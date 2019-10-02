@@ -1,10 +1,7 @@
 ---
 title: bcp_bind | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 apiname:
@@ -15,28 +12,32 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
+ms.custom: ''
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99da52886b15cf89b693fdfb5f1cc5d039e64905
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895731"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707726"
 ---
-# <a name="bcpbind"></a>bcp_bind
+# <a name="bcp_bind"></a>bcp_bind
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사를 수행하기 위해 프로그램 변수에서 테이블 열로 데이터를 바인딩합니다.  
-  
-## <a name="syntax"></a>구문  
-  
+
+## <a name="syntax"></a>구문
+
 ```  
   
 RETCODE bcp_bind (  
-        HDBC hdbc,   
+        HDBC hdbc,
         LPCBYTE pData,  
         INT cbIndicator,  
         DBINT cbData,  
@@ -46,19 +47,20 @@ RETCODE bcp_bind (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *pData*  
- 복사 대상 데이터에 대한 포인터입니다. 하는 경우 *eDataType* SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR 또는 sqlimage 인 경우에 *pData* NULL 일 수 있습니다. NULL *pData* 긴 데이터 값을 보냄을 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 청크로 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다. 사용자만 설정 해야 *pData* 그렇지 않은 경우에 해당 하는 사용자가 바인딩한 필드 열이 BLOB 열인 경우 NULL로 **bcp_bind** 실패 합니다.  
+ 복사 대상 데이터에 대한 포인터입니다. *Edatatype* 이 sqltext, SQLTEXT, SQLXML, sqltext, SQLTEXT, sqltext, SQLTEXT, SQLBINARY, sqltext 또는 SQLIMAGE 인 경우 *.pdata* 는 NULL 일 수 있습니다. NULL *.pdata* 는 long 데이터 값이 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)를 사용 하 여 청크로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송 됨을 나타냅니다. 사용자가 바인딩된 필드에 해당 하는 열이 BLOB 열인 경우에만 *.pdata* 를 NULL로 설정 해야 합니다. 그렇지 않으면 **bcp_bind** 가 실패 합니다.  
   
- 데이터에 표시자가 있으면 이는 메모리에서 데이터 바로 앞에 표시됩니다. 합니다 *pData* 매개 변수가이 경우 표시기의 너비에 표시자 변수를 가리키는 합니다 *cbIndicator* 매개 변수를 올바르게 주소 사용자 데이터를 대량 복사에서 사용 됩니다.  
+ 데이터에 표시자가 있으면 이는 메모리에서 데이터 바로 앞에 표시됩니다. *.Pdata* 매개 변수는이 경우 표시기 변수를 가리키며 표시기의 너비 인 *cbindicator* 매개 변수는 대량 복사에서 사용자 데이터를 올바르게 처리 하는 데 사용 됩니다.  
   
  *cbIndicator*  
  열 데이터의 길이 또는 Null 표시자의 바이트 단위 길이입니다. 올바른 표시기 길이 값은 0(표시기를 사용하지 않을 경우), 1, 2, 4 또는 8입니다. 표시자는 메모리에서 데이터 바로 앞에 표시됩니다. 예를 들어 대량 복사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 정수 값을 삽입하기 위해 다음 구조 형식 정의를 사용할 수 있습니다.  
   
-```  
+```
 typedef struct tagBCPBOUNDINT  
     {  
     int iIndicator;  
@@ -66,66 +68,65 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- 예제에서는 합니다 *pData* 매개 변수는 선언 된 즉 BCPBOUNDINT 주소의 구조 인스턴스의 주소를 설정할 수는 *iIndicator* 구조체 멤버입니다. 합니다 *cbIndicator* 정수 크기로 매개 변수를 설정할 수는 (sizeof (int), 및 *cbData* 매개 변수는 정수 (sizeof (int) 크기 다시 설정 됩니다. 인스턴스의 값에 바인딩된 열에 값 NULL을 포함 하는 서버에 행을 대량 복사할 *iIndicator* 멤버를 sql_null_data로 설정 되어야 합니다.  
+ 예제 사례에서 *.pdata* 매개 변수는 구조체의 선언 된 인스턴스 주소 (BCPBOUNDINT *iindicator* 구조체 멤버의 주소)로 설정 됩니다. *Cbindicator* 매개 변수는 정수 크기 (sizeof (int))로 설정 되 고, *cbindicator* 매개 변수는 다시 정수 크기 (sizeof (int))로 설정 됩니다. 바인딩된 열에 대해 NULL 값을 포함 하는 서버에 행을 대량 복사 하려면 인스턴스 *Iindicator* 멤버의 값을 SQL_NULL_DATA로 설정 해야 합니다.  
   
  *cbData*  
  프로그램 변수 데이터에서 길이 또는 Null 표시자나 종결자의 길이를 제외한 바이트 수입니다.  
   
- 설정 *cbData* 를 sql_null_data로 서버에 복사 하는 모든 행의 열에 NULL 값 포함을 의미 합니다.  
+ *Cbdata* 를 SQL_NULL_DATA로 설정 하면 서버에 복사 된 모든 행에는 열에 대 한 NULL 값이 포함 되어 있음을 나타냅니다.  
   
- 설정 *cbData* 를 sql_varlen_data로 시스템에서 문자열 종결자를 사용 하거나 데이터의 길이 확인 하려면 다른 메서드를 복사를 나타냅니다.  
+ *Cbdata* 를 SQL_VARLEN_DATA로 설정 하면 시스템에서 문자열 종결자 또는 다른 메서드를 사용 하 여 복사 되는 데이터의 길이를 결정 하는 것을 나타냅니다.  
   
- 정수와 같은 고정 길이 데이터 형식의 경우 시스템은 데이터 형식으로 데이터의 길이를 확인합니다. 따라서 고정 길이 데이터 형식용 *cbData* SQL_VARLEN_DATA 또는 데이터의 길이 안전 하 게 될 수 있습니다.  
+ 정수와 같은 고정 길이 데이터 형식의 경우 시스템은 데이터 형식으로 데이터의 길이를 확인합니다. 따라서 고정 길이 데이터 형식의 경우 *Cbdata* 를 안전 하 게 SQL_VARLEN_DATA 하거나 데이터의 길이를 지정할 수 있습니다.  
   
- 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 *cbData* SQL_VARLEN_DATA, SQL_NULL_DATA, 양수 일부 값 또는 0 일 수 있습니다. 하는 경우 *cbData* 가 SQL_VARLEN_DATA 이면 시스템은 데이터의 길이 확인 하는 길이 또는 null 표시기 (있는 경우) 또는 종결자 시퀀스를 사용 합니다. 두 가지가 모두 제공되면 시스템은 복사할 데이터가 적은 항목을 사용합니다. 하는 경우 *cbData* 가 SQL_VARLEN_DATA 이면 열의 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이 며 길이 표시기 나 종결자 시퀀스 모두를 지정 하면 시스템 오류 메시지를 반환 합니다.  
+ @No__t-0 문자 및 이진 데이터 형식의 경우 *Cbdata* 는 SQL_VARLEN_DATA, SQL_NULL_DATA, 양수 값 또는 0 일 수 있습니다. *Cbdata* 가 SQL_VARLEN_DATA 인 경우 시스템은 길이/null 표시기 (있는 경우) 또는 종결자 시퀀스를 사용 하 여 데이터 길이를 확인 합니다. 두 가지가 모두 제공되면 시스템은 복사할 데이터가 적은 항목을 사용합니다. *Cbdata* 가 SQL_VARLEN_DATA 인 경우 열의 데이터 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이 며 길이 표시기 나 종결자 시퀀스를 지정 하지 않으면 시스템에서 오류 메시지를 반환 합니다.  
   
- 하는 경우 *cbData* 가 0 이거나 양수 값 이면 시스템은 *cbData* 를 데이터 길이로 합니다. 그러나 양수 이면 *cbData* 최소한의 데이터를 복사 하는 메서드를 사용 하 여 데이터 길이 확인 하는 시스템, 값, 길이 표시기 나 종결자 시퀀스를 제공 합니다.  
+ *Cbdata* 가 0 이거나 양수 값 이면 시스템은 *cbdata* 를 데이터 길이로 사용 합니다. 그러나 *cbdata* 값이 양수이 고 길이 표시자 또는 종결자 시퀀스가 제공 된 경우 시스템은 복사 되는 데이터의 양이 가장 적은 메서드를 사용 하 여 데이터 길이를 결정 합니다.  
   
- 합니다 *cbData* 매개 변수 값 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 다음 양수 표현 되는 경우 *cbData* 매개 변수 값에서 각 문자의 바이트 크기를 곱한 문자의 수를 나타냅니다.  
+ *Cbdata* 매개 변수 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현 되는 경우 양의 *Cbdata* 매개 변수 값은 문자 수와 각 문자의 바이트 크기를 곱한 값을 나타냅니다.  
   
  *pTerm*  
  바이트 패턴에 대한 포인터이며 있는 경우 이 프로그램 변수의 끝을 표시합니다. 예를 들어 ANSI 및 MBCS C 문자열은 일반적으로 1바이트 종결자(\0)를 가집니다.  
   
- 종결자가 없는 변수를 설정 *pTerm* NULL로 합니다.  
+ 변수에 종결자가 없는 경우 *Pterm* 을 NULL로 설정 합니다.  
   
- C Null 종결자를 프로그램 변수 종결자로 지정하기 위해 빈 문자열("")을 사용할 수 있습니다. Null로 끝나는 빈 문자열은 단일 바이트 (종결자 바이트 자체), 설정 *cbTerm* 1입니다. 예를 들어 나타내는 문자열 *szName* null로 종료 되는 길이를 나타내는 종결자를 사용 해야 함 및:  
+ C Null 종결자를 프로그램 변수 종결자로 지정하기 위해 빈 문자열("")을 사용할 수 있습니다. Null로 끝나는 빈 문자열은 단일 바이트 (종결자 바이트 자체)를 구성 하므로 *Cbterm* 을 1로 설정 합니다. 예를 들어 *szName* 의 문자열이 null로 종료 되 고 해당 종결자를 사용 하 여 길이를 나타내야 함을 나타낼 수 있습니다.  
   
-```  
+```
 bcp_bind(hdbc, szName, 0,  
    SQL_VARLEN_DATA, "", 1,  
    SQLCHARACTER, 2)  
-```  
-  
- 이 예제는 nonterminated 형태의 15 자에서 복사 되어야 함을 나타낼 수 있는 *szName* 바인딩된 테이블의 두 번째 열을 가변:  
-  
-```  
-bcp_bind(hdbc, szName, 0, 15,   
+```
+
+ 이 예제의 종료 되지 않은 형식은 15 자를 *szName* 변수에서 바인딩된 테이블의 두 번째 열로 복사 했음을 나타낼 수 있습니다.  
+
+```
+bcp_bind(hdbc, szName, 0, 15,
    NULL, 0, SQLCHARACTER, 2)  
-```  
+```
+
+ 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이를 모두 올바르게 설정해야 합니다. 예를 들어 *szName* 의 문자열이 유니코드 null 종결자 값으로 종료 된 유니코드 와이드 문자열 임을 나타내려면 다음을 수행 합니다.  
   
- 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이를 모두 올바르게 설정해야 합니다. 예:입니다 문자열에 *szName* 유니코드 와이드 문자열이 유니코드 null 종결자 값으로 종료 됩니다.  
-  
 ```  
-bcp_bind(hdbc, szName, 0,   
+bcp_bind(hdbc, szName, 0,
    SQL_VARLEN_DATA, L"",  
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- 경우 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 와이드 문자 하 변환이 수행 됩니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 MBCS 문자 형식이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 보내는 동안 와이드 문자가 멀티바이트 문자로 변환됩니다.  
+ 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 와이드 문자인 경우 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)에서 변환이 수행 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 MBCS 문자 형식이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 보내는 동안 와이드 문자가 멀티바이트 문자로 변환됩니다.  
   
  *cbTerm*  
- 프로그램 변수에 종결자가 있는 경우 바이트 수입니다. 변수 종료 문자 없음 경우 *cbTerm* 을 0으로 합니다.  
-  
- *eDataType*  
- 프로그램 변수의 C 데이터 형식입니다. 프로그램 변수의 데이터는 데이터베이스 열의 형식으로 변환됩니다. 이 매개 변수가 0이면 변환이 수행되지 않습니다.  
-  
- *eDataType* 매개 변수는 열거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h의 데이터 형식 토큰, ODBC C 데이터 형식 표시기 없습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
-  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 **_eDataType_** 매개 변수입니다.  
- 
- 다음 표에는 유효한 열거형 데이터 형식 및 해당 ODBC C 데이터 형식이 나열되어 있습니다.
-  
-|eDataType|C 형식|  
+ 프로그램 변수에 종결자가 있는 경우 바이트 수입니다. 변수에 종결자가 없는 경우 *Cbterm* 을 0으로 설정 합니다.  
+
+*Edatatype* 프로그램 변수의 C 데이터 형식입니다. 프로그램 변수의 데이터는 데이터베이스 열의 형식으로 변환됩니다. 이 매개 변수가 0이면 변환이 수행되지 않습니다.  
+
+*Edatatype* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거 됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
+
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]은 **_Edatatype_** 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원을 도입 했습니다.  
+
+다음 표에는 유효한 열거형 데이터 형식 및 해당 ODBC C 데이터 형식이 나열되어 있습니다.
+
+|eDataType|C 형식|
 |-----------------------|------------|  
 |SQLTEXT|char *|  
 |SQLNTEXT|wchar_t *|  
@@ -143,22 +144,22 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|ssNoversion|  
+|SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 20cm(8 SQLINT8|  
 |SQLFLT4|FLOAT|  
 |SQLFLT8|FLOAT|  
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 20cm(8 SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 20cm(8 SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 20cm(8 SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -166,58 +167,60 @@ bcp_bind(hdbc, szName, 0,
 |SQLUNIQUEID|SQLGUID|  
 |SQLVARIANT|*다음을 제외한 모든 데이터 형식:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
 |SQLXML|*지원되는 C 데이터 형식:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+
+*Idxservercol* 데이터가 복사 되는 데이터베이스 테이블에서 열의 서 수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서수 위치는 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
- *idxServerCol*  
- 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서수 위치는 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
+## <a name="returns"></a>반환 값
+
+ SUCCEED 또는 FAIL
+
+## <a name="remarks"></a>설명
+
+**Bcp_bind** 를 사용 하 여 프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테이블로 데이터를 빠르고 효율적으로 복사할 수 있습니다.  
+
+이 또는 다른 대량 복사 함수를 호출 하기 전에 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출 합니다. **Bcp_init** 를 호출 하면 대량 복사를 위한 @no__t 1 대상 테이블이 설정 됩니다. **Bcp_bind** 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)에서 사용할 수 있도록 **bcp_init** 를 호출 하는 경우 데이터 파일을 나타내는 **BCP_INIT** _szdatafile_ 파일 매개 변수는 NULL로 설정 됩니다. **bcp_init**_edirection_ 매개 변수는 DB_IN로 설정 됩니다.  
+
+복사 하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 모든 열에 대해 별도의 **bcp_bind** 호출을 수행 합니다. 필요한 **bcp_bind** 호출을 수행한 후 **bcp_sendrow** 를 호출 하 여 프로그램 변수의 데이터 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보냅니다. 열을 다시 바인딩하는 것은 지원되지 않습니다.
+
+@No__t-0을 선택 하 여 이미 받은 행을 커밋하는 경우 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)를 호출 합니다. 예를 들어, 삽입 된 모든 1000 행 또는 다른 간격에 대해 **bcp_batch** 를 한 번씩 호출 합니다.  
+
+삽입할 행이 더 이상 없으면 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)를 호출 합니다. 그렇게 하지 않으면 오류가 반환됩니다.
+
+[Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)로 지정 된 제어 매개 변수 설정은 **bcp_bind** 행 전송에 영향을 주지 않습니다.  
+
+열에 대 한 *.pdata* 가 NULL로 설정 된 경우 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)에 대 한 호출에서 해당 값이 제공 됩니다. *edatatype* 이 SQLTEXT, SQLTEXT, SQLXML, SQLTEXT, SQLTEXT, SQLTEXT, sqltext, SQLBINARY,로 설정 된 모든 후속 열이 제공 됩니다. SQLNCHAR 또는 SQLIMAGE는 NULL로 설정 된 *.pdata* 에도 바인딩되어야 하며, **bcp_moretext**에 대 한 호출 에서도 해당 값을 제공 해야 합니다.  
+
+**Varchar (max)** , **varbinary (max)** 또는 **nvarchar (max)** 와 같은 새 대량 값 형식의 경우 *EDATATYPE* 매개 변수에서 SQLCHARACTER, SQLCHARACTER, sqlcharacter, SQLBINARY 및 sqlcharacter를 형식 표시기로 사용할 수 있습니다.  
+
+*Cbterm* 이 0이 아니면 접두사 (*cbterm*)에 대 한 값 (1, 2, 4 또는 8)이 유효 합니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 종결자를 검색 하 고, 종결자 (*i*)와 관련 된 데이터 길이를 계산 하 고, *cbdata* 를 i의 작은 값 및 접두사 값으로 설정 합니다.  
+
+*Cbterm* 이 0이 고 *cbterm* (접두사)가 0이 아니면 *cbterm* 8 이어야 합니다. 8 바이트 접두사는 다음 값을 사용할 수 있습니다.  
+
+- 0xFFFFFFFFFFFFFFFF는 필드의 Null 값을 의미합니다.  
+
+- 0xFFFFFFFFFFFFFFFE은 서버에 데이터를 청크로 효율적으로 전송 하는 데 사용 되는 특수 접두사 값으로 처리 됩니다. 이 특수한 접두사를 사용한 데이터의 형식은 다음과 같습니다.  
+
+- < SPECIAL_PREFIX > \<0 개 이상의 데이터 청크 > < ZERO_CHUNK > 위치:  
+
+- SPECIAL_PREFIX는 0xFFFFFFFFFFFFFFFE입니다.  
+
+- DATA_CHUNK는 청크 길이를 포함 하는 4 바이트 접두사이 고 그 뒤에 4 바이트 접두사에 길이가 지정 된 실제 데이터가 있습니다.  
+
+- ZERO_CHUNK는 데이터의 끝을 나타내는 0 바이트 (00000000)를 모두 포함 하는 4 바이트 값입니다.  
+
+- 다른 모든 유효한 8 바이트 길이는 일반 데이터 길이로 처리 됩니다.  
+
+ **Bcp_bind** 를 사용할 때 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 를 호출 하면 오류가 발생 합니다.  
   
-## <a name="returns"></a>반환 값  
- SUCCEED 또는 FAIL  
+## <a name="bcp_bind-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능을 위한 bcp_bind 지원
+
+날짜/시간 형식에 대 한 *Edatatype* 매개 변수와 함께 사용 되는 형식에 대 한 자세한 내용은 [향상 된 날짜 및 시간 형식 &#40;에 대 한&#41;대량 복사 변경 내용 OLE DB 및 ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)를 참조 하세요.  
+
+자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
+
+## <a name="example"></a>예제
   
-## <a name="remarks"></a>설명  
- 사용 하 여 **bcp_bind** 의 테이블에 프로그램 변수에서 데이터를 복사할 빠르고 효율적인 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
-  
- 호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)서 **bcp_init** _szDataFile_매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 합니다 **bcp_init**_eDirection_ 매개 변수가 DB_IN으로 설정 됩니다.  
-  
- 개별적 **bcp_bind** 의 모든 열에 대 한 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복사 하려는 테이블입니다. 필요한 **bcp_bind** 호출을 수행한 다음 호출 **bcp_sendrow** 하 여 프로그램 변수의 데이터 행을 보낼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 열을 다시 바인딩하는 것은 지원되지 않습니다.  
-  
- 추가할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미 수신한 행 커밋이 호출 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)합니다. 예를 들어, 호출 **bcp_batch** 삽입 되는 모든 1000 행 또는 다른 간격으로 한 번입니다.  
-  
- 더 이상 행을 삽입할 때 호출할 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)합니다. 그렇게 하지 않으면 오류가 반환됩니다.  
-  
- 에 지정 된 매개 변수 설정을 제어할 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), 미치지 **bcp_bind** 행 전송 합니다.  
-  
- 하는 경우 *pData* 를 호출 하 여 해당 값을 제공 하기 때문에 열을 NULL로 설정 됩니다 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)를 사용 하 여 모든 후속 열 *eDataType* SQLTEXT, SQLNTEXT로 설정 SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR 또는 SQLIMAGE도 바인딩되어야 *pData* NULL로 설정 하 고 호출 하 여 해당 값도 제공 해야 **bcp_moretext**.  
-  
- 새로운 큰 값 형식에 대 한와 같은 **(는) 트랜잭션**, **varbinary (max)** , 또는 **nvarchar(max)** , SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, 사용할 수와 형식 표시기로 SQLNCHAR는 *eDataType* 매개 변수입니다.  
-  
- 경우 *cbTerm* 가 0이 아닌 값 (1, 2, 4 또는 8)이 유효한 접두사 (*cbIndicator*). 이 상황에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 종단 장치를 검색, 종단 장치에 대 한 데이터 길이 계산 (*i*), 설정의 *cbData* i의 값과 작은 값을 접두사입니다.  
-  
- 경우 *cbTerm* 0과 *cbIndicator* () 되지 않은 0 *cbIndicator* 8 이어야 합니다. 8바이트 접두사는 다음과 같은 값을 가질 수 있습니다.  
-  
--   0xFFFFFFFFFFFFFFFF는 필드의 Null 값을 의미합니다.  
-  
--   0xFFFFFFFFFFFFFFFE는 청크의 데이터를 효과적으로 서버에 보내는 데 사용할 수 있는 특수한 접두사 값입니다. 이 특수한 접두사를 사용한 데이터의 형식은 다음과 같습니다.  
-  
--   < SPECIAL_PREFIX > \<0 또는 데이터 청크를 더 >< ZERO_CHUNK > 여기서:  
-  
--   SPECIAL_PREFIX는 0xFFFFFFFFFFFFFFFE입니다.  
-  
--   DATA_CHUNK는 청크의 길이를 포함하는 4바이트 접두사이며, 이 뒤에는 4바이트 접두사에 길이가 지정된 실제 데이터가 옵니다.  
-  
--   ZERO_CHUNK는 데이터의 끝을 나타내는 모든 0(00000000)을 포함하는 4바이트 값입니다.  
-  
--   다른 모든 유효한 8바이트 길이는 일반적인 데이터 길이로 처리됩니다.  
-  
- 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 사용 하는 경우 **bcp_bind** 오류가 발생 합니다.  
-  
-## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능을 위한 bcp_bind 지원  
- 함께 사용 되는 형식에 대 한 정보는 *eDataType* 날짜/시간 형식에 대 한 매개 변수를 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
-  
- 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
-  
-## <a name="example"></a>예제  
-  
-```  
+```
 #include sql.h  
 #include sqlext.h  
 #include odbcss.h  
@@ -231,7 +234,7 @@ char*      pTerm = "\t\t";
   
 // Application initiation, get an ODBC environment handle, allocate the  
 // hdbc, and so on.  
-...   
+...
   
 // Enable bulk copy prior to connecting on allocated hdbc.  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP, (SQLPOINTER) SQL_BCP_ON,  
@@ -245,7 +248,7 @@ if (!SQL_SUCCEEDED(SQLConnect(hdbc, _T("myDSN"), SQL_NTS,
    return;  
    }  
   
-// Initialize bcp.   
+// Initialize bcp.
 if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL  
    DB_IN) == FAIL)  
    {  
@@ -253,7 +256,7 @@ if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL
    return;  
    }  
   
-// Bind program variables to table columns.   
+// Bind program variables to table columns.
 if (bcp_bind(hdbc, (LPCBYTE) &idCompany, 0, sizeof(DBINT), NULL, 0,  
    SQLINT4, 1)    == FAIL)  
    {  
@@ -269,10 +272,10 @@ if (bcp_bind(hdbc, (LPCBYTE) szCompanyName, 0, SQL_VARLEN_DATA,
   
 while (TRUE)  
    {  
-   // Retrieve and process program data.   
+   // Retrieve and process program data.
    if ((bMoreData = getdata(&idCompany, szCompanyName)) == TRUE)  
       {  
-      // Send the data.   
+      // Send the data.
       if (bcp_sendrow(hdbc) == FAIL)  
          {  
          // Raise error and return.  
@@ -296,7 +299,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## <a name="see-also"></a>관련 항목
+
+ [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)

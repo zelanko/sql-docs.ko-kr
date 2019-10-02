@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1182decfb5afe63e43aa527d89d1ebc44d179a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895725"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707731"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
+# <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -56,7 +56,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식(*idxServerColumn*)과 다르면 가능한 경우 대량 복사에서 데이터를 변환합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 *eUserDataType* 매개 변수입니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]은 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원을 도입 했습니다.  
   
  *eUserDataType* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
   
@@ -129,7 +129,7 @@ RETCODE bcp_colfmt (
   
  **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열로 구성된 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경하려면 먼저 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** 를 호출한 다음 **bcp_colfmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
- *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 참조 하세요 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)합니다.  
+ *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)를 참조 하세요.  
   
  **bcp_colfmt** 를 호출하기 전에 **bcp_columns**함수를 호출해야 합니다.  
   
@@ -141,10 +141,10 @@ RETCODE bcp_colfmt (
   
  [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_colfmt 지원  
- 사용 유형에 대 한 정보에 대 한 합니다 *eUserDataType* 날짜/시간 형식에 대 한 매개 변수 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_colfmt 지원  
+ 날짜/시간 형식에 대해 *Euserdatatype* 매개 변수와 함께 사용 되는 형식에 대 한 자세한 내용은 [향상 된 &#40;날짜 및 시간 형식 OLE DB 및 ODBC&#41;에 대 한 대량 복사 변경 내용](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)을 참조 하세요.  
   
- 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

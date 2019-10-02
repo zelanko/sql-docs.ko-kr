@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45c79a3b3d1c9e75d410d948c977ad4b521521b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1dd7b42ba6fcf4ea5b45fb779d4e6c67cd3074a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895743"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707724"
 ---
-# <a name="bcpbatch"></a>bcp_batch
+# <a name="bcp_batch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

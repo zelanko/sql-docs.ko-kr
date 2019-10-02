@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7d6ce92fe3ca3a4fb2c6209a01b3eee6b575b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85fc18ed18f157b47d9fd7b654cda4bf25e608ec
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895608"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707683"
 ---
-# <a name="bcpexec"></a>bcp_exec
+# <a name="bcp_exec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -48,7 +48,7 @@ RETCODE bcp_exec (
  DBINT에 대한 포인터입니다. **bcp_exec** 함수는 성공적으로 복사된 행 수로 이 DBINT를 채웁니다. *pnRowsProcessed* 가 NULL이면 **bcp_exec**에서 이 인수를 무시합니다.  
   
 ## <a name="returns"></a>반환 값  
- SUCCEED, SUCCEED_ASYNC 또는 FAIL. 모든 행이 복사되면 **bcp_exec** 함수가 SUCCEED를 반환합니다 비동기 대량 복사 작업이 보류 중이면**bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. **bcp_exec** 완전히 실패 또는 오류를 생성 하는 행 수가 다음을 사용 하 여 BCPMAXERRS에 지정 된 값에 도달할 경우 FAIL을 반환 합니다 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)합니다. BCPMAXERRS의 기본값은 10입니다. BCPMAXERRS 옵션은 데이터 파일에서 행을 읽는 동안 공급자가 발견하는 구문 오류의 수에만 영향을 주고 서버로 전송되는 행 수에는 영향을 주지 않습니다. 행에서 오류를 발견하면 서버에서 일괄 처리를 중단합니다. 성공적으로 복사된 행 수를 보려면 *pnRowsProcessed* 매개 변수를 확인하십시오.  
+ SUCCEED, SUCCEED_ASYNC 또는 FAIL. 모든 행이 복사되면 **bcp_exec** 함수가 SUCCEED를 반환합니다 비동기 대량 복사 작업이 보류 중이면**bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. 전체 오류가 발생 하거나 오류를 생성 하는 행의 수가 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)를 사용 하 여 BCPMAXERRS에 지정 된 값에 도달 하면 **bcp_exec** 는 FAIL을 반환 합니다. BCPMAXERRS의 기본값은 10입니다. BCPMAXERRS 옵션은 데이터 파일에서 행을 읽는 동안 공급자가 발견하는 구문 오류의 수에만 영향을 주고 서버로 전송되는 행 수에는 영향을 주지 않습니다. 행에서 오류를 발견하면 서버에서 일괄 처리를 중단합니다. 성공적으로 복사된 행 수를 보려면 *pnRowsProcessed* 매개 변수를 확인하십시오.  
   
 ## <a name="remarks"></a>설명  
  이 함수는 *bcp_init* 의 [eDirection](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)매개 변수 값에 따라 사용자 파일에서 데이터베이스 테이블로 또는 데이터베이스 테이블에서 사용자 파일로 데이터를 복사합니다.  
@@ -57,7 +57,7 @@ RETCODE bcp_exec (
   
  **bcp_exec** 는 무한정 보류될 수 있는 유일한 대량 복사 함수입니다. 따라서 비동기 모드를 지원하는 유일한 대량 복사 함수입니다. 비동기 모드를 설정하려면 [bcp_exec](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출하기 전에 **SQLSetConnectAttr**을 사용하여 SQL_ATTR_ASYNC_ENABLE을 SQL_ASYNC_ENABLE_ON으로 설정합니다. 완료 테스트를 하려면 같은 매개 변수를 사용하여 **bcp_exec** 를 호출합니다. 대량 복사가 완료되지 않은 경우 **bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. 또한 서버로 전송된 행 수에 대한 상태 개수를 *pnRowsProcessed* 에 반환합니다. 서버로 전송된 행은 일괄 처리의 끝에 도달할 때까지 커밋되지 않습니다.  
   
- 대량 복사에서 시작 하 여 중단에 대 한 내용은 변경 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 참조 하십시오 [대량 복사 작업 수행 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ @No__t-0부터 대량 복사의 주요 변경 내용에 대 한 자세한 내용은 [ODBC &#40;&#41;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 **bcp_exec**를 사용하는 방법을 보여 줍니다.  

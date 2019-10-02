@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 540a6a27a38ad7e7f749428c93773856bcc2cb89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b58a6ae57d6a5f6b549a98f4a16871424615ae97
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130899"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708030"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68130899"
   
  **bcp_bind** 는 가변 길이 데이터를 처리하는 다음과 같은 세 가지 메서드를 지원합니다.  
   
--   데이터 변수 하나만 있는 *cbData* 사용. 데이터 길이를 *cbData*에 저장합니다. 길이의 데이터를 대량 복사 변경 될 때마다 호출 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)재설정할 *cbData*합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbData*에 SQL_VARLEN_DATA를 지정합니다. 열에 제공할 데이터 값이 모두 NULL인 경우에는 *cbData*에 SQL_NULL_DATA를 지정합니다.  
+-   데이터 변수 하나만 있는 *cbData* 사용. 데이터 길이를 *cbData*에 저장합니다. 대량 복사 될 데이터의 길이가 변경 될 때마다 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 *cbdata*를 다시 설정 합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbData*에 SQL_VARLEN_DATA를 지정합니다. 열에 제공할 데이터 값이 모두 NULL인 경우에는 *cbData*에 SQL_NULL_DATA를 지정합니다.  
   
 -   표시자 변수 사용. 각각의 새 데이터 값이 데이터 변수로 이동할 때 값 길이를 표시자 변수에 저장합니다. 다른 두 메서드 중 하나를 사용할 경우에는 *cbIndicator*에 0을 지정합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68130899"
 |ODBC SQL 데이터 형식|ODBC C 데이터 형식|bcp_bind *type* 매개 변수|SQL Server 데이터 형식|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **다양 한 문자**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **문자 변경**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "68130899"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **이진 변경**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -86,7 +86,7 @@ ms.locfileid: "68130899"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서명 되지 않습니다 **tinyint**부호 없는 **smallint**, 또는 서명 되지 않은 **int** 데이터 형식입니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 서명 된 **tinyint**, unsigned **smallint**또는 unsigned **int** 데이터 형식이 없습니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -108,13 +108,13 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 interval 데이터 형식을 직접 지원하지 않습니다. 하지만 애플리케이션에서 interval 이스케이프 시퀀스를 문자열로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 열에 저장할 수 있습니다. 나중에 애플리케이션에서 이러한 문자열을 읽을 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 해당 문자열을 사용할 수 없습니다.  
   
- 대량 복사 함수를 사용하면 ODBC 데이터 원본에서 읽은 데이터를 빠르게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 로드할 수 있습니다. 데이터 변수 하나만 있는 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 의 지침에 따라 결과 집합의 열을 프로그램 변수에 바인딩한 후 **bcp_bind** 를 사용하여 동일한 프로그램 변수를 대량 복사 작업에 바인딩합니다. 호출 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 하거나 **SQLFetch** 프로그램 변수 및 호출에 ODBC 데이터 원본에서 데이터 행을 페치합니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 데이터를 대량 복사 프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
+ 대량 복사 함수를 사용하면 ODBC 데이터 원본에서 읽은 데이터를 빠르게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 로드할 수 있습니다. 데이터 변수 하나만 있는 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 의 지침에 따라 결과 집합의 열을 프로그램 변수에 바인딩한 후 **bcp_bind** 를 사용하여 동일한 프로그램 변수를 대량 복사 작업에 바인딩합니다. [Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 또는 **sqlfetch** 를 호출 하면 ODBC 데이터 원본에서 프로그램 변수로 데이터 행을 페치 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) @no__t를 호출 하 여 프로그램 변수의 데이터를 대량 복사 합니다.  
   
- 응용 프로그램이 사용할 수는 [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 변수에 원래 지정 된 데이터 변수의 주소를 변경 해야 할 때마다 함수는 **bcp_bind** _pData_ 매개 변수입니다. 또한 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **매개 변수에 원래 지정된 데이터 길이를 변경해야 할 경우에는**_bcp_collen_ 함수를 사용할 수 있습니다.  
+ 응용 프로그램은 **bcp_bind** _.pdata_ 매개 변수에 원래 지정 된 데이터 변수의 주소를 변경 해야 하는 경우 언제 든 지 [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 함수를 사용할 수 있습니다. 또한 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **매개 변수에 원래 지정된 데이터 길이를 변경해야 할 경우에는**_bcp_collen_ 함수를 사용할 수 있습니다.  
   
  "bcp_readrow" 함수에 해당하는 기능이 없기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 대량 복사를 사용하여 프로그램 변수로 데이터를 읽어들일 수는 없으며 애플리케이션에서 서버로 데이터를 보낼 수만 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [대량 복사 작업 수행 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [ODBC 대량 복사 작업 &#40;수행&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

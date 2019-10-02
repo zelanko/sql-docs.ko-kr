@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 820dadee39c4d68455b8c609b512a6504eb5fbad
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 9e8f4103511085bd834d9970e399604c7082ec0b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154422"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708592"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>예
 세션을 만듭니다.
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--session-kind -k`
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>예
 활성 세션을 모두 나열합니다.
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
@@ -124,7 +124,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>예
 ID가 0인 세션의 세션 정보를 가져옵니다.
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--session-id -i`
@@ -149,7 +149,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>예
 ID가 0인 세션의 세션 로그를 가져옵니다.
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--session-id -i`
@@ -174,7 +174,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>예
 ID가 0인 세션의 세션 상태를 가져옵니다.
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--session-id -i`
@@ -199,7 +199,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>예
 세션을 삭제합니다.
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--session-id -i`
@@ -212,7 +212,7 @@ Spark 세션 ID 번호입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

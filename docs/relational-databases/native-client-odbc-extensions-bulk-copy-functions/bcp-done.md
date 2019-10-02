@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_done function
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28d16d1ef5e63ee48d2e2251f5661437883c4324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5db617d974eee588c8a6efd52a2febf34da1f4f4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895640"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707692"
 ---
-# <a name="bcpdone"></a>bcp_done
+# <a name="bcp_done"></a>bcp_done
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

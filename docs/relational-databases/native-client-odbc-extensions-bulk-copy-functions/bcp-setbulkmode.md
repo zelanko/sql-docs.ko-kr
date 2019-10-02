@@ -10,21 +10,21 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de8b347aa0df4dc79570cae737525f0b1ca7eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f6dfcb6049811fa12899570b11c110b16dc400
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099438"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707471"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode를 사용 하면 단일 함수 호출에서 모든 열 특성을 설정 하는 대량 복사 작업에서 열 형식을 지정할 수 있습니다.  
+  bcp_setbulkmode를 사용 하면 대량 복사 작업에서 열 형식을 지정 하 여 단일 함수 호출에 모든 열 특성을 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,26 +63,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- bcp_setbulkmode 대량 쿼리 또는 테이블에서 복사를 사용할 수 있습니다. Bcp_setbulkmode 대량 쿼리 문을 복사 하 되, bcp_control BCP_HINT로 호출 하기 전에 호출 해야 합니다.  
+ bcp_setbulkmode는 쿼리 또는 테이블에서 대량 복사 하는 데 사용할 수 있습니다. Bcp_setbulkmode를 사용 하 여 쿼리 문을 대량 복사 하는 경우 BCP_HINT를 사용 하 여 bcp_control를 호출 하기 전에 호출 해야 합니다.  
   
- bcp_setbulkmode가 사용 하는 대신 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) 하 고 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)는 사용 하 여 함수 호출당 한 열의 형식을 지정 합니다.  
+ bcp_setbulkmode는 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) 및 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)를 사용 하는 대신 함수 호출 당 하나의 열 형식만 지정할 수 있습니다.  
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
 |property|설명|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP의-c 옵션에 해당합니다. EXE를 사용 하 여 bcp_setcolfmt **BCP_FMT_TYPE** 속성으로 설정 **SQLCHARACTER**합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의-w 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt **BCP_FMT_TYPE** 속성으로 설정 **SQLNCHAR**합니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP의-N 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt **BCP_FMT_TYPE** 속성으로 설정 **SQLNCHAR** 열 유형이 문자열인 경우 (기본, 문자열이 아닌 경우).|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP의-n 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt **BCP_FMT_TYPE** 속성이 기본값으로 설정 합니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE, **BCP_FMT_TYPE** 속성이 **sqlcharacter**로 설정 된 bcp_setcolfmt.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. **BCP_FMT_TYPE** 속성이 **sqlnchar**로 설정 된 EXE 및 bcp_setcolfmt|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. 열 유형이 문자열 (문자열이 아닌 경우 기본값) 인 경우 **BCP_FMT_TYPE** 속성이 **sqlnchar** 로 설정 된 EXE 및 bcp_setcolfmt|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. **BCP_FMT_TYPE** 속성이 기본값으로 설정 된 EXE 및 bcp_setcolfmt|  
   
- Bcp_setbulkmode bcp_setcolfmt, bcp_control, 및 bcp_readfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 사용 하지 않아야 합니다. 예를 들어 bcp_control(BCPTEXTFILE) 및 bcp_setbulkmode 호출 하지 않아야 합니다.  
+ Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출에 bcp_setbulkmode를 사용 하면 안 됩니다. 예를 들어 bcp_control (BCPTEXTFILE) 및 bcp_setbulkmode를 호출 하면 안 됩니다.  
   
- Bcp_control 및 bcp_setbulkmode bcp_setbulkmode와 충돌 하지 않는 bcp_control 옵션에 대해 호출할 수 있습니다. 예를 들어 bcp_control(BCPFIRST) 및 bcp_setbulkmode 호출할 수 있습니다.  
+ Bcp_setbulkmode와 충돌 하지 않는 bcp_control 옵션에 대해 bcp_control 및 bcp_setbulkmode를 호출할 수 있습니다. 예를 들어 bcp_control (BCPFIRST) 및 bcp_setbulkmode를 호출할 수 있습니다.  
   
- Bcp_setbulkmode bcp_setcolfmt, bcp_control, 및 bcp_readfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 호출 하려고 하면 함수 호출 중 하나는 시퀀스 오류 실패를 반환 합니다. 오류를 해결 하려는 경우 모든 설정을 다시 설정 하 고 다시 시작 하는 bcp_init를 호출 합니다.  
+ Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출을 사용 하 여 bcp_setbulkmode를 호출 하려고 하면 함수 호출 중 하나에서 시퀀스 오류 오류가 반환 됩니다. 오류를 수정 하도록 선택 하는 경우 bcp_init를 호출 하 여 모든 설정을 다시 설정 하 고 다시 시작 합니다.  
   
- 함수 시퀀스 오류가 발생 하는 함수 호출의 몇 가지 예는 다음과 같습니다.  
+ 함수 시퀀스 오류를 발생 시키는 함수 호출의 몇 가지 예는 다음과 같습니다.  
   
 ```  
 bcp_init("table", DB_IN);  

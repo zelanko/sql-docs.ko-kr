@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc379866c2d36ae4e84c284526b8cd5ad2fb931c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54b6f04dcc622cc5b8702d03d78a94e30e61fd7e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987712"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707586"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -51,14 +51,14 @@ RETCODE bcp_writefmt (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. 에 대 한 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 하 고 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 이 정의에서 참조 하는 파일에 저장 *szFormatFile*합니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
+ 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 및 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 에 대 한 호출은 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 는 *szformatfile*에서 참조 하는 파일에이 정의를 저장 합니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
   
- 구조에 대 한 자세한 내용은 **bcp** 데이터 형식으로 파일을 참조 하십시오 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ **Bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [Bcp 유틸리티 &#40;를 사용 하 여 대량 데이터 가져오기 및 내보내기 SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조 하세요.  
   
- 저장된 된 서식 파일을 로드 하려면 사용 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)합니다.  
+ 저장 된 서식 파일을 로드 하려면 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)를 사용 합니다.  
   
 > [!NOTE]  
->  생성 된 서식 파일 **bcp_writefmt** 의 버전 에서만 지원 됩니다 합니다 **bcp** 유틸리티와 함께 배포 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전.  
+>  **Bcp_writefmt** 에서 생성 된 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 이상으로 배포 된 **bcp** 유틸리티 버전 에서만 지원 됩니다.  
   
 ## <a name="example"></a>예제  
   

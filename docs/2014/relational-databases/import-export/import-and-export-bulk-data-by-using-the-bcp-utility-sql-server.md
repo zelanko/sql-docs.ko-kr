@@ -1,9 +1,6 @@
 ---
 title: bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,22 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011927"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708217"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
-  이 항목에서는 분할된 뷰를 포함하여 SELECT 문이 작동하는 [데이터베이스의 어디에서나 데이터를 가져올 수 있도록](../../tools/bcp-utility.md) bcp 유틸리티 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 방법에 대해 간략하게 설명합니다.  
+
+이 항목에서는 분할된 뷰를 포함하여 SELECT 문이 작동하는 [데이터베이스의 어디에서나 데이터를 가져올 수 있도록](../../tools/bcp-utility.md) bcp 유틸리티 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 방법에 대해 간략하게 설명합니다.  
   
  bcp 유틸리티(Bcp.exe)는 BCP(대량 복사 프로그램) API를 사용하는 명령줄 도구입니다. bcp 유틸리티는 다음 태스크를 수행합니다.  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66011927"
   
  **bcp** 명령 구문에 대한 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
+
  **bcp** 예제는 다음을 참조하세요.  
   
 -   [bcp 유틸리티](../../tools/bcp-utility.md)  
@@ -69,15 +71,11 @@ ms.locfileid: "66011927"
 -   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## <a name="see-also"></a>관련 항목  
- [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [대량 데이터 가져오기 준비&#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>관련 항목
+
+[INSERT &#40;&#41;transact-sql](/sql/t-sql/statements/insert-transact-sql)
+[SELECT 절 &#40;&#41;transact-sql](/sql/t-sql/queries/select-clause-transact-sql)
+[bcp 유틸리티](../../tools/bcp-utility.md)   
+[데이터 &#40;대량 가져오기 준비 SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)
+[BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)@no__t 7[대량 가져오기 및 내보내기 &#40;&#41;](bulk-import-and-export-of-data-sql-server.md)SQL Server 1[OPENROWSET &#40; Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[서식 파일 &#40;만들기 SQL Server&#41; ](create-a-format-file-sql-server.md)

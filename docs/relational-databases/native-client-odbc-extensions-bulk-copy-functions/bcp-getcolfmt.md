@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aec6cf3345a0693384835f433bd445fd5079c82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40e7f63438bbe6ff68284aa573e1307b17087234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895669"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707541"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -71,10 +71,10 @@ RETCODE bcp_getcolfmt (
   
  이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전과 비교해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전의 서버 컴퓨터에 연결할 때 동작 변경 내용이 관찰될 수 있습니다. 자세한 내용은 [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md)를 참조하십시오.  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_getcolfmt 지원  
- 형식을 사용 합니다 **BCP_FMT_TYPE** 날짜/시간 형식에 대 한 속성에 지정 된 대로 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_getcolfmt 지원  
+ 날짜/시간 형식에 대 한 **BCP_FMT_TYPE** 속성과 함께 사용 되는 형식은 향상 된 [날짜 및 시간 &#40;형식 OLE DB 및 ODBC&#41;에 대해 대량 복사 변경 내용](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에 지정 되어 있습니다.  
   
- 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

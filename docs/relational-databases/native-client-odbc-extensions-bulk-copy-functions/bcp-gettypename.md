@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895548"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707460"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -87,12 +87,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|모두|**Min**|  
 |**SQLAOPMAX**|모두|**Max**|  
 |**SQLDATETIM4**|모두|**smalldatetime**|  
-|**SQLMONEY4**|모두|**smallmoney**|  
-|**SQLFLT4**|모두|**실제**|  
+|**SQLMONEY4**|모두|**Smallmoney**|  
+|**SQLFLT4**|모두|**실제로**|  
 |**SQLUNIQUEID**|모두|**uniqueidentifier**|  
 |**SQLNCHAR**|아니요|**Nchar**|  
 |**SQLNVARCHAR**|아니요|**Nvarchar**|  
-|**SQLNTEXT**|모두|**ntext**|  
+|**SQLNTEXT**|모두|**N**|  
 |**SQLVARIANT**|모두|**sql_variant**|  
 |**SQLINT8**|모두|**Bigint**|  
 |**SQLCHARACTER**|사용자 계정 컨트롤|**varchar(max)**|  
@@ -106,12 +106,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
 |**SQLNVARCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
 |**SQLXML**|사용자 계정 컨트롤|**Xml**|  
-|**SQLUDT**|모두|**udt**|  
+|**SQLUDT**|모두|**Udt**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
- 날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
+ 날짜/시간 형식에 대 한 토큰 매개 변수 값은 [향상 된 날짜 및 시간 &#40;형식 OLE DB 및 ODBC&#41;에 대 한 대량 복사 변경 내용](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에서 테이블의 "sqlncli 형식" 열에 설명 되어 있습니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  
   
- 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -3,17 +3,17 @@ title: Dmv를 사용 하 여 Python 및 R 스크립트 실행 모니터링
 description: Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services에서 Python 및 R 외부 스크립트 실행을 모니터링할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978400"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713185"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>메모리 구성
 
-SQL Server 및 외부 리소스 풀의 최대 메모리 구성에 대 한 정보를 표시 합니다. SQL Server 기본값 `max server memory (MB)`을 사용 하 여 실행 되는 경우 OS 메모리의 100%로 간주 됩니다.
+SQL Server 및 외부 리소스 풀의 최대 메모리 구성에 대 한 정보를 표시 합니다. SQL Server 기본값 `max server memory (MB)`으로 실행 되는 경우 OS 메모리의 100%로 간주 됩니다.
 
 ![메모리 구성 쿼리의 출력](media/dmv-memory-configuration.png "메모리 구성 쿼리의 출력")
 
