@@ -1558,6 +1558,8 @@
       href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
     - name: Oracle CDC 데이터베이스
       href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+    - name: 문제 해결
+      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Attunity Oracle CDC Designer F1 도움말 참조
       href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
       items:
