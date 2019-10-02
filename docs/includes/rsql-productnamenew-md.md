@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2071fc91e36116ca2ad298362646d545d8ac2569
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3576058239674049691826048f51558153fe5d81
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68185396"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71717037"
 ---
-Machine Learning Services(데이터베이스 내) 
+Machine Learning Services 
