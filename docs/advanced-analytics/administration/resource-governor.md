@@ -3,17 +3,17 @@ title: Resource Governor를 사용 하 여 Python 및 R 워크 로드 관리
 description: Resource Governor를 사용 하 여 SQL Server Machine Learning Services에서 Python 및 R 작업에 대 한 CPU, 물리적 IO 및 메모리 리소스 할당을 관리 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714317"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823539"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Resource Governor를 사용 하 여 Python 및 R 워크 로드 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ Python 및 R의 기계 학습 알고리즘은 일반적으로 계산 집약적�
 
 기본적으로 machine learning에 대 한 외부 스크립트 런타임은 총 컴퓨터 메모리의 20%를 초과 하지 않도록 제한 됩니다. 시스템에 따라 다르지만 일반적으로 모델을 학습 하거나 많은 데이터 행을 예측 하는 것과 같은 심각한 기계 학습 작업에 대해이 제한이 적절 하지 않을 수 있습니다. 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Resource Governor를 사용 하 여 높아지면 제어
+## <a name="manage-resources-with-resource-governor"></a>Resource Governor를 사용 하 여 리소스 관리
  
 기본적으로 외부 프로세스는 로컬 서버에서 전체 호스트 메모리의 최대 20%를 사용 합니다. 외부 프로세스에서 사용할 수 있는 용량을 활용 하 여 R 및 Python 프로세스에서 서버 차원의 변경을 수행 하도록 기본 리소스 풀을 수정할 수 있습니다.
 
-또는 관련 작업 그룹 및 분류자를 사용 하 여 사용자 지정 *외부 리소스 풀*을 구성 하 여 특정 프로그램, 호스트 또는 사용자가 제공 하는 다른 기준에서 시작 되는 요청에 대 한 리소스 할당을 확인할 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부에서 R 및 Python 프로세스 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 를 관리할 수 있도록에 도입 된 리소스 풀의 유형입니다.
+또는 관련 된 작업 그룹 및 분류자를 사용 하 여 사용자 지정 **외부 리소스 풀**을 만들어 특정 프로그램, 호스트 또는 사용자가 제공 하는 다른 기준에서 시작 된 요청에 대 한 리소스 할당을 확인할 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부에서 R 및 Python 프로세스 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 를 관리할 수 있도록에 도입 된 리소스 풀의 유형입니다.
 
 1. [리소스 관리 사용](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) 기본적으로 해제 되어 있습니다.
 

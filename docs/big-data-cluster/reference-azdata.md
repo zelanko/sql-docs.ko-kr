@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391945"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816656"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,9 +27,8 @@ ms.locfileid: "70391945"
 |[azdata sql](reference-azdata-sql.md) | SQL DB CLI를 사용하여 사용자가 T-SQL을 통해 SQL Server를 조작할 수 있습니다. |
 |[azdata app](reference-azdata-app.md) | 애플리케이션을 만들고, 삭제, 실행, 관리합니다. |
 |[azdata bdc](reference-azdata-bdc.md) | SQL Server 빅 데이터 클러스터를 선택, 관리, 운영합니다. |
-|[azdata 컨트롤](reference-azdata-control.md) | 제어 평면을 만들고, 삭제 하 고, 관리 합니다. |
-[azdata login](#azdata-login) | 클러스터의 컨트롤러 엔드포인트에 로그인합니다.
-[azdata logout](#azdata-logout) | 클러스터에서 로그아웃합니다.
+|[azdata login](#azdata-login) | 클러스터의 컨트롤러 엔드포인트에 로그인합니다.
+|[azdata logout](#azdata-logout) | 클러스터에서 로그아웃합니다.
 ## <a name="azdata-login"></a>azdata login
 클러스터가 배포된 경우 배포 중에 컨트롤러 엔드포인트가 나열됩니다. 이 엔드포인트를 사용하여 로그인해야 합니다.  컨트롤러 엔드포인트를 모르는 경우 시스템의 기본 위치인 <user home>/.kube/config에 클러스터의 kube 구성을 저장하여 로그인하거나, KUBECONFIG 환경 변수를 사용할 수 있습니다(즉, export KUBECONFIG=path/to/.kube/config).
 ```bash
@@ -68,7 +67,7 @@ azdata login -n ClusterName
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-logout"></a>azdata logout
