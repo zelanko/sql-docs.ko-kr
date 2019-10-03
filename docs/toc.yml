@@ -207,8 +207,6 @@
               items:
                 - name: azdata
                   href: big-data-cluster/reference-azdata.md
-                - name: 컨트롤
-                  href: big-data-cluster/reference-azdata-control.md
                 - name: Notebook
                   href: big-data-cluster/reference-azdata-notebook.md
                 - name: sql
@@ -4160,8 +4158,8 @@
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016에서 사용되지 않음
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server 2016에서 지원되지 않는 기능
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: SQL Server 에서 지원되지 않는 기능
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
         - name: SQL Server 2017의 주요 변경 내용
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016의 주요 변경 내용
