@@ -306,7 +306,7 @@ PAUSE
   
     -   <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>에 대해 실행할 최대 동적 스냅샷 작업 수. 구독자가 스냅샷 요청을 언제든지 시작할 수 있으므로 이 속성은 여러 구독자가 분할된 스냅샷을 동시에 요청할 경우 동시에 실행 가능한 스냅샷 에이전트 작업 수를 제한합니다. 최대 작업 수가 실행되고 있으면 새로 추가된 분할된 스냅샷 요청은 실행 중인 작업 중 하나가 완료될 때까지 지연됩니다.  
   
-    -   비트 논리 OR 연산자(Visual C#의 경우**|** , Visual Basic의 경우 **Or** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 참조하세요.  
+    -   비트 논리 OR 연산자(Visual C#의 경우 **|** , Visual Basic의 경우 **Or** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 참조하세요.  
   
     -   스냅샷 에이전트가 실행되는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 의 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드.  
   
