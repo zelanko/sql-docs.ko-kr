@@ -31,18 +31,18 @@ ms.locfileid: "68025210"
   
 ## <a name="options"></a>옵션  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
- *SYSTEM***\\***INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
+ *SYSTEM ***\\*** INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   
  또한 이 필드는 모니터가 이 서버 인스턴스에 현재 연결되어 있는지 여부를 나타냅니다. 가능한 연결 상태는 다음과 같습니다.  
   
--   *server_instance_name***에 연결되지 않음**  
+-   *server_instance_name* **에 연결되지 않음**  
   
--   *server_instance_name***에 연결하는 중**  
+-   *server_instance_name* **에 연결하는 중**  
   
--   *server_instance_name***에 연결됨**  
+-   *server_instance_name* **에 연결됨**  
   
     > [!NOTE]  
-    >  **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 이 상태는 *server_instance_name***에 연결됨** **(제한된 사용 권한)** 입니다.  
+    >  **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 이 상태는 *server_instance_name* **에 연결됨** **(제한된 사용 권한)** 입니다.  
   
  각 파트너 서버 인스턴스의 이름이 별도의 *서버 인스턴스 및 서버 인스턴스의 연결 상태* 필드에 표시됩니다. 모니터 실행이 시작되면 맨 위 필드에 주 서버가 나열됩니다.  
   

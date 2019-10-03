@@ -120,11 +120,11 @@ ms.locfileid: "68769780"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **\@publication**에 아티클이 속한 게시 이름, **\@article**에 아티클 이름, **\@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **\@schema_option** 비트 마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **\@ins_cmd** - *CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 *XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name*** 또는 **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* ** 또는 **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -140,11 +140,11 @@ ms.locfileid: "68769780"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **\@publication**에 아티클이 속한 게시 이름, **\@article**에 아티클 이름, **\@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **\@schema_option** 비트 마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **\@ins_cmd** - *CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 *XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name***, **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* **, **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  

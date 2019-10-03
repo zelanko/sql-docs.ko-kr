@@ -62,7 +62,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @description = ] 'description'`프로필에 대 한 설명입니다. *description* 은 **nvarchar (3000)** 이며 기본값은 없습니다.  
   
-`[ @default = ] default`프로필이 *agent_type * ** 에 대 한 기본값 인지 여부를 나타냅니다. *기본값* 은 **bit**이며 기본값은 **0**입니다. **1** 은 추가 중인 프로필이 *agent_type*에서 지정한 에이전트의 새 기본 프로필이 됨을 나타냅니다.  
+`[ @default = ] default`프로필이 *agent_type* ** 에 대 한 기본값 인지 여부를 나타냅니다. *기본값* 은 **bit**이며 기본값은 **0**입니다. **1** 은 추가 중인 프로필이 *agent_type*에서 지정한 에이전트의 새 기본 프로필이 됨을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

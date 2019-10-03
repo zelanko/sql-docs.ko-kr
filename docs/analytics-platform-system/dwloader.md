@@ -156,7 +156,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name.* [ *schema*].*table_name*  
 대상 테이블의 세 부분으로 구성 된 이름입니다.  
   
 **-I** *source_data_location*  

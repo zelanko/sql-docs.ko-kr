@@ -76,7 +76,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  *이 매개 변수는 Oracle 게시자에 대해 지원 되지 않습니다.*  
   
-`[ @destination_table = ] 'destination_table'`*Source_table*또는 저장 프로시저와 다른 경우 대상 (구독) 테이블의 이름입니다. *destination_table* 는 **sysname**이며 기본값은 NULL입니다 .이는 *source_table* 가 *destination_table * ** 와 같음을 의미 합니다.  
+`[ @destination_table = ] 'destination_table'`*Source_table*또는 저장 프로시저와 다른 경우 대상 (구독) 테이블의 이름입니다. *destination_table* 는 **sysname**이며 기본값은 NULL입니다 .이는 *source_table* 가 *destination_table* ** 와 같음을 의미 합니다.  
   
 `[ @vertical_partition = ] 'vertical_partition'`테이블 아티클에 대해 열 필터링을 사용 하거나 사용 하지 않도록 설정 합니다. *vertical_partition* 은 **nchar (5)** 이며 기본값은 FALSE입니다.  
   
