@@ -12,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092657"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952489"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "66092657"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다. 정보를 참조 하세요 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다. 자세한 내용은 sharepoint [모드 설치 &#40;SharePoint 2010 및 sharepoint&#41;2013 Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조 하세요.  
   
  **섹션 내용**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66092657"
  [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  보고서를 무인 모드로 처리하는 데 필요한 사용자 계정을 구성하는 방법을 설명합니다.  
   
- [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [전자 메일 배달 &#40;SSRS에 대 한 보고서 서버 구성 Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  전자 메일 보고서 배포를 지원하도록 보고서 서버를 구성하는 방법을 설명합니다.  
   
  [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "66092657"
   
  **항목 내용**  
   
--   [Reporting Services 구성 관리자를 사용 하는 시나리오](#bkmk_scenarios)  
+-   [Reporting Services 구성 관리자 사용할 시나리오](#bkmk_scenarios)  
   
 -   [요구 사항](#bkmk_requirements)  
   

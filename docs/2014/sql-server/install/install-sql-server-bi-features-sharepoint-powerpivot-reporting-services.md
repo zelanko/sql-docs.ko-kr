@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 954f60e49f5bc94881fcdf66b7a381385fb40416
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 42bc370a4e1eebddb3293afe6843f3ed19338656
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890140"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952146"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint와 함께 SQL Server BI 기능 설치(PowerPivot 및 Reporting Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 Microsoft SharePoint 팜과 통합되어 SharePoint의 BI(비즈니스 인텔리전스) 기능을 사용할 수 있습니다. 해당하는 기능은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 SharePoint 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스에 사용 됩니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만들어지고 SharePoint 라이브러리에서 액세스되는 통합 문서를 위한 데이터 엔진입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 SharePoint에 저장한 다음에는 이를 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 대한 데이터 원본으로 사용할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 Microsoft SharePoint 팜과 통합되어 SharePoint의 BI(비즈니스 인텔리전스) 기능을 사용할 수 있습니다. 해당하는 기능은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 SharePoint 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스에 사용 됩니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만들어지고 SharePoint 라이브러리에서 액세스되는 통합 문서를 위한 데이터 엔진입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 SharePoint에 저장한 다음에는 이를 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 대한 데이터 원본으로 사용할 수 있습니다.  
   
  SharePoint 2010에 필요한 설치 및 구성 단계 중 일부는 SharePoint 2013에 필요한 단계와 다릅니다. 이 단원의 항목 중 일부는 SharePoint의 두 버전에 모두에 적용됩니다.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "68890140"
 |-|-----------|--------------|--------------------------|  
 |1|SharePoint 전용|기본 Excel Services 기능|SharePoint Server 2013에 포함된 Excel Services 및 기타 서비스입니다.|  
 |**2**|SharePoint와 SharePoint 모드의 Analysis Services|브라우저의 대화형 PowerPivot 통합 문서|SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 설치합니다.<br /><br /> Excel Services에 Analysis Services 서버를 등록합니다.|  
-|**3**|SharePoint와 SharePoint 모드의 Reporting Services|파워 뷰|SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치합니다.<br /><br /> SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 용 추가 기능 **(rssharepoint.msi)** 을 설치 합니다. 자세한 내용은 [sharepoint &#40;SharePoint 2010 및&#41; sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md) 를 참조 하세요.|  
+|**3**|SharePoint와 SharePoint 모드의 Reporting Services|파워 뷰|SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치합니다.<br /><br /> SharePoint 용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 **(rssharepoint.msi)** 을 설치 합니다. 자세한 내용은 [sharepoint &#40;SharePoint 2010 및&#41; sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md) 를 참조 하세요.|  
 |**4**|모든 PowerPivot 기능|팜 외부로부터 통합 문서를 데이터 원본으로 액세스합니다.<br /><br /> 데이터 새로 고침을 예약합니다.<br /><br /> PowerPivot 갤러리입니다.<br /><br /> 관리 대시보드입니다.<br /><br /> BISM 링크 파일 콘텐츠 형식입니다.|SharePoint용 PowerPivot 2013 추가 기능 **(Sppowerpivot .msi)** 을 배포 합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [SharePoint용 PowerPivot 추가 기능 &#40;SharePoint 2013 설치 또는 제거&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> **spPowerPivot.msi**를 다운로드하는 방법에 대한 자세한 내용은 [SQL Server 2014 SharePoint용 PowerPivot 다운로드](https://go.microsoft.com/fwlink/?LinkID=296473)를 참조하세요.|  
   
- 기능을 사용 하도록 설정 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [SharePoint 2013에 대 한 SQL Server BI 롤업 스토리](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) ()https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 를 참조 하세요.  
+ @No__t-0 기능을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [SharePoint 2013에 대 한 SQL SERVER BI](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 추가 정보 (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) )를 참조 하세요.  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a>설치 개요  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 둘 다 사용하려는 경우 SQL Server 설치 마법사를 두 번 실행하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 는 SQL Server 설치 마법사의 **설치 역할** 페이지에서 별도로 선택할 수 있습니다.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 둘 다 사용하려는 경우 SQL Server 설치 마법사를 두 번 실행하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]은 SQL Server 설치 마법사의 **설치 역할** 페이지에서 별도로 선택할 수 있습니다.  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 SharePoint 2010과 SharePoint 2013을 모두 지원하지만 SharePoint 버전에 따라 서로 다른 아키텍처 및 설치 프로세스를 사용합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68890140"
   
      SharePoint의 두 버전에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치 프로세스는 SQL Server 설치 마법사에서 **SharePoint용 SQL Server PowerPivot** 의 설정 역할을 선택하거나 SQL Server 명령 프롬프트 설치를 사용하여 시작됩니다.  
   
-     ![설치 역할](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "설치 역할")  
+     ![역할]설치(../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "역할") 설정  
   
 3.  SharePoint 2013의 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 및 환경을 확장할 수 있습니다. **spPowerPivot.msi** 를 다운로드 및 실행하여 서버 쪽 데이터 새로 고침 처리, 협업 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 관리 지원을 추가합니다. 자세한 내용은 [Microsoft® SharePoint용 Microsoft SQL Server 2014 PowerPivot](https://go.microsoft.com/fwlink/?LinkID=324854)을 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68890140"
   
     1.  SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치합니다. [Sharepoint 모드 설치 &#40;sharepoint 2010 및 sharepoint 2013&#41; 을 Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) 하 고 sharepoint [2010 용 sharepoint 모드 Reporting Services 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)합니다.  
   
-    2.  SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(rsSharePoint.msi)을 설치합니다. [Sharepoint &#40;SharePoint 2010 및&#41;sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조 하세요. Sharepoint 용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대 한 최신 버전은 [sharepoint 제품용 Reporting Services 추가 기능을 찾을 수 있는 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조 하세요.  
+    2.  SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(rsSharePoint.msi)을 설치합니다. [Sharepoint &#40;SharePoint 2010 및&#41;sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조 하세요. 최신 버전의 SharePoint 용 @no__t 추가 기능에 대 한 자세한 내용은 [Sharepoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조 하십시오.  
   
     3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스와 하나 이상의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성합니다. 자세한 내용은 [sharepoint 2013에 대 한 Reporting Services Sharepoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하세요.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68890140"
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [지원 되는 SharePoint 및 Reporting Services 서버와 추가 기능 조합 &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
+ [지원 되는 SharePoint 및 Reporting Services 서버와 추가 기능 &#40;SQL Server 2014&#41; 의 조합입니다](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
  [Sharepoint &#40;sharepoint 2010 및 sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

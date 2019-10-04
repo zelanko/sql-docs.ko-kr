@@ -4,17 +4,17 @@ ms.custom: ''
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
-ms.openlocfilehash: 3c120949b03ac1b6832316b9aa2d06875c5559f3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 93f362adfbc85500854943a479dac01988eb3a01
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890077"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952558"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 BI 기능 설치
 

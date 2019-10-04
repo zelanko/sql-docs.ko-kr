@@ -1,5 +1,5 @@
 ---
-title: SQL Server Standard 및 Enterprise (업그레이드 관리자)에 대 한 CPU 및 메모리 제한으로 변경 합니다. | Microsoft Docs
+title: SQL Server Standard 및 Enterprise의 CPU 및 메모리 제한에 대 한 변경 내용 (업그레이드 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4b58d7b9d449a6fe9ab3e5de8a7e369d57d13d70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095944"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952569"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard 및 Enterprise의 CPU 및 메모리 제한에 대한 변경 사항(업그레이드 관리자)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard 및 Enterprise에서는 최대 64GB의 시스템 메모리가 지원됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "66095944"
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 버전에서는 128GB 시스템 메모리가 지원되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서는 운영 체제 최대값이 최대 메모리로 지원됩니다.  
   
 > [!NOTE]  
@@ -40,6 +40,6 @@ ms.locfileid: "66095944"
 -   [SQL Server의 버전별 계산 용량 제한](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 업그레이드 문제 &#40;업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

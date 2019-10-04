@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092426"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952421"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>확장 배포(기본 모드 보고서 서버)
   **구성 관리자에서** 스케일 아웃 배포 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하여 스케일 아웃 배포의 초기화 상태를 보거나 보고서 서버를 스케일 아웃 배포에 조인할 수 있습니다. *스케일 아웃 배포* 는 단일 보고서 서버 데이터베이스를 공유하는 두 개 이상의 보고서 서버 인스턴스를 말합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "66092426"
   
      이미 스케일 아웃 배포에 하위 보고서 서버인 경우 이 페이지를 사용하여 노드를 추가하거나 제거할 수 있습니다.  
   
- **초기화**  
+ **초기**  
  스케일 아웃 배포에 보고서 서버를 추가하려면 **초기화** 를 클릭합니다. 이 단계에서는 공유 보고서 서버 데이터베이스의 대칭 키를 사용하도록 보고서 서버를 구성합니다. **초기화** 를 사용하여 보고서 서버 인스턴스를 스케일 아웃 배포에 추가하거나 마이그레이션 또는 설치 문제를 해결할 수 있습니다.  
   
  보고서 서버 인스턴스는 공유 보고서 서버 데이터베이스 연결이 이미 구성된 경우에만 사용할 수 있습니다. 또한 보고서 서버 데이터베이스를 사용하도록 이미 초기화된 보고서 서버를 초기화해야 합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "66092426"
   
  예방 조치로 대칭 키를 제거하기 전에 백업 복사본을 만들어야 합니다. 목록에 있는 마지막 보고서 서버의 암호화 키를 제거하면 해당 데이터베이스에 대한 이후의 모든 보고서 서버 초기화에 대해 새 요구 사항이 발생합니다. 즉, 보고서 서버를 초기화한 다음 대칭 키의 백업 복사본을 복원해야 합니다. 현재 보고서 서버 데이터베이스에 있는 암호화된 데이터에 액세스하려면 대칭 키를 복원해야 합니다.  
   
- 암호화된 데이터가 더 이상 필요하지 않거나 키의 백업 복사본이 없는 경우 암호화된 데이터를 삭제해야 합니다. 자세한 내용은 [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)합니다.  
+ 암호화된 데이터가 더 이상 필요하지 않거나 키의 백업 복사본이 없는 경우 암호화된 데이터를 삭제해야 합니다. 자세한 내용은 [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092176"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952389"
 ---
 # <a name="service-account-ssrs-native-mode"></a>서비스 계정(SSRS 기본 모드)
   서비스 계정 페이지를 사용하여 보고서 서버 서비스를 실행할 계정을 지정할 수 있습니다. 이 계정은 설치하는 동안 처음에 구성하며 계정 또는 암호를 변경하려는 경우 수정할 수 있습니다. 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션은 이 페이지에서 지정하는 서비스 ID로 모두 실행됩니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
- 보고서 서버 서비스에 지정한 계정은 레지스트리, 보고서 서버 프로그램 파일 및 보고서 서버 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 계정에 대한 모든 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 계정을 설정할 때 자동으로 구성됩니다. 서비스 계정을 사용 하 여 보고서 서버 데이터베이스에 연결 하는 경우 Configuration Manager 계정에 대 한 데이터베이스 로그인을 만들고에서 계정을 RSExecRole에 할당 하 여 데이터베이스 권한을 구성 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스팅하는 인스턴스에 보고서 서버 데이터베이스입니다. 보고서 서버 데이터베이스는 보고서 서버가 기록하는 유일한 데이터 저장소입니다. 서비스 계정에는 다른 데이터 저장소에 대한 권한이 필요하지 않습니다.  
+ 보고서 서버 서비스에 지정한 계정은 레지스트리, 보고서 서버 프로그램 파일 및 보고서 서버 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 계정에 대한 모든 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 계정을 설정할 때 자동으로 구성됩니다. 서비스 계정을 사용 하 여 보고서 서버 데이터베이스에 연결 하는 경우 Configuration Manager는 해당 계정에 대 한 데이터베이스 로그인을 만들고 보고서를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 RSExecRole에 계정을 할당 하 여 데이터베이스 사용 권한을 구성 합니다. 서버 데이터베이스. 보고서 서버 데이터베이스는 보고서 서버가 기록하는 유일한 데이터 저장소입니다. 서비스 계정에는 다른 데이터 저장소에 대한 권한이 필요하지 않습니다.  
   
  이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 탐색 창에서 링크를 클릭합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66092176"
  목록에서 **네트워크 서비스**, **로컬 시스템**또는 **로컬 서비스** 를 선택합니다. **네트워크 서비스** 만 사용하는 것이 좋지만 사용할 수 있는 계정을 사용하여 해당 계정을 구성할 수 있습니다.  
   
  **다른 계정 사용**  
- Windows 사용자 계정을 지정하려면 이 옵션을 선택합니다. 로컬 Windows 사용자 계정 또는 도메인 사용자 계정을 입력할 수 있습니다. 이 형식에서 도메인 계정을 지정 합니다.  *\<도메인 >\\< 사용자\>* 합니다. 이 형식으로 로컬 Windows 사용자 계정을 지정 합니다.  *\<컴퓨터 이름 >\\< 사용자\>* 합니다. 기존 계정만 선택할 수 있으며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성에 새 계정을 만들 수는 없습니다.  
+ Windows 사용자 계정을 지정하려면 이 옵션을 선택합니다. 로컬 Windows 사용자 계정 또는 도메인 사용자 계정을 입력할 수 있습니다. 도메인 계정을 지정 합니다. *\<domain > \\ < user @ no__t-3*. 다음 형식으로 로컬 Windows 사용자 계정을 지정 하십시오. *\<computer name > \\ < user @ no__t-3*. 기존 계정만 선택할 수 있으며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성에 새 계정을 만들 수는 없습니다.  
   
  계정의 최대 문자 수 제한은 20자입니다.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66092176"
  Windows 계정을 다른 계정으로 바꾸거나 기본 제공 계정을 Windows 도메인 계정으로 바꾸는 등 계정 유형을 전환하면 암호화 키의 백업 복사본을 만들라는 메시지가 표시됩니다. 새 계정을 선택하면 백업 복사본이 자동으로 복원됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 사용자가 서비스 계정을 수정할 때마다 암호화 키를 백업 및 복원하라는 메시지를 표시합니다. 이는 보고서 서버에서 계속 암호화된 데이터를 사용할 수 있도록 하기 위해 반드시 필요한 단계입니다. 이러한 작업에 대 한 자세한 내용은 참조 하세요. [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)합니다.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 사용자가 서비스 계정을 수정할 때마다 암호화 키를 백업 및 복원하라는 메시지를 표시합니다. 이는 보고서 서버에서 계속 암호화된 데이터를 사용할 수 있도록 하기 위해 반드시 필요한 단계입니다. 이러한 작업에 대 한 자세한 내용은 [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)를 참조 하세요.  
   
- 또한 보고서 서버가 SharePoint 통합 모드로 실행되도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 서비스 계정을 변경하는 경우 SharePoint 중앙 관리를 열어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용해야 합니다. 이 단계를 수행하면 새 서비스 계정에 SharePoint 데이터베이스에 대한 액세스 권한이 부여됩니다. 이 액세스 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 SharePoint 제품 또는 기술과 통합하는 데 필요합니다. SharePoint 중앙 관리에서 데이터베이스 액세스 권한을 부여 하는 방법에 대 한 자세한 내용은 참조 하십시오 [구성 및 보고서 서버 관리 &#40;Reporting Services SharePoint 모드&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) 하 고 [ Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+ 또한 보고서 서버가 SharePoint 통합 모드로 실행되도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 서비스 계정을 변경하는 경우 SharePoint 중앙 관리를 열어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용해야 합니다. 이 단계를 수행하면 새 서비스 계정에 SharePoint 데이터베이스에 대한 액세스 권한이 부여됩니다. 이 액세스 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 SharePoint 제품 또는 기술과 통합하는 데 필요합니다. Sharepoint 중앙 관리에서 데이터베이스 액세스 권한을 부여 하는 방법에 대 한 자세한 내용은 sharepoint [모드 &#40;&#41; 및 Reporting Services sharepoint 모드 Reporting Services 보고서 서버의 구성 및 관리](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) 를 참조 하세요. [ Sharepoint &#40;2010 및 sharepoint&#41;2013를 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
 ## <a name="choosing-an-account"></a>계정 선택  
  최상의 결과를 얻으려면 네트워크 도메인 컨트롤러 및 회사 SMTP 서버나 게이트웨이에 액세스할 수 있는 네트워크 연결 권한이 있는 계정을 지정합니다. 다음 표에서는 계정을 간단히 보여 주고 계정 사용에 대한 권장 사항을 알려 줍니다.  
