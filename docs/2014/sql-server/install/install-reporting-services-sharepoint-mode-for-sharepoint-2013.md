@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f829c49c47565fb7ed2dc4540216a4de4d3243d2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1a249c7a6fa260d5800c81b33b7674a2affa4eb5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890276"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952220"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Install Reporting Services SharePoint Mode for SharePoint 2013
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 단일 서버 설치 과정을 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; **참고:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 모드에서는 SharePoint 서버 다중 테 넌 트를 지원 **하지** 않습니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **참고:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint Server 다중 테 넌 트를 지원 **하지** 않습니다.|  
   
  기존 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버를 추가하는 방법은 다음을 참조하세요.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68890276"
   
 -   [설치 계정](#bkmk_setupaccounts)  
   
--   [1단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치](#bkmk_install_SSRS)  
+-   [1단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치 @ no__t-0  
   
--   [2단계: Reporting Services SharePoint 서비스 등록 및 시작](#bkmk_install_SSRS_sharedservice)  
+-   [2단계: Reporting Services SharePoint 서비스를 등록 하 고 시작 합니다. @ no__t-0  
   
--   [3단계: Reporting Services 서비스 응용 프로그램 만들기](#bkmk_create_serrviceapplication)  
+-   [3단계: Reporting Services 서비스 응용 프로그램 만들기 @ no__t-0  
   
--   [4단계: 파워 뷰 사이트 모음 기능을 활성화 합니다.](#bkmk_powerview)  
+-   [4단계: 파워 뷰 사이트 모음 기능을 활성화 합니다. ](#bkmk_powerview)  
   
 -   [1-4 단계에 대 한 Windows PowerShell 스크립트](#bkmk_full_script)  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68890276"
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스의 설치 및 등록:**  
   
--   SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서를 설치 하는 동안 현재 계정 (' 설치 ' 계정 이라고 함)에는 로컬 컴퓨터에 대 한 관리 권한이 있어야 합니다. Sharepoint를 설치 하 고 ' 설치 ' 계정이 sharepoint 팜 관리자 그룹 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 구성원 이기도 한 경우 설치 하는 경우 설치 시 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 등록 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint가 설치 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 되기 전에를 설치 하거나 ' 설치 ' 계정이 팜 관리자 그룹의 구성원이 아닌 경우에는 서비스를 수동으로 등록 해야 합니다. [2 단계: Reporting Services SharePoint 서비스](#bkmk_install_SSRS_sharedservice)를 등록 하 고 시작 합니다.  
+-   설치 하는 동안 현재 계정 (' 설치 ' 계정 이라고 함)은 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]이 고 로컬 컴퓨터에서 관리 권한이 있어야 합니다. SharePoint를 설치 하 고 ' 설치 ' 계정이 SharePoint 팜 관리자 그룹의 멤버인 경우에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]을 설치 하는 경우 @no__t 1 설치는 @no__t 2 서비스를 등록 합니다. SharePoint를 설치 하기 전에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]을 설치 하거나 ' 설치 ' 계정이 팜 관리자 그룹의 구성원이 아닌 경우에는 서비스를 수동으로 등록 해야 합니다. @No__t-0Step 2 단계를 참조 하세요. Reporting Services SharePoint Service @ no__t-0을 등록 하 고 시작 합니다.  
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기**  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하고 등록하여 하나 이상의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 2013 계정 권한에 대 한 자세한 내용은 [sharepoint 2013의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx) ()https://technet.microsoft.com/library/cc678863.aspx) 을 참조 하세요.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하고 등록하여 하나 이상의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 2013 계정 권한에 대 한 자세한 내용은 [sharepoint 2013의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) 을 참조 하세요.  
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68890276"
   
      **다음**을 클릭합니다.  
   
-8.  사용 조건 페이지가 표시되면 사용 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용량 현황 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
+8.  사용 조건 페이지가 표시되면 사용 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
   
      **다음**을 클릭합니다.  
   
@@ -121,13 +121,13 @@ ms.locfileid: "68890276"
   
     -   **SharePoint 제품용 Reporting Services 추가 기능**.  
   
-         ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고") 추가 기능을 설치 하는 설치 마법사 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스의 새로운 기능입니다.  
+         ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고") 추가 기능을 설치 하는 설치 마법사 옵션은 @no__t 2 릴리스와 새로 추가 되었습니다.  
   
     -   아직 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스가 없는 경우 전체 환경에 대해 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 를 선택할 수 있습니다.  
   
      **다음**을 클릭합니다.  
   
-     ![SharePoint 모드에 대 한 SSRS 기능 선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "SharePoint 모드에 대 한 SSRS 기능 선택")  
+     Sharepoint 모드의 ssrs 기능 ![선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "sharepoint 모드에 대 한 기능 선택")  
   
 11. **설치 규칙** 페이지가 표시되면 다음을 수행합니다. 경고 또는 차단 문제를 검토합니다. 그리고 **다음**을 클릭합니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68890276"
     > [!NOTE]  
     >  SQL Server 설치가 완료되면 이 항목의 다른 섹션을 따라 SharePoint 환경을 구성합니다. 이 절차에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 설치 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 생성이 포함됩니다.  
   
-     ![SQL Server 설치 마법사-SSRS 구성 페이지](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server 설치 마법사-SSRS 구성 페이지")  
+     ![SQL Server 설치 마법사-Ssrs 구성 페이지](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server 설치 마법사-ssrs 구성 페이지")  
   
 17. **오류 보고** 페이지에서 오류 보고서를 보내기 위한 확인란을 클릭하면 Microsoft가 SQL Server 기능 및 서비스를 개선하는 데 도움이 됩니다.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "68890276"
 3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  이 옵션이 목록에 표시 되지 않으면  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지 않음을 나타냅니다.** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
+    >  @No__t-0 옵션이 목록에 나타나지 않으면 **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
 4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 설명이 포함된 이름이나 명명 규칙을 사용하면 관리 및 운영 작업을 구성하는 데 도움이 됩니다.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "68890276"
   
 11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능 및 데이터 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
- ![PowerShell 관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") PowerShell을 사용 하 여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 다음을 참조 하세요.  
+ Powershell ![관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") powershell을 사용 하 여 @no__t 2 서비스 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 다음을 참조 하세요.  
   
 -   다음 섹션인 [1-4단계를 위한 Windows PowerShell 스크립트](#bkmk_full_script)를 참조하세요.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "68890276"
   
 -   “Reporting Services”라는 서비스 프록시를 만듭니다.  
   
--   "Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application" 이라는 서비스 응용 프로그램을 만듭니다.  
+-   "Reporting Services 응용 프로그램" 이라는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만듭니다.  
   
 -   사이트 모음에 대해 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 기능을 사용하도록 설정합니다.  
   
@@ -413,8 +413,8 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [콘텐츠 로드맵: SharePoint 서버 및 SQL Server BI 설정 및 구성](https://technet.microsoft.com/library/dn205112.aspx)   
- [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Content 로드맵: SharePoint 서버 설정 및 구성 및 SQL Server BI @ no__t-0 @ no__t-1  
+ [SQL Server 2012의 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

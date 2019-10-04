@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 33bbaf46bb4dee5e0e7b58f6dc179ae5647ee3e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890734"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952241"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>배포 검사 목록: SharePoint 2010용 PowerPivot의 다중 서버 설치
-  이 검사 목록에서는 처음부터 작성 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 3 계층 sharepoint 2010 팜에 sharepoint 용을 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 애플리케이션 및 웹 계층이 포함되어 있습니다. 이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 토폴로지에를 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층에를 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 응용 프로그램 서버에를 설치 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 하는 경우에만 수행 해야 하는 설치 단계가 있습니다.  
+  이 검사 목록에서는 SharePoint 용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 처음부터 작성 하는 3 계층 SharePoint 2010 팜에 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 응용 프로그램 및 웹 계층이 포함되어 있습니다. 이 토폴로지에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 응용 프로그램 계층에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 수행 해야 하는 설치 단계는 응용 프로그램 서버에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치 하는 것입니다.  
   
 ||  
 |-|  
@@ -29,7 +29,7 @@ ms.locfileid: "68890734"
 ## <a name="prerequisites"></a>사전 요구 사항  
  SQL Server 및 SharePoint 2010을 설치하려면 로컬 관리자여야 합니다.  
   
- SharePoint를 설치하는 관리자가 팜도 구성해야 합니다. 팜을 구성하려면 데이터베이스 서버에 SQL Server 로그인이 있어야 합니다. 로그인은, `dbcreator` `securityadmin` 및 `public`역할에 할당 되어야 합니다.  
+ SharePoint를 설치하는 관리자가 팜도 구성해야 합니다. 팜을 구성하려면 데이터베이스 서버에 SQL Server 로그인이 있어야 합니다. 로그인은 `dbcreator`, `securityadmin` 및 `public` 역할에 할당 되어야 합니다.  
   
  SharePoint Server 2010의 엔터프라이즈 또는 엔터프라이즈 평가판 버전이 있어야 합니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68890734"
 ##  <a name="installsp"></a>3 계층 SharePoint 2010 팜 설치 및 구성  
  SharePoint 서버로 사용할 컴퓨터 각각에서 SharePoint 필수 구성 요소 설치 관리자 프로그램을 실행한 다음 SharePoint Server 설치 프로그램을 실행합니다.  
   
- SharePoint 2010 설명서의 다음 지침을 사용하여 두 개의 웹 서버와 한 개의 애플리케이션 서버가 포함된 SharePoint 2010 팜을 설치하고 구성합니다.  
+ SharePoint 2010 설명서의 다음 지침을 사용하여 두 개의 웹 서버와 한 개의 응용 프로그램 서버가 포함된 SharePoint 2010 팜을 설치하고 구성합니다.  
   
  [3 계층 팜을 위한 다중 서버 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=182771)  
   
@@ -137,27 +137,27 @@ ms.locfileid: "68890734"
   
 -   Excel 서비스, 검색 서비스 및 Secure Store Service  
   
--   웹 애플리케이션 및 사이트 컬렉션  
+-   웹 응용 프로그램 및 사이트 컬렉션  
   
 -   사용 현황 및 상태 데이터 수집  
   
 -   진단 로깅  
   
 ##  <a name="installppapp"></a>응용 프로그램 서버에 SharePoint용 PowerPivot 설치  
- SQL Server 설치 프로그램을 실행하여 SharePoint 팜에 SharePoint용 PowerPivot을 추가합니다. 팜이 여러 SharePoint 서버로 구성된 경우에는 이미 팜에 조인된 애플리케이션 서버에서 SQL Server 설치 프로그램을 실행해야 합니다.  
+ SQL Server 설치 프로그램을 실행하여 SharePoint 팜에 SharePoint용 PowerPivot을 추가합니다. 팜이 여러 SharePoint 서버로 구성된 경우에는 이미 팜에 조인된 응용 프로그램 서버에서 SQL Server 설치 프로그램을 실행해야 합니다.  
   
- 항상 애플리케이션 서버에 SharePoint용 PowerPivot을 설치합니다. 또한 웹 프런트 엔드 서버도 SharePoint용 PowerPivot 서버 구성 요소를 실행하지만 웹 프런트 엔드에서 실행되는 구성 요소는 팜에 솔루션 배포 시 SharePoint용 PowerPivot 구성 단계 동안 설치됩니다. 설치에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)를 참조 하세요.  
+ 항상 응용 프로그램 서버에 SharePoint용 PowerPivot을 설치합니다. 또한 웹 프런트 엔드 서버도 SharePoint용 PowerPivot 서버 구성 요소를 실행하지만 웹 프런트 엔드에서 실행되는 구성 요소는 팜에 솔루션 배포 시 SharePoint용 PowerPivot 구성 단계 동안 설치됩니다. 설치에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)를 참조 하세요.  
   
- 배포 토폴로지가 2개의 SharePoint용 PowerPivot 인스턴스를 호출할 경우 각 애플리케이션 서버에서 SQL Server 설치를 실행합니다. 하나의 컴퓨터에서 SharePoint용 PowerPivot 인스턴스를 하나만 사용할 수 있습니다. 여러 인스턴스가 필요하면 추가 서버를 사용해야 합니다. 동일한 팜에 [여러 SharePoint용 PowerPivot 서버를 추가 하는 방법에 대 한 자세한 내용은 배포 검사 목록: SharePoint 2010 팜에](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)PowerPivot 서버를 추가 하 여 확장 합니다.  
+ 배포 토폴로지가 2개의 SharePoint용 PowerPivot 인스턴스를 호출할 경우 각 응용 프로그램 서버에서 SQL Server 설치를 실행합니다. 하나의 컴퓨터에서 SharePoint용 PowerPivot 인스턴스를 하나만 사용할 수 있습니다. 여러 인스턴스가 필요하면 추가 서버를 사용해야 합니다. 동일한 팜에 여러 SharePoint용 PowerPivot 서버를 추가 하는 방법에 대 한 자세한 내용은 [Deployment 검사 목록: SharePoint 2010 팜 @ no__t-0에 PowerPivot 서버를 추가 하 여 확장 합니다.  
   
 ##  <a name="installclientlib"></a>SharePoint용 PowerPivot가 설치 되지 않은 SharePoint 응용 프로그램 서버에 Analysis Services 클라이언트 라이브러리를 설치 합니다.  
- 동일 컴퓨터에 SharePoint용 PowerPivot을 설치하지 않은 상태로 다음 애플리케이션을 실행하는 웹 프런트 또는 애플리케이션 서버를 포함하는 팜 토폴로지에는 PowerPivot 데이터 액세스 및 기능을 지원하기 위해 추가 소프트웨어가 필요합니다.  
+ 동일 컴퓨터에 SharePoint용 PowerPivot을 설치하지 않은 상태로 다음 응용 프로그램을 실행하는 웹 프런트 또는 응용 프로그램 서버를 포함하는 팜 토폴로지에는 PowerPivot 데이터 액세스 및 기능을 지원하기 위해 추가 소프트웨어가 필요합니다.  
   
 -   Excel 서비스 또는 PerformancePoint 서비스  
   
--   고유 서버에서 독립 실행형 애플리케이션으로 실행되는 중앙 관리  
+-   고유 서버에서 독립 실행형 응용 프로그램으로 실행되는 중앙 관리  
   
- PowerPivot 데이터 액세스를 지원하기 위해서는 Excel Services 및 PerformancePoint Services 모두 새 버전의 Analysis Services OLE DB Provider가 필요합니다. 최신 OLE DB Provider가 없는 컴퓨터에서 애플리케이션을 실행할 경우 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.  
+ PowerPivot 데이터 액세스를 지원하기 위해서는 Excel Services 및 PerformancePoint Services 모두 새 버전의 Analysis Services OLE DB Provider가 필요합니다. 최신 OLE DB Provider가 없는 컴퓨터에서 응용 프로그램을 실행할 경우 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.  
   
  마찬가지로 동일 컴퓨터에 SharePoint용 PowerPivot 없이 중앙 관리만 있는 컴퓨터에는 ADOMD.NET 클라이언트 라이브러리가 필요합니다. 이 라이브러리는 대시보드를 채우기 위해 사용하는 내부 데이터에 액세스하기 위해 PowerPivot 관리 대시보드에서 사용됩니다. 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)를 참조하세요.  
   
@@ -167,11 +167,11 @@ ms.locfileid: "68890734"
  자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)를 참조 하세요.  
   
 ##  <a name="AAM"></a>웹 프런트 엔드 서버에 대 한 대체 액세스 매핑 구성  
- PowerPivot 데이터 액세스 또는 데이터 새로 고침에 대한 요청을 각 웹 프런트 엔드 서버에서 처리하도록 하려면 각 서버의 서로 다른 URL을 동일한 웹 애플리케이션에 매핑해야 합니다.  
+ PowerPivot 데이터 액세스 또는 데이터 새로 고침에 대한 요청을 각 웹 프런트 엔드 서버에서 처리하도록 하려면 각 서버의 서로 다른 URL을 동일한 웹 응용 프로그램에 매핑해야 합니다.  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **대체 액세스 매핑 구성**을 클릭 합니다.  
   
-2.  대체 액세스 매핑 컬렉션에서 사용하는 웹 애플리케이션을 선택합니다.  
+2.  대체 액세스 매핑 컬렉션에서 사용하는 웹 응응 프로그램을 선택합니다.  
   
 3.  **내부 URL 추가**를 클릭 합니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68890734"
   
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소 > http://\<your computer name을 지정할 수 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소에 http://\< > 컴퓨터 이름을 지정할 수 있습니다.  
   
 2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "68890734"
   
 6.  서버 유형에서 **Analysis  Services**를 선택합니다.  
   
-7.  서버 이름에 서버 이름  **\<> \powerpivot**을 입력 합니다. 여기서  **\<server-name >** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
+7.  서버 이름에 @no__t- **1server-name > \powerpivot**을 입력 합니다. 여기서 **\<server-name >** 은 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.  
   
 8.  **연결**을 클릭합니다.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "68890734"
  PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 업로드 크기를 늘려야 할 수 있습니다. 웹 응용 프로그램에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [SharePoint용 PowerPivot &#40;&#41;최대 파일 업로드 크기 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)을 참조 하세요.  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>통합 문서 사용자에게 SharePoint 사용 권한 부여  
- 통합 문서를 게시하거나 보려는 사용자에게는 SharePoint 사용 권한이 필요합니다. 게시 된 통합 문서를 확인 해야 하는 사용자에 게 **보기** 권한을 부여 하 고 통합 문서를 게시 또는 관리 하는 사용자에 게 사용 권한을 부여 해야 합니다. 사용 권한을 부여하려면 사이트 컬렉션 관리자여야 합니다.  
+ 통합 문서를 게시하거나 보려는 사용자에게는 SharePoint 사용 권한이 필요합니다. 게시 된 통합 문서를 확인 해야 하는 사용자에 게 **보기** 권한을 부여 **하 고 통합** 문서를 게시 또는 관리 하는 사용자에 게 사용 권한을 부여 해야 합니다. 사용 권한을 부여하려면 사이트 컬렉션 관리자여야 합니다.  
   
 1.  사이트에서 **사이트 작업**을 클릭합니다.  
   
@@ -261,11 +261,11 @@ ms.locfileid: "68890734"
  PowerPivot 갤러리는 SharePoint 사이트에서 PowerPivot 통합 문서를 보는 데 사용되는 미리 보기 및 프레젠테이션 옵션을 포함하는 라이브러리입니다. 해당 미리 보기 기능을 사용하려면 PowerPivot 갤러리를 사용하여 PowerPivot 통합 문서를 게시하고 보는 것이 좋습니다. 또한 같은 SharePoint 서버에 Reporting Services도 배포하는 경우 PowerPivot 갤러리를 사용하여 보고서를 쉽게 만들 수 있습니다. PowerPivot 갤러리에서 보고서 작성기를 시작하여 게시된 PowerPivot 통합 문서를 기반으로 새 보고서를 만들 수 있습니다. 라이브러리를 만들고 사용 하는 방법에 대 한 자세한 내용은 [Powerpivot 갤러리 만들기 및 사용자 지정](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) 및 [powerpivot 갤러리 사용](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery)을 참조 하세요.  
   
 #### <a name="tune-configuration-settings"></a>구성 설정 조정  
- PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용량 현황 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+ PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
- [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
+ [SQL Server 2012의 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [SharePoint용 PowerPivot 2010 @no__t 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)-1  
+ [ 배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장 @ no__t-0  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096825"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952676"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>고급 다중 웹 사이트 구성(SSRS 암호 모드)
   이 대화 상자에서는 보고서 서버 또는 보고서 관리자에 액세스할 때 사용되는 URL을 만들고 관리할 수 있습니다. **고급 다중 웹 사이트 구성** 대화 상자는 호스트 헤더 이름을 포함하는 사용자 지정 URL, 추가 URL을 만들거나 IP 주소를 IPv4 또는 IPv6 형식으로 지정하는 데 사용됩니다.  
@@ -40,12 +40,12 @@ ms.locfileid: "66096825"
   
 -   **127.0.0.1** - localhost 액세스에 사용되며 보고서 서버 컴퓨터에 대한 로컬 관리를 지원합니다. 이 값만 선택할 경우 보고서 서버 컴퓨터에 로컬로 로그온한 사용자만 애플리케이션에 액세스할 수 있습니다.  
   
--   *Nnn.nnn.nnn.nnn* - 컴퓨터에 설치된 네트워크 어댑터 카드의 IPv4 주소입니다. 네트워크에서 IPv6 주소에 IP 주소에 8 개의 4 바이트 필드로 다음 형식으로 128 비트 값 됩니다: \<머리글 >:*nnnn:nnnn:nnnn:nnnn*합니다.  
+-   *Nnn.nnn.nnn.nnn* - 컴퓨터에 설치된 네트워크 어댑터 카드의 IPv4 주소입니다. 네트워크에서 IPv6 주소 지정을 사용 하는 경우 IP 주소는 \<header >:*nnnn: nnnn: nnnn: nnnn*형식과 비슷한 8 4 바이트 필드의 128 비트 값입니다.  
   
      카드가 여러 개인 경우 카드 하나당 한 개의 IP 주소가 표시됩니다. IP 주소를 한 개만 선택할 경우 해당 IP 주소와 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름만 애플리케이션에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다.  
   
  **포트**  
- 보고서 서버에서 요청을 모니터링하는 포트를 지정합니다. 기본 포트는 포트 80입니다. 포트 80을 사용할 경우 URL에 포트 번호를 포함시킬 필요가 없습니다. 다른 포트 번호를 사용 하는 경우 항상 포함 해야 url에서 (예를 들어 http://localhost:8181/reports) 합니다.  
+ 보고서 서버에서 요청을 모니터링하는 포트를 지정합니다. 기본 포트는 포트 80입니다. 포트 80을 사용할 경우 URL에 포트 번호를 포함시킬 필요가 없습니다. 다른 포트 번호를 사용 하는 경우 URL에 항상 포함 해야 합니다 (예: http://localhost:8181/reports) ).  
   
  **호스트 헤더**  
  컴퓨터로 확인되는 도메인 이름 서버에 호스트 헤더가 이미 정의되어 있는 경우 보고서 서버 액세스용으로 구성되는 호스트 헤더를 URL에 지정할 수 있습니다.  

@@ -1,10 +1,10 @@
 ---
 title: _exec_requests (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326163"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923771"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "71326163"
 |database_id|**smallint**|요청을 실행 중인 대상 데이터베이스의 ID입니다. Null을 허용하지 않습니다.|  
 |user_id|**int**|요청을 제출한 사용자의 ID입니다. Null을 허용하지 않습니다.|  
 |connection_id|**uniqueidentifier**|요청이 도착한 연결의 ID입니다. Null을 허용합니다.|  
-|blocking_session_id|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 현재 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
+|blocking_session_id|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL 이거나 0 이면 요청이 차단 되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다 (또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 현재 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
 |wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 자세한 내용은 [_os_wait_stats &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조 하세요.|  
 |wait_time|**int**|요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다.|  
 |last_wait_type|**nvarchar(60)**|이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. Null을 허용하지 않습니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "71326163"
 |ansi_padding|**bit**|1 = ANSI_PADDING 설정이 요청에 대해 ON입니다.<br /><br /> 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS 설정이 요청에 대해 ON입니다. 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL 설정이 요청에 대해 ON입니다. 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
-|transaction_isolation_level|**smallint**|이 요청이 만들어진 트랜잭션의 격리 수준을 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = 지정되지 않음<br /><br /> 1 = 커밋되지 않은 읽기<br /><br /> 2 = 커밋된 읽기<br /><br /> 3 = 반복 읽기<br /><br /> 4 = 직렬화 가능<br /><br /> 5 = 스냅샷|  
+|transaction_isolation_level|**smallint**|이 요청이 만들어진 트랜잭션의 격리 수준을 나타냅니다. Null을 허용하지 않습니다.<br /> 0 = 지정되지 않음<br /> 1 = 커밋되지 않은 읽기<br /> 2 = 커밋된 읽기<br /> 3 = 반복 읽기<br /> 4 = 직렬화 가능<br /> 5 = 스냅샷|  
 |lock_timeout|**int**|이 요청에 대한 잠금 제한 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |deadlock_priority|**int**|요청에 대한 DEADLOCK_PRIORITY 설정입니다. Null을 허용하지 않습니다.|  
 |row_count|**bigint**|이 요청에서 클라이언트에 반환된 행 수입니다. Null을 허용하지 않습니다.|  
@@ -96,6 +96,7 @@ ms.locfileid: "71326163"
 |is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
 |page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하 `wait_resource` 는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다. 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database Hyperscale<br /><br /> 이 요청에서 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>설명 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2\. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
 
-다음 예제에서는 **_exec_requests** 를 쿼리하여 흥미로운 일괄 처리를 찾고 출력에서 해당 `transaction_id` 일괄 처리를 복사 합니다.
+다음 예제에서는 **_exec_requests** 를 쿼리하여 흥미로운 일괄 처리를 찾고 출력에서 해당 `transaction_id`을 복사 합니다.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-그런 다음, 잠금 정보 `transaction_id` 를 찾으려면 시스템 함수 **sys. dm _strrrstrstrstrrrrrstrstrr**  
+그런 다음, 잠금 정보를 찾으려면 시스템 함수 **sys. dm**_astrrrrr_l와 함께 복사 된 `transaction_id`을 사용 합니다.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092672"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952038"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)
   이 섹션에서는 Reporting Services 구성 관리자에 대한 F1 도움말을 제공합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "66092672"
   
 -   [암호화 키 복원](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [스케일 아웃 배포](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [확장 배포](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  

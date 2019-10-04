@@ -1,5 +1,5 @@
 ---
-title: 데이터를 지원 하도록 ADO.NET Data Services 설치 피드 SharePoint 목록의 내보내기 | Microsoft Docs
+title: ADO.NET Data Services를 설치 하 여 SharePoint 목록의 데이터 피드 내보내기를 지원 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 622d729e0b86a210bbdaaedf29818a49e81ed2ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9b3ec2d8b7459f9d66313c6a40b1cbc26450e0d
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094658"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952160"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원
   SharePoint 목록의 데이터 피드 내보내기를 수행하려면 ADO.NET Data Services가 필요합니다. 이 구성 요소는 SharePoint 2010의 SharePoint 필수 구성 요소 설치 관리자 프로그램에 포함되어 있지 않으므로 수동으로 설치해야 합니다.  
   
- 이 필수 구성이 요소가 없는 데이터 피드로 내보내진 SharePoint 목록을 사용 하려고 할 때 다음 오류가 표시 됩니다. "보안상의 이유로 DTD에서에서 표시가 금지 된이 XML 문서입니다. DTD 처리를 활성화하려면 XmlReaderSettings의 ProhibitDtd 속성을 false로 설정하고 이 설정을 XmlReader.Create 메서드로 전달합니다."  
+ 이 필수 구성 요소가 없는 경우 데이터 피드로 내보내진 SharePoint 목록을 사용 하려고 하면 다음과 같은 오류가 발생 합니다. "보안상의 이유로이 XML 문서에서는 DTD가 허용 되지 않습니다. DTD 처리를 활성화하려면 XmlReaderSettings의 ProhibitDtd 속성을 false로 설정하고 이 설정을 XmlReader.Create 메서드로 전달합니다."  
   
  다음 지침에 따라 목록을 데이터 피드로 내보내도록 허용할 모든 SharePoint 서버에 ADO.NET Data Services를 설치합니다.  
   

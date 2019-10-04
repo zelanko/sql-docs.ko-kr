@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 0b7fee687c45dd0b96197e6c920971661c6b70dc
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530915"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952456"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -103,13 +103,13 @@ ms.locfileid: "69530915"
   
 3.  **SQL Server PowerPivot 서비스 응용 프로그램**을 선택합니다. 이 응용 프로그램이 목록에 표시되지 않으면 SharePoint용 PowerPivot이 설치되지 않았거나 솔루션이 배포되지 않은 것입니다.  
   
-4.  **새 PowerPivot 서비스 응용 프로그램 만들기** 페이지에 응용 프로그램의 이름을 입력합니다. 기본값은 get-powerpivotserviceapplication\<number >입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
+4.  **새 PowerPivot 서비스 응용 프로그램 만들기** 페이지에 응용 프로그램의 이름을 입력합니다. 기본값은 Get-powerpivotserviceapplication @ no__t-0number >입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
   
 5.  애플리케이션 풀에서 새 애플리케이션 풀을 만들고 해당 풀에 대한 보안 계정을 선택합니다. 도메인 사용자 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 서비스 응용 프로그램 데이터베이스를 만들 데이터베이스 서버를 선택합니다. 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다.  
   
-7.  **데이터베이스 이름**에서 기본값은 PowerPivotServiceApplication1_\<guid >입니다. 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+7.  **데이터베이스 이름**에서 기본값은 PowerPivotServiceApplication1_ @ no__t-1guid >입니다. 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "69530915"
   
 5.  **데이터베이스**에 이 서비스 응용 프로그램에 대한 데이터베이스를 호스팅할 SQL Server 인스턴스를 지정합니다. 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다.  
   
-6.  **데이터베이스 이름**에 서비스 응용 프로그램 데이터베이스의 이름을 입력합니다. 기본값은 Secure_Store_Service_DB_\<guid >입니다. 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+6.  **데이터베이스 이름**에 서비스 응용 프로그램 데이터베이스의 이름을 입력합니다. 기본값은 Secure_Store_Service_DB_ @ no__t-0guid >입니다. 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 7.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. SQL 인증을 선택하는 경우 팜에서 이 인증 유형을 사용하는 방법에 대한 지침을 SharePoint 관리자 설명서에서 참조하십시오.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "69530915"
   
 9. 애플리케이션 풀에 대한 보안 계정을 선택합니다. 도메인 사용자 계정을 사용할 관리 계정을 지정합니다.  
   
-10. 나머지 기본값을 적용 한 다음 확인을 클릭 **합니다.** 을 클릭합니다. 서비스 애플리케이션이 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
+10. 나머지 기본값을 적용 한 다음 확인을 클릭 **합니다.** 을 클릭합니다. 서비스 응용 프로그램이 다른 관리 서비스와 함께 팜의 서비스 응용 프로그램 목록에 표시됩니다.  
   
 ##### <a name="part-2-generate-the-master-key"></a>2부: 마스터 키 생성  
   
@@ -198,7 +198,7 @@ ms.locfileid: "69530915"
  무인 PowerPivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [PowerPivot 무인 데이터 새로 고침 &#40;계정&#41; 구성](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 을 참조 하세요 SharePoint용 PowerPivot [PowerPivot 데이터 새로 고침 &#40;SharePoint용 PowerPivot&#41;에 저장 된 자격 증명을 구성](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
 ##  <a name="Usage"></a> 6단계: 사용 데이터 컬렉션 사용  
- SharePoint용 PowerPivot은 SharePoint 사용량 현황 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
+ SharePoint용 PowerPivot은 SharePoint 사용 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
   
 ##  <a name="Upload"></a>7 단계: SharePoint 웹 응용 프로그램 및 Excel 서비스의 최대 업로드 크기 늘리기  
  PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 크기를 늘려야 할 수 있습니다. 웹 응용 프로그램에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [SharePoint용 PowerPivot &#40;&#41;최대 파일 업로드 크기 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)을 참조 하세요.  
@@ -208,7 +208,7 @@ ms.locfileid: "69530915"
   
 1.  SharePoint  사이트에서 **사이트 작업**을 클릭합니다.  
   
-     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<컴퓨터 이름 > 입력 하 여 루트 사이트 모음을 열면 SharePoint 사이트에 자주 액세스할 수 있습니다.  
+     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<computer name >를 입력 하 여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "69530915"
   
  공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot  서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
   
- 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkId=159570)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 다음 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램의 x64 패키지를 다운로드 합니다.  
+ 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkId=159570)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 r 2에 대 한 microsoft® Analysis Services OLE DB Provider**을 찾은 후 @no__t 1 설치 프로그램의 x64 패키지를 다운로드 합니다.  
   
  확인 단계를 포함하여 공급자를 설치하는 방법은 [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하십시오.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "69530915"
   
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소 > http://\<your computer name을 지정할 수 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소에 http://\< > 컴퓨터 이름을 지정할 수 있습니다.  
   
 2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "69530915"
   
 5.  서버 유형에서 **Analysis  Services**를 선택합니다.  
   
-6.  서버 이름에 서버 이름  **\<> \powerpivot**을 입력 합니다. 여기서  **\<server-name >** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
+6.  서버 이름에 @no__t- **1server-name > \powerpivot**을 입력 합니다. 여기서 **\<server-name >** 은 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.  
   
 7.  **연결**을 클릭합니다.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "69530915"
  신뢰할 수 있는 사이트를 Excel 서비스에 추가하여 Excel 통합 문서 및 PowerPivot 데이터를 제공하는 사이트에 대한 권한 및 구성 설정을 다양하게 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration)을 참조하세요.  
   
 ### <a name="tune-configuration-settings"></a>구성 설정 조정  
- PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용량 현황 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+ PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ### <a name="install-powerpivot-for-excel-and-build-a-powerpivot-workbook"></a>PowerPivot for Excel 설치 및 PowerPivot 통합 문서 작성  
  팜에 서버 구성 요소를 설치한 후에는 포함된 PowerPivot 데이터를 사용하는 첫 번째 Excel 2010 통합 문서를 만들어 웹 애플리케이션에서 SharePoint 라이브러리에 게시할 수 있습니다. PowerPivot 데이터를 포함하는 Excel 통합 문서를 작성하기 전에 먼저 Excel 2010을 설치한 다음 Excel이 PowerPivot 데이터 가져오기와 향상된 기능을 지원하도록 확장하는 PowerPivot for Excel 추가 기능을 설치해야 합니다.  
@@ -290,13 +290,13 @@ ms.locfileid: "69530915"
   
  PowerPivot 서비스 애플리케이션을 구성하는 방법에 따라서는 PowerPivot 시스템 서비스가 기본 연결 그룹에 추가되어 기본 연결을 사용하는 모든 웹 애플리케이션에 제공될 수도 있습니다. 그러나 사용자 지정 서비스 애플리케이션 연결 목록을 사용하도록 웹 애플리케이션을 구성한 경우에는 PowerPivot 데이터 처리를 사용하려는 각 SharePoint 웹 애플리케이션에 대해 PowerPivot 서비스 애플리케이션을 추가해야 합니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca)을 참조 하세요.  
   
- 이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)PowerPivot 서버를 추가 하 여 확장 합니다.  
+ 이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [Deployment 검사 목록: SharePoint 2010 팜 @ no__t-0에 PowerPivot 서버를 추가 하 여 확장 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
- [중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
- [SharePoint에 PowerPivot 솔루션 배포](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
+ [SQL Server 2014의 버전에서 지원 되는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [PowerPivot 서비스 계정 @no__t 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)-1  
+ [중앙 관리 @no__t에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)-1  
+ SharePoint   [에 PowerPivot 솔루션 배포](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)  
  [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

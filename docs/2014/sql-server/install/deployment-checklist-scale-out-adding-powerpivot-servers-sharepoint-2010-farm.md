@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: db17c7d395507072745ec8c4b7dd606efea75230
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530931"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952180"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>배포 검사 목록: PowerPivot 서버를 SharePoint 2010 팜에 추가하여 확장
   SharePoint 팜에서 PowerPivot 쿼리 처리 요청이 많을 것으로 예상되는 경우에는 새 쿼리 및 데이터 처리 지원을 원활하게 추가하기 위해 추가 SharePoint용 PowerPivot 인스턴스를 추가할 수 있습니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "69530931"
   
 |단계|링크|  
 |----------|----------|  
-|팜에 이미 있는 Analysis Services 인스턴스의 서비스 계정을 확인합니다.|설치할 각 추가 인스턴스는 첫 번째 인스턴스와 동일한 계정으로 실행해야 합니다. 다음 방법 중 하나를 사용하여 서비스 계정을 결정합니다.<br /><br /> 중앙 관리의 보안 섹션에서 **서비스 계정 구성**을 클릭 합니다. **Windows 서비스-SQL Server Analysis Services**를 선택 합니다. 서비스를 선택하면 서비스 계정 이름이 페이지에 표시됩니다.<br /><br /> PowerPivot 서비스를 이미 설치한 서버에서 관리 도구에서 **서비스** 콘솔 응용 프로그램을 엽니다. **SQL Server Analysis Services**를 두 번 클릭 합니다. **로그온** 탭을 클릭 하 여 서비스 계정을 확인 합니다.<br />**중요 중앙관리\* 를 사용 하 여 서비스 계정을 변경 합니다. \* \* \*** 다른 도구나 방법을 사용하는 경우 팜에서 사용 권한이 제대로 업데이트되지 않습니다.|  
+|팜에 이미 있는 Analysis Services 인스턴스의 서비스 계정을 확인합니다.|설치할 각 추가 인스턴스는 첫 번째 인스턴스와 동일한 계정으로 실행해야 합니다. 다음 방법 중 하나를 사용하여 서비스 계정을 결정합니다.<br /><br /> 중앙 관리의 보안 섹션에서 **서비스 계정 구성**을 클릭 합니다. **Windows 서비스-SQL Server Analysis Services**를 선택 합니다. 서비스를 선택하면 서비스 계정 이름이 페이지에 표시됩니다.<br /><br /> PowerPivot 서비스를 이미 설치한 서버에서 관리 도구에서 **서비스** 콘솔 응용 프로그램을 엽니다. **SQL Server Analysis Services**를 두 번 클릭 합니다. **로그온** 탭을 클릭 하 여 서비스 계정을 확인 합니다.<br />**\* @ no__t-2 중요 \* @ no__t-4** 중앙 관리를 사용 하 여 서비스 계정을 변경 합니다. 다른 도구나 방법을 사용하는 경우 팜에서 사용 권한이 제대로 업데이트되지 않습니다.|  
 |설치 프로그램을 실행하여 SharePoint용 PowerPivot의 두 번째 인스턴스를 설치합니다.|[SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 팜에 연결되어 있지만 서버에 기존 PowerPivot 인스턴스가 없는 애플리케이션 서버를 선택합니다.<br /><br /> 설치하는 동안 서비스 계정을 지정하라는 메시지가 표시되면 이전 단계의 계정을 입력합니다. Analysis Services 서비스의 모든 인스턴스가 동일한 계정으로 실행되어야 합니다. 이 요구 사항을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 동일한 유형의 모든 서비스 인스턴스에 대해 한 곳에서 암호를 업데이트할 수 있습니다.|  
 |두 번째 인스턴스 구성|다음 방법 중 하나를 사용 하 여 인스턴스를 구성할 수 있습니다. [Windows PowerShell을 사용 하 여](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell) [Powerpivot 구성 도구](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools) 또는 powerpivot 구성<br /><br /> 두 번째 인스턴스 구성 시 로컬 서비스를 설치해야 합니다. 다른 모든 구성 태스크(예를 들어 서비스 애플리케이션 구성 또는 데이터 새로 고침 구성)는 초기 구성 중에 수행되며 설치한 후속 인스턴스에 의해 사용됩니다.|  
 |사후 설치 작업|추가 단계를 수행할 필요가 없습니다. 즉, 서비스 애플리케이션을 만들거나 기능을 활성화하거나 솔루션을 배포하거나 서비스 애플리케이션 ID를 변경하지 않아도 됩니다. 기존 웹 애플리케이션 및 서비스 애플리케이션이 새 서버 소프트웨어를 자동으로 검색해 사용합니다.<br /><br /> 선택적으로, 쿼리용 서버 및 데이터 새로 고침용 서버를 사용하기 위해 두 번째 서버를 설치한 경우 지금 각 서버에 의해 처리되는 요청 유형을 지정하도록 서버 인스턴스 속성을 구성할 수 있습니다. 자세한 내용은 [전용 데이터 새로 고침 또는 쿼리 전용 처리 &#40;SharePoint용 PowerPivot&#41;구성](../../analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)을 참조 하세요.|  
-|두 번째 인스턴스 설치 확인|다음 단계를 수행하여 앞서 설치한 서버에서 PowerPivot 쿼리 처리를 확인할 수 있습니다.<br /><br /> 1) 중앙 관리에서 서버에서 서비스 관리 페이지를 열어 서버와 해당 서비스가 표시 되는지 확인 합니다.<br />-서버에서 아래쪽 화살표를 클릭 하 고 서버 변경을 클릭 한 다음 새 SharePoint용 PowerPivot 설치 된 서버를 선택 합니다.<br />-SQL Server Analysis Services 및 SQL Server PowerPivot 시스템 서비스 시작 되었는지 확인 합니다.<br /><br /> 2) 중앙 관리에서 방금 설치한 서버가 유일 하 게 사용할 수 있도록 다른 SharePoint용 PowerPivot 서버를 중지 합니다. 자세한 내용은 [SharePoint용 PowerPivot 서버 시작 또는 중지](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)를 참조 하세요.<br /><br /> 3) PowerPivot 통합 문서를 클릭 하 여 라이브러리에서 엽니다.<br /><br /> 4) 슬라이서를 클릭 하거나 데이터를 피벗 하 여 쿼리를 시작 합니다. 서버에서 PowerPivot 데이터가 백그라운드에 로드됩니다. 다음 단계에서는 서버에 연결하여 데이터가 로드 및 캐시되는지 확인합니다.<br /><br /> 5) 시작 메뉴의 Microsoft SQL Server 프로그램 그룹에서 SQL Server Management Studio를 시작 합니다. 이 도구가 서버에 설치되어 있지 않으면 마지막 단계로 건너뛰어 캐시된 파일이 있는지 확인하면 됩니다.<br /><br /> 6) 서버 유형에 서 **Analysis Services**를 선택 합니다.<br /><br /> 7) 서버 이름에 서버 이름  **\<> \powerpivot**을 입력 합니다. 여기서  **\<server-name >** 은 새 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.<br /><br /> 8) **연결**을 클릭 합니다.<br /><br /> 9) 개체 탐색기에서 **데이터베이스** 를 클릭 하 여 로드 된 PowerPivot 데이터 파일 목록을 확인 합니다.<br /><br /> 10) 컴퓨터 파일 시스템에서 다음 폴더를 확인 하 여 파일이 디스크에 캐시 되는지 여부를 확인 합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시는 \Program Files\Microsoft SQL Server\MSAS11.POWERPIVOT\OLAP\Backup 폴더에서 확인할 수 있습니다.<br /><br /> 11) 이전에 중지 한 서비스를 다시 시작 합니다.|  
+|두 번째 인스턴스 설치 확인|다음 단계를 수행하여 앞서 설치한 서버에서 PowerPivot 쿼리 처리를 확인할 수 있습니다.<br /><br /> 1) 중앙 관리에서 서버에서 서비스 관리 페이지를 열어 서버와 해당 서비스가 표시 되는지 확인 합니다.<br />-서버에서 아래쪽 화살표를 클릭 하 고 서버 변경을 클릭 한 다음 새 SharePoint용 PowerPivot 설치 된 서버를 선택 합니다.<br />-SQL Server Analysis Services 및 SQL Server PowerPivot 시스템 서비스 시작 되었는지 확인 합니다.<br /><br /> 2) 중앙 관리에서 방금 설치한 서버가 유일 하 게 사용할 수 있도록 다른 SharePoint용 PowerPivot 서버를 중지 합니다. 자세한 내용은 [SharePoint용 PowerPivot 서버 시작 또는 중지](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)를 참조 하세요.<br /><br /> 3) PowerPivot 통합 문서를 클릭 하 여 라이브러리에서 엽니다.<br /><br /> 4) 슬라이서를 클릭 하거나 데이터를 피벗 하 여 쿼리를 시작 합니다. 서버에서 PowerPivot 데이터가 백그라운드에 로드됩니다. 다음 단계에서는 서버에 연결하여 데이터가 로드 및 캐시되는지 확인합니다.<br /><br /> 5) 시작 메뉴의 Microsoft SQL Server 프로그램 그룹에서 SQL Server Management Studio를 시작 합니다. 이 도구가 서버에 설치되어 있지 않으면 마지막 단계로 건너뛰어 캐시된 파일이 있는지 확인하면 됩니다.<br /><br /> 6) 서버 유형에 서 **Analysis Services**를 선택 합니다.<br /><br /> 7) 서버 이름에 @no__t- **1server-name > \powerpivot**을 입력 합니다. 여기서 **\<server-name >** 은 새 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.<br /><br /> 8) **연결**을 클릭 합니다.<br /><br /> 9) 개체 탐색기에서 **데이터베이스** 를 클릭 하 여 로드 된 PowerPivot 데이터 파일 목록을 확인 합니다.<br /><br /> 10) 컴퓨터 파일 시스템에서 다음 폴더를 확인 하 여 파일이 디스크에 캐시 되는지 여부를 확인 합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시는 \Program Files\Microsoft SQL Server\MSAS11.POWERPIVOT\OLAP\Backup 폴더에서 확인할 수 있습니다.<br /><br /> 11) 이전에 중지 한 서비스를 다시 시작 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [초기 구성 &#40;SharePoint용 PowerPivot&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   

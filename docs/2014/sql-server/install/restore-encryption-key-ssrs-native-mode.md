@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092514"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952030"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>복원 암호화 키(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 중요한 데이터를 보호합니다. 암호화된 데이터에 대한 지속적인 액세스를 보장하려면 서비스 계정이 변경된 경우, 또는 계획된 마이그레이션에 따라 암호화 키를 복원해야 하는 경우에 대비하여 암호화 키 백업을 만들어야 합니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용해서 키를 복원하는 방법에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66092514"
  데이터를 암호화하는 데 사용한 키와 다른 잘못된 키를 복원한 경우 현재 보고서 서버 데이터베이스에 저장된 데이터를 해독할 수 없습니다. 잘못된 키를 복원한 경우 올바른 키의 백업 복사본이 있으면 즉시 이 복사본을 복원해야 합니다. 데이터를 암호화하는 데 사용한 키의 백업 복사본이 없으면 암호화된 데이터를 모두 삭제해야 합니다. **암호화 키** 페이지에서 [삭제](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 단추를 클릭하여 이 단계를 수행합니다. 암호화된 내용을 삭제한 후에는 모든 구독을 수동으로 업데이트하고 보고서 서버에서 보고서 및 데이터 기반 구독에 정의된 모든 저장된 자격 증명을 다시 지정해야 합니다.  
   
 ## <a name="restore-encryption-key-dialog"></a>암호화 키 복원 대화 상자  
- 찾을 수 있는 위치에 대 한 정보에 대 한 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 참조 하세요 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)합니다.  
+ @No__t-0 Configuration Manager를 찾을 수 있는 위치에 대 한 자세한 [내용은 &#40;Reporting Services 구성 관리자 기본&#41;모드](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
  암호화 키 복원 대화 상자를 열려면 **구성 관리자의 탐색 창에서** 암호화 키 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 클릭한 다음 **복원**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. 자세한 내용은 다음을 참조하십시오.  
   

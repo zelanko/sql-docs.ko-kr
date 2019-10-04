@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454678"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952297"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **기본 모드** 에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 스토리지로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스의 이름은 `reportserver` 및 `reportservertempdb`입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "66454678"
 > [!IMPORTANT]  
 >  보고서 서버 데이터베이스에 대해 쿼리를 실행하는 애플리케이션을 작성하지 마십시오. 보고서 서버 데이터베이스는 공용 스키마가 아닙니다. 현재 릴리스의 테이블 구조는 다음 릴리스에서 변경될 수 있습니다. 보고서 서버 데이터베이스에 액세스해야 하는 애플리케이션을 작성하는 경우에는 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API를 사용하여 보고서 서버 데이터베이스에 액세스하십시오.  
 >   
->  이에 대한 예외는 실행 로그 뷰입니다. 자세한 내용은 참조 하세요. [보고서 서버 실행 로그 및 ExecutionLog3 뷰](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+>  이에 대한 예외는 실행 로그 뷰입니다. 자세한 내용은 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md) 를 참조 하세요.  
   
 ## <a name="ways-to-create-the-report-server-database"></a>보고서 서버 데이터베이스를 만드는 방법  
  **기본 모드:** 다음과 같은 방법으로 기본 모드 보고서 서버 데이터베이스를 만들 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "66454678"
 >  보고서 서버 데이터베이스를 호스팅하는 보고서 서버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 서로 다른 도메인에 있을 수 있습니다. 인터넷 배포의 경우 방화벽 뒤에 있는 서버를 사용하는 것이 일반적입니다. 보고서 서버를 인터넷 액세스용으로 구성하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하여 방화벽 뒤에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 IPSEC을 사용하여 연결 보안을 설정합니다.  
   
 ## <a name="database-server-edition-requirements"></a>데이터베이스 서버 에디션 요구 사항  
- 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은의 "보고서 서버 데이터베이스 서버 에디션 요구 사항" 섹션을 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)의 "보고서 서버 데이터베이스 서버 버전 요구 사항" 섹션을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 구성 관리자 &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  

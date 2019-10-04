@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892438"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952001"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 문제 해결
   예상한 페이지 및 기능 대신 오류가 발생할 경우 다음을 수행합니다.  
@@ -39,6 +39,6 @@ ms.locfileid: "68892438"
   
 4.  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
   
- 이 문제의 추가 원인은 https://support.microsoft.com/kb/2361559) [PowerPivot 갤러리의 아이콘에 빨간색 X가 표시](https://support.microsoft.com/kb/2361559) 되는 경우를 참조 하세요.  
+ 이 문제의 추가 원인은 [PowerPivot 갤러리의 아이콘에 빨간색 X가 표시](https://support.microsoft.com/kb/2361559) 되는 경우 (https://support.microsoft.com/kb/2361559) 을 참조 하세요.  
   
   

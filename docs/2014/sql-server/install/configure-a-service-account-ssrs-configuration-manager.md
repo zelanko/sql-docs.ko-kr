@@ -1,5 +1,5 @@
 ---
-title: 서비스 계정 (SSRS 구성 관리자) 구성 | Microsoft Docs
+title: 서비스 계정 구성 (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096101"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952580"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램은 하나의 서비스 내에서 실행됩니다. 서비스를 실행하는 계정은 설치 중 서비스 ID 페이지에 계정을 지정할 때 정의되지만 다른 계정을 사용하거나 암호를 업데이트하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "66096101"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버에 연결합니다.  
   
-2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 내용은 지정할 계정 유형에 대 한 권장 사항은 [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)합니다.  
+2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 지정할 계정 유형에 대 한 권장 사항은 [보고서 서버 서비스 계정 &#40;SSRS Configuration Manager&#41;구성](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조 하세요.  
   
 3.  Windows 사용자 계정을 선택한 경우 새 계정과 암호를 지정합니다. 계정은 20자를 초과할 수 없습니다.  
   

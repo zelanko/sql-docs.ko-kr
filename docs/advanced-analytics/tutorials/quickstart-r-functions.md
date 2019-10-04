@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용 하 여 고급 통계 계산을 위해 R 함수를 작성 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/03/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cebd4ea6a356af6802a0e26f778667b2acc4b80c
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149912"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951859"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ as.data.frame(rnorm(100, mean = 50, sd = 3));
 T-sql에서 r의이 줄을 호출 하려면 다음과 같이의 `sp_execute_external_script`r 스크립트 매개 변수에 r 함수를 추가 합니다.
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(100, mean = 50, sd =3));'
@@ -62,7 +62,7 @@ CREATE PROCEDURE MyRNorm (
     , @param3 INT
     )
 AS
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -82,7 +82,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 이제 저장 프로시저에서 R 함수를 래핑했으므로 다음과 같이 쉽게 함수를 호출하고 다른 값을 전달할 수 있습니다.
 
 ```sql
-EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
+EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>문제 해결에 R 유틸리티 함수 사용
@@ -103,9 +103,7 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> 대부분의 사용자는 r에서 시스템 타이밍 함수 (예: `system.time` 및 `proc.time`)를 사용 하 여 r 프로세스에 사용 되는 시간을 캡처하고 성능 문제를 분석 하는 것입니다.
-
-예제는 다음 자습서를 참조 하세요. [데이터 기능을 만듭니다](../tutorials/walkthrough-create-data-features.md). 이 연습에서 r 타이밍 함수는 R 함수 및의 성능을 비교 하기 위해 솔루션에 포함 되어 있습니다. 데이터에서 기능을 만들기 위한 t-sql 함수입니다.
+> 대부분의 사용자는 r에서 시스템 타이밍 함수 (예: `system.time` 및 `proc.time`)를 사용 하 여 r 프로세스에 사용 되는 시간을 캡처하고 성능 문제를 분석 하는 것입니다. 예를 들어 솔루션에 R 타이밍 함수가 포함 된 [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md) 자습서를 참조 하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -9,31 +9,31 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428981"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952466"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>보고서 서버 상태(SSRS 기본 모드)
   이 페이지를 사용하여 현재 연결된 보고서 서버 인스턴스에 대한 정보를 볼 수 있습니다. 이 페이지는 보고서 서버 구성의 시작 페이지입니다. 추가 페이지에서는 URL, 서비스 계정, 보고서 서버 데이터베이스, 보고서 서버 전자 메일 배달, 스케일 아웃 배포 및 암호화 키를 구성할 수 있습니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
- 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)합니다.  
+ 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)을 참조 하세요.  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 (RSConfigTool.exe)는 "highestAvailable"의 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  
+>  @ No__t-0 Configuration Manager (Rsconfigtool.exe)는 "highestAvailable" 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  
   
- 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **서비스 상태를 보고 합니다.** "시작" 이어야 합니다. 관리자 도구의 서비스 콘솔 애플리케이션을 사용하여 서비스 상태를 확인할 수도 있습니다.  
+ 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **보고서 서비스 상태:** "Started" 여야 합니다. 관리자 도구의 서비스 콘솔 애플리케이션을 사용하여 서비스 상태를 확인할 수도 있습니다.  
   
 ## <a name="options"></a>변수  
  **SQL Server 인스턴스**  
- 현재 연결 중인 보고서 서버 인스턴스에 대한 정보를 표시합니다. 보고서 서버 인스턴스 이름은 명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기반으로 합니다. 기본 인스턴스는 MSSQLSERVER입니다. 명명된 인스턴스는 사용자가 설치 중 지정한 값입니다. 인스턴스에 대 한 자세한 내용은 참조 하세요. [여러 버전 및 SQL Server 인스턴스 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+ 현재 연결 중인 보고서 서버 인스턴스에 대한 정보를 표시합니다. 보고서 서버 인스턴스 이름은 명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기반으로 합니다. 기본 인스턴스는 MSSQLSERVER입니다. 명명된 인스턴스는 사용자가 설치 중 지정한 값입니다. 인스턴스에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [여러 버전 및 SQL Server 인스턴스 사용](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) 을 참조 하세요.  
   
 > [!NOTE]  
 >  SQL Server Express with Advanced Services에서 기본 인스턴스는 SQLExpress입니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "66428981"
  보고서 서버 서비스를 시작합니다. 컴퓨터 이름을 변경한 후에 보고서 서버를 다시 구성하는 경우처럼 일부 구성을 변경한 후에는 서비스를 다시 시작해야 합니다. URL 예약을 다시 구성하면 서비스가 자동으로 다시 시작됩니다. 변경을 적용하려면 다시 시작해야 합니다.  
   
  **중지**  
- 보고서 서버 서비스를 중지합니다. 서비스를 중지하면 보고서 서버의 작동이 중지됩니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+ 보고서 서버 서비스를 중지합니다. 서비스를 중지하면 보고서 서버의 작동이 중지됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) 를 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

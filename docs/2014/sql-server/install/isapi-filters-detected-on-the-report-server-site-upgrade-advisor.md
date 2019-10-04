@@ -1,5 +1,5 @@
 ---
-title: ISAPI 필터 (업그레이드 관리자)는 보고서 서버 사이트에서 검색 | Microsoft Docs
+title: 보고서 서버 사이트에서 ISAPI 필터가 검색 됨 (업그레이드 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 812fc3584f0d0742ea6065e4600da1f9a7755385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2b811955839eb22e3325d64c55454b92a6b1b8c
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094158"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952440"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>ISAPI 필터가 보고서 서버 사이트에서 검색됨(업그레이드 관리자)
-  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터에서 지원 되지 않습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
+  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-1에서 지원 되지 않습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 네이티브 합니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t 네이티브.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  업그레이드하기 전에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션이 웹 사이트에 대한 ISAPI 필터를 사용하는지 여부를 확인합니다. ISAPI 필터가 필요하지 않으면 보고서 서버를 업그레이드할 수 있습니다. 설치 프로그램은 IIS에서 실행되는 ISAPI 필터에 대한 지원 없이 기본 URL을 만듭니다. ISAPI 필터가 필요하면 ISAPI 필터를 호스팅하는 다른 방법(예: ISA Server를 사용하거나 IIS에서 ISAPI 필터를 계속 호스팅하는 방법)을 찾을 때까지 업그레이드하지 마십시오. 보고서 서버는 특정 시나리오에서 ISAPI 필터의 대체로 ASP.NET HTTPModules를 지원합니다. 자세한 내용은 MSDN에서 ASP.NET 설명서를 참조하십시오.  
   
 ## <a name="corrective-action"></a>수정 동작  
  배포에 필요한 ISAPI 필터를 호스팅하는 별도의 솔루션을 평가하고 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 업그레이드 문제 &#40;업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   
