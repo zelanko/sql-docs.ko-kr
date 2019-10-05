@@ -1,7 +1,7 @@
 ---
 title: 릴리스 정보
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 (미리 보기)의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 최신 업데이트 및 알려진 문제에 대해 설명 합니다.
+description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에 대 한 최신 업데이트 및 알려진 문제에 대해 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988102"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974390"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터의 릴리스 정보
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 최신 버전의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대 한 업데이트 및 알려진 문제를 나열 합니다.
+이 문서에는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 최신 릴리스에 대 한 업데이트 및 알려진 문제가 나와 있습니다.
 
 ## <a id="rc"></a>릴리스 후보 (8 월)
 
@@ -31,13 +31,13 @@ ms.locfileid: "70988102"
 |새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 |Always On 가용성 그룹 SQL Server |SQL Server 빅 데이터 클러스터를 배포 하는 경우 다음을 제공 하는 가용성 그룹을 만들도록 배포를 구성할 수 있습니다.<br/><br/>-고가용성 <br/><br/>-읽기-축소 <br/><br/>-데이터 풀에 데이터를 삽입 하는 스케일 아웃<br/><br>[고가용성을 사용 하 여 배포를](../big-data-cluster/deployment-high-availability.md)참조 하세요. |
-|`azdata` |[설치 관리자](./deploy-install-azdata-linux-package.md) 를 사용 하는 도구에 대 한 간단한 설치<br/><br/>[`azdata notebook`명령](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`명령](./reference-azdata-bdc-status.md) |
+|`azdata` |[설치 관리자](./deploy-install-azdata-linux-package.md) 를 사용 하는 도구에 대 한 간단한 설치<br/><br/>[`azdata notebook` 명령](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` 명령](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[Azure Data Studio의 릴리스 후보 빌드를 다운로드](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)합니다.<br/><br/>SQL Server 2019 가이드 Jupyter 책을 통해 전자 필기장 문제 해결을 추가 했습니다.<br/><br/>컨트롤러 로그인 환경이 추가 되었습니다.<br/><br/>서비스 끝점을 확인 하 고, 클러스터 상태를 보고, 노트북 문제 해결을 위한 컨트롤러 대시보드가 추가 되었습니다.<br/><br/>향상 된 노트북 셀 출력/편집 성능.|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
 
-* SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드 번호 `15.0.1900.47`는입니다.
+* SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드 번호가 `15.0.1900.47`입니다.
 
 * "Kubeadm" 배포 프로필은 위의 빌드 번호를 사용 하는 SQL Server 2019 빅 데이터 클러스터 릴리스 후보에서 지원 되지 않습니다. 대신, Kubeadm 배포에 대해 "kubeadm" 프로필을 사용 합니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "70988102"
 
 |새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-|퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [시작 하기를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)참조 하세요.|
+|퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [@No__t-1 시작을](deploy-get-started.md)참조 하세요.|
 |`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](deploy-install-azdata.md)를 참조하세요. |
 |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 외부 데이터 원본의 열이 전적으로 서수 위치에 따라 바인딩되고 EXTERNAL TABLE 정의에 지정된 이름이 사용되지 않았습니다. |
 |HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
@@ -169,7 +169,7 @@ ms.locfileid: "70988102"
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 로그 대시보드
 
-- Aris CTP 3.0과 3.1 사이에서 Kibana 버전이 6.3.1에서 7.0.1로 업그레이드되었습니다.  그러면 Microsoft Edge 브라우저가 Kibana와 호환 되지 않습니다. 사용자는 Microsoft Edge에서 Kibana 대시보드의 현재 버전을 로드할 때 빈 페이지를 표시 합니다. Kibana.rs에 대해 지원되는 브라우저를 보려면 [여기]( https://www.elastic.co/support/matrix#matrix_browse)를 참조하세요. 
+- CTP 3.0과 3.1 사이에서 Kibana 버전은 6.3.1에서 7.0.1로 업그레이드 되었습니다.  그러면 Microsoft Edge 브라우저가 Kibana와 호환 되지 않습니다. 사용자는 Microsoft Edge에서 Kibana 대시보드의 현재 버전을 로드할 때 빈 페이지를 표시 합니다. Kibana에 대해 지원 되는 브라우저는 [여기]( https://www.elastic.co/support/matrix#matrix_browse) 를 참조 하세요.
 
 
 ## <a id="ctp30"></a> CTP 3.0(5월)
@@ -498,9 +498,9 @@ make: *** [deploy-clean] Error 2
 
 | 새로운 기능 또는 업데이트 | 설명 |
 | :---------- | :------ |
-| IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
-| 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [앱을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| 애플리케이션을 빅 데이터 클러스터에 배포하기 위한 VS Code 확장. | [VS Code를 사용 하 여 응용 프로그램을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
+| 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [@No__t에서 앱을 배포 하는 방법-1](big-data-cluster-create-apps.md) |
+| 애플리케이션을 빅 데이터 클러스터에 배포하기 위한 VS Code 확장. | [VS Code를 사용 하 여 @no__t에 응용 프로그램을 배포 하는 방법-1](app-deployment-extension.md) |
 | **azdata** 도구 명령 사용법 변경 | 자세한 내용은 [azdata의 알려진 문제](#azdatactp23)를 참조하세요. |
 | 빅 데이터 클러스터에서 Sparklyr 사용 | [SQL Server 2019 빅 데이터 클러스터에서 Sparklyr 사용](sparklyr-from-RStudio.md) |
 | **HDFS 계층화**를 통해 빅 데이터 클러스터에 외장 HDFS 호환 스토리지를 탑재합니다. | [HDFS 계층화](hdfs-tiering.md)를 참조하세요 |
@@ -693,7 +693,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>알려진 문제
 
-다음 섹션에서는 CTP 2.1의에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 대 한 알려진 문제를 제공 합니다.
+다음 섹션에서는 CTP 2.1의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대 한 알려진 문제를 제공 합니다.
 
 #### <a name="deployment"></a>배포
 
@@ -768,7 +768,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>알려진 문제
 
-다음 섹션에서는 CTP 2.0의에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 대 한 알려진 문제를 제공 합니다.
+다음 섹션에서는 CTP 2.0의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대 한 알려진 문제를 제공 합니다.
 
 #### <a name="deployment"></a>배포
 
@@ -818,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>다음 단계
 
-에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.
+@No__t-0에 대 한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)를 참조 하십시오.
