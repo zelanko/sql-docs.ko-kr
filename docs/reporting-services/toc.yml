@@ -123,12 +123,12 @@
       href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: SQL Server 버전의 Reporting Services 기능
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Reporting Services 설치
+- name: Reporting Services 버전 설치
   items:
-    - name: Reporting Services 2017 설치
+    - name: Reporting Services 설치
       href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: Reporting Services 2017에 대한 제품 키 찾기
+        - name: Reporting Services 제품 키 찾기
           href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
     - name: 기본 모드에서 Reporting Services 2016 설치
       href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
