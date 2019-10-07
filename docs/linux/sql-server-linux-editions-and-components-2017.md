@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154651"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687384"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
@@ -161,15 +161,15 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 |기능|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|관리자 전용 연결|예|예|예|예, 추적 플래그 있음|예, 추적 플래그 있음|   
+|관리자 전용 연결|예|예|예|예, 추적 플래그 있음|   
 |PowerShell 스크립팅 지원|예|예|예|예| 
 |데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|예|예|예|예| 
-|정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니오|아니오|   
-|성능 데이터 수집기|예|예|예|아니오|아니오| 
-|표준 성능 보고서|예|예|예|아니오|아니오| 
-|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|아니오|아니오|   
+|정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니오|  
+|성능 데이터 수집기|예|예|예|아니오|
+|표준 성능 보고서|예|예|예|아니오|
+|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|아니오| 
 |인덱스 뷰의 직접 쿼리(NOEXPAND 힌트 사용)|예|예|예|예| 
-|인덱싱된 뷰의 자동 유지 관리|예|예|예|아니오|아니오| 
+|인덱싱된 뷰의 자동 유지 관리|예|예|예|아니오|
 |분산형 분할 뷰|예|아니오|아니오|아니오| 
 |병렬 인덱스 작업|예|아니오|아니오|아니오|  
 |쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|아니오|아니오|아니오| 
@@ -188,10 +188,10 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |MERGE 및 UPSERT 기능|예|예|예|예|   
 |날짜 및 시간 데이터 형식|예|예|예|예|  
 |국제화 지원|예|예|예|예| 
-|전체 텍스트 및 의미 체계 검색|예|예|예|예|아니오| 
-|쿼리에서 언어 지정|예|예|예|예|아니오|   
-|Service Broker(메시징)|예|예|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|   
-|Transact-SQL 엔드포인트|예|예|예|아니오|아니오| 
+|전체 텍스트 및 의미 체계 검색|예|예|예|예|
+|쿼리에서 언어 지정|예|예|예|예|
+|Service Broker(메시징)|예|예|아니요(클라이언트 전용)|아니요(클라이언트 전용)|
+|Transact-SQL 엔드포인트|예|예|예|아니오|
 |그래프|예|예|예|예|  
 
 

@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155752"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816609"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -249,13 +249,13 @@ ms.locfileid: "70155752"
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   

@@ -6,13 +6,13 @@ ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-ms.openlocfilehash: 1c9797eb7020b4381d21e5324ab2a3b23bb14b29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: ''
+ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061961"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710461"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase를 사용한 형식 매핑
 

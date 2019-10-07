@@ -6,14 +6,14 @@ ms.technology: polybase
 ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4f34532c2e2a54a457557410a4bc079c4cd4cbc0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811316"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710622"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ad89273416373b2c5c93f4d830c5f07d64beaa84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2e66a523fbc82d163c24b52f8c2289cdd38fd6f
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127047"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816726"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 스파스 파일의 크기 보기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,11 @@ ms.locfileid: "68127047"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 다음을 수행합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
+     데이터베이스 스냅샷의 **sys.database_files** 또는 **sys.master_files** 에서 **is_sparse**열을 선택합니다. 이 값은 다음과 같이 파일이 스파스 파일인지 여부를 나타냅니다.  
   
-     1 = File is a sparse file.  
+     1 = 스파스 파일입니다.  
   
-     0 = File is not a sparse file.  
+     0 = 스파스 파일이 아닙니다.  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>스파스 파일의 실제 크기 확인  
   
@@ -90,7 +88,7 @@ ORDER BY 1;
 ```
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071699"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816766"
 ---
 # <a name="attach-a-database"></a>데이터베이스 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ ms.locfileid: "68071699"
   
 2.  마우스 오른쪽 단추로 **데이터베이스** 를 클릭하고 **연결**을 클릭합니다.  
   
-3.  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭하고 **데이터베이스 파일 찾기** 대화 상자에서 데이터베이스가 있는 디스크 드라이브를 선택한 다음 디렉터리 트리를 확장하여 데이터베이스의 .mdf 파일을 선택합니다. 파일의 경로를 예로 들면 다음과 같습니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭하고 **데이터베이스 파일 찾기** 대화 상자에서 데이터베이스가 있는 디스크 드라이브를 선택한 다음 디렉터리 트리를 확장하여 데이터베이스의 .mdf 파일을 선택합니다. 파일의 경로를 예로 들면 다음과 같습니다.
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > 이미 연결된 데이터베이스를 선택하려고 하면 오류가 발생합니다.  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **연결할 데이터베이스**  
+     선택한 데이터베이스에 대한 정보를 표시합니다.  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<열 머리글 없음>  
+     연결 작업의 상태를 나타내는 아이콘을 표시합니다. 가능한 아이콘은 아래의 **상태** 에 대한 설명에 설명되어 있습니다.  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **MDF 파일 위치**  
+     선택한 MDF 파일의 경로와 파일 이름을 표시합니다.  
   
      **Database Name**  
-     Displays the name of the database.  
+     데이터베이스 이름을 표시합니다.  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **다른 이름으로 연결**  
+     필요에 따라 연결할 데이터베이스의 이름을 다른 이름으로 지정합니다.  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **소유자**  
+     필요에 따라 다른 소유자를 선택할 수 있도록 가능한 데이터베이스 소유자의 드롭다운 목록을 제공합니다.  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **상태**  
+     다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
     |아이콘|상태 텍스트|설명|  
     |----------|-----------------|-----------------|  
@@ -95,32 +93,32 @@ ms.locfileid: "68071699"
     |오른쪽과 왼쪽에 두 개의 검정 사분면이 있고 위쪽과 아래쪽에 두 개의 흰색 사분면이 있는 원|중지됨|사용자가 작업을 중지하여 연결 작업이 완료되지 않았습니다.|  
     |시계 반대 방향을 가리키는 곡선 모양의 화살표가 있는 원|롤백됨|연결 작업이 성공적으로 완료되었지만 다른 개체를 연결하는 동안 발생한 오류로 인해 롤백되었습니다.|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **메시지**  
+     빈 메시지 또는 "파일을 찾을 수 없습니다"라는 하이퍼링크를 표시합니다.  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **추가**  
+     필요한 기본 데이터베이스 파일을 찾습니다. 사용자가 .mdf 파일을 선택하면 **연결할 데이터베이스** 표의 각 필드에 적절한 정보가 자동으로 입력됩니다.  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **제거**  
+     선택한 파일을 **연결할 데이터베이스** 표에서 제거합니다.  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" 데이터베이스 정보**  
+     연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추( **...** )를 클릭합니다.  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > 파일이 없으면 **메시지** 열에 "찾을 수 없음"이 표시됩니다. 로그 파일을 찾을 수 없는 경우 다른 디렉터리에 있거나 삭제된 것입니다. 올바른 위치를 가리키도록 **데이터베이스 정보** 표의 파일 경로를 업데이트하거나 표에서 로그 파일을 제거해야 합니다. .ndf 데이터 파일을 찾을 수 없는 경우 올바른 위치를 가리키도록 표에서 해당 파일의 경로를 업데이트해야 합니다.  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **원래 파일 이름**  
+     데이터베이스에 속한 연결된 파일의 이름을 표시합니다.  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **파일 유형**  
+     파일의 형식( **데이터** 또는 **로그**)을 나타냅니다.  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **현재 파일 경로**  
+     선택한 데이터베이스 파일의 경로를 표시합니다. 이 경로는 직접 편집할 수 있습니다.  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **메시지**  
+     빈 메시지 또는 "**파일을 찾을 수 없습니다**"라는 하이퍼링크를 표시합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

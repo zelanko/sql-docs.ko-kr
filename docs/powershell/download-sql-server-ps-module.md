@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697286"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713205"
 ---
 # <a name="install-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68697286"
 
 모듈의 시험판 버전은 더 자주 제공될 수 있습니다. 이러한 버전의 모듈을 가져오는 방법에 대해서는 이 페이지 하단의 섹션을 참조하세요.
 
-PowerShell 갤러리에서 **SqlServer** 모듈을 설치하려면 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 세션을 시작하고 다음 명령을 사용합니다. 설치 시 문제가 발생할 경우 [Install-Module 설명서](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) 및 [Install-Module 참조](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)를 참조하세요.
+PowerShell 갤러리에서 **SqlServer** 모듈을 설치하려면 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 세션을 시작하고 다음 명령을 사용합니다. 설치 시 문제가 발생할 경우 [Install-Module 설명서](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) 및 [Install-Module 참조](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)를 참조하세요.
 
 **SqlServer** 모듈을 설치하려면
 

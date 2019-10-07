@@ -4,16 +4,16 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ffce4eeb7cffab8b2a8a25c6972fdc01aaf72345
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b343327b73a8e682a76b94757982f20fde81e7c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062326"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710612"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB의 외부 데이터에 액세스하도록 PolyBase 구성
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf2d5d29d080064f5958ec467b55b90ded8afff8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153099"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816703"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,11 +169,9 @@ ON
   
 3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 오류 *코드 5120 물리적 파일 "%.\*ls"를 열 수 없습니다. 운영 체제 오류 %d: "%ls"* .  
   
-     To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
+     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거하면 됩니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
     1.  ALTER Database 문을 사용하여 서버 A의 파일 경로를 로컬 폴더로 설정합니다.  
   

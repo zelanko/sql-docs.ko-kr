@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764365"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710963"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764365"
 |설명|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |아티클을 삭제합니다.|**sp_droparticle**|모든 매개 변수|구독을 만들기 전에 아티클을 삭제할 수 있습니다. 저장 프로시저를 사용하면 아티클에 대한 구독을 삭제할 수 있고, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하면 전체 구독을 삭제하고 다시 만든 후 동기화해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
-|열 필터를 변경합니다.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|열 필터를 변경합니다.|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 추가합니다.|**sp_articlefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|행 필터를 삭제합니다.|**sp_articlefilter**|**@article**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|행 필터를 변경합니다.|**sp_articlefilter**|**@filter_clause**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|행 필터를 삭제합니다.|**sp_articlefilter**|`@article`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|행 필터를 변경합니다.|**sp_articlefilter**|`@filter_clause`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 변경합니다.|**sp_changearticle**|**filter**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |스키마 옵션을 변경합니다.|**sp_changearticle**|**schema_option**|새 스냅샷|  
 |스냅샷을 적용하기 전에 구독자에서 테이블이 처리되는 방식을 변경합니다.|**sp_changearticle**|**pre_creation_cmd**|새 스냅샷|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764365"
 |INSERT, UPDATE 또는 DELETE 명령을 변경합니다.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 이름을 변경합니다.|**sp_changearticle**|**dest_table**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 소유자(스키마)를 변경합니다.|**sp_changearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764365"
 |프리 스냅샷 스크립트 또는 포스트 스냅샷 스크립트를 변경합니다.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|새 스냅샷(스크립트 내용을 변경한 경우에도 필요)<br /><br /> 구독자에 새 스크립트를 적용하기 위해 재초기화가 필요합니다.|  
 |조인 필터 또는 논리적 레코드를 추가합니다.|**sp_addmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 삭제합니다.|**sp_dropmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |사전 계산 파티션 사용을 설정 또는 해제합니다.|**sp_changemergepublication**|**use_partition_groups**|새 스냅샷|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 파티션 최적화를 설정 또는 해제합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764365"
 |매개 변수가 있는 필터가 게시의 마지막 필터인 아티클을 삭제합니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |아티클이 조인 필터 또는 논리적 레코드에서 부모인 아티클을 삭제합니다. 조인을 삭제하면 의도하지 않는 결과가 발생할 수 있습니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |다른 모든 경우의 아티클을 삭제합니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅샷|  
-|이전에 게시되지 않은 열 필터를 포함합니다.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|이전에 게시되지 않은 열 필터를 포함합니다.|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 추가, 삭제 또는 변경합니다.|**sp_changemergearticle**|**subset_filterclause**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.<br /><br /> 매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.<br /><br /> 아티클이 조인 필터에 포함되지 않은 경우 아티클을 삭제하고 이를 다른 행 필터로 다시 추가할 수 있습니다. 이 경우 전체 구독을 다시 초기화할 필요가 없습니다. 아티클을 추가 및 삭제하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |스키마 옵션을 변경합니다.|**sp_changemergearticle**|**schema_option**|새 스냅샷|  
 |열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  

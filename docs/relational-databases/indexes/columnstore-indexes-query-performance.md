@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009372"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816712"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -154,8 +154,6 @@ columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포�
 문자열 조건자 푸시다운을 사용하면 쿼리 실행 시 사전에 있는 값으로 조건자를 계산하고 조건을 충족할 경우 사전 값을 참조하는 모든 행이 자동으로 조건이 충족됩니다. 이렇게 하면 두 가지 방법으로 성능이 향상됩니다.
 1.  정규화된 행만 반환되어 SCAN 노드에서 받아야 하는 행 수를 줄입니다. 
 2.  문자열 비교 수가 상당히 줄어듭니다. 이 예제에서는 1백만 개의 비교에 대해 100개의 문자열 비교만 필요합니다. 아래 설명된 대로 몇 가지 제한 사항이 있습니다.    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   델타 행 그룹에 대한 문자열 조건자 푸시다운이 없습니다. 델타 행 그룹의 열에 대한 사전이 없습니다.    
     -   사전 항목이 64KB 항목을 초과하면 문자열 조건자 푸시다운이 없습니다.    

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066873"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708284"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,6 @@ AdventureWorks_snapshot_evening
   
 2.  AS SNAPSHOT OF 절을 사용하여 파일에서 CREATE DATABASE 문을 실행합니다. 스냅샷을 만들려면 원본 데이터베이스를 구성하는 모든 데이터베이스 파일의 논리적 이름을 지정해야 합니다. 구문은 다음과 같습니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -117,12 +115,12 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     여기서 *source_**database_name*은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name*은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name*은 데이터베이스를 되돌릴 스냅샷의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)을 사용해서만 만들 수 있습니다.  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  데이터베이스 스냅샷을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
   
 > [!NOTE]  
 >  이 예에서 사용된 `.ss` 확장명은 임의로 지정됩니다.  

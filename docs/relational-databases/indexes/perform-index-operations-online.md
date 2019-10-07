@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1c10bfefd80a121e858cc0175f08b6ee68ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 914d2a3bfd73c76fc89b1ca6ed0302f32e0a4d32
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909599"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680790"
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,12 +96,11 @@ ms.locfileid: "67909599"
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>온라인으로 인덱스를 만들거나, 다시 작성하거나, 삭제하려면  
   
 다음 예제에서는 AdventureWorks 데이터베이스의 기존 온라인 인덱스를 다시 작성합니다.
-  
- ```sql  
- ALTER INDEX AK_Employee_NationalIDNumber
-   ON HumanResources.Employee  
-   REBUILD WITH (ONLINE = ON)
-;
+
+```sql
+ALTER INDEX AK_Employee_NationalIDNumber
+    ON HumanResources.Employee
+    REBUILD WITH (ONLINE = ON);
 ```  
   
 다음 예에서는 `NewGroup` 절을 사용하여 온라인으로 클러스터형 인덱스를 삭제하고 결과 테이블을 `MOVE TO` 파일 그룹으로 옮깁니다. 테이블을 이동하기 전과 이동한 후에 파일 그룹에서의 인덱스 및 테이블 배치를 확인하기 위해 `sys.indexes`, `sys.tables`및 `sys.filegroups` 카탈로그 뷰를 쿼리합니다.  

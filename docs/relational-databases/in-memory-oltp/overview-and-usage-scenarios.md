@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059284"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961938"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ETL 워크플로에는 종종 준비 테이블로 데이터 로드, 데이터 �
 
 다음 위치에서 스크립트를 사용하여 기본 데이터 폴더에 파일 그룹을 만들고 권장 설정을 구성할 수 있습니다.
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 다음 스크립트는 데이터베이스에서 만들 수 있는 메모리 내 OLTP 개체를 보여 줍니다.
 
@@ -225,7 +225,7 @@ GO
 [더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](https://msdn.microsoft.com/library/mt694156.aspx)   
 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) 에서 확인할 수 있습니다.  
 [메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
+[메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
 [기본 메모리 내 OLTP 설명서](in-memory-oltp-in-memory-optimization.md)   
 [Azure SQL Database의 메모리 내 OLTP 성능 및 리소스 사용률 이점](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   

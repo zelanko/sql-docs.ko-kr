@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909721"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816689"
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909721"
   
 3.  정렬을 위한 추가 임시 디스크 공간을 확인합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     SORT_IN_TEMPDB를 ON으로 설정하여 **tempdb** 에서 정렬하고 SORT_IN_TEMPDB를 OFF로 설정하여 대상 위치에서 정렬하기 위한 공간 요구 사항이 나와 있습니다.  
   
     1.  SORT_IN_TEMPDB을 ON으로 설정한 경우 **tempdb** 에 가장 큰 인덱스(1백만*200바이트~200MB)를 보관할 만큼 충분한 디스크 공간이 있어야 합니다. 정렬 작업에서는 채우기 비율을 고려하지 않습니다.  
   

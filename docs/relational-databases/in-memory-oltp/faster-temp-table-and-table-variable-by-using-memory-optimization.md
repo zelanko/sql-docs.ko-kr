@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092235"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713247"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
   
   
 기존의 테이블 변수는 tempdb 데이터베이스에서 테이블을 나타냅니다. 훨씬 빠른 성능을 위해 테이블 변수를 메모리 액세스에 최적화할 수 있습니다.  
@@ -298,7 +298,7 @@ go
 ```  
 
 
-다음 스크립트는 파일 그룹을 만들고 권장되는 데이터베이스 설정을 구성합니다. [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+다음 스크립트는 파일 그룹을 만들고 권장되는 데이터베이스 설정을 구성합니다. [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 FILE 및 FILEGROUP의 `ALTER DATABASE ... ADD` 에 대한 자세한 내용은 다음을 참조하세요.  
   

@@ -1,20 +1,20 @@
 ---
 title: SQL Server 2019 CTP 2.0에서 외부 데이터 가상화 | Microsoft Docs
 description: 이 페이지에서는 CSV 파일에 대해 외부 테이블 만들기 마법사를 사용하는 단계를 자세히 설명합니다.
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: df014d179faa5321e3f4e472045eb64a9e9894be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041144"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710603"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV 파일과 함께 외부 테이블 마법사 사용
 
