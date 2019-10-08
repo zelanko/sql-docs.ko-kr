@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006062"
+ms.locfileid: "72008433"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용 하 여 데이터 형식 및 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ SQL Server는 Python **pandas** 패키지를 사용 하 여 테이블 형식 데
 - 데이터 프레임의 단일 값을 셀 이라고 하며 인덱스를 통해 액세스 합니다.
 
 데이터 프레임에 테이블 형식 구조가 필요한 경우 계산의 단일 결과를 데이터 프레임으로 노출 하는 방법 한 가지 대답은 단일 스칼라 값을 데이터 프레임으로 쉽게 변환 되는 계열로 나타내는 것입니다. 
+
+> [!NOTE]
+> 날짜를 반환할 때 SQL의 Python은 날짜 범위가 1753-01-01 (-53690)에서 9999-12-31 (2958463)까지 제한 된 DATETIME을 사용 합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
