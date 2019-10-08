@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af8aa1693f303f76c04219e384d13a0bbaf6afe
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 32b8c8b1bbac53b099afc64f06a0eb5137292555
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211291"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006086"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -51,41 +51,41 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @account_name = ] 'account_name'`추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @account_name = ] 'account_name'` 추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @email_address = ] 'email_address'`메시지를 보낼 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. *email_address* 는 **nvarchar (128)** 이며 기본값은 없습니다. 예를 들어 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정은 주소 **SqlAgent@Adventure-Works.com** 에서 전자 메일을 보낼 수 있습니다.  
+`[ @email_address = ] 'email_address'`은 메시지를 보낼 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. *email_address* 는 **nvarchar (128)** 이며 기본값은 없습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 계정은 주소 **SqlAgent@Adventure-Works.com** 에서 전자 메일을 보낼 수 있습니다.  
   
-`[ @display_name = ] 'display_name'`이 계정의 전자 메일 메시지에 사용할 표시 이름입니다. *display_name* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 전자 메일 메시지의 **자동 메일러 SQL Server 에이전트** 이름이 표시 될 수 있습니다.  
+`[ @display_name = ] 'display_name'`이 계정의 전자 메일 메시지에 사용할 표시 이름입니다. *display_name* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대 한 계정은 전자 메일 메시지에 **SQL Server 에이전트 자동 메일러** 이름을 표시할 수 있습니다.  
   
-`[ @replyto_address = ] 'replyto_address'`이 계정에서 메시지에 대 한 응답을 보낼 주소입니다. *replyto_address* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 에이전트 계정에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 회신은 데이터베이스 관리자 인 **danw@Adventure-Works.com** 로 이동할 수 있습니다.  
+`[ @replyto_address = ] 'replyto_address'`이 계정에서 메시지에 대 한 응답을 보낼 주소입니다. *replyto_address* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 계정에 대 한 회신은 데이터베이스 관리자 인 **danw@Adventure-Works.com** 로 이동할 수 있습니다.  
   
-`[ @description = ] 'description'`계정에 대 한 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'`은 계정에 대 한 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
-`[ @mailserver_name = ] 'server_name'`이 계정에 사용할 SMTP 메일 서버의 이름 또는 IP 주소입니다. 를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 컴퓨터에서 IP 주소를 사용할 수 있도록 해당 컴퓨터를 확인할 수 있어야 합니다. 기본은 **sysname**이며 기본값은 없습니다.  
+`[ @mailserver_name = ] 'server_name'`이 계정에 사용할 SMTP 메일 서버의 이름 또는 IP 주소입니다. @No__t-0을 실행 하는 컴퓨터는 IP *주소에 대 한 대/* 소문자를 확인할 수 있어야 합니다. 기본은 **sysname**이며 기본값은 없습니다.  
   
-`[ @mailserver_type = ] 'server_type'`전자 메일 서버의 유형입니다. *server_type* 는 **sysname**이며 기본값은 **' SMTP '** 입니다.  
+`[ @mailserver_type = ] 'server_type'` 전자 메일 서버의 유형입니다. *server_type* 는 **sysname**이며 기본값은 **' SMTP '** 입니다.  
   
-`[ @port = ] port_number`전자 메일 서버의 포트 번호입니다. *port_number* 는 **int**이며 기본값은 25입니다.  
+`[ @port = ] port_number` 전자 메일 서버의 포트 번호입니다. *port_number* 는 **int**이며 기본값은 25입니다.  
   
-`[ @username = ] 'username'`전자 메일 서버에 로그온 하는 데 사용할 사용자 이름입니다. *username* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 이 매개 변수가 NULL이면 데이터베이스 메일은 이 계정에 대한 인증을 사용하지 않습니다. 메일 서버에 인증이 필요하지 않은 경우 username에 NULL을 사용합니다.  
+`[ @username = ] 'username'` 전자 메일 서버에 로그온 하는 데 사용할 사용자 이름입니다. *username* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 이 매개 변수가 NULL이면 데이터베이스 메일은 이 계정에 대한 인증을 사용하지 않습니다. 메일 서버에 인증이 필요하지 않은 경우 username에 NULL을 사용합니다.  
   
-`[ @password = ] 'password'`전자 메일 서버에 로그온 하는 데 사용할 암호입니다. *password* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. username을 지정하지 않으면 암호를 제공할 필요가 없습니다.  
+`[ @password = ] 'password'` 전자 메일 서버에 로그온 하는 데 사용할 암호입니다. *password* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. username을 지정하지 않으면 암호를 제공할 필요가 없습니다.  
   
-`[ @use_default_credentials = ] use_default_credentials`의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. **use_default_credentials** 는 bit 이며 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일 **@username** 는 및 **@password** 매개 변수를 보내고, 그렇지 않으면 및 **@password** 매개 변수 **@username** 없이 메일을 보냅니다.  
+`[ @use_default_credentials = ] use_default_credentials` @no__t의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 합니다. **use_default_credentials** 는 bit 이며 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 인 경우 데이터베이스 메일는 **\@username** 및 **\@password** 매개 변수 **@no__t** **@no__t** 를 보냅니다 (있는 경우).  
   
-`[ @enable_ssl = ] enable_ssl`데이터베이스 메일에서 SSL(Secure Sockets Layer)를 사용 하 여 통신을 암호화할지 여부를 지정 합니다. **Enable_ssl** 는 bit 이며 기본값은 0입니다.  
+`[ @enable_ssl = ] enable_ssl`은 데이터베이스 메일 SSL(Secure Sockets Layer)를 사용 하 여 통신을 암호화할지 여부를 지정 합니다. **Enable_ssl** 는 bit 이며 기본값은 0입니다.  
   
-`[ @account_id = ] account_id OUTPUT`새 계정에 대 한 계정 id를 반환 합니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @account_id = ] account_id OUTPUT`은 새 계정에 대 한 계정 id를 반환 합니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- 데이터베이스 메일는, **@email_address** **@display_name** 및 **@replyto_address** 에 대 한 별도의 매개 변수를 제공 합니다. **@email_address** 매개 변수는 메시지를 보낸 주소입니다. 매개 변수는 전자 메일 메시지의 보낸 위치: 필드에 표시 되는 이름입니다. **@display_name** **@replyto_address** 매개 변수는 전자 메일 메시지에 대 한 회신이 전송 되는 주소입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용된 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에만 사용되는 전자 메일 주소에서 전자 메일 메시지를 보낼 수 있습니다. 해당 주소에서 보낸 메시지는 쉽게 알아 볼 수 있는 이름으로 표시되므로 수신자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 메시지를 보냈는지를 쉽게 확인할 수 있습니다. 수신자가 메시지에 회신하면 회신은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 주소가 아니라 데이터베이스 관리자에게 전달되어야 합니다. 이 시나리오에서 계정은 전자 메일 주소로 **SqlAgent@Adventure-Works.com** 를 사용 합니다. 표시 이름은 **SQL Server 에이전트 자동화 된 메일러**로 설정 됩니다. 이 계정은를 **danw@Adventure-Works.com** 회신 주소로 사용 하므로이 계정에서 보낸 메시지에 대 한 회신은 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전자 메일 주소가 아니라 데이터베이스 관리자에 게 전달 됩니다. 이 세 매개 변수에 독립된 설정을 제공하면 데이터베이스 메일에서 사용자 요구 사항에 맞게 메시지를 구성할 수 있습니다.  
+ 데이터베이스 메일은 **@no__t 1email_address**, **\@display_name**및 **\@replyto_address**에 대 한 별도의 매개 변수를 제공 합니다. **@No__t-1email_address** 매개 변수는 메시지를 보낸 주소입니다. **@No__t-1display_name** 매개 변수는 전자 메일 메시지의 **보낸 위치:** 필드에 표시 되는 이름입니다. **@No__t-1replyto_address** 매개 변수는 전자 메일 메시지에 대 한 회신이 전송 되는 주소입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용된 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에만 사용되는 전자 메일 주소에서 전자 메일 메시지를 보낼 수 있습니다. 해당 주소에서 보낸 메시지는 쉽게 알아 볼 수 있는 이름으로 표시되므로 수신자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 메시지를 보냈는지를 쉽게 확인할 수 있습니다. 수신자가 메시지에 회신하면 회신은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 주소가 아니라 데이터베이스 관리자에게 전달되어야 합니다. 이 시나리오에서 계정은 전자 메일 주소로 **SqlAgent@Adventure-Works.com** 을 사용 합니다. 표시 이름은 **SQL Server 에이전트 자동화 된 메일러**로 설정 됩니다. 이 계정은 회신 주소로 **danw@Adventure-Works.com** 을 사용 하므로이 계정에서 보낸 메시지에 대 한 회신은 @no__t 2 에이전트의 전자 메일 주소가 아니라 데이터베이스 관리자에 게 전달 됩니다. 이 세 매개 변수에 독립된 설정을 제공하면 데이터베이스 메일에서 사용자 요구 사항에 맞게 메시지를 구성할 수 있습니다.  
   
- 매개 **@mailserver_type** 변수는 **' SMTP '** 값을 지원 합니다.  
+ **@No__t-1mailserver_type** 매개 변수는 **' SMTP '** 값을 지원 합니다.  
   
- 가 1 이면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보냅니다. **@use_default_credentials** 가 **@use_default_credentials** 0이 **@username** 고 계정에 **@password** 대해 및가 지정 된 경우이 계정은 SMTP 인증을 사용 합니다. 및는 계정이 SMTP 서버에 사용 하는 자격 증명으로, 또는 컴퓨터가 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크에 대 한 자격 증명이 아닙니다. **@password** **@username**  
+ **@No__t-1use_default_credentials** 가 1 이면 @no__t의 자격 증명을 사용 하 여 SMTP 서버로 메일을 보냅니다. **@No__t-1use_default_credentials** 가 0이 고 **\@username** 및 **\@password** 가 계정에 지정 된 경우이 계정은 SMTP 인증을 사용 합니다. **@No__t-1username** 및 **\@password** 는 계정이 SMTP 서버에 사용 하는 자격 증명 이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 컴퓨터가 있는 네트워크에 대 한 자격 증명은 아닙니다.  
   
  **Sysmail_add_account_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
@@ -93,7 +93,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `AdventureWorks Administrator`라는 계정을 만듭니다. 이 계정은 `dba@Adventure-Works.com`이라는 전자 메일 주소를 사용하고 SMTP 메일 서버 `smtp.Adventure-Works.com`으로 메일을 보냅니다. 이 계정에서 보낸 전자 메일 메시지 `AdventureWorks Automated Mailer` 는 메시지의 **보낸 사람:** 줄에 표시 됩니다. 메시지에 대한 회신은 `danw@Adventure-Works.com`으로 전달됩니다.  
+ 다음 예에서는 `AdventureWorks Administrator`라는 계정을 만듭니다. 이 계정은 `dba@Adventure-Works.com`이라는 전자 메일 주소를 사용하고 SMTP 메일 서버 `smtp.Adventure-Works.com`으로 메일을 보냅니다. 이 계정에서 보낸 전자 메일 메시지는 메시지의 **보낸 사람:** 줄에 `AdventureWorks Automated Mailer`이 표시 됩니다. 메시지에 대한 회신은 `danw@Adventure-Works.com`으로 전달됩니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_account_sp  
@@ -106,7 +106,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [데이터베이스 메일 계정을 만듭니다](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Transact-sql 저장 프로시저 &#40;데이터베이스 메일&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

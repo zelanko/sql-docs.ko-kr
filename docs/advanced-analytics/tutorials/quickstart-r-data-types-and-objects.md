@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용 하 여 R 및 SQL Server에서 데이터 형식 및 데이터 개체를 사용 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149962"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006005"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ $ c..world..: Factor w/ 1 level "world": 1
 현재로서는 R 개체를 데이터 프레임으로 강제 변환할 때 예상되는 결과를 확인해야 합니다.
 
 > [!TIP]
-> `is.matrix` ,`is.vector`와 같은 R id 함수를 사용 하 여 내부 데이터 구조에 대 한 정보를 반환할 수도 있습니다.
+> @No__t-0 `is.vector`과 같은 R id 함수를 사용 하 여 내부 데이터 구조에 대 한 정보를 반환할 수도 있습니다.
 
 ## <a name="implicit-conversion-of-data-objects"></a>데이터 개체의 암시적 변환
 
@@ -305,6 +305,7 @@ SQL Server에서 고급 R 함수를 작성 하는 방법에 대 한 자세한 �
 > [!div class="nextstepaction"]
 > [SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성](quickstart-r-functions.md)
 
-Machine Learning Services SQL Server에 대 한 자세한 내용은 다음을 참조 하세요.
+SQL Server Machine Learning Services에서 R을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
+- [SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services](quickstart-r-train-score-model.md)
 - [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)

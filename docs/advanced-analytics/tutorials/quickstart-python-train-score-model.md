@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services를 사용 하 여 Python에서 간단한 예측 모델을 만든 다음 새 데이터를 사용 하 여 결과를 예측 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad067e81bdb132d7958451d711e49ca57e308bac
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204290"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006020"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 Python에서 예측 모델을 만들고 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합�
 이 빠른 시작을 완료 하면 다음을 익힐 수 있습니다.
 
 > [!div class="checklist"]
-> * 저장 프로시저에 Python 코드를 포함 하는 방법
-> * 저장 프로시저의 입력을 통해 코드에 입력을 전달 하는 방법
-> * 저장 프로시저를 사용 하 여 모델을 운영 하는 방법
+> - 저장 프로시저에 Python 코드를 포함 하는 방법
+> - 저장 프로시저의 입력을 통해 코드에 입력을 전달 하는 방법
+> - 저장 프로시저를 사용 하 여 모델을 운영 하는 방법
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -89,7 +89,7 @@ SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합�
 
 SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림으로 직렬화 되 고 데이터베이스 테이블의 VARBINARY (MAX) 열에 저장 됩니다. 모델을 만들고, 학습 하 고, serialize 하 고, 데이터베이스에 저장 한 후에는 다른 프로시저 또는 점수 매기기 작업의 [예측 t-sql](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 함수에 의해 호출 될 수 있습니다.
 
-1. 다음 스크립트를 실행 하 여 프로시저를 실행 합니다. 저장 프로시저 `EXECUTE` 를 실행 하는 특정 문은 네 번째 줄에 있습니다.
+1. 다음 스크립트를 실행 하 여 프로시저를 실행 합니다. 저장 프로시저를 실행 하는 특정 문은 네 번째 줄에서 `EXECUTE`입니다.
 
    이 특정 스크립트는 동일한 이름 ("Naive Bayes")의 기존 모델을 삭제 하 여 동일한 절차를 다시 실행 하 여 새로 만든 공간을 만듭니다. 모델을 삭제 하지 않으면 개체가 이미 존재 하는 것을 나타내는 오류가 발생 합니다. 모델은 **irissql** 데이터베이스를 만들 때 프로 비전 된 **iris_models**라는 테이블에 저장 됩니다.
 
@@ -117,9 +117,9 @@ SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림�
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>예측을 생성 하는 저장 프로시저 만들기 및 실행
 
-모델을 만들고, 학습 하 고, 저장 했으므로 다음 단계로 이동 합니다. 예측을 생성 하는 저장 프로시저 만들기 을 호출 `sp_execute_external_script` 하 여 serialize 된 모델을 로드 하는 Python 스크립트를 실행 하 고 점수에 대 한 새 데이터 입력을 제공 하 여이 작업을 수행 합니다.
+모델을 만들고, 학습 하 고, 저장 했으므로 다음 단계로 이동 합니다. 예측을 생성 하는 저장 프로시저 만들기 @No__t-0을 호출 하 여 직렬화 된 모델을 로드 하는 Python 스크립트를 실행 하 고 점수에 새 데이터 입력을 제공 하 여이 작업을 수행 합니다.
 
-1. 다음 코드를 실행 하 여 점수 매기기를 수행 하는 저장 프로시저를 만듭니다. 런타임에이 프로시저는 이진 모델을 로드 하 고, 열 `[1,2,3,4]` 을 입력으로 사용 하 고, 열 `[0,5,6]` 을 출력으로 지정 합니다.
+1. 다음 코드를 실행 하 여 점수 매기기를 수행 하는 저장 프로시저를 만듭니다. 런타임에이 프로시저는 이진 모델을 로드 하 고, `[1,2,3,4]` 열을 입력으로 사용 하 고, `[0,5,6]` 열을 출력으로 지정 합니다.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -160,17 +160,17 @@ SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림�
    GO
    ```
 
-   저장 프로시저를 실행 하면 Python 데이터 프레임이 반환 됩니다. T-sql의이 줄은 반환 된 결과 `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`에 대 한 스키마를 지정 합니다. 결과를 새 테이블에 삽입 하거나 응용 프로그램에 반환할 수 있습니다.
+   저장 프로시저를 실행 하면 Python 데이터 프레임이 반환 됩니다. T-sql의이 줄은 반환 된 결과에 대 한 스키마를 지정 합니다. `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. 결과를 새 테이블에 삽입 하거나 응용 프로그램에 반환할 수 있습니다.
 
    ![실행 중인 저장 프로시저의 결과 집합](media/train-score-using-python-NB-model-results.png)
 
    결과는 흰꽃잎색 특성을 입력으로 사용 하는 방법에 대 한 150의 예측입니다. 대부분의 관찰에서 예측 된 종류는 실제 종류와 일치 합니다.
 
-   이 예제는 학습 및 점수 매기기에 Python iri 데이터 집합을 사용 하 여 간단 하 게 만들었습니다. 보다 일반적인 접근 방법은 SQL 쿼리를 실행 하 여 새 데이터를 가져오고로 `InputDataSet`Python에 전달 하는 것과 관련이 있습니다.
+   이 예제는 학습 및 점수 매기기에 Python iri 데이터 집합을 사용 하 여 간단 하 게 만들었습니다. 보다 일반적인 접근 방식은 SQL 쿼리를 실행 하 여 새 데이터를 가져오고 `InputDataSet`으로 Python에 전달 하는 것과 관련이 있습니다.
 
 ## <a name="conclusion"></a>결론
 
-이 연습에서는 다른 태스크 전용 저장 프로시저를 만드는 방법을 알아보았습니다. 여기서 각 저장 프로시저는 시스템 저장 프로시저 `sp_execute_external_script` 를 사용 하 여 Python 프로세스를 시작 합니다. Python 프로세스에 대 한 입력은 매개 `sp_execute_external` 변수로에 전달 됩니다. SQL Server 데이터베이스의 Python 스크립트 자체와 데이터 변수는 모두 입력으로 전달 됩니다.
+이 연습에서는 각 저장 프로시저에서 시스템 저장 @no__t 프로시저를 사용 하 여 Python 프로세스를 시작 하는 다른 작업에 전용 저장 프로시저를 만드는 방법을 알아보았습니다. Python 프로세스에 대 한 입력은 매개 변수로 `sp_execute_external`에 전달 됩니다. SQL Server 데이터베이스의 Python 스크립트 자체와 데이터 변수는 모두 입력으로 전달 됩니다.
 
 일반적으로는 세련 된 Python 코드와 함께 SSMS를 사용 하거나 행 기반 출력을 반환 하는 간단한 Python 코드를 사용 하도록 계획 해야 합니다. 이 도구로 SSMS는 T-sql과 같은 쿼리 언어를 지원 하 고 평면화 된 행 집합을 반환 합니다. 코드에서 산 점도 또는 히스토그램과 같은 시각적 출력을 생성 하는 경우 이미지를 렌더링할 수 있는 도구나 최종 사용자 응용 프로그램이 필요 합니다.
 
@@ -181,11 +181,6 @@ SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림�
 최종 장점으로는 매개 변수를 사용 하 여 프로세스를 수정할 수 있습니다. 이 연습에서는 모델 (이 예에서는 "Naive Bayes" 이라고 명명 됨)을 만든 Python 코드가 점수 매기기 프로세스에서 모델을 호출 하는 두 번째 저장 프로시저에 대 한 입력으로 전달 되었습니다. 이 연습에서는 하나의 모델만 사용 하지만 점수 매기기 작업에서 모델을 매개 변수화 하 여 스크립트를 보다 유용 하 게 만드는 방법을 생각해 볼 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
-
-SQL Server에서 Python 데이터 형식을 처리 하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
-
-> [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services에서 Python을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-python-data-structures.md)
 
 Machine Learning Services SQL Server에 대 한 자세한 내용은 다음을 참조 하세요.
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services를 사용 하 여 R에서 간단한 예측 모델을 만든 다음 새 데이터를 사용 하 여 결과를 예측 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150336"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005983"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "71150336"
    );
    ```
 
-1. 기본 제공 데이터 집합 `mtcars`의 데이터를 삽입 합니다.
+1. 기본 제공 데이터 집합의 데이터를 `mtcars`으로 삽입 합니다.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,11 +72,11 @@ ms.locfileid: "71150336"
    ```
 
    > [!TIP]
-   > R 런타임에는 작고 큰 많은 데이터 세트가 포함되어 있습니다. R을 사용 하 여 설치 된 데이터 집합 목록을 가져오려면 `library(help="datasets")` r 명령 프롬프트에서을 입력 합니다.
+   > R 런타임에는 작고 큰 많은 데이터 세트가 포함되어 있습니다. R을 사용 하 여 설치 된 데이터 집합 목록을 가져오려면 R 명령 프롬프트에서 `library(help="datasets")`을 입력 합니다.
 
 ### <a name="create-and-train-the-model"></a>모델 만들기 및 학습
 
-자동차 속도 데이터에는 두 개의 열, 즉, 두 열`hp`이 모두 포함 됩니다`wt`. 이 데이터를 사용 하 여 차량에서 수동 전송에 적합 한 확률을 예측 하는 일반화 된 선형 모델 (글 화)을 만듭니다.
+차 속도 데이터에는 두 개의 열, @no__t @no__t 즉 두 개의 열이 포함 됩니다. 이 데이터를 사용 하 여 차량에서 수동 전송에 적합 한 확률을 예측 하는 일반화 된 선형 모델 (글 화)을 만듭니다.
 
 모델을 작성 하려면 R 코드 내에서 수식을 정의 하 고 데이터를 입력 매개 변수로 전달 합니다.
 
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- 에 대 `glm` 한 첫 번째 인수는 *수식* 매개 변수 이며 `am` 에 `hp + wt`종속 된 것으로 정의 됩니다.
+- @No__t에 대 한 첫 번째 인수는 `am`를 `hp + wt`에 따라 정의 하는 *수식* 매개 변수입니다.
 - 입력 데이터는 SQL 쿼리로 데이터를 채운 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 특정 이름을 할당하지 않는 경우 기본 변수 이름은 _InputDataSet_ 입니다.
 
 ### <a name="store-the-model-in-the-sql-database"></a>SQL 데이터베이스에 모델 저장
@@ -170,7 +170,7 @@ GO
 1. 새 입력 데이터를 가져옵니다.
 1. 해당 모델과 호환되는 R 예측 함수를 호출합니다.
 
-시간이 지남에 따라 테이블은 여러 R 모델을 포함 하거나 다른 매개 변수 또는 알고리즘을 사용 하 여 작성 되거나 다른 데이터 하위 집합에 대해 학습 될 수 있습니다. 이 예에서는 라는 `default model`모델을 사용 합니다.
+시간이 지남에 따라 테이블은 여러 R 모델을 포함 하거나 다른 매개 변수 또는 알고리즘을 사용 하 여 작성 되거나 다른 데이터 하위 집합에 대해 학습 될 수 있습니다. 이 예제에서는 `default model` 이라는 모델을 사용 합니다.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -213,12 +213,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 R 데이터 형식을 처리 하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
+Machine Learning Services SQL Server에 대 한 자세한 내용은 다음을 참조 하세요.
 
-> [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-r-data-types-and-objects.md)
-
-Machine Learning Services SQL Server에 대 한 자세한 내용은 다음 문서를 참조 하세요.
-
-- [SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성](quickstart-r-functions.md)
 - [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)

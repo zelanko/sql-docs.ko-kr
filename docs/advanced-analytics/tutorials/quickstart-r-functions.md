@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용 하 여 고급 통계 계산을 위해 R 함수를 작성 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951859"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006031"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71951859"
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>난수를 생성하는 저장 프로시저 만들기
 
-간단히 하기 위해 r 설치 된 SQL Server Machine Learning Services `stats` 에서 기본적으로 설치 및 로드 되는 r 패키지를 사용 하겠습니다. 이 패키지에는 일반 통계 작업용으로 수백 개의 함수가 포함되어 있으며, 그 중 `rnorm` 함수는 주어진 표준 편차와 평균으로 정규 분포를 사용한 지정된 수의 난수를 생성합니다.
+간단히 하기 위해 R을 설치 하는 Machine Learning Services SQL Server에서 기본적으로 설치 및 로드 되는 R `stats` 패키지를 사용 하겠습니다. 이 패키지에는 일반 통계 작업용으로 수백 개의 함수가 포함되어 있으며, 그 중 `rnorm` 함수는 주어진 표준 편차와 평균으로 정규 분포를 사용한 지정된 수의 난수를 생성합니다.
 
 예를 들어 다음 R 코드는 표준 편차가 3 인 경우 100를 평균 50로 반환 합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "71951859"
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-T-sql에서 r의이 줄을 호출 하려면 다음과 같이의 `sp_execute_external_script`r 스크립트 매개 변수에 r 함수를 추가 합니다.
+T-sql에서 R의이 줄을 호출 하려면 다음과 같이 `sp_execute_external_script`의 R 스크립트 매개 변수에 R 함수를 추가 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> 대부분의 사용자는 r에서 시스템 타이밍 함수 (예: `system.time` 및 `proc.time`)를 사용 하 여 r 프로세스에 사용 되는 시간을 캡처하고 성능 문제를 분석 하는 것입니다. 예를 들어 솔루션에 R 타이밍 함수가 포함 된 [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md) 자습서를 참조 하세요.
+> @No__t-0 및 `proc.time`과 같이 R에서 시스템 타이밍 함수를 사용 하 여 R 프로세스에 사용 되는 시간을 캡처하고 성능 문제를 분석 하는 경우가 많습니다. 예를 들어 솔루션에 R 타이밍 함수가 포함 된 [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md) 자습서를 참조 하세요.
 
 ## <a name="next-steps"></a>다음 단계
+
+SQL Server에서 R을 사용 하 여 기계 학습 모델을 만들려면이 빠른 시작을 수행 합니다.
+
+> [!div class="nextstepaction"]
+> [SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services](quickstart-r-train-score-model.md)
 
 Machine Learning Services SQL Server에 대 한 자세한 내용은 다음을 참조 하세요.
 

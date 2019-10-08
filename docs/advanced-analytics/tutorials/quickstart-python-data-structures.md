@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 이 빠른 시작에서는 Python에서 데이터 형식 및 데이터 개체를 사용 하 고 SQL Server Machine Learning Services SQL Server 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199437"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006062"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용 하 여 데이터 형식 및 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ SQL Server는 Python **pandas** 패키지를 사용 하 여 테이블 형식 데
 
 앞에서 소개 하는 개념은 다음과 같습니다.
 
-+ 데이터 프레임은 _여러_ 열이 있는 테이블입니다.
-+ 데이터 프레임의 단일 열은 계열 이라는 목록 형식의 개체입니다.
-+ 데이터 프레임의 단일 값을 셀 이라고 하며 인덱스를 통해 액세스 합니다.
+- 데이터 프레임은 _여러_ 열이 있는 테이블입니다.
+- 데이터 프레임의 단일 열은 계열 이라는 목록 형식의 개체입니다.
+- 데이터 프레임의 단일 값을 셀 이라고 하며 인덱스를 통해 액세스 합니다.
 
 데이터 프레임에 테이블 형식 구조가 필요한 경우 계산의 단일 결과를 데이터 프레임으로 노출 하는 방법 한 가지 대답은 단일 스칼라 값을 데이터 프레임으로 쉽게 변환 되는 계열로 나타내는 것입니다. 
 
@@ -203,11 +203,12 @@ SQL Server는 Python **pandas** 패키지를 사용 하 여 테이블 형식 데
 
 ## <a name="next-steps"></a>다음 단계
 
-다음으로 SQL Server에서 Python을 사용 하 여 예측 모델을 작성 합니다.
+SQL Server에서 고급 Python 함수를 작성 하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
 
 > [!div class="nextstepaction"]
-> [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
+> [SQL Server Machine Learning Services를 사용 하 여 고급 Python 함수 작성](quickstart-python-functions.md)
 
-Machine Learning Services SQL Server에 대 한 자세한 내용은 다음을 참조 하세요.
+SQL Server Machine Learning Services에서 Python을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
+- [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
 - [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)

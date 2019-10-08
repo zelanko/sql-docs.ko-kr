@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services를 사용 하 여 SQL Server 인스턴스에서 간단한 Python 스크립트를 만들고 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204300"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006122"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 간단한 Python 스크립트 만들기 및 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. SQL Server 인스턴스에 연결 된 **SQL Server Management Studio** 에서 새 쿼리 창을 엽니다.
 
-1. 전체 Python 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달 합니다.
+1. @No__t-0 저장 프로시저에 전체 Python 스크립트를 전달 합니다.
 
-   스크립트는 인수를 `@script` 통해 전달 됩니다. `@script` 인수 내의 모든 항목은 유효한 Python 코드 여야 합니다.
+   스크립트는 `@script` 인수를 통해 전달 됩니다. @No__t-0 인수 내의 모든 항목은 유효한 Python 코드 여야 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -60,7 +60,7 @@ print(c, d)
     '
     ```
 
-1. 올바른 결과를 계산 하 고 Python `print` 함수에서 결과를 **메시지** 창에 반환 합니다.
+1. 올바른 결과가 계산 되 고 Python `print` 함수는 결과를 **메시지** 창에 반환 합니다.
 
    다음과 같이 표시 됩니다.
 
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-`sp_execute_external_script` 저장 프로시저에 대 한 입력은 다음과 같습니다.
+@No__t-0 저장 프로시저에 대 한 입력은 다음과 같습니다.
 
 | | |
 |-|-|
@@ -100,9 +100,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>입력 및 출력 사용
 
-기본적으로에서는 `sp_execute_external_script` 단일 데이터 집합을 입력으로 허용 합니다 .이는 일반적으로 유효한 SQL 쿼리 형식으로 제공 합니다. 그런 다음 단일 Python 데이터 프레임을 출력으로 반환 합니다.
+기본적으로 `sp_execute_external_script`은 단일 데이터 집합을 입력으로 허용 합니다 .이는 일반적으로 유효한 SQL 쿼리 형식으로 제공 합니다. 그런 다음 단일 Python 데이터 프레임을 출력으로 반환 합니다.
 
-지금은의 `sp_execute_external_script`기본 입력 및 출력 변수를 사용 하겠습니다. **Inputdataset** 및 **outputdataset**
+지금은 `sp_execute_external_script`의 기본 입력 및 출력 변수를 사용 하겠습니다. **Inputdataset** 및 **outputdataset**
 
 1. 작은 테스트 데이터 테이블을 만듭니다.
 
@@ -120,7 +120,7 @@ GO
     GO
     ```
 
-1. `SELECT` 문을 사용 하 여 테이블을 쿼리 합니다.
+1. @No__t-0 문을 사용 하 여 테이블을 쿼리 합니다.
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ GO
 
     ![PythonTestData 테이블의 내용](./media/select-pythontestdata.png)
 
-1. 다음 Python 스크립트를 실행 합니다. `SELECT` 문을 사용 하 여 테이블에서 데이터를 검색 하 고, Python 런타임을 통해 전달 하 고, 데이터를 데이터 프레임으로 반환 합니다. 절 `WITH RESULT SETS` 은 열 이름 *NewColName*을 추가 하 여 SQL에 대해 반환 된 데이터 테이블의 스키마를 정의 합니다.
+1. 다음 Python 스크립트를 실행 합니다. @No__t-0 문을 사용 하 여 테이블에서 데이터를 검색 하 고, Python 런타임을 통해 전달 하 고, 데이터를 데이터 프레임으로 반환 합니다. @No__t-0 절은 열 이름 *NewColName*을 추가 하 여 SQL에 대해 반환 된 데이터 테이블의 스키마를 정의 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,12 +155,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Python은 대/소문자를 구분 합니다. Python 스크립트 (**SQL_out**, **SQL_in**)에서 사용 되는 입력 및 출력 변수는 대/소문자를 포함 하 `@input_data_1_name` 여 `@output_data_1_name`및으로 정의 된 이름과 일치 해야 합니다.
+    Python은 대/소문자를 구분 합니다. Python 스크립트 (**SQL_out**, **SQL_in**)에서 사용 되는 입력 및 출력 변수는 대/소문자를 포함 하 여 `@input_data_1_name` 및 `@output_data_1_name`으로 정의 된 이름과 일치 해야 합니다.
 
    > [!TIP]
    > 하나의 입력 데이터 세트만 매개 변수로 전달할 수 있으며 하나의 데이터 세트만 반환할 수 있습니다. 그러나 Python 코드 내에서 다른 데이터 집합을 호출할 수 있으며 데이터 집합 외에 다른 형식의 출력을 반환할 수 있습니다. 또한 모든 매개 변수에 OUTPUT 키워드를 추가하여 결과와 함께 매개 변수를 반환할 수도 있습니다.
 
-1. 입력 데이터 없이 Python 스크립트를 사용 하 여 값을 생성할 수도 있습니다 (`@input_data_1` 가 blank로 설정 됨).
+1. 입력 데이터 없이 Python 스크립트를 사용 하 여 값을 생성할 수도 있습니다 (`@input_data_1`이 blank로 설정 됨).
 
    다음 스크립트는 "hello" 및 "세계" 텍스트를 출력 합니다.
 
@@ -177,7 +177,7 @@ GO
 
    **결과**
 
-   ![입력으로를 @script 사용 하 여 쿼리 결과](./media/python-data-generated-output.png)
+   ![@No__t-0을 입력으로 사용 하 여 쿼리 결과](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python은 선행 공백을 사용 하 여 문을 그룹화 합니다. 따라서 포함 된 Python 스크립트가 이전 스크립트와 같이 여러 줄에 걸쳐 있는 경우에는 Python 명령을 SQL 명령에 맞게 들여씁니다. 예를 들어 다음 스크립트는 오류를 생성 합니다.
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-출력은 Python의 `pip.get_installed_distributions()` 에서 가져온 것 이며 `STDOUT` 메시지로 반환 됩니다.
+출력은 Python에서 `pip.get_installed_distributions()`이 고 `STDOUT` 메시지로 반환 됩니다.
 
 **결과**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 Python을 사용 하 여 기계 학습 모델을 만들려면이 빠른 시작을 수행 합니다.
+SQL Server Machine Learning Services에서 Python을 사용 하는 경우 데이터 구조를 사용 하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services를 사용 하 여 Python에서 예측 모델을 만들고 점수 매기기](quickstart-python-train-score-model.md)
+> [SQL Server Machine Learning Services에서 Python을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-python-data-structures.md)
 
-Machine Learning Services SQL Server에 대 한 자세한 내용은 다음 문서를 참조 하세요.
+SQL Server Machine Learning Services에서 Python을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-- [SQL Server Machine Learning Services에서 Python을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-python-data-structures.md)
+- [SQL Server Machine Learning Services를 사용 하 여 고급 Python 함수 작성](quickstart-python-functions.md)
+- [SQL Server Machine Learning Services를 사용 하 여 Python에서 예측 모델을 만들고 점수 매기기](quickstart-python-train-score-model.md)
 - [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)

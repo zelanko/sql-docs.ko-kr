@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services를 사용 하 여 SQL Server 인스턴스에서 간단한 R 스크립트를 만들고 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d723fa9b90659eb31e96626a3a85c1299c17fa2f
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150316"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006034"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 간단한 R 스크립트 만들기 및 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ print(c(c, d))
 
 1. **SQL Server Management Studio** 를 열고 SQL Server 인스턴스에 연결 합니다.
 
-1. 전체 R 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달 합니다.
+1. @No__t-0 저장 프로시저에 전체 R 스크립트를 전달 합니다.
 
-   스크립트는 인수를 `@script` 통해 전달 됩니다. `@script` 인수 내의 모든 항목은 유효한 R 코드 여야 합니다.
+   스크립트는 `@script` 인수를 통해 전달 됩니다. @No__t-0 인수 내의 모든 항목은 유효한 R 코드 여야 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. 올바른 결과를 계산 하 고 R `print` 함수에서 결과를 **메시지** 창에 반환 합니다.
+1. 올바른 결과를 계산 하 고 R `print` 함수는 결과를 **메시지** 창에 반환 합니다.
 
    다음과 같이 표시 됩니다.
 
@@ -85,14 +85,14 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-`sp_execute_external_script` 저장 프로시저에 대 한 입력은 다음과 같습니다.
+@No__t-0 저장 프로시저에 대 한 입력은 다음과 같습니다.
 
 | | |
 |-|-|
 | @language | 호출할 언어 확장 (이 경우 R)을 정의 합니다. |
 | @script | R 런타임에 전달 되는 명령을 정의 합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 포함되어야 합니다. **Nvarchar** 형식의 변수에 텍스트를 추가한 다음 변수를 호출할 수도 있습니다. |
 | @input_data_1 | 쿼리에서 반환 되는 데이터로, R 런타임으로 전달 되어 SQL Server 데이터를 데이터 프레임으로 반환 합니다. |
-|결과 집합 포함 | 절은 SQL Server에 대해 반환 된 데이터 테이블의 스키마를 정의 하 고, 열 이름으로 "Hello World"를 추가 하 고, 데이터 형식에 대해 **int** 를 정의 합니다. |
+|WITH RESULT SETS | 절은 SQL Server에 대해 반환 된 데이터 테이블의 스키마를 정의 하 고, 열 이름으로 "Hello World"를 추가 하 고, 데이터 형식에 대해 **int** 를 정의 합니다. |
 
 명령은 다음 텍스트를 출력 합니다.
 
@@ -102,9 +102,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>입력 및 출력 사용
 
-기본적으로에서는 `sp_execute_external_script` 단일 데이터 집합을 입력으로 허용 합니다 .이는 일반적으로 유효한 SQL 쿼리 형식으로 제공 합니다. 그런 다음 단일 R 데이터 프레임을 출력으로 반환 합니다.
+기본적으로 `sp_execute_external_script`은 단일 데이터 집합을 입력으로 허용 합니다 .이는 일반적으로 유효한 SQL 쿼리 형식으로 제공 합니다. 그런 다음 단일 R 데이터 프레임을 출력으로 반환 합니다.
 
-지금은의 `sp_execute_external_script`기본 입력 및 출력 변수를 사용 하겠습니다. **Inputdataset** 및 **outputdataset**
+지금은 `sp_execute_external_script`의 기본 입력 및 출력 변수를 사용 하겠습니다. **Inputdataset** 및 **outputdataset**
 
 1. 작은 테스트 데이터 테이블을 만듭니다.
 
@@ -122,7 +122,7 @@ GO
     GO
     ```
 
-1. `SELECT` 문을 사용 하 여 테이블을 쿼리 합니다.
+1. @No__t-0 문을 사용 하 여 테이블을 쿼리 합니다.
   
     ```sql
     SELECT *
@@ -133,7 +133,7 @@ GO
 
     ![RTestData 테이블의 내용](./media/select-rtestdata.png)
 
-1. 다음 R 스크립트를 실행 합니다. `SELECT` 문을 사용 하 여 테이블에서 데이터를 검색 하 고, R 런타임을 통해 전달 하 고, 데이터를 데이터 프레임으로 반환 합니다. 절 `WITH RESULT SETS` 은 열 이름 *NewColName*을 추가 하 여 SQL에 대해 반환 된 데이터 테이블의 스키마를 정의 합니다.
+1. 다음 R 스크립트를 실행 합니다. @No__t-0 문을 사용 하 여 테이블에서 데이터를 검색 하 고, R 런타임을 통해 전달 하 고, 데이터를 데이터 프레임으로 반환 합니다. @No__t-0 절은 열 이름 *NewColName*을 추가 하 여 SQL에 대해 반환 된 데이터 테이블의 스키마를 정의 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,12 +157,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    R은 대/소문자를 구분 합니다. R 스크립트 (**SQL_out**, **SQL_in**)에서 사용 되는 입력 및 출력 변수는 대/소문자를 포함 하 `@input_data_1_name` 여 `@output_data_1_name`및으로 정의 된 이름과 일치 해야 합니다.
+    R은 대/소문자를 구분 합니다. R 스크립트 (**SQL_out**, **SQL_in**)에서 사용 되는 입력 및 출력 변수는 대/소문자를 포함 하 여 `@input_data_1_name` 및 `@output_data_1_name`으로 정의 된 이름과 일치 해야 합니다.
 
    > [!TIP]
    > 하나의 입력 데이터 세트만 매개 변수로 전달할 수 있으며 하나의 데이터 세트만 반환할 수 있습니다. 그러나 R 코드 내에서 다른 데이터 세트를 호출할 수 있으며 데이터 세트 외에 다른 유형의 출력을 반환할 수 있습니다. 또한 모든 매개 변수에 OUTPUT 키워드를 추가하여 결과와 함께 매개 변수를 반환할 수도 있습니다.
 
-1. 입력 데이터 없이 R 스크립트를 사용 하 여 값을 생성할 수도 있습니다 (`@input_data_1` 가 blank로 설정 됨).
+1. 또한 입력 데이터 없이 R 스크립트를 사용 하 여 값을 생성할 수 있습니다 (`@input_data_1`은 blank로 설정 됨).
 
    다음 스크립트는 "hello" 및 "세계" 텍스트를 출력 합니다.
 
@@ -178,7 +178,7 @@ GO
 
     **결과**
 
-    ![입력으로를 @script 사용 하 여 쿼리 결과](./media/r-data-generated-output.png)
+    ![@No__t-0을 입력으로 사용 하 여 쿼리 결과](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>R 버전 확인
 
@@ -232,7 +232,7 @@ WITH result sets((
             ));
 ```
 
-출력은 R의 `installed.packages()` 에서 가져온 것 이며 결과 집합으로 반환 됩니다.
+출력은 R에서 `installed.packages()`이 고 결과 집합으로 반환 됩니다.
 
 **결과**
 
@@ -240,13 +240,13 @@ WITH result sets((
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 R을 사용 하 여 기계 학습 모델을 만들려면이 빠른 시작을 수행 합니다.
+SQL Server Machine Learning Services에서 R을 사용 하는 경우 데이터 구조를 사용 하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services](quickstart-r-train-score-model.md)
+> [SQL Server Machine Learning Services에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-r-data-types-and-objects.md)
 
-Machine Learning Services SQL Server에 대 한 자세한 내용은 다음 문서를 참조 하세요.
+SQL Server Machine Learning Services에서 R을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-- [SQL Server Machine Learning Services에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.](quickstart-r-data-types-and-objects.md)
 - [SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성](quickstart-r-functions.md)
+- [SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services](quickstart-r-train-score-model.md)
 - [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)
