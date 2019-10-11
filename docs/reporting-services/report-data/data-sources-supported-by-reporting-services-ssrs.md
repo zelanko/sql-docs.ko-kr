@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500457"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951781"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -109,11 +109,11 @@ ms.locfileid: "66500457"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장<br /><br /> 버전 10.0|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
 |SharePoint 목록|[Microsoft SharePoint 목록](#SharePointList)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Lists.asmx 또는 SharePoint 개체 모델 API 인터페이스에서 데이터 가져오기<br /><br /> [참고](#SharePointList)를 참조하십시오.|N|Y|SharePoint 2013 제품 이상|Y|Y|   
 |XML|[XML](#XML)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|XML 데이터 원본에는 플랫폼 종속성이 없음|해당 사항 없음|해당 사항 없음|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 또는 문서|Y|Y|  
-|보고서 서버 모델|보고서 모델|게시된 SMDL 파일에 대한 사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|모델의 데이터 원본에서 기본 제공 데이터 처리 확장 프로그램을 사용합니다.<br /><br /> Oracle 기반 모델을 사용하려면 Oracle 클라이언트 구성 요소가 있어야 합니다.<br /><br /> Teradata 기반 모델을 사용하려면 Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|해당 사항 없음|해당 사항 없음|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 모델을 만들 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 이상<br /><br /> Teradata V14, v13, v12 및 v6.2|N|N|  
+|보고서 서버 모델|보고서 모델|게시된 SMDL 파일에 대한 사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|모델의 데이터 원본에서 기본 제공 데이터 처리 확장 프로그램을 사용합니다.<br /><br /> Oracle 기반 모델을 사용하려면 Oracle 클라이언트 구성 요소가 필요합니다.<br /><br /> Teradata 기반 모델을 사용하려면 Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|해당 사항 없음|해당 사항 없음|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 모델을 만들 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 이상<br /><br /> Teradata V14, v13, v12 및 v6.2|N|N|  
 |SAP 다차원 데이터베이스|SAP BW|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 SAP 설명서를 참조하십시오.|해당 사항 없음|해당 사항 없음|SAP BW 7.0-7.5|Y|해당 사항 없음|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 Hyperion 설명서를 참조하십시오.|Y|해당 사항 없음|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|해당 사항 없음|  
 |Oracle 관계형 데이터베이스|[Oracle](#OracleClient)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Oracle 클라이언트 구성 요소 12c 이상 필요|Y|해당 사항 없음|Oracle 11g, 11g R2, 12c|Y|Y|  
-|Teradata 관계형 데이터베이스|[Teradata](#Teradata)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Teradata의 .NET Data Provider for Teradata 확장<br /><br /> Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|Y|해당 사항 없음|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
+|Teradata |[Teradata](#Teradata)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Teradata의 .NET Data Provider for Teradata 확장<br /><br /> Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|Y|해당 사항 없음|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
 |DB2 관계형 데이터베이스|사용자 지정 및 등록된 데이터 확장 프로그램 이름||2004 Host Integration (HI) Server<br /><br /> [HI Server 설명서](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)(영문)를 참조하세요.|Y|해당 사항 없음|해당 사항 없음|Y|N|  
 |일반 OLE DB 데이터 원본|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|OLE DB를 지원하는 모든 데이터 원본<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 사항 없음|OLE DB를 지원하는 모든 데이터 원본 [참고](#OLEDBStandard)를 참조하십시오.|Y|해당 사항 없음|  
 |일반 ODBC 데이터 원본|[ODBC](#ODBCGeneric)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ODBC를 지원하는 모든 데이터 원본.<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 사항 없음|ODBC를 지원하는 모든 데이터 원본. [참고](#ODBCGeneric)를 참조하십시오.|Y|Y|  
@@ -244,13 +244,13 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Teradata 데이터 처리 확장 프로그램  
- 데이터 원본 유형 **Teradata**를 선택하면 .NET Framework Data Provider for Teradata를 확장하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. Teradata 데이터베이스에서 보고서 데이터를 검색하려면 시스템 관리자가 클라이언트에서 보고서를 편집 및 미리 보기 위한 보고서 제작 클라이언트와 게시된 보고서를 보기 위한 보고서 서버에 .NET Framework Data Provider for Teradata를 설치해야 합니다.  
+ 데이터 원본 유형 **Teradata**를 선택하면 .NET Framework Data Provider for Teradata를 확장하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. Teradata에서 보고서 데이터를 검색하려면 시스템 관리자가 클라이언트에서 보고서를 편집하고 미리 볼 수 있는 보고서 작성 클라이언트와 게시된 보고서를 볼 수 있는 보고서 서버에 .NET Framework Data Provider for Teradata를 설치해야 합니다.  
   
  보고서 서버 프로젝트의 경우 이 확장 프로그램에 대해 그래픽 쿼리 디자이너를 사용할 수 없습니다. 쿼리를 만들려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다.  
   
  다음 표에서는 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]의 보고서 정의에서 데이터 원본을 정의하기 위해 지원되는 .NET Data Provider for Teradata 버전을 보여 줍니다.  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 버전|Teradata 데이터베이스 버전|.NET Framework Data Provider for Teradata 버전|  
+|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 버전|Teradata 버전|.NET Framework Data Provider for Teradata 버전|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  이 확장 프로그램은 다중값 매개 변수를 지원하지 않습니다. TEXT 쿼리 모드에서 EXECUTE 명령을 사용하여 쿼리에 매크로를 지정할 수 있습니다.  
   
  자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.  
-  
- Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)백서를 참조하세요.  
-  
+ 
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint 목록 데이터 확장 프로그램  

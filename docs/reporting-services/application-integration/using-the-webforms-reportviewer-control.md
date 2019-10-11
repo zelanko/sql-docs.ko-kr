@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194794"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687377"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 애플리케이션에서 렌더링할 수 있습니다.  

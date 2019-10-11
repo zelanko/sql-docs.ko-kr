@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cleanup_temporal_history | Microsoft Docs
+title: sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -9,19 +9,19 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 111986a771b9cfb156c0d37688565b39401411f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f382af39620fde58480b9fa02178901cb882dab
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037233"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252004"
 ---
-# <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact SQL)
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sp_cleanup_temporal_history (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-단일 트랜잭션 내에서 구성 된 HISTORY_RETENTION 기간 일치 하는 temporal 기록 테이블에서 모든 행을 제거 합니다.
+단일 트랜잭션 내에서 구성 된 HISTORY_RETENTION PERIOD와 일치 하는 temporal 기록 테이블의 모든 행을 제거 합니다.
   
 ## <a name="syntax"></a>구문  
 ```  
@@ -30,9 +30,9 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
   
 ## <a name="arguments"></a>인수  
 
-*@table_name*
+*\@table_name*
 
-호출 되는 보존 정리 temporal 테이블의 이름입니다.
+보존 정리가 호출 되는 temporal 테이블의 이름입니다.
 
 *schema_name*
 
@@ -40,16 +40,16 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 *row_count_var* [OUTPUT]
 
-삭제 된 행 수를 반환 하는 출력 매개 변수입니다. 이 매개 변수를 반환 됩니다 경우 기록 테이블에 클러스터형 columnstore 인덱스 있음, 항상 0입니다.
+삭제 된 행의 수를 반환 하는 출력 매개 변수입니다. 기록 테이블에 클러스터형 columnstore 인덱스가 있으면이 매개 변수는 항상 0을 반환 합니다.
   
 ## <a name="remarks"></a>설명
-이 저장된 프로시저는 한정 된 재방문 주기 기간 지정한 temporal 테이블 함께만 사용할 수 있습니다.
-즉시 기록 테이블에서 오래 된 모든 행을 제거 해야 하는 경우에이 저장된 프로시저를 사용 합니다. 동일한 트랜잭션 내의 모든 적격 행을 삭제 하는 대로 데이터베이스 로그 및 I/O 하위 시스템에 상당한 영향 있을 수 있음을 알아야 합니다. 
+이 저장 프로시저는 유한 보존 기간을 지정한 temporal 테이블에만 사용할 수 있습니다.
+기록 테이블에서 오래 된 행을 모두 즉시 정리 해야 하는 경우에만이 저장 프로시저를 사용 합니다. 데이터베이스 로그 및 i/o 하위 시스템에는 동일한 트랜잭션 내에 있는 모든 행을 삭제할 때 상당한 영향을 줄 수 있다는 것을 알고 있어야 합니다. 
 
-항상 오래 된 일반 워크 로드 및 일반적인 데이터베이스에 대 한 최소한의 영향을 사용 하 여 행을 제거는 정리를 위한 내부 백그라운드 태스크를 사용 하는 것이 좋습니다.
+일반적으로 일반 작업 및 데이터베이스에 미치는 영향을 최소화 하 여 오래 된 행을 제거 하는 정리를 위해 내부 백그라운드 작업을 사용 하는 것이 좋습니다.
 
 ## <a name="permissions"></a>사용 권한  
- Db_owner 권한이 필요합니다.  
+ Db_owner 권한이 필요 합니다.  
 
 ## <a name="example"></a>예제
 
@@ -61,4 +61,4 @@ select @rowcnt
 
 ## <a name="see-also"></a>참조
 
-[임시 테이블 보존 정책](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Temporal 테이블 보존 정책](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

@@ -12,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070457"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251213"
 ---
 # <a name="relational-query-designer-ssas"></a>관계형 쿼리 디자이너(SSAS)
   관계형 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 관계형 데이터베이스 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 검색할 데이터를 지정하는 쿼리를 만들 때 유용합니다. 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고 쿼리를 대화형으로 작성하며 쿼리 결과를 볼 수 있습니다.  텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -203,7 +203,7 @@ ms.locfileid: "66070457"
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 모든 데이터 원본 유형에서 그래픽 쿼리 디자이너를 지원하는 것은 아닙니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 sql 및 rdl만 지원됩니다.|  
 |![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 집합을 표시합니다.|  
-|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다.<br /><br /> 저장된 프로시저에서 둘 이상의 결과 집합을 반환 하는 경우 첫 번째 결과 집합만 데이터 집합을 채우는 데 사용 된다는 note 합니다. 또한 note <br />                      **TableDirect** OLE DB 데이터 원본 유형에 사용할 수 있습니다.|  
+|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다.<br /><br /> 저장 프로시저에서 둘 이상의 결과 집합을 반환 하는 경우 첫 번째 결과 집합만 데이터 집합을 채우는 데 사용 됩니다. 참고 항목 <br />                      **TableDirect** 는 OLE DB 데이터 원본 유형 에서만 사용할 수 있습니다.|  
   
 #### <a name="command-type-text"></a>Text 명령 유형  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 집합을 만들 때 기본적으로 관계형 쿼리 디자이너가 열립니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집** 토글 단추를 클릭합니다. 텍스트 기반 쿼리 디자이너에는 쿼리 창 및 결과 창이 제공됩니다. 다음 그림에서는 레이블과 함께 각 창을 보여 줍니다.  
@@ -247,18 +247,18 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **실행** ( **!** ) 단추를 클릭합니다. 다음 표에서 예가 `uspGetWhereUsedProductID` 값에서 제공 하는 매개 변수를 **쿼리 매개 변수 정의** 대화 상자.  
+ **실행** ( **!** ) 단추를 클릭합니다. 다음 표에서는 **쿼리 매개 변수 정의** 대화 상자에서 값을 제공 하는 `uspGetWhereUsedProductID` 매개 변수의 예를 제공 합니다.  
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@ Checkdate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>TableDirect 명령 유형  
  **명령 typeTableDirect**를 선택하면 텍스트 기반 쿼리 디자이너에 쿼리 창 및 결과 창이 제공됩니다. 테이블을 입력하고 **실행** 단추를 클릭할 경우 해당 테이블의 모든 열이 반환됩니다.  
   
 #### <a name="example"></a>예제  
- 데이터 원본 유형이 OLE DB인 경우 다음 데이터 세트 쿼리는 `ContactType` 테이블의 모든 연락처 유형에 대한 결과 집합을 반환합니다.  
+ 데이터 원본 유형이 OLE DB인 경우 다음 데이터 집합 쿼리는 `ContactType` 테이블의 모든 연락처 유형에 대한 결과 집합을 반환합니다.  
   
  `ContactType`  
   

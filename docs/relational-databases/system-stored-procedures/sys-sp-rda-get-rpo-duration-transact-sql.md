@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_get_rpo_duration (TRANSACT-SQL) | Microsoft Docs
+title: sp_rda_get_rpo_duration (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15a188a912d9338b6e786248e9242914d5759196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905078"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252064"
 ---
-# <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact SQL)
+# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  확인 하려면 원격 Azure 데이터베이스를 전체 복원 지정 시간 복원은 필요한 경우 준비 테이블의 SQL Server 유지 하는 마이그레이션된 데이터의 시간 수를 가져옵니다. 
+  지정 시간 복원이 필요한 경우 원격 Azure 데이터베이스를 전체 복원할 수 있도록 SQL Server 준비 테이블에 유지 되는 마이그레이션된 데이터의 시간을 가져옵니다. 
   
-  자세한 내용은 참조 하세요. [Stretch Database 마이그레이션된 행을 일시적으로 유지 하 여 Azure 데이터에 대 한 데이터 손실의 위험을 줄입니다](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)합니다.  
+  자세한 내용은 [마이그레이션된 행을 일시적으로 유지 하 여 Azure 데이터에 대 한 데이터 손실의 위험을 줄이기 Stretch Database](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)를 참조 하세요.  
     
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -41,18 +41,18 @@ sp_rda_get_rpo_duration @durationinhours output
 ```    
     
 ## <a name="output-parameter"></a>출력 매개 변수    
- *@durationinhours*    
-  시간입니다 (null이 아닌 정수 값) 현재 스트레치 사용 데이터베이스에 대 한 SQL Server 유지 하는 마이그레이션된 데이터입니다.    
+ *@no__t 1durationinhours*    
+  현재 스트레치 사용 데이터베이스에 대해 SQL Server 유지 하는 마이그레이션된 데이터의 시간 (null이 아닌 정수 값) 수입니다.    
     
 ## <a name="permissions"></a>사용 권한    
- Db_owner 권한이 필요합니다.    
+ Db_owner 권한이 필요 합니다.    
     
 ## <a name="remarks"></a>설명    
- 실행 하 여 값을 변경 [sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)합니다.    
+ [Sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)을 실행 하 여 값을 변경 합니다.    
     
 ## <a name="see-also"></a>관련 항목    
- [sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
- [스트레치 사용 데이터베이스 (Stretch Database)를 복원 합니다.](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
+ [sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [스트레치 사용 데이터베이스 (Stretch Database) @no__t 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)-1  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     
   

@@ -51,6 +51,8 @@
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
         - name: 데이터 형식 및 개체 처리
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: Python 함수 쓰기
+          href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: 모델 학습 및 점수 매기기
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R

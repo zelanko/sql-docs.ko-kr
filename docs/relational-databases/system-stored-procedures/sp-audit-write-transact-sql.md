@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (TRANSACT-SQL) | Microsoft Docs
+title: sp_audit_write (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046146"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251974"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write(Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  사용자 정의 감사 이벤트를 추가 합니다 **USER_DEFINED_AUDIT_GROUP**합니다. 하는 경우 **USER_DEFINED_AUDIT_GROUP** 을 사용 하지 않는 **sp_audit_write** 무시 됩니다.  
+  **USER_DEFINED_AUDIT_GROUP**에 사용자 정의 감사 이벤트를 추가 합니다. **USER_DEFINED_AUDIT_GROUP** 를 사용 하지 않는 경우 **sp_audit_write** 는 무시 됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>인수  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 매개 변수는 사용자가 정의한 및에 기록 합니다 **user_defined_event_id** 감사 로그의 열입니다. *@user_defined_event_id* 형식인 **smallint**합니다.  
+ 사용자가 정의 하 고 감사 로그의 **user_defined_event_id** 열에 기록 되는 매개 변수입니다. *\@user_defined_event_id* 은 **smallint**형식입니다.  
   
  `[ @succeeded = ] succeeded`  
- 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded` 됩니다 **비트**합니다.  
+ 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded`은 **bit**입니다.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information` 됩니다 **nvarchar(4000)** 합니다.  
+ 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information`은 **nvarchar (4000)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  입력 매개 변수가 잘못되었거나 대상 감사 로그에 쓸 수 없는 경우 실패가 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
- 경우는 **USER_DEFINED_AUDIT_GROUP** 서버 감사 사양 또는 데이터베이스 감사 사양에 의해 트리거되는 이벤트에 추가 됩니다 **sp_audit_write** 감사 로그에 포함 됩니다.  
+ 서버 감사 사양 또는 데이터베이스 감사 사양에 **USER_DEFINED_AUDIT_GROUP** 이 추가 되 면 **sp_audit_write** 에 의해 트리거되는 이벤트가 감사 로그에 포함 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버 자격이 필요 합니다 **공용** 데이터베이스 역할.  
+ **Public** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   

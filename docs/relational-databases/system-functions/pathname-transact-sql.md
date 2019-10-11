@@ -1,5 +1,5 @@
 ---
-title: PathName (TRANSACT-SQL) | Microsoft Docs
+title: PathName (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140576"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251954"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  FILESTREAM BLOB(Binary Large Object)의 경로를 반환합니다. OpenSqlFilestream API는 응용 프로그램은 Win32 Api를 사용 하 여 BLOB 데이터를 사용 하는 데 사용할 수 있는 핸들을 반환 하려면이 경로 사용 합니다. PathName은 읽기 전용입니다.  
+  FILESTREAM BLOB(Binary Large Object)의 경로를 반환합니다. OpenSqlFilestream API는이 경로를 사용 하 여 응용 프로그램이 Win32 Api를 사용 하 여 BLOB 데이터를 작업 하는 데 사용할 수 있는 핸들을 반환 합니다. PathName은 읽기 전용입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,25 +40,25 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>인수  
  *column_name*  
- 열 이름은 **varbinary (max)** FILESTREAM 열입니다. *column_name* 열 이름 이어야 합니다. 식이나 CAST 또는 CONVERT 문의 결과일 수 없습니다.  
+ **Varbinary (max)** FILESTREAM 열의 열 이름입니다. *column_name* 는 열 이름 이어야 합니다. 식이나 CAST 또는 CONVERT 문의 결과일 수 없습니다.  
   
- 또는 다른 데이터 형식의 열에 대해 PathName을 요청을 **varbinary (max)** 수준 쿼리 컴파일 시간 오류가 발생 하는 FILESTREAM 저장소 특성을 없습니다.  
+ FILESTREAM 저장소 특성이 없는 **varbinary (max)** 또는 다른 데이터 형식의 열에 대해 PathName을 요청 하면 쿼리 컴파일 시간 오류가 발생 합니다.  
   
- *@option*  
- 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 경로의 서버 구성 요소 서식을 지정 하는 방법을 정의 하는 합니다. *@option* 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
+ *\@option*  
+ 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. *\@option* 은 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|0|BIOS로 변환 된 서버 이름을 반환 형식, 예를 들어: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|예를 들어 서버 이름을 변환 하지 않고 반환합니다. `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|예를 들어 전체 서버 경로를 반환합니다. `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다 (예: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`).|  
+|1|변환 없이 서버 이름을 반환 합니다 (예: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`).|  
+|2|전체 서버 경로를 반환 합니다 (예: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`).|  
   
  *use_replica_computer_name*  
- Always On 가용성 그룹에 서버 이름을 반환 되는 방법을 정의 하는 비트 값입니다.  
+ 서버 이름이 Always On 가용성 그룹에서 반환 되는 방법을 정의 하는 비트 값입니다.  
   
- 데이터베이스는 Always On 가용성 그룹에 속하지 않습니다, 경우에이 인수의 값은 무시 됩니다. 컴퓨터 이름은 항상 경로에 사용됩니다.  
+ 데이터베이스가 Always On 가용성 그룹에 속하지 않을 경우이 인수의 값은 무시 됩니다. 컴퓨터 이름은 항상 경로에 사용됩니다.  
   
- Always On 가용성 데이터베이스가 속하는 경우 그룹의 값 *use_replica_computer_name* 의 출력에 다음과 같은 영향을 합니다 **PathName** 함수:  
+ 데이터베이스가 Always On 가용성 그룹에 속하는 경우 *use_replica_computer_name* 의 값은 **PathName** 함수의 출력에 다음과 같은 영향을 미칠 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>관련 항목  
  [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

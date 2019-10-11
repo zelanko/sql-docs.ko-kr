@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923771"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261564"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.  
-  
+@No__t에서 실행 되는 각 요청에 대 한 정보를 반환 합니다. 요청에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
+   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 요청과 관련된 세션의 ID입니다. Null을 허용하지 않습니다.|  
@@ -94,17 +94,17 @@ ms.locfileid: "71923771"
 |parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리 인 경우 예약 된 병렬 작업자의 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
 |is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
-|page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하 `wait_resource` 는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다. 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
+|page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> @No__t-0 열이 페이지를 포함 하는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다. 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database Hyperscale<br /><br /> 이 요청에서 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>설명 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
 
-[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 병렬 요청을 실행할 경우는 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
+[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 할당 된 작업을 완료 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
 
 ## <a name="permissions"></a>사용 권한
-사용자 `VIEW SERVER STATE` 에 게 서버에 대 한 권한이 있는 경우 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE`는`sys.dm_exec_requests` 에 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 부여할 수 없으므로 항상 현재 연결로 제한 됩니다.
+사용자에 게 서버에 대 한 `VIEW SERVER STATE` 권한이 있으면-1 @no__t 인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE`은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 부여할 수 없으므로 `sys.dm_exec_requests`는 항상 현재 연결로 제한 됩니다.
   
 ## <a name="examples"></a>예  
   
@@ -184,11 +184,12 @@ GO
 ```
 
 ## <a name="see-also"></a>관련 항목
-
-- [동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [실행 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[실행 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)    
+[_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      

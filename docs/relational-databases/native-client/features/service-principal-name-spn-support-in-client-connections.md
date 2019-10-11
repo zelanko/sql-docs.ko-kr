@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893311"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173683"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68893311"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용법  
  다음 표에서는 클라이언트 애플리케이션이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
   
 |시나리오|Description|  
@@ -72,7 +72,7 @@ ms.locfileid: "68893311"
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.  
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결된 서버가 만들어질 때 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 **@provstr** 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 해서 얻는 이점은 클라이언트 연결 문자열에 SPN을 지정할 때의 이점과 같습니다. 즉, Kerberos 인증을 사용하는 연결을 더 간단하게, 더 안정적으로 설정할 수 있습니다.  
+ 연결 된 서버 @no__t를 만들면 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 의 **1provstr** 매개 변수를 사용 하 여 서버 및 장애 조치 (failover) 파트너 spn을 지정할 수 있습니다. 이렇게 해서 얻는 이점은 클라이언트 연결 문자열에 SPN을 지정할 때의 이점과 같습니다. 즉, Kerberos 인증을 사용하는 연결을 더 간단하게, 더 안정적으로 설정할 수 있습니다.  
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8dcc8c4cd9908f6904d54d1d8a6f3affb1f5b6d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57ba9918769655c6823e8837641342f75f3795e5
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996628"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974319"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
@@ -28,25 +28,29 @@ ms.locfileid: "67996628"
 ### <a name="linux-and-macos"></a>Linux 및 macOS
 
 #### <a name="debian"></a>Debian
+- [Debian 10. deb 패키지](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
 - [Debian 9. deb 패키지](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
 - [Debian 8. deb 패키지](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>RedHat
+- [RedHat 8 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/rhel/8/prod/)
 - [RedHat 7 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 패키지(msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [RedHat 6 패키지(msodbcsql17-*)](https://packages.microsoft.com/rhel/6/prod/)
 
 #### <a name="suse"></a>Suse
+- [SuSE 15 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/sles/15/prod/)
 - [SuSE 12 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
 - [SuSE 11 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
+- [Ubuntu 19.04 패키지](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 18.10 패키지](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 패키지](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 17.10 패키지](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 16.04 패키지](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 패키지](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 및 macOS 10.12, 10.13 Homebrew 열의 공식을](https://github.com/Microsoft/homebrew-mssql-release)
+- [macOS 10.12, 10.13, 10.14 Homebrew 열의 공식을](https://github.com/Microsoft/homebrew-mssql-release)
 
 또한 [드라이버 설치](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조 하세요.
 

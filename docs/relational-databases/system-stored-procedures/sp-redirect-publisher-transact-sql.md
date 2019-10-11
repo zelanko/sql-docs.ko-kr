@@ -1,5 +1,5 @@
 ---
-title: sp_redirect_publisher (TRANSACT-SQL) | Microsoft Docs
+title: sp_redirect_publisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002514"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252120"
 ---
-# <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher(Transact-SQL)
+# <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  기존 게시자/데이터베이스 쌍에 대한 리디렉션된 게시자를 지정합니다. 게시자 데이터베이스를 Always On 가용성 그룹에 속하는 경우 리디렉션된 게시자는 가용성 그룹과 연결 된 가용성 그룹 수신기 이름입니다.  
+  기존 게시자/데이터베이스 쌍에 대한 리디렉션된 게시자를 지정합니다. 게시자 데이터베이스가 Always On 가용성 그룹에 속하는 경우 리디렉션된 게시자는 가용성 그룹에 연결 된 가용성 그룹 수신기 이름입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +40,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @original_publisher = ] 'original_publisher'` 인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 데이터베이스를 게시 합니다. *original_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'`은 원래 데이터베이스를 게시 한 @no__t 인스턴스의 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 중인 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` 새 게시자 될 가용성 그룹과 연결 된 가용성 그룹 수신기 이름입니다. *redirected_publisher* 됩니다 **sysname**, 기본값은 없습니다. 가용성 그룹 수신기를 기본 포트가 아닌 다른 포트로 구성한 경우 `'Listenername,51433'`과 같이 포트 번호를 수신기 이름과 함께 지정합니다.  
+`[ @redirected_publisher = ] 'redirected_publisher'` 새 게시자가 될 가용성 그룹에 연결 된 가용성 그룹 수신기 이름입니다. *redirected_publisher* 는 **sysname**이며 기본값은 없습니다. 가용성 그룹 수신기를 기본 포트가 아닌 다른 포트로 구성한 경우 `'Listenername,51433'`과 같이 포트 번호를 수신기 이름과 함께 지정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,17 +53,17 @@ sp_redirect_publisher
  없음  
   
 ## <a name="remarks"></a>설명  
- **sp_redirect_publisher** 복제 게시자는 가용성 그룹 수신기를 사용 하 여 게시자/데이터베이스 쌍을 연결 하 여 Always On 가용성 그룹의 현재 주 복제본에 리디렉션되어야 하는 데 사용 됩니다. 실행할 **sp_redirect_publisher** AG 수신기를 구성한 후에 게시 된 데이터베이스를 포함 하는 가용성 그룹에 대 한 합니다.  
+ **sp_redirect_publisher** 은 게시자/데이터베이스 쌍을 가용성 그룹의 수신기와 연결 하 여 복제 게시자를 Always On 가용성 그룹의 현재 주 데이터베이스로 리디렉션할 수 있도록 하는 데 사용 됩니다. 게시 된 데이터베이스를 포함 하는 가용성 그룹에 대해 AG 수신기가 구성 된 후 **sp_redirect_publisher** 를 실행 합니다.  
   
- 원래 게시자의 게시 데이터베이스의 주 복제본에서 가용성 그룹에서 제거 되 면 실행 **sp_redirect_publisher** 에 대 한 값을 지정 하지 않고 합니다 *@redirected_publisher* 게시자/데이터베이스 쌍에 대 한 리디렉션을 제거 매개 변수입니다. 게시자 리디렉션에 대 한 자세한 내용은 참조 하십시오 [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)합니다.  
+ 원래 게시자의 게시 데이터베이스가 주 복제본의 가용성 그룹에서 제거 되는 경우 *\@redirected_publisher* 매개 변수의 값을 지정 하지 않고 **sp_redirect_publisher** 를 실행 하 여 게시자/데이터베이스 쌍의 리디렉션입니다. 에서 게시자를 리디렉션하는 방법에 대 한 자세한 내용은 [AlwaysOn 게시 데이터베이스 &#40;유지 관리&#41;SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- 호출자 여야의 멤버는 **sysadmin** 고정 서버 역할을 **db_owner** 정의 된 게시에 대 한 게시 액세스 목록의 멤버 또는 배포 데이터베이스에 대 한 고정된 데이터베이스 역할 게시자 데이터베이스를 사용 하 여 연결 합니다.  
+ 호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

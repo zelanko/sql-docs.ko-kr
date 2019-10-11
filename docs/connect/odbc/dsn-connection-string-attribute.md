@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702788"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712924"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -116,6 +116,8 @@ ms.locfileid: "68702788"
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 다음은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md)에 나오지 않는 몇 가지 문자열 키워드 및 연결 특성입니다.
@@ -190,6 +192,31 @@ SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY �
 |-|-|
 |아니오|(기본값) 사용 가능한 경우 메타데이터에 sp_describe_first_result_set을 사용합니다. |
 |예| 메타데이터에 SET FMTONLY를 사용합니다. |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+인증에 사용할 인증서를 지정 합니다. 다음 옵션을 사용할 수 있습니다. 
+
+| 옵션 값 | 설명 |
+|-|-|
+| sha1:`<hash_value>` | ODBC 드라이버는 SHA1 해시를 사용 하 여 Windows 인증서 저장소에서 인증서를 찾습니다. |
+| 제목:`<subject>` | ODBC 드라이버는 주체를 사용 하 여 Windows 인증서 저장소에서 인증서를 찾습니다. |
+| 파일: `<file_location>` [, 암호: `<password>`] | ODBC 드라이버는 인증서 파일을 사용 합니다. |
+
+인증서가 PFX 형식이 고 PFX 인증서 내의 개인 키가 암호로 보호 되는 경우 password 키워드가 필요 합니다. PEM 및 DER 형식의 인증서의 경우 ClientKey 특성이 필요 합니다.
+
+
+## <a name="clientkey"></a>ClientKey
+
+ClientCertificate 특성으로 지정 된 PEM 또는 DER 인증서에 대 한 개인 키의 파일 위치를 지정 합니다. 형식: 
+
+| 옵션 값 | 설명 |
+|-|-|
+| 파일: `<file_location>` [, 암호: `<password>`] | 개인 키 파일의 위치를 지정 합니다. |
+
+개인 키 파일이 암호로 보호 되는 경우 password 키워드가 필요 합니다. 암호에 "," 문자가 포함 된 경우 추가 "," 문자는 각 문자 바로 뒤에 추가 됩니다. 예를 들어 암호가 "a, b, c" 인 경우 연결 문자열에 있는 이스케이프 된 암호는 "a,, b,, c"입니다. 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 

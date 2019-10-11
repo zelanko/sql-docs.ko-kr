@@ -1,10 +1,7 @@
 ---
 title: bcp 유틸리티 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,13 +24,16 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742998"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708717"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -43,10 +43,10 @@ ms.locfileid: "68742998"
 >
 > Azure SQL Data Warehouse에서 bcp를 사용 하는 방법에 대 한 자세한 내용은 [bcp를 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)를 참조 하세요.
 
-  **대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
-  
- ![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") **bcp** 구문에 사용되는 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
-  
+**대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
+
+![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") **bcp** 구문에 사용되는 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
+
 > [!NOTE]
 > **bcp** 를 사용하여 데이터를 백업하는 경우 서식 파일을 만들어 데이터 서식을 기록합니다. **bcp** 데이터 파일에는 스키마 또는 서식 정보가 **포함되어 있지 않기** 때문에 테이블이나 뷰가 삭제된 경우 서식 파일이 없으면 데이터를 가져오지 못할 수 있습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "68742998"
 **[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-명령줄 도구는 GA (일반 공급) 이지만 용 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설치 관리자 패키지를 사용 하 여 릴리스됩니다.
+명령줄 도구는 GA (일반 공급) 이지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대 한 설치 관리자 패키지를 사용 하 여 릴리스됩니다.
 
 ### <a name="version-information"></a>버전 정보
 
@@ -63,8 +63,8 @@ ms.locfileid: "68742998"
 빌드 번호: 15.0.1000.34<br>
 릴리스 날짜: 2018년 10월 18일
 
-새 버전의 SQLCMD는 SQL Database, SQL Data Warehouse 및 Always Encrypted 기능에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
-새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
+새 버전의 SQLCMD는 SQL Database, SQL Data Warehouse 및 Always Encrypted 기능에 대 한 MFA (Multi-Factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
+새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-Factor Authentication (MFA) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
@@ -110,7 +110,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>]
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
-</pre></td></tr></table>  
+</pre></td></tr></table>
 
 ## <a name="arguments"></a>인수
 
@@ -175,7 +175,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850과 같은 특정 코드 페이지 번호입니다.<br /><br /> 버전 13([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다. 버전 13부터 UTF-8 인코딩을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이전 버전으로 가져올 수 있습니다.|  
   
  **-d** _**database\_name**_ <a name="d"></a>   
- 연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. **-d** *database_name*과 세 부분으로 구성된 이름(bcp.exe에 첫 번째 매개 변수로 전달되는 *database_name.schema.table*)을 지정하면 오류가 발생하는데 이는 데이터베이스 이름을 두 번 지정할 수 없기 때문입니다. *database_name*이 하이픈(-)이나 슬래시(/)로 시작하면 **-d**와 데이터베이스 이름 사이에 공백을 포함하지 마세요.  
+ 연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. \* *-D database_name와 세 부분으로 구성 된 이름 (database_name의 첫 번째 매개 변수로 전달 되는 테이블 이름)이 지정 된 경우 데이터베이스 이름을 두 번 지정할 수 없으므로 오류가 발생 합니다. *database_name*이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-d**와 데이터베이스 이름 사이에 공백을 추가하지 않습니다.  
   
  **-e** _**err\_file**_ <a name="e"></a>  
  **bcp** 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다. **bcp** 명령의 오류 메시지는 사용자의 워크스테이션에 나타납니다. 이 옵션을 사용하지 않으면 오류 파일이 생성되지 않습니다.  
@@ -214,35 +214,33 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다.
 
 > [!TIP]
->  버전의 bcp에 AAD (Azure Active Directory 인증) 형식 **bcp** (>)가 포함 되어 있는지 확인 하려면 (\<bcp space\<대시\<> 대시 >) 사용 가능한 인수 목록에-G가 표시 되는지 확인 합니다.
+>  해당 버전의 bcp에 AAD (Azure Active Directory 인증) 형식 **bcp가** 포함 되어 있는지 확인 하려면 (bcp \<space > \<dash > \<dash >) 사용 가능한 인수 목록에-G가 표시 되는지 확인 합니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
 
-    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 내보냅니다. 이 예에서는 Azure `bcptest` 서버 `aadserver.database.windows.net` 에서 `testdb` 데이터베이스의 테이블을 내보내고 파일 `c:\last\data1.dat`에 데이터를 저장 합니다.
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 내보냅니다. 이 예에서는 Azure server `aadserver.database.windows.net`의 데이터베이스 `testdb`에서 `bcptest` 테이블을 내보내고-3 `c:\last\data1.dat` 파일에 데이터를 저장 합니다.
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 가져옵니다. 이 예에서는 azure AD 사용자 `c:\last\data1.dat` /암호 `bcptest` 를 사용 `testdb` 하 여 azure `aadserver.database.windows.net` 서버에서 데이터베이스에 대 한 테이블로 파일의 데이터를 가져옵니다.
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 가져옵니다. 이 예제에서는 Azure AD 사용자/암호를 사용 하 여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대 한 `c:\last\data1.dat` 파일의 데이터를 `bcptest` 테이블로 가져옵니다.
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
+- **Azure Active Directory 통합**
 
-
-- **Azure Active Directory 통합** 
- 
     Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령이 실행 되 고 있는 계정)이 Azure AD와 페더레이션된 것으로 가정 합니다. 
 
-    다음 예제에서는 Azure AD 통합 계정을 사용 하 여 데이터를 내보냅니다. 예제는 azure 서버 `bcptest` `testdb` `aadserver.database.windows.net` 에서 통합 된 azure AD를 사용 하 여 데이터베이스에서 테이블을 내보내고 파일 `c:\last\data2.dat`에 데이터를 저장 합니다.
+    다음 예제에서는 Azure AD 통합 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 Azure server `aadserver.database.windows.net`에서 통합 된 Azure AD를 사용 하 여 데이터베이스 `testdb`에서 `bcptest` 테이블을 내보내고-3 `c:\last\data2.dat` 파일에 데이터를 저장 합니다.
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    다음 예제에서는 Azure AD 통합 인증을 사용 하 여 데이터를 가져옵니다. 이 예에서는 azure AD 통합 `c:\last\data2.txt` 인증을 `bcptest` 사용 하 `testdb` 여 azure 서버 `aadserver.database.windows.net` 에서 데이터베이스에 대 한 테이블로 파일의 데이터를 가져옵니다.
+    다음 예제에서는 Azure AD 통합 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 Azure AD 통합 인증을 사용 하 여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대 한 `c:\last\data2.txt` 파일의 데이터를 `bcptest` 테이블로 가져옵니다.
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -264,7 +262,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   Azure AD 사용자가 Windows 계정을 사용 하 여 페더레이션 된 도메인 인 경우 명령줄에 필요한 사용자 이름에는 해당 도메인 계정이 포함 됩니다 (예 joe@contoso.com : 아래 참조).   
+   Azure AD 사용자가 Windows 계정을 사용 하 여 페더레이션 되는 도메인 인 경우 명령줄에 필요한 사용자 이름에는 해당 도메인 계정이 포함 됩니다 (joe@contoso.com 예: 0은 아래 참조).   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
@@ -284,7 +282,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 일괄 처리당 데이터의 대략적인 KB 단위 크기( *cc*)입니다. 기본적으로 KILOBYTES_PER_BATCH는 알 수 없습니다.  
   
 * **TABLOCK**  
-대량 로드 작업이 진행되는 동안 대량 업데이트 테이블 수준 잠금이 사용되도록 지정합니다. 그렇지 않으면 행 수준 잠금이 사용됩니다. 대량 복사 작업 중에 잠금을 보유하면 테이블의 잠금 경합이 줄어들기 때문에 이 힌트를 사용하면 성능이 크게 향상됩니다. 테이블에 인덱스가 없고 **TABLOCK** 이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load**테이블 옵션에 의해 결정됩니다.  
+대량 로드 작업이 진행되는 동안 대량 업데이트 테이블 수준 잠금이 사용되도록 지정합니다. 그렇지 않으면 행 수준 잠금이 사용됩니다. 대량 복사 작업 중에 잠금을 보유하면 테이블의 잠금 경합이 줄어들기 때문에 이 힌트를 사용하면 성능이 크게 향상됩니다. 테이블에 인덱스가 없고 **TABLOCK** 이 지정되어 있으면 여러 클라이언트가 동시에 테이블을 로드할 수 있습니다. 기본적으로 잠금 동작은 **table lock on bulk load** 테이블 옵션에 의해 결정됩니다.  
   
   > [!NOTE]
   > 대상 테이블이 클러스터형 columnstore 인덱스인 경우에는 각 동시 스레드가 인덱스 내의 별도 행 그룹에 할당되고 데이터를 로드하기 때문에 여러 동시 클라이언트에서 로드하는 데 TABLOCK 힌트가 필요 없습니다. 자세한 내용은 columnstore 인덱스 개념 항목을 참조하세요.
@@ -407,7 +405,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-v**<a name="v"></a>  
  **bcp** 유틸리티 버전 번호 및 저작권을 보고합니다.  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130** )<a name="V"></a>  
+ **-V**(**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
  이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전의 데이터 형식을 사용하여 대량 복사 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않으며 기본값을 사용합니다.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -481,9 +479,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 
 ## <a name="data-validation"></a>데이터 유효성 검사
 
- **bcp** 는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다. 예를 들어 **bcp** 는 이제 다음을 확인합니다.  
+ **bcp**는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다. 예를 들어 **bcp** 는 이제 다음을 확인합니다.  
   
--   **float** 또는 **real** 데이터 형식의 네이티브 표시가 유효한지 여부  
+-   float 또는 real 데이터 형식의 원시 표시가 유효한지 여부  
   
 -   유니코드 데이터의 길이가 짝수 바이트인지 여부  
   
@@ -526,36 +524,37 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
   
 -   (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보냅니다.  
   
--   (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시할 수 있습니다(-t 및 -r 옵션 사용).  
+-   (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시하세요(-t 및 -r 옵션 사용).  
   
 -   (사용자) 실제 문자열 값 간의 충돌 가능성을 최소화하려면 길고 고유한 종결자(바이트 또는 문자 시퀀스)를 사용합니다. 이렇게 하려면 -t 및 -r 옵션을 사용하면 됩니다.  
 
 ## <a name="examples"></a>예
 
- 이 섹션에서는 다음과 같은 예를 보여 줍니다.  
- 
--   1\. **bcp** 유틸리티 버전 식별
-  
--   2\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
-  
--   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
-  
--   D. 파일에서 테이블로 데이터 복사  
-  
--   E. 데이터 파일로 특정 열 복사  
-  
--   F. 데이터 파일로 특정 행 복사  
-  
--   G. 쿼리에서 데이터 파일로 데이터 복사  
-  
--   H. 서식 파일 만들기
-    
--   9\. **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행  
+이 섹션에서는 다음과 같은 예를 보여 줍니다.
 
+1\. **bcp** 유틸리티 버전 식별
+
+2\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)
+
+C. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)
+
+D. 파일에서 테이블로 데이터 복사
+
+E. 데이터 파일로 특정 열 복사
+
+F. 데이터 파일로 특정 행 복사
+
+G. 쿼리에서 데이터 파일로 데이터 복사
+
+H. 서식 파일 만들기
+
+9\. **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행
+
+J. 코드 페이지 지정
 
 ### <a name="example-test-conditions"></a>**예제 테스트 조건**
 
-아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters`에서 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)다운로드할 수 있습니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
+아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters`는 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)에서 다운로드할 수 있습니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
 
 다음 스크립트에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
@@ -583,93 +582,106 @@ END
 > TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>1\.  **bcp** 유틸리티 버전 식별
+
 명령 프롬프트에서 다음 명령을 입력합니다.
+
 ```
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>2\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>2\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)
+
 다음 예에서는 **테이블의** out `WideWorldImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.
 
-- **기본**  
-이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.
+- **기본** 이 예에서는 `StockItemTransactions_character.bcp`라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.
 
   명령 프롬프트에서 다음 명령을 입력합니다.
+
   ```
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
- 
+
  - **Expanded**  
 이 예에서는 `StockItemTransactions_native.bcp` 라는 데이터 파일을 만들고 **네이티브** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  예제에서는 또한 최대 구문 오류 수, 오류 파일 및 출력 파일을 지정합니다.
 
     명령 프롬프트에서 다음 명령을 입력합니다.
     ```
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
-    ``` 
- 
+    ```
+
 `Error_out.log` 및 `Output_out.log`을 검토합니다.  `Error_out.log` 비어 있어야 합니다.  `StockItemTransactions_character.bcp` 및 `StockItemTransactions_native.bcp`간 파일 크기를 비교합니다. 
-   
-### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
+
+### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)
+
 다음 예에서는 **테이블의** out `WideWorldImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.  이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  
   
  이 예에서는 혼합 모드 인증을 사용하고 있다고 가정합니다. **-U** 스위치를 사용하여 로그인 ID를 지정해야 합니다. 또한 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하지 않는 한 **-S** 스위치를 사용하여 시스템 이름을 지정하고 원하는 경우 인스턴스 이름을 지정합니다.  
 
 명령 프롬프트에서 다음 명령을 입력합니다. \(시스템에서 암호를 입력하라는 메시지가 나타납니다.\)
-```  
+
+```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
-```  
-  
-### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 파일에서 테이블로 데이터 복사  
+```
+
+### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 파일에서 테이블로 데이터 복사
+
 다음 예제는 위에서 만든 파일을 사용하여 **테이블의** in `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 옵션에 대해 설명합니다.
-  
-- **Basic**  
-이 예에서는 이전에 만든 `StockItemTransactions_character.bcp` 데이터 파일을 사용합니다.
+
+- **기본** 이 예에서는 이전에 만든 `StockItemTransactions_character.bcp` 데이터 파일을 사용합니다.
 
   명령 프롬프트에서 다음 명령을 입력합니다.
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
-  ```  
 
-- **Expanded**  
-이 예에서는 이전에 만든 `StockItemTransactions_native.bcp` 데이터 파일을 사용합니다.  예제에서는 또한 **TABLOCK**힌트를 사용하여 배치 크기, 최대 구문 오류 수, 오류 파일 및 출력 파일을 지정합니다.
-  
-  명령 프롬프트에서 다음 명령을 입력합니다.
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
-  ```    
-  `Error_in.log` 및 `Output_in.log`을 검토합니다.
-   
-### <a name="e-copying-a-specific-column-into-a-data-file"></a>E. 데이터 파일로 특정 열 복사  
-특정 열을 복사하려면 **queryout** 옵션을 사용합니다.  다음 예에서는 `StockItemTransactionID` 테이블의 `Warehouse.StockItemTransactions` 열만 데이터 파일로 복사합니다. 
+  ```
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
+  ```
+
+- **확장** 이 예에서는 이전에 만든 `StockItemTransactions_native.bcp` 데이터 파일을 사용합니다.  예제에서는 또한 **TABLOCK**힌트를 사용하여 배치 크기, 최대 구문 오류 수, 오류 파일 및 출력 파일을 지정합니다.
   
 명령 프롬프트에서 다음 명령을 입력합니다.
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
+```
+
+  `Error_in.log` 및 `Output_in.log`을 검토합니다.
+
+### <a name="e-copying-a-specific-column-into-a-data-file"></a>E. 데이터 파일로 특정 열 복사
+
+특정 열을 복사하려면 **queryout** 옵션을 사용합니다.  다음 예에서는 `StockItemTransactionID` 테이블의 `Warehouse.StockItemTransactions` 열만 데이터 파일로 복사합니다.
   
-```  
+명령 프롬프트에서 다음 명령을 입력합니다.
+
+```
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
-```  
-  
-### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 데이터 파일로 특정 행 복사  
+```
+
+### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 데이터 파일로 특정 행 복사
+
 특정 행을 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `WideWorldImporters.Application.People` 테이블에서 `Amy Trefl`라는 연락처 행만 데이터 파일(`Amy_Trefl_c.bcp`)로 복사합니다.  참고: **-d** 스위치는 데이터베이스를 식별하는 데 사용됩니다.
   
-명령 프롬프트에서 다음 명령을 입력합니다. 
-```  
+명령 프롬프트에서 다음 명령을 입력합니다.
+
+```
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
-```  
-  
-### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 쿼리에서 데이터 파일로 데이터 복사  
+```
+
+### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 쿼리에서 데이터 파일로 데이터 복사
+
 Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **queryout** 옵션을 사용합니다.  다음 예에서는 `WideWorldImporters.Application.People` 테이블에서 전체 이름을 기준으로 정렬된 이름을 `People.txt` 데이터 파일로 복사합니다.  참고: **-t** 스위치는 쉼표로 구분된 파일을 만드는 데 사용됩니다.
-  
+
 명령 프롬프트에서 다음 명령을 입력합니다.
-```  
+
+```
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
-```  
-  
-### <a name="h-creating-format-files"></a>H. 서식 파일 만들기  
+```
+
+### <a name="h-creating-format-files"></a>H. 서식 파일 만들기
+
 다음 예에서는 `Warehouse.StockItemTransactions` 데이터베이스의 `WideWorldImporters` 테이블에 대해 3개의 서로 다른 서식 파일을 만듭니다.  만들어진 각 파일의 내용을 검토합니다.
-  
+
 명령 프롬프트에서 다음 명령을 입력합니다.
-  
-```  
+
+```
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -678,37 +690,33 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 REM XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
- 
-```  
+```
+
+> [!NOTE]
+> **-x** 스위치를 사용하려면 **bcp** 9.0 클라이언트를 사용해야 합니다. **bcp** 9.0 클라이언트를 사용하는 방법은 "[주의](#remarks)"를 참조하세요.
   
-> [!NOTE]  
->  **-x** 스위치를 사용하려면 **bcp** 9.0 클라이언트를 사용해야 합니다. **bcp** 9.0 클라이언트를 사용하는 방법은 "[주의](#remarks)"를 참조하세요.  
+ 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) 및 [XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)을 참조하세요.
   
- 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) 및 [XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)을 참조하세요.  
-  
-### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>9\. bcp에서 서식 파일을 사용하여 대량 가져오기 수행  
+### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>9\. bcp에서 서식 파일을 사용하여 대량 가져오기 수행
+
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스로 데이터를 가져올 때 이전에 만든 서식 파일을 사용하려면 **in** 옵션과 함께 **-f** 스위치를 사용합니다.  예를 들어 다음 명령은 이전에 만든 서식 파일인 `StockItemTransactions_character.bcp`을 사용하여 데이터 파일 `Warehouse.StockItemTransactions_bcp` 의 내용을 `StockItemTransactions_c.xml`테이블의 복사본으로 대량 복사합니다.  참고: **-L** 스위치는 처음 100개의 레코드를 가져오는 데 사용됩니다.
-  
+
 명령 프롬프트에서 다음 명령을 입력합니다.
-```  
-bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
-```  
-  
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
+```
+
 > [!NOTE]  
 >  데이터 파일 필드와 테이블 열의 숫자, 순서, 데이터 형식 등이 다른 경우 서식 파일을 사용하면 유용합니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)에 대한 지식이 필요하지 않습니다.  
-  
-### <a name="j-specifying-a-code-page"></a>J. 코드 페이지 지정  
- 다음 부분 코드 예제에서는 코드 페이지 65001을 지정하는 동안 bcp 가져오기를 보여 줍니다.  
-  
-```  
+
+### <a name="j-specifying-a-code-page"></a>J. 코드 페이지 지정
+
+다음 부분 코드 예제에서는 코드 페이지 65001을 지정하는 동안 bcp 가져오기를 보여 줍니다.
+
+```
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
-  
- 다음 부분 코드 예제에서는 코드 페이지 65001을 지정하는 동안 bcp 내보내기를 보여 줍니다.  
-  
-```  
-bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
+```
 
 ## <a name="additional-examples"></a>추가 예
 

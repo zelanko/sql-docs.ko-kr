@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9cd9bb481ec54f9d99c80aba54241827c2a118cf
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471078"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252032"
 ---
-# <a name="sprxpredict"></a>sp_rxPredict  
+# <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 데이터베이스에서 이진 형식으로 저장 된 기계 학습 모델로 구성 된 지정 된 입력에 대 한 예측 값을 생성 합니다.
 
-R 및 Python 기계 학습 모델에 대 한 점수를 거의 실시간으로 제공 합니다. `sp_rxPredict``rxPredict` 는 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)에서 R 함수의 래퍼로 제공 되는 저장 프로시저로, [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)에서 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 함수를 제공 합니다. 이는로 C++ 작성 되었으며 점수 매기기 작업을 위해 특별히 최적화 되어 있습니다.
+R 및 Python 기계 학습 모델에 대 한 점수를 거의 실시간으로 제공 합니다. `sp_rxPredict`은 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)에서 `rxPredict` R 함수의 래퍼로 제공 되는 저장 프로시저이 고 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)에서 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 함수를 제공 합니다. 이는로 C++ 작성 되었으며 점수 매기기 작업을 위해 특별히 최적화 되어 있습니다.
 
 모델은 R 또는 Python을 사용 하 여 만들어야 하지만, 대상 데이터베이스 엔진 인스턴스에서 이진 형식으로 직렬화 되 고 저장 된 후에는 R 또는 Python 통합이 설치 되지 않은 경우에도 해당 데이터베이스 엔진 인스턴스에서 사용 될 수 있습니다. 자세한 내용은 [sp_rxPredict를 사용 하 여 실시간 점수 매기기](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)를 참조 하세요.
 
@@ -60,7 +60,7 @@ sp_rxPredict  ( @model, @input )
 > [!NOTE]
 > 이 옵션을 enabing 보안에 영향을 미칩니다. 서버에서 SQLCLR을 사용 하도록 설정할 수 없는 경우 [TRANSACT-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) 함수와 같은 대체 구현을 사용 합니다.
 
-사용자에 게 `EXECUTE` 데이터베이스에 대 한 권한이 필요 합니다.
+사용자에 게는 데이터베이스에 대 한 `EXECUTE` 권한이 필요 합니다.
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
@@ -120,7 +120,7 @@ sp_rxPredict  ( @model, @input )
 
 다음 모델 유형은 지원 되지 않습니다.
 
-+ RevoScaleR에서 또는 `rxGlm` `rxNaiveBayes` 알고리즘을 사용 하는 모델
++ RevoScaleR의 `rxGlm` 또는 `rxNaiveBayes` 알고리즘을 사용 하는 모델
 + R의 PMML 모델
 + 다른 타사 라이브러리를 사용 하 여 만든 모델 
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-의 *@inputData* 입력 데이터는 유효한 SQL 쿼리가 될 뿐만 아니라 저장 된 모델의 열과 호환 되는 열을 포함 해야 합니다.
+*@No__t-1inputData* 의 입력 데이터에는 유효한 SQL 쿼리가 될 뿐만 아니라 저장 된 모델의 열과 호환 되는 열이 포함 되어야 합니다.
 
-`sp_rxPredict`는 double, float, short, ushort, long, ulong 및 string과 같은 .NET 열 유형만 지원 합니다. 실시간 점수 매기기에 사용 하기 전에 입력 데이터에서 지원 되지 않는 형식을 필터링 해야 할 수도 있습니다. 
+`sp_rxPredict`은 double, float, short, ushort, long, ulong 및 string과 같은 .NET 열 유형만 지원 합니다. 실시간 점수 매기기에 사용 하기 전에 입력 데이터에서 지원 되지 않는 형식을 필터링 해야 할 수도 있습니다. 
 
   해당 SQL 형식에 대 한 자세한 내용은 [sql-Clr 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 또는 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.
 

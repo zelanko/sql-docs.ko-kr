@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 713c5cc8de5daecec77ff984a22f85b220ece2a2
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715744"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251347"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (데이터베이스 내) 인스턴스에서 실행할 R 코드를 변환 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + 네트워크에 액세스 하거나 SQL Server에 설치할 수 없는 R 라이브러리를 사용 합니다.
 + 이 코드는 Excel 워크시트, 공유 파일 및 기타 데이터베이스와 같은 SQL Server 외부에 있는 데이터 원본에 대 한 별도의 호출을 수행 합니다. 
-+ *@script* [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 의 매개 변수에서 코드를 실행 하 고 저장 프로시저를 매개 변수화 하려고 합니다.
++ [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 의 *\@script* 매개 변수에서 코드를 실행 하 고 저장 프로시저도 매개 변수화 하려고 합니다.
 + 원본 솔루션에는 데이터 준비, 기능 엔지니어링 및 모델 학습, 점수 매기기 또는 보고와 같이 독립적으로 실행 되는 경우 프로덕션 환경에서 보다 효율적일 수 있는 여러 단계가 포함 됩니다.
 + 라이브러리를 변경 하거나 병렬 실행을 사용 하 여 성능을 최적화 하 고 SQL Server에 대 한 일부 처리를 오프 로드 합니다. 
 
@@ -56,7 +56,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + 가능한 데이터 형식 문제의 검사 목록을 확인합니다.
 
-    모든 R 데이터 형식은 SQL Server machine Learning Services에서 지원 됩니다. 그러나는 R 보다 더 다양 한 데이터 형식을 지원합니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따라서 데이터를 R로 보낼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때 일부 암시적 데이터 형식 변환이 수행 되며 그 반대의 경우도 마찬가지입니다. 일부 데이터를 명시적으로 캐스팅 하거나 변환 해야 할 수도 있습니다. 
+    모든 R 데이터 형식은 SQL Server machine Learning Services에서 지원 됩니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 R 보다 더 다양 한 데이터 형식을 지원 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 R로 보낼 때 일부 암시적 데이터 형식 변환이 수행 되며 그 반대의 경우도 마찬가지입니다. 일부 데이터를 명시적으로 캐스팅 하거나 변환 해야 할 수도 있습니다. 
 
     NULL 값이 지원됩니다. 그러나 R은 `na` 데이터 구문을 사용 하 여 누락 값을 나타냅니다 .이 값은 null과 비슷합니다.
 
@@ -72,7 +72,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + 저장 프로시저에서 R을 실행 하는 경우 여러 **스칼라** 입력을 통과할 수 있습니다. 출력에서 사용 하려는 매개 변수의 경우 **output** 키워드를 추가 합니다. 
 
-    예를 들어 다음 스칼라 입력 `@model_name` 은 결과의 자체 열에도 출력 되는 모델 이름을 포함 합니다.
+    예를 들어 다음 스칼라 입력 `@model_name`은 결과의 자체 열에도 출력 되는 모델 이름을 포함 합니다.
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
@@ -92,7 +92,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
     예를 들어 테이블에 데이터를 삽입 하려면 **WITH RESULT SET** 절을 사용 하 여 스키마를 지정 해야 합니다.
 
-    R 스크립트에서 인수 `@parallel=1`를 사용 하는 경우에도 출력 스키마가 필요 합니다. 이유는 SQL Server에서 여러 프로세스를 만들어 병렬로 쿼리를 실행하고 끝에 결과를 수집할 수 있기 때문입니다. 따라서 병렬 프로세스를 만들려면 먼저 출력 스키마를 준비 해야 합니다.
+    R 스크립트에서 인수 @no__t 사용 하는 경우에도 출력 스키마가 필요 합니다. 이유는 SQL Server에서 여러 프로세스를 만들어 병렬로 쿼리를 실행하고 끝에 결과를 수집할 수 있기 때문입니다. 따라서 병렬 프로세스를 만들려면 먼저 출력 스키마를 준비 해야 합니다.
     
     다른 경우에는 **결과 집합이 UNDEFINED로 설정**된 옵션을 사용 하 여 결과 스키마를 생략할 수 있습니다. 이 문은 열의 이름을 지정 하거나 SQL 데이터 형식을 지정 하지 않고 R 스크립트에서 데이터 집합을 반환 합니다.
 
@@ -106,7 +106,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + 모든 쿼리를 미리 실행 하 고 SQL Server 쿼리 계획을 검토 하 여 병렬로 수행할 수 있는 태스크를 식별 합니다.
 
-    입력 쿼리를 병렬화 할 수 있는 경우 `@parallel=1` [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대 한 인수의 일부로를 설정 합니다. 
+    입력 쿼리를 병렬화 할 수 있는 경우 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대 한 인수의 일부로 `@parallel=1`을 설정 합니다. 
 
     이 플래그를 사용한 병렬 처리는 일반적으로 SQL Server에서 분할된 테이블로 작업하거나 여러 프로세스에 쿼리를 분산하고 끝에 결과를 집계할 때마다 수행할 수 있습니다. 일반적으로 모든 데이터를 읽어야 하는 알고리즘을 통해 모델을 학습하거나 집계를 만들어야 하는 경우에는 이 플래그를 사용한 병렬 처리를 수행할 수 없습니다.
 
@@ -149,7 +149,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + T-sql 도구 및 ETL 프로세스를 활용 합니다. 데이터 워크플로의 일부로 기능 엔지니어링, 기능 추출 및 데이터 정리를 미리 수행 합니다.
 
-    또는 rstudio와 [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] 같은 전용 R 개발 환경에서 작업 하는 경우 데이터를 컴퓨터로 끌어오고 데이터를 반복적으로 분석 한 다음 결과를 작성 하거나 표시할 수 있습니다. 
+    @No__t-0 또는 RStudio와 같은 전용 R 개발 환경에서 작업 하는 경우 데이터를 컴퓨터로 끌어오고 데이터를 반복적으로 분석 한 다음 결과를 작성 하거나 표시할 수 있습니다. 
     
     그러나 독립 실행형 R 코드가 SQL Server로 마이그레이션되면이 프로세스의 대부분을 간소화 하거나 다른 SQL Server 도구로 위임할 수 있습니다. 
 
@@ -159,7 +159,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동 하는 경�
 
 + 응용 프로그램에서 직접 액세스 하기 위해 저장 프로시저에서 예측 및 점수 매기기 함수를 래핑합니다.
 
-### <a name="other-resources"></a>다른 리소스
+### <a name="other-resources"></a>기타 참고 자료
 
 SQL Server에서 R 솔루션을 배포 하는 방법에 대 한 예제를 보려면 다음 샘플을 참조 하세요.
 

@@ -1,26 +1,34 @@
 ---
-title: SQL Server Reporting Services(2017 이상) 설치 | Microsoft Docs
-ms.date: 12/20/2017
+title: SQL Server Reporting Services 설치 | Microsoft Docs
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502687"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952740"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
+# <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services 설치에는 보고서 항목을 저장하고 보고서를 렌더링하며 구독 및 기타 보고서 서비스를 처리하기 위한 서버 구성 요소가 포함됩니다. 
 
-SQL Server 2017 Reporting Services를 다운로드하려면 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)로 이동하세요.
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Microsoft 다운로드 센터에서 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)를 다운로드하세요.
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Microsoft 다운로드 센터에서 [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)를 다운로드하세요.
+
+::: moniker-end
 
 > [!NOTE]
 > Power BI Report Server를 찾고 있나요? [Power BI Report Server 설치](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)를 참조하세요.
@@ -40,34 +48,24 @@ Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨
 
 2. **Reporting Services 설치**를 선택합니다.
 
-    ![Reporting Services 설치](media/install-reporting-services/report-server-install.png)
-
 3. 버전을 선택하여 설치한 후 **다음**을 선택합니다.
-
-    ![버전 선택](media/install-reporting-services/report-server-install-edition.png)
 
     무료 버전의 경우 드롭다운에서 평가판 또는 개발자 버전을 선택합니다.
 
     ![평가판 또는 개발자 버전](media/install-reporting-services/report-server-install-edition-select.png)
 
-    그렇지 않은 경우 제품 키를 입력합니다. [SQL Server 2017 Reporting Services의 제품 키를 찾습니다](find-reporting-services-product-key-ssrs.md).
+    그렇지 않은 경우 제품 키를 입력합니다. [SQL Server Reporting Services의 제품 키를 찾습니다](find-reporting-services-product-key-ssrs.md).
 
 4. 사용 조건을 읽고 동의한 후 **다음**을 선택합니다.
 
 5. 보고서 서버 데이터베이스를 저장하는 데 사용할 수 있는 데이터베이스 엔진이 있어야 합니다. **다음**을 선택하여 보고서 서버만 설치합니다.
 
-    ![데이터베이스는 설치하는 데 필요하지 않음](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. 보고서 서버에 대한 설치 위치를 지정합니다. 계속하려면 **설치**를 선택합니다.
-
-    ![설치 경로 지정](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > 기본 경로는 C:\Program Files\Microsoft SQL Server Reporting Services입니다.
 
 7. 성공적으로 설치 후 **보고서 서버 구성**을 선택하여 Reporting Services 구성 관리자를 시작합니다.
-
-    ![보고서 서버 구성](media/install-reporting-services/report-server-install-configure.png)
 
 ## <a name="configuration-your-report-server"></a>보고서 서버 구성
 

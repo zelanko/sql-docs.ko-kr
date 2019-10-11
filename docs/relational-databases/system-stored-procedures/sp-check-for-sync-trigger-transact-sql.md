@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771279"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251247"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   사용자 정의 트리거 또는 저장 프로시저가 즉시 업데이트 구독에 사용되는 복제 트리거의 컨텍스트에서 호출되고 있는지 여부를 결정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자 또는 구독 데이터베이스의 구독자에서 실행됩니다.  
@@ -52,10 +52,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**영구히**|DELETE 트리거|  
 |NULL(기본값)||  
   
-`[ @fonpublisher = ] fonpublisher`저장 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 는 **bit**이며 기본값은 0입니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
+`[ @fonpublisher = ] fonpublisher`은 저장 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 는 **bit**이며 기본값은 0입니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 1은 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고 있으며에서 *@trigger_op* 반환 되는 트리거의 유형 임을 나타냅니다.  
+ 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 1은 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고 있고 *\@trigger_op*에서 반환 되는 트리거의 유형 임을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_check_for_sync_trigger** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
