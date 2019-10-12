@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8558c8d9caffd27d7a87743c88e1d62c430640fd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768908"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278121"
 ---
-# <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher(Transact-SQL)
+# <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포 게시자를 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
@@ -39,15 +39,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`은 삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @no_checks = ] no_checks`**Sp_dropdistpublisher** 에서 게시자가 배포자로 서버를 제거 했는지 여부를 확인 합니다. *no_checks* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @no_checks = ] no_checks`은 게시자가 게시자가 배포자로 서버를 제거 했는지를 확인 **sp_dropdistpublisher** 여부를 지정 합니다. *no_checks* 는 **bit**이며 기본값은 **0**입니다.  
   
  **0**인 경우 복제는 원격 게시자가 로컬 서버를 배포자로 제거 했는지 확인 합니다. 게시자가 로컬인 경우에는 복제 시 로컬 서버에 게시 또는 배포 개체가 남아 있지 않음을 확인합니다.  
   
- **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) **@ignore_distributor**  =  **1**을 사용 하 여 복제를 제거 해야 합니다.  
+ **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 **\@ignore_distributor** = **1**과 함께 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 를 사용 하 여 복제를 제거 해야 합니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`게시자를 제거할 때 배포 개체가 배포자에 남아 있는지 여부를 지정 합니다. *ignore_distributor* 는 **bit** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor`은 게시자가 제거 될 때 배포자에 배포 개체가 남아 있는지 여부를 지정 합니다. *ignore_distributor* 는 **bit** 이며 다음 값 중 하나일 수 있습니다.  
   
  **1** = *게시자* 에 속하는 배포 개체가 배포자에 남아 있습니다.  
   

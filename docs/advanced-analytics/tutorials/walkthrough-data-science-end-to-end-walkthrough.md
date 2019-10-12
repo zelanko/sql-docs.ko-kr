@@ -3,17 +3,17 @@ title: R 언어를 사용 하 여 데이터 과학자에 대 한 자습서
 description: 데이터베이스 내 분석을 위한 종단 간 R 솔루션을 만드는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ad7f5a500f740e4a302f814ec9523dfb33ecc68b
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714663"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278269"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자 SQL 개발
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +38,21 @@ R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server �
 
 + RStudio와 같은 R IDE 또는 R에 포함 된 기본 제공 RSTUDIO 도구
 
-클라이언트 워크스테이션에서이 연습을 수행 하는 것이 좋습니다. SQL Server와 R 언어가 사용 하도록 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 동일한 네트워크에서 연결할 수 있어야 합니다. 워크스테이션 구성에 대 한 지침은 [R 개발용 데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조 하세요.
+클라이언트 워크스테이션에서이 연습을 수행 하는 것이 좋습니다. 동일한 네트워크에서 SQL Server를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 하 고 R 언어가 사용 하도록 설정 되어 있어야 합니다. 워크스테이션 구성에 대 한 지침은 [R 개발용 데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조 하세요.
 
-또는 및 R 개발 환경이 둘 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 포함 된 컴퓨터에서이 연습을 실행할 수도 있지만 프로덕션 환경에서는이 구성을 권장 하지 않습니다. 클라이언트와 서버를 동일한 컴퓨터에 배치 해야 하는 경우에는 "원격" 클라이언트에서 R 스크립트를 전송 하기 위한 두 번째 Microsoft R 라이브러리 집합을 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리는 사용 하지 마십시오. 특히 컴퓨터 하나를 사용 하는 경우 클라이언트 및 서버 작업을 지원 하기 위해 두 위치 모두에 RevoScaleR 라이브러리가 필요 합니다.
+또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 R 개발 환경이 둘 다 포함 된 컴퓨터에서이 연습을 실행할 수 있지만 프로덕션 환경에서는이 구성을 권장 하지 않습니다. 클라이언트와 서버를 동일한 컴퓨터에 배치 해야 하는 경우에는 "원격" 클라이언트에서 R 스크립트를 전송 하기 위한 두 번째 Microsoft R 라이브러리 집합을 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리는 사용 하지 마십시오. 특히 컴퓨터 하나를 사용 하는 경우 클라이언트 및 서버 작업을 지원 하기 위해 두 위치 모두에 RevoScaleR 라이브러리가 필요 합니다.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+> [!NOTE]
+> R 클라이언트 대신 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) 또는 [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/)를 사용 하는 경우 RevoScaleR 경로는 C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR입니다.
 
 <a name="add-packages"></a>
 
 ## <a name="additional-r-packages"></a>추가 R 패키지
 
-이 연습을 수행 하려면의 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]일부로 기본적으로 설치 되지 않는 몇 가지 R 라이브러리가 필요 합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
+이 연습을 수행 하려면 기본적으로 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 일부로 설치 되지 않는 몇 가지 R 라이브러리가 필요 합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
 
 ### <a name="on-a-client-workstation"></a>클라이언트 워크스테이션
 
@@ -80,7 +83,7 @@ SQL Server에서 패키지를 설치 하는 몇 가지 옵션이 있습니다. �
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  이 예제에서는 R grep 함수를 사용 하 여 사용 가능한 경로의 벡터를 검색 하 고 "Program Files"를 포함 하는 경로를 찾습니다. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)를 참조하세요.
+  이 예제에서는 R grep 함수를 사용 하 여 사용 가능한 경로의 벡터를 검색 하 고 "Program Files"를 포함 하는 경로를 찾습니다. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)을 참조 하세요.
 
   패키지가 이미 설치되었다고 생각되면 `installed.packages()` 를 실행하여 설치된 패키지 목록을 확인하십시오.
 

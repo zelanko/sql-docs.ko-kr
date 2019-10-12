@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (TRANSACT-SQL) | Microsoft Docs
+title: sp_rda_set_query_mode (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b1450dc8304c2e8d3db5a6fa8b2153f951e70bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083609"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278328"
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
+# <a name="syssp_rda_set_query_mode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  로컬 및 원격 데이터 (기본값) 또는 로컬 데이터에만 현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리를 반환 하는지 여부를 지정 합니다.  
+  현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리가 로컬 및 원격 데이터 (기본값) 또는 로컬 데이터만 반환할지 여부를 지정 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,41 +39,41 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @mode = ] *@mode*  
- 다음 값 중 하나입니다.  
+ [@mode =] *\@mode*  
+ 는 다음 값 중 하나입니다.  
   
 -   **사용 안 함** 스트레치 사용 테이블에 대 한 모든 쿼리가 실패 합니다.  
   
--   **LOCAL_ONLY** 스트레치 사용 테이블에 대 한 쿼리 로컬 데이터만 반환 합니다.  
+-   **LOCAL_ONLY** 스트레치 사용 테이블에 대 한 쿼리는 로컬 데이터만 반환 합니다.  
   
--   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리 로컬 및 원격 데이터를 반환 합니다. 이는 기본 동작입니다.  
+-   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 이는 기본 동작입니다.  
   
- [ @force = ]  *@force*  
- 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값이입니다.  
+ [@force =]  *\@force*  
+ 는 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 > 0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
- Db_owner 권한이 필요합니다.  
+ Db_owner 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  
- 다음 확장된 저장된 프로시저를 스트레치 사용 데이터베이스에 대 한 쿼리 모드를 설정할 수도 있습니다.  
+ 다음 확장 저장 프로시저는 스트레치 사용 데이터베이스에 대해서도 쿼리 모드를 설정 합니다.  
   
 -   **sp_rda_deauthorize_db**  
   
-     실행 한 후 **sp_rda_deauthorize_db** , 스트레치 사용 데이터베이스 및 테이블에 대 한 모든 쿼리가 실패 합니다. 즉, 쿼리 모드를 사용 하지 않도록 설정 됩니다. 이 모드를 종료 하려면 다음 중 하나를 수행 합니다.  
+     **Sp_rda_deauthorize_db** 를 실행 하면 스트레치 사용 데이터베이스 및 테이블에 대 한 모든 쿼리가 실패 합니다. 즉, 쿼리 모드는 사용 안 함으로 설정 됩니다. 이 모드를 종료 하려면 다음 작업 중 하나를 수행 합니다.  
   
-    -   실행할 [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업이 자동으로 다시 설정 쿼리 모드를 LOCAL_AND_REMOTE를 Stretch Database 대 한 기본 동작 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과 반환합니다.  
+    -   [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업은 자동으로 쿼리 모드를 Stretch Database의 기본 동작인 LOCAL_AND_REMOTE로 다시 설정 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
   
-    -   실행할 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 계속 해 서만 로컬 데이터에 대해 실행 하는 쿼리 수 있도록 LOCAL_ONLY 인수를 사용 합니다.  
+    -   LOCAL_ONLY 인수를 사용 하 여 [sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 를 실행 하 여 쿼리가 로컬 데이터에 대해서만 계속 실행 되도록 합니다.  
   
 -   **sp_rda_reauthorize_db**  
   
-     실행할 때 [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 원격 Azure 데이터베이스에 다시 연결 하려면이 작업이 자동으로 다시 설정 쿼리 모드를 LOCAL_AND_REMOTE 기본 동작에 대 한 Stretch Database. 즉, 쿼리는 로컬 및 원격 데이터에서 결과 반환합니다.  
+     [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 하는 경우이 작업은 자동으로 쿼리 모드를 Stretch Database의 기본 동작인 LOCAL_AND_REMOTE로 다시 설정 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sp_rda_deauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

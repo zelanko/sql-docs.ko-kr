@@ -1,5 +1,5 @@
 ---
-title: 동작 변경 내용을 데이터베이스 엔진 기능의 SQL Server 2014 | Microsoft Docs
+title: SQL Server 2014의 데이터베이스 엔진 기능에 대 한 동작 변경 내용 Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,28 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: bfaaea1b07c17fbf5c47bbcccf20a3ca55862123
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463460"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278208"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
   
-## <a name="SQL14"></a> 동작 변경 내용 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a>@No__t의 동작 변경 내용-1  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이전 버전에서 특정 길이(4,020자 초과) 이상의 문자열을 포함하는 XML 문서에 대한 쿼리는 잘못된 결과를 반환할 수 있습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 이러한 쿼리가 올바른 결과를 반환합니다.  
   
-## <a name="Denali"></a> 동작 변경 내용 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a>@No__t의 동작 변경 내용-1  
   
 ### <a name="metadata-discovery"></a>메타데이터 검색  
- 향상 된 기능을 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol SQLDescribeCol의 이전 버전에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명의 얻을에 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
+ @No__t-1부터 시작 하 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 향상 된 기능을 통해 SQLDescribeCol는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 반환 된 결과 보다 더 정확한 결과를 얻을 수 있습니다. 자세한 내용은 [메타데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
- 합니다 [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) 바뀝니다 쿼리를 실제로 실행 하지 않고 응답 형식을 결정 하기 위한 옵션 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)하십시오 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), 및 [sys.dm _ exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)합니다.  
+ 실제로 쿼리를 실행 하지 않고 응답 형식을 결정 하는 [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) 옵션은 [ &#40;sp_describe_first_result_set transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40; 로 바뀝니다. Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [ &#40;_exec_describe_first_result_set&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)및 [_exec_describe_first_result_set_for_object &#40;&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)(transact-sql)을 (를) 기반으로 합니다.  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>SQL Server 에이전트 태스크의 스크립팅 동작 변경 내용  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 기존 작업의 스크립트를 복사하여 새 작업을 만드는 경우 해당하는 새 작업은 기존 작업에 영향을 줄 수 있습니다. 기존 작업에서 스크립트를 사용 하 여 새 작업을 만들려면 매개 변수를 삭제 수동으로 *@schedule_uid* 은 일반적으로 기존 작업에서 작업 스케줄을 만드는 섹션의 마지막 매개 변수입니다. 이렇게 하면 기존 작업에 영향을 주지 않고 새 작업의 독립적인 새 스케줄을 만들 수 있습니다.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 기존 작업의 스크립트를 복사하여 새 작업을 만드는 경우 해당하는 새 작업은 기존 작업에 영향을 줄 수 있습니다. 기존 작업의 스크립트를 사용 하 여 새 작업을 만들려면 일반적으로 기존 작업에서 작업 일정을 만드는 섹션의 마지막 매개 변수 *\@schedule_uid* 매개 변수를 수동으로 삭제 합니다. 이렇게 하면 기존 작업에 영향을 주지 않고 새 작업의 독립적인 새 스케줄을 만들 수 있습니다.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩  
  이제 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서는 다음 사용자 정의 CLR 개체를 폴딩할 수 있습니다.  
@@ -71,10 +71,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- 공간 개체가 비어 있는지 여부를 결정할 호출을 [STIsEmpty &#40;geometry 데이터 형식&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) 메서드.  
+ 공간 개체가 비어 있는지 확인 하려면 [STIsEmpty &#40;geometry 데이터 형식&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) 메서드를 호출 합니다.  
   
 ### <a name="log-function-has-new-optional-parameter"></a>로그 함수에 새로운 선택적 매개 변수 포함  
- 합니다 `LOG` 함수에 선택적 *기본* 매개 변수입니다. 자세한 내용은 [로그 &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)합니다.  
+ 이제 `LOG` 함수에 선택적 *기본* 매개 변수가 있습니다. 자세한 내용은 [로그 &#40;transact-sql&#41;](/sql/t-sql/functions/log-transact-sql)을 참조 하세요.  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>분할된 인덱스 작업 중의 통계 계산이 변경됨  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검색하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
@@ -84,7 +84,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |원본 XS 데이터 형식|대상 SQL Server 데이터 형식|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|decimal<br /><br /> NUMERIC|  
 |FLOAT|REAL|  
 |double|FLOAT|  
@@ -98,12 +98,12 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML 모드에서의 sqlcmd.exe 동작 변경 내용  
- XML 모드를 사용 하 여 sqlcmd.exe를 사용 하는 경우 동작 변경 내용이 (: XML ON 명령) SELECT를 실행 하는 경우 * from T FOR XML...  
+ SELECT * from T FOR XML ...을 실행할 때 XML 모드 (: XML ON 명령)에서 sqlcmd를 사용 하는 경우 동작이 변경 됩니다.  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 수정 메시지  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 DBCC CHECKIDENT 명령을 통해 반환되는 메시지는 해당 명령을 RESEED *new_reseed_value*  에 사용하는 경우에만 현재 ID 값을 변경하도록 변경되었습니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 DBCC CHECKIDENT 명령을 통해 반환되는 메시지는 해당 명령을 RESEED *new_reseed_value*  에 사용하는 경우에만 현재 ID 값을 변경하도록 변경되었습니다. 새 메시지는 "id 정보 확인: 현재 id 값 ' \< 현재 id 값 > '입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
   
- 이전 버전의 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >', 현재 열 값 '\<현재 열 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요." DBCC CHECKIDENT를 지정할 때 NORESEED를 사용하거나 두 번째 매개 변수를 사용하지 않거나 reseed 값을 사용하지 않으면 메시지가 변경되지 않습니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)를 참조하세요.  
+ 이전 버전에서 메시지는 "id 정보 확인: 현재 id 값 ' \< 현재 id 값 > ', 현재 열 값 ' \<current 열 값 > '입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요." DBCC CHECKIDENT를 지정할 때 NORESEED를 사용하거나 두 번째 매개 변수를 사용하지 않거나 reseed 값을 사용하지 않으면 메시지가 변경되지 않습니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)를 참조하세요.  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 데이터 형식에서의 exist() 함수 동작이 변경됨  
  null 값이 있는 XML 데이터 형식을 0과 비교할 때 **exist()** 함수의 동작이 변경되었습니다. 다음 예를 살펴 보십시오.  
@@ -126,9 +126,9 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014에서에서 사용 되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014에서에서 지원 되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2014 @no__t 데이터베이스 엔진 기능에 대 한 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)-1  
+ [SQL Server 2014 @no__t에서 사용 되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)-1  
+ [SQL Server 2014 @no__t에서](discontinued-database-engine-functionality-in-sql-server-2016.md)지원 되지 않는 데이터베이스 엔진 기능-1  
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   
