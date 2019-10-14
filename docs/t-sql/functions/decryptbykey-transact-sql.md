@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bc96e1eaf22c304a4751bb39c40319da2f16659
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314538"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251372"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
 
 **\@인증자**  
-인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *\@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
 
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다. `DECRYPTBYKEY`는 데이터 암호화에 사용되는 대칭 키가 열려 있지 않거나 *ciphertext*가 NULL이면 NULL을 반환합니다.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284597"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278289"
 ---
 # <a name="report-server-namespace-management-methods"></a>보고서 서버 네임스페이스 관리 메서드
   보고서 서버 관리 웹 서비스에는 보고서 서버 데이터베이스에서 보고서, 폴더 및 리소스를 관리하는 데 사용할 수 있는 메서드가 포함됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "63284597"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|작업 실행을 취소합니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 폴더를 추가합니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 새 항목을 추가합니다. 이 메서드는 **보고서**, **모델**, **데이터 세트**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|새 보고서 편집 세션을 만듭니다.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession (System.string, System.string, System.string [], ReportService2010 [] @)|새 보고서 편집 세션을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 항목을 제거합니다.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 지정된 검색 조건과 일치하는 항목을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|제공된 매개 변수를 기준으로 이벤트를 트리거합니다.|  

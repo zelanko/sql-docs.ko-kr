@@ -122,598 +122,608 @@
       href: ../integration-services/ssis-package-upgrade-wizard-f1-help.md
     - name: 패키지 및 프로젝트 매개 변수
       href: ../integration-services/integration-services-ssis-package-and-project-parameters.md
-- name: 개요
-  href: ../integration-services/connection-manager/integration-services-ssis-connections.md
-- name: 솔루션 탐색기
-  href: ../integration-services/connection-manager/data-sources.md
-- name: ADO 연결 관리자
-  href: ../integration-services/connection-manager/ado-connection-manager.md
-- name: ADO.NET 연결 관리자
-  href: ../integration-services/connection-manager/ado-net-connection-manager.md
-- name: Analysis Services 연결 관리자
-  href: ../integration-services/connection-manager/analysis-services-connection-manager.md
+- name: 연결 관리자
   items:
-    - name: Analysis Services 연결 관리자 추가 대화 상자 UI 참조
-      href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
-- name: Azure Data Lake Analytics 연결 관리자
-  href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
-- name: Azure Data Lake Store 연결 관리자
-  href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
-- name: Azure HDInsight 연결 관리자
-  href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
-- name: Azure Resource Manager 연결 관리자
-  href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
-- name: Azure Storage 연결 관리자
-  href: ../integration-services/connection-manager/azure-storage-connection-manager.md
-- name: Azure 구독 연결 관리자
-  href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
-- name: Excel 연결 관리자
-  href: ../integration-services/connection-manager/excel-connection-manager.md
-- name: 파일 연결 관리자
-  href: ../integration-services/connection-manager/file-connection-manager.md
-  items:
-    - name: 파일 연결 관리자 추가 대화 상자 UI 참조
-      href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
-    - name: 열 유형 제안 대화 상자 UI 참조
-      href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
-- name: Flat File Connection Manager
-  href: ../integration-services/connection-manager/flat-file-connection-manager.md
-- name: FTP 연결 관리자
-  href: ../integration-services/connection-manager/ftp-connection-manager.md
-- name: Hadoop 연결 관리자
-  href: ../integration-services/connection-manager/hadoop-connection-manager.md
-- name: HTTP 연결 관리자
-  href: ../integration-services/connection-manager/http-connection-manager.md
-- name: MSMQ 연결 관리자
-  href: ../integration-services/connection-manager/msmq-connection-manager.md
-- name: 다중 파일 연결 관리자
-  href: ../integration-services/connection-manager/multiple-files-connection-manager.md
-- name: 다중 플랫 파일 연결 관리자
-  href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
-- name: OData 연결 관리자
-  href: ../integration-services/connection-manager/odata-connection-manager.md
-- name: ODBC 연결 관리자
-  href: ../integration-services/connection-manager/odbc-connection-manager.md
-- name: OLE DB 연결 관리자
-  href: ../integration-services/connection-manager/ole-db-connection-manager.md
-- name: SAP BW 연결 관리자
-  href: ../integration-services/connection-manager/sap-bw-connection-manager.md
-- name: SMTP 연결 관리자
-  href: ../integration-services/connection-manager/smtp-connection-manager.md
-- name: SMO 연결 관리자
-  href: ../integration-services/connection-manager/smo-connection-manager.md
-- name: SQL Server Compact Edition 연결 관리자
-  href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
-- name: WMI 연결 관리자
-  href: ../integration-services/connection-manager/wmi-connection-manager.md
-- name: 개요
-  href: ../integration-services/control-flow/control-flow.md
-- name: 제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
-  href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
-- name: Integration Services 컨테이너
-  href: ../integration-services/control-flow/integration-services-containers.md
-  items:
-    - name: Foreach 루프 컨테이너
-      href: ../integration-services/control-flow/foreach-loop-container.md
-    - name: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
-      href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
-    - name: For 루프 컨테이너
-      href: ../integration-services/control-flow/for-loop-container.md
-    - name: 시퀀스 컨테이너
-      href: ../integration-services/control-flow/sequence-container.md
-    - name: 태스크 호스트 컨테이너
-      href: ../integration-services/control-flow/task-host-container.md
-- name: Integration Services 태스크
-  href: ../integration-services/control-flow/integration-services-tasks.md
-  items:
-    - name: Analysis Services DDL 실행 태스크
-      href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
-    - name: Analysis Services 처리 태스크
-      href: ../integration-services/control-flow/analysis-services-processing-task.md
-    - name: Azure Blob 다운로드 작업
-      href: ../integration-services/control-flow/azure-blob-download-task.md
-    - name: Azure Blob 업로드 태스크
-      href: ../integration-services/control-flow/azure-blob-upload-task.md
-    - name: Azure Data Lake Analytics 태스크
-      href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
-    - name: Azure Data Lake Store 파일 시스템 태스크
-      href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
-    - name: Azure HDInsight 클러스터 만들기 태스크
-      href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
-    - name: Azure HDInsight 클러스터 삭제 작업
-      href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
-    - name: Azure HDInsight 하이브 태스크
-      href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
-    - name: Azure HDInsight Pig 태스크
-      href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
-    - name: Azure SQL DW 업로드 태스크
-      href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
-    - name: 유연한 파일 작업
-      href: ../integration-services/control-flow/flexible-file-task.md
-    - name: 데이터베이스 백업 태스크
-      href: ../integration-services/control-flow/back-up-database-task.md
-    - name: 대량 삽입 태스크
-      href: ../integration-services/control-flow/bulk-insert-task.md
-    - name: CDC 제어 태스크
-      href: ../integration-services/control-flow/cdc-control-task.md
+    - name: 개요
+      href: ../integration-services/connection-manager/integration-services-ssis-connections.md
+    - name: 솔루션 탐색기
+      href: ../integration-services/connection-manager/data-sources.md
+    - name: ADO 연결 관리자
+      href: ../integration-services/connection-manager/ado-connection-manager.md
+    - name: ADO.NET 연결 관리자
+      href: ../integration-services/connection-manager/ado-net-connection-manager.md
+    - name: Analysis Services 연결 관리자
+      href: ../integration-services/connection-manager/analysis-services-connection-manager.md
       items:
-        - name: CDC 제어 태스크 사용자 지정 속성
-          href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
-    - name: 데이터베이스 무결성 검사 태스크
-      href: ../integration-services/control-flow/check-database-integrity-task.md
-    - name: 데이터 흐름 태스크
-      href: ../integration-services/control-flow/data-flow-task.md
-    - name: Data Mining Query Task
-      href: ../integration-services/control-flow/data-mining-query-task.md
+        - name: Analysis Services 연결 관리자 추가 대화 상자 UI 참조
+          href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
+    - name: Azure Data Lake Analytics 연결 관리자
+      href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
+    - name: Azure Data Lake Store 연결 관리자
+      href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
+    - name: Azure HDInsight 연결 관리자
+      href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
+    - name: Azure Resource Manager 연결 관리자
+      href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
+    - name: Azure Storage 연결 관리자
+      href: ../integration-services/connection-manager/azure-storage-connection-manager.md
+    - name: Azure 구독 연결 관리자
+      href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
+    - name: Excel 연결 관리자
+      href: ../integration-services/connection-manager/excel-connection-manager.md
+    - name: 파일 연결 관리자
+      href: ../integration-services/connection-manager/file-connection-manager.md
       items:
-        - name: 데이터 마이닝 쿼리
-          href: ../integration-services/control-flow/data-mining-query.md
-    - name: 데이터 프로파일링 태스크 및 뷰어
-      href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+        - name: 파일 연결 관리자 추가 대화 상자 UI 참조
+          href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+        - name: 열 유형 제안 대화 상자 UI 참조
+          href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
+    - name: Flat File Connection Manager
+      href: ../integration-services/connection-manager/flat-file-connection-manager.md
+    - name: FTP 연결 관리자
+      href: ../integration-services/connection-manager/ftp-connection-manager.md
+    - name: Hadoop 연결 관리자
+      href: ../integration-services/connection-manager/hadoop-connection-manager.md
+    - name: HTTP 연결 관리자
+      href: ../integration-services/connection-manager/http-connection-manager.md
+    - name: MSMQ 연결 관리자
+      href: ../integration-services/connection-manager/msmq-connection-manager.md
+    - name: 다중 파일 연결 관리자
+      href: ../integration-services/connection-manager/multiple-files-connection-manager.md
+    - name: 다중 플랫 파일 연결 관리자
+      href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
+    - name: OData 연결 관리자
+      href: ../integration-services/connection-manager/odata-connection-manager.md
+    - name: ODBC 연결 관리자
+      href: ../integration-services/connection-manager/odbc-connection-manager.md
+    - name: OLE DB 연결 관리자
+      href: ../integration-services/connection-manager/ole-db-connection-manager.md
+    - name: SAP BW 연결 관리자
+      href: ../integration-services/connection-manager/sap-bw-connection-manager.md
+    - name: SMTP 연결 관리자
+      href: ../integration-services/connection-manager/smtp-connection-manager.md
+    - name: SMO 연결 관리자
+      href: ../integration-services/connection-manager/smo-connection-manager.md
+    - name: SQL Server Compact Edition 연결 관리자
+      href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
+    - name: WMI 연결 관리자
+      href: ../integration-services/connection-manager/wmi-connection-manager.md
+- name: 제어 흐름
+  items:
+    - name: 개요
+      href: ../integration-services/control-flow/control-flow.md
+    - name: 제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
+      href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
+    - name: Integration Services 컨테이너
+      href: ../integration-services/control-flow/integration-services-containers.md
       items:
-        - name: 데이터 프로파일링 태스크 설정
-          href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
-        - name: 데이터 프로필 뷰어(Data Profile Viewer)
-          href: ../integration-services/control-flow/data-profile-viewer.md
-        - name: 데이터 프로파일링 태스크
-          href: ../integration-services/control-flow/data-profiling-task.md
+        - name: Foreach 루프 컨테이너
+          href: ../integration-services/control-flow/foreach-loop-container.md
+        - name: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
+          href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+        - name: For 루프 컨테이너
+          href: ../integration-services/control-flow/for-loop-container.md
+        - name: 시퀀스 컨테이너
+          href: ../integration-services/control-flow/sequence-container.md
+        - name: 태스크 호스트 컨테이너
+          href: ../integration-services/control-flow/task-host-container.md
+    - name: Integration Services 태스크
+      href: ../integration-services/control-flow/integration-services-tasks.md
+      items:
+        - name: Analysis Services DDL 실행 태스크
+          href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
+        - name: Analysis Services 처리 태스크
+          href: ../integration-services/control-flow/analysis-services-processing-task.md
+        - name: Azure Blob 다운로드 작업
+          href: ../integration-services/control-flow/azure-blob-download-task.md
+        - name: Azure Blob 업로드 태스크
+          href: ../integration-services/control-flow/azure-blob-upload-task.md
+        - name: Azure Data Lake Analytics 태스크
+          href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
+        - name: Azure Data Lake Store 파일 시스템 태스크
+          href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
+        - name: Azure HDInsight 클러스터 만들기 태스크
+          href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
+        - name: Azure HDInsight 클러스터 삭제 작업
+          href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
+        - name: Azure HDInsight 하이브 태스크
+          href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
+        - name: Azure HDInsight Pig 태스크
+          href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
+        - name: Azure SQL DW 업로드 태스크
+          href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+        - name: 유연한 파일 작업
+          href: ../integration-services/control-flow/flexible-file-task.md
+        - name: 데이터베이스 백업 태스크
+          href: ../integration-services/control-flow/back-up-database-task.md
+        - name: 대량 삽입 태스크
+          href: ../integration-services/control-flow/bulk-insert-task.md
+        - name: CDC 제어 태스크
+          href: ../integration-services/control-flow/cdc-control-task.md
           items:
-            - name: 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
-              href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
-            - name: 데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
-              href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+            - name: CDC 제어 태스크 사용자 지정 속성
+              href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
+        - name: 데이터베이스 무결성 검사 태스크
+          href: ../integration-services/control-flow/check-database-integrity-task.md
+        - name: 데이터 흐름 태스크
+          href: ../integration-services/control-flow/data-flow-task.md
+        - name: Data Mining Query Task
+          href: ../integration-services/control-flow/data-mining-query-task.md
+          items:
+            - name: 데이터 마이닝 쿼리
+              href: ../integration-services/control-flow/data-mining-query.md
+        - name: 데이터 프로파일링 태스크 및 뷰어
+          href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+          items:
+            - name: 데이터 프로파일링 태스크 설정
+              href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
+            - name: 데이터 프로필 뷰어(Data Profile Viewer)
+              href: ../integration-services/control-flow/data-profile-viewer.md
+            - name: 데이터 프로파일링 태스크
+              href: ../integration-services/control-flow/data-profiling-task.md
               items:
-                - name: 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
-                - name: 열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
-                - name: 열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
-                - name: 열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
-                - name: 열 통계 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
-                - name: 열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
-                - name: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
-                - name: 값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
-                  href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
-            - name: 데이터 프로파일링 태스크 편집기(일반 페이지)
-              href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
-            - name: 패키지 워크플로에 데이터 프로파일링 태스크 포함
-              href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
-    - name: 패키지 실행 태스크
-      href: ../integration-services/control-flow/execute-package-task.md
-    - name: 프로세스 실행 태스크
-      href: ../integration-services/control-flow/execute-process-task.md
-    - name: SQL Server 에이전트 작업 실행 태스크
-      href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
-    - name: SQL 실행 태스크
-      href: ../integration-services/control-flow/execute-sql-task.md
+                - name: 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
+                  href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
+                - name: 데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
+                  href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+                  items:
+                    - name: 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
+                    - name: 열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
+                    - name: 열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
+                    - name: 열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
+                    - name: 열 통계 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
+                    - name: 열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
+                    - name: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
+                    - name: 값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
+                      href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
+                - name: 데이터 프로파일링 태스크 편집기(일반 페이지)
+                  href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
+                - name: 패키지 워크플로에 데이터 프로파일링 태스크 포함
+                  href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
+        - name: 패키지 실행 태스크
+          href: ../integration-services/control-flow/execute-package-task.md
+        - name: 프로세스 실행 태스크
+          href: ../integration-services/control-flow/execute-process-task.md
+        - name: SQL Server 에이전트 작업 실행 태스크
+          href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
+        - name: SQL 실행 태스크
+          href: ../integration-services/control-flow/execute-sql-task.md
+          items:
+            - name: Integration Services 패키지의 MERGE
+              href: ../integration-services/control-flow/merge-in-integration-services-packages.md
+        - name: T-SQL 문 실행 태스크
+          href: ../integration-services/control-flow/execute-t-sql-statement-task.md
+        - name: 식 태스크
+          href: ../integration-services/control-flow/expression-task.md
+        - name: 파일 시스템 태스크
+          href: ../integration-services/control-flow/file-system-task.md
+        - name: FTP 태스크
+          href: ../integration-services/control-flow/ftp-task.md
+        - name: Hadoop 파일 시스템 태스크
+          href: ../integration-services/control-flow/hadoop-file-system-task.md
+        - name: Hadoop 하이브 태스크
+          href: ../integration-services/control-flow/hadoop-hive-task.md
+        - name: Hadoop Pig 작업
+          href: ../integration-services/control-flow/hadoop-pig-task.md
+        - name: 기록 정리 태스크
+          href: ../integration-services/control-flow/history-cleanup-task.md
+        - name: 유지 관리 정리 태스크
+          href: ../integration-services/control-flow/maintenance-cleanup-task.md
+        - name: Message Queue Task
+          href: ../integration-services/control-flow/message-queue-task.md
+          items:
+            - name: 변수 선택
+              href: ../integration-services/control-flow/select-variables.md
+            - name: 패키지 선택
+              href: ../integration-services/control-flow/select-a-package.md
+        - name: 운영자에게 알림 태스크
+          href: ../integration-services/control-flow/notify-operator-task.md
+        - name: 인덱스 다시 작성 태스크
+          href: ../integration-services/control-flow/rebuild-index-task.md
+        - name: 인덱스 다시 구성 태스크
+          href: ../integration-services/control-flow/reorganize-index-task.md
+        - name: 스크립트 태스크
+          href: ../integration-services/control-flow/script-task.md
+          items:
+            - name: 변수 선택 페이지
+              href: ../integration-services/control-flow/select-variables-page.md
+        - name: 메일 보내기 태스크
+          href: ../integration-services/control-flow/send-mail-task.md
+        - name: 데이터베이스 축소 태스크
+          href: ../integration-services/control-flow/shrink-database-task.md
+        - name: 데이터베이스 전송 태스크
+          href: ../integration-services/control-flow/transfer-database-task.md
+        - name: 오류 메시지 전송 태스크
+          href: ../integration-services/control-flow/transfer-error-messages-task.md
+        - name: 작업 전송 태스크
+          href: ../integration-services/control-flow/transfer-jobs-task.md
+        - name: 로그인 전송 태스크
+          href: ../integration-services/control-flow/transfer-logins-task.md
+        - name: Master 저장 프로시저 전송 태스크
+          href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
+        - name: SQL Server 개체 전송 태스크
+          href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
+        - name: 전송할 개체 선택
+          href: ../integration-services/control-flow/select-objects-to-transfer.md
+        - name: 통계 업데이트 태스크
+          href: ../integration-services/control-flow/update-statistics-task.md
+        - name: 웹 서비스 태스크
+          href: ../integration-services/control-flow/web-service-task.md
+        - name: WMI 데이터 판독기 태스크
+          href: ../integration-services/control-flow/wmi-data-reader-task.md
+        - name: WMI 이벤트 감시자 태스크
+          href: ../integration-services/control-flow/wmi-event-watcher-task.md
+        - name: XML 태스크
+          href: ../integration-services/control-flow/xml-task.md
+          items:
+            - name: Validate XML with the XML Task
+              href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
+    - name: 선행 제약 조건
+      href: ../integration-services/control-flow/precedence-constraints.md
+- name: 데이터 흐름
+  items:
+    - name: 개요
+      href: ../integration-services/data-flow/data-flow.md
+    - name: 데이터 흐름의 데이터
+      href: ../integration-services/data-flow/data-in-data-flows.md
       items:
-        - name: Integration Services 패키지의 MERGE
-          href: ../integration-services/control-flow/merge-in-integration-services-packages.md
-    - name: T-SQL 문 실행 태스크
-      href: ../integration-services/control-flow/execute-t-sql-statement-task.md
-    - name: 식 태스크
-      href: ../integration-services/control-flow/expression-task.md
-    - name: 파일 시스템 태스크
-      href: ../integration-services/control-flow/file-system-task.md
-    - name: FTP 태스크
-      href: ../integration-services/control-flow/ftp-task.md
-    - name: Hadoop 파일 시스템 태스크
-      href: ../integration-services/control-flow/hadoop-file-system-task.md
-    - name: Hadoop 하이브 태스크
-      href: ../integration-services/control-flow/hadoop-hive-task.md
-    - name: Hadoop Pig 작업
-      href: ../integration-services/control-flow/hadoop-pig-task.md
-    - name: 기록 정리 태스크
-      href: ../integration-services/control-flow/history-cleanup-task.md
-    - name: 유지 관리 정리 태스크
-      href: ../integration-services/control-flow/maintenance-cleanup-task.md
-    - name: Message Queue Task
-      href: ../integration-services/control-flow/message-queue-task.md
+        - name: Integration Services 데이터 형식
+          href: ../integration-services/data-flow/integration-services-data-types.md
+        - name: 데이터 구문 분석
+          href: ../integration-services/data-flow/parsing-data.md
+        - name: 문자열 데이터 비교
+          href: ../integration-services/data-flow/comparing-string-data.md
+    - name: 데이터 흐름에서 구성 요소 추가 또는 삭제
+      href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
+    - name: 데이터 흐름 구성 요소의 속성 설정
+      href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
+    - name: 데이터 흐름의 구성 요소 연결
+      href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
+    - name: Integration Services 경로
+      href: ../integration-services/data-flow/integration-services-paths.md
+    - name: 열 참조 확인 편집기
+      href: ../integration-services/data-flow/resolve-column-reference-editor.md
+    - name: 데이터 뷰어
+      href: ../integration-services/data-flow/data-viewer.md
+    - name: 데이터 오류 처리
+      href: ../integration-services/data-flow/error-handling-in-data.md
+    - name: 데이터 흐름 성능 기능
+      href: ../integration-services/data-flow/data-flow-performance-features.md
+    - name: 원본 길잡이
+      href: ../integration-services/data-flow/source-assistant.md
+    - name: 대상 길잡이
+      href: ../integration-services/data-flow/destination-assistant.md
+    - name: 원본 및 대상
       items:
-        - name: 변수 선택
-          href: ../integration-services/control-flow/select-variables.md
-        - name: 패키지 선택
-          href: ../integration-services/control-flow/select-a-package.md
-    - name: 운영자에게 알림 태스크
-      href: ../integration-services/control-flow/notify-operator-task.md
-    - name: 인덱스 다시 작성 태스크
-      href: ../integration-services/control-flow/rebuild-index-task.md
-    - name: 인덱스 다시 구성 태스크
-      href: ../integration-services/control-flow/reorganize-index-task.md
-    - name: 스크립트 태스크
-      href: ../integration-services/control-flow/script-task.md
+        - name: ADO.NET 원본
+          href: ../integration-services/data-flow/ado-net-source.md
+        - name: ADO.NET 대상
+          href: ../integration-services/data-flow/ado-net-destination.md
+        - name: ADO.NET 사용자 지정 속성
+          href: ../integration-services/data-flow/ado-net-custom-properties.md
+        - name: Azure Blob 원본
+          href: ../integration-services/data-flow/azure-blob-source.md
+        - name: Azure Blob 대상
+          href: ../integration-services/data-flow/azure-blob-destination.md
+        - name: Azure Data Lake Store 원본
+          href: ../integration-services/data-flow/azure-data-lake-store-source.md
+        - name: Azure Data Lake Store 대상
+          href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+        - name: 유연한 파일 원본
+          href: ../integration-services/data-flow/flexible-file-source.md
+        - name: 유연한 파일 대상
+          href: ../integration-services/data-flow/flexible-file-destination.md
+        - name: CDC 흐름 구성 요소
+          href: ../integration-services/data-flow/cdc-flow-components.md
+          items:
+            - name: CDC 원본
+              href: ../integration-services/data-flow/cdc-source.md
+              items:
+                - name: CDC 원본 사용자 지정 속성
+                  href: ../integration-services/data-flow/cdc-source-custom-properties.md
+                - name: CDC 원본을 사용하여 변경 데이터 추출
+                  href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
+            - name: CDC 분할자
+              href: ../integration-services/data-flow/cdc-splitter.md
+            - name: 변경 유형에 따라 CDC 스트림 전송
+              href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
+            - name: 상태 변수 정의
+              href: ../integration-services/data-flow/define-a-state-variable.md
+        - name: 데이터 마이닝 모델 학습 대상
+          href: ../integration-services/data-flow/data-mining-model-training-destination.md
+          items:
+            - name: 데이터 마이닝 모델 학습 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
+        - name: 데이터 스트리밍 대상
+          href: ../integration-services/data-flow/data-streaming-destination.md
+          items:
+            - name: '연습: SSIS 패키지를 SQL 뷰로 게시'
+              href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
+        - name: DataReader 대상
+          href: ../integration-services/data-flow/datareader-destination.md
+          items:
+            - name: DataReader 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/datareader-destination-custom-properties.md
+        - name: 차원 처리 대상
+          href: ../integration-services/data-flow/dimension-processing-destination.md
+          items:
+            - name: 차원 처리 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
+        - name: Excel 원본
+          href: ../integration-services/data-flow/excel-source.md
+        - name: Excel 대상
+          href: ../integration-services/data-flow/excel-destination.md
+        - name: Excel 사용자 지정 속성
+          href: ../integration-services/data-flow/excel-custom-properties.md
+        - name: 플랫 파일 원본
+          href: ../integration-services/data-flow/flat-file-source.md
+        - name: 플랫 파일 대상
+          href: ../integration-services/data-flow/flat-file-destination.md
+        - name: HDFS 파일 원본
+          href: ../integration-services/data-flow/hdfs-file-source.md
+        - name: HDFS 파일 대상
+          href: ../integration-services/data-flow/hdfs-file-destination.md
+        - name: 플랫 파일 사용자 지정 속성
+          href: ../integration-services/data-flow/flat-file-custom-properties.md
+        - name: OData 원본
+          href: ../integration-services/data-flow/odata-source.md
+          items:
+            - name: '자습서: OData 원본 사용'
+              href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
+            - name: 런타임에 OData 원본 쿼리 제공
+              href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
+            - name: OData 원본 속성
+              href: ../integration-services/data-flow/odata-source-properties.md
+        - name: ODBC 흐름 구성 요소
+          href: ../integration-services/data-flow/odbc-flow-components.md
+          items:
+            - name: ODBC 대상
+              href: ../integration-services/data-flow/odbc-destination.md
+              items:
+                - name: ODBC 대상을 사용하여 데이터 로드
+                  href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
+                - name: ODBC Destination Custom Properties
+                  href: ../integration-services/data-flow/odbc-destination-custom-properties.md
+            - name: ODBC 원본
+              href: ../integration-services/data-flow/odbc-source.md
+              items:
+                - name: ODBC 원본을 사용하여 데이터 추출
+                  href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
+                - name: ODBC Source Custom Properties
+                  href: ../integration-services/data-flow/odbc-source-custom-properties.md
+        - name: OLE DB 원본
+          href: ../integration-services/data-flow/ole-db-source.md
+          items:
+            - name: 쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
+              href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
+            - name: OLE DB 원본을 사용하여 데이터 추출
+              href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
+        - name: OLE DB 대상
+          href: ../integration-services/data-flow/ole-db-destination.md
+          items:
+            - name: OLE DB 대상을 사용하여 데이터 로드
+              href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
+        - name: OLE DB 사용자 지정 속성
+          href: ../integration-services/data-flow/ole-db-custom-properties.md
+        - name: 파티션 처리 대상
+          href: ../integration-services/data-flow/partition-processing-destination.md
+          items:
+            - name: 파티션 처리 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
+        - name: 파워 쿼리 원본
+          href: ../integration-services/data-flow/power-query-source.md
+        - name: 원시 파일 원본
+          href: ../integration-services/data-flow/raw-file-source.md
+        - name: Raw File Destination
+          href: ../integration-services/data-flow/raw-file-destination.md
+        - name: 원시 파일 사용자 지정 속성
+          href: ../integration-services/data-flow/raw-file-custom-properties.md
+        - name: 레코드 집합 대상
+          href: ../integration-services/data-flow/recordset-destination.md
+          items:
+            - name: 레코드 집합 대상 사용
+              href: ../integration-services/data-flow/use-a-recordset-destination.md
+            - name: 레코드 집합 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/recordset-destination-custom-properties.md
+        - name: SAP BW 원본
+          href: ../integration-services/data-flow/sap-bw-source.md
+          items:
+            - name: SAP BW 원본 편집기(연결 관리자 페이지)
+              href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
+            - name: SAP BW 원본 편집기(열 페이지)
+              href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
+            - name: SAP BW 원본 편집기(오류 출력 페이지)
+              href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
+            - name: SAP BW 원본 편집기(고급 페이지)
+              href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
+            - name: RFC 대상 조회
+              href: ../integration-services/data-flow/look-up-rfc-destination.md
+            - name: 프로세스 체인 조회
+              href: ../integration-services/data-flow/look-up-process-chain.md
+            - name: 요청 로그
+              href: ../integration-services/data-flow/request-log.md
+            - name: 미리 보기
+              href: ../integration-services/data-flow/preview.md
+        - name: SAP BW 대상
+          href: ../integration-services/data-flow/sap-bw-destination.md
+          items:
+            - name: SAP BW 대상 편집기(연결 관리자 페이지)
+              href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
+            - name: SAP BW 대상 편집기(매핑 페이지)
+              href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
+            - name: SAP BW 대상 편집기(오류 출력 페이지)
+              href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
+            - name: SAP BW 대상 편집기(고급 페이지)
+              href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
+            - name: InfoPackage 조회
+              href: ../integration-services/data-flow/look-up-infopackage.md
+            - name: 새 InfoObject 만들기
+              href: ../integration-services/data-flow/create-new-infoobject.md
+            - name: 트랜잭션 데이터용 InfoCube 만들기
+              href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
+            - name: InfoObject 조회
+              href: ../integration-services/data-flow/look-up-infoobject.md
+            - name: InfoSource 만들기
+              href: ../integration-services/data-flow/create-infosource.md
+            - name: 트랜잭션 데이터용 InfoSource 만들기
+              href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
+            - name: 마스터 데이터용 InfoSource 만들기
+              href: ../integration-services/data-flow/create-infosource-for-master-data.md
+            - name: InfoPackage 만들기
+              href: ../integration-services/data-flow/create-infopackage.md
+        - name: SQL Server Compact Edition 대상
+          href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
+          items:
+            - name: SQL Server Compact Edition 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
+        - name: SQL Server 대상
+          href: ../integration-services/data-flow/sql-server-destination.md
+          items:
+            - name: SQL Server 대상을 사용하여 데이터 대량 로드
+              href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
+            - name: SQL Server 대상 사용자 지정 속성
+              href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
+- name: 변환
+  items:
+    - name: 개요
+      href: ../integration-services/data-flow/transformations/integration-services-transformations.md
+    - name: 집계 변환
+      href: ../integration-services/data-flow/transformations/aggregate-transformation.md
       items:
-        - name: 변수 선택 페이지
-          href: ../integration-services/control-flow/select-variables-page.md
-    - name: 메일 보내기 태스크
-      href: ../integration-services/control-flow/send-mail-task.md
-    - name: 데이터베이스 축소 태스크
-      href: ../integration-services/control-flow/shrink-database-task.md
-    - name: 데이터베이스 전송 태스크
-      href: ../integration-services/control-flow/transfer-database-task.md
-    - name: 오류 메시지 전송 태스크
-      href: ../integration-services/control-flow/transfer-error-messages-task.md
-    - name: 작업 전송 태스크
-      href: ../integration-services/control-flow/transfer-jobs-task.md
-    - name: 로그인 전송 태스크
-      href: ../integration-services/control-flow/transfer-logins-task.md
-    - name: Master 저장 프로시저 전송 태스크
-      href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
-    - name: SQL Server 개체 전송 태스크
-      href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
-    - name: 전송할 개체 선택
-      href: ../integration-services/control-flow/select-objects-to-transfer.md
-    - name: 통계 업데이트 태스크
-      href: ../integration-services/control-flow/update-statistics-task.md
-    - name: 웹 서비스 태스크
-      href: ../integration-services/control-flow/web-service-task.md
-    - name: WMI 데이터 판독기 태스크
-      href: ../integration-services/control-flow/wmi-data-reader-task.md
-    - name: WMI 이벤트 감시자 태스크
-      href: ../integration-services/control-flow/wmi-event-watcher-task.md
-    - name: XML 태스크
-      href: ../integration-services/control-flow/xml-task.md
+        - name: 집계 변환을 사용하여 데이터 세트의 값 집계
+          href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+    - name: 감사 변환
+      href: ../integration-services/data-flow/transformations/audit-transformation.md
+    - name: 분산 데이터 배포자 변환
+      href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
+    - name: 문자표 변환
+      href: ../integration-services/data-flow/transformations/character-map-transformation.md
+    - name: 조건부 분할 변환
+      href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
       items:
-        - name: Validate XML with the XML Task
-          href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
-- name: 선행 제약 조건
-  href: ../integration-services/control-flow/precedence-constraints.md
-- name: 개요
-  href: ../integration-services/data-flow/data-flow.md
-- name: 데이터 흐름의 데이터
-  href: ../integration-services/data-flow/data-in-data-flows.md
-  items:
-    - name: Integration Services 데이터 형식
-      href: ../integration-services/data-flow/integration-services-data-types.md
-    - name: 데이터 구문 분석
-      href: ../integration-services/data-flow/parsing-data.md
-    - name: 문자열 데이터 비교
-      href: ../integration-services/data-flow/comparing-string-data.md
-- name: 데이터 흐름에서 구성 요소 추가 또는 삭제
-  href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
-- name: 데이터 흐름 구성 요소의 속성 설정
-  href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
-- name: 데이터 흐름의 구성 요소 연결
-  href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
-- name: Integration Services 경로
-  href: ../integration-services/data-flow/integration-services-paths.md
-- name: 열 참조 확인 편집기
-  href: ../integration-services/data-flow/resolve-column-reference-editor.md
-- name: 데이터 뷰어
-  href: ../integration-services/data-flow/data-viewer.md
-- name: 데이터 오류 처리
-  href: ../integration-services/data-flow/error-handling-in-data.md
-- name: 데이터 흐름 성능 기능
-  href: ../integration-services/data-flow/data-flow-performance-features.md
-- name: 원본 길잡이
-  href: ../integration-services/data-flow/source-assistant.md
-- name: 대상 길잡이
-  href: ../integration-services/data-flow/destination-assistant.md
-- name: ADO.NET 원본
-  href: ../integration-services/data-flow/ado-net-source.md
-- name: ADO.NET 대상
-  href: ../integration-services/data-flow/ado-net-destination.md
-- name: ADO.NET 사용자 지정 속성
-  href: ../integration-services/data-flow/ado-net-custom-properties.md
-- name: Azure Blob 원본
-  href: ../integration-services/data-flow/azure-blob-source.md
-- name: Azure Blob 대상
-  href: ../integration-services/data-flow/azure-blob-destination.md
-- name: Azure Data Lake Store 원본
-  href: ../integration-services/data-flow/azure-data-lake-store-source.md
-- name: Azure Data Lake Store 대상
-  href: ../integration-services/data-flow/azure-data-lake-store-destination.md
-- name: 유연한 파일 원본
-  href: ../integration-services/data-flow/flexible-file-source.md
-- name: 유연한 파일 대상
-  href: ../integration-services/data-flow/flexible-file-destination.md
-- name: CDC 흐름 구성 요소
-  href: ../integration-services/data-flow/cdc-flow-components.md
-  items:
-    - name: CDC 원본
-      href: ../integration-services/data-flow/cdc-source.md
+        - name: 조건부 분할 변환을 사용하여 데이터 세트 분할
+          href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
+    - name: 열 복사 변환
+      href: ../integration-services/data-flow/transformations/copy-column-transformation.md
+    - name: 데이터 변환
+      href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
       items:
-        - name: CDC 원본 사용자 지정 속성
-          href: ../integration-services/data-flow/cdc-source-custom-properties.md
-        - name: CDC 원본을 사용하여 변경 데이터 추출
-          href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
-    - name: CDC 분할자
-      href: ../integration-services/data-flow/cdc-splitter.md
-    - name: 변경 유형에 따라 CDC 스트림 전송
-      href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
-    - name: 상태 변수 정의
-      href: ../integration-services/data-flow/define-a-state-variable.md
-- name: 데이터 마이닝 모델 학습 대상
-  href: ../integration-services/data-flow/data-mining-model-training-destination.md
-  items:
-    - name: 데이터 마이닝 모델 학습 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
-- name: 데이터 스트리밍 대상
-  href: ../integration-services/data-flow/data-streaming-destination.md
-  items:
-    - name: '연습: SSIS 패키지를 SQL 뷰로 게시'
-      href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
-- name: DataReader 대상
-  href: ../integration-services/data-flow/datareader-destination.md
-  items:
-    - name: DataReader 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/datareader-destination-custom-properties.md
-- name: 차원 처리 대상
-  href: ../integration-services/data-flow/dimension-processing-destination.md
-  items:
-    - name: 차원 처리 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
-- name: Excel 원본
-  href: ../integration-services/data-flow/excel-source.md
-- name: Excel 대상
-  href: ../integration-services/data-flow/excel-destination.md
-- name: Excel 사용자 지정 속성
-  href: ../integration-services/data-flow/excel-custom-properties.md
-- name: 플랫 파일 원본
-  href: ../integration-services/data-flow/flat-file-source.md
-- name: 플랫 파일 대상
-  href: ../integration-services/data-flow/flat-file-destination.md
-- name: HDFS 파일 원본
-  href: ../integration-services/data-flow/hdfs-file-source.md
-- name: HDFS 파일 대상
-  href: ../integration-services/data-flow/hdfs-file-destination.md
-- name: 플랫 파일 사용자 지정 속성
-  href: ../integration-services/data-flow/flat-file-custom-properties.md
-- name: OData 원본
-  href: ../integration-services/data-flow/odata-source.md
-  items:
-    - name: '자습서: OData 원본 사용'
-      href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
-    - name: 런타임에 OData 원본 쿼리 제공
-      href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
-    - name: OData 원본 속성
-      href: ../integration-services/data-flow/odata-source-properties.md
-- name: ODBC 흐름 구성 요소
-  href: ../integration-services/data-flow/odbc-flow-components.md
-  items:
-    - name: ODBC 대상
-      href: ../integration-services/data-flow/odbc-destination.md
+        - name: 데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
+          href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
+    - name: 데이터 마이닝 쿼리 변환
+      href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
+    - name: DQS 정리 변환
+      href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
-        - name: ODBC 대상을 사용하여 데이터 로드
-          href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
-        - name: ODBC Destination Custom Properties
-          href: ../integration-services/data-flow/odbc-destination-custom-properties.md
-    - name: ODBC 원본
-      href: ../integration-services/data-flow/odbc-source.md
+        - name: DQS 정리 연결 관리자
+          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+        - name: 데이터 원본에 데이터 품질 규칙 적용
+          href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
+        - name: 복합 도메인에 열 매핑
+          href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
+    - name: 파생 열 변환
+      href: ../integration-services/data-flow/transformations/derived-column-transformation.md
       items:
-        - name: ODBC 원본을 사용하여 데이터 추출
-          href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
-        - name: ODBC Source Custom Properties
-          href: ../integration-services/data-flow/odbc-source-custom-properties.md
-- name: OLE DB 원본
-  href: ../integration-services/data-flow/ole-db-source.md
-  items:
-    - name: 쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
-      href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
-    - name: OLE DB 원본을 사용하여 데이터 추출
-      href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
-- name: OLE DB 대상
-  href: ../integration-services/data-flow/ole-db-destination.md
-  items:
-    - name: OLE DB 대상을 사용하여 데이터 로드
-      href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
-- name: OLE DB 사용자 지정 속성
-  href: ../integration-services/data-flow/ole-db-custom-properties.md
-- name: 파티션 처리 대상
-  href: ../integration-services/data-flow/partition-processing-destination.md
-  items:
-    - name: 파티션 처리 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
-- name: 파워 쿼리 원본
-  href: ../integration-services/data-flow/power-query-source.md
-- name: 원시 파일 원본
-  href: ../integration-services/data-flow/raw-file-source.md
-- name: Raw File Destination
-  href: ../integration-services/data-flow/raw-file-destination.md
-- name: 원시 파일 사용자 지정 속성
-  href: ../integration-services/data-flow/raw-file-custom-properties.md
-- name: 레코드 집합 대상
-  href: ../integration-services/data-flow/recordset-destination.md
-  items:
-    - name: 레코드 집합 대상 사용
-      href: ../integration-services/data-flow/use-a-recordset-destination.md
-    - name: 레코드 집합 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/recordset-destination-custom-properties.md
-- name: SAP BW 원본
-  href: ../integration-services/data-flow/sap-bw-source.md
-  items:
-    - name: SAP BW 원본 편집기(연결 관리자 페이지)
-      href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
-    - name: SAP BW 원본 편집기(열 페이지)
-      href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
-    - name: SAP BW 원본 편집기(오류 출력 페이지)
-      href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
-    - name: SAP BW 원본 편집기(고급 페이지)
-      href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
-    - name: RFC 대상 조회
-      href: ../integration-services/data-flow/look-up-rfc-destination.md
-    - name: 프로세스 체인 조회
-      href: ../integration-services/data-flow/look-up-process-chain.md
-    - name: 요청 로그
-      href: ../integration-services/data-flow/request-log.md
-    - name: 미리 보기
-      href: ../integration-services/data-flow/preview.md
-- name: SAP BW 대상
-  href: ../integration-services/data-flow/sap-bw-destination.md
-  items:
-    - name: SAP BW 대상 편집기(연결 관리자 페이지)
-      href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
-    - name: SAP BW 대상 편집기(매핑 페이지)
-      href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
-    - name: SAP BW 대상 편집기(오류 출력 페이지)
-      href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
-    - name: SAP BW 대상 편집기(고급 페이지)
-      href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
-    - name: InfoPackage 조회
-      href: ../integration-services/data-flow/look-up-infopackage.md
-    - name: 새 InfoObject 만들기
-      href: ../integration-services/data-flow/create-new-infoobject.md
-    - name: 트랜잭션 데이터용 InfoCube 만들기
-      href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
-    - name: InfoObject 조회
-      href: ../integration-services/data-flow/look-up-infoobject.md
-    - name: InfoSource 만들기
-      href: ../integration-services/data-flow/create-infosource.md
-    - name: 트랜잭션 데이터용 InfoSource 만들기
-      href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
-    - name: 마스터 데이터용 InfoSource 만들기
-      href: ../integration-services/data-flow/create-infosource-for-master-data.md
-    - name: InfoPackage 만들기
-      href: ../integration-services/data-flow/create-infopackage.md
-- name: SQL Server Compact Edition 대상
-  href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
-  items:
-    - name: SQL Server Compact Edition 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
-- name: SQL Server 대상
-  href: ../integration-services/data-flow/sql-server-destination.md
-  items:
-    - name: SQL Server 대상을 사용하여 데이터 대량 로드
-      href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
-    - name: SQL Server 대상 사용자 지정 속성
-      href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
-- name: 개요
-  href: ../integration-services/data-flow/transformations/integration-services-transformations.md
-- name: 집계 변환
-  href: ../integration-services/data-flow/transformations/aggregate-transformation.md
-  items:
-    - name: 집계 변환을 사용하여 데이터 세트의 값 집계
-      href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
-- name: 감사 변환
-  href: ../integration-services/data-flow/transformations/audit-transformation.md
-- name: 분산 데이터 배포자 변환
-  href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
-- name: 문자표 변환
-  href: ../integration-services/data-flow/transformations/character-map-transformation.md
-- name: 조건부 분할 변환
-  href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
-  items:
-    - name: 조건부 분할 변환을 사용하여 데이터 세트 분할
-      href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
-- name: 열 복사 변환
-  href: ../integration-services/data-flow/transformations/copy-column-transformation.md
-- name: 데이터 변환
-  href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
-  items:
-    - name: 데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
-      href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
-- name: 데이터 마이닝 쿼리 변환
-  href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
-- name: DQS 정리 변환
-  href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
-  items:
-    - name: DQS 정리 연결 관리자
-      href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
-    - name: 데이터 원본에 데이터 품질 규칙 적용
-      href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
-    - name: 복합 도메인에 열 매핑
-      href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
-- name: 파생 열 변환
-  href: ../integration-services/data-flow/transformations/derived-column-transformation.md
-  items:
-    - name: 파생 열 변환을 사용하여 열 값 파생
-      href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
-- name: 열 내보내기 변환
-  href: ../integration-services/data-flow/transformations/export-column-transformation.md
-- name: 유사 항목 그룹화 변환
-  href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
-  items:
-    - name: 유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
-      href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
-- name: 유사 항목 조회 변환
-  href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
-- name: 열 가져오기 변환
-  href: ../integration-services/data-flow/transformations/import-column-transformation.md
-- name: 조회 변환
-  href: ../integration-services/data-flow/transformations/lookup-transformation.md
-  items:
-    - name: 캐시 없음 또는 부분 캐시 모드로 조회 구현
-      href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
-    - name: 캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
-    - name: OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
-    - name: 조회 변환에 대한 캐시 만들기 및 배포
-      href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
-    - name: 관계 만들기
-      href: ../integration-services/data-flow/transformations/create-relationships.md
-    - name: 캐시 변환
-      href: ../integration-services/data-flow/transformations/cache-transform.md
+        - name: 파생 열 변환을 사용하여 열 값 파생
+          href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
+    - name: 열 내보내기 변환
+      href: ../integration-services/data-flow/transformations/export-column-transformation.md
+    - name: 유사 항목 그룹화 변환
+      href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
       items:
-        - name: 캐시 연결 관리자
-          href: ../integration-services/data-flow/transformations/cache-connection-manager.md
-- name: 병합 변환
-  href: ../integration-services/data-flow/transformations/merge-transformation.md
-- name: Merge Join Transformation
-  href: ../integration-services/data-flow/transformations/merge-join-transformation.md
-  items:
-    - name: 병합 조인 변환을 사용하여 데이터 세트 확장
-      href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
-    - name: 병합 및 병합 조인 변환을 위한 데이터 정렬
-      href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
-- name: 멀티캐스트 변환
-  href: ../integration-services/data-flow/transformations/multicast-transformation.md
-- name: OLE DB 명령 변환
-  href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
-- name: 비율 샘플링 변환
-  href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
-- name: 피벗 변환
-  href: ../integration-services/data-flow/transformations/pivot-transformation.md
-- name: 행 개수 변환
-  href: ../integration-services/data-flow/transformations/row-count-transformation.md
-- name: 행 샘플링 변환
-  href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
-- name: 스크립트 구성 요소
-  href: ../integration-services/data-flow/transformations/script-component.md
-- name: 느린 변경 차원 변환
-  href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
-  items:
-    - name: 느린 변경 차원 마법사를 사용하여 출력 구성
-      href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
-    - name: 느린 변경 차원 마법사 F1 도움말
-      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+        - name: 유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
+          href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+    - name: 유사 항목 조회 변환
+      href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
+    - name: 열 가져오기 변환
+      href: ../integration-services/data-flow/transformations/import-column-transformation.md
+    - name: 조회 변환
+      href: ../integration-services/data-flow/transformations/lookup-transformation.md
       items:
-        - name: 느린 변경 차원 마법사 시작
-          href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
-        - name: 차원 테이블 및 키 선택(느린 변경 차원 마법사)
-          href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
-        - name: 느린 변경 차원 열(느린 변경 차원 마법사)
-          href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
-        - name: 고정 및 변경 특성 옵션(느린 변경 차원 마법사)
-          href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
-        - name: 기록 특성 옵션(느린 변경 차원 마법사)
-          href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
-        - name: 유추 차원 멤버(느린 변경 차원 마법사)
-          href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
-        - name: 느린 변경 차원 마법사 완료
-          href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
-- name: 정렬 변환
-  href: ../integration-services/data-flow/transformations/sort-transformation.md
-- name: 용어 추출 변환
-  href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
-- name: 용어 조회 변환
-  href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
-- name: UNION ALL 변환
-  href: ../integration-services/data-flow/transformations/union-all-transformation.md
-  items:
-    - name: UNION ALL 변환을 사용하여 데이터 병합
-      href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
-- name: 피벗 해제 변환
-  href: ../integration-services/data-flow/transformations/unpivot-transformation.md
-- name: 변환을 사용하여 데이터 변환
-  href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
-- name: Transformation Custom Properties
-  href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
+        - name: 캐시 없음 또는 부분 캐시 모드로 조회 구현
+          href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+        - name: 캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
+          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+        - name: OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
+          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+        - name: 조회 변환에 대한 캐시 만들기 및 배포
+          href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
+        - name: 관계 만들기
+          href: ../integration-services/data-flow/transformations/create-relationships.md
+        - name: 캐시 변환
+          href: ../integration-services/data-flow/transformations/cache-transform.md
+          items:
+            - name: 캐시 연결 관리자
+              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+    - name: 병합 변환
+      href: ../integration-services/data-flow/transformations/merge-transformation.md
+    - name: Merge Join Transformation
+      href: ../integration-services/data-flow/transformations/merge-join-transformation.md
+      items:
+        - name: 병합 조인 변환을 사용하여 데이터 세트 확장
+          href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
+        - name: 병합 및 병합 조인 변환을 위한 데이터 정렬
+          href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
+    - name: 멀티캐스트 변환
+      href: ../integration-services/data-flow/transformations/multicast-transformation.md
+    - name: OLE DB 명령 변환
+      href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
+    - name: 비율 샘플링 변환
+      href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
+    - name: 피벗 변환
+      href: ../integration-services/data-flow/transformations/pivot-transformation.md
+    - name: 행 개수 변환
+      href: ../integration-services/data-flow/transformations/row-count-transformation.md
+    - name: 행 샘플링 변환
+      href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
+    - name: 스크립트 구성 요소
+      href: ../integration-services/data-flow/transformations/script-component.md
+    - name: 느린 변경 차원 변환
+      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
+      items:
+        - name: 느린 변경 차원 마법사를 사용하여 출력 구성
+          href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
+        - name: 느린 변경 차원 마법사 F1 도움말
+          href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+          items:
+            - name: 느린 변경 차원 마법사 시작
+              href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
+            - name: 차원 테이블 및 키 선택(느린 변경 차원 마법사)
+              href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+            - name: 느린 변경 차원 열(느린 변경 차원 마법사)
+              href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+            - name: 고정 및 변경 특성 옵션(느린 변경 차원 마법사)
+              href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+            - name: 기록 특성 옵션(느린 변경 차원 마법사)
+              href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
+            - name: 유추 차원 멤버(느린 변경 차원 마법사)
+              href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
+            - name: 느린 변경 차원 마법사 완료
+              href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
+    - name: 정렬 변환
+      href: ../integration-services/data-flow/transformations/sort-transformation.md
+    - name: 용어 추출 변환
+      href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
+    - name: 용어 조회 변환
+      href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
+    - name: UNION ALL 변환
+      href: ../integration-services/data-flow/transformations/union-all-transformation.md
+      items:
+        - name: UNION ALL 변환을 사용하여 데이터 병합
+          href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
+    - name: 피벗 해제 변환
+      href: ../integration-services/data-flow/transformations/unpivot-transformation.md
+    - name: 변환을 사용하여 데이터 변환
+      href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
+    - name: Transformation Custom Properties
+      href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
 - name: XML 원본
   href: ../integration-services/data-flow/xml-source.md
   items:
@@ -728,168 +738,170 @@
       href: ../integration-services/variables-window.md
     - name: 시스템 변수
       href: ../integration-services/system-variables.md
-- name: 개요
-  href: ../integration-services/expressions/integration-services-ssis-expressions.md
-- name: 고급 Integration Services 식의 예
-  href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
-- name: 패키지에서 속성 식 사용
-  href: ../integration-services/expressions/use-property-expressions-in-packages.md
+- name: 식
   items:
-    - name: 속성 식의 열거 상수
-      href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
-    - name: 속성 식 추가 또는 변경
-      href: ../integration-services/expressions/add-or-change-a-property-expression.md
+    - name: 개요
+      href: ../integration-services/expressions/integration-services-ssis-expressions.md
+    - name: 고급 Integration Services 식의 예
+      href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
+    - name: 패키지에서 속성 식 사용
+      href: ../integration-services/expressions/use-property-expressions-in-packages.md
       items:
-        - name: 식 페이지
-          href: ../integration-services/expressions/expressions-page.md
-        - name: 속성 식 편집기
-          href: ../integration-services/expressions/property-expressions-editor.md
-        - name: 식 작성기
-          href: ../integration-services/expressions/expression-builder.md
-- name: 식에서의 Integration Services 데이터 형식
-  href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
-- name: 데이터 잘림(SSIS)
-  href: ../integration-services/expressions/data-truncation-ssis.md
-- name: 문자열 패딩(SSIS)
-  href: ../integration-services/expressions/string-padding-ssis.md
-- name: 구문(SSIS)
-  href: ../integration-services/expressions/syntax-ssis.md
-- name: 식별자(SSIS)
-  href: ../integration-services/expressions/identifiers-ssis.md
-- name: 리터럴(SSIS)
-  href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
-- name: 연산자(SSIS 식)
-  href: ../integration-services/expressions/operators-ssis-expression.md
-  items:
-    - name: 연산자 우선 순위 및 계산 방향
-      href: ../integration-services/expressions/operator-precedence-and-associativity.md
-    - name: 캐스트(SSIS 식)
-      href: ../integration-services/expressions/cast-ssis-expression.md
-    - name: ()(괄호)(SSIS 식)
-      href: ../integration-services/expressions/parentheses-ssis-expression.md
-    - name: + (더하기)(SSIS)
-      href: ../integration-services/expressions/add-ssis.md
-    - name: + (연결)(SSIS 식)
-      href: ../integration-services/expressions/concatenate-ssis-expression.md
-    - name: '- (빼기)(SSIS 식)'
-      href: ../integration-services/expressions/subtract-ssis-expression.md
-    - name: '- (부정)(SSIS 식)'
-      href: ../integration-services/expressions/negate-ssis-expression.md
-    - name: '* (곱하기)(SSIS 식)'
-      href: ../integration-services/expressions/multiply-ssis-expression.md
-    - name: Divide (SSIS Expression)
-      href: ../integration-services/expressions/divide-ssis-expression.md
-    - name: (모듈로)(SSIS 식)
-      href: ../integration-services/expressions/modulo-ssis-expression.md
-    - name: '||(논리적 OR)(SSIS 식)'
-      href: ../integration-services/expressions/logical-or-ssis-expression.md
-    - name: '&&(논리적 AND)(SSIS 식)'
-      href: ../integration-services/expressions/logical-and-ssis-expression.md
-    - name: '! (논리적 Not)(SSIS 식)'
-      href: ../integration-services/expressions/logical-not-ssis-expression.md
-    - name: '|(포괄적 비트 OR)(SSIS 식)'
-      href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
-    - name: ^(배타적 비트 OR)(SSIS 식)
-      href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
-    - name: '&(비트 AND)(SSIS 식)'
-      href: ../integration-services/expressions/bitwise-and-ssis-expression.md
-    - name: ~(비트 Not)(SSIS 식)
-      href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-    - name: ==(같음)(SSIS 식)
-      href: ../integration-services/expressions/equal-ssis-expression.md
-    - name: '!=(같지 않음)(SSIS 식)'
-      href: ../integration-services/expressions/unequal-ssis-expression.md
-    - name: '> (보다 큼)(SSIS 식)'
-      href: ../integration-services/expressions/greater-than-ssis-expression.md
-    - name: <(보다 작음)(SSIS 식)
-      href: ../integration-services/expressions/less-than-ssis-expression.md
-    - name: '>=(크거나 같음)(SSIS 식)'
-      href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
-    - name: <=(작거나 같음)(SSIS 식)
-      href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-    - name: '? 으로 디코딩된 문자입니다. (조건부)(SSIS 식)'
-      href: ../integration-services/expressions/conditional-ssis-expression.md
-- name: 함수(SSIS 식)
-  href: ../integration-services/expressions/functions-ssis-expression.md
-  items:
-    - name: ABS(SSIS 식)
-      href: ../integration-services/expressions/abs-ssis-expression.md
-    - name: CEILING(SSIS 식)
-      href: ../integration-services/expressions/ceiling-ssis-expression.md
-    - name: CODEPOINT(SSIS 식)
-      href: ../integration-services/expressions/codepoint-ssis-expression.md
-    - name: DATEADD(SSIS 식)
-      href: ../integration-services/expressions/dateadd-ssis-expression.md
-    - name: DATEDIFF(SSIS 식)
-      href: ../integration-services/expressions/datediff-ssis-expression.md
-    - name: DATEPART(SSIS 식)
-      href: ../integration-services/expressions/datepart-ssis-expression.md
-    - name: DAY(SSIS 식)
-      href: ../integration-services/expressions/day-ssis-expression.md
-    - name: EXP(SSIS 식)
-      href: ../integration-services/expressions/exp-ssis-expression.md
-    - name: FINDSTRING(SSIS 식)
-      href: ../integration-services/expressions/findstring-ssis-expression.md
-    - name: FLOOR(SSIS 식)
-      href: ../integration-services/expressions/floor-ssis-expression.md
-    - name: GETDATE(SSIS 식)
-      href: ../integration-services/expressions/getdate-ssis-expression.md
-    - name: GETUTCDATE(SSIS 식)
-      href: ../integration-services/expressions/getutcdate-ssis-expression.md
-    - name: HEX(SSIS 식)
-      href: ../integration-services/expressions/hex-ssis-expression.md
-    - name: ISNULL(SSIS 식)
-      href: ../integration-services/expressions/isnull-ssis-expression.md
-    - name: LEFT(SSIS 식)
-      href: ../integration-services/expressions/left-ssis-expression.md
-    - name: LEN(SSIS 식)
-      href: ../integration-services/expressions/len-ssis-expression.md
-    - name: LN(SSIS 식)
-      href: ../integration-services/expressions/ln-ssis-expression.md
-    - name: LOG(SSIS 식)
-      href: ../integration-services/expressions/log-ssis-expression.md
-    - name: LOWER(SSIS 식)
-      href: ../integration-services/expressions/lower-ssis-expression.md
-    - name: LTRIM(SSIS 식)
-      href: ../integration-services/expressions/ltrim-ssis-expression.md
-    - name: MONTH(SSIS 식)
-      href: ../integration-services/expressions/month-ssis-expression.md
-    - name: NULL(SSIS 식)
-      href: ../integration-services/expressions/null-ssis-expression.md
-    - name: POWER(SSIS 식)
-      href: ../integration-services/expressions/power-ssis-expression.md
-    - name: REPLACE(SSIS 식)
-      href: ../integration-services/expressions/replace-ssis-expression.md
-    - name: REPLACENULL(SSIS 식)
-      href: ../integration-services/expressions/replacenull-ssis-expression.md
-    - name: REPLICATE(SSIS 식)
-      href: ../integration-services/expressions/replicate-ssis-expression.md
-    - name: REVERSE(SSIS 식)
-      href: ../integration-services/expressions/reverse-ssis-expression.md
-    - name: RIGHT(SSIS 식)
-      href: ../integration-services/expressions/right-ssis-expression.md
-    - name: ROUND(SSIS 식)
-      href: ../integration-services/expressions/round-ssis-expression.md
-    - name: RTRIM(SSIS 식)
-      href: ../integration-services/expressions/rtrim-ssis-expression.md
-    - name: SIGN(SSIS 식)
-      href: ../integration-services/expressions/sign-ssis-expression.md
-    - name: SQRT(SSIS 식)
-      href: ../integration-services/expressions/sqrt-ssis-expression.md
-    - name: SQUARE(SSIS 식)
-      href: ../integration-services/expressions/square-ssis-expression.md
-    - name: SUBSTRING(SSIS 식)
-      href: ../integration-services/expressions/substring-ssis-expression.md
-    - name: TOKEN(SSIS 식)
-      href: ../integration-services/expressions/token-ssis-expression.md
-    - name: TOKENCOUNT(SSIS 식)
-      href: ../integration-services/expressions/tokencount-ssis-expression.md
-    - name: TRIM(SSIS 식)
-      href: ../integration-services/expressions/trim-ssis-expression.md
-    - name: UPPER(SSIS 식)
-      href: ../integration-services/expressions/upper-ssis-expression.md
-    - name: YEAR(SSIS 식)
-      href: ../integration-services/expressions/year-ssis-expression.md
+        - name: 속성 식의 열거 상수
+          href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
+        - name: 속성 식 추가 또는 변경
+          href: ../integration-services/expressions/add-or-change-a-property-expression.md
+          items:
+            - name: 식 페이지
+              href: ../integration-services/expressions/expressions-page.md
+            - name: 속성 식 편집기
+              href: ../integration-services/expressions/property-expressions-editor.md
+            - name: 식 작성기
+              href: ../integration-services/expressions/expression-builder.md
+    - name: 식에서의 Integration Services 데이터 형식
+      href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
+    - name: 데이터 잘림(SSIS)
+      href: ../integration-services/expressions/data-truncation-ssis.md
+    - name: 문자열 패딩(SSIS)
+      href: ../integration-services/expressions/string-padding-ssis.md
+    - name: 구문(SSIS)
+      href: ../integration-services/expressions/syntax-ssis.md
+    - name: 식별자(SSIS)
+      href: ../integration-services/expressions/identifiers-ssis.md
+    - name: 리터럴(SSIS)
+      href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
+    - name: 연산자(SSIS 식)
+      href: ../integration-services/expressions/operators-ssis-expression.md
+      items:
+        - name: 연산자 우선 순위 및 계산 방향
+          href: ../integration-services/expressions/operator-precedence-and-associativity.md
+        - name: 캐스트(SSIS 식)
+          href: ../integration-services/expressions/cast-ssis-expression.md
+        - name: ()(괄호)(SSIS 식)
+          href: ../integration-services/expressions/parentheses-ssis-expression.md
+        - name: + (더하기)(SSIS)
+          href: ../integration-services/expressions/add-ssis.md
+        - name: + (연결)(SSIS 식)
+          href: ../integration-services/expressions/concatenate-ssis-expression.md
+        - name: '- (빼기)(SSIS 식)'
+          href: ../integration-services/expressions/subtract-ssis-expression.md
+        - name: '- (부정)(SSIS 식)'
+          href: ../integration-services/expressions/negate-ssis-expression.md
+        - name: '* (곱하기)(SSIS 식)'
+          href: ../integration-services/expressions/multiply-ssis-expression.md
+        - name: Divide (SSIS Expression)
+          href: ../integration-services/expressions/divide-ssis-expression.md
+        - name: (모듈로)(SSIS 식)
+          href: ../integration-services/expressions/modulo-ssis-expression.md
+        - name: '||(논리적 OR)(SSIS 식)'
+          href: ../integration-services/expressions/logical-or-ssis-expression.md
+        - name: '&&(논리적 AND)(SSIS 식)'
+          href: ../integration-services/expressions/logical-and-ssis-expression.md
+        - name: '! (논리적 Not)(SSIS 식)'
+          href: ../integration-services/expressions/logical-not-ssis-expression.md
+        - name: '|(포괄적 비트 OR)(SSIS 식)'
+          href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
+        - name: ^(배타적 비트 OR)(SSIS 식)
+          href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
+        - name: '&(비트 AND)(SSIS 식)'
+          href: ../integration-services/expressions/bitwise-and-ssis-expression.md
+        - name: ~(비트 Not)(SSIS 식)
+          href: ../integration-services/expressions/bitwise-not-ssis-expression.md
+        - name: ==(같음)(SSIS 식)
+          href: ../integration-services/expressions/equal-ssis-expression.md
+        - name: '!=(같지 않음)(SSIS 식)'
+          href: ../integration-services/expressions/unequal-ssis-expression.md
+        - name: '> (보다 큼)(SSIS 식)'
+          href: ../integration-services/expressions/greater-than-ssis-expression.md
+        - name: <(보다 작음)(SSIS 식)
+          href: ../integration-services/expressions/less-than-ssis-expression.md
+        - name: '>=(크거나 같음)(SSIS 식)'
+          href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
+        - name: <=(작거나 같음)(SSIS 식)
+          href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
+        - name: '? 으로 디코딩된 문자입니다. (조건부)(SSIS 식)'
+          href: ../integration-services/expressions/conditional-ssis-expression.md
+    - name: 함수(SSIS 식)
+      href: ../integration-services/expressions/functions-ssis-expression.md
+      items:
+        - name: ABS(SSIS 식)
+          href: ../integration-services/expressions/abs-ssis-expression.md
+        - name: CEILING(SSIS 식)
+          href: ../integration-services/expressions/ceiling-ssis-expression.md
+        - name: CODEPOINT(SSIS 식)
+          href: ../integration-services/expressions/codepoint-ssis-expression.md
+        - name: DATEADD(SSIS 식)
+          href: ../integration-services/expressions/dateadd-ssis-expression.md
+        - name: DATEDIFF(SSIS 식)
+          href: ../integration-services/expressions/datediff-ssis-expression.md
+        - name: DATEPART(SSIS 식)
+          href: ../integration-services/expressions/datepart-ssis-expression.md
+        - name: DAY(SSIS 식)
+          href: ../integration-services/expressions/day-ssis-expression.md
+        - name: EXP(SSIS 식)
+          href: ../integration-services/expressions/exp-ssis-expression.md
+        - name: FINDSTRING(SSIS 식)
+          href: ../integration-services/expressions/findstring-ssis-expression.md
+        - name: FLOOR(SSIS 식)
+          href: ../integration-services/expressions/floor-ssis-expression.md
+        - name: GETDATE(SSIS 식)
+          href: ../integration-services/expressions/getdate-ssis-expression.md
+        - name: GETUTCDATE(SSIS 식)
+          href: ../integration-services/expressions/getutcdate-ssis-expression.md
+        - name: HEX(SSIS 식)
+          href: ../integration-services/expressions/hex-ssis-expression.md
+        - name: ISNULL(SSIS 식)
+          href: ../integration-services/expressions/isnull-ssis-expression.md
+        - name: LEFT(SSIS 식)
+          href: ../integration-services/expressions/left-ssis-expression.md
+        - name: LEN(SSIS 식)
+          href: ../integration-services/expressions/len-ssis-expression.md
+        - name: LN(SSIS 식)
+          href: ../integration-services/expressions/ln-ssis-expression.md
+        - name: LOG(SSIS 식)
+          href: ../integration-services/expressions/log-ssis-expression.md
+        - name: LOWER(SSIS 식)
+          href: ../integration-services/expressions/lower-ssis-expression.md
+        - name: LTRIM(SSIS 식)
+          href: ../integration-services/expressions/ltrim-ssis-expression.md
+        - name: MONTH(SSIS 식)
+          href: ../integration-services/expressions/month-ssis-expression.md
+        - name: NULL(SSIS 식)
+          href: ../integration-services/expressions/null-ssis-expression.md
+        - name: POWER(SSIS 식)
+          href: ../integration-services/expressions/power-ssis-expression.md
+        - name: REPLACE(SSIS 식)
+          href: ../integration-services/expressions/replace-ssis-expression.md
+        - name: REPLACENULL(SSIS 식)
+          href: ../integration-services/expressions/replacenull-ssis-expression.md
+        - name: REPLICATE(SSIS 식)
+          href: ../integration-services/expressions/replicate-ssis-expression.md
+        - name: REVERSE(SSIS 식)
+          href: ../integration-services/expressions/reverse-ssis-expression.md
+        - name: RIGHT(SSIS 식)
+          href: ../integration-services/expressions/right-ssis-expression.md
+        - name: ROUND(SSIS 식)
+          href: ../integration-services/expressions/round-ssis-expression.md
+        - name: RTRIM(SSIS 식)
+          href: ../integration-services/expressions/rtrim-ssis-expression.md
+        - name: SIGN(SSIS 식)
+          href: ../integration-services/expressions/sign-ssis-expression.md
+        - name: SQRT(SSIS 식)
+          href: ../integration-services/expressions/sqrt-ssis-expression.md
+        - name: SQUARE(SSIS 식)
+          href: ../integration-services/expressions/square-ssis-expression.md
+        - name: SUBSTRING(SSIS 식)
+          href: ../integration-services/expressions/substring-ssis-expression.md
+        - name: TOKEN(SSIS 식)
+          href: ../integration-services/expressions/token-ssis-expression.md
+        - name: TOKENCOUNT(SSIS 식)
+          href: ../integration-services/expressions/tokencount-ssis-expression.md
+        - name: TRIM(SSIS 식)
+          href: ../integration-services/expressions/trim-ssis-expression.md
+        - name: UPPER(SSIS 식)
+          href: ../integration-services/expressions/upper-ssis-expression.md
+        - name: YEAR(SSIS 식)
+          href: ../integration-services/expressions/year-ssis-expression.md
 - name: 이벤트 처리기
   href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: 쿼리
@@ -913,32 +925,34 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: 개요
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
-- name: 단일 컴퓨터에서 SSIS Scale Out 시작
-  href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-- name: '연습: Integration Services 스케일 아웃 설정'
-  href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-- name: 규모 확장에서 패키지 실행
-  href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
-- name: Scale Out 관리자를 사용하여 Scale Out 작업자 추가
-  href: ../integration-services/scale-out/add-scale-out-worker.md
-- name: Scale Out 마스터
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
-- name: Scale Out 작업자
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
-- name: Scale Out 관리자
-  href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
-- name: Scale Out 로깅을 위한 계정 변경
-  href: ../integration-services/scale-out/change-logdb-account.md
-- name: Scale Out에 대한 인증서 관리
-  href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
-- name: Scale Out 고가용성
-  href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
-- name: SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성
-  href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
-- name: Scale Out 문제 해결
-  href: ../integration-services/scale-out/troubleshooting-scale-out.md
+- name: 규모 확장
+  items:
+    - name: 개요
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
+    - name: 단일 컴퓨터에서 SSIS Scale Out 시작
+      href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
+    - name: '연습: Integration Services 스케일 아웃 설정'
+      href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
+    - name: 규모 확장에서 패키지 실행
+      href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
+    - name: Scale Out 관리자를 사용하여 Scale Out 작업자 추가
+      href: ../integration-services/scale-out/add-scale-out-worker.md
+    - name: Scale Out 마스터
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
+    - name: Scale Out 작업자
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
+    - name: Scale Out 관리자
+      href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
+    - name: Scale Out 로깅을 위한 계정 변경
+      href: ../integration-services/scale-out/change-logdb-account.md
+    - name: Scale Out에 대한 인증서 관리
+      href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
+    - name: Scale Out 고가용성
+      href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
+    - name: SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성
+      href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
+    - name: Scale Out 문제 해결
+      href: ../integration-services/scale-out/troubleshooting-scale-out.md
 - name: 카탈로그 및 서버
   href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md
 - name: SSIS 카탈로그
@@ -973,236 +987,244 @@
   href: ../integration-services/service/events-logged-by-the-integration-services-service.md
 - name: 클러스터의 Integration Services(SSIS)
   href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
-- name: 개요
-  href: ../integration-services/security/security-overview-integration-services.md
-- name: 패키지의 중요한 데이터에 대한 액세스 제어
-  href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
-- name: 디지털 서명을 사용하여 패키지 원본 확인
-  href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
-- name: Integration Services 역할(SSIS 서비스)
-  href: ../integration-services/security/integration-services-roles-ssis-service.md
-- name: 실행 중인 패키지 및 기타 작업 모니터링
-  href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
-- name: 통합 서비스 패키지에 의해 기록된 이벤트
-  href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
-- name: Integration Services(SSIS) 로깅
-  href: ../integration-services/performance/integration-services-ssis-logging.md
-- name: 성능 카운터
-  href: ../integration-services/performance/performance-counters.md
-- name: 개요
-  href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
-- name: 패키지 개발 문제 해결 및 디버깅
+- name: 패키지
   items:
-    - name: 패키지 배포 문제 해결 도구
-      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
-    - name: 제어 흐름 디버깅
-      href: ../integration-services/troubleshooting/debugging-control-flow.md
-    - name: 스크립트 디버깅
-      href: ../integration-services/troubleshooting/debugging-script.md
-    - name: 데이터 흐름 디버깅
-      href: ../integration-services/troubleshooting/debugging-data-flow.md
-- name: 패키지 연결 문제 해결 도구
-  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
-- name: 패키지 실행 문제 해결 도구
-  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
-- name: 패키지 실행 보고서 문제 해결
-  href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
-- name: 패키지 실행을 위한 덤프 파일 생성
-  href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
-- name: 개요
-  href: ../integration-services/system-views/views-integration-services-catalog.md
-- name: catalog.catalog_properties
-  href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
-- name: catalog.effective_object_permissions
-  href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
-- name: catalog.environment_variables
-  href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
-- name: catalog.environment_references
-  href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
-- name: catalog.environments
-  href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
-- name: catalog.event_message_context
-  href: ../integration-services/system-views/catalog-event-message-context.md
-- name: catalog.event_messages
-  href: ../integration-services/system-views/catalog-event-messages.md
-- name: catalog.executable_statistics
-  href: ../integration-services/system-views/catalog-executable-statistics.md
-- name: catalog.executables
-  href: ../integration-services/system-views/catalog-executables.md
-- name: catalog.execution_component_phases
-  href: ../integration-services/system-views/catalog-execution-component-phases.md
-- name: catalog.execution_data_statistics
-  href: ../integration-services/system-views/catalog-execution-data-statistics.md
-- name: catalog.execution_data_taps
-  href: ../integration-services/system-views/catalog-execution-data-taps.md
-- name: catalog.execution_parameter_values
-  href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
-- name: catalog.execution_property_override_values
-  href: ../integration-services/system-views/catalog-execution-property-override-values.md
-- name: catalog.executions
-  href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
-- name: catalog.explicit_object_permissions
-  href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
-- name: catalog.extended_operation_info
-  href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
-- name: catalog.folders
-  href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
-- name: catalog.object_parameters
-  href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
-- name: catalog.object_versions
-  href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
-- name: catalog.operation_messages
-  href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
-- name: catalog.operations
-  href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
-- name: catalog.packages
-  href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
-- name: catalog.projects
-  href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
-- name: catalog.validations
-  href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
-- name: catalog.master_properties
-  href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
-- name: catalog.worker_agents
-  href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
-- name: 개요
-  href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
-- name: 추가
+    - name: 개요
+      href: ../integration-services/security/security-overview-integration-services.md
+    - name: 패키지의 중요한 데이터에 대한 액세스 제어
+      href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
+    - name: 디지털 서명을 사용하여 패키지 원본 확인
+      href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
+    - name: Integration Services 역할(SSIS 서비스)
+      href: ../integration-services/security/integration-services-roles-ssis-service.md
+    - name: 실행 중인 패키지 및 기타 작업 모니터링
+      href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
+    - name: 통합 서비스 패키지에 의해 기록된 이벤트
+      href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
+    - name: Integration Services(SSIS) 로깅
+      href: ../integration-services/performance/integration-services-ssis-logging.md
+    - name: 성능 카운터
+      href: ../integration-services/performance/performance-counters.md
+- name: 문제 해결
   items:
-    - name: catalog.add_data_tap
-      href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
-    - name: catalog.add_data_tap_by_guid
-      href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
+    - name: 개요
+      href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
+    - name: 패키지 개발 문제 해결 및 디버깅
+      items:
+        - name: 패키지 배포 문제 해결 도구
+          href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
+        - name: 제어 흐름 디버깅
+          href: ../integration-services/troubleshooting/debugging-control-flow.md
+        - name: 스크립트 디버깅
+          href: ../integration-services/troubleshooting/debugging-script.md
+        - name: 데이터 흐름 디버깅
+          href: ../integration-services/troubleshooting/debugging-data-flow.md
+    - name: 패키지 연결 문제 해결 도구
+      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
+    - name: 패키지 실행 문제 해결 도구
+      href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: 패키지 실행 보고서 문제 해결
+      href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: 패키지 실행을 위한 덤프 파일 생성
+      href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
+- name: 카탈로그 참조
+  items:
+    - name: 개요
+      href: ../integration-services/system-views/views-integration-services-catalog.md
+    - name: catalog.catalog_properties
+      href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
+    - name: catalog.effective_object_permissions
+      href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
+    - name: catalog.environment_variables
+      href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
+    - name: catalog.environment_references
+      href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
+    - name: catalog.environments
+      href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
+    - name: catalog.event_message_context
+      href: ../integration-services/system-views/catalog-event-message-context.md
+    - name: catalog.event_messages
+      href: ../integration-services/system-views/catalog-event-messages.md
+    - name: catalog.executable_statistics
+      href: ../integration-services/system-views/catalog-executable-statistics.md
+    - name: catalog.executables
+      href: ../integration-services/system-views/catalog-executables.md
+    - name: catalog.execution_component_phases
+      href: ../integration-services/system-views/catalog-execution-component-phases.md
+    - name: catalog.execution_data_statistics
+      href: ../integration-services/system-views/catalog-execution-data-statistics.md
+    - name: catalog.execution_data_taps
+      href: ../integration-services/system-views/catalog-execution-data-taps.md
+    - name: catalog.execution_parameter_values
+      href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
+    - name: catalog.execution_property_override_values
+      href: ../integration-services/system-views/catalog-execution-property-override-values.md
+    - name: catalog.executions
+      href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
+    - name: catalog.explicit_object_permissions
+      href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
+    - name: catalog.extended_operation_info
+      href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
+    - name: catalog.folders
+      href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
+    - name: catalog.object_parameters
+      href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
+    - name: catalog.object_versions
+      href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
+    - name: catalog.operation_messages
+      href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
+    - name: catalog.operations
+      href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
+    - name: catalog.packages
+      href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
+    - name: catalog.projects
+      href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
+    - name: catalog.validations
+      href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
+    - name: catalog.master_properties
+      href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
+    - name: catalog.worker_agents
+      href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
+- name: 저장 프로시저
+  items:
+    - name: 개요
+      href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
+    - name: 추가
+      items:
+        - name: catalog.add_data_tap
+          href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
+        - name: catalog.add_data_tap_by_guid
+          href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
+        - name: catalog.disable_worker_agent
+          href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
+    - name: catalog.check_schema_version
+      href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
+    - name: catalog.clear_object_parameter_value
+      href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
+    - name: catalog.configure_catalog
+      href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
+    - name: 만들기
+      items:
+        - name: catalog.create_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
+        - name: catalog.create_environment
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
+        - name: catalog.create_environment_reference
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
+        - name: catalog.create_environment_variable
+          href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
+        - name: catalog.create_execution
+          href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
+        - name: catalog.create_execution_dump
+          href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
+        - name: catalog.create_folder
+          href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
+    - name: DELETE
+      items:
+        - name: catalog.delete_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
+        - name: catalog.delete_environment
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
+        - name: catalog.delete_environment_reference
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
+        - name: catalog.delete_environment_variable
+          href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
+        - name: catalog.delete_folder
+          href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
+        - name: catalog.delete_project
+          href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
+    - name: catalog.deny_permission
+      href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
+    - name: 배포
+      items:
+        - name: catalog.deploy_packages
+          href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
+        - name: catalog.deploy_project
+          href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
     - name: catalog.disable_worker_agent
-      href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
-- name: catalog.check_schema_version
-  href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
-- name: catalog.clear_object_parameter_value
-  href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
-- name: catalog.configure_catalog
-  href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
-- name: 만들기
-  items:
-    - name: catalog.create_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
-    - name: catalog.create_environment
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
-    - name: catalog.create_environment_reference
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
-    - name: catalog.create_environment_variable
-      href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
-    - name: catalog.create_execution
-      href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
-    - name: catalog.create_execution_dump
-      href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
-    - name: catalog.create_folder
-      href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-- name: DELETE
-  items:
-    - name: catalog.delete_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
-    - name: catalog.delete_environment
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
-    - name: catalog.delete_environment_reference
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
-    - name: catalog.delete_environment_variable
-      href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
-    - name: catalog.delete_folder
-      href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
-    - name: catalog.delete_project
-      href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
-- name: catalog.deny_permission
-  href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
-- name: 배포
-  items:
-    - name: catalog.deploy_packages
-      href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
-    - name: catalog.deploy_project
-      href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
-- name: catalog.disable_worker_agent
-  href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
-- name: catalog.enable_worker_agent
-  href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
-- name: 가져오기
-  items:
-    - name: catalog.get_parameter_values
-      href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
-    - name: catalog.get_project
-      href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
-- name: catalog.grant_permission
-  href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-- name: 자세히 보기
-  items:
-    - name: catalog.move_environment
-      href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
-    - name: catalog.move_project
-      href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
-- name: catalog.remove_data_tap
-  href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
-- name: 이름 바꾸기
-  items:
-    - name: catalog.rename_customized_logging_level
-      href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
-    - name: catalog.rename_environment
-      href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
-    - name: catalog.rename_folder
-      href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
-- name: catalog.restore_project
-  href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
-- name: catalog.revoke_permission
-  href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-- name: Set
-  items:
-    - name: catalog.set_customized_logging_level_description
-      href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
-    - name: catalog.set_customized_logging_level_value
-      href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
-    - name: catalog.set_environment_property
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
-    - name: catalog.set_environment_reference_type
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
-    - name: catalog.set_environment_variable_property
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
-    - name: catalog.set_environment_variable_protection
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
-    - name: catalog.set_environment_variable_value
-      href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
-    - name: catalog.set_execution_parameter_value
-      href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
-    - name: catalog.set_execution_property_override_value
-      href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
-    - name: catalog.set_folder_description
-      href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
-    - name: catalog.set_object_parameter_value
-      href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
-    - name: catalog.set_worker_agent_property
-      href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
-- name: catalog.startup
-  href: ../integration-services/system-stored-procedures/catalog-startup.md
-- name: catalog.start_execution
-  href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
-- name: catalog.stop_operation
-  href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-- name: Update
-  items:
-    - name: catalog.update_logdb_info(SSISDB 데이터베이스)
-      href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
-    - name: catalog.update_master_address(SSISDB 데이터베이스)
-      href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
-- name: 유효성 검사
-  items:
-    - name: catalog.validate_package
-      href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
-    - name: catalog.validate_project
-      href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
-- name: 정리
-  items:
-    - name: catalog.cleanup_server_execution_keys
-      href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
-    - name: catalog.cleanup_server_log
-      href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
-- name: 시스템 함수 - dm_execution_performance_counters
-  href: ../integration-services/functions-dm-execution-performance-counters.md
+      href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
+    - name: catalog.enable_worker_agent
+      href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
+    - name: 가져오기
+      items:
+        - name: catalog.get_parameter_values
+          href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
+        - name: catalog.get_project
+          href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
+    - name: catalog.grant_permission
+      href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
+    - name: 자세히 보기
+      items:
+        - name: catalog.move_environment
+          href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
+        - name: catalog.move_project
+          href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
+    - name: catalog.remove_data_tap
+      href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
+    - name: 이름 바꾸기
+      items:
+        - name: catalog.rename_customized_logging_level
+          href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
+        - name: catalog.rename_environment
+          href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
+        - name: catalog.rename_folder
+          href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
+    - name: catalog.restore_project
+      href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
+    - name: catalog.revoke_permission
+      href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
+    - name: Set
+      items:
+        - name: catalog.set_customized_logging_level_description
+          href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
+        - name: catalog.set_customized_logging_level_value
+          href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
+        - name: catalog.set_environment_property
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
+        - name: catalog.set_environment_reference_type
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
+        - name: catalog.set_environment_variable_property
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
+        - name: catalog.set_environment_variable_protection
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
+        - name: catalog.set_environment_variable_value
+          href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
+        - name: catalog.set_execution_parameter_value
+          href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
+        - name: catalog.set_execution_property_override_value
+          href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
+        - name: catalog.set_folder_description
+          href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
+        - name: catalog.set_object_parameter_value
+          href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
+        - name: catalog.set_worker_agent_property
+          href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
+    - name: catalog.startup
+      href: ../integration-services/system-stored-procedures/catalog-startup.md
+    - name: catalog.start_execution
+      href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
+    - name: catalog.stop_operation
+      href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
+    - name: Update
+      items:
+        - name: catalog.update_logdb_info(SSISDB 데이터베이스)
+          href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
+        - name: catalog.update_master_address(SSISDB 데이터베이스)
+          href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
+    - name: 유효성 검사
+      items:
+        - name: catalog.validate_package
+          href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
+        - name: catalog.validate_project
+          href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
+    - name: 정리
+      items:
+        - name: catalog.cleanup_server_execution_keys
+          href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
+        - name: catalog.cleanup_server_log
+          href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
+    - name: 시스템 함수 - dm_execution_performance_counters
+      href: ../integration-services/functions-dm-execution-performance-counters.md
 - name: 오류 및 이벤트 참조
   href: ../integration-services/errors-and-events-reference-integration-services.md
   items:
@@ -1525,157 +1547,159 @@
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: SQL Data Warehouse로 데이터 로드
   href: ../integration-services/load-data-to-sql-data-warehouse.md
-- name: 개요
-  href: ../integration-services/change-data-capture/change-data-capture-ssis.md
-- name: 변경 데이터의 간격 지정
-  href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
-- name: 변경 데이터의 준비 여부 확인
-  href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
-- name: 변경 데이터에 대한 쿼리 준비
-  href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
-- name: 변경 데이터 검색을 위한 함수 만들기
-  href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
-- name: 변경 데이터 검색 및 이해
-  href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
-- name: '삽입, 업데이트 및 삭제 처리'
-  href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
-- name: 대상에 변경 내용 적용
-  href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
-- name: 여러 테이블의 증분 로드 수행
-  href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
-- name: Attunity Oracle CDC
-  href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
-- name: Change Data Capture Designer for Oracle by Attunity
-  href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
+- name: 변경 데이터 캡처
   items:
-    - name: CDC Designer 콘솔 소개
-      href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
-    - name: Oracle CDC 인스턴스 데이터 형식
-      href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
-    - name: 오류 처리
-      href: ../integration-services/change-data-capture/error-handling.md
-    - name: Oracle CDC 인스턴스
-      href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
-    - name: Oracle CDC 데이터베이스
-      href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
-    - name: 문제 해결
-      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
-    - name: Attunity Oracle CDC Designer F1 도움말 참조
-      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+    - name: 개요
+      href: ../integration-services/change-data-capture/change-data-capture-ssis.md
+    - name: 변경 데이터의 간격 지정
+      href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
+    - name: 변경 데이터의 준비 여부 확인
+      href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
+    - name: 변경 데이터에 대한 쿼리 준비
+      href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
+    - name: 변경 데이터 검색을 위한 함수 만들기
+      href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
+    - name: 변경 데이터 검색 및 이해
+      href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
+    - name: '삽입, 업데이트 및 삭제 처리'
+      href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
+    - name: 대상에 변경 내용 적용
+      href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
+    - name: 여러 테이블의 증분 로드 수행
+      href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
+    - name: Attunity Oracle CDC
+      href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
+    - name: Change Data Capture Designer for Oracle by Attunity
+      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
       items:
-        - name: CDC Designer 콘솔 액세스
-          href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
-        - name: CDC Service 관리
-          href: ../integration-services/change-data-capture/manage-a-cdc-service.md
-        - name: CDC 인스턴스 관리
-          href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
-        - name: 새 인스턴스 마법사 사용
-          href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+        - name: CDC Designer 콘솔 소개
+          href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
+        - name: Oracle CDC 인스턴스 데이터 형식
+          href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
+        - name: 오류 처리
+          href: ../integration-services/change-data-capture/error-handling.md
+        - name: Oracle CDC 인스턴스
+          href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
+        - name: Oracle CDC 데이터베이스
+          href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+        - name: 문제 해결
+          href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
+        - name: Attunity Oracle CDC Designer F1 도움말 참조
+          href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
           items:
-            - name: SQL Server 변경 데이터베이스 만들기
-              href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
-            - name: Oracle 원본 데이터베이스에 연결
-              href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
-            - name: Oracle에 연결
-              href: ../integration-services/change-data-capture/connect-to-oracle.md
-            - name: Oracle 테이블 및 열 선택
-              href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
-            - name: 변경 내용을 캡처할 Oracle 테이블 선택
-              href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
-            - name: 변경 캡처를 위해 선택된 테이블 변경
-              href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
-            - name: 보완 로깅 스크립트 생성 및 실행
-              href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
-            - name: 미러 테이블 및 CDC 캡처 인스턴스 생성
-              href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
-            - name: 마침
-              href: ../integration-services/change-data-capture/finish.md
-        - name: 인스턴스 속성 편집
-          href: ../integration-services/change-data-capture/edit-instance-properties.md
+            - name: CDC Designer 콘솔 액세스
+              href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
+            - name: CDC Service 관리
+              href: ../integration-services/change-data-capture/manage-a-cdc-service.md
+            - name: CDC 인스턴스 관리
+              href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
+            - name: 새 인스턴스 마법사 사용
+              href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+              items:
+                - name: SQL Server 변경 데이터베이스 만들기
+                  href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
+                - name: Oracle 원본 데이터베이스에 연결
+                  href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
+                - name: Oracle에 연결
+                  href: ../integration-services/change-data-capture/connect-to-oracle.md
+                - name: Oracle 테이블 및 열 선택
+                  href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
+                - name: 변경 내용을 캡처할 Oracle 테이블 선택
+                  href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
+                - name: 변경 캡처를 위해 선택된 테이블 변경
+                  href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
+                - name: 보완 로깅 스크립트 생성 및 실행
+                  href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
+                - name: 미러 테이블 및 CDC 캡처 인스턴스 생성
+                  href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
+                - name: 마침
+                  href: ../integration-services/change-data-capture/finish.md
+            - name: 인스턴스 속성 편집
+              href: ../integration-services/change-data-capture/edit-instance-properties.md
+              items:
+                - name: Oracle 데이터베이스 속성 편집
+                  href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
+                - name: 테이블 편집
+                  href: ../integration-services/change-data-capture/edit-tables.md
+                - name: CDC 인스턴스에 테이블 추가
+                  href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
+                - name: 테이블 속성 편집
+                  href: ../integration-services/change-data-capture/edit-the-table-properties.md
+                - name: 보완 로깅 스크립트 검토 및 생성
+                  href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
+                - name: 고급 속성 편집
+                  href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
+        - name: Attunity Oracle CDC Designer 방법 가이드
+          href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
           items:
-            - name: Oracle 데이터베이스 속성 편집
-              href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
-            - name: 테이블 편집
-              href: ../integration-services/change-data-capture/edit-tables.md
-            - name: CDC 인스턴스에 테이블 추가
-              href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
-            - name: 테이블 속성 편집
-              href: ../integration-services/change-data-capture/edit-the-table-properties.md
-            - name: 보완 로깅 스크립트 검토 및 생성
-              href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
-            - name: 고급 속성 편집
-              href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
-    - name: Attunity Oracle CDC Designer 방법 가이드
-      href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+            - name: CDC Designer 콘솔에서 CDC Service를 관리하는 방법
+              href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+            - name: SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
+              href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
+            - name: CDC 인스턴스 관리 방법
+              href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
+            - name: CDC 인스턴스 속성을 편집하는 방법
+              href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
+            - name: CDC 인스턴스 속성을 보는 방법
+              href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
+        - name: 인스턴스를 만들기 위한 SQL Server 연결
+          href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
+        - name: 고급 연결 속성
+          href: ../integration-services/change-data-capture/advanced-connection-properties.md
+        - name: 스크립트 실행을 위한 Oracle 자격 증명
+          href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
+        - name: Oracle 보완 로깅 스크립트
+          href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
+        - name: CDC 인스턴스 배포 스크립트
+          href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
+        - name: SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한
+          href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
+    - name: Attunity Oracle CDC Service
+      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
       items:
-        - name: CDC Designer 콘솔에서 CDC Service를 관리하는 방법
-          href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
-        - name: SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
-          href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-        - name: CDC 인스턴스 관리 방법
-          href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
-        - name: CDC 인스턴스 속성을 편집하는 방법
-          href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
-        - name: CDC 인스턴스 속성을 보는 방법
-          href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
-    - name: 인스턴스를 만들기 위한 SQL Server 연결
-      href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
-    - name: 고급 연결 속성
-      href: ../integration-services/change-data-capture/advanced-connection-properties.md
-    - name: 스크립트 실행을 위한 Oracle 자격 증명
-      href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
-    - name: Oracle 보완 로깅 스크립트
-      href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
-    - name: CDC 인스턴스 배포 스크립트
-      href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
-    - name: SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한
-      href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
-- name: Attunity Oracle CDC Service
-  href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
-  items:
-    - name: Attunity Oracle CDC Service 시스템 아키텍처
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
-    - name: Oracle CDC Service
-      href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
-      items:
-        - name: 고가용성 지원
-          href: ../integration-services/change-data-capture/high-availability-support.md
-        - name: SQL Server 연결 CDC Service에 필요한 권한
-          href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
-        - name: 사용자 역할
-          href: ../integration-services/change-data-capture/user-roles.md
-        - name: Oracle CDC Service 작업
-          href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
-    - name: Attunity Oracle CDC Service F1 도움말
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
-      items:
-        - name: SQL 서버에 연결
-          href: ../integration-services/change-data-capture/connection-to-sql-server.md
-        - name: 삭제를 위해 SQL Server에 연결
-          href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
-        - name: Oracle CDC Service 만들기 및 편집
-          href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-        - name: Oracle CDC Service 관리
-          href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
-        - name: CDC를 위한 SQL Server 준비
-          href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
-        - name: Oracle CDC를 위한 SQL Server 준비-스크립트 보기
-          href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
-        - name: CDC Service 작업
-          href: ../integration-services/change-data-capture/work-with-cdc-services.md
-    - name: Attunity Oracle CDC Service 방법 가이드
-      href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
-      items:
-        - name: CDC Service를 만들고 편집하는 방법
-          href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
-        - name: 로컬 CDC Service를 관리하는 방법
-          href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
-        - name: CDC를 위해 SQL Server를 준비하는 방법
-          href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
-        - name: CDC Service 명령줄 인터페이스를 사용하는 방법
-          href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
-        - name: CDC Service에서 작업하는 방법
-          href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
+        - name: Attunity Oracle CDC Service 시스템 아키텍처
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+        - name: Oracle CDC Service
+          href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
+          items:
+            - name: 고가용성 지원
+              href: ../integration-services/change-data-capture/high-availability-support.md
+            - name: SQL Server 연결 CDC Service에 필요한 권한
+              href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
+            - name: 사용자 역할
+              href: ../integration-services/change-data-capture/user-roles.md
+            - name: Oracle CDC Service 작업
+              href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
+        - name: Attunity Oracle CDC Service F1 도움말
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
+          items:
+            - name: SQL 서버에 연결
+              href: ../integration-services/change-data-capture/connection-to-sql-server.md
+            - name: 삭제를 위해 SQL Server에 연결
+              href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
+            - name: Oracle CDC Service 만들기 및 편집
+              href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
+            - name: Oracle CDC Service 관리
+              href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
+            - name: CDC를 위한 SQL Server 준비
+              href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
+            - name: Oracle CDC를 위한 SQL Server 준비-스크립트 보기
+              href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
+            - name: CDC Service 작업
+              href: ../integration-services/change-data-capture/work-with-cdc-services.md
+        - name: Attunity Oracle CDC Service 방법 가이드
+          href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+          items:
+            - name: CDC Service를 만들고 편집하는 방법
+              href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
+            - name: 로컬 CDC Service를 관리하는 방법
+              href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
+            - name: CDC를 위해 SQL Server를 준비하는 방법
+              href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
+            - name: CDC Service 명령줄 인터페이스를 사용하는 방법
+              href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
+            - name: CDC Service에서 작업하는 방법
+              href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
 - name: Microsoft Connector for SAP BW
   href: ../integration-services/microsoft-connector-for-sap-bw.md
   items:

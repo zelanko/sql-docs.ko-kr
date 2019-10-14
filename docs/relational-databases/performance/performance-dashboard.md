@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559473"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041172"
 ---
 # <a name="performance-dashboard"></a>성능 대시보드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "67559473"
 기본 DMV의 데이터가 선택 취소되어 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 시작될 때 **고비용 쿼리**가 다시 설정됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 고비용 쿼리에 대한 자세한 내용은 쿼리 저장소에서 확인할 수 있습니다. 
 
 > [!NOTE]
-> 성능 대시보드는 [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602)에 대한 독립형 다운로드로 처음 릴리스되었으며, 이후 [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063)용으로 업데이트되었습니다.
+> 성능 대시보드는 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415)에 대한 독립형 다운로드로 처음 릴리스되었으며, 이후 [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063)용으로 업데이트되었습니다.
 
 ## <a name="permissions"></a>사용 권한  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `VIEW SERVER STATE` 및 `ALTER TRACE` 권한이 필요합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221973"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041061"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration을 사용하여 SQL Server 설치
 
@@ -28,7 +28,7 @@ SQL Server 설치 인터페이스를 통해 별생각 없이 같은 단추를 �
 
 설상가상으로, 이로 인해 전체 설치에 대한 신뢰가 흔들린다는 것입니다. "내가 또 무엇을 빠뜨렸을까?" 직접 요청할 수 있습니다.
 
-[PowerShell DSC(Desired State Configuration)](https://docs.microsoft.com/powershell/dsc/overview)에 대해 읽어 보세요. DSC를 사용하면 수백, 수천 대의 서버에서 재사용할 수있는 하나의 구성 템플릿을 빌드할 수 있습니다. 빌드에 따라 몇 가지 설정 매개 변수를 조정해야 할수도 있습니다. 하지만 모든 표준 설정을 그대로 유지할 수 있으므로 중요한 문제는 아닙니다. 이는 중요한 매개 변수를 입력하는 것을 잊지 않게 해줍니다.
+[PowerShell DSC(Desired State Configuration)](/powershell/scripting/dsc/overview/overview)에 대해 읽어 보세요. DSC를 사용하면 수백, 수천 대의 서버에서 재사용할 수있는 하나의 구성 템플릿을 빌드할 수 있습니다. 빌드에 따라 몇 가지 설정 매개 변수를 조정해야 할수도 있습니다. 하지만 모든 표준 설정을 그대로 유지할 수 있으므로 중요한 문제는 아닙니다. 이는 중요한 매개 변수를 입력하는 것을 잊지 않게 해줍니다.
 
 이 문서에서는 **SqlServerDsc** DSC 리소스를 사용하여 Windows Server 2016에서 SQL Server 2017의 독립 실행형 인스턴스의 초기 설정을 살펴보겠습니다. DSC에 대한 사전 지식은 DSC가 어떻게 작동하는지 탐색하지 않기 때문에 유용합니다.
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>관련 항목:
 
-[Windows PowerShell Desired State Configuration 개요](https://docs.microsoft.com/powershell/dsc/overview)
+[Windows PowerShell Desired State Configuration 개요](/powershell/scripting/dsc/overview/overview)
 
 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

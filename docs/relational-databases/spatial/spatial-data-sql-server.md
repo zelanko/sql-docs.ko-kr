@@ -1,6 +1,6 @@
 ---
 title: 공간 데이터(SQL Server) | Microsoft 문서
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 505785e4b0460d2a59e4d42898d950bc55b25de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048505"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278145"
 ---
 # <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,6 @@ ms.locfileid: "68048505"
 -   **geography** 형식은 둥근 표면 좌표계의 데이터를 나타냅니다.  
   
  두 가지 데이터 형식 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 새로운 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
   
 ##  <a name="reltasks"></a> 관련 태스크  
  [geometry 인스턴스 만들기, 구성 및 쿼리](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  

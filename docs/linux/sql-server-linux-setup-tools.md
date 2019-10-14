@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910798"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041252"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 SQL Server 명령줄 도구 sqlcmd 및 bcp 설치
 
@@ -180,7 +180,7 @@ ms.locfileid: "70910798"
 
 이제 macOS에서 **sqlcmd** 및 **bcp** 미리 보기를 사용할 수 있습니다. 자세한 내용은 [공지](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)를 참조하세요.
 
-‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’
+‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’ 
 
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
