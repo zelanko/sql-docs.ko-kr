@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045637"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687366"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045637"
 |GROUP BY, ORDER BY의 열 수||바이트 수로만 제한||  
 |GROUP BY WITH CUBE 또는 WITH ROLLUP 문의 열 또는 식의 수||10||  
 |인덱스 키당 열 수||32|테이블에 하나 이상의 XML 인덱스가 있는 경우 XML 열이 기본 XML 인덱스의 클러스터링 키에 추가되므로 사용자 테이블의 클러스터링 키는 31개 열로 제한됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 비클러스터형 인덱스에 키가 아닌 열을 포함시켜 최대 32개의 키 열 제한을 피할 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.|  
-|외래 키당 열 수||32||  
-|기본 키당 열 수||32||  
-|넓지 않은 테이블당 열 수||1,024||  
-|넓은 테이블당 열 수||30,000||  
-|SELECT 문당 열 수||4,096||  
-|INSERT 문당 열 수||4,096||  
+|외래 키 또는 기본 키당 열 수||32||  
+|`INSERT` 문당 열 수||4,096||  
+|`SELECT` 문당 열 수||4,096||  
+|테이블당 열 수||1,024|스파스 열 집합을 포함하는 테이블에는 최대 30,000개의 열이 포함됩니다. [스파스 열 집합](../relational-databases/tables/use-column-sets.md)을 참조하세요.|  
+|`UPDATE` 문당 열 수||4,096|[스파스 열 집합](../relational-databases/tables/use-column-sets.md)에는 다른 한도가 적용됩니다.|  
+|뷰당 열 수||1,024||  
 |클라이언트당 연결 수||구성된 연결의 최대 값||  
 |데이터베이스 크기||524,272TB||  
 |다음 인스턴스당 데이터베이스 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045637"
 |인덱싱되지 않은 열의 통계||30,000|| 
 |SELECT 문당 테이블 수||사용 가능한 리소스로만 제한||  
 |테이블당 트리거 수||데이터베이스의 개체 수로 제한|데이터베이스 개체에는 테이블, 뷰, 저장 프로시저, 사용자 정의 함수, 트리거, 규칙, 기본값 및 제약 조건 등의 개체가 있습니다. 한 데이터베이스에서 모든 개체 수의 합계는 2,147,483,647을 초과할 수 없습니다.|  
-|UPDATE 문 당 열 수(넓은 테이블)||4096||  
 |사용자 연결||32,767||  
 |XML 인덱스||249||  
   

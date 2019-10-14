@@ -1,7 +1,7 @@
 ---
 title: float 및 real(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086752"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682012"
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68086752"
   
 **float** 또는 **real**에서 문자 데이터로 변환할 때 일반적으로 STR 문자열 함수를 사용하는 것이 CAST( )를 사용하는 것보다 유용합니다. 이는 STR을 사용하면 서식을 더 많이 제어할 수 있기 때문입니다. 자세한 내용은 [STR&#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md) 및 [함수&#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)를 참조하세요.
   
-과학적 표기법을 사용하는 **float** 값을 **decimal** 또는 **numerci**로 변환할 경우 전체 자릿수 값이 17자리로 제한됩니다. <5E-18의 값은 0으로 내림합니다.
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이전에는 **float** 값을 **decimal** 또는 **numeric**로 변환하는 경우 정밀도 값이 17자리로 제한됩니다. 5E-18(과학적 표기법 5E-18 또는 10진 표기법 0.0000000000000000050000000000000005를 사용하여 설정된 경우) 미만의 **float** 값은 0으로 버림됩니다. [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 더 이상 제한되지 않습니다.
   
 ## <a name="see-also"></a>관련 항목:
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

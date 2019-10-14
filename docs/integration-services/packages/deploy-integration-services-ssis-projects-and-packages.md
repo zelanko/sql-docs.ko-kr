@@ -1,10 +1,10 @@
 ---
 title: Integration Services(SSIS) 프로젝트 및 패키지 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,31 +18,31 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282640"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680965"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
   
 레거시 패키지 배포 모델에 대한 자세한 내용은 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 > [!NOTE]  
->  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 배포 모델을 사용하여 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)]는 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 도입했습니다.  
+>  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 배포 모델을 사용하여 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)]는 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 도입했습니다.
 
 > [!NOTE]
 > 이 문서에서는 SSIS 패키지를 일반적으로 배포하는 방법 및 온-프레미스에서 패키지를 배포하는 방법을 설명합니다. 또한 다음 플랫폼으로 SSIS 패키지를 배포할 수도 있습니다.
 > - **Microsoft Azure 클라우드** 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 > - **Linux** 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>프로젝트 배포 모델과 레거시 패키지 배포 모델 비교  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>프로젝트 배포 모델과 레거시 패키지 배포 모델 비교
+
  프로젝트에 대해 선택한 배포 모델 유형에 따라 해당 프로젝트에 사용할 수 있는 배포 및 관리 옵션이 달라집니다. 다음 표에서는 프로젝트 배포 모델을 사용하는 경우와 패키지 배포 모델을 사용하는 경우의 차이점과 유사점을 보여 줍니다.  
   
 |프로젝트 배포 모델을 사용하는 경우|레거시 패키지 배포 모델을 사용하는 경우|  
@@ -58,9 +58,8 @@ ms.locfileid: "71282640"
 |실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되고 카탈로그에 저장됩니다. Transact-SQL 뷰를 사용하여 이러한 이벤트를 쿼리할 수 있습니다.|실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되지 않습니다. 이벤트를 캡처하려면 로그 공급자를 패키지에 추가해야 합니다.|  
 |패키지가 별도의 Windows 프로세스에서 실행됩니다.|패키지가 별도의 Windows 프로세스에서 실행됩니다.|  
 |SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|  
-  
- 프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>프로젝트 배포 모델의 기능  
  다음 표에서는 프로젝트 배포 모델에만 배포되는 프로젝트에 사용할 수 있는 기능을 나열합니다.  
   
@@ -79,7 +78,8 @@ ms.locfileid: "71282640"
 
 기본값에서 SSIS 서비스 계정을 변경하는 경우, 패키지를 성공적으로 배포하려면 먼저 기본이 아닌 서비스 계정에 추가 권한을 부여해야 할 수 있습니다. 기본이 아닌 서비스 계정에 필요한 사용 권한이 없으면 다음과 같은 오류 메시지가 표시될 수 있습니다.
 
-*사용자 정의 루틴 또는 집계 "deploy_project_internal"을 실행하는 동안 .NET Framework 오류가 발생했습니다. System.ComponentModel.Win32Exception: 클라이언트에 필수 권한이 없습니다.*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
 이 오류는 일반적으로 DCOM 권한 누락으로 인해 발생합니다. 오류를 해결하려면 다음 작업을 수행합니다.
 
@@ -92,8 +92,9 @@ ms.locfileid: "71282640"
 7.  **권한** 대화 상자에서 기본이 아닌 서비스 계정을 추가하고 필요에 따라 **허용** 권한을 부여합니다. 일반적으로 계정에는 **로컬 시작** 및 **로컬 활성화** 사용 권한이 있습니다.
 8.  **확인**을 두 번 클릭한 후 **구성 요소 서비스** 콘솔을 닫습니다.
 
-이 섹션에 설명된 오류 및 SSIS 서비스 계정에 필요한 사용 권한에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.  
-[System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+이 섹션에 설명된 오류 및 SSIS 서비스 계정에 필요한 사용 권한에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.
+ 
+- [System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -105,7 +106,7 @@ ms.locfileid: "71282640"
   
 1.  아직 없는 경우 SSISDB 카탈로그를 만듭니다. 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
   
-2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 아래 지침을 참조하세요. [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)  
+2.  **Integration Services 프로젝트 변환 마법사**를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 다음 지침을 참조하세요. [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)  
   
     -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 이상에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
   
@@ -144,17 +145,17 @@ ms.locfileid: "71282640"
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 연 다음 **프로젝트** 메뉴에서 **배포** 를 선택하여 **Integration Services 배포 마법사**를 시작합니다.  
   
-     -또는-  
+     로 구분하거나 여러  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** 노드를 확장하고 배포할 프로젝트의 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
   
-     -또는-  
+     로 구분하거나 여러  
   
      명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
   
 2.  **원본 선택** 페이지에서 **프로젝트 배포 파일** 을 클릭하여 프로젝트 배포 파일을 선택합니다.  
   
-     -또는-  
+     로 구분하거나 여러  
   
      **Integration Services 카탈로그** 를 클릭하여 SSISDB 카탈로그에 이미 배포된 프로젝트를 선택합니다.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "71282640"
   
 1.  명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
   
-2.  **원본 선택** 페이지에서 **패키지 배포 모델**로 전환합니다. 그런 다음 원본 패키지가 포함된 폴더를 선택하고 패키지를 구성합니다.  
+2.  **원본 선택** 페이지에서 **패키지 배포 모델**로 전환합니다. 그런 다음, 원본 패키지가 포함된 폴더를 선택하고 패키지를 구성합니다.  
   
 3.  마법사를 완료합니다. [Package Deployment Model](#PackageModel)에서 설명하는 나머지 단계를 수행합니다.  
   
@@ -179,7 +180,7 @@ ms.locfileid: "71282640"
   
 3.  **소개** 페이지가 표시되면 **다음** 을 클릭하여 계속합니다.  
   
-4.  **원본 선택** 페이지에서 **패키지 배포 모델**로 전환합니다. 그런 다음 원본 패키지가 포함된 폴더를 선택하고 패키지를 구성합니다.  
+4.  **원본 선택** 페이지에서 **패키지 배포 모델**로 전환합니다. 그런 다음, 원본 패키지가 포함된 폴더를 선택하고 패키지를 구성합니다.  
   
 5.  마법사를 완료합니다. [Package Deployment Model](#PackageModel)에서 설명하는 나머지 단계를 수행합니다.  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>패키지 배포 모델로 변환 대화 상자
   **패키지 배포 모델로 변환** 명령을 사용하면 프로젝트 및 프로젝트의 각 패키지에서 해당 모델과의 호환성을 검사한 후 패키지를 패키지 배포 모델로 변환할 수 있습니다. 패키지에 매개 변수와 같이 프로젝트 배포 모델에 고유한 기능이 사용된 경우 패키지를 변환할 수 없습니다.  
-  
-### <a name="task-list"></a>작업 목록  
+
  패키지를 패키지 배포 모델로 변환하려면 두 단계가 필요합니다.  
   
 1.  **프로젝트** 메뉴에서 **패키지 배포 모델로 변환** 명령을 선택하면 이 모델에 대한 프로젝트 및 각 패키지의 호환성이 검사됩니다. 결과는 **결과** 테이블에 표시됩니다.  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  프로젝트 및 모든 패키지가 호환성 테스트를 성공하면 **확인** 을 클릭하여 패키지를 변환합니다.  
   
-> **참고:** 프로젝트를 프로젝트 배포 모델로 변환하려면 **Integration Services 프로젝트 변환 마법사**를 사용합니다. 자세한 내용은 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)을 참조하세요.  
+> [!NOTE]
+> 프로젝트를 프로젝트 배포 모델로 변환하려면 **Integration Services 프로젝트 변환 마법사**를 사용합니다. 자세한 내용은 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)을 참조하세요.  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 배포 마법사
   **Integration Services 배포 마법사** 는 아래의 두 가지 배포 모델을 지원합니다.
@@ -287,14 +288,15 @@ static void Main()
  
  **패키지 배포 모델** 을 사용하면 전체 프로젝트를 배포할 필요 없이 SSIS 카탈로그로 업데이트한 패키지를 배포할 수 있습니다. 
  
- > **참고:** Integration Services 배포 마법사의 기본 배포는 프로젝트 배포 모델입니다.  
+ > [!NOTE]
+ > Integration Services 배포 마법사의 기본 배포는 프로젝트 배포 모델입니다.  
   
 ### <a name="launch-the-wizard"></a>마법사 시작
 다음과 같이 마법사를 시작합니다.
 
  - Windows Search에서 **"SQL Server 배포 마법사"** 를 입력합니다. 
 
-**OR**
+ 로 구분하거나 여러
 
  - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -304,61 +306,70 @@ static void Main()
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>원본 선택  
+#### <a name="select-source"></a>원본 선택
+
  만든 프로젝트 배포 파일을 배포하려면 **프로젝트 배포 파일** 을 선택하고 .ispac 파일에 대한 경로를 입력합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 프로젝트를 배포하려면 **Integration Services 카탈로그**를 선택한 후 서버 이름과 카탈로그에 있는 프로젝트 경로를 입력합니다. **다음** 을 클릭하여 **대상 선택** 페이지를 표시합니다.  
   
-#### <a name="select-destination"></a>대상 선택  
+#### <a name="select-destination"></a>대상 선택
+
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 프로젝트에 대한 대상 폴더를 선택하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 입력하거나 서버 목록에서 **찾아보기** 를 클릭하여 선택합니다. SSISDB에 프로젝트 경로를 입력하거나 **찾아보기** 를 클릭하여 선택합니다. **다음** 을 클릭하여 **검토** 페이지를 표시합니다.  
   
-#### <a name="review-and-deploy"></a>검토(및 배포)  
+#### <a name="review-and-deploy"></a>검토(및 배포)
+
  이 페이지를 사용하면 선택한 설정을 검토할 수 있습니다. **이전**을 클릭하거나 왼쪽 창의 단계 중 하나를 클릭하여 선택 항목을 변경할 수 있습니다. **배포** 를 클릭해 배포 프로세스를 시작합니다.  
   
-#### <a name="results"></a>결과  
+#### <a name="results"></a>결과
+
  배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 결과를 XML 파일로 저장하려면 **보고서 저장...** 을 클릭하거나 **닫기**를 클릭해 마법사를 종료합니다.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>원본 선택  
+#### <a name="select-source"></a>원본 선택
+
  **Integration Services 배포 마법사** 의 **원본 선택** 페이지는 **배포 모델** 에서 **패키지 배포**옵션을 선택할 때 패키지 배포 모델별 설정을 보여줍니다.  
   
- 원본 패키지를 선택하려면 **찾아보기...** 단추를 클릭하여 패키지가 포함된 **폴더**를 선택하거나 **패키지 폴더 경로** 텍스트 상자에 폴더 경로를 입력하고 페이지 아래쪽에 있는 **새로 고침** 단추를 클릭합니다. 이제 목록 상자의 지정된 폴더에 모든 패키지가 표시됩니다. 기본적으로 모든 패키지가 선택되어 있습니다. 첫 번째 열에 있는 **확인란** 을 클릭해 서버로 배포할 패키지를 선택합니다.  
+ 원본 패키지를 선택하려면 **찾아보기...** 단추를 클릭하여 패키지가 포함된 **폴더**를 선택하거나, **패키지 폴더 경로** 텍스트 상자에 폴더 경로를 입력하고 페이지 아래쪽에 있는 **새로 고침** 단추를 클릭합니다. 이제 목록 상자의 지정된 폴더에 모든 패키지가 표시됩니다. 기본적으로 모든 패키지가 선택되어 있습니다. 첫 번째 열에 있는 **확인란** 을 클릭해 서버로 배포할 패키지를 선택합니다.  
   
- **상태** 및 **메시지** 열을 참조하여 패키지 상태를 확인합니다. 상태가 **준비** 또는 **경고**로 설정된 경우 배포 마법사는 배포 프로세스를 차단하지 않습니다. 반면, 상태가 **오류**로 설정된 경우 마법사는 선택한 패키지의 배포를 더 이상 진행하지 않습니다. 자세한 경고/오류 메시지를 보려면 **메시지** 열에 있는 링크를 클릭합니다.  
+ **상태** 및 **메시지** 열을 참조하여 패키지 상태를 확인합니다. 상태가 **준비** 또는 **경고**로 설정된 경우 배포 마법사는 배포 프로세스를 차단하지 않습니다. 상태가 **오류**로 설정된 경우에는 마법사가 선택한 패키지의 배포를 진행하지 않습니다. 자세한 경고 또는 오류 메시지를 보려면 **메시지** 열에 있는 링크를 클릭합니다.  
   
- 중요한 데이터 또는 패키지 데이터가 암호로 암호화된 경우 **암호** 열에 암호를 입력한 후 **새로 고침** 단추를 클릭해 암호가 맞는지 확인합니다. 암호가 맞는 경우 상태가 **준비** 로 변경되고 경고 메시지가 사라집니다. 여러 패키지의 암호가 동일한 경우 동일한 암호화 암호가 있는 패키지들을 선택한 후 **암호** 텍스트 상자에 암호를 입력한 후 **적용** 단추를 클릭합니다. 암호는 선택한 패키지에 적용됩니다.  
+ 중요한 데이터 또는 패키지 데이터가 암호로 암호화된 경우 **암호** 열에 암호를 입력한 후 **새로 고침** 단추를 클릭해 암호가 맞는지 확인합니다. 암호가 맞는 경우 상태가 **준비** 로 변경되고 경고 메시지가 사라집니다. 여러 패키지의 암호가 동일한 경우 동일한 암호화 암호를 사용하는 패키지를 선택하고 **암호** 텍스트 상자에 암호를 입력한 다음, **적용** 단추를 선택합니다. 암호는 선택한 패키지에 적용됩니다.  
   
  선택한 일부 패키지가 **오류**로 설정되지 않은 경우 **다음** 단추가 활성화되어 패키지 배포 프로세스를 계속 진행할 수 있습니다.  
   
-#### <a name="select-destination"></a>대상 선택  
- 패키지 소스를 선택한 후 **다음** 단추를 클릭해 **대상 선택** 페이지로 전환합니다. 패키지는 SSIS 카탈로그(SSISDB)에 프로젝트로 배포되어야 합니다. 따라서 대상 프로젝트가 SSIS 카탈로그에 이미 있는지 확인한 후 패키지를 배포하십시오. 그렇지 않으면 빈 프로젝트를 만듭니다. **대상 선택** 페이지에서 **서버 이름** 텍스트 상자에 서버 이름을 입력하거나 **찾아보기...** 단추를 클릭해 서버 인스턴스를 선택합니다. 그런 다음, **경로** 옆에 있는 **찾아보기...** 단추를 클릭하여 대상 프로젝트를 지정합니다. 프로젝트가 없는 경우 **새 프로젝트...** 를 클릭하여 대상 프로젝트로 빈 프로젝트를 만듭니다. 프로젝트는 **반드시** 폴더 아래에 생성되어야 합니다.  
+#### <a name="select-destination"></a>대상 선택
+
+ 패키지 원본을 선택한 후 **다음** 단추를 클릭하여 **대상 선택** 페이지로 전환합니다. 패키지는 SSIS 카탈로그(SSISDB)에 프로젝트로 배포되어야 합니다. 패키지를 배포하기 전에 대상 프로젝트가 SSIS 카탈로그에 이미 있는지 확인합니다. 프로젝트가 없는 경우 빈 프로젝트를 만듭니다. **대상 선택** 페이지에서 **서버 이름** 텍스트 상자에 서버 이름을 입력하거나 **찾아보기...** 단추를 클릭하여 서버 인스턴스를 선택합니다. 그런 다음, **경로** 텍스트 상자 옆에 있는 **찾아보기...** 단추를 클릭하여 대상 프로젝트를 지정합니다. 프로젝트가 없는 경우 **새 프로젝트...** 단추를 클릭하여 대상 프로젝트로 사용할 빈 프로젝트를 만듭니다. 폴더 아래에 프로젝트를 만들어야 합니다.  
   
-#### <a name="review-and-deploy"></a>검토 및 배포  
- **대상 선택** 페이지에서 **다음** 을 클릭해 **Integration Services 배포 마법사** 의 **검토**페이지로 전환합니다. 검토 페이지에서 배포 작업에 대한 요약 보고서를 검토합니다. 검토한 후, **배포** 단추를 클릭해 배포 작업을 수행합니다.  
+#### <a name="review-and-deploy"></a>검토 및 배포
+
+ **대상 선택** 페이지에서 **다음** 을 클릭해 **Integration Services 배포 마법사** 의 **검토**페이지로 전환합니다. 검토 페이지에서 배포 작업에 대한 요약 보고서를 검토합니다. 확인한 후, **배포** 단추를 클릭하여 배포 작업을 수행합니다.  
   
-#### <a name="results"></a>결과  
- 배포가 완료되면 **결과** 페이지가 표시되어야 합니다. **결과** 페이지에서 배포 프로세스의 각 단계 결과를 검토합니다. **결과** 페이지에서 **보고서 저장** 을 클릭해 배포 보고서를 저장하거나 **닫기** 를 클릭해 마법사를 종료합니다.  
+#### <a name="results"></a>결과
+
+ 배포가 완료되면 **결과** 페이지가 표시되어야 합니다. **결과** 페이지에서 배포 프로세스의 각 단계 결과를 검토합니다. **보고서 저장**을 클릭하여 배포 보고서를 저장하거나 **닫기**를 클릭하여 마법사를 닫습니다.  
 
 ## <a name="create-and-map-a-server-environment"></a>서버 환경 만들기 및 매핑
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 프로젝트에 포함된 패키지의 런타임 값을 지정하기 위한 서버 환경을 만듭니다. 그런 다음 특정 패키지, 진입점 패키지 또는 지정된 프로젝트의 모든 패키지에 대한 매개 변수에 환경 변수를 매핑할 수 있습니다. 진입점 패키지는 일반적으로 자식 패키지를 실행하는 부모 패키지입니다.  
   
 > [!IMPORTANT]  
 >  지정된 실행의 경우 패키지는 단일 서버 환경에 포함된 값만으로 실행할 수 있습니다.  
   
- 서버 환경, 환경 참조 및 환경 변수 목록에 대한 뷰를 쿼리할 수 있습니다. 저장 프로시저를 호출하여 환경, 환경 참조 및 환경 변수를 추가, 삭제 및 수정할 수도 있습니다. 자세한 내용은 **SSIS Catalog** 의 [서버 환경, 서버 변수 및 서버 환경 참조](../../integration-services/catalog/ssis-catalog.md)섹션을 참조하십시오.  
+ 서버 환경, 환경 참조 및 환경 변수 목록에 대한 뷰를 쿼리할 수 있습니다. 저장 프로시저를 호출하여 환경, 환경 참조 및 환경 변수를 추가, 삭제 및 수정할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)에서 **서버 환경, 서버 변수 및 서버 환경 참조** 섹션을 참조하세요.  
   
 ### <a name="to-create-and-use-a-server-environment"></a>서버 환경을 만들고 사용하려면  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그> **SSISDB** 노드를 확장하고 환경을 만들 프로젝트의 **환경** 폴더를 찾습니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그 **SSISDB** 노드를 펼친 다음, 환경을 만들 프로젝트의 **환경** 폴더를 찾습니다.  
   
 2.  **환경** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **환경 만들기**를 클릭합니다.  
   
-3.  환경의 이름을 입력하고 선택적으로 설명을 입력한 다음 **확인**을 클릭합니다.  
+3.  환경의 이름을 입력하고 선택적으로 설명을 추가합니다. **확인**을 클릭합니다.  
   
 4.  새 환경을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 5.  **변수** 페이지에서 다음을 수행하여 변수를 추가합니다.  
   
-    1.  변수의 **유형** 을 선택합니다. 변수 이름은 변수에 매핑할 프로젝트 매개 변수의 이름과 일치하지 **않아도** 됩니다.  
+    1.  변수의 **유형** 을 선택합니다. 변수 이름은 변수에 매핑할 프로젝트 매개 변수의 이름과 일치하지 않아도 됩니다.  
   
     2.  변수에 대한 선택적 **설명** 을 입력합니다.  
   
@@ -378,7 +389,7 @@ static void Main()
   
     2.  **로그인 또는 역할** 영역에서 사용 권한을 허용하거나 거부할 사용자 또는 역할을 선택합니다.  
   
-    3.  **명시적** 영역에서 각 사용 권한 옆의 **허용** 또는 **거부** 를 클릭합니다.  
+    3.  **명시적** 영역에서 각 사용 권한 옆에 있는 **허용** 또는 **거부**를 선택합니다.  
   
 7.  환경을 스크립팅하려면 **스크립트**를 클릭합니다. 기본적으로 스크립트는 새 쿼리 편집기 창에 표시됩니다.  
   
@@ -393,7 +404,7 @@ static void Main()
   
 11. 프로젝트를 다시 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
   
-12. 디자인 타임 시 패키지에 추가한 매개 변수 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 프로젝트 배포 모델로 변환할 때 생성된 매개 변수에 환경 변수를 매핑하려면 다음을 수행합니다.  
+12. 디자인 타임 시 패키지에 추가한 매개 변수 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 프로젝트 배포 모델로 변환할 때 생성된 매개 변수에 환경 변수를 매핑하려면 다음을 수행합니다.
   
     1.  **매개 변수** 페이지의 **매개 변수** 탭에서 **값** 필드 옆에 있는 찾아보기 단추를 클릭합니다.  
   
@@ -401,19 +412,20 @@ static void Main()
   
 13. 환경 변수를 연결 관리자 속성에 매핑하려면 다음을 수행합니다. 연결 관리자 속성에 대한 매개 변수가 SSIS 서버에 자동으로 생성됩니다.  
   
-    1.  **매개 변수** 페이지의 **연결 관리자** 탭에서 **값** 필드 옆에 있는 찾아보기 단추를 클릭합니다.  
+    1.  **매개 변수** 페이지의 **연결 관리자** 탭에서 **값** 필드 옆에 있는 **찾아보기** 단추를 클릭합니다.  
   
     2.  **환경 변수 사용**을 클릭한 다음 만든 환경 변수를 선택합니다.  
   
 14. **확인** 을 두 번 클릭하여 변경 내용을 저장합니다.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
-  프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+
+  프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)를 참조하십시오.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트를 배포하고 패키지를 실행할 수도 있습니다. 자세한 내용은 **참고 항목** 섹션의 항목을 참조하십시오.  
   
 > [!TIP]
->  다음을 수행하여 아래 절차에 나열된 저장 프로시저에 대한 Transact-SQL 문을 쉽게 생성할 수 있습니다. 단, catalog.deploy_project는 예외입니다.  
+>  다음을 수행하여 아래 절차에 나열된 저장 프로시저에 대한 Transact-SQL 문을 쉽게 생성할 수 있습니다. 단, catalog.deploy_project는 예외입니다.
 > 
 >  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **Integration Services 카탈로그** 노드를 확장하고 실행할 패키지로 이동합니다.  
 > 2.  패키지를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
@@ -426,9 +438,9 @@ static void Main()
   
 1.  [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 패키지를 포함하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포합니다.  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일의 이진 콘텐츠를 검색하려면 *@project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일의 이진 콘텐츠를 검색하려면 _\@project_stream_ 매개 변수에 대해 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 SELECT 문을 사용합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
   
-     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어서 varbinary(max) 형식의 *@ProjectBinary* 매개 변수에 저장합니다. *@ProjectBinary* 매개 변수 값이 *@project_stream* 매개 변수에 할당됩니다.  
+     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어 varbinary(max) 형식의 _\@ProjectBinary 매개 변수에 저장합니다. _\@ProjectBinary_ 매개 변수 값이 _\@project_stream_ 매개 변수에 할당됩니다.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ static void Main()
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>저장 프로시저를 사용하여 서버 간에 프로젝트를 배포하려면  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>저장 프로시저를 사용하여 서버 간에 프로젝트를 배포하려면
+
  [catalog.get_project&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) 및 [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 저장 프로시저를 사용하여 서버 간에 프로젝트를 배포할 수 있습니다.  
   
  저장 프로시저를 실행하기 전에 다음을 수행해야 합니다.  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 열고 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **프로젝트 배포 모델로 변환**을 클릭합니다.  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 **프로젝트** 노드를 마우스 오른쪽 단추로 클릭하고 **패키지 가져오기**를 선택합니다.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 **Integration Services 카탈로그**의 **프로젝트** 노드를 마우스 오른쪽 단추로 클릭하고 **패키지 가져오기**를 선택합니다.  
   
  **Integration Services 프로젝트 변환 마법사** 를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 실행하는지 아니면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 실행하는지에 따라 수행되는 변환 태스크가 다릅니다.   
   

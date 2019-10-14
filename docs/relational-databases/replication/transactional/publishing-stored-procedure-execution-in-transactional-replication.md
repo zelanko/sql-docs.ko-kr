@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769327"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710729"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [저장 프로시저 실행을 트랜잭션 게시로 게시&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   복제 Transact-SQL 프로그래밍: [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하고 **@type** 매개 변수의 값을 'serializable proc exec'(권장) 또는 'proc exec'로 지정합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
+-   복제 Transact-SQL 프로그래밍: `@type` 매개 변수에 ‘serializable proc exec’(권장) 또는 ‘proc exec’ 값을 지정하고 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>구독자에서 프로시저 수정  
  기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 구독자의 저장 프로시저 **sp_big_delete**에는 두 가지 기능이 있습니다. 복제된 테이블 **big_table1** 에서 1,000,000개의 행을 삭제하고 복제되지 않은 테이블 **big_table2**를 업데이트합니다. 네트워크 리소스에 대한 수요를 줄이려면 **sp_big_delete**를 게시하여 100만 개의 행 삭제를 저장 프로시저로 전파해야 합니다. 구독자에서 100만 개의 행만 삭제하고 **big_table2** 에 대한 후속 업데이트를 수행하지 않도록 **sp_big_delete**를 정의할 수 있습니다.  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  직렬화 가능 트랜잭션 내에서 프로시저를 실행하면 잠금이 더 오래 유지되어 동시성이 줄어들 수 있습니다.  
   
-## <a name="the-xactabort-setting"></a>XACT_ABORT 설정  
+## <a name="the-xact_abort-setting"></a>XACT_ABORT 설정  
  저장 프로시저 실행을 복제할 때 저장 프로시저를 실행하는 세션에 대해 XACT_ABORT 설정을 ON으로 지정해야 합니다. XACT_ABORT가 OFF로 설정되면 게시자에서 프로시저 실행 중 오류가 발생하면 구독자에서도 같은 오류가 발생하여 배포 에이전트가 실패합니다. XACT_ABORT를 ON으로 지정하면 게시자에서 실행 중 발생한 모든 오류로 인해 전체 실행이 롤백되므로 배포 에이전트 실패를 막을 수 있습니다. XACT_ABORT 설정에 대한 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)를 참조하세요.  
   
  XACT_ABORT를 OFF로 설정해야 하는 경우에는 배포 에이전트에 대해 **-SkipErrors** 매개 변수를 지정합니다. 그러면 오류가 발생해도 에이전트가 구독자에서 변경 내용을 계속 적용할 수 있습니다.  

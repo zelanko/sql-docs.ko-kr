@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154570"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682117"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -35,7 +35,7 @@ FCI를 수동으로 다른 노드로 장애 조치(failover)할 수 있는 경�
 
 ## <a name="manual-failover-rhel-or-ubuntu"></a>수동 장애 조치(failover)(RHEL 또는 Ubuntu)
 
-수동 장애 조치(failover)를 수행하려면 RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 다음 단계를 실행합니다.
+RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 수동 장애 조치를 수행하려면 다음 단계를 실행합니다.
 1.  다음 명령을 실행합니다. 
 
    ```bash

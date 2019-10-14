@@ -8,14 +8,14 @@ helpviewer_keywords:
 - PolyBase, installation
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8416a144a6b7c0e34526af3111ab6b4aad343652
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326171"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961965"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -155,7 +155,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> PolyBase 사용
 
-설치 후 PolyBase를 활성화하여 해당 기능에 액세스해야 합니다. SQL Server 2019 CTP 2.0에 연결하려면 설치 후 PolyBase를 활성화해야 합니다. 다음 Transact-SQL 명령을 사용합니다.
+설치 후 PolyBase를 활성화하여 해당 기능에 액세스해야 합니다. 다음 Transact-SQL 명령을 사용합니다. 빅 데이터 클러스터 설치 중에 배포된 SQL 2019 인스턴스에는 이 설정이 기본적으로 사용하도록 지정되어 있습니다.
 
 
 ```sql

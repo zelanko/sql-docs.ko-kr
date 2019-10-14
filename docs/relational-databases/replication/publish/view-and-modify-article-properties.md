@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 61a55d8b72669fb83425e74b9888bd254b076378
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174307"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710799"
 ---
 # <a name="view-and-modify-article-properties"></a>아티클 속성 보기 및 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "71174307"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
   
-1.  [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행하고 **\@publication** 매개 변수에 게시의 이름을, **\@article** 매개 변수에 아티클의 이름을 지정합니다. **\@article**을 지정하지 않으면 게시의 모든 아티클에 대한 정보가 반환됩니다.  
+1.  `@publication` 매개 변수에 게시의 이름, `@article` 매개 변수에 아티클의 이름을 지정하고 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@article`을 지정하지 않으면 게시의 모든 아티클 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) 를 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 실행하고 **\@property** 매개 변수에 변경되는 아티클 속성을, **\@value** 매개 변수에 이 속성의 새 값을 지정합니다.  
+1.  `@property` 매개 변수에 변경되는 아티클 속성, `@value` 매개 변수에 이 속성의 새 값을 지정하고 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot**에 **1** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **\@force_reinit_subscription**에 **1** 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `@force_invalidate_snapshot`에 `1` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `@force_reinit_subscription`에도 `1` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 보려면  
   
-1.  [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행하고 **\@publication** 매개 변수에 게시의 이름을, **\@article** 매개 변수에 아티클의 이름을 지정합니다. 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
+1.  `@publication` 매개 변수에 게시의 이름, `@article` 매개 변수에 아티클의 이름을 지정하고 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행합니다. 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) 을 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행하고 **\@property** 매개 변수에 변경되는 아티클 속성을, **\@value** 매개 변수에 이 속성의 새 값을 지정합니다.  
+1.  `@property` 매개 변수에 변경되는 아티클 속성, `@value` 매개 변수에 이 속성의 새 값을 지정하고 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot**에 **1** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **\@force_reinit_subscription**에 **1** 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `@force_invalidate_snapshot`에 `1` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `@force_reinit_subscription`에도 `1` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예에서는 게시된 아티클의 속성을 반환합니다.  

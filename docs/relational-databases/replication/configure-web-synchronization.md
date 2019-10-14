@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903096"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710313"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903096"
   
      에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
--   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 **@internet_url** 및 **@internet_login** 및 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 참조하십시오. 이 계정에는 스냅샷 공유에 대한 읽기 권한이 있어야 합니다.  
+-   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)의 `@internet_url` 및 `@internet_login` 매개 변수에 값을 지정할 때 병합 에이전트가 사용하는 것과 동일한 도메인 계정을 지정합니다. 이 계정에는 스냅샷 공유에 대한 읽기 권한이 있어야 합니다.  
   
 -   각 게시는 IIS에 대해 서로 다른 가상 디렉터리를 사용해야 합니다.  
   

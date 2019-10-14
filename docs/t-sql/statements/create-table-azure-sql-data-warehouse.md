@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419604"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961785"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>순서가 지정된 클러스터형 columnstore 인덱스 옵션(Azure SQL Data Warehouse 미리 보기)
 
-클러스터형 columnstore 인덱스는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  COMPUND 키는 ORDER 사양의 기본값입니다.  정렬 순서는 항상 오름차순입니다. ORDER 절이 지정되지 않은 경우 columnstore가 정렬되지 않습니다. 주문 프로세스로 인해 주문 클러스터형 열 저장소 인덱스가 있는 테이블은 비주문 클러스터형 열 저장소 인덱스보다 데이터 로드 시간이 더 길어질 수 있습니다. 데이터를 로드하는 동안 tempdb 공간이 더 필요한 경우 삽입당 데이터 크기를 줄일 수 있습니다.
+CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  CCI의 데이터는 columnstore 세그먼트로 압축되기 전에 정렬되지 않습니다.  ORDER를 사용하여 CCI를 만드는 경우, 데이터가 인덱스 세그먼트에 추가되기 전에 정렬되며, 쿼리 성능이 향상될 수 있습니다. 자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.  
 
 사용자는 sys.index_columns의 column_store_order_ordinal 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> 3. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
-
-다음 예는 순서가 지정된 클러스터형 columnstore 인덱스를 만드는 방법을 보여줍니다. 인덱스는 SHIPDATE에 정렬되어 있습니다.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>임시 테이블에 대한 예제
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> 5. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
+
+다음 예는 순서가 지정된 클러스터형 columnstore 인덱스를 만드는 방법을 보여줍니다. 인덱스는 SHIPDATE에 정렬되어 있습니다.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>테이블 배포 예제
 
-### <a name="RoundRobin"></a> 5. ROUND_ROBIN 테이블 만들기  
+### <a name="RoundRobin"></a> 6. ROUND_ROBIN 테이블 만들기  
  다음 예에서는 세 개의 열이 있고 파티션 없는 ROUND_ROBIN 테이블을 만듭니다. 데이터는 모든 배포에 걸쳐 분산됩니다. 힙 또는 rowstore 클러스터형 인덱스에 비해 더 나은 성능 및 데이터 압축을 제공하는 CLUSTERED COLUMNSTORE INDEX를 사용하여 테이블이 만들어집니다.  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> 6. 해시 배포된 테이블 만들기
+### <a name="HashDistributed"></a> G. 해시 배포된 테이블 만들기
 
  다음 예에서는 이전 예와 동일한 테이블을 만듭니다. 그러나 이 테이블의 경우 행은 ROUND_ROBIN 테이블처럼 임의로 분산되는 대신 배포됩니다(`id` 열에서). 힙 또는 rowstore 클러스터형 인덱스에 비해 더 나은 성능 및 데이터 압축을 제공하는 CLUSTERED COLUMNSTORE INDEX를 사용하여 테이블이 만들어집니다.  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. 복제된 테이블 만들기  
+### <a name="Replicated"></a> H. 복제된 테이블 만들기  
  다음 예에서는 이전 예제와 비슷한 복제된 테이블을 만듭니다. 복제된 테이블은 각 컴퓨팅 노드에 전체가 복사됩니다. 각 컴퓨팅 노드에서 이 복사본을 사용하면 쿼리에 대한 데이터 이동이 줄어듭니다. 이 예제는 힙에 비해 더 나은 데이터 압축을 제공하는 클러스터형 인덱스를 사용하여 만들어집니다. CLUSTERED COLUMNSTORE INDEX 압축을 달성하는 데 충분한 행이 힙에 포함되지 않을 수 있습니다.  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>테이블 파티션에 대한 예제
 
-###  <a name="PartitionedTable"></a> H. 분할된 테이블 만들기
+###  <a name="PartitionedTable"></a> I. 분할된 테이블 만들기
 
  다음 예에서는 RANGE LEFT 분할을 `id` 열에 추가하여 예 1과 동일한 테이블을 만듭니다. 4개의 파티션 경계 값을 지정하여 파티션이 5개가 됩니다.  
   
@@ -522,7 +521,7 @@ WITH
 - 파티션 4: 30 <= col < 40
 - 파티션 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. 하나의 파티션으로 분할된 테이블 만들기
+### <a name="OnePartition"></a> J. 하나의 파티션으로 분할된 테이블 만들기
 
  다음 예제에서는 하나의 파티션으로 분할된 테이블을 만듭니다. 경계 값을 지정하지 않아 파티션이 하나가 됩니다.  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 날짜 분할로 테이블 만들기
+### <a name="DatePartition"></a> K. 날짜 분할로 테이블 만들기
 
  다음 예제에서는 `date` 열에서 분할하여 `myTable`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
   

@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "70878630"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816640"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="october-2019"></a>2019년 10월
+
+2019년 10월 2일 &nbsp; / &nbsp; 버전: 1.12.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 쿼리 기록 확장 릴리스 | SQL 기록 확장은 Azure Data Studio 세션에서 실행된 이전 쿼리를 모두 저장하고 실행 순서대로 나열합니다. 사용자는 쿼리 열기, 쿼리 실행, 쿼리 삭제, 쿼리 기록 일시 중지 또는 모든 쿼리 기록 항목 삭제 작업을 수행할 수 있습니다. |
+| 새로운 결과 복사/붙여넣기 기능 | 결과 그리드에서 결과를 복사/붙여넣는 새로운 방법을 추가했습니다. |
+| PowerShell 확장 업데이트 |  |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+- 전자 필기장
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
 ## <a name="september-2019"></a>2019년 9월
 

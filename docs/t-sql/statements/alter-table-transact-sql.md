@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889816"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823616"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -473,6 +473,9 @@ Always Encrypted를 보안 Enclave와 함께 사용하는 경우 열을 보호�
 *column_name*  
 변경, 추가 또는 삭제할 열의 이름입니다. *column_name* 최댓값은 128자입니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **timestamp** 데이터 형식 열에 대해 *column_name*을 지정하지 않으면 **timestamp**가 이름으로 사용됩니다.
 
+> [!NOTE]
+> 변경되는 테이블의 모든 기존 열 뒤에 새 열이 추가됩니다.
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 변경된 열의 새 데이터 형식 또는 추가된 열의 데이터 형식입니다. 분할된 테이블의 기존 열에 *type_name*을 지정할 수 없습니다. *type_name*은 다음 형식 중 하나일 수 있습니다.
 
@@ -614,6 +617,9 @@ ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에�
 
 ADD  
 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건이 추가되도록 지정합니다. 또는 시스템이 시스템 버전 관리에 사용하는 열이 추가됩니다. 메모리 최적화 테이블의 경우 인덱스를 추가할 수 있습니다.
+
+> [!NOTE]
+> 변경되는 테이블의 모든 기존 열 뒤에 새 열이 추가됩니다.
 
 > [!IMPORTANT]
 > ALTER TABLE 문을 사용하지 않을 경우 [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md), [PAD_INDEX](alter-table-index-option-transact-sql.md) 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다.

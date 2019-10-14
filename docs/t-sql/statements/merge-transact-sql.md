@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653353"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680834"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
@@ -223,8 +223,8 @@ WHEN MATCHED THEN \<merge_matched>
 MERGE 문에는 최대 두 개의 WHEN MATCHED 절이 포함될 수 있습니다. WHEN MATCHED 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN MATCHED 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN MATCHED 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. UPDATE가 \<merge_matched> 절에 지정되어 있고 \<merge_search_condition>을 기반으로 둘 이상의 \<table_source> 행이 *target_table*의 행과 일치하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. MERGE 문은 동일한 행을 여러 번 업데이트하거나 업데이트하고 삭제할 수 없습니다.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-\<table_source> ON \<merge_search_condition>에서 반환되는 행 중 *target_table*의 행과 일치하지 않지만 추가 검색 조건(있을 경우)을 충족하는 모든 행에 대해 *target_table*에 행이 삽입되도록 지정합니다. 삽입할 값은 \<merge_not_matched> 절에 지정됩니다. MERGE 문에는 WHEN NOT MATCHED 절이 하나만 포함될 수 있습니다.  
-  
+\<table_source> ON \<merge_search_condition>에서 반환되는 행 중 *target_table*의 행과 일치하지 않지만 추가 검색 조건(있을 경우)을 충족하는 모든 행에 대해 *target_table*에 행이 삽입되도록 지정합니다. 삽입할 값은 \<merge_not_matched> 절에 지정됩니다. MERGE 문에는 WHEN NOT MATCHED [ BY TARGET ] 절이 하나만 포함될 수 있습니다.
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched>절에 따라 업데이트되거나 삭제되도록 지정합니다.  
   

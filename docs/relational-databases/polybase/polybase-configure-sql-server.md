@@ -4,16 +4,16 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: e71fc7c603ad5ca975a3e55ee1bbd41601b85387
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307615"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816772"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -39,42 +39,42 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
 - [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE STATISTICS(Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1.  MongoDB 소스에 액세스하기 위한 데이터베이스 범위 자격 증명을 만듭니다.
+1. SQL Server 원본에 액세스하기 위한 데이터베이스 범위 자격 증명을 만듭니다. 다음 예제에서는 `IDENTITY = 'username'` 및 `SECRET = 'password'`를 사용하여 외부 데이터 원본에 대한 자격 증명을 만듭니다.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source.  
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-    WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
+    WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. 다음 예제에서는 두 가지 작업을 수행합니다.
+
+   - `SQLServerInstance`라는 외부 데이터 원본을 만듭니다.
+   - 외부 데이터 원본(`LOCATION = '<vendor>://<server>[:<port>]'`)을 확인합니다. 예제에서는 SQL Server의 기본 인스턴스를 가리킵니다.
+   - 계산을 원본(`PUSHDOWN`)으로 푸시해야 하는지 여부를 확인합니다. `PUSHDOWN`은 기본적으로 `ON`입니다.
+
+   마지막으로, 예제에서는 이전에 만든 자격 증명을 사용합니다.
 
     ```sql
-    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = SQLServerCredentials);
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
     ```
 
-1. **선택 사항:** 외부 테이블에 대한 통계를 만듭니다.
+1. 필요에 따라 외부 테이블에 대한 통계를 만듭니다.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+  최적의 쿼리 성능을 얻으려면 외부 테이블 열, 특히 조인 필터와 집계에 사용되는 열에 대한 통계를 만듭니다.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
-
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-    ```
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
 >[!IMPORTANT] 
 >외부 데이터 원본을 만든 후에는 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 명령을 사용하여 해당 원본 위에 쿼리 가능 테이블을 만들 수 있습니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 커넥터 호환 형식
 

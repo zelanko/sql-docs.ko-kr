@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907802"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710906"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907802"
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 대한 하나 이상의 관련 아티클, 즉 자식 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행합니다. **@publication** 을 지정하고 **@filtername** 에 이 필터에 대한 고유한 이름을, **@article** 에 2단계에서 만든 자식 아티클의 이름을, **@join_articlename** 에 조인되는 부모 아티클의 이름을, **@join_unique_key** 에 다음 값 중 하나를 지정합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행합니다. `@publication`을 지정하고 `@filtername`에 이 필터의 고유 이름, `@article`에 2단계에서 만든 자식 아티클의 이름, `@join_articlename`에 조인되는 부모 아티클의 이름, `@join_unique_key`에 다음 값 중 하나를 지정합니다.  
   
     -   **0** - 부모 아티클과 자식 아티클 간의 다 대 일 또는 다 대 다 조인을 나타냅니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907802"
      이는 두 아티클 간의 조인 필터를 정의합니다.  
   
     > [!CAUTION]  
-    >  부모 아티클의 기반 테이블에 있는 조인 열에 고유성을 보장하는 제약 조건이 있는 경우에만 **@join_unique_key** 를 **1** 로 설정하세요. **@join_unique_key** 를 **1**로 설정하면 데이터가 일치하지 않을 수 있습니다.  
+    >  부모 아티클의 기반 테이블에 있는 조인 열에 고유성을 보장하는 제약 조건이 있는 경우에만 `@join_unique_key`를 **1**로 설정합니다. `@join_unique_key`를 **1**로 설정하면 데이터가 수렴되지 않을 수 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 정적 행 필터를 사용하여 자체 필터링되는 `SalesOrderDetail` 테이블에 대해 `SalesOrderHeader` 테이블 아티클을 필터링하는 병합 게시에 대한 아티클을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  

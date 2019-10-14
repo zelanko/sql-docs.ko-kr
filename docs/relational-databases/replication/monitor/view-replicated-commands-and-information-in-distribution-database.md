@@ -18,12 +18,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1d1e0171082811e8f3f049b66b78da02bd12b601
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766950"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711008"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>배포 데이터베이스에서 복제된 명령 및 정보 보기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68766950"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>트랜잭션 복제를 사용하여 게시된 특정 데이터베이스 또는 특정 아티클에서 배포 데이터베이스의 복제된 명령을 보려면  
   
-1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. **@publication** 및 **@article** 을 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
+1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@publication` 및 `@article`을 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)를 실행합니다. (옵션) **@article_id** 을 참조하세요. (옵션) **@publisher_database_id** 에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 **sys.databases** 카탈로그 뷰의 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 얻을 수 있습니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)를 실행합니다. (옵션) `@article_id`에 2단계의 아티클 ID를 지정합니다. (옵션) `@publisher_database_id`에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **database_id** 열에서 얻을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 복제 모니터링](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

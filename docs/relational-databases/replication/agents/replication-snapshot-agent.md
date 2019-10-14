@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768266"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710348"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,10 +119,10 @@ snapshot [ -?]
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-DynamicFilterHostName** _dynamic_filter_host_name_  
- 동적 스냅샷을 만들 때 필터링에서 [HOST_NAME&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/functions/host-name-transact-sql.md) 값을 설정하는데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `rep_id = HOST_NAME()` 이 지정된 경우 병합 에이전트를 호출하기 전에 **DynamicFilterHostName** 속성을 "FBJones"로 설정하면 **rep_id** 열에 "FBJones"가 있는 행만 복제됩니다.  
+ 동적 스냅샷을 만들 때 필터링에서 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 값을 설정하는데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `rep_id = HOST_NAME()` 이 지정된 경우 병합 에이전트를 호출하기 전에 **DynamicFilterHostName** 속성을 "FBJones"로 설정하면 **rep_id** 열에 "FBJones"가 있는 행만 복제됩니다.  
   
  **-DynamicFilterLogin** _dynamic_filter_login_  
- 동적 스냅샷을 만들 때 필터링에서 [SUSER_SNAME&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 값을 설정하는 데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `user_id = SUSER_SNAME()` 이 지정된 경우 **SQLSnapshot** 개체의 **Run** 메서드를 호출하기 전에 **DynamicFilterLogin** 속성을 "rsmith"로 설정하면 **user_id** 열에 "rsmith"가 있는 행만 스냅샷에 포함됩니다.  
+ 동적 스냅샷을 만들 때 필터링에서 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 값을 설정하는 데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `user_id = SUSER_SNAME()` 이 지정된 경우 **SQLSnapshot** 개체의 **Run** 메서드를 호출하기 전에 **DynamicFilterLogin** 속성을 "rsmith"로 설정하면 **user_id** 열에 "rsmith"가 있는 행만 스냅샷에 포함됩니다.  
   
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  동적 스냅샷을 생성할 위치입니다.  
@@ -185,7 +185,7 @@ snapshot [ -?]
  관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0**입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 스토리지 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
   
 > [!NOTE]
->  이 매개 변수를 **1**로 설정하는 것은 병합 게시의 동기화 최적화 옵션이 **true**([sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 **@keep_partition_changes** 매개 변수)로 설정된 경우에만 유용합니다.  
+>  이 매개 변수를 **1**로 설정하는 것은 병합 게시의 동기화 최적화 옵션이 **true**([sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@keep_partition_changes**` 매개 변수)로 설정된 경우에만 유용합니다.  
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
@@ -250,7 +250,7 @@ snapshot [ -?]
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 행 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<,@g>\n입니다.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 동시에 실행 중인 동적 스냅샷 프로세스의 수가 [sp_addmergepublication&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 **@max_concurrent_dynamic_snapshots** 속성으로 설정된 제한에 도달할 때까지 스냅샷 에이전트에서 대기하는 최대 시간(초)입니다. 최대 시간(초)에 도달한 경우 스냅샷 에이전트가 계속 대기 중이면 해당 스냅샷 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
+ 동시에 실행 중인 동적 스냅샷 프로세스 수가 [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@max_concurrent_dynamic_snapshots` 속성으로 설정된 한도에 도달할 때까지 스냅샷 에이전트에서 대기하는 최대 시간(초)입니다. 최대 시간(초)에 도달한 경우 스냅샷 에이전트가 계속 대기 중이면 해당 스냅샷 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  이 매개 변수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  

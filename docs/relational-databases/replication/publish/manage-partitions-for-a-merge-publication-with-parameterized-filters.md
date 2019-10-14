@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002688"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710892"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002688"
   
 #### <a name="to-view-information-on-existing-partitions"></a>기존 파티션의 정보를 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정합니다. (옵션) 단일 필터링 조건을 기준으로 한 정보만 반환되도록 하려면 **@suser_sname** 또는 **@host_name** 을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)을 실행합니다. `@publication`에 게시의 이름을 지정합니다. (옵션) `@suser_sname` 또는 `@host_name`을 지정하여 단일 필터링 조건에 맞는 정보만 반환합니다.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>새 파티션을 정의하고 새 분할된 스냅샷을 생성하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. `@publication`에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
-    -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
+    -   `@suser_sname` - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에서 반환된 값으로 정의된 경우  
   
-    -   **@host_name** - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
+    -   `@host_name` - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에서 반환된 값으로 정의된 경우  
   
 2.  이 새 파티션에 대해 매개 변수가 있는 스냅샷을 만들고 초기화합니다. 자세한 내용은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)을 실행합니다. `@publication`에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
-    -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
+    -   `@suser_sname` - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에서 반환된 값으로 정의된 경우  
   
-    -   **@host_name** - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
+    -   `@host_name` - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에서 반환된 값으로 정의된 경우  
   
      이 경우 파티션에 대한 스냅샷 작업과 스냅샷 파일도 제거됩니다.  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002688"
 ## <a name="see-also"></a>참고 항목  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256713"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708337"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>자습서: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
@@ -109,9 +109,10 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
    ![데이터베이스 변경](media/connect-query-sql-server/changedb.png)
 
 2. 다음 T-SQL 코드 조각을 쿼리 창에 붙여넣고, 선택한 다음, **실행**(또는 키보드의 F5 키)을 선택합니다.  
-   쿼리 창에서 기존 텍스트를 대체하거나 끝에 추가할 수 있습니다. 쿼리 창에서 모든 항목을 실행하려면 **실행**을 선택합니다. 텍스트의 일부를 실행하려면 해당 부분을 강조 표시한 다음, **실행**을 선택합니다.  
+   쿼리 창에서 기존 텍스트를 대체하거나 끝에 추가할 수 있습니다. 쿼리 창에서 모든 항목을 실행하려면 **실행**을 선택합니다. 텍스트를 추가한 경우, 텍스트의 일부만 실행하려면 해당 부분을 강조 표시하고 **실행**을 선택합니다.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

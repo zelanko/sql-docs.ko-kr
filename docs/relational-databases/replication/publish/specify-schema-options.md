@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 516434ca2bb44701b432cb095d252f16278134a0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764101"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710848"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>SQL Server 복제의 스키마 옵션 지정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68764101"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   스키마 옵션의 전체 목록은 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 **@schema_option** 매개 변수를 참조하세요.  
+-   스키마 옵션의 전체 목록은 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 `@schema_option` 매개 변수를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  제약 조건 및 트리거를 구독자에 복사할지 여부 등의 스키마 옵션을 **아티클 속성-\<Article>** 대화 상자의 **속성** 탭에 지정합니다. 이 탭은 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
@@ -86,15 +86,15 @@ ms.locfileid: "68764101"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@type** 에 대한 데이터베이스 개체 유형 및 **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름, `@source_object`에 게시되는 데이터베이스 개체, `@type`에 데이터베이스 개체 유형, `@schema_option`에 하나 이상 스키마 옵션의 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름, `@source_object`에 게시되는 데이터베이스 개체, `@schema_option`에 하나 이상 스키마 옵션의 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을 지정하고 **@article** 에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름을 지정합니다. 결과 집합에서 `schema_option` 열의 값을 확인합니다.  
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 연산을 실행합니다.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "68764101"
   
 3.  옵션이 설정되지 않은 경우 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 연산을 실행합니다.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
+4.  게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름, `@property`에 `schema_option` 값, `@value`에 3단계의 16진수 결과를 지정합니다.  
   
 5.  스냅샷 에이전트를 실행하여 새 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>병합 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을 지정하고 **@article** 에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 연산을 실행합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68764101"
   
 3.  옵션이 설정되지 않은 경우 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 연산을 실행합니다.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
+4.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. `@publication`에 아티클이 속한 게시의 이름, `@article`에 아티클의 이름, `@property`에 `schema_option` 값, `@value`에 3단계의 16진수 결과를 지정합니다.  
   
 5.  스냅샷 에이전트를 실행하여 새 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   

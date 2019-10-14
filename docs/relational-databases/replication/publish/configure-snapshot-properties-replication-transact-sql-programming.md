@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4b77902b69ccfd286537a985fc561b120291552c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769928"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710919"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅샷 속성 구성(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,39 +28,39 @@ ms.locfileid: "68769928"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 만들 때 스냅샷 속성을 구성하려면  
   
-1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **@publication** 에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq** 를 지정하며 다음과 같은 스냅샷 관련 매개 변수를 하나 이상 지정합니다.  
+1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 `@publication`에 게시 이름, `@repl_freq`에 **snapshot** 또는 **continuous** 값을 지정하고 다음 스냅샷 관련 매개 변수를 하나 이상 지정합니다.  
   
-    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅샷을 기본 스냅샷 폴더 이외 위치 또는 기본 스냅샷 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
-    -   **@compress_snapshot** - 대체 스냅샷 폴더의 스냅샷 파일이 **CAB 파일 형식으로 압축되는 경우** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 값을 지정합니다.    
-    -   **@pre_snapshot_script** - 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **@post_snapshot_script** - 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **@snapshot_in_defaultfolder** - 대체 스냅샷 폴더의 스냅샷 파일이 **false** 값을 지정합니다.  
+    -   `@alt_snapshot_folder` - 이 게시의 스냅샷을 스냅샷 기본 폴더 대신 또는 추가로 액세스하는 위치의 경로를 지정합니다.    
+    -   `@compress_snapshot` - 대체 스냅샷 폴더의 스냅샷 파일이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB 파일 형식으로 압축된 경우 **true** 값을 지정합니다.    
+    -   `@pre_snapshot_script` - 초기 스냅샷을 적용하기 전에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   `@post_snapshot_script` - 초기 스냅샷을 적용한 후에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   `@snapshot_in_defaultfolder` - 스냅샷을 기본 위치 이외의 위치에서만 사용할 수 있는 경우 **false** 값을 지정합니다.  
   
      게시를 만드는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>병합 게시를 만들 때 스냅샷 속성을 구성하려면  
   
-1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **@publication** 에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq** 를 지정하며 다음과 같은 스냅샷 관련 매개 변수를 하나 이상 지정합니다.  
+1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 `@publication`에 게시 이름, `@repl_freq`에 **snapshot** 또는 **continuous** 값을 지정하고 다음 스냅샷 관련 매개 변수를 하나 이상 지정합니다.  
   
-    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅샷을 기본 스냅샷 폴더 이외 위치 또는 기본 스냅샷 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
-    -   **@compress_snapshot** - 대체 스냅샷 폴더의 스냅샷 파일이 **CAB 파일 형식으로 압축되는 경우** 값을 지정합니다.   
-    -   **@pre_snapshot_script** - 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **@post_snapshot_script** - 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **@snapshot_in_defaultfolder** - 대체 스냅샷 폴더의 스냅샷 파일이 **false** 값을 지정합니다.  
+    -   **@alt_snapshot_folder** - 이 게시의 스냅샷을 스냅샷 기본 폴더 대신 또는 추가로 액세스하는 위치의 경로를 지정합니다.    
+    -   `@compress_snapshot` - 대체 스냅샷 폴더의 스냅샷 파일이 CAB 파일 형식으로 압축된 경우 **true** 값을 지정합니다.   
+    -   `@pre_snapshot_script` - 초기 스냅샷을 적용하기 전에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   `@post_snapshot_script` - 초기 스냅샷을 적용한 후에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   `@snapshot_in_defaultfolder` - 스냅샷을 기본 위치 이외의 위치에서만 사용할 수 있는 경우 **false** 값을 지정합니다.  
   
 2.  게시를 만드는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>기존 스냅샷 또는 트랜잭션 게시의 스냅샷 속성을 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property** 에 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 `@force_invalidate_snapshot`에 **1** 값, `@property`에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value** 을 실행합니다.    
-    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
-    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **alt_snapshot_folder** - `@value`에도 대체 스냅샷 폴더의 새 경로를 지정합니다.    
+    -   **compress_snapshot** - `@value`에도 대체 스냅샷 폴더의 스냅샷 파일을 CAB 파일 형식으로 압축할지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.    
+    -   **pre_snapshot_script** - `@value`에도 초기 스냅샷을 적용하기 전에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   **post_snapshot_script** - `@value`에도 초기 스냅샷을 적용한 후에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
     -   **snapshot_in_defaultfolder** - 마찬가지로 스냅샷을 기본 위치 이외 위치에서만 사용할 수 있는지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.  
   
-2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)을 실행합니다. 이때 변경할 **@publication** 및 하나 이상의 일정 또는 보안 자격 증명 매개 변수를 지정합니다.  
+2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)을 실행합니다. 이때 `@publication`과 변경할 일정 또는 보안 자격 증명 매개 변수를 하나 이상 지정합니다.  
   
     > [!IMPORTANT]  
     >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
@@ -69,12 +69,12 @@ ms.locfileid: "68769928"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>기존 병합 게시의 스냅샷 속성을 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property** 에 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 `@force_invalidate_snapshot`에 **1** 값, `@property**`에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value** 을 실행합니다.    
-    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
-    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
-    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅샷을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **alt_snapshot_folder** - `@value`에도 대체 스냅샷 폴더의 새 경로를 지정합니다.    
+    -   **compress_snapshot** - `@value`에도 대체 스냅샷 폴더의 스냅샷 파일을 CAB 파일 형식으로 압축할지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.    
+    -   **pre_snapshot_script** - `@value`에도 초기 스냅샷을 적용하기 전에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
+    -   **post_snapshot_script** - `@value`에도 초기 스냅샷을 적용한 후에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
     -   **snapshot_in_defaultfolder** - 마찬가지로 스냅샷을 기본 위치 이외 위치에서만 사용할 수 있는지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.  
   
 2.  명령 프롬프트에서 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 를 실행하거나 스냅샷 에이전트 작업을 시작하여 새 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  

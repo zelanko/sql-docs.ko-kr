@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122175"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816826"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce 및 abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>ESCAPE 절을 사용한 패턴 일치  
- 하나 이상의 특수 와일드카드 문자를 포함하는 문자열을 검색할 수 있습니다. 예를 들어 customers 데이터베이스의 discounts 테이블은 백분율 기호(%)를 포함하는 할인 값을 저장할 수 있습니다. 백분율 기호를 와일드카드 문자가 아닌 일반 문자로 취급하여 검색하려면 ESCAPE 키워드와 이스케이프 문자를 제공해야 합니다. 예를 들어 예제 데이터베이스에는 30%라는 텍스트를 포함하는 comment 열이 있습니다. comment 열의 어느 위치든 30%라는 문자열이 있는 모든 행을 검색하려면 `WHERE comment LIKE '%30!%%' ESCAPE '!'`와 같은 WHERE 절을 지정합니다. ESCAPE 및 이스케이프 문자를 지정하지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 30이라는 문자열이 있는 모든 행을 반환합니다.  
+ 하나 이상의 특수 와일드카드 문자를 포함하는 문자열을 검색할 수 있습니다. 예를 들어 customers 데이터베이스의 discounts 테이블은 백분율 기호(%)를 포함하는 할인 값을 저장할 수 있습니다. 백분율 기호를 와일드카드 문자가 아닌 일반 문자로 취급하여 검색하려면 ESCAPE 키워드와 이스케이프 문자를 제공해야 합니다. 예를 들어 예제 데이터베이스에는 30%라는 텍스트를 포함하는 comment 열이 있습니다. comment 열의 어느 위치든 30%라는 문자열이 있는 모든 행을 검색하려면 `WHERE comment LIKE '%30!%%' ESCAPE '!'`와 같은 WHERE 절을 지정합니다. ESCAPE 및 이스케이프 문자를 지정하지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 30! 문자열이 있는 모든 행을 반환합니다.  
   
  LIKE 패턴에서 이스케이프 문자 뒤에 문자가 없는 경우 해당 패턴은 유효하지 않으며 LIKE는 FALSE를 반환합니다. 이스케이프 문자 뒤에 오는 문자가 와일드카드 문자가 아닌 경우 이스케이프 문자는 무시되고 다음에 오는 문자는 패턴 내의 일반 문자로 처리됩니다. 이 문자에는 양쪽 대괄호([ ])로 묶여 있는 백분율 기호(%), 밑줄(_) 및 왼쪽 대괄호([) 와일드카드 문자가 여기에 포함됩니다. 이스케이프 문자는 캐럿(^), 하이픈(-) 및 오른쪽 대괄호(])를 이스케이프 처리하는 것을 포함하여 양쪽 대괄호 문자([ ]) 안에서 사용할 수 있습니다.  
   

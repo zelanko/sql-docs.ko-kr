@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326113"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708252"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -219,7 +219,7 @@ tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를
 
 ## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터
 
-tempdb 메타데이터 경합은 역사적으로 SQL Server에서 실행하는 많은 워크로드의 확장성에 대한 병목 현상이었습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 이 새로운 기능을 옵트인하려면 다음 스크립트를 사용하세요,
+tempdb 메타데이터 경합은 역사적으로 SQL Server에서 실행하는 많은 워크로드의 확장성에 대한 병목 현상이었습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 메모리 최적화 테이블에 대한 쿼리는 잠금 및 분리 힌트를 지원하지 않으므로 메모리 최적화 tempdb 카탈로그 보기에 대한 쿼리는 잠금 및 분리 힌트를 유지하지 않습니다. SQL Server의 다른 시스템 카탈로그 보기와 마찬가지로 시스템 보기에 대한 모든 트랜잭션은 READ COMMITTED(또는 이 경우 READ COMMITTED SNAPSHOT) 분리 내에 있습니다.
-4. 메모리 최적화 tempdb 메타데이터가 활성화된 경우 임시 테이블에 대한 [columnstore 인덱스](../indexes/columnstore-indexes-overview.md)를 생성할 수 없습니다.
+4. 메모리 최적화 TempDB 메타데이터가 사용하도록 설정된 경우에는 임시 테이블에 [columnstore 인덱스](../indexes/columnstore-indexes-overview.md)를 만들 수 없습니다.
+5. columnstore 인덱스에 대한 제한으로 인해, 메모리 최적화 TempDB 메타데이터가 사용하도록 설정된 경우에는 COLUMNSTORE 또는 COLUMNSTORE_ARCHIVE 데이터 압축 매개 변수와 함께 sp_estimate_data_compression_savings 시스템 저장 프로시저를 사용할 수 없습니다.
 
 > [!NOTE] 
 > 이 제한 사항은 tempdb 시스템 보기를 참조하는 경우에만 적용되며 원하는 경우 사용자 데이터베이스의 메모리 최적화 테이블을 액세스할 때 동일한 트랜잭션에서 임시 테이블을 만들 수 있습니다.

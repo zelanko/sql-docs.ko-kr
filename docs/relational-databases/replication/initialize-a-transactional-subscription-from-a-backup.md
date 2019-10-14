@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251101"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710299"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>트랜잭션 구독을 백업에서 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251101"
   
     -   값이 **1**이면 게시에서 이 기능을 지원하는 것입니다.  
   
-    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. **@property** 에 **allow_initialize_from_backup** 값, **@value** 에 **true** 값을 지정합니다.  
+    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 `@property`에 **allow_initialize_from_backup** 값, `@value`에 **true** 값을 지정합니다.  
   
 2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **allow_initialize_from_backup** 에 **true**값을 지정합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251101"
   
 5.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 저장 프로시저를 실행합니다. 다음 매개 변수를 지정합니다.  
   
-    -   **@sync_type** - **initialize with backup**을 참조하세요.  
+    -   `@sync_type` - **initialize with backup** 값입니다.  
   
-    -   **@backupdevicetype** - 백업 디바이스의 유형: **논리** (기본값) **디스크**또는 **테이프**을 참조하세요.  
+    -   `@backupdevicetype` - 백업 디바이스 유형으로, **logical**(기본값), **disk** 또는 **tape**입니다.  
   
-    -   **@backupdevicename** - 복원에 사용할 논리적 또는 물리적 백업 디바이스  
+    -   `@backupdevicename` - 복원에 사용할 논리적 또는 물리적 백업 디바이스입니다.  
   
          논리적 디바이스의 경우 **sp_addumpdevice** 를 사용하여 디바이스를 만들 때 지정한 백업 디바이스의 이름을 지정합니다.  
   
          물리적 디바이스의 경우 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` 또는 `TAPE = '\\.\TAPE0'`과 같이 전체 경로와 파일 이름을 지정합니다.  
   
-    -   (옵션) **@password** - 백업 장치를 만들 때 제공한 암호  
+    -   (옵션) `@password` - 백업 세트를 만들 때 지정한 암호입니다.  
   
-    -   (옵션) **@mediapassword** - 미디어 세트를 포맷할 때 제공한 암호  
+    -   (옵션) `@mediapassword` - 미디어 세트를 포맷할 때 지정한 암호입니다.  
   
-    -   (옵션) **@fileidhint** - 복원되는 백업 세트에 대한 식별자. 예를 들어 **1** 을 지정하면 백업 미디어의 첫 번째 백업 세트를 나타내고 **2** 를 지정하면 두 번째 백업 세트를 나타냅니다.  
+    -   (옵션) `@fileidhint` - 복원되는 백업 세트의 식별자입니다. 예를 들어 **1** 을 지정하면 백업 미디어의 첫 번째 백업 세트를 나타내고 **2** 를 지정하면 두 번째 백업 세트를 나타냅니다.  
   
-    -   (테이프 디바이스 옵션) **@unload** - 복원이 완료된 후 드라이브에서 테이프를 언로드해야 하는 경우 **1** (기본값), 언로드하지 않아야 하는 경우 **0** 을 지정합니다.  
+    -   (테이프 디바이스 옵션) `@unload` - 복원이 완료된 후 드라이브에서 테이프를 언로드해야 하는 경우 **1**(기본값), 언로드하지 않아야 하는 경우 **0** 값을 지정합니다.  
   
 6.  (옵션) 끌어오기 구독의 경우 구독 데이터베이스의 구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) 및 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   

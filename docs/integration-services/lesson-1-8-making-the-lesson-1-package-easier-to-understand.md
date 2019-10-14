@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283813"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680969"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>1-8단원: 1단원 패키지 주석 달기 및 형식 
 
@@ -55,7 +55,7 @@ ms.locfileid: "71283813"
   
     주석 상자에서 텍스트 줄을 바꾸려면 새로운 줄을 시작할 위치에 커서를 놓고 **Enter**를 누릅니다.  
   
-    주석 상자에 텍스트를 추가하지 않은 경우 상자의 바깥쪽을 클릭하면 상자가 사라집니다.  
+    주석 상자에 텍스트를 추가하지 않은 경우 상자의 바깥쪽을 클릭하면 상자가 사라집니다.  이 동작 때문에, 주석 상자에 텍스트를 붙여넣으려면 주석 추가를 선택하기 전에 텍스트를 클립보드에 복사합니다. 
   
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [9단계: 1단원 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

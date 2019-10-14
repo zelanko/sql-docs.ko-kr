@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dcf95ea2aaab71771f90bc861265bb19e2f9d0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073566"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710887"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "68073566"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>병합 게시에 대한 게시 호환성 수준을 설정하려면  
   
-1.  게시가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전과 호환되도록 하려면 **@publication_compatibility_level** 에 값을 지정하여 게시자에서 [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+1.  게시가 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 호환되도록 하려면 게시자에서 `@publication_compatibility_level`에 값을 지정하고 [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 변경하려면  
   
-1.  **@property** 에 **publication_compatibility_level**, **@value** 에 적절한 게시 호환성 수준을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다.  
+1.  `@property`에 **publication_compatibility_level**, `@value`에 적절한 게시 호환성 수준을 지정하고 [sp_changemergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 확인하려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68073566"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 병합 게시를 만들고 게시 호환성 수준을 설정합니다.  
   
-```  
+```sql  
 -- To avoid storing the login and password in the script file, the values   
 -- are passed into SQLCMD as scripting variables. For information about   
 -- how to use scripting variables on the command line and in SQL Server  
@@ -106,7 +106,7 @@ GO
 > [!NOTE]  
 >  게시에서 특정 호환성 수준이 필요한 기능을 사용하고 있는 경우에는 게시 호환성 수준 변경이 허용되지 않을 수 있습니다. 자세한 내용은 [복제의 이전 버전과의 호환성](../../../relational-databases/replication/replication-backward-compatibility.md)을 참조하세요.  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
@@ -122,7 +122,7 @@ GO
   
  다음 예에서는 병합 게시에 대한 현재 게시 호환성 수준을 반환합니다.  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
 EXEC sp_helpmergepublication   

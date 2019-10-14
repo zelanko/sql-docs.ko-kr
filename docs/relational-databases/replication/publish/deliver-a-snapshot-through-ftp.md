@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907695"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710998"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅샷 배달
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,87 +76,87 @@ ms.locfileid: "67907695"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 FTP 스냅샷 배달을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **@publication** 을 지정하고 **@enabled_for_internet** 에 **true** 값을, 다음 매개 변수에 적절한 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 `@publication`을 지정하고 `@enabled_for_internet`에 **true** 값, 다음 매개 변수에 적절한 값을 지정합니다.  
   
-    -   **@ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   `@ftp_address` - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
+    -   (옵션) `@ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅샷을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory** 에 **\snapshots\ftp**를 지정합니다. 복제는 스냅샷 파일을 만들 때 스냅샷 폴더 경로에 'ftp'를 추가합니다.  
+    -   (옵션) `@ftp_subdirectory` - FTP 로그인에 할당되는 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅샷을 \\\ftpserver\home\snapshots에 저장하려면 `@ftp_subdirectory`에 **\snapshots\ftp**를 지정합니다. 복제에서 스냅샷 파일을 만들 때 스냅샷 폴더 경로에 ‘ftp’를 추가합니다.  
   
-    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
+    -   (옵션) `@ftp_login` - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
   
-    -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
+    -   (옵션) `@ftp_password` - FTP 로그인의 암호입니다.  
   
      이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅샷 배달을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. **@publication** 을 지정하고 **@enabled_for_internet** 에 **true** 값을, 다음 매개 변수에 적절한 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 `@publication`을 지정하고 `@enabled_for_internet`에 **true** 값, 다음 매개 변수에 적절한 값을 지정합니다.  
   
-    -   **@ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   `@ftp_address` - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
+    -   (옵션) `@ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅샷을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory** 에 **\snapshots\ftp**를 지정합니다. 복제는 스냅샷 파일을 만들 때 스냅샷 폴더 경로에 'ftp'를 추가합니다.  
+    -   (옵션) `@ftp_subdirectory` - FTP 로그인에 할당되는 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅샷을 \\\ftpserver\home\snapshots에 저장하려면 `@ftp_subdirectory`에 **\snapshots\ftp**를 지정합니다. 복제에서 스냅샷 파일을 만들 때 스냅샷 폴더 경로에 ‘ftp’를 추가합니다.  
   
-    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
+    -   (옵션) `@ftp_login` - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
   
-    -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
+    -   (옵션) `@ftp_password` - FTP 로그인의 암호입니다.  
   
      이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅샷 배달을 사용하는 스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독을 만들려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 이때 **@publisher** 및 **@publication** 에서 사용 가능합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`을 지정합니다.  
   
-    -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 을 지정하고 **@job_login** 및 **@job_password** 에 구독자에서 배포 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을, **@use_ftp** 에 **true** 값을 지정합니다.  
+    -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@job_login` 및 `@job_password`에 구독자에서 배포 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을, `@use_ftp`에 **true** 값을 지정합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅샷 배달을 사용하는 병합 게시에 대한 끌어오기 구독을 만들려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. 이때 **@publisher** 및 **@publication** 에서 사용 가능합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`을 지정합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 을 지정하고 **@job_login** 및 **@job_password** 에 구독자에서 배포 에이전트를 실행하는 데 사용되는 Windows 자격 증명을, **@use_ftp** 에 **true** 값을 지정합니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@job_login` 및 `@job_password`에 구독자에서 배포 에이전트를 실행하는 데 사용되는 Windows 자격 증명을, `@use_ftp`에 `true` 값을 지정합니다.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 하나 이상의 FTP 스냅샷 배달 설정을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. **@property** 에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value** 에 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 `@property`에 다음 값 중 하나, `@value`에 이 설정의 새 값을 지정합니다.  
   
-    -   **ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   `ftp_address ` - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   **ftp_port** - FTP 서버에서 사용되는 포트입니다.  
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   **ftp_subdirectory** - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   `ftp_subdirectory` - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
-    -   **ftp_login** - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
+    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   
-    -   **ftp_password** - FTP 로그인에 대한 암호입니다.  
+    -   `ftp_password` - FTP 로그인에 대한 암호입니다.  
   
 2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.  
   
-3.  (옵션) FTP 스냅샷 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 을 실행합니다. **@property** 에 **enabled_for_internet** 값, **@value** 에 **false** 값을 지정합니다.  
+3.  (옵션) FTP 스냅샷 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 을 실행합니다. 이때 `@property`에 `enabled_for_internet` 값, `@value`에 `false` 값을 지정합니다.  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅샷 배달 설정을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. **@property** 에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value** 에 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 `@property`에 다음 값 중 하나, `@value`에 이 설정의 새 값을 지정합니다.  
   
-    -   **ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   `ftp_address` - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   **ftp_port** - FTP 서버에서 사용되는 포트입니다.  
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   **ftp_subdirectory** - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   `ftp_subdirectory` - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
-    -   **ftp_login** - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
+    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   
-    -   **ftp_password** - FTP 로그인에 대한 암호입니다.  
+    -   `ftp_password` - FTP 로그인에 대한 암호입니다.  
   
 2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.  
   
-3.  (옵션) FTP 스냅샷 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 을 실행합니다. **@property** 에 **enabled_for_internet** 값, **@value** 에 **false** 값을 지정합니다.  
+3.  (옵션) FTP 스냅샷 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 을 실행합니다. 이때 `@property`에 `enabled_for_internet` 값, `@value`에 `false` 값을 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 구독자가 FTP를 사용하여 스냅샷 데이터에 액세스할 수 있는 병합 게시를 만듭니다. 구독자는 FTP 공유에 액세스할 때 보안 VPN 연결을 사용해야 합니다. **sqlcmd** 스크립팅 변수는 로그인 및 암호 값을 제공하는 데 사용됩니다. 자세한 내용은 [스크립팅 변수와 함께 sqlcmd 사용](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227186"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713210"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 일부 옵션 이름이 변경되었습니다.      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF`가 `INTERLEAVED_EXECUTION_TVF`로 변경됨
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`이 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`으로 변경됨
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
+
 ## <a name="arguments"></a>인수
 
 보조용
@@ -113,6 +119,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 max degree of parallelism 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. SQL Server는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 
 인스턴스 수준에서 이 옵션을 설정하려면 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
+
+> [!NOTE]
+> Azure SQL Database에서 서버 수준의 **max degree of parallelism** 구성은 항상 0으로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources) 섹션을 참조하세요.
 
 > [!TIP]
 > 쿼리 수준에서 이를 수행하기 위해 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.
@@ -351,6 +360,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 `ALTER_DATABASE_SCOPED_CONFIGURATION` 이벤트는 DDL 트리거를 시작하는 데 사용할 수 있는 DDL 이벤트로 추가되며 `ALTER_DATABASE_EVENTS` 트리거 그룹의 자식입니다.
 
 데이터베이스 범위 구성 설정은 데이터베이스와 함께 전달됩니다. 이는 지정된 데이터베이스가 복원되거나 첨부될 때 기존 구성 설정이 그대로 유지됨을 의미합니다.
+
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 일부 옵션 이름이 변경되었습니다.      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF`가 `INTERLEAVED_EXECUTION_TVF`로 변경됨
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`이 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`으로 변경됨
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 

@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769835"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710870"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,16 +74,16 @@ ms.locfileid: "68769835"
 ### <a name="merge-replication"></a>병합 복제  
  ID 범위는 게시자에 의해 관리되고 병합 에이전트에 의해 구독자로 전파됩니다. 재게시 계층에서는 범위가 루트 게시자와 재게시자에 의해 관리됩니다. ID 값은 게시자의 풀에서 할당됩니다. 새 게시 마법사 또는 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 사용하여 ID 열이 있는 아티클을 게시에 추가할 경우 다음에 대한 값을 지정합니다.  
   
--   **@identity_range** 매개 변수 - 구독 유형이 클라이언트 구독인 게시자와 구독자 모두에 초기에 할당되는 ID 범위 크기를 제어합니다.  
+-   `@identity_range` 매개 변수 - 클라이언트 구독에서 초기에 게시자와 구독자에 모두 할당되는 ID 범위 크기를 제어합니다.  
   
     > [!NOTE]  
-    >  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 구독자의 경우 **@pub_identity_range** 매개 변수가 아닌 이 매개 변수가 재게시 구독자의 ID 범위 크기를 제어합니다.  
+    >  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 구독자의 경우 `@pub_identity_range` 매개 변수가 아닌 이 매개 변수가 재게시 구독자의 ID 범위 크기를 제어합니다.  
   
--   **@pub_identity_range** 매개 변수 - 구독 유형이 서버 구독인 구독자에 할당된 재게시 작업을 위한 ID 범위 크기를 제어합니다. 이는 데이터를 재게시하는 데 필요합니다. 구독 유형이 서버 구독인 모든 구독자는 실제로 데이터를 재게시하지 않더라도 재게시 작업을 위한 범위를 받습니다.  
+-   `@pub_identity_range` 매개 변수 - 구독 유형이 서버 구독인 구독자에 할당된 재게시 작업을 위한 ID 범위 크기를 제어합니다. 이 매개 변수는 데이터를 다시 게시하는 데 필요합니다. 구독 유형이 서버 구독인 모든 구독자는 실제로 데이터를 재게시하지 않더라도 재게시 작업을 위한 범위를 받습니다.  
   
--   **@threshold** 매개 변수 - [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 구독에 새 ID 범위가 필요한 시기를 결정하는 데 사용됩니다.  
+-   `@threshold` 매개 변수 - [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독에 새 ID 범위가 필요한 경우를 확인하는 데 사용됩니다.  
   
- 예를 들어 **@identity_range** 에 대해 10000을 지정하고 **@pub_identity_range** 를 참조하세요. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 게시자 및 모든 구독자(구독 유형이 서버 구독인 구독자 포함)에게 기본 범위 10000이 할당됩니다. 또한 구독 유형이 서버 구독인 구독자에는 기본 범위 500000이 할당되어 재게시 구독자와 동기화하는 구독자가 이 범위를 사용할 수 있습니다. 재게시 구독자에서 게시의 아티클에 대해 **@identity_range** , **@pub_identity_range** 및 **@threshold** 를 지정해야 합니다  
+ 예를 들어 `@identity_range`에 10000, `@pub_identity_range`에 500000을 지정할 수 있습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 게시자 및 모든 구독자(구독 유형이 서버 구독인 구독자 포함)에게 기본 범위 10000이 할당됩니다. 또한 서버 구독의 구독자에는 기본 범위 500000이 할당되며, 재게시 구독자와 동기화되는 구독자가 이 범위를 사용할 수 있습니다. 재게시 구독자에서 게시의 아티클에 대해 `@identity_range`, `@pub_identity_range` 및 `@threshold`를 지정해야 합니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상을 실행하는 각 구독자는 보조 ID 범위도 받습니다. 보조 범위의 크기는 주 범위의 크기와 같습니다. 주 범위를 모두 사용하면 보조 범위가 사용되고 병합 에이전트가 구독자에 새 범위를 할당합니다. 새 범위는 보조 범위가 되고 구독자가 ID 값을 사용하는 한 프로세스는 계속 진행됩니다.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "68769835"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>지연 업데이트 구독이 있는 트랜잭션 복제  
  ID 범위는 배포자에 의해 관리되고 배포 에이전트에 의해 구독자로 전파됩니다. ID 값은 배포자의 풀에서 할당됩니다. 풀 크기는 데이터 형식의 크기와 ID 열에 사용되는 증가값을 기반으로 합니다. 새 게시 마법사 또는 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 사용하여 ID 열이 있는 아티클을 게시에 추가할 경우 다음에 대한 값을 지정합니다.  
   
--   **@identity_range** 매개 변수 - 모든 구독자에 초기에 할당되는 ID 범위 크기를 제어합니다.  
+-   `@identity_range` 매개 변수 - 모든 구독자에 초기에 할당되는 ID 범위 크기를 제어합니다.  
   
--   **@pub_identity_range** 매개 변수 - 게시자에 할당되는 ID 범위 크기를 제어합니다.  
+-   `@pub_identity_range` 매개 변수 - 게시자에 할당되는 ID 범위 크기를 제어합니다.  
   
--   **@threshold** 매개 변수 - 구독에 새 ID 범위가 필요한 시기를 결정하는 데 사용됩니다.  
+-   `@threshold` 매개 변수 - 구독에 새 ID 범위가 필요한 경우를 확인하는 데 사용됩니다.  
   
- 예를 들어 **@pub_identity_range** 에 대해 10000을, **@identity_range** 에 대해 1000(구독자에서의 업데이트 수가 적다고 가정)을, 그리고 **@threshold** 를 참조하세요. 구독자에서 800(1000의 80%)이 삽입되면 구독자에 새 범위가 할당됩니다. 게시자에서 8000이 삽입되면 게시자에 새 범위가 할당됩니다. 새 범위를 지정하면 테이블의 ID 범위 값에 간격이 발생합니다. 더 높은 임계값을 지정하면 이러한 간격이 줄어들지만 시스템의 내결함성이 저하됩니다. 어떤 이유로든 배포 에이전트를 실행할 수 없으면 구독자에서 ID가 보다 빠른 속도로 줄어들 수 있습니다.  
+ 예를 들어 `@pub_identity_range`에 10000, `@identity_range`에 1000(구독자에서의 업데이트 수가 적다고 가정), `@threshold`에 80%를 지정할 수 있습니다. 구독자에서 800(1000의 80%)이 삽입되면 구독자에 새 범위가 할당됩니다. 게시자에서 8000이 삽입되면 게시자에 새 범위가 할당됩니다. 새 범위를 지정하면 테이블의 ID 범위 값에 간격이 발생합니다. 더 높은 임계값을 지정하면 이러한 간격이 줄어들지만 시스템의 내결함성이 저하됩니다. 어떤 이유로든 배포 에이전트를 실행할 수 없으면 구독자에서 ID가 보다 빠른 속도로 줄어들 수 있습니다.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>ID 범위 수동 관리를 위한 범위 할당  
  ID 범위 수동 관리를 지정할 경우 게시자와 각 구독자가 서로 다른 ID 범위를 사용하고 있는지 확인해야 합니다. 예를 들어 게시자에 있는 테이블의 ID 열이 `IDENTITY(1,1)`로 정의되어 있다고 가정합니다. 이 ID 열은 1에서 시작하고 행이 삽입될 때마다 1씩 증가합니다. 게시자의 테이블에 5,000개의 행이 있고 애플리케이션 수명 동안 테이블이 얼마간 커질 것으로 예상되는 경우 게시자는 1-10,000 범위를 사용할 수 있습니다. 두 구독자가 있는 경우 구독자 A는 10,001-20,000을 사용하고 구독자 B는 20,001-30,000을 사용할 수 있습니다.  

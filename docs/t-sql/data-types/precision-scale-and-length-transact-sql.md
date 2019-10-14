@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000630"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682057"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "68000630"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **숫자** 및 **10진수** 데이터 형식의 기본 최대 전체 자릿수는 38입니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본 최대 전체 자릿수는 28입니다.
   
-숫자 데이터 형식의 길이는 해당 숫자를 저장하는 데 사용된 바이트 수이고 문자열이나 유니코드 데이터 형식의 길이는 문자의 개수입니다. **binary**, **varbinary** 및 **image** 데이터 유형의 길이는 바이트 수입니다. 예를 들어 **int** 데이터 형식은 10자리까지 지정할 수 있고 4바이트로 저장되며 소수점은 허용되지 않습니다. **int** 데이터 형식의 전체 자릿수는 10이고 길이는 4, 소수 자릿수는 0입니다.
+숫자 데이터 형식의 길이는 해당 숫자를 저장하는 데 사용된 바이트 수이고 varchar와 char에서 문자열의 길이는 바이트 수입니다. nvarchar와 nchar에서 문자열의 길이는 바이트 쌍 수입니다. **binary**, **varbinary** 및 **image** 데이터 유형의 길이는 바이트 수입니다. 예를 들어 **int** 데이터 형식은 10자리까지 지정할 수 있고 4바이트로 저장되며 소수점은 허용되지 않습니다. **int** 데이터 형식의 전체 자릿수는 10이고 길이는 4, 소수 자릿수는 0입니다.
   
-두 개의 **char**, **varchar**, **binary** 또는 **varbinary** 식을 연결할 때 결과 식의 길이는 두 원본 식의 길이를 합한 것으로 최대 8,000자입니다.
+**char**, **varchar**, **binary** 또는 **varbinary** 식 2개를 연결하는 경우 결과 식의 길이는 두 원본 식의 길이를 합한 값으로 최대 8,000바이트입니다.
   
-두 개의 **nchar** 또는 **nvarchar** 식을 연결할 때 결과 식의 길이는 두 원본 식의 길이를 합한 것으로 최대 4,000자입니다.
+**nchar** 또는 **nvarchar** 식 2개를 연결하는 경우 결과 식의 길이는 두 원본 식의 길이를 합한 값으로 최대 4,000바이트 쌍입니다.
   
 UNION, EXCEPT 또는 INTERSECT를 사용하여 데이터 형식은 같지만 길이가 다른 두 식을 비교할 때 결과 길이는 두 식의 더 긴 길이가 됩니다.
   

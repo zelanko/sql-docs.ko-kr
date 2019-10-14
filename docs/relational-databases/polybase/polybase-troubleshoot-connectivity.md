@@ -6,34 +6,38 @@ ms.reviewer: mikeray
 ms.technology: polybase
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 04/23/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ac5c5fa9a19b88ef25702ae4f6c3359fd302892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062014"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823586"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
+PolyBase에 기본 제공된 대화형 진단을 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
 
-이 문서는 이 도구를 활용하여 이러한 문제의 디버깅 프로세스를 살펴보기 위한 가이드입니다.
+이 문서는 기본 제공 진단을 활용하여 이러한 문제의 디버깅 프로세스를 살펴보기 위한 가이드입니다.
+
+> [!TIP]
+> 이 가이드의 단계를 수행하는 대신, Kerberos 보안 HDFS 클러스터에 외부 테이블을 만드는 중 HDFS Kerberos 오류가 발생할 경우 PolyBase에 대한 HDFS Kerberos 연결 문제를 해결하기 위해 [HDFS Kerberos 테스터](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/hdfs-kerberos-tester)를 실행하도록 선택할 수 있습니다. .
+> 이 도구는 HDFS Kerberos 설정 문제, 즉 사용자 이름/암호의 잘못된 구성과 클러스터 Kerberos 설정의 잘못된 구성 확인에 집중할 수 있도록 SQL Server 이외의 문제를 제외하는 데 도움이 됩니다.      
+> 이 도구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와는 독립적입니다. Jupyter Notebook으로 제공되며, Azure Data Studio가 필요합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-1. PolyBase가 설치된 SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 이상
+1. PolyBase가 설치된 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상
 1. Kerberos(Active Directory 또는 MIT)로 보호된 Hadoop 클러스터(Cloudera 또는 Hortonworks)
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>소개
-
 먼저 Kerberos 프로토콜을 개략적으로 이해할 수 있도록 도와드립니다. 관련된 행위자는 다음 세 가지입니다.
 
 1. Kerberos 클라이언트(SQL Server)
@@ -44,10 +48,10 @@ Kerberos가 Hadoop 클러스터에서 구성되면 각 Hadoop 보안 리소스�
 
 PolyBase에서 Kerberos 보안 리소스에 대해 인증이 요청되면 다음과 같은 4번 왕복 핸드셰이크가 수행됩니다.
 
-1. SQL Server가 KDC에 연결하고 사용자의 TGT를 가져옵니다. TGT는 KDC 프라이빗 키를 사용하여 암호화됩니다.
-1. SQL Server는 Hadoop 보안 리소스인 HDFS를 호출하고 ST가 필요한 SPN을 결정합니다.
-1. SQL Server는 KDC로 돌아가고, TGT를 다시 전달하고, ST를 요청하여 해당하는 특정 보안 리소스에 액세스합니다. ST는 보안 서비스의 프라이빗 키를 사용하여 암호화됩니다.
-1. SQL Server가 ST를 Hadoop에 전달하고 인증되어 해당 서비스에 대해 세션이 만들어집니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 KDC에 연결하고 사용자의 TGT를 가져옵니다. TGT는 KDC 프라이빗 키를 사용하여 암호화됩니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 Hadoop 보안 리소스인 HDFS를 호출하고 ST가 필요한 SPN을 확인합니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 KDC로 돌아가고, TGT를 다시 전달하고, ST를 요청하여 해당하는 특정 보안 리소스에 액세스합니다. ST는 보안 서비스의 프라이빗 키를 사용하여 암호화됩니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 ST를 Hadoop에 전달하고 인증되어 해당 서비스에 대해 세션이 만들어집니다.
 
 ![](./media/polybase-sqlserver.png)
 
@@ -68,7 +72,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 `\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-예를 들어 SQL Server 2016의 기본값은 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`입니다.
+예를 들어 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 기본값은 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`입니다.
 
 **core-site.xml**을 업데이트하고 아래 세 가지 속성을 추가합니다. 환경에 따라 값을 설정합니다.
 
@@ -89,10 +93,10 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 나중에 푸시다운 작업이 필요한 경우 다른 XML도 업데이트해야 하지만 이 파일만 구성해도 HDFS 파일 시스템에 액세스할 수는 있습니다.
 
-이 도구는 SQL Server와 독립적으로 실행되므로 SQL Server가 실행되고 있지 않아도 되고 구성 XML을 업데이트하더라도 SQL Server를 다시 시작하지 않아도 됩니다. 이 도구를 실행하려면 SQL Server가 설치된 호스트에서 다음 명령을 실행합니다.
+이 도구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 독립적으로 실행되므로, SQL Server가 실행되고 있지 않아도 되고 구성 XML을 업데이트하는 경우 SQL Server를 다시 시작하지 않아도 됩니다. 이 도구를 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 호스트에서 다음 명령을 실행합니다.
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -117,8 +121,7 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 다음은 MIT KDC 출력의 일부입니다. MIT 및 AD의 전체 샘플 출력은 이 문서 끝에 있는 참조에서 확인할 수 있습니다.
 
 ## <a name="checkpoint-1"></a>검사점 1
-
-`Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`인 티켓의 16진수 덤프여야 합니다. KDC에 인증되고 TGT를 받은 SQL Server를 나타냅니다. 이 덤프가 없으면 Hadoop이 아니라 SQL Server와 KDC 사이에서만 문제를 찾을 수 있습니다.
+`Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`인 티켓의 16진수 덤프여야 합니다. KDC에 인증되고 TGT를 받은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 나타냅니다. 이 덤프가 없으면 Hadoop이 아닌 KDC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 문제가 있습니다.
 
 PolyBase는 AD와 MIT 간의 트러스트 관계를 지원하지 **않으며** Hadoop 클러스터에 구성된 동일한 KDC에 대해 구성해야 합니다. 이러한 환경에서는 해당 KDC에 서비스 계정을 수동으로 만들고 해당 계정을 사용하여 인증을 수행하면 됩니다.
 
@@ -147,7 +150,6 @@ PolyBase는 AD와 MIT 간의 트러스트 관계를 지원하지 **않으며** H
 ```
 
 ## <a name="checkpoint-2"></a>검사점 2
-
 PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비스 티켓이 포함되어 있지 않으므로 액세스에 실패합니다.
 
 ```cmd
@@ -159,8 +161,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 ```
 
 ## <a name="checkpoint-3"></a>검사점 3
-
-두 번째 16진수 덤프는 SQL Server가 TGT를 사용하여 KDC에서 이름 노드 SPN에 적용되는 서비스 티켓을 가져왔음을 나타냅니다.
+두 번째 16진수 덤프는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 TGT를 사용하여 KDC에서 이름 노드 SPN에 적용되는 서비스 티켓을 가져왔음을 나타냅니다.
 
 ```cmd
  >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
@@ -186,8 +187,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 ```
 
 ## <a name="checkpoint-4"></a>검사점 4
-
-마지막으로 대상 경로의 파일 속성이 확인 메시지와 함께 출력되어야 합니다. 이 파일 속성은 SQL Server가 ST를 사용하여 Hadoop에서 인증되었고 보안 리소스에 대한 액세스 권한이 세션에 부여되었음을 확인합니다.
+마지막으로 대상 경로의 파일 속성이 확인 메시지와 함께 출력되어야 합니다. 이 파일 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 ST를 사용하여 Hadoop에서 인증되었고 보안 리소스에 대한 액세스 권한이 세션에 부여되었음을 확인합니다.
 
 이 지점에 도달하면 (i) 세 행위자가 제대로 통신할 수 있고, (ii) core-site.xml과 jaas.conf가 적절하며, (iii) KDC가 자격 증명을 인식했음을 나타냅니다.
 
@@ -197,7 +197,6 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 ```
 
 ## <a name="common-errors"></a>일반 오류
-
 도구가 실행되고 대상 경로의 파일 속성이 출력되지 *않은* 경우(검사점 4), 중간에 예외가 throw되었을 수 있습니다. 이 예외를 검토하고 검토 4단계 흐름에서 이 예외가 발생한 상황을 고려하세요. 발생할 수 있는 다음의 일반 오류를 순서대로 고려하세요.
 
 | 예외 및 메시지 | 원인 | 
@@ -213,11 +212,10 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 ## <a name="debugging-tips"></a>디버깅 팁
 
 ### <a name="mit-kdc"></a>MIT KDC  
-
 관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs**를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 프라이빗 키를 사용하여 암호화됩니다.  
 
 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)를 사용하여 KDC에서 로컬로 관리자 자격 증명을 확인하는 것도 좋습니다. 예제 사용량은 `kinit identity@MYREALM.COM`입니다. 암호를 묻는 메시지가 표시되면 ID가 있는 것입니다.  
-KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 SQL Server 컴퓨터 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ**로 표시됩니다.
+KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 머신 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ**로 표시됩니다.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -226,16 +224,14 @@ KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있�
 ```
 
 ### <a name="active-directory"></a>Active Directory 
-
 Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit*으로 이동하여 SPN을 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 각각의 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 사용할 수 있는 SPN이 하나씩 있습니다.
 
 ### <a name="general-debugging-tips"></a>일반 디버깅 팁
-
 SQL Server PolyBase 기능과 독립적으로 Java 환경을 통해 로그를 살펴보고 Kerberos 문제를 디버그하는 데 유용합니다.
 
 Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단계를 수행하여 디버그하세요.
 
-1. SQL Server 외부에서 Kerberos HDFS 데이터에 액세스할 수 있는지 확인합니다. 다음 작업 중 하나를 수행할 수 있습니다. 
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 Kerberos HDFS 데이터에 액세스할 수 있는지 확인합니다. 다음 작업 중 하나를 수행할 수 있습니다. 
 
     - 고유한 Java 프로그램을 작성하거나
     - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 예를 들어
@@ -253,10 +249,9 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 3. Active Directory Kerberos의 경우 Windows에서 `klist` 명령을 사용하여 캐시된 티켓을 볼 수 있는지 확인합니다.
     - PolyBase 머신에 로그인하고 명령 프롬프트에서 `klist` 및 `klist tgt`를 실행하여 KDC, 사용자 이름 및 암호화 형식이 올바른지 확인합니다.
 
-4.  KDC에서 AES256을 지원할 수 있는 경우 [JCE 정책 파일](http://www.oracle.com/technetwork/java/javase/downloads/index.html)을 설치했는지 확인합니다.
+4. KDC에서 AES256을 지원할 수 있는 경우 [JCE 정책 파일](http://www.oracle.com/technetwork/java/javase/downloads/index.html)을 설치했는지 확인합니다.
 
 ## <a name="see-also"></a>관련 항목:
-
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)(Active Directory 인증을 사용하여 PolyBase와 Cloudera 통합)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)(CDH의 Kerberos 설정에 대한 Cloudera 가이드)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)(HDP의 Kerberos 설정에 대한 Hortonworks 가이드)  

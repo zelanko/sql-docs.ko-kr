@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809874"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682064"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)(미리 보기)
 
@@ -44,15 +44,17 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>Remarks
 
-구체화된 뷰의 정의에 있는 기본 테이블을 수정하면 기본 테이블에서 구체화된 뷰의 모든 증분 변경 내용은 유지됩니다.  구체화된 뷰에서 선택하면 클러스터형 columnstore 구조에서 구체화된 뷰가 검색되고 이러한 증분 변경 내용이 적용됩니다.   유지 관리되는 증분 변경 내용 수가 많으면 선택 성능이 저하됩니다.  사용자는 구체화된 뷰를 다시 빌드하여 클러스터형 columnstore 구조를 다시 만들고 모든 증분 변경 내용을 기본 테이블에 통합할 수 있습니다.
-  
+구체화된 뷰를 기본 테이블의 데이터 변경 내용으로 계속 새로 고치기 위해 데이터 웨어하우스 엔진은 영향을 받는 각 뷰에 추적 행을 추가하여 변경 내용을 반영합니다. 구체화된 뷰에서 선택하면 뷰의 클러스터형 columnstore 인덱스 검색과 증분 변경 내용 적용이 포함됩니다.  사용자가 구체화된 뷰를 다시 빌드할 때까지 추적 행(TOTAL_ROWS-BASE_VIEW_ROWS)은 제거되지 않습니다.  
+
+overhead_ratio는 TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS)로 계산됩니다.  비율이 높으면 SELECT 성능이 저하됩니다.  사용자는 구체화된 뷰를 다시 빌드하여 오버헤드 비율을 줄일 수 있습니다.
+
 ## <a name="permissions"></a>사용 권한  
   
 VIEW DATABASE STATE 권한이 필요합니다.  
 
-## <a name="example"></a>예제  
+## <a name="examples"></a>예  
 
-이 예제에서는 구체화된 뷰에 사용되는 델타 공간을 반환합니다.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>1\. 이 예제에서는 구체화된 뷰의 오버헤드 비율을 반환합니다.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0.0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>2\. 이 예제에서는 기본 테이블의 데이터가 변경됨에 따라 구체화된 뷰 오버헤드가 증가하는 방식을 보여 줍니다.
 
-</br>
+테이블 만들기
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+T1에 행 5개 삽입
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+구체화된 뷰 MV1 만들기
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+구체화된 뷰에서 선택하면 행 2개가 반환됩니다.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+기본 테이블의 데이터를 변경하기 전에 구체화된 뷰 오버헤드를 확인합니다.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+출력:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
+
+기본 테이블을 업데이트합니다.  이 쿼리는 동일한 행의 동일한 열을 동일한 값으로 100번 업데이트합니다.  구체화된 뷰 내용은 변경되지 않습니다.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+구체화된 뷰에서 선택하면 이전과 동일한 결과가 반환됩니다.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+다음은 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(“dbo.mv1”)의 출력입니다.  행 100개가 구체화된 뷰(total_row-base_view_rows)에 추가되었으며 해당 overhead_ratio가 증가했습니다. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51.00000000000000000 |
+
+구체화된 뷰를 다시 빌드한 후에는 증분 데이터 변경 내용에 대한 모든 추적 행이 제거되었으며 뷰 오버헤드 비율이 감소했습니다.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+출력
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
 
 ## <a name="see-also"></a>관련 항목:
 

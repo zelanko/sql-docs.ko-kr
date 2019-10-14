@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021402"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710794"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>게시자 정보, 구독 조사 목록(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68021402"
  각 구독의 이름입니다. 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **이름**  
- 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 **@description** 또는 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 의 [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)가 표시됩니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
+ 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 또는 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)의 `@description` 매개 변수를 사용하여 지정합니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
   
  **게시**  
  구독을 동기화할 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  

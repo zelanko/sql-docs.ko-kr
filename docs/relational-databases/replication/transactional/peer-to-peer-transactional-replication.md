@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121333"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710727"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>피어 투 피어 - 트랜잭션 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121333"
   
 -   배포 에이전트 매개 변수 **-SubscriptionStreams** 및 로그 판독기 에이전트 매개 변수 **-MaxCmdsInTran**  
   
--   아티클 속성 **@destination_owner** 및 **@destination_table** 라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.
+-   아티클 속성 `@destination_owner` 및 `@destination_table`
 
 -   피어 투 피어 트랜잭션 복제에서는 피어 투 피어 게시에 대한 단방향 트랜잭션 구독을 만들 수 없습니다.   
   
  다음 속성에는 특별히 고려할 사항이 있습니다.  
   
--   게시 속성 **@allow_initialize_from_backup** 의 값은 **true**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   게시 속성 `@allow_initialize_from_backup`의 값은 **true**여야 합니다.  
   
--   아티클 속성 **@replicate_ddl** 의 값은 **true**여야 하고 **@identityrangemanagementoption** 의 값은 **manual**이어야 하며 **@status** 에서는 옵션 **24** 를 설정해야 합니다.  
+-   아티클 속성 `@replicate_ddl`의 값은 **true**, `@identityrangemanagementoption`의 값은 **manual**이어야 하고 `@status`에 옵션 **24**를 설정해야 합니다.  
   
--   아티클 속성 **@ins_cmd** , **@del_cmd** 및 **@upd_cmd** 의 값은 **SQL**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   아티클 속성 `@ins_cmd`, `@del_cmd` 및 `@upd_cmd`의 값을 **SQL**로 설정할 수 없습니다.  
   
--   구독 속성 **@sync_type** 의 값은 **none** 또는 **automatic**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   구독 속성 `@sync_type`의 값은 **none** 또는 **automatic**이어야 합니다.  
   
 ### <a name="maintenance-considerations"></a>유지 관리 고려 사항  
  시스템을 정지해야 수행할 수 있는 작업도 있습니다. 즉, 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 모두 받았는지 확인해야 합니다.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063112"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710438"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063112"
   
     -   **enabled_for_het_sub** 값이 1인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자가 지원됩니다.  
   
-    -   **enabled_for_het_sub**의 값이 0이면 **@property** 에 **enabled_for_het_sub**를, **@value** 에 **true**를 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
+    -   **enabled_for_het_sub**의 값이 0이면 `@property`에 **enabled_for_het_sub**, `@value`에 **true**를 지정하고 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
         > [!NOTE]  
         >  **enabled_for_het_sub** 을 **true**로 변경하기 전에 게시에 대한 기존 구독을 모두 삭제해야 합니다. 게시에서 업데이트 구독도 지원하는 경우 **enabled_for_het_sub** 을 **true** 로 설정할 수 없습니다. **enabled_for_het_sub** 변경은 다른 게시 속성에도 영향을 줍니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication** , **@subscriber** 를 지정하고 **@destination_db** 에 **(기본 대상)** 값을, **@subscription_type** 에 **push** 값을, **@subscriber_type** 에 3 값을 지정합니다(OLE DB 공급자 지정).  
+3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. `@publication`, `@subscriber`를 지정하고 `@destination_db`에 `(default destination)` 값, `@subscription_type`에 **push** 값, `@subscriber_type`에 3 값을 지정합니다(OLE DB 공급자 지정).  
   
 4.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   배포자의 배포 에이전트가 **@subscriber** 및 **@publication** 매개 변수  
+    -   `@subscriber` 및 `@publication` 매개 변수  
   
-    -   **@subscriber_db** 에 **(기본 대상)** 값  
+    -   `@subscriber_db`에 **(기본 대상)** 값  
   
-    -   **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** 및 **@subscriber_catalog** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본의 속성  
+    -   `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string` 및 `@subscriber_catalog`에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 데이터 원본 속성  
   
-    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password** 를 참조하세요.  
+    -   `@job_login` 및 `@job_password`에 배포자에서 배포 에이전트 실행에 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명  
   
-        > [!NOTE]  
-        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 및 **@job_password** 에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+       > [!NOTE]  
+       > Windows 통합 인증을 사용하여 만든 연결은 항상 `@job_login` 및 `@job_password`로 지정된 Windows 자격 증명을 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (선택 사항) **@subscriber_security_mode** 에 **0** 값, **@subscriber_login** 및 **@subscriber_password** 에 OLE DB 공급자 로그인 정보  
+    -   `@subscriber_security_mode`에 **0** 값, `@subscriber_login` 및 `@subscriber_password`에 OLE DB 공급자 로그인 정보  
   
     -   이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   

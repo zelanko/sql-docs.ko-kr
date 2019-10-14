@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326025"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961956"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 SQL Server 2019 확장(미리 보기)
 
-Azure Data Studio용 SQL Server 2019 확장(미리 보기)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원에 제공되는 새로운 기능 및 지원 기능에 대한 미리 보기 지원을 제공합니다. 여기에는 [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 [Notebook 환경](../big-data-cluster/notebooks-guidance.md) 및 PolyBase [외부 테이블 만들기 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)에 대 한 미리 보기 지원이 포함됩니다.
+Azure Data Studio용 SQL Server 2019 확장(미리 보기)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원에 제공되는 새로운 기능 및 지원 기능에 대한 미리 보기 지원을 제공합니다. 지원에는 [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 [Notebook 환경](../big-data-cluster/notebooks-guidance.md) 및 PolyBase [외부 테이블 만들기 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)에 대한 미리 보기 지원이 포함됩니다.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기) 설치
 
@@ -33,7 +33,7 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019년 9월 11일 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019년 9월 11일 |0.16.0
 
-1. Azure Data Studio의 **파일** 메뉴에서 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
+1. Azure Data Studio에서 **파일** 메뉴의 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
 
 1. 설치할지 확인하라는 메시지가 표시되면 **예**를 선택하고 설치 성공 알림이 표시될 때까지 기다립니다.
 
@@ -65,7 +65,7 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 * 외부 테이블 만들기 마법사:
   * 기존 외부 데이터 원본을 사용하여 외부 테이블을 만들 수 있도록 지원합니다.
   * 마법사 전체에서 성능이 향상되었습니다.
-  * 특수 문자를 포함하는 개체 이름의 처리가 개선되었습니다. 일부 경우에는 이로 인해 마법사가 실패했습니다.
+  * 특수 문자를 포함하는 개체 이름의 처리가 개선되었습니다. 이러한 개체 이름으로 인해 마법사가 실패하는 경우가 있었습니다.
   * 개체 매핑 페이지의 안정성이 개선되었습니다.
   * 데이터베이스 드롭다운에서 'DWConfiguration', 'Dwconfiguration', 'Dwconfiguration' 등의 시스템 데이터베이스가 제거되었습니다.
   * **CSV 파일에서 외부 테이블 만들기** 마법사에서 외부 파일 형식 개체의 이름을 설정할 수 있도록 지원합니다.
@@ -82,13 +82,13 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 
 ## <a name="release-notes-v0102"></a>릴리스 정보(v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 지원
-SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 데이터 클러스터 인스턴스에 연결할 때 탐색기 트리에 새 _Data Services_ 폴더가 나타납니다. 여기에는 연결에 대해 새 Notebook을 열고, Spark 작업을 제출하고, HDFS로 작업하는 것과 같은 작업을 위한 시작 지점이 있습니다. HDFS 파일/ 폴더를 통해 _외부 데이터 만들기_와 같은 일부 작업을 수행하려면 _SQL Server 2019 미리 보기_ 확장을 설치해야 합니다.
+SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 데이터 클러스터 인스턴스에 연결하면 탐색기 트리에 새 _Data Services_ 폴더가 나타납니다. 이 폴더에는 연결에 대해 새 Notebook 열기, Spark 작업 제출, HDFS 사용 등의 작업을 위한 시작 지점이 있습니다. HDFS 파일/폴더에 대한 _외부 데이터 만들기_ 등의 일부 작업을 수행하려면 _SQL Server 2019 미리 보기_ 확장을 설치해야 합니다.
 
 ### <a name="notebook-support"></a>Notebook 지원
 이 릴리스에서는 Notebook 사용자 인터페이스의 중요한 기능이 업데이트되었습니다. 이러한 업데이트는 사용자와 공유하는 Notebook을 쉽게 읽을 수 있도록 하는 데 중점을 두고 진행되었습니다. 즉, 선택하거나 가리키지 않으면 셀 주변의 모든 개요 상자가 제거되고, 셀을 선택하지 않고도 쉬운 셀 수준 작업을 수행하기 위한 가리키기 지원이 추가되고, 실행 횟수, 애니메이션 _실행 중지_ 단추 등을 추가하여 실행 상태를 명확히 나타냅니다. 또한 _새 Notebook_(`Ctrl+Shift+N`), _셀 실행_(`F5`), _새 코드 셀_(`Ctrl+Shift+C`), _새 텍스트 셀_(`Ctrl+Shift+T`)의 바로 가기 키도 추가했습니다. 앞으로 모든 주요 작업을 바로 가기로 실행할 수 있도록 할 예정이므로 놓치기 쉬운 작업이 있으면 알려주세요.
 
 기타 개선 사항 및 수정 내용은 다음과 같습니다.
-* 이제 _SQL Server 2019 미리 보기_ 확장은 Python 종속성의 설치 디렉터리를 선택하라는 메시지를 표시합니다. 또한 `.vsix file`에 더 이상 Python이 포함되지 않으므로 전반적인 확장 크기가 줄어듭니다. Spark 및 Python3 커널을 지원하려면 Python 종속성이 필요하므로 이러한 커널을 사용하려면 이 확장을 설치해야 합니다.
+* 이제 _SQL Server 2019 미리 보기_ 확장에서 Python 종속성의 설치 디렉터리를 선택하라는 메시지를 사용자에게 표시합니다. 또한 `.vsix file`에 더 이상 Python이 포함되지 않으므로 전반적인 확장 크기가 줄어듭니다. Python 종속성은 Spark 및 Python3 커널을 지원합니다.
 * 명령줄에서 새 Notebook을 시작할 수 있는 지원이 추가되었습니다. 인수 `--command=notebook.command.new --server=myservername`을 사용하여 시작하면 새 Notebook이 열리고 이 서버에 연결됩니다.
 * 셀에 길이가 긴 코드가 포함된 Notebook의 성능이 수정되었습니다. 코드 셀이 250줄을 초과하면 스크롤 막대가 추가됩니다.
 * .ipynb 파일 지원이 개선되었습니다. 이제 버전 3 이상이 지원됩니다. 저장 시 파일이 버전 4 이상으로 업데이트됩니다.

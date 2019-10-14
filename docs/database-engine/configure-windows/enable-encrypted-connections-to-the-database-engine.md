@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314505"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708514"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 
 - 인증서는 **AT_KEYEXCHANGE**의 **KeySpec** 옵션을 사용하여 만들어야 합니다. 일반적으로 인증서의 키 사용 속성(**KEY_USAGE**)에는 키 암호화(**CERT_KEY_ENCIPHERMENT_KEY_USAGE**)도 포함됩니다.
 
-- 인증서의 **주체** 속성은 CN(일반 이름)이 서버 컴퓨터의 호스트 이름이나 FQDN(정규화된 도메인 이름)과 동일함을 나타내야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 장애 조치 클러스터에서 실행 중일 경우 일반 이름은 가상 서버의 호스트 이름이나 FQDN과 일치해야 하며 인증서는 장애 조치 클러스터의 모든 노드에 프로비저닝되어야 합니다.
+- 인증서의 **주체** 속성은 CN(일반 이름)이 서버 컴퓨터의 호스트 이름이나 FQDN(정규화된 도메인 이름)과 동일함을 나타내야 합니다. 호스트 이름을 사용하는 경우 인증서에 DNS 접미사를 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 장애 조치 클러스터에서 실행 중일 경우 일반 이름은 가상 서버의 호스트 이름이나 FQDN과 일치해야 하며 인증서는 장애 조치 클러스터의 모든 노드에 프로비저닝되어야 합니다.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 SNAC([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 원시 클라이언트)는 와일드카드 인증서를 지원합니다. SNAC는 더 이상 사용되지 않으며 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 및 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 바뀌었습니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서 및 [KB 258858](http://support.microsoft.com/kb/258858)을 참조하세요.       
   SQL Server 구성 관리자를 사용하여 와일드카드 인증서를 선택할 수 없습니다. 와일드카드 인증서를 사용하려면 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 레지스트리 키를 편집하고 **인증서** 값에 공백 없이 인증서의 지문을 입력해야 합니다.  

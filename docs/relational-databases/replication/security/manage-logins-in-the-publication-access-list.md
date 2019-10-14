@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fa63ed5cf1367bc0834b0241f40fa9e52f741c87
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769649"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710786"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ ms.locfileid: "68769649"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>PAL에 속한 그룹 및 로그인을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름을 지정합니다. 그러면 PAL의 그룹 및 로그인에 대한 정보가 표시됩니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)를 실행합니다. 이때 `@publication`에 게시 이름을 지정합니다. 그러면 PAL의 그룹 및 로그인에 대한 정보가 표시됩니다.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>PAL에 그룹 및 로그인을 추가하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름, **@login** 에 추가할 로그인 또는 그룹 이름을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)를 실행합니다. 이때 `@publication`에 게시 이름, `@login`에 추가되는 로그인 또는 그룹의 이름을 지정합니다.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>PAL에서 그룹 및 로그인을 제거하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름, **@login** 에 제거할 로그인 또는 그룹 이름을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)를 실행합니다. 이때 `@publication`에 게시 이름, `@login`에 제거되는 로그인 또는 그룹의 이름을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [게시 액세스 목록에서 로그인 관리](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

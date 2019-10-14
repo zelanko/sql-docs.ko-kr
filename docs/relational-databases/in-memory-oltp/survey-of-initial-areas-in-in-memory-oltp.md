@@ -1,7 +1,7 @@
 ---
-title: '빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs'
+title: '빠른 설문 조사 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661476"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712943"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -211,7 +212,7 @@ Microsoft SQL Server에서 메모리 최적화 테이블을 만들려면 먼저 
   
 Azure SQL Database에서는 이러한 FILEGROUP을 만들 수 없으며, 만들 필요도 없습니다.  
 
-다음 샘플 T-SQL 스크립트는 메모리 내 OLTP에 데이터베이스를 사용하고 모든 권장 설정을 구성합니다. 이는 SQL Server와 Azure SQL Database 둘 다에서 작동합니다([enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)).
+다음 샘플 T-SQL 스크립트는 메모리 내 OLTP에 데이터베이스를 사용하고 모든 권장 설정을 구성합니다. 이는 SQL Server와 Azure SQL Database 둘 다에서 작동합니다([enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)).
 
 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부 SQL Server 기능만 지원됩니다. 제한 사항에 대한 자세한 내용은 다음을 참조하세요. [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)
   

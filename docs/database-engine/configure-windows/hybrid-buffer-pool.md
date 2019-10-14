@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251054"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823568"
 ---
 # <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 다음 예제는 SQL Server의 인스턴스에 대해 하이브리드 버퍼 풀 시스템 구성의 현재 상태를 반환합니다.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 다음 예제는 테이블 두 개를 반환합니다.
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>하이브리드 버퍼 풀 모범 사례
 
-16GB RAM 미만인 상태에서 인스턴스에서 하이브리드 버퍼 풀을 할당하지 않는 것이 좋습니다.
-
 Windows에서 PMEM 디바이스를 포맷할 때 NTFS에 가능한 가장 큰 할당 단위 크기(Windows Server 2019에서 2MB)를 사용하고 디바이스에서 DAX(Direct Access)에 적합하게 포맷되었는지 확인합니다.
+
+성능을 최적화하려면 Windows에서 [메모리의 잠긴 페이지](./enable-the-lock-pages-in-memory-option-windows.md)를 사용하도록 설정합니다.
 
 파일 크기가 2MB의 배수여야 합니다(modulo 2MB가 0이어야 함).
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096924"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713276"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ ms.locfileid: "71096924"
 
 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않은 경우에도 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]는 가용성 그룹의 데이터베이스에 대한 분산 트랜잭션을 방지하지 않습니다. 그러나 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않으면 일부 상황에서 장애 조치가 실패할 수 있습니다. 특히 새 주 복제본 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스는 DTC에서 트랜잭션 결과를 가져올 수 없습니다. 장애 조치 후 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스가 DTC에서 미결 트랜잭션의 결과를 얻도록 하려면 분산 트랜잭션에 대한 가용성 그룹을 구성합니다. 
 
+DTC는 데이터베이스가 장애 조치(failover) 클러스터의 멤버이기도 한 경우를 제외하고 가용성 그룹 처리에 포함되지 않습니다. 가용성 그룹 내에서 복제본 간의 일관성은 가용성 그룹 논리를 통해 유지 관리됩니다. 보조 복제본이 영구 저장소에 로그 레코드를 유지했음을 확인해야 주 복제본이 커밋을 완료하고 호출자에게 커밋을 확인합니다. 그런 후에만 주 복제본이 트랜잭션 완료를 선언합니다. 비동기 모드에서는 보조 복제본의 승인을 기다리지 않으며, 명시적으로 소량의 데이터가 손실될 가능성이 있습니다.
+
 ## <a name="prerequisites"></a>사전 요구 사항
 
 가용성 그룹에서 분산 트랜잭션을 지원하도록 구성하려면 먼저 다음 필수 조건을 충족해야 합니다.
@@ -50,6 +52,8 @@ ms.locfileid: "71096924"
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 만들기
 
 분산 트랜잭션을 지원하도록 가용성 그룹을 구성합니다. 각 데이터베이스가 리소스 관리자로 등록할 수 있도록 가용성 그룹을 설정합니다. 이 문서에서는 각 데이터베이스가 DTC의 리소스 관리자가 될 수 있도록 가용성 그룹을 구성하는 방법에 대해 설명합니다.
+
+
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 이상에서 분산 트랜잭션에 대한 가용성 그룹을 만들 수 있습니다. 분산 트랜잭션에 대한 가용성 그룹을 만들려면 가용성 그룹 정의에 `DTC_SUPPORT = PER_DB`를 포함시킵니다. 다음 스크립트에서는 분산 트랜잭션에 대한 가용성 그룹을 만듭니다. 
 

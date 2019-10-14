@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085369"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974306"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085369"
   
 ###  <a name="HowToCheckAccess"></a> 방법: 데이터베이스에 비트랜잭션 액세스가 사용하도록 설정되어 있는지 확인  
  카탈로그 뷰 [sys.database_filestream_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)를 쿼리하고 **non_transacted_access** 및 **non_transacted_access_desc** 열을 확인합니다.  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> 방법: 데이터베이스 수준에서 비트랜잭션 액세스를 사용하도록 설정  
  사용 가능한 비트랜잭션 액세스 수준은 FULL, READ_ONLY 및 OFF입니다.  
   
  **Transact-SQL을 사용하여 비트랜잭션 액세스 수준 지정**  
- -   **새 데이터베이스를 만들 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   **기존 데이터베이스를 변경할 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 문을 호출합니다.  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - **새 데이터베이스를 만들 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- **기존 데이터베이스를 변경할 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 문을 호출합니다.
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **SQL Server Management Studio를 사용하여 비트랜잭션 액세스 수준 지정**  
  **데이터베이스 속성** 대화 상자의 **옵션** 페이지에 있는 **FILESTREAM 비트랜잭션 액세스** 필드에서 비트랜잭션 액세스 수준을 지정할 수 있습니다. 이 대화 상자에 대한 자세한 내용은 [데이터베이스 속성&#40;옵션 페이지&#41;](../../relational-databases/databases/database-properties-options-page.md)을 참조하세요.  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a> 방법: 데이터베이스 수준에서 FileTable의 디렉터리 지정  
  지정한 이름은 데이터베이스 수준 디렉터리의 인스턴스 전체에서 고유해야 합니다.  
   
- **Transact-SQL을 사용하여 FileTable의 디렉터리 지정**  
- -   **새 데이터베이스를 만들 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**Transact-SQL을 사용하여 FileTable의 디렉터리 지정**  
+- **새 데이터베이스를 만들 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   **기존 데이터베이스를 변경할 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 문을 호출합니다. 이러한 옵션을 사용하여 디렉터리 이름을 변경할 경우 데이터베이스가 단독으로 잠겨 있고 열려 있는 파일 핸들이 없어야 합니다.  
   
     ```sql  

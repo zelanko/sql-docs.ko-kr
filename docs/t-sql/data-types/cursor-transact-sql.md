@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f97fdcba1cfed8ca28c39afdec92275aa6ba5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125953"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682074"
 ---
 # <a name="cursor-transact-sql"></a>SET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68125953"
   
 ## <a name="remarks"></a>Remarks  
 **cursor** 데이터 형식을 가진 변수와 매개 변수를 참조할 수 있는 작업은 다음과 같습니다.
--   DECLARE *@local_variable* 및 SET *@local_variable* 문.  
+-   DECLARE *\@local_variable* 및 SET *\@local_variable* 문  
 -   OPEN, FETCH, CLOSE 및 DEALLOCATE 커서 문  
 -   저장 프로시저 출력 매개 변수  
 -   CURSOR_STATUS 함수  
