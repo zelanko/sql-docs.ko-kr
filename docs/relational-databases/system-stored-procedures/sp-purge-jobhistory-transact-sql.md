@@ -1,5 +1,5 @@
 ---
-title: sp_purge_jobhistory (TRANSACT-SQL) | Microsoft Docs
+title: sp_purge_jobhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896459"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313760"
 ---
-# <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
+# <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   작업에 대한 기록 레코드를 제거합니다.  
@@ -43,14 +43,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_name = ] 'job_name'` 기록 레코드를 삭제 하는 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @job_name = ] 'job_name'` 기록 레코드를 삭제할 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다. *Job_id* 또는 *job_name* 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
 > [!NOTE]  
->  멤버는 **sysadmin** 고정 서버 역할의 멤버는 **SQLAgentOperatorRole** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_purge_jobhistory** 를지정하지않고*job_name* 하거나 *job_id*합니다. 때 **sysadmin** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다. 때 **SQLAgentOperatorRole** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내 모든 로컬 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다.  
+>  **Sysadmin** 고정 서버 역할의 멤버 또는 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 멤버는 *job_name* 또는 *job_id*를 지정 하지 않고 **sp_purge_jobhistory** 를 실행할 수 있습니다. **Sysadmin** 사용자가 이러한 인수를 지정 하지 않으면 *oldest_date*에 지정 된 시간 내에 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 삭제 됩니다. **SQLAgentOperatorRole** 사용자가 이러한 인수를 지정 하지 않으면 *oldest_date*에 지정 된 시간 내에 모든 로컬 작업에 대 한 작업 기록이 삭제 됩니다.  
   
-`[ @job_id = ] job_id` 삭제할 레코드에 대 한 작업의 작업 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 에 대 한 설명을 참조 하십시오 **@job_name** 방법은 **sysadmin** 하거나 **SQLAgentOperatorRole** 사용자는이 인수를 사용할 수 있습니다.  
+`[ @job_id = ] job_id` 레코드를 삭제할 작업의 id입니다. *job_id* 는 **uniqueidentifier**이며 기본값은 NULL입니다. *Job_id* 또는 *job_name* 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다. **Sysadmin** 또는 **SQLAgentOperatorRole** 사용자가이 인수를 사용할 수 있는 방법에 대 한 자세한 내용은 **@no__t** 설명의 참고를 참조 하세요.  
   
-`[ @oldest_date = ] oldest_date` 기록에 보존할 가장 오래 된 레코드입니다. *oldest_date* 됩니다 **datetime**, 기본값은 NULL입니다. 때 *oldest_date* 를 지정 하면 **sp_purge_jobhistory** 만 지정 된 값 보다 오래 된 레코드를 제거 합니다.  
+`[ @oldest_date = ] oldest_date` 기록에 보존할 가장 오래 된 레코드입니다. *oldest_date* 는 **datetime**이며 기본값은 NULL입니다. *Oldest_date* 를 지정 하면 **sp_purge_jobhistory** 는 지정 된 값 보다 오래 된 레코드만 제거 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -59,14 +59,14 @@ sp_purge_jobhistory
  없음  
   
 ## <a name="remarks"></a>설명  
- 때 **sp_purge_jobhistory** 완료 되 면 메시지가 반환 됩니다.  
+ **Sp_purge_jobhistory** 성공적으로 완료 되 면 메시지가 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로의 멤버만 합니다 **sysadmin** 고정된 서버 역할 또는 **SQLAgentOperatorRole** 고정된 데이터베이스 역할에서이 저장된 프로시저를 실행할 수 있습니다. 멤버인 **sysadmin** 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거할 수 있습니다. 멤버인 **SQLAgentOperatorRole** 만으로 모든 로컬 작업에 대 한 작업 기록을 제거할 수 있습니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할 또는 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 멤버만이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 모든 로컬 작업에 대 한 작업 기록만 제거할 수 있습니다.  
   
- 멤버를 포함 한 다른 사용자 **SQLAgentUserRole** 회원과 **SQLAgentReaderRole**, 명시적으로 권한을 부여 해야 합니다 EXECUTE에 **sp_purge_jobhistory**. 이러한 사용자는 이 저장 프로시저에 대해 EXECUTE 권한을 부여 받은 다음에도 각자 소유한 작업에 대한 기록만 제거할 수 있습니다.  
+ **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 멤버를 비롯 한 다른 사용자에 게는 **sp_purge_jobhistory**에 대 한 EXECUTE 권한을 명시적으로 부여 해야 합니다. 이러한 사용자는 이 저장 프로시저에 대해 EXECUTE 권한을 부여 받은 다음에도 각자 소유한 작업에 대한 기록만 제거할 수 있습니다.  
   
- 합니다 **SQLAgentUserRole**를 **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스입니다. 해당 사용 권한에 대 한 자세한 내용은 참조 하세요 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)입니다.  
+ **SQLAgentUserRole**, **SQLAgentReaderRole**및 **SQLAgentOperatorRole** 고정 데이터베이스 역할은 **msdb** 데이터베이스에 있습니다. 사용 권한에 대 한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -85,7 +85,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>2\. 모든 작업의 기록 제거  
   
 > [!NOTE]  
->  구성원만 합니다 **sysadmin** 고정 서버 역할의 멤버 및 합니다 **SQLAgentOperatorRole** 모든 작업에 대 한 기록을 제거할 수 있습니다. 때 **sysadmin** 매개 변수 없이이 저장된 프로시저를 실행 하는 사용자, 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거 됩니다. 때 **SQLAgentOperatorRole** 매개 변수 없이이 저장된 프로시저를 실행 하는 사용자, 모든 로컬 작업에 대 한 작업 기록만 제거 됩니다.  
+>  **Sysadmin** 고정 서버 역할의 멤버 및 **SQLAgentOperatorRole** 의 멤버만 모든 작업에 대 한 기록을 제거할 수 있습니다. **Sysadmin** 사용자가 매개 변수 없이이 저장 프로시저를 실행 하면 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 제거 됩니다. **SQLAgentOperatorRole** 사용자가 매개 변수 없이이 저장 프로시저를 실행 하면 모든 로컬 작업에 대 한 작업 기록도 제거 됩니다.  
   
  다음 예에서는 매개 변수 없이 프로시저를 실행하여 모든 기록 레코드를 제거합니다.  
   
@@ -98,8 +98,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
