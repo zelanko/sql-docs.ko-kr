@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152738"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173143"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
@@ -35,6 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="1742-october-2019"></a>17.4.2, 2019년 10월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 추가 Azure Key Vault 끝점에 대 한 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 데이터 분류 버전 설정 지원 | [데이터 분류](../data-classification.md#bkmk-version)를 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
+**알려진 문제:**
+
+Secure enclaves 및 Azure Key Vault에서 Always Encrypted를 사용 하는 경우 홀수 키 경로 길이는 CMK 서명 확인 오류가 발생할 수 있습니다. 이 문제가 발생 하는 경우 AKV 키 이름을 바꿔서 keypath의 길이를 한 문자씩 변경해 보세요.
+
 ## <a name="174-august-2019"></a>17.4, 2019년 8월
 
 | 추가된 기능 | 세부 정보 |

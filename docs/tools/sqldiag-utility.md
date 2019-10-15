@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986301"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251361"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 는 시작할 때 현재 출력 폴더에 출력을 추가하지 않습니다. 대신 기본 출력 폴더를 덮어쓰거나(옵션 1) 폴더의 이름을 바꾼 다음(옵션 2) SQLDIAG라는 새 기본 출력 폴더에 출력을 씁니다.  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  구성 파일에 지정된 컴퓨터를 재정의합니다. 기본적으로 구성 파일은 SQLDiag.Xml이거나 **/I** 매개 변수를 사용하여 설정됩니다. 둘 이상의 컴퓨터를 지정할 경우 각 컴퓨터 이름을 공백으로 구분하십시오.  
   
- *@machinelistfile* 을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
+ *\@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
  **/C** _file_compression_type_  
  **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  

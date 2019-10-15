@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530856"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313687"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   감사의 현재 상태를 나타내는 각 서버 감사의 행을 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|감사의 ID입니다. Audit_id 카탈로그 뷰의 필드에 매핑합니다 .|  
+|**audit_id**|**int**|감사의 ID입니다. Audit_id 카탈로그 뷰의 필드에 매핑합니다 **.**|  
 |**name**|**sysname**|감사의 이름입니다. **Server_audits** 카탈로그 뷰의 **이름** 필드와 동일 합니다.|  
 |**상태**|**smallint**|서버 감사의 숫자 상태입니다.<br /><br /> 0 = 시작 되지 않음<br /><br /> 1 =<br />        시작됨<br /><br /> 2 =<br />      런타임 실패<br /><br /> 3 = 대상 만들기 실패<br /><br /> 4 = 종료 중|  
 |**status_desc**|**nvarchar(256)**|서버 감사의 상태를 보여 주는 문자열입니다.<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  

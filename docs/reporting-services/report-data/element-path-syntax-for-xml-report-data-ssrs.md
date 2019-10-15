@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573163"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173831"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 세트 쿼리나 XML **ElementPath**의 XML **Query**를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 세트 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**인코딩**|이 요소에 대한 **Value** 가 인코딩된 XML이므로 이 값을 디코딩하여 이 요소의 하위 요소로 포함해야 함을 나타냅니다.|  
 |**FieldList**|데이터를 검색하는 데 사용할 요소 및 특성 집합을 정의합니다.<br /><br /> 지정하지 않으면 모든 특성 및 하위 요소가 필드로 사용됩니다. 빈 필드 목록을 지정하는 경우( **{}** ) 이 노드의 필드는 사용되지 않습니다.<br /><br /> **FieldList** 에 **Value** 와 **Element** 또는 **ElementNode**가 모두 포함될 수는 없습니다.|  
 |**필드**|데이터 세트 필드로 검색되는 데이터를 지정합니다.|  
-|**Attribute**|**ElementNode**내의 이름 값 쌍입니다. 예를 들어 요소 노드 \<Customer ID="1">에서 **ID**는 특성이며 **@ID(Integer)** 는 해당 데이터 필드 **ID**에 정수 형식으로 “1”을 반환합니다.|  
+|**Attribute**|**ElementNode**내의 이름 값 쌍입니다. 예를 들어 요소 노드 \<Customer ID="1">에서 **ID**는 특성이며 **\@ID(Integer)** 는 해당 데이터 필드 **ID**에 정수 형식으로 "1"을 반환합니다.|  
 |**Value**|요소의 값입니다. **Value** 는 요소 경로의 마지막 **ElementNode** 에만 사용할 수 있습니다. 예를 들어 \<Return>은 리프 노드이므로 요소 경로의 끝에 이 노드를 포함하면 **Return {@}** 값은 **Chair**가 됩니다.|  
 |**Element**|명명된 하위 요소의 값입니다. 예를 들어 Customers {}/Customer {}/LastName은 LastName 요소에 대한 값만 검색합니다.|  
 |**형식**|이 요소에서 만든 필드에 사용할 선택적 데이터 형식입니다.|  

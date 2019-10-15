@@ -8,12 +8,12 @@ description: 이 문서에서는 브랜드 패키지를 통해 비즈니스로 �
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199419"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251917"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
@@ -75,7 +75,7 @@ LESS 스타일시트에는 다음과 같이 사전 정의된 LESS 변수를 참�
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-처리된 출력은 **@primaryButtonBg** LESS 변수를 조회하고 **primary**라고 하는 json 속성(이 예제의 경우 #009900)으로 매핑된 것을 확인할 수 있습니다. 따라서 올바른 CSS가 출력됩니다.  
+처리된 출력은 **\@@primaryButtonBg** LESS 변수를 조회하고 **primary**라고 하는 json 속성(이 예제의 경우 #009900)으로 매핑된 것을 확인할 수 있습니다. 따라서 올바른 CSS가 출력됩니다.  
   
     .btn-primary {   
         color:#ffffff;   

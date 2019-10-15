@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575996"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278233"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 필요한 계정은 구독에 구성된 자격 증명이거나 보고서 서버용으로 구성된 **파일 공유 계정**일 수 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "65575996"
   
  **덮어쓰기:** 덮어쓰기 옵션을 지정해 각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용할지 아니면 새 파일을 만들지를 선택할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
   
- 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이렇게 하려면 파일 이름에 **@timestamp** 변수를 추가하세요(예: *CompanySales@timestamp* ). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
+ 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이렇게 하려면 파일 이름에 **\@timestamp** 변수를 추가하세요(예: *CompanySales@timestamp* ). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
   
  다음 이미지는 파일 공유 전달을 위해 구성된 구독에 대한 설정의 예제입니다.  
   

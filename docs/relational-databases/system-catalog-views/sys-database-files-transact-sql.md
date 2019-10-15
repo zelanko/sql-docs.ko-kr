@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (TRANSACT-SQL) | Microsoft Docs
+title: database_files (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915090"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313729"
 ---
-# <a name="sysdatabasefiles-transact-sql"></a>sys.database_files(Transact-SQL)
+# <a name="sysdatabase_files-transact-sql"></a>sys.database_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 자체에 저장되어 있는 각 데이터베이스 파일당 한 개의 행을 포함합니다. 이 뷰는 데이터베이스별 뷰입니다.  
@@ -35,20 +35,20 @@ ms.locfileid: "67915090"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|데이터베이스 내 파일의 ID입니다.|  
-|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드되었습니다.|  
+|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 @no__t에서 업그레이드 되었습니다 (2005 및 이전 버전 SQL Server에 유효).|  
 |**type**|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 만들어진 전체 텍스트 카탈로그의 파일을 포함함)<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 생성된 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
 |**type_desc**|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 생성된 전체 텍스트 카탈로그의 파일을 포함함)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전의 전체 텍스트 카탈로그)|  
 |**data_space_id**|**int**|값은 0 이상일 수 있습니다. 값 0은 데이터베이스 로그 파일을 나타내고 0보다 큰 값은 이 데이터 파일이 저장되는 파일 그룹의 ID를 나타냅니다.|  
 |**name**|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
-|**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. AlwaysOn에 의해 데이터베이스가 호스팅되면 [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)하십시오 **physical_name** 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽기 가능한 보조 데이터베이스의 올바른 파일 위치에 대해 쿼리할 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)합니다.|  
+|**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. 데이터베이스가 AlwaysOn [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)에 의해 호스트 되는 경우 **physical_name** 는 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽을 수 있는 보조 데이터베이스의 올바른 파일 위치에 대해 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)를 쿼리 합니다.|  
 |**state**|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
-|**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅샷의 경우 size는 스냅샷이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너에 대 한 크기는 현재 사용 된 컨테이너의 크기를 반영 합니다.|  
-|**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> Max_size는 FILESTREAM 파일 그룹 컨테이너에 대 한 컨테이너의 최대 크기를 반영합니다.<br /><br /> 참고는 무제한 로그 파일 크기를 사용 하 여 업그레이드 된 데이터베이스에 로그 파일의 최대 크기에 대 한-1를 보고 합니다.|  
-|**growth**|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> > 0 = 파일이 자동으로 증가 합니다.<br /><br /> is_percent_growth = 0인 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
+|**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅샷의 경우 size는 스냅샷이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너의 경우 크기는 컨테이너의 현재 사용 된 크기를 반영 합니다.|  
+|**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너의 경우 max_size는 컨테이너의 최대 크기를 반영 합니다.<br /><br /> 로그 파일의 크기가 무제한으로 업그레이드 된 데이터베이스는 로그 파일의 최대 크기에 대해-1을 보고 합니다.|  
+|**growth**|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> > 0 = 파일은 자동으로 증가 합니다.<br /><br /> is_percent_growth = 0인 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
 |**is_media_read_only**|**bit**|1 = 파일이 읽기 전용 미디어에 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기 미디어에 있습니다.|  
 |**is_read_only**|**bit**|1 = 파일이 읽기 전용으로 표시되어 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기로 표시되어 있습니다.|  
-|**is_sparse**|**bit**|1 = 스파스 파일입니다.<br /><br /> 0 = 스파스 파일이 아닙니다.<br /><br /> 자세한 내용은 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.|  
+|**is_sparse**|**bit**|1 = 스파스 파일입니다.<br /><br /> 0 = 스파스 파일이 아닙니다.<br /><br /> 자세한 내용은 [데이터베이스 스냅샷 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.|  
 |**is_percent_growth**|**bit**|1 = 파일의 증가 단위가 백분율입니다.<br /><br /> 0 = 페이지 단위의 절대 증가 크기입니다.|  
 |**is_name_reserved**|**bit**|1 = 삭제된 파일 이름(name 또는 physical_name)은 다음 로그 백업 후에만 다시 사용이 가능합니다. 데이터베이스에서 파일을 삭제할 때 논리적 이름은 다음 로그 백업까지 예약된 상태로 유지됩니다. 이 열은 전체 복구 모델 및 대량 로그 복구 모델에만 해당됩니다.|  
 |**create_lsn**|**numeric(25,0)**|파일이 생성된 시점의 LSN(로그 시퀀스 번호)입니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "67915090"
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
 
 ## <a name="examples"></a>예  
-다음 문은 각 데이터베이스 파일에 대 한 빈 공간의 양과 이름, 파일 크기를 반환합니다.
+다음 문은 각 데이터베이스 파일에 대 한 이름, 파일 크기 및 빈 공간의 크기를 반환 합니다.
 
 ```
 SELECT name, size/128.0 FileSizeInMB,
@@ -79,7 +79,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-사용 하는 경우에 자세한 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]를 참조 하세요 [Azure SQL Database V12에서 데이터베이스 크기 결정](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) SQL 고객 자문 팀 블로그.
+@No__t를 사용 하는 방법에 대 한 자세한 내용은 SQL 고객 자문 팀 블로그에서 [Azure SQL Database V12에서 데이터베이스 크기 확인](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 을 참조 하세요.
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
