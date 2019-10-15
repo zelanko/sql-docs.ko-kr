@@ -1,5 +1,5 @@
 ---
-title: sp_delete_proxy (TRANSACT-SQL) | Microsoft Docs
+title: sp_delete_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009196"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305103"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정한 프록시를 제거합니다.  
@@ -40,9 +40,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id` 제거할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_id = ] id` 제거할 프록시의 프록시 id 번호입니다. *Proxy_id* 는 **int**이며 기본값은 NULL입니다.  
   
-`[ @proxy_name = ] 'proxy_name'` 제거할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 제거할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -51,12 +51,12 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  없음  
   
 ## <a name="remarks"></a>설명  
- 어느 **@proxy_name** 하거나 **@proxy_id** 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
+ **@No__t-1proxy_name** 또는 **\@proxy_id** 를 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
  작업 단계가 지정된 프록시를 참조할 경우 해당 프록시는 삭제할 수 없으며 저장 프로시저가 실패합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로의 멤버만 합니다 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_delete_proxy**합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_delete_proxy**을 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Catalog application proxy`라는 프록시를 삭제합니다.  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

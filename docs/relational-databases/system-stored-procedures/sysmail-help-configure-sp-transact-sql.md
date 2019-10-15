@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_configure_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_help_configure_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909071"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304741"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 메일의 구성 설정을 표시합니다.  
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>인수  
  [ **@parameter_name** = ] **'***parameter_name***'**  
- 검색할 구성 설정의 이름입니다. 구성 설정의 값을 지정 하면 반환은 **@parameter_value** 출력 매개 변수입니다. 없는 경우 **@parameter_name** 을 지정 하면이 저장된 프로시저 결과 모든 인스턴스에서 데이터베이스 메일 구성 설정이 포함 된 집합을 반환 합니다.  
+ 검색할 구성 설정의 이름입니다. 이 값을 지정 하면 구성 설정의 값이 **\@parameter_value** OUTPUT 매개 변수에 반환 됩니다. 1parameter_name가 지정 **@no__t** 되지 않은 경우이 저장 프로시저는 인스턴스의 모든 데이터베이스 메일 구성 설정이 포함 된 결과 집합을 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없는 경우 **@parameter_name** 을 지정한 경우 결과 다음 열을 사용 하 여 집합을 반환 합니다.  
+ 1parameter_name를 지정 **@no__t** 하지 않으면는 다음 열이 포함 된 결과 집합을 반환 합니다.  
   
 ||||  
 |-|-|-|  
@@ -56,14 +56,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**description**|**nvarchar(256)**|구성 매개 변수에 대한 설명입니다.|  
   
 ## <a name="remarks"></a>설명  
- 저장된 프로시저 **sysmail_help_configure_sp** 인스턴스에 대 한 현재 데이터베이스 메일 구성 설정을 나열 합니다.  
+ **Sysmail_help_configure_sp** 저장 프로시저는 인스턴스에 대 한 현재 데이터베이스 메일 구성 설정을 나열 합니다.  
   
- 때를 **@parameter_name** 지정 된 출력 매개 변수가 제공 됩니다 있지만 **@parameter_value** ,이 저장된 프로시저는 출력이 없습니다.  
+ **@No__t-1parameter_name** 가 지정 되었지만 **\@parameter_value**에 대 한 출력 매개 변수가 제공 되지 않은 경우이 저장 프로시저는 출력을 생성 하지 않습니다.  
   
- 저장된 프로시저 **sysmail_help_configure_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 호출 해야 합니다 **msdb**합니다.  
+ **Sysmail_help_configure_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 호출 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저 기본의 멤버에 대 한 권한을 실행 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ 이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터베이스 메일 구성 설정 목록을 보여 줍니다.  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql 저장 프로시저 &#40;데이터베이스 메일&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

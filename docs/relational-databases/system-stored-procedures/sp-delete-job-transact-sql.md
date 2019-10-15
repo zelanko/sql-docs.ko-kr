@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) | Microsoft Docs
+title: sp_delete_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085335"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306274"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job(Transact-SQL)
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   작업을 삭제합니다.  
@@ -42,20 +42,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id` 삭제할 작업의 id 번호가입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id`은 삭제할 작업의 id 번호입니다. *job_id* 는 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'` 삭제할 작업의 이름이입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'`은 삭제할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  어느 *job_id* 하거나 *job_name*지정 해야 하며 둘 다 지정할 수 없습니다.  
+>  *Job_id* 또는 *job_name*중 하나를 지정 해야 합니다. 둘 다 지정할 수 없습니다.  
   
-`[ @originating_server = ] 'server'` 내부에 사용 합니다.  
+@no__t-내부 사용을 위한 0입니다.  
   
-`[ @delete_history = ] delete_history` 작업 기록 삭제 여부를 지정 합니다. *delete_history* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_history* 됩니다 **1**, 작업에 대 한 작업 기록이 삭제 됩니다. 때 *delete_history* 됩니다 **0**, 작업 기록 삭제 되지 않습니다.  
+`[ @delete_history = ] delete_history`은 작업에 대 한 기록을 삭제할지 여부를 지정 합니다. *delete_history* 는 **bit**이며 기본값은 **1**입니다. *Delete_history* 가 **1**이면 작업의 작업 기록이 삭제 됩니다. *Delete_history* 가 **0**이면 작업 기록이 삭제 되지 않습니다.  
   
- 작업이 삭제 된 기록을 삭제 되지 않습니다을 작업에 대 한 기록 정보는 표시 되지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 그래픽 사용자 인터페이스 작업 기록 하지만 정보에 여전히에 상주할는 **sysjobhistory**테이블에 **msdb** 데이터베이스입니다.  
+ 작업이 삭제 되 고 기록이 삭제 되지 않은 경우 작업에 대 한 기록 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 그래픽 사용자 인터페이스 작업 기록에 표시 되지 않지만 해당 정보는 msdb의 **sysjobhistory** 테이블에 계속 남아 있습니다.데이터베이스.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 연결 있는지 여부를 일정을 삭제 하려면이 작업에 다른 작업에 연결 되어 있지 않은 경우를 지정 합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_unused_schedule* 됩니다 **1**, 일정을 참조 하는 다른 작업이 없는 경우이 작업에 연결 된 일정이 삭제 됩니다. 때 *delete_unused_schedule* 됩니다 **0**, 일정은 삭제 되지 않습니다.  
+`[ @delete_unused_schedule = ] delete_unused_schedule`은 다른 작업에 연결 되어 있지 않은 경우이 작업에 연결 된 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 는 **bit**이며 기본값은 **1**입니다. *Delete_unused_schedule* 가 **1**인 경우 해당 일정을 참조 하는 다른 작업이 없으면이 작업에 연결 된 일정이 삭제 됩니다. *Delete_unused_schedule* 가 **0**인 경우 일정은 삭제 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  없음  
   
 ## <a name="remarks"></a>설명  
- 합니다 **@originating_server** 인수는 내부 용도로 예약 되어 있습니다.  
+ **@No__t-1originating_server** 인수는 내부용으로 예약 되어 있습니다.  
   
- 합니다 **@delete_unused_schedule** 인수는 자동으로 모든 작업에 연결 되어 있지 않은 일정을 제거 하 여 이전 버전의 SQL Server를 사용 하 여 이전 버전과 호환성을 제공 합니다. 이 매개 변수는 이전 버전과의 호환성 동작이 기본적으로 설정되어 있습니다. 작업에 연결 되어 있지 않은 일정을 유지 하기 위해 값을 제공 해야 합니다 **0** 으로 **@delete_unused_schedule** 인수입니다.  
+ **@No__t-1delete_unused_schedule** 인수는 작업에 연결 되지 않은 일정을 자동으로 제거 하 여 이전 버전의 SQL Server와의 호환성을 제공 합니다. 이 매개 변수는 이전 버전과의 호환성 동작이 기본적으로 설정되어 있습니다. 작업에 연결 되지 않은 일정을 유지 하려면 값 **0** 을 **\@delete_unused_schedule** 인수로 제공 해야 합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
@@ -99,8 +99,8 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

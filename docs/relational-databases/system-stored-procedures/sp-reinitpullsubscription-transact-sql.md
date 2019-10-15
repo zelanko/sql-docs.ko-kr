@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762345"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304918"
 ---
-# <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription(Transact-SQL)
+# <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   다음 번 배포 에이전트가 실행될 때 트랜잭션 끌어오기 또는 익명 구독을 다시 초기화하도록 표시합니다. 이 저장 프로시저는 끌어오기 구독 데이터베이스의 구독자에서 실행됩니다.  
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`은 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'`은 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 모든 구독을 다시 초기화 하도록 표시 하는 all입니다.  
+`[ @publication = ] 'publication'`은 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 모든 구독을 다시 초기화 하도록 표시 하는 all입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  다음에 배포 에이전트를 실행 하는 동안 구독자에서 **sp_reinitpullsubscription** 을 호출 하 여 구독을 다시 초기화할 수 있습니다.  
   
- 에 대해 **false** 값을 사용 하 여 만든 게시 **@immediate_sync** 에 대 한 구독은 구독자에서 다시 초기화할 수 없습니다.  
+ 2immediate_sync에 대해 **false** 값을 사용 하 여 만든 게시에 대 **@no__t** 한 구독은 구독자에서 다시 초기화할 수 없습니다.  
   
  구독자에서 **sp_reinitpullsubscription** 을 실행 하거나 게시자에서 **sp_reinitsubscription** 를 실행 하 여 끌어오기 구독을 다시 초기화할 수 있습니다.  
   

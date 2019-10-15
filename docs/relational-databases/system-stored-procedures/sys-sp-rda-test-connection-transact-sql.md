@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_test_connection (TRANSACT-SQL) | Microsoft Docs
+title: sp_rda_test_connection (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a63a88e24f62ba9d8a4a70107663ab2d585f4640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061787"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305156"
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sp_rda_test_connection (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  원격 Azure 서버에 SQL Server에서 연결을 테스트 하 고 데이터 마이그레이션을 방해할 수 있는 문제를 보고 합니다.  
+  SQL Server에서 원격 Azure 서버로의 연결을 테스트 하 고 데이터 마이그레이션을 방해할 수 있는 문제를 보고 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
--   에 대 한 값을 제공 하는 경우 **@database_name** 에 지정 된 데이터베이스가 스트레치 지원 하지만 값을 제공 해야 합니다 **@server_address** 합니다.  
+-   1database_name에 대 **@no__t**한 값을 제공 했지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되지 않은 경우에는 **\@server_address**에 대 한 값을 제공 해야 합니다.  
   
--   에 대 한 값을 제공 하는 경우 **@database_name** 에 지정 된 데이터베이스가 스트레치 사용 하도록 설정 하 고 값을 제공 하지 않아도 **@server_address** 합니다. 에 대 한 값을 제공 하는 경우 **@server_address** , 저장된 프로시저를 무시 하 고 스트레치 사용 데이터베이스를 사용 하 여 기존 Azure 서버를 이미 사용 하 여 연결 합니다.  
+-   1database_name에 대 **@no__t**한 값을 제공 하 고 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 된 경우에는 **\@server_address**에 대 한 값을 제공할 필요가 없습니다. 1server_address에 대 **@no__t**한 값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
   
  @azure_username = N'*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  
@@ -62,25 +62,25 @@ EXECUTE sys.sp_rda_test_connection
  사용자 이름 및 암호를 제공 하는 대신 스트레치 사용 데이터베이스에 저장 된 자격 증명의 이름을 제공할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 경우 **성공**, sp_rda_test_connection 심각도 EX_INFO 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) 오류를 반환 하 고 성공 코드를 반환 합니다.  
+ **성공**하는 경우 sp_rda_test_connection는 심각도 EX_INFO 및 성공 반환 코드를 포함 하는 오류 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED)을 반환 합니다.  
   
- 경우 **오류**, sp_rda_test_connection 심각도 EX_USER 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) 오류를 반환 하 고 오류 코드를 반환 합니다.  
+ **오류가 발생**하는 경우 sp_rda_test_connection는 심각도 EX_USER 및 오류 반환 코드를 포함 하는 오류 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED)을 반환 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|link_state|ssNoversion|값에 해당 하는 다음 값 중 하나 **link_state_desc**합니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버는 정상입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 오류가 SQL Server와 원격 Azure 서버 간의 연결이 되지 않습니다.<br />-   ERROR<br />     인증 문제, 연결 문제 또는 방화벽 문제가 되지 않는 오류로 인해 SQL Server와 원격 Azure 서버 간의 링크입니다.|  
-|error_number|ssNoversion|오류 수입니다. 오류가 없는 경우이 필드는 NULL입니다.|  
-|error_message|nvarchar(1024)|오류 메시지. 오류가 없는 경우이 필드는 NULL입니다.|  
+|link_state|int|**Link_state_desc**의 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar(32)|**Link_state**의 앞에 있는 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버가 정상입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽에서 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 오류가 발생 하 여 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-   ERROR<br />     인증 문제, 연결 문제 또는 방화벽 문제로 인 한 오류는 SQL Server와 원격 Azure 서버 간의 연결을 방지 하는 것입니다.|  
+|error_number|int|오류 수입니다. 오류가 없으면이 필드는 NULL입니다.|  
+|error_message|nvarchar(1024)|오류 메시지. 오류가 없으면이 필드는 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- Db_owner 권한이 필요합니다.  
+ Db_owner 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>원격 Azure 서버에 SQL Server에서 연결을 확인  
+### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server에서 원격 Azure 서버에 대 한 연결 확인  
   
 ```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
@@ -88,13 +88,13 @@ GO
   
 ```  
   
- 결과 SQL Server 원격 Azure 서버에 연결할 수를 표시 합니다.  
+ 결과는 SQL Server 원격 Azure 서버에 연결할 수 없음을 보여 줍니다.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<연결 관련 오류 번호 >*|*\<연결 관련 오류 메시지 >*|  
+|2|ERROR_NO_CONNECTION|*\< 연결 관련 오류 번호 >*|*\< 연결 관련 오류 메시지 >*|  
   
-### <a name="check-the-azure-firewall"></a>Azure 방화벽이 확인  
+### <a name="check-the-azure-firewall"></a>Azure 방화벽 확인  
   
 ```sql  
 USE <Stretch-enabled database>  
@@ -104,11 +104,11 @@ GO
   
 ```  
   
- 결과 Azure 방화벽의 SQL Server와 원격 Azure 서버 간의 링크를 방지 하는 것을 보여줍니다.  
+ 결과는 Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크를 차단 하 고 있음을 보여 줍니다.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<방화벽 관련 오류 번호 >*|*\<방화벽 관련 오류 메시지 >*|  
+|1|ERROR_AZURE_FIREWALL|*\< 방화벽 관련 오류 번호 >*|*\< 방화벽 관련 오류 메시지 >*|  
   
 ### <a name="check-authentication-credentials"></a>인증 자격 증명 확인  
   
@@ -120,13 +120,13 @@ GO
   
 ```  
   
- 결과 인증 실패의 SQL Server와 원격 Azure 서버 간의 링크를 방지 하는 것을 보여줍니다.  
+ 결과는 인증 실패로 인해 SQL Server와 원격 Azure 서버 간의 링크를 방지 하 고 있음을 보여 줍니다.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<인증 관련 오류 번호 >*|*\<인증 관련 오류 메시지 >*|  
+|3|ERROR_AUTH_FAILURE|*\< 인증 관련 오류 번호 >*|*\< 인증 관련 오류 메시지 >*|  
   
-### <a name="check-the-status-of-the-remote-azure-server"></a>원격 Azure 서버 상태를 확인 합니다.  
+### <a name="check-the-status-of-the-remote-azure-server"></a>원격 Azure 서버의 상태를 확인 합니다.  
   
 ```sql  
 USE <SQL Server database>  
@@ -139,7 +139,7 @@ GO
   
 ```  
   
- 결과 표시 연결 정상 상태이 고 지정된 된 데이터베이스에 대 한 Stretch Database 사용할 수 있습니다.  
+ 그러면 연결이 정상 상태 이며 지정 된 데이터베이스에 대 한 Stretch Database를 사용 하도록 설정할 수 있습니다.  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  

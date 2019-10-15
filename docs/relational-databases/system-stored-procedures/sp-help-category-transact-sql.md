@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055236"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304809"
 ---
-# <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
+# <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 클래스의 작업, 경고 또는 운영자에 관한 정보를 제공합니다.  
@@ -42,7 +42,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'` 에 대 한 정보를 요청 하는 클래스입니다. *클래스* 됩니다 **varchar(8)** , 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -50,23 +50,23 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
 |**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
   
-`[ @type = ] 'type'` 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 정보를 요청 하는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**LOCAL**|로컬 작업 범주입니다.|  
-|**다중-서버**|다중 서버 작업 범주입니다.|  
-|**NONE**|이외의 다른 클래스에 대 한 범주 **작업**합니다.|  
+|**다중 서버**|다중 서버 작업 범주입니다.|  
+|**NONE**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
-`[ @name = ] 'name'` 정보를 요청한 대상 범주의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @suffix = ] suffix` 지정 여부는 **category_type** 결과 집합의 열은 ID 또는 이름. *접미사* 됩니다 **비트**, 기본값은 **0**합니다. **1** 표시 된 **category_type** 이름으로 및 **0** ID로 표시  
+`[ @suffix = ] suffix`은 결과 집합의 **category_type** 열이 ID 인지 아니면 이름 인지를 지정 합니다. *접미사* 는 **bit**이며 기본값은 **0**입니다. **1** 은 **category_type** 를 이름으로 표시 하 고 **0** 은 ID로 표시 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 때 **@suffix** 됩니다 **0**를 **sp_help_category** 다음 결과 집합을 반환 합니다.  
+ **@No__t-1suffix** 가 **0**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
@@ -74,16 +74,16 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
- 때 **@suffix** 됩니다 **1**를 **sp_help_category** 다음 결과 집합을 반환 합니다.  
+ **@No__t-1suffix** 가 **1**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
-|**category_type**|**sysname**|범주의 유형입니다. 중 하나 **로컬**하십시오 **MULTI-SERVER**, 또는 **NONE**|  
+|**category_type**|**sysname**|범주의 유형입니다. **로컬**, **다중 서버**또는 **없음** 중 하나|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- **sp_help_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
+ **sp_help_category** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
  매개 변수가 지정되지 않은 경우에는 결과 집합이 모든 작업 범주에 관한 정보를 제공합니다.  
   
@@ -126,9 +126,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

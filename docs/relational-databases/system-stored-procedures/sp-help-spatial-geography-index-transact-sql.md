@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_spatial_geography_index (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5118392bff90cc9f58cdda66ace40b0b68f612a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085148"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304879"
 ---
-# <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index(Transact-SQL)
+# <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  에 대 한 이름 및 지정된 된 속성 집합에 대 한 값을 반환 된 **지리** 공간 인덱스입니다. 결과는 테이블 형식으로 반환됩니다. 인덱스의 핵심 속성 집합만 반환하거나 인덱스의 속성을 모두 반환하도록 선택할 수 있습니다.  
+  **지리** 공간 인덱스에 대해 지정 된 속성 집합의 이름과 값을 반환 합니다. 결과는 테이블 형식으로 반환됩니다. 인덱스의 핵심 속성 집합만 반환하거나 인덱스의 속성을 모두 반환하도록 선택할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>인수  
- 참조 [저장 프로시저 인수 및 공간 인덱스의 속성](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)합니다.  
+ [공간 인덱스 저장 프로시저의 인수 및 속성을](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)참조 하세요.  
   
 ## <a name="properties"></a>속성  
- 참조 [저장 프로시저 인수 및 공간 인덱스의 속성](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)합니다.  
+ [공간 인덱스 저장 프로시저의 인수 및 속성을](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  사용자가 이 프로시저에 액세스하려면 PUBLIC 역할을 할당받아야 합니다. 서버 및 개체에 대한 READ ACCESS 권한이 필요합니다.  
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>설명  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `sp_help_spatial_geography_index` 조사 하는 **지리** 공간 인덱스 **SIndx_SpatialTable_geography_col2** 테이블에 정의 된 **geography_col** 지정 된 쿼리 예제에 대 한 **@qs** 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
+ 다음 예에서는 `sp_help_spatial_geography_index`을 사용 하 여 **5qs @no__t**의 지정 된 쿼리 샘플에 대 한 **geography_col** 테이블에 정의 된 **geography** 공간 인덱스 **SIndx_SpatialTable_geography_col2** 를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
   
 ```  
 declare @qs geography  
@@ -61,7 +61,7 @@ declare @qs geography
 exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geography_col2', 0, @qs;  
 ```  
   
- 경계 상자는 **지리** 인스턴스는 전체 지구입니다.  
+ **Geography** 인스턴스의 경계 상자는 전체 지구입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
