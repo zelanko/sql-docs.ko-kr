@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974415"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006070"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 
 ON <br>
 [IMDB](../../relational-databases/in-memory-database.md) 기능군의 일부인 모든 인스턴스 수준 기능을 사용합니다. 이는 현재 [메모리 최적화 tempdb 메타데이터](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) 및 [하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)을 포함합니다. 적용하려면 다시 시작해야 합니다.
@@ -284,9 +284,11 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 이 문은 DDL 트리거를 지원하지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
-프로세스 선호도에 대해 ALTER  SETTINGS  권한이 필요하고, 진단 로그 및 장애 조치(failover)  클러스터 속성 옵션에 대해 ALTER  SETTINGS  및 VIEW  SERVER  STATE  권한이 필요하며,  HADR  클러스터 컨텍스트 옵션에 대해 CONTROL  SERVER  권한이 필요합니다.  
-  
-버퍼 풀 확장 옵션을 위해서는 ALTER SERVER STATE 권한이 필요합니다.  
+다음이 필요합니다.
+- 프로세스 선호도 옵션에 대한 `ALTER SETTINGS` 권한.
+- 장애 조치(Failover) 클러스터 속성 옵션에 대한 `ALTER SETTINGS` 및 `VIEW SERVER STATE` 권한.
+- HADR 클러스터 컨텍스트 옵션에 대한 `CONTROL SERVER` 권한.  
+- 버퍼 풀 확장 옵션에 대한 `ALTER SERVER STATE` 권한.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 리소스 DLL은 로컬 시스템 계정으로 실행됩니다. 따라서 로컬 시스템 계정에는 진단 로그 옵션의 지정된 경로에 대한 읽기 및 쓰기 권한이 있어야 합니다.  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. 두 개의 CPU가 있는 시스템에서 CPU 0에 선호도 설정  
 다음 예에서는 두 개의 CPU가 있는 컴퓨터에서 `CPU=0`에 선호도를 설정합니다. 다음 문이 실행되기 전의 내부 선호도 비트 마스크는 00입니다.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. 선호도를 AUTO로 설정  
 다음 예에서는 선호도를 `AUTO`로 설정합니다.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

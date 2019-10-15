@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713210"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261016"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -114,17 +114,22 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-명령문에 사용해야 하는 기본 MAXDOP 설정을 지정합니다. 0은 기본값이며 서버 구성이 대신 사용됨을 나타냅니다. 데이터베이스 범위에서 MAXDOP는 sp_configure로 서버 수준에서 **max degree of parallelism** 설정을 재정의합니다(0으로 설정되지 않은 한). 쿼리 힌트는 다른 설정을 필요로 하는 특정 쿼리를 조정하기 위해 DB 범위 MAXDOP를 여전히 재정의할 수 있습니다. 이러한 모든 설정은 작업 그룹에 대한 MAXDOP 설정으로 제한됩니다.
+문에 사용해야 하는 기본 **max degree of parallelism (MAXDOP)** 설정을 지정합니다. 0은 기본값이며 서버 구성이 대신 사용됨을 나타냅니다. 데이터베이스 범위에서 MAXDOP는 sp_configure로 서버 수준에서 **max degree of parallelism** 설정을 재정의합니다(0으로 설정되지 않은 한). 쿼리 힌트는 다른 설정을 필요로 하는 특정 쿼리를 조정하기 위해 데이터베이스 범위 MAXDOP를 여전히 재정의할 수 있습니다. 이러한 모든 설정은 [작업 그룹]()에 대해 설정된 MAXDOP로 제한됩니다.
 
-max degree of parallelism 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. SQL Server는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
+MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
+
+> [!NOTE]
+> **max degree of parallelism (MAXDOP)** 제한은 [작업](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)별로 설정됩니다. [요청](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)별 또는 쿼리 제한별로 수행되지 않습니다. 즉, 병렬 쿼리 실행 중에 단일 요청은 [스케줄러](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)에 할당되는 여러 작업을 생성할 수 있습니다. 자세한 내용은 [스레드 및 작업 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요. 
 
 인스턴스 수준에서 이 옵션을 설정하려면 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
 > [!NOTE]
-> Azure SQL Database에서 서버 수준의 **max degree of parallelism** 구성은 항상 0으로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources) 섹션을 참조하세요.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 서버 수준의 **max degree of parallelism** 구성은 항상 0으로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](#additional-resources) 섹션을 참조하세요.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하기 위해 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.
+> 쿼리 수준에서 이를 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.    
+> 서버 수준에서 이를 수행하려면 **max degree of parallelism (MAXDOP)** [서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 사용합니다.     
+> 작업 수준에서 이 작업을 수행하려면 **MAX_DOP** [리소스 관리자(Resource Governor) 작업 그룹 구성 옵션](../../t-sql/statements/create-workload-group-transact-sql.md)을 사용합니다.    
 
 PRIMARY
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>자세한 정보
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>자세한 정보   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [SQL Server의 "max degree of parallelism" 구성 옵션에 대한 권장 사항 및 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [온라인 인덱스 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

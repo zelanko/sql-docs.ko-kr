@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 10/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 8151b3853da3a19785de8dcaf8d31c2d6768c558
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816625"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173148"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -29,9 +29,9 @@ ms.locfileid: "71816625"
 
 |플랫폼|다운로드|릴리스 날짜| 버전 옵션 |
 |:---|:---|:---|:---|
-|Windows|[사용자 설치 관리자(권장)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2019년 10월 2일 |1.12.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2019년 10월 2일 |1.12.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|2019년 10월 2일 |1.12.0|
+|Windows|[사용자 설치 관리자(권장)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2019년 10월 8일 |1.12.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2019년 10월 8일 |1.12.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|2019년 10월 8일 |1.12.1|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하세요.
 

@@ -46,6 +46,8 @@
       href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
     - name: 설정 및 서비스 설치 +
       href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Transact-SQL 참조 +
+  href: 'https://docs.microsoft.com/sql/t-sql/?view=sql-server-2016'
 - name: Configuration Manager 도움말 +
   href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
 - name: 인덱스 디자인 가이드

@@ -1,6 +1,6 @@
 ---
 title: SQL Server의 최대 용량 사양 | Microsoft 문서
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687366"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008441"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687366"
 |연결당 잠금 수||서버당 최대 잠금 수||  
 |다음 인스턴스당 잠금 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||메모리로만 제한|이 값은 정적 잠금 할당용입니다. 동적 잠금은 메모리로만 제한됩니다.|  
 |중첩 저장 프로시저 수준 수||32|하나의 저장 프로시저가 65개 이상의 데이터베이스에 액세스하거나 인터리빙 시 3개 이상의 데이터베이스에 액세스할 경우 오류가 발생합니다.|  
-|중첩 하위 쿼리 수||32||  
+|중첩 하위 쿼리 수||32||    
+|중첩 트랜잭션||4,294,967,296||     
 |중첩 트리거 수준 수||32||  
 |테이블당 비클러스터형 인덱스 수||999||  
 |CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP 중 하나가 사용되는 경우 GROUP BY 절의 개별 식 수||32||  
