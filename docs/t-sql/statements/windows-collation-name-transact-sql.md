@@ -143,14 +143,14 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |바슈키르어(러시아)|Bashkir_100_|사용할 수 없음|
 |바스크어(바스크)|Latin1_General_100_|사용할 수 없음|
 |벵골어(인도)|Bengali_100_<sup>1</sup>|사용할 수 없음|
-|보스니아어(보스니아 및 헤르체고비나, 키릴 자모)|Bosnian_Cyrillic_100_|사용할 수 없음|
-|보스니아어(보스니아 및 헤르체고비나, 라틴 문자)|Bosnian_Latin_100_|사용할 수 없음|
+|보스니아어(보스니아 헤르체고비나, 키릴 자모)|Bosnian_Cyrillic_100_|사용할 수 없음|
+|보스니아어(보스니아 헤르체고비나, 라틴 문자)|Bosnian_Latin_100_|사용할 수 없음|
 |브르타뉴어(프랑스)|Breton_100_|사용할 수 없음|
 |중국어(마카오 특별 행정구)|Chinese_Traditional_Pinyin_100_|사용할 수 없음|
 |중국어(마카오 특별 행정구)|Chinese_Traditional_Stroke_Order_100_|사용할 수 없음|
 |중국어(싱가포르)|Chinese_Simplified_Stroke_Order_100_|사용할 수 없음|
 |코르시카어(프랑스)|Corsican_100_|사용할 수 없음|
-|크로아티아어(보스니아 및 헤르체고비나, 라틴 문자)|Croatian_100_|사용할 수 없음|
+|크로아티아어(보스니아 헤르체고비나, 라틴 문자)|Croatian_100_|사용할 수 없음|
 |다리어(아프가니스탄)|Dari_100_|사용할 수 없음|
 |영어(인도)|Latin1_General_100_|사용할 수 없음|
 |영어(말레이시아)|Latin1_General_100_|사용할 수 없음|
@@ -205,8 +205,8 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |남부 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|
 |남부 라프어(스웨덴)|Sami_Sweden_Finland_100_|사용할 수 없음|
 |산스크리트어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
-|세르비아어(보스니아 및 헤르체고비나, 키릴 자모)|Serbian_Cyrillic_100_|사용할 수 없음|
-|세르비아어(보스니아 및 헤르체고비나, 라틴 문자)|Serbian_Latin_100_|사용할 수 없음|
+|세르비아어(보스니아 헤르체고비나, 키릴 자모)|Serbian_Cyrillic_100_|사용할 수 없음|
+|세르비아어(보스니아 헤르체고비나, 라틴 문자)|Serbian_Latin_100_|사용할 수 없음|
 |세르비아어(세르비아, 키릴 자모)|Serbian_Cyrillic_100_|사용할 수 없음|
 |세르비아어(세르비아, 라틴 문자)|Serbian_Latin_100_|사용할 수 없음|
 |세소토 사 레보아어/북부 소토어(남아프리카)|Latin1_General_100_|사용할 수 없음|
