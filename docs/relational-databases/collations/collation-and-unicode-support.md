@@ -185,8 +185,8 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |벨로루시어(벨로루시)|0x0423|0x0419|Cyrillic_General_CI_AS|
 |벵골어(방글라데시)|0x0845|0x0445|서버 수준에서 사용할 수 없음|
 |벵골어(인도)|0x0445|0x0439|서버 수준에서 사용할 수 없음|
-|보스니아어(보스니아 및 헤르체고비나, 키릴 자모)|0x201a|0x201a|Latin1_General_CI_AI|
-|보스니아어(보스니아 및 헤르체고비나, 라틴 문자)|0x141a|0x141a|Latin1_General_CI_AI|
+|보스니아어(보스니아 헤르체고비나, 키릴 자모)|0x201a|0x201a|Latin1_General_CI_AI|
+|보스니아어(보스니아 헤르체고비나, 라틴 문자)|0x141a|0x141a|Latin1_General_CI_AI|
 |브르타뉴어(프랑스)|0x047e|0x047e|Latin1_General_CI_AI|
 |불가리아어(불가리아)|0x0402|0x0419|Cyrillic_General_CI_AS|
 |카탈로니아어(카탈로니아)|0x0403|0x0409|Latin1_General_CI_AS|
@@ -200,7 +200,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |중국어(대만)|0x30404|0x30404|Chinese_Taiwan_Bopomofo_CI_AS|
 |중국어(대만)|0x0404|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |코르시카어(프랑스)|0x0483|0x0483|Latin1_General_CI_AI|
-|크로아티아어(보스니아 및 헤르체고비나, 라틴 문자)|0x101a|0x041a|Croatian_CI_AS|
+|크로아티아어(보스니아 헤르체고비나, 라틴 문자)|0x101a|0x041a|Croatian_CI_AS|
 |크로아티아어(크로아티아)|0x041a|0x041a|Croatian_CI_AS|
 |체코어(체코)|0x0405|0x0405|Czech_CI_AS|
 |덴마크어(덴마크)|0x0406|0x0406|Danish_Norwegian_CI_AS|
@@ -275,7 +275,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |리투아니아어(리투아니아)|0x0427|0x0427|Lithuanian_CI_AS|
 |저지 소르비아어(독일)|0x082e|0x0409|Latin1_General_CI_AS|
 |룩셈부르크어(룩셈부르크)|0x046e|0x0409|Latin1_General_CI_AS|
-|마케도니아어(마케도니아, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|마케도니아어(북마케도니아)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |말레이어(브루나이)|0x083e|0x0409|Latin1_General_CI_AS|
 |말레이어(말레이시아)|0x043e|0x0409|Latin1_General_CI_AS|
 |말라얄람어(인도)|0x044c|0x0439|서버 수준에서 사용할 수 없음|
@@ -313,8 +313,8 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |남부 라프어(노르웨이)|0x183b|0x043b|Latin1_General_CI_AI|
 |남부 라프어(스웨덴)|0x1c3b|0x083b|Latin1_General_CI_AI|
 |산스크리트어(인도)|0x044f|0x0439|서버 수준에서 사용할 수 없음|
-|세르비아어(보스니아 및 헤르체고비나, 키릴 자모)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
-|세르비아어(보스니아 및 헤르체고비나, 라틴 문자)|0x181a|0x081a|Latin1_General_CI_AI|
+|세르비아어(보스니아 헤르체고비나, 키릴 자모)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
+|세르비아어(보스니아 헤르체고비나, 라틴 문자)|0x181a|0x081a|Latin1_General_CI_AI|
 |세르비아어(세르비아, 키릴 자모)|0x0c1a|0x0c1a|Latin1_General_CI_AI|
 |세르비아어(세르비아, 라틴 문자)|0x081a|0x081a|Latin1_General_CI_AI|
 |세소토 사 레보아어/북부 소토어(남아프리카)|0x046c|0x0409|Latin1_General_CI_AS|

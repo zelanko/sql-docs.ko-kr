@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710386"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041201"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710386"
 ## <a name="logins-and-object-ownership"></a>로그인 및 개체 소유권  
   
 ### <a name="are-logins-and-passwords-replicated"></a>로그인과 암호도 복제됩니까?  
- 아니요. DTS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
+ 아니요. SSIS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
   
--   CREATE TABLE 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
+-   `CREATE TABLE` 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스>.\<스키마>.\<개체>. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스>.\<스키마>.\<개체>. 스키마는 `CREATE SCHEMA` 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710386"
  인덱스를 다시 작성하는 메커니즘은 다양합니다. 이러한 메커니즘은 복제에 대한 특별한 고려 사항 없이 모두 사용 가능합니다. 한 가지 예외는 트랜잭션 게시의 테이블에는 기본 키가 필요하므로 이러한 테이블에서는 기본 키를 삭제하고 다시 만들 수 없다는 것입니다.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>게시 및 구독 데이터베이스에서 인덱스를 어떻게 추가하고 변경합니까?  
- 복제에 대한 특별한 고려 사항 없이 인덱스를 게시자나 구독자에 추가할 수 있습니다. 그러나 인덱스는 성능에 영향을 미칠 수 있습니다. CREATE INDEX와 ALTER INDEX는 복제되지 않으므로 예를 들어 게시자에서 인덱스를 추가하거나 변경하는 경우 구독자에 이러한 내용을 반영하려면 구독자에서도 동일한 작업을 수행해야 합니다.  
+ 복제에 대한 특별한 고려 사항 없이 인덱스를 게시자나 구독자에 추가할 수 있습니다. 그러나 인덱스는 성능에 영향을 미칠 수 있습니다. `CREATE INDEX` 및 `ALTER INDEX`는 복제되지 않으므로 예를 들어 게시자에서 인덱스를 추가하거나 변경하는 경우 구독자에 이러한 내용을 반영하려면 구독자에서 동일한 작업을 수행해야 합니다.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>복제에 관련된 데이터베이스의 파일은 어떻게 이동하며 이름은 어떻게 바꿉니까?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 데이터베이스 파일을 이동하거나 이름을 바꾸려면 해당 데이터베이스를 분리하고 다시 연결해야 했습니다. 그러나 복제된 데이터베이스는 분리할 수 없으므로 먼저 이러한 데이터베이스에서 복제를 제거해야 했습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 데이터베이스를 분리하거나 다시 연결하지 않고도 복제에 아무런 영향을 미치지 않으면서 파일을 이동하거나 이름을 바꿀 수 있습니다. 파일을 이동하고 이름을 바꾸는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
@@ -187,7 +187,7 @@ ms.locfileid: "71710386"
  먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 아티클을 삭제한 다음 `DROP <Object>`를 사용하여 데이터베이스에서 아티클을 삭제합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>게시된 테이블에서 열을 어떻게 추가하고 삭제합니까?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 열 추가 및 삭제를 비롯하여 게시된 개체에 대한 다양한 스키마 변경을 수행할 수 있습니다. 예를 들어 게시자에서 ALTER TABLE ... DROP COLUMN을 실행하면 해당 문이 구독자로 복제된 다음 실행되어 해당 열을 삭제합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 를 실행하는 구독자는 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)저장 프로시저를 통해 열을 추가 및 삭제할 수 있습니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 열 추가 및 삭제를 비롯하여 게시된 개체에 대한 다양한 스키마 변경을 수행할 수 있습니다. 예를 들어, 게시자에서 `ALTER TABLE … DROP COLUMN`을(를) 실행하면 해당 문이 구독자로 복제된 다음 실행되어 해당 열을 삭제합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 를 실행하는 구독자는 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)저장 프로시저를 통해 열을 추가 및 삭제할 수 있습니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
 ## <a name="replication-maintenance"></a>복제 유지 관리  
   

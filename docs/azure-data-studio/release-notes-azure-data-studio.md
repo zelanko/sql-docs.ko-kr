@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 10/08/2019
+ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816640"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041123"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="october-2019-hotfix"></a>2019년 10월(핫픽스)
+
+2019년 10월 8일 &nbsp; / &nbsp; 버전: 1.12.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 전자 필기장의 따옴표와 백슬래시가 올바르게 이스케이프되도록 문제가 해결되었습니다. |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019"></a>2019년 10월
 
