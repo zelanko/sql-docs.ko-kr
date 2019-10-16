@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264000"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041126"
 ---
 # <a name="data-classification"></a>데이터 분류
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -57,10 +57,10 @@ SQLRETURN SQLGetDescField(
  *BufferLength*  
  입력 출력 버퍼의 길이 (바이트)
 
- *StringLengthPtr* 출력 *Valueptr*에서 반환 하는 데 사용할 수 있는 총 바이트 수를 반환할 버퍼에 대 한 포인터입니다.
+ *StringLengthPtr* [Output] *valueptr*에서 반환할 수 있는 총 바이트 수를 반환 하는 버퍼에 대 한 포인터입니다.
  
 > [!NOTE]
-> 버퍼의 크기를 알 수 없는 경우 SQLGetDescField를 *NULL로 호출* 하 고 *StringLengthPtr*의 값을 검사 하 여이를 확인할 수 있습니다.
+> 버퍼의 크기를 알 수 없는 경우 *SQLGetDescField를 NULL로 호출* 하 고 *StringLengthPtr*의 값을 검사 하 여이를 확인할 수 있습니다.
  
 데이터 분류 정보를 사용할 수 없는 경우 *잘못 된 설명자 필드* 오류가 반환 됩니다.
 
@@ -69,23 +69,23 @@ SQLGetDescField에 대 한 호출이 성공적으로 완료 되 면,이에 따�
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` 및`cc cc` 는 가장 낮은 주소에서 가장 덜 중요 한 바이트로 저장 된 멀티 바이트 정수입니다.
+> `nn nn`, `tt tt` 및 `cc cc`는 가장 낮은 주소에서 가장 덜 중요 한 바이트로 저장 된 멀티 바이트 정수입니다.
 
-*`sensitivitylabel`* 및 *`informationtype`* 는 모두 형식입니다.
+*`sensitivitylabel`* 과 *`informationtype`* 은 모두 형식입니다.
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* 양식
+*`columnsensitivity`* 은 형식입니다.
 
  `nn nn [n sensitivityprops]`
 
-각 열 *(c)* 에 대해 *n* 4 바이트가 *`sensitivityprops`* 제공 됩니다.
+각 열 *(c)* 에 대해 *n* 4 바이트 *`sensitivityprops`* 이 제공 됩니다.
 
  `ss ss tt tt`
 
-s- *`sensitivitylabels`* 배열에 대 한 인덱스 `FF FF` 입니다 (레이블이 지정 되지 않은 경우).
+s- *@no__t* 배열에 대 한 인덱스입니다. 레이블이 지정 되지 않은 경우 `FF FF`입니다.
 
-레이블이 지정 되지 않은 경우 *`informationtypes`* 배열에 `FF FF` t 인덱스를 지정 합니다.
+*`informationtypes`* 배열에 t 인덱스 @no__t를 지정 합니다.
 
 
 <br><br>
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>코드 샘플
-데이터 분류 메타 데이터를 읽는 방법을 보여 주는 테스트 응용 프로그램입니다. Windows에서는를 사용 하 여 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` 컴파일하고 연결 문자열과 함께 실행할 수 있으며, 분류 된 열을 반환 하는 SQL 쿼리를 매개 변수로 사용할 수 있습니다.
+데이터 분류 메타 데이터를 읽는 방법을 보여 주는 테스트 응용 프로그램입니다. Windows에서는 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`을 사용 하 여 컴파일하고, 연결 문자열과 함께 실행 하 고, 분류 된 열을 매개 변수로 반환 하는 SQL 쿼리를 실행할 수 있습니다.
 
 ```
 #ifdef _WIN32
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>지원 되는 버전
+Microsoft ODBC Driver 17.2는 `FieldIdentifier`이 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)로 설정 된 경우 `SQLGetDescField`을 통해 검색 데이터 분류 정보를 허용 합니다. 
+
+Microsoft ODBC Driver 17.4.1.1부터 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 필드 식별자를 사용 하 여 `SQLGetDescField`을 통해 서버에서 지 원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서 지원 되는 데이터 분류 버전은 "2"로 설정 됩니다.
+
+ 
+
+17.4.2.1에서 시작 하는 경우 "1"로 설정 되 고 버전 드라이버가 지원 되는 SQL Server에 보고 하는 데이터 분류의 기본 버전이 도입 되었습니다. 새 연결 특성 `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400)을 사용 하 여 응용 프로그램에서 지원 되는 버전의 데이터 분류를 "1"에서 최대 지원까지 변경할 수 있습니다.  
+
+예: 
+
+버전을 설정 하려면이 호출은 SQLConnect 또는 SQLDriverConnect 호출 바로 앞에와 야 합니다.
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+현재 지원 되는 데이터 분류 버전의 값은 SQLGetConnectAttr 호출을 통해 retirved 수 있습니다. 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 
