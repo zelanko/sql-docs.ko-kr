@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952525"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010용 Reporting Services SharePoint 모드 설치
@@ -31,7 +31,7 @@ ms.locfileid: "71952525"
   
 
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
   
 -   > [!IMPORTANT]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 구성 및 관리하는 데 더 이상 필요하지 않으며 지원되지 않습니다. SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [SharePoint 서비스 응용 프로그램 Reporting Services 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)를 참조 하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "71952525"
   
 -   **SharePoint 2010 관리** 서비스를 Windows Server Manager에서 시작했는지 확인합니다.  
   
- 1 개 서버 설치 ![의 ssrs 구성]요소(../../../2014/sql-server/install/media/rs-deployment-1-server.gif "1 대의 서버 설치에서 ssrs 구성 요소")  
+ ![단일 서버 설치에 대 한 SSRS 구성 요소](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "단일 서버 설치에 대 한 SSRS 구성 요소")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>단일 서버 구성을 위한 데이터베이스 고려 사항  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71952525"
   
      **다음**을 클릭합니다.  
   
-7.  라이선스 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
+7.  라이선스 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용량 현황 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
   
      **다음**을 클릭합니다.  
   
@@ -86,19 +86,19 @@ ms.locfileid: "71952525"
   
      **다음**을 클릭합니다.  
   
-     ![설치 역할을 위한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할을 위한 SQL Server 기능 설치")  
+     ![설치 역할에 대 한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할에 대 한 SQL Server 기능 설치")  
   
 9. **기능 선택** 페이지에서 다음을 선택합니다.  
   
     -   **Reporting Services – SharePoint**  
   
-    -   **SharePoint 2010 제품용 Reporting Services 추가 기능**. ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고")추가 기능을 설치 하는 설치 마법사 옵션은 @no__t 2 릴리스와 새로 추가 되었습니다.  
+    -   **SharePoint 2010 제품용 Reporting Services 추가 기능**. ![참고](../../../2014/reporting-services/media/rs-fyinote.png "note") 추가 기능을 설치 하는 설치 마법사 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스와 새로 추가 되었습니다.  
   
     -   아직 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스가 없는 경우 전체 환경에 대해 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 를 선택할 수 있습니다.  
   
      **다음**을 클릭합니다.  
   
-     Sharepoint 모드의 ssrs 기능 ![선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "sharepoint 모드에 대 한 기능 선택")  
+     ![SharePoint 모드에 대 한 SSRS 기능 선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "SharePoint 모드에 대 한 SSRS 기능 선택")  
   
 10. **설치 규칙** 페이지에서 **다음** 을 클릭합니다. 경고 또는 차단 문제를 검토합니다.  
   
@@ -183,9 +183,9 @@ ms.locfileid: "71952525"
     > [!WARNING]  
     >  @No__t-0 옵션이 목록에 나타나지 않으면 **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
-4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
+4.  **SQL Server Reporting Services 서비스 애플리케이션 만들기** 페이지에서 애플리케이션의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
   
-5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 새 애플리케이션 풀의 이름을 서비스 애플리케이션의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
+5.  **애플리케이션 풀** 섹션에서 애플리케이션에 대한 새 애플리케이션 풀을 만듭니다(권장). 새 애플리케이션 풀의 이름을 서비스 애플리케이션의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
   
      애플리케이션 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
   
@@ -193,15 +193,15 @@ ms.locfileid: "71952525"
   
 7.  **데이터베이스 이름** 에서 기본값은 `ReportingService_<guid>`이고 고유한 데이터베이스 이름입니다. 새 값을 입력하는 경우 고유한 값을 입력합니다.  
   
-8.  **데이터베이스 인증**에서 기본값은 Windows 인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint 관리자 설명서에서 참조하십시오.  
+8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
-9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
+9. **웹 애플리케이션 연결** 섹션에서 현재 Reporting Services 서비스 애플리케이션에 의해 액세스하기 위해 프로비전 대상 웹 애플리케이션을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
   
 10. **확인**을 클릭합니다.  
   
 11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
- Powershell ![관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "powershell 관련 콘텐츠") powershell을 사용 하 여 @no__t 2 서비스 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 [powershell을 사용 하 여 Reporting Services 서비스 응용 프로그램 만들기를](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)참조 하세요.  
+ ![PowerShell 관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") PowerShell을 사용 하 여 @no__t 1 서비스 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 [powershell을 사용 하 여 Reporting Services 서비스 응용 프로그램 만들기를](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)참조 하세요.  
   
 
   
@@ -235,7 +235,7 @@ ms.locfileid: "71952525"
 
   
 ### <a name="configure-e-mail-for-a-service-application"></a>서비스 애플리케이션에 대한 전자 메일 구성  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 애플리케이션에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
   
 
   
@@ -245,9 +245,9 @@ ms.locfileid: "71952525"
 
   
 ### <a name="activate-the-file-sync-feature"></a>파일 동기화 기능 활성화  
- 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)를 참조하세요.  
+ 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능을 활성화](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [SQL Server 2012의 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
