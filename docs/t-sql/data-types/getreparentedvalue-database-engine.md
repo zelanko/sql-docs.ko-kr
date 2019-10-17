@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077959"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278362"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ _oldRoot_에서 _newRoot_로 노드를 이동하여 트리를 수정하는 데 �
 ## <a name="examples"></a>예  
   
 ### <a name="a-comparing-two-node-locations"></a>1\. 두 노드 위치 비교  
-다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 **@NewParent** 노드의 하위 항목이 되도록 노드를 이동하는 경우 노드의 **hierarchyid**가 어떻게 달라지는지 보여 줍니다. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
+다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 **\@NewParent** 노드의 하위 항목이 되도록 노드를 이동하는 경우 노드의 **hierarchyid**가 어떻게 달라지는지 보여 줍니다. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

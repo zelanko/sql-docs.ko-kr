@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e0f4646d6c67931bbbede9b44b97a52251b1b024
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a46f94c1a6c490e157dfb0b90b2b5297afb6526f
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809915"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174865"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE(Transact-SQL)
 
@@ -37,7 +37,15 @@ DBCC DROPRESULTSETCACHE
 ## <a name="permissions"></a>사용 권한
 
 DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.
-  
+
+## <a name="remarks"></a>Remarks
+
+이 명령은 모든 쿼리에 대한 결과 집합 캐시를 비웁니다.  
+
+데이터베이스에 대한 결과 집합 캐시 기능을 꺼도 캐시된 결과가 모두 삭제됩니다.  
+
+결과 집합 캐싱을 사용하도록 설정된 데이터베이스를 일시 중지하면 캐시된 결과가 삭제되지 않습니다.  
+
 ## <a name="see-also"></a>관련 항목:
 
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

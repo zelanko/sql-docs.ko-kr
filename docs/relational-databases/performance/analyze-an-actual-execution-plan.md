@@ -1,7 +1,7 @@
 ---
 title: 실제 실행 계획 분석 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219583"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289326"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>실제 실행 계획 분석
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 계획 분석 기능을 사용하여 실제 그래픽 실행 계획 분석을 설명합니다. 
+
+이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 계획 분석 기능을 사용하여 실제 그래픽 실행 계획을 분석하는 방법에 대해 설명합니다. 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4부터 사용할 수 있습니다. 일반적으로 [최신 버전의 SSMS를 설치](../../ssms/download-sql-server-management-studio-ssms.md)하는 것이 좋습니다.
 
 > [!NOTE]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행된 후 실제 실행 계획이 실행됩니다. 이 때문에 실제 실행 계획에는 실제 행 수, 리소스 사용량 메트릭 및 런타임 경고(있는 경우)와 같은 런타임 정보가 포함됩니다. 자세한 내용은 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.

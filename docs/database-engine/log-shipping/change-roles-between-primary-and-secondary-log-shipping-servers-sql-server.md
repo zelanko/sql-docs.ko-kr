@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057924"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008451"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ ms.locfileid: "68057924"
   
     3.  **보조 데이터베이스 설정** 대화 상자에서 **아니요, 보조 데이터베이스가 초기화되었습니다.** 를 선택합니다.  
   
-4.  이전 로그 전달 구성에서 로그 전달 모니터링을 사용하도록 설정한 경우에는 새 로그 전달 구성을 모니터링하도록 로그 전달 모니터링을 다시 구성합니다.  *database_name* 을 사용자 데이터베이스 이름으로 바꾸어 다음 명령을 실행합니다.  
+4.  이전 로그 전달 구성에서 로그 전달 모니터링을 사용하도록 설정한 경우에는 새 로그 전달 구성을 모니터링하도록 로그 전달 모니터링을 다시 구성합니다.  threshold_alert_enabled를 1로 설정하면 restore_threshold가 초과될 때 경고가 발생하도록 지정됩니다. *database_name* 을 사용자 데이터베이스 이름으로 바꾸어 다음 명령을 실행합니다.  
   
     1.  **새 주 서버에서 다음을 수행합니다.**  
   
          다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68057924"
   
          다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

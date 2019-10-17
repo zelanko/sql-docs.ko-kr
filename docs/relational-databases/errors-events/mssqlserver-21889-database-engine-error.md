@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3a5d0271f1adc4c402518422997e6f7f7c3db8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056695"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251491"
 ---
-# <a name="mssqlserver21889"></a>MSSQLSERVER_21889
+# <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "68056695"
 게시자 데이터베이스를 호스트하려면 SQL Server 인스턴스가 복제 게시자여야 합니다. **sp_validate_redirected_publisher**는 원격 서버에서 **sp_helpdistributor**를 호출하여 서버가 복제 게시자인지 여부를 확인합니다. 이 오류는 SQL Server의 대상 인스턴스가 복제 게시자가 아님을 나타냅니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-게시자 데이터베이스를 호스트하는 SQL Server 인스턴스에서 **sp_adddistributor**를 실행합니다. **sp_adddistributor**를 실행할 때 올바른 배포자를 지정합니다. *@password* 매개 변수에 대해 **sp_adddistributor**가 배포자에서 처음 실행될 때 사용된 것과 동일한 값을 사용합니다.  
+게시자 데이터베이스를 호스트하는 SQL Server 인스턴스에서 **sp_adddistributor**를 실행합니다. **sp_adddistributor**를 실행할 때 올바른 배포자를 지정합니다. *\@password* 매개 변수에 대해 **sp_adddistributor**가 배포자에서 처음 실행될 때 사용된 것과 동일한 값을 사용합니다.  
   

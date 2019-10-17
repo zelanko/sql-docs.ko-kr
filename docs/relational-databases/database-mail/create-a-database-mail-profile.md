@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211251"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278316"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,35 +93,35 @@ ms.locfileid: "70211251"
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@description* = '*설명*'  
+     *\@description* = '*설명*'  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@description* 은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고 *\@description*은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@account_name* = '*계정 이름*'  
+     *\@account_name* = '*계정 이름*'  
   
-     *@sequence_number* = '*프로필 내 계정의 시퀀스 번호* '  
+     *\@sequence_number* = '*프로필 내 계정의 시퀀스 번호.* '  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@account_name* 은 프로필에 추가할 계정의 이름이며, *@sequence_number* 는 프로필에서 계정이 사용되는 순서를 결정합니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고, *\@account_name*은 프로필에 추가할 계정의 이름이며, *\@sequence_number*는 프로필에서 계정이 사용되는 순서를 결정합니다.  
   
 -   이 프로필을 사용하여 메일을 보내는 각 데이터베이스 역할 또는 사용자에게 프로필에 대한 액세스 권한을 부여합니다. 이렇게 하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@ principal_name* = '*데이터베이스 사용자 또는 역할의 이름*'  
+     *\@principal_name* = '*데이터베이스 사용자 또는 역할의 이름*'  
   
-     *@is_default* = '*기본 프로필 상태* '  
+     *\@is_default* = '*기본 프로필 상태* '  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@principal_name* 은 데이터베이스 사용자 또는 역할의 이름이며, *@is_default* 는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고, *\@principal_name*은 데이터베이스 사용자 또는 역할의 이름이며, *\@is_default*는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
   
  다음 예에서는 데이터베이스 메일 계정을 만들고, 데이터베이스 메일 프라이빗 프로필을 만든 다음 프로필에 계정을 추가하며, **msdb** 데이터베이스의 **DBMailUsers** 데이터베이스 역할에 해당 프로필에 대한 액세스 권한을 부여합니다.  
   
@@ -161,35 +161,35 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@description* = '*설명*'  
+     *\@description* = '*설명*'  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@description* 은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고 *\@description*은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@account_name* = '*계정 이름*'  
+     *\@account_name* = '*계정 이름*'  
   
-     *@sequence_number* = '*프로필 내 계정의 시퀀스 번호* '  
+     *\@sequence_number* = '*프로필 내 계정의 시퀀스 번호.* '  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@account_name* 은 프로필에 추가할 계정의 이름이며, *@sequence_number* 는 프로필에서 계정이 사용되는 순서를 결정합니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고, *\@account_name*은 프로필에 추가할 계정의 이름이며, *\@sequence_number*는 프로필에서 계정이 사용되는 순서를 결정합니다.  
   
 -   공용 액세스를 허용하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*프로필 이름*'  
+     *\@profile_name* = '*프로필 이름*'  
   
-     *@ principal_name* = '**public** 또는 **0**'  
+     *\@ principal_name* = '**public** 또는 **0**'  
   
-     *@is_default* = '*기본 프로필 상태* '  
+     *\@is_default* = '*기본 프로필 상태* '  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@principal_name* 은 이 프로필이 공용 프로필임을 나타내며, *@is_default* 는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
+     여기서 *\@profile_name*은 프로필의 이름이고, *\@principal_name*은 이 프로필이 공용 프로필임을 나타내며, *\@is_default*는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
   
  다음 예에서는 데이터베이스 메일 계정을 만들고, 데이터베이스 메일 프라이빗 프로필을 만든 다음 프로필에 계정을 추가하며, 프로필에 대한 퍼블릭 액세스 권한을 부여합니다.  
   

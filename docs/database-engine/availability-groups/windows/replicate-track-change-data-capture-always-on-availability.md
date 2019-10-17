@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014345"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251965"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014345"
     ```  
   
     > [!NOTE]  
-    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용하거나 사용하지 않도록 설정하려면 [sp_update_job&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)의 *@enabled* 옵션을 사용합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)에서 지원됩니다.  
+    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용하지 않거나 사용하도록 설정하려면 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)의 *\@enabled* 옵션을 사용합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)에서 지원됩니다.  
   
 -   **Always On 주 데이터베이스 복제본에 CDC 역할 추가**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014345"
   
      가용성 그룹 수신기 이름 또는 명시적인 노드 이름을 사용하여 보조 복제본을 찾을 수 있습니다. 가용성 그룹 수신기 이름을 사용하는 경우 액세스가 모든 적합한 보조 복제본으로 전송됩니다.  
   
-     보조 복제본에 액세스하기 위해 **sp_addlinkedserver** 를 사용하여 연결된 서버를 만들 경우, 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 *@datasrc* 매개 변수가 사용되고 읽기 전용 의도를 지정하기 위해 *@provstr* 매개 변수가 사용됩니다.  
+     보조 복제본에 액세스하기 위해 **sp_addlinkedserver**를 사용하여 연결된 서버를 만들 경우, 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 *\@datasrc* 매개 변수가 사용되고 읽기 전용 의도를 지정하기 위해 *\@provstr* 매개 변수가 사용됩니다.  
   
     ```sql  
     EXEC sp_addlinkedserver   

@@ -17,20 +17,22 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e5a258436c521eec380114a42e68c3f20b75fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025004"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289318"
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 최대 병렬 처리 수준을 정의하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 이 설정을 수정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 이상을 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 여러 프로세서를 사용하여 인덱스 문과 관련된 검색, 정렬 및 인덱스 작업을 수행할 수 있습니다. 단일 인덱스 문 실행에 사용되는 프로세서 수는 [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션, 현재 작업 및 인덱스 통계에 따라 결정됩니다. max degree of parallelism 옵션은 병렬 계획 실행에 사용할 프로세서의 최대 개수를 결정합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시스템에서 진행 중인 작업이 많음을 감지하면 문이 실행되기 전에 인덱스 작업의 병렬 처리 수준이 자동으로 감소됩니다. 분할되지 않은 인덱스의 선행 키 열의 고유 값 수가 제한되거나 각 고유 값의 빈도가 상당히 다양한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 병렬 처리 수준을 줄일 수도 있습니다.  
+이 항목에서는 최대 병렬 처리 수준을 정의하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 이 설정을 수정하는 방법에 대해 설명합니다. 
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 이상을 실행하는 다중 프로세서 시스템에서는 다른 쿼리와 마찬가지로 인덱스 문이 여러 프로세서(CPU)를 사용하여 인덱스 문과 관련된 검색, 정렬 및 인덱스 작업을 수행할 수 있습니다. 단일 인덱스 문 실행에 사용되는 CPU 수는 [최대 병렬 처리 수준](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 서버 구성 옵션, 현재 작업 및 인덱스 통계에 따라 결정됩니다. max degree of parallelism 옵션은 병렬 계획 실행에 사용할 프로세서의 최대 개수를 결정합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시스템에서 진행 중인 작업이 많음을 감지하면 문이 실행되기 전에 인덱스 작업의 병렬 처리 수준이 자동으로 감소됩니다. 분할되지 않은 인덱스의 선행 키 열의 고유 값 수가 제한되거나 각 고유 값의 빈도가 상당히 다양한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 병렬 처리 수준을 줄일 수도 있습니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)를 참조하세요. 
   
 > [!NOTE]  
->  병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. 자세한 내용은 SQL Server 2016 버전에서 지원하는 기능을 참조하세요.  
+> 병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -62,24 +64,22 @@ ms.locfileid: "68025004"
   
 -   다음은 병렬 인덱스 실행 및 MAXDOP 인덱스 옵션이 적용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
-    -   CREATE  INDEX  
+    -   [CREATE  INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
-    -   ALTER  INDEX  REBUILD  
+    -   [ALTER INDEX(...) REBUILD](../../t-sql/statements/alter-index-transact-sql.md)  
   
-    -   DROP INDEX(클러스터형 인덱스에만 해당)  
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)(클러스터형 인덱스에만 해당)  
   
-    -   ALTER TABLE ADD (인덱스) CONSTRAINT  
+    -   [ALTER TABLE ADD (인덱스) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md) 
   
-    -   ALTER TABLE DROP (클러스터형 인덱스) CONSTRAINT  
+    -   [ALTER TABLE DROP (클러스터형 인덱스) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
   
--   ALTER INDEX REORGANIZE 문에서 MAXDOP 인덱스 옵션을 지정할 수 없습니다.  
+-   `ALTER INDEX (...) REORGANIZE` 문에서는 MAXDOP 인덱스 옵션을 지정할 수 없습니다.  
   
--   쿼리 최적화 프로그램에서 작성 작업에 병렬 처리 수준을 적용할 경우 정렬이 필요한 분할 인덱스 작업의 메모리 요구 사항이 늘어날 수 있습니다. 병렬 처리 수준이 높을수록 메모리 요구 사항이 늘어납니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
+-   쿼리 최적화 프로그램에서 작성 작업에 병렬 처리 수준을 적용할 경우 정렬이 필요한 분할 인덱스 작업의 메모리 요구 사항이 늘어날 수 있습니다. 병렬 처리 수준이 높을수록 메모리 요구 사항이 늘어납니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
-  
-####  <a name="Permissions"></a> 사용 권한  
- 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
+###  <a name="Security"></a> <a name="Permissions"></a> 권한  
+ 테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68025004"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
@@ -133,7 +133,7 @@ ms.locfileid: "68025004"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
@@ -141,7 +141,12 @@ ms.locfileid: "68025004"
     WITH (MAXDOP=8);  
     GO  
     ```  
-  
- 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
-  
-  
+ 
+## <a name="see-also"></a>관련 항목:
+[쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
+[CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)      
+[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)      
+[ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)       
+[ALTER TABLE index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)    

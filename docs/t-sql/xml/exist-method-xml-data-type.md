@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051307"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278149"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ select @f;
   
 -   비교를 위해 값을 **xs:date** 형식으로 캐스팅하는 데 `cast as xs:date?` 코드가 사용됩니다.  
   
--   **@Somedate** 특성의 값은 형식화되지 않습니다. 이 값을 비교할 때 암시적으로 오른쪽에 있는 형식인 **xs:date** 형식으로 캐스팅됩니다.  
+-   **\@Somedate** 특성의 값은 형식화되지 않습니다. 이 값을 비교할 때 암시적으로 오른쪽에 있는 형식인 **xs:date** 형식으로 캐스팅됩니다.  
   
 -   **cast as xs:date()** 대신 **xs:date()** 생성자 함수를 사용할 수 있습니다. 자세한 내용은 [생성자 함수&#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)를 참조하세요.  
   

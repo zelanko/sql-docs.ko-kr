@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073732"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72162563"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68073732"
 1.  Administrators 그룹의 멤버로 Windows에 로그인한 다음 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 엽니다.  
 2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
 3.  등록된 서버가 표시되지 않으면 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.
-4.  등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 선택한 상태로 **데이터베이스 엔진**을 확장하고 **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **로컬 서버 등록**을 클릭합니다. 컴퓨터에 설치된 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 표시됩니다. 기본 인스턴스의 이름은 지정되지 않으며 컴퓨터 이름으로 표시됩니다. 명명된 인스턴스는 컴퓨터 이름 다음에 백슬래시(\\)가 오고 마지막으로 인스턴스 이름이 붙는 형식으로 표시됩니다. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]의 경우 설치하는 동안 이름을 변경하지 않은 한 인스턴스 이름이 *<computer_name>* \sqlexpress로 지정됩니다.  
+4.  등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 선택한 상태로 **데이터베이스 엔진**을 확장하고 **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **로컬 서버 등록**을 클릭합니다. **로컬 서버 그룹**을 확장하여 표시된 컴퓨터에 설치된 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 모든 인스턴스를 확인합니다. 기본 인스턴스의 이름은 지정되지 않으며 컴퓨터 이름으로 표시됩니다. 명명된 인스턴스는 컴퓨터 이름 다음에 백슬래시(\\)가 오고 마지막으로 인스턴스 이름이 붙는 형식으로 표시됩니다. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]의 경우 설치하는 동안 이름을 변경하지 않은 한 인스턴스 이름이 *<computer_name>* \sqlexpress로 지정됩니다.  
 
 [!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

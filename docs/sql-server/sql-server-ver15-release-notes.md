@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326124"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041194"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15
     - Windows Server 2016 이상. 추가 요구 사항은 [SQL Server 설치 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
     - Microsoft .NET Framework 4.6.2. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.
     - Linux의 경우 [Linux - 지원되는 플랫폼](../linux/sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>SSMS 18.x가 설치된 경우 SQL Server 설치가 실패할 수 있음
+
+- **문제 및 고객에게 미치는 영향**: 다음과 같은 조건에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 설치가 실패합니다.
+  1. SSMS(SQL Server Management Studio) 버전 18.0, 18.1, 18.2 또는 18.3이 서버에 설치되어 있습니다.
+  1. 이동식 미디어에서 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 설치를 시도합니다. 예를 들어 설치 미디어가 DVD입니다.
+
+- **해결 방법**:
+  1. SSMS 18.3.1보다 이전 버전의 SSMS를 제거합니다.
+  1. 최신 버전의 SSMS(18.3.1 이상)를 설치합니다. 최신 버전은 [SSMS 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]를 정상적으로 설치합니다.
+
+  >[!NOTE]
+  >제거가 필요합니다.
+
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 후보.
 
 ## <a name="updated-compiler"></a>컴파일러 업데이트
 
@@ -111,7 +127,7 @@ Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15
 - **해결 방법**:  최신 VC 런타임 2013(x86)를 설치하세요.
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [수동으로 설치](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [수동으로 설치](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -132,6 +148,10 @@ Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15
 - **해결 방법**: MDS 포털을 열고 리소스로 직접 이동합니다.
 
 - **적용 대상**: SQL Server 2019 릴리스 후보
+
+## <a name="machine-learning-services"></a>Machine Learning Services
+
+SQL Server Machine Learning Services의 문제는 [SQL Server Machine Learning Services의 알려진 문제](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)를 참조하세요.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

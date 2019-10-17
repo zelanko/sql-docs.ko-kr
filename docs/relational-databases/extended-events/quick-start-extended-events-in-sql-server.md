@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016849"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251539"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -410,7 +410,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 확장 이벤트의 효과적인 사용에 대한 많은 시나리오를 제공합니다. 다음 문서는 쿼리 중 발생한 잠금과 관련된 예제 시나리오를 제공합니다.
 
 
-다음 문서에서는 잠금 평가에 대한 이벤트 세션 시나리오에 대해 설명합니다. 또한 이 문서에서는 **@dbid** 사용 및 동적 `EXECUTE (@YourSqlString)`사용에 대한 고급 기술도 보여 줍니다.
+다음 문서에서는 잠금 평가에 대한 이벤트 세션 시나리오에 대해 설명합니다. 또한 이 문서에서는 **\@dbid** 사용 및 동적 `EXECUTE (@YourSqlString)` 사용에 대한 고급 기술도 보여 줍니다.
 
 - [가장 많은 잠금이 발생한 개체 찾기](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 이 시나리오에서는 사용자에게 표시하기 전에 원시 이벤트 데이터를 처리하는 대상 package0.histogram을 사용합니다.

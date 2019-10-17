@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051263"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278166"
 ---
 # <a name="query-method-xml-data-type"></a>query() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ XQuery
 이 섹션에서는 **xml** 데이터 형식의 query() 메서드를 사용하는 예를 보여 줍니다.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>1\. xml 형식 변수에 대해 query() 메서드 사용  
-다음 예에서는 **xml** 형식의 **@myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
+다음 예에서는 **xml** 형식의 **\@myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
   
 이 쿼리는 <`ProductDescription`> 요소의 <`Features`> 자식 요소를 검색합니다.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087171"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173656"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>2단원: 명명 표준 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68087171"
   
 2.  **새 조건 만들기** 대화 상자의 **이름** 상자에 **Finance Tables**를 입력합니다.  
     1. **패싯** 목록에서 **여러 부분으로 구성된 이름**을 선택합니다. 
-    1. **식** 영역의 **필드** 상자에서 **@Name** 을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 ```'fintbl%'```를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.
+    1. **식** 영역의 **필드** 상자에서 **\@이름**을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 ```'fintbl%'```를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.
     1. **설명** 페이지에서 **Finance table names must begin with fintbl**을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
 
     ![Finance Tables 조건](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

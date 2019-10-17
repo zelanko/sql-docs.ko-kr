@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988466"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251934"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988466"
   
  배포 데이터베이스는 SQL Server 2012 및 SQL Server 2014를 사용하여 가용성 그룹에 배치할 수 없습니다. 배포 데이터베이스를 가용성 그룹에 배치하는 것은 SQL 2016 이상에서 지원됩니다. 자세한 내용은 [가용성 그룹에서 배포 데이터베이스 구성](../../../relational-databases/replication/configure-distribution-availability-group.md)을 참조하세요.
   
-1.  배포자에서 배포를 구성합니다. 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *@password* 매개 변수를 사용하여 원격 게시자에서 배포자에 연결할 때 사용될 암호를 식별합니다. 암호는 원격 배포자를 설정할 때 각 원격 게시자에서도 필요합니다.  
+1.  배포자에서 배포를 구성합니다. 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *\@password* 매개 변수를 사용하여 원격 게시자가 배포자에 연결할 때 사용될 암호를 식별합니다. 암호는 원격 배포자를 설정할 때 각 원격 게시자에서도 필요합니다.  
   
     ```  
     USE master;  

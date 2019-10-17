@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211299"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252190"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211299"
  WAITFOR  
  현재 메시지가 없으면 메시지가 큐에 도착할 때까지 GET CONVERSATION GROUP 문이 대기하도록 지정합니다.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  GET CONVERSATION GROUP 문에서 반환한 대화 그룹 ID를 저장하는 데 사용되는 변수입니다. 변수는 **uniqueidentifier** 형식이어야 합니다. 사용할 수 있는 대화 그룹이 없으면 변수가 NULL로 설정됩니다.  
   
  FROM  
@@ -72,7 +72,7 @@ ms.locfileid: "70211299"
  대화 그룹을 가져올 큐의 이름입니다.  
   
  TIMEOUT *제한 시간*  
- 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout*이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *@conversation_group_id* 변수를 NULL로 설정합니다.  
+ 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout*이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *\@conversation_group_id* 변수를 NULL로 설정합니다.  
   
 ## <a name="remarks"></a>Remarks  
   

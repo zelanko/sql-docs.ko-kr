@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 50f62a2b8253ee517dba48e982ecce2eaee58c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3722a6860fea48f32fd2528435b9929cc3bd689
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987351"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278228"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
 2.  PARAMETERIZATION FORCED 쿼리 힌트를 지정하여 매개 변수가 있는 쿼리 형식에 대한 계획 지침을 만듭니다.  
 
+    > [!IMPORTANT]  
+    >  쿼리를 매개 변수화하는 과정의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 리터럴 값 및 크기에 따라 리터럴 값을 바꾸는 매개 변수에 데이터 유형을 할당합니다. 같은 프로세스가 **sp_get_query_template** 의 **\@stmt** 출력 매개 변수에 전달된 상수 리터럴 값에서 발생합니다. **sp_create_plan_guide\@ 의** **params** 인수에 지정된 데이터 유형이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 매개 변수화된 쿼리의 데이터 유형과 일치해야 하므로 쿼리에 사용할 수 있는 매개 변수 값의 전체 범위를 포함하는 계획 지침을 두 개 이상 만들어야 할 수 있습니다.  
+
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    > [!IMPORTANT]  
-    >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
-  
- 다음 스크립트는 매개 변수가 있는 쿼리를 얻고 이에 대한 계획 지침을 만들기 위해 사용할 수 있습니다.  
+다음 스크립트는 매개 변수가 있는 쿼리를 얻고 이에 대한 계획 지침을 만들기 위해 사용할 수 있습니다.  
   
 ```  
 DECLARE @stmt nvarchar(max);  
@@ -80,9 +80,7 @@ EXEC sp_create_plan_guide
     N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- 마찬가지로 강제 매개 변수화가 이미 설정된 데이터베이스에서 예제 쿼리 및 구문상 동일한 기타 쿼리(해당 상수 리터럴 값 제외)가 단순 매개 변수화 규칙에 따라 매개 변수화되었는지 확인할 수 있습니다. 이렇게 하려면 OPTION 절에 PARAMETERIZATION FORCED 대신 PARAMETERIZATION SIMPLE을 지정합니다.  
+마찬가지로 강제 매개 변수화가 이미 설정된 데이터베이스에서 예제 쿼리 및 구문상 동일한 기타 쿼리(해당 상수 리터럴 값 제외)가 단순 매개 변수화 규칙에 따라 매개 변수화되었는지 확인할 수 있습니다. 이렇게 하려면 OPTION 절에 PARAMETERIZATION FORCED 대신 PARAMETERIZATION SIMPLE을 지정합니다.  
   
 > [!NOTE]  
->  TEMPLATE 계획 지침은 문을 하나의 문으로만 구성되어 있는 일괄 처리에 제출된 쿼리와 일치시킵니다. 다중 문 일괄 처리 내에 있는 문은 TEMPLATE 계획 지침에 일치시킬 수 없습니다.  
-  
-  
+>  TEMPLATE 계획 지침은 문을 하나의 문으로만 구성되어 있는 일괄 처리에 제출된 쿼리와 일치시킵니다. 다중 문 일괄 처리 내에 있는 문은 TEMPLATE 계획 지침에 일치시킬 수 없습니다.

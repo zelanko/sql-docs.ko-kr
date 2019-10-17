@@ -1,7 +1,7 @@
 ---
 title: CURRENT_TIMEZONE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2019
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6c29cfba3f47506cb88860763d6650cfb3ecab7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e659ae78b81cb6888e749bd40546efe16b4c542d
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026393"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261331"
 ---
-# <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE(Transact-SQL)
+# <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-이 함수는 서버 또는 인스턴스에서 관찰된 표준 시간대 이름을 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE`은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 운영 체제에서 반환 값을 끌어냅니다. SQL Database Managed Instance의 경우 반환 값은 기본 운영 체제의 표준 시간대가 아니라 인스턴스를 만드는 중에 할당된 인스턴스 자체의 표준 시간대를 기반으로 합니다.
+이 함수는 서버 또는 인스턴스에서 관찰된 표준 시간대 이름을 반환합니다. SQL Database Managed Instance의 경우 반환 값은 기본 운영 체제의 표준 시간대가 아니라 인스턴스를 만드는 중에 할당된 인스턴스 자체의 표준 시간대를 기반으로 합니다.
   
 > [!NOTE]  
 > 단일 및 풀링된 SQL Database의 경우 표준 시간대는 항상 UTC로 설정되고 `CURRENT_TIMEZONE`은 UTC 표준 시간대의 이름을 반환합니다.

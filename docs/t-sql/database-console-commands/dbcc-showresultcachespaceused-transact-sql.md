@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476312"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174653"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 
@@ -42,7 +42,12 @@ DBCC SHOWRESULTCACHESPACEUSED
 - 결과 세트가 사용되지 않을 경우 48시간 간격으로
 - 결과 세트 캐시가 최대 크기에 가까워질 때
 
-사용자는 결과 세트 캐시 기능을 해제하거나 `DBCC DROPRESULTSETCACHE` 명령을 사용하여 데이터베이스의 결과 세트 캐시를 수동으로 비울 수 있습니다.   데이터베이스를 일시 중지해도 결과 세트 캐시는 비워지지 않습니다.  
+데이터베이스에 대한 결과 집합 캐시를 수동으로 비우려면 다음 옵션 중 하나를 사용할 수 있습니다.
+
+- 데이터베이스에 대한 결과 집합 캐시 기능을 해제
+- 데이터베이스에 연결 되어 있는 동안 `DBCC DROPRESULTSETCACHE`를 실행 
+
+데이터베이스를 일시 중지해도 결과 세트 캐시는 비워지지 않습니다.  
 
 ## <a name="permissions"></a>사용 권한
 

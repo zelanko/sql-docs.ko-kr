@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 704bcba5e6b21ade748c7a549f5b88c131fa578c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121878"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252043"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,8 +122,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  값을 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 데이터 형식으로 변환하려면 **%I64d**를 지정합니다.  
   
- *@local_variable*  
- *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. *@local_variable* 은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
+ *\@local_variable*  
+ *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. *\@local_variable*은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
   
  *severity*  
  이 메시지에 연결된 사용자 정의 심각도입니다. sp_addmessage를 사용해 만든 사용자 정의 메시지를 발생시키기 위해 *msg_id*를 사용할 경우 RAISERROR에 지정된 심각도가 sp_addmessage에 지정된 심각도보다 우선합니다.  

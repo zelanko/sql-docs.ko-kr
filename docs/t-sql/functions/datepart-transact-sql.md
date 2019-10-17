@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119139"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278197"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +150,7 @@ SET DATEFIRST 7 -- (일요일)
 ## <a name="year-month-and-day-datepart-arguments"></a>year, month 및 day datepart 인수  
 DATEPART(**year**, *date*), DATEPART(**month**, *date*) 및 DATEPART (**day**, *date*)에 대해 반환되는 값은 각각 [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), [DAY](../../t-sql/functions/day-transact-sql.md) 함수에서 반환하는 값과 동일합니다.
   
-## <a name="isoweek-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
 ISO 8601에는 주 번호 매기기 시스템인 ISO 주-일 시스템이 포함됩니다. 각 주는 목요일이 포함되는 연도에 연결됩니다. 예를 들어 2004년의 첫 주(2004W01)는 2003년 12월 29일 월요일부터 2004년 1월 4일 일요일까지입니다. 유럽 국가/지역은 일반적으로 이 번호 매기기 스타일을 사용합니다. 비유럽 국가/지역 일반적으로 이를 사용하지 않습니다.
 
 참고: 1년에 가장 많은 주는 52주나 53주일 수 있습니다.
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *@t* 에는 **time** 데이터 형식이 있습니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
+*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *\@t*는 **time** 데이터 형식입니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076745"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278281"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68076745"
 ## <a name="benefits-of-data-tier-applications"></a>데이터 계층 애플리케이션의 이점  
  대부분의 데이터베이스 애플리케이션 수명 주기에는 애플리케이션 업데이트 및 유지 관리 활동을 위해 개발자 및 DBA의 스크립트 공유 및 교환과 임시 통합 정보가 포함됩니다. 이러한 방식은 데이터베이스 수가 많지 않은 경우에 허용 가능하지만 데이터베이스 수와 크기 및 복잡도가 증가할수록 확장성이 크게 떨어집니다.  
   
- DAC는 선언적인 데이터베이스 개발을 통해 배포 및 관리를 간소화할 수 있게 해주는 데이터베이스 수명 주기 관리 및 생산성 도구입니다. 개발자는 SQL Server Data Tools 데이터베이스 프로젝트에서 데이터베이스를 작성한 후 DBA에게 전달하기 위해 데이터베이스를 DACPAC로 작성할 수 있습니다. DBA는 SQL Server Management Studio를 사용하여 DAC를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테스트 또는 프로덕션 인스턴스나 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 배포할 수 있습니다. 또는 DBA가 이전에 SQL Server Management Studio를 사용하여 배포된 데이터베이스를 DACPAC를 통해 업그레이드할 수 있습니다. DBA는 테스트 또는 프로덕션 조정을 반영하거나 애플리케이션 내 변경 사항에 따라 데이터베이스 설계를 추가로 변경할 수 있도록 데이터베이스를 DACPAC로 추출하고 이를 개발자에게 전달함으로써 수명 주기를 완료합니다.  
+ DAC는 선언적인 데이터베이스 개발을 통해 배포 및 관리를 간소화할 수 있게 해주는 데이터베이스 수명 주기 관리 및 생산성 도구입니다. 개발자는 SQL Server Data Tools 데이터베이스 프로젝트에서 데이터베이스를 작성한 후 DBA에 전달하기 위해 데이터베이스를 DACPAC로 작성할 수 있습니다. DBA는 SQL Server Management Studio를 사용하여 DAC를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테스트 또는 프로덕션 인스턴스나 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 배포할 수 있습니다. 또는 DBA가 이전에 SQL Server Management Studio를 사용하여 배포된 데이터베이스를 DACPAC를 통해 업그레이드할 수 있습니다. DBA는 테스트 또는 프로덕션 조정을 반영하거나 애플리케이션 내 변경 사항에 따라 데이터베이스 설계를 추가로 변경할 수 있도록 데이터베이스를 DACPAC로 추출하고 이를 개발자에게 전달함으로써 수명 주기를 완료합니다.  
   
  스크립트 기반 배포 대신 DAC 기반 배포를 사용할 경우의 이점은 DBA가 이 도구를 통해 다양한 원본 및 대상 데이터베이스의 동작을 식별하고 유효성을 검사할 수 있다는 점입니다. 업그레이드 중에 데이터 손실이 발생할 수 있는 경우 이 도구를 통해 DBA에게 경고가 표시되고 업그레이드 계획도 제공됩니다. DBA는 계획을 평가하고 도구를 활용하여 업그레이드를 계속 진행할 수 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68076745"
   
 -   DACPAC는 확장명이 .dacpac인 Windows 파일입니다. 이 파일은 DACPAC 원본의 세부 사항을 나타내는 여러 XML 섹션, 데이터베이스의 개체 및 기타 특성으로 구성되는 개방형 형식을 지원합니다. 고급 사용자는 제품에 포함된 DacUnpack.exe 유틸리티를 사용하여 파일의 압축을 풀고 각 섹션을 보다 자세히 검사할 수 있습니다.  
   
--   DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 dbmanager 역할의 멤버이거나 사용자에게 CREATE DATABASE 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 dbmanager 역할의 멤버이거나 사용자에게 DROP DATABASE 권한이 할당되어 있어야 합니다.  
+-   DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **CREATE DATABASE** 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **DROP DATABASE** 권한이 할당되어 있어야 합니다.  
   
 ## <a name="dac-tools"></a>DAC 도구  
  DACPAC는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 제공되는 여러 도구 간에 쉽게 사용할 수 있습니다. 이러한 도구는 상호 운용성 단위로 DACPAC를 사용하는 여러 사용자의 요구 사항을 해결해 줍니다.  
@@ -97,7 +97,6 @@ ms.locfileid: "68076745"
   
 ## <a name="bacpac"></a>BACPAC  
  BACPAC는 데이터베이스의 스키마와 데이터를 캡슐화 하는 확장명이 .bacpac인 Windows 파일입니다. BACPAC는 서버 간에 데이터베이스를 이동하거나 [로컬 서버에서 클라우드로 데이터베이스를 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)하고 기존 데이터베이스를 개방 형식으로 보관하는 데 주로 사용됩니다.  
-  
  DACPAC와 비슷하게 BACPAC 파일 형식도 개방형이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. BACPAC의 데이터는 JSON 형식으로 저장됩니다.  
   
  DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC는 엄격하게 정의된 스키마를 개발, 테스트, 프로덕션 환경에 순차적으로 배포하는 데 주로 사용됩니다. 또한 그 반대로, 프로덕션 환경의 스키마를 캡처하여 테스트 및 개발 환경에 다시 적용할 때도 사용됩니다.  

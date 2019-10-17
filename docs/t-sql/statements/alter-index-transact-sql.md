@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66e4ecf9e2858c37145a7b6bd63bbfa8511349a4
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: e032b93772658c90c67dafe948c6542ce3510494
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009398"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174452"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -341,7 +341,7 @@ FILLFACTOR = *fillfactor*
  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- **tempdb**에 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
+ **tempdb**에 정렬 결과를 저장할지 여부를 지정합니다. Azure SQL Database 하이퍼스케일을 제외하고 기본값은 OFF입니다. 하이퍼스케일의 모든 인덱스 다시 작성 작업의 경우, 다시 시작 가능한 인덱스 다시 작성을 사용하지 않는 한 지정된 옵션에 관계없이 SORT_IN_TEMPDB는 항상 ON입니다.  
   
  ON  
  인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. **tempdb**가 사용자 데이터베이스와는 다른 디스크 집합에 있으면 인덱스를 만드는 데 필요한 시간이 줄어들 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  

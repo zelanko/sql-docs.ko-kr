@@ -1,7 +1,7 @@
 ---
 title: Point(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3d1859da2743171bd3d3e314455918b361c4f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025676"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260163"
 ---
 # <a name="point-geography-data-type"></a>Point(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Point ( Lat, Long, SRID )
  생성할 **Point**의 y 좌표를 나타내는 **float** 식입니다. 유효한 위도와 경도 값에 대한 자세한 내용은 [Point](../../relational-databases/spatial/point.md)를 참조하세요.  
   
  *SRID*  
- 반환하려는 **geography** 인스턴스의 SRID를 나타내는 **int** 식입니다.  
+ 반환할 **geography** 인스턴스의 [SRID(Spatial Reference Identifier)](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  

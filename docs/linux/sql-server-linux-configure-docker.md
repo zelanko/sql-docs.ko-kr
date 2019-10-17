@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988134"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278255"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
@@ -25,6 +25,9 @@ ms.locfileid: "70988134"
 
 > [!NOTE]
 > 이 문서에서는 특히 mssql-server-linux 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows Docker Hub 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
+
+> [!IMPORTANT]
+> 프로덕션 사용 사례를 위해 SQL Server 컨테이너를 실행하기로 선택하기 전에 [SQL Server 컨테이너에 대한 지원 정책](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server)을 검토하여 지원되는 구성에서 실행 중인지 확인하세요.
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 끌어와 실행하기
 

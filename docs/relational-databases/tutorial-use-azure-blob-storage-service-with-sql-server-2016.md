@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138364"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041214"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용
 
@@ -73,12 +73,12 @@ Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티�
   
 1.  Windows PowerShell 또는 Windows PowerShell ISE를 엽니다(위의 버전 요구 사항 참조).  
   
-2.  다음과 같이 b 스크립트를 편집한 후 실행합니다.  
+2.  아래 스크립트를 편집한 후 실행합니다.  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
@@ -430,7 +430,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 이 섹션에서는 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅샷을 삭제합니다.  
   
 > [!NOTE]  
-> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅샷은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅샷의 URL을 확인하고 [sp_delete_backup_file_snapshot &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅샷을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅샷은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅샷의 URL을 확인하고 [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅샷을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 파일-스냅샷 백업 세트를 삭제하려면 다음 단계를 따르세요.  
   
@@ -494,4 +494,4 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 [sys.credentials&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

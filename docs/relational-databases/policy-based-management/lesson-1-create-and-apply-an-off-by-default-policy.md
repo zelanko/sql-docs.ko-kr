@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087103"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251285"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>1단원: Off By Default 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68087103"
   
 2.  **새 조건 만들기** 대화 상자의 **이름** 상자에 **Mail Off**를 입력합니다.   
     1. **패싯** 상자에서 **노출 영역 구성** 패싯이 선택되어 있는지 확인합니다.
-    1. **식** 영역의 **필드** 상자에서 **@DatabaseMailEnabled** 를 선택하고, **연산자** 상자에서 **=** 를 선택한 다음 **값**에서 **False**를 선택합니다.  
+    1. **식** 영역의 **필드** 상자에서 **\@DatabaseMailEnabled**를 선택하고, **연산자** 상자에서 **=** 를 선택한 다음 **값** 에서 **False**를 선택합니다.  
     1. **설명** 페이지에서 조건에 대한 설명을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
 
     ![Mail off 조건](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005990"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,13 +30,13 @@ ms.locfileid: "68060764"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_NO_ELIGIBLE_STMT|  
-|메시지 텍스트|**@plan_handle** 로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않으므로 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. **@plan_handle** 에 다른 값을 지정하세요.|  
+|메시지 텍스트|**\@plan_handle**에 지정된 일괄 처리 또는 모듈에 계획 지침에 적합한 문이 포함되어 있지 않으므로 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. **\@plan_handle**에 다른 값을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
-**@plan_handle** 로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  
+**\@plan_handle**로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-**@plan_handle** 에 다른 값을 지정하세요.  
+**\@plan_handle**에 다른 값을 지정하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [계획 지침](~/relational-databases/performance/plan-guides.md)  

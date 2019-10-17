@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934763"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008458"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
 
@@ -104,7 +104,7 @@ SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다.
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>배포자를 Windows Server 2012 R2로 병렬 마이그레이션하는 단계
-SQL Server 인스턴스를 SQL 2016 이상으로 업그레이드하려고 하고 현재 OS가 Windows 2008(또는 2008 R2)이면 OS를 Windows Server 2012 R2 이상으로 병렬 업그레이드해야 합니다. 이 중간 OS 업그레이드에 대한 이유는 SQL Server 2016을 Windows Server 2008/2008 R2에 설치할 수 없고, Windows Server 2008/20008 R2에서 장애 조치 클러스터에 대한 현재 위치 업그레이드를 허용하지 않기 때문입니다. 다음 단계는 독립 실행형 SQL 서버 인스턴스 또는 Always On FCI(장애 조치 클러스터 인스턴스) 내에서 수행할 수 있습니다.
+SQL Server 인스턴스를 SQL Server 2016 이상으로 업그레이드하려고 하고 현재 OS가 Windows 2008(또는 2008 R2)이면 OS를 Windows Server R2 이상으로 병렬 업그레이드해야 합니다. 이 중간 OS 업그레이드에 대한 이유는 SQL Server 2016을 Windows Server 2008/2008 R2에 설치할 수 없고, Windows Server 2008/20008 R2에서 바로 Windows Server 2016으로 현재 위치 업그레이드를 허용하지 않기 때문입니다. Windows Server 2008/2008 R2에서 Windows server 2012로 현재 위치 업그레이드를 수행하고 Windows Server 2016으로 업그레이드 하는 것이 가능하지만, 일반적으로 가동 중지 시간 때문에 권장되지 않으며 간편한 롤백 경로를 사용할 수 없는 복잡성이 추가됩니다. 병렬 업그레이드는 장애 조치(failover) 클러스터에 참여하는 SQL Server 인스턴스에 사용할 수 있는 유일한 업그레이드 경로입니다.  다음 단계는 독립 실행형 SQL 서버 인스턴스 또는 Always On FCI(장애 조치 클러스터 인스턴스) 내에서 수행할 수 있습니다.
 
 1. Windows Server 2012 R2/2016에서 다른 Windows 클러스터 및 SQL Server FCI 이름 또는 독립 실행형 호스트 이름을 사용하여 새 SQL Server 인스턴스(독립 실행형 또는 Always On 장애 조치 클러스터), 에디션 및 버전을 배포자로 설정합니다. 복제 에이전트 실행 파일, 복제 폴더 및 데이터베이스 파일 경로가 새 환경의 동일한 경로에 있도록 이전 배포자와 동일한 디렉터리 구조를 유지해야 합니다. 이렇게 하면 필요한 사후 마이그레이션/업그레이드 단계가 줄어듭니다.
 1. 복제가 동기화되었는지 확인한 다음, 모든 복제 에이전트를 종료합니다. 

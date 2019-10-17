@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959018"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278239"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "67959018"
 
    ![빠른 검색 위젯](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 첫 번째 행에서 **Email** 열을 편집하고, *orlando0@adventure-works.com* 을 입력하고, **Enter** 키를 눌러 변경 내용을 저장합니다.
+1. 첫 번째 행에서 **Email** 열을 편집하고 *orlando0\@adventure-works.com*을 입력한 다음 **Enter**를 눌러 변경 내용을 저장합니다.
 
    ![데이터 편집](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ ms.locfileid: "67959018"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>쿼리 결과를 JSON으로 저장을 사용하여 setCustomer 저장 프로시저 테스트
 
-이전 섹션에서 만든 *setCustomer* 저장 프로시저에서는 JSON 데이터를 *@json_val* 매개 변수에 전달해야 합니다. 이 섹션에서는 저장 프로시저를 테스트할 수 있도록 매개 변수에 전달할 올바른 형식의 JSON을 가져오는 방법을 보여 줍니다.
+이전 섹션에서 만든 *setCustomer* 저장 프로시저에서는 JSON 데이터를 *\@json_val* 매개 변수에 전달해야 합니다. 이 섹션에서는 저장 프로시저를 테스트할 수 있도록 매개 변수에 전달할 올바른 형식의 JSON을 가져오는 방법을 보여 줍니다.
 
 1. **서버** 사이드바에서 *dbo.Customers* 테이블을 마우스 오른쪽 단추로 클릭하고 **SELECT TOP 1000 Rows**를 클릭합니다.
 

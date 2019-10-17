@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298823"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251979"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298823"
 > [!NOTE]  
 >  이 저장 프로시저의 구문과 해당 매개 변수에 대한 자세한 내용은 [sys.sp_cdc_generate_wrapper_function&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)을 참조하세요.  
   
- 이 저장 프로시저는 항상 각 캡처 인스턴스의 모든 변경 내용을 반환하는 래퍼 함수를 생성합니다. 캡처 인스턴스를 만들 때 *@supports_net_changes* 매개 변수가 설정된 경우에는 각 해당 캡처 인스턴스의 순 변경을 반환하는 래퍼 함수도 생성됩니다.  
+ 이 저장 프로시저는 항상 각 캡처 인스턴스의 모든 변경 내용을 반환하는 래퍼 함수를 생성합니다. 캡처 인스턴스를 만들 때 *\@supports_net_changes* 매개 변수가 설정된 경우에는 각 해당 캡처 인스턴스의 순 변경을 반환하는 래퍼 함수도 생성됩니다.  
   
  이 저장 프로시저는 열이 두 개 있는 결과 집합을 반환합니다.  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>저장 프로시저에서 만든 함수 이해 및 사용  
- 생성된 래퍼 함수는 캡처된 변경 데이터의 시간대를 체계적으로 탐색하기 위해 특정 간격의 *@end_time* 매개 변수가 후속 간격의 *@start_time* 매개 변수일 것으로 간주합니다. 이러한 규칙이 준수되는 경우 생성된 래퍼 함수에서 다음과 같은 태스크를 수행할 수 있습니다.  
+ 생성된 래퍼 함수는 캡처된 변경 데이터의 시간대를 체계적으로 탐색하기 위해 특정 간격의 *\@end_time* 매개 변수가 후속 간격의 *\@start_time* 매개 변수일 것으로 간주합니다. 이러한 규칙이 준수되는 경우 생성된 래퍼 함수에서 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   날짜/시간 값을 내부적으로 사용되는 LSN 값에 매핑  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   간격의 시작 날짜/시간 값 및 종료 날짜/시간 값. 래퍼 함수는 날짜/시간 값을 쿼리 간격의 끝점으로 사용하지만 변경 데이터 캡처 함수는 두 LSN 값을 끝점으로 사용합니다.  
   
--   행 필터. 래퍼 함수와 변경 데이터 캡처 함수의 *@row_filter_option* 매개 변수는 서로 동일합니다. 자세한 내용은 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)를 참조하세요.  
+-   행 필터. 래퍼 함수와 변경 데이터 캡처 함수의 *\@row_filter_option* 매개 변수는 서로 동일합니다. 자세한 내용은 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)를 참조하세요.  
   
  래퍼 함수에서 반환하는 결과 집합에는 다음과 같은 데이터가 포함됩니다.  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드의 유효한 값은 다음과 같습니다. ‘I’는 삽입, ‘D’는 삭제, ‘UO’는 이전 값 업데이트 및 ‘UN’은 새 값 업데이트입니다.  
   
--   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
+-   요청 시 작업 코드 뒤에 *\@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
   
  패키지에서 모든 변경을 쿼리하는 래퍼 함수를 호출하는 경우 래퍼 함수는 __CDC_STARTLSN 및 \__CDC_SEQVAL 열도 반환합니다. 이러한 두 열은 각각 결과 집합의 첫 번째 열과 두 번째 열이 됩니다. 또한 래퍼 함수는 이러한 두 열에 따라 결과 집합을 정렬합니다.  
   

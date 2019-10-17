@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816801"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251396"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -44,7 +44,7 @@ SSMS는 무료입니다.
 
 **이제 SSMS 18.3.1을 사용할 수 있습니다. SSMS 18.3은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 지원하는 *SQL Server Management Studio*의 최신 GA(일반 공급) 버전입니다!**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.3.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[SQL Server Management Studio 18.3.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치되어 있는 경우 SSMS 18.3.1을 설치하면 18.3.1로 업그레이드됩니다. SSMS 18.x의 이전 *미리 보기* 버전이 설치된 경우 SSMS 18.3.1을 설치하기 전에 제거해야 합니다.
 
@@ -75,8 +75,8 @@ SQL Server Management Studio 18.3.1:
 | 새 항목 | 세부 정보 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 데이터 분류 | 데이터 분류 정보를 열 속성 UI에 추가했습니다(*정보 유형*, *정보 유형 ID*, *민감도 레이블* 및 *민감도 레이블 ID*는 SSMS UI에 노출되지 않음). |
-| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원 업데이트(예: "ALTER SERVER CONFIGURATION"). |
-| Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS 통합 런타임에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 itemr `Tools > Migrate to Azure > Configure Azure-enabled DTExec`이 추가되었습니다. |
+| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: "ALTER SERVER CONFIGURATION"). |
+| Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`이 추가되었습니다. |
 | SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
 | SMO/스크립팅 | 데이터 분류 - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다.  - SQL 버전 15(SQL 2019) 이상 및 Azure SQL DB에 대한 새 민감도 특성 '순위'가 추가되었습니다. |
 

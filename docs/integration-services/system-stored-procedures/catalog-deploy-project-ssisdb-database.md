@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281164"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251329"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project(SSISDB 데이터베이스)
 
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   매개 변수가 존재하지 않는 개체를 참조하거나, 이미 있는 개체를 만들려고 하거나, 기타 다른 방식으로 잘못된 경우  
   
--   *@project_name* 매개 변수 값이 배포 파일에 있는 프로젝트의 이름과 일치하지 않는 경우  
+-   *\@project_name* 매개 변수 값이 배포 파일에 있는 프로젝트의 이름과 일치하지 않는 경우  
   
 -   사용자에게 적절한 권한이 없는 경우  
   
