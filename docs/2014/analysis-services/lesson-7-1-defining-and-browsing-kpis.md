@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493788"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI 정의 및 찾아보기
@@ -59,7 +59,7 @@ ms.locfileid: "69493788"
   
      다음 그림에서는 큐브 디자이너의 **KPI** 탭을 보여 줍니다.  
   
-     ![큐브 디자이너의 kpi 탭](../../2014/tutorials/media/l7-kpi-1.gif "큐브 디자이너의 kpi 탭")  
+     ![큐브 디자이너의 Kpi 탭](../../2014/tutorials/media/l7-kpi-1.gif "큐브 디자이너의 Kpi 탭")  
   
 2.  **KPI** 탭의 도구 모음에서 **새 KPI** 단추를 클릭합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493788"
   
      ![표시 창의 빈 KPI 템플릿](../../2014/tutorials/media/l7-kpi-2.gif "표시 창의 빈 KPI 템플릿")  
   
-3.  **이름** 상자에를 입력 `Reseller Revenue`한 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.  
+3.  **이름** 상자에 `Reseller Revenue`를 입력 한 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.  
   
 4.  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Reseller Sales**를 차례로 확장한 후 **Reseller Sales-Sales Amount** 측정값을 **값 식** 상자로 끌어옵니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493788"
   
 1.  **KPI** 탭의 도구 모음에서 **폼 보기** 단추를 클릭한 후 **새 KPI** 단추를 클릭합니다.  
   
-2.  **이름** 상자에를 입력 `Product Gross Profit Margin`하 고  **\<모든 >** 이 **관련 된 측정값 그룹** 목록에 나타나는지 확인 합니다.  
+2.  **이름** 상자에 `Product Gross Profit Margin`를 입력 한 다음 **\<All >** 이 **관련 된 측정값 그룹** 목록에 나타나는지 확인 합니다.  
   
 3.  **계산 도구** 창의 **메타데이터** 탭에서 **Total GPM** 측정값을 **값 식** 상자로 끌어옵니다.  
   
@@ -261,13 +261,13 @@ ms.locfileid: "69493788"
   
 2.  배포가 성공적으로 완료되면 **KPI** 탭의 도구 모음에서 **브라우저 보기** 를 클릭한 후 **다시 연결**을 클릭합니다.  
   
-     Kpi가 나타나고 **Q3 CY 2007** 및 북아메리카 판매 지역에 대 한 kpi 값이 표시 됩니다. `Product Gross Profit Margin`  
+     @No__t_0 KPI가 표시 되 고 **Q3 CY 2007** 및 **북아메리카** 영업 지역에 대 한 kpi 값이 표시 됩니다.  
   
 3.  **필터** 창의 **차원** 목록에서 **Product** 를, **계층** 목록에서 **Category** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Bikes** 를 선택한 다음 **확인**을 클릭합니다.  
   
      North America의 대리점별로 Q3 CY 2007에 해당하는 Bikes 판매의 매출이익률이 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [8단원: 작업 정의](lesson-8-defining-actions.md)  
+ [8단원: 동작 정의](lesson-8-defining-actions.md)  
   
   

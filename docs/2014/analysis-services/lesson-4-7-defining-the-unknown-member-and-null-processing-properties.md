@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493927"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>알 수 없는 멤버 및 Null 처리 속성 정의
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.  
   
  차원 마법사와 큐브 마법사는 차원의 키 특성이 Null을 허용하는지 또는 눈송이 차원의 루트 특성이 Null 허용 열을 기반으로 하는지 여부에 따라서 이러한 속성을 설정합니다. 이러한 경우에 키 특성의 **NullProcessing** 속성은 **UnknownMember** 로 설정되고 **UnknownMember** 속성은 **Visible**로 설정됩니다.  
   
  그러나 이 자습서에서 Product 차원의 경우처럼 눈송이 차원을 증분식으로 작성하거나 차원 디자이너를 사용하여 차원을 정의한 다음 이러한 기존 차원을 큐브에 통합할 경우 **UnknownMember** 및 **NullProcessing** 속성을 수동으로 설정해야 할 수 있습니다.  
   
- 이 항목의 태스크에서는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 데이터 원본 뷰에 추가할 눈송이 테이블의 Product 차원에 Product Categories 및 Product Subcategory 특성을 추가합니다. 그런 다음 product 차원에 대해 **UnknownMember** 속성을 사용 하도록 설정 하 `Assembly Components` 고, `Subcategory` **UnknownMemberName** 속성에 대 한 값으로을 지정 `Category` 하 고, 및 특성을 product name 특성과 연결 합니다. 그런 다음 눈송이 테이블을 연결 하는 멤버 키 특성에 대 한 사용자 지정 오류 처리를 정의 합니다.  
+ 이 항목의 태스크에서는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 데이터 원본 뷰에 추가할 눈송이 테이블의 Product 차원에 Product Categories 및 Product Subcategory 특성을 추가합니다. 그런 다음 Product 차원에 대해 **UnknownMember** 속성을 사용 하도록 설정 하 고, `Assembly Components` **UnknownMemberName** 속성에 대 한 값으로 지정 하 고, `Subcategory` 및 `Category` 특성을 Product name 특성과 연결한 다음 사용자 지정을 정의 합니다. 눈송이 테이블을 연결 하는 멤버 키 특성에 대 한 오류 처리  
   
 > [!NOTE]  
 >  큐브 마법사를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 처음 정의할 때 Subcategory 및 Category 특성을 추가한 경우 이러한 단계는 자동으로 수행됩니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "69493927"
   
      다음 이미지는 **ErrorConfiguration** 속성 컬렉션의 속성 설정을 보여 줍니다.  
   
-     ![Errorconfiguration 속성 컬렉션](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "Errorconfiguration 속성 컬렉션")  
+     ![ErrorConfiguration 속성 컬렉션](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration 속성 컬렉션")  
   
-5.  **브라우저** 탭을 클릭 하 고 **계층** 목록에서 **Product Model Lines** 가 선택 되어 있는지 확인 한 다음를 `All Products`확장 합니다.  
+5.  **브라우저** 탭을 클릭 하 고 **계층** 목록에서 **Product Model Lines** 가 선택 되어 있는지 확인 한 다음 `All Products`를 확장 합니다.  
   
      Product Line 수준의 5개 멤버가 표시됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493927"
   
 8.  **데이터 원본 뷰** 창에서 **DimProductCategory** 테이블을 찾아 해당 테이블의 **ProductCategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.  
   
-9. **특성** 창에서이 새 특성의 이름을로 `Category`변경 합니다.  
+9. **특성** 창에서이 새 특성의 이름을 `Category`로 변경 합니다.  
   
 10. 속성 창에서 **NameColumn** 속성 필드를 클릭 한 다음 찾아보기 ( **...** ) 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다.  
   
@@ -95,15 +95,15 @@ ms.locfileid: "69493927"
   
 12. **데이터 원본 뷰** 창에서 **DimProductSubcategory** 테이블을 찾아 해당 테이블의 **ProductSubcategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.  
   
-13. **특성** 창에서이 새 특성의 이름을로 `Subcategory`변경 합니다.  
+13. **특성** 창에서이 새 특성의 이름을 `Subcategory`로 변경 합니다.  
   
 14. 속성 창에서 **NameColumn** 속성 필드를 클릭 한 다음 찾아보기 **(...)** 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다.  
   
 15. **원본 열** 목록에서 **EnglishProductSubcategoryName** 을 선택하고 **확인**을 클릭합니다.  
   
-16. 위쪽에서 아래쪽 `Category`으로, `Subcategory`및 **제품 이름**에서 다음 수준으로 **product Categories** 라는 새 사용자 정의 계층을 만듭니다.  
+16. 위쪽에서 아래쪽으로 (`Category`, `Subcategory` 및 **제품 이름**에서 다음과 같은 수준으로 **product Categories** 라는 새 사용자 정의 계층을 만듭니다.  
   
-17. Product `All Products` Categories 사용자 정의 계층의 **AllMemberName** 속성에 대 한 값으로를 지정 합니다.  
+17. Product Categories 사용자 정의 계층의 **AllMemberName** 속성에 대 한 값으로 `All Products`를 지정 합니다.  
   
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>Product 차원에서 사용자 정의 계층 찾아보기  
   
@@ -117,25 +117,25 @@ ms.locfileid: "69493927"
   
      다음 이미지에 표시된 것처럼 ProductSubcategoryKey 열에 값이 없는 제품을 제거하는 SELECT DISTINCT 절에 WHERE 절이 추가되었습니다.  
   
-     ![Where 절을 보여 주는 SELECT DISTINCT 절](../../2014/tutorials/media/l4-productnametraceline-1.gif "Where 절을 보여 주는 SELECT DISTINCT 절")  
+     ![WHERE 절을 보여 주는 SELECT DISTINCT 절](../../2014/tutorials/media/l4-productnametraceline-1.gif "WHERE 절을 보여 주는 SELECT DISTINCT 절")  
   
 5.  **닫기** 를 3번 클릭하여 처리 중인 대화 상자를 모두 닫습니다.  
   
 6.  **Product** 차원의 차원 디자이너에서 **브라우저** 탭을 클릭한 후 **다시 연결**을 클릭합니다.  
   
-7.  **계층** **목록에 Product Model Lines** 가 표시 되는지 확인 하 고 ,구성요소를확장`All Products`합니다.  
+7.  **계층** 목록에 **Product Model Lines** 가 표시 되는지 확인 하 고 `All Products`를 확장 한 다음 **구성 요소**를 확장 합니다.  
   
 8.  **계층** 목록에서 **Product Categories** 를 선택 하 고 `All Products`를 확장 한 다음 **구성 요소**를 확장 합니다.  
   
      어셈블리 구성 요소가 나타나지 않습니다.  
   
- 이전 태스크에서 설명한 동작을 수정 하려면 Products 차원의 **UnknownMember** 속성을 사용 하도록 설정 하 고, **UnknownMemberName** 속성에 값을 설정 하 `Subcategory` 고, 및에 대 한 **NullProcessing** 속성을 설정 합니다. **UnknownMember**에 대 한 **모델 이름** 특성을 `Category` 지정 하 고 특성을 `Subcategory` 특성의 관련 특성으로 정의한 다음 **Product Line** 특성을 **모델 이름의** 관련 특성으로 정의 합니다. 특성도. 이러한 절차를 수행하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 다음 태스크에서 볼 수 있는 바와 같이 **SubcategoryKey** 열의 값이 없는 각 제품에 대해 알 수 없는 멤버 이름 값을 사용합니다.  
+ 이전 태스크에서 설명한 동작을 수정 하려면 Products 차원의 **UnknownMember** 속성을 사용 하도록 설정 하 고, **UnknownMemberName** 속성에 대 한 값을 설정 하 고 **, `Subcategory`에 대 한 NullProcessing 속성을 설정 합니다.**  **UnknownMember**에 대 한 모델 이름 특성 `Category` 특성을 `Subcategory` 특성의 관련 특성으로 정의한 다음 **Product Line** 특성을 **model name** 특성의 관련 특성으로 정의 합니다. 이러한 절차를 수행하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 다음 태스크에서 볼 수 있는 바와 같이 **SubcategoryKey** 열의 값이 없는 각 제품에 대해 알 수 없는 멤버 이름 값을 사용합니다.  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>알 수 없는 멤버 활성화, 특성 관계 정의 및 Null에 대한 사용자 지정 프로세싱 속성 지정  
   
 1.  **Product** 차원의 차원 디자이너에서 **차원 구조** 탭을 클릭한 후 **특성** 창의 **Product** 를 선택합니다.  
   
-2.  **속성** 창에서 **UnknownMember** 속성을 **Visible**로 변경한 다음 **UnknownMemberName** 속성의 값을로 `Assembly Components`변경 합니다.  
+2.  **속성** 창에서 **UnknownMember** 속성을 **Visible**로 변경한 다음 **UnknownMemberName** 속성의 값을 `Assembly Components` 변경 합니다.  
   
      **UnknownMember** 속성을 **Visible** 또는 **Hidden** 으로 변경하면 차원에 대한 **UnknownMember** 속성이 활성화됩니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "69493927"
   
 4.  다이어그램에서 `Subcategory` 특성을 마우스 오른쪽 단추로 클릭 한 다음 **새 특성 관계**를 선택 합니다.  
   
-5.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 `Subcategory`입니다. **관련 특성** 을로 `Category`설정 합니다. 관계 유형 설정은 **고정**으로 둡니다.  
+5.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 `Subcategory`입니다. **관련 특성** 을 `Category` 설정 합니다. 관계 유형 설정은 **고정**으로 둡니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -159,7 +159,7 @@ ms.locfileid: "69493927"
   
 12. **NullProcessing** 속성을 **UnknownMember**로 변경합니다.  
   
-     이러한 변경으로 인해 처리 중 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 `Subcategory` 특성 또는 **Model Name** 특성에 대해 null 값이 발견 되는 경우 알 수 없는 멤버 값이 키 값으로 대체 되 고 사용자 정의 계층은 다음과 같이 됩니다. 올바르게 생성 되었습니다.  
+     이러한 변경으로 인해 처리 하는 동안 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] `Subcategory` 특성 또는 **Model Name** 특성에 대해 null 값이 발견 되는 경우 알 수 없는 멤버 값이 키 값으로 대체 되 고 사용자 정의 계층이 생성 됩니다. 올바른.  
   
 ## <a name="browsing-the-product-dimension-again"></a>Product 차원 다시 찾아보기  
   
@@ -167,17 +167,17 @@ ms.locfileid: "69493927"
   
 2.  배포가 성공적으로 완료되면 **Product** 차원에 대한 차원 디자이너에서 **브라우저** 탭을 클릭한 후 **다시 연결**을 클릭합니다.  
   
-3.  **계층** 목록에서 **Product Categories** 가 선택 되어 있는지 확인 한 다음를 확장 `All Products`합니다.  
+3.  **계층** 목록에서 **Product Categories** 가 선택 되어 있는지 확인 한 다음 `All Products`를 확장 합니다.  
   
      Assembly Components가 Category 수준의 새 멤버로 나타납니다.  
   
-4.  수준 멤버를 확장 한 다음 `Subcategory` 수준의 멤버를 `Assembly Components` 확장 합니다. `Assembly Components` `Category`  
+4.  @No__t_1 수준의 `Assembly Components` 멤버를 확장 한 다음 `Subcategory` 수준의 `Assembly Components` 멤버를 확장 합니다.  
   
      다음 그림에 표시된 것처럼 이제 모든 어셈블리 구성 요소가 **Product Name** 수준에 나타납니다.  
   
      ![어셈블리 구성 요소를 보여 주는 제품 이름 수준](../../2014/tutorials/media/l4-assemblycomponents-1.gif "어셈블리 구성 요소를 보여 주는 제품 이름 수준")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 차원과 측정값 그룹 간의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [5단원: 차원과 측정값 그룹의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

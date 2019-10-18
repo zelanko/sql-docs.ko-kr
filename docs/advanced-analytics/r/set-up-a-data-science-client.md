@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69633632"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발용 데이터 과학 클라이언트 설정
@@ -29,7 +29,7 @@ SQL Server 용 R 솔루션을 개발 하 고 배포 하려면 개발 워크스�
 설치의 유효성을 검사 하기 위해이 문서에 설명 된 대로 기본 제공 **Rgui** 도구를 사용 하거나 [라이브러리](#install-ide) 를 rgui 또는 일반적으로 사용 하는 다른 IDE에 연결할 수 있습니다.
 
 > [!Note]
-> 클라이언트 라이브러리 설치에 대 한 대안은 [독립 실행형 서버](../install/sql-machine-learning-standalone-windows-install.md) 를 리치 클라이언트로 사용 하는 것입니다 .이는 일부 고객이 더 심층적인 시나리오 작업을 선호 합니다. 독립 실행형 서버는 SQL Server에서 완전히 분리 되지만 R 라이브러리가 동일 하기 때문에 SQL Server 데이터베이스 내 분석을 위해 클라이언트로 사용할 수 있습니다. 다른 데이터 플랫폼의 데이터를 가져오고 모델링 하는 기능을 포함 하 여 SQL 관련 없는 작업에도 사용할 수 있습니다. 독립 실행형 서버를 설치 하는 경우이 위치 `C:\Program Files\Microsoft SQL Server\140\R_SERVER`에서 R 실행 파일을 찾을 수 있습니다. 설치의 유효성을 검사 하려면 [r 콘솔 앱을 열어](#R-tools) 해당 위치에서 setup.exe를 사용 하 여 명령을 실행 합니다.
+> 클라이언트 라이브러리 설치에 대 한 대안은 [독립 실행형 서버](../install/sql-machine-learning-standalone-windows-install.md) 를 리치 클라이언트로 사용 하는 것입니다 .이는 일부 고객이 더 심층적인 시나리오 작업을 선호 합니다. 독립 실행형 서버는 SQL Server에서 완전히 분리 되지만 R 라이브러리가 동일 하기 때문에 SQL Server 데이터베이스 내 분석을 위해 클라이언트로 사용할 수 있습니다. 다른 데이터 플랫폼의 데이터를 가져오고 모델링 하는 기능을 포함 하 여 SQL 관련 없는 작업에도 사용할 수 있습니다. 독립 실행형 서버를 설치 하는 경우이 위치에서 R 실행 파일 `C:\Program Files\Microsoft SQL Server\140\R_SERVER` 찾을 수 있습니다. 설치의 유효성을 검사 하려면 [r 콘솔 앱을 열어](#R-tools) 해당 위치에서 setup.exe를 사용 하 여 명령을 실행 합니다.
 
 ## <a name="commonly-used-tools"></a>일반적으로 사용 되는 도구
 
@@ -51,7 +51,7 @@ Microsoft의 R 패키지는 여러 제품 및 서비스에서 사용할 수 있�
 
 3. MKL_CBWR 시스템 환경 변수를 만들어 Intel MKL (Math Kernel Library) 계산에 일관 된 출력이 있는지 확인 합니다.
 
-  + 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭 합니다.
+  + 제어판에서 **시스템 및 보안**  > **시스템**  > **고급 시스템 설정**  > **환경 변수**를 클릭 합니다.
   + 값이 **AUTO**로 설정 된 **MKL_CBWR**이라는 새 시스템 변수를 만듭니다.
 
 ## <a name="2---locate-executables"></a>2-실행 파일 찾기
@@ -75,7 +75,7 @@ SQL Server를 사용 하 여 R을 설치 하는 경우 RGui, Rgui 등과 같은 
 
   Microsoft program 폴더에서 R 세션을 시작 하면 RevoScaleR를 비롯 한 여러 패키지가 자동으로 로드 됩니다. 
 
-2. 명령 `print(Revo.version)` 프롬프트에서를 입력 하 여 RevoScaleR 패키지 버전 정보를 반환 합니다. 9\.2.1 또는 9.3.0 for RevoScaleR가 있어야 합니다.
+2. RevoScaleR 패키지 버전 정보를 반환 하려면 명령 프롬프트에 `print(Revo.version)`을 입력 합니다. 9\.2.1 또는 9.3.0 for RevoScaleR가 있어야 합니다.
 
 3. R 프롬프트에서 **search ()** 를 입력 하 여 설치 된 패키지 목록을 확인 합니다.
 
@@ -106,9 +106,9 @@ R을 사용 하는 데이터베이스에서 데이터베이스 관리자에 게 
 
 다음 단계에서는 데모 데이터베이스, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)및 Windows 인증을 가정 합니다.
 
-1. 클라이언트 워크스테이션에서 **Rgui** 를 엽니다. 예를 들어로 `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` 이동 하 여 **rgui .exe** 를 두 번 클릭 하 여 시작 합니다.
+1. 클라이언트 워크스테이션에서 **Rgui** 를 엽니다. 예를 들어 `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`로 이동 하 고 **Rgui .exe** 를 두 번 클릭 하 여 시작 합니다.
 
-2. RevoScaleR가 자동으로 로드 됩니다. 다음 명령을 실행 하 여 RevoScaleR가 작동 하는지 확인 합니다.`print(Revo.version)`
+2. RevoScaleR가 자동으로 로드 됩니다. 다음 명령을 실행 하 여 RevoScaleR가 작동 하는지 확인 합니다. `print(Revo.version)`
 
 3. 원격 서버에서 실행 되는 데모 스크립트를 입력 합니다. 원격 SQL Server 인스턴스에 대 한 올바른 이름을 포함 하도록 다음 샘플 스크립트를 수정 해야 합니다. 이 세션은 로컬 세션으로 시작 되지만 **Rxsummary** 함수는 원격 SQL Server 인스턴스에서 실행 됩니다.
 
@@ -126,9 +126,9 @@ R을 사용 하는 데이터베이스에서 데이터베이스 관리자에 게 
   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
   ```
 
-  **Results:**
+  **결과:**
 
-  이 스크립트는 원격 서버의 데이터베이스에 연결 하 고, 쿼리를 제공 하 고, 원격 코드 `cc` 실행에 대 한 계산 컨텍스트 명령을 만든 다음, RevoScaleR 함수 **rxsummary** 를 제공 하 여 쿼리의 통계 요약을 반환 합니다. 검색.
+  이 스크립트는 원격 서버의 데이터베이스에 연결 하 고, 쿼리를 제공 하 고, 원격 코드 실행에 대 한 `cc` 계산 컨텍스트를 만든 다음, RevoScaleR 함수 **Rxsummary** 를 제공 하 여 쿼리 결과의 통계 요약을 반환 합니다.
 
   ```R
     Call:
@@ -201,7 +201,7 @@ IDE에서 로컬 R 라이브러리: 기본 R, RevoScaleR 등을 가리킵니다.
 
 1. SQL Server에 설치 된 R 패키지 버전을 확인 합니다. 자세한 내용은 [R 패키지 정보 가져오기](../package-management/r-package-information.md)를 참조 하세요.
 
-1. Microsoft R Client 또는 독립 실행형 서버 옵션 중 하나를 설치 하 여 SQL Server 인스턴스에서 사용 하는 기본 R 배포를 비롯 하 여 RevoScaleR 및 기타 R 패키지를 추가 합니다. 서버와 동일한 패키지 버전을 제공 하는 동일한 수준 또는 더 낮은 버전 (패키지가 이전 버전과 호환 됨)을 선택 합니다. 버전 정보는이 문서의 버전 맵을 참조 하세요. [R 및 Python 구성 요소를 업그레이드](../install/upgrade-r-and-python.md)합니다.
+1. Microsoft R Client 또는 독립 실행형 서버 옵션 중 하나를 설치 하 여 SQL Server 인스턴스에서 사용 하는 기본 R 배포를 비롯 하 여 RevoScaleR 및 기타 R 패키지를 추가 합니다. 서버와 동일한 패키지 버전을 제공 하는 동일한 수준 또는 더 낮은 버전 (패키지가 이전 버전과 호환 됨)을 선택 합니다. 버전 정보는이 문서의 버전 맵 ( [R 및 Python 구성 요소 업그레이드](../install/upgrade-r-and-python.md))을 참조 하세요.
 
 1. RStudio에서 RevoScaleR, Microsoft R Open 및 기타 Microsoft 패키지를 제공 하는 R 환경을 가리키도록 [r 경로를 업데이트](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) 합니다. 
 
@@ -227,11 +227,11 @@ R에 대해 선호 하는 IDE가 아직 없는 경우 **Visual Studio용 R 도�
 
 1. **파일** 메뉴에서 **새로 만들기** 를 선택한 다음 **프로젝트**를 선택 합니다.
 
-2. 왼쪽 창에는 미리 설치 된 템플릿 목록이 있습니다. **R**을 클릭 하 고 **r 프로젝트**를 선택 합니다. **이름** 상자에를 입력 `dbtest` 하 고 **확인**을 클릭 합니다. 
+2. 왼쪽 창에는 미리 설치 된 템플릿 목록이 있습니다. **R**을 클릭 하 고 **r 프로젝트**를 선택 합니다. **이름** 상자에 `dbtest`를 입력 하 고 **확인**을 클릭 합니다. 
 
-  Visual Studio에서 새 프로젝트 폴더와 기본 스크립트 파일 ( `Script.R`)을 만듭니다. 
+  Visual Studio에서 새 프로젝트 폴더와 기본 스크립트 파일 `Script.R`를 만듭니다. 
 
-3. 스크립트 `.libPaths()` 파일의 첫 번째 줄에를 입력 한 다음 ctrl + enter를 누릅니다.
+3. 스크립트 파일의 첫 번째 줄에 `.libPaths()`를 입력 한 다음 CTRL + ENTER를 누릅니다.
 
   현재 R 라이브러리 경로는 **R 대화형** 창에 표시 되어야 합니다. 
 
@@ -244,5 +244,5 @@ R에 대해 선호 하는 IDE가 아직 없는 경우 **Visual Studio용 R 도�
 
 계산 컨텍스트를 로컬에서 원격 SQL Server 인스턴스로 전환할 수 있는 연습이 포함 된 두 가지 자습서가 있습니다.
 
-+ [자습서: SQL Server 데이터에 RevoScaleR R 함수 사용](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [자습서: SQL Server 데이터와 함께 RevoScaleR R 함수 사용](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [데이터 과학 엔드투엔드 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

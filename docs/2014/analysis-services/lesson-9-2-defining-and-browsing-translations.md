@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493786"
 ---
 # <a name="defining-and-browsing-translations"></a>번역 정의 및 찾아보기
@@ -40,9 +40,9 @@ ms.locfileid: "69493786"
   
      프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 `Fecha` 합니다.  
+5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열에 `Fecha`을 입력 하 고 **프랑스어 (프랑스)** 번역 열에 `Temps` 합니다.  
   
-6.  **Month Name** 특성에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열을 입력 하 고 `Mois d'Année` **프랑스어 (프랑스)** 번역 열에을 입력 `Mes del Año` 합니다.  
+6.  **Month Name** 특성에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열에 `Mes del Año`을 입력 하 고 **프랑스어 (프랑스)** 번역 열에 `Mois d'Année` 합니다.  
   
      이러한 번역을 입력 하면 줄임표 ( **...** )가 나타납니다. 이 줄임표를 클릭하면 특성 계층의 각 멤버에 대한 번역을 제공하는 기본 테이블의 열을 지정할 수 있습니다.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493786"
   
      프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 `Fecha` 합니다.  
+5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열에 `Fecha`을 입력 하 고 **프랑스어 (프랑스)** 번역 열에 `Temps` 합니다.  
   
-6.  **Internet Sales** 측정값 그룹에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Ventes D'Internet` **프랑스어 (프랑스)** 번역 열을 입력 `Ventas del lnternet` 합니다.  
+6.  **Internet Sales** 측정값 그룹에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열에 `Ventas del lnternet`을 입력 하 고 **프랑스어 (프랑스)** 번역 열에 `Ventes D'Internet` 합니다.  
   
-7.  Internet sales-sales Amount 측정값에 대 한 **Caption** 개체의 행에서 `Cantidad de las Ventas del Internet` **스페인어 (스페인)** 번역 열과 `Quantité de Ventes d'Internet` **프랑스어 (프랑스)** 번역 열을 입력 합니다.  
+7.  Internet Sales-Sales Amount 측정값에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열에 `Cantidad de las Ventas del Internet`을 입력 하 고 **프랑스어 (프랑스)** 번역 열에 `Quantité de Ventes d'Internet` 합니다.  
   
      이 절차의 단계는 큐브 개체에 대한 메타데이터 번역을 정의하는 과정을 보여 줍니다.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "69493786"
   
 5.  도구 모음의 **언어** 목록에서 **스페인어(스페인)** 를 선택합니다.  
   
-     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신, 다음 이미지에 표시 된 것 처럼 이라는 `Ventas del lnternet`새 표시 폴더에 스페인어로 표시 됩니다.  
+     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신 다음 그림에 표시 된 것 처럼 `Ventas del lnternet` 이라는 새 표시 폴더에 스페인어로 표시 됩니다.  
   
      ![메타 데이터 창 다시 채워집니다](../../2014/tutorials/media/l9-translations-6.gif "메타 데이터 창 다시 채워집니다")  
   
-6.  메타 데이터 창에서를 마우스 오른쪽 단추로 `Cantidad de las Ventas del Internet` 클릭 하 고 **쿼리에 추가를**선택 합니다.  
+6.  메타 데이터 창에서 `Cantidad de las Ventas del Internet`을 마우스 오른쪽 단추로 클릭 하 고 **쿼리에 추가를**선택 합니다.  
   
-7.  메타 데이터 `Fecha`창에서 **Fecha**를 확장 하 고 **Fecha**를 마우스 오른쪽 단추로 클릭 한 다음 **필터에 추가**를 선택 합니다.  
+7.  메타 데이터 창에서 `Fecha`, **Fecha**를 차례로 확장 하 고 **Fecha**를 마우스 오른쪽 단추로 클릭 한 다음 **필터에 추가**를 선택 합니다.  
   
 8.  **필터** 창에서 **CY 2007** 을 필터 식으로 선택합니다.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "69493786"
      이제 월 이름과 측정값 이름이 프랑스어로 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [10 단원: 관리 역할 정의](lesson-10-defining-administrative-roles.md)  
+ [10단원: 관리자 역할 정의](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>관련 항목  
- [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
+## <a name="see-also"></a>관련 항목:  
+ [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)    
+ [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
  [번역 &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

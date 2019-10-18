@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275673"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542138"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 새 R 패키지 설치
 
@@ -23,9 +23,9 @@ ms.locfileid: "70275673"
 이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용 하 여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) t-sql 문을 사용 하 여 데이터베이스 내에서 실행 되는 R 스크립트에서 설치 패키지를 사용할 수 있습니다.
 
 > [!NOTE]
-> SQL Server에서 r `install.packages` 패키지를 추가 하는 데는 표준 r 명령이 권장 되지 않습니다. 대신이 문서에 설명 된 대로 **sqlmlutils** 를 사용 합니다.
+> SQL Server에 R 패키지를 추가 하는 경우 표준 R `install.packages` 명령을 권장 하지 않습니다. 대신이 문서에 설명 된 대로 **sqlmlutils** 를 사용 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>Prerequisites
 
 - SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에 [R](https://www.r-project.org) 및 [rstudio Desktop](https://www.rstudio.com/products/rstudio/download/) 을 설치 합니다. 스크립트를 실행 하기 위해 R IDE를 사용할 수 있지만이 문서에서는 RStudio를 가정 합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "70275673"
 
 클라이언트 컴퓨터에서 인터넷에 액세스할 수 있는 경우 **sqlmlutils** 및 해당 종속 패키지를 온라인으로 다운로드 하 여 설치할 수 있습니다.
 
-1. 에서 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 클라이언트 컴퓨터로 최신 **sqlmlutils** zip 파일을 다운로드 합니다. 파일의 압축을 풀어야 합니다.
+1. @No__t_1에서 클라이언트 컴퓨터로 최신 **sqlmlutils** zip 파일을 다운로드 합니다. 파일의 압축을 풀어야 합니다.
 
 1. **명령 프롬프트** 를 열고 다음 명령을 실행 하 여 **Sqlmlutils** 및 **rodbcext**패키지를 설치 합니다. 전체 경로를 다운로드 한 **sqlmlutils** zip 파일로 대체 합니다 .이 예제에서는 파일이 문서 폴더에 있다고 가정 합니다. 온라인 및 설치 된 **Rodbcext** 패키지를 찾을 수 있습니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "70275673"
 
 1. **MiniCRAN**를 설치 합니다. 자세한 내용은 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 를 참조 하세요.
 
-1. RStudio에서 다음 R 스크립트를 실행 하 여 **Rodbcext**패키지의 로컬 리포지토리를 만듭니다. 이 예제에서는 폴더 `c:\downloads\rodbcext`에 리포지토리를 만듭니다.
+1. RStudio에서 다음 R 스크립트를 실행 하 여 **Rodbcext**패키지의 로컬 리포지토리를 만듭니다. 이 예제에서는 `c:\downloads\rodbcext` 폴더에 리포지토리를 만듭니다.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ ms.locfileid: "70275673"
 
    ::: moniker-end
 
-   `Rversion` 값에 대해 SQL Server에 설치 된 R 버전을 사용 합니다. 설치 된 버전을 확인 하려면 다음 T-sql 명령을 사용 합니다.
+   @No__t_0 값에 대해 SQL Server에 설치 된 R 버전을 사용 합니다. 설치 된 버전을 확인 하려면 다음 T-sql 명령을 사용 합니다.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. 에서 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 최신 **sqlmlutils** zip 파일을 다운로드 합니다 (파일의 압축을 풀어야 함). 예를 들어 파일을로 `c:\downloads\sqlmlutils_0.7.1.zip`다운로드 합니다.
+1. @No__t_1에서 최신 **sqlmlutils** zip 파일을 다운로드 합니다 (파일의 압축을 풀어야 함). 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip` 파일을 다운로드 합니다.
 
-1. 전체 **rodbcext** 리포지토리 폴더 (`c:\downloads\rodbcext`) 및 **sqlmlutils** zip 파일 (`c:\downloads\sqlmlutils_0.7.1.zip`)을 클라이언트 컴퓨터에 복사 합니다. 예를 들어 클라이언트 컴퓨터의 폴더 `c:\temp\packages` 에 복사 합니다.
+1. 전체 **Rodbcext** 리포지토리 폴더 (`c:\downloads\rodbcext`)와 **sqlmlutils** zip 파일 (`c:\downloads\sqlmlutils_0.7.1.zip`)을 클라이언트 컴퓨터로 복사 합니다. 예를 들어 클라이언트 컴퓨터에서 `c:\temp\packages` 폴더에 복사 합니다.
 
 SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 명령 프롬프트를 열고 다음 명령을 실행 하 여 **Rodbcext** 를 설치한 다음 **sqlmlutils**를 설치 합니다.
 
@@ -128,15 +128,13 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
 
 1. 클라이언트 컴퓨터에서 RStudio를 열고 새 **R 스크립트** 파일을 만듭니다.
 
-1. 다음 R 스크립트를 사용 하 여 **sqlmlutils**를 사용 하 여 **glue** 패키지를 설치 합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체 합니다.
+1. 다음 R 스크립트를 사용 하 여 **sqlmlutils**를 사용 하 여 **glue** 패키지를 설치 합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체 합니다. Windows 인증을 사용 하지 않는 경우 `uid` 및 `pwd` 매개 변수를 추가 합니다.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -151,7 +149,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
 
 인터넷에 액세스할 때 사용 되는 컴퓨터:
 
-1. 다음 R 스크립트를 실행 하 여 **glue**의 로컬 리포지토리를 만듭니다. 이 예에서는에서 `c:\downloads\glue`리포지토리 폴더를 만듭니다.
+1. 다음 R 스크립트를 실행 하 여 **glue**의 로컬 리포지토리를 만듭니다. 이 예에서는 `c:\downloads\glue`에 리포지토리 폴더를 만듭니다.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -180,28 +178,26 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
    ::: moniker-end
 
 
-   `Rversion` 값에 대해 SQL Server에 설치 된 R 버전을 사용 합니다. 설치 된 버전을 확인 하려면 다음 T-sql 명령을 사용 합니다.
+   @No__t_0 값에 대해 SQL Server에 설치 된 R 버전을 사용 합니다. 설치 된 버전을 확인 하려면 다음 T-sql 명령을 사용 합니다.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. 전체 **glue** repository 폴더 (`c:\downloads\glue`)를 클라이언트 컴퓨터에 복사 합니다. 예를 들어 폴더 `c:\temp\packages\glue`에 복사 합니다.
+1. 전체 **glue** repository 폴더 (`c:\downloads\glue`)를 클라이언트 컴퓨터에 복사 합니다. 예를 들어 `c:\temp\packages\glue` 폴더에 복사 합니다.
 
-클라이언트 컴퓨터에서 다음을 수행합니다.
+클라이언트 컴퓨터에서 다음을 수행 합니다.
 
 1. RStudio를 열고 새 **R 스크립트** 파일을 만듭니다.
 
-1. 다음 R 스크립트를 사용 하 여 **sqlmlutils**를 사용 하 여 **glue** 패키지를 설치 합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체 합니다.
+1. 다음 R 스크립트를 사용 하 여 **sqlmlutils**를 사용 하 여 **glue** 패키지를 설치 합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체 합니다. Windows 인증을 사용 하지 않는 경우 `uid` 및 `pwd` 매개 변수를 추가 합니다.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))
@@ -232,7 +228,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
          ';
    ```
 
-    **결과**
+    **Results**
 
     ```text
     My name is Fred and my birthday is Sunday, June 14, 2020.

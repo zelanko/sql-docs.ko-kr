@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890834"
 ---
 # <a name="automatically-grouping-attribute-members"></a>자동으로 특성 멤버 그룹화
@@ -28,7 +28,7 @@ ms.locfileid: "69890834"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 가우스 분포와 함께 K-Means 클러스터링 메서드를 사용하여 입력 값에 단일 차원 클러스터링을 수행하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.  
   
- 그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
+ 그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
  이 항목의 태스크에서는 **Customer** 차원의 연간 소득 값, **Employees** 차원의 직원 병가 시간 및 **Employees** 차원의 직원 휴가 시간에 대해 서로 다른 유형의 그룹화를 사용하도록 설정한 다음 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 처리하고 검색하여 멤버 그룹의 결과를 표시하고, 마지막으로 멤버 그룹 속성을 수정하여 그룹화 유형의 변경 결과를 표시하는 방법에 대해 설명합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69890834"
   
 4.  **특성** 창에서 **Yearly Income**을 선택합니다.  
   
-5.  속성 창에서 **DiscretizationMethod** 속성 값을 **Automatic** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
+5.  속성 창에서 **DiscretizationMethod** 속성 값을 **Automatic** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을 `5`로 변경 합니다.  
   
      다음 그림에서는 **Yearly Income**의 수정된 속성을 보여 줍니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890834"
   
 4.  **특성** 창에서 **Sick Leave Hours**를 선택합니다.  
   
-5.  속성 창에서 **DiscretizationMethod** 속성의 값을 **클러스터** 로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
+5.  속성 창에서 **DiscretizationMethod** 속성의 값을 **클러스터** 로 변경 하 고 **DiscretizationBucketCount** 속성의 값을 `5`로 변경 합니다.  
   
 6.  **특성** 창에서 **Vacation Hours**를 선택합니다.  
   
-7.  속성 창에서 **DiscretizationMethod** 속성의 값을 **동일한 영역** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
+7.  속성 창에서 **DiscretizationMethod** 속성의 값을 **동일한 영역** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을 `5`로 변경 합니다.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>수정된 특성 계층 찾아보기  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69890834"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [특성 계층 숨기기 및 비활성화](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

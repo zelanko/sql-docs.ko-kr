@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874406"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
@@ -42,7 +42,7 @@ ms.locfileid: "70874406"
     >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
     > Microsoft Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭 한 다음 문서 라이브러리 보기를 **모든 문서**로 변경 합니다.    
     > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
-    >  Microsoft Edge에서 지 원하는 항목에 대 한 자세한 내용은 Windows 블로그, [과거의 중단 (2 부)을 참조 하세요. ActiveX, VBScript ...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Microsoft Edge에서 지 원하는 항목에 대 한 자세한 내용은 Windows 블로그, [과거의 중단, 2 부: ActiveX에](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 대 한 의견을 표시 합니다. VBScript ...  
   
 -   라이브러리를 만들려면 사이트 소유자여야 합니다.  
   
@@ -59,18 +59,18 @@ ms.locfileid: "70874406"
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 ##  <a name="createlib"></a>PowerPivot 갤러리 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 새 서버 설치 옵션을 사용하여 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치하면 만들어집니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 기존 팜에 추가한 경우 또는 추가 라이브러리가 필요한 경우 애플리케이션이나 사이트에 대해 새로 만들 수 있습니다.  
   
-1.  1.  **SharePoint 2010**: 사이트 홈 페이지의 왼쪽 위 모서리에서 **사이트 작업** 을 클릭 합니다.  
+1.  1.  **SharePoint 2010**: 사이트 홈 페이지의 왼쪽 상단에서 **사이트 작업** 을 클릭합니다.  
   
     2.  **기타 옵션**을 클릭합니다.  
   
     3.  라이브러리에서 **PowerPivot  갤러리**를 클릭합니다.  
   
-    1.  **SharePoint 2013**: 설정 아이콘 ![Sharepoint 설정](../media/as-sharepoint2013-settings-gear.gif "sharepoint 설정")을 클릭 합니다.  **사이트 콘텐츠**를 클릭합니다.  
+    1.  **Sharepoint 2013**: 설정 아이콘 ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 클릭 합니다. **사이트 콘텐츠**를 클릭합니다.  
   
     2.  **앱 추가**를 클릭합니다.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "70874406"
   
 2.  리본에서 **라이브러리**를 클릭합니다.  
   
-3.  **SharePoint  2010:** 사용자 지정 보기에서 **이 보기 수정**을 클릭 합니다.  
+3.  **SharePoint 2010:** 사용자 지정 보기에서 **이 보기 수정**을 클릭합니다.  
   
-     **SharePoint 2013:** **보기 관리**에서 **보기 수정**을 클릭 합니다.  
+     **SharePoint 2013:** **보기 관리**에서 **보기 수정**을 클릭합니다.  
   
 4.  정렬에 통합 문서가 목록에 표시되는 방식을 결정하는 데 사용될 조건을 지정합니다. 기본적으로 문서는 추가된 순서로 나열됩니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874406"
   
  다음 표에서는 각 미리 보기 페이지의 축소판 그림 스케치를 표시하는 데 사용할 수 있는 여러 레이아웃을 설명합니다.  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|  
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|  
@@ -146,10 +146,10 @@ ms.locfileid: "70874406"
   
 3.  보기 관리의 현재 보기 목록에서 사용할 보기를 선택합니다. 미리 정의된 보기에는 갤러리, 극장식 및 회전식 보기가 있습니다. 또는 라이브러리에서 문서를 이동, 삭제 또는 관리하려는 경우 모든 문서를 선택할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SharePoint용 PowerPivot 설치 문제 해결](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [PowerPivot 갤러리 사용](use-power-pivot-gallery.md)   
- [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SharePoint용 PowerPivot 설치 문제 해결](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
+ [PowerPivot 갤러리   사용](use-power-pivot-gallery.md)  
+ [중앙 관리  에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)  
  [PowerPivot 갤러리 삭제](delete-power-pivot-gallery.md)  
   
   

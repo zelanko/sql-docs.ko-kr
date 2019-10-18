@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493873"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>다 대 다 관계 정의
@@ -35,7 +35,7 @@ ms.locfileid: "69493873"
   
 1.  **Adventure Works DW 2012** 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 엽니다.  
   
-2.  **다이어그램 구성 도우미** 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 다음 새 다이어그램의 이름으로를 지정 `Internet Sales Order Reasons` 합니다.  
+2.  **다이어그램 구성 도우미** 창을 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 다음이 새 다이어그램의 이름으로 `Internet Sales Order Reasons`를 지정 합니다.  
   
 3.  **테이블** 창에서 **InternetSales** 테이블을 **다이어그램** 창으로 끌어옵니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69493873"
   
 6.  **서식** 메뉴에서 **자동 레이아웃**을 가리킨 다음 **다이어그램**을 클릭합니다.  
   
-7.  속성 창에서 **dimsalesreason** 테이블의 `SalesReason` **friendlyname** 속성을로 변경 하 고 **FactInternetSalesReason** 테이블의 `InternetSalesReason` **friendlyname** 속성을로 변경 합니다.  
+7.  속성 창에서 **Dimsalesreason** 테이블의 **friendlyname** 속성을 `SalesReason`로 변경 하 고 **FactInternetSalesReason** 테이블의 **friendlyname** 속성을 `InternetSalesReason`로 변경 합니다.  
   
 8.  **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)** 을 확장하고 **SalesOrderNumber**를 클릭한 다음 속성 창에서 이 데이터 열의 **DataType** 속성을 검토합니다.  
   
      **SalesOrderNumber** 열의 데이터 형식은 문자열 데이터 형식입니다.  
   
-9. `InternetSalesReason` 테이블의 다른 열에 대 한 데이터 형식을 검토 합니다.  
+9. @No__t_0 테이블의 다른 열에 대 한 데이터 형식을 검토 합니다.  
   
      이 테이블의 다른 두 개의 열에 대한 데이터 형식은 숫자 데이터 형식입니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493873"
   
 2.  **측정값** 창을 마우스 오른쪽 단추로 클릭한 다음 **새 측정값 그룹**을 클릭합니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)를 참조하세요.  
   
-3.  **새 측정값 그룹** 대화 상자의 `InternetSalesReason` **데이터 원본 뷰에서 테이블 선택** 목록에서를 선택한 다음 **확인**을 클릭 합니다.  
+3.  **새 측정값 그룹** 대화 상자의 **데이터 원본 뷰에서 테이블 선택** 목록에서 `InternetSalesReason`을 선택 하 고 **확인**을 클릭 합니다.  
   
      이제 **Internet Sales Reason** 측정값 그룹이 **측정값** 창에 나타납니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "69493873"
   
 4.  **원본 정보 지정** 페이지에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 데이터 원본 뷰가 선택되어 있는지 확인합니다.  
   
-5.  **주 테이블** 목록에서을 선택 `SalesReason`합니다.  
+5.  **주 테이블** 목록에서 `SalesReason`을 선택 합니다.  
   
 6.  **키 열** 목록에 **SalesReasonKey** 가 있는지 확인합니다.  
   
@@ -107,19 +107,19 @@ ms.locfileid: "69493873"
   
 8.  **다음**을 클릭합니다.  
   
-9. **차원 특성 선택** 페이지에서 키 특성인 **Sales Reason Key** 특성이 자동으로 선택됩니다. **Sales reason reason Type** 특성 옆에 있는 확인란을 선택 하 고 이름을로 `Sales Reason Type`변경한 후 **다음**을 클릭 합니다.  
+9. **차원 특성 선택** 페이지에서 키 특성인 **Sales Reason Key** 특성이 자동으로 선택됩니다. **Sales Reason Reason Type** 특성 옆에 있는 확인란을 선택 하 고 이름을 `Sales Reason Type`로 변경한 후 **다음**을 클릭 합니다.  
   
 10. **마법사 완료** 페이지에서 **마침** 을 클릭하여 Sales Reason 차원을 만듭니다.  
   
 11. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-12. **Sales reason** 차원에 대 한 차원 디자이너의 **특성** 창에서 **sales reason Key**를 선택한 다음 속성 창의 **이름** 속성을로 변경 합니다.`Sales Reason.`  
+12. **Sales reason** 차원에 대 한 차원 디자이너의 **특성** 창에서 **sales reason Key**를 선택한 다음 속성 창의 **이름** 속성을로 변경 `Sales Reason.`  
   
-13. 차원 디자이너 **의 계층** 창 `Sales Reason Type` 에서 수준 및 **sales Reason** 수준을 해당 순서로 포함 하는 **sales** Reason 사용자 계층을 만듭니다.  
+13. 차원 디자이너의 **계층** 창에서 해당 순서로 `Sales Reason Type` 수준 및 **sales Reason** 수준을 포함 하는 **sales** Reason 사용자 계층을 만듭니다.  
   
-14. 속성 창에서 Sales 이유가 계층 `All Sales Reasons` 의 **AllMemberName** 속성에 대 한 값으로를 정의 합니다.  
+14. 속성 창에서 Sales 이유가 계층의 **AllMemberName** 속성에 대 한 값으로 `All Sales Reasons`을 정의 합니다.  
   
-15. Sales `All Sales Reasons` Reason 차원의 **AttributeAllMemberName** 속성에 대 한 값으로 정의 합니다.  
+15. Sales Reason 차원의 **AttributeAllMemberName** 속성 값으로 `All Sales Reasons`를 정의 합니다.  
   
 16. 새로 만들어진 차원을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 큐브 차원으로 추가하려면 **큐브 디자이너**로 전환합니다. **큐브 구조** 탭에서 **차원** 창을 마우스 오른쪽 단추로 클릭하고 **큐브 차원 추가**를 선택합니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493873"
   
 5.  메타데이터 창에서 **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**, **Australia**를 차례로 확장하고 **Queensland**를 마우스 오른쪽 단추로 클릭한 다음 **필터에 추가**를 클릭합니다.  
   
-6.  `Sales Reason Type` 수준의 각 멤버를 확장 하 여 Queensland의 고객이 인터넷을 통해 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품을 구매 하는 데 제공한 각 이유와 관련 된 달러 값을 검토 합니다.  
+6.  @No__t_0 수준의 각 멤버를 확장 하 여 Queensland의 고객이 인터넷을 통해 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품의 구매를 위해 제공한 각 이유와 관련 된 달러 값을 검토 합니다.  
   
      각 판매 이유와 연결된 합계가 총 판매량보다 크며 이는 일부 고객이 여러 구매 이유를 언급했기 때문입니다.  
   
@@ -172,8 +172,8 @@ ms.locfileid: "69493873"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [측정값 그룹의 차원 세분성 정의](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [다 대 다 관계 및 다 대 다 관계 속성 정의](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

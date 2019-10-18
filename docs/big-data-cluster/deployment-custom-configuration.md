@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682033"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542168"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대 한 배포 설정 구성
 
@@ -151,11 +151,11 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 
 클러스터 배포 구성 파일을 사용자 지정하려면 VSCode와 같은 JSON 형식 편집기를 사용할 수 있습니다. 자동화를 위해 이러한 편집 작업을 스크립팅하려면 **azdata bdc config** 명령을 사용합니다. 이 문서에서는 배포 구성 파일을 수정하여 빅 데이터 클러스터 배포를 구성하는 방법을 설명합니다. 각기 다른 시나리오에 맞게 구성을 변경하는 방법의 예제를 제공합니다. 배포에서 구성 파일을 사용하는 방법에 대한 자세한 내용은 [배포 지침](deployment-guidance.md#configfile)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>Prerequisites
 
 - [azdata 설치](deploy-install-azdata.md).
 
-- 이 섹션의 각 예제에서는 표준 구성 중 하나의 복사본을 만들었다고 가정합니다. 자세한 내용은 [사용자 지정 구성 만들기](deployment-guidance.md#customconfig)를 참조하세요. 예를 들어 다음 명령은 기본 **aks** 구성에 기반 `custom` 하 여 두 개의 JSON 배포 구성 파일, **bdc** 및 **컨트롤**을 포함 하는 라는 디렉터리를 만듭니다.
+- 이 섹션의 각 예제에서는 표준 구성 중 하나의 복사본을 만들었다고 가정합니다. 자세한 내용은 [사용자 지정 구성 만들기](deployment-guidance.md#customconfig)를 참조하세요. 예를 들어 다음 명령은 기본 **aks** 구성에 **기반 하 여** 두 개의 json 배포 구성 파일인 및 **control**을 포함 하는 `custom` 라는 디렉터리를 만듭니다.
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -539,18 +539,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -635,4 +625,4 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 > [이 문서의](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)지침에 따라 Kubernetes 클러스터의 각 호스트에서 수동으로 **max_map_count** 설정을 수동으로 업데이트 하는 것이 좋습니다.
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터 배포에서 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md#configfile)을 참조 하세요.
+빅 데이터 클러스터 배포에서 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포 하는 방법](deployment-guidance.md#configfile)을 참조 하세요.

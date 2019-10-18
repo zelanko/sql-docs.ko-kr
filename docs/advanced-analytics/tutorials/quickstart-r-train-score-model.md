@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005983"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542117"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 R에서 예측 모델 만들기 및 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 R을 사용 하 여 예측 모델을 만들고 학습 하 고, 모델을 SQL Server 인스턴스의 테이블에 저장 한 다음, 모델을 사용 하 여 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용 하 여 새 데이터의 값을 예측할 수 있습니다.
 
-이 빠른 시작에서 사용할 모델은 차량에서 수동 전송에 적합 한 확률을 예측 하는 단순한 일반화 된 선형 모델 (글 화 m)입니다. R에 포함 된 **mtcars** 데이터 집합을 사용 합니다.
+SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합니다. 첫 번째는 R에 포함 된 **mtcars** 데이터 집합을 사용 하 고 차량에서 수동 전송에 적합 한 확률을 예측 하는 단순한 일반화 된 선형 모델 (글 화)을 생성 합니다. 두 번째 절차는 첫 번째 절차에서 생성 된 모델을 호출 하 여 새 데이터를 기반으로 예측 집합을 출력 하는 것입니다. SQL 저장 프로시저에 R 코드를 배치 하 여 작업은 SQL에 포함 되 고 다시 사용할 수 있으며 다른 저장 프로시저와 클라이언트 응용 프로그램에서 호출할 수 있습니다.
 
 > [!TIP]
-> 선형 모델에 리프레셔가 필요한 경우 rxLinMod를 사용 하 여 모델을 맞추는 프로세스를 설명 하는이 자습서를 사용해 보세요.  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)(선형 모델 맞춤)
+> 선형 모델에 리프레셔가 필요한 경우 rxLinMod: [피팅 선형 모델](/machine-learning-server/r/how-to-revoscaler-linear-model) 을 사용 하 여 모델을 맞추는 프로세스를 설명 하는이 자습서를 사용해 보세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+이 빠른 시작을 완료 하면 다음을 익힐 수 있습니다.
+
+> [!div class="checklist"]
+> - 저장 프로시저에 R 코드를 포함 하는 방법
+> - 저장 프로시저의 입력을 통해 코드에 입력을 전달 하는 방법
+> - 저장 프로시저를 사용 하 여 모델을 운영 하는 방법
+
+## <a name="prerequisites"></a>Prerequisites
 
 - 이 빠른 시작을 사용 하려면 R 언어가 설치 된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 를 사용 하 여 SQL Server 인스턴스에 액세스 해야 합니다.
 
@@ -41,7 +48,7 @@ ms.locfileid: "72005983"
 
 ### <a name="create-the-source-data"></a>원본 데이터 만들기
 
-1. **SQL Server Management Studio** 를 열고 SQL Server 인스턴스에 연결 합니다.
+1. SSMS를 열고 SQL Server 인스턴스에 연결 하 고 새 쿼리 창을 엽니다.
 
 1. 학습 데이터를 저장할 테이블을 만듭니다.
 
@@ -61,7 +68,7 @@ ms.locfileid: "72005983"
    );
    ```
 
-1. 기본 제공 데이터 집합의 데이터를 `mtcars`으로 삽입 합니다.
+1. @No__t_0 기본 제공 데이터 집합의 데이터를 삽입 합니다.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,11 +79,11 @@ ms.locfileid: "72005983"
    ```
 
    > [!TIP]
-   > R 런타임에는 작고 큰 많은 데이터 세트가 포함되어 있습니다. R을 사용 하 여 설치 된 데이터 집합 목록을 가져오려면 R 명령 프롬프트에서 `library(help="datasets")`을 입력 합니다.
+   > R 런타임에는 작고 큰 많은 데이터 세트가 포함되어 있습니다. R을 사용 하 여 설치 된 데이터 집합 목록을 가져오려면 R 명령 프롬프트에서 `library(help="datasets")`를 입력 합니다.
 
 ### <a name="create-and-train-the-model"></a>모델 만들기 및 학습
 
-차 속도 데이터에는 두 개의 열, @no__t @no__t 즉 두 개의 열이 포함 됩니다. 이 데이터를 사용 하 여 차량에서 수동 전송에 적합 한 확률을 예측 하는 일반화 된 선형 모델 (글 화)을 만듭니다.
+차 속도 데이터에는 두 개의 열, 즉 두 개의 열, 즉 `hp` 및 가중치 (`wt`)가 포함 됩니다. 이 데이터를 사용 하 여 차량에서 수동 전송에 적합 한 확률을 예측 하는 일반화 된 선형 모델 (글 화)을 만듭니다.
 
 모델을 작성 하려면 R 코드 내에서 수식을 정의 하 고 데이터를 입력 매개 변수로 전달 합니다.
 
@@ -98,8 +105,8 @@ END;
 GO
 ```
 
-- @No__t에 대 한 첫 번째 인수는 `am`를 `hp + wt`에 따라 정의 하는 *수식* 매개 변수입니다.
-- 입력 데이터는 SQL 쿼리로 데이터를 채운 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 특정 이름을 할당하지 않는 경우 기본 변수 이름은 _InputDataSet_ 입니다.
+- @No__t_0에 대 한 첫 번째 인수는 `hp + wt`에 따라 `am` 정의 하는 *수식* 매개 변수입니다.
+- 입력 데이터는 SQL 쿼리에 의해 채워지는 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 특정 이름을 할당하지 않는 경우 기본 변수 이름은 _InputDataSet_입니다.
 
 ### <a name="store-the-model-in-the-sql-database"></a>SQL 데이터베이스에 모델 저장
 
@@ -124,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 이 코드를 두 번째로 실행 하면 다음 오류가 발생 합니다. "PRIMARY KEY 제약 조건 위반 ... 개체 stopping_distance_models "에 중복 키를 삽입할 수 없습니다. 이 오류를 방지하는 한 가지 옵션은 각 새 모델의 이름을 업데이트하는 것입니다. 예를 들어 모델의 유형, 생성한 날짜 등을 포함해서 좀 더 서술적인 이름으로 변경할 수 있습니다.
+   > 이 코드를 두 번째로 실행 하면 다음과 같은 오류가 발생 합니다. "PRIMARY KEY 제약 조건 위반 ... 개체 stopping_distance_models "에 중복 키를 삽입할 수 없습니다. 이 오류를 방지하는 한 가지 옵션은 각 새 모델의 이름을 업데이트하는 것입니다. 예를 들어 이름을 추가 설명이 포함된 이름으로 변경하고 모델 유형, 모델 유형을 만든 날짜 등을 포함할 수 있습니다.
 
      ```sql
      UPDATE GLM_models
@@ -170,7 +177,7 @@ GO
 1. 새 입력 데이터를 가져옵니다.
 1. 해당 모델과 호환되는 R 예측 함수를 호출합니다.
 
-시간이 지남에 따라 테이블은 여러 R 모델을 포함 하거나 다른 매개 변수 또는 알고리즘을 사용 하 여 작성 되거나 다른 데이터 하위 집합에 대해 학습 될 수 있습니다. 이 예제에서는 `default model` 이라는 모델을 사용 합니다.
+시간이 지남에 따라 테이블은 여러 R 모델을 포함 하거나 다른 매개 변수 또는 알고리즘을 사용 하 여 작성 되거나 다른 데이터 하위 집합에 대해 학습 될 수 있습니다. 이 예에서는 `default model` 라는 모델을 사용 합니다.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -198,14 +205,14 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 - 테이블에서 모델을 검색한 후 모델에서 `unserialize` 함수를 호출합니다.
 
-- 모델에 필요한 인수들로 `predict` 함수를 적용하고 새 입력 데이터를 제공합니다.
+- 적절한 인수를 사용하여 `predict` 함수를 적용하고 새 입력 데이터를 제공합니다.
 
 > [!NOTE]
-> 예제에서 추가된 `str` 함수는 테스트 단계에 R에서 반환되는 데이터의 스키마를 확인하기 위한 용도입니다. 나중에 제거할 수 있습니다.
+> 이 예제에서는 R에서 반환 되는 데이터의 스키마를 확인 하기 위해 테스트 단계 중에 `str` 함수를 추가 합니다. 나중에 문을 제거할 수 있습니다.
 >
-> R 스크립트에 사용된 열 이름은 저장 프로시저 출력으로 반드시 전달되지는 않습니다. 여기서 WITH RESULTS 절은 몇 가지 새로운 열 이름을 정의 하는 데 사용 됩니다.
+> R 스크립트에 사용 된 열 이름이 저장 프로시저 출력에 반드시 전달 되는 것은 아닙니다. 여기서 WITH RESULTS 절은 몇 가지 새로운 열 이름을 정의 하는 데 사용 됩니다.
 
-**결과**
+**Results**
 
 ![수동 전송의 properbility 예측에 대 한 결과 집합](./media/r-predict-am-resultset.png)
 

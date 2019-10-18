@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493977"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configure PowerPivot and Deploy Solutions (SharePoint 2013)
@@ -24,7 +24,7 @@ ms.locfileid: "69493977"
   
 -   PowerPivot 서비스 애플리케이션 만들기  
   
--   SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하도록 Excel Services 애플리케이션을 구성합니다. 백 엔드 서비스 및 SharePoint 모드에서 서버 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조 하세요.  
+-   SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하도록 Excel Services 애플리케이션을 구성합니다. 백 엔드 서비스 및 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 설치에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조 하세요.  
   
  SharePoint용 PowerPivot 2013 구성 도구를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 추가 기능 &#40;SharePoint 2013&#41; 설치 또는 제거](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) 를 참조 하세요.  
   
@@ -37,14 +37,14 @@ ms.locfileid: "69493977"
  [문제 해결](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a>SharePoint용 PowerPivot 2013 구성 실행  
- **참고:** 설치 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 마법사는에 대 한 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]두 가지 구성 도구를 설치 합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
+ **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 두 가지 구성 도구를 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
   
-|속성|Description|  
+|NAME|Description|  
 |----------|-----------------|  
 |SharePoint 2013용 PowerPivot 구성|SharePoint 2013|  
 |PowerPivot 구성 도구|SharePoint 2010 SP1(서비스 팩 1)|  
   
- **참고:** 다음 단계를 완료 하려면 팜 관리자 여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  
+ **참고:** 다음 단계를 완료하려면 팜 관리자여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  
   
 -   "사용자가 팜 관리자가 아닙니다. 유효성 검사 오류를 처리하고 다시 시도하십시오."  
   
@@ -58,15 +58,15 @@ ms.locfileid: "69493977"
   
 4.  **매개 변수** 탭에서  
   
-    1.  **기본 계정 사용자 이름**: 기본 계정에 대 한 도메인 사용자 계정을 입력 합니다. 이 계정은 PowerPivot 서비스 애플리케이션 풀을 포함한 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
+    1.  **기본 계정 사용자 이름**: 기본 계정의 도메인 사용자 계정을 입력합니다. 이 계정은 PowerPivot 서비스 애플리케이션 풀을 포함한 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
   
-    2.  **데이터베이스 서버**: SharePoint 팜에 대해 지원 되는 SQL Server 데이터베이스 엔진을 사용할 수 있습니다.  
+    2.  **데이터베이스 서버**: SharePoint 팜에 대해 지원되는 SQL Server 데이터베이스 엔진을 사용할 수 있습니다.  
   
-    3.  **암호**: 암호를 입력 하십시오. 새 SharePoint 팜을 만드는 경우 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 이미 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
+    3.  **암호**: 암호를 입력합니다. 새 SharePoint 팜을 만드는 경우 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 이미 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
   
-    4.  **Excel Services 용 PowerPivot 서버**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버의 이름을 입력 합니다. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
+    4.  **Excel Services용 PowerPivot 서버**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버의 이름을 입력합니다. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
   
-    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값을 수정 하려면 왼쪽 창에서 다음 페이지를 검토 합니다. **기본 웹 응용 프로그램 만들기** 및 **웹 응용 프로그램 솔루션 배포**  
+    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값을 수정하려면 왼쪽 창에서 **기본 웹 애플리케이션 만들기** 및 **웹 애플리케이션 솔루션 배포**페이지를 검토하세요.  
   
 5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 항목에 대 한 자세한 내용은이 항목의 " [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41; ](../../configure-repair-powerpivot-sharepoint-2010.md) 에서 서버를 구성 하는 데 사용 되는 입력 값" 섹션을 참조 하십시오.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "69493977"
   
 1.  구성 도구로 만든 사이트 URL로 이동합니다.  
   
-     **설정**![Sharepoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 설정")을 클릭 한 다음 **사이트 설정**을 클릭 합니다.  
+     **설정**![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 클릭 한 다음 **사이트 설정**을 클릭 합니다.  
   
      **사이트 모음 기능**을 클릭합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69493977"
   
 1.  SharePoint 중앙 관리에서 **모니터링** 을 클릭하고 **사용 현황 및 상태 데이터 수집 구성**을 클릭합니다.  
   
-2.  **사용 현황 데이터 수집 사용** 이 선택되어 있는지 확인합니다.  
+2.  **사용량 현황 데이터 수집 사용** 이 선택되어 있는지 확인합니다.  
   
 3.  다음 이벤트가 선택되어 있는지 확인합니다.  
   

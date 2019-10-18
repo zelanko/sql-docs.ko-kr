@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313673"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542132"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 Python에서 예측 모델을 만들고 점수 매기기
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용 하 여 Python에서 예측 모델 만들기 및 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 Python을 사용 하 여 예측 모델을 만들고 학습 하 고, 모델을 SQL Server 인스턴스의 테이블에 저장 한 다음, 모델을 사용 하 여 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용 하 여 새 데이터의 값을 예측할 수 있습니다.
 
-SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합니다. 첫 번째는 클래식 Iri 꽃 데이터 집합을 사용 하 고 Naive Bayes 모델을 생성 하 여 꽃 특성을 기반으로 하는 조리개 종류를 예측 합니다. 두 번째 절차는 첫 번째 절차에서 생성 된 모델을 호출 하 여 새 데이터를 기반으로 예측 집합을 출력 하는 것입니다. 저장 프로시저에 코드를 배치 하면 다른 저장 프로시저와 클라이언트 응용 프로그램에서 작업을 포함 하 고 재사용 가능 하며 호출할 수 있습니다.
+SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합니다. 첫 번째는 클래식 Iri 꽃 데이터 집합을 사용 하 고 Naive Bayes 모델을 생성 하 여 꽃 특성을 기반으로 하는 조리개 종류를 예측 합니다. 두 번째 절차는 첫 번째 절차에서 생성 된 모델을 호출 하 여 새 데이터를 기반으로 예측 집합을 출력 하는 것입니다. SQL 저장 프로시저에 Python 코드를 배치 하면 작업은 SQL에 포함 되 고 재사용 가능 하며 다른 저장 프로시저와 클라이언트 응용 프로그램에서 호출할 수 있습니다.
 
 이 빠른 시작을 완료 하면 다음을 익힐 수 있습니다.
 
@@ -31,7 +31,7 @@ SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합�
 > - 저장 프로시저의 입력을 통해 코드에 입력을 전달 하는 방법
 > - 저장 프로시저를 사용 하 여 모델을 운영 하는 방법
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>Prerequisites
 
 - 이 빠른 시작에서는 Python 언어가 설치 된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 를 사용 하 여 SQL Server 인스턴스에 액세스할 수 있어야 합니다.
 
@@ -43,7 +43,9 @@ SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합�
 
 이 단계에서는 결과를 예측 하는 모델을 생성 하는 저장 프로시저를 만듭니다.
 
-1. **Irissql** 데이터베이스에 연결 된 SSMS에서 새 쿼리 창을 엽니다. 
+1. SSMS를 열고 SQL Server 인스턴스에 연결 하 고 새 쿼리 창을 엽니다.
+
+1. Irissql 데이터베이스에 연결 합니다.
 
     ```sql
     USE irissql
@@ -89,7 +91,7 @@ SQL에서 실행 되는 두 개의 저장 프로시저를 만들고 실행 합�
 
 SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림으로 직렬화 되 고 데이터베이스 테이블의 VARBINARY (MAX) 열에 저장 됩니다. 모델을 만들고, 학습 하 고, serialize 하 고, 데이터베이스에 저장 한 후에는 다른 프로시저 또는 점수 매기기 작업의 [예측 t-sql](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 함수에 의해 호출 될 수 있습니다.
 
-1. 다음 스크립트를 실행 하 여 프로시저를 실행 합니다. 저장 프로시저를 실행 하는 특정 문은 네 번째 줄에서 `EXECUTE`입니다.
+1. 다음 스크립트를 실행 하 여 프로시저를 실행 합니다. 저장 프로시저를 실행 하는 특정 문은 네 번째 줄에 `EXECUTE` 됩니다.
 
    이 특정 스크립트는 동일한 이름 ("Naive Bayes")의 기존 모델을 삭제 하 여 동일한 절차를 다시 실행 하 여 새로 만든 공간을 만듭니다. 모델을 삭제 하지 않으면 개체가 이미 존재 하는 것을 나타내는 오류가 발생 합니다. 모델은 **irissql** 데이터베이스를 만들 때 프로 비전 된 **iris_models**라는 테이블에 저장 됩니다.
 
@@ -109,15 +111,15 @@ SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림�
     SELECT * FROM dbo.iris_models
     ```
 
-    **결과**
+    **Results**
 
-    | model_name  | model |
+    | model_name  | 모델 |
     |---|-----------------|
     | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>예측을 생성 하는 저장 프로시저 만들기 및 실행
 
-모델을 만들고, 학습 하 고, 저장 했으므로 다음 단계로 이동 합니다. 예측을 생성 하는 저장 프로시저 만들기 @No__t-0을 호출 하 여 직렬화 된 모델을 로드 하는 Python 스크립트를 실행 하 고 점수에 새 데이터 입력을 제공 하 여이 작업을 수행 합니다.
+모델을 만들고, 학습 하 고, 저장 했으므로 다음 단계로 이동 합니다. 예측을 생성 하는 저장 프로시저 만들기 Serialize 된 모델을 로드 하는 Python 스크립트를 실행 하 고 점수에 새 데이터 입력을 제공 하는 `sp_execute_external_script`를 호출 하 여이 작업을 수행 합니다.
 
 1. 다음 코드를 실행 하 여 점수 매기기를 수행 하는 저장 프로시저를 만듭니다. 런타임에이 프로시저는 이진 모델을 로드 하 고, `[1,2,3,4]` 열을 입력으로 사용 하 고, `[0,5,6]` 열을 출력으로 지정 합니다.
 
@@ -166,11 +168,11 @@ SQL Server 다시 사용 하기 위해 저장 된 모델은 바이트 스트림�
 
    결과는 흰꽃잎색 특성을 입력으로 사용 하는 방법에 대 한 150의 예측입니다. 대부분의 관찰에서 예측 된 종류는 실제 종류와 일치 합니다.
 
-   이 예제는 학습 및 점수 매기기에 Python iri 데이터 집합을 사용 하 여 간단 하 게 만들었습니다. 보다 일반적인 접근 방식은 SQL 쿼리를 실행 하 여 새 데이터를 가져오고 `InputDataSet`으로 Python에 전달 하는 것과 관련이 있습니다.
+   이 예제는 학습 및 점수 매기기에 Python iri 데이터 집합을 사용 하 여 간단 하 게 만들었습니다. 보다 일반적인 접근 방식은 SQL 쿼리를 실행 하 여 새 데이터를 가져오고 `InputDataSet`로 Python에 전달 하는 것과 관련이 있습니다.
 
 ## <a name="conclusion"></a>결론
 
-이 연습에서는 각 저장 프로시저에서 시스템 저장 @no__t 프로시저를 사용 하 여 Python 프로세스를 시작 하는 다른 작업에 전용 저장 프로시저를 만드는 방법을 알아보았습니다. Python 프로세스에 대 한 입력은 매개 변수로 `sp_execute_external`에 전달 됩니다. SQL Server 데이터베이스의 Python 스크립트 자체와 데이터 변수는 모두 입력으로 전달 됩니다.
+이 연습에서는 다른 태스크에 전용 저장 프로시저를 만드는 방법을 알아보았습니다. 여기에서 각 저장 프로시저는 시스템 저장 프로시저를 사용 하 여 Python 프로세스를 시작 `sp_execute_external_script` 합니다. Python 프로세스에 대 한 입력은 `sp_execute_external` 매개 변수로 전달 됩니다. SQL Server 데이터베이스의 Python 스크립트 자체와 데이터 변수는 모두 입력으로 전달 됩니다.
 
 일반적으로는 세련 된 Python 코드와 함께 SSMS를 사용 하거나 행 기반 출력을 반환 하는 간단한 Python 코드를 사용 하도록 계획 해야 합니다. 이 도구로 SSMS는 T-sql과 같은 쿼리 언어를 지원 하 고 평면화 된 행 집합을 반환 합니다. 코드에서 산 점도 또는 히스토그램과 같은 시각적 출력을 생성 하는 경우 이미지를 렌더링할 수 있는 도구나 최종 사용자 응용 프로그램이 필요 합니다.
 
