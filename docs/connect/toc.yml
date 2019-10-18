@@ -11,15 +11,135 @@
 - name: ADO.NET
   items:
     - name: Microsoft ADO.NET for SQL Server
-      href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: '1단계: ADO.NET 개발을 위한 개발 환경 구성'
-      href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: '2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기'
-      href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: '3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명'
-      href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: '4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결'
-      href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
+      href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+    - name: SqlClient 드라이버 시작
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+        - name: '1단계: ADO.NET 개발을 위한 개발 환경 구성'
+          href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+        - name: '2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기'
+          href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+        - name: '3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명'
+          href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+        - name: '4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결'
+          href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: SqlClient 드라이버 개요
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+        - name: Microsoft.Data.SqlClient 네임스페이스 소개
+          href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+        - name: Microsoft SqlClient Data Provider for SQL Server 다운로드
+          href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient 드라이버 지원 기간
+          href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+        - name: 추가 SqlClient 드라이버 정보 찾기
+          href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: SQL Server 및 ADO.NET
+      href: ../connect/ado-net/sql/index.md
+      items:
+        - name: SQL Server 보안
+          href: ../connect/ado-net/sql/sql-server-security.md
+          items:
+            - name: SQL Server에서 인증
+              href: ../connect/ado-net/sql/authentication-sql-server.md
+            - name: SQL Server의 애플리케이션 보안 시나리오
+              href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+              items:
+                - name: SQL Server에서 보안 동적 SQL 작성
+                  href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+            - name: SQL Server Express 보안
+              href: ../connect/ado-net/sql/sql-server-express-security.md
+        - name: SQL Server 데이터 형식 및 ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-types.md
+          items:
+            - name: SqlTypes 및 데이터 세트
+              href: ../connect/ado-net/sql/sqltypes-dataset.md
+            - name: NULL 값 처리
+              href: ../connect/ado-net/sql/handle-null-values.md
+            - name: GUID 및 uniqueidentifier 값 비교
+              href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+            - name: 날짜 및 시간 데이터
+              href: ../connect/ado-net/sql/date-time-data.md
+            - name: 큰 UDT
+              href: ../connect/ado-net/sql/large-udts.md
+            - name: SQL Server의 XML 데이터
+              href: ../connect/ado-net/sql/xml-data-sql-server.md
+              items:
+                - name: SQL XML 열 값
+                  href: ../connect/ado-net/sql/sql-xml-column-values.md
+                - name: XML 값을 매개 변수로 지정
+                  href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+        - name: SQL Server 이진 및 큰 값 데이터
+          href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+          items:
+            - name: ADO.NET에서 큰 값(최대) 데이터 수정
+              href: ../connect/ado-net/sql/modify-large-value-max-data.md
+            - name: FILESTREAM 데이터
+              href: ../connect/ado-net/sql/filestream-data.md
+            - name: 파일에서 이미지 삽입
+              href: ../connect/ado-net/sql/insert-image-file.md
+        - name: ADO.NET의 SQL Server 데이터 작업
+          href: ../connect/ado-net/sql/sql-server-data-operations.md
+          items:
+            - name: SQL Server에서 대량 복사 작업
+              href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+              items:
+                - name: 대량 복사 예제 설정
+                  href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+                - name: 단일 대량 복사 작업
+                  href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+                - name: 여러 대량 복사 작업
+                  href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+                - name: 트랜잭션 및 대량 복사 작업
+                  href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+            - name: MARS(Multiple Active Result Sets)
+              href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+              items:
+                - name: MARS(Multiple Active Result Sets) 사용
+                  href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+                - name: 데이터 조작
+                  href: ../connect/ado-net/sql/manipulate-data.md
+            - name: 비동기 작업
+              href: ../connect/ado-net/sql/asynchronous-operations.md
+              items:
+                - name: 콜백을 사용하는 Windows 애플리케이션
+                  href: ../connect/ado-net/sql/windows-applications-callbacks.md
+                - name: 대기 핸들을 사용하는 ASP.NET 애플리케이션
+                  href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+                - name: 콘솔 애플리케이션에서 폴링
+                  href: ../connect/ado-net/sql/poll-console-applications.md
+            - name: 테이블 반환 매개 변수
+              href: ../connect/ado-net/sql/table-valued-parameters.md
+        - name: SQL Server 기능 및 ADO.NET
+          href: ../connect/ado-net/sql/sql-server-features-adonet.md
+          items:
+            - name: SQL Server의 인스턴스 열거(ADO.NET)
+              href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+            - name: SQL Server의 공급자 통계
+              href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+            - name: SQL Server Express 사용자 인스턴스
+              href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+            - name: SQL Server의 데이터베이스 미러링
+              href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+            - name: 컨텍스트 연결
+              href: ../connect/ado-net/sql/context-connection.md
+            - name: SQL Server의 쿼리 알림
+              href: ../connect/ado-net/sql/query-notifications-sql-server.md
+              items:
+                - name: 쿼리 알림 사용
+                  href: ../connect/ado-net/sql/enable-query-notifications.md
+                - name: ASP.NET 애플리케이션의 SqlDependency
+                  href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+                - name: SqlDependency로 변경 내용 감지
+                  href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+                - name: SqlNotificationRequest를 사용한 SqlCommand 실행
+                  href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+            - name: SQL Server의 스냅샷 격리
+              href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+            - name: 고가용성 재해 복구를 위한 SqlClient 지원
+              href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+            - name: LocalDB에 대한 SqlClient 지원
+              href: ../connect/ado-net/sql/sqlclient-support-localdb.md
 - name: JDBC
   items:
     - name: SQL Server용 Microsoft JDBC Driver

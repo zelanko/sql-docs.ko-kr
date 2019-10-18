@@ -1,5 +1,5 @@
 ---
-title: '태스크 4: 도메인 규칙 설정 | Microsoft Docs'
+title: '작업 4: 도메인 규칙 설정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489074"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381737"
 ---
-# <a name="task-4-setting-domain-rules"></a>태스크 4: 도메인 규칙 설정
-  이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com** 합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
+# <a name="task-4-setting-domain-rules"></a>작업 4: 도메인 규칙 설정
+  이 작업에서는 **연락처 전자 메일** 도메인에 대 한 규칙을 만들어 전자 메일 주소가 **\@adventure works.com**으로 끝나는지 확인 합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
   
 1.  **도메인 목록** 에서 **Contact Email**을 클릭합니다.  
   
 2.  오른쪽 창에서 **도메인 규칙** 으로 전환합니다.  
   
-     ![새 도메인 규칙 도구 모음 단추 추가](../../2014/tutorials/media/et-settingdomainrules-01.jpg "새 도메인 규칙 도구 모음 단추 추가")  
+     ![새 도메인 규칙 추가 도구 모음 단추](../../2014/tutorials/media/et-settingdomainrules-01.jpg "새 도메인 규칙 추가 도구 모음 단추")  
   
 3.  오른쪽 창의 도구 모음에서 **새 도메인 규칙 추가** 단추를 클릭하여 규칙을 추가합니다.  
   
@@ -32,33 +32,33 @@ ms.locfileid: "65489074"
   
 5.  **규칙 작성** 창에서 **아래쪽 화살표**를 클릭하고 **값이 다음으로 종료**를 선택합니다.  
   
-6.  형식 **@adventure-works.com** 텍스트 상자에 키를 눌러 **탭**합니다. **규칙 작성** 창에서 **선택한 절에 새 조건 추가** 도구 모음 단추를 클릭하여 조건을 추가할 수 있습니다.  
+6.  텍스트 상자에 **\@adventure-works.com** 를 입력 하 고 **tab**키를 누릅니다. **규칙 작성** 창에서 **선택한 절에 새 조건 추가** 도구 모음 단추를 클릭하여 조건을 추가할 수 있습니다.  
   
-     ![유효성 검사 규칙을 전자 메일](../../2014/tutorials/media/et-settingdomainrules-02.jpg "메일 유효성 검사 규칙")  
+     ![전자 메일 유효성 검사 규칙](../../2014/tutorials/media/et-settingdomainrules-02.jpg "전자 메일 유효성 검사 규칙")  
   
 7.  오른쪽 창의 도구 모음에서 **테스트 데이터에서 선택한 도메인 규칙 실행** 단추를 클릭하여 예제 데이터로 규칙을 테스트합니다.  
   
-     ![테스트 데이터 도구 모음 단추에서 도메인 규칙 실행](../../2014/tutorials/media/et-settingdomainrules-03.jpg "테스트 데이터 도구 모음 단추에서 도메인 규칙 실행")  
+     ![테스트 데이터에 대 한 도메인 규칙 실행 도구 모음 단추](../../2014/tutorials/media/et-settingdomainrules-03.jpg "테스트 데이터에 대 한 도메인 규칙 실행 도구 모음 단추")  
   
 8.  **도메인 규칙 테스트** 대화 상자의 도구 모음에서 **도메인 규칙에서 새 테스트 용어를 추가합니다.** 단추를 클릭합니다.  
   
-     ![도메인 규칙 대화 상자를 테스트할](../../2014/tutorials/media/et-settingdomainrules-04.jpg "도메인 규칙 대화 상자 테스트")  
+     ![도메인 규칙 테스트 대화 상자](../../2014/tutorials/media/et-settingdomainrules-04.jpg "도메인 규칙 테스트 대화 상자")  
   
-9. 형식 **frank7@adventure-works.com** (유효 값)에 **Contact Email** 열입니다.  
+9. **연락처 전자 메일** 열에 **frank7 \@adventure-works.com** (올바른 값)를 입력 합니다.  
   
-10. 이전 두 단계를 반복 추가 **joe2@adventure-work.com** (no 사용 하 여 잘못 된 값의 ').  
+10. 이전 두 단계를 반복 하 여 **joe2 \@adventure-work.com** (' s '가 없는 잘못 된 값)을 추가 합니다.  
   
-11. 도구 모음에서 마지막 단추(**모든 용어에 대한 도메인 규칙을 테스트합니다.** )를 클릭하여 규칙에 대해 입력 데이터를 테스트합니다.  
+11. 도구 모음에서 마지막 단추(**모든 용어에 대한 도메인 규칙을 테스트합니다.**)를 클릭하여 규칙에 대해 입력 데이터를 테스트합니다.  
   
-     ![모든 조건 도구 모음 단추에서 도메인 규칙 테스트](../../2014/tutorials/media/et-settingdomainrules-05.jpg "모든 조건 도구 모음 단추에서 도메인 규칙 테스트")  
+     ![모든 용어에 대 한 도메인 규칙 테스트 도구 모음 단추](../../2014/tutorials/media/et-settingdomainrules-05.jpg "모든 용어에 대 한 도메인 규칙 테스트 도구 모음 단추")  
   
 12. 첫 번째 항목은 유효한 항목으로 표시되고 두 번째 항목은 잘못된 항목으로 표시됨을 알 수 있습니다.  
   
-     ![도메인 규칙 테스트 결과](../../2014/tutorials/media/et-settingdomainrules-06.jpg "도메인 규칙 테스트 결과")  
+     ![도메인 규칙 결과 테스트](../../2014/tutorials/media/et-settingdomainrules-06.jpg "도메인 규칙 결과 테스트")  
   
 13. **닫기** 를 클릭하여 **도메인 규칙 테스트** 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 5: 용어 기반 관계 설정](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [태스크 5: 용어 기반 관계 설정](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   
