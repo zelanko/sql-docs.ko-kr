@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "63035076"
 ---
 # <a name="sqllogship-application"></a>sqllogship 애플리케이션
-  **sqllogship** 응용 프로그램은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
+  **sqllogship** 애플리케이션은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
   
  ![토픽 링크 아이콘](../../2014/database-engine/media/topic-link.gif "토픽 링크 아이콘") 구문 표기 규칙은 [명령 프롬프트 유틸리티 &#40;참조 데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md)를 참조 하세요.  
   
@@ -58,37 +58,37 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |level|Description|  
 |-----------|-----------------|  
 |0|추적 및 디버깅 메시지를 출력하지 않습니다.|  
-|1|오류 처리 메시지를 출력합니다.|  
+|@shouldalert|오류 처리 메시지를 출력합니다.|  
 |2|경고 및 오류 처리 메시지를 출력합니다.|  
 |**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이것은 기본값입니다.|  
 |4|모든 디버깅 및 추적 메시지를 출력합니다.|  
   
  **-logintimeout** _timeout_value_  
- 서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value* 는 **int**_입니다._  
+ 시도 시간이 초과 되기 전에 서버 인스턴스에 로그인을 시도 하는 데 할당 된 시간을 지정 합니다. 기본값은 15 초입니다. *timeout_value* 는 **int**_입니다._  
   
  **-querytimeout** _timeout_value_  
- 지정된 작업을 시작하는 데 할당된 제한 시간 값을 지정합니다. 기본값은 제한 시간 없음입니다. *timeout_value* 는 **int**_입니다._  
+ 시도 시간이 초과 되기 전에 지정 된 작업을 시작 하기 위해 할당 된 시간을 지정 합니다. 기본값은 제한 시간 없음입니다. *timeout_value* 는 **int**_입니다._  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>Remarks  
  가능하면 백업, 복사 및 복원 작업을 사용하여 백업, 복사 및 복원을 수행하는 것이 좋습니다. 일괄 처리 작업 또는 다른 애플리케이션에서 이러한 작업을 시작하려면 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) 저장 프로시저를 호출하세요.  
   
  **sqllogship** 에서 생성된 로그 전달 기록은 로그 전달 백업, 복사 및 복원 작업으로 생성된 기록과 섞여 있습니다. 로그 전달 구성에 대해 백업, 복사 또는 복원 작업을 수행하도록 **sqllogship** 을 반복적으로 사용하려면 해당 로그 전달 작업을 비활성화하는 것을 고려하십시오. 자세한 내용은 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
  **Sqllogship 응용 프로그램** 은 X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn 디렉터리에 설치 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sqllogship** 은 Windows 인증을 사용합니다. 명령이 실행될 Windows 인증 계정에는 Windows 디렉터리 액세스 권한 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 권한이 필요합니다. 요구 사항은 **sqllogship** 명령이 **-backup**, **-copy**또는 **-restore** 옵션을 지정하는지에 따라 다릅니다.  
   
-|옵션|디렉터리 액세스 권한|사용 권한|  
+|옵션|디렉터리 액세스 권한|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|백업 디렉터리에 대한 읽기/쓰기 권한이 필요합니다.|BACKUP 문과 같은 권한이 필요합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.|  
 |**-copy**|백업 디렉터리에 대한 읽기 권한과 복사 디렉터리에 대한 쓰기 권한이 필요합니다.|[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 저장 프로시저와 같은 권한이 필요합니다.|  
-|**-restore**|복사 디렉터리에 대한 읽기/쓰기 권한이 필요합니다.|RESTORE 문과 같은 권한이 필요합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)를 참조하세요.|  
+|**-restore**|복사 디렉터리에 대한 읽기/쓰기 권한이 필요합니다.|RESTORE 문과 같은 권한이 필요합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)을 참조하세요.|  
   
 > [!NOTE]  
->  백업 및 복사 디렉터리의 경로를 찾기 위해 **sp_help_log_shipping_secondary_database** 저장 프로시저를 실행하거나 **msdb**의 **log_shipping_secondary** 테이블을 볼 수 있습니다. 백업 디렉터리 및 대상 디렉터리의 경로는 **backup_source_directory** 및 **backup_destination_directory** 열에 각각 있습니다.  
+>  백업 및 복사 디렉터리의 경로를 찾기 위해 **sp_help_log_shipping_secondary_database** 저장 프로시저를 실행하거나 **msdb** 의 **log_shipping_secondary**테이블을 볼 수 있습니다. 백업 디렉터리 및 대상 디렉터리의 경로는 **backup_source_directory** 및 **backup_destination_directory** 열에 각각 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [로그 전달 정보&#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
  [log_shipping_secondary&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   

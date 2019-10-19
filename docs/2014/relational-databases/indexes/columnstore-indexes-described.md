@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811043"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *메모리 내 columnstore 인덱스* 는 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 저장 하 고 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 스토리지보다 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기보다 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.  
+  @No__t_0 *메모리 내 columnstore 인덱스* 는 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 저장 하 고 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 스토리지보다 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기보다 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.  
   
 > [!NOTE]  
 >  클러스터형 columnstore 인덱스를 대형 데이터 웨어하우징 팩트 테이블을 저장하기 위한 표준으로 보고 대부분의 데이터 웨어하우징 시나리오에 사용될 것으로 예상합니다. 클러스터형 columnstore 인덱스는 업데이트 가능하므로 해당 작업에서 많은 삽입, 업데이트 및 삭제 작업을 수행할 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "68811043"
   
 -   인덱스의 열 복사본을 저장할 추가 스토리지가 필요합니다.  
   
--   인덱스를 다시 작성하거나 파티션을 내부 및 외부 전환하여 업데이트됩니다. 삽입, 업데이트, 삭제 등의 DML 작업을 사용하여 업데이트할 수 없습니다.  
+-   인덱스를 다시 작성 하거나 파티션을 전환 하거나 체크 아웃 하 여 업데이트 됩니다. Insert, update, delete 등의 DML 작업을 사용 하 여 업데이트할 수 없습니다.  
   
 -   테이블의 다른 인덱스와 결합할 수 있습니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68811043"
   
 -   각 열 세그먼트는 함께 압축되며 실제 미디어에 저장됩니다.  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![열 세그먼트](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "열 세그먼트")  
   
  비클러스터형 columnstore 인덱스  
  *비클러스터형 columnstore 인덱스* 는 기존 클러스터형 인덱스 또는 힙 테이블에 생성 되는 읽기 전용 인덱스입니다. 여기에는 테이블의 모든 열을 포함한 열 하위 집합의 복사본이 들어 있습니다. 테이블은 비클러스터형 columnstore 인덱스를 포함 하는 동안 읽기 전용입니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "68811043"
  클러스터형 columnstore 인덱스  
  *클러스터형 columnstore 인덱스* 는 전체 테이블에 대 한 물리적 저장소 이며 테이블의 유일한 인덱스입니다. 클러스터형 인덱스는 업데이트할 수 있습니다. 인덱스에 대해 삽입, 삭제 및 업데이트 작업을 수행할 수 있으며, 인덱스로 데이터를 대량 로드할 수 있습니다.  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![클러스터형 Columnstore 인덱스](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 columnstore 인덱스")  
   
  열 세그먼트의 조각화를 줄이고 성능을 향상시키기 위해 columnstore 인덱스는 삭제된 행에 대한 ID의 B-트리와 함께 deltastore라는 rowstore 테이블에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68811043"
   
  ![Columnstore 인덱스로 데이터 로드](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Columnstore 인덱스로 데이터 로드")  
   
- 비클러스터형 columnstore 인덱스가 있는 테이블은 인덱스가 삭제되거나 비활성화될 때까지 읽기 전용입니다. 테이블과 비클러스터형 columnstore 인덱스를 업데이트하려면 파티션을 내부 및 외부 전환합니다. 인덱스를 비활성화하고 테이블을 업데이트한 후 인덱스를 다시 작성할 수도 있습니다.  
+ 비클러스터형 columnstore 인덱스가 있는 테이블은 인덱스가 삭제되거나 비활성화될 때까지 읽기 전용입니다. 테이블과 비클러스터형 columnstore 인덱스를 업데이트 하려면 파티션을 내부 및 외부로 전환할 수 있습니다. 인덱스를 사용 하지 않도록 설정 하 고 테이블을 업데이트 한 다음 인덱스를 다시 작성할 수도 있습니다.  
   
  자세한 내용은 [Using Nonclustered Columnstore Indexes](indexes.md)을 참조하세요.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811043"
   
 -   [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>메타데이터  
+### <a name="metadata"></a>브라우저  
  columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 저장됩니다. columnstore 인덱스에는 키 열이 없습니다.  
   
 -   [sys.indexes&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

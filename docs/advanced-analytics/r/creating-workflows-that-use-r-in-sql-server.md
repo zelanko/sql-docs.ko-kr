@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715168"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용 하 여 SSIS 및 SSRS 워크플로 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL Server SQL Server Machine Learning Services의 언어 및 데이터 과학 기능을 사용 하 여 포함 된 R 및 Python 스크립트를 사용 하는 방법을 설명 합니다. SQL Server Integration Services (SSIS) 및 SQL Server Reporting Services SSRS. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공 합니다. SSIS 및 SSRS는 각각 조정 ETL 변환과 시각화를 제공 합니다. 이 문서에서는 이러한 모든 기능을이 워크플로 패턴에 함께 포함 하는 방법을 설명 합니다.
+이 문서에서는 SQL Server SQL Server Machine Learning Services의 언어 및 데이터 과학 기능을 사용 하 여 포함 된 R 및 Python 스크립트를 사용 하는 방법에 대해 설명 합니다. SQL Server Integration Services (SSIS) 및 SQL Server Reporting Services SSRS. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공 합니다. SSIS 및 SSRS는 각각 조정 ETL 변환과 시각화를 제공 합니다. 이 문서에서는 이러한 모든 기능을이 워크플로 패턴에 함께 포함 하는 방법을 설명 합니다.
 
 > [!div class="checklist"]
 > * R 또는 Python 실행 파일을 포함 하는 저장 프로시저 만들기
@@ -32,9 +32,9 @@ ms.locfileid: "68715168"
 
 데이터 과학 워크플로는 반복이 매우 빈번하며, 크기 조정, 집계, 확률 계산, 특성 병합 및 이름 변경을 비롯한 데이터 변환이 많이 이루어집니다. 데이터 과학자는 R, Python 또는 기타 언어로 이러한 작업을 대부분 수행하지만 엔터프라이즈 데이터로 이러한 워크플로를 실행하려면 ETL 도구 및 프로세스와의 원활한 통합이 필요합니다.
 
-에서는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] transact-sql 및 저장 프로시저를 통해 R에서 복잡 한 작업을 실행할 수 있으므로 데이터 과학 작업을 기존 ETL 프로세스와 통합할 수 있습니다. 메모리를 많이 사용 하는 작업의 체인을 수행 하는 대신 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]를 비롯 하 여 가장 효율적인 도구를 사용 하 여 데이터 준비를 최적화할 수 있습니다. 
+@No__t_0를 사용 하면 Transact-sql 및 저장 프로시저를 통해 R에서 복잡 한 작업을 실행할 수 있으므로 데이터 과학 작업을 기존 ETL 프로세스와 통합할 수 있습니다. 메모리를 많이 사용 하는 작업의 체인을 수행 하는 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 비롯 한 가장 효율적인 도구를 사용 하 여 데이터 준비를 최적화할 수 있습니다. 
 
-다음은를 사용 하 여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]데이터 처리 및 모델링 파이프라인을 자동화할 수 있는 방법에 대 한 몇 가지 아이디어입니다.
+다음은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용 하 여 데이터 처리 및 모델링 파이프라인을 자동화할 수 있는 방법에 대 한 몇 가지 아이디어입니다.
 
 + 온-프레미스 또는 클라우드 소스에서 데이터를 추출 하 여 학습 데이터 빌드 
 + 데이터 통합 워크플로의 일부로 R 또는 Python 모델 빌드 및 실행
@@ -45,7 +45,7 @@ ms.locfileid: "68715168"
 
 ## <a name="ssis-example"></a>SSIS 예제
 
-다음 예제는이 URL에서 Jimmy Wong에 의해 작성 된 현재 사용 중지 된 MSDN 블로그 게시물에서 시작 됩니다.`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+다음 예제는 Jimmy Wong에서 작성 한 현재 사용이 중지 된 MSDN 블로그 게시물의 URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 이 예에서는 SSIS를 사용 하 여 작업을 자동화 하는 방법을 보여 줍니다. SQL Server Management Studio를 사용 하 여 포함 된 R을 사용 하 여 저장 프로시저를 만든 후 SSIS 패키지의 [T-sql 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) 에서 해당 저장 프로시저를 실행 합니다.
 
@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![선형 모델을 생성 합니다](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델을 생성 합니다") .
+![선형 모델을 생성 합니다.](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델을 생성 합니다.")
 
 검사점으로이 작업이 완료 되 면 ssis_iris_models를 쿼리하여 이진 모델이 하나 포함 되어 있는지 확인할 수 있습니다.
 
@@ -191,13 +191,13 @@ SSIS 디자이너에서 F5 키를 눌러 패키지를 실행 합니다. 다음 �
 
 R은 차트와 흥미로운 시각화를 만들 수 있지만 외부 데이터 원본과 잘 통합 되지 않으므로 각 차트 또는 그래프를 개별적으로 생성 해야 합니다. 공유도 어려울 수 있습니다.
 
-를 사용 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]하면 저장 프로시저를 통해 [!INCLUDE[tsql](../../includes/tsql-md.md)] R에서 복잡 한 작업을 실행할 수 있습니다 .이는 및 Power BI을 비롯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 한 다양 한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
+@No__t_0를 사용 하 여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯 한 다양 한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R에서 복잡 한 작업을 실행할 수 있습니다.
 
 ### <a name="ssrs-example"></a>SSRS 예
 
-[Microsoft Reporting Services(SSRS)용 R 그래픽 장치](https://rgraphicsdevice.codeplex.com/)
+[Microsoft Reporting Services(SSRS)용 R 그래픽 디바이스](https://rgraphicsdevice.codeplex.com/)
 
-이 CodePlex 프로젝트는 R의 그래픽 출력을 보고서에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용할 수 있는 이미지로 렌더링 하는 사용자 지정 보고서 항목을 만드는 데 도움이 되는 코드를 제공 합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
+이 CodePlex 프로젝트는 R의 그래픽 출력을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에서 사용할 수 있는 이미지로 렌더링 하는 사용자 지정 보고서 항목을 만드는 데 도움이 되는 코드를 제공 합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
 
 + R 그래픽 디바이스를 사용하여 만든 차트 및 그림을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대시보드에 게시
 
