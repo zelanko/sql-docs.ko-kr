@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: 개요
   items:
-    - name: SQL Server의 새 기능
+    - name: What's New
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: 버전 및 기능
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: 배포 스크립트
               items:
                 - name: AKS python 스크립트
@@ -8348,27 +8348,27 @@
         - name: 확장 프로그램
           href: azure-data-studio/extensions.md
           items:
-            - name: PostgreSQL 확장(미리 보기)
+            - name: PostgreSQL 확장
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019(미리 보기)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server 에이전트(미리 보기)
+            - name: SQL Server 에이전트
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: SQL Server 중앙 관리 서버 확장(미리 보기)
+            - name: SQL Server 중앙 관리 서버 확장
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: SQL Server dacpac 확장(미리 보기)
+            - name: SQL Server dacpac 확장
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server 가져오기(미리 보기)
+            - name: SQL Server 가져오기
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server 프로파일러(미리 보기)
+            - name: SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: 스키마 비교 확장(미리 보기)
+            - name: 스키마 비교 확장
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell 확장
               href: azure-data-studio/powershell-extension.md
-            - name: 관리되는 인스턴스 확장(미리 보기)
+            - name: Managed Instance 확장
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: SandDance 확장(미리 보기)
+            - name: SandDance 확장
               href: azure-data-studio/sanddance-extension.md
         - name: 확장 작성
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: SQL Server 2019 미리 보기
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: 새로운 기능
           href: linux/sql-server-linux-whats-new.md
