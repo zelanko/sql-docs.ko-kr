@@ -1,7 +1,7 @@
 ---
 title: PIVOT 및 UNPIVOT 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559417"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305173"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-`EmployeeID` 열에서 반환하는 고유 값이 최종 결과 집합의 필드가 됩니다. 이와 같이 피벗 절에 지정된 각 `EmployeeID` 번호에 대해 열이 제공되며 여기서는 직원 `164`, `198`, `223`, `231` 및 `233`에 대해 열이 하나씩 제공됩니다. `PurchaseOrderID` 열은 최종 출력에 반환되는 열(그룹화 열)을 그룹화하는 기준 값 열로 사용됩니다. 이 경우 그룹화 열은 `COUNT` 함수로 집계됩니다. `PurchaseOrderID` 열에 표시되는 Null 값이 각 직원에 대한 `COUNT` 계산 시 사용되지 않았다는 경고 메시지가 나타납니다.  
+`EmployeeID` 열에서 반환하는 고유 값이 최종 결과 집합의 필드가 됩니다. 이와 같이 피벗 절에 지정된 각 `EmployeeID` 번호에 대해 열이 제공되며 여기서는 직원 `250`, `251`, `256`, `257` 및 `260`에 대해 열이 하나씩 제공됩니다. `PurchaseOrderID` 열은 최종 출력에 반환되는 열(그룹화 열)을 그룹화하는 기준 값 열로 사용됩니다. 이 경우 그룹화 열은 `COUNT` 함수로 집계됩니다. `PurchaseOrderID` 열에 표시되는 Null 값이 각 직원에 대한 `COUNT` 계산 시 사용되지 않았다는 경고 메시지가 나타납니다.  
   
 > [!IMPORTANT]  
 >  집계 함수에 `PIVOT`을 사용하면 집계 계산 시 값 열의 모든 NULL 값이 사용되지 않습니다.  

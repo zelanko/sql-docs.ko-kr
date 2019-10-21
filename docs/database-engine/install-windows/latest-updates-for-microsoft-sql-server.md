@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245581"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586723"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server에 대한 최신 업데이트
 
@@ -49,7 +49,7 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
 |SQL Server 2005 |SP4[(KB 2463332)](http://support.microsoft.com/kb/2463332)|해당 사항 없음|해당 사항 없음|해당 사항 없음|[SQL Server 2005 설치](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4[(KB 290211)](http://support.microsoft.com/kb/290211)|해당 사항 없음|해당 사항 없음|해당 사항 없음|[SQL Server 2000 설치](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**업데이트를 테스트하는 방법에 대해 알아봅니다.**  [Testing and Developing Supportability Roadmaps for ISV Applications(PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**업데이트를 테스트하는 방법에 대해 알아봅니다.**  [Testing and Developing Supportability Roadmaps for ISV Applications(PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>기술 자료
 

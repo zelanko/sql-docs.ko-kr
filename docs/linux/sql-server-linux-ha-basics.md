@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809957"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586761"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -30,10 +30,10 @@ ms.locfileid: "70809957"
 Windows에서 FCI에는 항상 기본 WSFC(Windows Server 장애 조치(failover) 클러스터)가 필요합니다. 배포 시나리오에 따라 AG에는 일반적으로 기본 WSFC가 필요합니다. 단, [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]에는 새로운 없음 변형이 포함됩니다. Linux에는 WSFC가 없습니다. Linux의 클러스터링 구현은 [Linux의 Always On 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대한 Pacemaker](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux) 섹션에서 설명합니다.
 
 ## <a name="a-quick-linux-primer"></a>빠른 Linux 입문
-일부 Linux 설치는 인터페이스와 함께 설치될 수 있지만 대부분의 경우에는 함께 설치되지 않습니다. 즉, 운영 체제 계층의 거의 모든 항목은 명령줄을 통해 설치됩니다. 일반적으로 Linux 환경에서 이 명령줄은 ‘bash 셸’이라는 용어로 사용됩니다.
+일부 Linux 설치는 인터페이스와 함께 설치될 수 있지만 대부분의 경우에는 함께 설치되지 않습니다. 즉, 운영 체제 계층의 거의 모든 항목은 명령줄을 통해 설치됩니다. 일반적으로 Linux 환경에서 이 명령줄은 ‘bash 셸’이라는 용어로 사용됩니다. 
 
 Windows Server에서 많은 작업을 관리자 권한으로 수행해야 하는 것처럼 Linux에서는 많은 명령을 상승된 권한으로 실행해야 합니다. 상승된 권한으로 실행해야 하는 두 가지 주요 방법이 있습니다.
-1. 적절한 사용자의 컨텍스트에서 실행합니다. 다른 사용자로 변경하려면 `su` 명령을 사용합니다. 사용자 이름 없이 `su`만 실행되는 경우 암호를 알고 있다면 이제 ‘루트’로 셸에 있는 것입니다.
+1. 적절한 사용자의 컨텍스트에서 실행합니다. 다른 사용자로 변경하려면 `su` 명령을 사용합니다. 사용자 이름 없이 `su`만 실행되는 경우 암호를 알고 있다면 이제 ‘루트’로 셸에 있는 것입니다. 
    
 2. 명령을 실행하는 더 일반적이고 보안이 고려된 방법은 실행하기 전에 `sudo`를 사용하는 것입니다. 이 문서의 많은 예제에서는 `sudo`를 사용합니다.
 
@@ -76,7 +76,7 @@ SMB(서버 메시지 블록)의 Linux 변형인 Samba는 UNC 경로(예: `\\SERV
 
 Windows 기반 SMB 공유를 사용할 수도 있으며, Samba의 클라이언트 부분이 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 호스트하는 Linux 서버에서 제대로 구성되고 공유에 적절한 액세스 권한이 있는 경우에는 SMB 공유가 Linux 기반일 필요가 없습니다. 혼합 환경에 있는 사용자의 경우 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포에 기존 인프라를 이용하는 것이 한 가지 방법입니다.
 
-한 가지 중요한 점은 배포된 Samba 버전이 SMB 3.0 규격이어야 한다는 것입니다. SMB 지원이 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)]에 추가된 경우 모든 공유가 SMB 3.0을 지원해야 했습니다. 공유에 Windows Server가 아닌 Samba를 사용하면 Samba 기반 공유는 Samba 4.0 이상을 사용해야 하며, SMB 3.1.1을 지원하는 4.3 이상을 사용하는 것이 가장 좋습니다. SMB 및 Linux에 대한 자세한 내용은 [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)(Samba의 SMB3)를 참조하세요.
+한 가지 중요한 점은 배포된 Samba 버전이 SMB 3.0 규격이어야 한다는 것입니다. SMB 지원이 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)]에 추가된 경우 모든 공유가 SMB 3.0을 지원해야 했습니다. 공유에 Windows Server가 아닌 Samba를 사용하면 Samba 기반 공유는 Samba 4.0 이상을 사용해야 하며, SMB 3.1.1을 지원하는 4.3 이상을 사용하는 것이 가장 좋습니다. SMB 및 Linux에 대한 자세한 내용은 [SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)(Samba의 SMB3)를 참조하세요.
 
 마지막으로, NFS(네트워크 파일 시스템) 공유를 사용할 수 있습니다. NFS는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 Windows 기반 배포에서 사용할 수 없으며 Linux 기반 배포에만 사용할 수 있습니다.
 
@@ -209,7 +209,7 @@ Pacemaker 클러스터의 로그 위치는 배포에 따라 다릅니다.
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 Linux 기반 Pacemaker 클러스터 가상화
 가상 머신을 사용하여 AG 및 FCI에 대해 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포를 배포하는 작업에는 Windows 기반 배포의 경우와 동일한 규칙이 적용됩니다. [Microsoft 지원 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)에는 Microsoft에서 제공하는 가상화된 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포의 지원 가능성에 대한 기본 규칙 세트가 있습니다. Microsoft의 Hyper-V 및 VMware의 ESXi와 같은 하이퍼바이저는 플랫폼 자체의 차이로 인해 서로 다른 분산을 포함할 수 있습니다.
 
-가상화된 AG 및 FCI의 경우 지정된 Pacemaker 클러스터의 노드에 대해 선호도 방지가 설정되어 있는지 확인합니다. AG 또는 FCI 구성에서 고가용성을 위해 구성된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 호스트하는 VM은 동일한 하이퍼바이저 호스트에서 실행되지 않아야 합니다. 예를 들어 2노드 FCI가 배포된 경우에는, 특히 Live Migration 또는 vMotion 같은 기능을 사용하는 경우 호스트 오류 발생 시 이동할 노드를 호스트하는 VM 중 하나에 사용할 위치가 있도록 ‘적어도’ 세 개의 하이퍼바이저 호스트가 있어야 합니다.
+가상화된 AG 및 FCI의 경우 지정된 Pacemaker 클러스터의 노드에 대해 선호도 방지가 설정되어 있는지 확인합니다. AG 또는 FCI 구성에서 고가용성을 위해 구성된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 호스트하는 VM은 동일한 하이퍼바이저 호스트에서 실행되지 않아야 합니다. 예를 들어 2노드 FCI가 배포된 경우에는, 특히 Live Migration 또는 vMotion 같은 기능을 사용하는 경우 호스트 오류 발생 시 이동할 노드를 호스트하는 VM 중 하나에 사용할 위치가 있도록 ‘적어도’ 세 개의 하이퍼바이저 호스트가 있어야 합니다. 
 
 자세한 내용은 다음을 참조하세요.
 -   Hyper-V 설명서 - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)(고가용성을 위한 게스트 클러스터링 사용)
