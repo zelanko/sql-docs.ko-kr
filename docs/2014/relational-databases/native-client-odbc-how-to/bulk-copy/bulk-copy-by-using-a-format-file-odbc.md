@@ -1,7 +1,7 @@
 ---
-title: 대량 복사 서식 파일 (ODBC)를 사용 하 여 | Microsoft Docs
+title: 서식 파일을 사용 하 여 대량 복사 (ODBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -13,12 +13,12 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2dc0ac57b132a0e681337b358a951a0e33f56db
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754636"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688913"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>서식 파일을 사용하여 대량 복사(ODBC)
   이 예제에서는 ODBC bcp_init 함수를 서식 파일과 함께 사용하는 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "62754636"
   
 2.  대량 복사 작업을 사용하도록 SQL_COPT_SS_BCP 및 SQL_BCP_ON을 설정합니다.  
   
-3.  Microsoft에 연결 됩니다. SQL Server??? 합니다.  
+3.  Microsoft SQL Server에 연결 합니다.  
   
 4.  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62754636"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사본의 방향: DB_IN 파일에서 테이블 또는 뷰.  
+    -   복사 방향을 지정합니다. DB_IN이면 파일에서 테이블 또는 뷰로 복사됩니다.  
   
 5.  [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 를 호출하여 대량 복사 작업에 사용할 데이터 파일을 설명하는 서식 파일을 만듭니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62754636"
 ## <a name="example"></a>예제  
  이 예제는 IA64에서 지원되지 않습니다.  
   
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62754636"
   
  다섯 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용한 테이블을 삭제합니다.  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE BCPDate (cola int, colb datetime)  
 ```  
@@ -77,10 +77,9 @@ CREATE TABLE BCPDate (cola int, colb datetime)
 ```  
 1  
 2  
-  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib odbcbcp.lib  
 #include <stdio.h>  
 #include <windows.h>  
@@ -177,15 +176,15 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use AdventureWorks  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
      DROP TABLE BCPDate  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server ODBC 드라이버 방법 도움말 항목을 사용한 대량 복사 &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server odbc 드라이버를 사용 하 여 대량 복사 방법 항목 &#40;odbc&#41; ](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
  [데이터 파일 및 서식 파일 사용](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

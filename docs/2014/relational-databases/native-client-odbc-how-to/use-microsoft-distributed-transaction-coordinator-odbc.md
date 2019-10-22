@@ -1,7 +1,7 @@
 ---
-title: Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs
+title: Microsoft DTC(Distributed Transaction Coordinator) 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200221"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688697"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Microsoft Distributed Transaction Coordinator 사용(ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "63200221"
   
 1.  MS DTC OLE DtcGetTransactionManager 함수를 사용하여 MS DTC에 연결합니다. MS DTC에 대한 자세한 내용은 Microsoft Distributed Transaction Coordinator를 참조하십시오.  
   
-2.  각 microsoft SQL DriverConnect를 한 번 호출 됩니다. SQL Server??? 연결을 설정 합니다.  
+2.  설정 하려는 각 Microsoft SQL Server 연결에 대해 SQL DriverConnect를 한 번씩 호출 합니다.  
   
 3.  MS DTC OLE ITransactionDispenser::BeginTransaction 함수를 호출하여 MS DTC 트랜잭션을 시작하고 해당 트랜잭션을 나타내는 트랜잭션 개체를 가져옵니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63200221"
 > [!NOTE]  
 >  앞의 4 - 5단계에서 제안한 대로 호출하는 대신 각 SQL Server에 대해 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 차례로 호출할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [트랜잭션 수행 &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [트랜잭션 &#40;수행 ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

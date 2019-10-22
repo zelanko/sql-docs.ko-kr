@@ -1,7 +1,7 @@
 ---
 title: XML 데이터 직렬화 정의 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637581"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688891"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
   xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  
@@ -31,10 +31,10 @@ ms.locfileid: "62637581"
 ## <a name="serialization-encoding"></a>직렬화 인코딩  
  SQL 대상 유형이 VARBINARY인 경우 결과는 UTF-16 바이트 순서 표시가 앞에 표시되어 있지만 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 예를 들어  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  다음은 결과입니다.  
@@ -45,27 +45,27 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  SQL 대상 유형이 NVARCHAR 또는 NCHAR인 경우 결과는 앞에 바이트 순서 표시가 없고 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 예를 들어  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  다음은 결과입니다.  
   
 ```  
-<??/>  
+<Δ/>  
 ```  
   
  SQL 대상 유형이 VARCHAR 또는 NCHAR인 경우 결과는 바이트 순서 표시나 XML 선언이 없이 데이터베이스의 데이터 정렬 코드 페이지에 따른 인코딩으로 직렬화됩니다. 대상 유형이 너무 작거나 값을 대상 데이터 정렬 코드 페이지에 매핑할 수 없는 경우 오류가 발생합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 예를 들어  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 현재 데이터 정렬의 코드 페이지가 유니코드 문자를 나타낼 수 없는 경우이 오류가 발생할 수 있습니다??, 또는 특정 인코딩으로 나타냅니다.  
+ 현재 데이터 정렬의 코드 페이지가 유니코드 문자 &#x10300;를 나타내지 않거나 특정 인코딩으로 표시 되는 경우이로 인해 오류가 발생할 수 있습니다.  
   
  XML 결과를 클라이언트 쪽에 반환할 때 데이터는 UTF-16 인코딩으로 보내집니다. 그런 다음 클라이언트 쪽 공급자는 해당 API 규칙에 따라 이 데이터를 제공합니다.  
   
@@ -87,9 +87,9 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
 -   공백만 포함된 텍스트 노드를 보호하기 위해 공백 문자 중 하나(일반적으로 마지막 공백 문자)는 해당 숫자 문자 참조로 엔터티화됩니다. 이러한 방식으로 다시 구문 분석 과정에서 구문 분석 중의 공백 처리 설정에 관계없이 공백 문자 텍스트 노드를 보존합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 예를 들어  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,19 +100,19 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
 ```  
 <a a="  
-    ????>">     
+    𐌀>">     
 </a>  
 ```  
   
  마지막 공백 보호 규칙을 적용하지 않으려면 **xml** 에서 문자열이나 이진 유형으로 캐스팅할 때 명시적 CONVERT 옵션 1을 사용하면 됩니다. 예를 들어 엔터티화를 방지하려면 다음을 수행할 수 있습니다.  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  [query() 메서드(xml 데이터 형식)](/sql/t-sql/xml/query-method-xml-data-type) 는 xml 데이터 형식 인스턴스를 반환합니다. 따라서 문자열이나 이진 유형으로 캐스팅된 **query()** 메서드의 결과는 앞에서 설명한 규칙에 따라 엔터티화됩니다. 엔터티화되지 않은 문자열 값을 가져오려면 대신 [value() 메서드(xml 데이터 형식)](/sql/t-sql/xml/value-method-xml-data-type) 를 사용해야 합니다. 다음은 **query()** 메서드를 사용하는 예제입니다.  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -126,7 +126,7 @@ This example contains an entitized char: <.
   
  다음은 **value()** 메서드를 사용하는 예제입니다.  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
@@ -141,7 +141,7 @@ This example contains an entitized char: <.
   
  예를 들어 xs:double 값 1.34e1은 아래 예에서와 같이 13.4로 직렬화됩니다.  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  이 예에서는 문자열 값 13.4를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XQuery의 형식 캐스트 규칙](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

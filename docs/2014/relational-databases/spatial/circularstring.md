@@ -1,7 +1,7 @@
 ---
 title: CircularString | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: efe15f6eea386522fc6139601af66ce736e980f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014418"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688712"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString`은 0개 이상의 연속 원호 세그먼트 컬렉션입니다. 원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되는 곡선 세그먼트입니다. 첫 번째 점은 세 번째 점과 같을 수 없습니다. 원호 세그먼트의 세 점 모두가 공선상에 있는 경우 원호 세그먼트가 선분으로 처리됩니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예가에 도입 된 새로운 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CircularString` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  @No__t_1 하위 유형을 비롯 하 여 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입 된 새로운 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.  
   
 ## <a name="circularstring-instances"></a>CircularString 인스턴스  
  다음 그림에서는 유효한 `CircularString` 인스턴스를 보여 줍니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "66014418"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- `CircularString` 인스턴스가 없으면 비어 있거나 포함 홀수 지점, n, n 허용 되는 > 1. 다음 `CircularString` 인스턴스가 허용됩니다.  
+ @No__t_0 인스턴스는 비어 있거나 홀수의 지점 수 n을 포함 하는 경우 허용 됩니다. 여기서 n > 1입니다. 다음 `CircularString` 인스턴스가 허용됩니다.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -39,7 +39,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3`에서는 `CircularString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다. 다음 CircularString 인스턴스 선언은 허용되지 않습니다. 이 선언에서는 `System.FormatException`이 발생합니다.  
   
-```  
+```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
  다음 예에서는 유효한 `CircularString` 인스턴스를 보여 줍니다.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -70,7 +70,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
   
  다음 예에서는 유효하지 않은 CircularString 인스턴스를 보여 줍니다.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 값을 `CircularString` 예제 2에 가깝습니다???, 원의 실제 원주 인 합니다.  
+ @No__t_0 예의 값은 원의 실제 원주 인 2&#x03c0; (2 * pi)에 가깝습니다.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>4\. 동일한 문에서 CircularString을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 조각은 동일한 문에서 `geometry`을 사용하여 `CircularString` 인스턴스를 선언하고 인스턴스화하는 방법을 보여 줍니다.  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [공간 데이터 형식 개요](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

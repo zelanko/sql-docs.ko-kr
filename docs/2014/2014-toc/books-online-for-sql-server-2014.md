@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2014에 대 한 온라인 설명서 | Microsoft Docs
-ms.date: 05/25/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a66e558abcd1835674915955d0cda65eff58f8c0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a943685156ce9ec0ed3c94f4650c5a8222bff445
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887760"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688779"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014용 온라인 설명서
 
@@ -47,7 +47,7 @@ SQL Server 2016 이상 버전은 [여기](https://docs.microsoft.com/sql/sql-ser
 |![Integration Services 아이콘](media/dts.gif "Integration Services 아이콘")|[Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 웨어하우징을 위해 추출, 변환 및 로드하는 ETL 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.|  
 |![mds_cm_icon](media/mds-cm-icon.gif "mds_cm_icon")|[MDS(Master Data Services)](../master-data-services/master-data-services.md)<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 마스터 데이터 관리를 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 작성된 솔루션을 사용하면 정확한 정보를 기반으로 보고와 분석을 수행할 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 사용하여 마스터 데이터에 대한 중앙 리포지토리를 만들고 시간 경과에 따라 변경되는 데이터의 감사 가능 및 보안 가능 레코드를 유지 관리합니다.|  
 |![복제 아이콘](media/replication.gif "복제 아이콘")|[복제](../relational-databases/replication/sql-server-replication.md)<br /><br /> 복제는 한 데이터베이스에서 다른 데이터베이스로 데이터 및 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.|  
-|![Reporting Services 아이콘](media/reportingservices.gif "Reporting Services 아이콘")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services에서는 다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리할 수 있게 해 주는 기업형의 웹 사용이 가능한 보고 기능을 제공합니다.|  
+|![Reporting Services 아이콘](media/reportingservices.gif "Reporting Services 아이콘")|[Reporting  Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services에서는 다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리할 수 있게 해 주는 기업형의 웹 사용이 가능한 보고 기능을 제공합니다.|  
   
 ## <a name="sql-server-information-on-the-web"></a>웹의 SQL Server 정보  
 
@@ -67,11 +67,11 @@ SQL Server 2016 이상 버전은 [여기](https://docs.microsoft.com/sql/sql-ser
   
 -   [XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)  
 
-## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016+
+## <a name="previous-versions-gm2014"></a>SQL Server 2005, 2008, 2012, 2016 +
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 
  [SQL Server 구성 관리자 도움말](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
