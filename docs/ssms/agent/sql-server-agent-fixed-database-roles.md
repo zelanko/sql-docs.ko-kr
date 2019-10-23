@@ -20,12 +20,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4e806d8fe064023f0de54849bfaf9494f4a7feb2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9ae6f9aae067208eedd0ffe6218f703d55e3696f
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259630"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304928"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "68259630"
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 사용 권한  
 **SQLAgentOperatorRole** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 가장 사용 권한이 많은 역할입니다. 여기에는 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 모든 사용 권한이 포함됩니다. 이 역할의 멤버는 또한 운영자 및 프록시의 속성을 볼 수 있으며 서버에서 사용 가능한 프록시와 경고를 열거할 수 있습니다.  
   
-**SQLAgentOperatorRole** 멤버는 로컬 작업 및 일정에 대한 추가 사용 권한을 갖습니다. 이 멤버는 모든 로컬 작업을 실행, 중지 또는 시작할 수 있으며 서버의 모든 로컬 작업에 대한 작업 기록을 삭제할 수 있습니다. 또한 서버의 모든 로컬 작업과 일정을 설정 또는 해제할 수 있습니다. 로컬 작업이나 일정을 설정 또는 해제하려면 이 역할의 멤버가 **sp_update_job** 및 **sp_update_schedule**저장 프로시저를 사용해야 합니다. **SQLAgentOperatorRole** 멤버는 작업 또는 일정 이름이나 식별자를 지정하는 매개 변수와 **@enabled** 매개 변수만 지정할 수 있습니다. 다른 매개 변수를 지정하면 해당 저장 프로시저 실행이 실패합니다. **SQLAgentOperatorRole** 멤버는 자신이 소유하지 않는 작업에 대한 액세스를 얻기 위해 작업 소유권을 변경할 수 없습니다.  
+**SQLAgentOperatorRole** 멤버는 로컬 작업 및 일정에 대한 추가 사용 권한을 갖습니다. 이 멤버는 모든 로컬 작업을 실행, 중지 또는 시작할 수 있으며 서버의 모든 로컬 작업에 대한 작업 기록을 삭제할 수 있습니다. 또한 서버의 모든 로컬 작업과 일정을 설정 또는 해제할 수 있습니다. 로컬 작업이나 일정을 설정 또는 해제하려면 이 역할의 멤버가 **sp_update_job** 및 **sp_update_schedule**저장 프로시저를 사용해야 합니다. **SQLAgentOperatorRole** 멤버는 작업 또는 일정 이름이나 식별자를 지정하는 매개 변수와 **\@enabled** 매개 변수만 지정할 수 있습니다. 다른 매개 변수를 지정하면 해당 저장 프로시저 실행이 실패합니다. **SQLAgentOperatorRole** 멤버는 자신이 소유하지 않는 작업에 대한 액세스를 얻기 위해 작업 소유권을 변경할 수 없습니다.  
   
 **개체 탐색기의**작업 **,** 경고 **,** 운영자 **및** 프록시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 **SQLAgentOperatorRole**의 멤버에게 표시됩니다. 이 역할의 멤버에게는 **오류 로그** 노드만 표시되지 않습니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68259630"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |생성/수정/삭제|아니오|아니오|예(소유한 작업만 해당)<br /><br />작업 소유권을 변경할 수 없습니다.|아니오|예(소유한 작업만 해당)|아니오|  
 |목록 보기(열거)|예|예<br /><br />**sp_notify_operator** 및 Management Studio의 **작업 속성** 대화 상자에서 사용할 수 있는 운영자 목록을 가져올 수 있습니다.|예|예|예|예|  
-|설정/해제|아니오|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **@enabled** 및 **@job_id** (또는 **@job_name** ) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **@enabled** 및 **@schedule_id** (또는 **@name** ) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 사항 없음|  
+|설정/해제|아니오|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **\@enabled** 및 **\@job_id** (또는 **\@job_name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **\@enabled** 및 **\@schedule_id** (또는 **name\@** ) 매개 변수를 지정하여 자신이 소유하지 않은 일정을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 사항 없음|  
 |속성 보기|예|예|예|예|예|예|  
 |속성 편집|아니오|아니오|예(소유한 작업만 해당)|아니오|예(소유한 작업만 해당)|아니오|  
 |실행/중지/시작|해당 사항 없음|해당 사항 없음|예|아니오|해당 사항 없음|해당 사항 없음|  

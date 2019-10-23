@@ -14,12 +14,12 @@ ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b792338b5576926f1012bed59ac60c4d88fb11f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101387"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452894"
 ---
 # <a name="change-column-order-in-a-table"></a>테이블에서 열 순서 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "68101387"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **열 순서를 변경하려면**  
   
- 이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다.  
+ Transact-SQL 문을 사용하여 이 작업을 지원하지 않습니다.  
   
 ###  <a name="TsqlExample"></a>  

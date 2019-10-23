@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809814"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542193"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  명령문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. **EXPLAIN**을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 Azure SQL Data Warehouse(미리 보기)에 적용됩니다.
+  명령문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. EXPLAIN을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 Azure SQL Data Warehouse(미리 보기)에 적용됩니다.
   
  쿼리 계획에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]의 "쿼리 계획 이해"를 참조하세요.  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>인수
 
  *SQL_statement*  
- **EXPLAIN**이 실행되는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문입니다. *SQL_statement*는 다음 명령 중 하나일 수 있습니다. **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
 
-*WITH_RECOMMENDATIONS* 는 SQL 문의 성능을 최적화하기 위한 권장 사항이 포함된 쿼리 계획을 반환합니다.  
+ EXPLAIN이 실행되는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문입니다. *SQL_statement*는 다음 명령 중 하나일 수 있습니다. SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+
+*WITH_RECOMMENDATIONS*(미리 보기)
+
+SQL 문의 성능을 최적화하기 위한 권장 사항이 포함된 쿼리 계획을 반환합니다.  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -310,7 +313,7 @@ GO
 **WITH_RECOMMENDATIONS EXPLAIN 문 제출**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**EXPLAIN WITH_RECOMMENDATIONS에 대한 출력 예제**(미리 보기)
+**EXPLAIN WITH_RECOMMENDATIONS에 대한 출력 예제**  
 
 아래 출력은 View1이라는 권장되는 구체화된 뷰 만들기를 포함합니다.  
 

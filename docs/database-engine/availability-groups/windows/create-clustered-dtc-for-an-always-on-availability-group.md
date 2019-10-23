@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc5b7c3d5c8fd1ad1c050ea2f50c55d4a0d1120f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991131"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586770"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "67991131"
 
 이 연습에서는 클러스터된 DTC 리소스와 SQL Server 가용성 그룹을 만들어 [SQL Server 가용성 그룹에 대한 DTC 클러스터링](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)의 요구 사항에 맞춥니다.
 
-여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드**대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
+여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드**대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](/powershell/scripting/developer/module/importing-a-powershell-module)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
 - [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항(SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 모든 요구 사항을 충족합니다.  
 - 도메인은 `contoso.lab`입니다.
 - 사용자에게 DTC 네트워크 이름 리소스가 만들어지는 OU에 컴퓨터 만들기 개체 권한이 있습니다.

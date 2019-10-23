@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822619"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545057"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
@@ -68,6 +68,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 - sqlcmd 또는 Powershell을 사용하여 통합 터미널을 통해 대부분의 관리 작업을 실행할 수 있습니다.
 - 마법사 환경이 별로 필요하지 않습니다.
 - 심층 관리 구성을 수행할 필요가 없습니다.
+- 수행할 작업 
 
 **SQL Server Management Studio를 사용하는 경우:**
 - 데이터베이스 관리 작업에 대부분의 시간을 사용합니다.
@@ -117,6 +118,8 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |텍스트로 결과 표시||예|
 |공간 뷰어||예|
 |SQLCMD||예|
+|전자 필기장|예||
+|쿼리를 코드 조각으로 저장|예||
 
 ### <a name="operating-system-support"></a>운영 체제 지원
 
@@ -139,6 +142,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |백업/복원|예|예|
+|빅 데이터 클러스터 지원|예||
 |플랫 파일 가져오기|미리 보기|예|
 |SQL 에이전트|미리 보기|예|
 |SQL 프로파일러|미리 보기|예|
@@ -160,6 +164,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |Template Explorer||예|
 |취약성 평가||예|
 |XEvent 관리||예|
+|SQL 평가 API 통합||예|
 
 ## <a name="next-steps"></a>다음 단계
 

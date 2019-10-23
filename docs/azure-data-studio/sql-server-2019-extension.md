@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 17a618fb10f234d839243b0523260d19d0a2b599
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961956"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381778"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 SQL Server 2019 확장(미리 보기)
 
@@ -32,6 +32,9 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
    |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019년 9월 11일 |0.16.0
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019년 9월 11일 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019년 9월 11일 |0.16.0
+
+   > [!NOTE]
+   > VSIX가 zip 파일로 다운로드되는 Internet Explorer의 알려진 문제가 있습니다. Edge 또는 다른 브라우저를 사용하여 VSIX를 올바르게 다운로드합니다. 
 
 1. Azure Data Studio에서 **파일** 메뉴의 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
 

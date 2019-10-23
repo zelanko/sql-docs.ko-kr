@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092632"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305076"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
 
@@ -65,7 +65,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 1.  실행을 만듭니다.
 
-    각 패키지에 `[catalog].[create_execution]`을 호출합니다. **@runinscaleout** 매개 변수를 `True`로 설정합니다. 일부 Scale Out 작업자 컴퓨터에서 패키지를 실행할 수 없는 경우 **@useanyworker** 매개 변수를 `False`로 설정합니다. 이 저장 프로시저 및 **@useanyworker** 매개 변수에 대한 자세한 내용은 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 참조합니다. 
+    각 패키지에 `[catalog].[create_execution]`을 호출합니다. 매개 변수 **\@runinscaleout**을 `True`로 설정합니다. 일부 Scale Out 작업자 컴퓨터에서 패키지를 실행할 수 없는 경우 **\@useanyworker** 매개 변수를 `False`로 설정합니다. 이 저장 프로시저 및 **\@useanyworker** 매개 변수에 대한 자세한 내용은 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 참조합니다. 
 
 2. 실행 매개 변수를 설정합니다.
 
@@ -77,7 +77,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 4. 실행을 시작합니다.
 
-    `[catalog].[start_execution]`을 호출합니다. **@retry_count** 매개 변수를 설정하여 패키지 실행이 실패할 경우 다시 시도하는 횟수를 설정합니다.
+    `[catalog].[start_execution]`을 호출합니다. **\@retry_count** 매개 변수를 설정하여 패키지 실행이 실패할 경우 다시 시도하는 횟수를 설정합니다.
     
 ### <a name="example"></a>예제
 다음 예제에서는 Scale Out에서 하나의 Scale Out 작업자를 사용하여 `package1.dtsx`와 `package2.dtsx`라는 두 개의 패키지를 실행합니다.  
@@ -118,7 +118,7 @@ Scale Out에서 패키지를 실행하려면 다음 권한 중 하나가 있어�
 
 2.  **카탈로그 속성** 대화 상자에서 **서버 차원의 기본 실행 모드**를 **Scale Out**으로 설정합니다.
 
-이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때 **@runinscaleout** 매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
+이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때  **\@runinscaleout** 매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
 
 ![실행 모드](media/exe-mode.PNG)
 

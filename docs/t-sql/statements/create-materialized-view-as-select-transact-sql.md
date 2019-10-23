@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109769"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545078"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)(미리 보기)
 
@@ -111,8 +111,8 @@ MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 �
 Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 매우 비슷합니다.  구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   구체화된 뷰에 대한 추가 고려 사항은 다음과 같습니다.  
  
 구체화된 뷰는 CLUSTERED COLUMNSTORE INDEX만 지원합니다. 
- 
-구체화된 뷰는 DROP VIEW를 통해 삭제할 수 있습니다.  ALTER MATERIALIZED VIEW를 사용하여 구체화된 뷰를 사용하지 않도록 설정하거나 다시 작성할 수 있습니다.   
+
+구체화된 뷰는 다른 뷰를 참조할 수 없습니다.  
  
 구체화된 뷰는 분할된 테이블에서 만들 수 있습니다.  SPLIT/MERGE 작업은 구체화된 뷰에서 참조되는 테이블에서 지원됩니다.  SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원되지 않습니다. 사용하려고 하면 오류 `Msg 106104, Level 16, State 1, Line 9`이 표시됩니다.
  
@@ -129,6 +129,8 @@ ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원
 만들고 나면, 구체화된 뷰는 Azure SQL Data Warehouse 인스턴스의 뷰 폴더 아래에 있는 SQL Server Management Studio 내에 표시됩니다.
 
 사용자는 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 및 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest)를 실행하여 구체화된 뷰에서 사용되는 공간을 확인할 수 있습니다.  
+
+구체화된 뷰는 DROP VIEW를 통해 삭제할 수 있습니다.  ALTER MATERIALIZED VIEW를 사용하여 구체화된 뷰를 사용하지 않도록 설정하거나 다시 작성할 수 있습니다.   
 
 EXPLAIN 계획과 SQL Server Management Studio의 그래픽 예상 실행 계획은 쿼리 최적화 프로그램이 쿼리 실행을 위해 구체화된 뷰를 고려하는지 여부를 나타냅니다. 또한 SQL Server Management Studio의 그래픽 예상 실행 계획은 쿼리 최적화 프로그램이 쿼리 실행을 위해 구체화된 뷰를 고려하는지 여부를 나타냅니다.
 

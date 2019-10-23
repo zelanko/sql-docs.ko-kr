@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027344"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305281"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
@@ -197,9 +197,9 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - **id user@contoso.com** 에서 `No such user`를 반환하는 경우 `sudo systemctl status sssd` 명령을 실행하여 SSSD 서비스가 시작되었는지 확인하세요. SSSD 서비스가 실행 중인데도 오류가 계속 표시되는 경우에는 SSSD의 자세한 정보 로깅을 사용하도록 설정해 보세요. 자세한 내용은 Red Hat 설명서에서 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)(SSSD 문제 해결)에 관한 내용을 참조하세요.
+   > - **id user\@contoso.com**에서 `No such user`를 반환하는 경우 `sudo systemctl status sssd` 명령을 실행하여 SSSD 서비스가 시작되었는지 확인하세요. SSSD 서비스가 실행 중인데도 오류가 계속 표시되는 경우에는 SSSD의 자세한 정보 로깅을 사용하도록 설정해 보세요. 자세한 내용은 Red Hat 설명서에서 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)(SSSD 문제 해결)에 관한 내용을 참조하세요.
    >
-   > - **kinit user@CONTOSO.COM** 에서 `KDC reply did not match expectations while getting initial credentials`를 반환하는 경우 영역을 대문자로 지정했는지 확인하세요.
+   > - **kinit user\@CONTOSO.COM**을 반환하는 경우에는 `KDC reply did not match expectations while getting initial credentials`, 대문자로 영역을 지정했는지 확인합니다.
 
 자세한 내용은 Red Hat 설명서에서 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)(ID 도메인 검색 및 조인)에 관한 내용을 참조하세요.
 

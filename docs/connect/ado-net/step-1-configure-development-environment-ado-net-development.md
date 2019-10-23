@@ -1,0 +1,44 @@
+---
+title: '1단계: ADO.NET 개발을 위한 개발 환경 구성 | Microsoft Docs'
+description: ADO.NET 개발을 위한 환경을 구성 하는 방법을 설명 합니다.
+ms.custom: ''
+ms.date: 08/15/2019
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: rothja
+ms.technology: connectivity
+ms.topic: conceptual
+ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
+author: v-kaywon
+ms.author: v-kaywon
+ms.openlocfilehash: c26fc76cc9106bc9b5e3fddabb8c85bc5996f797
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.translationtype: MTE75
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451826"
+---
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>1단계: ADO.NET 개발을 위한 개발 환경 구성
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+- 다음 문서:&nbsp;&nbsp;&nbsp;[2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기](step-2-create-sql-database-ado-net-development.md)  
+
+## <a name="download-a-net-sql-driver"></a>.NET SQL 드라이버 다운로드
+
+현재 코드 예제에서는 Windows에 대 한 .NET Framework ADO.NET를 사용 합니다. .NET Core는 Windows 외에도 Linux 및 MacOS에서 사용할 수 있습니다.
+
+### <a name="adonet-for-windows"></a>Windows 용 ADO.NET
+
+- ADO.NET를 포함 하 여](../../ssdt/media/download.png)[.NET Framework를 다운로드 하 고 설치 하는](../sql-connection-libraries.md#anchor-20-drivers-relational-access) ![Download 아래쪽 화살표
+
+- 소스 코드를 작성 하 고 컴파일하기 C# 위해 Visual Studio Community 또는 유사한 IDE (통합 개발 환경)를 설치 합니다. Microsoft는 이제 Visual Studio Community를 *무료로*제공 합니다.  
+    - [Visual Studio Community 다운로드](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [무료 Visual Studio에 대 한 추가 옵션](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+
+
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>Linux-Ubuntu 및 MacOS 용 .NET Core
+
+다양 한 운영 체제용 .NET Core 다운로드 링크는 다음에서 제공 됩니다.
+
+- ![Download 아래쪽 화살표-](../../ssdt/media/download.png)[.Net Core를 다운로드 하 고 설치 하기 위해 원 합니다](../sql-connection-libraries.md#anchor-20-drivers-relational-access) .

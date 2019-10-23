@@ -1,7 +1,7 @@
 ---
 title: 잠금을 보유한 쿼리 파악 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021909"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589985"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>잠금을 보유한 쿼리 파악
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  
+데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  
   
- 예를 들어 서버의 성능 문제가 차단으로 인한 것이라고 의심될 경우 sys.dm_exec_requests를 쿼리하면 대기 중인 리소스가 잠겨 있음을 나타내는 대기 유형을 사용하는 일시 중단 모드의 세션을 여러 개 찾을 수 있습니다.  
+예를 들어 서버의 성능 문제가 차단으로 인한 것이라고 의심될 경우 sys.dm_exec_requests를 쿼리하면 대기 중인 리소스가 잠겨 있음을 나타내는 대기 유형을 사용하는 일시 중단 모드의 세션을 여러 개 찾을 수 있습니다.  
   
- sys.dm_tran_locks를 쿼리하면 보류 중인 잠금이 여러 개 있다는 결과가 나타나지만 잠금을 부여한 세션에는 sys.dm_exec_requests에 표시된 활성 요청이 없습니다.  
+sys.dm_tran_locks를 쿼리하면 보류 중인 잠금이 여러 개 있다는 결과가 나타나지만 잠금을 부여한 세션에는 sys.dm_exec_requests에 표시된 활성 요청이 없습니다.  
   
- 이 예는 잠금이 수행될 때 어떤 쿼리가 잠금, 쿼리 계획 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 가져오는지 확인하는 방법을 보여 줍니다. 이 예에서는 또한 확장 이벤트 세션에서 쌍 대상을 사용하는 방법도 보여 줍니다.  
+이 예는 잠금이 수행될 때 어떤 쿼리가 잠금, 쿼리 계획 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 가져오는지 확인하는 방법을 보여 줍니다. 이 예에서는 또한 확장 이벤트 세션에서 쌍 대상을 사용하는 방법도 보여 줍니다.  
   
- 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
+이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
 > [!NOTE]  
 >  이 예에서는 AdventureWorks 데이터베이스를 사용합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "68021909"
   
 1.  쿼리 편집기에서 다음 문을 실행합니다.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021909"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  서버에서 작업을 실행한 후 쿼리 편집기에서 다음 문을 실행하여 여전히 잠금을 보유하고 있는 쿼리를 찾습니다.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021909"
   
 3.  문제를 식별한 후에는 임시 테이블과 이벤트 세션을 삭제합니다.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> 위의 Transact-SQL 코드 예제는 온-프레미스 SQL Server에서 실행되지만 _Azure SQL Database에서는 그다지 실행되지 않을_ 수 있습니다. `ADD EVENT sqlserver.lock_acquired`와 같이 이벤트와 직접 관련된 예제의 핵심 부분은 Azure SQL Database에서도 작동합니다. 그러나 예제를 실행하려면 `sys.server_event_sessions`와 같은 예비 항목을 `sys.database_event_sessions`와 같은 Azure SQL Database로 편집해야 합니다.
+> SQL Server 온-프레미스와 Azure SQL Database 간의 이러한 사소한 차이점에 대한 자세한 내용은 다음 문서를 참조하세요.
+> - [Azure SQL Database의 확장 이벤트](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [확장 이벤트를 지원하는 시스템 개체](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>참고 항목  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

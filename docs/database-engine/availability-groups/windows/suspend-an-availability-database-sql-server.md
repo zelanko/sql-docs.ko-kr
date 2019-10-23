@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013887"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517964"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013887"
   
 1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
-2.  다음의 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)문을 사용하여 데이터베이스를 일시 중지합니다.  
+2.  다음의 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 문을 사용하여 데이터베이스를 일시 중단합니다.  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **데이터베이스를 일시 중지하려면**  

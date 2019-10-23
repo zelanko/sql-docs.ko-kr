@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553205"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545062"
 ---
 # <a name="oracle-source"></a>Oracle 원본
 
@@ -54,7 +54,7 @@ Oracle 원본의 사용자 지정 속성은 다음과 같습니다. 모든 속�
 |AccessMode|Integer(열거형)|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **테이블 이름** 및 **SQL 명령**입니다. 기본값은 **테이블 이름**입니다.|
 |BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 배열로 추출되는 레코드의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
 |DefaultCodePage|정수|데이터 원본에 코드 페이지 정보가 없을 때 사용할 코드 페이지입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
-|PreFetchCount|정수|미리 가져온(미리 보기) 행의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
+|PreFetchCount|정수|미리 가져온 행의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
 |SqlCommand|String|AccessMode가 SQL 명령으로 설정될 때 실행할 SQL 명령입니다.|
 |TableName|String|AccessMode가 테이블 이름으로 설정될 때 사용되는 데이터가 포함된 테이블의 이름입니다.|
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063995"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517935"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server 장애 조치(Failover) 클러스터를 설치하기 전에 SQL Server에서 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
   
- Windows 클러스터에 로컬 디스크 드라이브가 있고, 하나 이상의 클러스터 노드에서 같은 드라이브 문자가 공유 드라이브로 사용된 경우 해당 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 설치할 수 없습니다.  
+ Windows 클러스터에 로컬 디스크 드라이브가 있고, 하나 이상의 클러스터 노드에서 같은 드라이브 문자가 공유 드라이브로 사용된 경우 해당 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 설치할 수 없습니다. 이 제한은 SQL Server 장애 조치(failover) 클러스터 인스턴스와 Windows 장애 조치 클러스터 인스턴스의 일부인 서버에 있는 독립 실행형 인스턴스에 모두 적용됩니다.
   
  그리고 다음 항목들을 검토하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링 개념과 기능 및 태스크를 보다 자세히 배울 수 있습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68063995"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 디스크가 압축되거나 암호화되지 않았는지 확인합니다. 압축된 드라이브 또는 암호화된 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려고 시도하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 실패합니다.  
   
--   SAN 구성은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server 및 Datacenter Server 버전에서도 지원됩니다. Windows 카탈로그 및 하드웨어 호환성 목록 범주인 "클러스터/다중 클러스터 디바이스"에는 다중 WSFC 클러스터가 연결된 SAN 저장 디바이스로 지원되며 테스트를 마친 SAN 사용 가능 저장 디바이스 집합이 나열되어 있습니다. 인증된 구성 요소를 찾은 후 클러스터 유효성 검사를 실행하십시오.  
+-   SAN 구성은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server 및 Datacenter Server 버전에서도 지원됩니다. Windows 카탈로그 및 하드웨어 호환성 목록 범주인 &quot;클러스터/다중 클러스터 디바이스&quot;에는 다중 WSFC 클러스터가 연결된 SAN 스토리지 디바이스로 지원되며 테스트를 마친 SAN 사용 가능 스토리지 디바이스 집합이 나열되어 있습니다. 인증된 구성 요소를 찾은 후 클러스터 유효성 검사를 실행하십시오.  
   
 -   데이터 파일 설치에는 SMB 파일 공유도 지원됩니다. 자세한 내용은 [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)를 참조하세요.  
   

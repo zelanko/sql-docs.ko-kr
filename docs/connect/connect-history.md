@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154181"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451842"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server에 대 한 드라이버 기록
 
@@ -39,7 +39,7 @@ Microsoft OLE DB Provider for SQL Server의 세 가지 고유한 세대가 있�
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET는 Microsoft .NET 프레임 워크에서 도입 되었으며 계속 향상 되 고 유지 관리 됩니다. Microsoft .NET Framework의 핵심 구성 요소입니다. 자세한 내용은 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-for-sql-server.md)를 참조 하세요.
+ADO.NET는 Microsoft .NET 프레임 워크에서 도입 되었으며 계속 향상 되 고 유지 관리 됩니다. Microsoft .NET Framework의 핵심 구성 요소입니다. 자세한 내용은 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md)를 참조 하세요.
 
 ## <a name="jdbc"></a>JDBC
 
@@ -72,8 +72,8 @@ Microsoft/Windows Data Access 구성 요소 (MDAC/WDAC)는 응용 프로그램�
 이 문서의 목적을 위해, MDAC/WDAC 스택을 기술 및 제품을 기반으로 다음 구성 요소로 나눌 수 있습니다.
 
 * **ADO** (ADOMD 및 ADOX 포함)
-* **OLE DB** (OLE DB Core 서비스, SQL Server OLE DB 공급자, Oracle OLE DB 공급자, ODBC 드라이버용 OLE DB 공급자, 데이터 셰이프 공급자 및 원격 Data Provider 포함)
-* **ODBC** (ODBC 드라이버 관리자, SQL ODBC 드라이버 및 Oracle ODBC 드라이버 포함)
+* **OLE DB** (OLE DB 핵심 서비스, SQL Server OLE DB 공급자, Oracle OLE DB 공급자, ODBC 드라이버용 OLE DB 공급자, 데이터 셰이프 공급자 및 원격 Data Provider 포함)
+* **Odbc** (Odbc 드라이버 관리자, SQL odbc 드라이버 및 Oracle odbc 드라이버 포함)
 
 ### <a name="mdacwdac-components"></a>MDAC/WDAC 구성 요소
 
@@ -108,7 +108,7 @@ MDAC/WDAC에는 다음 구성 요소가 포함 됩니다.
 * **MSDADS:** 데이터 셰이핑을 위한 Microsoft OLE DB 공급자 (MSDADS)를 사용 하 여 응용 프로그램의 키, 필드 또는 행 집합 간에 계층 관계를 만들 수 있습니다. MDAC 2.1 이후 주요 기능 개선 사항이 없습니다. 이 공급자는 더 이상 사용 되지 않습니다. MSDADS 대신 XML을 사용 하는 것이 좋습니다.
 * **ORACLE ODBC 및 oracle OLE DB:** Microsoft Oracle ODBC Driver (Oracle ODBC) 및 Microsoft OLE DB Provider for Oracle (oracle OLE DB)는 Oracle 데이터베이스 서버에 대 한 액세스를 제공 합니다. 이러한 기능은 OCI (Oracle Call Interface) 버전 7을 사용 하 여 작성 되었으며 Oracle 7에 대 한 완전 한 지원을 제공 합니다. 또한 oracle 7 에뮬레이션을 사용 하 여 Oracle 8 데이터베이스에 대해 제한 된 지원을 제공 합니다. Oracle은 OCI 버전 7 호출을 사용 하는 응용 프로그램을 더 이상 지원 하지 않습니다. 이러한 기술은 더 이상 사용 되지 않습니다. Oracle 데이터 원본을 사용 하는 경우 Oracle에서 제공 하는 드라이버 및 공급자로 마이그레이션해야 합니다.
 * **RDS:** RDS (원격 Data Services)는 인터넷 이나 인트라넷을 통해 원격 ADO 레코드 집합 개체에 액세스 하는 데 사용할 수 있는 전용 Microsoft 메커니즘입니다. RDS는 사용 되지 않습니다. MDAC 2.1 이후 RDS에 대 한 주요 기능이 향상 되지 않았습니다. Microsoft는 다양 한 SOAP 기능이 있으며 RDS 구성 요소를 대체 하는 .NET Framework를 출시 했습니다. 모든 RDS 서버 구성 요소는 Windows 7 이후 운영 체제에서 제거 됩니다.
-* **JRO:** Jet 복제 개체 (JRO)는 더 이상 사용 되지 않습니다. JRO는 jet 데이터베이스 (.mdb)를*만들어 압축 하 고 jet 복제 관리를 수행 하기 위해 jet (.mdb) 데이터베이스를 사용 하는 ADO 내에서 사용 됩니다. MDAC 2.7는 마지막 릴리스가 될 예정입니다. JRO는 64 비트 Windows 운영 체제에서 사용할 수 없습니다. JRO은 Microsoft Access 2007 파일 형식 (* .accdb)에서 지원 되지 않습니다.
+* **JRO:** Jet 복제 개체 (JRO)는 더 이상 사용 되지 않습니다. JRO는 jet 데이터베이스 (.mdb)를 만들고 압축 하 고 Jet 복제 관리를 수행 하기 위해 Jet ( *.mdb) 데이터베이스를 사용 하는 ADO 내에서 사용 됩니다. MDAC 2.7는 마지막 릴리스가 될 예정입니다. JRO는 64 비트 Windows 운영 체제에서 사용할 수 없습니다. JRO은 Microsoft Access 2007 파일 형식 (* .accdb)에서 지원 되지 않습니다.
 * **16 비트 ODBC 지원:** 16 비트 응용 프로그램을 사용 하는 경우 32 비트 응용 프로그램으로 마이그레이션해야 합니다. 16 비트 기능은 더 이상 사용 되지 않으며 64 비트 운영 체제에서 제거 됩니다. 자세한 내용은 [기술 자료 문서 896458](https://support.microsoft.com/kb/896458)을 참조하십시오.
 * **OLEDB 단순 공급자 (MSDAOSP):** OLEDB 단순 공급자는 간단한 데이터를 통해 OLE DB 공급자를 빠르게 구축할 프레임 워크를 제공 합니다. MSDAOSP는 사용 되지 않습니다.
 * **ODBC 커서 라이브러리:** ODBC 커서 라이브러리 (ODBCCR32)는 제한 된 클라이언트 쪽 데이터 커서를 제공 합니다. ODBC 커서 라이브러리는 더 이상 사용 되지 않습니다. 응용 프로그램은 서버 쪽 커서 구현을 대체 방법으로 사용할 수 있습니다.

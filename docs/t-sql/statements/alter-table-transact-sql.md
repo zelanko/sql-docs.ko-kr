@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823616"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304842"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -806,7 +806,7 @@ SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
 AUTO  
 이 옵션을 선택하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 테이블 스키마에 적절한 잠금 에스컬레이션 세분성을 선택할 수 있습니다.
 
-- 테이블이 분할되지 않은 경우에는 잠금이 파티션으로 에스컬레이션됩니다. 잠금이 파티션 수준으로 에스컬레이션된 후에는 나중에 잠금이 TABLE 세분성으로 에스컬레이션되지 않습니다.
+- 테이블이 분할된 경우에는 잠금이 HOBT(힙 또는 B-트리) 세분성으로 에스컬레이션됩니다. 즉, 에스컬레이션은 파티션 수준에 대해 허용됩니다. 잠금이 HoBT 수준으로 에스컬레이션된 후에는 나중에 잠금이 TABLE 세분성으로 에스컬레이션되지 않습니다.
 - 테이블이 분할되지 않은 경우에는 잠금이 TABLE 세분성으로 에스컬레이션됩니다.
 
 TABLE  

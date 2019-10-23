@@ -1,7 +1,7 @@
 ---
 title: 서버 감사 및 서버 감사 사양 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095187"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517979"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095187"
      만들려는 감사 파일 수를 최대 2,147,483,647까지 지정합니다. 이 옵션은 **무제한** 을 선택 취소한 경우에만 사용할 수 있습니다.  
   
      **최대 파일 크기**  
-     MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 감사 파일의 최대 크기를 지정합니다. 1,024MB와 2,147,483,647TB 사이로 지정할 수 있습니다. **무제한** 확인란을 선택하면 파일 크기에 대한 제한이 없습니다. 1024MB보다 작은 값을 지정하면 오류가 반환됩니다. **무제한** 확인란은 기본적으로 선택됩니다.  
+     MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 감사 파일의 최대 크기를 지정합니다. 최대 2,147,483,647TB의 숫자를 지정할 수 있습니다. **무제한** 확인란을 선택하면 파일 크기에 대한 제한이 없습니다. **무제한** 확인란은 기본적으로 선택됩니다.  
   
      **디스크 공간 예약** 확인란  
      지정된 최대 파일 크기와 동일한 공간이 디스크에 미리 할당되도록 지정합니다. 이 설정은 **최대 파일 크기** 아래에서 **무제한** 을 선택하지 않은 경우에만 사용할 수 있습니다. 이 확인란은 기본적으로 선택되지 않습니다.  

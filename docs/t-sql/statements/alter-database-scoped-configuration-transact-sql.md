@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261016"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589991"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -114,7 +114,7 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-문에 사용해야 하는 기본 **max degree of parallelism (MAXDOP)** 설정을 지정합니다. 0은 기본값이며 서버 구성이 대신 사용됨을 나타냅니다. 데이터베이스 범위에서 MAXDOP는 sp_configure로 서버 수준에서 **max degree of parallelism** 설정을 재정의합니다(0으로 설정되지 않은 한). 쿼리 힌트는 다른 설정을 필요로 하는 특정 쿼리를 조정하기 위해 데이터베이스 범위 MAXDOP를 여전히 재정의할 수 있습니다. 이러한 모든 설정은 [작업 그룹]()에 대해 설정된 MAXDOP로 제한됩니다.
+문에 사용해야 하는 기본 **max degree of parallelism (MAXDOP)** 설정을 지정합니다. 0은 기본값이며 서버 구성이 대신 사용됨을 나타냅니다. 데이터베이스 범위에서 MAXDOP는 sp_configure로 서버 수준에서 **max degree of parallelism** 설정을 재정의합니다(0으로 설정되지 않은 한). 쿼리 힌트는 다른 설정을 필요로 하는 특정 쿼리를 조정하기 위해 데이터베이스 범위 MAXDOP를 여전히 재정의할 수 있습니다. 이러한 모든 설정은 [작업 그룹](create-workload-group-transact-sql.md)에 대해 설정된 MAXDOP로 제한됩니다.
 
 MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 

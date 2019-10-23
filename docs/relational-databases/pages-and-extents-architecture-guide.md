@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031673"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586774"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ ms.locfileid: "68031673"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 스토리지 단위는 페이지입니다. 데이터베이스에서 데이터 파일(.mdf 또는 .ndf)에 할당되는 디스크 공간은 논리적인 페이지로 나뉘어지며 0에서 n 사이의 숫자가 연속으로 페이지에 매겨집니다. 디스크 I/O 작업은 페이지 수준에서 수행됩니다. 즉, SQL Server가 전체 데이터 페이지를 읽거나 씁니다.
 
-익스텐트는 실제로 연속하는 8페이지를 모은 것으로 페이지를 효율적으로 관리하는 데 사용됩니다. 모든 페이지는 익스텐트로 저장됩니다.
+익스텐트는 실제로 연속하는 8페이지를 모은 것으로 페이지를 효율적으로 관리하는 데 사용됩니다. 모든 페이지는 익스텐트가 구성됩니다.
 
 ### <a name="pages"></a>페이지
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 페이지의 크기는 8KB입니다. 이 사실은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 메가바이트당 128페이지가 있음을 의미합니다. 각 페이지는 96바이트 머리글로 시작하는데 이 머리글은 페이지에 대한 시스템 정보를 저장하는 데 사용됩니다. 페이지 번호, 페이지 유형, 해당 페이지의 사용 가능한 공간 크기 그리고 해당 페이지를 소유하고 있는 개체의 할당 단위 ID와 같은 정보를 저장합니다.
+일반 책 사용: 모든 콘텐츠가 페이지에 기록됩니다. 책과 마찬가지로 SQL Server에서도 모든 데이터 행이 페이지에 기록됩니다. 책에서 모든 페이지의 실제 크기는 동일합니다. 마찬가지로 SQL Server에서도 모든 데이터 페이지의 크기는 8kb로 동일합니다. 책에서 대부분의 페이지에는 책의 주요 내용이 포함되어 있으며 일부 페이지에는 내용에 대한 메타데이터가 포함되어 있습니다. 예를 들어 목차와 인덱스 테이블 등입니다. 역시 SQL Server도 다르지 않습니다. 대부분의 페이지에는 사용자가 저장한 실제 데이터 행이 포함되어 있습니다. 이를 데이터 페이지 및 텍스트/이미지 페이지(특수한 경우)라고 합니다. 인덱스 페이지에는 데이터가 있는 위치에 대한 인덱스 참조가 포함되고, 마지막으로 데이터의 구성에 대한 다양한 메타데이터를 저장하는 시스템 페이지(PFS, GAM, SGAM, IAM, DCM, BCM 페이지)가 있습니다. 페이지 유형 및 설명은 아래 표를 참조하세요.
+
+앞에서 설명한 대로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 페이지 크기는 8KB입니다. 이 사실은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 메가바이트당 128페이지가 있음을 의미합니다. 각 페이지는 96바이트 머리글로 시작하는데 이 머리글은 페이지에 대한 시스템 정보를 저장하는 데 사용됩니다. 페이지 번호, 페이지 유형, 해당 페이지의 사용 가능한 공간 크기 그리고 해당 페이지를 소유하고 있는 개체의 할당 단위 ID와 같은 정보를 저장합니다.
 
 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터 파일에서 사용되는 페이지 유형을 보여 줍니다.
 

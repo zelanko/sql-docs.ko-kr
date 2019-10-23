@@ -13,17 +13,17 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68065449"
 ---
 # <a name="sqllogship-application"></a>sqllogship 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 애플리케이션은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
   
- ![토픽 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") 구문 표기 규칙은 [명령 프롬프트 유틸리티 &#40;참조 데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md)를 참조 하세요.  
+ 구문 표기 규칙에 대한 내용은 ![명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘")를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

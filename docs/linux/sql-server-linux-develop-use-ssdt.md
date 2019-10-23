@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077399"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545049"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용하여 SQL Server on Linux 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SSDT(SQL Server Data Tools)를 통해 Visual Studio는 SQL Server on Linux를 위한 강력한 개발 및 DLM(데이터베이스 수명 주기 관리) 환경으로 전환됩니다. 애플리케이션 코드를 개발하는 경우와 마찬가지로, 원본 제어 프로젝트에서 데이터베이스를 개발, 빌드, 테스트, 게시할 수 있습니다.
+SSDT(SQL Server Data Tools)를 통해 Visual Studio는 SQL Server on Linux를 위한 강력한 개발 및 DLM(데이터베이스 수명 주기 관리) 환경으로 전환됩니다. 원본 제어 프로젝트에서 데이터베이스를 개발, 빌드, 테스트 및 게시할 수 있습니다. 애플리케이션 코드를 개발하는 것과 같습니다.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio 및 SQL Server Data Tools 설치
 
-1. Windows 머신에서 Visual Studio를 아직 설치하지 않은 경우 [Visual Studio 다운로드 및 설치]합니다. Visual Studio 라이선스가 없으면 학생, 오픈 소스 및 개인 개발자를 위한 모든 기능을 갖춘 체험 IDE인 Visual Studio Community 버전을 사용할 수 있습니다.
+1. Windows 머신에서 Visual Studio를 아직 설치하지 않은 경우 [Visual Studio를 다운로드하여 설치](https://visualstudio.microsoft.com/downloads/)합니다. Visual Studio 라이선스가 없으면 학생, 오픈 소스 및 개인 개발자를 위한 모든 기능을 갖춘 체험 IDE인 Visual Studio Community 버전을 사용할 수 있습니다.
 
 2. Visual Studio 설치 중에 **설치 유형 선택** 옵션에서 **사용자 지정**을 선택합니다. **다음**을 클릭합니다.
 
@@ -105,12 +105,12 @@ Linux의 SQL Server 인스턴스에서 새 데이터베이스를 성공적으로
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성] 및 [Transact-SQL 참조(데이터베이스 엔진)]를 참조하세요.
+T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
 
-SQL Data Tools를 사용하여 데이터베이스를 개발하는 방법에 대한 자세한 내용은 [SSDT MSDN 문서]를 참조하세요.
+SQL Data Tools를 사용하여 데이터베이스를 개발하는 방법에 대한 자세한 내용은 아래 문서를 참조하세요.
 
-[Visual Studio 다운로드 및 설치]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN 문서]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL 참조(데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx
+* [Visual Studio 다운로드 및 설치](https://www.visualstudio.com/downloads/)
+* [SSDT를 다운로드하여 설치](https://aka.ms/ssdt-download)합니다.
+* [SSDT MSDN 문서](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [자습서: Transact-SQL 문 작성](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Transact-SQL 참조(데이터베이스 엔진)](https://msdn.microsoft.com/library/bb510741.aspx)

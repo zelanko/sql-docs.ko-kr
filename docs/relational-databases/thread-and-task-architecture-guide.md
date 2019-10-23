@@ -14,12 +14,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08efd7847fba1ad0b4df10d3a761475c735ceca8
+ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289374"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305191"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72289374"
 ## <a name="sql-server-task-scheduling"></a>SQL Server 태스크 예약
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 범위에서 **요청**은 쿼리 또는 일괄 처리의 논리적 표현입니다. 요청은 검사점 또는 로그 기록기와 같은 시스템 스레드에 필요한 작업도 나타냅니다. 요청은 수명이 지속되는 동안 다양한 상태로 존재하고 요청을 실행하는 데 필요한 리소스를 사용할 수 없는 경우(예: [잠금](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) 또는 [래치](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)) 대기를 누적시킬 수 있습니다. 요청 상태에 대한 자세한 내용은 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)를 참조하세요.
 
-**태스크**는 요청을 수행하기 위해 완료해야 하는 작업 단위를 나타냅니다. 하나 이상의 태스크를 단일 요청에 할당할 수 있습니다. 병렬 요청은 순차적이 아니라 동시에 실행되는 여러 활성 태스크를 포함합니다. 순차적으로 실행되는 요청은 특정 시점에 하나의 활성 태스크만 포함합니다. 태스크는 수명이 지속되는 동안 다양한 상태로 존재합니다. 태스크 상태에 대한 자세한 내용은 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)를 참조하세요. 태스크가 일시 중단됨 상태일 경우 태스크를 실행하는 데 필요한 리소스가 사용 가능해질 때까지 기다리고 있는 것입니다. 대기 태스크에 대한 자세한 내용은 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)를 참조하세요.
+**태스크**는 요청을 수행하기 위해 완료해야 하는 작업 단위를 나타냅니다. 하나 이상의 태스크를 단일 요청에 할당할 수 있습니다. 병렬 요청은 순차적이 아니라 동시에 실행되는 여러 활성 태스크를 포함합니다. 순차적으로 실행되는 요청은 특정 시점에 하나의 활성 태스크만 포함합니다. 태스크는 수명이 지속되는 동안 다양한 상태로 존재합니다. 태스크 상태에 대한 자세한 내용은 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)를 참조하세요. 작업이 일시 중단됨 상태일 경우 작업을 실행하는 데 필요한 리소스가 사용 가능해질 때까지 기다리고 있는 것입니다. 대기 태스크에 대한 자세한 내용은 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)를 참조하세요.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**(작업자 또는 스레드라고도 함)는 운영 체제 스레드의 논리적 표현입니다. 직렬 요청을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 활성 태스크를 실행할 작업자를 생성합니다. [행 모드](../relational-databases/query-processing-architecture-guide.md#execution-modes)에서 병렬 요청을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 할당된 태스크를 완료해야 하는 자식 작업자를 조정하는 작업자를 할당합니다. 각 태스크에 대해 생성되는 작업자 스레드 수는 다음에 따라 달라집니다.
 -   요청이 쿼리 최적화 프로그램에 의해 결정된 대로 병렬 처리에 적합한지 여부.

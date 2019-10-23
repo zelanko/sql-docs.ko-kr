@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974251"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304956"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>직렬화 가능 트랜잭션 사용 예  
- **Org_BreadthFirst** 인덱스를 사용하면 **@last_child** 확인 시 범위 검색이 사용됩니다. 애플리케이션에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **@last_child** 를 다시 계산해야 합니다. 다음 코드는 직렬화 가능 트랜잭션 내에서 새 노드 값을 컴퓨팅합니다.  
+ **Org_BreadthFirst** 인덱스를 사용하면 **\@last_child** 확인 시 범위 검색이 사용됩니다. 애플리케이션에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **\@last_child**를 다시 계산해야 합니다. 다음 코드는 직렬화 가능 트랜잭션 내에서 새 노드 값을 컴퓨팅합니다.  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
- 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **@oldMgr** 포함)를 **@newMgr** 를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
+ 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **\@oldMgr**의 하위 트리를 사용하여 이 하위 트리( **\@oldMgr** 포함)를 **\@newMgr**의 하위 트리로 만듭니다.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

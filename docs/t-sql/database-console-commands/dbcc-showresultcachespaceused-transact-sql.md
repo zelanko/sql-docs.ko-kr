@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174653"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452836"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 
@@ -37,18 +37,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 `DBCC SHOWRESULTCACHESPACEUSED` 명령은 매개 변수를 사용하지 않으며 해당 명령이 실행되는 데이터베이스에서 사용하는 공간을 반환합니다.
 
-결과 세트 캐시의 최대 크기는 데이터베이스당 1TB입니다.  Azure SQL Data Warehouse는 결과 세트 캐시의 항목을 다음에 따라 자동으로 제거합니다.
-
-- 결과 세트가 사용되지 않을 경우 48시간 간격으로
-- 결과 세트 캐시가 최대 크기에 가까워질 때
-
-데이터베이스에 대한 결과 집합 캐시를 수동으로 비우려면 다음 옵션 중 하나를 사용할 수 있습니다.
-
-- 데이터베이스에 대한 결과 집합 캐시 기능을 해제
-- 데이터베이스에 연결 되어 있는 동안 `DBCC DROPRESULTSETCACHE`를 실행 
-
-데이터베이스를 일시 중지해도 결과 세트 캐시는 비워지지 않습니다.  
-
 ## <a name="permissions"></a>사용 권한
 
 VIEW SERVER STATE 권한이 필요합니다.
@@ -65,6 +53,7 @@ VIEW SERVER STATE 권한이 필요합니다.
 
 ## <a name="see-also"></a>관련 항목:
 
+[결과 집합 캐싱을 사용한 성능 조정](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

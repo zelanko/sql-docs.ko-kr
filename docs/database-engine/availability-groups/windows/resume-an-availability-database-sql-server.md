@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014258"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517951"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>가용성 데이터베이스 재개(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "68014258"
   
 1.  데이터베이스를 재개할 보조 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
   
-2.  다음 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)문을 사용하여 보조 데이터베이스를 재개합니다.  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+2.  다음 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 문을 사용하여 보조 데이터베이스를 재개합니다.  
+
+     ALTER DATABASE *database_name* SET HADR RESUME
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 데이터베이스를 재개하려면**  
