@@ -2,7 +2,7 @@
 title: 초기화 및 권한 부여 속성 | Microsoft Docs
 description: 초기화 및 권한 부여 속성
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d2c8c3bbd3c65ea1f31830191b113d4204ebb894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015904"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381868"
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "68015904"
 |속성 ID|설명|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|SQL Server에 대 한 OLE DB 드라이버는 인증 정보를 캐시 하지 않습니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
-|DBPROP_AUTH_ENCRYPT_PASSWORD|SQL Server에 대 한 OLE DB 드라이버는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 표준 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 메커니즘을 사용 하 여 암호를 숨깁니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
+|DBPROP_AUTH_ENCRYPT_PASSWORD|SQL Server에 대 한 OLE DB 드라이버는 표준 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 메커니즘을 사용 하 여 암호를 숨깁니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_AUTH_INTEGRATED|DBPROP_AUTH_INTEGRATED가 NULL 포인터, Null 문자열 또는 'SSPI' VT_BSTR 값으로 설정되면 SQL Server용 OLE DB 드라이버는 Windows 인증 모드를 사용하여 DBPROP_INIT_DATASOURCE 및 DBPROP_INIT_CATALOG 속성으로 지정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 사용자 액세스 권한을 부여합니다.<br /><br /> VT_EMPTY(기본값)로 설정되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안이 사용됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 및 암호는 DBPROP_AUTH_USERID 및 DBPROP_AUTH_PASSWORD 속성에 지정됩니다.|  
-|DBPROP_AUTH_MASK_PASSWORD|SQL Server에 대 한 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 표준 보안 메커니즘을 사용 하 여 암호를 숨깁니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
+|DBPROP_AUTH_MASK_PASSWORD|SQL Server에 대 한 OLE DB 드라이버는 표준 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 메커니즘을 사용 하 여 암호를 숨깁니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인에 할당된 암호입니다. 이 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 액세스 권한을 부여하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 선택한 경우 사용됩니다.|  
 |DBPROP_AUTH_PERSIST_ENCRYPTED|SQL Server에 대 한 OLE DB 드라이버는 지속 될 때 인증 정보를 암호화 하지 않습니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|SQL Server용 OLE DB 드라이버는 요청된 경우 암호의 이미지를 포함한 인증 값을 지속시킵니다. 암호화는 제공되지 않습니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68015904"
 |DBPROP_INIT_LOCATION|SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_INIT_MODE|SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_INIT_PROMPT|SQL Server에 대 한 OLE DB 드라이버는 데이터 원본 초기화에 대 한 모든 프롬프트 모드를 지원 합니다. SQL Server OLE DB 드라이버는 속성에 대 한 기본 설정으로 DBPROMPT_NOPROMPT을 사용 합니다.|  
-|DBPROP_INIT_PROTECTION_LEVEL|SQL Server에 대 한 OLE DB 드라이버는 인스턴스에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대 한 연결에 대 한 보호 수준을 지원 하지 않습니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
+|DBPROP_INIT_PROTECTION_LEVEL|SQL Server에 대 한 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대 한 연결에 대 한 보호 수준을 지원 하지 않습니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버는 속성 값을 설정 하려고 할 때 DB_S_ERRORSOCCURRED를 반환 합니다. DBPROP 구조의 *dwStatus* 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_INIT_PROVIDERSTRING|이 항목의 뒷부분에 나오는 SQL Server 문자열 OLE DB 드라이버를 참조 하십시오.|  
 |DBPROP_INIT_TIMEOUT|SQL Server용 OLE DB 드라이버는 지정된 시간(초) 내에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하지 못할 경우 초기화 시 오류를 반환합니다.|  
   
@@ -58,8 +58,8 @@ ms.locfileid: "68015904"
   
 |속성 ID|설명|  
 |-----------------|-----------------|  
-|SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Description: Azure Active Directory을 인증 하는 데 사용 되는 액세스 토큰입니다. <br/><br/>**참고:** `UID`이 속성과 `PWD` ,,`Authentication` 또는 연결 문자열 키워드 또는 해당 속성/키워드를 지정하는것은오류입니다.`Trusted_Connection`|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 사용 된 SQL 또는 Active Directory 인증을 지정 합니다. 유효한 값은<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정 되는 인증 모드입니다.</li><li>`(empty string)`: 이전에 설정 된 인증 모드를 설정 하지 않습니다.</li><li>`ActiveDirectoryPassword:`로그인 ID 및 암호를 사용 하 여 인증을 Active Directory 합니다.</li><li>`ActiveDirectoryIntegrated:`현재 로그인 한 사용자의 Windows 계정 자격 증명을 사용 하 여 Active Directory에 대 한 통합 인증.</li><br/>**참고:** (또는 `ActiveDirectoryIntegrated` `Integrated Security` `Authentication`)인증키워드또는해당속성을사용하는응용프로그램은키워드(또는해당속성)의값을로설정하여새로사용하도록설정`Trusted_Connection`하는 **것이 좋습니다.** 암호화 및 인증서 유효성 검사 동작<br/><br/><li>`SqlPassword:`로그인 ID 및 암호를 사용 하는 인증입니다.</li><br/>**참고:** 인증을 사용 하 `SQL Server` 는 응용 프로그램은 `Authentication` 키워드 (또는 해당 속성)의 값을로 `SqlPassword` 설정 하 여 새 암호화 및 인증서 유효성 검사 동작을 사용 하도록 설정 하는 **것이 좋습니다** .</ul>|
+|SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Description: Azure Active Directory을 인증 하는 데 사용 되는 액세스 토큰입니다. <br/><br/>**참고:** 이 속성을 지정 하는 것은 오류 이며 연결 문자열 키워드 또는 해당 속성/키워드를 `UID` `PWD`, `Trusted_Connection` 또는 `Authentication` 수 있습니다.|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 사용 된 SQL 또는 Active Directory 인증을 지정 합니다. 유효한 값은<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정 되는 인증 모드입니다.</li><li>`(empty string)`: 이전에 설정 된 인증 모드를 설정 하지 않습니다.</li><li>Azure Active Directory id를 사용 하 여 ID 및 암호 인증을 `ActiveDirectoryPassword:`User 합니다.</li><li>Azure Active Directory id를 사용 하 여 통합 인증을 `ActiveDirectoryIntegrated:` 합니다.</li><br/>**참고:** @No__t_1 키워드를 사용 하 여 Windows 인증을 SQL Server 수도 있습니다. @No__t_0 또는 `Trusted_Connection` 인증 키워드를 대체 합니다. @No__t_1 또는 `Trusted_Connection` 키워드를 사용 하는 응용 프로그램 또는 해당 속성을 사용 하 여 새 암호화 및 인증서 유효성 검사 동작을 사용 하는 `Authentication` 키워드 (또는 해당 속성)의 값을 `ActiveDirectoryIntegrated`로 설정 하는 **것이 좋습니다** . .<br/><br/><li>Azure Active Directory id를 사용 하 여 대화형 인증을 `ActiveDirectoryInteractive:` 합니다. 이 메서드는 Azure MFA (multi-factor authentication)를 지원 합니다. </li><li>[MSI (`ActiveDirectoryMSI:` 관리 서비스 ID)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 인증. 사용자 할당 id의 경우 사용자 ID를 사용자 id의 개체 ID로 설정 해야 합니다.</li><li>사용자 ID 및 암호를 사용 하 여 인증을 `SqlPassword:` 합니다.</li><br/>**참고:** @No__t_2 인증을 사용 하는 응용 프로그램은 [새로운 암호화 및 인증서 유효성 검사 동작](../features/using-azure-active-directory.md#encryption-and-certificate-validation)을 사용할 수 있도록 `Authentication` 키워드 (또는 해당 속성)의 값을 `SqlPassword`로 설정 하는 **것이 좋습니다** .</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 현재 또는 만료 된 암호입니다. 자세한 내용은 [프로그래밍 방식으로 암호 변경](../../oledb/features/changing-passwords-programmatically.md)을 참조 하세요.|  
 |SSPROP_INIT_APPNAME|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 클라이언트 응용 프로그램 이름입니다.|  
 |SSPROP_INIT_AUTOTRANSLATE|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: OEM/ANSI 문자 변환입니다.<br /><br /> VARIANT_TRUE: SQL Server용 OLE DB 드라이버는 클라이언트와 서버 코드 페이지 간의 확장 문자 일치에서 문제를 최소화하기 위해 유니코드를 통한 변환으로 클라이언트와 서버 간에 전송된 ANSI 문자열을 변환합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**, **varchar**또는 **text** 변수, 매개 변수 또는 열 인스턴스로 전송된 클라이언트 DBTYPE_STR 데이터는 클라이언트 ACP(ANSI 코드 페이지)를 사용하여 문자에서 유니코드로 변환된 후 서버의 ACP를 사용하여 유니코드에서 문자로 변환됩니다.<br /><br /> 클라이언트 DBTYPE_STR 변수로 전송된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar** 또는 **text** 데이터는 서버 ACP를 사용하여 문자에서 유니코드로 변환된 후 클라이언트 ACP를 사용하여 유니코드에서 문자로 변환됩니다.<br /><br /> 이러한 변환은 SQL Server에 대 한 OLE DB 드라이버에 의해 클라이언트에서 수행 됩니다. 이를 위해서는 서버에 사용된 것과 동일한 ACP를 클라이언트에서 사용할 수 있어야 합니다.<br /><br /> 이러한 설정은 다음 전송에 대해 발생하는 변환에는 영향을 미치지 않습니다.<br /><br /> 서버의 **char**, **varchar** 또는 **text**로 전송된 유니코드 DBTYPE_WSTR 클라이언트 데이터.<br /><br /> 클라이언트의 유니코드 DBTYPE_WSTR 변수에 전송된 **char**, **varchar** 또는 **text** 서버 데이터.<br /><br /> 서버의 유니코드 **nchar**, **nvarchar** 또는 **ntext**로 전송된 ANSI DBTYPE_STR 클라이언트 데이터.<br /><br /> 클라이언트의 ANSI DBTYPE_STR 변수로 전송된 유니코드 **char**, **varchar** 또는 **text** 서버 데이터.<br /><br /> VARIANT_FALSE: SQL Server에 대 한 OLE DB 드라이버는 문자 변환을 수행 하지 않습니다.<br /><br /> SQL Server용 OLE DB 드라이버는 서버의 **char**, **varchar** 또는 **text** 변수, 매개 변수 또는 열로 전송된 클라이언트 ANSI 문자 DBTYPE_STR 데이터를 변환하지 않습니다. 서버에서 클라이언트의 DBTYPE_STR 변수로 전송된 **char**, **varchar** 또는 **text** 데이터에 대해 변환이 수행되지 않습니다.<br /><br /> 클라이언트와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 서로 다른 ACP를 사용하는 경우 확장 문자가 잘못 해석될 수 있습니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68015904"
 |SSPROP_INIT_PACKETSIZE|형식: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 네트워크 패킷 크기 (바이트)입니다. 패킷 크기 속성 값은 512에서 32,767 사이여야 합니다. SQL Server 네트워크 패킷 크기의 기본 OLE DB 드라이버는 4096입니다.|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|형식: BOOL<br /><br /> R/W: 쓰기<br /><br /> 기본값: FALSE<br /><br /> 설명: 서버 쪽 커서가 사용되는 경우 데이터베이스 업데이트 동안 사용됩니다. 이 속성은 클라이언트의 코드 페이지가 아닌 서버에서 얻은 데이터 정렬 정보를 데이터에 첨부합니다. 현재 이 속성은 대상 데이터의 데이터 정렬을 알고 이를 올바르게 변환하는 분산 쿼리 처리에서만 사용됩니다.|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 서버 인증서 유효성 검사를 설정 또는 해제하는 데 사용됩니다. 이 속성은 읽기/쓰기이지만 연결이 설정된 후에 이 속성을 설정하려고 하면 오류가 발생합니다.<br /><br /> 인증서 유효성 검사가 필요하도록 클라이언트가 구성된 경우 이 속성은 무시됩니다. 그러나 애플리케이션에서 이 속성을 SSPROP_INIT_ENCRYPT와 함께 사용하면 클라이언트가 암호화를 요구하지 않도록 구성되고 클라이언트에 제공된 인증서가 없는 경우에도 서버에 대한 연결이 암호화되도록 보장할 수 있습니다.<br /><br /> 클라이언트 애플리케이션은 연결이 열린 후에 이 속성을 쿼리하여 실제 사용되는 암호화 및 유효성 검사 설정을 확인할 수 있습니다.<br /><br /> 참고: 인증서 유효성 검사 없이 암호화를 사용하면 패킷 스니핑에 대한 부분적인 보호가 가능하지만 메시지 가로채기(man-in-the-middle) 공격은 차단하지 못합니다. 서버 인증서 유효성을 검사하지 않고 단순히 로그인과 서버로 전송되는 데이터의 암호화만 허용합니다.<br /><br /> 자세한 내용은 [유효성 검사 없이 암호화 사용](../../oledb/features/using-encryption-without-validation.md)을 참조하세요.|  
-|SSPROP_INIT_USEPROCFORPREP|형식: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 설명: 저장 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로시저를 사용 합니다. **ICommandPrepare** 인터페이스를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 임시 저장 프로시저 사용을 정의합니다. 이 속성은 SQL Server 6.5에 연결하는 경우에만 의미가 있었습니다. 이후 버전에서는 이 속성이 무시됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF: 명령이 준비 될 때 임시 저장 프로시저가 만들어지지 않습니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON: 명령이 준비 될 때 임시 저장 프로시저가 만들어집니다. 임시 저장 프로시저는 세션이 해제될 때 삭제됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP: 명령이 준비 될 때 임시 저장 프로시저가 만들어집니다. 이 프로시저는 **ICommandPrepare::Unprepare**로 명령이 준비 취소될 때, **ICommandText::SetCommandText**로 명령 개체에 대해 새 명령이 지정될 때, 또는 명령을 참조하는 모든 애플리케이션이 해제될 때 삭제됩니다.|  
+|SSPROP_INIT_USEPROCFORPREP|형식: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> 기본값: SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 사용 합니다. **ICommandPrepare** 인터페이스를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 임시 저장 프로시저 사용을 정의합니다. 이 속성은 SQL Server 6.5에 연결하는 경우에만 의미가 있었습니다. 이후 버전에서는 이 속성이 무시됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF: 명령이 준비 될 때 임시 저장 프로시저가 만들어지지 않습니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON: 명령이 준비 될 때 임시 저장 프로시저가 만들어집니다. 임시 저장 프로시저는 세션이 해제될 때 삭제됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP: 명령이 준비 될 때 임시 저장 프로시저가 만들어집니다. 이 프로시저는 **ICommandPrepare::Unprepare**로 명령이 준비 취소될 때, **ICommandText::SetCommandText**로 명령 개체에 대해 새 명령이 지정될 때, 또는 명령을 참조하는 모든 애플리케이션이 해제될 때 삭제됩니다.|  
 |SSPROP_INIT_WSID|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 워크스테이션을 식별하는 문자열입니다.|  
   
 

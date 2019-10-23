@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713185"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services 모니터링
@@ -38,17 +38,17 @@ Dmv에 대 한 일반적인 정보는 [시스템 동적 관리 뷰](../../relati
 
 ## <a name="dynamic-management-views"></a>동적 관리 뷰
 
-SQL Server에서 기계 학습 워크 로드를 모니터링 하는 경우 다음과 같은 동적 관리 뷰를 사용할 수 있습니다. Dmv를 쿼리하려면 인스턴스에 대 한 사용 `VIEW SERVER STATE` 권한이 필요 합니다.
+SQL Server에서 기계 학습 워크 로드를 모니터링 하는 경우 다음과 같은 동적 관리 뷰를 사용할 수 있습니다. Dmv를 쿼리하려면 인스턴스에 대 한 `VIEW SERVER STATE` 권한이 필요 합니다.
 
 | 동적 관리 뷰 | type | 설명 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 실행 | 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 실행 | 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 실행 | 서버에서 유지되는 각 성능 카운터에 대해 행을 반환합니다. 검색 조건을 `WHERE object_name LIKE '%External Scripts%'`사용 하는 경우이 정보를 사용 하 여 실행 된 스크립트 수, 인증 모드를 사용 하 여 실행 된 스크립트 또는 전체 인스턴스에서 실행 된 R 또는 Python 호출 수를 확인할 수 있습니다. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 실행 | 서버에서 유지되는 각 성능 카운터에 대해 행을 반환합니다. @No__t_0 검색 조건을 사용 하는 경우이 정보를 사용 하 여 실행 된 스크립트 수, 인증 모드를 사용 하 여 실행 된 스크립트 또는 전체 인스턴스에서 실행 된 R 또는 Python 호출 수를 확인할 수 있습니다. |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | 리소스 관리자 | Resource Governor의 현재 외부 리소스 풀 상태, 리소스 풀의 현재 구성 및 리소스 풀 통계에 대 한 정보를 반환 합니다. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | 리소스 관리자 | Resource Governor의 현재 외부 리소스 풀 구성에 대 한 CPU 선호도 정보를 반환 합니다. 각 스케줄러가 개별 프로세서에 매핑되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 스케줄러당 하나의 행을 반환합니다. 이 뷰를 사용하여 스케줄러 상태를 모니터링하거나 런어웨이 태스크를 식별할 수 있습니다. |
 
-인스턴스를 모니터링 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 및 [Resource Governor 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)를 참조 하세요.
+@No__t_0 인스턴스를 모니터링 하는 방법에 대 한 자세한 내용은 [카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 및 [Resource Governor 관련 된 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)를 참조 하세요.
 
 ## <a name="settings-and-configuration"></a>설정 및 구성
 
@@ -80,7 +80,7 @@ WHERE name = 'external scripts enabled';
 
 | Column | 설명 |
 |--------|-------------|
-| IsMLServicesInstalled | 인스턴스에 대해 Machine Learning Services SQL Server 설치 된 경우 1을 반환 합니다. 그렇지 않으면 0을 반환 합니다. |
+| Isml서비스로 설치 됨 | 인스턴스에 대해 Machine Learning Services SQL Server 설치 된 경우 1을 반환 합니다. 그렇지 않으면 0을 반환 합니다. |
 | ExternalScriptsEnabled | 인스턴스에 대해 외부 스크립트를 사용 하는 경우 1을 반환 합니다. 그렇지 않으면 0을 반환 합니다. |
 | ImpliedAuthenticationEnabled | 묵시적 인증을 사용 하는 경우 1을 반환 합니다. 그렇지 않으면 0을 반환 합니다. SQLRUserGroup에 대 한 로그인이 있는지 확인 하 여 묵시적 인증에 대 한 구성을 확인 합니다. |
 | IsTcpEnabled | 인스턴스에 대해 TCP/IP 프로토콜을 사용 하는 경우 1을 반환 합니다. 그렇지 않으면 0을 반환 합니다. 자세한 내용은 [기본 SQL Server 네트워크 프로토콜 구성](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)을 참조 하세요. |
@@ -167,10 +167,10 @@ WHERE object_name LIKE '%External Scripts%'
 | 카운터 | 설명 |
 |---------|-------------|
 | 모든 실행 | 로컬 또는 원격 호출로 시작 되는 외부 프로세스의 수입니다. |
-| 병렬 실행 | 스크립트가  _\@병렬_ 쿼리 계획을 생성 하 고 사용할 수 있는 병렬 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 사양을 포함 하는 횟수입니다. |
+| 병렬 실행 | 스크립트에 _\@parallel_ 사양이 포함 되 고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 병렬 쿼리 계획을 생성 하 고 사용할 수 있는 횟수입니다. |
 | 스트림 실행 | 스트리밍 기능이 호출 된 횟수입니다. |
 | SQL CC 실행 | 호출이 원격으로 인스턴스화되어 SQL Server 계산 컨텍스트로 사용 된 외부 스크립트 실행 수입니다. |
-| 묵시적 인증 로그인 | 암시적 인증을 사용 하 여 ODBC 루프백 호출을 수행한 횟수 즉,는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 스크립트 요청을 보내는 사용자를 대신 하 여 호출을 실행 했습니다. |
+| 묵시적 인증 로그인 | 암시적 인증을 사용 하 여 ODBC 루프백 호출을 수행한 횟수 즉, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 스크립트 요청을 보내는 사용자를 대신 하 여 호출을 실행 했습니다. |
 | 총 실행 시간(ms) | 호출 및 호출 완료 사이에 경과 된 시간입니다. |
 | 실행 오류 | 스크립트에서 오류를 보고 한 횟수입니다. 이 수에는 R 또는 Python 오류가 포함 되지 않습니다. |
 
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>메모리 구성
 
-SQL Server 및 외부 리소스 풀의 최대 메모리 구성에 대 한 정보를 표시 합니다. SQL Server 기본값 `max server memory (MB)`으로 실행 되는 경우 OS 메모리의 100%로 간주 됩니다.
+SQL Server 및 외부 리소스 풀의 최대 메모리 구성에 대 한 정보를 표시 합니다. SQL Server `max server memory (MB)` 기본값을 사용 하 여 실행 되는 경우 OS 메모리의 100%로 간주 됩니다.
 
 ![메모리 구성 쿼리의 출력](media/dmv-memory-configuration.png "메모리 구성 쿼리의 출력")
 
@@ -248,7 +248,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | Column | 설명 |
 |--------|-------------|
-| pool_name | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 접두사가 `SQL Server` 있고 외부 리소스 풀에는 `External Pool`접두사가 붙습니다.
+| pool_name | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 `SQL Server` 접두사가 추가 되 고 외부 리소스 풀에는 `External Pool` 접두사가 붙습니다.
 | total_cpu_usage_hours | 리소스 Govenor 통계가 다시 설정 된 이후의 누적 CPU 사용량 (밀리초)입니다. |
 | read_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 읽기 IO입니다. |
 | write_io_completed_total | 리소스 관리자 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다. |
