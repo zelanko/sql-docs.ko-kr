@@ -14,21 +14,21 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791988"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782894"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>가용성 그룹에 데이터베이스 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 데이터베이스를 추가하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [사전 요구 사항 및 제한 사항](#Prerequisites)  
   
-     [사용 권한](#Permissions)  
+     [Permissions](#Permissions)  
   
 -   **가용성 그룹에 데이터베이스를 추가하려면:**  
   
@@ -103,30 +103,24 @@ ms.locfileid: "62791988"
   
      예를 들어 다음 명령은 보조 데이터베이스 `MyDd` 을(를) `MyAG` 가용성 그룹에 추가합니다. 이 가용성 그룹의 주 복제본은 `PrimaryServer\InstanceName`에 의해 호스트됩니다.  
   
-    ```  
-  
+    ```powershell
     Add-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-    -Database "MyDb"  
+     -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
+     -Database "MyDb"  
     ```  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 3.  가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [AlwaysOn 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
- **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
-  
--   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
-  
- 전체 예제를 보려면 아래의 [예제(PowerShell)](#PSExample)를 참조하세요.  
-  
-###  <a name="PSExample"></a> 예제(PowerShell)  
+ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)를 참조 하세요.
+
  다음 예는 가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스에 있는 데이터베이스에서 보조 데이터베이스를 준비하고, 이 데이터베이스를 가용성 그룹에 주 데이터베이스로 추가한 다음, 보조 데이터베이스를 가용성 그룹에 조인하는 전체 과정을 보여 줍니다. 가장 먼저, 이 예에서는 데이터베이스와 해당 트랜잭션 로그를 백업합니다. 그런 다음 보조 복제본을 호스팅하는 서버 인스턴스로 데이터베이스 및 로그 백업을 복원합니다.  
   
  이 예에서는 `Add-SqlAvailabilityDatabase`를 두 번 호출합니다. 먼저 주 복제본에서 호출해서 데이터베이스를 가용성 그룹에 추가한 다음 보조 복제본에서 호출해서 해당 복제본에 있는 보조 데이터베이스를 가용성 그룹에 조인합니다. 보조 복제본이 두 개 이상인 경우 각 보조 복제본에서 보조 데이터베이스를 복원 및 조인합니다.  
   
-```  
+```powershell
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  
 $LogBackupFile = "\\share\backups\MyDatabase.trn"  
 $MyAgPrimaryPath = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -139,14 +133,11 @@ Restore-SqlDatabase -Database "MyDatabase" -BackupFile $DatabaseBackupFile -Serv
 Restore-SqlDatabase -Database "MyDatabase" -BackupFile $LogBackupFile -ServerInstance "SecondaryServer\InstanceName" -RestoreAction 'Log' -NoRecovery  
   
 Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"  
-Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"  
-  
+Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드를 사용 하 여 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn 대시보드 &#40;SQL Server Management Studio&#41;  를 사용 합니다](use-the-always-on-dashboard-sql-server-management-studio.md) .  
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
-  
-  

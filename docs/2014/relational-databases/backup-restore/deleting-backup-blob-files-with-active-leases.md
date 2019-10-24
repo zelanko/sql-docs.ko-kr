@@ -10,12 +10,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154758"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783061"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
   Azure storage에 백업 하거나 복원 하는 경우 SQL Server는 blob에 대 한 단독 액세스를 잠그기 위해 무한 임대를 획득 합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제하고 blob을 삭제하는 방법에 대해 설명합니다.  
@@ -31,27 +31,26 @@ ms.locfileid: "70154758"
   
 1.  **임대가 있는 blob 식별:** 백업 프로세스를 실행하는 스크립트가 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 blob 정리에 사용할 수 있습니다.   또한 LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 blob을 식별할 수 있습니다. blob 식별 후에는 blob 삭제 전에 목록을 검토하고 백업 파일이 유효한지 확인하는 것이 좋습니다.  
   
-2.  **임대 중단:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 해제할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
+2.  **임대 해제:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 해제할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
   
     > [!TIP]  
     >  SQL Server는 복원 작업 중 임대 ID를 실행하여 단독 액세스를 설정합니다. 복원 임대 ID는 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2입니다.  
   
-3.  **Blob 삭제:** 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
+3.  **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 ###  <a name="Code_Example"></a> PowerShell 스크립트 예:  
- **중요 PowerShell2.0\* 을 실행 하는 경우 Microsoft windowsazure.servicebus 어셈블리를 로드 하는 데 문제가 있을 수 있습니다. \* \* \*** 문제 해결을 위해 Powershell 3.0으로 업그레이드하는 것이 좋습니다. PowerShell 2.0에 대한 다음 해결 방법을 사용할 수도 있습니다.  
+ **\* \* 중요 \* \*** PowerShell 2.0을 실행 하는 경우 Microsoft Windowsazure.servicebus 어셈블리를 로드 하는 데 문제가 있을 수 있습니다. 문제 해결을 위해 Powershell 3.0으로 업그레이드하는 것이 좋습니다. PowerShell 2.0에 대한 다음 해결 방법을 사용할 수도 있습니다.  
   
 -   다음과 같이 powershell.exe.config 파일을 만들거나 수정하여 런타임에 .NET 2.0 및 .NET 4.0 어셈블리를 로드합니다.  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  다음 예에서는 활성 임대가 있는 blob을 식별한 다음 해제합니다. 임대 ID를 필터링하는 방법도 보여 줍니다.  
@@ -80,11 +79,11 @@ ms.locfileid: "70154758"
   
      **임대 해제 중**  
   
-     **Blob의 \<URL>에 대한 임대는 복원 임대입니다. 아직 활성 상태인 복원 임대를 가진 Blob이 있는 경우에만 이 메시지가 나타납니다.**  
+     **\<Blob의 URL>의 임대는 복원 임대입니다. 아직 활성 상태인 복원 임대를 가진 blob이 있는 경우에만 이 메시지가 나타납니다.**  
   
      **\<Blob의 URL>의 임대는 \<Blob의 URL>의 복원 임대 해제 임대가 아닙니다.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -104,34 +103,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -149,11 +146,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  

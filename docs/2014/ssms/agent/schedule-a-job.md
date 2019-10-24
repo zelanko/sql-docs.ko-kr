@@ -14,12 +14,12 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666768"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783174"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "62666768"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62666768"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     -- creates a schedule named NightlyJobs.   
@@ -109,9 +109,7 @@ ms.locfileid: "62666768"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) 하 고 [sp_attach_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
+ 자세한 내용은 [ &#40;&#41; sp_add_schedule](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) 및 [ &#40;sp_attach_schedule transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)을 참조 하세요.  
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobSchedule` 클래스를 사용합니다. 자세한 내용은[SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
-  
-  

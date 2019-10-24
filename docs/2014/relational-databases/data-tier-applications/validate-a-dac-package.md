@@ -17,19 +17,19 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917917"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782664"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
-1.  **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
+2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "62917917"
   
 3.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성...** 을 선택합니다.  
   
-4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 응용 프로그램(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
+4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 애플리케이션(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
   
 5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션 가져오기...** 를 선택합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62917917"
   
 4.  마법사 사용에 대한 자세한 내용은 [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)를 참조하세요.  
   
- **PowerShell을 사용하여 데이터베이스 변경 내용 보기**  
+### <a name="view-database-changes-by-using-powershell"></a>PowerShell을 사용하여 데이터베이스 변경 내용 보기
   
 1.  SMO Server 개체를 만든 다음 보려는 DAC를 포함하는 인스턴스로 설정합니다.  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917917"
   
 4.  `GetDatabaseChanges()` 메서드를 사용하여 `ChangeResults` 개체를 검색하고 개체를 텍스트 파일에 파이핑하여 새 개체, 삭제된 개체 및 변경된 개체에 대한 간단한 보고서를 생성합니다.  
   
-### <a name="view-database-changes-example-powershell"></a>데이터베이스 변경 내용 보기 예(PowerShell)  
- **데이터베이스 변경 내용 보기 예(PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>데이터베이스 변경 내용 보기 예(PowerShell)
   
  다음 예에서는 MyApplicaiton이라는 배포된 DAC에 대한 데이터베이스 변경 내용을 보고합니다.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   
-### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
- **업그레이드 동작 보기 예(PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)
   
  다음 예에서는 MyApplicaiton이라는 DAC를 MyApplicationVNext.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  또는 별도의 폴더에 DAC의 압축을 풉니다. 그런 다음 WinDiff 유틸리티와 같은 비교 도구를 사용하여 차이를 분석할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 계층 응용 프로그램](data-tier-applications.md)   
- [데이터 계층 응용 프로그램 배포](deploy-a-data-tier-application.md)   
- [데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ [개체 탐색기](data-tier-applications.md)   
+ [데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)   
+ [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)  

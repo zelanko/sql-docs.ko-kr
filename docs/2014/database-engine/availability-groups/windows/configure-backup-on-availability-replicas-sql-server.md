@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815200"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783002"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  보조 복제본에 백업에 대한 소개는 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  보조 복제본에 대 한 백업에 대 한 소개는 [활성 보조: 보조 복제본에 백업 (AlwaysOn 가용성 그룹)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조 하세요.  
   
  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62815200"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|태스크|사용 권한|  
+|태스크|Permissions|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 보조 복제본에 백업을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 그룹 또는 가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "62815200"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
+    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
   
 6.  **복제본 백업 우선 순위** 표를 사용하여 가용성 복제본의 백업 우선 순위를 변경할 수 있습니다. 이 표는 가용성 그룹에 대한 복제본을 호스팅하는 각 서버 인스턴스의 현재 백업 우선 순위를 표시합니다. 표 열은 다음과 같습니다.  
   
@@ -109,19 +109,19 @@ ms.locfileid: "62815200"
 2.  새 가용성 그룹을 만들려는 경우 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)을 사용하세요. 기존 가용성 그룹을 수정하려는 경우 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql) 문을 사용합니다.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **보조 복제본에 백업을 구성하려면**  
+
+### <a name="to-configure-backup-on-secondary-replicas"></a>보조 복제본에 백업을 구성하려면
   
 1.  기본값(`cd`)을 주 복제본을 호스팅하는 서버 인스턴스로 설정합니다.  
   
 2.  필요한 경우 추가하거나 수정할 각 가용성 복제본의 백업 우선 순위를 구성합니다. 이 우선 순위는 어느 복제본이 가용성 그룹의 데이터베이스에서 자동 백업 요청을 지원해야 하는지를 결정하기 위해(우선 순위가 가장 높은 복제본이 선택됨) 주 복제본을 호스팅하는 서버 인스턴스가 사용합니다. 이 우선 순위는 1부터 100까지의 임의의 숫자일 수 있습니다. 우선 순위 0은 백업 요청 지원을 위한 후보로 해당 복제본을 고려하지 않아야 함을 나타냅니다.  기본 설정은 50입니다.  
   
-     가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 두 경우 모두 지정 합니다 `BackupPriority` *n* 매개 변수를 여기서 *n* 0에서 100 사이의 값입니다.  
+     가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 두 경우 모두 `BackupPriority`*n* 매개 변수를 지정 합니다. 여기서 *n* 은 0에서 100 사이의 값입니다.  
   
      예를 들어 다음 명령은 가용성 복제본 `MyReplica`의 백업 우선 순위를 `60`으로 설정합니다.  
   
-    ```  
-    Set-SqlAvailabilityReplica -BackupPriority 60 `  
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -BackupPriority 60 -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
 3.  필요한 경우 만들거나 수정하는 가용성 그룹에 대해 자동화된 백업 기본 설정을 구성합니다. 이 기본 설정은 백업을 수행할 위치를 선택할 때 백업 작업에서 주 복제본을 평가하는 방식을 나타냅니다. 기본 설정은 보조 복제본을 사용하는 것입니다.  
@@ -146,26 +146,21 @@ ms.locfileid: "62815200"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  `AutomatedBackupPreference`는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
+    >  `AutomatedBackupPreference`는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
   
      예를 들어 다음 명령은 가용성 그룹 `MyAg`의 `AutomatedBackupPreference` 속성을 `SecondaryOnly`로 설정합니다. 주 복제본에서는 이 가용성 그룹의 데이터베이스 자동 백업이 절대 발생하지 않으며 대신 백업 우선 순위 설정 값이 가장 높은 보조 복제본으로 백업이 리디렉션됩니다.  
   
-    ```  
-    Set-SqlAvailabilityGroup `  
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
-    -AutomatedBackupPreference SecondaryOnly  
+    ```powershell
+    Set-SqlAvailabilityGroup -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
+     -AutomatedBackupPreference SecondaryOnly  
     ```  
   
 > [!NOTE]  
->  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+>  cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
- **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
+SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md) 를 참조 하 고 [SQL Server PowerShell 도움을 받으세요](../../../powershell/sql-server-powershell.md).
   
--   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
-  
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
-  
-##  <a name="FollowUp"></a> 후속 작업: 보조 복제본에 백업을 구성한 후의 작업  
+##  <a name="FollowUp"></a> 후속 작업: 보조 복제본에 백업을 구성한 후  
  지정된 가용성 그룹에 대해 자동화된 백업 기본 설정을 고려하도록 하려면 백업 우선 순위가 0보다 큰(>0) 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 데이터베이스에 대한 백업 작업을 스크립팅해야 합니다. 현재 복제본이 기본 백업 복제본인지 여부를 확인하려면 백업 스크립트에서 [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 함수를 사용합니다. 현재 서버 인스턴스가 호스팅하는 가용성 복제본이 백업에 대한 선호 복제본인 경우 이 함수가 1을 반환합니다. 그렇지 않으면 함수가 0을 반환합니다. 각 가용성 복제본에서 이 함수를 쿼리하는 간단한 스크립트를 실행하여 지정된 백업 작업을 실행할 복제본을 확인할 수 있습니다. 예를 들어 백업 작업 스크립트의 일반적인 코드 조각은 다음과 같습니다.  
   
 ```  
@@ -188,19 +183,17 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 |보기|정보|관련 열|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|현재 복제본이 기본 백업 복제본인지 여부|이 오류에는 이 작업을 적용할 수 없습니다.|  
+|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|현재 복제본이 기본 백업 복제본인지 여부|해당 사항 없음|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|자동화된 백업 기본 설정|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|지정된 가용성 복제본의 백업 우선 순위|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|복제본이 서버 인스턴스의 로컬 복제본인지 여부<br /><br /> 현재 역할<br /><br /> 작동 상태<br /><br /> 연결 상태<br /><br /> 가용성 복제본의 동기화 상태|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 AlwaysOn 솔루션 가이드 Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+ [활성 보조: 보조 복제본에 백업 (AlwaysOn 가용성 그룹)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 
