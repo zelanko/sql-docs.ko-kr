@@ -22,25 +22,25 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918193"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783067"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
-  마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
+  마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
   
--   **시작하기 전 주의 사항:**  [SQL Server 유틸리티](#SQLUtility), [데이터베이스 옵션 및 설정](#DBOptSettings)를 [제한 사항 및 제한 사항](#LimitationsRestrictions)를 [필수 구성 요소](#Prerequisites), [보안](#Security), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [SQL Server 유틸리티](#SQLUtility), [데이터베이스 옵션 및 설정](#DBOptSettings), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
--   **DAC를 배포를 사용 하 여:**  [데이터 계층 응용 프로그램 배포 마법사](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **DAC를 배포하려면:** [데이터 계층 애플리케이션 배포 마법사](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 시작하기 전에  
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 단일 인스턴스에 여러 번 배포할 수 있지만 배포를 한 번에 하나씩만 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
   
-###  <a name="SQLUtility"></a> SQL Server 유틸리티  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+###  <a name="SQLUtility"></a>SQL Server 유틸리티  
+ DAC를 데이터베이스 엔진의 관리되는 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
 ###  <a name="DBOptSettings"></a> 데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 다음을 제외한 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "62918193"
 ####  <a name="Permissions"></a> Permissions  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 배포할 수 있습니다. 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정인 **sa** 도 DAC를 배포할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 배포하려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 배포하려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="UsingDeployDACWizard"></a> 사용 하 여 데이터 계층 응용 프로그램 배포 마법사  
+##  <a name="UsingDeployDACWizard"></a>데이터 계층 응용 프로그램 배포 마법사 사용  
  **마법사를 사용 하 여 DAC를 배포 하려면**  
   
 1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
@@ -93,15 +93,15 @@ ms.locfileid: "62918193"
   
  **취소** - DAC를 배포하지 않고 마법사를 종료합니다.  
   
-##  <a name="Select_dac_package"></a> DAC 패키지 선택 페이지  
+##  <a name="Select_dac_package"></a>DAC 패키지 선택 페이지  
  이 페이지를 사용하여 배포할 데이터 계층 애플리케이션을 포함하는 DAC 패키지를 지정할 수 있습니다. 이 페이지는 세 가지 상태로 전환됩니다.  
   
 ### <a name="select-the-dac-package"></a>DAC 패키지 선택  
  이 페이지의 초기 상태를 사용하여 배포할 DAC 패키지를 선택할 수 있습니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다.  
   
- **DAC 패키지** - 배포할 데이터 계층 응용 프로그램이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
+ **DAC 패키지** - 배포할 데이터 계층 애플리케이션이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
   
- **응용 프로그램 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 이름을 표시하는 읽기 전용 입력란입니다.  
+ **애플리케이션 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 이름을 표시하는 읽기 전용 입력란입니다.  
   
  **버전** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 버전을 표시하는 읽기 전용 입력란입니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62918193"
   
  **DAC 내용의 유효성을 검사하고 있습니다** - 유효성 검사의 현재 상태를 보고하는 진행률 표시줄입니다.  
   
- **\< 이전** -의 초기 상태를 반환 합니다 **패키지 선택** 페이지입니다.  
+ **\< 이전** - **패키지 선택** 페이지의 초기 상태로 돌아갑니다.  
   
  **다음 >** - **패키지 선택** 페이지의 최종 버전으로 진행합니다.  
   
@@ -133,13 +133,13 @@ ms.locfileid: "62918193"
   
  **정책 위반을 무시합니다.** - 정책 조건이 한 개 이상 위반되더라도 배포를 진행하려면 이 확인란을 사용합니다. 실패한 모든 조건이 DAC 작동에 영향을 주지 않는 것이 확실한 경우에만 이 옵션을 선택합니다.  
   
- **\< 이전** -반환 된 **패키지 선택** 페이지입니다.  
+ **\< 이전** - **패키지 선택** 페이지로 돌아갑니다.  
   
  **다음 >** - **구성 업데이트** 페이지로 진행합니다.  
   
  **취소** - DAC를 배포하지 않고 마법사를 종료합니다.  
   
-##  <a name="Update_configuration"></a> 구성 업데이트 페이지  
+##  <a name="Update_configuration"></a>구성 업데이트 페이지  
  이 페이지를 사용하여 배포된 DAC 인스턴스와 배포를 통해 생성된 데이터베이스의 이름을 지정하고 데이터베이스 옵션을 설정할 수 있습니다.  
   
  **데이터베이스 이름:** - 배포를 통해 생성된 데이터베이스의 이름을 지정합니다. 기본은 DAC가 추출된 원본 데이터베이스 이름입니다. 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내에서 고유해야 하며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자 규칙을 준수해야 합니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "62918193"
   
  **로그 파일 경로 및 이름:** - 로그 파일의 전체 경로와 파일 이름을 지정합니다. 입력란은 기본 경로와 파일 이름으로 채워집니다. 입력란의 문자열을 편집하여 기본값을 변경하거나 **찾아보기** 단추를 사용하여 로그 파일이 있는 폴더를 탐색할 수 있습니다.  
   
- **\< 이전** -반환 된 **DAC 패키지 선택** 페이지입니다.  
+ **\< 이전** - **DAC 패키지 선택** 페이지로 돌아갑니다.  
   
  **다음 >** - **요약** 페이지로 진행합니다.  
   
@@ -169,13 +169,13 @@ ms.locfileid: "62918193"
   
  **DAC를 배포하는 데 사용되는 설정은 다음과 같습니다.** - 표시된 정보를 검토하여 수행할 동작이 올바른지 확인합니다. 창에는 선택한 DAC 패키지와 배포하도록 선택한 DAC 인스턴스 이름이 표시됩니다. 창에는 DAC와 연결된 데이터베이스를 만들 때 사용되는 설정도 표시됩니다.  
   
- **\< 이전** -반환 하는 **구성 업데이트** 선택 항목을 변경 하는 페이지입니다.  
+ **이전 \<** - **업데이트 구성** 페이지로 돌아가 선택 항목을 변경 합니다.  
   
  **다음 >** - DAC를 배포하고 **DAC 배포** 페이지에 결과를 표시합니다.  
   
  **취소** - DAC를 배포하지 않고 마법사를 종료합니다.  
   
-##  <a name="Deploy"></a> 배포 페이지  
+##  <a name="Deploy"></a>배포 페이지  
  이 페이지에서는 배포 작업의 성공 또는 실패를 보고합니다.  
   
  **DAC를 배포하는 중** - DAC를 배포하기 위해 수행한 각 동작의 성공 또는 실패를 보고합니다. 정보를 검토하여 각 동작의 성공 또는 실패를 확인합니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 선택하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
@@ -185,7 +185,7 @@ ms.locfileid: "62918193"
  **마침** - 마법사를 종료합니다.  
   
 ##  <a name="DeployDACPowerShell"></a> PowerShell 사용  
- **PowerShell 스크립트에서 install () 메서드를 사용 하 여 DAC를 배포 하려면**  
+ **PowerShell 스크립트에서 Install () 메서드를 사용 하 여 DAC를 배포 하려면**  
   
 1.  SMO Server 개체를 만든 다음 DAC를 배포할 인스턴스로 설정합니다.  
   
@@ -204,10 +204,10 @@ ms.locfileid: "62918193"
 ### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 MyApplication.dacpac 패키지의 DAC 정의를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 기본 인스턴스에서 MyApplication이라는 DAC를 배포합니다.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -231,9 +231,7 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 계층 응용 프로그램](data-tier-applications.md)   
+## <a name="see-also"></a>관련 항목:  
+ [개체 탐색기](data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](extract-a-dac-from-a-database.md)   
  [데이터베이스 식별자](../databases/database-identifiers.md)  
-  
-  

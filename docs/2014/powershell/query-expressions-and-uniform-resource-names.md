@@ -14,20 +14,19 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922886"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782758"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
   SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```
       Object1  
       [<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]<FilterExpression>::=  
 <PropertyExpression> [and <PropertyExpression>][...n]  
@@ -84,9 +83,9 @@ ms.locfileid: "62922886"
 |||  
 |-|-|  
 |yyyy|4자리 연도|  
-|MM|두 자리 월(01 - 12)|  
+|mm|두 자리 월(01 - 12)|  
 |dd|두 자리 날짜(01 - 31)|  
-|hh|24시간제를 사용하는 두 자리 시간(01 - 23)|  
+|m|24시간제를 사용하는 두 자리 시간(01 - 23)|  
 |mi|두 자리 분(01 - 59)|  
 |ss|두 자리 초(01 - 59)|  
 |mmm|밀리초 수(001 - 999)|  
@@ -150,15 +149,13 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>6\. is_null을 사용하여 개체 열거  
+### <a name="f-enumerating-objects-using-is_null"></a>6\. is_null을 사용하여 개체 열거  
  이 쿼리 식은 마지막 수정 날짜 속성에 대한 NULL이 없는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 테이블을 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Invoke-PolicyEvaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
