@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 스키마를 제거 합니다. | Microsoft 문서
+title: 스키마 생성, 변경 및 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 384c1e0f14d3cfe5237913b29be1d9ae74aa2d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073cdba829845c940c67d60a92b0346d4ed7541d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62511323"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782257"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Visual Basic에서 스키마 생성, 변경 및 제거  
  이 코드 예제는 스키마를 만들어 데이터베이스 개체에 할당하는 방법을 보여 줍니다. 그러면 프로그램이 사용자에게 권한을 부여하고 스키마에 새 테이블을 만듭니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62511323"
 ## <a name="creating-altering-and-removing-a-schema-in-visual-c"></a>Visual C#에서 스키마 생성, 변경 및 제거  
  이 코드 예제는 스키마를 만들어 데이터베이스 개체에 할당하는 방법을 보여 줍니다. 그러면 프로그램이 사용자에게 권한을 부여하고 스키마에 새 테이블을 만듭니다.  
   
-```  
+```csharp
 {  
          //Connect to the local, default instance of SQL Server.   
          Server srv = new Server();   
@@ -73,27 +73,26 @@ ms.locfileid: "62511323"
 ## <a name="creating-altering-and-removing-a-schema-in-powershell"></a>PowerShell에서 스키마 생성, 변경 및 제거  
  이 코드 예제는 스키마를 만들어 데이터베이스 개체에 할당하는 방법을 보여 줍니다. 그러면 프로그램이 사용자에게 권한을 부여하고 스키마에 새 테이블을 만듭니다.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a schema object variable by supplying the parent database and name arguments in the constructor.   
-$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema `  
--argumentlist $db, "MySchema1"  
+# Define a schema object variable by supplying the parent database and name arguments in the constructor.
+$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema -argumentlist $db, "MySchema1"  
   
 # Set schema owner  
-$sch.Owner = "dbo"   
+$sch.Owner = "dbo"
   
-# Create the schema on the instance of SQL Server.   
+# Create the schema on the instance of SQL Server.
 $sch.Create()  
   
-# Define an ObjectPermissionSet that contains the Update and Select object permissions.   
+# Define an ObjectPermissionSet that contains the Update and Select object permissions.
 $obperset  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.ObjectPermissionSet  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Select)  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Update)  
   
-# Grant the set of permissions on the schema to the guest account.   
+# Grant the set of permissions on the schema to the guest account.
 $sch.Grant($obperset, "guest")  
   
 #Create a SMO Table with one column and add it to the database  
@@ -101,15 +100,13 @@ $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlis
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $mycol =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $tb.Columns.Add($mycol)  
-$tb.Create()   
+$tb.Create()
   
-# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.   
+# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.
 $sch.Owner = "guest"  
 $sch.Alter()  
   
-# Run the Drop method for the table and the schema to remove them.   
+# Run the Drop method for the table and the schema to remove them.
 $tb.Drop()  
 $sch.Drop()  
-```  
-  
-  
+```

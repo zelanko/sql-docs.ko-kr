@@ -1,5 +1,5 @@
 ---
-title: MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체 (기본 모드) 용 성능 카운터 | Microsoft Docs
+title: MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대 한 성능 카운터 (기본 모드) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 248adc8dcbf3f3c016ff861be124ccde9e461db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3acf02dff2d0d699a6d4dfe271d0aed8419683a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103707"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782816"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대한 성능 카운터(기본 모드)
   이 항목에서는 `MSRS 2014 Web Service` 및 `MSRS 2014 Windows Service` 성능 개체에 대한 성능 카운터에 대해 설명합니다.  
@@ -30,13 +30,13 @@ ms.locfileid: "66103707"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링합니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 개수는 현재 서버에만 적용되고 스케일 아웃 배포에는 적용되지 않습니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
   
  성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서 [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx) 을 참조하세요.  
   
- SharePoint 모드 성능 카운터와 관련 된 정보를 참조 하세요 [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ SharePoint 모드 성능 카운터와 관련 된 정보는 [msrs 2014 웹 서비스 Sharepoint 모드 및 msrs 2014 Windows 서비스 Sharepoint 모드 성능 개체 &#40;sharepoint 모드&#41;에 대 한 성능 카운터](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)를 참조 하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [MSRS 2014 웹 서비스 성능 카운터](#bkmk_webservice)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66103707"
   
 -   [PowerShell Cmdlet을 사용하여 목록 반환](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2014 웹 서비스 성능 카운터  
+##  <a name="bkmk_webservice"></a>MSRS 2014 웹 서비스 성능 카운터  
  `MSRS 2014 Web Service` 성능 개체는 보고서 서버 성능을 모니터링합니다. 이 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
  다음 표에서는 `MSRS 2014 Web Service` 성능 개체와 함께 제공되는 카운터를 나열합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "66103707"
 |`Total Reports Executed`|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
 |`Total Requests`|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows 서비스 성능 카운터  
+##  <a name="bkmk_windowsservice"></a>MSRS 2014 Windows 서비스 성능 카운터  
  `MSRS 2014 Windows Service` 성능 개체는 보고서 서버 Windows 서비스를 모니터링합니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다.  
   
  다음 표에서는 `MSRS 2014 Windows Service` 성능 개체에 포함된 카운터를 나열합니다.  
@@ -114,21 +114,19 @@ ms.locfileid: "66103707"
 |`Total Snapshot Updates`|보고서 실행 스냅샷에 대한 총 업데이트 수입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 "msr"로 시작하는 카운터 집합을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName가 "msr"로 시작 하는 카운터 집합을 반환 합니다.  
   
-```  
-get-counter -listset msr*  
+```powershell
+Get-Counter -ListSet msr*  
 ```  
   
  다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 서버 성능 모니터링](monitoring-report-server-performance.md)   
- [성능 카운터 MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 &#40;SharePoint 모드&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Msrs 2014 웹 서비스 sharepoint 모드 및 msrs 2014 Windows 서비스 sharepoint 모드 성능 &#40;개체에 대 한 성능 카운터 sharepoint&#41; 모드](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)    
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](performance-counters-reportserver-service-performance-objects.md)  
-  
-  

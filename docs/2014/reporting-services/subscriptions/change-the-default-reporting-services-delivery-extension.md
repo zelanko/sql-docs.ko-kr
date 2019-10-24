@@ -12,17 +12,17 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101035"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783248"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>기본 Reporting Services 배달 확장 프로그램 변경
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 설정을 수정하여 구독 정의 페이지의 **배달 방법** 목록에 표시될 배달 확장 프로그램을 결정할 수 있습니다. 예를 들어, 구성을 수정하여 사용자가 새 구독을 만들었을 때 전자 메일 배달 대신 기본적으로 파일 공유 전달을 선택할 수 있습니다. 또한 배달 확장 프로그램이 사용자 인터페이스에 나열되는 순서를 변경할 수 있습니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 메일 및 Windows 파일 공유 배달을 포함하는 확장 프로그램입니다. 사용자 지정 배달을 지원하기 위해 사용자 지정 확장 프로그램이나 타사 확장 프로그램을 배포한 경우에는 보고서 서버에 배달 확장 프로그램이 더 있을 수 있습니다. 배달 확장 프로그램의 가용성은 보고서 서버에 배포되었는지 여부에 따라 다릅니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66101035"
   
  다음은 기본 전달 확장 프로그램과 보고서 관리자에서의 표시 순서를 제어하는 **RSReportServer.config** 의 기본 섹션입니다. 전자 메일이 파일에 첫 번째로 표시되며 이것이 기본값입니다.  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -53,7 +53,7 @@ ms.locfileid: "66101035"
   
      텍스트 편집기에서 RSReportServer.config 파일을 엽니다. 구성 파일에 대한 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)을 참조하세요. 구성 변경 후에는 UI가 다음 이미지와 유사해 보입니다.  
   
-     ![배달 확장 프로그램의 수정된 목록](../media/ssrs-modified-delivery.png "배달 확장 프로그램의 수정된 목록")  
+     ![배달 확장 프로그램의 수정 된 목록](../media/ssrs-modified-delivery.png "배달 확장 프로그램의 수정 된 목록")  
   
 2.  DeliveryUI 섹션이 다음 예시와 유사하게 보이도록 수정하고 주요 변경 사항을 확인합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66101035"
   
      **이벤트 ID:** 109  
   
-     **원본:** 보고서 서버 Windows 서비스 (인스턴스 이름)  
+     **원본:** 보고서 서버 Windows 서비스(인스턴스 이름)  
   
      RSReportServer.config 파일 수정  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101035"
   
 2.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 알고 있는 경우에 이 단계를 건너뛸 수 있습니다. SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 나열하려면 다음 PowerShell을 사용합니다.  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 “ssrsapp”의 현재 기본 배달 확장 프로그램을 확인하려면 다음 PowerShell을 실행합니다.  
   
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
   
-    ```  
-  
-## <a name="see-also"></a>관련 항목  
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)    
+ [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)    
  [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md)   
  [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)   
- [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [전자 메일 배달 &#40;SSRS에 대 한 보고서 서버 구성 Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
