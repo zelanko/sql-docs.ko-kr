@@ -10289,14 +10289,18 @@
   items:
     - name: 개요
       items:
+        - name: 새로운 기능
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-whats-new-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-whats-new.md
         - name: 릴리스 정보
           items:
-            - name: SQL Server 2017
-              href: linux/sql-server-linux-release-notes.md
             - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
-        - name: 새로운 기능
-          href: linux/sql-server-linux-whats-new.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-release-notes.md
         - name: 버전 및 지원되는 기능
           href: linux/sql-server-linux-editions-and-components-2017.md
         - name: FAQ
