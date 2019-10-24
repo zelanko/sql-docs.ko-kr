@@ -16,17 +16,17 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814148"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782949"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 데이터베이스 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 보조 데이터베이스를 제거하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62814148"
   
      다음 예에서는 가용성 그룹에서 *MyDb2* 라는 로컬 보조 데이터베이스를 제거합니다.  
   
-    ```  
+    ```sql
     ALTER DATABASE MyDb2 SET HADR OFF;  
     GO  
     ```  
@@ -100,13 +100,12 @@ ms.locfileid: "62814148"
   
      예를 들어 다음 명령은 `MyDb8` 서버 인스턴스가 호스팅하는 보조 복제본에서 보조 데이터베이스 `SecondaryComputer\Instance`을 제거합니다. 제거된 보조 데이터베이스에 대한 데이터 동기화가 중단됩니다. 이 명령은 주 데이터베이스 또는 다른 보조 데이터베이스에 영향을 주지 않습니다.  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `  
-    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
     ```  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -128,8 +127,6 @@ ms.locfileid: "62814148"
   
      자세한 내용은 [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
  [가용성 그룹에서 주 데이터베이스 제거&#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
-  
-  

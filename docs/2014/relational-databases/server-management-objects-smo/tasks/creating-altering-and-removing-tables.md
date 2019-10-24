@@ -1,5 +1,5 @@
 ---
-title: 만들기, 변경, 및 테이블 제거 | Microsoft 문서
+title: 테이블 생성, 변경 및 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb2c3a5163bdb5e69d67b0f8c27d2c77d21a7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63218250"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782390"
 ---
 # <a name="creating-altering-and-removing-tables"></a>테이블 생성, 변경 및 제거
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 테이블은 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic에서 테이블 생성, 변경 및 제거  
  이 코드 예제는 서로 다른 유형과 용도의 여러 열이 있는 테이블을 만듭니다. 또한 ID 필드를 만드는 방법, 기본 키를 만드는 방법, 테이블 속성을 변경하는 방법에 대한 예를 제공합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "63218250"
 ## <a name="creating-altering-and-removing-a-table-in-visual-c"></a>Visual C#에서 테이블 생성, 변경 및 제거  
  이 코드 예제는 서로 다른 유형과 용도의 여러 열이 있는 테이블을 만듭니다. 또한 ID 필드를 만드는 방법, 기본 키를 만드는 방법, 테이블 속성을 변경하는 방법에 대한 예를 제공합니다.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
         Server srv;   
@@ -82,7 +82,7 @@ ms.locfileid: "63218250"
 ## <a name="creating-altering-and-removing-a-table-in-powershell"></a>PowerShell에서 테이블 생성, 변경 및 제거  
  이 코드 예제는 서로 다른 유형과 용도의 여러 열이 있는 테이블을 만듭니다. 또한 ID 필드를 만드는 방법, 기본 키를 만드는 방법, 테이블 속성을 변경하는 방법에 대한 예를 제공합니다.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.Types")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63218250"
 CD \sql\localhost\default\Databases\  
   
 #And the database object corresponding to AdventureWorks2012.  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 #Create a SMO Table  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "Test_Table"  
@@ -107,16 +107,16 @@ $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumen
 $col2.Identity = $true  
 $col2.IdentitySeed = 1  
 $col2.IdentityIncrement = 1  
-$tb.Columns.Add($col2)   
+$tb.Columns.Add($col2)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Real  
 $col3 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Value", $Type  
-$tb.Columns.Add($col3)   
+$tb.Columns.Add($col3)
   
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col4 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $col4.Nullable = $false  
-$tb.Columns.Add($col4)   
+$tb.Columns.Add($col4)
   
 #Create the table  
 $tb.Create()  
@@ -124,17 +124,14 @@ $tb.Create()
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $col5 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"ExpiryDate", $Type  
 $col5.Nullable = $false  
-$tb.Columns.Add($col5)   
+$tb.Columns.Add($col5)
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $tb.Alter()  
   
-#Remove the table from the database.   
+#Remove the table from the database.
 $tb.Drop()  
-  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- <xref:Microsoft.SqlServer.Management.Smo.Table>  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>

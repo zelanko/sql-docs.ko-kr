@@ -16,19 +16,19 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211480"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782771"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [보안](#Security)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68211480"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211480"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- example removes the history for a job named NightlyBackups.  
     USE msdb ;  
     GO  
@@ -83,7 +83,7 @@ ms.locfileid: "68211480"
     GO  
     ```  
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  **작업 기록 로그를 지우려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `PurgeJobHistory` 클래스의 `JobServer` 메서드를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  

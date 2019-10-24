@@ -20,32 +20,32 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918135"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782716"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-  하나를 사용 합니다 **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 및 합니다 DAC정의등록하는기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의스크립팅`msdb` 시스템 데이터베이스 (**마스터** 에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용 하 여 기존 데이터베이스의 개체를 설명 하는 dac (데이터 계층 응용 프로그램) 정의를 작성 하 고 dac 정의를 `msdb` 시스템 데이터베이스에 등록할 수 있습니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 **master** ).  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **DAC 업그레이드에 사용되는 도구:** [데이터 계층 애플리케이션 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
- 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+ 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 등록을 수행할 수 있습니다. DAC가 데이터베이스에 이미 등록된 경우에는 DAC 등록을 수행할 수 없습니다. 예를 들어 데이터베이스가 DAC를 배포하는 방식으로 만들어진 경우 **데이터 계층 애플리케이션 등록 마법사**를 실행할 수 없습니다.  
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 등록할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 DAC를 등록하려면 하나 이상의 ALTER ANY LOGIN과 데이터베이스 범위 VIEW DEFINITION 권한, **sys.sql_expression_dependencies**에 대한 SELECT 권한 및 **dbcreator** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 도 DAC를 등록할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 로그인이 없는 DAC를 등록하려면 **dbmanager** 또는 **serveradmin** 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 로그인이 있는 DAC를 등록하려면 **loginmanager** 또는 **serveradmin** 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="UsingRegisterDACWizard"></a> 데이터 계층 응용 프로그램 등록 마법사 사용  
+##  <a name="UsingRegisterDACWizard"></a> 데이터 계층 애플리케이션 등록 마법사 사용  
  **마법사를 사용하여 DAC를 등록하려면**  
   
 1.  **개체 탐색기**에서 DAC로 등록할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -76,13 +76,13 @@ ms.locfileid: "62918135"
 ##  <a name="Set_properties"></a> 속성 설정 페이지  
  이 페이지를 사용하여 애플리케이션 이름 및 버전과 같은 DAC 수준 속성을 지정할 수 있습니다.  
   
- **응용 프로그램 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
+ **애플리케이션 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
   
- **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우에 버전에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우 버전은 `msdb` 데이터베이스에 저장 되며 나중에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다.  
   
- **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포에 대 한 설명에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+ **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포할 때 설명은 `msdb` 데이터베이스에 저장 되며 나중에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다.  
   
- **\< 이전** -반환 하는 **소개** 페이지입니다.  
+ **\< 이전** - **소개** 페이지로 돌아갑니다.  
   
  **다음 >** - 데이터베이스의 개체로 DAC를 작성할 수 있는지 확인하고 **유효성 검사 및 요약** 페이지에 결과를 표시합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62918135"
 ### <a name="retrieving-objects"></a>개체 검색  
  **데이터베이스 및 서버 개체 검색** - 마법사가 데이터베이스의 모든 필요한 개체 및 데이터베이스 엔진의 인스턴스를 검색할 때 진행률 표시줄을 표시합니다.  
   
- **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
+ **이전\<** -항목을 변경 하려면 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62918135"
 ### <a name="validating-objects"></a>개체 유효성 확인  
  **.**  _._ **를 실행할 수 없습니다.** _ObjectName_ **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_ **.** _ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
- **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
+ **이전\<** -항목을 변경 하려면 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62918135"
   
  **보고서 저장** - 유효성 검사 보고서의 복사본을 HTML 파일로 저장하려면 이 단추를 선택합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\DAC Packages** 폴더입니다.  
   
- **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
+ **이전\<** -항목을 변경 하려면 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -143,10 +143,10 @@ ms.locfileid: "62918135"
 ### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 MyDB라는 데이터베이스를 DAC로 등록합니다.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -162,7 +162,5 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 계층 응용 프로그램](data-tier-applications.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ [의](data-tier-applications.md)  

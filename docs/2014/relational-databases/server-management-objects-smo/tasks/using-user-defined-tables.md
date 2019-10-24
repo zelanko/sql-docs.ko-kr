@@ -1,5 +1,5 @@
 ---
-title: 사용자 정의 테이블을 사용 하 여 | Microsoft 문서
+title: 사용자 정의 테이블 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781816"
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
   사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 각 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션에는 개체를 **열** 속성의 컬렉션을 나타내는 <xref:Microsoft.SqlServer.Management.Smo.Column> 개체는 사용자 정의 테이블의 열을 나열 합니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 해당 컬렉션의 각 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체에는 사용자 정의 테이블의 열을 나열 하는 <xref:Microsoft.SqlServer.Management.Smo.Column> 개체의 컬렉션을 참조 하는 **Columns** 속성이 있습니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체를 사용하여 새 사용자 정의 테이블을 정의할 때 여러 열과 이 열들 중 하나를 기반으로 하는 기본 키를 제공해야 합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63270722"
   
  이 예는 사용자 정의 테이블을 만들어 사용자 정의 함수의 매개 변수로 사용하는 방법을 보여 줍니다.  
   
-```  
+```vb
 'Connect to the local, default instance of SQL Server  
         Dim srv As Server  
         srv = New Server  
@@ -104,7 +104,7 @@ ms.locfileid: "63270722"
   
  이 예는 사용자 정의 테이블을 만들어 사용자 정의 함수의 매개 변수로 사용하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server   
                Server srv = new Server();  
@@ -174,85 +174,72 @@ ms.locfileid: "63270722"
   
  이 예는 사용자 정의 테이블을 만들어 사용자 정의 함수의 매개 변수로 사용하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 #Define a UserDefinedTableType object variable by supplying the  
-#database and name in the constructor.   
-$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType `  
--argumentlist $db, "My_User_Defined_Table"  
+#database and name in the constructor.
+$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType -ArgumentList $db, "My_User_Defined_Table"  
   
 #Add three columns of different types to the UserDefinedTableType object.  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col1",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col1", $type  
 $udtt.Columns.Add($col)  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::VarCharMax  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col2",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col2", $type  
 $udtt.Columns.Add($col)  
   
  $type = [Microsoft.SqlServer.Management.SMO.DataType]::Money  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col3",$type  
-$udtt.Columns.Add($col)          
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col3", $type  
+$udtt.Columns.Add($col)
   
-#Define an Index object variable by supplying the user-defined   
-#table variable and name in the constructor.   
+#Define an Index object variable by supplying the user-defined table variable and name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index `  
 -argumentlist $udtt, "PK_UddtTable"  
   
-#Add the first column in the user-defined table as   
-#the indexed column.   
+#Add the first column in the user-defined table as the indexed column.
 $idxcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "Col1"  
 $idx.IndexedColumns.Add($idxcol)  
   
-#Specify that the index is a clustered, unique, primary key.   
+#Specify that the index is a clustered, unique, primary key.
 $idx.IsClustered = $true  
 $idx.IsUnique = $true  
 $idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Add the index and create the user-defined table.   
+#Add the index and create the user-defined table.
 $udtt.Indexes.Add($idx)  
 $udtt.Create();  
   
-# Display the Transact-SQL creation script for the   
-# user-defined table.   
+# Display the Transact-SQL creation script for the user-defined table.
 $sc = $udtt.Script()  
 $sc  
   
-# Define a new user-defined function with a single parameter.   
-$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction `  
--argumentlist $db, "My_User_Defined_Function"  
+# Define a new user-defined function with a single parameter.
+$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction -ArgumentList $db, "My_User_Defined_Function"  
 $udf.TextMode = $false  
 $udf.FunctionType = [Microsoft.SqlServer.Management.SMO.UserDefinedFunctionType]::Scalar  
 $udf.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
 $udf.DataType = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
   
 # Specify the parameter as a UserDefinedTableTable object.  
-$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter `  
--argumentlist $udf, "@param"  
-$type    =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType `  
--argumentlist $udtt  
+$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter -ArgumentList $udf, "@param"  
+$type = New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType -ArgumentList $udtt  
 $udfp.DataType = $type  
 $udfp.IsReadOnly = $true  
 $udf.Parameters.Add($udfp)  
   
-# Specify the TextBody property to the Transact-SQL definition of the   
-# user-defined function.   
+# Specify the TextBody property to the Transact-SQL definition of the user-defined function.   
 $udf.TextBody = "BEGIN RETURN (GETDATE());end"  
   
-# Create the user-defined function.   
-$udf.Create()           
+# Create the user-defined function.
+$udf.Create()
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [데이터베이스 파일 및 파일 그룹](../../databases/database-files-and-filegroups.md)  
-  
-  

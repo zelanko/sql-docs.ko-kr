@@ -15,17 +15,17 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814079"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782942"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 복제본 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 보조 복제본을 제거하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62814079"
   
      다음 예에서는 *MyAG* 가용성 그룹에서 보조 복제본을 제거합니다. 대상 보조 복제본은 *COMPUTER02* 라는 컴퓨터에서 *HADR_INSTANCE*라는 서버 인스턴스에 있습니다.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
@@ -105,13 +105,12 @@ ms.locfileid: "62814079"
   
      예를 들어 다음 명령은 `MyReplica` 라는 가용성 그룹에서 `MyAg`서버의 가용성 복제본을 제거합니다.  이 명령은 가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스에서 실행해야 합니다.  
   
-    ```  
-    Remove-SqlAvailabilityReplica `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Remove-SqlAvailabilityReplica -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -122,9 +121,7 @@ ms.locfileid: "62814079"
   
  복제본을 제거하면 데이터 수신이 중지됩니다. 보조 복제본이 글로벌 상점에서 제거되었음을 확인한 후 이 복제본은 RECOVERING 상태에서 로컬 서버 인스턴스에 남아 있는 가용성 그룹 설정을 데이터베이스에서 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
  [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [가용성 그룹 제거&#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
-  
-  

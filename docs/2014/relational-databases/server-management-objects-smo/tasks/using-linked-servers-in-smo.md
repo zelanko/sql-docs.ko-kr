@@ -1,5 +1,5 @@
 ---
-title: SMO에서 연결 된 서버를 사용 하 여 | Microsoft Docs
+title: SMO에서 연결 된 서버 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 778da1b08aedd6c39db97351c6de799c883b6954
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f62efaa1550ea0b9e68ce4914e4852612d53f48
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207024"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782002"
 ---
 # <a name="using-linked-servers-in-smo"></a>SMO에서 연결된 서버 사용
   연결된 서버는 원격 서버의 OLE DB 데이터 원본을 나타냅니다. 원격 OLE DB 데이터 원본은 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "63207024"
  SMO에서 설치된 OLE-DB 공급자는 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 개체 모음으로 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 visual [Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-basic"></a>Visual Basic에서 OLE-DB 공급자 서버에 대한 링크 만들기  
  코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 다른 유형의 데이터 원본에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB에 대한 링크를 만드는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 제품 이름으로 지정하면 공식 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 OLE DB 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client OLE DB 공급자를 사용하여 연결된 서버에서 데이터에 액세스할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "63207024"
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>Visual C#에서 OLE-DB 공급자 서버에 대한 링크 만들기  
  코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 다른 유형의 데이터 원본에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB에 대한 링크를 만드는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 제품 이름으로 지정하면 공식 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 OLE DB 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client OLE DB 공급자를 사용하여 연결된 서버에서 데이터에 액세스할 수 있습니다.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
    Server srv = new Server();   
@@ -55,18 +55,16 @@ ms.locfileid: "63207024"
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-powershell"></a>PowerShell에서 OLE-DB 공급자 서버에 대한 링크 만들기  
  코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 다른 유형의 데이터 원본에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB에 대한 링크를 만드는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 제품 이름으로 지정하면 공식 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 OLE DB 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client OLE DB 공급자를 사용하여 연결된 서버에서 데이터에 액세스할 수 있습니다.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $svr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
 #Create a linked server object which corresponds to an OLEDB type of SQL server product  
-$lsvr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.LinkedServer -argumentlist $svr,"OLEDBSRV"  
+$lsvr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.LinkedServer -ArgumentList $svr,"OLEDBSRV"  
   
-#When the product name is SQL Server the remaining properties are not required to be set.   
-$lsvr.ProductName = "SQL Server"  
+#When the product name is SQL Server the remaining properties are not required to be set.
+$lsvr.ProductName = "SQL Server"
   
 #Create the Database Object  
-$lsvr.Create()   
+$lsvr.Create()
 ```  
-  
-  
