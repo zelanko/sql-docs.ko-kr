@@ -1,7 +1,7 @@
 - name: SQL Server Machine Learning Services 설명서
   href: ../advanced-analytics/index.yml
 - name: SQL Server 시작 >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 개요
   expanded: true
   items:

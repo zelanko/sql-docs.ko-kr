@@ -1,7 +1,7 @@
 - name: SSIS(SQL Server Integration Services)
   href: ../integration-services/sql-server-integration-services.md
 - name: SQL Server 시작 >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 개요
   items:
     - name: SQL Server 2016 Integration Services의 새로운 기능

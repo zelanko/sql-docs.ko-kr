@@ -1,7 +1,7 @@
 - name: SSRS(SQL Server Reporting Services)란?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: SQL Server 시작 >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 개요
   items:
     - name: Reporting Services의 새로운 기능
