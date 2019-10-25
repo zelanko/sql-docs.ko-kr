@@ -16,33 +16,29 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523929"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783196"
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 범주를 삭제하는 방법에 대해 설명합니다.  
   
  작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다.  
-  
 
-  
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  사용자가 정의한 작업 범주를 삭제할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 이 작업 범주에 할당된 작업을 다른 작업 범주에 재할당할 것인지 묻습니다. 사용자가 정의한 작업 범주만 삭제할 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
-  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
 
-  
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
+### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
   
@@ -58,11 +54,9 @@ ms.locfileid: "62523929"
   
 7.  **작업 범주 관리**_server_name_ 대화 상자를 닫습니다.  
   
-
-  
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   
-#### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
+### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -70,7 +64,7 @@ ms.locfileid: "62523929"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- deletes the job category named AdminJobs.  
     USE msdb ;  
     GO   
@@ -80,15 +74,11 @@ ms.locfileid: "62523929"
     GO  
     ```  
   
- 자세한 내용은 [sp_delete_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)합니다.  
-  
+ 자세한 내용은 [sp_delete_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)을 참조 하세요.  
 
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
- **작업 범주를 삭제하려면**  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+
+### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 호출합니다.  
-  
-
-  
-  

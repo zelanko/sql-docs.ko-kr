@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154840"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783079"
 ---
 # <a name="backup-encryption"></a>백업 암호화
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "70154840"
   
  백업 중에 암호화하려면 암호화 키를 보호할 암호기와 암호화 알고리즘을 지정해야 합니다. 지원되는 암호화 옵션은 다음과 같습니다.  
   
--   **암호화 알고리즘:** 지원되는 암호화 알고리즘은 AES 128, AES 192, AES 256 및 Triple DES입니다.  
+-   **암호화 알고리즘:** 지원되는 암호화 알고리즘은 AES 128, AES 192, AES 256, Triple DES입니다.  
   
--   **암호기:** 인증서 또는 비대칭 키  
+-   **암호기:** 인증서 또는 비대칭 키입니다.  
   
 > [!CAUTION]  
 >  인증서나 비대칭 키를 백업하는 것이 매우 중요하며, 이때 가급적이면 인증서나 비대칭 키를 사용하여 암호화한 백업 파일과 다른 위치에 백업하는 것이 좋습니다. 인증서나 비대칭 키가 없으면 백업을 복원할 수 없으므로 백업 파일을 사용할 수 없게 됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "70154840"
   
 ##  <a name="Benefits"></a> 이점  
   
-1.  데이터베이스 백업을 암호화하면 데이터를 보호하는 데 도움이 됩니다. SQL Server는 백업을 만드는 동안 백업 데이터를 암호화하는 옵션을 제공합니다.  
+1.  데이터베이스 백업을 암호화하면 데이터를 보호할 수 있습니다. SQL Server는 백업을 만드는 동안 백업 데이터를 암호화하는 옵션을 제공합니다.  
   
 2.  TDE를 사용하여 암호화된 데이터베이스에도 암호화를 사용할 수 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70154840"
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  백업을 암호화하기 위한 사전 요구 사항은 다음과 같습니다.  
   
-1.  **master 데이터베이스의 데이터베이스 마스터 키를 만듭니다.** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 프라이빗 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
+1.  **master 데이터베이스용 데이터베이스 마스터 키 만들기:** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 프라이빗 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
   
 2.  백업 암호화에 사용할 인증서나 비대칭 키를 만듭니다. 인증서를 만드는 방법은 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)를 참조하세요. 비대칭 키를 만드는 방법은 [CREATE ASYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)를 참조하세요.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "70154840"
 ### <a name="using-transact-sql"></a>Transact-SQL 사용  
  다음은 백업 파일을 암호화하는 예제 Transact-SQL 문입니다.  
   
-```  
+```sql
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
@@ -104,8 +104,7 @@ WITH
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
-  
+GO
 ```  
   
  전체 Transact-SQL 문 구문은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.  
@@ -113,12 +112,9 @@ GO
 ### <a name="using-powershell"></a>PowerShell 사용  
  이 예제에서는 암호화 옵션을 만든 다음 **Backup-SqlDatabase** cmdlet에서 매개 변수 값으로 사용하여 암호화된 백업을 만듭니다.  
   
-```  
-C:\PS>$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
-```  
-  
-```  
-C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
+```powershell
+$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
+Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
 ##  <a name="RecommendedPractices"></a> 권장 방법  
@@ -136,9 +132,9 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |-----------------|-----------------|  
 |[암호화된 백업 만들기](create-an-encrypted-backup.md)|암호화된 백업을 만드는 데 필요한 기본 단계에 대해 설명합니다.|  
 |[Azure에 대 한 관리 되는 백업 SQL Server-보존 및 저장소 설정](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|암호화 옵션이 지정된 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하는 데 필요한 기본 단계에 대해 설명합니다.|  
-|[Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure 키 자격 증명 모음에서 키로 보호하는 암호화된 백업을 만드는 예제를 제공합니다.|  
+|[Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure Key Vault에서 키로 보호하는 암호화된 백업을 만드는 예제를 제공합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)  
   
   

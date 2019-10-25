@@ -15,17 +15,17 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523749"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783190"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523749"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -80,16 +80,14 @@ ms.locfileid: "62523749"
     GO  
     ```  
   
- 자세한 내용은 [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_jobsteplog &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)을 참조 하세요.  
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `DeleteJobStepLogs` 클래스의 `Job` 메서드를 사용합니다. 자세한 내용은[SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
-```  
--- Uses PowerShell to delete all job step log files that have ID values larger than 5.  
-$srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
+```powershell
+# Delete all job step log files that have ID values larger than 5.  
+$srv = New-Object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = $srv.JobServer.Jobs["Test Job"]  
 $jb.DeleteJobStepLogs(5)  
-```  
-  
-  
+```
