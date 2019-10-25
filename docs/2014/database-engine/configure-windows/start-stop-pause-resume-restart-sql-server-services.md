@@ -1,5 +1,5 @@
 ---
-title: 시작, 중지, 일시 중지, 재개, 데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스를 다시 시작 | Microsoft Docs
+title: 데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,17 +40,17 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808750"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797951"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
-  이 항목에서는 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법을 설명 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** 명령 프롬프트에서 명령을 [!INCLUDE[tsql](../../includes/tsql-md.md)], 또는 PowerShell입니다.  
+  이 항목에서는 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** commands를 사용 하 여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법에 대해 설명 [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
     -   [SQL Server Database Engine, SQL Server 에이전트 및 SQL Server Browser 서비스 정의](#Services)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62808750"
   
     -   [SQL Server 구성 관리자](#SSCMProcedure)  
   
-    -   다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+    -   [SQL Server Management Studio](#SSMSProcedure)  
   
     -   [명령 프롬프트 창의 net 명령](#CommandPrompt)  
   
@@ -76,10 +76,10 @@ ms.locfileid: "62808750"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 Windows 서비스로 실행되는 실행 가능한 프로그램입니다. Windows 서비스로 실행되는 프로그램은 컴퓨터 화면에 작업을 표시하지 않고도 작업을 계속할 수 있습니다.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인 실행 가능한 프로세스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴퓨터당 하나로 제한되는 기본 인스턴스이거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 여러 인스턴스 중 하나일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 확인할 수 있습니다. 기본 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)** 로 나열됩니다. 명명된 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](<instance_name>)** 로 나열됩니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 로 설치됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인 실행 가능한 프로세스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴퓨터당 하나로 제한되는 기본 인스턴스이거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 여러 인스턴스 중 하나일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 확인할 수 있습니다. 기본 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)** 로 나열됩니다. 명명된 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](<instance_name>)** 로 나열됩니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQLEXPRESS)** 로 설치됩니다.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스**  
- 작업 및 경고라고 하는 예약된 관리 태스크를 실행하는 Windows 서비스입니다. 자세한 내용은 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 일부 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 작업 및 경고라고 하는 예약된 관리 태스크를 실행하는 Windows 서비스입니다. 자세한 내용은 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 일부 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지 원하는 기능 목록은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공하는 Windows 서비스입니다. 컴퓨터에 설치된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스의 단일 인스턴스가 사용됩니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "62808750"
 ####  <a name="Permissions"></a> Permissions  
  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](https://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
   
- 중지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 사용 하 여 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` 명령의 멤버 자격이 필요 합니다 **sysadmin** 또는 **serveradmin** 고정 서버 역할 되며 양도할 수 없습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` 명령을 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 중지 하려면 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 여야 하며 양도할 수 없습니다.  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 사용  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808750"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- 에 대 한 자세한 내용은 합니다 `SHUTDOWN` 문을 참조 [종료 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)합니다.  
+ `SHUTDOWN` 문에 대 한 자세한 내용은 [SHUTDOWN &#40;transact-sql&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)을 참조 하세요.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808750"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  중지하거나 시작할 서비스를 확인합니다. 다음 줄 중 하나를 선택합니다. `instancename` 을 명명된 인스턴스의 이름으로 바꿉니다.  
@@ -338,8 +337,6 @@ ms.locfileid: "62808750"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [최소 구성으로 SQL Server 시작](start-sql-server-with-minimal-configuration.md)   
  [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

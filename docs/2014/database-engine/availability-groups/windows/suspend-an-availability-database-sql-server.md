@@ -17,12 +17,12 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814026"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797955"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "62814026"
 > [!NOTE]  
 >  AlwaysOn 보조 데이터베이스를 일시 중지해도 주 데이터베이스의 가용성에 직접 영향을 주지는 않습니다. 그러나 보조 데이터베이스를 일시 중지하면 주 데이터베이스의 중복 및 장애 조치(failover) 기능에 영향을 줄 수 있습니다. 이것은 데이터베이스 미러링과는 대조적입니다. 데이터베이스 미러링의 경우에는 미러 데이터베이스 및 주 데이터베이스에서 미러링 상태가 일시 중지됩니다. AlwaysOn 주 데이터베이스를 일시 중지하면 모든 해당 보조 데이터베이스에서 데이터 이동이 일시 중지되고 주 데이터베이스를 재개할 때까지 해당 데이터베이스에 대한 중복 및 장애 조치(failover) 기능이 중단됩니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62814026"
   
 -   **후속 작업:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
   
--   [관련 작업](#RelatedTasks)  
+-   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62814026"
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 꽉 찬 트랜잭션 로그 방지](#FollowUp)를 참조하세요.  
+ 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 이 항목 뒷부분에 나오는 [후속 작업: 꽉 찬 트랜잭션 로그 방지](#FollowUp)를 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62814026"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  개체 탐색기에서 데이터베이스를 일시 중지할 가용성 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
+1.  개체 탐색기에서 데이터베이스를 일시 중지할 가용성 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
   
 2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62814026"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
+1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
   
 2.  다음의 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)문을 사용하여 데이터베이스를 일시 중지합니다.  
   
@@ -107,25 +107,24 @@ ms.locfileid: "62814026"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
+1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
   
 2.  `Suspend-SqlAvailabilityDatabase` cmdlet을 사용하여 가용성 그룹을 일시 중지합니다.  
   
      예를 들어 다음 명령은 서버 인스턴스 `MyDb3` 에서 가용성 그룹 `MyAg` 에 있는 가용성 데이터베이스 `Computer\Instance`에 대한 데이터 동기화를 일시 중단합니다.  
   
-    ```  
-    Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Suspend-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 꽉 찬 트랜잭션 로그 방지  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  일반적으로 데이터베이스에서 자동 검사점을 수행하면 다음 로그 백업 이후 해당 트랜잭션 로그가 이 검사점까지 잘립니다. 그러나 보조 데이터베이스를 일시 중지하는 동안 모든 현재 로그 레코드가 주 데이터베이스에서 활성 상태로 남아 있습니다. 서버 인스턴스의 공간이 부족하거나 최대 크기에 도달하여 트랜잭션 로그가 가득 차면 데이터베이스는 더 이상 업데이트를 수행할 수 없습니다.  
   
  이 문제를 방지하려면 다음 중 하나를 수행해야 합니다.  
@@ -144,8 +143,6 @@ ms.locfileid: "62814026"
   
 -   [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
  [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
-  
-  

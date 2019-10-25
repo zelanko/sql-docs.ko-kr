@@ -14,12 +14,12 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211324"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798182"
 ---
 # <a name="start-a-job"></a>Start a Job
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행을 시작하는 방법에 대해 설명합니다.  
@@ -41,11 +41,11 @@ ms.locfileid: "68211324"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-start-a-job"></a>작업을 시작하려면  
+### <a name="to-start-a-job"></a>작업을 시작하려면  
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211324"
   
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   
-#### <a name="to-start-a-job"></a>작업을 시작하려면  
+### <a name="to-start-a-job"></a>작업을 시작하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211324"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -80,9 +80,8 @@ ms.locfileid: "68211324"
   
  자세한 내용은 [sp_start_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)을 참조하세요.  
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
- **작업을 시작하려면**  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+
+### <a name="to-start-a-job"></a>작업을 시작하려면
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Start` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
-  
-  

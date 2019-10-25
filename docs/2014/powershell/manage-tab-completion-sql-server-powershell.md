@@ -10,12 +10,12 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922954"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797792"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>탭 완성 기능 관리(SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인에 도입된 3개 시스템 변수(`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` 및 `$SqlServerIncludeSystemObjects`)를 사용하여 Windows PowerShell 탭 완성 기능을 제어할 수 있습니다. 탭 완성 기능은 이름이 입력한 문자열로 시작하는 항목의 테이블을 반환하여 사용자 입력을 줄여 줍니다.  
@@ -42,14 +42,12 @@ ms.locfileid: "62922954"
 ### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 3개 변수를 모두 설정하고 해당 설정을 나열합니다.  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

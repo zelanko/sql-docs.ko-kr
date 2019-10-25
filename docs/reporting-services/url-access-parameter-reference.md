@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620589"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542185"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 디바이스 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 디바이스별 매개 변수에 대한 자세한 내용은 [URL에 디바이스 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -247,7 +247,7 @@ ms.locfileid: "65620589"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : 보고서 기록 스냅숏을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
+-   *Snapshot* : 보고서 기록 스냅샷을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
   
      타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅샷을 검색하는 **Native** 모드의 예제입니다.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "65620589"
                   **true** 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. (보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다.) 기본 값은 **false**입니다.  
   
 -   *ResetSession*:  
-                  **true** 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅숏의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본 값은 **false**입니다.  
+                  **true** 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅샷의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본 값은 **false**입니다.  
   
 -   *ShowHideToggle*:  
                   보고서의 섹션의 표시/숨기기 상태를 토글합니다. 토글할 섹션을 나타내는 양의 정수를 지정합니다.  

@@ -10,19 +10,19 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064727"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797873"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 `sqlps` 모듈을 Windows PowerShell 2.0 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  
   
-1.  **시작하기 전에:**  [보안](#Security)  
+1.  **Before You Begin:**  [Security](#Security)  
   
-2.  **모듈을 로드 합니다.**  [Sqlps 모듈 로드](#LoadSqlps)  
+2.  **모듈을 로드하려면**  [sqlps 모듈 로드](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  `sqlps` 모듈을 Windows PowerShell로 가져온 후 다음을 수행할 수 있습니다.  
@@ -44,7 +44,8 @@ ms.locfileid: "66064727"
  기본적으로 Windows PowerShell은 모든 Windows PowerShell 스크립트 실행을 방지하는 **제한됨**으로 설정된 스크립팅 실행 정책과 함께 실행됩니다. `sqlps` 모듈을 로드하려면 `Set-ExecutionPolicy` cmdlet을 사용하여 서명된 스크립트나 기타 스크립트를 실행할 수 있도록 설정합니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. Windows PowerShell 스크립트를 사용하도록 설정하는 방법은 [Windows PowerShell 스크립트 실행](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)을 참조하십시오.  
   
 ##  <a name="LoadSqlps"></a> sqlps 모듈 로드  
- **Windows PowerShell에서 sqlps 모듈을 로드하려면**  
+
+### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>Windows PowerShell에서 sqlps 모듈을 로드하려면
   
 1.  `Set-ExecutionPolicy` cmdlet을 사용하여 적절한 스크립트 실행 정책을 설정합니다.  
   
@@ -53,18 +54,13 @@ ms.locfileid: "66064727"
 ### <a name="example-powershell"></a>예제(PowerShell)  
  이 예에서는 이름 확인을 해제한 상태로 `sqlps` 모듈을 로드합니다.  
   
-```  
+```powershell
 ## Import the SQL Server Module.  
   
 Import-Module "sqlps" -DisableNameChecking  
-  
 ```  
-  
 
-  
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)   
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

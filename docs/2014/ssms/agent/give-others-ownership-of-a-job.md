@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63075262"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798227"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 소유권을 다른 사용자에게 다시 할당하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **작업의 소유권을 다른 사용자에게 제공하려면:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63075262"
 >  **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자로 작업 소유권을 변경하고 이 작업이 프록시 계정을 필요로 하는 작업 단계를 실행 중이면(예: [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행) 사용자가 해당 프록시 계정에 액세스할 수 있어야 작업이 실패하지 않습니다.  
   
 ####  <a name="Permissions"></a> Permissions  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMSProc2"></a> SQL Server Management Studio 사용  
  **작업의 소유권을 다른 사람에게 주려면**  
@@ -70,9 +70,9 @@ ms.locfileid: "63075262"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저입니다. 다음 예에서는 `danw` 의 모든 작업을 `fran??oisa`에 다시 할당합니다.  
+3.  쿼리 창에서 [sp_manage_jobs_by_login &#40;transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저를 사용 하는 다음 문을 입력 합니다. 다음 예에서는 `danw` 의 모든 작업을 `fran??oisa`에 다시 할당합니다.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -83,13 +83,12 @@ ms.locfileid: "63075262"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> SQL Server 관리 개체를 사용 하 여  
- **작업의 소유권을 다른 사람에게 주려면**  
+##  <a name="SMOProc2"></a>SQL Server 관리 개체 사용  
+
+### <a name="to-give-others-ownership-of-a-job"></a>작업의 소유권을 다른 사람에게 주려면
   
 1.  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Job` 클래스를 호출합니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [작업 구현](implement-jobs.md)   
  [작업 만들기](create-jobs.md)  
-  
-  

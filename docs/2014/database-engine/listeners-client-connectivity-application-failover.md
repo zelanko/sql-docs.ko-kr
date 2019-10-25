@@ -1,5 +1,5 @@
 ---
-title: 가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (SQL Server) | Microsoft Docs
+title: 가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774796"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797836"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
@@ -107,7 +107,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅  
+###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅  
  애플리케이션 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 애플리케이션의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 애플리케이션의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 애플리케이션 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
   
  애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에는 `ApplicationIntent` 속성으로 설정 `ReadOnly`,이 *읽기 전용 연결 문자열*합니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
+ 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 `ApplicationIntent` 속성이 `ReadOnly`로 설정 되어 있으므로이를 *읽기 전용 연결 문자열로*만듭니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
   
  가용성 그룹의 주 데이터베이스는 들어오는 읽기 전용 라우팅 요청을 처리한 다음 주 복제본에 조인되고 읽기 전용 라우팅을 위해 구성된 온라인 읽기 전용 복제본을 찾습니다.  클라이언트는 주 복제본 서버에서 연결 정보를 다시 받고 식별된 읽기 전용 복제본에 연결합니다.  
   
@@ -184,7 +184,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
   
  `setspn` Windows 명령줄 도구를 사용하여 SPN을 구성할 수 있습니다.  예를 들어 `AG1listener.Adventure-Works.com` 도메인 계정에서 실행하도록 구성된 모든 SQL Server 인스턴스 집합에 호스팅되는 `corp/svclogin2`이라는 가용성 그룹에 대한 SPN을 구성하려면  
   
-```  
+```cmd
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
@@ -206,17 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 AlwaysOn 솔루션 가이드 Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)(가용성 그룹 수신기 소개)(SQL Server AlwaysOn 팀 블로그)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
  [AlwaysOn 클라이언트 연결 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [활성 보조 복제본: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조: 읽기 가능한 보조 &#40;복제본&#41; AlwaysOn 가용성 그룹](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
-  
-  

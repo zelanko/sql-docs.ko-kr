@@ -10,19 +10,19 @@ ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108361"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796373"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션은 SharePoint 중앙 관리에서 관리됩니다. 관리 및 속성 페이지에서 서비스 애플리케이션의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
   
--   [서비스 응용 프로그램 관리 페이지를 열려면](#bkmk_openpages)  
+-   [서비스 애플리케이션 관리 페이지를 열려면](#bkmk_openpages)  
   
 -   [시스템 설정 페이지](#bkmk_systemsettings)  
   
@@ -37,16 +37,16 @@ ms.locfileid: "66108361"
 -   [구독 및 경고 프로비전](#bkmk_provisionsubscriptions)  
   
 ## <a name="to-open-service-application-properties-page"></a>서비스 애플리케이션 속성 페이지를 열려면  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 속성 페이지를 열려면 다음을 완료합니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 속성 페이지를 열려면 다음을 완료합니다.  
   
 1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 2.  서비스 애플리케이션 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
   
- 서비스 응용 프로그램 속성에 대 한 자세한 내용은 참조 하세요. [3 단계: Reporting Services 서비스 애플리케이션 만들기](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)의 "서비스 애플리케이션" 섹션을 참조하세요.  
+ 서비스 애플리케이션 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)을 참조하세요.  
   
-##  <a name="bkmk_openpages"></a> 서비스 응용 프로그램 관리 페이지를 열려면  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 관리 페이지를 열려면 다음을 완료합니다.  
+##  <a name="bkmk_openpages"></a> 서비스 애플리케이션 관리 페이지를 열려면  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 관리 페이지를 열려면 다음을 완료합니다.  
   
 1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
@@ -90,10 +90,10 @@ ms.locfileid: "66108361"
   
 |설정|주석|  
 |-------------|--------------|  
-|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 를 클릭합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)를 참조하세요.|  
+|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 이라고도 합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |실행 로그 보관 일 수|기본값은 60일입니다.|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> 보안 설정  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66108361"
 |설정|주석|  
 |-------------|--------------|  
 |보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 애플리케이션을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
-|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 응용 프로그램으로 시작하려면 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
+|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 애플리케이션으로 시작하려면 http://\<computername&gt;/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
 |클라이언트 인쇄 기능 사용|기본값은 TRUE입니다.<br /><br /> 사용자가 인쇄 옵션을 제공 하는 클라이언트 쪽 컨트롤을 다운로드할 수 있는지 여부를 지정합니다.|  
 |세션 제한 시간 편집|기본값은 7200초입니다.|  
 |세션 캐시 제한 편집|기본값은 5입니다.|  
@@ -149,13 +149,13 @@ ms.locfileid: "66108361"
   
  다음은 UEAccount 속성과 함께 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 목록을 반환하는 예제 PowerShell 명령입니다.  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>대량 삽입 태스크 편집기  
  **실행 계정 지정**  
  계정을 지정하려면 선택합니다.  
   
@@ -171,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 전자 메일 설정  
  이 페이지에서는 보고서 서버에서 보고서 서버 전자 메일 배달을 가능하게 하는 SMTP(Simple Mail Transport Protocol) 설정을 지정할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하여 전자 메일 구독을 통해 보고서 또는 보고서 처리 알림을 배포할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하려면 SMTP 서버 및 보낸 사람 주소: 필드에 사용할 전자 메일 주소가 필요합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>대량 삽입 태스크 편집기  
  **SMTP 서버 사용**  
  보고서 서버 전자 메일이 SMTP 서버를 통해 라우팅되도록 지정합니다.  
   
@@ -182,7 +182,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  생성된 전자 메일의 보낸 사람: 필드에 사용할 전자 메일 주소를 지정합니다. SMTP 서버에서 메일을 보낼 수 있는 권한이 있는 사용자 계정을 지정해야 합니다.  
   
 ##  <a name="bkmk_provisionsubscriptions"></a> 구독 및 경고 프로비전  
- 이 페이지를 사용하여 SQL Server 에이전트가 실행 중인지 확인하고 SQL Server 에이전트를 사용하도록 보고 서비스에 대한 액세스를 프로비전합니다. SQL Server 에이전트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독, 일정 및 데이터 경고에 필요합니다. [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ 이 페이지를 사용하여 SQL Server 에이전트가 실행 중인지 확인하고 SQL Server 에이전트를 사용하도록 보고 서비스에 대한 액세스를 프로비전합니다. SQL Server 에이전트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독, 일정 및 데이터 경고에 필요합니다. [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ## <a name="proxy-association"></a>프록시 연결  
  Reporting Services 서비스 애플리케이션을 만들 때 Reporting Services 서비스 애플리케이션을 통해 액세스하기 위해 권한을 연결 및 프로비전할 웹 애플리케이션을 선택했습니다. 연결하지 않거나 연결을 변경하려면 다음 단계를 수행할 수 있습니다.  

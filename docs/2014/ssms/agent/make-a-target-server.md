@@ -19,19 +19,19 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659841"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798189"
 ---
 # <a name="make-a-target-server"></a>대상 서버 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 SMO(SQL Server 관리 개체)를 사용하여 대상 서버를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [보안](#Security)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62659841"
 ###  <a name="Security"></a> 보안  
  프록시와 연관된 단계가 있는 배포된 작업은 대상 서버의 프록시 계정 컨텍스트로 실행됩니다. 다음 조건이 만족되는지 또는 프록시와 연관된 작업 단계가 마스터 서버에서 대상으로 다운로드되지 않는지 확인하세요.  
   
--   마스터 서버 레지스트리 하위 키 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) 1(true)로 설정 합니다. 기본적으로 이 하위 키는 0(false)으로 설정됩니다.  
+-   마스터 서버 레지스트리 하위 키 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \Sql server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD)가 1 (true)로 설정 되어 있습니다. 기본적으로 이 하위 키는 0(false)으로 설정됩니다.  
   
 -   프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 여부  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62659841"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 현재 서버를 AdventureWorks1 마스터 서버에 참여시킵니다. 현재 서버의 위치는 Building 21, Room 309, Rack 5입니다.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,11 +105,9 @@ ms.locfileid: "62659841"
     GO;  
     ```  
   
-     자세한 내용은 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)합니다.  
+     자세한 내용은 [sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)을 참조 하세요.  
   
-##  <a name="PowerShellProcedure"></a> SQL Server Management Objects (SMO)를 사용 하 여  
+##  <a name="PowerShellProcedure"></a>SQL Server 관리 개체 사용 (SMO)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [기업 내 관리 자동화](automated-administration-across-an-enterprise.md)  
-  
-  

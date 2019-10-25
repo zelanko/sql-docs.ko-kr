@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154828"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798026"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "70154828"
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70154828"
   
 -   **다음을 사용 하 여 전체 데이터베이스 백업을 만듭니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70154828"
   
 -   명시적 또는 암시적 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  
   
--   최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 만든 백업은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복원할 수 없습니다.  
+-   최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 만든 백업은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복원할 수 없습니다.  
   
 -   자세한 내용은 [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)을 참조하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70154828"
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -91,13 +91,13 @@ ms.locfileid: "70154828"
   
 4.  `Database` 목록 상자에서 데이터베이스 이름을 확인 합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
   
-5.  모든 복구 모델(**전체**, **대량 로그** 또는 **단순**)에서 데이터베이스 백업을 수행할 수 있습니다.  
+5.  모든 복구 모델(**전체**, **대량 로그**또는 **단순**)에서 데이터베이스 백업을 수행할 수 있습니다.  
   
 6.  **백업 유형** 목록 상자에서 **전체**를 선택합니다.  
   
-     전체 데이터베이스 백업을 만든 후 차등 데이터베이스 백업을 만들 수 있습니다. 자세한 내용은 [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)를 참조하세요.  
+     전체 데이터베이스 백업을 만든 후 차등 데이터베이스 백업을 만들 수 있습니다. 자세한 내용은 [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)을 참조하세요.  
   
-7.  필요한 경우 **복사 전용 백업**을 선택하여 복사 전용 백업을 만들 수도 있습니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](copy-only-backups-sql-server.md)를 참조하세요.  
+7.  필요한 경우 **복사 전용 백업** 을 선택하여 복사 전용 백업을 만들 수도 있습니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](copy-only-backups-sql-server.md)를 참조하세요.  
   
     > [!NOTE]  
     >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
@@ -190,8 +190,8 @@ ms.locfileid: "70154828"
   
     |옵션|Description|  
     |------------|-----------------|  
-    |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **,** ...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
+    |*데이터베이스*|백업할 데이터베이스입니다.|  
+    |*backup_device* [ **,** ...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.|  
     |WITH *with_options* [ **,** ...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.  
@@ -204,7 +204,7 @@ ms.locfileid: "70154828"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.  
   
-         설명 **=** { ***'`text`*** text_variable | } **@**  
+         설명 **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
          NAME **=** { *backup_set_name* |  **@** _backup_set_name_var_ }  
@@ -222,7 +222,7 @@ ms.locfileid: "70154828"
         > [!IMPORTANT]  
         >  BACKUP 문의 FORMAT 절을 사용하는 경우 백업 미디어에 이전에 저장된 백업이 모두 삭제되므로 각별히 주의해야 합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>1\. 디스크 디바이스에 백업  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.  
@@ -276,8 +276,7 @@ GO
   
      다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예에서는 `-BackupAction Database`를 지정합니다.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database  
     ```  
   
@@ -301,7 +300,7 @@ GO
   
 -   [유지 관리 계획 마법사 사용](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
@@ -311,5 +310,3 @@ GO
  [데이터베이스 백업&#40;백업 옵션 페이지&#41;](back-up-database-backup-options-page.md)   
  [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)  
-  
-  

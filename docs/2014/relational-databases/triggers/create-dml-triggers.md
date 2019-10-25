@@ -19,17 +19,17 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676439"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796392"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거를 만드는 방법에 대해 설명합니다.  
   
-##  <a name="Top"></a> 시작하기 전 주의 사항  
+##  <a name="Top"></a> 시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  DML 트리거 생성과 관련한 제한 사항 목록은 [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)를 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "62676439"
   
 5.  **템플릿 매개 변수 값 지정** 대화 상자에 표시된 매개 변수에 대해 다음 값을 입력합니다.  
   
-    |매개 변수|값|  
+    |Execute|ReplTest1|  
     |---------------|-----------|  
     |작성자|*Your name*|  
     |만든 날짜|*Today's date*|  
@@ -98,7 +98,7 @@ ms.locfileid: "62676439"
   
 10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
- [시작하기 전 주의 사항](#Top)  
+ [시작하기 전에](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62676439"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 위와 동일한 저장된 DML 트리거를 만듭니다.  
   
-    ```  
+    ```sql
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -136,7 +136,3 @@ ms.locfileid: "62676439"
           (SELECT PurchaseOrderID FROM inserted)  
     END;  
     ```  
-  
-##  <a name="PowerShellProcedure"></a> [시작하기 전 주의 사항](#Top)  
-  
-  

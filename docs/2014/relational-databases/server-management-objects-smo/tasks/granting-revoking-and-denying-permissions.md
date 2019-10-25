@@ -1,5 +1,5 @@
 ---
-title: 권한을 부여, 취소 및 사용 권한 거부 | Microsoft Docs
+title: 권한 부여, 취소 및 거부 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226151"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796785"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체는 일련의 권한 또는 개별 서버 권한을 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체에 할당하는 데 사용됩니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "63226151"
  <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 개체를 사용하여 비슷한 방법으로 데이터베이스 권한 및 데이터베이스 개체 권한을 할당할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Visual C#에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>PowerShell에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -251,7 +251,5 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

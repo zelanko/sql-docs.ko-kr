@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226208"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796632"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
   WMI 공급자는 MMC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜을 관리하는 데 사용하는 게시된 인터페이스입니다. SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "63226208"
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 `Imports` WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 공급자를 사용 하는 프로그램의 경우 WMI 네임 스페이스를 한 정하는 `Imports` 문을 포함 해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226208"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>Visual Basic에서 URN 문자열을 사용하여 서버 프로토콜 활성화  
  코드 예제는 URN 개체를 사용하여 서버 프로토콜을 식별한 다음 프로토콜을 활성화하는 방법을 보여 줍니다.  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226208"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>PowerShell에서 URN 문자열을 사용하여 서버 프로토콜 활성화  
  코드 예제는 URN 개체를 사용하여 서버 프로토콜을 식별한 다음 프로토콜을 활성화하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>Visual C#에서 서비스 시작 및 중지  
  이 코드 예제는 SQL Server 인스턴스를 중지 및 시작하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>PowerShell에서 서비스 시작 및 중지  
  이 코드 예제는 SQL Server 인스턴스를 중지 및 시작하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [구성 관리용 WMI 공급자 개념](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

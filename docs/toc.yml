@@ -1,8 +1,8 @@
-- name: SQL Server 시작
-  href: sql-server/sql-server-technical-documentation.md
-- name: SQL 문서 탐색 팁
+- name: SQL Server
+  href: sql-server/index.yml
+- name: 문서 탐색 팁
   href: sql-server/sql-docs-navigation-guide.md
-- name: 이전 버전 2014-2005
+- name: 이전 버전 2005-2014
   href: toc/previous-versions-sql-server.md
 - name: 개요
   items:
@@ -10376,18 +10376,18 @@
               href: linux/sql-server-linux-configure-mssql-conf.md
             - name: 환경 변수
               href: linux/sql-server-linux-configure-environment-variables.md
-            - name: Docker 컨테이너 구성
-              href: linux/sql-server-linux-configure-docker.md
-            - name: MSDTC
-              items:
-                - name: MSDTC 구성
-                  href: linux/sql-server-linux-configure-msdtc.md
-                - name: MSDTC에 대한 Docker 구성
-                  href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: MSDTC 구성
+              href: linux/sql-server-linux-configure-msdtc.md
             - name: 지속적 메모리 PMEM 구성
               href: linux/sql-server-linux-configure-pmem.md
             - name: Microsoft로 보낼 사용량 및 진단 데이터 구성
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+        - name: SSIS 로그 구성
+          items:
+            - name: Docker 컨테이너 구성
+              href: linux/sql-server-linux-configure-docker.md
+            - name: MSDTC에 대한 Docker 구성
+              href: linux/sql-server-linux-configure-msdtc-docker.md
         - name: 개발
           href: linux/sql-server-linux-develop-overview.md
           items:

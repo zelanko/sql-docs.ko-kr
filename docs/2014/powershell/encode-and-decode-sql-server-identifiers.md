@@ -10,19 +10,19 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775062"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797773"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
   SQL Server 구분 식별자에 Windows PowerShell 경로 이름에서 지원되지 않는 문자가 사용되는 경우가 있습니다. 이러한 문자는 16진수 값을 인코딩하여 지정할 수 있습니다.  
   
-1.  **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions)  
+1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
   
-2.  **특수 문자를 처리 합니다.**  [식별자 인코딩](#EncodeIdent), [식별자 디코딩](#DecodeIdent)  
+2.  **특수 문자를 처리하려면:**  [식별자 인코딩](#EncodeIdent), [식별자 디코딩](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  Windows PowerShell 경로 이름에 지원되지 않는 문자는 "%" 문자 뒤에 해당 문자를 나타내는 비트 패턴의 16진수 값(예: " **%** xx")을 사용하여 표현하거나 인코딩할 수 있습니다. 인코딩은 Windows PowerShell 경로에 지원되지 않는 모든 문자를 처리하는 데 사용할 수 있습니다.  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  또는 **Encode-SqlName** 을 사용하여 Windows PowerShell에서 지원되는 이름을 작성할 수 있습니다.  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,13 +67,11 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>예(디코딩)  
  이 예제에서는 "Table:Test"를 반환합니다.  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [PowerShell의 SQL Server 식별자](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

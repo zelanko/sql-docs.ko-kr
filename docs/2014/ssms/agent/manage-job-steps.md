@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893128"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798223"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
   작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "68893128"
   
 -   실행 프로그램 및 운영 체제 명령  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 데이터를 대량으로 가져오는 데 서식 파일을 사용하는 방법을 보여 줍니다.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 태스크  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68893128"
   
 -   명령이 성공한 경우 반환되는 프로세스 종료 코드를 지정합니다.  
   
--   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다. 예를 들면 다음과 같습니다. **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다(예: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** ).  
   
     > [!NOTE]  
     >  실행 파일이 시스템 경로나 작업 단계가 실행되는 계정의 사용자 경로에 지정된 디렉터리에 있지 않은 경우 실행 파일의 전체 경로를 지정해야 합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893128"
   
 -   열려는 기존 PowerShell 스크립트 파일  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 하위 시스템은 PowerShell 세션을 열고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 로드합니다. 작업 단계 명령으로 사용되는 PowerShell 스크립트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 하위 시스템은 PowerShell 세션을 열고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 로드 합니다. 작업 단계 명령으로 사용 되는 PowerShell 스크립트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 스크립팅 작업 단계  
   
@@ -128,16 +128,15 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>복제 작업 단계  
- 복제를 사용하여 게시와 구독을 만드는 경우 기본적으로 복제 작업이 만들어집니다. 만들어지는 작업 유형은 복제 유형(스냅숏, 트랜잭션 또는 병합)과 사용되는 옵션에 따라 결정됩니다.  
+ 복제를 사용하여 게시와 구독을 만드는 경우 기본적으로 복제 작업이 만들어집니다. 만들어지는 작업 유형은 복제 유형(스냅샷, 트랜잭션 또는 병합)과 사용되는 옵션에 따라 결정됩니다.  
   
  복제 작업 단계는 다음 복제 에이전트 중 하나를 활성화합니다.  
   
--   스냅숏 에이전트(Snapshot 작업)  
+-   스냅샷 에이전트(Snapshot 작업)  
   
 -   로그 판독기 에이전트(LogReader 작업)  
   
@@ -195,24 +194,22 @@ Set oServer = nothing
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하는 작업 단계 만들기에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**Description**|**항목**|  
 |실행 프로그램으로 작업 단계를 만드는 방법에 대해 설명합니다.|[CmdExec 작업 단계 만들기](create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 사용 권한을 다시 설정하는 방법에 대해 설명합니다.|[SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 만드는 방법에 대해 설명합니다.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 Transact-SQL 작업 단계의 옵션을 정의하는 방법에 대해 설명합니다.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 Transact-SQL 작업 단계의 옵션을 정의하는 방법에 대해 설명합니다.|[Transact-SQL 작업 단계 옵션 정의](define-transact-sql-job-step-options.md)|  
 |ActiveX 스크립트 작업 단계를 만드는 방법에 대해 설명합니다.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 명령과 쿼리를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|작업 실행 중에 오류가 발생하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수행해야 하는 동작에 대해 설명합니다.|[작업 단계 성공 또는 실패 흐름 설정](set-job-step-success-or-failure-flow.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 명령과 쿼리를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.|[Analysis Services 작업 단계 만들기](create-an-analysis-services-job-step.md)|  
+|작업 실행 중에 오류가 발생하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수행해야 하는 동작에 대해 설명합니다.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다.|[작업 단계 정보 보기](view-job-step-information.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[작업 단계 로그 삭제](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [sysjobstepslogs &#40;transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
- [작업 만들기](create-jobs.md)   
+## <a name="see-also"></a>관련 항목:  
+ [sysjobstepslogs &#40;transact-sql&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [작업  만들기](create-jobs.md)  
  [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

@@ -15,21 +15,21 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815557"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797691"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
-  이 항목에서는  , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대한 단일 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
+  이 항목에서는 , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대한 단일 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹에 대한 첫 번째 가용성 그룹 수신기를 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell을 사용하는 것이 좋습니다. 추가 수신기를 만들려는 경우처럼 필요한 경우를 제외하고 WSFC 클러스터에서 수신기를 직접 만들지 마세요.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="DoesListenerExist"></a> 이 가용성 그룹에 대한 수신기가 이미 존재합니까?  
  **가용성 그룹에 대한 수신기가 이미 존재하는지 확인하려면**  
@@ -65,14 +65,14 @@ ms.locfileid: "62815557"
   
 ###  <a name="WinPermissions"></a> Windows 사용 권한  
   
-|사용 권한|링크|  
+|Permissions|링크|  
 |-----------------|----------|  
 |가용성 그룹을 호스팅하는 WSFC 클러스터의 CNO(클러스터 개체 이름)에는 **컴퓨터 개체 생성** 권한이 있어야 합니다.<br /><br /> Active Directory에서 기본적으로 CNO는 명시적으로 **컴퓨터 개체 생성** 권한이 없으며 10개의 VCO(가상 컴퓨터 개체)를 만들 수 있습니다. 10개의 VCO를 만든 후에는 VCO를 추가로 만들 수 없습니다. WSFC 클러스터의 CNO에 대한 권한을 명시적으로 부여하여 이 문제를 방지할 수 있습니다. 삭제한 가용성 그룹에 대한 VCO는 Active Directory에서 자동으로 삭제되지 않으며 수동으로 삭제하지 않는 한 10개의 VCO 기본 제한 개수에 대해 계산됩니다.<br /><br /> 참고: 일부 조직에서는 보안 정책에 따라 **컴퓨터 개체 생성** 권한을 개별 사용자 계정에 부여하는 작업이 금지됩니다.|*클러스터를 설치하는 사람의 계정을 구성하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *클러스터 이름 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|조직에서 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비해야 하는 경우 **계정 운영자** 그룹의 멤버 자격 또는 도메인 관리자의 지원이 필요합니다.<br /><br /> 팁:  일반적으로 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비하지 않는 것이 가장 간단합니다. 가능하면 WSFC 고가용성 마법사를 실행할 때 계정을 자동으로 만들고 구성하도록 합니다.|*클러스터형 서비스 또는 애플리케이션에 대한 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|조직에서 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비해야 하는 경우 **계정 운영자** 그룹의 멤버 자격 또는 도메인 관리자의 지원이 필요합니다.<br /><br /> 팁: 일반적으로 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비하지 않는 것이 가장 간단합니다. 가능하면 WSFC 고가용성 마법사를 실행할 때 계정을 자동으로 만들고 구성하도록 합니다.|*클러스터형 서비스 또는 애플리케이션에 대한 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 사용 권한  
   
-|태스크|사용 권한|  
+|태스크|Permissions|  
 |----------|-----------------|  
 |가용성 그룹 수신기를 만들려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |기존 가용성 그룹 수신기를 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
@@ -135,7 +135,8 @@ ms.locfileid: "62815557"
  지정한 가용성 그룹 수신기를 만들려면 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **가용성 그룹 수신기를 만들거나 구성하려면**  
+
+### <a name="to-create-or-configure-an-availability-group-listener"></a>가용성 그룹 수신기를 만들거나 구성하려면
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
   
@@ -143,15 +144,15 @@ ms.locfileid: "62815557"
   
      다음 예에서는 `MyAg2`라는 기존 가용성 그룹에 가용성 그룹 수신기를 추가합니다. 이 수신기에 대해 고유한 DNS 이름인 `MyAg2ListenerIvP6`이 지정됩니다. 두 복제본이 서로 다른 서브넷에 있으므로 수신기는 고정 IP 주소를 사용하는 것이 좋습니다. 두 가용성 복제본 각각에 대해 IPv6 형식을 사용하는 고정 IP 주소인 `2001:4898:f0:f00f::cf3c and 2001:4898:e0:f213::4ce2`를 WITH IP 절이 지정합니다. 또한 이 예제에서 PORT 인수(옵션)를 사용하여 포트 `60173` 을 수신기 포트로 지정합니다.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg2   
           ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
-  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **가용성 그룹 수신기를 만들거나 구성하려면**  
+
+### <a name="to-create-or-configure-an-availability-group-listener"></a>가용성 그룹 수신기를 만들거나 구성하려면 
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
@@ -162,11 +163,10 @@ ms.locfileid: "62815557"
   
      예를 들어, 다음의 `New-SqlAvailabilityGroupListener` 명령은 가용성 그룹 `MyListener`에 대해 `MyAg`라는 가용성 그룹 수신기를 만듭니다. 이 수신기는 `-StaticIp` 매개 변수에 전달된 IPv4 주소를 가상 IP 주소로 사용합니다.  
   
-    ```  
-    New-SqlAvailabilityGroupListener -Name MyListener `   
-    -StaticIp '192.168.3.1/255.255.252.0' `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
-  
+    ```powershell
+    New-SqlAvailabilityGroupListener -Name MyListener `
+    -StaticIp '192.168.3.1/255.255.252.0' `
+    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg
     ```  
   
      `Set-SqlAvailabilityGroupListener`  
@@ -174,29 +174,26 @@ ms.locfileid: "62815557"
   
      예를 들어, 다음의 `Set-SqlAvailabilityGroupListener` 명령은 `MyListener`라는 가용성 그룹 수신기의 포트 번호를 `1535`로 설정합니다. 이 포트는 수신기에 대한 연결을 수신하는 데 사용됩니다.  
   
-    ```  
-    Set-SqlAvailabilityGroupListener -Port 1535 `   
+    ```powershell
+    Set-SqlAvailabilityGroupListener -Port 1535 `
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
-  
     ```  
   
      `Add-SqlAGListenerstaticIp`  
      기존 가용성 그룹 수신기 구성에 고정 IP 주소를 추가합니다. IP 주소는 서브넷이 있는 IPv4 주소이거나 IPv6 주소일 수 있습니다.  
   
-     예를 들어, 다음의 `Add-SqlAGListenerstaticIp` 명령은 가용성 그룹 `MyListener`의 `MyAg` 가용성 그룹 수신기에 고정 IPv4 주소를 추가합니다. 이 IPv6 주소는 `255.255.252.0` 서브넷에서 수신기의 가상 IP 주소로 사용됩니다. 가용성 그룹이 복수 서브넷에 있는 경우 각 서브넷에 대한 고정 IP 주소를 수신기에 추가해야 합니다.  
+     예를 들어, 다음의 `Add-SqlAGListenerstaticIp` 명령은 가용성 그룹 `MyListener`의 `MyAg` 가용성 그룹 수신기에 고정 IPv4 주소를 추가합니다. 이 IPv6 주소는 `255.255.252.0`서브넷에서 수신기의 가상 IP 주소로 사용됩니다. 가용성 그룹이 복수 서브넷에 있는 경우 각 서브넷에 대한 고정 IP 주소를 수신기에 추가해야 합니다.  
   
-    ```  
-    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
-    Add-SqlAGListenerstaticIp -Path $path `   
+    ```powershell
+    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `
+    Add-SqlAGListenerstaticIp -Path $path `
     -StaticIp "2001:0db8:85a3:0000:0000:8a2e:0370:7334"  
     ```  
   
     > [!NOTE]  
     >  cmdlet의 구문을 보려면 **PowerShell 환경에서**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
- **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
-  
--   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
+SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)를 참조 하세요.
   
 ## <a name="troubleshooting"></a>문제 해결  
   
@@ -210,7 +207,7 @@ ms.locfileid: "62815557"
 ##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹 수신기를 만든 후  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover 키워드 및 관련 기능  
- `MultiSubnetFailover`는 SQL Server 2012에서 AlwaysOn 가용성 그룹과 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스를 사용하여 보다 빠르게 장애 조치할 수 있도록 하는 데 사용되는 새로운 연결 문자열 키워드입니다. `MultiSubnetFailover=True`가 연결 문자열에서 설정되면 다음 세 가지 하위 기능을 사용할 수 있습니다.  
+ `MultiSubnetFailover`는 SQL Server 2012에서 AlwaysOn 가용성 그룹과 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스를 사용하여 보다 빠르게 장애 조치할 수 있도록 하는 데 사용되는 새로운 연결 문자열 키워드입니다. `MultiSubnetFailover=True` 가 연결 문자열에서 설정되면 다음 세 가지 하위 기능을 사용할 수 있습니다.  
   
 -   AlwaysOn 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 대한 다중 서브넷 수신기로 보다 빠른 다중 서브넷 장애 조치  
   
@@ -224,21 +221,21 @@ ms.locfileid: "62815557"
   
  **MultiSubnetFailover=True가 .NET Framework 3.5 또는 OLEDB에서 지원되지 않음**  
   
- **문제점:** 가용성 그룹 또는 장애 조치 클러스터 인스턴스에 각기 다른 서브넷의 여러 IP 주소 (네트워크 이름 또는 클라이언트 액세스 지점 WSFC 클러스터 관리자에서) 수신기 이름에.NET Framework를 사용 하 여 ADO.NET를 사용 하는 경우 3.5SP1 또는 SQL Native Client 11.0 OLEDB 잠재적으로 가용성 그룹 수신기에 클라이언트 연결 요청 중 50%를 소진 연결 제한 시간입니다.  
+ **문제:** 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 각기 다른 서브넷의 여러 IP 주소를 사용하는 수신기 이름(WSFC 클러스터 관리자에서는 네트워크 이름 또는 클라이언트 액세스 지점이라고도 함)이 있고 .NET Framework 3.5 SP1 또는 SQL Native Client 11.0 OLEDB가 있는 ADO.NET을 사용하는 경우 가용성 그룹 수신기에 대한 클라이언트 연결 요청 중 50%가 연결 제한 시간을 초과할 수 있습니다.  
   
- **해결 방법:** 다음 작업 중 하나를 수행 하는 것이 좋습니다.  
+ **해결 방법:** 다음 작업 중 하나를 수행하는 것이 좋습니다.  
   
 -   클러스터 리소스를 조작할 권한이 없는 경우 연결 제한 시간을 30초로 변경합니다. 이 값은 20초 TCP 제한 시간 기간과 10초 버퍼를 더한 값입니다.  
   
-     **장점**: 서브넷 간 장애 조치가 발생 하는 경우 클라이언트 복구 시간은 짧습니다.  
+     **장점**: 서브넷 간 장애 조치(Failover)가 발생하는 경우 클라이언트 복구 시간이 짧습니다.  
   
-     **단점**: 클라이언트 연결 중 절반이 20 초 이상 걸립니다.  
+     **단점**: 클라이언트 연결 중 절반이 20초 이상 걸립니다.  
   
 -   클러스터 리소스를 조작할 권한이 있는 경우 더 권장하는 방법은 가용성 그룹 수신기의 네트워크 이름을 `RegisterAllProvidersIP=0`으로 설정하는 것입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "RegisterAllProvidersIP 설정"을 참조하세요.  
   
-     **장점:** 클라이언트 연결 시간 제한 값을 늘릴 필요가 없습니다.  
+     **장점** : 클라이언트 연결 제한 시간 값을 증가시키지 않아도 됩니다.  
   
-     **단점:** 서브넷 간 장애 조치가 발생 하는 경우 클라이언트 복구 시간은 15 분 수 또는에 따라 프로그램 `HostRecordTTL` 설정 및 사이트 간 DNS/AD 복제 일정의 설정 합니다.  
+     **단점:** 서브넷 간 장애 조치 (failover)가 발생 하는 경우 클라이언트 복구 시간은 `HostRecordTTL` 설정 및 사이트 간 DNS/AD 복제 일정의 설정에 따라 15 분 이상 걸릴 수 있습니다.  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 설정  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 가용성 그룹 수신기를 만들면 WSFC에서 `RegisterAllProvidersIP` 속성이 1(true)로 설정된 클라이언트 액세스 지점이 만들어집니다. 이 속성 값의 효과는 클라이언트 연결 문자열에 따라 다음과 같이 달라집니다.  
@@ -247,7 +244,7 @@ ms.locfileid: "62815557"
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 클라이언트 연결 문자열이 권장 사항에 따라 `RegisterAllProvidersIP`를 지정하는 클라이언트에 대한 장애 조치(Failover) 후에 재연결 시간을 줄이기 위해 `MultiSubnetFailover = True` 속성을 1로 설정합니다. 수신기의 다중 서브넷 기능을 사용하려면 클라이언트에 `MultiSubnetFailover` 키워드를 지원하는 데이터 공급자가 필요할 수 있습니다. 다중 서브넷 장애 조치(failover)의 드라이버 지원에 대한 자세한 내용은 [AlwaysOn 클라이언트 연결&#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)을 참조하세요.  
   
-     다중 서브넷 클러스터링에 대한 자세한 내용은 [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)을 참조하세요.  
+     다중 서브넷 클러스터링에 대한 자세한 내용은 [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)를 만들거나 구성하는 방법에 대해 설명합니다.  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`일 때 WSFC 클러스터에서 WSFC 구성 유효성 검사 마법사를 실행하면 마법사가 다음과 같은 경고 메시지를 생성합니다.  
@@ -258,7 +255,7 @@ ms.locfileid: "62815557"
   
 -   `MultiSubnetFailover`를 true로 설정하지 않는 연결 문자열  
   
-     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 `RegisterAllProvidersIP`를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결할 필요 하 고 사용할 수 없는 레거시 클라이언트가 있을 경우 합니다 `MultiSubnetFailover` 속성인 것이 좋습니다 변경 하는 `RegisterAllProvidersIP` 0입니다.  
+     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 `RegisterAllProvidersIP`를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결 해야 하는 레거시 클라이언트가 있고 `MultiSubnetFailover` 속성을 사용할 수 없는 경우 `RegisterAllProvidersIP`를 0으로 변경 하는 것이 좋습니다.  
   
     > [!IMPORTANT]  
     >  WSFC 클러스터(장애 조치(Failover) 클러스터 관리자 GUI)를 통해 가용성 그룹 수신기를 만들면 기본적으로 `RegisterAllProvidersIP`는 0(false)으로 설정됩니다.  
@@ -269,9 +266,9 @@ ms.locfileid: "62815557"
 ###  <a name="SampleScript"></a> RegisterAllProvidersIP를 비활성화하고 TTL을 줄이는 샘플 PowerShell 스크립트  
  다음 PowerShell 예에서는 수신기 리소스에 대한 `RegisterAllProvidersIP` 및 `HostRecordTTL` 클러스터 매개 변수를 구성하는 방법을 보여 줍니다.  DNS 레코드는 기본 20분이 아닌 5분 동안 캐시됩니다.  두 클러스터 매개 변수를 모두 수정하면 `MultiSubnetFailover` 매개 변수를 사용할 수 없는 레거시 클라이언트에 대한 장애 조치(Failover) 후 올바른 IP 주소에 연결하는 시간이 줄어들 수 있습니다.  `yourListenerName` 을 변경할 수신기의 이름으로 바꿉니다.  
   
-```  
+```powershell
 Import-Module FailoverClusters  
-Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
+Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0
 Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourAGResource  
@@ -301,7 +298,7 @@ Start-ClusterResource yourAGResource
   
         3.  WSFC 가용성 그룹 리소스에 종속성을 추가합니다.  
   
-         장애 조치(failover) 클러스터 관리자의 대화 상자와 탭에 대한 자세한 내용은 [사용자 인터페이스: 장애 조치(failover) 클러스터 관리자 스냅인](https://technet.microsoft.com/library/cc772502.aspx)을 참조하세요.  
+         장애 조치(Failover) 클러스터 관리자의 대화 상자와 탭에 대한 자세한 내용은 [사용자 인터페이스: 장애 조치(Failover) 클러스터 관리자 스냅인](https://technet.microsoft.com/library/cc772502.aspx)을 참조하세요.  
   
     -   **장애 조치(failover) 클러스터용 Windows PowerShell 사용:**  
   
@@ -329,9 +326,7 @@ Start-ClusterResource yourAGResource
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+## <a name="see-also"></a>관련 항목:  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
-  

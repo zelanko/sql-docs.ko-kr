@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856121"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798280"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 관리 개체를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업 범주를 만드는 방법에 대해 설명합니다.  
@@ -31,12 +31,10 @@ ms.locfileid: "62856121"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
- 다중 서버 범주는 마스터 서버에만 존재합니다. 한 마스터 서버에서는 하나의 기본 작업 범주만 사용할 수 있습니다. 즉, [**범주화되지 않음(다중 서버)** ] 하나만 있습니다. 다중 서버 작업을 다운로드하면 해당 범주가 대상 서버에서 **MSX의 작업** 으로 변경됩니다.  
+ 다중 서버 범주는 마스터 서버에만 존재합니다. 한 마스터 서버에서는 하나의 기본 작업 범주만 사용할 수 있습니다. 즉, [**범주화되지 않음(다중 서버)**] 하나만 있습니다. 다중 서버 작업을 다운로드하면 해당 범주가 대상 서버에서 **MSX의 작업** 으로 변경됩니다.  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
-  
-
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
@@ -58,10 +56,8 @@ ms.locfileid: "62856121"
   
 8.  **작업 범주 관리**_server_name_ 대화 상자에서 **새로 고침** 을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
   
- 이러한 대화 상자에 대 한 자세한 내용은 참조 하세요. [작업 범주: 작업 범주 관리](job-categories-manage-job-categories.md) 하 고 [작업 범주 속성 및 새 작업 범주](job-categories-properties-new-job-category.md)합니다.  
-  
- 
-  
+ 이러한 대화 상자에 대 한 자세한 내용은 [작업 범주: 작업](job-categories-manage-job-categories.md) 범주 및 [작업 범주 관리 속성 및 새 작업 범주](job-categories-properties-new-job-category.md)를 참조 하세요.  
+
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-job-category"></a>작업 범주를 만들려면  
@@ -72,7 +68,7 @@ ms.locfileid: "62856121"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- creates a local job category named AdminJobs   
     USE msdb ;  
     GO  
@@ -83,15 +79,9 @@ ms.locfileid: "62856121"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)합니다.  
-  
+ 자세한 내용은 [sp_add_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)을 참조 하세요.  
 
-  
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  **작업 범주를 만들려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 호출합니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
-  
- 
-  
-  

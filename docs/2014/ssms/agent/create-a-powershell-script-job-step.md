@@ -15,19 +15,19 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211461"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798296"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 PowerShell 스크립트를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [보안](#Security)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211461"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211461"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- creates a PowerShell job step that finds the processes that use more than 1000 MB of memory and kills them  
     USE msdb;  
     GO  
@@ -88,11 +88,9 @@ ms.locfileid: "68211461"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)을 참조 하세요.  
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  **PowerShell 스크립트 작업 단계를 만들려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobStep` 클래스를 사용합니다.  
-  
-  

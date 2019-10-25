@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575565"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305049"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서를 전자 메일로 배포하려면 1) 전자 메일 배달용 보고서 서버를 구성하고 2) 표준 구독 또는 데이터 기반 구독을 정의합니다. 단일 구독에서 전자 메일 메시지 하나에 여러 보고서를 포함해 배달할 수는 없습니다. 그러나 여러 구독을 만들 수는 있습니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575565"
   
 -   전자 메일 메시지의 제목: 줄에 알림을 보냅니다. 기본적으로 구독 정의의 제목: 줄에는 구독 처리 시 보고서별 정보로 대체되는 다음과 같은 변수가 포함되어 있습니다.  
   
-     **@ReportName** 은(는) 보고서 이름을 지정합니다.  
+     **\@ReportName**은 보고서 이름을 지정합니다.  
   
-     **@ExecutionTime** 은(는) 보고서가 실행된 시간을 지정합니다.  
+     **\@ExecutionTime**은 보고서가 실행된 시간을 지정합니다.  
   
      각 구독의 제목: 줄에서 이러한 변수를 정적 텍스트와 결합하거나 텍스트를 수정할 수 있습니다.  
   

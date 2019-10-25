@@ -15,12 +15,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108712"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796400"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services 암호화 키 백업 및 복원
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "66108712"
 ## <a name="backing-up-the-encryption-keys"></a>암호화 키 백업  
  대칭 키를 백업하면 사용자가 지정한 파일에 키가 기록된 후 사용자가 제공한 암호를 사용하여 키가 스크램블됩니다. 대칭 키는 암호화되지 않은 상태로는 저장될 수 없으므로 디스크에 저장할 때 암호를 제공하여 키를 암호화해야 합니다. 파일이 생성되면 해당 파일을 안전한 위치에 저장하고 파일 잠금을 해제하는 데 사용되는 **암호를 기억해야** 합니다. 대칭 키를 백업하려면 다음과 같은 도구를 사용할 수 있습니다.  
   
- **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티입니다.  
+ **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티  
   
  **SharePoint 모드:** SharePoint 중앙 관리 페이지 또는 PowerShell  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66108712"
   
 1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. `-e` 추출 인수를 사용하여 키를 복사하고 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -102,11 +102,9 @@ ms.locfileid: "66108712"
   
 1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. `-a` 인수를 사용하여 키를 복원합니다. 정규화된 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

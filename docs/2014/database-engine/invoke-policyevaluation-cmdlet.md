@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624364"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797854"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 은 SQL Server 개체의 대상 집합이 하나 이상의 정책 기반 관리 정책에 지정된 조건을 준수하는지 여부를 보고하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
@@ -49,34 +49,34 @@ ms.locfileid: "67624364"
   
  정책이 정책 저장소에 저장되는 경우 평가할 정책을 가리키는 PSObjects 집합을 전달해야 합니다. 이는 일반적으로 Get-Item과 같은 cmdlet의 출력을 **Invoke-PolicyEvaluation**으로 파이프하여 수행되며 **-Policy** 매개 변수를 지정할 필요가 없습니다. 예를 들어 Microsoft Best Practices 정책을 데이터베이스 엔진 인스턴스로 가져온 경우 이 명령은 **데이터베이스 상태** 정책을 평가합니다.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  이 예에서는 Where-Object를 사용하여 정책 저장소의 여러 정책을 해당 **PolicyCategory** 속성을 기반으로 필터링하는 방법을 보여 줍니다. **Where-Object** 의 파이프된 출력에서 가져온 개체가 **Invoke-PolicyEvaluation**에서 사용됩니다.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  정책이 XML 파일로 저장되는 경우 **-Policy** 매개 변수를 사용하여 각 정책의 경로와 이름을 모두 제공해야 합니다. **-Policy** 매개 변수에 경로를 지정하지 않으면 **Invoke-PolicyEvaulation** 에서 **sqlps** 경로의 현재 설정을 사용합니다. 예를 들어 이 명령은 SQL Server와 함께 설치된 Microsoft Best Practice 정책 중 하나를 로그인의 기본 데이터베이스에 대해 평가합니다.  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  이 명령은 동일한 작업을 수행하며 현재 **sqlps** 경로만 사용하여 정책 XML 파일의 위치를 설정합니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  이 예에서는 **Get-ChildItem** cmdlet을 사용하여 여러 정책 XML 파일을 검색하고 개체를 **Invoke-PolicyEvaluation**으로 파이프하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 는 대상 집합의 SQL Server 개체를 나타내는 개체 배열 또는 개체를 가져옵니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스 개체의 배열을 만들어 **-TargetObjects**에서 사용됩니다.  
   
--   **-TargetExpressions** 는 대상 집합의 개체를 지정하는 쿼리 식을 포함하는 문자열을 가져옵니다. 쿼리 식은 '/' 문자로 구분된 노드 형식입니다. 각 노드의 형식은 ObjectType[Filter]입니다. 개체 형식에는 SQL Server 관리 개체 (SMO) 개체 계층 구조에 있는 개체 중 하나입니다. 필터는 해당 노드에 있는 개체에 대해 필터링하는 식입니다. 자세한 내용은 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)을(를) 참조하세요.  
+-   **-TargetExpressions** 는 대상 집합의 개체를 지정하는 쿼리 식을 포함하는 문자열을 가져옵니다. 쿼리 식은 '/' 문자로 구분된 노드 형식입니다. 각 노드의 형식은 ObjectType[Filter]입니다. 개체 유형은 SMO (SQL Server Management Object) 개체 계층의 개체 중 하나입니다. 필터는 해당 노드에 있는 개체에 대해 필터링하는 식입니다. 자세한 내용은 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)을(를) 참조하세요.  
   
  **-TargetObjects** 또는 **-TargetExpression**중에서 하나만 지정합니다.  
   
  이 예에서는 Sfc.SqlStoreConnection 개체를 사용하여 대상 서버를 지정합니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  이 예에서는 **-TargetExpression** 을 사용하여 평가할 특정 데이터베이스를 식별합니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>Analysis Services 정책 평가  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대해 정책을 평가하려면 어셈블리를 로드하여 PowerShell에 등록하고, Analysis Services 연결 개체를 사용하여 변수를 만들고, 변수를 **-TargetObject** 매개 변수에 전달해야 합니다. 이 예에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 대한 최선의 구현 방법 노출 영역 구성 정책을 평가하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>Reporting Services 정책 평가  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 정책을 평가하려면 어셈블리를 로드하여 PowerShell에 등록하고, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 연결 개체를 사용하여 변수를 만들고, 변수를 **-TargetObject** 매개 변수에 전달해야 합니다. 이 예에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 대한 최선의 구현 방법 노출 영역 구성 정책을 평가하는 방법을 보여 줍니다.  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>출력의 형식 지정  
  기본적으로 **Invoke-PolicyEvaluation** 출력은 사람이 읽을 수 있는 형식의 간략한 보고서로 명령 프롬프트 창에 표시됩니다. **-OutputXML** 매개 변수를 사용하여 cmdlet에서 대신 XML 파일 형식의 세부 보고서를 생성하도록 지정할 수 있습니다. **Invoke-PolicyEvaluation** 은 SML-IF 판독기에서 파일을 읽을 수 있도록 SML-IF(Systems Modeling Language Interchange Format) 스키마를 사용합니다.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

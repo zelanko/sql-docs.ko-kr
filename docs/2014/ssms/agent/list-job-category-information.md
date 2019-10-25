@@ -10,19 +10,19 @@ ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189144"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798211"
 ---
 # <a name="list-job-category-information"></a>작업 범주 정보 나열
-  작업 범주 정보를 나열 하는 방법을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용 하 여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 작업 범주 정보를 나열 하는 방법  
 
   
 ##  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
 
   
 ##  <a name="TSQL"></a> Transact-SQL 사용  
@@ -35,7 +35,7 @@ ms.locfileid: "68189144"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     -- returns information about jobs that are administered locally  
     USE msdb ;  
     GO  
@@ -45,13 +45,10 @@ ms.locfileid: "68189144"
     GO  
     ```  
   
- 자세한 내용은 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)합니다.  
+ 자세한 내용은 [sp_help_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)을 참조 하세요.  
   
   
-##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
+##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  **작업 범주 정보를 나열하려면**  
   
- Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다. 자세한 내용은 [SQL Server Management Objects &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.  
-  
-  
-  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다. 자세한 내용은 [SQL Server 관리 개체 &#40;&#41; SMO 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조 하세요.  

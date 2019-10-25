@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889605"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797640"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
   Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 는 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 에서는 테이블 형식 모델을 지원 합니다. **SharePoint 통합 모드** 는 통합 문서 내에서 Excel 또는 PowerPivot 데이터 모델을 로드 하 고 쿼리 하는 데 사용 되는 SharePoint용 PowerPivot로 설치 된 Analysis Services의 인스턴스를 나타냅니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "68889605"
  이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 [테이블 형식 모델링 &#40;ssas 테이블&#41; ](../../tabular-models/tabular-models-ssas.md) 형식 및 [테이블 형식 및 다차원 &#40;솔루션&#41;비교 ssas](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)를 참조 하세요.  
   
 ## <a name="basic-architecture"></a>기본 아키텍처  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 애플리케이션은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. @No__t_0 인스턴스는 "\<ServerName > \\ < InstanceName \>"으로 이름이 지정 됩니다. 다음 그림에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체 간에 언급 된 모든 관계를 보여 줍니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 애플리케이션은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 "\<ServerName >\\< InstanceName\>"로 이름이 지정 됩니다. 다음 그림에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체 간에 언급 된 모든 관계를 보여 줍니다.  
   
- ![AMO 실행 개체 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
+ ![AMO 실행 개체 관계](../../dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
   
  기본 클래스는 큐브를 만드는 데 필요한 최소 개체 집합입니다. 이 최소 개체 집합은 차원, 측정값 그룹 및 파티션입니다. 집계는 선택 사항입니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889605"
 ## <a name="example"></a>예제  
  Packages와 Last라는 두 개의 측정값과 Route, Source, Time이라는 세 개의 관련 차원이 있는 Imports 큐브가 있다고 가정합니다.  
   
- ![큐브 예 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "큐브 예 1")  
+ ![큐브 예 1](../../dev-guide/media/cubeintro1.gif "큐브 예 1")  
   
  큐브 주위의 더 작은 영숫자 값이 차원의 멤버입니다. 예제 멤버는 ground(Route 차원의 멤버), Africa(Source 차원의 멤버) 및 1st quarter(Time 차원의 멤버)입니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889605"
 ### <a name="aggregates"></a>집계  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 나와 있는 것 처럼 Time 차원의 Calendar Time 계층을 사용 하 여 이전 그림의 측정값을 표준 달력 계층 구조에 따라 집계할 수 있습니다.  
   
- ![시간 차원에 따라 구성 된 측정값의 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값의 다이어그램")  
+ ![시간 차원에 따라 구성 된 측정값의 다이어그램](../../dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값의 다이어그램")  
   
  단일 차원을 사용하여 측정값을 집계하는 것 외에도 다른 차원의 멤버를 조합하여 측정값을 집계할 수 있습니다. 이렇게 하면 비즈니스 사용자가 동시에 여러 차원에서 측정값을 평가할 수 있습니다. 예를 들어 비즈니스 사용자가 Eastern Hemisphere와 Western Hemisphere에서 항공편으로 도착한 분기별 수입품을 분석하려는 경우 큐브에 대해 쿼리를 실행하여 다음과 같은 데이터 세트을 검색할 수 있습니다.  
   

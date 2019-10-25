@@ -10,19 +10,19 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762352"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797758"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
   SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 인스턴스와 해당 인스턴스가 실행 중인 컴퓨터를 식별해야 합니다. 컴퓨터와 인스턴스를 지정하는 구문은 SQL Server 식별자 규칙과 Windows PowerShell 경로 규칙을 모두 준수해야 합니다.  
   
-1.  **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions)  
+1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
   
-2.  **인스턴스를 지정 합니다.**  [예](#Examples)  
+2.  **인스턴스를 지정하려면**  [예](#Examples)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
@@ -51,33 +51,31 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> 예: 컴퓨터 및 인스턴스 이름  
  이 예에서는 localhost 및 DEFAULT를 사용하여 로컬 컴퓨터의 기본 인스턴스를 지정합니다.  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  (local)의 괄호 문자는 일반적으로 Windows PowerShell에서 명령으로 처리됩니다. 다음 중 하나를 수행해야 합니다.  
   
 -   경로 문자열을 따옴표로 묶습니다.  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   역따옴표 문자(`)를 사용하여 괄호를 이스케이프 처리합니다.  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   16진수 표현을 사용하여 괄호를 인코딩합니다.  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [PowerShell의 SQL Server 식별자](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

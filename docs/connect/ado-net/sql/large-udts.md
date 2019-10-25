@@ -1,0 +1,112 @@
+---
+title: 큰 UDT
+description: SQL Server 2008에 도입 된 대량 값 Udt에서 데이터를 검색 하는 방법을 보여 줍니다.
+ms.date: 08/15/2019
+dev_langs:
+- csharp
+ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: v-kaywon
+ms.author: v-kaywon
+ms.reviewer: rothja
+ms.openlocfilehash: 4ea2c0002ceb01606cdf51f04246abcdc74429e0
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.translationtype: MTE75
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452158"
+---
+# <a name="large-udts"></a>큰 UDT
+
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체를 SQL Server 데이터베이스에 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있도록 합니다. UDT는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 달리 여러 요소를 포함할 수 있으며 관련 동작이 있을 수 있습니다.  
+  
+이전에는 UDT의 최대 크기가 8KB로 제한되었습니다. SQL Server 2008에서 <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined> 형식인 UDT에서는 이 제한이 제거되었습니다.  
+  
+사용자 정의 형식에 대 한 전체 설명서는 SQL Server 온라인 설명서의 [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366) 을 참조 하세요.
+  
+## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema를 사용 하 여 UDT 스키마 검색  
+@No__t_1 <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 메서드는 <xref:System.Data.DataTable>에서 데이터베이스 스키마 정보를 반환 합니다.
+  
+### <a name="getschematable-column-values-for-udts"></a>Udt에 대해 적합 한 열 값  
+@No__t_1의 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 메서드는 열 메타 데이터를 설명 하는 <xref:System.Data.DataTable> 반환 합니다. 다음 표에서는 SQL Server 2005와 SQL Server 2008 사이에 큰 Udt에 대 한 열 메타 데이터의 차이점에 대해 설명 합니다.  
+  
+|SqlDataReader 열|SQL Server 2005|SQL Server 2008 이상|  
+|--------------------------|---------------------|-------------------------------|  
+|`ColumnSize`|다양함|다양함|  
+|`NumericPrecision`|255|255|  
+|`NumericScale`|255|255|  
+|`DataType`|`Byte[]`|UDT 인스턴스|  
+|`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 인스턴스|  
+|`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
+|`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*Database.SchemaName.TypeName*과 같이 세 부분으로 지정되는 이름|  
+|`IsLong`|다양함|다양함|  
+  
+## <a name="sqldatareader-considerations"></a>SqlDataReader 고려 사항  
+<xref:Microsoft.Data.SqlClient.SqlDataReader>는 큰 UDT 값 검색을 지원하도록 SQL Server 2008부터 확장되었습니다. @No__t_0에서 처리 되는 크기의 크기는 사용 중인 SQL Server 버전 및 연결 문자열에 지정 된 `Type System Version`에 따라 달라 집니다. 자세한 내용은 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>가 될 때까지 태스크를 반복합니다.  
+  
+다음 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 `Type System Version` SQL Server 2005로 설정 된 경우 UDT 대신 <xref:System.Data.SqlTypes.SqlBinary>을 반환 합니다.  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+  
+다음 메서드는 `Type System Version` SQL Server 2005로 설정 된 경우 UDT 대신 `Byte[]` 배열을 반환 합니다.  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
+  
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValues%2A>  
+  
+ADO.NET의 현재 버전에 대해서는 변환이 수행 되지 않습니다.  
+  
+## <a name="specifying-sqlparameters"></a>SqlParameters 지정  
+다음 <xref:Microsoft.Data.SqlClient.SqlParameter> 속성이 많은 Udt를 사용 하도록 확장 되었습니다.  
+  
+|SqlParameter 속성|설명|  
+|---------------------------|-----------------|  
+|<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정 합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  
+|<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정 합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  
+|<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|확인할 매개 변수 값의 크기를 가져오거나 설정 합니다. 기본값은 0입니다. 속성은 매개 변수 값의 크기를 나타내는 정수일 수 있습니다. 큰 UDT의 경우 UDT의 실제 크기이거나 -1(알 수 없는 경우)일 수 있습니다.|  
+  
+## <a name="retrieving-data-example"></a>데이터 검색 예제  
+다음 코드 조각에서는 많은 UDT 데이터를 검색 하는 방법을 보여 줍니다. @No__t_0 변수는 SQL Server 데이터베이스에 대 한 올바른 연결을 가정 하 고 `commandString` 변수는 먼저 나열 된 기본 키 열을 사용 하 여 올바른 SELECT 문을 사용 한다고 가정 합니다.  
+  
+```csharp  
+using (SqlConnection connection = new SqlConnection(   
+    connectionString, commandString))  
+{  
+  connection.Open();  
+  SqlCommand command = new SqlCommand(commandString);  
+  SqlDataReader reader = command.ExecuteReader();  
+  while (reader.Read())  
+  {  
+    // Retrieve the value of the Primary Key column.  
+    int id = reader.GetInt32(0);  
+  
+    // Retrieve the value of the UDT.  
+    LargeUDT udt = (LargeUDT)reader[1];  
+  
+    // You can also use GetSqlValue and GetValue.  
+    // LargeUDT udt = (LargeUDT)reader.GetSqlValue(1);  
+    // LargeUDT udt = (LargeUDT)reader.GetValue(1);  
+  
+    Console.WriteLine(  
+     "ID={0} LargeUDT={1}", id, udt);  
+  }  
+reader.close  
+}  
+```  
+  
+## <a name="next-steps"></a>다음 단계
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-large-value-data.md)

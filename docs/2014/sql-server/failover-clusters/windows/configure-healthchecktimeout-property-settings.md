@@ -10,19 +10,19 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049501"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797446"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
-  HealthCheckTimeout 설정은 SQL Server 리소스 DLL에서 반환 된 정보에 대 한 대기 해야 하는 밀리초 단위로 시간 길이 지정 하는 합니다 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 보고 하기 전에 저장 프로시저를 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI)으로 응답 하지 않습니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
+  HealthCheckTimeout 설정은 SQL Server 리소스 DLL이 AlwaysOn 장애 조치 (Failover) 클러스터를 보고 하기 전에 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 저장 프로시저에서 반환 되는 정보를 대기 해야 하는 시간 (밀리초)을 지정 하는 데 사용 됩니다. 인스턴스 (FCI)가 응답 하지 않습니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Limits), [Security](#Security)  
   
--   **사용 하 여 HeathCheckTimeout 설정을 구성 합니다.**  [PowerShell](#PowerShellProcedure)하십시오 [장애 조치 클러스터 관리자](#WSFC), [TRANSACT-SQL](#TsqlProcedure)  
+-   **To Configure the HeathCheckTimeout setting, using:**  [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -36,18 +36,17 @@ ms.locfileid: "63049501"
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-##### <a name="to-configure-healthchecktimeout-settings"></a>HealthCheckTimeout 설정을 구성하려면  
+### <a name="to-configure-healthchecktimeout-settings"></a>HealthCheckTimeout 설정을 구성하려면  
   
 1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
-3.  사용 하 여는 `Get-ClusterResource` cmdlet을 찾을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 사용 하 여 `Set-ClusterParameter` cmdlet을 설정 하는 **HealthCheckTimeout** 장애 조치 클러스터 인스턴스에 대 한 속성.  
+3.  `Get-ClusterResource` cmdlet을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 찾은 다음 `Set-ClusterParameter` cmdlet을 사용 하 여 장애 조치 (failover) 클러스터 인스턴스에 대 한 **HealthCheckTimeout** 속성을 설정 합니다.  
   
 > [!TIP]  
 >  새 PowerShell 창을 열 때마다 `FailoverClusters` 모듈을 가져와야 합니다.  
-  
-### <a name="example-powershell"></a>예제(PowerShell)  
+
  다음 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 "`SQL Server (INST1)`"의 HealthCheckTimeout 설정을 60000밀리초로 번경합니다.  
   
 ```powershell  
@@ -55,7 +54,6 @@ Import-Module FailoverClusters
   
 $fci = "SQL Server (INST1)"  
 Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000  
-  
 ```  
   
 ### <a name="related-content-powershell"></a>관련 내용(PowerShell)  
@@ -83,12 +81,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 HealthCheckTimeout 옵션을 15,000밀리초(15초)로 설정합니다.  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION   
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](failover-policy-for-failover-cluster-instances.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 373700d04bb7c3d7cc28a72f881714cef9913923
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 8f0adc5fc19c487c388289b5e361708a4b9db9d6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199447"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796670"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "71199447"
 > [!IMPORTANT]
 > 동작과 상위 수준의 상태에 따라 데이터베이스 상태 정보가 사용할 수 없거나 만료될 수 있습니다. 또한 값은 로컬 관련성만 가집니다. 
    
-|열 이름|데이터 형식|주 복제본에 대한 설명|  
+|열 이름|이름|주 복제본에 대한 설명|  
 |-----------------|---------------|----------------------------------------|  
 |**database_id**|**int**|데이터베이스의 식별자입니다.|  
-|**group_id**|**uniqueidentifier**|데이터베이스가 속한 가용성 그룹의 식별자입니다.|  
-|**replica_id**|**uniqueidentifier**|가용성 그룹 내 가용성 복제본의 식별자입니다.|  
-|**group_database_id**|**uniqueidentifier**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  
+|**group_id**|**ssNoversion**|데이터베이스가 속한 가용성 그룹의 식별자입니다.|  
+|**replica_id**|**ssNoversion**|가용성 그룹 내 가용성 복제본의 식별자입니다.|  
+|**group_database_id**|**ssNoversion**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  
 |**is_local**|**bit**|가용성 데이터베이스가 로컬인지 여부를 나타나며 다음 중 하나입니다.<br /><br /> 0 = 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬이 아닙니다.<br /><br /> 1 = 데이터베이스가 서버 인스턴스에 로컬입니다.|  
-|**is_primary_replica**|**bit**|복제본이 기본이면 1을, 보조 복제본이면 0을 반환합니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**is_primary_replica**|**bit**|복제본이 주 복제본 이면 1을 반환 하 고 데이터베이스가 속한 가용성 그룹의 보조 복제본 인 경우 0을 반환 합니다. 분산 가용성 그룹 또는 활성 지역 복제 관계에서 주 데이터베이스 또는 보조 데이터베이스를 참조 하지 않습니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
 |**synchronization_state**|**tinyint**|데이터 이동 상태 이며 다음 값 중 하나입니다.<br /><br /> 0 = 동기화 중이 아닙니다. 주 데이터베이스의 경우 데이터베이스에서 트랜잭션 로그를 해당 보조 데이터베이스와 동기화할 준비가 되지 않았음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에서 연결 문제로 인해 로그 동기화를 시작하지 않았거나 데이터베이스가 일시 중지되었거나, 시작 중에 전환 상태를 진행하고 있거나 역할 전환 중임을 나타냅니다.<br /><br /> 1 = 동기화 중입니다. 주 데이터베이스의 경우 해당 데이터베이스가 보조 데이터베이스의 검색 요청을 받을 준비가 되었음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에 대한 활성 데이터 이동이 수행되고 있음을 나타냅니다.<br /><br /> 2 = 동기화 됨 주 데이터베이스는 동기화 중 대신 동기화됨으로 표시됩니다. 동기 커밋 보조 데이터베이스는 로컬 캐시에 데이터베이스가 장애 조치(failover) 준비되고 동기화 중일 때 동기화됨으로 표시됩니다.<br /><br /> 3 = 되돌리기 보조 데이터베이스가 주 데이터베이스에서 페이지 가져오기를 현재 진행 중인 경우의 실행 취소 프로세스의 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 되돌리기 상태에 있는 경우 보조 복제본에 대 한 장애 조치를 강제로 실행 하면 데이터베이스가 주 데이터베이스로 시작 될 수 없는 상태로 유지 됩니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.<br /><br /> 4 = 초기화 하 고 있습니다. 보조 데이터베이스에서 실행 취소 LSN을 catch하는 데 필요한 트랜잭션 로그가 보조 복제본에서 제공되고 확정 중인 경우의 실행 취소 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 초기화 중 상태에 있는 경우 보조 복제본에 대 한 장애 조치를 강제로 실행 하면 데이터베이스가 주 데이터베이스로 시작 될 수 없는 상태로 유지 됩니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.|  
 |**synchronization_state_desc**|**nvarchar(60)**|데이터 이동 상태에 대한 설명이며 다음 중 하나입니다.<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있지 않습니다.<br /><br /> 1 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있습니다.<br /><br /> 비동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 항상 0입니다.<br /><br /> 동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 주 데이터베이스에서만 정확합니다.|  
@@ -75,12 +75,12 @@ ms.locfileid: "71199447"
 |**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
 
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.
 
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>관련 항목:
 
 - [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
 - [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)

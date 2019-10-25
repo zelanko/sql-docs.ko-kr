@@ -13,15 +13,15 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7fc07b0b38a9612159ea8f88c00724340f7b494
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13fc00425a12737000a6400c5b9368288de80aa3
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273773"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797235"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO에서 SQL Server 구성
-  Smo에서 합니다 <xref:Microsoft.SqlServer.Management.Smo.Information> 개체를 <xref:Microsoft.SqlServer.Management.Smo.Settings> 개체를 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 설정 및 인스턴스에 대 한 정보를 포함 하는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Information> 개체, <xref:Microsoft.SqlServer.Management.Smo.Settings> 개체, <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대 한 설정 및 정보를 포함 합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 설치된 인스턴스의 동작을 설명하는 다양한 속성이 있습니다. 이러한 속성은 시작 옵션, 서버 기본값, 파일 및 디렉터리, 시스템 및 프로세서 정보, 제품 및 버전, 연결 정보, 메모리 옵션, 언어 및 데이터 정렬 선택, 인증 모드에 대해 설명합니다.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "63273773"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 속성은 산술 연산, ANSI 표준 및 트랜잭션과 관련된 현재 연결 동작에 대한 정보를 포함합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체로 표시되는 일련의 구성 옵션도 있습니다. 이 개체는 `sp_configure` 저장 프로시저로 수정할 수 있는 옵션을 나타내는 일련의 속성을 포함합니다. 와 같은 옵션 **우선 순위 높임**, **복구 간격** 하 고 **Network Packet Size**인스턴스의 성능을 제어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이러한 옵션은 대부분 동적으로 변경할 수 있지만, 먼저 값이 구성된 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때 변경되는 경우도 있습니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체로 표시되는 일련의 구성 옵션도 있습니다. 이 개체는 `sp_configure` 저장 프로시저로 수정할 수 있는 옵션을 나타내는 일련의 속성을 포함합니다. **우선 순위 높임**, **복구 간격** 및 **네트워크 패킷 크기**와 같은 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 성능을 제어 합니다. 이러한 옵션은 대부분 동적으로 변경할 수 있지만, 먼저 값이 구성된 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때 변경되는 경우도 있습니다.  
   
- 모든 구성 옵션에는 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체 속성이 있습니다. <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 개체를 사용하여 전역 구성 설정을 수정할 수 있습니다. 대부분의 속성에는 최대값 및 최소값이 있으며 이것 역시 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 속성으로 저장됩니다. 이러한 속성에는 필요 합니다 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 인스턴스의 변경 내용을 커밋하려면 메서드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ 모든 구성 옵션에는 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체 속성이 있습니다. <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 개체를 사용하여 전역 구성 설정을 수정할 수 있습니다. 대부분의 속성에는 최대값 및 최소값이 있으며 이것 역시 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 속성으로 저장됩니다. 이러한 속성에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 변경 내용을 커밋하기 위해 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 메서드가 필요 합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체의 모든 구성 옵션은 시스템 관리자가 변경해야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 visual [Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Visual Basic에서 SQL Server 구성 옵션 수정  
  코드 예제는 Visual Basic .NET에서 구성 옵션을 업데이트하는 방법을 보여 줍니다. 또한 지정된 구성 옵션에 대한 최대값 및 최소값 정보를 검색하고 표시합니다. 마지막으로 프로그램에서 사용자에게 변경이 동적으로 이루어졌는지, 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때까지 변경 내용이 저장되는지를 알려줍니다.  
@@ -47,20 +47,20 @@ ms.locfileid: "63273773"
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure2](SMO How to#SMO_VBConfigure2)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>Visual Basic에서 SQL Server 설정 수정  
- 인스턴스에 대 한 정보를 표시 하는 코드 예제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 <xref:Microsoft.SqlServer.Management.Smo.Information> 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings>에서 설정을 수정 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성입니다.  
+ 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Information> 및 <xref:Microsoft.SqlServer.Management.Smo.Settings>의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대 한 정보를 표시 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성의 설정을 수정 합니다.  
   
  이 예에서 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.Settings> 개체에는 모두 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드가 있습니다. 이들에 대한 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드를 개별적으로 실행할 수 있습니다.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure1](SMO How to#SMO_VBConfigure1)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>Visual C#에서 SQL Server 설정 수정  
- 인스턴스에 대 한 정보를 표시 하는 코드 예제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 <xref:Microsoft.SqlServer.Management.Smo.Information> 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings>에서 설정을 수정 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성입니다.  
+ 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Information> 및 <xref:Microsoft.SqlServer.Management.Smo.Settings>의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대 한 정보를 표시 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성의 설정을 수정 합니다.  
   
  이 예에서 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.Settings> 개체에는 모두 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드가 있습니다. 이들에 대한 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드를 개별적으로 실행할 수 있습니다.  
   
  `//Connect to the local, default instance of SQL Server.`  
   
-```  
+```csharp
 {  
             Server srv = new Server();  
             //Display all the configuration options.   
@@ -92,14 +92,14 @@ ms.locfileid: "63273773"
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>PowerShell에서 SQL Server 설정 수정  
- 인스턴스에 대 한 정보를 표시 하는 코드 예제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 <xref:Microsoft.SqlServer.Management.Smo.Information> 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings>에서 설정을 수정 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성입니다.  
+ 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Information> 및 <xref:Microsoft.SqlServer.Management.Smo.Settings>의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대 한 정보를 표시 하 고 <xref:Microsoft.SqlServer.Management.Smo.Settings> 및 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>개체 속성의 설정을 수정 합니다.  
   
  이 예에서 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.Settings> 개체에는 모두 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드가 있습니다. 이들에 대한 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드를 개별적으로 실행할 수 있습니다.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Display information about the instance of SQL Server in Information and Settings.  
 "OS Version = " + $srv.Information.OSVersion  
@@ -121,10 +121,10 @@ $srv.Alter()
 ## <a name="modifying-sql-server-configuration-options-in-powershell"></a>PowerShell에서 SQL Server 구성 옵션 수정  
  코드 예제는 Visual Basic .NET에서 구성 옵션을 업데이트하는 방법을 보여 줍니다. 또한 지정된 구성 옵션에 대한 최대값 및 최소값 정보를 검색하고 표시합니다. 마지막으로 프로그램에서 사용자에게 변경이 동적으로 이루어졌는지, 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 다시 시작될 때까지 변경 내용이 저장되는지를 알려줍니다.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  
 cd \sql\LocalMachine  
-$svr = get-item default  
+$svr = Get-Item default  
   
 #enumerate its properties  
 foreach ($Item in $Svr.Configuration.Properties)   
@@ -145,13 +145,11 @@ $svr.Configuration.Alter()
   
 #Display when the change takes place according to the IsDynamic property.  
 If ($svr.Configuration.ShowAdvancedOptions.IsDynamic -eq $true)  
- {    
+ {
    "Configuration option has been updated."  
  }  
 Else  
-{  
+ {  
     "Configuration option will be updated when SQL Server is restarted."  
-}  
+ }  
 ```  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762099"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797805"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "62762099"
 ### <a name="alias-example-powershell"></a>별칭 예(PowerShell)  
  예를 들어 SQLSERVER:\SQL 폴더로 이동하고 해당 폴더의 자식 항목 목록을 요청하여 사용 가능한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 목록을 검색하려면 다음과 같은 cmdlet 또는 별칭의 집합 중 하나를 사용하면 됩니다.  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Get-ChildItem 사용  
- **Get-Childitem을 사용하여 정보 반환**  
+
+### <a name="return-information-by-using-get-childitem"></a>Get-Childitem을 사용하여 정보 반환
   
 1.  childrem의 목록을 원하는 노드로 이동합니다.  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Get-childitem 예(PowerShell)  
  다음 예에서는 SQL Server 공급자 경로의 각 노드에 대해 Get-ChildItem이 반환하는 정보에 대해 설명합니다.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>사용자 지정 드라이브 만들기  
- **사용자 지정 드라이브 만들기 및 사용**  
+
+### <a name="create-and-use-a-custom-drive"></a>사용자 지정 드라이브 만들기 및 사용
   
 1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. `Root` 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>사용자 지정 드라이브 예(PowerShell)  
  이 예에서는 AdventureWorks2012 예제 데이터베이스의 배포된 복사본에 대해 노드에 매핑되는 AWDB라는 가상 드라이브를 만듭니다. 그런 다음 가상 드라이브를 사용하여 데이터베이스에서 테이블을 탐색합니다.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -129,10 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](work-with-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

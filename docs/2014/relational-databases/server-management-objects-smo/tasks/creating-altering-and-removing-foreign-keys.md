@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 외래 키를 제거 합니다. | Microsoft 문서
+title: 외래 키 생성, 변경 및 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021874"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796962"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "63021874"
  외래 키를 나타내는 열이 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체의 `Columns` 개체 속성에 나열됩니다. 외래 키에서 참조되는 기본 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에 지정된 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성으로 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic에서 외래 키 생성, 변경 및 제거  
  이 코드 예제는 한 테이블의 하나 이상의 열 사이에서 다른 테이블의 기본 키 열에 대한 외래 키 관계를 만드는 방법을 보여 줍니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "63021874"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>Visual C#에서 외래 키 생성, 변경 및 제거  
  이 코드 예제는 한 테이블의 하나 이상의 열 사이에서 다른 테이블의 기본 키 열에 대한 외래 키 관계를 만드는 방법을 보여 줍니다.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021874"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>PowerShell에서 외래 키 생성, 변경 및 제거  
  이 코드 예제는 한 테이블의 하나 이상의 열 사이에서 다른 테이블의 기본 키 열에 대한 외래 키 관계를 만드는 방법을 보여 줍니다.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>예제: 외래 키, 기본 키 및 Unique 제약 조건 열  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>샘플: 외래 키, 기본 키 및 UNIQUE 제약 조건 열  
  이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
 -   기존 개체에서 외래 키 찾기  
@@ -103,7 +103,7 @@ $fk.Create()
   
  이 예제의 C# 버전입니다.  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  예제의 Visual Basic 버전입니다.  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

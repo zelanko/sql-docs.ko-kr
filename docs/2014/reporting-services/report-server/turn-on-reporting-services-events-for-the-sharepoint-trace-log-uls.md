@@ -10,12 +10,12 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103155"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796410"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버는 SharePoint ULS(통합 로깅 서비스) 추적 로그에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 이벤트를 기록할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 범주는 SharePoint 중앙 관리의 모니터링 페이지에서 사용할 수 있습니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "66103155"
 ##  <a name="bkmk_general"></a> 일반 ULS 로그 권장 사항  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경을 모니터링하는 데 권장되는 이벤트 범주 및 수준을 나열합니다. 이벤트를 기록하면 각 항목에 이벤트 기록 시간, 프로세스 이름 및 스레드 ID가 포함됩니다.  
   
-|범주|Level|Description|  
+|범주|level|Description|  
 |--------------|-----------|-----------------|  
-|데이터베이스|자세히|데이터베이스 액세스를 포함하는 이벤트를 기록합니다.|  
-|일반|자세히|다음 항목에 대한 액세스를 포함하는 이벤트를 기록합니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 웹 페이지<br /><br /> 보고서 뷰어 HTTP 처리기<br /><br /> 보고서 액세스 파일(.rdl)<br /><br /> 데이터 원본 파일(.rsds)<br /><br /> SharePoint 사이트의 URL(.smdl 파일)|  
+|DataSourceView|Verbose|데이터베이스 액세스를 포함하는 이벤트를 기록합니다.|  
+|일반|Verbose|다음 항목에 대한 액세스를 포함하는 이벤트를 기록합니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 웹 페이지<br /><br /> 보고서 뷰어 HTTP 처리기<br /><br /> 보고서 액세스 파일(.rdl)<br /><br /> 데이터 원본 파일(.rsds)<br /><br /> SharePoint 사이트의 URL(.smdl 파일)|  
 |Office Server 일반|Exception|로그온 실패를 기록합니다.|  
 |토폴로지|Verbose|현재 사용자 정보를 기록합니다.|  
-|웹 파트|자세히|보고서 뷰어 웹 파트에 대한 액세스를 포함하는 이벤트를 기록합니다.|  
+|웹 파트|Verbose|보고서 뷰어 웹 파트에 대한 액세스를 포함하는 이벤트를 기록합니다.|  
   
 ##  <a name="bkmk_turnon"></a> Reporting Services 범주에서 Reporting Services 이벤트를 설정 및 해제하려면  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66103155"
   
  다음 PowerShell cmdlet을 사용하여 모든 현재 팜 진단 로그 설정을 검토할 수 있습니다.  
   
-```  
+```powershell
 Get-SPDiagnosticConfig  
 ```  
   
@@ -86,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **제품: SQL Server Reporting Services**  
   
-2.  **범주:** 서버와 관련 된 이벤트 이름 시작 부분에 "Report Server" 라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
+2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 "Report Server"라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
   
-3.  **범주:** 이벤트와 관련 된 나 웹 프런트 엔드 구성 요소 로부터 전달 되는 "Report Server"를 포함 되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
+3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 "Report Server"가 포함되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services 이벤트 목록  
  다음 표에는 SQL Server Reporting Services 범주의 이벤트 목록이 나와 있습니다.  
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |보고서 서버 공급자||  
 |보고서 서버 렌더링||  
 |보고서 서버 보고서 미리 보기||  
-|보고서 서버 리소스 유틸리티|샘플 항목:<br /><br /> MediumReporting 서비스 시작 SKU: Evaluation<br /><br /> MediumEvaluation 복사: 180 일 남음|  
+|보고서 서버 리소스 유틸리티|샘플 항목:<br /><br /> MediumReporting 서비스 시작 SKU: 평가<br /><br /> MediumEvaluation 복사: 180일 남음|  
 |보고서 서버 실행 작업||  
 |보고서 서버 실행 요청||  
 |보고서 서버 예약||  
@@ -139,10 +139,10 @@ Get-SPDiagnosticConfig
 |공유 서비스|샘플 항목:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> 콘텐츠 데이터베이스에 대한 MediumGranting 액세스입니다.<br /><br /> ReportingWebServiceApplication의 MediumProvisioning 인스턴스<br /><br /> ReportingWebServiceApplication에 대한 MediumProcessing 서비스 계정 변경 내용<br /><br /> MediumSetting 데이터베이스 사용 권한입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  
- ![PowerShell 관련 내용](../media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") PowerShell을 사용 하 여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
-```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
+```powershell
+Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
  ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 많은 도구가 있습니다. 예를 들어 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) 또는 [SharePoint ULS 로그 뷰어](http://ulsviewer.codeplex.com/workitem/list/basic)를 다운로드할 수 있습니다. 이 두 도구는 Codeplex에서 다운로드할 수 있습니다.  
@@ -153,5 +153,3 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  추적 로그 파일은 일반적으로 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 폴더에 있지만 SharePoint 중앙 관리의 **진단 로깅** 페이지에서 경로를 확인하거나 변경할 수 있습니다.  
   
  SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
-  
-  

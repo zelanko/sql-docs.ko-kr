@@ -10,12 +10,12 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922964"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798045"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
   이 항목에서는 SQL Server PowerShell 공급자를 사용하지 않는 Windows PowerShell 스크립트에서 SMO(SQL Server Management Object) 어셈블리를 로드하는 방법을 설명합니다.  
@@ -29,17 +29,15 @@ ms.locfileid: "62922964"
   
 -   공급자 또는 cmdlet을 사용하지 않는 C# 또는 Visual Basic과 같은 다른 언어에서 SMO 코드를 이식하려는 경우  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>예: SQL Server Management Objects 로드  
+## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server 관리 개체 로드  
  다음 코드는 SMO 어셈블리를 로드합니다.  
   
-```  
-#  
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
   
 $ErrorActionPreference = "Stop"  
   
-$sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
+$sqlpsreg = "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
 if (Get-ChildItem $sqlpsreg -ErrorAction "SilentlyContinue")  
 {  
@@ -81,11 +79,9 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

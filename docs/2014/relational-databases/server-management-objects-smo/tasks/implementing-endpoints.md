@@ -14,15 +14,15 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158749"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796841"
 ---
 # <a name="implementing-endpoints"></a>엔드포인트 구현
-  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
+  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. ph x="1" /&gt; 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 속성을 사용하여 다음 페이로드 유형 중 하나를 지정할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63158749"
  엔드포인트가 만들어지고 완전히 정의되었으면 데이터베이스 사용자, 그룹, 역할 및 로그온에 대해 액세스를 부여, 취소 및 거부할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 및 visual [Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Visual Basic에서 데이터베이스 미러링 엔드포인트 서비스 만들기  
  코드 예제는 SMO에서 데이터베이스 미러링 엔드포인트를 만드는 방법을 보여 줍니다. 이 작업은 데이터베이스 미러를 만들기 전에 수행해야 합니다. 데이터베이스 미러를 만들려면 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 및 기타 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 속성을 사용하십시오.  
@@ -59,7 +59,7 @@ ms.locfileid: "63158749"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-c"></a>Visual C#에서 데이터베이스 미러링 엔드포인트 서비스 만들기  
  코드 예제는 SMO에서 데이터베이스 미러링 엔드포인트를 만드는 방법을 보여 줍니다. 이 작업은 데이터베이스 미러를 만들기 전에 수행해야 합니다. 데이터베이스 미러를 만들려면 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 및 기타 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 속성을 사용하십시오.  
   
-```  
+```csharp
 {  
             //Set up a database mirroring endpoint on the server before   
         //setting up a database mirror.   
@@ -86,10 +86,10 @@ ms.locfileid: "63158749"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-powershell"></a>PowerShell에서 데이터베이스 미러링 엔드포인트 서비스 만들기  
  코드 예제는 SMO에서 데이터베이스 미러링 엔드포인트를 만드는 방법을 보여 줍니다. 이 작업은 데이터베이스 미러를 만들기 전에 수행해야 합니다. 데이터베이스 미러를 만들려면 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 및 기타 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 속성을 사용하십시오.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Get a new endpoint to congure and add  
 $ep = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Endpoint -argumentlist $srv,"Mirroring_Endpoint"  
@@ -111,7 +111,5 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+ [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
