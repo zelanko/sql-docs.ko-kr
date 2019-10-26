@@ -1,5 +1,5 @@
 ---
-title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft 문서
+title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934307"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908494"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 예에서는 AdventureWorks 데이터베이스를 대상으로 SQL 쿼리를 실행합니다. 그리고 쿼리 결과에 XSL 변환을 적용하여 직원의 이름과 성의 두 개 열로 이루어진 테이블을 생성합니다.  
   
- SqlXmlCommand 개체의 XslPath 속성은 XSL 파일 및 디렉터리 경로 지정 하려면 사용 됩니다.  
+ SqlXmlCommand 개체의 XslPath 속성은 XSL 파일 및 해당 디렉터리 경로를 지정 하는 데 사용 됩니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -110,8 +110,6 @@ class Test
      이렇게 하면 실행 파일(DocSample.exe)이 만들어집니다.  
   
 4.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>.NET Framework에서 XSL 변환 적용  
  앞서 설명한 것처럼 XSL 변환을 중간 계층에 적용하지 않고 클라이언트 쪽(.NET Framework 내부)에 적용할 수 있습니다. 다음의 수정된 C# 코드는 XSL 변환을 .NET Framework에 적용하는 방법을 보여 줍니다.  

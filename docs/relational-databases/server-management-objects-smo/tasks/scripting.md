@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148341"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909035"
 ---
 # <a name="scripting"></a>스크립팅
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체 또는 개별 개체의 **스크립트** 메서드를 통해 제어 됩니다. 개체 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인스턴스의개체에대한종속성관계의[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]매핑을 제어 합니다.  
+  SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체 및 해당 자식 개체 또는 개별 개체에 대 한 **스크립트** 메서드를 통해 제어 됩니다. <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 개체에 대 한 종속성 관계의 매핑을 제어 합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체를 사용한 고급 스크립팅은 다음 3단계 프로세스를 거칩니다.  
   
@@ -33,8 +33,6 @@ ms.locfileid: "70148341"
 2.  목록 생성  
   
 3.  스크립트 생성  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  검색 단계에서는 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 개체를 사용합니다. 개체의 URN 목록을 제공하면 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 메서드가 URN 목록의 개체에 대해 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 개체를 반환합니다. 부울 *Fparents* 매개 변수는 지정 된 개체의 부모 또는 자식을 검색할지 여부를 선택 하는 데 사용 됩니다. 이 단계에서 종속성 트리를 수정할 수 있습니다.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70148341"
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
- 이 코드 예제에는 System.object 네임 스페이스에 대 한 **Imports** 문이 필요 합니다. 응용 프로그램의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
+ 이 코드 예제에는 System.object 네임 스페이스에 대 한 **Imports** 문이 필요 합니다. 애플리케이션의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

@@ -1,5 +1,5 @@
 ---
-title: 클라이언트 쪽에서 XML 처리 (SQLXML 관리 되는 클래스) | Microsoft 문서
+title: 클라이언트 쪽에서 XML 처리 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 547e7df24fcf18b3183cd2d279c84e9b38977671
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119592"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909163"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>클라이언트 쪽에서 XML 처리(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 예제에서는 ClientSideXml 속성의 사용을 보여 줍니다. 애플리케이션은 서버에서 저장 프로시저를 실행합니다. 클라이언트 쪽에서 저장 프로시저의 결과(두 개의 열로 이루어진 행 집합)가 처리되어 XML 문서를 생성합니다.  
+  이 예에서는 ClientSideXml 속성을 사용 하는 방법을 보여 줍니다. 애플리케이션은 서버에서 저장 프로시저를 실행합니다. 클라이언트 쪽에서 저장 프로시저의 결과(두 개의 열로 이루어진 행 집합)가 처리되어 XML 문서를 생성합니다.  
   
- 다음 GetContacts 저장 프로시저 반환 **FirstName** 하 고 **LastName** AdventureWorks 데이터베이스의 Person.Contact 테이블에 있는 직원의 합니다.  
+ 다음 GetContacts 저장 프로시저는 AdventureWorks 데이터베이스의 Person. Contact 테이블에서 **FirstName** 및 **LastName** 을 반환 합니다.  
   
 ```  
 USE AdventureWorks  
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 이 C# 응용 프로그램 저장된 프로시저를 실행 하 고 CommandText 값을 지정 하는 FOR XML AUTO 옵션을 지정 합니다. 응용 프로그램에 ClientSideXml SqlXmlCommand 개체의 속성은 true입니다. 이렇게 하면 행 집합을 반환하고 클라이언트에서 해당 행 집합에 XML 변환을 적용하는 기존 저장 프로시저를 실행할 수 있습니다.  
+ 이 C# 응용 프로그램은 저장 프로시저를 실행 하 고 CommandText 값을 지정할 때 FOR XML AUTO 옵션을 지정 합니다. 응용 프로그램에서 SqlXmlCommand 개체의 ClientSideXml 속성이 true로 설정 됩니다. 이렇게 하면 행 집합을 반환하고 클라이언트에서 해당 행 집합에 XML 변환을 적용하는 기존 저장 프로시저를 실행할 수 있습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -96,6 +96,4 @@ public static int Main(String[] args)
      이렇게 하면 실행 파일(DocSample.exe)이 만들어집니다.  
   
 4.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

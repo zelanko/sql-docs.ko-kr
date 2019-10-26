@@ -1,5 +1,5 @@
 ---
-title: 처리 결과 (ODBC) | Microsoft Docs
+title: 결과 처리 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd7e36ca2bad2e067d82fa5ad0751f2ef7aef34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee80b68bafa419472c5c650a270a20d4d54526bd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133441"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908184"
 ---
 # <a name="processing-results---process-results"></a>결과 처리 - 결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-먼저 결과 집합의 특징을 확인 한 다음 중 하나를 사용 하 여 프로그램 변수로 데이터를 검색 하는 ODBC 응용 프로그램에서 결과 처리 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 하거나 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+ODBC 응용 프로그램에서 결과를 처리 하려면 먼저 결과 집합의 특징을 확인 한 다음 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 또는 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 사용 하 여 프로그램 변수로 데이터를 검색 해야 합니다.  
   
 ### <a name="to-process-results"></a>결과를 처리하려면  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68133441"
   
     -   바인딩되지 않은 열을 사용하는 경우 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 한 번 이상 호출하여 바인딩된 마지막 열 다음의 바인딩되지 않은 열 데이터를 가져옵니다. **SQLGetData**는 번호가 가장 작은 열부터 차례로 호출해야 합니다.  
   
-    -   **SQLGetData**를 여러 번 호출하여 텍스트나 이미지 열에서 데이터를 가져옵니다.  
+    -   **SQLGetData** 를 여러 번 호출하여 텍스트나 이미지 열에서 데이터를 가져옵니다.  
   
 4.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하여 결과 집합의 끝을 알리면 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하여 다른 결과 집합을 사용할 수 있는지 여부를 확인합니다.  
   
@@ -59,12 +59,10 @@ ms.locfileid: "68133441"
   
 6.  다른 결과 집합을 사용할 수 있는 경우 1단계로 이동합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하기 전에 결과 집합 처리를 취소하려면 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출합니다.  
   
-## <a name="see-also"></a>관련 항목  
-[결과 집합 정보를 검색할 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+## <a name="see-also"></a>관련 항목:  
+[ODBC 결과 집합 정보 &#40;검색&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

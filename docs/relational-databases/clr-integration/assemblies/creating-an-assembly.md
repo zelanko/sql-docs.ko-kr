@@ -1,5 +1,5 @@
 ---
-title: Creating an Assembly | Microsoft Docs
+title: 어셈블리 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027932"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907396"
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   호출되거나 참조되는 어셈블리가 동일한 데이터베이스에 만들어졌습니다.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>어셈블리 생성 시 보안 지정  
- 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전한**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**합니다. **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 만들 때 코드를 실행할 수 있는 보안의 세 가지 보안 수준인 **SAFE**, **EXTERNAL_ACCESS**또는 **UNSAFE**중 하나를 지정할 수 있습니다. **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
   
  **SAFE** 는 기본 권한 집합이며 대부분의 시나리오에서 작동합니다. 이 보안 수준을 지정하려면 다음과 같이 CREATE ASSEMBLY 문의 구문을 수정합니다.  
   
@@ -69,7 +69,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  어셈블리의 코드를 **SAFE** 권한 집합으로 실행할 경우 코드는 in-process 관리 공급자를 통해 서버 내에서 계산 및 데이터 액세스만 수행할 수 있습니다.  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>EXTERNAL_ACCESS 및 UNSAFE 어셈블리 만들기  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>EXTERNAL_ACCESS 및 UNSAFE 어셈블리 만들기  
  **EXTERNAL_ACCESS** 는 코드에서 파일, 네트워크, 레지스트리, 환경 변수 등 서버 외부의 리소스에 액세스해야 하는 시나리오를 해결합니다. 서버에서 외부 리소스에 액세스할 때마다 서버는 관리 코드를 호출하는 사용자의 보안 컨텍스트를 가장합니다.  
   
  **UNSAFE** 코드 권한은 어셈블리가 안전한지 확인할 수 없거나 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API 같은 제한된 리소스에 대한 추가 액세스가 필요한 경우에 사용합니다.  
@@ -79,8 +79,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  어셈블리가 서명된 강력한 이름이거나 인증서로 서명된 Authenticode입니다. 이 강력한 이름(또는 인증서)이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 비대칭 키(또는 인증서)로 생성되었고 **EXTERNAL ACCESS ASSEMBLY** 권한(외부 액세스 어셈블리의 경우) 또는 **UNSAFE ASSEMBLY** 권한(안전하지 않은 어셈블리의 경우)이 있는 해당 로그인을 가지고 있습니다.  
   
 2.  DBO(데이터베이스 소유자)에게 **EXTERNAL ACCESS ASSEMBLY** ( **EXTERNAL ACCESS** 어셈블리의 경우) 또는 **UNSAFE ASSEMBLY** ( **UNSAFE** 어셈블리의 경우) 권한이 있고 데이터베이스의 [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) 이 **ON**으로 설정되어 있습니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  위에 나열된 두 가지 조건은 어셈블리가 실행될 때는 물론 로드될 때에도 검사되며 두 가지 조건 중 적어도 하나는 만족해야 어셈블리가 로드됩니다.  
   
@@ -131,10 +129,10 @@ WITH PERMISSION_SET = UNSAFE;
   
  각 설정의 권한에 대한 자세한 내용은 [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [어셈블리 변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [어셈블리 삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [어셈블리  변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  
+ [어셈블리  삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md)   
  [부분적으로 신뢰할 수 있는 호출자 허용](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  

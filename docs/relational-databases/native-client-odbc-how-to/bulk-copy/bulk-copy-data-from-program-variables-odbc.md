@@ -1,5 +1,5 @@
 ---
-title: 데이터 대량 복사 프로그램 변수 (ODBC)에서 | Microsoft Docs
+title: 프로그램 변수에서 대량 데이터 복사 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aad67fc3b545ed7a33c3f54c2902073f5c033d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2ce54f4ad05abb25b0b8c40a359a072a2c60ae6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987697"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908254"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 샘플에서는 데이터 대량 복사 프로그램 변수에서 사용 하 여 SQL 서버에 대량 복사 함수를 사용 하는 방법을 보여 줍니다 **bcp_bind** 하 고 **bcp_sendrow**합니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
+  이 샘플에서는 대량 복사 함수를 사용 하 여 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
@@ -47,32 +47,30 @@ ms.locfileid: "67987697"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름을 지정합니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사본의 방향: DB_IN 뷰 또는 테이블로 복사 하려는 경우 DB_OUT 응용 프로그램에서 테이블 또는 뷰에서 응용 프로그램입니다.  
+    -   복사 방향: 응용 프로그램에서 뷰 또는 테이블로 DB_IN 하거나 테이블이 나 뷰의 응용 프로그램에 DB_OUT 합니다.  
   
-5.  호출 [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 열을 프로그램 변수에 바인딩할 대량 복사에서 각 열에 대 한 합니다.  
+5.  대량 복사의 각 열에 대해 [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 해당 열을 프로그램 변수에 바인딩합니다.  
   
-6.  데이터 및 호출을 사용 하 여 프로그램 변수를 채우고 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 데이터 행을 보내도록 합니다.  
+6.  프로그램 변수를 데이터로 채운 다음 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출 하 여 데이터 행을 보냅니다.  
   
-7.  여러 행을 보낸 후에 호출 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 검사점 행 이미 전송 합니다. 호출 하는 것이 좋습니다 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 행 1000 개 행당 한 번 이상.  
+7.  여러 행을 보낸 후에는 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하 여 이미 전송 된 행을 검사점으로 보냅니다. 1000 행 당 한 번 이상 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하는 것이 좋습니다.  
   
-8.  모든 행을 보낸 후에 호출 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 작업을 완료 합니다.  
+8.  모든 행을 보낸 후 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 를 호출 하 여 작업을 완료 합니다.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 변경할 수 있습니다 위치와 프로그램 변수 길이 대량 복사 작업을 하는 동안 호출한 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 하 고 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)합니다. 사용 하 여 [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 다양 한 대량 복사 옵션을 설정 합니다. 사용 하 여 [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 보낼 **텍스트**합니다 **ntext**, 및 **이미지** 서버를 세그먼트의 데이터입니다.  
+ [Bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 대량 복사 작업 중에 프로그램 변수의 위치와 길이를 변경할 수 있습니다. [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 다양 한 대량 복사 옵션을 설정 합니다. [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 사용 하 여 **text**, **ntext**및 **image** 데이터를 세그먼트의 서버에 보냅니다.  
   
 ## <a name="example"></a>예제  
  이 예제는 IA64에서 지원되지 않습니다.  
   
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 샘플에서 사용할 테이블을 만듭니다.  
+ 첫 번째 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용할 테이블을 만듭니다.  
   
  odbc32.lib 및 odbcbcp.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. MSBuild.exe를 사용하여 빌드한 경우 먼저 Bcpfmt.fmt 및 Bcpodbc.bcp를 프로젝트 디렉터리에서 .exe가 있는 디렉터리에 복사한 다음 .exe를 호출합니다.  
   
- 세 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 샘플을 사용 하는 테이블을 삭제 하는 목록입니다.  
+ 세 번째 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용한 테이블을 삭제 합니다.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -306,8 +304,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server ODBC 드라이버 방법 도움말 항목을 사용한 대량 복사 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server odbc 드라이버를 사용 하 여 대량 복사 방법 항목 &#40;odbc&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
  [프로그램 변수에서 대량 복사](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

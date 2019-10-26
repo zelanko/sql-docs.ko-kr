@@ -1,5 +1,5 @@
 ---
-title: 'Sql: 사용 하 여 값 필터링-필드와-(SQLXML 4.0) | Microsoft Docs'
+title: 'Sql: limit 필드 및 sql: limit 값을 사용 하 여 값 필터링 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac64cc0ff2f16b70000ff4bc33d0f5fd114f872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067111"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906096"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. 합니다 **sql:-필드** 하 고 **sql:-값** 주석은 제한 값이 포함 된 데이터베이스 열을 식별 하 고 데이터를 필터링 하는 데 사용할 특정 제한 값을 지정 하는 데 사용 반환 됩니다.  
+  데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. **Sql: limit 필드** 및 **sql: limit 값** 주석은 제한 값이 포함 된 데이터베이스 열을 식별 하 고 반환 되는 데이터를 필터링 하는 데 사용할 특정 제한 값을 지정 하는 데 사용 됩니다.  
   
- 합니다 **sql:-필드** 주석은 제한 값이 포함 된 열을 식별 하는; 각 매핑된 요소나 특성에서 허용 됩니다.  
+ **Sql: limit 필드** 주석은 제한 값이 포함 된 열을 식별 하는 데 사용 됩니다. 각 매핑된 요소나 특성에서 허용 됩니다.  
   
- **sql:-값** 주석은 제한 값에 지정 된 열의 지정 되는 **sql:-필드** 주석. 합니다 **sql:-값** 주석은 선택 사항입니다. 하는 경우 **sql:-값** 는 지정 하지 않으면 NULL 값을 가정 합니다.  
+ **Sql: limit 값** 주석은 **sql: limit 필드** 주석에 지정 된 열에 제한 된 값을 지정 하는 데 사용 됩니다. **Sql: limit 값** 주석은 선택 사항입니다. **Sql: limit 값** 을 지정 하지 않으면 NULL 값이 가정 됩니다.  
   
 > [!NOTE]  
->  작업할 때를 **sql:-필드** 형식의 SQL의 매핑된 열 인 **실제**, SQLXML 4.0에 대해 변환을 수행 합니다 **sql:-값** XML 스키마에 지정 된 대로 로 **nvarchar** 값을 지정 합니다. 이 경우 공학용 표기법을 사용하여 10진수 제한 값을 지정해야 합니다. 자세한 내용은 아래 2번 예를 참조하십시오.  
+>  매핑된 SQL 열이 **real**유형인 **sql: limit 필드** 를 사용할 때 SQLXML 4.0은 XML 스키마에 지정 된 대로 **sql: limit 값** 을 **nvarchar** 지정 된 값으로 변환 합니다. 이 경우 공학용 표기법을 사용하여 10진수 제한 값을 지정해야 합니다. 자세한 내용은 아래 2번 예를 참조하십시오.  
   
 ## <a name="examples"></a>예  
  이러한 예를 사용하여 작업 예제를 만들려면 다음과 같은 제품이 설치되어 있어야 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "68067111"
   
  아래의 예에서는 템플릿을 사용하여 매핑 XSD 스키마를 기준으로 XPath 쿼리를 지정합니다.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. 고객 주소를 제한하여 특정 주소 형식만 반환  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>1\. 고객 주소를 제한하여 특정 주소 형식만 반환  
  이 예에서 데이터베이스에는 다음과 같은 두 개의 테이블이 있습니다.  
   
 -   Customer (CustomerID, CompanyName)  
@@ -55,7 +55,7 @@ ms.locfileid: "68067111"
   
  고객에 대해 배달 주소 및/또는 요금 청구서 주소가 존재할 수 있습니다. AddressType 열의 값은 Shipping과 Billing입니다.  
   
- 매핑 스키마입니다 합니다 **ShipTo** 스키마 특성 Addresses 관계에서 StreetAddress 열에 매핑됩니다. 이 특성에 대해 반환 되는 값은 shipping 주소만 지정 하 여 제한 된 **sql:-필드** 및 **sql:-값** 주석입니다. 마찬가지로, 합니다 **BillTo** 스키마 특성에는 고객의 요금 청구서 주소만 반환 합니다.  
+ **ShipTo** Schema 특성이 주소 관계의 StreetAddress 열에 매핑되는 매핑 스키마입니다. 이 특성에 대해 반환 되는 값은 **sql: limit 필드** 및 **sql: limit 값** 주석을 지정 하 여 배송 주소로만 제한 됩니다. 마찬가지로 **BillTo** 스키마 특성은 고객의 청구 주소만 반환 합니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68067111"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
-1.  두 테이블을 만들고 합니다 **tempdb** 데이터베이스:  
+1.  **Tempdb** 데이터베이스에 두 개의 테이블을 만듭니다.  
   
     ```  
     USE tempdb  
@@ -148,9 +148,7 @@ ms.locfileid: "68067111"
   
 5.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 결과입니다.  
   
@@ -174,7 +172,7 @@ ms.locfileid: "68067111"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 매핑 스키마는이 **OrderID** 주문 세부 정보에서 특성 orders 관계에서 OrderID 열에 매핑됩니다. 이 특성에 대해 반환 되는 값은 제한 된 값이 2.0000000e-001 (0.2)에 지정 된를 **할인** 사용 하 여 특성를 **sql:-필드** 및 **sql:-값** 주석입니다.  
+ 이는 주문 정보의 **orderid** 특성이 주문 관계의 orderid 열에 매핑되는 매핑 스키마입니다. 이 특성에 대해 반환 되는 값은 **sql:** 2.0000000 및 **sql: limit 값** 주석을 사용 하 여 할인율 (0.2) 값을 사용 하는 **할인율** 으로만 제한 됩니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -220,7 +218,7 @@ ms.locfileid: "68067111"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
-1.  두 테이블을 만들고 합니다 **tempdb** 데이터베이스:  
+1.  **Tempdb** 데이터베이스에 두 개의 테이블을 만듭니다.  
   
     ```  
     USE tempdb  
@@ -308,10 +306,10 @@ ms.locfileid: "68067111"
     </root>  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 및 nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [주석이 추가 된 XSD 스키마에서 쿼리를 사용 하 여 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [nchar 및 nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [SQL Server Native Client  설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+ [쿼리에서 &#40;주석이 추가 된 XSD 스키마 사용 SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

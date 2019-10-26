@@ -14,12 +14,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7235217173217b01b224e1772629dc3a7fc87ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908258"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909516"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,8 +47,6 @@ ms.locfileid: "67908258"
 7.  행 집합을 처리하고 **IRowset::Release** 메서드를 사용하여 해제합니다.  
   
 8.  저장 프로시저에서 받은 반환 코드와 출력 매개 변수 값을 처리합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>예제  
  이 예에서는 행 집합, 반환 코드 및 출력 매개 변수 처리를 보여 줍니다. 결과 집합은 처리되지 않습니다. 이 예제는 IA64에서 지원되지 않습니다.  
@@ -399,7 +397,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

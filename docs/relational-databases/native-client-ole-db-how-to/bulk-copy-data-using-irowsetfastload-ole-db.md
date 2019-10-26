@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad (OLE DB)를 통한 복사본 데이터를 대량으로 | Microsoft Docs
+title: IRowsetFastLoad를 사용 하 여 대량 데이터 복사 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d166dd4f08ef46a87b1dc467453056ad88d84c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106742"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906654"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68106742"
 
   이 예제에서는 레코드를 테이블에 대량 복사하기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다.  
   
- 소비자는 SQLOLEDB 공급자별 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정하여 대량 복사가 필요하다는 것을 SQLOLEDB에 알립니다. 데이터 원본의 속성 집합을 사용하여 소비자는 SQLOLEDB 세션을 만듭니다. 새 세션에 대 한 소비자 액세스 허용 **IRowsetFastLoad**합니다.  
+ 소비자는 SQLOLEDB 공급자별 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정하여 대량 복사가 필요하다는 것을 SQLOLEDB에 알립니다. 데이터 원본의 속성 집합을 사용하여 소비자는 SQLOLEDB 세션을 만듭니다. 새 세션을 사용 하면 소비자가 **IRowsetFastLoad**에 액세스할 수 있습니다.  
   
  **IRowsetFastLoad**를 사용하여 레코드를 테이블에 대량 복사하는 방법을 보여 주는 전체 예제가 있습니다. 이 예제에서는 10개의 레코드를 **IRFLTable** 테이블에 추가합니다. 이를 위해 데이터베이스에 **IRFLTable** 테이블을 만들어야 합니다.  
   
@@ -44,17 +44,15 @@ ms.locfileid: "68106742"
   
 2.  SQLOLEDB 공급자별 데이터 원본 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정합니다. 이 속성을 VARIANT_TRUE로 설정하면 새로 생성되는 세션에서 소비자가 **IRowsetFastLoad**에 액세스할 수 있습니다.  
   
-3.  요청 하는 세션을 만들 합니다 **IOpenRowset** 인터페이스입니다.  
+3.  **Iopenrowset** 인터페이스를 요청 하는 세션을 만듭니다.  
   
 4.  **IOpenRowset::OpenRowset**을 호출하여 대량 복사 작업을 통해 데이터를 복사할 테이블의 모든 행이 포함된 행 집합을 엽니다.  
   
-5.  필요한 바인딩을 수행 하 고 사용 하 여 접근자를 만듭니다 **iaccessor:: Createaccessor**합니다.  
+5.  필요한 바인딩을 수행 하 고 **IAccessor:: CreateAccessor**를 사용 하 여 접근자를 만듭니다.  
   
 6.  테이블에 복사할 데이터를 가져올 메모리 버퍼를 설정합니다.  
   
-7.  호출 **irowsetfastload:: Insertrow** 에서 데이터를 테이블로 대량 복사로 합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  **IRowsetFastLoad:: InsertRow** 를 호출 하 여 데이터를 테이블에 대량 복사 합니다.  
 
 ## <a name="example"></a>예제  
  이 예에서는 10개의 레코드를 IRFLTable 테이블에 추가합니다. 이를 위해 데이터베이스에 IRFLTable 테이블을 만들어야 합니다. 이 예제는 IA64에서 지원되지 않습니다.  

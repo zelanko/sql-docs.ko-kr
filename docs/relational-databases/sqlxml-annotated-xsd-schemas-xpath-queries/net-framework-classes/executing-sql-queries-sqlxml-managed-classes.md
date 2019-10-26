@@ -1,5 +1,5 @@
 ---
-title: SQL 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft 문서
+title: SQL 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ef6d18b4d302cd551db8e7e3e5ab7e96f077a20
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934279"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908471"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL 쿼리 실행(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 예에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
--   매개 변수 (SqlXmlParameter 개체)를 만듭니다.  
+-   매개 변수 만들기 (SqlXmlParameter 개체)  
   
--   SqlXmlParameter 개체의 속성 이름 및 값에 값을 지정 합니다.  
+-   SqlXmlParameter 개체의 속성 (이름 및 값)에 값을 할당 합니다.  
   
- 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수를 지정 (*성*), Value 속성만 설정 됩니다. 이 쿼리 매개 변수는 위치 때문에 이름이 필요 합니다. Name 속성이 설정 되지 않았습니다.  
+ 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수 (*LastName*)를 지정할 때 Value 속성만 설정 됩니다. Name 속성은 설정 되지 않습니다 .이 쿼리에서 매개 변수는 위치 이며 이름이 필요 하지 않기 때문입니다.  
   
- 기본적으로 SqlXmlCommand 개체의 CommandType 속성은 **Sql**. 명시적으로 설정되지 않았습니다.  
+ SqlXmlCommand 개체의 CommandType 속성은 기본적으로 **Sql**입니다. 명시적으로 설정되지 않았습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -99,11 +99,9 @@ public static int Main(String[] args)
   
 3.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  이 예를 테스트하려면 컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있어야 합니다.  
   
- SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 [CommandText 속성을 사용 하 여 템플릿 파일 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
+ SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 [CommandText 속성을 사용 하 여 템플릿 파일 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)을 참조 하세요.  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -124,7 +122,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>ExecuteToStream 사용  
- 기존의 스트림에 Stream 개체를 생성 하 고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 이전 예제에서 코드는 ExecuteToStream 메서드를 사용 하 여 여기 개정 되어:  
+ 기존 스트림이 있는 경우 Stream 개체를 만들고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 이전 예제의 코드는 ExecuteToStream 메서드를 사용 하도록 여기에서 수정 되었습니다.  
   
 ```  
 using System;  
@@ -157,6 +155,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod를 사용할 수 있습니다. 자세한 내용은 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod를 사용할 수도 있습니다. 자세한 내용은 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: VBScript를 사용 하는 SQL Server 서비스 고급 속성 수정 | Microsoft Docs
+title: VBScript를 사용 하 여 SQL Server 서비스 고급 속성 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90632548114577475735a6dfca9244c84c09ab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139443"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909196"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  이 섹션에서는 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행 되는 합니다.  
+  이 섹션에서는 컴퓨터에서 실행 중인 설치 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다.  
   
  이 코드 예제에서는 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스와 해당 버전을 나열합니다.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "68139443"
   
 5.  파일을 저장합니다.  
   
-6.  입력 하 여 스크립트 실행 **cscript test.vbs** 명령 프롬프트에서.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+6.  명령 프롬프트에서 **cscript** 를 입력 하 여 스크립트를 실행 합니다.  
 
 ## <a name="example"></a>예제  
   

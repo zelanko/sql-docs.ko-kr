@@ -1,5 +1,5 @@
 ---
-title: ADO를 사용 하 여 SQLXML 4.0 실행할 쿼리 | Microsoft 문서
+title: ADO를 사용 하 여 SQLXML 4.0 쿼리 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135326"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909127"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68135326"
   
  또는 MDAC(Microsoft Data Access Components) 2.6 이상에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 이용하여 쿼리를 실행하고 COM 기반 애플리케이션에서 SQLXML 4.0을 사용할 수 있습니다.  
   
- 이 항목에서는 Visual Basic Scripting Edition (VBScript) 응용 프로그램 (.vbs 파일 이름 확장명을 사용 하 여 스크립트)의 일부로 SQLXML 및 ADO를 사용 하는 방법을 보여 줍니다. SQLXML 4.0 설명서의 쿼리 예제를 다시 만들고 테스트하는 데 유용한 초기 설치 절차를 제공합니다.  
+ 이 항목에서는 Visual Basic Scripting Edition (VBScript) 응용 프로그램의 일부로 SQLXML 및 ADO를 사용 하는 방법을 보여 줍니다 (.vbs 파일 이름 확장명을 사용 하는 스크립트). SQLXML 4.0 설명서의 쿼리 예제를 다시 만들고 테스트하는 데 유용한 초기 설치 절차를 제공합니다.  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>SQLXML 4.0 테스트 스크립트 만들기  
  이 절차에서는 ADO 2.6 이상의 SQLXML ADO 확장을 이용하여 SQLXML 쿼리를 실행하는 데 사용할 수 있는 VBScript(.vbs) 파일인 Sqlxml4test.vbs를 만듭니다.  
@@ -107,8 +107,6 @@ ms.locfileid: "68135326"
   
 5.  SQLXML 4.0 테스트 스크립트를 사용하는 방법에 대한 다음 섹션의 지침을 따릅니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="using-the-sqlxml-40-test-script"></a>SQLXML 4.0 테스트 스크립트 사용  
  다음 절차에서는 Sqlxml4test.vbs 파일을 사용하여 이 설명서에서 제공하는 예제 쿼리를 테스트하는 방법에 대해 설명합니다.  
   
@@ -116,14 +114,14 @@ ms.locfileid: "68135326"
   
 1.  다음과 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 설치되어 있는지 확인합니다.  
   
-    1.  **시작** 메뉴에서 **설정**, 다음을 클릭 하 고 **컨트롤 패널**.  
+    1.  **시작** 메뉴에서 **설정**을 가리킨 다음 **제어판**을 클릭 합니다.  
   
-    2.  제어판에서 열고 **프로그램 추가 / 제거**  
+    2.  제어판에서 **프로그램 추가/제거** 를 엽니다.  
   
-    3.  현재 설치 된 프로그램 목록에서 확인 하는 **Microsoft SQL Server Native Client** 목록에 나타납니다.  
+    3.  현재 설치 된 프로그램 목록에서 **Microsoft SQL Server Native Client** 가 목록에 나타나는지 확인 합니다.  
   
         > [!NOTE]  
-        >  설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 참조 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+        >  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 해야 하는 경우 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
   
 2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인해야 하는 경우 Microsoft 웹 사이트(www.microsoft.com)에서 무료 다운로드로 제공되는 MDAC Component Checker 도구를 사용할 수 있습니다. 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
   

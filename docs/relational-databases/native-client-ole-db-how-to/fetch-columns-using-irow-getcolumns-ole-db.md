@@ -1,5 +1,5 @@
 ---
-title: 'Irow:: Getcolumns (OLE DB)를 사용 하 여 열 인출 | Microsoft Docs'
+title: 'IRow:: GetColumns를 사용 하 여 열 페치 (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30acc0027c2456ff0194280c28a0ef97c1383a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110335"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907606"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68110335"
 3.  IRow::GetColumns()를 실행하여 결과 행에 있는 하나 이상의 열을 인출합니다. 데이터를 인출하기 전에 실제 열 크기를 검색하려면 DBCOLUMNACCESS의 pData를 NULL로 설정합니다. 그러면 IRow::GetColumns() 호출에서 열 너비만 반환합니다. 두 번째 IRow::GetColumns() 호출에서는 데이터를 인출합니다.  
   
 4.  필요한 모든 열에 액세스할 때까지 IRow::GetColumns()를 실행합니다. 순서대로 열에 액세스해야 합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>예제  
  이 예제에서는 IRow 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스를 허용하는 방법을 보여 줍니다. 예에서는 다음을 보여 줍니다.  
@@ -522,7 +520,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

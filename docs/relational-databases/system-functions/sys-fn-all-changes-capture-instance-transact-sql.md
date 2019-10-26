@@ -1,5 +1,5 @@
 ---
-title: fn_all_changes_ @ no__t-0capture_instance @ no__t-1 (Transact-sql) | Microsoft Docs
+title: fn_all_changes_&lt;capture_instance&gt; (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c8dce82cd331e1cf35464fe7122521fcd3285fa
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251256"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909394"
 ---
-# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_ @ no__t-0capture_instance @ no__t-1 (Transact-sql)
+# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_&lt;capture_instance&gt; (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **모든 변경 내용** 쿼리 함수에 대 한 래퍼입니다. 이러한 함수를 만드는 데 필요한 스크립트는 sys.sp_cdc_generate_wrapper_function 저장 프로시저에 의해 생성됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  다음 옵션 중 하나를 사용할 수 있습니다.  
   
- 모두  
+ all  
  지정된 LSN 범위 내의 모든 변경을 반환합니다. 업데이트 작업으로 인해 발생하는 변경 내용의 경우 이 옵션을 사용하면 업데이트가 적용된 후의 새 값을 포함하는 행만 반환됩니다.  
   
  all update old  
@@ -83,15 +83,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|열 유형|설명|  
+|열 이름|열 유형|Description|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
 |__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|@column_list의 \< 열 >|**잠기기**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function에 대해 *column_list* 인수에서 식별 되는 열입니다.|  
-|__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 호출에 제공 된 인수 *row_filter_option* 의 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* = ' 모든 업데이트 이전 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
-|@update_flag_list의 \< 열 >|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. @No__t 64, _CDC_OPERATION이 ' ', ' I ', ' UO ' 인 경우 플래그는 항상 NULL로 설정 됩니다. @No__t 64, _CDC_OPERATION이 ' u n ' 이면 업데이트에서 해당 열에 대 한 변경 내용이 생성 되 면 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
+|@column_list에서 열 \<|**잠기기**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function에 대해 *column_list* 인수에서 식별 되는 열입니다.|  
+|__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 호출에 제공 된 인수 *row_filter_option* 의 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = ' a l l '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* = ' 모든 업데이트 이전 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
+|@update_flag_list에서 열 \<|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. \__CDC_OPERATION이 ' ', ' I ', ' UO ' 인 경우 플래그는 항상 NULL로 설정 됩니다. \__CDC_OPERATION이 ' u n ' 이면 업데이트에서 해당 열에 대 한 변경 내용을 생성 하는 경우 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>Remarks  
  Fn_all_changes_ < capture_instance > 함수는 fn_cdc_get_all_changes_ < capture_instance > 쿼리 함수의 래퍼로 사용 됩니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
   
  래퍼 함수는 자동으로 만들어지지 않습니다. 래퍼 함수를 만들려면 다음 두 작업을 수행해야 합니다.  
@@ -100,20 +100,18 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 2.  래퍼 함수를 실제로 만드는 스크립트를 실행합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  래퍼 함수를 사용 하면 사용자가 LSN 값 대신 **datetime** 값으로 제한 된 간격 내에서 발생 한 변경 내용을 체계적으로 쿼리할 수 있습니다. 래퍼 함수는 제공 된 **datetime** 값과 쿼리 함수의 인수로 내부적으로 필요한 LSN 값 사이에 필요한 모든 변환을 수행 합니다. 변경 데이터 스트림을 처리하기 위해 래퍼 함수가 직렬로 사용된 경우 특정 호출과 연결된 간격의 @end_time 값이 후속 호출과 연결된 간격의 @start_time 값으로 제공된다는 규칙을 준수하면 데이터가 손실되거나 반복되지 않습니다.  
   
  스크립트를 만들 때 @closed_high_end_point 매개 변수를 사용하면 지정된 쿼리 창에서 닫힌 상한이나 열린 상한을 지원하는 래퍼를 생성할 수 있습니다. 즉, 커밋 시간이 추출 간격의 상한과 같은 항목을 간격에 포함할지 여부를 결정할 수 있습니다. 기본적으로 상한이 포함됩니다.  
   
- **모든 변경 내용** 래퍼 함수에서 반환 되는 결과 집합은 변경 테이블의 __ $ start_lsn 및 \_ @ no__t-2 $ seqval 열을 각각 -3 _CDC_STARTLSN 및 @no__t -4 _cdc_seqval의 @no__t 열로 반환 합니다. 래퍼가 생성 될 때 *\@column_list* 매개 변수에 표시 된 추적 된 열만 사용 하 여이를 따릅니다. *@No__t-1column_list* 가 NULL 인 경우 추적 된 모든 원본 열이 반환 됩니다. 원본 열 뒤에는 작업을 식별 하는 1 또는 2 문자 열인 작업 열 @no__t 64, _CDC_OPERATION이 옵니다.  
+ **모든 변경 내용** 래퍼 함수에서 반환 되는 결과 집합은 변경 테이블의 __ $ start_lsn 및 \_\_$seqval 열을 각각 \__CDC_STARTLSN 및 \__CDC_SEQVAL 열로 반환 합니다. 래퍼가 생성 될 때 *\@column_list* 매개 변수에 나타난 추적 된 열만 사용 하 여이를 따릅니다. Column_list이 NULL 인 *\@* 경우 추적 된 모든 원본 열이 반환 됩니다. 원본 열 뒤에는 작업을 식별 하는 한 문자 또는 두 문자 열인 작업 열이 \_.  
   
- 그런 다음 @update_flag_list 매개 변수에 식별된 각 열에 대한 결과 집합에 비트 플래그가 추가됩니다. __CDC_OPERATION이 ', ' I ' 또는 ' UO ' 이면 **모든 변경** 래퍼의 비트 플래그는 항상 NULL이 됩니다. 64, _CDC_OPERATION이 ' u n ' 인 @no__t 경우 플래그는 업데이트 작업으로 인해 열이 변경 되었는지 여부에 따라 1 또는 0으로 설정 됩니다.  
+ 그런 다음 @update_flag_list 매개 변수에 식별된 각 열에 대한 결과 집합에 비트 플래그가 추가됩니다. __CDC_OPERATION이 ', ' I ' 또는 ' UO ' 이면 **모든 변경** 래퍼의 비트 플래그는 항상 NULL이 됩니다. \__CDC_OPERATION이 ' u n ' 인 경우 플래그는 업데이트 작업으로 인해 열이 변경 되었는지 여부에 따라 1 또는 0으로 설정 됩니다.  
   
  변경 데이터 캡처 구성 템플릿 ' Schema 용 CDC 래퍼 Tvf 인스턴스화 '는 sp_cdc_generate_wrapper_function 저장 프로시저를 사용 하 여 스키마에 정의 된 쿼리 함수의 모든 래퍼 함수에 대 한 CREATE 스크립트를 가져오는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_cdc_generate_wrapper_function &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+## <a name="see-also"></a>관련 항목:  
+ [sp_cdc_generate_wrapper_function &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

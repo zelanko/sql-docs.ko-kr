@@ -13,14 +13,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75402ddc6c04ef9487f544fb070a143138cf66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec168903543e42dff34d03086949bee79829f328
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110121"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909537"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD 커서 가져오기
+# <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD 커서 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -31,15 +31,13 @@ ms.locfileid: "68110121"
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
-### <a name="to-obtain-fastforward-cursor"></a>FAST_FORWARD 커서를 가져오려면  
+### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD 커서를 가져오려면  
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   
 2.  행 집합 속성 DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT 및 DBPROP_OWNUPDATEDELETE를 VARIANT_TRUE로 설정합니다.  
   
 3.  명령을 실행합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>예제  
  다음 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정된 후에 SELECT 문이 실행되어 AdventureWorks 데이터베이스에 있는 Purchasing.Vendor 테이블의 Name 열이 검색되고 표시됩니다. 이 예제는 IA64에서 지원되지 않습니다.  

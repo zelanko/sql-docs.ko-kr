@@ -1,5 +1,5 @@
 ---
-title: 'sql: mapped (SQLXML 4.0) | Microsoft Docs'
+title: 'sql: 매핑됨 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055415"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907134"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 대량 로드 프로세스를 **sql: 매핑된** 예상 있는 XSD 스키마에서 주석 인 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
+  XML 대량 로드는 XSD 스키마의 **sql: mapped** 주석을 예상 대로 처리 합니다. 즉, 매핑 스키마가 모든 요소나 특성에 대해 **sql: mapped = "false"** 를 지정 하는 경우 xml 대량 로드는 연결 된 데이터를 해당 열.  
   
- XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 사용 하 여 XSD 스키마에 주석이 지정 되어 **sql: 매핑된 = "false"** ). 이러한 열은 사용 하 여 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
+ XML 대량 로드는 매핑되지 않은 요소 및 특성 (스키마에 설명 되어 있지 않거나 **sql: mapped = "false"** 로 XSD 스키마에 주석이 추가 되어 있기 때문)을 무시 합니다. 이러한 열이 **sql: 오버플로-필드**를 사용 하 여 지정 된 경우 매핑되지 않은 모든 데이터는 오버플로 열로 이동 합니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055415"
 </xsd:schema>  
 ```  
   
- 때문에 합니다 **HomePhone** 특성을 지정 **sql: 매핑된 = "false"** , XML 대량 로드가이 특성의 해당 열에 매핑되지 않는 경우. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
+ **HomePhone** 특성은 **sql: mapped = "false"** 를 지정 하므로 XML 대량 로드는이 특성을 해당 열에 매핑하지 않습니다. XSD 스키마는 XML 대량 로드에서이 소비 되지 않은 데이터를 저장 하는 오버플로 열 (**OverflowColumn**)을 식별 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
-1.  테이블을 만듭니다.는 **tempdb** 데이터베이스:  
+1.  **Tempdb** 데이터베이스에 다음 테이블을 만듭니다.  
   
     ```  
     USE tempdb  
@@ -85,8 +85,6 @@ ms.locfileid: "68055415"
     ```  
   
 4.  XML 대량 로드를 실행하려면 이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VBScript(Visual Basic Scripting Edition) 예를 Sample.vbs로 저장한 다음 이 스크립트를 실행합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

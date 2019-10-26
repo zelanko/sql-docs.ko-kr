@@ -1,5 +1,5 @@
 ---
-title: 책갈피 (OLE DB)를 사용 하 여 행 검색 | Microsoft Docs
+title: 책갈피를 사용 하 여 행 검색 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a21ebe62cb9a62172ffc63e15ced0deb6a23b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908166"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908043"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>책갈피를 사용하여 행 검색(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "67908166"
 4.  책갈피로 사용할 열에 대해 바인딩 구조의 **dwFlag** 필드를 DBCOLUMNSINFO_ISBOOKMARK 플래그로 설정합니다.  
   
 5.  **IRowsetLocate::GetRowsAt** 을 사용하여 책갈피에서의 오프셋으로 지정된 행부터 시작하여 행을 인출합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>예제  
  이 예제에서는 책갈피를 사용하여 행을 인출하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
