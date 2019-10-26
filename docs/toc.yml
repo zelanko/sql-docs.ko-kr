@@ -10301,8 +10301,12 @@
               href: linux/sql-server-linux-release-notes-2019.md
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-        - name: 버전 및 지원되는 기능
-          href: linux/sql-server-linux-editions-and-components-2017.md
+        - name: 버전 및 기능
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-editions-and-components-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-editions-and-components-2017.md
         - name: FAQ
           href: linux/sql-server-linux-faq.md
     - name: 빠른 시작
