@@ -1,7 +1,7 @@
 ---
 title: Spark 작업을 사용하여 데이터 수집
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 사용 하 여의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 사용 하 여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653291"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916008"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀로 데이터 수집
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 Spark 작업을 사용 하 여의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] [데이터 풀](concept-data-pool.md) 에 데이터를 로드 하는 방법을 보여 줍니다. 
+이 자습서에서는 Spark 작업을 사용 하 여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 [데이터 풀](concept-data-pool.md) 에 데이터를 로드 하는 방법을 보여 줍니다. 
 
-이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 데이터 풀에 외부 테이블을 만듭니다.
@@ -77,49 +77,54 @@ ms.locfileid: "69653291"
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 
-다음 단계는 스토리지 풀(HDFS)에서 데이터 풀에 만든 외부 테이블로 웹 클릭 스트림 데이터를 로드하는 Spark 스트리밍 작업을 만드는 것입니다.
+다음 단계는 스토리지 풀(HDFS)에서 데이터 풀에 만든 외부 테이블로 웹 클릭 스트림 데이터를 로드하는 Spark 스트리밍 작업을 만드는 것입니다. 이 데이터는 [빅 데이터 클러스터에 샘플 데이터를 로드](tutorial-load-sample-data.md)하는/clickstream_data에 추가 되었습니다.
 
 1. Azure Data Studio에서 빅 데이터 클러스터의 마스터 인스턴스에 연결합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)을 참조하세요.
 
-1. **서버** 창에서 HDFS/Spark 게이트웨이 연결을 두 번 클릭합니다. 그런 다음, **새 Spark 작업**을 선택합니다.
+2. 새 노트북을 만들고 Spark |를 선택 합니다. 커널로 Scala.
 
-   ![새 Spark 작업](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Spark 수집 작업 실행
+   1. Spark-SQL 커넥터 매개 변수 구성
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. **새 작업** 창의 **작업 이름** 필드에 이름을 입력합니다.
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. **Jar/py 파일** 드롭다운에서 **HDFS**를 선택합니다. 다음과 같은 jar 파일 경로를 입력합니다.
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Spark 작업 정의 및 실행
+      * 각 작업은 readStream 및 writeStream의 두 부분으로 구성 됩니다. 아래에서 위에 정의 된 스키마를 사용 하 여 데이터 프레임을 만든 다음 데이터 풀의 외부 테이블에 기록 합니다.
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. **주 클래스** 필드에 `FileStreaming`를 입력합니다.
-
-1. **인수** 필드에 다음 텍스트를 입력하고 `<your_password>` 자리 표시자에 SQL Server 마스터 인스턴스의 암호를 지정합니다. 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   다음 표에서는 각 인수를 설명합니다.
-
-   | 인수 | 설명 |
-   |---|---|
-   | 서버 이름(server name) | 테이블 스키마를 읽는 데 사용할 SQL Server |
-   | port number | SQL Server가 수신 대기 중인 포트(기본값 1433) |
-   | username | SQL Server 로그인 사용자 이름 |
-   | password | SQL Server 로그인 암호 |
-   | 데이터베이스 이름 | 대상 데이터베이스 |
-   | external table name | 결과에 사용할 테이블 |
-   | Source directory for streaming | “hdfs:///clickstream_data”와 같은 전체 URI여야 합니다. |
-   | input format | “csv”, “parquet” 또는 “json”일 수 있습니다. |
-   | enable checkpoint | true 또는 false |
-   | timeout | 종료하기까지 작업을 실행할 시간(밀리초) |
-
-1. **제출**을 눌러 작업을 제출합니다.
-
-   ![Spark 작업 제출](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## <a name="query-the-data"></a>데이터 쿼리
 
 다음 단계에서는 Spark 스트리밍 작업이 HDFS에서 데이터 풀로 데이터를 로드하는 방법을 보여 줍니다.
@@ -138,7 +143,24 @@ ms.locfileid: "69653291"
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. Spark에서 데이터를 쿼리할 수도 있습니다. 예를 들어 아래 코드는 테이블의 레코드 수를 인쇄 합니다.
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## <a name="clean-up"></a>정리
 
 다음 명령을 사용하여 이 자습서에서 만든 데이터베이스 개체를 제거합니다.
