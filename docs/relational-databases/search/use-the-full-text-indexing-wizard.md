@@ -23,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095278"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903817"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68095278"
 4. **단어 분리기용 언어.** 드롭다운 목록에서 언어를 선택합니다. 여기에서 선택한 언어는 인덱스에 올바른 단어 분리기를 식별하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 단어 분리기를 사용하여 전체 텍스트 인덱싱된 데이터의 단어 경계를 식별합니다.  
   
 5.  **유형 열.** 전체 텍스트 인덱싱되는 열의 문서 유형을 보관하는 열 이름을 선택합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **참고:** **유형 열**은 **사용 가능한 열** 열에 이름이 지정된 열이 **varbinary(max)** 또는 **image** 유형일 경우에만 사용할 수 있습니다.  
   

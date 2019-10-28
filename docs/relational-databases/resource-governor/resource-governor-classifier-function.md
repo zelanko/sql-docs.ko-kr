@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ae4caa882a2618ea57c84a33e8c9cb7e87db7c0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099217"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903922"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68099217"
 2.  LOGON 트리거 실행  
   
 3.  분류  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  분류가 시작되면 리소스 관리자는 분류자 함수를 실행하고 이 함수에서 반환된 값을 사용하여 적절한 작업 그룹으로 요청을 보냅니다.  
   

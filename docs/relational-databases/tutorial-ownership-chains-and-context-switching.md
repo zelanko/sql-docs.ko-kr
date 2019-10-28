@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138385"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907000"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>자습서: 소유권 체인 및 컨텍스트 전환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,6 @@ ms.locfileid: "68138385"
 2.  구매 주문별로 데이터에 액세스하는 저장 프로시저 만들기   
 3.  저장 프로시저를 통해 데이터 액세스  
 4.  환경 다시 설정  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.
 

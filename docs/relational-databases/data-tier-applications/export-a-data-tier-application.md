@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176348"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904177"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "70176348"
 1.  내보내기를 수행하면 DAC 추출 시 DAC 패키지 파일에 DAC 정의가 작성되듯이 내보내기 파일(BACPAC 파일)에 DAC 정의가 작성됩니다. 내보낸 DAC 정의에는 현재 데이터베이스의 모든 개체가 포함됩니다. DAC에서 원래 배포된 데이터베이스에 대해 내보내기 프로세스를 실행할 때 배포 후에 데이터베이스를 직접 변경한 경우 내보낸 정의는 원본 DAC에 정의된 개체 집합이 아니라 데이터베이스의 개체 집합과 일치합니다.  
   
 2.  보내기에서는 데이터베이스의 모든 테이블에서 데이터를 대량 복사한 다음 내보내기 파일에 통합합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  내보내기 프로세스에서는 DAC 버전을 1.0.0.0으로 설정하고 내보내기 파일의 DAC 설명을 빈 문자열로 설정합니다. 데이터베이스가 DAC에서 배포된 경우에는 내보내기 파일의 DAC 정의에 원본 DAC에 지정된 것과 동일한 이름이 포함되고, 그렇지 않은 경우에는 DAC 이름이 데이터베이스 이름으로 설정됩니다.  
   

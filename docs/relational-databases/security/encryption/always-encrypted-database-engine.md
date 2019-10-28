@@ -16,17 +16,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043193"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903166"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![상시 암호화](../../../relational-databases/security/encryption/media/always-encrypted.png "상시 암호화")  
+  ![항상 암호화](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  상시 암호화는 신용 카드 번호나 주민 등록 번호(예: 미국 사회 보장 번호)와 같이 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 기능입니다. Always Encrypted를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다. 온-프레미스 데이터베이스 관리자, 클라우드 데이터베이스 관리자 또는 기타 높은 권한을 가지고 있지만 인증되지 않은 사용자가 암호화된 데이터에 액세스할 수 없도록 함으로써 상시 암호화는 고객이 직접 제어할 수 없는 중요한 데이터를 안전하게 저장하도록 해줍니다. 이를 통해 조직에서는 미사용 데이터와 사용 중인 데이터를 Azure에 스토리지하기 위해 암호화하거나, 온-프레미스 데이터베이스 관리를 타사에 위임할 수 있도록 하거나, 자체 DBA 직원에 대한 보안 정보 사용 허가 요구 사항을 줄일 수 있습니다.  
   
@@ -82,8 +82,6 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 1. SSN 열에서 데이터를 선택하고, 애플리케이션에 결과 집합으로 저장합니다. 이렇게 하면 애플리케이션(클라이언트 *드라이버*)이 열 암호를 해독할 수 있습니다.
 2. 결과 집합에서 SQL Server로 데이터를 삽입합니다. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > 이 시나리오에서 대상 열이 암호화된 데이터를 허용하지 않는 일반 varchar이기 때문에 데이터는 서버에 다시 보낼 때 암호화됩니다. 

@@ -13,12 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098269"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903885"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ ms.locfileid: "68098269"
 동의어 사전 쿼리는 언어별 동의어 사전과 전역 동의어 사전을 모두 사용합니다.
 1.  이 쿼리는 먼저 언어별 파일을 조회한 다음 이미 로드되지 않은 경우 처리를 위해 해당 파일을 로드합니다. 이 쿼리는 동의어 사전 파일의 확장 집합 규칙과 교체 집합 규칙으로 지정된 언어별 동의어를 포함하도록 확장됩니다. 
 2.  그런 다음 전역 동의어 사전에 대해 이러한 단계가 반복됩니다. 그러나 용어가 이미 언어별 동의어 사전 파일에서 일치 항목의 일부인 경우 해당 용어는 전역 동의어 사전에서 일치 항목으로 적합하지 않습니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> 동의어 사전 파일의 구조  
  각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 분음 부호 설정, 확장 집합, 교체 집합을 정의하는 자식 요소의 샘플이 포함된 `<thesaurus>` 요소에 정의됩니다.

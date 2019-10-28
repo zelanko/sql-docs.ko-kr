@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239405"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906973"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +29,6 @@ ms.locfileid: "72239405"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치하거나 [Azure SQL 가상 머신](/azure/sql-database/sql-database-managed-instance-configure-vm) 또는 [지점 및 사이트 간](/azure/sql-database/sql-database-managed-instance-configure-p2s) 연결을 통해 설정된 연결을 사용하여 [관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance-get-started)를 배포합니다.
 - 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="create-azure-blob-container"></a>Azure Blob 컨테이너 만들기
 컨테이너에서는 그룹화된 blob 집합을 제공합니다. 모든 blob는 컨테이너에 있어야 합니다. 스토리지 계정은 개수에 제한 없이 컨테이너를 포함할 수 있지만 적어도 하나는 포함해야 합니다. 컨테이너에는 개수에 제한 없이 blob를 저장할 수 있습니다. 

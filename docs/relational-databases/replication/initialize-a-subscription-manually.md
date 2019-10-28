@@ -15,12 +15,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37aecafd3506d2cd47b7b4efd93a89f50ce4ec2d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768537"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905205"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ ms.locfileid: "68768537"
 1.  스키마와 데이터가 구독 데이터베이스에 복사되었는지 확인합니다.  
   
 2.  새 구독 마법사의 **구독 초기화** 페이지에 있는 **초기화** 확인란의 선택을 취소합니다. 복제 개체와 메타데이터만 복사해야 하는 각 구독에 대해서 이 작업을 수행합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 수동으로 게시를 초기화할 수 있습니다.  

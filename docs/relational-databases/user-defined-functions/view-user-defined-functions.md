@@ -19,12 +19,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8390690ebbdef66d0a5c754e7a0e5db2f31437de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123516"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905514"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,48 +70,46 @@ ms.locfileid: "68123516"
   
 4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
+     다음 속성이 **함수 속성 –** _function_name_ 대화 상자에 표시됩니다.  
   
-     **Database**  
-     The name of the database containing this function.  
+     **데이터베이스 백업**  
+     이 함수를 포함하는 데이터베이스의 이름입니다.  
   
      **Server**  
-     The name of the current server instance.  
+     현재 서버 인스턴스의 이름입니다.  
   
-     **User**  
-     The name of the user of this connection.  
+     **사용자**  
+     이 연결을 사용하는 사용자의 이름입니다.  
   
-     **Created date**  
-     Displays the date the function was created.  
+     **만든 날짜**  
+     함수를 만든 날짜를 표시합니다.  
   
-     **Execute As**  
-     Execution context for the function.  
+     **다음으로 실행**  
+     함수에 대한 실행 컨텍스트입니다.  
   
-     **Name**  
-     The name of the current function.  
+     **이름**  
+     현재 함수의 이름입니다.  
   
-     **Schema**  
-     Displays the schema that owns the function.  
+     **스키마**  
+     함수를 소유하는 스키마를 표시합니다.  
   
-     **System object**  
-     Indicates whether the function is a system object. Values are True and False.  
+     **시스템 개체**  
+     함수가 시스템 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **ANSI NULL**  
+     개체가 ANSI NULL 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-     **Encrypted**  
-     Indicates whether the function is encrypted. Values are True and False.  
+     **암호화됨**  
+     함수를 암호화하는지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
-     **Function Type**  
-     The type of user defined function.  
+     **함수 유형**  
+     사용자 정의 함수의 유형입니다.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **따옴표 붙은 식별자**  
+     개체가 따옴표 붙은 식별자 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-     **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **스키마 바운드**  
+     스키마 바운드 함수인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다. 스키마 바운드 함수에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)의 SCHEMABINDING 섹션을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

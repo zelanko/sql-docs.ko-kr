@@ -15,12 +15,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d60e0f6d3aab14f2aef73e63d0fdc0077534ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909619"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906306"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,8 +70,6 @@ ms.locfileid: "67909619"
 7.  **닫기**를 클릭합니다.  
   
 8.  **파일** 메뉴에서 _table name_ **저장**을 클릭합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   

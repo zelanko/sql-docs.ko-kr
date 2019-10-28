@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fab59450a2403eadc080a5f246c0911b164eba3a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710815"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904630"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>아티클 유형 정의(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "71710815"
 2.  `logbased manualboth` 및 `logbased manualfilter` 아티클의 경우 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행하여 행 필터링된 아티클에 대한 필터링 저장 프로시저를 생성합니다. 자세한 내용은 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
 3.  `logbased manualboth`, `logbased manualview` 및 `logbased manualfilter` 아티클의 경우 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 뷰 또는 인덱싱된 뷰 아티클을 게시하려면  
   

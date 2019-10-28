@@ -1,7 +1,7 @@
 ---
 title: SQL Server 설명서 탐색 팁
 description: SQL Server 기술 문서 탐색을 위한 팁과 트릭 - 허브 페이지, 목차, 헤더, 이동 경로 사용 방법 및 버전 필터 사용 방법 등을 설명합니다.
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621755"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904307"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
 
@@ -93,6 +93,6 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ## <a name="next-steps"></a>다음 단계
 
-- [SQL Server 기술 설명서](sql-server-technical-documentation.md)를 시작하세요. 
+- [SQL Server 기술 설명서](index.yml)를 시작하세요.
 - SQL Server에 대한 피드백 제출 또는 도움말에 대한 자세한 내용은 [도움말 보기](sql-server-get-help.md) 페이지를 참조하세요. 
 - 모든 빠른 시작 및 자습서에 빠르게 액세스하려면 [SQL Server 교육 센터](../lp/sql-server/sql-education-center.md)로 이동하세요.

@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5115149afbcfb2796c8e821bd22c84e72eb2315
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082755"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903832"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하�
 전체 텍스트 검색을 설정하는 두 가지 기본 단계는 다음과 같습니다.  
 1.  전체 텍스트 카탈로그를 만듭니다.  
 2.  검색할 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만듭니다. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 각 전체 텍스트 인덱스는 전체 텍스트 카탈로그에 속해야 합니다. 각 전체 텍스트 인덱스에 대해 별도의 텍스트 카탈로그를 만들거나 지정된 카탈로그에 여러 전체 텍스트 인덱스를 연결할 수 있습니다. 전체 텍스트 카탈로그는 가상 개체이며 어떠한 파일 그룹에도 속하지 않습니다. 이 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다.
 

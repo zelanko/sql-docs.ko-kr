@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228458"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906068"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>데이터베이스 메일로 테스트 이메일 보내기  
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "70228458"
     sent_status 열은 테스트 이메일 메시지를 보냈는지 여부를 표시합니다.
 
 1. 오류가 발생한 경우 다음 명령문을 실행하여 오류 메시지를 확인합니다.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

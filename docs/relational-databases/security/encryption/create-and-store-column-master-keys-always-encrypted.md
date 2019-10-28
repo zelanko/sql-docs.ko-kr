@@ -11,12 +11,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e5fd4eaf56bebb430d2d2153038a7128d34398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049986"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902959"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저�
 7.  **스냅인 추가/제거** 대화 상자에서 **확인**을 클릭합니다.
 8.  **인증서** 스냅인의 **인증서 &gt; 개인** 폴더에서 인증서를 찾은 다음 인증서를 마우스 오른쪽 단추로 클릭하고 **모든 태스크**를 가리킨 다음 **프라이빗 키 관리**를 클릭합니다.
 9.  필요한 경우 **보안** 대화 상자에서 사용자 계정에 대한 읽기 권한을 추가합니다.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 열 마스터 키 만들기
 

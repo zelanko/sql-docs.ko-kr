@@ -10,12 +10,12 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 702bc2a5dd5578bff85d7e386e2abe3a4a0a658f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050084"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903015"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ Import-Module "SqlServer"
 상시 암호화 cmdlet 중 일부는 데이터베이스의 데이터 또는 메타데이터로 작업하므로 먼저 데이터베이스에 연결해야 합니다. SqlServer 모듈을 사용하여 상시 암호화를 구성할 때 데이터베이스에 연결하는 다음 두 가지 권장 방법이 있습니다. 
 1. SQL Server PowerShell을 사용하여 연결합니다.
 2. SMO(SQL Server 관리 개체)를 사용하여 연결합니다.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>SQL Server PowerShell 사용
 

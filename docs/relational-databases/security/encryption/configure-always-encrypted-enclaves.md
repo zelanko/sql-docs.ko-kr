@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27f78de54735559365f771aaee3669b8f08856c7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892712"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902994"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
 
@@ -31,8 +31,6 @@ ms.locfileid: "68892712"
 4. SQL Server 인스턴스에서 Enclave 형식을 구성합니다.
 5. Enclave 사용 키를 프로비전합니다.
 6. 중요한 데이터가 포함된 열을 암호화합니다.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)을 참조하세요.

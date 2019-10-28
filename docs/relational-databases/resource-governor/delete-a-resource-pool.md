@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125033"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903933"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ ms.locfileid: "68125033"
   
 3.  **개체 삭제** 창의 **삭제할 개체** 목록에 리소스 풀이 나열됩니다. 리소스 풀을 삭제하려면 **확인**을 클릭합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
+    >  삭제하려고 하는 리소스 풀에 작업 그룹이 들어 있으면 해당 리소스 풀을 삭제할 수 없습니다.  
   
 ##  <a name="DelRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 삭제  
  **Transact-SQL을 사용하여 리소스 풀을 삭제하려면**  

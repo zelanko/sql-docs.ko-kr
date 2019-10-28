@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 461c222e6558ca2c003abc7920e1479c050df89e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106720"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903905"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "68106720"
 3.  이 페이지의 필드에 대한 설명을 보려면 [리소스 관리자 속성](#RGProp)을 참조하세요.  
   
 4.  변경 사항을 저장하려면 **확인**을 클릭합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGProp"></a> Resource Governor properties  
  **분류자 함수 이름**  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be669093b3899744f8019eeb7c965b48dc4665bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50cdd9031d309a1bbfd6f4229749b5cc5de56125
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009183"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906882"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>정책 기반 관리 패싯의 속성 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,4 @@ ms.locfileid: "68009183"
 5.  보려는 속성이 지정된 패싯을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **패싯 속성 –** _facet_name_ 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [패싯 속성 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [패싯 속성 대화 상자, 종속 정책 페이지](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md) 및 [패싯 속성 대화 상자, 종속 조건 페이지](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)를 참조하세요.  
   
 6.  완료되면 **닫기**를 클릭합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

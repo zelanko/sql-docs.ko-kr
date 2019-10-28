@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8e8c1f982bfc912cac76207d81178037fb320f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007051"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906554"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -40,8 +40,6 @@ DBCC CHECKDB 프로세스는 다음 세 단계로 구성됩니다.
 2.  시스템 테이블의 일관성을 검사합니다. 이는 몇몇 필수적인 시스템 기본 테이블에 대해 DBCC CHECKTABLE을 실행하는 것과 같습니다.  
   
 3.  데이터베이스 일관성 검사를 완료합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 MSSQLEngine_7995 오류는 2단계에서 발생하며 DBCC CHECKDB에서 명령으로 복구할 수 없거나 REPAIR가 지정되지 않은 오류를 발견했음을 나타냅니다. 검사 중인 시스템 기본 테이블에 데이터베이스의 모든 개체에 대한 메타데이터가 저장되어 있거나 시스템 기본 테이블이 손상되어 DBCC CHECKDB는 3단계로 계속 진행할 수 없습니다.  
   

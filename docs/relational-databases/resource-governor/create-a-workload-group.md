@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136876"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903961"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68136876"
 6.  기본 설정에서 변경하려는 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
 7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

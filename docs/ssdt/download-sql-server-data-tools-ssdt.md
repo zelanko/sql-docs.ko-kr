@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545085"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807447"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 
@@ -32,12 +32,12 @@ Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reportin
 Visual Studio 2019에 대한 라이선스가 이미 있으면 다음을 수행합니다.
 
 - SQL 데이터베이스 프로젝트의 경우 Visual Studio용 데이터 스토리지 및 처리 워크로드를 설치합니다.
-- Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 마켓플레이스에서 적절한 [확장](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치합니다.
+- Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 마켓플레이스에서 적절한 [확장](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치합니다.
 
 Visual Studio 2019에 대한 라이선스가 아직 없으면 다음을 수행합니다.
 
 - [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 설치합니다.
-- 필요에 따라 Analysis Services, Integration Services 또는 Reporting Services [확장명](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치합니다.
+- 필요에 따라 Analysis Services, Integration Services 또는 Reporting Services [확장명](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치합니다.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Visual Studio 2017용 SSDT의 변경 내용
 
