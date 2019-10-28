@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033638"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908864"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033638"
 2.  페이지 체크섬이 있는지 여부에 관계없이 BACKUP은 백업 스트림에 대해 별도의 백업 체크섬을 생성합니다. 복원 작업은 경우에 따라 백업 체크섬을 사용하여 백업이 손상되지 않았는지 확인할 수 있습니다. 백업 체크섬은 데이터베이스 페이지가 아니라 백업 미디어에 저장됩니다. 백업 체크섬은 복원할 때 사용되기도 합니다.  
   
 3.  백업 세트의 플래그는 **msdb..backupset** 의 **has_backup_checksums**열에서 포함 백업 체크섬으로 지정됩니다. 자세한 내용은 [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)를 참조하세요.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  복원 작업 중 백업 미디어에 백업 체크섬이 있을 경우 기본적으로 RESTORE 문과 RESTORE VERIFYONLY 문은 백업 체크섬과 페이지 체크섬을 모두 확인합니다. 백업 체크섬이 없을 경우 복원 작업은 확인 없이 진행됩니다. 백업 체크섬이 없으면 복원이 페이지 체크섬을 안정적으로 확인할 수 없기 때문입니다.  
   

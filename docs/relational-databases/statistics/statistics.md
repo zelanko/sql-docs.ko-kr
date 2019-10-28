@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934113"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907075"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "67934113"
 
 다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "히스토그램") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 위의 각 히스토그램 단계를 살펴보면 다음과 같습니다.
 -   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS 옵션  
+#### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 옵션  
  자동 통계 업데이트 옵션 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics)가 ON으로 설정되면 쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음, 쿼리에서 사용될 때 이를 업데이트합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음, 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.  
   
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이하 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 변경된 행 비율에 따라 임계값을 사용합니다. 테이블의 행 수에 관계없이 이러한 방식이 사용됩니다. 임계값은 다음과 같습니다.
@@ -122,7 +122,7 @@ AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 작성된 통계 개체, �
  
 AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](https://support.microsoft.com/help/2754171)를 참조하세요.
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  비동기 통계 업데이트 옵션인 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)는 쿼리 최적화 프로그램이 동기 또는 비동기 통계 업데이트를 사용하는지를 결정합니다. 기본적으로 비동기 통계 업데이트 옵션은 OFF이며 쿼리 최적화 프로그램은 통계를 동기적으로 업데이트합니다. AUTO_UPDATE_STATISTICS_ASYNC 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 작성된 통계에 적용됩니다.  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
 1.  인덱스가 만들어진 경우 쿼리 최적화 프로그램에서 테이블 또는 뷰의 인덱스에 대한 통계를 작성합니다. 이러한 통계는 인덱스의 키 열에 대해 만들어집니다. 인덱스가 필터링된 인덱스인 경우 쿼리 최적화 프로그램은 필터링된 인덱스로 지정된 행의 동일한 하위 집합에 대해 필터링된 통계를 작성합니다. 필터링된 인덱스에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md) 및 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
 2.  [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON이면 쿼리 최적화 프로그램은 쿼리 조건자의 단일 열에 대한 통계를 작성합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 대부분의 쿼리에서 통계를 만드는 두 가지 방법을 통해 고품질의 쿼리 계획을 만들 수 있습니다. 경우에 따라서 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 추가 통계를 작성하여 쿼리 계획을 향상시킬 수 있습니다. 인덱스 또는 단일 열에 대해 통계를 작성할 때, 이러한 추가 통계를 통해 쿼리 최적화 프로그램에 설명되지 않은 통계 상관 관계를 캡처할 수 있습니다. 애플리케이션에 테이블 데이터의 추가 통계 상관 관계를 포함할 수 있으며 이를 통계 개체로 계산하는 경우 쿼리 최적화 프로그램에서 쿼리 계획을 향상하도록 할 수 있습니다. 예를 들어 데이터 행의 하위 집합에 대한 필터링된 통계 또는 쿼리 조건자 열에 대한 여러 열 통계는 쿼리 계획을 향상시킬 수 있습니다.  
   

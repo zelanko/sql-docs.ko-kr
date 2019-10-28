@@ -1,6 +1,6 @@
 ---
 title: SQL 설명서 버전 관리 시스템| Microsoft Docs
-ms.date: 08/09/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c00dbad924f9a3f327593a5c377c807ef646a3b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911295"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907946"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
@@ -166,7 +166,7 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
     - [SQL Server 2014 설명서](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
-    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016)
+    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/index.yml?view=sql-server-2016)
 
 ## <a name="see-also"></a>관련 항목:
 

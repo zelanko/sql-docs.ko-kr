@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72518002"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909317"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -134,8 +134,6 @@ SQL Server 2017에서 이 쿼리의 실행 계획(호환성 수준 140 및 그 �
 1. SQL Server는 `CUSTOMER` 및 `ORDERS` 간의 암시적 조인을 추론하며 조인 연산자를 통해 이것이 명시적이 됩니다.
 2. SQL Server도 암시적 `GROUP BY O_CUSTKEY on ORDERS`를 추론하며 IndexSpool + StreamAggregate를 사용하여 구현합니다.
 3. SQL Server에서는 이제 모든 연산자에서 병렬 처리를 사용합니다.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복잡할 수도 있습니다. 여기서 보듯이 UDF 내 연산은 더 이상 블랙 박스가 아니므로 쿼리 최적화 프로그램이 해당 연산을 희생하고 최적화할 수 있습니다. 또한 UDF가 더 이상 계획에 없으므로 반복 UDF 호출이 함수 호출 과부하를 완전히 방지하는 계획으로 바뀝니다.
 

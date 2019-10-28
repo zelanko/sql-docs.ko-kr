@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2983ecd08b352c354c2fdd7987dbeb102e506601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939412"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908064"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>피어 투 피어 토폴로지 관리(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "67939412"
     >  [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)이 실행된 후에는 복제를 통해 토폴로지의 구독에 아티클이 자동으로 추가됩니다.  
   
 6.  토폴로지의 각 노드에서 배포 에이전트를 다시 시작합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-make-schema-changes-to-a-publication-database"></a>게시 데이터베이스의 스키마를 변경하려면  
   

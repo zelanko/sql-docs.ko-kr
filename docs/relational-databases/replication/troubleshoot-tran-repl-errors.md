@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769347"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907286"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769347"
 1. 트랜잭션은 복제되는 개체에서 발행하며 트랜잭션 로그에 “복제용”으로 표시됩니다. 
 2. 로그 판독기 에이전트는 트랜잭션 로그를 통해 검사하고 “복제용”으로 표시된 트랜잭션을 검색합니다. 그런 다음, 이러한 트랜잭션을 배포 데이터베이스에 저장합니다. 
 3. 배포 에이전트는 판독기 스레드를 사용하여 배포 데이터베이스를 통해 검사합니다. 그런 다음, 이 에이전트는 기록기 스레드를 사용하여 구독자에 연결하고 해당 변경을 구독자에게 적용합니다.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 이 프로세스의 모든 단계에서 오류가 발생할 수 있습니다. 이러한 오류 찾기는 동기화 문제 해결의 가장 어려운 측면일 수 있습니다. 다행히 복제 모니터를 사용하면 이 프로세스가 쉬어집니다. 
 

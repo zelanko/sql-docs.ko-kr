@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127228"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909505"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅샷으로 되돌리기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,9 +75,9 @@ ms.locfileid: "68127228"
     > [!NOTE]  
     >  데이터베이스가 손상된 경우 백업에서 해당 데이터베이스를 복원해야 합니다. 자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) 또는 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.  
   
--   오류가 발생하기 전에 만든 최근 스냅샷을 식별합니다. 자세한 내용은 [View a Database Snapshot &amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
+-   오류가 발생하기 전에 만든 최근 스냅샷을 식별합니다. 자세한 내용은 [View a Database Snapshot &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
--   데이터베이스에 현재 있는 다른 모든 스냅샷을 삭제합니다. 자세한 내용은 [Drop a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+-   데이터베이스에 현재 있는 다른 모든 스냅샷을 삭제합니다. 자세한 내용은 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> 보안  
   
@@ -90,11 +90,11 @@ ms.locfileid: "68127228"
 > [!NOTE]  
 >  이 프로시저의 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&#40;Transact-SQL&#41;** 카탈로그 뷰의 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
+1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&#40;Transact-SQL&#41;** 카탈로그 뷰의 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
   
 2.  다른 모든 데이터베이스 스냅샷을 삭제합니다.  
   
-     스냅샷 삭제 방법은 [Drop a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). 되돌리기 전에 데이터베이스에서 전체 복구 모델을 사용하는 경우 로그를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 또는 [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)을 참조하세요.  
+     스냅샷 삭제 방법은 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). 되돌리기 전에 데이터베이스에서 전체 복구 모델을 사용하는 경우 로그를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 또는 [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)을 참조하세요.  
   
 3.  되돌리기 작업을 수행합니다.  
   
@@ -118,8 +118,6 @@ ms.locfileid: "68127228"
   
 6.  필요에 따라, 특히 전체 또는 대량 로그 복구 모델을 사용하는 경우 되돌린 데이터베이스를 백업합니다. 데이터베이스를 백업하려면 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 섹션에는 데이터베이스를 데이터베이스 스냅샷으로 되돌리는 다음 예가 포함되어 있습니다.  
   
@@ -128,7 +126,7 @@ ms.locfileid: "68127228"
 -   2\. [Sales 데이터베이스에 대한 스냅샷 되돌리기](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅샷 되돌리기  
- 이 예에서는 현재 하나의 스냅샷만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅샷을 만드는 예는 [Create a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ 이 예에서는 현재 하나의 스냅샷만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅샷을 만드는 예는 [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -143,9 +141,9 @@ GO
   
  이 예에 사용되는 예제 데이터베이스와 스냅샷을 만드는 코드는 다음을 참조하세요.  
   
--   **Sales** 데이터베이스와 **sales_snapshot0600** 스냅샷의 경우 [CREATE DATABASE&amp;#40;SQL Server Transact-SQL&amp;#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)의 "파일 그룹이 포함된 데이터베이스 만들기" 및 "데이터베이스 스냅샷 만들기"를 참조하세요.  
+-   **Sales** 데이터베이스와 **sales_snapshot0600** 스냅샷의 경우 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)의 "파일 그룹이 포함된 데이터베이스 만들기" 및 "데이터베이스 스냅샷 만들기"를 참조하세요.  
   
--   **sales_snapshot1200** 스냅샷의 경우 [Create a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   **sales_snapshot1200** 스냅샷의 경우 [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -162,16 +160,16 @@ GO
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [데이터베이스 스냅샷 만들기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [데이터베이스 미러링 및 데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+ [데이터베이스 미러링 및 데이터베이스 스냅샷&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

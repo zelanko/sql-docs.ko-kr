@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9bef4e304b592a6be1c9d59c44d691e07829d70f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3a3dfb5804c49ae3a5c2c78d985aa548f710dab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768367"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907063"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "68768367"
   
 2.  **확인**을 선택합니다.   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="snapshot-folder-locations"></a>스냅샷 폴더 위치
 
 ### <a name="default-snapshot-location"></a>기본 스냅샷 위치
@@ -49,7 +47,7 @@ ms.locfileid: "68768367"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅샷 위치를 수정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
+1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
 2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.  
   
     > [!NOTE]  
@@ -65,7 +63,7 @@ ms.locfileid: "68768367"
 대체 스냅샷 폴더 위치를 지정하거나 스냅샷 파일을 압축하려면 초기 스냅샷을 즉시 만들지 말고 게시를 만들어 스냅샷 위치에 대한 게시 속성을 설정한 다음 해당 게시에 대해 스냅샷 에이전트를 실행합니다. 초기 스냅샷을 만든 다음 대체 위치를 변경할 경우 게시에 대해 생성된 스냅샷의 위치는 새 대체 위치로 다시 지정할 수 없습니다. 이 경우 게시 설정에 따라 병합 에이전트나 배포 에이전트가 새 대체 위치에서 스냅샷 파일을 찾지 못할 수 있습니다.  
   
 > [!NOTE]  
->  대체 위치를 기본 스냅샷 폴더 위치와 동일하게 지정하지 마세요. 대체 위치는 **게시 속성** 대화 상자나 [sp_changepublication&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 사용하여 지정할 수 있습니다.  
+>  대체 위치를 기본 스냅샷 폴더 위치와 동일하게 지정하지 마세요. 대체 위치는 **게시 속성** 대화 상자나 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 사용하여 지정할 수 있습니다.  
   
 > [!CAUTION]  
 >  WebSync 및 대체 스냅샷 폴더 위치를 동시에 사용하지 마십시오.  
@@ -86,7 +84,7 @@ ms.locfileid: "68768367"
   
 #### <a name="use-transact-sql"></a>Transact-SQL 사용 
 
-[스냅샷 속성 구성&amp;#40;복제 Transact-SQL 프로그래밍&amp;#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder**의 값을 false로 지정합니다. 
+[스냅샷 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder**의 값을 false로 지정합니다. 
 
 ## <a name="compressed-snapshots"></a>압축 스냅샷
   스냅샷을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅샷이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅샷 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅샷 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅샷 생성과 적용에 더 많은 시간이 걸립니다.  
@@ -143,6 +141,6 @@ ms.locfileid: "68768367"
 ## <a name="see-also"></a>참고 항목  
  [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [FTP를 통해 스냅샷 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
- [스냅샷 속성 구성&amp;#40;복제 Transact-SQL 프로그래밍&amp;#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
+ [스냅샷 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
   
   

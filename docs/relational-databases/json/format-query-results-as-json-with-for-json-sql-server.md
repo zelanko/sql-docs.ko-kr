@@ -14,12 +14,12 @@ ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ccdd995900f10b8d0a83f10795659e1a5050995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a8746b0d63b4c16776244cbb953cf91dd2fa7b3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909408"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908716"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 
@@ -194,8 +194,6 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
     -   SELECT 문 결과(FOR JSON 절을 적용하기 전)의 각 열은 JSON 개체의 속성이 됩니다.  
   
 3.  JSON 구문에 따라 열과 해당 값의 이름이 모두 이스케이프됩니다. 자세한 내용은 [FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법&#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="example"></a>예제
 다음은 **FOR JSON** 절에서 JSON 출력의 형식을 지정하는 방법을 보여 주는 예제입니다.  

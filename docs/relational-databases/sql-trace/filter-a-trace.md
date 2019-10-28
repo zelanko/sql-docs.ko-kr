@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072893"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909492"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072893"
 2.  필요한 정보가 있는 데이터와 데이터 열을 확인합니다.  
   
 3.  필요한 데이터 하위 집합을 확인하고 데이터 하위 집합을 기준으로 필터를 정의합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  예를 들어 일정 시간 이상이 걸리는 이벤트만 추적하려고 할 수도 있습니다. 이 경우 **Duration** 데이터 열이 300밀리초보다 더 큰 이벤트를 포함하는 추적을 만들 수 있습니다. 그러면 300밀리초 내에 완료되는 이벤트는 추적에 포함되지 않습니다.  
   

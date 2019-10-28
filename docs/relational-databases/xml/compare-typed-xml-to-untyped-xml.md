@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b98cc763b1bfdd47a1d560639a9a6dff5cd49a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112887"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907193"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,8 +153,6 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  일 년 중 1월 1일보다 작은 **xs:date** 또는 **xs:dateTime** 값은 인덱스가 다시 작성되거나 XQuery 또는 XML-DML 문이 해당 값을 포함하는 XML 데이터 형식에 대해 실행되면 런타임 오류를 일으킵니다.  
   
 2.  **xs:date** 또는 **xs:dateTime** 패싯의 음수 연도나 XML 스키마 컬렉션의 기본값은 기본 **xs:date** 또는 **xs:dateTime** 형식(예: **xs:dateTime**의 경우 0001-01-01T00:00:00.0000000Z)에 의해 허용되는 최소값으로 자동 업데이트됩니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  간단한 SQL SELECT 문을 계속 사용하면 음수 연도가 포함될 경우에도 전체 XML 데이터 형식을 검색할 수 있습니다. 음수 연도를 새로 지원되는 범위에 있는 연도로 대체하거나 해당 요소나 특성의 유형을 **xs:string**으로 변경하는 것이 좋습니다.  
   

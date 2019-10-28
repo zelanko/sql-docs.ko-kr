@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092295"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907858"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,8 +122,6 @@ ms.locfileid: "68092295"
 3.  **다음** 을 클릭하고 작업 목록이 **검사 목록 생성 옵션 구성** 페이지의 설정과 일치하는지 확인합니다.  
   
 4.  **종료**를 클릭한 후 선택한 개체에 대해서만 마이그레이션 검사 목록 보고서가 생성되었는지 확인합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  메모리 최적화 관리자 도구 및 네이티브 컴파일 관리자 도구에서 생성된 보고서와 비교하여 보고서의 정확성을 확인합니다. 자세한 내용은 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 및 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)를 참조하세요.  
   

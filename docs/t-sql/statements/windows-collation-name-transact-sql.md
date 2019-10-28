@@ -179,7 +179,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |말라얄람어(인도)|Indic_General_100_<sup>1</sup>|사용할 수 없음|
 |몰타어(몰타)|Maltese_100_|사용할 수 없음|
 |마오리어(뉴질랜드)|Maori_100_|사용할 수 없음|
-|마푸둔군어(칠레)|Mapudungan_100_|사용할 수 없음|
+|마푸둥군어(칠레)|Mapudungan_100_|사용할 수 없음|
 |마라티어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |모호크어(모호크)|Mohawk_100_|사용할 수 없음|
 |몽골어(중국)|Cyrillic_General_100_|사용할 수 없음|

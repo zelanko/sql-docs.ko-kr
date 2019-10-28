@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095656"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907960"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "68095656"
 2.  SQL 명령 `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`를 실행합니다.  
   
 3.  SQL 명령 `DROP USER <replication_administrative_user_schema>``CASCADE;`를 실행합니다.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>PRIMARY KEY 부재와 관련된 SQL Server 오류 21663이 발생했습니다.  
  트랜잭션 게시의 아티클에는 올바른 기본 키가 있어야 합니다. 아티클에 올바른 기본 키가 없으면 아티클을 추가할 때 다음 오류 메시지가 표시됩니다.  

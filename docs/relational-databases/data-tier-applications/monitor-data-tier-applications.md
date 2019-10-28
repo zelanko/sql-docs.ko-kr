@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f6a5bbb6b4315b0cdb6ed85bd592bb1d18c5c2eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134696"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907774"
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 애플리케이션 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68134696"
 3.  **보기/유틸리티 탐색기 정보** 메뉴를 선택합니다.  
   
 4.  **유틸리티 탐색기** 에서 **배포된 데이터 계층 애플리케이션**노드를 선택합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **배포된 데이터 계층 애플리케이션** 세부 정보 페이지의 정보는 기본적으로 15분마다 데이터를 수집하도록 되어 있는 유틸리티 관리 데이터 웨어하우스의 데이터에서 제공됩니다. **유틸리티 관리** 세부 정보 페이지를 사용하여 이 간격을 조정할 수도 있습니다.  
   

@@ -3,16 +3,16 @@ title: Linux의 SQL Server FAQ
 description: 이 문서에서는 Linux에서 실행되는 SQL Server에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952639"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929909"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server FAQ(질문과 대답)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67952639"
 
 1. **Linux의 SQL Server가 Windows의 SQL Server와 동일한가요?**
 
-   SQL Server의 핵심 데이터베이스 엔진은 Windows와 Linux가 동일합니다. 그러나 일부 기능은 현재 Linux에서 지원되지 않습니다. Linux에서 지원되지 않는 기능 목록은 [지원되지 않는 기능 및 서비스](sql-server-linux-release-notes.md#Unsupported)를 참조하세요. [알려진 문제](sql-server-linux-release-notes.md#known-issues)도 검토하세요. 이러한 목록에 지정되지 않은 다른 SQL Server 기능 및 서비스는 Linux에서 지원됩니다.
+   SQL Server의 핵심 데이터베이스 엔진은 Windows와 Linux가 동일합니다. 그러나 일부 기능은 현재 Linux에서 지원되지 않습니다. Linux에서 지원되지 않는 기능 목록은 [지원되지 않는 기능 및 서비스](sql-server-linux-editions-and-components-2019.md#Unsupported)를 참조하세요. [알려진 문제](sql-server-linux-release-notes.md#known-issues)도 검토하세요. 이러한 목록에 지정되지 않은 다른 SQL Server 기능 및 서비스는 Linux에서 지원됩니다.
 
 1. **SQL Server에 대한 지원 정책은 무엇인가요?**
 

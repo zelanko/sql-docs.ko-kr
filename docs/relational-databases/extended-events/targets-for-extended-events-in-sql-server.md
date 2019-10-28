@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009357"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907994"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -73,7 +73,7 @@ Transact-SQL에서 [CREATE EVENT SESSION](~/t-sql/statements/create-event-sessio
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target 대상
+## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target 대상
 
 
 SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동하여 시스템 작업을 모니터링할 수 있습니다. 참조 항목:
@@ -91,7 +91,7 @@ SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>event_counter 대상
+## <a name="event_counter-target"></a>event_counter 대상
 
 
 event_counter 대상은 단순히 지정된 각 이벤트 발생 횟수를 계산합니다.
@@ -107,7 +107,7 @@ event_counter 대상은 단순히 지정된 각 이벤트 발생 횟수를 계�
     - 데이터베이스 엔진은 속도가 너무 느리고 그로 인해 데이터베이스 엔진의 성능을 저하시키는 대상으로부터 연결이 끊어집니다. 이러한 이유로 대부분의 대상은 *비동기적으로*처리합니다.
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>event_counter에서 캡처된 출력 예제
+#### <a name="example-output-captured-by-event_counter"></a>event_counter에서 캡처된 출력 예제
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>event_file 대상
+## <a name="event_file-target"></a>event_file 대상
 
 
 **event_file** 대상은 버퍼에서 디스크 파일로 이벤트 세션 출력을 작성합니다.
@@ -161,7 +161,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>**event_file** 대상을 사용하는 CREATE EVENT SESSION
+#### <a name="create-event-session-with-event_file-target"></a>**event_file** 대상을 사용하는 CREATE EVENT SESSION
 
 
 다음은 테스트에 사용된 CREATE EVENT SESSION입니다. ADD TARGET 절 중 하나는 event_file를 지정합니다.
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 함수
+#### <a name="sysfn_xe_file_target_read_file-function"></a>sys.fn_xe_file_target_read_file 함수
 
 
 event_file 대상은 수신되는 데이터를 사람이 읽을 수 없는 이진 형식으로 저장합니다. Transact-SQL에서는 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 기능에서 선택하여 .xel 파일의 내용을 보고할 수 있습니다.
@@ -249,7 +249,7 @@ SELECT f.*
 물론 .xel 데이터를 보려면 SSMS UI를 수동으로 사용할 수도 있습니다.
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>event_file 대상에 저장된 데이터
+#### <a name="data-stored-in-the-event_file-target"></a>event_file 대상에 저장된 데이터
 
 
 다음은 SQL Server 2016의 **sys.fn_xe_file_target_read_file**에서 선택한 보고서입니다.
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>pair_matching 대상
+## <a name="pair_matching-target"></a>pair_matching 대상
 
 
 pair_matching 대상에서는 해당 종료 이벤트없이 발생하는 시작 이벤트를 검색할 수 있습니다. 예를 들어, lock_acquired 이벤트가 발생하지만 이와 일치하는 lock_released 이벤트가 그다음에 적절히 수행되지 않으면 문제일 수 있습니다.
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>pair_matching 예
+### <a name="example-of-pair_matching"></a>pair_matching 예
 
 
 다음 CREATE EVENT SESSION 문을 두 이벤트와 두 대상을 지정합니다. pair_matching 대상에서는 이벤트가 일치하는 두 필드 집합을 쌍으로 지정합니다. **begin_matching_columns=** 및 **end_matching_columns=** 에 할당된 쉼표로 구분된 필드 순서는 동일해야 합니다. 쉼표로 구분된 값에서 언급된 필드 사이에는 탭이나 줄 바꿈이 허용되지 않습니다. 공백은 허용됩니다.
@@ -520,8 +520,6 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. 대상을 검사할 때까지 일부러 COMMIT TRANSACTION을 실행하지 않습니다.
 4. 테스트한 후 나중에 COMMIT TRANSACTION을 실행했습니다.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 단순 **event_counter** 대상은 다음 출력 행을 제공합니다. 52-50=2이므로, 출력을 통해 pair-matching 대상에서 출력을 검사할 때 2개의 쌍을 이루지 않는 lock_acquired 이벤트가 있음을 알려 줍니다.
 
 
@@ -549,7 +547,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>ring_buffer 대상
+## <a name="ring_buffer-target"></a>ring_buffer 대상
 
 
 ring_buffer 대상은 빠르고 간단한 이벤트 테스트에 유용합니다. 이벤트 세션을 중지하면 저장된 출력이 삭제됩니다.
@@ -557,7 +555,7 @@ ring_buffer 대상은 빠르고 간단한 이벤트 테스트에 유용합니다
 이 ring_buffer 섹션에서는 XQuery의 Transact-SQL 구현을 사용하여 ring_buffer의 XML 콘텐츠를 보다 읽기 쉬운 관계형 행 집합에 복사하는 방법도 알 수 있습니다.
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>ring_buffer를 사용하는 CREATE EVENT SESSION
+#### <a name="create-event-session-with-ring_buffer"></a>ring_buffer를 사용하는 CREATE EVENT SESSION
 
 
 이 CREATE EVENT SESSION 문에서 특별한 것은 없습니다. ring_buffer 대상이 사용됩니다.
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>ring_buffer에서 lock_acquired에 대해 수신한 XML 출력
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>ring_buffer에서 lock_acquired에 대해 수신한 XML 출력
 
 
 SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩니다. 이 테스트의 경우 ring_buffer 대상에서 저장한 XML 문자열은 다음과 같이 나타납니다. 그러나 다음 XML을 간략하게 표현하기 위해 2개의 &#x3c;event&#x3e; 요소를 제외하고는 모두 지웠습니다. 또한 각 &#x3c;event&#x3e;에서 불필요한 &#x3c;data&#x3e; 요소도 삭제되었습니다.

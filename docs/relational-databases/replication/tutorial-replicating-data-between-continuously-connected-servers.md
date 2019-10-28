@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769409"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907711"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ ms.locfileid: "68769409"
     ![게시 이름이 있는 "마법사 완료" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. 게시를 만든 후 **닫기** 를 선택하여 마법사를 완료합니다. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 게시를 만들려고 할 때 SQL Server 에이전트가 실행되고 있지 않은 경우 다음과 같은 오류가 발생할 수 있습니다. 이 오류는 게시가 성공적으로 만들어졌지만 스냅샷 에이전트를 시작하지 못했음을 나타냅니다. 이러한 경우 SQL Server 에이전트를 시작한 다음, 스냅샷 에이전트를 수동으로 시작해야 합니다. 다음 섹션에서 지침을 제공합니다. 
 

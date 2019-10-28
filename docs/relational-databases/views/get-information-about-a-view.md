@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123406"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909887"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,42 +63,40 @@ ms.locfileid: "68123406"
   
 2.  속성을 볼 뷰를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     **속성 보기** 대화 상자에 표시되는 속성은 다음과 같습니다.  
   
-     **Database**  
-     The name of the database containing this view.  
+     **데이터베이스 백업**  
+     이 뷰를 포함하는 데이터베이스의 이름입니다.  
   
      **Server**  
-     The name of the current server instance.  
+     현재 서버 인스턴스의 이름입니다.  
   
-     **User**  
-     The name of the user of this connection.  
+     **사용자**  
+     이 연결을 사용하는 사용자의 이름입니다.  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **만든 날짜**  
+     뷰를 만든 날짜를 표시합니다.  
   
-     **Name**  
-     The name of the current view.  
+     **이름**  
+     현재 뷰의 이름입니다.  
   
-     **Schema**  
-     Displays the schema that owns the view.  
+     **스키마**  
+     뷰를 소유하는 스키마를 표시합니다.  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **시스템 개체**  
+     뷰가 시스템 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **ANSI NULL**  
+     개체가 ANSI NULL 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-     **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     **암호화됨**  
+     뷰가 암호화되는지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **따옴표 붙은 식별자**  
+     개체가 따옴표 붙은 식별자 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **스키마 바운드**  
+     뷰가 스키마 바운드 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다. 스키마 바운드 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 SCHEMABINDING 부분을 참조하세요.  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>뷰 디자이너 도구를 사용하여 뷰 속성 가져오기  
   

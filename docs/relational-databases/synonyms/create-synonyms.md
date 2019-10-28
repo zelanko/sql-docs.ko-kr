@@ -14,12 +14,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3500552ae0dde03b7cd4b354560bc3d0857eebec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b6ccdce58ca96a26a607996943e6d48d9bac1d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050903"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909738"
 ---
 # <a name="create-synonyms"></a>동의어 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,28 +54,26 @@ ms.locfileid: "68050903"
   
 3.  **새 동의어 추가** 대화 상자에 다음 정보를 입력합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Synonym name**  
-     Type the new name you will use for this object.  
+     **동의어 이름**  
+     이 개체에 사용할 새 이름을 입력합니다.  
   
-     **Synonym schema**  
-     Type the schema of the new name you will use for this object.  
+     **동의어 스키마**  
+     이 개체에 사용할 새 이름의 스키마를 입력합니다.  
   
-     **Server name**  
-     Type the server instance to connect to.  
+     **서버 이름**  
+     연결할 서버 인스턴스를 입력합니다.  
   
-     **Database name**  
-     Type or select the database containing the object.  
+     **데이터베이스 이름**  
+     개체가 포함된 데이터베이스를 입력하거나 선택합니다.  
   
-     **Schema**  
-     Type or select the schema that owns the object.  
+     **스키마**  
+     개체를 소유하는 스키마를 입력하거나 선택합니다.  
   
-     **Object type**  
-     Select the type of object.  
+     **개체 유형**  
+     개체 유형을 선택합니다.  
   
-     **Object name**  
-     Type the name of the object to which the synonym refers.  
+     **개체 이름**  
+     동의어가 나타내는 개체의 이름을 입력합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

@@ -16,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512a32fbbc57b960369b052615973b999f378a90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfe3901465f1230de5eea3996adad499208f6619
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009385"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907415"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler 사용
 
@@ -50,8 +50,6 @@ XEvent Profiler에 액세스하려면 다음 단계를 수행합니다.
    ![XEProfiler 세션](media/xevents-xe-profiler-start-session.png)
 
 5. 이제 확장 이벤트를 볼 수 있습니다.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler 뷰어](media/xevents-xe-profiler-start-viewer.png)
 

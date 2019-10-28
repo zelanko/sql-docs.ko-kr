@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111820"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908446"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ ms.locfileid: "68111820"
   
 2.  [수정 조치 수행](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> DAC(관리자 전용 연결) 열기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DAC(관리자 전용 연결)를 제공합니다. DAC를 사용하면 관리자는 서버가 다른 클라이언트 연결에 응답하지 않는 경우에도 실행 중인 SQL Server 데이터베이스 엔진 인스턴스에 액세스하여 서버에서 문제를 해결할 수 있습니다. DAC는 `sqlcmd` 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 사용할 수 있습니다.  
   
@@ -101,7 +99,7 @@ ms.locfileid: "68111820"
   
 #### <a name="increase-available-memory"></a>사용 가능한 메모리 늘리기  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>리소스 풀에서 MAX_MEMORY_PERCENT의 값 늘리기  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>리소스 풀에서 MAX_MEMORY_PERCENT의 값 늘리기  
  메모리 내 테이블에 대한 명명된 리소스 풀을 만들지 않은 경우 이 리소스 풀을 만들고 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 이 리소스 풀에 바인딩해야 합니다. 리소스 풀을 만들고 [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) 메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 항목을 참조하세요.  
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스가 리소스 풀에 바인딩된 경우 풀에서 액세스할 수 있는 메모리 비율을 늘릴 수 있습니다. 리소스 풀을 위한 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값 변경에 대한 지침은 하위 항목 [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 을 참조하세요.  

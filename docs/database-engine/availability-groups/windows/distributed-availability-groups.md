@@ -2,7 +2,7 @@
 title: 분산 가용성 그룹이란?
 description: 분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다.
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702747"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907275"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)를 보완합니다.
+분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/index.yml)를 보완합니다.
 
 > [!NOTE]
 > "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
@@ -30,7 +30,7 @@ ms.locfileid: "68702747"
 
 ## <a name="understand-distributed-availability-groups"></a>분산 가용성 그룹 이해
 
-분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다. 실제, 가상, 온-프레미스, 공용 클라우드 또는 가용성 그룹 배포를 지원하는 모든 위치에 있을 수 있습니다. 여기에는 Linux에서 호스팅되는 가용성 그룹과 Windows에서 호스팅되는 가용성 그룹 사이 같이 도메인 간 및 플랫폼 간이 포함됩니다. 두 가용성 그룹이 통신할 수 있는 한 이러한 가용성 그룹을 포함한 분산 가용성 그룹을 구성할 수 있습니다.
+분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다. 실제, 가상, 온-프레미스, 퍼블릭 클라우드 또는 가용성 그룹 배포를 지원하는 모든 위치에 있을 수 있습니다. 여기에는 Linux에서 호스팅되는 가용성 그룹과 Windows에서 호스팅되는 가용성 그룹 사이 같이 도메인 간 및 플랫폼 간이 포함됩니다. 두 가용성 그룹이 통신할 수 있는 한 이러한 가용성 그룹을 포함한 분산 가용성 그룹을 구성할 수 있습니다.
 
 기존 가용성 그룹에는 WSFC 클러스터에 구성된 리소스가 있습니다. 분산 가용성 그룹은 WSFC 클러스터에 아무 것도 구성하지 않습니다. 분산 가용성 그룹에 관한 모든 항목은 SQL Server 내에서 유지 관리됩니다. 분산 가용성 그룹에 대한 정보를 확인하는 방법은 [분산 가용성 그룹 정보 보기](#monitor-distributed-availability-group-health)를 참조하세요. 
 
@@ -116,7 +116,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 ### <a name="migrate-by-using-a-distributed-availability-group"></a>분산 가용성 그룹을 사용하여 마이그레이션
 
-분산 가용성 그룹은 서로 완전히 다른 두 가지 가용성 그룹 구성을 지원하므로 재해 복구 및 다중 사이트 시나리오뿐만 아니라 마이그레이션 시나리오도 사용할 수 있습니다. 새 하드웨어 또는 가상 컴퓨터(공용 클라우드의 온-프레미스 또는 IaaS)로 마이그레이션하는 경우, 분산 가용성 그룹을 구성하면 이전에 백업, 복사 및 복원 또는 로그 전달을 사용했던 마이그레이션이 발생할 수 있습니다. 
+분산 가용성 그룹은 서로 완전히 다른 두 가지 가용성 그룹 구성을 지원하므로 재해 복구 및 다중 사이트 시나리오뿐만 아니라 마이그레이션 시나리오도 사용할 수 있습니다. 새 하드웨어 또는 가상 컴퓨터(퍼블릭 클라우드의 온-프레미스 또는 IaaS)로 마이그레이션하는 경우, 분산 가용성 그룹을 구성하면 이전에 백업, 복사 및 복원 또는 로그 전달을 사용했던 마이그레이션이 발생할 수 있습니다. 
 
 마이그레이션 기능은 동일한 SQL Server 버전을 유지하면서 기본 OS를 변경하거나 업그레이드하는 시나리오에서 특히 유용합니다. Windows Server 2016은 동일한 하드웨어에서 Windows Server 2012 R2의 롤링 업그레이드를 허용하지만, 대부분의 사용자는 새 하드웨어 또는 가상 컴퓨터를 배포하도록 선택합니다. 
 

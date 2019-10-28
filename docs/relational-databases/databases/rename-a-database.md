@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70810131"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907424"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -74,8 +74,6 @@ ms.locfileid: "70810131"
 4. 새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
   
 5. 경우에 따라 데이터베이스가 기본 데이터베이스인 경우 [이름을 바꾼 후 기본 데이터베이스 다시 설정](#reset-your-default-database-after-rename)을 참조하세요.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="rename-a-database-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스 이름 변경하기  
   

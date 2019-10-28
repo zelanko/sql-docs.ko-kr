@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75cf54d5e52b708bf50d45ddefa7beaf1f3a8fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086270"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907455"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,7 @@ ms.locfileid: "68086270"
   
 4.  파일(컨테이너)를 파일 그룹에 추가하려면 **일반** 페이지를 클릭합니다. **데이터베이스 파일**아래에서 **추가**를 클릭합니다. **파일 형식** 을 **FILESTREAM 데이터**로 선택하고 컨테이너의 논리적 이름을 지정한 다음 메모리 최적화 파일 그룹을 선택하고 **자동 증가/최대 크기** 가 **제한 없음**으로 설정되어 있는지 확인합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 새 데이터베이스를 만드는 방법은 [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)를 참조하세요.  
   
 ### <a name="to-create-a-memory-optimized-table"></a>메모리 최적화 테이블을 만들려면  
   

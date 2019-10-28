@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4644cc6d4c74e16e61842622f6210fcef235e005
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bd2512c66c072c047ec8aec1bfa4cc353864d463
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155634"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908844"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>디바이스에서 백업 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,6 @@ ms.locfileid: "70155634"
 7.  **백업 미디어** 입력란에서 **백업 디바이스**를 선택하고 **추가** 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.  
   
 8.  **백업 디바이스** 입력란에서 복원 작업에 사용하려는 디바이스를 선택합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

@@ -16,12 +16,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c529a7f64fb3db9bdbe7d18cb5a5cb36ebdd9786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037623"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909116"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "68037623"
 6.  새 데이터 형식 별칭에 NULL 값을 허용하려면 **NULL 허용** 확인란을 선택합니다.  
   
 7.  기본값이나 규칙을 새 데이터 형식 별칭에 바인딩하려면 **바인딩** 영역에서 **기본값** 또는 **규칙** 상자를 채웁니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 기본값과 규칙을 만들 수 없으므로 대신 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 기본값과 규칙을 만드는 예제 코드는 템플릿 탐색기에서 찾을 수 있습니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

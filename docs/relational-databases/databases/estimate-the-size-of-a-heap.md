@@ -17,12 +17,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 518319ff5ef16061e02575d522dd56633858df99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934523"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909052"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,9 +83,7 @@ ms.locfileid: "67934523"
   
 8.  힙에 데이터를 저장하는 데 필요한 공간의 크기를 계산합니다(페이지당 총 8192바이트임).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Heap size (bytes) = 8192 x **_Num_Pages_**  
+     힙 크기(바이트) = 8192 x **_Num_Pages_**  
   
  이 계산에서 다음 사항은 고려되지 않습니다.  
   

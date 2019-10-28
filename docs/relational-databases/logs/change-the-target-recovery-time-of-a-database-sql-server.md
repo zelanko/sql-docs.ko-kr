@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ab366052f60d6039fcfe8060fd702d762146a304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8e28d1dd10e55a3726198a6061e44c24bc898b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084145"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909575"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68084145"
 3.  **데이터베이스 속성** 대화 상자에서 **옵션** 페이지를 클릭합니다.  
   
 4.  **복구** 패널의 **대상 복구 시간(초)** 필드에서 이 데이터베이스에 대한 복구 시간의 상한으로 사용할 시간(초)을 지정합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **대상 복구 시간을 변경하려면**  

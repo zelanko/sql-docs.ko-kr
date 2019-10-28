@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7690198e904ab22c463da5a9de90c48ad8b9e15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118573"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908695"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ GO
 2.  데이터베이스 수준에서 지정된 **DIRECTORY_NAME**  
   
 3.  FileTable 수준에서 지정된 **FILETABLE_DIRECTORY**  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  결과 계층 구조는 다음과 같습니다.  
   
