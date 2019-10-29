@@ -34,7 +34,7 @@ ms.locfileid: "66085979"
   
 -   ARTxp 및 ARIMA 알고리즘의 혼합  
   
- 이러한 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md) 및 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.  
+ 이러한 알고리즘에 대한 자세한 내용은 [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md) 및 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
   
 > [!NOTE]  
 >  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
@@ -57,7 +57,7 @@ ms.locfileid: "66085979"
   
  ARIMA만 사용하여 모델을 만든 경우 **모델** 탭에는 **모두**라는 캡션이 있는 단일 노드가 포함됩니다. 루트 노드의 **마이닝 범례** 에는 ARIMA 수식이 포함됩니다.  
   
- 혼합 모델을 만든 경우 루트 노드에는 사례 수와 ARIMA 수식만 포함됩니다. 루트 노드 다음에 트리는 각 주기적 구조에 대한 별도의 노드로 분리됩니다. 루트가 아닌 각 노드에서 마이닝 범례에는 ARTxp 및 ARIMA 알고리즘 모두와 노드의 수식, 노드 내 사례 수가 포함됩니다. ARTxp 수식은 처음 나열되고 트리 노드 수식이라는 레이블이 붙습니다. 그 다음에 ARIMA 수식이 나열됩니다. 이 정보를 해석하는 방법은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.  
+ 혼합 모델을 만든 경우 루트 노드에는 사례 수와 ARIMA 수식만 포함됩니다. 루트 노드 다음에 트리는 각 주기적 구조에 대한 별도의 노드로 분리됩니다. 루트가 아닌 각 노드에서 마이닝 범례에는 ARTxp 및 ARIMA 알고리즘 모두와 노드의 수식, 노드 내 사례 수가 포함됩니다. ARTxp 수식은 처음 나열되고 트리 노드 수식이라는 레이블이 붙습니다. 그 다음에 ARIMA 수식이 나열됩니다. 이 정보를 해석하는 방법은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
   
  일반적으로 의사 결정 트리 그래프는 가장 중요한 분리인 **모두** 노드를 뷰어의 왼쪽에 표시합니다. 의사 결정 트리에서 **모두** 노드 다음의 분할은 학습 데이터의 사례를 가장 확실하게 분리하는 조건을 포함하므로 가장 중요합니다. 시계열 모델에서 주 분기는 가능성이 가장 높은 계절적 주기를 나타냅니다. **All** 노드 다음의 분할은 분기의 오른쪽에 나타납니다.  
   

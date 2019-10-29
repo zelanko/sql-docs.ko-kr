@@ -77,10 +77,10 @@
           href: mining-model-content-for-sequence-clustering-models.md
         - name: 시퀀스 클러스터링 모델 쿼리 예제
           href: sequence-clustering-model-query-examples.md
-    - name: Microsoft 시계열 알고리즘
+    - name: Microsoft Time Series 알고리즘
       href: microsoft-time-series-algorithm.md
       items:
-        - name: Microsoft Time Series Algorithm Technical Reference
+        - name: Microsoft Time Series 알고리즘 기술 참조
           href: microsoft-time-series-algorithm-technical-reference.md
         - name: 시계열 모델에 대한 마이닝 모델 콘텐츠
           href: mining-model-content-for-time-series-models-analysis-services-data-mining.md

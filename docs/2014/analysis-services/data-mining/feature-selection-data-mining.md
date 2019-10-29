@@ -112,7 +112,7 @@ ms.locfileid: "66084423"
 |Clustering|흥미도 점수|Microsoft 클러스터링 알고리즘은 불연속 데이터 또는 불연속화된 데이터를 사용할 수 있습니다. 그러나 각 특성의 점수가 거리로 계산되고 연속 숫자로 표현되기 때문에 흥미도 점수를 사용해야 합니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)를 참조하십시오.|  
 |선형 회귀|흥미도 점수|Microsoft 선형 회귀 알고리즘은 연속 열만 지원하므로 흥미도 점수만 사용할 수 있습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)를 참조하십시오.|  
 |연결 규칙<br /><br /> 시퀀스 클러스터링|사용되지 않음|기능 선택은 이러한 알고리즘을 통해 호출되지 않습니다.<br /><br /> 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어하고 필요한 경우 입력 데이터의 크기를 줄일 수 있습니다.<br /><br /> 자세한 내용은 [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) 및 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)를 참조하세요.|  
-|시계열|사용되지 않음|기능 선택은 시계열 모델에 적용되지 않습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.|  
+|시계열|사용되지 않음|기능 선택은 시계열 모델에 적용되지 않습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.|  
   
 ## <a name="feature-selection-parameters"></a>기능 선택 매개 변수  
  기능 선택을 지원하는 알고리즘에서 다음 매개 변수를 사용하여 기능 선택 사용 시기를 제어할 수 있습니다. 각 알고리즘에는 허용되는 입력 수에 대한 기본값이 있지만, 이 기본값을 재정의하거나 특성 수를 지정할 수 있습니다. 이 섹션에서는 기능 선택을 관리하기 위해 제공되는 매개 변수를 나열합니다.  

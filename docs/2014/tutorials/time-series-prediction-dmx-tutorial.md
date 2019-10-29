@@ -29,7 +29,7 @@ ms.locfileid: "63044191"
   
 -   DMX(Data Mining Extensions) 쿼리 언어  
   
--   Microsoft 시계열 알고리즘  
+-   Microsoft Time Series 알고리즘  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
   

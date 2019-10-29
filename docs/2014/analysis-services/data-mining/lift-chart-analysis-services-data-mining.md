@@ -111,7 +111,7 @@ ms.locfileid: "66084307"
   
  동일한 예측 가능한 특성을 가진 여러 모델을 리프트 차트에 추가할 수 있습니다. 특성을 공유하지 않는 모델은 **입력** 탭에서 선택할 수 없습니다.  
   
- 리프트 차트 또는 수익 차트에는 시계열 모델을 표시할 수 없습니다. 시계열 예측의 정확도를 측정하기 위한 일반적인 방법은 기록 데이터의 일부를 예약하고 해당 데이터를 예측과 비교하는 것입니다. 자세한 내용은 [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)을 참조하세요.  
+ 리프트 차트 또는 수익 차트에는 시계열 모델을 표시할 수 없습니다. 시계열 예측의 정확도를 측정하기 위한 일반적인 방법은 기록 데이터의 일부를 예약하고 해당 데이터를 예측과 비교하는 것입니다. 자세한 내용은 [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
   
 ### <a name="related-content"></a>관련 내용  
  [맨 위로 이동](#bkmk_Top)  

@@ -44,7 +44,7 @@ ms.locfileid: "66086507"
 |Microsoft 로지스틱 회귀 알고리즘|이진 결과에 영향을 주는 요소를 식별하고 이러한 요소를 사용하여 결과에 영향을 주는 방법을 파악합니다.<br /><br /> [https://msdn.microsoft.com/library/ms174828.aspx](https://msdn.microsoft.com/library/ms174828.aspx)|  
 |Microsoft Naïve Bayes 알고리즘|데이터에서 관계를 탐색하고 결과와 가장 밀접히 연관된 관계를 찾습니다.<br /><br /> [https://msdn.microsoft.com/library/ms174806.aspx](https://msdn.microsoft.com/library/ms174806.aspx)|  
 |Microsoft 신경망 알고리즘|여러 입력과 여러 출력 간의 숨겨진 관계를 찾습니다. 탐색이나 예측에 사용합니다.<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
-|Microsoft 시계열 알고리즘|기록 데이터를 사용하여 미래 가치를 예측합니다.<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
+|Microsoft Time Series 알고리즘|기록 데이터를 사용하여 미래 가치를 예측합니다.<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
 ## <a name="advanced-options"></a>고급 옵션  
  Excel용 데이터 마이닝 클라이언트를 사용할 때는 사용자 고유의 데이터 마이닝 구조 및 모델을 만들거나 알고리즘의 매개 변수를 세밀하게 조정하는 옵션이 제공됩니다.  

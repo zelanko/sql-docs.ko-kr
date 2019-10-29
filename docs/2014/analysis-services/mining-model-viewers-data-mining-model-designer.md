@@ -38,7 +38,7 @@ ms.locfileid: "66077737"
   
  다음 다이어그램에서는 같은 모델에 대해 사용자 지정 뷰어와 일반 뷰어를 보여 줍니다.  
   
--   위쪽 다이어그램은 Microsoft 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대한 뷰어를 보여 줍니다. 이 사용자 지정 뷰어에서는 시계열 그래프를 자동으로 만들고 5개의 예측을 제공합니다.  
+-   위쪽 다이어그램은 Microsoft Time Series 알고리즘을 기반으로 하는 마이닝 모델에 대한 뷰어를 보여 줍니다. 이 사용자 지정 뷰어에서는 시계열 그래프를 자동으로 만들고 5개의 예측을 제공합니다.  
   
 -   아래쪽 다이어그램은 **Microsoft 일반 콘텐츠 트리 뷰어**를 사용하여 표시되는 동일한 모델을 보여 줍니다. 이 뷰어에는 표준화된 스키마에 따라 마이닝 모델의 내용이 표시됩니다. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66077737"
   
     -   [시퀀스 클러스터링 클러스터 전환 탭 &#40;마이닝 모델 뷰어&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
-### <a name="microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘  
+### <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series 알고리즘  
   
 -   [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

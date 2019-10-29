@@ -20,7 +20,7 @@ ms.locfileid: "62678445"
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기
   이 단원에서는 기록 데이터를 기반으로 시간 경과에 따라 값을 예측할 수 있는 마이닝 모델을 만듭니다. 모델을 만들면 기본 구조가 자동으로 생성되고 추가 마이닝 모델에 대한 기초로 사용될 수 있습니다.  
   
- 이 단원에서는 사용자가 예측 모델과 Microsoft 시계열 알고리즘의 요구 사항을 잘 알고 있다고 가정합니다. 자세한 내용은 [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)을 참조하세요.  
+ 이 단원에서는 사용자가 예측 모델과 Microsoft Time Series 알고리즘의 요구 사항을 잘 알고 있다고 가정합니다. 자세한 내용은 [Microsoft Time Series 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)을 참조하세요.  
   
 ## <a name="create-mining-model-statement"></a>CREATE MINING MODEL 문  
  마이닝 모델을 직접 만들고 기본 마이닝 구조를 자동으로 생성, 하기 위해 사용 하는 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
@@ -59,7 +59,7 @@ CREATE MINING MODEL [Mining Model Name]
 <key columns>  
 ```  
   
- 코드의 다음 줄은 예측할 모델의 열을 정의하는 데 사용됩니다. 단일 마이닝 모델에 예측 가능한 특성이 여러 개 있을 수 있습니다. 예측 가능한 특성이 여러 개 있으면 Microsoft 시계열 알고리즘에서 각 계열에 대해 별도의 분석을 생성합니다.  
+ 코드의 다음 줄은 예측할 모델의 열을 정의하는 데 사용됩니다. 단일 마이닝 모델에 예측 가능한 특성이 여러 개 있을 수 있습니다. 예측 가능한 특성이 여러 개 있으면 Microsoft Time Series 알고리즘에서 각 계열에 대해 별도의 분석을 생성합니다.  
   
 ```  
 <predictable attribute columns>  

@@ -66,7 +66,7 @@ ms.locfileid: "66081052"
  예측 수를 지정할 때는 단계 수를 나타내는 정수를 입력합니다. 이러한 단계의 단위는 데이터의 시간 및 날짜 계열에 사용된 단위에 따라 달라집니다. 월별 판매 결과를 나열하는 데이터일 경우 월을 기준으로 예측이 만들어집니다. 시간 단위를 변경하려면 원본 데이터를 변경해야 합니다.  
   
 ### <a name="understanding-periodicity"></a>주기성 이해  
- 예측은 특정 기간 동안 반복되는 패턴을 기반으로 수행됩니다. 따라서 Microsoft 시계열 알고리즘은 가장 강력한 패턴이 있는 기간을 결정하기 위해 계산을 수행합니다. *주기 성* 이러한 기간을 나타냅니다.  
+ 예측은 특정 기간 동안 반복되는 패턴을 기반으로 수행됩니다. 따라서 Microsoft Time Series 알고리즘은 가장 강력한 패턴이 있는 기간을 결정하기 위해 계산을 수행합니다. *주기 성* 이러한 기간을 나타냅니다.  
   
  시계열에 잠재적 패턴이 여러 개 포함될 수 있습니다. 데이터에 특정 패턴이 확실히 포함되어 있는 경우 알고리즘에 힌트를 제공하여 예측 품질을 높일 수도 있습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66081052"
   
 -   합니다 **예측** Excel 매개 변수를 사용자 지정 하는 기능 제공에 대 한 데이터 마이닝 클라이언트에서 마법사.  
   
- 에 대 한 자세한 내용은 합니다 **예측** 마법사 참조 [예측 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). 예측에 사용되는 알고리즘에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "Microsoft 시계열 알고리즘" 항목을 참조하십시오.  
+ 에 대 한 자세한 내용은 합니다 **예측** 마법사 참조 [예측 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). 예측에 사용되는 알고리즘에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "Microsoft Time Series 알고리즘" 항목을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  

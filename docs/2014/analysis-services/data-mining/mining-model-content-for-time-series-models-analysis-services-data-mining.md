@@ -31,7 +31,7 @@ ms.locfileid: "66083527"
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>시계열 모델의 구조 이해  
  시계열 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있습니다. 이 부모 노드 아래에는 모델을 만드는 데 사용한 알고리즘에 따라 하나 또는 두 개의 시계열 트리가 있습니다.  
   
- 혼합 모델을 만들 경우 각각 ARIMA와 ARTXP에 대한 두 개의 별도 트리가 모델에 추가됩니다. ARTXP 알고리즘만 사용하거나 ARIMA 알고리즘만 사용하도록 선택할 경우 해당 알고리즘에 해당하는 단일 트리가 추가됩니다. FORECAST_METHOD 매개 변수를 설정하여 사용할 알고리즘을 지정합니다. ARTXP, ARIMA 또는 혼합 모델 중 어느 것을 사용할지에 대한 자세한 내용은 [Microsoft 시계열 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
+ 혼합 모델을 만들 경우 각각 ARIMA와 ARTXP에 대한 두 개의 별도 트리가 모델에 추가됩니다. ARTXP 알고리즘만 사용하거나 ARIMA 알고리즘만 사용하도록 선택할 경우 해당 알고리즘에 해당하는 단일 트리가 추가됩니다. FORECAST_METHOD 매개 변수를 설정하여 사용할 알고리즘을 지정합니다. ARTXP, ARIMA 또는 혼합 모델 중 어느 것을 사용할지에 대한 자세한 내용은 [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
   
  다음 다이어그램에는 혼합 모델을 만들기 위해 기본 설정을 사용하여 만든 시계열 데이터 마이닝 모델의 예가 나와 있습니다. 두 모델 간의 차이를 보다 쉽게 비교할 수 있도록 여기서 ARTXP 모델은 다이어그램의 왼쪽에 있고 ARIMA 모델은 다이어그램의 오른쪽에 있습니다.  ARTXP가 더 작은 분기로 분할되는 트리와 같은 구조인데 반하여 ARIMA 알고리즘으로 만든 구조는 더 작은 구성 요소를 기반으로 작성된 피라미드와 같습니다.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66083527"
   
 -   MA( *이동 평균* )에 대한 노드  
   
- 이러한 용어의 의미에 대한 자세한 내용은 [Microsoft 시계열 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
+ 이러한 용어의 의미에 대한 자세한 내용은 [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
   
- *차수* 는 수식의 중요한 부분이며 수식에 표시됩니다. 차이 순서가 사용되는 방법은 [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)를 참조하세요.  
+ *차수* 는 수식의 중요한 부분이며 수식에 표시됩니다. 차이 순서가 사용되는 방법은 [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)를 참조하세요.  
   
 ## <a name="model-content-for-time-series"></a>시계열에 대한 모델 콘텐츠  
  이 섹션에서는 시계열 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다.  

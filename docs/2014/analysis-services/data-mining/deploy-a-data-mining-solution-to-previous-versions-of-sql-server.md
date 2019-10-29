@@ -41,7 +41,7 @@ ms.locfileid: "66084681"
  [데이터베이스 동기화 사용](#bkmk_Synch)  
   
 ##  <a name="bkmk_TimeSeries"></a> 시계열 모델 배포  
- SQL Server 2008에서는 보조 알고리즘인 ARIMA가 추가되어 Microsoft 시계열 알고리즘이 향상되었습니다. 시계열 알고리즘의 변경 사항에 대한 자세한 내용은 [Microsoft 시계열 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
+ SQL Server 2008에서는 보조 알고리즘인 ARIMA가 추가되어 Microsoft Time Series 알고리즘이 향상되었습니다. Time Series 알고리즘의 변경 사항에 대한 자세한 내용은 [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)을 참조하세요.  
   
  따라서 새 ARIMA 알고리즘을 사용하는 시계열 마이닝 모델이 SQL Server 2005 Analysis Services 인스턴스에 배포될 경우 다르게 동작할 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084681"
   
  따라서 모델을 변경하지 않으려면 모델을 탐색만 해야 하고 처리하면 안 됩니다. 또는 FORECAST_METHOD 또는 PREDICTION_SMOOTHING 매개 변수를 명시적으로 설정할 수도 있습니다.  
   
- 혼합 모델을 구성하는 방법에 대한 자세한 내용은 [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)를 참조하세요.  
+ 혼합 모델을 구성하는 방법에 대한 자세한 내용은 [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)를 참조하세요.  
   
  모델의 데이터 원본에 사용되는 공급자가 SQL Client Data Provider 10이면 데이터 원본 정의도 수정하여 이전 버전의 SQL Server Native Client를 지정해야 합니다. 그렇지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 공급자가 등록되지 않았다는 오류가 생성됩니다.  
   

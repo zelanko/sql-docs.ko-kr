@@ -36,7 +36,7 @@ ms.locfileid: "63180534"
   
 -   [시계열 예측 DMX 자습서](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
-     이 자습서에서는 예측 모델을 만들어 CREATE MODEL (DMX) 문 사용을 설명합니다. 그런 다음 관련 모델을 추가하고 Microsoft 시계열 알고리즘의 매개 변수를 변경하여 각 모델의 동작을 사용자 지정합니다. 마지막으로 예측을 만들고 새 데이터를 사용하여 해당 예측을 업데이트합니다. 예측을 만들면서 시계열을 업데이트하는 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터 추가되었습니다.  
+     이 자습서에서는 예측 모델을 만들어 CREATE MODEL (DMX) 문 사용을 설명합니다. 그런 다음 관련 모델을 추가하고 Microsoft Time Series 알고리즘의 매개 변수를 변경하여 각 모델의 동작을 사용자 지정합니다. 마지막으로 예측을 만들고 새 데이터를 사용하여 해당 예측을 업데이트합니다. 예측을 만들면서 시계열을 업데이트하는 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터 추가되었습니다.  
   
 ## <a name="reference"></a>참조  
  [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  

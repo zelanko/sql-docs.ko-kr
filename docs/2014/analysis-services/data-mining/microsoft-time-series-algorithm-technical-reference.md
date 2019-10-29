@@ -34,7 +34,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083758"
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 소개된 ARTXP 알고리즘은 계열의 적절한 다음 값을 예측하도록 최적화되어 있습니다.  
@@ -45,19 +45,19 @@ ms.locfileid: "66083758"
   
  이 항목에서는 각 알고리즘이 구현되는 방법과 분석 및 예측 결과를 세부 조정하기 위해 매개 변수를 설정하여 알고리즘을 사용자 지정하는 방법에 대한 추가 정보를 제공합니다.  
   
-## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘 구현  
+## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft Time Series 알고리즘 구현  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에 대한 구현을 기초로 하여 SQL Server 2005에 처음 사용된 ARTXP 알고리즘을 개발했습니다. 따라서 ARTXP 알고리즘은 주기 시계열 데이터를 나타내는 자동 회귀 트리 모델로 설명할 수 있습니다. 이 알고리즘은 다양한 수의 과거 항목을 예측 중인 각 현재 항목과 연결합니다. ARTXP라는 이름은 자동 회귀 트리 방법(ART 알고리즘)이 알려지지 않은 여러 이전 상태에 적용된다는 사실에서 기인한 것입니다. ARTXP 알고리즘에 대한 자세한 내용은 [시계열 분석을 위한 자동 회귀 트리 모델](https://go.microsoft.com/fwlink/?LinkId=45966)을 참조하세요.  
   
- ARIMA 알고리즘은 장기 예측의 정확도를 향상시키기 위해 SQL Server 2008의 Microsoft 시계열 알고리즘에 추가되었습니다. 이 알고리즘은 Box 및 Jenkins가 설명한 자동 회귀 통합 이동 평균 계산을 위한 프로세스를 구현한 기술입니다. ARIMA 방식에서는 순차적으로 관측된 결과에서 종속성을 확인하고 모델 중에 임의 충격을 사용할 수 있습니다. ARIMA 방식은 또한 승제 계절성을 지원합니다. ARIMA 알고리즘에 대한 자세한 내용이 필요한 경우 Box 및 Jenkins의 세미나 자료를 참조하십시오. 이 섹션에서는 Microsoft 시계열 알고리즘에서 ARIMA 방식이 어떻게 구현되었는지에 대해서만 설명합니다.  
+ ARIMA 알고리즘은 장기 예측의 정확도를 향상시키기 위해 SQL Server 2008의 Microsoft Time Series 알고리즘에 추가되었습니다. 이 알고리즘은 Box 및 Jenkins가 설명한 자동 회귀 통합 이동 평균 계산을 위한 프로세스를 구현한 기술입니다. ARIMA 방식에서는 순차적으로 관측된 결과에서 종속성을 확인하고 모델 중에 임의 충격을 사용할 수 있습니다. ARIMA 방식은 또한 승제 계절성을 지원합니다. ARIMA 알고리즘에 대한 자세한 내용이 필요한 경우 Box 및 Jenkins의 세미나 자료를 참조하십시오. 이 섹션에서는 Microsoft Time Series 알고리즘에서 ARIMA 방식이 어떻게 구현되었는지에 대해서만 설명합니다.  
   
- 기본적으로 Microsoft 시계열 알고리즘에서는 ARTXP와 ARIMA 방식을 모두 사용하고 결과를 혼합하여 예측 정확도를 향상시킬 수 있도록 합니다. 특정 방식만 사용하려는 경우에는 알고리즘 매개 변수를 사용하여 ARTXP 또는 ARIMA만 사용하도록 지정하거나 알고리즘 결과의 혼합 방식을 제어할 수 있습니다. ARTXP 알고리즘에서는 교차 예측을 지원하지만 ARIMA 알고리즘에서는 교차 예측을 지원하지 않습니다. 따라서 교차 예측은 알고리즘을 혼합하여 사용하는 경우나 ARTXP만 사용하도록 모델을 구성한 경우에만 사용할 수 있습니다.  
+ 기본적으로 Microsoft Time Series 알고리즘에서는 ARTXP와 ARIMA 방식을 모두 사용하고 결과를 혼합하여 예측 정확도를 향상시킬 수 있도록 합니다. 특정 방식만 사용하려는 경우에는 알고리즘 매개 변수를 사용하여 ARTXP 또는 ARIMA만 사용하도록 지정하거나 알고리즘 결과의 혼합 방식을 제어할 수 있습니다. ARTXP 알고리즘에서는 교차 예측을 지원하지만 ARIMA 알고리즘에서는 교차 예측을 지원하지 않습니다. 따라서 교차 예측은 알고리즘을 혼합하여 사용하는 경우나 ARTXP만 사용하도록 모델을 구성한 경우에만 사용할 수 있습니다.  
   
 ## <a name="understanding-arima-difference-order"></a>ARIMA의 차분 차수 이해  
- 이 섹션에서는 ARIMA 모델을 이해하는 데 필요한 몇 가지 용어를 소개하고 Microsoft 시계열 알고리즘에서 사용되는 *차분* 의 구현 방식에 대해 설명합니다. 이러한 용어와 개념에 대한 완전한 설명을 보려면 Box 및 Jenkins가 작성한 설명서를 참조하는 것이 좋습니다.  
+ 이 섹션에서는 ARIMA 모델을 이해하는 데 필요한 몇 가지 용어를 소개하고 Microsoft Time Series 알고리즘에서 사용되는 *차분* 의 구현 방식에 대해 설명합니다. 이러한 용어와 개념에 대한 완전한 설명을 보려면 Box 및 Jenkins가 작성한 설명서를 참조하는 것이 좋습니다.  
   
 -   항은 수학 방정식의 한 요소입니다. 예를 들어 다항 방정식에서 한 항은 여러 변수와 상수의 조합을 포함할 수 있습니다.  
   
--   Microsoft 시계열 알고리즘에 포함된 ARIMA 수식에는 *자동 회귀* 및 *이동 평균* 항이 모두 사용됩니다.  
+-   Microsoft Time Series 알고리즘에 포함된 ARIMA 수식에는 *자동 회귀* 및 *이동 평균* 항이 모두 사용됩니다.  
   
 -   시계열 모델은 *정상* 또는 *비정상*모델일 수 있습니다. *정상 모델* 은 순환 변동이 있더라도 평균으로 회귀하는 모델이며, *비정상 모델* 은 균형에 초점을 두지 않고 *충격*또는 외부 변수로 인한 높은 편차 또는 변동폭을 갖기 쉽습니다.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66083758"
   
 -   *차분 차수* 는 값들 간의 차분이 시계열에 사용된 횟수를 나타냅니다.  
   
- Microsoft 시계열 알고리즘은 데이터 계열에서 값을 가져와 데이터를 패턴에 맞추려고 시도합니다. 데이터 계열이 아직 정상이 아니면 알고리즘이 차분 차수를 적용합니다. 차분 차수가 증가할 때마다 시계열이 점점 더 정상화됩니다.  
+ Microsoft Time Series 알고리즘은 데이터 계열에서 값을 가져와 데이터를 패턴에 맞추려고 시도합니다. 데이터 계열이 아직 정상이 아니면 알고리즘이 차분 차수를 적용합니다. 차분 차수가 증가할 때마다 시계열이 점점 더 정상화됩니다.  
   
  예를 들어 (z1, z2,..., zn) 시계열을 하나의 차분 차수를 사용 하 여 계산을 수행 하는 경우 가져와야 새 계열 (y1, y2,..., yn-1), 여기서 *yi = zi + 1-zi*합니다. 차분 차수가 2 이면 알고리즘이 사항과 다른 시리즈 (x1, x2,..., xn-2) 방정식에서 파생 된 y 계열을 기반으로 생성 합니다. 올바른 차분 양은 데이터에 따라 다릅니다. 단일 차분 차수는 일정한 추세를 표시하는 모델에서 가장 일반적으로 사용됩니다. 두 번째 차분 차수는 시간에 따라 변동되는 추세를 나타낼 수 있습니다.  
   
- 기본적으로 Microsoft 시계열 알고리즘에 사용된 차분 차수는 -1로서, 알고리즘이 차분 차수의 최적 값을 자동으로 감지합니다. 일반적으로 최적 값은 1이지만(차분이 필요한 경우), 특정 상황에서는 알고리즘이 값을 최대값 2로 늘립니다.  
+ 기본적으로 Microsoft Time Series 알고리즘에 사용된 차분 차수는 -1로서, 알고리즘이 차분 차수의 최적 값을 자동으로 감지합니다. 일반적으로 최적 값은 1이지만(차분이 필요한 경우), 특정 상황에서는 알고리즘이 값을 최대값 2로 늘립니다.  
   
- Microsoft 시계열 알고리즘은 자동 회귀 값을 사용하여 최적의 ARIMA 차분 차수를 결정합니다. 알고리즘은 AR 값을 검사하고 AR 항의 순서를 나타내는 숨겨진 매개 변수인 ARIMA_AR_ORDER를 설정합니다. 이 숨겨진 매개 변수 ARIMA_AR_ORDER의 값 범위는 -1~8입니다. 기본값이 -1이면 알고리즘이 적합한 차분 차수를 자동으로 선택합니다.  
+ Microsoft Time Series 알고리즘은 자동 회귀 값을 사용하여 최적의 ARIMA 차분 차수를 결정합니다. 알고리즘은 AR 값을 검사하고 AR 항의 순서를 나타내는 숨겨진 매개 변수인 ARIMA_AR_ORDER를 설정합니다. 이 숨겨진 매개 변수 ARIMA_AR_ORDER의 값 범위는 -1~8입니다. 기본값이 -1이면 알고리즘이 적합한 차분 차수를 자동으로 선택합니다.  
   
  ARIMA_AR_ORDER 값이 1보다 크면 알고리즘이 다항식 항으로 시계열을 곱합니다. 다항식의 한 항이 루트 1 또는 1에 근접한 수로 확인되면 알고리즘이 항을 제거하고 차분 차수를 1 늘려서 모델의 안정성을 보존하려고 시도합니다. 차분 차수가 이미 최대값인 경우 항이 제거되고 차분 차수가 변경되지 않습니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "66083758"
   
  마지막으로 위에서 설명한 수식은 계절성 힌트가 포함되지 않은 단순화된 사례의 수식입니다. 계절성 힌트가 제공된 경우 각 계절성 힌트에 대해 방정식의 왼쪽에 별도의 AR 다항식 항이 추가되며, 차분 계열을 불안정화할 수 있는 항을 제거하기 위해 동일한 전략이 사용됩니다.  
   
-## <a name="customizing-the-microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘 사용자 지정  
+## <a name="customizing-the-microsoft-time-series-algorithm"></a>Microsoft Time Series 알고리즘 사용자 지정  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 다음 매개 변수를 지원합니다.  
   
 > [!NOTE]  
->  Microsoft 시계열 알고리즘은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있지만 시계열 분석을 사용자 지정하는 매개 변수와 같은 고급 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  Microsoft Time Series 알고리즘은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있지만 시계열 분석을 사용자 지정하는 매개 변수와 같은 고급 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
 ### <a name="detection-of-seasonality"></a>계절성 검색  
  ARIMA 및 ARTXP 알고리즘은 모두 계절성 또는 주기 검색을 지원합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 고속 푸리에 변환을 사용하여 학습 전에 계절성을 검색합니다. 그러나 알고리즘 매개 변수를 설정하여 계절성 검색 및 시계열 분석의 결과에 영향을 줄 수 있습니다.  
