@@ -137,7 +137,7 @@ ms.locfileid: "72908287"
     -   **-DistributorSecurityMode** = **0**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
-    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 트랜잭션 게시를 만들고 **sqlcmd** 스크립팅 변수를 사용하여 새 게시에 대한 스냅샷 에이전트 작업을 추가하는 방법을 보여 줍니다. 또한 추가한 작업을 시작합니다.  
