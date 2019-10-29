@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542228"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989502"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버 감사에 의해 생성된 감사 파일로부터 정보를 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \* \\** 지정 된 위치에 있는 모든 감사 파일을 수집 합니다.  
   
-    -   **\<path > \LoginsAudit_{GUID}** -지정 된 이름 및 GUID 쌍을 가진 모든 감사 파일을 수집 합니다.  
+    -   **\<경로 > \LoginsAudit_{GUID}** -지정 된 이름 및 GUID 쌍이 있는 모든 감사 파일을 수집 합니다.  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** -특정 감사 파일을 수집 합니다.  
+    -   **\<경로 > \LoginsAudit_{GUID}_00_29384.sqlaudit** -특정 감사 파일을 수집 합니다.  
   
- - **Azure SQL Database**:
+ - **Azure SQL Database 또는 Azure SQL Data Warehouse**:
  
     이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예를 들어
  
-      - **\<Storage_endpoint \> / \<Container \> /** \<ServerName \> / 0DatabaseName 1 2-특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
+      - **\<Storage_endpoint\>/\<컨테이너\>/ServerName**\<\>/DatabaseName\<\>-특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 8 0 9FileName xel** -특정 감사 파일 (blob)을 수집 합니다.
+      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<파일 이름\>xel** -특정 감사 파일 (blob)을 수집 합니다.
   
 > [!NOTE]  
 >  파일 이름 패턴 없이 경로를 전달하면 오류가 생성됩니다.  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | 열 이름 | 설명에 | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 동작의 ID입니다. Null을 허용하지 않습니다. |  
-| additional_information | **nvarchar(4000)** | 단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름은 `'\<'`, `'>'`, `'/'`, `'_x'`와 같이 잘못 된 xml 문자를 이스케이프 하기 위해 구문 분석 됩니다. @No__t_0으로 이스케이프 됩니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다. |
+| additional_information | **nvarchar(4000)** | 단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름은 `'\<'`, `'>'`, `'/'`, `'_x'`와 같이 잘못 된 xml 문자를 이스케이프 하기 위해 구문 분석 됩니다. `_xHHHH\_`으로 이스케이프 됩니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다. |
 | affected_rows | **bigint** | **적용 대상**: AZURE SQL DB에만 해당<br /><br /> 실행 된 문의 영향을 받는 행의 수입니다. |  
 | application_name | **nvarchar(128)** | **적용 대상**: AZURE SQL DB + SQL Server (2017부터 시작)<br /><br /> 감사 이벤트를 발생 시킨 문을 실행 한 클라이언트 응용 프로그램의 이름입니다. |  
 | audit_file_offset | **bigint** | **적용 대상**: SQL Server에만<br /><br /> 감사 레코드가 포함된 파일의 버퍼 오프셋입니다. Null을 허용하지 않습니다. |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database***
 
-  이 예제에서는 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` 라는 파일을 읽습니다.  
+  이 예제에서는 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`라는 파일을 읽습니다.  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
