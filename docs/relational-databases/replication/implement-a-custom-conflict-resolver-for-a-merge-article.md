@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561143"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905122"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "69561143"
      이 저장 프로시저는 병합 에이전트에서 이러한 매개 변수에 전달하는 값을 사용하여 사용자 지정 충돌 해결 논리를 구현합니다. 이 저장 프로시저는 기본 테이블과 구조가 동일하고 해당 행의 최우선 버전에 대한 데이터 값을 포함하는 단일 행 결과 집합을 반환해야 합니다.  
   
 2.  게시자에 연결할 때 구독자가 사용하는 모든 로그인에 저장 프로시저에 대한 EXECUTE 권한을 부여합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>새 테이블 아티클에 사용자 지정 충돌 해결 프로그램 사용  
   

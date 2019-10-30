@@ -3,28 +3,25 @@ title: SQL Server 2017 on Linux의 새로운 기능
 description: 이 문서에서는 SQL Server 2017 on Linux의 새로운 기능을 중점적으로 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032163"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890550"
 ---
-# <a name="whats-new-for-sql-server-on-linux"></a>SQL Server on Linux의 새로운 기능
+# <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux의 새로운 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux에서 실행되는 SQL Server 2017에 사용할 수 있는 주요 기능 및 서비스에 대해 설명합니다.
 
-SQL Server 2019 미리 보기가 릴리스되었습니다. 이 문서에서는 SQL Server 2019 미리 보기 릴리스를 다루지 않습니다. SQL Server 2019 미리 보기에 대한 자세한 내용은 [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)을 참조하세요.
-
 > [!NOTE]
-> 이 문서의 이러한 기능 외에도 GA 릴리스 후에 누적 업데이트가 정기적으로 릴리스됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진 문제에 대해서는 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
+> 이 문서의 이러한 기능 외에도 누적 업데이트가 정기적으로 릴리스됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진 문제에 대해서는 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
 
 ## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
 
@@ -66,9 +63,6 @@ SQL Server on Linux를 설치하려면 다음 자습서 중 하나를 사용합�
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-SQL Server 2017에 도입된 다른 향상된 기능을 보려면 [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)을 참조하세요.
-
-> [!TIP]
-> 질문과 대답은 [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.
+질문과 대답은 [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요. SQL Server 2017에 도입된 다른 향상된 기능을 보려면 [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)을 참조하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

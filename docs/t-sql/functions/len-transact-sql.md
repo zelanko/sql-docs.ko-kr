@@ -20,12 +20,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653241"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798418"
 ---
 # <a name="len-transact-sql"></a>LEN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> 지정된 문자열 식으로 인코딩된 문자 수를 반환하려면 [LEN](../../t-sql/functions/len-transact-sql.md)을 사용하고, 지정된 문자열 식의 크기(바이트)를 반환하려면 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)를 사용합니다. 이러한 출력은 열에 사용되는 인코딩 유형 및 데이터 형식에 따라 다를 수 있습니다. 서로 다른 인코딩 유형의 스토리지 차이점에 대해 자세히 알아보려면 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+> [LEN](../../t-sql/functions/len-transact-sql.md)을 사용하여 지정된 문자열 식에 대해 인코딩된 문자 수를 반환하거나 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)를 사용하여 지정된 문자열 식의 크기(바이트)를 반환하는 경우 출력은 열에 사용되는 데이터 형식 및 인코딩 형식에 따라 다를 수 있습니다. 서로 다른 인코딩 유형의 스토리지 차이점에 대해 자세히 알아보려면 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
 ## <a name="examples"></a>예  
  다음 예에서는 `FirstName`에 있는 사람의 `Australia` 데이터 및 문자 수를 선택합니다. 이 예에서는 AdventureWorks 데이터베이스를 사용합니다.  

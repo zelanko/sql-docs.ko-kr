@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 76e375259132528b84cbc0cc85b1f61da49f9b93
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621776"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907833"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "69621776"
   
  다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 [변경 데이터 캡처](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
   
- ![변경 데이터 캡처에 대한 개념 설명](../../relational-databases/track-changes/media/cdcart1.gif "Conceptual illustration of change data capture")  
+ ![변경 데이터 캡처의 개념 설명](../../relational-databases/track-changes/media/cdcart1.gif "변경 데이터 캡처의 개념 설명")  
   
 ### <a name="security-model"></a>보안 모델  
  이 섹션에서는 변경 데이터 캡처 보안 모델에 대해 설명합니다.  
@@ -109,8 +109,6 @@ ms.locfileid: "69621776"
   
 2.  보안 주체가 미러로 장애 조치를 수행하면 미러에서 캡처 작업 및 정리 작업을 만듭니다. 작업을 만들려면 저장 프로시저 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)을 사용합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  데이터베이스 미러링에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
 #### <a name="transactional-replication"></a>트랜잭션 복제  
@@ -143,7 +141,7 @@ ms.locfileid: "69621776"
   
  다음 그림에서는 변경 내용 추적을 사용하는 것이 좋은 동기화 시나리오를 보여 줍니다. 이 시나리오에서는 애플리케이션에 마지막으로 테이블이 동기화된 이후 변경된 테이블의 모든 행 및 현재 행 데이터만 포함하는 정보가 필요합니다. 동기화 메커니즘을 사용하여 변경 내용을 추적하기 때문에 애플리케이션에서는 양방향 동기화를 수행하고 발생할 수 있는 모든 충돌을 안정적으로 검색할 수 있습니다.  
   
- ![변경 내용 추적에 대한 개념 설명](../../relational-databases/track-changes/media/cdcart2.gif "Conceptual illustration of change tracking")  
+ ![변경 내용 추적의 개념 설명](../../relational-databases/track-changes/media/cdcart2.gif "변경 내용 추적의 개념 설명")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>변경 내용 추적 및 Sync Services for ADO.NET  
  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 데이터베이스 간 동기화를 사용하도록 설정하여 오프라인 및 협업 시나리오를 대상으로 하는 애플리케이션을 작성할 수 있는 직관적이고 유연한 API를 제공합니다. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 변경 내용을 동기화하기 위한 API를 제공하지만 서버 또는 피어 데이터베이스에서 변경 내용을 실제로 추적하지는 않습니다. 사용자 지정 변경 내용 추적 시스템을 만들 수 있지만 일반적으로 이러한 시스템으로 인해 작업이 상당히 복잡해지며 성능 오버헤드가 발생합니다. 서버 또는 피어 데이터베이스의 변경 내용을 추적하려면 구성하기 쉽고 고성능 추적을 제공하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 내 변경 내용 추적을 사용하는 것이 좋습니다.  

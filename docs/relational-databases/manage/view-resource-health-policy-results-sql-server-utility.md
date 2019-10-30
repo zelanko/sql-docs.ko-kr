@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42832ef91f33bbe4e66ad82bc3498106502e7ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024455"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907531"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>리소스 상태 정책 결과 보기(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,6 @@ ms.locfileid: "68024455"
 4.  **의 관리되는 인스턴스의 목록 뷰 데이터를 보려면** 관리되는 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 목록 뷰 데이터가 내용 창에 표시됩니다.  
   
 5.  데이터 계층 애플리케이션의 목록 뷰를 보려면 **배포된 데이터 계층 애플리케이션** 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 목록 뷰 데이터가 내용 창에 표시됩니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

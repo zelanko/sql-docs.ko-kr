@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995880"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783396"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
 
@@ -510,7 +510,7 @@ MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-c
 | mssql-conf 설정 | 설명 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 분산 트랜잭션에 대한 보안 전용 RPC 호출 구성 |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 분산에 대한 보안 전용 RPC 호출 구성 |트랜잭션
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 분산 트랜잭션에 대한 보안 전용 RPC 호출을 구성 |
 | distributedtransaction.maxlogsize | DTC 트랜잭션 로그 파일 크기(MB). 기본값은 64MB임 |
 | distributedtransaction.memorybuffersize | 추적이 저장되는 순환 버퍼 크기. 이 크기는 MB단위이며 기본값은 10MB임 |
 | distributedtransaction.servertcpport | MSDTC rpc 서버 포트 |

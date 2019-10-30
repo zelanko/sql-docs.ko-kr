@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710771"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908237"
 ---
 # <a name="republish-data"></a>데이터 다시 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710771"
   
 6.  구독을 초기화합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  재게시 토폴로지에서 병합 복제를 사용하는 경우 모든 재게시 구독자에서 서버 구독을 사용해야 합니다. 구독 유형에 대한 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
  다음 그림에서 게시자와 재게시자는 모두 자체 로컬 배포자로 동작합니다. 여기에 원격 배포자를 설정하면 각 배포자는 속도가 느리거나 비용이 많이 드는 통신 연결의 같은 쪽에 게시자로 있어야 합니다. 게시자는 안정적인 고속 통신 연결로 배포자에 연결되어야 합니다.  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![데이터 재게시](../../relational-databases/replication/media/repl-06a.gif "데이터 재게시")  
   
  모든 서버는 게시자인 동시에 구독자로 작동할 수 있습니다. 예를 들어 다음 다이어그램에서 런던에 존재하며 미국의 다른 4개 도시인 시카고, 뉴욕, 샌디에고 및 시애틀과 같은 4개 도시에 배포해야 하는 테이블 게시를 보십시오. 이 경우 다음과 같이 뉴욕 사이트가 조건에 맞기 때문에 뉴욕에 있는 서버를 런던에서 시작된 게시된 테이블로 구독하도록 선택합니다.  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71710771"
   
 -   뉴욕에서 미국의 다른 모든 구독자 사이트 간 네트워크 통신 회선이 양호합니다.  
   
-     ![여러 위치로 데이터 다시 게시](../../relational-databases/replication/media/repl-06.gif "Republishing data to dispersed locations")  
+     ![여러 위치로 데이터 재게시](../../relational-databases/replication/media/repl-06.gif "여러 위치로 데이터 재게시")  
   
  복제는 다음 표에 나와 있는 재게시 시나리오를 지원합니다.  
   

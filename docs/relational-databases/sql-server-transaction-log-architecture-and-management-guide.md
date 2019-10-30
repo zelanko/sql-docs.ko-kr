@@ -1,7 +1,7 @@
 ---
 title: SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874206"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916064"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874206"
 
   
 ##  <a name="Logical_Arch"></a> 트랜잭션 로그 논리 아키텍처  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션 로그는 로그 레코드 문자열처럼 논리적으로 작동합니다. 각 로그 레코드는 LSN(로그 시퀀스 번호)으로 식별됩니다. 각 새 로그 레코드는 LSN과 함께 로그의 논리적 끝에 작성되며 이때 LSN은 오름차순입니다. 로그 레코드는 작성된 순서대로 저장됩니다. 각 로그 레코드에는 자신이 속한 트랜잭션의 ID가 포함됩니다. 각 트랜잭션에서 트랜잭션과 관련된 모든 로그 레코드는 트랜잭션의 롤백 속도를 높이는 후방 포인터로 체인에 개별적으로 연결되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션 로그는 로그 레코드 문자열처럼 논리적으로 작동합니다. 각 로그 레코드는 LSN(로그 시퀀스 번호)으로 식별됩니다. 각 새 로그 레코드는 LSN과 함께 로그의 논리적 끝에 작성되며 이때 LSN은 오름차순입니다. 로그 레코드는 만들어진 순서에 따라 순차적으로 저장됩니다. 예를 들어 LSN2가 LSN1보다 큰 경우 로그 레코드 LSN1에 해당하는 변경이 먼저 발생하고 로그 레코드 LSN2에 해당하는 변경이 이후에 발생한 것입니다. 각 로그 레코드에는 자신이 속한 트랜잭션의 ID가 포함됩니다. 각 트랜잭션에서 트랜잭션과 관련된 모든 로그 레코드는 트랜잭션의 롤백 속도를 높이는 후방 포인터로 체인에 개별적으로 연결되어 있습니다.  
   
  데이터 수정에 대한 로그 레코드는 수행된 논리적 연산이나 수정된 데이터의 이전 이미지와 이후 이미지를 기록합니다. 이전 이미지는 연산이 수행되기 전의 데이터 복사본이고 이후 이미지는 연산이 수행된 후의 데이터 복사본입니다.  
   
@@ -65,7 +65,9 @@ ms.locfileid: "70874206"
   
  롤백 작업도 기록됩니다. 각 트랜잭션은 트랜잭션 로그에 공간을 예약하여 명시적 롤백 문이나 오류로 인해 발생한 롤백을 지원하기에 충분한 로그 공간을 확보합니다. 예약된 공간의 크기는 트랜잭션에서 수행되는 작업에 따라 다르지만 일반적으로 각 작업을 기록하는 데 사용되는 공간의 크기와 같습니다. 이렇게 예약된 공간은 트랜잭션 완료 시 해제됩니다.  
   
-<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 **최소 복구 LSN(*MinLSN*)** 이라고 합니다.  
+<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분, *활성 로그* 또는 *비상 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 [복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 **최소 복구 LSN(*MinLSN*)** 이라고 합니다. 트랜잭션 로그에서 지원되는 작업에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
+
+차등 및 로그 백업의 경우 데이터베이스는 보다 나중의 것으로 복원되며 이는 더 높은 LSN에 해당합니다. 
   
 ##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
 데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
@@ -231,14 +233,14 @@ MinLSN에서 마지막으로 쓰여진 로그 레코드까지의 로그 파일 �
 LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기록된 검사점이 처리되면 Tran 1이 커밋되고 Tran 2만 유일한 활성 트랜잭션이 됩니다. 이 경우 Tran 2에 대한 첫 번째 로그 레코드가 마지막 검사점에서 활성 상태인 트랜잭션에 대한 가장 오래된 로그 레코드가 됩니다. 따라서 Tran 2에 대한 Begin Transaction 레코드인 LSN 142가 MinLSN이 됩니다.
 
 ### <a name="long-running-transactions"></a>장기 실행 트랜잭션
-
-활성 로그에는 커밋되지 않은 모든 트랜잭션의 모든 부분이 포함되어야 합니다. 트랜잭션을 시작했으나 커밋하거나 롤백하지 않은 애플리케이션이 있으면 데이터베이스 엔진이 MinLSN을 앞당기지 못하게 됩니다. 이로 인해 다음 두 가지 유형의 문제가 발생할 수 있습니다.
+활성 로그에는 커밋되지 않은 모든 트랜잭션의 모든 부분이 포함되어야 합니다. 트랜잭션을 시작했으나 커밋하거나 롤백하지 않은 애플리케이션이 있으면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]이 MinLSN을 앞당기지 못하게 됩니다. 이로 인해 다음 두 가지 유형의 문제가 발생할 수 있습니다.
 
 * 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후에 시스템이 종료되면 시스템이 다시 시작된 후의 복구 단계 수행 시 **복구 간격** 옵션에 지정된 시간보다 훨씬 더 오래 걸릴 수 있습니다.
 * 로그가 MinLSN을 통과하여 잘릴 수 없으므로 너무 커질 수 있습니다. 이러한 문제는 트랜잭션 로그가 각 자동 검사점에서 일반적으로 잘리게 되는 단순 복구 모델을 데이터베이스에서 사용하는 경우에도 발생합니다.
 
-### <a name="replication-transactions"></a>복제 트랜잭션
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에서 [가속 데이터베이스 복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)를 사용하여 장기 실행 트랜잭션의 복구와 위에 설명된 문제를 방지할 수 있습니다.  
 
+### <a name="replication-transactions"></a>복제 트랜잭션
 로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 활성 로그에는 복제용으로 표시되었지만 아직 배포 데이터베이스로 전달되지 않은 모든 트랜잭션이 포함되어야 합니다. 이러한 트랜잭션이 제때에 복제되지 않으면 로그 잘라내기가 수행되지 않을 수 있습니다. 자세한 내용은 [트랜잭션 복제](../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.
 
 ## <a name="see-also"></a>관련 항목: 
@@ -249,6 +251,7 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [recovery interval 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[가속 데이터베이스 복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Paul Randall, “SQL Server의 로깅 및 복구 이해”](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

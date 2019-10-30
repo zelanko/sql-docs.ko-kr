@@ -3,7 +3,7 @@ title: SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 10/15/2019
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b591e7383861e878496553fd8091f8a5137fb8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938982"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904262"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ DMV(동적 관리 뷰) **sys.dm_db_stats_properties**. 이 DMV를 사용하여 �
 ## <a name="20-before-you-install"></a>2.0 설치 전 준비 사항  
 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 업데이트 설치 방법에 대한 자세한 내용은 [SQL Server 2008 R2 서비스 설명서](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)를 참조하세요.  
   
-SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추가 정보를 참조하십시오. 이 추가 정보 문서는 설치 미디어에서 다운로드할 수 있습니다. 또한 [SQL Server 온라인 설명서](sql-server-technical-documentation.md) 및 [SQL Server 포럼](https://social.msdn.microsoft.com/Forums/category/sqlserver/)에서 자세한 내용을 볼 수 있습니다.  
+SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추가 정보를 참조하십시오. 이 추가 정보 문서는 설치 미디어에서 다운로드할 수 있습니다. [SQL Server 포럼](https://social.msdn.microsoft.com/Forums/category/sqlserver/)에서 자세한 정보를 찾을 수도 있습니다.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 다운로드 및 설치할 올바른 파일 선택  
 다음 표를 사용하여 다운로드 및 설치할 파일을 결정합니다. 서비스 팩을 설치하기 전에 올바른 시스템 요구 사항을 갖추고 있는지 확인합니다. 시스템 요구 사항은 표에 링크되어 있는 다운로드 페이지에서 확인할 수 있습니다.  
   
 |현재 설치된 버전|원하는 작업|다운로드 및 설치할 파일|  
 |-------------------------------------------|----------------------|---------------------------|  
-|32비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1|32비트 버전의 SQL Server 2008 R2 SP2로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에서 SQLServer2008R2SP2-KB2630458-x86-ENU 다운로드|  
-|32비트 버전의 SQL Server 2008 R2 RTM Express 또는 SQL Server 2008 R2 SP1 Express|32비트 버전의 SQL Server 2008 R2 SP2로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
-|32비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 효율성 도구(SQL Server 2008 R2 Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 효율성 도구 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
-|32비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|32비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x86_ENU.exe|  
-|32비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
-|32비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2008 R2 SP2 Feature Pack으로 도구 업그레이드| [Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
+|32비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1|32비트 버전의 SQL Server 2008 R2 SP2로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에서 SQLServer2008R2SP2-KB2630458-x86-ENU 다운로드|  
+|32비트 버전의 SQL Server 2008 R2 RTM Express 또는 SQL Server 2008 R2 SP1 Express|32비트 버전의 SQL Server 2008 R2 SP2로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
+|32비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 효율성 도구(SQL Server 2008 R2 Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 효율성 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
+|32비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|32비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x86_ENU.exe|  
+|32비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
+|32비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2008 R2 SP2 Feature Pack으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
 |SQL Server 2008 R2의 32비트 설치 없음|Server 2008 R2(SP2 포함) 설치|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791)으로 이동하여 지침을 따릅니다.|  
 |SQL Server 2008 R2 Management Studio의 32비트 설치 없음|SQL Server 2008 R2 Management Studio(SP2 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791) 에 있는 SQLManagementStudio_x86_ENU.exe를 다운로드하여 무료로 SQL Server 2008 R2 SP2 Management Studio Express Edition을 설치합니다.|  
-|64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전|64비트 버전의 SQL Server 2008 R2 SP2로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
-|64비트 버전의 SQL Server 2008 R2 RTM Express 또는 SQL Server 2008 R2 SP1 Express|64비트 버전의 SQL Server 2008 R2 SP2로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
-|64비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 도구(SQL Server 2008 R2 Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 도구 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
-|64비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|64비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x64_ENU.exe|  
-|64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드| [여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe|  
-|64비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2008 R2 SP2 기능 팩으로 도구 업그레이드| [Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
+|64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전|64비트 버전의 SQL Server 2008 R2 SP2로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
+|64비트 버전의 SQL Server 2008 R2 RTM Express 또는 SQL Server 2008 R2 SP1 Express|64비트 버전의 SQL Server 2008 R2 SP2로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
+|64비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 도구(SQL Server 2008 R2 Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
+|64비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|64비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x64_ENU.exe|  
+|64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe|  
+|64비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2008 R2 SP2 기능 팩으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
 |SQL Server 2008 R2의 64비트 설치 안 됨|Server 2008 R2(SP2 포함) 설치|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791)으로 이동하여 지침을 따릅니다.|  
 |SQL Server 2008 R2 Management Studio의 64비트 설치 안 됨|SQL Server 2008 R2 Management Studio(SP2 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791) 에 있는 SQLManagementStudio_x64_ENU.exe를 다운로드하여 무료로 SQL Server 2008 R2 SP2 Management Studio Express Edition을 설치합니다.|  
   

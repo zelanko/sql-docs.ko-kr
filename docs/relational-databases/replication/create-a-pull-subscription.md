@@ -17,14 +17,22 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768665"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908429"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 끌어오기 구독을 만드는 방법에 대해 설명합니다.  
   
@@ -64,8 +72,6 @@ ms.locfileid: "68768665"
 3.  하나 이상의 구독을 만들 게시를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
   
 4.  새 구독 마법사의 페이지를 완료합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>구독자에서 끌어오기 구독을 만들려면  
   

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710637"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907575"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -60,12 +60,10 @@ ms.locfileid: "71710637"
 
 2. **services.msc**를 사용하여 SQL Server를 다시 시작해야 합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
   
-   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc에서 PolyBase 서비스 중지 및 시작")  
   
 ## <a id="pushdown"></a> 푸시다운 계산 사용  
 

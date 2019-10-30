@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10a54ea4326c3fb3c1a9400568ac9aa7e904aa2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111787"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908435"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 최적화 테이블 복원 및 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68111787"
   
 3.  **실행 취소**. 이 단계에서는 커밋되지 않은 트랜잭션이 롤백됩니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="process-for-improving-load-time"></a>로드 시간 향상을 위한 프로세스
 메모리 최적화 테이블을 메모리에 로드하면 RTO(복구 시간 목표)의 성능에 영향을 줄 수 있습니다. 데이터 및 델타 파일에서 메모리 최적화 데이터를 로드하는 시간을 개선하기 위해 메모리 내 OLTP 엔진은 다음과 같이 데이터/델타 파일을 병렬로 로드합니다.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "68111787"
   
 -   **데이터 파일 스트리밍**. 델타 맵 필터가 생성된 후, 논리적 CPU 수 만큼의 스레드에서 데이터 파일을 읽습니다. 각 스레드는 데이터 행을 읽고 연결된 델타 맵을 확인한 다음, 이 행이 삭제됨으로 표시되지 않은 경우에만 테이블에 행을 삽입합니다. 복구의 이 부분은 다음 다이어그램과 같이 일부 경우에 CPU 바인딩될 수 있습니다.  
   
-    ![메모리 최적화 테이블에 데이터 스트리밍](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "메모리 최적화 테이블에 데이터 스트리밍")  
+    ![메모리 최적화 테이블에 대한 데이터 스트리밍](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "메모리 최적화 테이블에 대한 데이터 스트리밍")  
   
 ## <a name="specific-cases-of-slow-load-times"></a>로드 시간이 길어지는 구체적인 경우
 메모리 최적화 테이블은 일반적으로 I/O 속도로 메모리에 로드될 수 있지만 데이터 행을 메모리에 로드하면 때때로 속도가 느려집니다. 구체적인 경우는 다음과 같습니다.  

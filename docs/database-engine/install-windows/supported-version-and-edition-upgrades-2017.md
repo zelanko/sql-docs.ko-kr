@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990808"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717225"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017에 지원되는 버전 및 에디션 업그레이드
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990808"
   
 ## <a name="unsupported-scenarios"></a>지원되지 않는 시나리오  
   
--   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서는 버전 간 인스턴스가 지원되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]인스턴스에서 동일해야 합니다.  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서는 버전 간 인스턴스가 지원되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]의 인스턴스에서 동일해야 합니다.  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]은 64비트 플랫폼에서만 사용할 수 있습니다. 플랫폼 간 업그레이드는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 32비트 인스턴스를 네이티브 64비트로 업그레이드할 수 없습니다. 하지만 데이터베이스를 복제에 게시하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 32비트 인스턴스에서 데이터베이스를 분리하거나 백업한 다음 이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64비트)의 새 인스턴스에 연결하거나 이 인스턴스로 복원할 수 있습니다. master, msdb 및 model 시스템 데이터베이스의 모든 로그인과 기타 사용자 개체를 다시 만들어야 합니다.  
   

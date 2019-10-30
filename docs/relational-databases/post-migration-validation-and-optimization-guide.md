@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006138"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909157"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
@@ -107,8 +107,6 @@ SARGable이 아닌 조건자의 몇 가지 예:
   -   이를 위해서는 데이터베이스(예: 저장 프로시저, 사용자 정의 함수 또는 뷰)에 저장된 사용자 정의 코드 구문을 기본 테이블(예: [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md))에서 사용되는 데이터 형식에 대한 정보를 저장하는 시스템 테이블과 비교해야 할 수 있습니다.
 2. 모든 코드를 이전 시점으로 트래버스할 수 없는 경우에는 같은 목적으로 테이블의 데이터 형식을 변수/매개 변수 선언과 일치하도록 변경합니다.
 3. 다음 구문을 유용성을 생각해 보세요.
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   조건자로 사용되는 함수
   -   와일드카드 검색

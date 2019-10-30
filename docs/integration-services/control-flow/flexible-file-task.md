@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298281"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807415"
 ---
 # <a name="flexible-file-task"></a>유연한 파일 작업
 
@@ -35,7 +35,9 @@ Flexible File Task는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩
 패키지에 Flexible File Task를 추가하려면 SSIS 도구 상자에서 디자이너 캔버스로 끕니다. 그런 다음, 작업을 두 번 클릭하거나 마우스 오른쪽 단추로 클릭하고 **편집**을 선택하여 **Flexible File Task 편집기** 대화 상자를 엽니다.
 
 **작업** 속성은 수행할 파일 작업을 지정합니다.
-현재는 **복사** 작업만 지원됩니다.
+현재 지원되는 작업은 다음과 같습니다.
+- **복사** 작업
+- **삭제** 작업
 
 **복사** 작업에 사용할 수 있는 속성은 다음과 같습니다.
 
@@ -48,6 +50,12 @@ Flexible File Task는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩
 - **DestinationConnection** 대상 연결 관리자를 지정합니다.
 - **DestinationFolderPath:** 대상 폴더 경로를 지정합니다.
 - **DestinationFileName:** 대상 파일 이름을 지정합니다.
+
+**삭제** 작업에 사용할 수 있는 속성은 다음과 같습니다.
+- **ConnectionType:** 연결 관리자 유형을 지정합니다.
+- **Connection:** 연결 관리자를 지정합니다.
+- **FolderPath:** 폴더 경로를 지정합니다.
+- **FileName:** 파일 이름을 지정합니다. 빈 상태로 두면 폴더가 삭제됩니다. Azure Blob Storage에서는 폴더 삭제가 지원되지 않습니다.
 
 ***서비스 사용자 권한 구성에 대한 참고 사항***
 

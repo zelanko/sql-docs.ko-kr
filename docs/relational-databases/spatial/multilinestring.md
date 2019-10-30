@@ -13,12 +13,12 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d144129f296a1e5c131bdc90364e3e2a969d3bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048646"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907017"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048646"
 ## <a name="multilinestring-instances"></a>MultiLineString 인스턴스  
  다음 그림에서는 **MultiLineString** 인스턴스의 예를 보여 줍니다.  
   
- ![geometry MultiLineString 인스턴스의 예](../../relational-databases/spatial/media/multilinestring.gif "geometry MultiLineString 인스턴스의 예")  
+ ![기하 도형 MultiLineString 인스턴스의 예](../../relational-databases/spatial/media/multilinestring.gif "기하 도형 MultiLineString 인스턴스의 예")  
   
  그림에 대한 설명:  
   
@@ -65,8 +65,6 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 1.  **MultiLineString** 인스턴스를 구성하는 모든 인스턴스가 유효한 **LineString** 인스턴스여야 합니다.  
   
 2.  **LineString** 인스턴스를 구성하는 두 **MultiLineString** 인스턴스가 일정 간격으로 겹치면 안 됩니다. **LineString** 인스턴스는 제한된 수의 점에서 자체적으로 또는 다른 **LineString** 인스턴스와 교차하는 것만 가능합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 다음 예에서는 유효한 **MultiLineString** 인스턴스 세 개와 유효하지 않은 **MultiLineString** 인스턴스 하나를 보여 줍니다.  
   

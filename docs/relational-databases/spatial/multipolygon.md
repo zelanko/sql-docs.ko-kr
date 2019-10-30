@@ -13,12 +13,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048575"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907004"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048575"
 ## <a name="polygon-instances"></a>Polygon 인스턴스  
  다음 그림에서는 **MultiPolygon** 인스턴스의 예를 보여 줍니다.  
   
- ![geometry MultiPolygon 인스턴스의 예](../../relational-databases/spatial/media/multipolygon.gif "geometry MultiPolygon 인스턴스의 예")  
+ ![기하 도형 MultiPolygon 인스턴스의 예](../../relational-databases/spatial/media/multipolygon.gif "기하 도형 MultiPolygon 인스턴스의 예")  
   
  그림에 대한 설명:  
   
@@ -64,8 +64,6 @@ MultiPolygon의 두 번째 인스턴스는 허용되는 Polygon 인스턴스가 
 1.  **MultiPolygon** 인스턴스를 구성하는 모든 인스턴스가 유효한 **Polygon** 인스턴스인 경우. 유효한 **Polygon** 인스턴스에 대한 자세한 내용은 [Polygon](../../relational-databases/spatial/polygon.md)을 참조하십시오.  
   
 2.  **Polygon** 인스턴스를 구성하는 어떤 **MultiPolygon** 인스턴스도 겹치지 않는 경우  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 다음 예에서는 유효한 **MultiPolygon** 인스턴스 두 개와 유효하지 않은 **MultiPolygon** 인스턴스 하나를 보여 줍니다.  
   

@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140318"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796644"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
 
@@ -57,6 +57,9 @@ ms.locfileid: "68140318"
 - 강력한 형식입니다.
 - 클라이언트가 정렬 순서 및 고유 키를 지정할 수 있습니다.
 - 저장 프로시저에서 사용 될 때 임시 테이블과 같이 캐시됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 테이블-반환 매개 변수는 또한 매개 변수가 있는 쿼리에 대해 캐시됩니다.
+
+## <a name="Permissions"></a> 사용 권한
+사용자 정의 테이블 형식의 인스턴스를 만들거나 테이블 반환 매개 변수를 사용하여 저장 프로시저를 호출하려면 사용자에게 해당 형식이나 해당 형식이 포함된 스키마 또는 데이터베이스에 대한 EXECUTE 권한이 있어야 합니다.
 
 ## <a name="Restrictions"></a> 제한 사항
 

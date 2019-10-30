@@ -1,11 +1,11 @@
 ---
 title: PREDICT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,20 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: VanMSFT
-ms.author: vanto
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141314"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907256"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다.  
+저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다. 자세한 내용은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../advanced-analytics/sql-native-scoring.md)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -92,7 +92,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ## <a name="remarks"></a>Remarks
 
-`PREDICT` 함수는 SQL Server 2017 이상의 모든 버전에서 지원됩니다. 이 지원에는 Linux용 SQL Server 2017이 포함됩니다. `PREDICT`는 클라우드의 Azure SQL Database에서도 지원됩니다. 이러한 모든 지원은 다른 컴퓨터 학습 기능이 사용 가능한지 여부와 관계없이 활성화됩니다.
+`PREDICT` 함수는 SQL Server 2017 이상 모든 버전 및 Windows와 Linux에서 지원됩니다. `PREDICT`는 클라우드의 Azure SQL Database에서도 지원됩니다. 이러한 모든 지원은 다른 컴퓨터 학습 기능이 사용 가능한지 여부와 관계없이 활성화됩니다.
 
 `PREDICT` 함수를 사용하기 위해 R, Python 또는 다른 기계 학습 언어를 서버에 설치할 필요는 없습니다. 모델을 다른 환경에서 학습하고 `PREDICT`와 함께 사용하기 위해 SQL Server 테이블에 저장하거나 저장된 모델을 가진 SQL Server의 다른 인스턴스에서 모델을 호출할 수 있습니다.
 
@@ -179,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>다음 단계
+
+- [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../advanced-analytics/sql-native-scoring.md)

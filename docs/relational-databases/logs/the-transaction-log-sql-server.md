@@ -1,7 +1,7 @@
 ---
 title: 트랜잭션 로그(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083945"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916027"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ ms.locfileid: "68083945"
  트랜잭션 로그는 다음 작업을 지원합니다.  
   
 -   개별 트랜잭션 복구  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구 
 -   복원된 데이터베이스, 파일, 파일 그룹 또는 페이지를 오류 지점으로 롤포워드  
 -   트랜잭션 복제 지원  
 -   고가용성 및 재해 복구 솔루션 지원: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달
 
 ### <a name="individual-transaction-recovery"></a>개별 트랜잭션 복구
-애플리케이션이 `ROLLBACK` 문을 실행하거나 데이터베이스 엔진이 클라이언트와의 통신이 끊어진 때와 같은 오류를 검색할 경우 불완전한 트랜잭션에 의해 수정된 내용을 롤백하는 데 이 로그 레코드가 사용됩니다. 
+애플리케이션이 `ROLLBACK` 문을 실행하거나 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 클라이언트와의 통신이 끊어진 때와 같은 오류를 검색할 경우 불완전한 트랜잭션에 의해 수정된 내용을 롤백하는 데 이 로그 레코드가 사용됩니다. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구
-서버에 장애가 발생하면 데이터베이스에서 일부 수정 내용이 버퍼 캐시에서 데이터 파일로 옮겨지지 않을 수 있으며 데이터 파일에 불완전한 트랜잭션으로 인한 일부 수정 내용이 그대로 남아 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 시작되면 이 인스턴스는 각 데이터베이스의 복구를 실행합니다. 데이터 파일에 쓰여지지 않은 로그에 기록된 모든 수정 내용은 롤포워드됩니다. 그런 다음 트랜잭션 로그에서 발견된 모든 불완전한 트랜잭션이 롤백되어 데이터베이스의 무결성이 보존됩니다. 
+서버에 장애가 발생하면 데이터베이스에서 일부 수정 내용이 버퍼 캐시에서 데이터 파일로 옮겨지지 않을 수 있으며 데이터 파일에 불완전한 트랜잭션으로 인한 일부 수정 내용이 그대로 남아 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 시작되면 이 인스턴스는 각 데이터베이스의 복구를 실행합니다. 데이터 파일에 쓰여지지 않은 로그에 기록된 모든 수정 내용은 롤포워드됩니다. 그런 다음 트랜잭션 로그에서 발견된 모든 불완전한 트랜잭션이 롤백되어 데이터베이스의 무결성이 보존됩니다. 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>복원된 데이터베이스, 파일, 파일 그룹 또는 페이지를 오류 지점으로 롤포워드
 데이터베이스 파일에 영향을 주는 하드웨어 손실이나 디스크 오류가 발생한 후 데이터베이스를 오류 발생 지점으로 복원할 수 있습니다. 먼저 마지막 전체 데이터베이스 백업과 마지막 차등 데이터베이스 백업을 복원한 후 트랜잭션 로그 백업의 이후 시퀀스를 오류 지점까지 복원합니다. 
 
-각 로그 백업을 복원할 때 데이터베이스 엔진은 로그에 기록된 모든 수정 내용을 다시 적용하여 모든 트랜잭션을 롤포워드합니다. 마지막 로그 백업이 복원되면 데이터베이스 엔진은 로그 정보를 사용하여 해당 지점에서 완료되지 않은 모든 트랜잭션을 롤백합니다. 
+각 로그 백업을 복원할 때 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 로그에 기록된 모든 수정 내용을 다시 적용하여 모든 트랜잭션을 롤포워드합니다. 마지막 로그 백업이 복원되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 로그 정보를 사용하여 해당 지점에서 완료되지 않은 모든 트랜잭션을 롤백합니다. 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 ### <a name="supporting-transactional-replication"></a>트랜잭션 복제 지원
-로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](https://msdn.microsoft.com/library/ms151706.aspx)을 참조하세요.
+로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))을 참조하세요.
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>고가용성 및 재해 복구 솔루션 지원
 대기 서버 솔루션, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달은 트랜잭션 로그를 많이 사용합니다. 
@@ -67,12 +67,14 @@ ms.locfileid: "68083945"
 
 **데이터베이스 미러링 시나리오**에서는 주 데이터베이스에 대한 모든 업데이트 내용이 미러 데이터베이스인 데이터베이스의 전체 복사본에 즉시 재생성됩니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 즉시 보내면 미러 서버 인스턴스에서는 들어오는 로그 레코드를 미러 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [데이터베이스 미러링](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>트랜잭션 로그 특성
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 트랜잭션 로그의 특성은 다음과 같습니다. 
 -  트랜잭션 로그는 데이터베이스에서 별도의 파일 또는 파일 집합으로 구현됩니다. 로그 캐시는 데이터 페이지의 버퍼 캐시와는 별도로 관리되므로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 단순하고, 빠르고, 강력한 코드를 구현할 수 있습니다. 자세한 내용은 [트랜잭션 로그 물리적 아키텍처](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)를 참조하세요.
+
 -  로그 레코드 및 페이지의 형식은 데이터 페이지의 형식을 따르도록 제한되어 있지 않습니다.
+
 -  트랜잭션 로그는 여러 파일에 구현할 수 있습니다. 트랜잭션 로그에 `FILEGROWTH` 값을 설정하여 자동으로 확장되도록 파일을 정의할 수 있습니다. 이를 통해 트랜잭션 로그에서 공간이 부족해질 확률이 줄어들며 동시에 관리 오버헤드가 줄어듭니다. 자세한 내용은 [ALTER DATABASE &#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
+
 -  로그에서 공간을 재사용하는 메커니즘은 빠르게 수행되며 트랜잭션 처리량에 최소의 영향만 미칩니다.
 
 트랜잭션 로그 아키텍처 및 내부에 대한 자세한 내용은 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)를 참조하세요.
@@ -136,7 +138,7 @@ ms.locfileid: "68083945"
   
 -   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) 작업.  
   
-트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 SELECT INTO 작업이 모두 기록됩니다.  
+트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 `SELECT INTO` 작업이 모두 기록됩니다.  
   
 -   새 데이터를 삽입 또는 추가할 때 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 `.WRITE` 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
@@ -166,7 +168,9 @@ ms.locfileid: "68083945"
 **트랜잭션 로그 백업(전체 복구 모델)**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [데이터베이스가 손상된 경우 트랜잭션 로그 백업(SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **트랜잭션 로그 복원(전체 복구 모델)**  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ ms.locfileid: "68083945"
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)   
 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [데이터베이스의 속성 보기 또는 변경](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

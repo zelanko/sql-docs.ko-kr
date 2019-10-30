@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289290"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907659"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "72289290"
 
 4.  비교된 계획이 기본적으로 위쪽에 하나, 아래쪽에 하나로 새 창에서 열립니다. 기본 선택 사항이 비교된 계획에서 공통적이지만 계획 간의 차이점을 보여주는 연산자 또는 노드의 첫 번째 발생이 됩니다. 강조 표시된 모든 연산자 및 노드가 비교된 계획 모두에 존재합니다. 위쪽 또는 왼쪽 계획에서 강조 표시된 연산자를 선택하면 아래쪽 또는 오른쪽 계획에서 해당 연산자가 자동으로 선택됩니다. 비교된 계획(아래 그림의 SELECT 노드) 중 하나에서 루트 노드 연산자를 선택하면 다른 비교된 계획에서 해당 루트 노드 연산자가 선택됩니다.
 
-    ![두 개의 저장된 계획 파일의 계획 비교](../../relational-databases/performance/media/plancomparison-plans.png "두 개의 저장된 계획 파일의 계획 비교")  
+    ![저장된 두 계획 파일의 계획 비교](../../relational-databases/performance/media/plancomparison-plans.png "저장된 두 계획 파일의 계획 비교")  
 
      > [!TIP]
      > 실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **토글 분할자 방향**을 선택하여 실행 계획 비교의 표시를 병렬로 전환할 수 있습니다.
@@ -75,8 +75,6 @@ ms.locfileid: "72289290"
 
 6.  **실행 계획 분석** 비교 탐색 창이 아래에서 열립니다. 세 개의 탭을 사용할 수 있습니다.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **명령문 옵션** 탭에서 기본 선택 사항은 *비슷한 작업 강조 표시*이며 비교된 계획에서 강조 표시된 동일한 연산자 또는 노드는 동일한 색과 선 패턴을 공유합니다. 선 패턴을 클릭하여 비교된 계획의 비슷한 영역 간을 이동합니다. *유사한 세그먼트와 일치하지 않는 작업 강조 표시*를 선택하여 유사점보다 계획의 차이점을 강조 표시하도록 선택할 수도 있습니다. 
     
        > [!NOTE]
@@ -86,11 +84,11 @@ ms.locfileid: "72289290"
 
     2.  비교할 올바른 명령문 쌍을 허용하여 다중 명령문으로 계획을 비교할 때 **다중 명령문** 탭은 유용합니다.
 
-        ![비교된 계획의 다중 명령문](../../relational-databases/performance/media/plancomparison-multiple.png "비교된 계획의 다중 명령문")  
+        ![비교된 계획의 여러 문](../../relational-databases/performance/media/plancomparison-multiple.png "비교된 계획의 여러 문")  
 
     3.  **시나리오** 탭에서 비교된 계획에서 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 차이점과 관련된 항목을 살펴보도록 몇 가지 가장 관련성이 높은 측면에 대한 자동화된 분석을 찾을 수 있습니다. 왼쪽 창에서 나열된 각 연산자의 경우 오른쪽 창은 *이 시나리오에 대한 자세한 내용은 여기를 클릭하세요* 링크의 시나리오에 대한 세부 정보를 보여주며, 해당 시나리오를 설명하는 가능한 원인이 나열됩니다. 
 
-        ![예상된 행 수가 다름](../../relational-databases/performance/media/plancomparison-scenarios.png "예상 행 수가 다름")  
+        ![예상 행 수가 다름](../../relational-databases/performance/media/plancomparison-scenarios.png "예상 행 수가 다름")  
 
     이 창이 닫힌 경우 비교된 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고, **실행 계획 비교 옵션**을 선택하여 다시 엽니다.
 
@@ -102,7 +100,7 @@ ms.locfileid: "72289290"
 
 2.  동일한 쿼리에 대해 두 개의 계획을 선택하려면 SHIFT 키와 마우스의 조합을 사용합니다. 
 
-    ![쿼리 저장소에서 두 개의 계획 선택](../../relational-databases/performance/media/plancomparison-querystore.png "쿼리 저장소에서 두 개의 계획 선택")   
+    ![쿼리 저장소에서 두 계획을 선택](../../relational-databases/performance/media/plancomparison-querystore.png "쿼리 저장소에서 두 계획을 선택")   
 
 3.  **별도 창에서 선택 쿼리에 대한 계획 비교** 단추를 사용하여 계획 비교를 시작합니다. 그런 다음, *실행 계획을 비교하려면*의 4~6단계를 적용할 수 있습니다. 
 

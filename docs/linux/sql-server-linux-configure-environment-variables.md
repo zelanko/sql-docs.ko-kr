@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476223"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807463"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
 
@@ -94,7 +94,7 @@ ms.locfileid: "68476223"
 이 예제에서는 구성된 환경 변수를 사용하여 `mssql-conf setup`을 실행합니다. 다음 환경 변수를 지정합니다.
 
 - **ACCEPT_EULA**는 최종 사용자 사용권 계약에 동의합니다.
-- **MSSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 Developer Edition을 지정합니다.
+- **MSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
 - **MSSQL_SA_PASSWORD**는 강력한 암호를 설정합니다.
 - **MSSQL_TCP_PORT**는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 이 예제 docker 명령은 다음 환경 변수를 사용하여 새 SQL Server 컨테이너를 만듭니다.
 
 - **ACCEPT_EULA**는 최종 사용자 사용권 계약에 동의합니다.
-- **MSSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 Developer Edition을 지정합니다.
+- **MSSQL_PID**는 비프로덕션 사용을 위해 SQL Server의 체험용 라이선스 디벨로퍼 버전을 지정합니다.
 - **MSSQL_SA_PASSWORD**는 강력한 암호를 설정합니다.
 - **MSSQL_TCP_PORT**는 SQL Server가 수신 대기하는 TCP 포트를 1234로 설정합니다. 즉, 포트 1433(기본값)을 호스트 포트에 매핑하는 대신 이 예제에서는 `-p 1234:1234` 명령을 사용하여 사용자 지정 TCP 포트를 매핑해야 합니다.
 

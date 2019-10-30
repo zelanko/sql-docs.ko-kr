@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123216"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909816"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "70123216"
 4.  쿼리에 사용된 인덱스가 조각 모음되었는지 확인합니다.  
   
 5.  부담이 큰 쿼리는 다시 작성하는 것이 좋습니다. 예를 들어 쿼리 매개 변수화를 활용하고 동적 SQL의 사용을 줄입니다. 데이터를 읽을 때의 최적 논리를 구현합니다(애플리케이션 쪽이 아니라 데이터베이스 쪽에서 데이터 필터링 적용).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>A/B 테스트  
  쿼리 저장소를 사용하여 예정된 애플리케이션 변경 이전과 이후의 워크로드 성능을 비교할 수 있습니다. 다음 목록에는 쿼리 저장소를 사용하여 환경 또는 애플리케이션 변경이 워크로드 성능에 미치는 영향을 평가할 수 있는 몇 가지 예제가 포함되어 있습니다.  

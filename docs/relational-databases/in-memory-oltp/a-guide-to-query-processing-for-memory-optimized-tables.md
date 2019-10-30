@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811152"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908732"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 표시되는 예상 실행 계획은 다음과 같습니다.  
   
- ![디스크 기반 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "디스크 기반 테이블의 조인을 위한 쿼리 계획.")  
+ ![디스크 기반 테이블 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "디스크 기반 테이블 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블 조인을 위한 쿼리 계획.  
   
  이 쿼리 계획 정보:  
@@ -117,8 +117,6 @@ SQL Server 쿼리 처리 파이프라인.
   
 6.  Access Methods는 버퍼 풀에 있는 인덱스 및 데이터 페이지로부터 행을 검색하고 필요에 따라 디스크에서 버퍼 풀로 페이지를 로드합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  첫 번째 예제 쿼리에서 실행 엔진은 Access Methods에서 Customer의 클러스터형 인덱스 및 Order의 비클러스터형 인덱스에 있는 행을 요청합니다. Access Methods는 B-트리 인덱스 구조를 통과하여 요청된 행을 검색합니다. 이 경우에는 계획이 전체 인덱스 검색을 호출하므로 모든 행이 검색됩니다.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스  
@@ -126,7 +124,7 @@ SQL Server 쿼리 처리 파이프라인.
   
  해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하면 메모리 최적화 테이블 및 디스크 기반 테이블에 모두 액세스할 수 있습니다. 다음 그림에서는 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 위한 쿼리 처리를 보여 줍니다.  
   
- ![해석된 tsql을 위한 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "해석된 tsql을 위한 쿼리 처리 파이프라인.")  
+ ![해석된 tsql을 위한 쿼리 처리 파이프라인](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "해석된 tsql을 위한 쿼리 처리 파이프라인.")  
 메모리 최적화 테이블에 대한 해석된 Transact-SQL 액세스를 위한 쿼리 처리 파이프라인  
   
  그림에 표시된 것처럼 쿼리 처리 파이프라인은 대부분 변경되지 않은 상태로 유지됩니다.  
@@ -164,7 +162,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  예상 계획은 다음과 같습니다.  
   
- ![메모리 최적화 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "메모리 최적화 테이블의 조인을 위한 쿼리 계획.")  
+ ![메모리 액세스에 최적화된 테이블의 조인을 위한 쿼리 계획](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "메모리 최적화 테이블의 조인을 위한 쿼리 계획.")  
 메모리 최적화 테이블의 조인을 위한 쿼리 계획  
   
  디스크 기반 테이블에서 동일한 쿼리를 계획에 사용해서 다음과 같은 차이점을 관찰합니다(그림 1).  
@@ -205,7 +203,7 @@ END
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
   
- ![저장 프로시저의 네이티브 컴파일.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "저장 프로시저의 네이티브 컴파일.")  
+ ![저장 프로시저의 고유 컴파일](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "저장 프로시저의 고유 컴파일")  
 저장 프로시저의 고유 컴파일  
   
  프로세스에 대한 설명은 다음과 같습니다.  
@@ -222,7 +220,7 @@ END
   
  고유하게 컴파일된 저장 프로시저의 호출은 DLL의 함수 호출과 같습니다.  
   
- ![고유하게 컴파일된 저장 프로시저의 실행.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "고유하게 컴파일된 저장 프로시저의 실행.")  
+ ![고유하게 컴파일된 저장 프로시저의 실행](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "고유하게 컴파일된 저장 프로시저의 실행")  
 고유하게 컴파일된 저장 프로시저의 실행  
   
  고유하게 컴파일된 저장 프로시저의 호출에 대한 설명은 다음과 같습니다.  
@@ -296,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Customer 테이블에서 행을 하나만 남겨두고 모두 삭제한 후에는 다음과 같이 됩니다.  
   
- ![열 통계 및 조인](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "열 통계 및 조인")  
+ ![열 통계 및 조인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "열 통계 및 조인.")  
   
  이 쿼리 계획에 대한 설명은 다음과 같습니다.  
   
@@ -305,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   IX_CustomerID에 대한 전체 인덱스 검색은 index seek로 바뀌었습니다. 그 결과 전체 인덱스 검색에 필요한 830개 행 대신 5개 행이 검색되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

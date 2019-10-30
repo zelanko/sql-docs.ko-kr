@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961965"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908665"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -69,7 +69,7 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
    
 3. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.  
 
-   ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
+   ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase 서비스")  
    
    >[!NOTE]
    >SQL Server 2019 PolyBase에는 추가적인 **HDFS 데이터 원본용 Java 커넥터** 옵션이 포함되어 있습니다. 이 기능에 대한 자세한 내용은 [SQL Server 미리 보기 기능](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/)을 참조하세요.
@@ -90,8 +90,6 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
      또한 이 옵션은 MSDTC(Microsoft Distributed Transaction Coordinator) 방화벽 연결을 사용하도록 설정하고 MSDTC 레지스트리 설정을 수정합니다.  
    
 6. PolyBase 구성 페이지에서 6개 이상의 포트로 포트 범위를 지정합니다. SQL Server 설치 프로그램은 범위에서 처음 6개의 사용 가능한 포트를 할당합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710622"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906884"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -41,8 +41,6 @@ ms.locfileid: "71710622"
 
 5. (선택 사항) [sp_polybase_leave_group&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 컴퓨팅 노드를 제거합니다.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example-walk-through"></a>예제 연습
 
 이 예제는 다음을 사용하여 PolyBase 그룹을 구성하는 단계를 보여줍니다.  
@@ -67,7 +65,7 @@ ms.locfileid: "71710622"
   
 5. 설치가 완료된 후 **services.msc**를 실행합니다. SQL Server, PolyBase 엔진 및 PolyBase 데이터 이동 서비스가 실행 중인지 확인합니다.
   
-   ![PolyBase 서비스](../../relational-databases/polybase/media/polybase-services.png "PolyBase services")  
+   ![PolyBase 서비스](../../relational-databases/polybase/media/polybase-services.png "PolyBase 서비스")  
   
 ## <a name="select-one-sql-server-as-head-node"></a>헤드 노드로 하나의 SQL Server 선택  
   

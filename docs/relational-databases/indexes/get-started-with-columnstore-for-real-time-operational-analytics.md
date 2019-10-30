@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009497"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908031"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009497"
   
 -   **데이터 대기 시간.** ETL을 구현하면 분석을 실행하는 데 지연 시간이 추가됩니다. 예를 들어 ETL 작업이 각 업무일 종료 시간에 실행되는 경우 분석 쿼리는 최소한 하루 이전의 데이터에서 실행됩니다. 많은 기업에서 이러한 지연은 허용되지 않습니다. 실시간 데이터 분석에 의존하기 때문입니다. 예를 들어 사기 감지에는 운영 데이터에 대한 실시간 분석이 필요합니다.  
   
- ![실시간 운영 분석 개요](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![실시간 운영 분석 개요](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "실시간 운영 분석 개요")  
   
  실시간 운영 분석은 이러한 과제에 대한 솔루션을 제공합니다.   
         분석 워크로드와 OLTP 워크로드가 동일한 기본 테이블에서 실행되는 경우에는 시간 지연이 없습니다.   실시간 분석을 사용할 수 있는 시나리오에서는 ETL이 필요 없고 별도의 데이터 웨어하우스를 구매하고 유지 관리할 필요가 없으므로 비용 및 복잡성이 크게 줄어듭니다.  
@@ -84,8 +84,6 @@ ms.locfileid: "70009497"
   
 3.  이 작업만 수행하면 됩니다!  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  이제 애플리케이션을 변경하지 않고도 실시간 운영 분석을 실행할 준비가 완료되었습니다.  분석 쿼리는 columnstore 인덱스에 대해 실행되고 OLTP 작업은 OLTP btree 인덱스에 대해 계속 실행됩니다. OLTP 워크로드는 계속 수행되지만 columnstore 인덱스를 유지하기 위해 약간의 추가 오버헤드가 발생합니다. 다음 섹션에서 성능 최적화를 참조하세요.  
   
 ## <a name="blog-posts"></a>블로그 게시물  
@@ -122,7 +120,7 @@ ms.locfileid: "70009497"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예제 A: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
  이 예제에서는 필터링된 조건(accountkey > 0)을 사용하여 columnstore 인덱스에 포함할 행을 설정합니다. 자주 변경되는 “핫” 데이터는 btree 인덱스에서 액세스하고 보다 안정적인 “웜” 데이터는 columnstore 인덱스에서 액세스하도록 필터링된 조건 및 후속 쿼리를 디자인하는 것이 목적입니다.  
   
- ![웜 및 핫 데이터에 대한 결합된 인덱스](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![웜 및 핫 데이터에 대한 결합된 인덱스](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "웜 및 핫 데이터에 대한 결합된 인덱스")  
   
 > [!NOTE]  
 >  쿼리 최적화 프로그램에서는 경우에 따라 쿼리 계획에 대해 columnstore 인덱스를 선택할 수 있습니다. 필터링된 columnstore 인덱스를 선택한 경우 쿼리 최적화 프로그램은 실시간 분석을 허용하기 위해 columnstore 인덱스의 행과 필터링된 조건을 충족하지 않는 행을 모두 투명하게 통합합니다. 이는 인덱스에 있는 행으로 제한되는 쿼리에서만 사용할 수 있는 일반 비클러스터형 필터링된 인덱스와 다릅니다.  
@@ -165,7 +163,7 @@ Group By customername
   
  분석 쿼리는 다음 쿼리 계획으로 실행됩니다. 필터링된 조건을 충족하지 않는 행에는 클러스터형 btree 인덱스를 통해 액세스하는 것을 볼 수 있습니다.  
   
- ![쿼리 계획](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![쿼리 계획](../../relational-databases/indexes/media/query-plan-columnstore.png "쿼리 계획")  
   
  [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
   

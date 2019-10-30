@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 06a8737ee336579847efc6ba874e5de389538251
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 05efb4fe4bc6d67c9642463675028d8fa29eb931
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271928"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798400"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -116,7 +116,7 @@ ms.locfileid: "71271928"
 |**3051**|SQL Server 백업에서 URL을 특정 오류 로그 파일에 로그하도록 설정합니다. 자세한 내용은 [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.<br /><br />**범위**: 전역만|  
 |**3205**|기본적으로 테이프 드라이브가 하드웨어 압축을 지원하면 DUMP 또는 BACKUP 문에서 하드웨어 압축을 사용합니다. 이 추적 플래그를 사용하면 테이프 드라이버에 대한 하드웨어 압축을 해제할 수 있습니다. 다른 사이트 또는 압축을 지원하지 않는 테이프 드라이브와 테이프를 교환할 때 유용합니다.<br /><br />**범위**: 전역 또는 세션|  
 |**3226**|기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그 백업을 매우 자주 만드는 경우 이러한 성공 메시지가 바로 누적되어 엄청난 오류 로그가 쌓여 다른 메시지를 찾는 데 문제가 될 수 있습니다.<br /><br />이 추적 플래그를 사용하면 이러한 로그 항목을 표시하지 않을 수 있습니다. 로그 백업을 자주 실행하거나 이러한 항목에 종속되는 스크립트가 없는 경우 이 추적 플래그를 사용하면 유용합니다.<br /><br />**범위**: 전역만|   
-|**3427**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 임시 테이블에 데이터를 삽입하는 많은 연속 트랜잭션이 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우보다 더 많은 CPU를 사용하는 경우 문제를 해결할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/3216543)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 이상의 빌드에 적용됩니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 이 추적 플래그는 영향을 주지 않습니다.<br /><br />**범위**: 전역만|  
+|**3427**|많은 연속 트랜잭션이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 임시 테이블에 데이터를 삽입할 때 이 작업이 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서보다 더 많은 CPU를 사용하는 경우 문제를 해결할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/3216543)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 ~ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 이 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|  
 |**3459**|병렬 다시 실행을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/3200975) 및 [Microsoft 지원 문서](https://support.microsoft.com/help/4101554)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
 |**3468**|TempDB에 [간접 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt)을 사용하지 않도록 설정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 이상 빌드에 적용됩니다.<br /><br />**범위**: 전역만|  
 |**3608**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **master** 데이터베이스를 제외한 모든 데이터베이스를 자동으로 시작 및 복구하지 못하도록 방지합니다. **TempDB**가 필요한 작업을 시작하면 **모델**이 복구되고 **TempDB**가 만들어집니다. 다른 데이터베이스에 액세스할 때 이 데이터베이스가 시작 및 복구됩니다. 스냅샷 격리 및 커밋된 읽기 스냅샷과 같은 일부 기능은 작동하지 않을 수 있습니다. [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md) 및 [사용자 데이터베이스 이동](../../relational-databases/databases/move-user-databases.md)에 사용합니다.<br /><br />**참고:** 정상적인 작업 중에는 사용하면 안 됩니다.<br /><br />**범위**: 전역만|   

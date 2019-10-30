@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294946"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807438"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -27,8 +27,9 @@ ms.locfileid: "71294946"
 
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
 
-[![Azure용 SSIS 기능 팩 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **다운로드**
+[![Azure용 SSIS 기능 팩 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **다운로드**
 
+- SQL Server 2019의 경우 - [Azure용 Microsoft SQL Server 2019 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=100430)
 - SQL Server 2017의 경우 - [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016의 경우 - [Azure용 Microsoft SQL Server 2016 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014의 경우 - [Azure용 Microsoft SQL Server 2014 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -177,3 +178,16 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-1150"></a>버전 1.15.0
+
+#### <a name="improvements"></a>개선 사항
+
+1. Flexible File 태스크에 폴더/파일 삭제 작업 추가
+1. Flexible File 원본에서 외부/출력 데이터 형식 변환 함수 추가
+
+#### <a name="bugfixes"></a>버그 수정
+
+1. 경우에 따라 "배열과 호환되지 않는 형식으로 요소를 액세스하려고 했습니다"라는 오류 메시지와 함께 Data Lake Storage Gen2에 대한 연결 테스트가 오작동합니다.
+1. Azure Storage 에뮬레이터에 대한 지원 재개

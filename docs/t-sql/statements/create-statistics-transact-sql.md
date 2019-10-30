@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586747"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798381"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,6 +165,9 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  **ON**을 선택한 경우 통계는 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트에 대해 생성 샘플링 비율을 유지합니다. **OFF**를 선택한 경우 샘플링 비율을 명시적으로 지정하지 않은 이후 업데이트의 통계 샘플링 비율은 기본 샘플링으로 재설정됩니다. 기본값은 **OFF**입니다. 
  
+ > [!NOTE]
+ > 테이블이 잘린 경우 잘린 HoBT에서 작성된 모든 통계가 기본 샘플링 비율을 사용하도록 되돌아갑니다.
+
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터)에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)까지.    
   
  STATS_STREAM **=** _stats_stream_  

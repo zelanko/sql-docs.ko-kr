@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176369"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717235"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176369"
   
 -   동일한 blob으로 병렬 백업을 수행하면 **초기화 실패** 오류가 발생하여 백업 중 하나가 실패합니다.  
   
--   다음은 백업 오류 문제 해결에 도움이 되는 오류 로그입니다.  
+-   페이지 Blob(예: `BACKUP... TO URL... WITH CREDENTIAL`)을 사용하는 경우 다음 오류 로그를 사용하여 백업 오류 문제를 해결할 수 있습니다.  
   
     -   다음 형식으로 추적 플래그 3051을 설정하여 특정 오류 로그 로깅을 활성화합니다.  
   

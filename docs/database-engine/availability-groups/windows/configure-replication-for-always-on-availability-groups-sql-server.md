@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251934"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689656"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251934"
         @security_mode = 1;  
     ```  
   
-3.  원격 게시자를 구성합니다. 배포자 구성에 저장 프로시저를 사용하는 경우 **sp_adddistpublisher**를 실행합니다. *@security_mode* 매개 변수는 복제 에이전트에서 실행되는 게시자 유효성 검사 저장 프로시저에서 현재 주 복제본에 연결하는 방법을 결정하는 데 사용됩니다. 1로 설정하면 Windows 인증을 사용하여 현재 주 복제본에 연결합니다. 0으로 설정하면 지정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @login *@login* @password *@password* 인증을 사용합니다. 지정된 로그인 및 암호가 각 보조 복제본에서 유효해야만 유효성 검사 저장 프로시저가 해당 복제본에 연결할 수 있습니다.  
+3.  원격 게시자를 구성합니다. 배포자 구성에 저장 프로시저를 사용하는 경우 **sp_adddistpublisher**를 실행합니다. *\@security_mode* 매개 변수는 복제 에이전트에서 실행되는 게시자 유효성 검사 저장 프로시저가 현재 주 복제본에 연결하는 방법을 결정하는 데 사용됩니다. 1로 설정하면 Windows 인증을 사용하여 현재 주 복제본에 연결합니다. 0으로 설정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 지정된 *\@login* 및 *\@password* 값과 함께 사용합니다. 지정된 로그인 및 암호가 각 보조 복제본에서 유효해야만 유효성 검사 저장 프로시저가 해당 복제본에 연결할 수 있습니다.  
   
     > [!NOTE]  
     >  수정된 복제 에이전트가 배포자와는 다른 컴퓨터에서 실행될 경우 Windows 인증으로 주 복제본에 연결하려면 복제본 호스트 컴퓨터 간 통신에 대해 Kerberos 인증이 구성되어 있어야 합니다. 현재 주 복제본 연결에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 사용하는 경우에는 Kerberos 인증이 필요하지 않습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "72251934"
   
  **원래 게시자에서 게시자 구성**  
   
-1.  원격 배포를 구성합니다. 게시자 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *@password* 값은 배포를 설정하기 위해 배포자에서 **sp_adddistrbutor**를 실행할 때 사용한 것과 동일한 값으로 지정합니다.  
+1.  원격 배포를 구성합니다. 게시자 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *\@password* 값은 배포를 설정하기 위해 배포자에서 **sp_adddistrbutor**를 실행할 때 사용한 것과 동일한 값으로 지정합니다.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 원래 게시자에 *@installed* 가 0이면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 복제를 추가해야 합니다.  
+ *\@installed*가 0이면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 복제를 추가해야 합니다.  
   
 ##  <a name="step4"></a> 4. 보조 복제본 호스트를 복제 게시자로 구성  
- 보조 복제본은 복제 게시자나 재게시자로 작동할 수 없지만 복제가 구성되어 있어야만 장애 조치(failover) 후 보조 복제본이 작업을 넘겨 받을 수 있습니다. 배포자에서 각 보조 복제본 호스트에 대해 배포를 구성합니다. 원래 게시자를 배포자에 추가할 때 지정한 것과 동일한 배포 데이터베이스 및 작업 디렉터리를 지정합니다. 배포 구성에 저장 프로시저를 사용하는 경우 **sp_adddistpublisher** 를 사용하여 원격 게시자를 배포자에 연결합니다. 원래 게시자에 *@login* @password *@password* 를 사용한 경우 보조 복제본 호스트를 게시자로 추가할 때 각각에 대해 동일한 값을 지정합니다.  
+ 보조 복제본은 복제 게시자나 재게시자로 작동할 수 없지만 복제가 구성되어 있어야만 장애 조치(failover) 후 보조 복제본이 작업을 넘겨 받을 수 있습니다. 배포자에서 각 보조 복제본 호스트에 대해 배포를 구성합니다. 원래 게시자를 배포자에 추가할 때 지정한 것과 동일한 배포 데이터베이스 및 작업 디렉터리를 지정합니다. 배포 구성에 저장 프로시저를 사용하는 경우 **sp_adddistpublisher** 를 사용하여 원격 게시자를 배포자에 연결합니다. 원래 게시자에 *\@login* 및 *\@password*를 사용한 경우 보조 복제본 호스트를 게시자로 추가할 때 각각에 대해 동일한 값을 지정합니다.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 각 보조 복제본 호스트에서 배포를 구성합니다. 원래 게시자의 배포자를 원격 배포자로 식별합니다. 배포자에서 원래 **sp_adddistributor** 를 실행했을 때와 동일한 암호를 사용합니다. 배포 구성에 저장 프로시저를 사용하는 경우 *@password* 의 **sp_adddistributor** 매개 변수를 사용하여 암호를 지정합니다.  
+ 각 보조 복제본 호스트에서 배포를 구성합니다. 원래 게시자의 배포자를 원격 배포자로 식별합니다. 배포자에서 원래 **sp_adddistributor** 를 실행했을 때와 동일한 암호를 사용합니다. 배포 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**의 *\@password* 매개 변수를 사용하여 암호를 지정합니다.  
   
 ```  
 EXEC sp_adddistributor   

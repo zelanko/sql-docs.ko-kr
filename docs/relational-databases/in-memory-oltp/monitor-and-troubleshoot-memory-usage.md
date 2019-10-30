@@ -11,12 +11,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069659"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907541"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68069659"
 2.  **새 쿼리**를 클릭합니다.  
   
 3.  새 쿼리 창에 이 코드를 붙여 넣고 각 섹션을 실행합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -248,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  자세한 내용은 [sys.dm_os_memory_objects(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)를 참조하세요.  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진 및 메모리 최적화 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
   
 ```sql  

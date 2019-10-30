@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,89 +25,653 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 9fc839390b89cb133bb51ae8c76552df1804c59b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155652"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783227"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  데이터베이스 사용자의 이름을 바꾸거나 기본 스키마를 변경합니다.  
+데이터베이스 사용자의 이름을 바꾸거나 기본 스키마를 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+||||||
+|-|-|-|-|-|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+||||||
+
+&nbsp;
+
+## <a name="sql-server"></a>SQL Server
   
 ## <a name="syntax"></a>구문  
   
-```  
--- Syntax for SQL Server and Azure SQL Database
+```
+-- Syntax for SQL Server
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
 [;]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = { schemaName | NULL }  
     | LOGIN = loginName  
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
 ```
+  
+## <a name="arguments"></a>인수
 
-> [!IMPORTANT]
-> SQL Database 관리되는 인스턴스에 대한 Azure AD 로그인은 **공개 미리 보기**로 제공됩니다. Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Database 관리되는 인스턴스에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
+ *userName*  
+ 이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
+  
+ LOGIN **=** _loginName_  
+ 사용자의 SID(보안 식별자)를 다른 로그인의 SID와 일치하도록 변경하여 사용자를 다른 로그인으로 다시 매핑합니다.  
+  
+ NAME **=** _newUserName_  
+ 이 사용자의 새 이름을 지정합니다. *newUserName*은 현재 데이터베이스에 아직 없는 이름이어야 합니다.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.  
+  
+ PASSWORD **=** '*password*'  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+  
+ 변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하세요.  
+  
+ OLD_PASSWORD **=** _'oldpassword'_  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+  
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD*가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD*를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
+  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+  
+ 사용자에게 할당할 기본 언어를 지정합니다. 이 옵션을 NONE으로 설정하면 기본 언어가 데이터베이스의 현재 기본 언어로 설정됩니다. 나중에 데이터베이스의 기본 언어가 변경되더라도 사용자의 기본 언어는 그대로 유지됩니다. *DEFAULT_LANGUAGE*는 로컬 ID(lcid), 언어 이름 또는 언어 별칭이 될 수 있습니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 데이터베이스에서 포함된 사용자에 대해서만 지정할 수 있습니다.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
+  
+ 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.  
+  
+> [!WARNING]  
+> 이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. 자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.
+  
+## <a name="remarks"></a>Remarks
+
+ 기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
+  
+ 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
+  
+ DEFAULT_SCHEMA는 현재 데이터베이스에 없는 스키마로 설정할 수 있습니다. 따라서 해당 스키마가 생성되기 전에 DEFAULT_SCHEMA를 사용자에게 할당할 수 있습니다.  
+  
+ 인증서 또는 비대칭 키에 매핑된 사용자에는 DEFAULT_SCHEMA를 지정할 수 없습니다.  
+  
+> [!IMPORTANT]  
+> 사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.
+  
+ 새 사용자 이름의 SID가 데이터베이스에 기록된 SID와 일치할 때만 Windows 로그인 또는 그룹에 매핑된 사용자의 이름을 변경할 수 있습니다. 이 검사는 데이터베이스에서 Windows 로그인의 스푸핑을 방지하는 데 도움이 됩니다.  
+  
+ WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다.  
+  
+ 다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.  
+  
+- 사용자가 Windows 사용자입니다.  
+  
+- 이름이 Windows 이름입니다(백슬래시 포함).  
+  
+- 새 이름이 지정되지 않았습니다.  
+  
+- 현재 이름이 로그인 이름과 다릅니다.  
+  
+ 위의 조건을 충족하지 않으면 사용자 이름이 변경되지 않으며 호출자가 NAME 절을 추가로 호출해야 합니다.  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 인증서 또는 비대칭 키에 매핑된 사용자 이름에는 백 슬래시 문자(\\)를 사용할 수 없습니다.  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+## <a name="security"></a>보안  
+  
+> [!NOTE]  
+> **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.
+  
+### <a name="permissions"></a>사용 권한
+
+ 사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
+  
+ 사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 데이터베이스에 대한 **CONTROL** 권한이 있는 사용자의 사용자 이름을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.  
+  
+## <a name="examples"></a>예  
+
+모든 예제는 사용자 데이터베이스에서 실행됩니다.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경
+
+ 다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
+```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경
+
+ 다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>C. 한 번에 여러 옵션 변경
+
+ 다음 예에서는 포함된 데이터베이스 사용자에 대해 여러 옵션을 하나의 문에서 변경합니다.  
+  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+  
+```sql
+ALTER USER Philip
+WITH NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'
+    , DEFAULT_LANGUAGE  = French ;  
+GO  
+```  
+
+## <a name="see-also"></a>관련 항목:
+
+ - [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)
+ - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
+
+## <a name="syntax"></a>구문
 
 ```
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = schemaName  
     | LOGIN = loginName  
-    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
 [;]  
   
 -- Azure SQL Database Update Syntax  
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
 [;]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = { schemaName | NULL }  
     | LOGIN = loginName  
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
-    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,... n ]   
+     WITH <set_item> [ ,... n ]
 [;]  
   
-<set_item> ::=   
+<set_item> ::=
      NAME = newUserName  
 ```  
+
+## <a name="arguments"></a>인수
+
+ *userName*  
+ 이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
+ LOGIN **=** _loginName_  
+ 사용자의 SID(보안 식별자)를 다른 로그인의 SID와 일치하도록 변경하여 사용자를 다른 로그인으로 다시 매핑합니다.  
+  
+ ALTER USER 문이 SQL 일괄 처리의 유일한 문인 경우 Azure SQL Database는 WITH LOGIN 절을 지원합니다. ALTER USER 문이 SQL 일괄 처리의 유일한 문이 아니거나 동적 SQL에서 실행되는 경우 WITH LOGIN 절이 지원되지 않습니다.  
+  
+ NAME **=** _newUserName_  
+ 이 사용자의 새 이름을 지정합니다. *newUserName*은 현재 데이터베이스에 아직 없는 이름이어야 합니다.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.  
+  
+ PASSWORD **=** '*password*'  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+  
+ 변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하세요.
+  
+ OLD_PASSWORD **=** _'oldpassword'_  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+  
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD*가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD*를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
+  
+ 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.  
+  
+> [!WARNING]  
+> 이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. 자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.
+  
+## <a name="remarks"></a>Remarks
+
+ 기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
+  
+ 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
+  
+ DEFAULT_SCHEMA는 현재 데이터베이스에 없는 스키마로 설정할 수 있습니다. 따라서 해당 스키마가 생성되기 전에 DEFAULT_SCHEMA를 사용자에게 할당할 수 있습니다.  
+  
+ 인증서 또는 비대칭 키에 매핑된 사용자에는 DEFAULT_SCHEMA를 지정할 수 없습니다.  
+  
+> [!IMPORTANT]  
+> 사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.
+  
+ 새 사용자 이름의 SID가 데이터베이스에 기록된 SID와 일치할 때만 Windows 로그인 또는 그룹에 매핑된 사용자의 이름을 변경할 수 있습니다. 이 검사는 데이터베이스에서 Windows 로그인의 스푸핑을 방지하는 데 도움이 됩니다.  
+  
+ WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다.  
+  
+ 다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.  
+  
+- 사용자가 Windows 사용자입니다.  
+  
+- 이름이 Windows 이름입니다(백슬래시 포함).  
+  
+- 새 이름이 지정되지 않았습니다.  
+  
+- 현재 이름이 로그인 이름과 다릅니다.  
+  
+ 위의 조건을 충족하지 않으면 사용자 이름이 변경되지 않으며 호출자가 NAME 절을 추가로 호출해야 합니다.  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 인증서 또는 비대칭 키에 매핑된 사용자 이름에는 백 슬래시 문자(\\)를 사용할 수 없습니다.  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+## <a name="security"></a>보안
+  
+> [!NOTE]  
+> **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
+  
+### <a name="permissions"></a>사용 권한
+
+ 사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
+  
+ 사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 데이터베이스에 대한 **CONTROL** 권한이 있는 사용자의 사용자 이름을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.  
+  
+## <a name="examples"></a>예
+
+모든 예제는 사용자 데이터베이스에서 실행됩니다.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경
+
+ 다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
 ```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경
+
+ 다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>C. 한 번에 여러 옵션 변경
+
+ 다음 예에서는 포함된 데이터베이스 사용자에 대해 여러 옵션을 하나의 문에서 변경합니다.
+  
+```sql
+ALTER USER Philip
+WITH  NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per';
+GO  
+```  
+
+## <a name="see-also"></a>관련 항목:
+
+ - [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)
+ - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
+
+## <a name="syntax"></a>구문
+
+> [!IMPORTANT]
+> Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Database 관리되는 인스턴스에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
+> </br> </br> 관리되는 인스턴스로 마이그레이션된 데이터베이스의 사용자를 다시 매핑하는 데 도움이 되는 새로운 구문 확장이 추가되었습니다. ALTER USER 구문은 Azure AD와 페더레이션 및 동기화된 도메인의 데이터베이스 사용자를 Azure AD 로그인에 매핑하는 데 도움이 됩니다.
+
+```
+-- Syntax for Azure SQL Database managed instance
+ALTER USER userName
+     { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
+[;]  
+  
+<set_item> ::=
+      NAME = newUserName
+    | DEFAULT_SCHEMA = { schemaName | NULL }  
+    | LOGIN = loginName  
+    | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]
+    | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
+  
+-- Users or groups that are migrated as federated and synchronized with Azure AD have the following syntax:
+
+    /** Applies to Windows users that were migrated and have the following user names:
+    - Windows user <domain\user>
+    - Windows group <domain\MyWindowsGroup>
+    - Windows alias <MyWindowsAlias>
+    **/
+
+ALTER USER userName  
+     { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
+[;]  
+  
+<set_item> ::=
+     NAME = newUserName
+    | DEFAULT_SCHEMA = { schemaName | NULL }
+    | LOGIN = loginName
+    | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
+```
+  
+## <a name="arguments"></a>인수
+
+ *userName*  
+ 이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
+  
+ LOGIN **=** _loginName_  
+ 사용자의 SID(보안 식별자)를 다른 로그인의 SID와 일치하도록 변경하여 사용자를 다른 로그인으로 다시 매핑합니다.  
+  
+ ALTER USER 문이 SQL 일괄 처리의 유일한 문인 경우 Azure SQL Database는 WITH LOGIN 절을 지원합니다. ALTER USER 문이 SQL 일괄 처리의 유일한 문이 아니거나 동적 SQL에서 실행되는 경우 WITH LOGIN 절이 지원되지 않습니다.  
+  
+ NAME **=** _newUserName_  
+ 이 사용자의 새 이름을 지정합니다. *newUserName*은 현재 데이터베이스에 아직 없는 이름이어야 합니다.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다. Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.  
+  
+ PASSWORD **=** '*password*' 
+  
+ 변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하세요.
+  
+ OLD_PASSWORD **=** _'oldpassword'_
+  
+ '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD*가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD*를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.
+  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+  
+ 사용자에게 할당할 기본 언어를 지정합니다. 이 옵션을 NONE으로 설정하면 기본 언어가 데이터베이스의 현재 기본 언어로 설정됩니다. 나중에 데이터베이스의 기본 언어가 변경되더라도 사용자의 기본 언어는 그대로 유지됩니다. *DEFAULT_LANGUAGE*는 로컬 ID(lcid), 언어 이름 또는 언어 별칭이 될 수 있습니다.  
+  
+> [!NOTE]  
+> 이 옵션은 포함된 데이터베이스에서 포함된 사용자에 대해서만 지정할 수 있습니다.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+  
+ 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.  
+  
+> [!WARNING]  
+> 이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. 자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.
+  
+## <a name="remarks"></a>Remarks
+
+ 기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
+  
+ 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
+  
+ DEFAULT_SCHEMA는 현재 데이터베이스에 없는 스키마로 설정할 수 있습니다. 따라서 해당 스키마가 생성되기 전에 DEFAULT_SCHEMA를 사용자에게 할당할 수 있습니다.  
+  
+ 인증서 또는 비대칭 키에 매핑된 사용자에는 DEFAULT_SCHEMA를 지정할 수 없습니다.  
+  
+> [!IMPORTANT]  
+> 사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.
+  
+ 새 사용자 이름의 SID가 데이터베이스에 기록된 SID와 일치할 때만 Windows 로그인 또는 그룹에 매핑된 사용자의 이름을 변경할 수 있습니다. 이 검사는 데이터베이스에서 Windows 로그인의 스푸핑을 방지하는 데 도움이 됩니다.  
+  
+ WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다. 유일한 예외는 Windows 사용자를 Azure AD 사용자로 변경하는 경우뿐입니다.
+
+> [!NOTE]
+> 관리되는 인스턴스에서 Windows 로그인 만들기를 지원하지 않으므로 다음 규칙은 관리되는 인스턴스의 Windows 사용자에게는 적용되지 않습니다. WITH LOGIN 옵션은 Azure AD 로그인이 있는 경우에만 사용할 수 있습니다.
+  
+ 다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.  
+  
+- 사용자가 Windows 사용자입니다.  
+  
+- 이름이 Windows 이름입니다(백슬래시 포함).  
+  
+- 새 이름이 지정되지 않았습니다.  
+  
+- 현재 이름이 로그인 이름과 다릅니다.  
+  
+ 위의 조건을 충족하지 않으면 사용자 이름이 변경되지 않으며 호출자가 NAME 절을 추가로 호출해야 합니다.  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 인증서 또는 비대칭 키에 매핑된 사용자 이름에는 백 슬래시 문자(\\)를 사용할 수 없습니다.  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
+
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>관리되는 인스턴스로 마이그레이션된 SQL 온-프레미스의 Windows 사용자에 대한 주의 사항
+
+이러한 주의 사항은 Azure AD와 페더레이션 및 동기화된 Windows 사용자로 인증하는 데 적용됩니다.
+
+- Azure AD에 매핑되는 Windows 사용자 또는 그룹의 유효성 검사는 기본적으로 마이그레이션 목적에 사용되는 모든 버전의 ALTER USER 구문에서 Graph API를 통해 수행됩니다.
+- 별칭이 지정된 온-프레미스 사용자(원래 Windows 계정에서 다른 이름을 사용)는 별칭이 지정된 이름을 유지합니다.
+- Azure AD 인증의 경우 LOGIN 매개 변수는 관리되는 인스턴스에만 적용되며 SQL DB에서 사용할 수 없습니다.
+- Azure AD 보안 주체에 대한 로그인을 보려면 다음 명령을 사용합니다. `select * from sys.server_principals`.
+    - 로그인의 지정된 형식이 `E` 또는 `X`인지 확인합니다.
+- Azure AD 사용자에 대해 PASSWORD 옵션을 사용할 수 없습니다.
+- 모든 마이그레이션 사례에서 Windows 사용자 또는 그룹의 역할 및 권한이 자동으로 새 Azure AD 사용자 또는 그룹으로 이전됩니다.
+- 새 구문 확장 **FROM EXTERNAL PROVIDER**은 SQL 온-프레미스의 Windows 사용자 및 그룹을 Azure AD 사용자 및 그룹으로 변경하는 데 사용할 수 있습니다. 이 확장을 사용하는 경우 Windows 도메인이 Azure AD와 페더레이션되어 있어야 하며 모든 Windows 도메인 구성원이 Azure AD에 있어야 합니다. **FROM EXTERNAL PROVIDER** 구문은 관리되는 인스턴스에 적용되며 Windows 사용자가 원래 SQL 인스턴스에 대한 로그인이 없고 독립 실행형 Azure AD 데이터베이스 사용자에 매핑되어야 하는 경우에 사용해야 합니다.
+  - 이 경우 허용되는 사용자 이름은 다음과 같습니다.
+    - Widows 사용자(_domain\user_).
+    - Windows 그룹(_MyWidnowsGroup_).
+    - Windows 별칭(_MyWindowsAlias_).
+  - ALTER 명령의 결과는 기존 사용자 이름을 기존 사용자 이름의 원래 SID를 기반으로 Azure AD에서 발견되는 해당 이름으로 바꿉니다. 변경된 이름이 데이터베이스의 메타데이터에 저장됩니다.
+    - (_domain\user_)가 Azure AD user@domain.com로 바뀝니다.
+    - (_domain\\MyWidnowsGroup_)이 Azure AD 그룹으로 바뀝니다.
+    - (_MyWindowsAlias_)는 변경되지 않은 상태로 유지되지만 이 사용자의 SID는 Azure AD에서 확인됩니다.
+
+> [!NOTE]
+> objectID로 변환된 원래 사용자의 SID를 Azure AD에서 찾을 수 없는 경우 ALTER USER 명령이 실패합니다.
+
+- 변경된 사용자를 보려면 다음 명령을 사용합니다. `select * from sys.database_principals`
+  - 사용자가 지정한 유형 `E` 또는 `X`를 확인합니다.
+- Windows 사용자를 Azure AD 사용자로 마이그레이션하는 데 NAME을 사용하는 경우 다음 제한 사항이 적용됩니다.
+  - 유효한 LOGIN을 지정해야 합니다.
+  - NAME은 Azure AD에서 확인되며 다음만 가능합니다.
+    - LOGIN의 이름.
+    - 별칭 - Azure AD에는 이름이 있을 수 없습니다.
+  - 다른 모든 경우에는 구문이 실패합니다.
+  
+## <a name="security"></a>보안
+  
+> [!NOTE]  
+> **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
+  
+### <a name="permissions"></a>사용 권한
+
+ 사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
+  
+ 사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 데이터베이스에 대한 **CONTROL** 권한이 있는 사용자의 사용자 이름을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.  
+  
+## <a name="examples"></a>예
+
+모든 예제는 사용자 데이터베이스에서 실행됩니다.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경
+
+ 다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
+```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경
+
+ 다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>C. 한 번에 여러 옵션 변경
+
+ 다음 예에서는 포함된 데이터베이스 사용자에 대해 여러 옵션을 하나의 문에서 변경합니다.  
+  
+```sql
+ALTER USER Philip
+WITH NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'
+    , DEFAULT_LANGUAGE  = French ;  
+GO  
+```
+
+### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D. 마이그레이션 후 데이터베이스의 사용자를 Azure AD 로그인에 매핑
+
+다음 예제에서는 사용자 `westus/joe`를 Azure AD 사용자 `joe@westus.com`에 다시 매핑합니다. 이 예제는 관리되는 인스턴스에 이미 있는 로그인에 대한 것입니다. 관리되는 인스턴스로 데이터베이스 마이그레이션을 완료하고 Azure AD 로그인을 사용하여 인증하려는 경우에 이를 수행해야 합니다.
+
+```sql
+ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
+```
+
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. 관리되는 인스턴스 로그인이 없는 데이터베이스의 기존 Windows 사용자를 Azure AD 사용자에게 매핑
+
+다음 예제에서는 로그인이 없는 사용자 `westus/joe`를 Azure AD 사용자 `joe@westus.com`에 다시 매핑합니다. 페더레이션된 사용자가 Azure AD에 있어야 합니다.
+
+```sql
+ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
+```
+
+### <a name="f-map-the-user-alias-to-an-existing-azure-ad-login"></a>F. 사용자 별칭을 기존 Azure AD 로그인에 매핑
+
+다음 예제에서는 사용자 이름 `westus\joe`를 `joe_alias`에 다시 매핑합니다. 이 경우 해당 Azure AD 로그인은 `joe@westus.com`입니다.
+
+```sql
+ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias  
+```
+
+### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. 관리되는 인스턴스에서 마이그레이션된 Windows 그룹을 Azure AD 그룹에 매핑
+
+다음 예제에서는 기존 온-프레미스 그룹 `westus\mygroup`을 관리되는 인스턴스의 Azure AD 그룹 `mygroup`에 다시 매핑합니다. 그룹이 Azure AD에 있어야 합니다.
+
+```sql
+ALTER USER [westus\mygroup] WITH LOGIN = mygroup
+```
+
+## <a name="see-also"></a>관련 항목:
+
+ - [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)
+ - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+ - [자습서: T-SQL DDL 구문을 사용하여 SQL Server 온-프레미스 Windows 사용자 및 그룹을 Azure SQL Database 관리되는 인스턴스로 마이그레이션](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System(PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
+
+## <a name="syntax"></a>구문
+  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-     NAME =newUserName   
-     | LOGIN =loginName  
+<set_item> ::=
+     NAME = newUserName
+     | LOGIN = loginName  
      | DEFAULT_SCHEMA = schema_name  
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *userName*  
  이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
@@ -122,39 +686,8 @@ ALTER USER userName
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
  서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다.   Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.  
   
- PASSWORD **=** '*password*'  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
-  
- 변경할 사용자의 암호를 지정합니다. 암호는 대소문자를 구분합니다.  
-  
-> [!NOTE]  
->  이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하십시오.  
-  
- OLD_PASSWORD **=** _'oldpassword'_  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
-  
- '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD*가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD*를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.  
-  
-> [!NOTE]  
->  이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.  
-  
- DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
-  
- 사용자에게 할당할 기본 언어를 지정합니다. 이 옵션을 NONE으로 설정하면 기본 언어가 데이터베이스의 현재 기본 언어로 설정됩니다. 나중에 데이터베이스의 기본 언어가 변경되더라도 사용자의 기본 언어는 그대로 유지됩니다. *DEFAULT_LANGUAGE*는 로컬 ID(lcid), 언어 이름 또는 언어 별칭이 될 수 있습니다.  
-  
-> [!NOTE]  
->  이 옵션은 포함된 데이터베이스에서 포함된 사용자에 대해서만 지정할 수 있습니다.  
-  
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
-  
- 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터를 암호 해독하지 않고도 테이블이나 데이터베이스 사이에 암호화된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다.  
-  
-> [!WARNING]  
->  이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. 자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.  
-  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
   
  사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
@@ -164,35 +697,30 @@ ALTER USER userName
  인증서 또는 비대칭 키에 매핑된 사용자에는 DEFAULT_SCHEMA를 지정할 수 없습니다.  
   
 > [!IMPORTANT]  
->  사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.  
-  
- 새 사용자 이름의 SID가 데이터베이스에 기록된 SID와 일치할 때만 Windows 로그인 또는 그룹에 매핑된 사용자의 이름을 변경할 수 있습니다. 이 검사는 데이터베이스에서 Windows 로그인의 스푸핑을 방지하는 데 도움이 됩니다.  
-  
- WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것처럼 사용자 유형을 변경하는 데는 사용할 수 없습니다.  
+> 사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.
+
+ WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다.  
   
  다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.  
+
+- 새 이름이 지정되지 않았습니다.  
   
--   사용자가 Windows 사용자입니다.  
-  
--   이름이 Windows 이름입니다(백슬래시 포함).  
-  
--   새 이름이 지정되지 않았습니다.  
-  
--   현재 이름이 로그인 이름과 다릅니다.  
+- 현재 이름이 로그인 이름과 다릅니다.  
   
  위의 조건을 충족하지 않으면 사용자 이름이 변경되지 않으며 호출자가 NAME 절을 추가로 호출해야 합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 인증서 또는 비대칭 키에 매핑된 사용자 이름에는 백 슬래시 문자(\\)를 사용할 수 없습니다.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
   
-## <a name="security"></a>보안  
+## <a name="security"></a>보안
   
 > [!NOTE]  
->  **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
+> **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>사용 권한
+
  사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
   
  사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
@@ -201,14 +729,15 @@ ALTER USER userName
   
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.  
 
-### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경  
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경
+
  다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
   
-```  
+```sql
 ALTER USER Mary5 WITH NAME = Mary51;  
 GO  
 ```  
@@ -216,33 +745,131 @@ GO
 ### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경  
  다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
   
-```  
+```sql
 ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
 GO  
+```
+
+## <a name="see-also"></a>관련 항목:
+
+ - [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)
+ - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_**
+
+&nbsp;
+
+## <a name="analytics-platform-system"></a>분석 플랫폼 시스템
+
+## <a name="syntax"></a>구문
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+ALTER USER userName
+     WITH <set_item> [ ,...n ]  
+  
+<set_item> ::=
+     NAME = newUserName
+     | LOGIN = loginName  
+     | DEFAULT_SCHEMA = schema_name  
+[;]  
 ```  
   
-### <a name="c-changing-several-options-at-once"></a>C. 한 번에 여러 옵션 변경  
- 다음 예에서는 포함된 데이터베이스 사용자에 대해 여러 옵션을 하나의 문에서 변경합니다.  
+## <a name="arguments"></a>인수
+
+ *userName*  
+ 이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ LOGIN **=** _loginName_  
+ 사용자의 SID(보안 식별자)를 다른 로그인의 SID와 일치하도록 변경하여 사용자를 다른 로그인으로 다시 매핑합니다.  
   
-```  
-ALTER USER Philip   
-WITH  NAME = Philipe   
-    , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
-    , DEFAULT_LANGUAGE  = French ;  
+ ALTER USER 문이 SQL 일괄 처리의 유일한 문인 경우 Azure SQL Database는 WITH LOGIN 절을 지원합니다. ALTER USER 문이 SQL 일괄 처리의 유일한 문이 아니거나 동적 SQL에서 실행되는 경우 WITH LOGIN 절이 지원되지 않습니다.  
+  
+ NAME **=** _newUserName_  
+ 이 사용자의 새 이름을 지정합니다. *newUserName*은 현재 데이터베이스에 아직 없는 이름이어야 합니다.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ 서버에서 이 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. 기본 스키마를 NULL로 설정하면 Windows 그룹에서 기본 스키마가 제거됩니다.   Windows 사용자에는 NULL 옵션을 사용할 수 없습니다.  
+  
+## <a name="remarks"></a>Remarks
+
+ 기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
+  
+ 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
+  
+ DEFAULT_SCHEMA는 현재 데이터베이스에 없는 스키마로 설정할 수 있습니다. 따라서 해당 스키마가 생성되기 전에 DEFAULT_SCHEMA를 사용자에게 할당할 수 있습니다.  
+  
+ 인증서 또는 비대칭 키에 매핑된 사용자에는 DEFAULT_SCHEMA를 지정할 수 없습니다.  
+  
+> [!IMPORTANT]  
+> 사용자가 **sysadmin** 고정 서버 역할의 멤버이면 DEFAULT_SCHEMA 값은 무시됩니다. **sysadmin** 고정 서버 역할의 모든 멤버는 기본 스키마가 `dbo`입니다.
+
+ WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다.  
+  
+ 다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.  
+
+- 새 이름이 지정되지 않았습니다.  
+  
+- 현재 이름이 로그인 이름과 다릅니다.  
+  
+ 위의 조건을 충족하지 않으면 사용자 이름이 변경되지 않으며 호출자가 NAME 절을 추가로 호출해야 합니다.  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 인증서 또는 비대칭 키에 매핑된 사용자 이름에는 백 슬래시 문자(\\)를 사용할 수 없습니다.  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
+  
+## <a name="security"></a>보안
+  
+> [!NOTE]  
+> **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
+  
+### <a name="permissions"></a>사용 권한
+
+ 사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
+  
+ 사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 데이터베이스에 대한 **CONTROL** 권한이 있는 사용자의 사용자 이름을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
+  
+ 기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.  
+  
+## <a name="examples"></a>예
+
+모든 예제는 사용자 데이터베이스에서 실행됩니다.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경
+
+ 다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
 GO  
 ```  
   
+### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경
+ 다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
- [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
-  
-  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```
 
+## <a name="see-also"></a>관련 항목:
 
+ - [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)
+ - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end

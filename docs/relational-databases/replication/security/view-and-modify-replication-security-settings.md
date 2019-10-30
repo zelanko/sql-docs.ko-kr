@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710747"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907978"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "71710747"
 4.  **배포자 속성 - \<Distributor>** 및 **배포 데이터베이스 속성 - \<Database>** 대화 상자. 이러한 대화 상자에 액세스하는 방법은 [View and Modify Distributor and Publisher Properties배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
 5.  **게시자 속성 - \<Publisher>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [게시자 및 배포자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>하나 이상의 에이전트에서 사용하는 계정의 암호를 변경하려면  
   
@@ -220,7 +218,7 @@ ms.locfileid: "71710747"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>끌어오기 구독 즉시 업데이트에 대한 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음 행에 있는 속성( **…** ) 단추를 클릭합니다.  
+1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성( **&#x2026;** ) 단추를 클릭합니다.  
   
 2.  **연결 정보 입력** 대화 상자에서 다음 옵션 중 하나를 선택합니다.  
   

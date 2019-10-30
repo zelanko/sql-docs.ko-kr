@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123559"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783303"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
   
 ##  <a name="FunctionTypes"></a> 함수 유형  
 **스칼라 함수**  
- 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수에는 함수 본문이 없으며 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 함수 본문은 BEGIN...END 블록으로 정의되며 여기에는 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 유형은 **text**, **ntext**, **image**, **cursor**및 **timestamp**를 제외한 모든 데이터 형식일 수 있습니다. 
+ 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수의 경우 반환된 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 경우 함수 본문에 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 유형은 **text**, **ntext**, **image**, **cursor**및 **timestamp**를 제외한 모든 데이터 형식일 수 있습니다. 
  **[예](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **테이블 반환 함수**  

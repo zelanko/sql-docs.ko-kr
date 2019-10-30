@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952765"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807477"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -69,7 +69,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
 |하이브리드 버퍼 풀| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새 기능으로, PMEM(영구 메모리) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 바로 액세스합니다. [하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 참조하세요.|
-|메모리 최적화 `tempdb` 메타데이터| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../relational-databases/in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 `tempdb` 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 `tempdb` 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. [메모리 최적화 `tempdb` 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
+|메모리 최적화 TempDB 메타데이터| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../relational-databases/in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 TempDB 메타데이터를 도입하여 해당 병목 상태를 효과적으로 제거하고 TempDB 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. [메모리 최적화 TempDB 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
 | 데이터베이스 스냅샷에 대한 메모리 내 OLTP 지원 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 메모리 최적화된 파일 그룹을 포함하는 데이터베이스의 [데이터베이스 스냅샷](../relational-databases/databases/database-snapshots-sql-server.md)을 만들 수 있습니다. |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|UTF-8 문자 인코딩 지원 |가져오기 및 내보내기 인코딩에는 UTF-8 문자를 지원하고, 문자열 데이터의 경우 데이터베이스 수준 또는 열 수준 데이터 정렬로 지원합니다. 이는 글로벌 규모로 확장되는 애플리케이션을 지원합니다. 글로벌 다국어 데이터베이스 애플리케이션 및 서비스를 제공하는 요구 사항은 고객 수요 및 특정 시장 규정을 충족하는 데 매우 중요합니다. [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 후보를 사용하면 Polybase 외부 테이블 및 Always Encrypted에 대한 UTF-8 지원이 가능합니다.|
+|UTF-8 문자 인코딩 지원 |가져오기 및 내보내기 인코딩에는 UTF-8 문자를 지원하고, 문자열 데이터의 경우 데이터베이스 수준 또는 열 수준 데이터 정렬로 지원합니다. 이는 글로벌 규모로 확장되는 애플리케이션을 지원합니다. 글로벌 다국어 데이터베이스 애플리케이션 및 서비스를 제공하는 요구 사항은 고객 수요 및 특정 시장 규정을 충족하는 데 매우 중요합니다. [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 후보를 사용하면 Polybase 외부 테이블 및 Always Encrypted(Enclaves를 사용하지 않을 경우)에 대한 UTF-8 지원이 가능합니다.|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>언어 확장
@@ -197,7 +197,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |MSDTC(Microsoft Distributed Transaction Coordinator) 지원 |[Linux에서 MSDTC를 구성하는 방법](../linux/sql-server-linux-configure-msdtc.md) |
 |타사 AD 공급자에 대한 OpenLDAP 지원 |[자습서: Linux에서 SQL Server와 Active Directory 인증 사용](../linux/sql-server-linux-active-directory-authentication.md) |
 |Linux의 Machine Learning |[Linux에서 Machine Learning 구성](../linux/sql-server-linux-setup-machine-learning.md) |
-|`tempdb` 개선 사항 | 기본적으로 Linux에 SQL Server를 새로 설치하면 논리적 코어 수(최대 8개 데이터 파일 포함)에 따라 여러 `tempdb` 데이터 파일이 생성됩니다. 이 위치에서 부 버전 또는 주 버전 업그레이드에는 적용되지 않습니다. 각 `tempdb` 파일은 자동 증가 속도가 64MB인 8MB입니다. 이 동작은 Windows의 기본 SQL Server 설치와 유사합니다. |
+|TempDB 개선 사항 | 기본적으로 SQL Server on Linux를 새로 설치하면 논리적 코어 수(최대 8개 데이터 파일 포함)에 따라 여러 TempDB 데이터 파일이 생성됩니다. 이 위치에서 부 버전 또는 주 버전 업그레이드에는 적용되지 않습니다. 각 TempDB 파일은 자동 증가 속도가 64MB인 8MB입니다. 이 동작은 Windows의 기본 SQL Server 설치와 유사합니다. |
 | Linux의 PolyBase. | Hadoop이 아닌 커넥터에 대한 Linux에 [PolyBase를 설치](../relational-databases/polybase/polybase-linux-setup.md)합니다.<br/><br/>[PolyBase 형식 매핑](../relational-databases/polybase/polybase-type-mapping.md). |
 | CDC(변경 데이터 캡처) 지원 | CDC(변경 데이터 캡처)는 이제 SQL Server 2019용 Linux에서 지원됩니다. |
 | &nbsp; | &nbsp; |

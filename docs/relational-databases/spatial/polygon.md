@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026137"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907206"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -42,8 +42,6 @@ ms.locfileid: "69026137"
 2.  그림 2는 외부 링 및 두 개의 내부 링에서 정의한 경계가 있는 **Polygon** 인스턴스입니다. 내부 링 내의 영역이 **Polygon** 인스턴스 외부의 일부분입니다.  
   
 3.  그림 3은 **Polygon** 인스턴스의 내부 링이 하나의 탄젠트 점에서 교차하므로 올바른 인스턴스입니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
  허용되는 **Polygon** 인스턴스는 예외를 발생시키지 않고 **geometry** 또는 **geography** 변수에 저장할 수 있는 인스턴스입니다. 다음 **Polygon** 인스턴스가 허용됩니다.  

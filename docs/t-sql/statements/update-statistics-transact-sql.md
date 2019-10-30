@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099785"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798412"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,6 +124,9 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > [!NOTE]
  > AUTO_UPDATE_STATISTICS가 실행된 경우 유지된 샘플링 비율(사용 가능한 경우)을 사용하거나 사용 가능하지 않은 경우 기본 샘플링 비율을 사용합니다.
  > RESAMPLE 동작은 이 옵션의 영향을 받지 않습니다.
+ 
+ > [!NOTE]
+ > 테이블이 잘린 경우 잘린 HoBT에서 작성된 모든 통계가 기본 샘플링 비율을 사용하도록 되돌아갑니다.
  
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 및 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)는 선택된 통계에 대해 유지되는 샘플 비율 값을 표시합니다.

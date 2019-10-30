@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057939"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905546"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057939"
   
      다음 그림에서는 CHANGETABLE(CHANGES ...)을 사용하여 변경 내용을 가져오는 방법을 보여줍니다.  
   
-     ![변경 내용 추적 쿼리 출력의 예](../../relational-databases/track-changes/media/queryoutput.gif "Example of change tracking query output")  
+     ![변경 내용 추적 쿼리 출력의 예](../../relational-databases/track-changes/media/queryoutput.gif "변경 내용 추적 쿼리 출력의 예")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 함수  
  다음에 변경 내용을 쿼리할 때 사용할 현재 버전을 가져오는 데 사용됩니다. 이 버전은 마지막으로 커밋된 트랜잭션의 버전을 나타냅니다.  
@@ -207,8 +207,6 @@ ON
   
 4.  CHANGETABLE(CHANGES ...)을 사용하여 SalesOrders 테이블에 대한 변경 내용을 가져옵니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  이전 단계로 반환되는 결과에 영향을 줄 수 있는 다음 두 프로세스가 데이터베이스에서 발생합니다.  
   
 -   정리 프로세스가 백그라운드에서 실행되어 지정된 보존 기간보다 오래된 변경 내용 추적 정보가 제거됩니다.  
@@ -265,8 +263,12 @@ BEGIN TRAN
 COMMIT TRAN  
 ```  
   
- 스냅샷 트랜잭션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
+ 스냅샷 트랜잭션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>정리 및 스냅샷 격리   
+동일한 데이터베이스 또는 동일한 인스턴스 내의 서로 다른 두 데이터베이스에 대한 스냅샷 격리와 변경 내용 추적을 모두 사용하도록 설정하면 스냅샷 격리를 사용하는 데이터베이스에 열려 있는 트랜잭션이 있는 경우 sys.syscommittab에서 정리 프로세스가 만료된 행을 그대로 둘 수 있습니다. 이는 변경 내용 추적 정리 프로세스에서 정리를 수행하는 동안 인스턴스 차원 하위 워터마크(안전 정리 버전)를 고려하는 경우에 발생할 수 있습니다. 이 작업은 변경 내용 추적 자동 정리 프로세스에서 스냅샷 격리를 사용하도록 설정된 데이터베이스의 열려 있는 트랜잭션에 필요할 수 있는 행을 모두 제거하지 않도록 하기 위한 것입니다. 읽기 커밋된 스냅샷 격리 및 스냅샷 격리 트랜잭션을 가능한 한 짧게 유지하여 sys.syscommittab의 만료된 행이 적시에 정리되도록 합니다. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>스냅샷 격리 사용의 대체 방법  
  스냅샷 격리 사용의 대체 방법이 있지만 이 경우 모든 애플리케이션 요구 사항이 충족되려면 더 많은 작업이 필요합니다. *last_synchronization_version* 의 유효성을 유지하며 변경 내용을 가져오기 전에 정리 프로세스로 인해 데이터가 제거되지 않도록 하려면 다음을 수행합니다.  
   

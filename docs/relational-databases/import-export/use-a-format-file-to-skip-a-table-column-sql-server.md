@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024983"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909262"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ GO
 
 2.   텍스트 편집기에서 기본 서식 파일을 수정합니다.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 수정된 서식 파일은 각 기존 필드를 대상 테이블의 해당 열로 매핑해야 합니다. 또한 테이블 열 또는 건너뛸 열을 표시해야 합니다. 
 
 예를 들어 `myTestSkipCol2.dat`에서 `myTestSkipCol` 테이블로 데이터를 대량으로 가져오려면 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음, 두 번째 필드를 `Col3`에 매핑해야 합니다.  
@@ -81,7 +79,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  다음 스크린샷에서는 이 샘플 기본 서식 파일의 값을 보여줍니다. 
   
- ![myTestSkipCol의 기본 비 XML 형식 파일](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![myTestSkipCol에 대한 비 XML 형식 기본 파일](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol에 대한 비 XML 형식 기본 파일")  
   
 > [!NOTE]  
 >  서식 파일 필드에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 참조하세요.  

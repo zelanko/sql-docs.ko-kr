@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991686"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807421"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>가용성 그룹의 보조 복제본으로 지원되는 백업 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991686"
   
 -   **BACKUP DATABASE** 는 보조 복제본에서 실행될 때 데이터베이스, 파일 또는 파일 그룹의 복사 전용 전체 백업만 지원합니다. 복사 전용 백업은 로그 체인에 영향을 미치거나 차등 비트맵을 지우지 않습니다.  
   
--   차등 백업은 보조 복제본에서 지원되지 않습니다.  
+-   차등 백업은 보조 복제본에서 지원되지 않습니다.
+
+-   보조 복제본에서 전체 데이터베이스 백업이 실행되는 동안 주 복제본에서 트랜잭션 로그 백업을 실행하는 것과 같은 동시 백업은 현재 지원되지 않습니다. 
   
 -   **BACKUP LOG** 는 정기적인 로그 백업만 지원합니다(COPY_ONLY 옵션은 보조 복제본의 로그 백업에 지원되지 않음).  
   
