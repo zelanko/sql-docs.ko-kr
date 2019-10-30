@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278267"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930484"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -101,7 +101,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-| MSDTC 지원 | SQL Sever 2017용 MSDTC(Microsoft Distributed Transaction Coordinator) 지원입니다. 자세한 내용은 [Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요. |
+| MSDTC 지원 | SQL Server 2017용 MSDTC(Microsoft Distributed Transaction Coordinator) 지원입니다. 자세한 내용은 [Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요. |
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -405,42 +405,6 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.1000.169-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.1000.169-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
-
-다음 기능 및 서비스는 GA 릴리스 시 Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.
-
-| 영역 | 지원되지 않는 기능 또는 서비스 |
-|-----|-----|
-| **데이터베이스 엔진** | 트랜잭션 복제 |
-| &nbsp; | 병합 복제 |
-| &nbsp; | 변경 데이터 캡처(SQL Server 에이전트 참조) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | 타사 연결을 사용하는 분산 쿼리 |
-| &nbsp; | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외의 데이터 원본에 연결된 서버  |
-| &nbsp; | 시스템 확장 저장 프로시저(XP_CMDSHELL 등) |
-| &nbsp; | Filetable, FILESTREAM |
-| &nbsp; | EXTERNAL_ACCESS 또는 UNSAFE 권한 세트가 있는 CLR 어셈블리 |
-| &nbsp; | Buffer Pool Extension |
-| **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| &nbsp; | , |
-| &nbsp; | 로그 판독기 에이전트 |
-| &nbsp; | CDC(변경 데이터 캡처) |
-| &nbsp; | Managed Backup |
-| **고가용성** | 데이터베이스 미러링  |
-| **보안** | 확장 가능 키 관리 |
-| &nbsp; | 연결된 서버의 AD 인증 | 
-| &nbsp; | AG(가용성 그룹)의 AD 인증 | 
-| &nbsp; | 타사 AD 도구(Centrify, Vintela, Powerbroker) | 
-| **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | 데이터베이스 엔진 서비스 |
-| &nbsp; | Master  Data  Services |
-| &nbsp; | DTC(Distributed Transaction Coordinator) |
-
 ## <a name="known-issues"></a>알려진 문제
 
 다음 섹션에서는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux의 GA(일반 공급) 릴리스에 관련된 알려진 문제를 설명합니다.
@@ -467,13 +431,11 @@ sudo systemctl start mssql-server
 
 #### <a name="databases"></a>데이터베이스
 
-- master 데이터베이스는 mssql 유틸리티를 사용하여 이동할 수 없습니다. 다른 시스템 데이터베이스는 mssql-conf를 통해 이동할 수 있습니다.
+- master 데이터베이스는 mssql-conf 유틸리티를 사용하여 이동할 수 없습니다. 다른 시스템 데이터베이스는 mssql-conf를 통해 이동할 수 있습니다.
 
 - Windows의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 백업된 데이터베이스를 복원할 때 Transact-SQL 문에서 **WITH MOVE** 절을 사용해야 합니다.
 
-- Microsoft DTC(Distributed Transaction Coordinator) 서비스가 필요한 분산 트랜잭션은 Linux에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. DTC가 포함되지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결된 서버에 대한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 지원됩니다. 자세한 내용은 [Microsoft DTC(Distributed Transaction Coordinator) 서비스가 필요한 분산 트랜잭션은 Linux에서 실행되는 SQL Server에서 지원되지 않음](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)을 참조하세요.
-
-- TLS(전송 계층 보안)에 대한 특정 알고리즘(암호 도구 모음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에서 제대로 작동하지 않습니다. 이로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결을 시도할 때 연결 오류가 발생하며 고가용성 그룹의 복제본 간에 연결을 설정하는 데 문제가 발생합니다.
+- TLS(전송 계층 보안)에 대한 특정 알고리즘(암호 도구 모음)은 Linux의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제대로 작동하지 않습니다. 이로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결을 시도할 때 연결 오류가 발생하며 고가용성 그룹의 복제본 간에 연결을 설정하는 데 문제가 발생합니다.
 
    - **해결 방법**: 다음을 수행하여 문제가 있는 암호 도구 모음을 사용하지 않도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux의 **mssql.conf** 구성 스크립트를 수정합니다.
 
@@ -493,7 +455,7 @@ sudo systemctl start mssql-server
       sudo systemctl restart mssql-server
       ```
 
-- 메모리 내 OLTP를 사용하는 Windows의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux에서 복원할 수 없습니다. 메모리 내 OLTP를 사용하는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스를 복원하려면 먼저 백업/복원 또는 분리/연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux로 이동하기 전에 Windows의 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]로 데이터베이스를 업그레이드합니다.
+- 메모리 내 OLTP를 사용하는 Windows의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스는 Linux의 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에서 복원할 수 없습니다. 메모리 내 OLTP를 사용하는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스를 복원하려면 먼저 백업/복원 또는 분리/연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux로 이동하기 전에 Windows의 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]로 데이터베이스를 업그레이드합니다.
 
 - 현재 사용자 권한 **ADMINISTER BULK OPERATIONS**는 Linux에서 지원되지 않습니다.
 

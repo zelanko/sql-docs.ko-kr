@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163909"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909303"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163909"
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
 3.  **작업 모드(요청)** 상자에서 **읽기/쓰기**를 선택합니다.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
@@ -118,7 +116,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 **재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 필터링합니다. **기간(밀리초)** (기본값), CPU 시간(밀리초), 논리적 읽기(KB), 논리적 쓰기(KB), 물리적 읽기(KB), CLR 시간(ms), DOP, 메모리 사용량(KB), 행 수, 사용된 메모리(KB), 사용된 임시 DB 메모리(KB), 대기 시간(밀리초).  
 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제로 적용 및 적용 해제하고, 그리드 형식과 차트 형식 간에 전환하고, 선택한 계획을 비교하고(두 개 이상 선택한 경우), 디스플레이를 새로 고칠 수 있습니다.  
   
-![SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리")  
+![SSMS 개체 탐색기의 SQL Server 2016 재발 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 개체 탐색기의 SQL Server 2016 재발 쿼리")  
   
 계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.
 
@@ -133,7 +131,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 선택한 대기 범주 디스플레이에서 막대 및 세부 정보 보기를 클릭하여 대기 범주를 선택합니다. 이 새로운 가로 막대형 차트는 해당 대기 범주에 영향을 주는 쿼리를 포함하고 있습니다. 
   
- ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 자세한 보기](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 자세한 보기")
+ ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 세부 정보 보기")
 
 평균, 최대, 최소, 표준 편차, **합계**(기본값) 등 선택한 대기 범주에 대한 다양한 조건에 따라 맨 위에 있는 드롭다운 상자를 사용하여 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.  
 

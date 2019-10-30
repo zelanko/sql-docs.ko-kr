@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082760"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930268"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68082760"
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
@@ -92,7 +92,7 @@ ms.locfileid: "68082760"
   
  이러한 두 프로세스에는 전체 텍스트 검색 아키텍처의 구성 요소가 포함됩니다. 이러한 구성 요소 및 이들의 관계는 다음 그림에 요약되어 있습니다. 구성 요소는 이 그림 다음에 설명되어 있습니다.  
   
- ![전체 텍스트 검색 아키텍처](../../relational-databases/search/media/ifts-arch.gif "full-text search architecture")  
+ ![전체 텍스트 검색 아키텍처](../../relational-databases/search/media/ifts-arch.gif "전체 텍스트 검색 아키텍처")  
 
 ###  <a name="sqlprocess"></a> SQL Server 프로세스  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스는 전체 텍스트 검색에 다음 구성 요소를 사용합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "68082760"
 
     >[!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진이 별도의 서비스가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 있습니다. 전체 텍스트 엔진을 데이터베이스 엔진에 통합하면 전체 텍스트 관리 효율성, 혼합 쿼리의 최적화 및 전체 성능이 향상됩니다.  
- 
+
 -   **인덱스 기록기(인덱서).** 인덱스 기록기는 인덱싱된 토큰을 저장하는 데 사용되는 구조를 만듭니다.  
   
 -   **필터 데몬 관리자.** 필터 데몬 관리자는 전체 텍스트 엔진 필터 데몬 호스트의 상태를 모니터링합니다.  

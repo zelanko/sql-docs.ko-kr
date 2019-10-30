@@ -1,7 +1,7 @@
 ---
 title: 트랜잭션 로그 백업 적용(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 08/14/2016
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934545"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916194"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "67934545"
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 복원의 일부로 수행되는 트랜잭션 로그 백업 적용에 대해 설명합니다.  
  
-  
 ##  <a name="Requirements"></a> 트랜잭션 로그 백업 복원을 위한 요구 사항  
  트랜잭션 로그 백업을 적용하려면 다음 요구 사항을 충족해야 합니다.  
   
@@ -39,14 +38,16 @@ ms.locfileid: "67934545"
   
 -   **아직 복구되지 않은 데이터베이스:**  마지막 트랜잭션 로그가 적용될 때까지 데이터베이스를 복구할 수 없습니다. 로그 체인이 끝나기 이전의 중간 트랜잭션 로그 백업 중 하나를 복원한 후 데이터베이스를 복구할 경우 해당 시점 이후의 데이터베이스를 복원하려면 전체 데이터베이스 백업부터 시작하여 전체 복원 시퀀스를 다시 시작해야 합니다.  
   
-    > **팁** 최선의 방법은 모든 로그 백업을 복원하는 것입니다(RESTORE LOG *database_name* WITH NORECOVERY). 그런 후 마지막 로그 백업을 복원한 후 데이터베이스를 별도의 작업으로 복구합니다(RESTORE DATABASE *database_name* WITH RECOVERY).  
+    > [!TIP]
+    > 모범 사례는 모든 로그 백업을 복원하는 것입니다(`RESTORE LOG *database_name* WITH NORECOVERY`). 그런 다음 마지막 로그 백업을 복원한 후 별도의 작업에서 데이터베이스를 복구합니다(`RESTORE DATABASE *database_name* WITH RECOVERY`).  
   
 ##  <a name="RecoveryAndTlogs"></a> 복구 및 트랜잭션 로그  
- 복원 작업을 완료하고 데이터베이스를 복구할 때 완료되지 않은 트랜잭션은 모두 롤백되는데 이것을 *실행 취소 단계*라고 합니다. 롤백은 데이터베이스의 무결성을 복원하는 데 필요합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.  
+ 복원 작업을 완료하고 데이터베이스를 복구할 때 데이터베이스의 무결성을 보장하기 위해 복구 프로세스가 실행됩니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
+ 
+ 복구 프로세스가 완료된 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다. 예를 들어 일련의 트랜잭션 로그 백업은 장기 실행 트랜잭션을 포함합니다. 트랜잭션의 시작은 첫 번째 트랜잭션 로그 백업에 기록되지만 트랜잭션의 끝은 두 번째 트랜잭션 로그 백업에 기록됩니다. 첫 번째 트랜잭션 로그 백업에는 커밋 또는 롤백 작업의 기록이 없습니다. 첫 번째 트랜잭션 로그 백업이 적용될 때 복구 작업이 실행되면 장기 실행 트랜잭션은 완료되지 않은 것으로 취급되고 해당 트랜잭션에 대한 첫 번째 트랜잭션 로그 백업에 기록된 데이터 수정이 롤백됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 시점 이후에 두 번째 트랜잭션 로그 백업을 적용할 수 없습니다.  
   
- 예를 들어 일련의 트랜잭션 로그 백업은 장기 실행 트랜잭션을 포함합니다. 트랜잭션의 시작은 첫 번째 트랜잭션 로그 백업에 기록되지만 트랜잭션의 끝은 두 번째 트랜잭션 로그 백업에 기록됩니다. 첫 번째 트랜잭션 로그 백업에는 커밋 또는 롤백 작업의 기록이 없습니다. 첫 번째 트랜잭션 로그 백업이 적용될 때 복구 작업이 실행되면 장기 실행 트랜잭션은 완료되지 않은 것으로 취급되고 해당 트랜잭션에 대한 첫 번째 트랜잭션 로그 백업에 기록된 데이터 수정이 롤백됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 시점 이후에 두 번째 트랜잭션 로그 백업을 적용할 수 없습니다.  
-  
-> **참고:** 경우에 따라서는 로그 복원 중에 파일을 명시적으로 추가할 수 있습니다.  
+> [!NOTE]
+> 경우에 따라서는 로그 복원 중에 파일을 명시적으로 추가할 수 있습니다.  
   
 ##  <a name="PITrestore"></a> 로그 백업을 사용하여 오류 지점까지 복원  
  예를 들어 다음과 같은 순서의 이벤트가 발생한다고 가정합니다.  
@@ -63,8 +64,6 @@ ms.locfileid: "67934545"
 > 이 백업 시퀀스의 예제에 대한 설명은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  데이터베이스를 오류 발생 시점인 오후 9:45의 상태로 복원하려면 다음 대체 절차 중 하나를 사용하십시오.  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **대체 1: 가장 최근의 전체 데이터베이스 백업을 사용하여 데이터베이스 복원**  
   
@@ -106,6 +105,6 @@ ms.locfileid: "67934545"
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

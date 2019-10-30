@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084085"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916018"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68084085"
 > 커밋되지 않은 장기 실행 트랜잭션의 경우 모든 검사점 유형에 대해 복구 시간이 늘어납니다.   
   
 ##  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 옵션과 'recovery interval' 옵션의 상호 작용  
- 다음 테이블에서는 서버 차원의 **sp_configure'** 복구 간격 **'** 설정과 데이터베이스별 ALTER DATABASE... 간의 상호 작용을 요약합니다. TARGET_RECOVERY_TIME 설정 간의 상호 작용을 간략하게 보여 줍니다.  
+ 다음 표에서는 서버 차원의 **sp_configure '** 복구 간격 **'** 설정과 데이터베이스별 `ALTER DATABASE ... TARGET_RECOVERY_TIME` 설정 간의 상호 작용을 요약합니다.  
   
 |target_recovery_time|'recovery interval'|사용되는 검사점 유형|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "68084085"
 ###  <a name="PerformanceImpact"></a> 복구 간격이 복구 성능에 미치는 영향  
 짧은 트랜잭션을 사용하는 OLTP(온라인 트랜잭션 처리) 시스템의 경우 **복구 간격** 은 복구 시간을 결정하는 기본 요소입니다. 그러나 **복구 간격** 옵션은 장기 실행 트랜잭션의 실행을 취소하는 데 필요한 시간에는 영향을 주지 않습니다. 장기 실행 트랜잭션이 있는 데이터베이스를 복구하는 데는 **복구 간격** 설정에서 지정한 것보다 오랜 시간이 걸릴 수 있습니다. 
  
-예를 들어 서버 인스턴스가 비활성화되기 전에 장기 실행 트랜잭션에서 업데이트를 수행하는 데 2시간이 걸렸었다면 장기 실행 트랜잭션을 복구하기 위한 실제 복구 시간은 **복구 간격** 값보다 훨씬 길어집니다. 장기 실행 트랜잭션이 복구 시간에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+예를 들어 서버 인스턴스가 비활성화되기 전에 장기 실행 트랜잭션에서 업데이트를 수행하는 데 2시간이 걸렸었다면 장기 실행 트랜잭션을 복구하기 위한 실제 복구 시간은 **복구 간격** 값보다 훨씬 길어집니다. 장기 실행 트랜잭션이 복구 시간에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
   
 일반적으로 기본값은 최적의 복구 성능을 제공합니다. 그러나 다음과 같은 경우에는 복구 간격을 변경하면 성능이 향상될 수 있습니다.  
   
@@ -92,7 +92,6 @@ ms.locfileid: "68084085"
 **recovery interval** 설정을 늘리려는 경우에는 값을 조금씩 늘려가며 그에 따라 복구 성능에 미치는 영향을 확인하는 것이 좋습니다. **recovery interval** 설정이 늘어나면 데이터베이스 복구를 완료하는 데 몇 배 더 긴 시간이 걸릴 수 있으므로 이 방법은 중요합니다. 예를 들어 **복구 간격** 을 10분으로 변경하면 **복구 간격** 이 1분으로 설정되었을 때보다 복구를 완료하는 데 약 10배 더 많은 시간이 걸립니다.  
   
 ##  <a name="IndirectChkpt"></a> 간접 검사점
-  
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입된 간접 검사점은 자동 검사점 대신 사용할 수 있는 구성 가능한 데이터베이스 수준 검사점을 제공합니다. **대상 복구 시간** 데이터베이스 구성 옵션을 지정하여 구성할 수 있습니다. 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.
 시스템이 충돌할 경우 간접 검사점을 사용하면 자동 검사점을 사용할 때보다 복구 시간이 빠르고 보다 예측 가능합니다. 간접 검사점은 다음과 같은 이점을 제공합니다.  
   
@@ -111,7 +110,6 @@ ms.locfileid: "68084085"
 > 현재 위치에서 업그레이드되었거나 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복원된 데이터베이스는 명시적으로 간접 검사점을 사용하도록 변경되지 않은 경우 이전의 자동 검사점 동작을 사용합니다.       
 
 ### <a name="ctp23"></a> 향상된 간접 검사점 확장성
-
 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 이전에는 `tempdb`와 같이 많은 수의 더티 페이지를 생성하는 데이터베이스가 있는 경우 비효율적인 스케줄러 오류가 발생할 수 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 간접 검사점에 대해 향상된 확장성을 도입하여 `UPDATE`/`INSERT` 워크로드가 많은 데이터베이스에서 이러한 오류를 방지할 수 있습니다.
   
 ##  <a name="EventsCausingChkpt"></a> 내부 검사점  
@@ -129,7 +127,6 @@ ms.locfileid: "68084085"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 오프라인으로 전환한 경우      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **서버 인스턴스의 복구 간격을 변경하려면**  
   
@@ -143,9 +140,7 @@ ms.locfileid: "68084085"
   
 -   [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>관련 항목:  
 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[트랜잭션 로그 물리 아키텍처](https://technet.microsoft.com/library/ms179355.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 온라인 설명서, 계속 적용!)       
-  
-  
+[SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

@@ -1,7 +1,7 @@
 ---
 title: 증분 복원(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033662"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916003"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033662"
      엔터프라이즈 버전에서 데이터베이스가 온라인 상태인 동안에는 오프라인 보조 파일 그룹을 복원 및 복구할 수 있습니다. 특정 읽기 전용 파일이 손상되지 않았고 데이터베이스와 일치하면 해당 파일을 복원할 필요가 없습니다. 자세한 내용은 [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)를 참조하세요.  
   
 ### <a name="applying-log-backups"></a>로그 백업 적용  
- 파일 백업이 생성되기 이전부터 읽기 전용 파일 그룹이 읽기 전용이었으면 로그 백업을 파일 그룹에 적용할 필요가 없으며 파일 복원 시 이 작업은 생략됩니다. 읽기/쓰기가 가능한 파일 그룹의 경우 파일 그룹을 현재 로그 파일로 전달하려면 손상되지 않은 로그 백업 체인을 마지막 전체 복원 또는 차등 복원에 적용해야 합니다.  
+ 파일 백업이 생성되기 이전부터 읽기 전용 파일 그룹이 읽기 전용이었으면 로그 백업을 파일 그룹에 적용할 필요가 없으며 파일 복원 시 이 작업은 생략됩니다. 읽기/쓰기가 가능한 파일 그룹의 경우 파일 그룹을 현재 로그 파일로 전달하려면 손상되지 않은 로그 백업 체인을 마지막 전체 복원 또는 차등 복원에 적용해야 합니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
   
 ### <a name="examples"></a>예  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033662"
   
 4.  데이터를 원래 복구 지점으로 복원하기 위한 원래 증분 복원으로 다른 모든 백업이 복원된 후 이어지는 차등 백업  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [복원 시퀀스 계획 및 수행&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [복원 시퀀스 계획 및 수행 &#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

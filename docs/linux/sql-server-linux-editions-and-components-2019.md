@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017의 버전 및 지원되는 기능 ~ Linux
+title: SQL Server 2019 버전 및 지원되는 기능 - Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928914"
+ms.locfileid: "72954995"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 버전 및 지원되는 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 SQL Server 2017 on Linux의 다양한 버전에서 지원하는 기능을 자세히 설명합니다. Windows의 SQL Server 버전 및 지원되는 기능에 대해서는 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)를 참조하세요.  
+이 문서에서는 SQL Server 2019 on Linux의 다양한 버전에서 지원하는 기능을 자세히 설명합니다. Windows에서 지원되는 SQL Server 버전 및 기능에 대해서는 [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)를 참조하세요.  
   
 설치 요구 사항은 사용자의 애플리케이션 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
 최신 릴리스 정보 및 새로운 기능 정보는 다음을 참조하세요.
-- [SQL Server 2017 on Linux 릴리스 정보](sql-server-linux-release-notes.md)
-- [SQL Server 2017 on Linux의 새로운 기능](sql-server-linux-whats-new.md)
+- [SQL Server 2019 on Linux 릴리스 정보](sql-server-linux-release-notes-2019.md)
+- [SQL Server 2019 on Linux의 새로운 기능](sql-server-linux-whats-new-2019.md)
 
 Linux에서 사용할 수 없는 SQL Server 기능 목록은 [지원되지 않는 기능 및 서비스](#Unsupported)를 참조하세요.
 
 ### <a name="try-sql-server"></a>SQL Server를 사용해 보세요.    
     
-[SQL Server 2017 다운로드](https://www.microsoft.com/sql-server/sql-server-2017)
+[SQL Server 2019 다운로드](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 버전  
  다음 표에서는 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에 대해 설명합니다. 
@@ -66,7 +66,7 @@ Linux에서 사용할 수 없는 SQL Server 기능 목록은 [지원되지 않�
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소  
 
-SQL Server 2017 on Linux는 SQL Server 데이터베이스 엔진을 지원합니다. 다음 표에서는 데이터베이스 엔진의 기능을 설명합니다.   
+SQL Server 2019 on Linux는 SQL Server 데이터베이스 엔진을 지원합니다. 다음 표에서는 데이터베이스 엔진의 기능을 설명합니다.   
   
 |서버 구성 요소|설명|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 |평면 및 측지 데이터 형식|예|예|예|예| 
 |고급 공간 라이브러리|예|예|예|예|   
 |산업 표준 공간 데이터 형식 가져오기/내보내기|예|예|예|예|   
+
 ## <a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
 
-다음 기능 및 서비스는 SQL Server 2017 on Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.
+다음 기능 및 서비스는 SQL Server 2019 on Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.
 
 | 영역 | 지원되지 않는 기능 또는 서비스 |
 |-----|-----|
-| **데이터베이스 엔진** | 트랜잭션 복제 |
-| &nbsp; | 병합 복제 |
-| &nbsp; | 변경 데이터 캡처(SQL Server 에이전트 참조) |
+| **데이터베이스 엔진** | 병합 복제 |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | 타사 연결을 사용하는 분산 쿼리 |
 | &nbsp; | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외의 데이터 원본에 연결된 서버  |
 | &nbsp; | 시스템 확장 저장 프로시저(XP_CMDSHELL 등) |
@@ -228,25 +226,28 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | Buffer Pool Extension |
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | , |
-| &nbsp; | 로그 판독기 에이전트 |
-| &nbsp; | CDC(변경 데이터 캡처) |
 | &nbsp; | Managed Backup |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
 | &nbsp; | 연결된 서버의 AD 인증 | 
 | &nbsp; | AG(가용성 그룹)의 AD 인증 | 
 | **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
+| &nbsp; | SQL Server R Services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | 데이터베이스 엔진 서비스 |
 | &nbsp; | Master  Data  Services |
+
+<sup>1</sup> SQL Server R은 SQL Server 내에서 지원되지만 별도 패키지로서의 SQL Server R Services는 지원되지 않습니다.
   
 ## <a name="next-steps"></a>다음 단계
+ [SQL Server 2017 버전 및 지원되는 기능 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 버전 및 지원되는 기능 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [SQL Server 2014 버전 및 지원되는 기능 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [SQL Server에 대한 제품 사양](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

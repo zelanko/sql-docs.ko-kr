@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082461"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916172"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -312,7 +312,6 @@ RESTORE LOG에 파일 목록을 포함하여 롤포워드 중에 파일을 만�
 > 전체 또는 대량 로그된 복구 모델을 사용하는 데이터베이스의 경우 대개 데이터베이스를 복원하기 전에 비상 로그 백업을 수행해야 합니다. RESTORE DATABASE 문에 데이터 백업이 종료된 후 발생한 시간 또는 트랜잭션을 지정해야 하는 WITH REPLACE나 WITH STOPAT 절이 포함되어 있지 않은 경우 비상 로그 백업을 먼저 수행하지 않고 데이터베이스를 복원하면 오류가 발생합니다. 비상 로그 백업에 대한 자세한 내용은 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>RECOVERY와 NORECOVERY 비교
-
 RESTORE 문에서 다음과 같이 [ RECOVERY | NORECOVERY ] 옵션을 통해 롤백을 제어합니다.
 
 - NORECOVERY는 롤백이 발생하지 않도록 지정합니다. 이렇게 하면 순서대로 다음 문으로 롤포워드를 계속할 수 있습니다.
@@ -321,10 +320,9 @@ RESTORE 문에서 다음과 같이 [ RECOVERY | NORECOVERY ] 옵션을 통해 �
 
 - RECOVERY(기본값)는 현재 백업에 대해 롤포워드가 완료된 다음 롤백이 수행되어야 한다는 의미입니다.
 
-  데이터베이스를 복구하려면 복원할 전체 데이터 집합(*롤포워드 세트*)가 데이터베이스와 일치해야 합니다. 롤포워드 세트가 데이터베이스와 일치할 만큼 충분히 롤포워드되지 않은 경우 RECOVERY를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다.
+  데이터베이스를 복구하려면 복원할 전체 데이터 집합(*롤포워드 세트*)이 데이터베이스와 일치해야 합니다. 롤포워드 세트가 데이터베이스와 일치할 만큼 충분히 롤포워드되지 않은 경우 RECOVERY를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 ## <a name="compatibility-support"></a>호환성 지원
-
 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 사용하여 만든 **master**, **model** 및 **msdb** 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다.
 
 > [!NOTE]
@@ -337,14 +335,11 @@ RESTORE 문에서 다음과 같이 [ RECOVERY | NORECOVERY ] 옵션을 통해 �
 데이터베이스가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 처음으로 연결되거나 복원될 때 데이터베이스 마스터 키(서비스 마스터 키로 암호화됨)의 복사본은 서버에 아직 저장되지 않은 상태입니다. 데이터베이스 마스터 키를 암호 해독하려면 **OPEN MASTER KEY** 문을 사용해야 합니다. DMK를 암호 해독한 후에는 **ALTER MASTER KEY REGENERATE** 문을 사용하여 SMK(서비스 마스터 키)로 암호화된 DMK의 복사본을 서버에 프로비전함으로써 앞으로 자동 암호 해독을 사용하도록 설정할 수 있습니다. 데이터베이스가 이전 버전에서 업그레이드되지 않은 경우에는 DMK를 다시 생성해야 최신 AES 알고리즘을 사용할 수 있습니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 데 소요되는 시간은 DMK에서 보호하는 개체 수에 따라 달라집니다. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 작업은 한 번만 필요하며 키 회전 전략의 일부로 이후에 수행하는 다시 생성 작업에 영향을 주지 않습니다.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
-
 오프라인 복원 시에 지정된 데이터베이스가 사용 중이면 RESTORE는 짧은 지연 후 사용자가 강제로 로그오프되도록 합니다. 주 파일 그룹이 아닌 파일 그룹에 대한 온라인 복원의 경우 복원한 파일 그룹이 오프라인 상태가 되는 경우를 제외하면 데이터베이스는 사용 중 상태로 유지될 수 있습니다. 지정한 데이터베이스의 모든 데이터는 복원된 데이터로 대체됩니다.
-
-데이터베이스에 대한 자세한 내용은 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.
 
 플랫폼 간 복원 작업은 서로 다른 프로세서 유형 간 복원 작업인 경우에도 운영 체제에서 데이터베이스의 데이터 정렬을 지원하는 한 수행할 수 있습니다.
 
-오류가 발생하면 RESTORE는 다시 시작할 수 있습니다. 또한 오류와 관계없이 RESTORE가 계속되도록 지시하여 최대한 많은 데이터를 복원할 수 있습니다(CONTINUE_AFTER_ERROR 옵션 참조).
+오류가 발생하면 RESTORE는 다시 시작할 수 있습니다. 또한 오류와 관계없이 RESTORE가 계속되도록 지시하여 최대한 많은 데이터를 복원할 수 있습니다(`CONTINUE_AFTER_ERROR` 옵션 참조).
 
 RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니다.
 
@@ -384,7 +379,6 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 서버 인스턴스의 백업 및 복원 작업을 추적하는 백업 및 복원 기록 테이블이 있습니다. 복원을 수행하면 백업 기록 테이블도 수정됩니다. 이 테이블에 대한 자세한 내용은 [백업 기록 및 헤더 정보](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)를 참조하세요.
 
 ## <a name="REPLACEoption"></a> REPLACE 옵션의 영향
-
 REPLACE는 신중한 검토 후에만 사용해야 하며 되도록 사용하지 않아야 합니다. 복원은 보통 실수로 복원 중 다른 데이터베이스로 현재 데이터베이스를 덮어쓰는 일을 방지합니다. RESTORE 문에서 지정된 데이터베이스가 현재 서버에 이미 존재하고 지정된 데이터베이스 패밀리 GUID가 백업 세트에 기록된 데이터베이스 패밀리 GUID와 다르면 해당 데이터베이스는 복원되지 않습니다. 이것은 중요한 보호 수단입니다.
 
 REPLACE 옵션은 복원 작업 중 일반적으로 수행하는 몇 가지 중요한 안전성 검사를 무시합니다. 무시되는 검사는 다음과 같습니다.
@@ -402,13 +396,11 @@ REPLACE 옵션은 복원 작업 중 일반적으로 수행하는 몇 가지 중�
   예를 들어 .xls 파일과 같은 잘못된 유형의 파일 또는 현재 온라인 상태가 아닌 다른 데이터베이스에서 사용 중인 파일을 덮어쓸 수 있습니다. 데이터 복원이 완료되어도 기존 파일을 덮어쓴 경우에는 임의의 데이터 손실이 발생할 수 있습니다.
 
 ## <a name="redoing-a-restore"></a>복원 다시 실행
-
 복원 결과는 실행 취소할 수 없지만 데이터 복사 결과를 무시하고 파일 단위로 다시 시작하여 롤포워드할 수 있습니다. 다시 시작하려면 원하는 파일을 복원하고 롤포워드를 다시 수행하십시오. 예를 들어 실수로 너무 많은 로그 백업을 복원하고 원하는 중지 지점을 지난 경우에는 해당 시퀀스를 다시 시작해야 합니다.
 
 복원 시퀀스를 중단하고 영향을 받는 파일의 전체 내용을 복원하여 다시 시작할 수 있습니다.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅샷으로 되돌리기
-
 DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리기 작업*은 전체 원본 데이터베이스를 데이터베이스 스냅샷 시점으로 되돌려 지정한 데이터베이스 스냅샷에 유지 관리된 시점의 데이터로 원본 데이터베이스를 덮어씁니다. 현재 되돌리는 스냅샷만 있을 수 있습니다. 그런 다음 되돌리기 작업은 로그를 다시 작성하므로 되돌린 데이터베이스를 사용자 오류 발생 지점으로 나중에 롤포워드할 수 없습니다.
 
 데이터 손실은 스냅샷 생성 이후의 데이터베이스 업데이트로 제한됩니다. 되돌린 데이터베이스의 메타데이터는 스냅샷 생성 시의 메타데이터와 동일합니다. 그러나 스냅샷으로 되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.
@@ -416,7 +408,6 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 데이터베이스 스냅샷에서 되돌리기는 미디어 복구용으로 사용할 수 없습니다. 일반 백업 세트와는 달리 데이터베이스 스냅샷은 데이터베이스 파일의 불완전한 복사본입니다. 데이터베이스나 데이터베이스 스냅샷이 손상된 경우 스냅샷에서 되돌릴 수 없는 경우가 많습니다. 되돌릴 수 있는 경우에도 손상 문제가 해결될 가능성은 거의 없습니다.
 
 ### <a name="restrictions-on-reverting"></a>되돌리기 제한 사항
-
 다음과 같은 경우에는 되돌리기가 지원되지 않습니다.
 
 - 원본 데이터베이스에는 읽기 전용 파일 그룹이나 압축 파일 그룹이 포함되어 있는 경우
@@ -426,19 +417,18 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 자세한 내용은 [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)를 참조하세요.
 
 ## <a name="security"></a>보안
-
 필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 그러나 암호로 보호된 미디어는 BACKUP 문의 FORMAT 옵션으로 덮어쓸 수 있습니다.
 
 > [!IMPORTANT]
 > 이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.
+
 > [!NOTE]
 > Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
 
 ### <a name="permissions"></a>사용 권한
+복원할 데이터베이스가 없으면 `CREATE DATABASE` 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 `sysadmin` 및 `dbcreator` 고정 서버 역할의 멤버와 데이터베이스의 소유자(`dbo`)에 설정됩니다. `FROM DATABASE_SNAPSHOT` 옵션의 경우 데이터베이스가 항상 있습니다.
 
-복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.
-
-멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
+멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 `db_owner` 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
 
 ## <a name="examples"></a> 예
 
@@ -625,7 +615,7 @@ RESTORE DATABASE AdventureWorks2012
 데이터베이스 백업은 `MyDatabaseBackups`라는 논리적 백업 디바이스에 있는 미디어 세트의 9번째 백업 세트입니다. 그런 다음 `10` 디바이스의 다음 3개 백업 세트(`11`, `12` 및 `MyDatabaseBackups`)에 있는 3개 로그 백업이 `WITH NORECOVERY`를 사용하여 복원됩니다. 마지막 로그 백업을 복원한 다음 데이터베이스가 복구됩니다.
 
 > [!NOTE]
-> 모든 로그 백업이 복원되기 전에 너무 빨리 복구하는 경우를 방지하기 위해 복구 작업은 별도의 단계로 수행됩니다.
+> 모든 로그 백업이 복원되기 전에 너무 빨리 복구하는 경우를 방지하기 위해 복구 작업은 별도의 단계로 수행됩니다. 복구 프로세스에 대한 자세한 내용은 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.
 
 `RESTORE DATABASE`에는 두 가지 유형의 `FILE` 옵션이 있습니다. 백업 디바이스 이름 앞에 있는 `FILE` 옵션은 백업 세트에서 복원될 데이터베이스 파일의 논리적 파일 이름을 지정합니다(예: `FILE = 'MyDatabase_data_1'`). 이 백업 세트는 미디어 세트의 첫 번째 데이터베이스 백업이 아니므로 미디어 세트에서의 해당 위치는 `FILE` 절의 `WITH` 옵션인 `FILE=9`를 사용하여 나타냅니다.
 
@@ -683,7 +673,8 @@ GO
 
 아래의 세 예제에서는 Microsoft Azure Storage 서비스를 사용하게 됩니다. 스토리지 계정 이름은 `mystorageaccount`입니다. 데이터 파일의 컨테이너는 `myfirstcontainer`입니다. 백업 파일의 컨테이너는 `mysecondcontainer`입니다. 각 컨테이너에 대한 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다. 저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명을 만들었습니다. Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
 
-**K1. Microsoft Azure Storage 서비스에서 전체 데이터베이스 백업 복원** `Sales`의 `mysecondcontainer`에 있는 전체 데이터베이스 백업이 `myfirstcontainer`로 복원됩니다. `Sales`는 현재 서버에 없습니다.
+**K1. Microsoft Azure Storage 서비스에서 전체 데이터베이스 백업 복원**    
+`mysecondcontainer`에 있는 `Sales`의 전체 데이터베이스 백업이 `myfirstcontainer`에 복원됩니다. `Sales`는 현재 서버에 없습니다.
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>자세한 정보
 
-- [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [시스템 데이터베이스 백업 및 복원(SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [미디어 세트, 미디어 패밀리 및 백업 세트](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY(Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY(Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [백업 기록 및 헤더 정보](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[시스템 데이터베이스 백업 및 복원(SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[미디어 세트, 미디어 패밀리 및 백업 세트](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY(Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY(Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[백업 기록 및 헤더 정보](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -780,7 +772,7 @@ FROM URL
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB Storage URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
+전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 Blob Storage URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
 
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함).
 
@@ -806,19 +798,17 @@ RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경
 자세한 내용은 [관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance) 참조
 
 ## <a name="restoring-an-encrypted-database"></a>암호화된 데이터베이스 복원
-
 암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
-
-RESTORE를 실행하려면 사용자에게 CREATE DATABASE 권한이 있어야 합니다.
+RESTORE를 실행하려면 사용자에게 `CREATE DATABASE` 권한이 있어야 합니다.
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
+멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 `db_owner` 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
 
 ## <a name="examples"></a> 예
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY 한 명의 사용자 데이터베이스 백업에 대한 헤�
 RESTORE HEADERONLY 결과는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과 뒤에 패턴화됩니다. 결과에는 50개 이상의 열이 있으며 모두 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과의 열에 대한 설명은 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
-
-**CREATE ANY DATABASE** 권한이 필요합니다.
+`CREATE ANY DATABASE` 권한이 필요합니다.
 
 백업 디렉터리에 액세스하고 읽을 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다.
 
@@ -983,14 +972,13 @@ RESTORE DATABASE 명령은 다음과 같은 조건에서 오류를 발생시킵�
 - SQL Server 2012 PDW 하드웨어가 있는 어플라이언스에서 만든 백업을 SQL Server 2008 R2 하드웨어가 있는 어플라이언스에 복원할 수 없습니다. 처음에 SQL Server 2008 R2 PDW 하드웨어와 함께 어플라이언스를 구매했고 현재 SQL Server 2012 PDW 소프트웨어를 실행하는 경우에도 마찬가지입니다.
 
 ## <a name="locking"></a>잠금
-
 DATABASE 개체에서 배타적 잠금을 사용합니다.
 
 ## <a name="examples"></a>예
 
 ### <a name="a-simple-restore-examples"></a>1\. 간단한 RESTORE 예
 
-다음 예에서는 전체 백업을 `SalesInvoices2013` 데이터베이스에 복원합니다. 백업 파일은 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full 디렉터리에 저장됩니다. SalesInvoices2013 데이터베이스는 대상 어플라이언스에 이미 존재할 수 없으며, 그렇지 않으면 이 명령은 오류가 발생하여 실패합니다.
+다음 예에서는 전체 백업을 `SalesInvoices2013` 데이터베이스에 복원합니다. 백업 파일은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 디렉터리에 저장됩니다. SalesInvoices2013 데이터베이스는 대상 어플라이언스에 이미 존재할 수 없으며, 그렇지 않으면 이 명령은 오류가 발생하여 실패합니다.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 다음 예에서는 SalesInvoices2013 데이터베이스에 전체 및 차등 백업을 차례로 복원합니다.
 
-데이터베이스의 전체 백업은 ‘\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full’ 디렉터리에 저장되는 전체 백업에서 복원됩니다. 복원이 성공적으로 완료되면 차등 백업이 SalesInvoices2013 데이터베이스에 복원됩니다. 차등 백업은 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' 디렉터리에 저장됩니다.
+데이터베이스의 전체 백업은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 디렉터리에 저장된 전체 백업에서 복원됩니다. 복원이 성공적으로 완료되면 차등 백업이 SalesInvoices2013 데이터베이스에 복원됩니다. 차등 백업은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` 디렉터리에 저장됩니다.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. 백업 헤더 복원
 
-이 예제는 데이터베이스 백업 ‘\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full’에 대한 헤더 정보를 복원합니다. 명령은 Invoices2013Full 백업에 대한 정보에서 하나의 행에 발생합니다.
+이 예에서는 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 데이터베이스 백업에 대한 헤더 정보를 복원합니다. 명령은 Invoices2013Full 백업에 대한 정보에서 하나의 행에 발생합니다.
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 헤더 정보를 사용하여 백업 복원을 시도하기 전에 백업의 콘텐츠를 확인하거나 대상 복원 어플라이언스가 원본 백업 어플라이언스와 호환되는지 확인할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-
-- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

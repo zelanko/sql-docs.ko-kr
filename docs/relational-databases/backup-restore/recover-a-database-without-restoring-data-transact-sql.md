@@ -1,7 +1,7 @@
 ---
 title: 데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL ) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033603"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916045"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033603"
   
  복구 전용 데이터베이스 복원의 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 구문은 다음과 같습니다.  
   
- RESTORE DATABASE *database_name* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  FROM **=** \<*backup_device>* 절은 백업이 필요 없으므로 복구 전용 복원에 사용되지 않습니다.  
+> FROM **=** \<*backup_device>* 절은 백업이 필요 없으므로 복구 전용 복원에 사용되지 않습니다.  
   
  **예제**  
   
  다음 예에서는 데이터를 복원하지 않고 복원 작업에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 복구합니다.  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,17 +60,17 @@ RESTORE DATABASE AdventureWorks2012
   
  데이터베이스가 증분 복원된 경우. 주 파일 그룹의 복원이 완료된 후 하나 이상의 복원되지 않은 파일이 새 데이터베이스 상태와 일치하는 경우입니다. 이는 이 파일이 읽기 전용이었기 때문일 수 있습니다. 이러한 파일은 복구만 하면 되며 따로 데이터를 복사할 필요가 없습니다.  
   
- 복구 전용 복원 작업에 따라 오프라인 상태인 파일 그룹의 데이터는 온라인 상태로 전환되지만 데이터 복사, 다시 실행 또는 실행 취소 단계는 수행되지 않습니다. 복원 단계에 대한 자세한 내용은 [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.  
+ 복구 전용 복원 작업에 따라 오프라인 상태인 파일 그룹의 데이터는 온라인 상태로 전환되지만 데이터 복사, 다시 실행 또는 실행 취소 단계는 수행되지 않습니다. 복원 단계에 대한 자세한 내용은 [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 참조하세요.  
   
  복구 전용 파일 복원의 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 구문은 다음과 같습니다.  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **예제**  
   
  다음 예에서는 `SalesGroup2`데이터베이스의 보조 파일 그룹 `Sales` 에 있는 파일의 복구 전용 파일 복원에 대해 설명합니다. 주 파일 그룹은 이미 증분 복원의 초기 단계로 복원되었으며 `SalesGroup2` 는 복원된 주 파일 그룹과 일치합니다. 이 파일 그룹을 복구하고 파일 그룹을 온라인 상태로 만들려면 다음과 같은 단일 문만 필요합니다.  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [파일 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [파일 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   
