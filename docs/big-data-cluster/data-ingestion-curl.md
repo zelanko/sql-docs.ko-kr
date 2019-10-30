@@ -1,7 +1,7 @@
 ---
 title: curl을 사용하여 HDFS로 데이터 로드 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 말아 넘기기를 사용 하 여 데이터를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS로 로드 합니다.
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS에 데이터를 로드 하려면 말아 넘기기를 사용 합니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,22 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652228"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049884"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>말아 넘기기를 사용 하 여 데이터를 HDFS로 로드[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>말아 넘기기를 사용 하 여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS로 데이터 로드
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 **말아** 를 사용 하 여 HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에 데이터를 로드 하는 방법을 설명 합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에서 **말아 넘기기** 를 사용 하 여 HDFS로 데이터를 로드 하는 방법을 설명 합니다.
+
+## <a id="prereqs"></a> 사전 요구 사항
+
+- [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="obtain-the-service-external-ip"></a>서비스 외부 IP 가져오기
 
@@ -39,24 +43,24 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들어
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
 ## <a name="list-a-file"></a>파일 나열
 
-**hdfs:///airlinedata** 아래에 있는 파일을 나열하려면 다음 curl 명령을 사용합니다.
+**Hdfs:///product_review_data**아래에 있는 파일을 나열 하려면 다음의 말아 명령을 사용 합니다.
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>HDFS에 로컬 파일 저장
 
-로컬 디렉터리의 새 파일 **test.csv**를 airlinedata 디렉터리에 저장하려면 다음 curl 명령을 사용합니다(**Content-Type** 매개 변수가 필요함).
+로컬 디렉터리에서 product_review_data 디렉터리에 새 파일을 저장 하려면 다음 말아 명령을 **사용 합니다 (** **content-type** 매개 변수가 필요 함).
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>디렉터리 만들기
