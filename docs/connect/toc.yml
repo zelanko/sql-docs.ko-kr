@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: JDBC 드라이버 배포
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Microsoft JDBC Driver 재배포
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: 추가 JDBC 드라이버 정보 찾기
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Microsoft JDBC Driver for SQL Server 지원 매트릭스
