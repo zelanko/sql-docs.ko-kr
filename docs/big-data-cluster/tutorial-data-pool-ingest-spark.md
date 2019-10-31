@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049857"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182636"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀로 데이터 수집
 
@@ -131,9 +131,9 @@ ms.locfileid: "73049857"
 
 다음 단계에서는 Spark 스트리밍 작업이 HDFS에서 데이터 풀로 데이터를 로드하는 방법을 보여 줍니다.
 
-1. 수집된 데이터를 쿼리하기 전에 작업 기록 출력을 살펴보고 작업이 완료되었는지 확인합니다.
+1. 수집 데이터를 쿼리 하기 전에 Yarn App ID, Spark UI 및 드라이버 로그를 포함 하 여 Spark 실행 상태를 확인 합니다.
 
-   ![Spark 작업 기록](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark 실행 세부 정보](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. 이 자습서의 시작 부분에서 열었던 SQL Server 마스터 인스턴스 쿼리 창으로 돌아갑니다.
 

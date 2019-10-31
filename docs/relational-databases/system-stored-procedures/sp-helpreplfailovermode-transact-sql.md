@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (TRANSACT-SQL) | Microsoft Docs
+title: sp_helpreplfailovermode (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142839"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  구독의 현재 장애 조치(Failover) 모드를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 구독자에서 실행됩니다. 장애 조치 모드에 대 한 자세한 내용은 참조 하세요. [업데이트할 수 있는 Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)합니다.  
+  구독의 현재 장애 조치(Failover) 모드를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 구독자에서 실행됩니다. 장애 조치 (failover) 모드에 대 한 자세한 내용은 [트랜잭션 복제를 위한 업데이트할](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)수 있는 구독을 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,32 +41,32 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'` 이 구독자의 업데이트에 참여 하는 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
+`[ @publisher = ] 'publisher'`은이 구독자의 업데이트에 참여 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
   
-`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'`는 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'` 이 구독자의 업데이트에 참여 하는 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`은이 구독자의 업데이트에 참여 하는 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 장애 조치 모드의 정수 값을 반환 하 고은 **출력** 매개 변수입니다. *failover_mode_id* 되는 **tinyint** 이며 기본값은 **0**합니다. 반환 **0** 즉시 업데이트 하 고 **1** 지연 업데이트에 대 한 합니다.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`는 장애 조치 (failover) 모드의 정수 값을 반환 하 고 **출력** 매개 변수입니다. *failover_mode_id* 은 **tinyint** 이며 기본값은 **0**입니다. 즉시 업데이트의 경우 **0** 을 반환 하 고 지연 업데이트의 경우 **1** 을 반환 합니다.  
   
- [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
- 구독자에서 데이터가 수정되는 모드를 반환합니다. *failover_mode* 되는 **nvarchar(10)** 이며 기본값은 NULL입니다. **출력** 매개 변수입니다.  
+ [ **\@failover_mode =** ] **'***failover_mode***' 출력**  
+ 구독자에서 데이터가 수정되는 모드를 반환합니다. *failover_mode* 은 **nvarchar (10)** 이며 기본값은 NULL입니다. 는 **OUTPUT** 매개 변수입니다.  
   
-|값|설명|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**immediate**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
-|**queued**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
+|**관련이**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
+|**넣었습니다**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>설명  
- **sp_helpreplfailovermode** 구독 즉시 업데이트를 사용 하도록 설정 된 장애 조치로 지연 업데이트에 오류가 발생 한 경우에 대 한 스냅숏 복제 또는 트랜잭션 복제에 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode** 는 장애 발생 시 장애 조치 (failover)로 지연 업데이트를 사용 하 여 즉시 업데이트를 사용 하도록 설정 하는 스냅숏 복제 또는 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpreplfailovermode**합니다.  
+## <a name="permissions"></a>Permissions  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_helpreplfailovermode**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:  
+ [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

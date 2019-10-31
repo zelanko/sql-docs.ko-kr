@@ -292,7 +292,7 @@ PAUSE
   
 2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. If <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 에서 **false**를 반환하면 데이터베이스가 있는지 확인합니다.  
   
-3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 **false**이면 **@allow_subscriber_initiated_snapshot** 로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>을 참조하세요.  
+3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 **false**이면 **\@allow_subscriber_initiated_snapshot** 로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>을 참조하세요.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
@@ -322,7 +322,7 @@ PAUSE
   
 8.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅샷을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
-9. (옵션) **@allow_subscriber_initiated_snapshot** 속성이 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
+9. (옵션) **\@allow_subscriber_initiated_snapshot** 속성이 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
   
 10. 구독자가 병합 에이전트에 처음으로 연결하는 경우에는 분할된 스냅샷이 자동으로 생성됩니다.  
   

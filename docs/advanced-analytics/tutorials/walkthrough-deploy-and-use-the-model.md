@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714686"
@@ -73,7 +73,7 @@ SQL 쿼리 또는 테이블을 입력으로 전달 하 여 여러 예측을 생�
 
     + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 테이블에서 **varbinary (max)** 데이터로 검색 되어 SQL 변수  _\@lmodel2_에 저장 되 고, 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개 변수 *mod* 로 전달 됩니다.
 
-    + 점수 매기기를 위한 입력으로 사용 되는 데이터는 sql 쿼리로 정의 되며 sql 변수  _\@입력_에 문자열로 저장 됩니다. 데이터는 데이터베이스에서 검색 될 때 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대 한 입력 데이터의 기본 이름인 *inputdataset*이라는 데이터 프레임에 저장 됩니다.  *_\@input_data_1_name_* 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을 정의할 수 있습니다.
+    + 점수 매기기를 위한 입력으로 사용 되는 데이터는 sql 쿼리로 정의 되며 sql 변수  _\@입력_에 문자열로 저장 됩니다. 데이터는 데이터베이스에서 검색 될 때 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대 한 입력 데이터의 기본 이름인 *inputdataset*이라는 데이터 프레임에 저장 됩니다. *_\@input_data_1_name_* 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을 정의할 수 있습니다.
 
     + 점수를 생성 하기 위해 저장 프로시저가 **RevoScaleR** 라이브러리에서 rxPredict 함수를 호출 합니다.
 

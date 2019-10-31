@@ -140,7 +140,7 @@ ms.locfileid: "72907811"
   
 1.  배포자에서 [sp_add_agent_profile&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)을 실행합니다. **\@name**을 지정하고 **\@profile_type**에 값 **1**을 지정한 후 **\@agent_type**에 다음 값 중 하나를 지정합니다.  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -158,7 +158,7 @@ ms.locfileid: "72907811"
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)을 실행합니다. **\@agent_type**에 대해 다음 값 중 하나를 지정합니다.  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "72907811"
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)을 실행합니다. **\@agent_type**에 대해 다음 값 중 하나를 지정합니다.  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -207,7 +207,7 @@ ms.locfileid: "72907811"
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)을 실행합니다. **\@agent_type**에 대해 다음 값 중 하나를 지정합니다.  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
