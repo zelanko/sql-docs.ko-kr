@@ -27,12 +27,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064625"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68661421"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
@@ -79,7 +79,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>1\. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `buyers` 사용자가 소유하는 `BenMiller` 데이터베이스 역할을 만듭니다.  
   
-```  
+```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>2\. 고정 데이터베이스 역할이 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `auditors` 고정 데이터베이스 역할이 소유하는 `db_securityadmin` 데이터베이스 역할을 만듭니다.  
   
-```  
+```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

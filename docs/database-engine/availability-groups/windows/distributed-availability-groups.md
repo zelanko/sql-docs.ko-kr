@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907275"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049851"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/index.yml)를 보완합니다.
+분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/)를 보완합니다.
 
 > [!NOTE]
 > "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.

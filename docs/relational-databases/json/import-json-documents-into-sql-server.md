@@ -1,7 +1,7 @@
 ---
 title: SQL Server에 JSON 문서 가져오기 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: a6a69047ca62f60cf071ac44e87bd741feea9b88
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70910828"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049889"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 
@@ -51,23 +51,6 @@ SELECT BulkColumn
 
 JSON 파일의 콘텐츠를 로드한 후 JSON 텍스트를 테이블에 저장할 수 있습니다.
 
-## <a name="import-multiple-json-documents"></a>여러 개의 JSON 문서 가져오기
-
-같은 방법을 사용하여 파일 시스템에서 JSON 파일 집합을 지역 변수로 한 번에 하나씩 로드할 수 있습니다. 파일 이름을 `book<index>.json`이라고 가정합니다.
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage에서 JSON 문서 가져오기
 

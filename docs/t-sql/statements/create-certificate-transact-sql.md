@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca161710f302bf0cb8b7ea252d279f7c15f7a49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064604"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -191,7 +191,7 @@ CREATE CERTIFICATE certificate_name
 ### <a name="a-creating-a-self-signed-certificate"></a>1\. 자체 서명된 인증서 만들기  
  다음 예에서는 `Shipping04`라는 인증서를 만듭니다. 이 인증서의 프라이빗 키는 암호를 사용하여 보호됩니다.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -202,7 +202,7 @@ GO
 ### <a name="b-creating-a-certificate-from-a-file"></a>2\. 파일로부터 인증서 만들기  
  다음 예에서는 데이터베이스에서 인증서를 만들고 파일로부터 키 쌍을 로드합니다.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -215,7 +215,7 @@ GO
    
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 서명된 실행 파일로부터 인증서 만들기  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -223,7 +223,7 @@ GO
   
  또는 `dll` 파일로부터 어셈블리를 만든 다음 어셈블리로부터 인증서를 만들 수 있습니다.  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -240,7 +240,7 @@ GO
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 자체 서명된 인증서 만들기  
  다음 예에서는 암호화된 암호를 지정하지 않고 `Shipping04`라는 인증서를 만듭니다. 이 예제는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와 함께 사용할 수 있습니다.
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
@@ -253,7 +253,7 @@ GO
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
- [CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   

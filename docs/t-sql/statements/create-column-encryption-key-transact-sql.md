@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064569"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍
 ### <a name="a-creating-a-column-encryption-key"></a>1\. 열 암호화 키 만들기  
 다음 예에서는 `MyCEK`라는 열 암호화 키를 만듭니다.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>2개 값을 사용하여 열 암호화 키 만들기  
 다음 예에서는 2개 값을 사용해 `TwoValueCEK`라는 열 암호화 키를 만듭니다.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

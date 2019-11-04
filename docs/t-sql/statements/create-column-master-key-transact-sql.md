@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061061"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064558"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ WITH (
   
 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CNG_STORE 공급자를 사용하는 클라이언트 애플리케이션은 열 마스터 키에 액세스합니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 열 마스터 키가 Azure Key Vault에 저장됩니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. 열 마스터 키는 사용자 지정 열 마스터 키 저장소에 저장됩니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>2\. Enclave 사용 열 마스터 키 만들기  
 다음 예제에서는 Enclave 사용 가능 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 Enclave 사용 가능 열 마스터 키가 인증서 저장소에 저장됩니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Enclave 사용 가능 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 Enclave 사용 가능 열 마스터 키가 Azure Key Vault에 저장됩니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

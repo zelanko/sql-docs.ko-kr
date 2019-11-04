@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b017b3cccbce4f993723d24f952eb605ce36a376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064688"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### <a name="a-creating-an-asymmetric-key"></a>1\. 비대칭 키 만들기  
  다음 예에서는 `PacificSales09` 알고리즘을 사용하여 `RSA_2048`라는 비대칭 키를 만들고 암호로 프라이빗 키를 보호합니다.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -139,7 +139,7 @@ GO
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>2\. 파일로부터 비대칭 키를 만들어서 사용자에게 권한 부여  
  다음 예에서는 파일에 저장된 키 쌍으로부터 비대칭 키 `PacificSales19`를 만든 다음, 사용자 `Christina`에게 비대칭 키의 소유권을 할당합니다. 프라이빗 키는 데이터베이스 마스터 키로 보호되며 마스터 키는 비대칭 키를 만들기 전에 만들어져야 합니다.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -149,7 +149,7 @@ GO
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM 공급자에서 비대칭 키 만들기  
  다음 예제에서는 `EKM_Provider1`이라는 확장 가능 키 관리 공급자에 저장된 키 쌍에서 `EKM_askey1` 비대칭 키와, 해당 공급자에서 `key10_user1`이라는 키를 만듭니다.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

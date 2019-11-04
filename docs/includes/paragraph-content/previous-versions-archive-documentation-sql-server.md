@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e80ca43ad2a16496673b20cb4144784988333a55
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912853"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73057335"
 ---
 
 보관된 웹 페이지 세트에 이전 버전의 Microsoft SQL Server에 대한 설명서를 누적해서 보존합니다. 보관된 웹 페이지는 Bing.com, Google.com 등의 검색 엔진에서 처리되지 않습니다. 그러나 Docs _previous-versions/sql/_ 주소에서 보관 파일을 확인할 수 있습니다.
@@ -20,7 +20,7 @@ ms.locfileid: "72912853"
 
 [SQL Server 2014 설명서](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)는 주 Docs 주소에서 계속 사용할 수 있습니다.
 
-[SQL Server 2019 설명서](https://docs.microsoft.com/sql/sql-server/index.yml?view=sql-server-ver15)는 주 Docs 주소에서 사용할 수 있습니다. 페이지 맨 위에 있는 버전 관리 드롭다운을 사용하여 다른 버전을 선택할 수 있습니다.
+[SQL Server 2019 설명서](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15)는 주 Docs 주소에서 사용할 수 있습니다. 페이지 맨 위에 있는 버전 관리 드롭다운을 사용하여 다른 버전을 선택할 수 있습니다.
 
 이전 버전의 SQL Server 설명서에 대한 자세한 내용은 [이전 버전의 SQL Server 설명서](/sql/toc/previous-versions-sql-server)를 참조하세요.
 

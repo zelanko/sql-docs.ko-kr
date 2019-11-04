@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064578"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>1\. 테이블에 대한 DML 트리거 비활성화  
  다음 예에서는 `uAddress` 테이블에 만들어진 `Address` 트리거를 비활성화합니다.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -95,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>2\. DDL 트리거 비활성화  
  다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 후 비활성화합니다.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

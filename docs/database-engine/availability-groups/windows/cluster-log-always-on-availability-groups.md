@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991287"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240759"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 CLUSTER.LOG 생성 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  장애 조치(failover) 클러스터 리소스로서 SQL Server, WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 클러스터 및 SQL Server 리소스 DLL(hadrres.dll) 간에는 SQL Server 내에서 모니터링할 수 없는 외부 상호 작용이 있습니다. WSFC 로그 CLUSTER.LOG는 WSFC 클러스터 또는 SQL Server 리소스 DLL의 문제를 진단할 수 있습니다.  
-  
- 다음 다이어그램은 가용성 그룹 리소스 만들기, 파괴 또는 상태 변경을 시작하는 SQL Server 및 Windows 클러스터 관리자 같은 애플리케이션 간의 관계를 보여 줍니다.  
+  장애 조치(failover) 클러스터 리소스로서 SQL Server, WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 클러스터 및 SQL Server 리소스 DLL(hadrres.dll) 간에는 SQL Server 내에서 모니터링할 수 없는 외부 상호 작용이 있습니다. WSFC 로그 CLUSTER.LOG는 WSFC 클러스터 또는 SQL Server 리소스 DLL의 문제를 진단할 수 있습니다. 
   
 ## <a name="generate-cluster-log"></a>클러스터 로그 생성  
  클러스터 로그를 두 가지 방법으로 생성할 수 있습니다.  

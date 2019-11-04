@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e28bcfb7a5478dd90053094dbf38d79a41a42021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064590"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="examples"></a>예  
  다음 예에서는 암호 `weekly_receipts` 및 기본 스키마로 `987Gbv876sPYY5m23`가 있는 `Sales`라는 애플리케이션 역할을 만듭니다.  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

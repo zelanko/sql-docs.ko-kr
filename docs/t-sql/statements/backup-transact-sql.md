@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028958"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142867"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 - 대상 네트워크 공유에 백업을 위한 충분한 공간이 없습니다. BACKUP DATABASE 명령은 백업을 시작하기에 앞서 디스크 공간이 충분한지 확인하지 않으므로 BACKUP DATABASE를 실행하는 동안 디스크 공간 부족 오류가 일어날 수 있습니다. 디스크 공간이 부족하면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 BACKUP DATABASE 명령을 롤백합니다. 데이터베이스의 크기를 줄이려면 [DBCC SHRINKLOG(Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 실행합니다.
 - 트랜잭션 내에서 백업을 시작하려고 시도합니다.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
 데이터베이스 백업을 수행하기 전에 [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)를 사용하여 데이터베이스의 크기를 줄입니다.
@@ -1217,6 +1219,8 @@ BACKUP 명령을 취소하면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 �
 
 전체 백업과 차등 백업은 서로 다른 디렉토리에 저장됩니다. 전체 백업과 차등 백업이 서로 관련 있음을 나타내기 위한 명명 규칙이 강제되지 않습니다. 자신 만의 명명 규칙을 통해 이 관련성을 추적할 수 있습니다. 또는 WITH DESCRIPTION 옵션을 사용하여 설명을 추가한 다음, RESTORE HEADERONLY 문을 사용하여 설명을 검색할 수 있습니다.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
 master 데이터베이스의 차등 백업을 수행할 수 없습니다. master 데이터베이스의 전체 백업 만 지원됩니다.

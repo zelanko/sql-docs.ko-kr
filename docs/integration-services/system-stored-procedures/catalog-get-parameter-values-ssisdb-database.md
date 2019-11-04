@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296809"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049946"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  매개 변수가 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @package_name = ] *package_name*  
- 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. 모든 프로젝트 매개 변수와 모든 패키지의 매개 변수를 검색하려면 NULL을 사용합니다. *package_name*은 **nvarchar(260)** 입니다.  
+ 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. *package_name*은 **nvarchar(260)** 입니다.  
   
  [ @reference_id = ] *reference_id*  
  환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  

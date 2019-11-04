@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049913"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
@@ -166,7 +166,7 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
     - [SQL Server 2014 설명서](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
-    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/index.yml?view=sql-server-2016)
+    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016)
 
 ## <a name="see-also"></a>관련 항목:
 

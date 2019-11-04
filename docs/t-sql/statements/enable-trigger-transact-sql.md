@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064552"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ DML 트리거를 활성화하려면 최소한 트리거가 만들어진 테이�
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>1\. 테이블의 DML 트리거 활성화  
 다음 예에서는 AdventureWorks 데이터베이스의 `uAddress` 테이블에서 만든 `Address` 트리거를 비활성화한 다음, 다시 활성화하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>2\. DDL 트리거 활성화  
 다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 다음, 비활성화하고 활성화합니다.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +109,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064681"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +220,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. 서비스를 사용하여 대상 서비스의 세 가지 우선 순위 수준 만들기  
  세 가지 성능 수준인 금(높음), 은(중간), 동(낮음)을 제공하는 시스템을 지원합니다. 계약은 하나지만 각 수준마다 별도의 시작자 서비스가 있습니다. 모든 시작자 서비스는 중앙 대상 서비스와 통신합니다.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +262,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. 계약을 사용하여 여러 서비스의 세 가지 우선 순위 수준 만들기  
  세 가지 성능 수준인 금(높음), 은(중간), 동(낮음)을 제공하는 시스템을 지원합니다. 각 수준은 별도의 계약을 가집니다. 이러한 우선 순위는 해당 계약을 사용하는 대화에서 참조하는 모든 서비스에 적용됩니다.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  
@@ -293,6 +293,6 @@ CREATE BROKER PRIORITY BronzePriority
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   
