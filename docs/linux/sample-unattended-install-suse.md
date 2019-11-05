@@ -4,16 +4,16 @@ titleSuffix: SQL Server
 description: SQL Server 스크립트 샘플 - SUSE Linux Enterprise Server에서 무인 설치
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910449"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593515"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>예제: SUSE Linux Enterprise Server를 위한 무인 SQL Server 설치 스크립트
 
@@ -26,7 +26,7 @@ ms.locfileid: "67910449"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- Linux에서 SQL Server를 실행하려면 2GB 이상의 메모리가 필요합니다.
+- SQL Server on Linux를 실행하려면 2GB 이상의 메모리가 필요합니다.
 - 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 - 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
@@ -176,7 +176,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>스크립트 이해
-Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설정하는 것입니다. 이러한 변수는 샘플과 같은 스크립팅 변수이거나 환경 변수일 수 있습니다. 변수 `MSSQL_SA_PASSWORD`는 SQL Server 설치에 **필수**이며, 스크립트용으로 생성된 사용자 지정 변수도 있습니다. 샘플 스크립트는 다음 단계를 수행합니다.
+Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설정하는 것입니다. 이 변수는 샘플과 같은 스크립팅 변수이거나 환경 변수일 수 있습니다. `MSSQL_SA_PASSWORD` 변수는 SQL Server 설치에 **필수**이며, 다른 변수는 스크립트용으로 생성된 사용자 지정 변수입니다. 샘플 스크립트는 다음 단계를 수행합니다.
 
 1. 공용 Microsoft GPG 키를 가져옵니다.
 
@@ -198,7 +198,7 @@ Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설�
 
 1. 다른 시스템에서 SQL Server에 연결하는 데 필요한 TCP의 포트 1433을 시스템 방화벽에서 차단 해제합니다.
 
-1. 선택적으로 교착 상태 추적을 위한 추적 플래그를 설정합니다. (줄의 주석 처리를 제거해야 함)
+1. 필요에 따라 교착 상태 추적을 위한 추적 플래그를 설정합니다. (줄의 주석 처리를 제거해야 함)
 
 1. SQL Server가 이제 설치되었습니다. 작동 가능하게 하려면 프로세스를 다시 시작합니다.
 
@@ -225,4 +225,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux의 SQL Server에 대한 자세한 내용은 [Linux의 SQL Server 개요](sql-server-linux-overview.md)를 참조하세요.
+SQL Server on Linux에 대한 자세한 내용은 [SQL Server on Linux 개요](sql-server-linux-overview.md)를 참조하세요.

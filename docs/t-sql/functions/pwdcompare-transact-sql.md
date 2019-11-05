@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2910ac2c0ba1390eb8d82900bb3c8d64947a6944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168772"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   암호를 해시하고 해당 해시를 기존 암호의 해시와 비교합니다. PWDCOMPARE를 사용하여 빈 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호 또는 일반적인 약한 암호를 검색할 수 있습니다.  
   

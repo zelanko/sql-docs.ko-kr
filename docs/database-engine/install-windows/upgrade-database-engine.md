@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 엔진 업그레이드 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122966"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531555"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122966"
 
     데이터베이스 호환성 수준을 변경한 후 사용할 수 있는 새 기능 및 향상된 동작에 대한 자세한 내용은 [호환성 수준 간의 차이점](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)을 참조하세요.
 
-5.  [새 SQL Server 기능을 활용하세요](https://www.microsoft.com/sql-server/sql-server-2017). 마지막으로 이전 단계를 모두 완료하고 나면 새 데이터베이스 엔진의 특정 향상 기능을 사용해 볼 수 있습니다. 이 문서에서는 이러한 향상 기능 중 몇 가지를 소개하고 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
+5.  [새 SQL Server 기능을 활용하세요](https://www.microsoft.com/sql-server/sql-server-2019). 마지막으로 이전 단계를 모두 완료하고 나면 새 데이터베이스 엔진의 특정 향상 기능을 사용해 볼 수 있습니다. 이 문서에서는 이러한 향상 기능 중 몇 가지를 소개하고 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
   
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278920"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989558"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "70278920"
   
     1.  **디바이스**  
   
-         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -108,25 +108,25 @@ ms.locfileid: "70278920"
 2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 전체 데이터베이스 백업을 복원합니다. 기본적으로 데이터 및 로그 파일은 원래 위치로 복원됩니다. 데이터베이스의 위치를 다시 지정하려면 MOVE 옵션을 사용하여 각 데이터베이스 파일 위치를 옮기고 기존 파일과의 충돌을 피합니다.  
 
   데이터베이스를 새 위치 및 새 이름으로 복원하는 데 사용되는 기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
-  
+  ```sql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > 데이터베이스 위치를 다른 디스크에 다시 지정할 때는 공간이 충분한지 확인하고 기존 파일과의 충돌 가능성이 있는지 확인합니다. 그러려면 RESTORE DATABASE 문에 사용하려는 것과 동일한 MOVE 매개 변수를 지정하는 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 문을 사용해야 합니다.  
   
@@ -138,10 +138,10 @@ ms.locfileid: "70278920"
   > [!NOTE]
   > 데이터베이스를 다른 서버 인스턴스로 복원하는 경우 새 이름 대신 원래 데이터베이스 이름을 사용할 수 있습니다.  
   
-  *backup_device* [ **,**...*n* ]  
+  *backup_device* [ **,** ...*n* ]  
   데이터베이스 백업 복원에 사용할 1-64개의 백업 디바이스 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 디바이스를 지정하거나, 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
   
-  { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
   자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "70278920"
   
   자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
   
-  MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
   *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
   |옵션|설명|  
