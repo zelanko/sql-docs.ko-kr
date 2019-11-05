@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_compute_node_errors (TRANSACT-SQL) | Microsoft Docs
+title: _exec_compute_node_errors (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,33 +22,35 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097880"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532787"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>_exec_compute_node_errors (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase에서 발생 하는 반환 오류 노드를 계산 합니다.  
+  PolyBase 계산 노드에서 발생 하는 오류를 반환 합니다.  
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
-|원본(source)|**nvarchar(255)**|원본 스레드 또는 프로세스 설명||  
-|type|**nvarchar(255)**|오류 유형입니다.||  
-|create_time|**datetime**|오류 발생 시간||  
-|compute_node_id|**int**|특정 계산 노드의 식별자|참조의 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|PolyBase 쿼리, 있는 경우의 식별자입니다.||  
-|spid|**int**|SQL Server 세션의 식별자||  
-|thread_id|**int**|오류가 발생 한 스레드의 숫자 식별자입니다.||  
-|details 정보|nvarchar(4000)|전체 설명은 오류의 세부 정보입니다.||  
+|error_id|`nvarchar(36)`|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
+|원본(source)|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
+|형식|`nvarchar(255)`|오류 유형입니다.||  
+|create_time|`datetime`|오류가 발생 한 시간입니다.||  
+|compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id of [_exec_compute_nodes &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요.|  
+|rexecution_id|`nvarchar(36)`|PolyBase 쿼리 (있는 경우)의 식별자입니다.||  
+|spid|`int`|SQL Server 세션의 식별자입니다.||  
+|thread_id|`int`|오류가 발생 한 스레드의 숫자 식별자입니다.||  
+|자세히|nvarchar(4000)|오류의 세부 정보에 대 한 전체 설명입니다.||
+|compute_pool_id|`int`|풀에 대 한 고유 식별자입니다.|
+
   
-## <a name="see-also"></a>관련 항목  
- [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>관련 항목:  
+ [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

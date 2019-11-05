@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_dms_workers (TRANSACT-SQL) | Microsoft Docs
+title: _exec_dms_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,48 +22,49 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097760"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532937"
 ---
-# <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>_exec_dms_workers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 보유 합니다.  
+  DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 저장 합니다.  
   
- 이 보기에는 지난 1000 개의 요청 및 활성 요청에 대 한 데이터 표시 활성 요청은이 보기에 있는 데이터를 갖습니다.  
+ 이 보기는 최근 1000 요청 및 활성 요청에 대 한 데이터를 표시 합니다. 활성 요청은 항상이 뷰에 있는 데이터를 가집니다.  
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|쿼리는이 DMS 작업자와 일부 of.request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 형성 합니다.||  
-|step_index|**int**|이 DMS 작업자의 일부인 단계를 쿼리 합니다.|단계 인덱스를 참조 하세요 [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)합니다.|  
-|dms_step_index|**int**|이 작업 자가 실행 되는 DMS 계획의 단계입니다.|참조 [sys.dm_exec_dms_workers (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|작업자에서 실행 되는 노드.|참조 [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)합니다.|  
-|distribution_id|**int**|||  
-|type|**nvarcha(32)**|||  
-|상태|**nvarchar(32)**|이 단계는 상태|'보류 중', 'Running', 'Complete', '실패 'UndoFailed', 'PendingCancel', ' 취소 '를 '취소', '중단'|  
-|bytes_per_sec|**bigint**|||  
-|bytes_processed|**bigint**|||  
-|rows_processed|**bigint**|||  
-|start_time|**datetime**|단계 실행 시작 된 시간|더 작은 또는 현재 같음 및 크거나 end_compile_time이이 단계 속해 있는 쿼리.|  
-|end_time|**datetime**|이 단계 실행이 완료, 취소 되었거나 실패 한 시간입니다.|더 작은 또는 현재 같음 및 크거나 start_time, 큐에 대기 또는 실행의 현재 단계에 대 한 NULL로 설정 합니다.|  
-|total_elapsed_time|**int**|총 쿼리 단계가 실행 된를 밀리초 단위로 시간|0 사이의 start_time 및 end_time 간의 차이입니다. 큐에 대기 중인된 단계에 대 한 0입니다.|  
-|cpu_time|**bigint**|||  
-|query_time|**int**|||  
-|buffers_available|**int**|||  
-|dms_cpid|**int**|||  
-|sql_spid|**int**|||  
-|error_id|**nvarchar(36)**|||  
-|source_info|**nvarchar(4000)**|||  
-|destination_info|**nvarchar(4000)**|||  
-|command|**nvarchar(4000)**|||  
-  
-## <a name="see-also"></a>관련 항목  
- [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+|execution_id|`nvarchar(32)`|이 DMS worker가 request_id, step_index 및 dms_step_index이 뷰에 대 한 키를 형성 하는 쿼리입니다.||  
+|step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|_Exec_distributed_request_steps의 단계 인덱스를 참조 하십시오. [ &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[_Exec_dms_workers (transact-sql)를](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
+|compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[ &#40;_Exec_compute_nodes&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 참조 하세요.|  
+|distribution_id|`int`|||  
+|형식|`nvarcha(32)`|||  
+|상태|`nvarchar(32)`|이 단계의 상태|' Pending ', ' Running ', ' Complete ', ' Failed ', ' 작업 취소 실패 ', ' PendingCancel ', ' 취소 됨 ', ' 실행 취소 됨 ', ' 중단 됨 '|  
+|bytes_per_sec|`bigint`|||  
+|bytes_processed|`bigint`|||  
+|rows_processed|`bigint`|||  
+|start_time|`datetime`|단계가 실행을 시작한 시간입니다.|현재 시간 보다 작거나 같고이 단계가 속한 쿼리의 end_compile_time 크거나 같습니다.|  
+|end_time|`datetime`|이 단계가 실행을 완료 하거나 취소 했거나 실패 한 시간입니다.|현재 시간 보다 작거나 같고 start_time 보다 크거나 같은 경우 현재 실행 중이거나 큐에 대기 중인 단계에 대해 NULL로 설정 합니다.|  
+|total_elapsed_time|`int`|쿼리 단계가 실행 된 총 시간 (밀리초)입니다.|0과 end_time와 start_time 간의 차이 대기 단계에 대해 0입니다.|  
+|cpu_time|`bigint`|||  
+|query_time|`int`|||  
+|buffers_available|`int`|||  
+|dms_cpid|`int`|||  
+|sql_spid|`int`|||  
+|error_id|`nvarchar(36)`|||  
+|source_info|`nvarchar(4000)`|||  
+|destination_info|`nvarchar(4000)`|||  
+|command|`nvarchar(4000)`|||
+|compute_pool_id|`int`|풀에 대 한 고유 식별자입니다.|
+
+## <a name="see-also"></a>관련 항목:  
+ [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

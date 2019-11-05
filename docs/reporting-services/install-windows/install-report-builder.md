@@ -1,18 +1,18 @@
 ---
 title: 보고서 작성기 설치 | Microsoft Docs
-ms.date: 09/22/2016
+ms.date: 10/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0d991e088a9bd06c322c3d0c8839b0c9c29fc52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d311062f362f7414a3a6d337ccc45b722e0a6c4c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502951"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536154"
 ---
 # <a name="install-report-builder"></a>보고서 작성기 설치
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  

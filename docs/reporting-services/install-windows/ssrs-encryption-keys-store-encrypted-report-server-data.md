@@ -1,6 +1,6 @@
 ---
 title: 암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513295"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988428"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 암호화 키 - 암호화된 보고서 서버 데이터 저장
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  
@@ -51,6 +51,8 @@ ms.locfileid: "62513295"
  보고서 서버 데이터베이스의 데이터는 대칭 키를 사용하여 암호화됩니다. 보고서 서버 데이터베이스마다 단일 대칭 키가 있습니다. 이 대칭 키는 Windows에서 생성하는 비대칭 키 쌍의 공개 키를 사용하여 자체적으로 암호화됩니다. 프라이빗 키는 보고서 서버 Windows 서비스 계정이 보유합니다.  
   
  여러 보고서 서버 인스턴스가 동일한 보고서 서버 데이터베이스를 공유하는 보고서 서버 스케일 아웃 배포에서는 모든 보고서 서버 노드가 단일 대칭 키를 사용합니다. 노드마다 공유 대칭 키의 복사본을 갖습니다. 대칭 키의 복사본은 스케일 아웃 배포가 구성될 때 각 노드에 대해 자동으로 만들어집니다. 각 노드에서는 해당 Windows 서비스 계정과 관련된 키 쌍의 공개 키를 사용하여 대칭 키의 복사본을 암호화합니다. 단일 인스턴스 및 스케일 아웃 배포에 대해 대칭 키를 생성하는 방법은 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
+ 
+ 또한 2019부터 시작 하 여 데이터에 대 한 추가 보호를 제공 하기 위해 SQL Server에서 투명한 데이터 암호화를 사용 하 여 보고서 서버 데이터베이스를 구성할 수 있습니다.
   
 > [!NOTE]  
 >  보고서 서버 Windows 서비스 계정을 변경하면 비대칭 키가 무효화되고 서버 작동이 중단됩니다. 이 문제를 방지하려면 항상 Reporting Services 구성 도구를 사용하여 서비스 계정 설정을 수정합니다. 구성 도구를 사용하면 해당 키가 자동으로 업데이트됩니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  

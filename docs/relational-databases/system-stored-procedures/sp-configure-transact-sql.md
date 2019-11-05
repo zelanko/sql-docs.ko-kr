@@ -1,7 +1,7 @@
 ---
 title: sp_configure (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974348"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536209"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @configname = ] 'option_name'`은 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
+`[ @configname = ] 'option_name'`는 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
  사용 가능한 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)을 참조 하세요.  
   
@@ -74,9 +74,9 @@ RECONFIGURE
 ## <a name="result-sets"></a>결과 집합  
  **Sp_configure** 는 매개 변수 없이 실행 될 때 다음 표와 같이 5 개의 열이 있는 결과 집합을 반환 하 고 옵션을 사전순으로 오름차순으로 정렬 합니다.  
   
- **Config_value** 및 **run_value** 의 값은 자동으로 동일 하지 않습니다. **Sp_configure**를 사용 하 여 구성 설정을 업데이트 한 후에는 다시 구성 또는 다시 설정 재정의를 사용 하 여 시스템 관리자가 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+ **Config_value** 및 **run_value** 의 값은 자동으로 동일 하지 않습니다. **Sp_configure**를 사용 하 여 구성 설정을 업데이트 한 후에는 다시 구성 또는 다시 설정 재정의를 사용 하 여 시스템 관리자가 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
@@ -84,9 +84,13 @@ RECONFIGURE
 |**config_value**|**int**|**Sp_configure** 를 사용 하 여 구성 옵션이 설정 된 값입니다 **(값.** 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys. 구성 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
 |**run_value**|**int**|현재 실행 중인 구성 옵션 값 ( **value_in_use**의 값)입니다.<br /><br /> 자세한 내용은 [sys. 구성 &#40;&#41;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  **Sp_configure** 를 사용 하 여 서버 수준 설정을 표시 하거나 변경 합니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="updating-the-running-configuration-value"></a>실행 중인 구성 값 업데이트  
  *옵션*에 새 *값* 을 지정 하면 결과 집합의 **config_value** 열에이 값이 표시 됩니다. 이 값은 처음에 현재 실행 중인 구성 값을 표시 하는 **run_value** 열의 값과 다릅니다. **Run_value** 열에서 실행 중인 구성 값을 업데이트 하려면 시스템 관리자가 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 실행 해야 합니다.  
   
@@ -95,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > 옵션 값을 잘못 설정하면 역으로 서버 인스턴스 구성에 영향을 줄 수 있습니다. RECONFIGURE WITH OVERRIDE는 매우 주의를 기울여 사용해야 합니다.  
   
- RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server memory** 서버 메모리 옵션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 동적으로 업데이트 됩니다. 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면-1 @no__t를 다시 시작 해야 합니다.  
+ RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server memory** 서버 메모리 옵션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 동적으로 업데이트 됩니다. 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 다시 시작 해야 합니다.  
   
  구성 옵션에서 RECONFIGURE를 실행 한 후 **sp_configure '***option_name***'** 를 실행 하 여 옵션이 동적으로 업데이트 되었는지 여부를 확인할 수 있습니다. **Run_value** 및 **config_value** 열의 값은 동적으로 업데이트 된 옵션에 대해 일치 해야 합니다. Is_dynamic 카탈로그 뷰의 열을 확인 하 여 동적으로 표시 되는 옵션을 확인할 수도 **있습니다.**  
  
  변경 내용은 SQL Server 오류 로그에도 기록 됩니다.
   
 > [!NOTE]  
->  옵션에 대해 지정 된 *값* 이 너무 높으면 **run_value** 열에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 유효 하지 않은 설정을 사용 하는 것이 아니라 동적 메모리에 기본적으로 지정 되어 있다는 사실이 반영 됩니다.  
+>  옵션에 대해 지정 된 *값* 이 너무 높으면 **run_value** 열에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 유효 하지 않은 설정을 사용 하는 대신 동적 메모리에 기본적으로 지정 되어 있다는 사실이 반영 됩니다.  
   
  자세한 내용은 [ &#40;&#41;transact-sql 다시 구성](../../t-sql/language-elements/reconfigure-transact-sql.md)을 참조 하세요.  
   
@@ -116,7 +120,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>A. 고급 구성 옵션 나열  
+### <a name="a-listing-the-advanced-configuration-options"></a>1\. 고급 구성 옵션 나열  
  다음 예에서는 모든 구성 옵션을 설정하고 나열하는 방법을 보여 줍니다. 먼저 `show advanced option`을 `1`로 설정하면 고급 구성 옵션이 표시됩니다. 이 옵션을 변경한 다음 매개 변수 없이 `sp_configure`를 실행하면 모든 구성 옵션이 표시됩니다.  
   
 ```sql  
@@ -125,7 +129,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- 메시지는 다음과 같습니다. "구성 옵션 ' 고급 옵션 표시 '가 0에서 1로 변경 되었습니다. RECONFIGURE 문을 실행하여 설치하십시오."  
+ "구성 옵션 ' 고급 옵션 표시 '가 0에서 1로 변경 된 메시지는 다음과 같습니다. RECONFIGURE 문을 실행하여 설치하십시오."  
   
  `RECONFIGURE`를 실행하여 모든 구성 옵션을 표시합니다.  
   
@@ -153,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 는 재구성이 완료 되 면 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에서 사용 하는 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
+ 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 는 재구성이 완료 되 면 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에서 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>4\. 특정 구성 이름에 대한 구성 설정 나열  
   
@@ -164,7 +168,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ### <a name="e-set-hadoop-connectivity"></a>5\. Hadoop 연결 설정  
  Hadoop 연결을 설정 하려면 sp_configure를 실행 하는 것 외에 몇 가지 추가 단계가 필요 합니다. 전체 절차는 [CREATE EXTERNAL DATA &#40;SOURCE transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
