@@ -30,7 +30,7 @@ ms.locfileid: "72304777"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INVALID_PARAMS|  
-|메시지 텍스트|**\@params**에 지정된 값이 잘못되었으므로 계획 지침 ‘%.*\*ls’을(를) 만들 수 없습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
+|메시지 텍스트|**\@params**에 지정된 값이 잘못되었으므로 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
 **\@params**에 대해 지정된 값이 잘못되었습니다.  

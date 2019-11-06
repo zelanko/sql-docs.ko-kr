@@ -304,7 +304,7 @@ GO
         > [!NOTE]  
         >  **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (옵션) 배포자에 연결할 때 **@value** 에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값. **false**(기본값)를 지정한 경우 구독을 프로그래밍 방식으로만 동기화할 수 있으므로 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 속성에서 이 개체에 액세스할 때 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent>의 추가 속성을 지정해야 합니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
+    -   (옵션) 배포자에 연결할 때 **\@value** 에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값. **false**(기본값)를 지정한 경우 구독을 프로그래밍 방식으로만 동기화할 수 있으므로 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 속성에서 이 개체에 액세스할 때 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent>의 추가 속성을 지정해야 합니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
   
         > [!NOTE]  
         >  일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. Express 구독자에 대해 **true** 값을 지정한 경우 에이전트 작업은 만들어지지 않습니다. 그러나 중요한 구독 관련 메타데이터는 구독자에 저장됩니다.  
@@ -346,7 +346,7 @@ GO
         > [!NOTE]  
         >  **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (옵션) 배포자에 연결할 때 **@value** 에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값. **false**(기본값)를 지정한 경우 구독을 프로그래밍 방식으로만 동기화할 수 있으므로 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 속성에서 이 개체에 액세스할 때 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent>의 추가 속성을 지정해야 합니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
+    -   (옵션) 배포자에 연결할 때 **\@value** 에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값. **false**(기본값)를 지정한 경우 구독을 프로그래밍 방식으로만 동기화할 수 있으므로 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 속성에서 이 개체에 액세스할 때 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent>의 추가 속성을 지정해야 합니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
   
     -   (옵션) SQL Server 인증을 사용하여 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드  
   
