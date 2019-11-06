@@ -14,13 +14,6 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: SQL Server 2016
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: 데이터베이스 엔진의 새 기능
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: SQL Server 2017
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: SQL Server 2016
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: 버전 및 기능
       items:
         - name: SQL Server 2019
@@ -32,7 +25,7 @@
     - name: 릴리스 정보
       items:
         - name: SQL Server 2019
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: SQL Server 2017
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
@@ -57,7 +50,7 @@
       items:
         - name: 시작
           items:
-            - name: 빅 데이터 클러스터 배포
+            - name: 배포
               href: big-data-cluster/deploy-get-started.md
             - name: 샘플 데이터 로드
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +60,8 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Azdata 설치
               items:
+                - name: Windows Installer 사용
+                  href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: Linux 패키지 관리자 사용
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
                 - name: pip 사용
@@ -83,8 +78,14 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 오프라인 배포
               href: big-data-cluster/deploy-offline.md
+            - name: Active Directory 모드
+              href: big-data-cluster/deploy-active-directory.md
             - name: 고가용성으로 배포
-              href: big-data-cluster/deployment-high-availability.md
+              items:
+                - name: 마스터 인스턴스
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: HDFS 노드 이름 및 Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Kubernetes 클러스터
               items:
                 - name: Azure Kubernetes Service
@@ -117,6 +118,10 @@
           href: big-data-cluster/concept-security.md
     - name: 방법 가이드
       items:
+        - name: Configuration
+          items:
+            - name: SQL Server 마스터 인스턴스
+              href: big-data-cluster/configure-sql-server-master-instance.md
         - name: 데이터 가상화
           items:
             - name: 관계형 데이터
@@ -137,6 +142,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: HDFS 계층화를 위한 S3 탑재
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: HDFS 사용 권한 관리
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: 데이터 수집
           items:
             - name: curl을 사용하여 데이터 로드
@@ -157,6 +164,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: 빅 데이터/기계 학습
           items:
+            - name: 'Machine Learning Services 사용(Python, R)'
+              href: big-data-cluster/machine-learning-services.md
             - name: PROSE Code Accelerator를 사용한 데이터 랭글링
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: MLeap이 있는 Spark 기계 학습 모델
@@ -165,9 +174,9 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: SQL Server와 Spark 통합
               href: big-data-cluster/spark-mssql-connector.md
-        - name: SQL Server 빅 데이터 클러스터 관리
+        - name: 관리
           items:
-            - name: 빅 데이터 클러스터에 연결
+            - name: 연결
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: 클러스터 상태 보기
               href: big-data-cluster/view-cluster-status.md
@@ -245,10 +254,6 @@
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs 상태
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-                - name: bdc 풀
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc 풀 상태
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark 일괄 처리
@@ -4168,7 +4173,11 @@
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
         - name: 하드웨어 및 소프트웨어 요구 사항
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: SQL Server 2019
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: SQL Server 2017 및 이전
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: 보안 고려 사항
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: 네트워크 프로토콜 및 네트워크 라이브러리
@@ -4247,6 +4256,8 @@
       items:
         - name: 호환성 인증
           href: database-engine/install-windows/compatibility-certification.md
+        - name: 지원되는 버전 및 SQL Server 2019 업그레이드
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2016
@@ -8125,29 +8136,91 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: 암호화
           items:
+            - name: Always Encrypted
+              items:
+                - name: PowerShell을 사용하여 상시 암호화 구성
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: SSMS를 사용하여 상시 암호화 구성
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: Always Encrypted 키 프로비저닝
+                  items:
+                    - name: 열 마스터 키 만들기 및 저장
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: SSMS를 사용하여 Always Encrypted 키 프로비저닝
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: Always Encrypted 키를 사용하여 Always Encrypted 키 프로비저닝
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted 키 순환
+                  items:
+                    - name: SSMS를 사용하여 Always Encrypted 키 순환
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: PowerShell을 사용하여 Always Encrypted 키 순환
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted를 사용하여 열 구성
+                  items:
+                    - name: Always Encrypted 마법사를 사용하여 열 암호화 구성
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: PowerShell로 Always Encrypted를 사용하여 열 암호화 구성
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: DAC package로 Always Encrypted를 사용하여 열 암호화 구성
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: Always Encrypted를 사용하여 열 쿼리
+                  items:
+                    - name: SSMS로 Always Encrypted를 사용하여 열 쿼리
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: Always Encrypted로 보호되는 중요한 데이터 마이그레이션
+                  items:
+                    - name: Always Encrypted를 사용하여 데이터베이스 내보내기 및 가져오기
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: Always Encrypted를 사용하여 데이터베이스 백업 및 복원
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: 가져오기 및 내보내기 마법사를 사용하여 데이터 마이그레이션
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: Always Encrypted를 사용하여 애플리케이션 개발
+                  items:
+                    - name: Always Encrypted를 사용하여 애플리케이션 개발
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: .NET Framework를 사용하여 애플리케이션 개발
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: 보안 Enclave를 사용한 Always Encrypted
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: Enclave 및 증명을 지원하도록 환경 설정
+                  items:
+                    - name: 호스트 보호자 서비스 증명을 사용하여 VBS enclave 설정
+                      items:
+                        - name: 호스트 보호자 서비스 증명 계획
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                - name: 보안 Enclave를 사용하여 Always Encrypted 키 관리
+                  items:
+                    - name: Enclave 사용 키 관리
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: Enclave 사용 키 프로비전
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: Enclave 사용 키 회전
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: 보안 enclave로 Always Encrypted를 사용하여 열 구성
+                  items:
+                    - name: 열 암호화 구성
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: Transact-sql을 사용하여 내부에서 열 암호화 구성
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: 기존 암호화된 열에 대해 보안 enclave를 사용하여 Always Encrypted 사용
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: 보안 enclave로 Always Encrypted를 사용하여 열 쿼리
+                  items:
+                    - name: 보안 enclave로 Always Encrypted를 사용하여 열 쿼리
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: SSMS로 보안 enclave와 Always Encrypted를 사용하여 열 쿼리
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: enclave 사용 열에 인덱스 만들기 및 사용
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: 보안 enclave로 Always Encrypted를 사용하여 애플리케이션 개발
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: TDE 문제 해결
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: Always Encrypted 구성
-              items:
-                - name: 보안 Enclave를 사용한 Always Encrypted 구성
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: SQL Server Management Studio를 사용하여 구성
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell을 사용하여 구성
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: Always Encrypted 키 구성
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: Always Encrypted 키 순환
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: 열 암호화 구성
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: 열 마스터 키 만들기 및 저장
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 중요한 데이터 마이그레이션
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: .NET Framework를 사용하여 애플리케이션 개발
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE로 보호되는 데이터베이스 이동
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: 확장 가능 키 관리
@@ -8255,14 +8328,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: 보안 Enclave를 사용한 Always Encrypted
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: 키 관리
+                - name: Always Encrypted를 위한 키 관리 개요
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: 암호화
+                - name: Always Encrypted 암호화
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: 클라이언트 개발
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: 보안 Enclave를 사용한 Always Encrypted
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: 암호화 키
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8279,16 +8350,24 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: 자습서
       items:
-        - name: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: 보안 Enclave 열을 사용한 Always Encrypted 인덱스 만들기 및 사용
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: Windows 인증서 저장소에 중요한 데이터를 보호하고 암호화 키 저장 >
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: Azure Key Vault에서 중요한 데이터를 보호하고 암호화 키 저장 >
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: 보안 Enclave를 사용한 Always Encrypted
+          items:
+            - name: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: 보안 Enclave 열을 사용한 Always Encrypted 인덱스 만들기 및 사용
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: 보안 enclave로 Always Encrypted를 사용하여 .NET Framework 애플리케이션 개발
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: 참조
       items:
         - name: 사용 권한 또는 보안 개체 페이지
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: 상시 암호화 마법사
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: 도구
   href: tools/overview-sql-tools.md
   items:
@@ -8350,8 +8429,8 @@
           items:
             - name: PostgreSQL 확장
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019
-              href: azure-data-studio/sql-server-2019-extension.md
+            - name: 데이터 가상화 확장
+              href: azure-data-studio/data-virtualization-extension.md
             - name: SQL Server 에이전트
               href: azure-data-studio/sql-server-agent-extension.md
             - name: SQL Server 중앙 관리 서버 확장
@@ -10255,6 +10334,10 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: 확장된 기능
+      items:
+        - name: 확장된 기능 및 도구
+          href: tools/download-sql-feature-packs.md
 - name: 자습서
   items:
     - name: SQL Server
@@ -10352,8 +10435,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: 복제 구성
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: 컨테이너에서 기계 학습
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 개념
       items:
         - name: 설치
@@ -12479,6 +12560,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: 빅 데이터 클러스터
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: 변경 데이터 캡처
           items:
             - name: sys.dm_cdc_errors
@@ -12835,6 +12922,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys

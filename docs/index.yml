@@ -1,0 +1,225 @@
+### YamlMime:Hub
+title: Microsoft SQL 설명서
+summary: Microsoft SQL Server를 사용하여 온-프레미스 및 클라우드에서 데이터베이스 요구 사항을 해결하는 방법을 알아보세요!
+brand: sql
+metadata:
+  title: Microsoft SQL 문서 | Microsoft Docs
+  description: Microsoft SQL Server를 사용하여 온-프레미스 및 클라우드에서 데이터베이스 요구 사항을 관리하는 방법을 알아보세요!
+  ms.topic: hub-page
+  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
+  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73595468"
+highlightedContent:
+  items:
+  - title: SQL Server 2019 시험 사용(미리 보기)
+    itemType: download
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+  - title: SQL Server를 사용하여 Azure VM 가져오기
+    itemType: overview
+    url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
+  - title: 쿼리 데이터 도구 다운로드
+    itemType: download
+    url: tools/overview-sql-tools.md
+  - title: SQL Server 교육 센터
+    itemType: learn
+    url: lp/sql-server/sql-education-center.md
+productDirectory:
+  items:
+  - title: Azure의 SQL
+    imageSrc: media/index/azure.png
+    links:
+    - url: https://docs.microsoft.com/azure/sql-database/
+      text: Azure SQL 데이터베이스
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (SQL DW)
+  - title: Windows의 SQL Server
+    imageSrc: media/index/windows.png
+    links:
+    - url: sql-server/index.yml
+      text: 온-프레미스
+    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+      text: Azure VM에서 실행
+    - url: https://docs.microsoft.com/previous-versions/sql/
+      text: 이전 버전 (SQL 2005-2012)
+  - title: SQL Server on Linux
+    imageSrc: media/index/linux.png
+    links:
+    - url: linux/sql-server-linux-overview.md
+      text: 온-프레미스
+    - url: linux/quickstart-install-connect-clouds.md
+      text: Azure VM에서 실행
+conceptualContent:
+  items:
+  - title: 시작
+    links:
+    - text: 연결 및 쿼리(Azure Data Studio)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: 연결 및 쿼리(SSMS)
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Transact-SQL 쓰기
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server Docker 컨테이너
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+    - text: SQL 문서 탐색 팁
+      url: sql-server/sql-docs-navigation-guide.md
+      itemType: get-started
+  - title: 새로운 기능
+    links:
+    - text: SQL Server 2019
+      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+      itemType: whats-new
+    - text: SQL Server 빅 데이터 클러스터
+      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      itemType: whats-new
+    - text: Azure Data Studio
+      url: azure-data-studio/what-is.md
+      itemType: whats-new
+    - text: Azure Database Migration Service
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: whats-new
+    - text: SQL Machine Learning Services
+      url: advanced-analytics/index.yml
+      itemType: whats-new
+  - title: 설치
+    links:
+    - text: SQL Server
+      url: database-engine/install-windows/install-sql-server.md
+      itemType: deploy
+    - text: SSMS(SQL Server Management Studio)
+      url: ssms/download-sql-server-management-studio-ssms.md
+      itemType: deploy
+    - text: Analysis Services(SSAS)
+      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      itemType: deploy
+    - text: Integration Services(SSIS)
+      url: integration-services/install-windows/install-integration-services.md
+      itemType: deploy
+    - text: Reporting Services(SSRS)
+      url: reporting-services/install-windows/install-reporting-services.md
+      itemType: deploy
+    footerLink:
+      text: 자세히 보기
+      url: lp/sql-server/install-sql-and-services.md
+  - title: 마이그레이션
+    links:
+    - text: 데이터 마이그레이션 가이드
+      url: https://datamigration.microsoft.com/
+      itemType: overview
+    - text: 데이터베이스 호환성 인증
+      url: https://aka.ms/dbcompat
+      itemType: overview
+    - text: Azure Database Migration Service (DMS)
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: overview
+    - text: DMA(Data Migration Assistant)
+      url: dma/dma-overview.md
+      itemType: overview
+    - text: DEA(데이터베이스 실험 도우미)
+      url: dea/database-experimentation-assistant-overview.md
+      itemType: overview
+    - text: SSMA(SQL Server Migration Assistant)
+      url: ssma/sql-server-migration-assistant.md
+      itemType: overview
+    footerLink:
+      text: 자세히 보기
+      url: lp/sql-server/load-move-data.md
+additionalContent:
+  sections:
+  - items:
+    - title: 관리
+      links:
+      - text: 동적 관리 뷰(DMV)
+        url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: 시스템 카탈로그 뷰
+        url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+      - text: 확장 이벤트
+        url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - text: SQL Server 보안 설정
+        url: relational-databases/security/securing-sql-server.md
+      - text: SQL PowerShell
+        url: powershell/sql-server-powershell.md
+      - text: Azure SQL REST API
+        url: https://docs.microsoft.com/rest/api/sql/
+      - text: Azure SQL PowerShell
+        url: https://docs.microsoft.com/powershell/module/az.sql/
+    - title: 보안 및 개인 정보
+      links:
+      - text: SQL Server 감사
+        url: relational-databases/security/auditing/sql-server-audit-database-engine.md
+      - text: Azure SQL Database 감사
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
+      - text: 데이터 분류
+        url: relational-databases/security/sql-data-discovery-and-classification.md
+      - text: Always Encrypted
+        url: relational-databases/security/encryption/always-encrypted-database-engine.md
+    - title: 개발
+      links:
+      - text: SQL Server를 사용하여 앱 빌드
+        url: https://www.microsoft.com/sql-server/developer-get-started/
+      - text: SQL Server를 사용하는 DevOps
+        url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
+      - text: SQL Server 보안
+        url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
+      - text: Azure SQL DB 애플리케이션
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+      - text: Azure SQL DB 연결 라이브러리
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+      - text: SQL Server 클라이언트 연결
+        url: connect/homepage-sql-connection-programming.md
+      - text: Transact-SQL(T-SQL)
+        url: t-sql/language-reference.md
+      - text: 데이터베이스 샘플
+        url: samples/sql-samples-where-are.md
+    - title: 보고 및 Machine Learning
+      links:
+      - text: Power BI Report Server
+        url: https://docs.microsoft.com/power-bi/report-server/get-started
+      - text: Power BI 서비스
+        url: https://docs.microsoft.com/power-bi/service-get-started
+      - text: SSRS(SQL Server Reporting Services)
+        url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: Azure Machine Learning
+        url: https://docs.microsoft.com/azure/machine-learning/
+      - text: SQL Machine Learning Services(R 및 Python)
+        url: advanced-analytics/index.yml
+      - text: SQL Server R Services
+        url: advanced-analytics/r/sql-server-r-services.md
+    - title: 빅 데이터
+      links:
+      - text: SQL Server 2019 빅 데이터 클러스터
+        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      - text: Polybase를 사용한 데이터 가상화
+        url: relational-databases/polybase/polybase-guide.md
+      - text: Azure Synapse Analytics (SQL DW)
+        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure SQL Database Hyperscale
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
+      - text: Azure Analysis Services
+        url: https://docs.microsoft.com/azure/analysis-services/
+      - text: SSAS(SQL Server Analysis Services)
+        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+      - text: Microsoft Analytics Platform System
+        url: analytics-platform-system/index.md
+    - title: 도구
+      links:
+      - text: Azure Data Studio
+        url: azure-data-studio/download.md
+      - text: SSMS(SQL Server Management Studio)
+        url: ssms/download-sql-server-management-studio-ssms.md
+      - text: mssql-cli
+        url: tools/mssql-cli.md
+      - text: Azure SQL CLI
+        url: https://docs.microsoft.com/cli/azure/sql
+      - text: SSDT(SQL Server Data Tools)
+        url: ssdt/download-sql-server-data-tools-ssdt.md
+      - text: Distributed replay
+        url: tools/distributed-replay/sql-server-distributed-replay.md
+      - text: 추가 도구 보기
+        url: tools/overview-sql-tools.md
