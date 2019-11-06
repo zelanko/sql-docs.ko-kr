@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708717"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989572"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -55,7 +55,7 @@ ms.locfileid: "71708717"
 **[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-명령줄 도구는 GA (일반 공급) 이지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대 한 설치 관리자 패키지를 사용 하 여 릴리스됩니다.
+명령줄 도구는 GA (일반 공급) 이지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설치 관리자 패키지를 사용 하 여 릴리스됩니다.
 
 ### <a name="version-information"></a>버전 정보
 
@@ -68,11 +68,11 @@ ms.locfileid: "71708717"
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 모두 필요합니다.
 
-BCP 버전 실행 `bcp /v` 명령을 확인 하 고 15.0.1000.34 이상이 사용 중인지 확인 합니다.
+BCP 버전 `bcp /v` 실행 명령을 확인 하 고 15.0.1000.34 이상이 사용 중인지 확인 합니다.
 
 <table><th>구문</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -214,18 +214,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다.
 
 > [!TIP]
->  해당 버전의 bcp에 AAD (Azure Active Directory 인증) 형식 **bcp가** 포함 되어 있는지 확인 하려면 (bcp \<space > \<dash > \<dash >) 사용 가능한 인수 목록에-G가 표시 되는지 확인 합니다.
+>  해당 버전의 bcp에 AAD (Azure Active Directory 인증) 형식 bcp (\<>\<)가 포함 되어 있는지 확인 하려면 bcp **--** (bcp >\<)를 사용 하 고 사용 가능한 인수 목록에-G가 표시 되는지 확인 합니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
 
-    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 내보냅니다. 이 예에서는 Azure server `aadserver.database.windows.net`의 데이터베이스 `testdb`에서 `bcptest` 테이블을 내보내고-3 `c:\last\data1.dat` 파일에 데이터를 저장 합니다.
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 내보냅니다. 이 예에서는 Azure 서버 `aadserver.database.windows.net`에서 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 파일 `c:\last\data1.dat`에 데이터를 저장 합니다.
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 가져옵니다. 이 예제에서는 Azure AD 사용자/암호를 사용 하 여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대 한 `c:\last\data1.dat` 파일의 데이터를 `bcptest` 테이블로 가져옵니다.
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 가져옵니다. 이 예에서는 azure AD 사용자/암호를 사용 하 `aadserver.database.windows.net` Azure 서버에서 데이터베이스 `testdb`에 대 한 테이블 `bcptest` `c:\last\data1.dat` 파일에서 데이터를 가져옵니다.
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +234,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령이 실행 되 고 있는 계정)이 Azure AD와 페더레이션된 것으로 가정 합니다. 
 
-    다음 예제에서는 Azure AD 통합 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 Azure server `aadserver.database.windows.net`에서 통합 된 Azure AD를 사용 하 여 데이터베이스 `testdb`에서 `bcptest` 테이블을 내보내고-3 `c:\last\data2.dat` 파일에 데이터를 저장 합니다.
+    다음 예제에서는 Azure AD 통합 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 Azure server `aadserver.database.windows.net`에서 통합 된 Azure AD를 사용 하 여 데이터베이스 `testdb`에서 테이블 `bcptest`를 내보내고 파일 `c:\last\data2.dat`에 데이터를 저장 합니다.
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    다음 예제에서는 Azure AD 통합 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 Azure AD 통합 인증을 사용 하 여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대 한 `c:\last\data2.txt` 파일의 데이터를 `bcptest` 테이블로 가져옵니다.
+    다음 예제에서는 Azure AD 통합 인증을 사용 하 여 데이터를 가져옵니다. 이 예에서는 Azure AD 통합 인증을 사용 하 여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data2.txt`에서 테이블 `bcptest`로 데이터를 가져옵니다.
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -262,13 +262,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   Azure AD 사용자가 Windows 계정을 사용 하 여 페더레이션 되는 도메인 인 경우 명령줄에 필요한 사용자 이름에는 해당 도메인 계정이 포함 됩니다 (joe@contoso.com 예: 0은 아래 참조).   
+   Azure AD 사용자가 Windows 계정을 사용 하 여 페더레이션 되는 도메인 인 경우 명령줄에 필요한 사용자 이름에는 도메인 계정이 포함 됩니다 (예: 아래 참조 joe@contoso.com).   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   특정 Azure AD에 게스트 사용자가 있고 bcp 명령을 실행 하는 데이터베이스 권한이 있는 SQL DB에 있는 그룹의 일부인 경우 해당 게스트 사용자 별칭이 사용 됩니다 (예: *keith0@adventureworks.com* ).
+   특정 Azure AD에 게스트 사용자가 있고 bcp 명령을 실행 하기 위한 데이터베이스 권한이 있는 SQL DB에 있는 그룹의 일부인 경우 해당 게스트 사용자 별칭이 사용 됩니다 (예: *keith0@adventureworks.com* ).
   
 **-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   

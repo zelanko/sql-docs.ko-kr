@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대한 FAQ(질문과 대답) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028068"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049814"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -34,7 +34,7 @@ JDBC Driver는 오픈 소스이며 소스 코드는 [GitHub](https://github.com/
 **Microsoft 다운로드 센터에서 사용할 수 있는 JDBC Driver 패키지와 GitHub에서 사용할 수 있는 JDBC Driver의 차이점은 무엇인가요?**  
 Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. Microsoft 다운로드 센터의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.
 
-**내 드라이버를 업그레이드할 때 어떤 정보를 알아야 하나요?**
+**내 드라이버를 업그레이드할 때 어떤 정보를 알아야 하나요?**  
 Microsoft JDBC Driver 7.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
@@ -42,20 +42,23 @@ Microsoft JDBC Driver 7.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설
 | mssql-jdbc-7.4.1. jre12 | JDBC 4.3(부분) 및 4.2 | JDK 12.0    |
 | mssql-jdbc-7.4.1. jre11 | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
 | mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
+Microsoft JDBC Driver 7.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.0은 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
+Microsoft JDBC Driver 7.0은 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3(부분) 및 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 6.4는 JDBC 4.1, 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
 
@@ -64,6 +67,7 @@ Microsoft JDBC Driver 6.4는 JDBC 4.1, 4.2 및 4.3(부분) 사양을 지원하�
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3(부분), 4.2 및 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 및 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
+| &nbsp;                    | &nbsp;                             | &nbsp;      |
 
 Microsoft JDBC Driver 6.2는 JDBC 4.0, 4.1 및 4.2 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
 
@@ -71,6 +75,7 @@ Microsoft JDBC Driver 6.2는 JDBC 4.0, 4.1 및 4.2 사양을 지원하며 설치
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 및 4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 및 4.0       | JDK 7.0     |
+| &nbsp;                    | &nbsp;                 | &nbsp;      |
 
 SQL Server용 Microsoft JDBC Driver 6.0 및 4.2는 JDBC 4.0, 4.1 및 4.2 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
 
@@ -78,12 +83,14 @@ SQL Server용 Microsoft JDBC Driver 6.0 및 4.2는 JDBC 4.0, 4.1 및 4.2 사양�
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2, 4.1 및 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 및 4.0       | JDK 7.0     |
+| &nbsp;        | &nbsp;                 | &nbsp;      |
 
 SQL Server용 Microsoft JDBC Driver 4.1은 JDBC 4.0 사양을 지원하며 설치 패키지에 다음과 같은 한 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR           | JDBC 사양 | JDK 버전     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 및 6.0 |
+| &nbsp;        | &nbsp;             | &nbsp;      |
 
 **기존에 사용하던 SQL Server 버전에서 최신 드라이버를 사용하기 위해 내 애플리케이션에서 코드를 변경해야 하나요?**  
 일반적으로 드라이버는 이전 버전과 호환되도록 설계되므로 드라이버를 업그레이드할 때 기존 애플리케이션을 변경할 필요는 없습니다. 새 드라이버 버전에 주요 변경 내용이 도입될 예정이면 [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)(JDBC Drive 릴리스 정보) 섹션에 변경 내용 및 기존 애플리케이션에 미치는 영향에 관한 세부 정보가 제공됩니다. 또한 드라이버에 포함된 릴리스 정보에서 해당 릴리스에서 수정된 버그 목록과 알려진 문제를 검토할 수 있습니다.
@@ -91,21 +98,20 @@ SQL Server용 Microsoft JDBC Driver 4.1은 JDBC 4.0 사양을 지원하며 설�
 **드라이버의 비용은 얼마나 되나요?**  
 Microsoft JDBC Driver for SQL Server는 추가 비용 없이 사용할 수 있습니다.
 
-**드라이버를 재배포할 수 있나요?**
-JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 "배포 가능 코드" 절을 검토하세요.
+**드라이버를 재배포할 수 있나요?**  
+JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 "배포 가능 코드" 절을 검토하세요.
 
-**이 드라이버를 사용하여 Linux 컴퓨터에서 Microsoft SQL Server에 액세스할 수 있나요?**
+**이 드라이버를 사용하여 Linux 컴퓨터에서 Microsoft SQL Server에 액세스할 수 있나요?**  
 예 이 드라이버를 사용하여 Linux, Unix 및 기타 Windows 이외의 플랫폼에서 SQL Server에 액세스할 수 있습니다. 자세한 내용은 [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)(SQL Server용 Microsoft JDBC Driver 지원 매트릭스)를 참조하세요.
 
-**드라이버가 SSL(Secure Sockets Layer) 암호화를 지원하나요?**
+**드라이버가 SSL(Secure Sockets Layer) 암호화를 지원하나요?**  
 버전 1.2부터 이 드라이버는 SSL(Secure Sockets Layer) 암호화를 지원합니다. 자세한 내용은 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)(SSL 암호화 사용)을 참조하세요.
 
 **Microsoft JDBC Driver for SQL Server에서는 어떤 유형의 인증을 지원하나요?**  
 다음 표에는서 사용할 수 있는 인증 옵션을 보여 줍니다. 이 드라이버 4.0 릴리스부터는 순수한 Java Kerberos 인증을 사용할 수 있습니다.
 
-|             |                                       |
-| ----------- | ------------------------------------- |
 | 플랫폼    | 인증                        |
+| ----------- | ------------------------------------- |
 | 비 Windows | 순수 Java Kerberos                    |
 | 비 Windows | SQL Server                            |
 | 비 Windows | Azure Active Directory 인증 |
@@ -114,6 +120,7 @@ JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 
 | 창     | NTLM 백업을 사용하는 Kerberos             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory 인증 |
+| &nbsp;      | &nbsp;                                |
 
 **이 드라이버가 IPv6(인터넷 프로토콜 버전 6) 주소를 지원하나요?**  
 예 드라이버는 IPv6 주소 사용을 지원합니다. 연결 속성 컬렉션 및 serverName 연결 문자열 속성을 사용합니다. 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성)을 참조하세요.
@@ -127,7 +134,7 @@ JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 
 **이 드라이버에 대한 지원을 사용할 수 있나요?**  
 몇 가지 지원 옵션을 사용할 수 있습니다. Microsoft에서 모니터링하는 [GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc)에 질문이나 문제를 게시할 수 있습니다. [포럼](https://go.microsoft.com/fwlink/?LinkID=246673)은 Microsoft, MVP 및 커뮤니티에서 모니터링합니다. Microsoft 고객 지원 서비스에 문의할 수도 있습니다. 개발 팀에서는 타사 애플리케이션 서버 외부에서 발생하는 문제를 재현하도록 요청할 수도 있습니다. 호스팅 Java 컨테이너 환경 외부에서 발생하는 문제를 재현할 수 없는 경우 관련 타사에 문의해야만 계속 팀의 지원을 받을 수 있습니다. 팀에서는 문제와 관련하여 최적의 도움을 주기 위해 Windows와 같은 운영 체제에서 문제를 재현하도록 요청할 수도 있습니다.
 
-**이 드라이버는 타사 애플리케이션 서버에서 사용할 수 있도록 인증되었나요?**
+**이 드라이버는 타사 애플리케이션 서버에서 사용할 수 있도록 인증되었나요?**  
 이 드라이버는 IBM WebSphere 및 SAP NetWeaver를 비롯한 다양한 애플리케이션 서버에서 테스트되었습니다.
 
 **추적을 사용하도록 설정하려면 어떻게 하나요?**  

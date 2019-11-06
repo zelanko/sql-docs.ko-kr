@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028116"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049842"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC 드라이버 배포
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028116"
  압축된 tar 파일의 압축을 풀려면 드라이버를 설치할 디렉터리로 파일을 이동하고 다음 명령을 입력합니다.  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>Legalities 드라이버 재배포
+
+JDBC 드라이버 버전 6.0, 6.2, 6.4 및 7.0은 재배포 가능 합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
+
+JDBC 드라이버 버전 4.x는 오래 된 버전입니다. 2018에 대 한 지원이 만료 되었습니다.
+
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

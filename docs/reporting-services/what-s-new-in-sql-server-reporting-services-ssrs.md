@@ -8,33 +8,29 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123110"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536278"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로운 기능에 대해 자세히 알아봅니다. 이 문서에서는 주요 기능 영역을 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
-
-현재 릴리스 정보는 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)를 참조하세요. 
+다양 한 버전의 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로운 기능에 대해 알아봅니다. 이 문서에서는 주요 기능 영역을 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
 
 Power BI Report Server에 대한 정보는 [Power BI Report Server란?](https://docs.microsoft.com/power-bi/report-server/get-started)을 참조하세요.
 
-**다운로드** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)** 로 이동하세요.
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services 미리 보기
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services 미리 보기는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=100122)에서 다운로드할 수 있습니다.
+![다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "다운로드로 사용 가능한 제품 설명서에서 데이터 공급자 설치 섹션을 참조하세요") **다운로드**
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) Microsoft 다운로드 센터에서 다운로드할 수 있습니다.
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance 지원
 
@@ -48,11 +44,27 @@ Microsoft 보고서 작성기 또는 SQL Server Data Tools (SSDT) 중 하나를 
 
 보고서를 작성할 때 도구 설명을 사용 하 여 보고서의 각 요소에 대 한 텍스트를 지정할 수 있습니다. 화면 판독기 기술은 이러한 도구 설명을 올바르게 식별 합니다.
 
+### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory 애플리케이션 프록시 지원
+
+Azure Active Directory 응용 프로그램 프록시를 사용 하면 웹 또는 모바일 앱을 통해 보안 액세스를 허용 하기 위해 웹 응용 프로그램 프록시를 더 이상 관리할 필요가 없습니다.
+
+### <a name="transparent-database-encryption"></a>투명한 데이터베이스 암호화
+
+SQL Server 2019는 이제 Enterprise 및 Standard edition 용 SSRS 카탈로그 데이터베이스에 대 한 투명 데이터베이스 암호화를 지원 합니다. 
+
+### <a name="microsoft-report-builder-update"></a>Microsoft 보고서 작성기 업데이트
+
+새로 릴리스된 보고서 작성기 버전은 Reporting Services의 2016, 2017 및 2019 버전과 완전히 호환 됩니다. 또한 Power BI Report Server의 모든 릴리스 및 지원 버전과 호환 됩니다.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+![다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "다운로드로 사용 가능한 제품 설명서에서 데이터 공급자 설치 섹션을 참조하세요") **다운로드**
+
+SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)** 로 이동하세요.
 
 ### <a name="comments-on-reports"></a>보고서에 대한 주석
 
@@ -129,7 +141,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]를 사용하여 SQL Server 모바일 보고서를 만들고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 게시할 수 있습니다.  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 자세한 내용은 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)를 참조하세요.  
 
@@ -137,7 +149,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 이제 iPad 및 iPhone의 iOS용 Power BI 모바일 앱에서 로컬 보고서 서버에서 호스트되는 SQL Server 모바일 보고서를 표시할 수 있습니다.  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 일부 구성 변경 없이는 기본적으로 연결할 수 없습니다. Power BI 모바일 앱을 보고서 서버에 연결하는 방법에 대한 자세한 내용은 [Power BI 모바일 액세스가 가능하도록 보고서 서버 설정](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)을 참조하세요.
 
@@ -165,7 +177,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 **페이지를 매긴 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대해 새롭고 현대적인 스타일을 사용하여 페이지를 매긴 세련된 보고서를 디자인할 수 있습니다.
 
-**트리 맵 및 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
+**트리 맵 및 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
 
 **보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지 및 애플리케이션에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
 
@@ -219,11 +231,11 @@ SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md
 |||  
 |-|-|  
 |단추를 사용하여 새|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **매개 변수 창 사용자 지정:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
 
-![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창의 매개 변수 목록")  
+![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **높은 DPI 지원:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 는 높은 DPI(인치당 도트 수) 배율 및 디바이스를 지원합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
 

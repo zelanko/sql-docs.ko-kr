@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: 22d90b2f2eeb569f5c6ef587bdbcc98e252c8957
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774201"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033039"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,6 +78,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DacApplicationName=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 이름을 정의했습니다. 기본값은 데이터베이스 이름입니다.|
 |**/p:**|DacMajorVersion=(INT32 '1')|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|
 |**/p:**|DacMinorVersion=(INT32 '0')|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|ExtractAllTableData=(BOOLEAN)|모든 사용자 테이블의 데이터를 추출 하는지 여부를 나타냅니다. ' T r u e ' 이면 모든 사용자 테이블의 데이터를 추출 하 고 데이터를 추출 하기 위한 개별 사용자 테이블을 지정할 수 없습니다. ' F a l s e ' 이면 데이터를 추출할 사용자 테이블을 하나 이상 지정 합니다.|
 |**/p:**|ExtractApplicationScopedObjectsOnly = (부울 ' True ')|True인 경우 지정된 원본에 대해 애플리케이션 범위 개체만 추출합니다. False인 경우 지정된 원본에 대해 모든 개체를 추출합니다.|
 |**/p:**|ExtractReferencedServerScopedElements = (부울 ' True ')|True인 경우 원본 데이터베이스 개체에서 참조하는 로그인, 서버 감사 및 자격 증명 개체를 추출합니다.|
@@ -85,9 +86,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreExtendedProperties=(BOOLEAN)|확장된 속성을 무시할지 여부를 지정합니다.|
 |**/p:**|IgnorePermissions = (부울 ' True ')|권한을 무시할지 여부를 지정합니다.|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|사용자와 로그인 간의 관계를 무시할지 여부를 지정합니다.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
-|**/p:**| TempDirectoryForTableData = (STRING)|패키지 파일에 기록 되기 전에 테이블 데이터를 버퍼링 하는 데 사용 되는 임시 디렉터리를 지정 합니다.|
+|**/p:**| TempDirectoryForTableData = (STRING)|패키지 파일에 기록되기 전에 테이블 데이터를 버퍼링하는 데 사용되는 임시 디렉터리를 지정합니다.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|추출된 dacpac를 확인할지 여부를 지정합니다.|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>매개 변수, 속성 및 SQLCMD 변수 게시
@@ -139,6 +141,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|배포 참가자에 대한 추가 배포 참가자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
 |**/p:**|AdditionalDeploymentContributors = (문자열)|dacpac가 배포될 때 실행되어야 하는 추가 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.|
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 추가 배포 참가자를 로드할 경로를 지정 합니다. 세미콜론으로 구분된 값의 목록이어야 합니다. | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|이 속성은 SqlClr 배포에서 배포 계획의 일부로 차단 어셈블리를 삭제하는 데 사용됩니다. 기본적으로 어셈블리를 삭제해야 하는 경우에는 모든 차단/참조 어셈블리가 어셈블리 업데이트를 차단합니다.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|SQL Server 플랫폼이 호환되지 않을 수 있는 경우에도 작업을 시도해야 하는지 여부를 지정합니다.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|이 속성이 True로 설정되어 있으면 행 수준 보안이 설정된 테이블에서 데이터 이동을 차단하지 않습니다. 기본값은 false입니다.|
@@ -149,7 +152,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|생성된 게시 스크립트에서 SETVAR 변수 선언을 주석 처리할지 여부를 지정합니다. 게시할 때 SQLCMD.EXE 등의 도구를 사용하여 명령줄에 값을 지정하려는 경우 이와 같이 할 수 있습니다.|
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|이 설정은 배포 중 데이터베이스의 데이터 정렬 처리 방법을 지정합니다.기본적으로 원본에서 지정하는 데이터 정렬과 일치하지 않을 경우 대상 데이터베이스의 데이터 정렬이 업데이트됩니다. 이 옵션을 설정하면 대상 데이터베이스(또는 서버)의 데이터 정렬이 사용됩니다.|
 |**/p:**|CreateNewDatabase = (부울)|데이터베이스에 게시할 때 대상 데이터베이스를 업데이트할지 또는 삭제 후 다시 만들지 여부를 지정합니다.|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;일반 용도의&#124;BusinessCritical&#124;hyperscale&#124;Default} ' default ')|Azure SQL Database 버전을 정의 합니다.|
 |**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database의 최대 크기(GB)를 정의합니다.|
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다.|
@@ -269,9 +272,11 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |속성|값|설명|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
-|**/p:**|TempDirectoryForTableData = (STRING)|패키지 파일에 기록 되기 전에 테이블 데이터를 버퍼링 하는 데 사용 되는 임시 디렉터리를 지정 합니다.|
+|**/p:**|TempDirectoryForTableData = (STRING)|패키지 파일에 기록되기 전에 테이블 데이터를 버퍼링하는 데 사용되는 임시 디렉터리를 지정합니다.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|필요한 대상 엔진 버전을 지정합니다. 이는 생성 된 bacpac에서 메모리 최적화 테이블과 같은 V12 기능을 사용 하 여 Azure SQL Database 서버에서 지 원하는 개체를 허용할지 여부에 영향을 줍니다.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 대해 지원되는 전체 텍스트 문서 유형을 확인할지 여부를 지정합니다.|
   
@@ -307,11 +312,14 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |속성|값|설명|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;일반 용도의&#124;BusinessCritical&#124;hyperscale&#124;Default} ' default ')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database의 최대 크기(GB)를 정의합니다.|
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다.|
-|**/p:**|ImportContributorArguments=(STRING)|배포 기여자에 대한 배포 기여자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
+|**/p:**|ImportContributorArguments=(STRING)|배포 참가자에 대한 배포 참가자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
 |**/p:**|ImportContributors = (STRING)|bacpac를 가져올 때 실행되어야 하는 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.|
+|**/p:**|ImportContributorPaths = (STRING)|추가 배포 참가자를 로드할 경로를 지정 합니다. 세미콜론으로 구분된 값의 목록이어야 합니다. |
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
 |**/p:**|Storage=({File&#124;Memory})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
   
 ## <a name="deployreport-parameters-and-properties"></a>DeployReport 매개 변수 및 속성
@@ -360,6 +368,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|배포 참가자에 대한 추가 배포 참가자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
 |**/p:**|AdditionalDeploymentContributors = (문자열)|dacpac가 배포될 때 실행되어야 하는 추가 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.|
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 추가 배포 참가자를 로드할 경로를 지정 합니다. 세미콜론으로 구분된 값의 목록이어야 합니다. | 
 |**/p:**|AllowDropBlocking 어셈블리 = (부울)|이 속성은 SqlClr 배포에서 배포 계획의 일부로 차단 어셈블리를 삭제하는 데 사용됩니다. 기본적으로 어셈블리를 삭제해야 하는 경우에는 모든 차단/참조 어셈블리가 어셈블리 업데이트를 차단합니다.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|SQL Server 플랫폼이 호환되지 않을 수 있는 경우에도 작업을 시도해야 하는지 여부를 지정합니다.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|이 속성이 True로 설정되어 있으면 행 수준 보안이 설정된 테이블에서 데이터 이동을 차단하지 않습니다. 기본값은 false입니다.|
@@ -370,7 +379,8 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|생성된 게시 스크립트에서 SETVAR 변수 선언을 주석 처리할지 여부를 지정합니다. 게시할 때 SQLCMD.EXE 등의 도구를 사용하여 명령줄에 값을 지정하려는 경우 이와 같이 할 수 있습니다. |
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|이 설정은 배포 중 데이터베이스의 데이터 정렬 처리 방법을 지정합니다.기본적으로 원본에서 지정하는 데이터 정렬과 일치하지 않을 경우 대상 데이터베이스의 데이터 정렬이 업데이트됩니다. 이 옵션을 설정하면 대상 데이터베이스(또는 서버)의 데이터 정렬이 사용됩니다. |
 |**/p:**|CreateNewDatabase = (부울)|데이터베이스에 게시할 때 대상 데이터베이스를 업데이트할지 또는 삭제 후 다시 만들지 여부를 지정합니다. |
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database 버전을 정의 합니다. |
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;일반 용도의&#124;BusinessCritical&#124;hyperscale&#124;Default} ' default ')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database의 최대 크기(GB)를 정의합니다.|
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다. |
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|True인 경우 배포 전에 데이터베이스가 단일 사용자 모드로 설정됩니다. |
@@ -429,7 +439,8 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|데이터베이스에 게시할 때 외래 키의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.| 
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|모든 복합 요소를 단일 게시 작업의 일부로 포함합니다.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|데이터베이스에 게시할 때 가능한 위치에 트랜잭션 문을 사용할지 여부를 지정합니다.|
- |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|차이가 있을 경우 ALTER ASSEMBLY 문을 실행하는 대신 게시에서 항상 어셈블리를 삭제하고 다시 만들지를 지정합니다. |
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
+|**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|차이가 있을 경우 ALTER ASSEMBLY 문을 실행하는 대신 게시에서 항상 어셈블리를 삭제하고 다시 만들지를 지정합니다. |
 |**/p:**|PopulateFilesOnFileGroups = (부울 ' True ')|대상 데이터베이스에 새 FileGroup이 만들어질 때 새 파일도 만들어지는지 여부를 지정합니다. |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|스키마가 데이터베이스 서버에 등록되었는지 여부를 지정합니다. 
 |**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|다른 작업이 실행될때 DeploymentPlanExecutor 기여자를 실행할지 여부를 지정합니다.|
@@ -521,6 +532,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|배포 참가자에 대한 추가 배포 참가자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.
 |**/p:**|AdditionalDeploymentContributors = (문자열)|dacpac가 배포될 때 실행되어야 하는 추가 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.
+|**/p:**|AdditionalDeploymentContributorPaths = (STRING)| 추가 배포 참가자를 로드할 경로를 지정 합니다. 세미콜론으로 구분된 값의 목록이어야 합니다. | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|이 속성은 SqlClr 배포에서 배포 계획의 일부로 차단 어셈블리를 삭제하는 데 사용됩니다. 기본적으로 어셈블리를 삭제해야 하는 경우에는 모든 차단/참조 어셈블리가 어셈블리 업데이트를 차단합니다.
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|SQL Server 플랫폼이 호환되지 않을 수 있는 경우에도 작업을 시도해야 하는지 여부를 지정합니다.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|이 속성이 True로 설정되어 있으면 행 수준 보안이 설정된 테이블에서 데이터 이동을 차단하지 않습니다. 기본값은 false입니다.
@@ -531,7 +543,8 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|생성된 게시 스크립트에서 SETVAR 변수 선언을 주석 처리할지 여부를 지정합니다. 게시할 때 SQLCMD.EXE 등의 도구를 사용하여 명령줄에 값을 지정하려는 경우 이와 같이 할 수 있습니다.
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|이 설정은 배포 중 데이터베이스의 데이터 정렬 처리 방법을 지정합니다.기본적으로 원본에서 지정하는 데이터 정렬과 일치하지 않을 경우 대상 데이터베이스의 데이터 정렬이 업데이트됩니다. 이 옵션을 설정하면 대상 데이터베이스(또는 서버)의 데이터 정렬이 사용됩니다.|
 |**/p:**|CreateNewDatabase = (부울)|데이터베이스에 게시할 때 대상 데이터베이스를 업데이트할지 또는 삭제 후 다시 만들지 여부를 지정합니다.
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database 버전을 정의 합니다.
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;일반 용도의&#124;BusinessCritical&#124;hyperscale&#124;Default} ' default ')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database의 최대 크기(GB)를 정의합니다.
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다.
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|True인 경우 배포 전에 데이터베이스가 단일 사용자 모드로 설정됩니다.
@@ -550,7 +563,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|DropStatisticsNotInSource = (부울 ' True ')|데이터베이스에 업데이트를 게시할 때 데이터베이스 스냅샷(.dacpac) 파일에 정의되지 않은 역할 멤버를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|
 |**/p:**|ExcludeObjectType=(STRING)|배포 중에 무시되어야 하는 개체 유형입니다. 유효한 개체 유형 이름은 Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers입니다.
 |**/p:**|ExcludeObjectTypes=(STRING)|배포 중에 무시되어야 하는 개체 유형의 세미콜론으로 구분된 목록입니다. 유효한 개체 유형 이름은 Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers입니다.
-|**/p:**|GenerateSmartDefaults=(BOOLEAN)|데이터가 들어 있는 테이블을 Null 값을 허용하지 않는 열로 업데이트할 때 자동으로 기본값을 제공합니다.
+|**/p:**|GenerateSmartDefaults=(BOOLEAN)|데이터가 들어 있는 테이블을 Null 값을 허용하지 않는 열로 업데이트할 때 자동으로 기본 값을 제공합니다.
 |**/p:**|IgnoreAnsiNulls = (부울 ' True ')|데이터베이스에 게시할 때 ANSI NULLS 설정에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.
 |**/p:**|IgnoreAuthorizer=(BOOLEAN)|데이터베이스에 게시할 때 권한 부여자를 무시할지 또는 업데이트할지를 지정합니다.
 |**/p:**|IgnoreColumnCollation=(BOOLEAN)|데이터베이스에 게시할 때 열 데이터 정렬의 차이를 무시할지 또는 업데이트할지를 지정합니다.
@@ -590,6 +603,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|데이터베이스에 게시할 때 외래 키의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|모든 복합 요소를 단일 게시 작업의 일부로 포함합니다.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|데이터베이스에 게시할 때 가능한 위치에 트랜잭션 문을 사용할지 여부를 지정합니다.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|차이가 있을 경우 ALTER ASSEMBLY 문을 실행하는 대신 게시에서 항상 어셈블리를 삭제하고 다시 만들지를 지정합니다.|
 |**/p:**|PopulateFilesOnFileGroups = (부울 ' True ')|대상 데이터베이스에 새 FileGroup이 만들어질 때 새 파일도 만들어지는지 여부를 지정합니다.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|스키마가 데이터베이스 서버에 등록되었는지 여부를 지정합니다.|
