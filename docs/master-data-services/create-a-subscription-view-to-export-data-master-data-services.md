@@ -1,5 +1,5 @@
 ---
-title: 구독 뷰를 만들어 데이터 내보내기(Master Data Services) | Microsoft Docs
+title: 구독 뷰를 만들어 데이터 내보내기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896916"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728475"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67896916"
 
   구독 뷰를 만들어 구독 시스템으로 Master Data Services 데이터를 내보낼 수 있습니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 데이터의 뷰가 생성됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -65,30 +65,30 @@ ms.locfileid: "67896916"
 ## <a name="view-information"></a>뷰 정보  
  생성되는 각 뷰에 대해 열이 10개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|설명|  
+|열|설명|  
 |------------|-----------------|  
-|상태|보기 상태입니다.<br /><br /> **저장**을 클릭하면 뷰가 업데이트 중임을 나타내는 ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 이미지가 표시됩니다.<br /><br /> 뷰를 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
+|상태|보기 상태입니다.<br /><br /> **저장**을 클릭 하면 뷰가 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con) 표시 됩니다.<br /><br /> 뷰를 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ") 표시 됩니다.|  
 |이름|구독 뷰 이름입니다.|  
-|Model|모델 이름입니다.|  
-|버전 옵션|버전 이름입니다.|  
+|모델|모델 이름입니다.|  
+|버전|버전 이름입니다.|  
 |버전|버전 플래그 이름입니다.|  
 |엔터티|파생 계층 이름입니다.|  
-|데이터 원본|엔터티 이름입니다.|  
+|엔터티|엔터티 이름입니다.|  
 |형식|뷰의 데이터 형식을 지정합니다.|  
 |Level|명시적 수준 또는 파생 수준 뷰 형식에만 사용되는 뷰의 수준 수를 지정합니다.|  
 |삭제된 멤버 포함|일시 삭제된 멤버가 뷰에 포함되는지 여부를 나타냅니다.|  
   
  뷰를 클릭하면 다음 정보가 표시됩니다.  
   
--   **만든 사람**: 보기를 만든 사용자의 이름입니다.  
+-   **만든 사람**: 뷰를 만든 사용자의 이름입니다.  
   
--   **On**: 보기를 만든 날짜와 시간입니다.  
+-   **날짜**: 뷰를 만든 날짜와 시간입니다.  
   
--   **업데이트한 사람**: 보기를 마지막으로 업데이트한 사용자의 이름입니다.  
+-   **업데이트한 사람**: 뷰를 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **On**: 보기를 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **날짜**: 뷰를 마지막으로 업데이트한 날짜와 시간입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [구독 뷰 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  

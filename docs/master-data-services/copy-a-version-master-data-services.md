@@ -1,5 +1,5 @@
 ---
-title: 버전 복사(Master Data Services) | Microsoft Docs
+title: 버전 복사
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079741"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728543"
 ---
 # <a name="copy-a-version-master-data-services"></a>버전 복사(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68079741"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 버전을 복사하여 새 버전을 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "68079741"
   
 -   [버전 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

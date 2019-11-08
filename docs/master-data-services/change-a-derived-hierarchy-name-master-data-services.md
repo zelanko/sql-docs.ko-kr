@@ -1,5 +1,5 @@
 ---
-title: 파생 계층 이름 변경(Master Data Services) | Microsoft Docs
+title: 파생 계층 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec27caad2ee9241701d23795d57a89af9809ffa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047358"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728656"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>파생 계층 이름 변경(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68047358"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 파생 계층의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68047358"
   
 8.  **파생 계층 저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [파생 계층 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

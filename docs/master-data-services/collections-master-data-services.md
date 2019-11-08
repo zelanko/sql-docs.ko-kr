@@ -1,5 +1,5 @@
 ---
-title: 컬렉션(Master Data Services) | Microsoft Docs
+title: 컬렉션
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da4ed587d3b77a4e2bc4eee782c6312eb2dc12ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941118"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728607"
 ---
 # <a name="collections-master-data-services"></a>컬렉션(Master Data Services)
 
@@ -39,11 +39,11 @@ ms.locfileid: "67941118"
  컬렉션을 만들면 사용자는 자동으로 소유자로 나열됩니다. 관리자인 경우 필요에 따라 자신의 컬렉션에 대한 다른 특성을 만들 수 있습니다.  
   
 ## <a name="subscription-views-for-collections"></a>컬렉션의 구독 뷰  
- 컬렉션을 표시하는 두 가지 유형의 구독 뷰가 있습니다. **컬렉션 특성** 형식은 컬렉션 목록 및 컬렉션과 관련된 모든 특성(설명 또는 소유자 등)을 표시합니다. **컬렉션** 형식은 모든 컬렉션의 모든 멤버와 각 멤버의 가중치 및 정렬 순서를 표시합니다. 자세한 내용은 [ 개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
+ 컬렉션을 표시하는 두 가지 유형의 구독 뷰가 있습니다. **컬렉션 특성** 형식은 컬렉션 목록 및 컬렉션과 관련된 모든 특성(설명 또는 소유자 등)을 표시합니다. **컬렉션** 형식은 모든 컬렉션의 모든 멤버와 각 멤버의 가중치 및 정렬 순서를 표시합니다. 자세한 내용은 [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
   
  컬렉션의 특정 멤버에 대해 가중치를 설정하는 경우 이러한 값을 관련 구독 뷰에서 사용할 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

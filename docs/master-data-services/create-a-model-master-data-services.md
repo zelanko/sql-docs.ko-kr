@@ -1,5 +1,5 @@
 ---
-title: 모델 만들기(Master Data Services) | Microsoft Docs
+title: 모델 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906651"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728487"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67906651"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체를 포함할 모델을 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -55,27 +55,27 @@ ms.locfileid: "67906651"
   
  생성되는 각 모델에 대해 열이 8개 포함된 행이 표에 추가됩니다. 이러한 8개 열은 다음과 같습니다.  
   
--   **상태**: 모델 상태입니다. **모델 저장** 단추를 클릭하면 모델을 업데이트하는 중임을 나타내는 ![업데이트 중](../master-data-services/media/mds-model-status-updating.png "업데이트 중") 이미지가 표시됩니다. 모델을 만들거나 편집할 때 오류가 발생하면 ![오류](../master-data-services/media/mds-model-status-error.png "오류") 이미지가 표시됩니다. 오류가 발생하지 않으면 상태가 정상이며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
+-   **상태**: 모델 상태입니다. **모델 저장** 단추를 클릭 하면 모델이 업데이트 중임을 나타내는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "새로") 이미지가 표시 됩니다. 모델을 만들거나 편집할 때 오류가 발생 하면 ![오류](../master-data-services/media/mds-model-status-error.png "오류") 이미지가 표시 됩니다. 오류가 발생하지 않는 경우 모델은 정상 상태가 되며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
   
 -   **이름**: 모델 이름입니다.  
   
 -   **설명**: 모델 설명입니다.  
   
--   **로그 보존 기간(일)** : 모델에 대해 로그를 보존할 기간(일)입니다.  
+-   **로그 보존 기간(일)** : 모델에 대 해 로그를 보존할 기간(일)입니다.  
   
 -   **만든 사람**: 모델을 만든 사용자의 사용자 이름입니다.  
   
--   **만든 날짜 및 시간**: 모델이 만들어진 날짜 및 시간입니다.  
+-   **만든 날짜 및 시간**: 모델을 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 모델을 마지막으로 업데이트한 사용자의 사용자 이름입니다.  
   
--   **업데이트한 날짜 및 시간**: 모델을 마지막으로 업데이트한 날짜 및 시간입니다.  
+-   **업데이트한 날짜 및 시간**: 모델을 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   
 -   [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [모델 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   

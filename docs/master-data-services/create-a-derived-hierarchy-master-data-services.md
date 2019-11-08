@@ -1,5 +1,5 @@
 ---
-title: 파생 계층 만들기(Master Data Services) | Microsoft Docs
+title: 파생 계층 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0bedc60665318e2ffd89ebfc6387bbb0432989f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079669"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729579"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>파생 계층 만들기(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68079669"
 > [!NOTE]  
 >  멤버에 대한 도메인 기반 특성 값이 없으면 멤버가 파생 계층에 포함되지 않습니다. 모든 멤버에 대한 도메인 기반 특성 값을 요구하려면 [특성 값 요구&#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "68079669"
   
 9. **뒤로**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [명시적 캡이 포함된 파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
