@@ -1,7 +1,7 @@
 ---
 title: RESTORE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916172"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530923"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -345,7 +345,7 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 
 손상된 **master** 데이터베이스는 특별한 프로시저를 사용하여 복원할 수 있습니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)을 참조하세요.
 
-데이터베이스를 복원하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 지워집니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+데이터베이스를 복원하면 복원 중인 데이터베이스에 대한 계획 캐시가 지워집니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 
 
 가용성 데이터베이스를 복원하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 데이터베이스를 복원한 다음 데이터베이스를 가용성 그룹에 추가합니다.
 
@@ -373,6 +373,10 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 
 > [!NOTE]
 > [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 데이터베이스 파일로 처리됩니다. 따라서 백업 작업 중에 더 이상 일시 중지하고 재개할 필요가 없다는 점을 제외하고 전체 텍스트 카탈로그를 백업하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 절차는 계속 적용 가능합니다. 자세한 내용은 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=107381)을 참조하세요.
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>메타데이터
 

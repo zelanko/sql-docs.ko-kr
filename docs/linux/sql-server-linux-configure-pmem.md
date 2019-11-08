@@ -4,29 +4,29 @@ description: 이 문서에서는 Linux에서 PMEM을 구성하기 위한 연습�
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923827"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531298"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법을 설명합니다. Linux에서 PMEM 지원은 SQL Server 2019 미리 보기에서 도입되었습니다.
+이 문서에서는 SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법을 설명합니다. Linux에 대한 PMEM 지원은 SQL Server 2019에서 도입되었습니다.
 
 ## <a name="overview"></a>개요
 
 SQL Server 2016에는 비휘발성 DIMM에 대한 지원 및 [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)(NVDIMM의 비상 로그 캐싱)이라는 최적화가 도입되었습니다. 이 최적화는 로그 버퍼를 영구적 스토리지로 강화하는 데 필요한 작업의 수를 줄입니다. 이 최적화는 DAX 모드의 영구적 메모리 디바이스에 대한 Windows Server 직접 액세스를 이용합니다.
 
-SQL Server 2019 미리 보기는 PMEM(영구적 메모리) 디바이스 지원을 Linux로 확장하여 PMEM에 배치된 데이터 및 트랜잭션 로그 파일의 전체 향상 기능을 제공합니다. 향상 기능은 효율적인 사용자 공간 `memcpy()` 작업을 사용하여 스토리지 디바이스에 액세스하는 방법을 나타냅니다. SQL Server는 파일 시스템 및 스토리지 스택을 통과하지 않고 Linux에서 DAX 지원을 활용하여 데이터를 디바이스에 직접 배치하여 대기 시간을 줄입니다.
+SQL Server 2019는 PMEM(영구적 메모리) 디바이스 지원을 Linux로 확장하여 PMEM에 배치된 데이터 및 트랜잭션 로그 파일의 전체 향상 기능을 제공합니다. 향상 기능은 효율적인 사용자 공간 `memcpy()` 작업을 사용하여 스토리지 디바이스에 액세스하는 방법을 나타냅니다. SQL Server는 파일 시스템 및 스토리지 스택을 통과하지 않고 Linux에서 DAX 지원을 활용하여 데이터를 디바이스에 직접 배치하여 대기 시간을 줄입니다.
 
 ## <a name="enable-enlightenment-of-database-files"></a>데이터베이스 파일의 향상 기능 사용
 SQL Server on Linux에서 데이터베이스 파일의 향상 기능을 사용하도록 설정하려면 다음 단계를 수행합니다.

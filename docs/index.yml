@@ -6,17 +6,17 @@ metadata:
   title: Microsoft SQL 문서 | Microsoft Docs
   description: Microsoft SQL Server를 사용하여 온-프레미스 및 클라우드에서 데이터베이스 요구 사항을 관리하는 방법을 알아보세요!
   ms.topic: hub-page
-  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
+  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73595468"
+  ms.lasthandoff: 11/07/2019
+  ms.locfileid: "73757214"
 highlightedContent:
   items:
-  - title: SQL Server 2019 시험 사용(미리 보기)
+  - title: SQL Server 2019를 사용해 보세요
     itemType: download
-    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
   - title: SQL Server를 사용하여 Azure VM 가져오기
     itemType: overview
     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm

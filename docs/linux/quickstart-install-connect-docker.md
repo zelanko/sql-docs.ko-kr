@@ -5,7 +5,7 @@ description: 이 빠른 시작에서는 Docker를 사용하여 SQL Server 2017 �
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 05/14/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 9f68a633252b8d822fa91a2f88deb35c02788f6f
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929733"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531383"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 
@@ -31,16 +31,16 @@ ms.locfileid: "70929733"
 이 빠른 시작에서 Docker를 사용하여 SQL Server 2017 컨테이너 이미지인 [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
-> SQL Server 2019 미리 보기 이미지를 사용해 보려면 [이 문서의 SQL Server 2019 미리 보기 버전](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)을 참조하세요.
+> SQL Server 2019 컨테이너를 실행하려면 [이 문서의 SQL Server 2019 버전](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)을 참조하세요.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 빠른 시작에서는 Docker를 사용하여 SQL Server 2019 미리 보기 컨테이너 이미지인 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서 Docker를 사용하여 SQL Server 2019 컨테이너 이미지인 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
-> 이 빠른 시작에서는 SQL Server 2019 미리 보기 컨테이너를 만듭니다. SQL Server 2017 컨테이너를 만들려는 경우 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017)을 참조하세요.
+> 이 빠른 시작에서는 SQL Server 2019 컨테이너를 만듭니다. SQL Server 2017 컨테이너를 만들려는 경우 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017)을 참조하세요.
 ::: moniker-end
 
 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다. 이 빠른 시작에서는 특히 SQL Server on **Linux** 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
@@ -82,7 +82,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone-end
 
    > [!TIP]
-   > SQL Server 2019 미리 보기 이미지를 사용해 보려면 [이 문서의 SQL Server 2019 미리 보기 버전](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)을 참조하세요.
+   > SQL Server 2019 컨테이너를 실행하려면 [이 문서의 SQL Server 2019 버전](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)을 참조하세요.
 
    이전 명령은 최신 SQL Server 2017 컨테이너 이미지를 끌어옵니다. 특정 이미지를 끌어오려면 콜론 및 태그 이름(예를 들어 `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)을 추가합니다. 사용 가능한 모든 이미지를 보려면 [mssql-server Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server)를 참조하세요.
 
@@ -184,26 +184,26 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
    > [!TIP]
-   > 이 빠른 시작에서는 SQL Server 2019 미리 보기 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행하려면 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)을 참조하세요.
+   > 이 빠른 시작에서는 SQL Server 2019 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행하려면 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)을 참조하세요.
 
-   위 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 미리 보기 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
+   이전 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
 
    ::: zone pivot="cs1-bash"
    이 문서의 bash 명령에는 `sudo`를 사용합니다. MacOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
@@ -215,7 +215,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
@@ -231,7 +231,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
    ::: zone-end
 
@@ -239,7 +239,7 @@ SELECT @@SERVERNAME,
    > 암호는 SQL Server 기본 암호 정책이 따라야 합니다. 그렇지 않으면 컨테이너는 SQL 서버를 설정할 수 없어 작동이 중지됩니다. 기본적으로 암호는 8자 이상이어야 하며 대문자, 소문자, 십진수 숫자 및 기호의 네 가지 집합 중 세 집합의 문자를 포함해야 합니다. [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령을 실행하여 오류 로그를 검사할 수 있습니다.
 
    > [!NOTE]
-   > 이 예제에서는 기본적으로 SQL Server 2019 Developer Edition 미리 보기를 사용하여 컨테이너를 만듭니다.
+   > 기본적으로 이렇게 하면 개발자 버전의 SQL Server 2019를 사용하여 컨테이너를 만듭니다.
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
@@ -249,7 +249,7 @@ SELECT @@SERVERNAME,
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트의 포트 1433에 공개됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** | SQL Server 2019 CTP 3.2 Linux 컨테이너 이미지입니다. |
+   | **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** | SQL Server 2019 Ubuntu Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 

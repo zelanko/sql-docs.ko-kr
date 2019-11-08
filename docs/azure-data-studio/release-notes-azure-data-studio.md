@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313615"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532533"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="november-2019"></a>2019년 11월
+
+2019년 11월 4일 &nbsp; / &nbsp; 버전: 1.13.0 
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 새로운 SQL Server 2019 지원 | &bull; &nbsp; BDC 배포 마법사를 사용한 SQL Server 2019 빅 데이터 클러스터 배포 <br/>&bull; &nbsp; 컨트롤러 대시보드를 사용한 클러스터 상태 관리 <br/>&bull; &nbsp; 보안 ACL 대화 상자를 사용하여 HDFS 액세스 제어 목록 관리 <br/> &bull; &nbsp; HDFS 계층화 대화 상자를 사용하여 탑재 추가 <br/> &bull; &nbsp; 기본 제공 Jupyter Book인 SQL Server 2019 가이드를 사용하여 문제 해결 <br/> &bull; &nbsp; SQL vNext 확장 데이터 가상화 확장으로 이름이 변경됨 <br/> &bull; &nbsp; 외부 테이블 마법사에서 Teradata 및 Mongo 지원 추가|
+| 새로운 Notebook 기능 | &bull; &nbsp; Powershell Notebook 발표 &bull; &nbsp; 축소 가능 코드 셀 발표 <br/>&bull; &nbsp; Notebook의 성능 향상 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)에서 확인할 수 있음 |
+| Jupyter Book 발표  | Jupyter Book는 목차에 구성된 전자 필기장 및 markdown 파일의 컬렉션입니다. |
+| 새 SQL Server 배포 마법사  | 이제 다음과 같은 배포에 대한 지원이 포함됩니다. <br/> &bull; &nbsp; Windows의 SQL Server 2019 <br/> &bull; &nbsp; Windows의 SQL Server 2017 <br/> &bull; &nbsp; Docker의 SQL Server 2019 <br/> &bull; &nbsp; Docker의 SQL Server 2017 |
+| 스키마 비교 확장 GA 발표| &bull; &nbsp; SQLCMD 모드 <br/> &bull; &nbsp; 지역화 지원 <br/> &bull; &nbsp; 접근성 수정 <br/> &bull; &nbsp; 보안 버그  |
+| SQL Server Dacpac 확장 GA 발표| <br/> &bull; &nbsp; 지역화 지원 <br/> &bull; &nbsp; 접근성 수정 <br/> &bull; &nbsp; 보안 버그 |
+| Visual Studio IntelliCode 확장 발표 | Visual Studio IntelliCode는 이제 SQL을 지원하므로 예약된 키워드를 보다 스마트하게 제안할 수 있습니다. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>2019년 10월(핫픽스 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313615"
 | Profiler 확장에 확장 이벤트 필터링 지원이 추가됨 | &nbsp; |
 | T-SQL 결과를 XML로 저장할 수 있는 XML로 저장 기능이 추가됨 | &nbsp; |
 | 데이터 계층 애플리케이션 마법사 개선 사항이 추가됨 | &bull; &nbsp; 스크립트 생성 단추가 추가됨<br/>&bull; &nbsp; 배포 중에 데이터가 손실될 수 있다는 경고를 표시하는 뷰가 추가됨 |
-| SQL Server 2019 미리 보기 확장 업데이트 | [SQL Server 2019 미리 보기 확장](sql-server-2019-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
 | 장기 실행 쿼리에 대해 결과 스트리밍이 기본적으로 사용됨 | &nbsp; |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313615"
 | Azure Active Directory 인증 지원이 추가됨 | &nbsp; |
 | Idera SQL DM Performance Insights(미리 보기) 발표 | &nbsp; |
 | SQL Server 가져오기 확장의 데이터 계층 애플리케이션 마법사 지원 | &nbsp; |
-| SQL Server 2019 미리 보기 확장 업데이트 | [SQL Server 2019 미리 보기 확장](sql-server-2019-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
 | SQL Server Profiler 기능 개선 | &nbsp; |
 | 대규모 쿼리의 결과 스트리밍(미리 보기) | &nbsp; |
 | 커뮤니티 확장: SQL 및 새 데이터베이스에 대한 sp_executesql | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313615"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| SQL Server 2019 미리 보기 확장 업데이트 | [SQL Server 2019 미리 보기 확장](sql-server-2019-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
 | 계획 붙여넣기 확장 도입 | &nbsp; |
 | SSMS 편집기 테마를 비롯한 하이 컬러 쿼리 확장 도입 | &nbsp; |
 | SQL Server 에이전트, Profiler 및 가져오기 확장 수정 | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313615"
 | Azure SQL Database를 검색하기 위한 Azure Resource Explorer 도입 | &nbsp; |
 | 개체 탐색기와 쿼리 편집기 간의 연결이 강화됨 | &nbsp; |
 | SQL 에이전트 확장 기능 개선 | &nbsp; |
-| SQL Server 2019 미리 보기 확장 업데이트 | [SQL Server 2019 미리 보기 확장](sql-server-2019-extension.md?view=sql-server-ver15)을 참조하세요. |
+| SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>버그 수정, 2018년 10월

@@ -1,31 +1,29 @@
 ---
 title: 스키마 비교 확장
 titleSuffix: Azure Data Studio
-description: Azure Data Studio용 스키마 비교 확장(미리 보기) 설치 및 사용
+description: Azure Data Studio용 스키마 비교 확장 설치 및 사용
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381807"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532540"
 ---
-# <a name="schema-compare-extension-preview"></a>스키마 비교 확장(미리 보기)
+# <a name="schema-compare-extension"></a>스키마 비교 확장
 스키마 비교 확장은 두 데이터베이스 정의를 비교하고 원본에서 대상으로 차이점을 적용하는 데 사용할 수 있는 간편한 환경을 제공합니다.
-
-이 환경은 현재 최초 미리 보기로 제공됩니다. [여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.
 
 
 ## <a name="features"></a>기능
 
-* 두 .dacpac 파일 또는 데이터베이스의 스키마 비교
+* 두 dacpac 파일 또는 데이터베이스의 스키마 비교
 * 원본과 일치하도록 대상에 대해 수행해야 하는 작업 세트로 결과를 표시
 * 결과에 나열된 작업을 선택적으로 제외
 * 비교 범위를 제어하는 옵션 설정
@@ -72,3 +70,4 @@ ms.locfileid: "72381807"
 ## <a name="next-steps"></a>다음 단계
 
 스키마 비교에 대해 자세히 알아보려면 [설명서를 참조하세요.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+[여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.

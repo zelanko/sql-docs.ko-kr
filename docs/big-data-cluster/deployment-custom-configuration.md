@@ -5,24 +5,27 @@ description: 구성 파일을 사용하여 빅 데이터 클러스터 배포를 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542168"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532036"
 ---
-# <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대 한 배포 설정 구성
+# <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 집합에서 시작 하 여 BDC 워크 로드 요구 사항에 더 적합 하도록 기본 설정을 쉽게 수정할 수 있습니다. 릴리스 후보 릴리스부터 구성 파일의 구조가 업데이트 되어 리소스의 각 서비스 마다 업데이트 설정을 세부적으로 수 있습니다. 
+`azdata` 관리 도구에 기본적으로 제공되는 미리 정의된 구성 프로필 세트에서 시작하여 BDC 워크로드 요구 사항에 더 잘 맞도록 기본 설정을 쉽게 수정할 수 있습니다. 구성 파일의 구조를 사용하면 리소스의 각 서비스에 대한 설정을 세부적으로 업데이트할 수 있습니다.
 
-리소스 수준 구성을 설정 하거나 리소스의 모든 서비스에 대 한 구성을 업데이트할 수도 있습니다. 다음은 bdc의 구조에 대 한 요약입니다 **.**
+> [!TIP]
+> 고가용성 서비스를 배포하는 방법에 대한 자세한 내용은 [SQL Server 마스터](deployment-high-availability.md) 또는 [HDFS 이름 노드](deployment-high-availability-hdfs-spark.md)와 같은 중요 업무용 구성 요소에 **고가용성**을 구성하는 방법에 대한 문서를 참조하세요.
+
+또한 리소스 수준 구성을 설정하거나 리소스의 모든 서비스에 대한 구성을 업데이트할 수도 있습니다. `bdc.json` 구조에 대한 요약은 다음과 같습니다.
 
 ```json
 {
@@ -81,7 +84,8 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 }
 ```
 
-풀의 인스턴스와 같은 리소스 수준 구성을 업데이트 하는 경우 리소스 사양을 업데이트 합니다. 예를 들어, compute 풀의 인스턴스 수를 업데이트 하려면이 섹션을 **bdc. json** 구성 파일에서 수정 합니다.
+풀의 인스턴스와 같은 리소스 수준 구성을 업데이트하는 경우 사양을 업데이트합니다. 예를 들어 컴퓨팅 풀의 인스턴스 수를 업데이트하려면 `bdc.json` 구성 파일에서 다음 섹션을 수정합니다.
+
 ```json
 "resources": {
     ...
@@ -99,7 +103,8 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 }
 ``` 
 
-마찬가지로 특정 리소스 내에서 단일 서비스의 설정을 변경 하는 경우에도 마찬가지입니다. 예를 들어 저장소 풀의 Spark 구성 요소에 대 한 Spark 메모리 설정을 변경 하려는 경우에는 **저장소-0** 리소스를 **bdc. json** 구성 파일의 **spark** 서비스에 대 한 **설정** 섹션으로 업데이트 합니다. .
+특정 리소스 내에서 단일 서비스의 설정을 변경하는 경우에도 마찬가지입니다. 예를 들어 스토리지 풀의 Spark 구성 요소에 대해서만 Spark 메모리 설정을 변경하려면 `storage-0` 리소스를 `bdc.json` 구성 파일의 `spark` 서비스에 대한 `settings` 섹션으로 업데이트합니다.
+
 ```json
 "resources":{
     ...
@@ -113,11 +118,16 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
             "replicas": 2,
             "settings": {
                 "spark": {
-                    "driverMemory": "2g",
-                    "driverCores": "1",
-                    "executorInstances": "3",
-                    "executorMemory": "1536m",
-                    "executorCores": "1"
+                    "spark-defaults-conf.spark.driver.memory": "2g",
+                    "spark-defaults-conf.spark.driver.cores": "1",
+                    "spark-defaults-conf.spark.executor.instances": "3",
+                    "spark-defaults-conf.spark.executor.memory": "1536m",
+                    "spark-defaults-conf.spark.executor.cores": "1",
+                    "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                    "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                    "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                    "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                    "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
                 }
             }
         }
@@ -126,7 +136,7 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 }
 ```
 
-여러 리소스와 연결 된 서비스에 동일한 구성을 적용 하려는 경우에는 **서비스** 섹션에서 해당 **설정을** 업데이트 합니다. 예를 들어, 저장소 풀과 Spark 풀 모두에서 Spark에 대해 동일한 설정을 설정 하려는 경우 **에는 해당** **설정** 섹션을 업데이트 **합니다.**
+동일한 구성을 여러 리소스와 연결된 서비스에 적용하려면 `services` 섹션에서 해당 `settings`를 업데이트합니다. 예를 들어 스토리지 풀과 Spark 풀 모두에서 Spark에 대해 동일한 설정을 지정하려면 `bdc.json` 구성 파일의 `spark` 서비스 섹션에서 `settings` 섹션을 업데이트합니다.
 
 ```json
 "services": {
@@ -137,33 +147,74 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
             "storage-0"
         ],
         "settings": {
-            "driverMemory": "2g",
-            "driverCores": "1",
-            "executorInstances": "3",
-            "executorMemory": "1536m",
-            "executorCores": "1"
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
         }
     }
     ...
 }
 ```
 
+클러스터 배포 구성 파일을 사용자 지정하려면 VSCode와 같은 JSON 형식 편집기를 사용할 수 있습니다. 자동화를 위해 이러한 편집 작업을 스크립팅하려면 `azdata bdc config` 명령을 사용합니다. 이 문서에서는 배포 구성 파일을 수정하여 빅 데이터 클러스터 배포를 구성하는 방법을 설명합니다. 각기 다른 시나리오에 맞게 구성을 변경하는 방법의 예제를 제공합니다. 배포에서 구성 파일을 사용하는 방법에 대한 자세한 내용은 [배포 지침](deployment-guidance.md#configfile)을 참조하세요.
 
-클러스터 배포 구성 파일을 사용자 지정하려면 VSCode와 같은 JSON 형식 편집기를 사용할 수 있습니다. 자동화를 위해 이러한 편집 작업을 스크립팅하려면 **azdata bdc config** 명령을 사용합니다. 이 문서에서는 배포 구성 파일을 수정하여 빅 데이터 클러스터 배포를 구성하는 방법을 설명합니다. 각기 다른 시나리오에 맞게 구성을 변경하는 방법의 예제를 제공합니다. 배포에서 구성 파일을 사용하는 방법에 대한 자세한 내용은 [배포 지침](deployment-guidance.md#configfile)을 참조하세요.
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [azdata 설치](deploy-install-azdata.md).
 
-- 이 섹션의 각 예제에서는 표준 구성 중 하나의 복사본을 만들었다고 가정합니다. 자세한 내용은 [사용자 지정 구성 만들기](deployment-guidance.md#customconfig)를 참조하세요. 예를 들어 다음 명령은 기본 **aks** 구성에 **기반 하 여** 두 개의 json 배포 구성 파일인 및 **control**을 포함 하는 `custom` 라는 디렉터리를 만듭니다.
+- 이 섹션의 각 예제에서는 표준 구성 중 하나의 복사본을 만들었다고 가정합니다. 자세한 내용은 [사용자 지정 구성 만들기](deployment-guidance.md#customconfig)를 참조하세요. 예를 들어 다음 명령은 기본 `aks-dev-test` 구성에 따라 두 개의 JSON 배포 구성 파일(`bdc.json` 및 `control.json`)을 포함하는 `custom-bdc`라는 디렉터리를 만듭니다.
 
    ```bash
-   azdata bdc config init --source aks-dev-test --target custom
+   azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
+
+## <a id="docker"></a> 기본 Docker 레지스트리, 리포지토리 및 이미지 태그 변경
+
+기본 제공 구성 파일, 특히 control.json에는 컨테이너 레지스트리, 리포지토리 및 이미지 태그가 미리 채워진 `docker` 섹션이 포함되어 있습니다. 기본적으로 빅 데이터 클러스터에 필요한 이미지는 `mssql/bdc` 리포지토리의 Microsoft Container Registry(`mcr.microsoft.com`)에 있습니다.
+
+```json
+{
+    "apiVersion": "v1",
+    "metadata": {
+        "kind": "Cluster",
+        "name": "mssql-cluster"
+    },
+    "spec": {
+        "docker": {
+            "registry": "mcr.microsoft.com",
+            "repository": "mssql/bdc",
+            "imageTag": "2019-GDR1-ubuntu-16.04",
+            "imagePullPolicy": "Always"
+        },
+        ...
+    }
+}
+```
+
+배포하기 전에 `control.json` 구성 파일을 직접 편집하거나 `azdata bdc config` 명령을 사용하여 `docker` 설정을 사용자 지정할 수 있습니다. 예를 들어 다음 명령은 다른 `<registry>`, `<repository>` 및 `<image_tag>`를 사용하여 `custom-bdc` control.json 구성 파일을 업데이트합니다.
+
+```bash
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.registry=<registry>"
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.repository=<repository>"
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=<image_tag>"
+```
+
+> [!TIP]
+> 버전별 이미지 태그는 사용하지만 `latest` 이미지 태그는 사용하지 않는 것이 좋습니다. 그렇지 않으면 이로 인해 클러스터 상태 문제가 발생하는 버전이 일치하지 않을 수 있습니다.
+
+> [!TIP]
+> 빅 데이터 클러스터 배포를 배포하는 경우 컨테이너 이미지를 가져올 컨테이너 레지스트리와 리포지토리에 액세스할 수 있어야 합니다. 환경에서 기본 Microsoft Container Registry에 액세스할 수 없는 경우 필요한 이미지가 먼저 프라이빗 Docker 리포지토리에 배치되는 오프라인 설치를 수행할 수 있습니다. 오프라인 설치에 대한 자세한 내용은[SQL Server 빅 데이터 클러스터의 오프라인 배포 수행](deploy-offline.md)을 참조하세요. 배포를 실행하기 전에 배포 워크플로에서 프라이빗 리포지토리에 액세스하여 이미지를 가져오도록 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD` [환경 변수](deployment-guidance.md#env)를 설정해야 합니다.
 
 ## <a id="clustername"></a> 클러스터 이름 변경
 
-클러스터 이름은 빅 데이터 클러스터의 이름과 배포 시 생성되는 Kubernetes 네임스페이스로 구성됩니다. 이 파일은 다음과 같은 **bdc. json** 배포 구성 파일의 부분에 지정 되어 있습니다.
+클러스터 이름은 빅 데이터 클러스터의 이름과 배포 시 생성되는 Kubernetes 네임스페이스로 구성됩니다. 이는 `bdc.json` 배포 구성 파일의 다음 부분에 지정되어 있습니다.
 
 ```json
 "metadata": {
@@ -172,10 +223,10 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 },
 ```
 
-다음 명령은 키-값 쌍을 **--json-values** 매개 변수로 보내 빅 데이터 클러스터 이름을 **test-cluster**로 변경합니다.
+다음 명령은 키-값 쌍을 `--json-values` 매개 변수에 보내서 빅 데이터 클러스터 이름을 `test-cluster`로 변경합니다.
 
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -183,7 +234,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.
 
 ## <a id="ports"></a> 엔드포인트 포트 업데이트
 
-끝점은 **컨트롤. json** 의 컨트롤러에 대해 정의 되 고, 게이트웨이 및 SQL Server 마스터 인스턴스는 해당 섹션의 **bdc. json**에 정의 되어 있습니다. **control.json** 구성 파일의 다음 부분에는 컨트롤러의 엔드포인트 정의가 표시됩니다.
+엔드포인트는 컨트롤러의 경우 `control.json`에서 정의되고, 게이트웨이 및 SQL Server 마스터 인스턴스의 경우 `bdc.json`의 해당 섹션에서 정의됩니다. `control.json` 구성 파일의 다음 부분에서는 컨트롤러의 엔드포인트 정의를 보여 줍니다.
 
 ```json
 {
@@ -202,15 +253,15 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.
 }
 ```
 
-다음 예제에서는 인라인 JSON을 사용하여 **컨트롤러** 엔드포인트의 포트를 변경합니다.
+다음 예제에서는 인라인 JSON을 사용하여 `controller` 엔드포인트의 포트를 변경합니다.
 
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> 풀 복제본 구성
+## <a id="replicas"></a> 크기 조정 구성
 
-저장소 풀과 같은 각 리소스의 구성은 **bdc. json** 구성 파일에 정의 되어 있습니다. 예를 들어, 다음의 **bdc** 는 **저장소 0** 리소스 정의를 보여 줍니다.
+스토리지 풀과 같은 각 리소스의 구성은 `bdc.json` 구성 파일에 정의됩니다. 예를 들어 `bdc.json`의 다음 부분에서는 `storage-0` 리소스 정의를 보여 줍니다.
 
 ```json
 "storage-0": {
@@ -223,27 +274,41 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
         "replicas": 2,
         "settings": {
             "spark": {
-                "driverMemory": "2g",
-                "driverCores": "1",
-                "executorInstances": "3",
-                "executorMemory": "1536m",
-                "executorCores": "1"
+                "spark-defaults-conf.spark.driver.memory": "2g",
+                "spark-defaults-conf.spark.driver.cores": "1",
+                "spark-defaults-conf.spark.executor.instances": "3",
+                "spark-defaults-conf.spark.executor.memory": "1536m",
+                "spark-defaults-conf.spark.executor.cores": "1",
+                "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
             }
         }
     }
 }
 ```
 
-각 풀의 **replicas** 값을 수정하여 풀의 인스턴스 수를 구성할 수 있습니다. 다음 예제에서는 인라인 JSON을 사용하여 스토리지 풀과 데이터 풀의 해당 값을 각각 `10`과 `4`로 변경합니다.
+각 풀의 `replicas` 값을 수정하여 스토리지, 컴퓨팅 및/또는 데이터 풀의 인스턴스 수를 구성할 수 있습니다. 다음 예제에서는 인라인 JSON을 사용하여 스토리지, 컴퓨팅 및 데이터 풀의 이러한 값을 각각 `10`, `4` 및 `4`로 변경합니다.
 
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
-azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.compute-0.spec.replicas=4"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
 ```
+
+> [!NOTE]
+> 컴퓨팅 및 데이터 풀의 유효성을 검사하는 인스턴스의 최대 수는 각각 `8`입니다. 배포 시에는 이 제한이 적용되지 않지만, 프로덕션 배포에는 더 큰 크기를 구성하지 않는 것이 좋습니다.
 
 ## <a id="storage"></a> 스토리지 구성
 
-각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 저장소 및 데이터 풀에 사용자 지정 저장소 클래스를 할당 하 고 데이터 풀의 HDFS (저장소 풀) 및 100 Gb에 대 한 데이터를 500으로 저장 하기 위한 영구 볼륨 클레임의 크기를 업데이트 합니다. 먼저 *type* 및 *replicas* 외에 새 *storage* 섹션을 포함하는 patch.json 파일을 아래와 같이 만듭니다.
+각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 사용자 지정 스토리지 클래스를 스토리지와 데이터 풀에 할당하고, 데이터를 저장하기 위한 영구 볼륨 클레임의 크기를 HDFS(스토리지 풀)의 경우 500Gb, 데이터 풀의 경우 100Gb로 업데이트합니다. 
+
+> [!TIP]
+> 스토리지 구성에 대한 자세한 내용은 [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
+
+먼저 *type* 및 *replicas* 외에 새 *storage* 섹션을 포함하는 patch.json 파일을 아래와 같이 만듭니다.
 
 ```json
 {
@@ -292,106 +357,120 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 }
 ```
 
-그런 다음 **azdata bdc 구성 패치** 명령을 사용 하 여 **bdc. json** 구성 파일을 업데이트할 수 있습니다.
+그런 다음, `azdata bdc config patch` 명령을 사용하여 `bdc.json` 구성 파일을 업데이트할 수 있습니다.
 ```bash
-azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
+azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> **kubeadm-dev-test**를 기반으로 하는 구성 파일에는 각 풀에 대한 스토리지 정의가 없지만, 필요한 경우 위 프로세스를 사용하여 추가할 수 있습니다.
-
-스토리지 구성에 대한 자세한 내용은 [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
+> `kubeadm-dev-test` 기반 구성 파일에는 각 풀에 대한 스토리지 정의가 없지만, 필요한 경우 위 프로세스를 사용하여 추가할 수 있습니다.
 
 ## <a id="sparkstorage"></a> Spark 없이 스토리지 풀 구성
 
-Spark 없이 실행되도록 스토리지 풀을 구성하고 별도의 spark 풀을 만들 수도 있습니다. 이렇게 하면 스토리지와 별도로 spark 컴퓨팅 기능을 확장할 수 있습니다. spark 풀을 구성하는 방법에 대한 자세한 내용은 이 문서의 끝에 있는 [JSON 패치 파일 예제](#jsonpatch)를 참조하세요.
+Spark 없이 실행되도록 스토리지 풀을 구성하고 별도의 spark 풀을 만들 수도 있습니다. 이 구성을 사용하면 스토리지와 관계없이 Spark 컴퓨팅 기능의 크기를 조정할 수 있습니다. Spark 풀을 구성하는 방법에 대한 자세한 내용은 이 문서의 [Spark 풀 만들기](#sparkpool) 섹션을 참조하세요.
 
+> [!NOTE]
+> Spark 없이 빅 데이터 클러스터를 배포하는 것은 지원되지 않습니다. 따라서 `includeSpark`를 `true`로 설정하거나, 하나 이상의 인스턴스를 사용하여 별도의 [Spark 풀](#sparkpool)을 만들어야 합니다. 또한 스토리지 풀(`includeSpark`는 `true`임)에서 둘 모두를 실행하는 Spark를 사용하고, 별도의 Spark 풀을 사용할 수 있습니다.
 
-기본적으로 저장소 풀 리소스에 대 한 **includespark** 설정은 true로 설정 되므로 변경 하기 위해 **includespark** 필드를 저장소 구성으로 편집 해야 합니다. 다음 명령은 인라인 json을 사용 하 여이 값을 편집 하는 방법을 보여 줍니다.
+기본적으로 스토리지 풀 리소스의 `includeSpark` 설정이 true로 설정되므로 이를 변경하려면 `includeSpark` 필드를 스토리지 구성으로 편집해야 합니다. 다음 명령은 인라인 json을 사용하여 이 값을 편집하는 방법을 보여 줍니다.
 
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
+```
+
+## <a id="sparkpool"></a> Spark 풀 만들기
+
+단지 덧셈에 Spark 인스턴스가 스토리지 풀에서 실행되는 대신 Spark 풀을 만들 수도 있습니다. 다음 예제에서는 `bdc.json` 구성 파일을 패치하여 두 개의 인스턴스를 사용하여 Spark 풀을 만드는 방법을 보여 줍니다. 
+
+먼저 다음과 같이 `spark-pool-patch.json` 파일을 만듭니다.
+
+```json
+{
+    "patch": [
+        {
+            "op": "add",
+            "path": "spec.resources.spark-0",
+            "value": {
+                "metadata": {
+                    "kind": "Pool",
+                    "name": "default"
+                },
+                "spec": {
+                    "type": "Spark",
+                    "replicas": 2
+                }
+            }
+        },
+        {
+            "op": "add",
+            "path": "spec.services.spark.resources/-",
+            "value": "spark-0"
+        },
+        {
+            "op": "add",
+            "path": "spec.services.hdfs.resources/-",
+            "value": "spark-0"
+        }
+    ]
+}
+```
+
+그런 다음, `azdata bdc config patch` 명령을 실행합니다.
+
+```bash
+azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
 ## <a id="podplacement"></a> Kubernetes 레이블을 사용하여 Pod 배치 구성
 
-다양한 유형의 워크로드 요구 사항에 맞게 특정 리소스가 있는 Kubernetes 노드의 Pod 배치를 제어할 수 있습니다. 예를 들어 저장소 풀 리소스 pod가 더 많은 저장소가 있는 노드에 배치 되도록 하거나, SQL Server 마스터 인스턴스가 더 높은 CPU 및 메모리 리소스가 있는 노드에 배치 되도록 할 수 있습니다. 이 경우에는 먼저 다양한 유형의 하드웨어를 사용하여 다른 유형의 Kubernetes 클러스터를 빌드한 다음, 적절하게 [노드 레이블을 할당](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)합니다. 빅 데이터 클러스터를 배포할 때 클러스터 배포 구성 파일의 풀 수준에서 동일한 레이블을 지정할 수 있습니다. 그러면 Kubernetes가 지정된 레이블과 일치하는 노드의 Pod에 선호도를 지정합니다. Kubernetes 클러스터의 노드에 추가 해야 하는 특정 레이블 키는 **mssql 클러스터 전체**에 해당 합니다. 이 레이블 자체의 값은 선택한 문자열일 수 있습니다.
+다양한 유형의 워크로드 요구 사항에 맞게 특정 리소스가 있는 Kubernetes 노드의 Pod 배치를 제어할 수 있습니다. Kubernetes 레이블을 사용하면 빅 데이터 클러스터 리소스를 배포하는 데 사용되는 Kubernetes 클러스터의 노드를 사용자 지정할 수 있지만 특정 리소스에 사용되는 노드를 제한할 수도 있습니다.
+예를 들어 더 많은 스토리지가 있는 노드에 스토리지 풀 리소스 Pod가 배치되고, 더 높은 CPU 및 메모리 리소스가 있는 노드에 SQL Server 마스터 인스턴스가 배치되도록 할 수 있습니다. 이 경우에는 먼저 다양한 유형의 하드웨어를 사용하여 다른 유형의 Kubernetes 클러스터를 빌드한 다음, 적절하게 [노드 레이블을 할당](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)합니다. 빅 데이터 클러스터를 배포할 때 클러스터 수준에서 동일한 레이블을 지정하여 `control.json` 파일의 `clusterLabel` 특성을 사용하여 빅 데이터 클러스터에 사용되는 노드를 나타낼 수 있습니다. 그런 다음, 다른 레이블이 풀 수준 배치에 사용됩니다. 이러한 레이블은 `nodeLabel` 특성을 사용하여 빅 데이터 클러스터 배포 구성 파일에서 지정할 수 있습니다. Kubernetes는 Pod를 지정된 레이블과 일치하는 노드에 할당합니다. Kubernetes 클러스터의 노드에 추가해야 하는 특정 레이블 키는 `mssql-cluster`(빅 데이터 클러스터에 사용되는 노드를 나타내는 경우) 및 `mssql-resource`(다양한 리소스에 대해 Pod가 배치되는 노드를 나타내는 경우)입니다. 이러한 레이블의 값은 선택한 문자열일 수 있습니다.
 
-다음 예제에서는 SQL Server 마스터 인스턴스, 계산 풀, 데이터 풀 & 저장소 풀에 대 한 노드 레이블 설정을 포함 하도록 사용자 지정 구성 파일을 편집 하는 방법을 보여 줍니다. 기본 제공 구성에는 *nodeLabel* 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집 하거나 패치 파일을 만들고 사용자 지정 구성 파일에 적용 해야 합니다. SQL Server 마스터 인스턴스 pod는 값이 **bdc-마스터**인 **mssql-클러스터 전체** 를 포함 하는 노드에 배포 됩니다. 계산 풀 및 데이터 풀 pod는 **mssql-클러스터 차원의** 값이 **bdc-sql**인 노드에 배포 됩니다. 저장소 풀 pod는 **mssql-클러스터 전체** **에 값이**포함 된 노드에 배포 됩니다.
+> [!NOTE]
+> 노드 수준 메트릭을 수집하는 Pod의 특성으로 인해 `metricsdc` Pod는 `mssql-cluster` 레이블이 있는 모든 노드에 배포되고 `mssql-resource`는 이러한 Pod에 적용되지 않습니다.
 
-다음 내용을 사용하여 현재 디렉터리에 **patch.json**이라는 파일을 만듭니다.
+다음 예제에서는 전체 빅 데이터 클러스터에 대한 `bdc` 노드 레이블, SQL Server 마스터 인스턴스 Pod를 특정 노드에 배치하기 위한 `bdc-master` 레이블, 스토리지 풀 리소스에 대한 `bdc-storage-pool`, 컴퓨팅 풀 및 데이터 풀 Pod에 대한 `bdc-compute-pool`, 나머지 리소스에 대한 `bdc-shared`를 포함하도록 사용자 지정 구성 파일을 편집하는 방법을 보여 줍니다. 
 
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.master.spec",
-      "value": {
-        "type": "Master",
-        "replicas": 1,
-        "endpoints": [
-          {
-            "name": "Master",
-            "serviceType": "NodePort",
-            "port": 31433
-          }
-        ],
-        "settings": {
-          "sql": {
-            "hadr.enabled": "false"
-          }
-        },
-        "nodeLabel": "bdc-master"
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.compute-0.spec",
-      "value": {
-        "type": "Compute",
-        "replicas": 1,
-        "nodeLabel": "bdc-sql"
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "nodeLabel": "bdc-sql"
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 3,
-        "nodeLabel": "bdc-storage",
-        "settings": {
-          "spark": {
-            "includeSpark": "true"
-          }
-        }
-      }
-    }
-  ]
-}
-```
+먼저 Kubernetes 노드의 레이블을 다음과 같이 지정합니다.
 
 ```bash
-azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
+kubectl label node <kubernetesNodeName1> mssql-cluster=bdc mssql-resource=bdc-shared --overwrite=true
+kubectl label node <kubernetesNodeName2> mssql-cluster=bdc mssql-resource=bdc-master --overwrite=true
+kubectl label node <kubernetesNodeName3> mssql-cluster=bdc mssql-resource=bdc-compute-pool --overwrite=true
+kubectl label node <kubernetesNodeName4> mssql-cluster=bdc mssql-resource=bdc-compute-pool --overwrite=true
+kubectl label node <kubernetesNodeName5> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName6> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName7> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
 ```
 
-## <a id="jsonpatch"></a> JSON 패치 파일
+그런 다음, 레이블 값을 포함하도록 클러스터 배포 구성 파일을 업데이트합니다. 이 예제에서는 `custom-bdc` 프로필에서 구성 파일을 사용자 지정한다고 가정합니다. 기본적으로 기본 제공 구성에는 `nodeLabel` 및 `clusterLabel` 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집하거나 `azdata bdc config add` 명령을 사용하여 필요한 편집 작업을 수행해야 합니다.
+
+```bash
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
+azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+
+# below can be omitted in which case we will take the node label default from the control.json
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.sparkhead.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
+```
+
+## <a id="jsonpatch"></a> JSON 패치 파일을 사용한 기타 사용자 지정
 
 JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치에 대한 자세한 내용은 [Python의 JSON 패치](https://github.com/stefankoegl/python-json-patch) 및 [JSONPath Online Evaluator](https://jsonpath.com/)를 참조하세요.
 
-아래 **patch.json** 파일은 다음과 같은 변경 작업을 수행합니다.
+다음 `patch.json` 파일에서 수행하는 변경 작업은 다음과 같습니다.
 
-- **control.json**에서 단일 엔드포인트의 포트를 업데이트합니다.
+- `control.json`에서 단일 엔드포인트의 포트를 업데이트합니다.
+
 ```json
 {
   "patch": [
@@ -404,7 +483,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- **control.json**에서 모든 엔드포인트(**port** 및 **serviceType**)를 업데이트합니다.
+- `control.json`에서 모든 엔드포인트(`port` 및 `serviceType`)를 업데이트합니다.
+
 ```json
 {
   "patch": [
@@ -428,7 +508,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- **control.json**에서 컨트롤러 스토리지 설정을 업데이트합니다. 이 설정은 풀 수준에서 재정의하지 않을 경우 모든 클러스터 구성 요소에 적용됩니다.
+- `control.json`에서 컨트롤러 스토리지 설정을 업데이트합니다. 이 설정은 풀 수준에서 재정의하지 않을 경우 모든 클러스터 구성 요소에 적용됩니다.
+
 ```json
 {
   "patch": [
@@ -452,7 +533,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- **control.json**에서 스토리지 클래스 이름을 업데이트합니다.
+- `control.json`에서 스토리지 클래스 이름을 업데이트합니다.
+
 ```json
 {
   "patch": [
@@ -465,7 +547,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- 는 **bdc. json**의 저장소 풀에 대 한 풀 저장소 설정을 업데이트 합니다.
+- `bdc.json`에서 스토리지 풀의 풀 스토리지 설정을 업데이트합니다.
+
 ```json
 {
   "patch": [
@@ -493,7 +576,8 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- 는 **bdc. json**의 저장소 풀에 대 한 Spark 설정을 업데이트 합니다.
+- `bdc.json`에서 스토리지 풀의 Spark 설정을 업데이트합니다.
+
 ```json
 {
   "patch": [
@@ -501,46 +585,18 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
       "op": "replace",
       "path": "spec.services.spark.settings",
       "value": {
-        "driverMemory": "2g",
-        "driverCores": 1,
-        "executorInstances": 3,
-        "executorCores": 1,
-        "executorMemory": "1536m"
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
       }
     }
-  ]
-}
-```
-
-- 두 개의 인스턴스를 사용 하 여 두 개의 spark 풀을 **만듭니다.**
-```json
-{
-  "patch": [
-    {
-      "op": "add",
-      "path": "spec.resources.spark-0",
-      "value": {
-        "metadata": {
-          "kind": "Pool",
-          "name": "default"
-        },
-        "spec": {
-          "type": "Spark",
-          "replicas": 2
-        }
-      }
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.resources/-",
-      "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.hdfs.resources/-",
-      "value": "spark-0"
-    }
-   }
   ]
 }
 ```
@@ -548,81 +604,62 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 > [!TIP]
 > 배포 구성 파일을 변경하기 위한 구조 및 옵션에 대한 자세한 내용은 [빅 데이터 클러스터의 배포 구성 파일 참조](reference-deployment-config.md)를 참조하세요.
 
-**azdata bdc config** 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 **사용자 지정/** a s c. **json 파일을** 대상 배포 구성 파일에 적용 합니다.
+`azdata bdc config` 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 `patch.json` 파일을 `custom-bdc/bdc.json` 대상 배포 구성 파일에 적용합니다.
 
 ```bash
-azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.json
 ```
 
-## <a name="disable-elasticsearch-to-run-in-privileged-mode"></a>특권 모드에서 실행 되는 ElasticSearch 사용 안 함
-기본적으로 ElasticSearch 컨테이너는 빅 데이터 클러스터의 권한 모드로 실행 됩니다. 이는 컨테이너 초기화 시간에 ElasticSearch가 더 많은 양의 로그를 처리할 때 컨테이너에 호스트 키워드가 필수 설정을 업데이트할 수 있는 충분 한 권한이 있는지 확인 하기 위한 것입니다. 이 항목에 대 한 자세한 내용은 [이 문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)에서 찾을 수 있습니다. 
+## <a name="disable-elasticsearch-to-run-in-privileged-mode"></a>특권 모드에서 실행되는 ElasticSearch 사용 안 함
 
-ElasticSearch를 실행 하는 컨테이너를 사용 하지 않도록 설정 하 여 특권 모드에서 실행 하려면 **컨트롤** 의 **settings** 섹션을 업데이트 하 고 vm의 값을 지정 해야 **합니다. 최대 _map_count** 는 **-1**입니다. 다음은이 섹션의 예입니다.
+ElasticSearch 컨테이너는 기본적으로 빅 데이터 클러스터에서 특권 모드로 실행됩니다. 이렇게 설정하면 컨테이너 초기화 시 ElasticSearch에서 더 많은 양의 로그를 처리할 때 필요한 호스트의 설정을 업데이트할 수 있을 만큼 충분한 권한이 컨테이너에 있습니다. 자세한 내용은 [이 문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)의 해당 항목에서 확인할 수 있습니다. 
+
+ElasticSearch를 실행하는 컨테이너를 특권 모드에서 실행되지 않도록 설정하려면 `control.json`에서 `settings` 섹션을 업데이트하고 `vm.max_map_count`의 값을 `-1`로 지정해야 합니다. 이 섹션의 예제는 다음과 같습니다.
+
 ```json
-"settings": {
-    "ElasticSearch": {
-        "vm.max_map_count": "-1"
-      }
+{
+    "apiVersion": "v1",
+    "metadata": {...},
+    "spec": {
+        "docker": {...},
+        "storage": {...},
+        "endpoints": [...],
+        "settings": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+            }
+        }
+    }
 }
 ```
 
-수동으로 **를 편집 하 고 위의** 섹션을 **사양**에 추가 하거나, 아래와 같이 패치 파일 **elasticsearch** 를 만들고 **azdata** CLI를 사용 하 여 컨트롤을 패치할 수 있습니다 **. json** 파일:
+`control.json`을 수동으로 편집하고 위의 섹션을 `spec`에 추가하거나, 아래와 같이 `elasticsearch-patch.json` 패치 파일을 만들고 `azdata` CLI를 사용하여 `control.json` 파일을 패치할 수 있습니다.
 
 ```json
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "spec",
+      "op": "add",
+      "path": "spec.settings",
       "value": {
-        "docker": {
-            "registry": "mcr.microsoft.com",
-            "repository": "mssql/bdc",
-            "imageTag": "2019-RC1-ubuntu",
-            "imagePullPolicy": "Always"
-        },
-        "storage": {
-            "data": {
-                "className": "default",
-                "accessMode": "ReadWriteOnce",
-                "size": "15Gi"
-            },
-            "logs": {
-                "className": "default",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
-        },
-        "endpoints": [
-            {
-                "name": "Controller",
-                "serviceType": "LoadBalancer",
-                "port": 30080
-            },
-            {
-                "name": "ServiceProxy",
-                "serviceType": "LoadBalancer",
-                "port": 30777
-            }
-        ],
-        "settings": {
             "ElasticSearch": {
                 "vm.max_map_count": "-1"
-             }
         }
-       }
+      }
     }
   ]
 }
 ```
 
-다음 명령을 실행 하 여 구성 파일을 패치 합니다.
-```
-azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
+다음 명령을 실행하여 구성 파일을 패치합니다.
+
+```bash
+azdata bdc config patch --config-file custom-bdc/control.json --patch-file elasticsearch-patch.json
 ```
 
 > [!IMPORTANT]
-> [이 문서의](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)지침에 따라 Kubernetes 클러스터의 각 호스트에서 수동으로 **max_map_count** 설정을 수동으로 업데이트 하는 것이 좋습니다.
+> [이 문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)의 지침에 따라 Kubernetes 클러스터의 각 호스트에서 `max_map_count` 설정을 수동으로 업데이트하는 것이 좋습니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터 배포에서 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포 하는 방법](deployment-guidance.md#configfile)을 참조 하세요.
+빅 데이터 클러스터 배포에서 구성 파일을 사용하는 방법에 대한 자세한 내용은 [Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md#configfile)을 참조하세요.

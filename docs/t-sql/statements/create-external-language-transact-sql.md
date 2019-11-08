@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893411"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536239"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -110,7 +110,7 @@ WITH (<option_spec>)
 
 ## <a name="remarks"></a>Remarks
 
-CTP 3.0에서 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않습니다.
+현재 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않습니다.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -120,7 +120,7 @@ CTP 3.0에서 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않�
 
 ### <a name="execute-external-script-permission"></a>EXECUTE EXTERNAL SCRIPT 사용 권한
 
-SQL Server 2019에서는 EXECUTE EXTERNAL SCRIPT 사용 권한을 도입하므로 특정 언어에 대한 외부 스크립트 실행 사용 권한을 부여할 수 있습니다. 이전에는 특정 언어에 대한 실행 사용 권한을 부여할 수 없는 EXECUTE ANY EXTERNAL SCRIPT 데이터베이스 사용 권한만 있었습니다.
+EXECUTE EXTERNAL SCRIPT 권한을 사용하여 특정 언어에 대한 외부 스크립트 실행 권한을 부여할 수 있습니다. 이는 특정 언어에 대한 실행 권한을 부여할 수 없는 EXECUTE ANY EXTERNAL SCRIPT 데이터베이스 사용 권한과는 다릅니다.
 
 즉, **dbo** 이외의 사용자는 특정 언어를 실행하려면 사용 권한을 부여받아야 합니다.
 

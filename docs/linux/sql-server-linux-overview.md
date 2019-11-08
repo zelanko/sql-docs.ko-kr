@@ -3,17 +3,17 @@ title: SQL Server on Linux 개요
 description: 이 문서에서는 Linux에서 SQL Server를 실행하는 방법을 설명하고 자세히 알아볼 수 있는 방법에 대한 정보를 제공합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: e3bd50cba4bcab81e7dcf00db9394704c5486160
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68105464"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531275"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -24,22 +24,22 @@ SQL Server 2017부터 SQL Server가 Linux에서 실행됩니다. 운영 체제�
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 미리 보기가 Linux에서 실행됩니다. 운영 체제에 관계없이 많은 유사한 기능과 서비스를 포함하는 동일한 SQL Server 데이터베이스 엔진입니다. 이 릴리스에 대한 자세한 내용은 [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)을 참조하세요.
+SQL Server 2019는 Linux에서 실행됩니다. 운영 체제에 관계없이 많은 유사한 기능과 서비스를 포함하는 동일한 SQL Server 데이터베이스 엔진입니다. 이 릴리스에 대한 자세한 내용은 [Linux용 SQL Server 2019의 새로운 기능](sql-server-linux-whats-new-2019.md)을 참조하세요.
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-ver15)가 출시되었습니다. 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)을 참조하세요.
+> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15)를 사용할 수 있습니다! 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019의 새로운 기능](sql-server-linux-whats-new-2019.md?view=sql-server-ver15)을 참조하세요.
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-linux-ver15)가 출시되었습니다. 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux)을 참조하세요.
+> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15)를 사용할 수 있습니다! 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019의 새로운 기능](sql-server-linux-whats-new-2019.md?view=sql-server-linux-ver15)을 참조하세요.
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 미리 보기가 출시되었습니다. 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)을 참조하세요.
+> SQL Server 2019를 사용할 수 있습니다! 최신 릴리스에 있는 Linux의 새로운 기능을 알아보려면 [Linux용 SQL Server 2019의 새로운 기능](sql-server-linux-whats-new-2019.md)을 참조하세요.
 ::: moniker-end
 
 ## <a name="install"></a>설치
@@ -80,7 +80,7 @@ SQL Server에 이미 익숙한 경우 이 릴리스의 일반적인 지침과 �
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에는 Linux를 포함한 지원되는 모든 플랫폼에서 동일한 기본 데이터베이스 엔진이 있습니다. 따라서 대부분의 기존 기능이 Linux에서 동일한 방식으로 작동합니다. 설명서의 이 영역에서는 Linux 관점에서 이와 같은 일부 기능을 공개합니다. 또한 Linux에서 고유한 요구 사항이 있는 영역을 설명합니다.
 
-SQL Server on Linux에 이미 익숙한 경우 이 릴리스의 일반적인 지침과 알려진 문제에 대한 [릴리스 정보](sql-server-linux-release-notes-2019.md)를 검토하세요. 그런 다음, [Linux의 SQL Server 2019 미리 보기 릴리스 정보](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)를 살펴봅니다.
+SQL Server on Linux에 이미 익숙한 경우 이 릴리스의 일반적인 지침과 알려진 문제에 대한 [릴리스 정보](sql-server-linux-release-notes-2019.md)를 검토하세요. 그런 다음, [Linux에 대한 SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)을 살펴봅니다.
 
 ::: moniker-end
 
@@ -92,12 +92,12 @@ SQL Server 2017 및 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에�
 SQL Server on Linux에 이미 익숙한 경우 릴리스 정보를 검토하세요.
 
 - [SQL Server 2017 릴리스 정보](sql-server-linux-release-notes.md)
-- [SQL Server 2019 미리 보기 릴리스 정보](sql-server-linux-release-notes-2019.md)
+- [SQL Server 2019 릴리스 정보](sql-server-linux-release-notes-2019.md)
 
 그런 다음, 새로운 기능을 살펴봅니다.
 
 - [SQL Server 2017의 새로운 기능](sql-server-linux-whats-new.md)
-- [Linux의 SQL Server 2019 미리 보기에 대한 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
+- [Linux에 대한 SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

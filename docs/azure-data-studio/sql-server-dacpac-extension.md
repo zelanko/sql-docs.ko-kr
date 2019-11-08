@@ -1,27 +1,25 @@
 ---
 title: SQL Server dacpac 확장
 titleSuffix: Azure Data Studio
-description: Azure Data Studio용 SQL Server dacpac 확장(미리 보기) 설치 및 사용
+description: Azure Data Studio용 SQL Server dacpac 확장 설치 및 사용
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783319"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532415"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 확장(미리 보기)
+# <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 확장
 
 **데이터 계층 애플리케이션 마법사** 는 dacpac 파일을 배포 및 추출하고 bacpac 파일을 가져오고 내보내기 위한 간편한 마법사 환경을 제공합니다.
-
-이 환경은 현재 최초 미리 보기로 제공됩니다. [여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.
 
 
 ## <a name="features"></a>기능
@@ -60,3 +58,4 @@ ms.locfileid: "72783319"
 ## <a name="next-steps"></a>다음 단계
 
 dacpac에 대한 자세한 내용은 [설명서](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)를 참조하세요.
+[여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.

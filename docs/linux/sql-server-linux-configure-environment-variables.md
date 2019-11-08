@@ -3,17 +3,17 @@ title: 환경 변수를 사용하여 SQL Server 설정 구성
 description: 이 문서에서는 환경 변수를 사용하여 Linux에서 특정 SQL Server 2017 설정을 구성하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807463"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531318"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
 
@@ -28,7 +28,7 @@ ms.locfileid: "72807463"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-여러 다른 환경 변수를 사용하여 Linux에서 SQL Server 2019 미리 보기를 구성할 수 있습니다. 이 변수는 다음과 같은 두 가지 시나리오에서 사용됩니다.
+여러 다른 환경 변수를 사용하여 Linux에서 SQL Server 2019를 구성할 수 있습니다. 이 변수는 다음과 같은 두 가지 시나리오에서 사용됩니다.
 
 ::: moniker-end
 
@@ -136,13 +136,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Linux/macOS에서 Docker를 실행하는 경우 작은따옴표와 함께 다음 구문을 사용합니다.
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 Windows에서 Docker를 실행하는 경우 큰따옴표와 함께 다음 구문을 사용합니다.
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end

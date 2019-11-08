@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263359"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988412"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 스크립팅
 
@@ -135,9 +135,9 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 5. **다음** 선택하여 **스크립팅 옵션 설정** 페이지를 엽니다. 여기에서 스크립트 및 일부 추가 고급 옵션을 저장하는 위치를 구성할 수 있습니다. 
 
-    1. **새 쿼리 창에 저장**을 선택합니다.
+    1\. **새 쿼리 창에 저장**을 선택합니다.
 
-    2. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
+    2\. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
 
       * *통계 스크립팅*으로 설정된 **통계 스크립팅**입니다.
       * *스키마 전용*으로 설정된 **스크립팅할 데이터 형식**입니다.
@@ -209,7 +209,7 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 4. **세션** 노드를 확장합니다.
 
-5. 원하는 확장 세션을 마우스 오른쪽 단추로 클릭하고 **세션 스크립팅** > **새 쿼리 편집기 창**을 선택합니다.
+5. 원하는 확장 세션 > **다른 이름으로 세션 스크립팅** > **작성 대상** > **새 쿼리 편집기 창**을 마우스 오른쪽 단추로 클릭합니다.
 
     ![확장된 새 쿼리 편집기 창 세션](media/scripting-ssms/scriptxevents.png)
 

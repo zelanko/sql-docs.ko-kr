@@ -1,29 +1,37 @@
 ---
 title: 시작
 titleSuffix: SQL Server big data clusters
-description: 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에 대 한 단계 및 리소스를 알아봅니다.
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)](미리 보기)를 배포하기 위한 단계와 리소스에 대해 알아봅니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 323394f9590551528ce9e9dfdf1fb97c7d1c2225
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: de20b8bea27f3b8003ab11941f044d4246155eeb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653399"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532209"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>시작 하기[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는를 배포 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)하는 방법에 대 한 개요를 제공 합니다. 이 문서는 개념을 설명하고 이 섹션의 다른 배포 문서를 이해하기 위한 프레임워크를 제공하도록 작성되었습니다. 특정 배포 단계는 클라이언트 및 서버에 대해 선택한 플랫폼에 따라 다릅니다.
+이 문서에서는 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)를 배포하는 방법에 대한 개요를 제공합니다.
+
+기타 배포 시나리오는 다음을 참조하세요.
+
+- [창](../database-engine/install-windows/install-sql-server.md)
+- [Linux](../linux/sql-server-linux-setup.md)
+- [Docker 컨테이너](../linux/sql-server-linux-configure-docker.md)
+
+이 문서는 개념을 설명하고 이 섹션의 다른 배포 문서를 이해하기 위한 프레임워크를 제공합니다. 특정 배포 단계는 클라이언트 및 서버에 대해 선택한 플랫폼에 따라 다릅니다.
 
 > [!TIP]
-> Kubernetes 및 빅 데이터 클러스터가 배포 된 환경을 신속 하 게 사용 하 여 기능을 강화 하려면 [scripts 섹션](#scripts)에서 가리키는 샘플 스크립트 중 하나를 사용 합니다. 배포 후 클러스터를 관리 하려면 다음 섹션의 [클라이언트 도구](#tools) 를 사용 합니다.
+> Kubernetes 및 빅 데이터 클러스터가 배포된 환경을 신속하게 구축하여 기능을 강화하려면 [스크립트 섹션](#scripts) 에서 가리키는 샘플 스크립트 중 하나를 사용합니다. 배포 후 클러스터를 관리하려면 다음 섹션의 [클라이언트 도구](#tools)를 사용합니다.
 
 ## <a id="tools"></a> 클라이언트 도구
 
@@ -42,11 +50,9 @@ ms.locfileid: "69653399"
 
 빅 데이터 클러스터는 [Kubernetes](https://kubernetes.io/docs/home)에서 관리되는 일련의 상호 관련된 컨테이너로 배포됩니다. 다양한 방법으로 Kubernetes를 호스트할 수 있습니다. 기존 Kubernetes 환경이 이미 있더라도 빅 데이터 클러스터와 관련된 요구 사항을 검토해야 합니다.
 
-- **AKS(Azure Kubernetes Service)** : AKS를 사용하여 관리되는 Kubernetes 클러스터를 Azure에 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. AKS를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 [배포 Notebook](deploy-notebooks.md)을 사용하여 한 단계로 AKS 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 빅 데이터 클러스터 배포에 대해 AKS를 구성 하는 방법에 대 한 자세한 내용은 [배포를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 위한 Azure Kubernetes 서비스 구성](deploy-on-aks.md)을 참조 하세요.
+- **AKS(Azure Kubernetes Service)** : AKS를 사용하여 관리되는 Kubernetes 클러스터를 Azure에 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. AKS를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 [배포 Notebook](deploy-notebooks.md)을 사용하여 한 단계로 AKS 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 빅 데이터 클러스터 배포를 위한 AKS를 구성하는 방법에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]배포를 위한 Azure Kubernetes Service 구성](deploy-on-aks.md)을 참조하세요.
 
-- **여러 머신**: 물리적 서버 또는 가상 머신일 수 있는 여러 Linux 머신에 Kubernetes를 배포할 수도 있습니다. [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 도구를 사용하여 Kubernetes 클러스터를 만들 수 있습니다. [bash 스크립트](deployment-script-single-node-kubeadm.md)를 사용하여 이러한 유형의 배포를 자동화할 수 있습니다. 이 방법은 빅 데이터 클러스터에 사용하려는 기존 인프라가 이미 있는 경우에 적합합니다. 빅 데이터 클러스터에서 **kubeadm** 배포를 사용 하는 방법에 대 한 자세한 내용은 [배포를 위해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 여러 컴퓨터에서 Kubernetes 구성](deploy-with-kubeadm.md)을 참조 하세요.
-
-- **Minikube**: Minikube를 사용하면 단일 서버에서 Kubernetes를 로컬로 실행할 수 있습니다. 빅 데이터 클러스터를 사용해 보거나 테스트 또는 개발 시나리오에서 사용해야 하는 경우에 적합한 옵션입니다. Minikube 사용 방법에 대한 자세한 내용은 [Minikube 설명서](https://kubernetes.io/docs/setup/minikube/)를 참조하세요. 빅 데이터 클러스터에서 Minikube를 사용하기 위한 특정 요구 사항은 [SQL Server 2019 빅 데이터 클러스터 배포에 대해 minikube 구성](deploy-on-minikube.md)을 참조하세요.
+- **여러 머신**: 물리적 서버 또는 가상 머신일 수 있는 여러 Linux 머신에 Kubernetes를 배포할 수도 있습니다. [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 도구를 사용하여 Kubernetes 클러스터를 만들 수 있습니다. [bash 스크립트](deployment-script-single-node-kubeadm.md)를 사용하여 이러한 유형의 배포를 자동화할 수 있습니다. 이 방법은 빅 데이터 클러스터에 사용하려는 기존 인프라가 이미 있는 경우에 적합합니다. 빅 데이터 클러스터에서 **kubeadm** 배포를 사용하는 방법에 대한 자세한 내용은 [여러 머신에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포를 위한 Kubernetes 구성](deploy-with-kubeadm.md)을 참조하세요.
 
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터 배포
 
@@ -59,7 +65,7 @@ Kubernetes를 구성한 후에 <`azdata bdc create` 명령을 사용하여 빅 �
 - 완전 무인 설치를 위해 환경 변수에 다른 모든 설정을 전달할 수 있습니다. 자세한 내용은 [무인 배포](deployment-guidance.md#unattended)를 참조하세요.
 
 
-## <a id="scripts"></a>배포 스크립트
+## <a id="scripts"></a> 배포 스크립트
 
 배포 스크립트를 사용하면 한 단계로 Kubernetes 및 빅 데이터 클러스터를 배포할 수 있습니다. 또한 배포 스크립트는 빅 데이터 클러스터 설정의 기본값을 제공하는 경우가 많습니다. 빅 데이터 클러스터 배포를 다르게 구성하는 고유한 버전을 만들어 배포 스크립트를 사용자 지정할 수 있습니다.
 

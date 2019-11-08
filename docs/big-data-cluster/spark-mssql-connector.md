@@ -5,16 +5,16 @@ description: Spark에서 MSSQL Spark 커넥터를 사용하여 SQL Server를 읽
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653309"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531605"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법
 
@@ -35,11 +35,11 @@ ms.locfileid: "69653309"
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 커넥터 인터페이스
 
-SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API를 사용하는 **MSSQL Spark 커넥터**를 빅 데이터 클러스터에 대해 제공합니다. MSSQL Spark 커넥터는 Spark 데이터 원본 API를 기반으로 하며, 익숙한 Spark JDBC 커넥터 인터페이스를 제공합니다. 인터페이스 매개 변수는 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)를 참조하세요. MSSQL Spark 커넥터는 **com.microsoft.sqlserver.jdbc.spark**라는 이름으로 참조됩니다.
+SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API를 사용하는 **MSSQL Spark 커넥터**를 빅 데이터 클러스터에 대해 제공합니다. MSSQL Spark 커넥터는 Spark 데이터 원본 API를 기반으로 하며, 익숙한 Spark JDBC 커넥터 인터페이스를 제공합니다. 인터페이스 매개 변수는 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)를 참조하세요. MSSQL Spark 커넥터는 **com.microsoft.sqlserver.jdbc.spark**라는 이름으로 참조됩니다.
 
 다음 표에서는 변경되었거나 새로 추가된 인터페이스 매개 변수를 설명합니다.
 
-| 속성 이름 | Optional | 설명 |
+| 속성 이름 | 선택 사항 | 설명 |
 |---|---|---|
 | **isolationLevel** | 예 | 연결의 격리 수준을 설명합니다. MSSQL Spark 커넥터의 기본값은 **READ_COMMITTED**입니다. |
 
@@ -49,7 +49,7 @@ SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대
 
 - [SQL Server 빅 데이터 클러스터](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/getazuredatastudio)
 
 ## <a name="create-the-target-database"></a>대상 데이터베이스 만들기
 
@@ -90,4 +90,4 @@ SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md) 을 참조 하세요.
+빅 데이터 클러스터에 대한 자세한 내용은 [Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md)을 참조하세요.

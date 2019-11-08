@@ -3,16 +3,16 @@ title: Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
 description: 이 문서에서는 Docker의SQL Server 컨테이너에 있는 분산 트랜잭션에 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770840"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531309"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
 
@@ -63,7 +63,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
@@ -71,7 +71,7 @@ docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -107,9 +107,14 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>호스트에서 포트 라우팅 구성
 
-이전 예제에서는 단일 Docker 컨테이너가 RPC 포트 135를 호스트의 포트 135에 매핑하기 때문에 이제 호스트를 통한 분산 트랜잭션은 추가 구성 없이도 작동합니다. SQL Server는 컨테이너에서 상승된 권한으로 실행되므로 컨테이너에서 포트 135를 직접 사용할 수 있습니다. 컨테이너 외부 SQL Server의 경우 사용 후 삭제되는 다른 포트를 사용해야 하며 포트 135에 대한 트래픽을 해당 포트로 라우팅해야 합니다.
+이전 예제에서는 단일 Docker 컨테이너가 RPC 포트 135를 호스트의 포트 135에 매핑하기 때문에 이제 호스트를 통한 분산 트랜잭션은 추가 구성 없이도 작동합니다. SQL Server는 이러한 컨테이너에서 상승된 권한으로 실행되므로 루트로 실행되는 컨테이너에서 포트 135를 직접 사용할 수 있습니다. 컨테이너 외부 또는 루트가 아닌 컨테이너의 SQL Server의 경우 컨테이너에 13500과 같은 다른 임시 포트를 사용해야 하며 포트 135에 대한 트래픽은 해당 포트로 라우팅되어야 합니다. 또한 컨테이너 포트 135에서 임시 포트까지 컨테이너 내에서 포트 라우팅 규칙도 구성해야 합니다.
 
-그러나 컨테이너의 포트 135를 호스트의 다른 포트(예: 13500)에 매핑하려면 호스트에서 포트 라우팅을 구성해야 합니다. 이를 통해 docker 컨테이너는 호스트 및 다른 외부 서버를 통해 분산 트랜잭션에 참여할 수 있습니다. 자세한 내용은 [포트 라우팅 구성](sql-server-linux-configure-msdtc.md#configure-port-routing)을 참조하세요.
+또 컨테이너의 포트 135를 호스트의 다른 포트(예: 13500)에 매핑하려면 호스트에서 포트 라우팅을 구성해야 합니다. 이를 통해 docker 컨테이너는 호스트 및 다른 외부 서버를 통해 분산 트랜잭션에 참여할 수 있습니다.
+
+라우팅 포트에 대한 자세한 내용은 [포트 라우팅 구성](sql-server-linux-configure-msdtc.md#configure-port-routing)을 참조하세요.
+
+> [!NOTE]
+> SQL Server 2017은 기본적으로 루트 컨테이너에서 실행되는 반면 SQL Server 2019 컨테이너는 루트가 아닌 사용자로 실행됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

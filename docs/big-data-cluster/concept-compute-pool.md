@@ -1,26 +1,26 @@
 ---
 title: 컴퓨팅 풀이란?
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 계산 풀에 대해 설명 합니다.
+description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 컴퓨팅 풀에 대해 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.openlocfilehash: f6f2813dff5e965f61f15b947725d78bf327dde7
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798241"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532404"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컴퓨팅 풀이란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 미리 보기 빅 데이터 클러스터에서 ‘SQL Server 컴퓨팅 풀’의 역할을 설명합니다. 컴퓨팅 풀은 빅 데이터 클러스터에 스케일 아웃 계산 리소스를 제공합니다. 다음 섹션에서는 컴퓨팅 풀의 아키텍처 및 기능을 설명합니다.
+이 문서에서는 SQL Server 빅 데이터 클러스터에서 *SQL Server 컴퓨팅 풀*의 역할을 설명합니다. 컴퓨팅 풀은 빅 데이터 클러스터에 스케일 아웃 계산 리소스를 제공합니다. 다음 섹션에서는 컴퓨팅 풀의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="compute-pool-architecture"></a>컴퓨팅 풀 아키텍처
 
@@ -28,11 +28,11 @@ ms.locfileid: "72798241"
 
 ## <a name="scale-out-groups"></a>확장 그룹
 
-Compute 풀은 HDFS, Oracle, MongoDB, Teradata 등의 여러 데이터 원본에 대 한 분산 쿼리에 대 한 PolyBase 스케일 아웃 그룹 역할을 할 수 있습니다. Kubernetes의 컴퓨팅 Pod를 사용하여 빅 데이터 클러스터는 PolyBase 스케일 아웃 그룹의 컴퓨팅 Pod 생성 및 구성을 자동화할 수 있습니다.
+컴퓨팅 풀은 HDFS, Oracle, MongoDB, Teradata 등의 다양한 데이터 원본에 대한 분산 쿼리를 위한 PolyBase 스케일 아웃 그룹 역할을 할 수 있습니다. Kubernetes의 컴퓨팅 Pod를 사용하여 빅 데이터 클러스터는 PolyBase 스케일 아웃 그룹의 컴퓨팅 Pod 생성 및 구성을 자동화할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대해 자세히 알아보려면 다음 리소스를 참조 하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]이란?](big-data-cluster-overview.md)
-- [워크숍: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)
+- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168755"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,9 +206,7 @@ SCHEMABINDING
 이 옵션은 메모리 최적화 테이블의 트리거에 필요하며 기존 테이블의 트리거에는 지원되지 않습니다.  
   
 FOR | AFTER  
-AFTER는 DML 트리거를 시작하는 SQL 문에서 지정한 모든 작업이 성공적으로 시작되었을 때만 트리거가 실행되도록 지정합니다. 모든 참조 연계 동작 및 제약 조건 검사도 이 트리거가 실행되기 전에 성공해야 합니다.  
-  
-지정된 키워드가 FOR뿐인 경우에는 AFTER가 기본값입니다.  
+FOR 또는 AFTER는 DML 트리거를 시작하는 SQL 문에서 지정한 모든 작업이 성공적으로 시작되었을 때만 트리거가 실행되도록 지정합니다. 모든 참조 연계 동작 및 제약 조건 검사도 이 트리거가 실행되기 전에 성공해야 합니다.  
   
 뷰에 대해 AFTER 트리거를 정의할 수 없습니다.  
   

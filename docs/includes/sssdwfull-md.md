@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ecfca3d5b4147a7523ce858671c131a7207bf8f1
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: dffa43d4935399b0855541eb663f4e7a7beac280
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68159769"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536268"
 ---
- Azure SQL 데이터 웨어하우스
+ Azure Synapse Analytics(SQL DW)

@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278197"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988434"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,19 +119,15 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week 및 weekday datepart 인수
 **week**(**wk**, **ww**) 또는 **weekday**(**dw**) *datepart*의 경우 `DATEPART` 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)로 설정된 값에 따라 달라집니다.
   
-모든 해의 1월 1일은 **week**_datepart_의 시작 값을 정의합니다. 예를 들어
+모든 해의 1월 1일은 **week** _datepart_의 시작 값을 정의합니다. 예를 들어
 
 DATEPART(**wk**, '1월 1일, *xxx*x') = 1
 
 여기서 *xxxx*는 연도입니다.
   
-이 표에서는 **week** 및 **weekday** *datepart*에 대한 반환 값을 보여줍니다.
+이 표에서는 각 SET DATEFIRST 인수의 '2007-04-21'에 대한 **week** 및 **weekday** *datepart*의 반환 값을 보여줍니다. 2007년 1월 1일은 월요일에 해당합니다. 2007년 4월 21일은 토요일에 해당합니다. 미국 영어
 
-'2007-04-21'
-
-각 SET DATEFIRST 인수에 대해. 2007년 1월 1일은 월요일에 해당합니다. 2007년 4월 21일은 토요일에 해당합니다. 미국 영어
-
-SET DATEFIRST 7 -- (일요일)
+`SET DATEFIRST 7 -- ( Sunday )`
 
 기본값으로 사용됩니다. DATEFIRST를 설정한 후 datepart 테이블 값에 대한 이 제안된 SQL 문을 사용합니다.
 

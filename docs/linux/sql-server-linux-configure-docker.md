@@ -1,27 +1,35 @@
 ---
 title: Docker의 SQL Server 구성 옵션
-description: Docker에서 SQL Server 2017 및 2019 미리 보기 컨테이너 이미지를 사용하고 조작하는 다양한 방법을 살펴봅니다. 여기에는 데이터 유지, 파일 복사, 문제 해결 등이 포함됩니다.
+description: Docker에서 SQL Server 2017 및 2019 컨테이너 이미지를 사용하고 조작하는 다양한 방법을 살펴봅니다. 여기에는 데이터 유지, 파일 복사, 문제 해결 등이 포함됩니다.
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 01/17/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278255"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531337"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Docker에서 [mssql-server-linux 컨테이너 이미지](https://hub.docker.com/_/microsoft-mssql-server)를 구성하고 사용하는 방법을 설명합니다. 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다.
+이 문서에서는 Docker에서 [mssql-server-linux 컨테이너 이미지](https://hub.docker.com/_/microsoft-mssql-server)를 구성하고 사용하는 방법을 설명합니다. 
+
+기타 배포 시나리오는 다음을 참조하세요.
+
+- [창](../database-engine/install-windows/install-sql-server.md)
+- [Linux](../linux/sql-server-linux-setup.md)
+- [Kubernetes - 빅 데이터 클러스터](../big-data-cluster/deploy-get-started.md)
+
+이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 문서에서는 특히 mssql-server-linux 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows Docker Hub 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
@@ -31,10 +39,10 @@ ms.locfileid: "72278255"
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 끌어와 실행하기
 
-SQL Server 2017 및 SQL Server 2019 미리 보기용 Docker 컨테이너 이미지를 끌어오고 실행하려면 다음 빠른 시작의 필수 조건 및 단계를 따르세요.
+SQL Server 2017 및 SQL Server 2019용 Docker 컨테이너 이미지를 끌어오고 실행하려면 다음 빠른 시작의 필수 조건 및 단계를 따르세요.
 
 - [Docker에서 SQL Server 2017 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Docker에서 SQL Server 2019 미리 보기 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Docker에서 SQL Server 2019 컨테이너 이미지 실행](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 이 구성 문서의 다음 섹션에서는 추가 사용 시나리오를 제공합니다.
 
@@ -43,17 +51,20 @@ SQL Server 2017 및 SQL Server 2019 미리 보기용 Docker 컨테이너 이미�
 
 ## <a id="rhel"></a> RHEL 기반 컨테이너 이미지 실행
 
-SQL Server Linux 컨테이너 이미지에 대한 모든 문서에서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019 미리 보기부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. 모든 docker 명령에서 컨테이너 리포지토리를 **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu**에서 **mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2**로 변경합니다.
+SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. 모든 docker 명령에서 컨테이너 리포지토리를 **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04**에서 **mcr.microsoft.com/mssql/rhel/server:2019-RC1**로 변경합니다.
 
-예를 들어 다음 명령은 RHEL을 사용하는 최신 SQL Server 2019 미리 보기 컨테이너를 끌어옵니다.
+예를 들어 다음 명령은 RHEL을 사용하는 최신 SQL Server 2019 컨테이너를 끌어옵니다.
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
 ```
+
+> [!NOTE]
+> SQL Server 2019의 GA 릴리스부터 최신 RHEL 컨테이너 이미지는 여전히 RC1 버전입니다. 이 버전은 프로덕션 용도로 사용되지 않습니다. 새 RHEL 컨테이너 이미지를 사용할 수 있게 되 면 이 문서가 업데이트됩니다.
 
 ::: moniker-end
 
@@ -127,7 +138,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>컨테이너 내부 도구
 
-SQL Server 2017 미리 보기부터 [SQL Server 명령줄 도구](sql-server-linux-setup-tools.md)가 컨테이너 이미지에 포함되었습니다. 대화형 명령 프롬프트를 사용하여 이미지에 연결하는 경우 로컬에서 도구를 실행할 수 있습니다.
+SQL Server 2017부터 [SQL Server 명령줄 도구](sql-server-linux-setup-tools.md)가 컨테이너 이미지에 포함되었습니다. 대화형 명령 프롬프트를 사용하여 이미지에 연결하는 경우 로컬에서 도구를 실행할 수 있습니다.
 
 1. `docker exec -it` 명령을 사용하여 실행 중인 컨테이너 내에서 대화형 bash 셸을 시작합니다. 다음 예제에서 `e69e056c702d`는 컨테이너 ID입니다.
 
@@ -171,16 +182,16 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-다음 예제에서는 SQL Server 2019 미리 보기 컨테이너 2개를 만들고 호스트 머신의 **1401** 및 **1402** 포트에 매핑합니다.
+다음 예제에서는 SQL Server 2019 컨테이너 2개를 만들고 호스트 머신의 **1401** 및 **1402** 포트에 매핑합니다.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -234,11 +245,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -268,11 +279,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 ::: moniker-end
 
@@ -398,14 +409,14 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
    -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 ::: moniker-end
 
@@ -512,6 +523,118 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 
 1. 필요에 따라 `docker rm`을 사용하여 이전 컨테이너를 제거합니다.
 
+## <a id="buildnonrootcontainer"></a> 루트가 아닌 SQL Server 2017 컨테이너를 빌드하여 실행
+
+`mssql`(루트가 아닌) 사용자 권한으로 시작되는 SQL Server 2017 컨테이너를 빌드하려면 다음 단계를 수행합니다.
+
+> [!NOTE]
+> SQL Server 2019 컨테이너는 루트가 아닌 것으로 자동 시작되므로, 다음 단계는 기본적으로 루트로 시작되는 SQL Server 2017 컨테이너에만 적용됩니다.
+
+1. [루트가 아닌 SQL Server 컨테이너에 대한 샘플 dockerfile](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile)을 다운로드한 후 `dockerfile`로 저장합니다.
+ 
+2. dockerfile 디렉터리의 컨텍스트에서 다음 명령을 실행하여 루트가 아닌 SQL Server 컨테이너를 빌드합니다.
+
+```bash
+cd <path to dockerfile>
+docker build -t 2017-latest-non-root .
+```
+ 
+3. 컨테이너를 시작합니다.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
+```
+
+> [!NOTE]
+> `--cap-add SYS_PTRACE` 플래그는 루트가 아닌 SQL Server 컨테이너가 문제 해결을 위해 덤프를 생성하는 데 필요합니다.
+ 
+4. 다음과 같이 컨테이너가 루트가 아닌 사용자로 실행 중인지 확인합니다.
+
+컨테이너에 대해 docker exec를 실행합니다.
+```bash
+docker exec -it sql1 bash
+```
+ 
+컨테이너 내에서 실행 중인 사용자를 반환하는 `whoami`를 실행합니다.
+ 
+```bash
+whoami
+```
+
+## <a id="nonrootuser"></a> 컨테이너를 호스트의 루트가 아닌 다른 사용자로 실행
+
+SQL Server 컨테이너를 루트가 아닌 다른 사용자로 실행하려면 docker run 명령에 -u 플래그를 추가합니다. 루트가 아닌 사용자가 액세스할 수 있는 '/var/opt/mssql'에 볼륨이 탑재되지 않은 경우 루트가 아닌 컨테이너를 루트 그룹의 일부로 실행해야 한다는 제한 사항이 있습니다. 루트 그룹은 루트가 아닌 사용자에게 추가 루트 사용 권한을 부여하지 않습니다.
+ 
+**UID 4000을 갖는 사용자로 실행**
+ 
+사용자 지정 UID를 사용하여 SQL Server를 시작할 수 있습니다. 예를 들어, 다음 명령은 UID 4000을 사용하여 SQL Server를 시작합니다.
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+> [!Warning]
+> SQL Server 컨테이너에 'mssql' 또는 'root'와 같은 명명된 사용자가 있는지 확인합니다. 그렇지 않으면 SQLCMD를 컨테이너 내에서 실행할 수 없습니다. 컨테이너 내에서 `whoami`를 실행하여 SQL Server 컨테이너가 명명된 사용자로 실행되고 있는지 확인할 수 있습니다.
+
+**루트가 아닌 컨테이너를 루트 사용자 권한으로 실행**
+
+필요한 경우 루트가 아닌 컨테이너를 루트 사용자 권한으로 실행할 수 있습니다. 이 권한이 더 높으므로 컨테이너에 모든 파일 사용 권한이 자동으로 부여됩니다.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**호스트 머신에서 사용자로 실행**
+ 
+다음 명령을 사용하여 호스트 머신에서 기존 사용자를 사용하여 SQL Server를 시작할 수 있습니다.
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**다른 사용자 및 그룹으로 실행**
+ 
+사용자 지정 사용자 및 그룹을 사용하여 SQL Server를 시작할 수 있습니다. 이 예제에서 탑재된 볼륨에는 호스트 머신의 사용자 또는 그룹에 대해 구성된 사용 권한이 있습니다.
+ 
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+## <a id="storagepermissions"></a> 루트가 아닌 컨테이너에 대한 영구 스토리지 권한 구성
+
+루트가 아닌 사용자가 탑재된 볼륨에 있는 DB 파일에 액세스할 수 있도록 하려면 컨테이너를 실행하는 사용자/그룹이 영구 파일 스토리지를 사용할 수 있는지 확인합니다.  
+
+이 명령을 사용하여 데이터베이스 파일의 현재 소유권을 확인할 수 있습니다.
+ 
+```bash
+ls -ll <database file dir>
+```
+
+SQL Server에 지속형 데이터베이스 파일에 대한 액세스 권한이 없는 경우 다음 명령 중 하나를 실행합니다.
+ 
+**루트 그룹에 DB 파일에 대한 r/w 액세스 권한 부여**
+
+루트가 아닌 SQL Server 컨테이너가 데이터베이스 파일에 액세스할 수 있도록 루트 그룹에 다음 디렉터리에 대한 권한을 부여합니다.
+
+```bash
+chgroup -R 0 <database file dir>
+chmod -R g=u <database file dir>
+```
+
+**루트가 아닌 사용자를 파일의 소유자로 설정**
+
+이것은 루트가 아닌 기본 사용자이거나 지정하려는 다른 루트가 아닌 사용자일 수 있습니다. 이 예제에서는 UID 10001을 루트가 아닌 사용자로 설정합니다.
+
+```bash
+chown -R 10001:0 <database file dir>
+```
+
+## <a id="changefilelocation"></a> 기본 파일 위치 변경
+
+`MSSQL_DATA_DIR` 변수를 추가하여 `docker run` 명령에서 데이터 디렉터리를 변경한 다음, 컨테이너의 사용자가 액세스할 수 있는 위치에 볼륨을 탑재합니다.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a id="troubleshooting"></a> 문제 해결
 
 다음 섹션에서는 컨테이너에서 SQL Server를 실행하기 위한 문제 해결 제안 사항을 제공합니다.
@@ -557,11 +680,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04`.
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04`.
 ```
 
 ::: moniker-end
@@ -599,7 +722,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -651,118 +774,6 @@ cat errorlog
 
 > [!TIP]
 > 컨테이너를 만들 때 호스트 디렉터리를 **/var/opt/mssql**에 탑재한 경우, 대신 호스트의 매핑된 경로에 있는 **log** 하위 디렉터리에서 확인할 수 있습니다.
-
-
-## <a id="buildnonrootcontainer"></a> 루트가 아닌 사용자 권한으로 SQL Server 컨테이너 빌드 및 실행
-
-`mssql`(루트가 아닌) 사용자 권한으로 시작되는 SQL Server 컨테이너를 빌드하려면 다음 단계를 수행합니다.
-
-1. [루트가 아닌 SQL Server 컨테이너에 대한 샘플 dockerfile](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile)을 다운로드한 후 `dockerfile`로 저장합니다.
- 
-2. dockerfile 디렉터리의 컨텍스트에서 다음 명령을 실행하여 루트가 아닌 SQL Server 컨테이너를 빌드합니다.
-
-```bash
-cd <path to dockerfile>
-docker build -t 2017-latest-non-root .
-```
- 
-3. 컨테이너를 시작합니다.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
-```
-
-> [!NOTE]
-> `--cap-add SYS_PTRACE` 플래그는 루트가 아닌 SQL Server 컨테이너가 문제 해결을 위해 덤프를 생성하는 데 필요합니다.
- 
-4. 다음과 같이 컨테이너가 루트가 아닌 사용자로 실행 중인지 확인합니다.
-
-컨테이너에 대해 docker exec를 실행합니다.
-```bash
-docker exec -it sql1 bash
-```
- 
-컨테이너 내에서 실행 중인 사용자를 반환하는 `whoami`를 실행합니다.
- 
-```bash
-whoami
-```
- 
-
-## <a id="nonrootuser"></a> 컨테이너를 호스트의 루트가 아닌 다른 사용자로 실행
-
-SQL Server 컨테이너를 루트가 아닌 다른 사용자로 실행하려면 docker run 명령에 -u 플래그를 추가합니다. 루트가 아닌 사용자가 액세스할 수 있는 '/var/opt/mssql'에 볼륨이 탑재되지 않은 경우 루트가 아닌 컨테이너를 루트 그룹의 일부로 실행해야 한다는 제한 사항이 있습니다. 루트 그룹은 루트가 아닌 사용자에게 추가 루트 사용 권한을 부여하지 않습니다.
- 
-**UID 4000을 갖는 사용자로 실행**
- 
-사용자 지정 UID를 사용하여 SQL Server를 시작할 수 있습니다. 예를 들어, 다음 명령은 UID 4000을 사용하여 SQL Server를 시작합니다.
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-> [!Warning]
-> SQL Server 컨테이너에 'mssql' 또는 'root'와 같은 명명된 사용자가 있는지 확인합니다. 그렇지 않으면 SQLCMD를 컨테이너 내에서 실행할 수 없습니다. 컨테이너 내에서 `whoami`를 실행하여 SQL Server 컨테이너가 명명된 사용자로 실행되고 있는지 확인할 수 있습니다.
-
-**루트가 아닌 컨테이너를 루트 사용자 권한으로 실행**
-
-필요한 경우 루트가 아닌 컨테이너를 루트 사용자 권한으로 실행할 수 있습니다. 이 권한이 더 높으므로 컨테이너에 모든 파일 사용 권한이 자동으로 부여됩니다.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-**호스트 머신에서 사용자로 실행**
- 
-다음 명령을 사용하여 호스트 머신에서 기존 사용자를 사용하여 SQL Server를 시작할 수 있습니다.
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-**다른 사용자 및 그룹으로 실행**
- 
-사용자 지정 사용자 및 그룹을 사용하여 SQL Server를 시작할 수 있습니다. 이 예제에서 탑재된 볼륨에는 호스트 머신의 사용자 또는 그룹에 대해 구성된 사용 권한이 있습니다.
- 
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-## <a id="storagepermissions"></a> 루트가 아닌 컨테이너에 대한 영구 스토리지 권한 구성
-루트가 아닌 사용자가 탑재된 볼륨에 있는 DB 파일에 액세스할 수 있도록 하려면 컨테이너를 실행하는 사용자/그룹이 영구 파일 스토리지를 사용할 수 있는지 확인합니다.  
-
-이 명령을 사용하여 데이터베이스 파일의 현재 소유권을 확인할 수 있습니다.
- 
-```bash
-ls -ll <database file dir>
-```
-
-SQL Server에 지속형 데이터베이스 파일에 대한 액세스 권한이 없는 경우 다음 명령 중 하나를 실행합니다.
- 
- 
-**루트 그룹에 DB 파일에 대한 r/w 액세스 권한 부여**
-
-루트가 아닌 SQL Server 컨테이너가 데이터베이스 파일에 액세스할 수 있도록 루트 그룹에 다음 디렉터리에 대한 권한을 부여합니다.
-
-```bash
-chgroup -R 0 <database file dir>
-chmod -R g=u <database file dir>
-```
- 
-**루트가 아닌 사용자를 파일의 소유자로 설정**
-
-이것은 루트가 아닌 기본 사용자이거나 지정하려는 다른 루트가 아닌 사용자일 수 있습니다. 이 예제에서는 UID 10001을 루트가 아닌 사용자로 설정합니다.
-
-```bash
-chown -R 10001:0 <database file dir>
-```
- 
-## <a id="changefilelocation"></a> 기본 파일 위치 변경
-
-`MSSQL_DATA_DIR` 변수를 추가하여 `docker run` 명령에서 데이터 디렉터리를 변경한 다음, 컨테이너의 사용자가 액세스할 수 있는 위치에 볼륨을 탑재합니다.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
-
 
 ## <a name="next-steps"></a>다음 단계
 
