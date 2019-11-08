@@ -1,6 +1,6 @@
 ---
-title: SqlServiceType 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: SqlServiceType 속성 (Sqlservicetype)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b8b0d47a3778303cfcbd234add3167f6c225bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054764"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660881"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ object.SqlServiceType [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 유형을 지정하는 uint32 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  반환 값은 다음 중 하나일 수 있습니다.  
   
-|type|정의|  
+|형식|정의|  
 |----------|----------------|  
 |*1*|MSSQLSERVER는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스입니다.|  
 |*2*|SQLSERVERAGENT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스입니다.|  
@@ -54,13 +54,13 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서비스입니다.|  
 |*6*|ReportServer는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스입니다.|  
 |*7*|SQLBrowser는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser 서비스입니다.|  
-|*8*|NsService는는 [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] 알림 서비스.|  
-|*9*|MSSQLFDLauncher 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 전체 텍스트 필터 데몬 시작 관리자 서비스입니다.|  
-|*10*|SQLPBENGINE 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 엔진 서비스입니다.|  
-|*11*|SQLPBDMS 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 데이터 이동 서비스입니다.|  
-|*12*|MSSQLLaunchpad 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행 패드 서비스입니다.|  
+|*8*|NsService는 [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Notification service입니다.|  
+|*되었는지*|MSSQLFDLauncher는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 전체 텍스트 필터 데몬 시작 관리자 서비스입니다.|  
+|*10*|SQLPBENGINE은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 엔진 서비스입니다.|  
+|*11*|SQLPBDMS는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 데이터 이동 서비스입니다.|  
+|*12*|MSSQLLaunchpad는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행 패드 서비스입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

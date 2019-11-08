@@ -1,5 +1,5 @@
 ---
-title: 구독 뷰 형식(Master Data Services) | Microsoft Docs
+title: 구독 뷰 형식
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085610"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728894"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68085610"
 |**파생 부모 자식(파생 계층 뷰)**|파생 계층 구조를 부모 자식 형식으로 포함합니다.|  
 |**파생 수준(파생 계층 뷰)**|파생 계층 구조를 수준 형식으로 포함합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

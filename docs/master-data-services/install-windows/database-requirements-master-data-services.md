@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 요구 사항(Master Data Services) | Microsoft Docs
+title: 데이터베이스 요구 사항
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4a59bc73be89222fef49aa9e779232cd3548e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a06d5b8ebc22e5456e8f2989766f2f829d637cd0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945011"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728138"
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
 
@@ -26,7 +26,7 @@ ms.locfileid: "67945011"
  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 로컬 또는 원격 컴퓨터에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들고 구성할 수 있습니다. 여러 환경 간에 데이터베이스를 이동하는 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스 및 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 새 위치의 데이터베이스에 연결하여 새 환경에서 정보를 유지 관리할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 의 구성 요소를 설치할 모든 컴퓨터는 사용 허가를 받아야 합니다. 자세한 내용은 EULA(최종 사용자 사용권 계약)를 참조하십시오.  
+>  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 구성 요소를 설치할 모든 컴퓨터는 사용 허가를 받아야 합니다. 자세한 내용은 EULA(최종 사용자 사용권 계약)를 참조하십시오.  
   
 ## <a name="requirements"></a>요구 사항  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들기 전에 다음 요구 사항이 충족되는지 확인하십시오.  
@@ -62,16 +62,16 @@ ms.locfileid: "67945011"
   
 ### <a name="accounts-and-permissions"></a>계정 및 사용 권한  
   
-|형식|Description|  
+|형식|설명|  
 |----------|-----------------|  
-|사용자 계정|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 호스팅하기 위해 Windows 계정 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 계정을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 인스턴스에 연결할 수 있습니다. 사용자 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 **sysadmin** 서버 역할에 속해야 합니다. **sysadmin** 역할에 대한 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
+|사용자 계정|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 호스팅하기 위해 Windows 계정 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 계정을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 인스턴스에 연결할 수 있습니다. 사용자 계정은 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 역할에 속해야 합니다. **sysadmin** 역할에 대한 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 관리자 계정|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 시스템 관리자가 될 도메인 사용자 계정을 지정해야 합니다. 이 데이터베이스에 연결된 모든 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 대해 이 사용자는 모든 기능 영역에서 모든 모델과 데이터를 업데이트할 수 있습니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.|  
   
 ### <a name="database-backup"></a>데이터베이스 백업  
  매일 작업량이 적은 시간에 전체 데이터베이스를 백업하고 사용자 환경의 요구 사항에 따라 트랜잭션 로그를 보다 자주 백업하는 것이 가장 좋습니다. 데이터베이스 백업에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services 데이터베이스](../../master-data-services/master-data-services-database.md)   
  [Master Data Services 데이터베이스에 연결 대화 상자](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   

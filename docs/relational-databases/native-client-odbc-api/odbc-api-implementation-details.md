@@ -1,5 +1,5 @@
 ---
-title: ODBC API 구현 정보 | Microsoft Docs
+title: ODBC API 구현 세부 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,22 +16,21 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 201068f313b7655c33dac31aa622a9be2965df29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113667"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787871"
 ---
-# <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
+# <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   ODBC(Open Database Connectivity)는 애플리케이션에서 ODBC 데이터 원본의 데이터에 액세스하는 데 사용하는 Microsoft Win32 응용 프로그래밍 인터페이스입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조에는 ODBC 함수 호출이 모두 문서화되어 있지는 않습니다. 드라이버 관련 매개 변수를 가지는 함수나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용될 때의 동작에 대해서만 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조에 대 한 Microsoft Data Access Components SDK를 다운로드 합니다 [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), 보거나 합니다 [ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조는 [데이터 액세스 및 저장소 개발자 센터](https://go.microsoft.com/fwlink?linkid=4173)에서 Microsoft Data ACCESS Components SDK를 다운로드 하거나 [odbc 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkId=45250) 를 온라인으로 확인 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -135,8 +134,8 @@ ms.locfileid: "68113667"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41; 참조](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ &#40;ODBC&#41; 참조 SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

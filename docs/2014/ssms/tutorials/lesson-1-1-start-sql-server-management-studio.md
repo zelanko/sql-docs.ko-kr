@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188847"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632793"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio 시작
   이 자습서를 시작하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 간단히 살펴봅니다.  
@@ -24,12 +24,12 @@ ms.locfileid: "63188847"
   
 #### <a name="to-open-sql-server-management-studio"></a>SQL Server Management Studio를 열려면  
   
-1.  에 **시작** 메뉴에서 **모든 프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭 하 고 **SQL Server Management Studio**.  
+1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]을 차례로 가리킨 다음 **SQL Server Management Studio**를 클릭 합니다.  
   
     > [!NOTE]  
-    >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express에서 무료로 다운로드할 수는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), 되었지만 다른 사용자 인터페이스가이 자습서에 설명 된 것입니다.  
+    >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=7593)에서 무료로 다운로드할 수 있지만이 자습서에 설명 된 것과 다른 사용자 인터페이스가 있습니다.  
   
-2.  **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결할를 **서버 이름** 상자는 컴퓨터의 이름을 포함 해야 합니다 여기서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 됩니다. 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명명 된 인스턴스인 합니다 **서버 이름** 상자도 형식으로 인스턴스 이름이 있어야 \< *computer_name* > \\ < *instance_name*>.  
+2.  **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결 하려면 **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치 된 컴퓨터의 이름을 포함 해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명명 된 인스턴스인 경우 **서버 이름** 상자에는 \<*computer_name*> *\\<instance_name*형식으로 인스턴스 이름도 포함 되어야 합니다.  
   
 ## <a name="management-studio-components"></a>Management Studio 구성 요소  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 유형에 따른 전용 창에 정보를 나타냅니다. 데이터베이스 정보는 개체 탐색기 및 문서 창에 표시됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "63188847"
   
      등록된 서버 창은 개체 탐색기 위에 나타납니다. 예약된 서버에는 사용자가 자주 관리하는 서버가 나열됩니다. 이 목록에서 서버를 추가하거나 제거할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행 중인 컴퓨터의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]인스턴스만 나열됩니다.  
   
-2.  서버에 나타나지 않으면 등록 된 서버에서 마우스 오른쪽 단추로 클릭 **데이터베이스 엔진**를 클릭 하 고 **로컬 서버 등록 업데이트**합니다.  
+2.  서버가 나타나지 않으면 등록 된 서버에서 **데이터베이스 엔진**를 마우스 오른쪽 단추로 클릭 한 다음 **로컬 서버 등록 업데이트**를 클릭 합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [등록된 서버 및 개체 탐색기와 연결](../object/object-explorer.md)  

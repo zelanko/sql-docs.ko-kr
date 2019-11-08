@@ -1,5 +1,5 @@
 ---
-title: 특성 그룹 삭제(Master Data Services) | Microsoft Docs
+title: 특성 그룹 삭제
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c86497b0a7231027d8b586147b372767f88b9605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906411"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729367"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>특성 그룹 삭제(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67906411"
   
 -   **참고** 특성 그룹이 있는 경우 특성 그룹에 속하지 않은 특성은 **탐색기**에 표시되지 않습니다. 특성 그룹이 없는 경우 모든 특성이 표시됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "67906411"
   
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [특성 그룹 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

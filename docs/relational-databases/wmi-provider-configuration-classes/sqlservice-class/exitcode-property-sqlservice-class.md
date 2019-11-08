@@ -1,6 +1,6 @@
 ---
-title: ExitCode 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: ExitCode 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0d85f3906991b698c2d2c5a70e7c5e95f7421d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 392fc529b10e79d96a83ccd896733d14d0b8b4dc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68221761"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659678"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ object.ExitCode [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  종료 코드를 지정하는 **uint32** 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  오류가 이 클래스가 나타내는 서비스에 고유한 것이면 이 속성은 ERROR_SERVICE_SPECIFIC_ERROR(1066)로 설정됩니다. 서비스는 실행 중일 때와 정상 종료 시 이 값을 다시 NO_ERROR로 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

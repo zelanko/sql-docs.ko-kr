@@ -1,6 +1,6 @@
 ---
-title: SetCurrentCertificate 메서드 (SecurityCertificate 클래스) | Microsoft Docs
-ms.custom: ''
+title: SetCurrentCertificate 메서드 (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc5120f636a78a9644a13a533b1bf084dca6f01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17d637c2b5b4a8f65a2d2e843cdf439d856fdd3f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071666"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659399"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 메서드(SecurityCertificate 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ object.SetCurrentCertificate(SHA , SQLInstance)
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|*SHA*|필요한 보안 인증서의 SHA(Secure Hash Algorithm) 지문을 지정하는 문자열 값입니다.|  
+|*S*|필요한 보안 인증서의 SHA(Secure Hash Algorithm) 지문을 지정하는 문자열 값입니다.|  
 |*SQLInstance*|인증서가 필요한 인스턴스를 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

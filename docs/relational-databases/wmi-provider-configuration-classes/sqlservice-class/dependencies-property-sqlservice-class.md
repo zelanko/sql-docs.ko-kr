@@ -1,6 +1,6 @@
 ---
-title: Dependencies 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: 종속성 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d904c67980f036240585f6a4b3053459d631d707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 993c922562773648aac5460116ba6e343a72132f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929893"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659282"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.Dependencies [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  참조된 서비스에 종속된 서비스의 목록을 포함하는 string[] 형식의 배열입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙 삭제(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094406"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729411"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68094406"
 > [!NOTE]  
 >  비즈니스 규칙을 삭제하지 않고 제외하면 비즈니스 규칙에 대해 데이터 유효성을 검사하지 않을 수 있습니다. 자세한 내용은 [비즈니스 규칙 제외&#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "68094406"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. 삭제된 비즈니스 규칙은 더 이상 눈금에 표시되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙 제외&#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

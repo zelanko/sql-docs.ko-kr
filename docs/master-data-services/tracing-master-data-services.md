@@ -1,5 +1,5 @@
 ---
-title: 추적(Master Data Services) | Microsoft Docs
+title: 추적
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263979"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727851"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "68263979"
     |-------------|-----------------|  
     |Time|추적 항목이 생성된 시간입니다.|  
     |CorrelationID|요청마다 상관 관계 ID 하나가 할당됩니다. 하나의 요청에 의해 트리거되는 모든 추적은 같은 상관 관계 ID를 공유합니다.<br /><br /> UI에서 오류가 발생하면 오류 메시지에 상관 관계 ID가 표시됩니다.|  
-    |작업(Operation)|요청 작업 이름입니다. 웹 UI 요청의 경우 작업 이름은 URL입니다. API 요청의 경우 작업 이름은 서비스 이름입니다.|  
+    |연산|요청 작업 이름입니다. 웹 UI 요청의 경우 작업 이름은 URL입니다. API 요청의 경우 작업 이름은 서비스 이름입니다.|  
     |Level|이 추적 항목의 수준입니다.|  
     |메시지|추적의 메시지 본문입니다.|  
   

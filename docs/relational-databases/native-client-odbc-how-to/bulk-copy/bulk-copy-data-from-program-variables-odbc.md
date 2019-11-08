@@ -14,18 +14,17 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2ce54f4ad05abb25b0b8c40a359a072a2c60ae6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2617a25d2e038db365f369fe498d2196c0900142
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908254"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781910"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 샘플에서는 대량 복사 함수를 사용 하 여 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
+  이 샘플에서는 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 대량 복사 함수를 사용 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
@@ -51,13 +50,13 @@ ms.locfileid: "72908254"
   
 5.  대량 복사의 각 열에 대해 [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 해당 열을 프로그램 변수에 바인딩합니다.  
   
-6.  프로그램 변수를 데이터로 채운 다음 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출 하 여 데이터 행을 보냅니다.  
+6.  프로그램 변수를 데이터로 채우고 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출 하 여 데이터 행을 보냅니다.  
   
-7.  여러 행을 보낸 후에는 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하 여 이미 전송 된 행을 검사점으로 보냅니다. 1000 행 당 한 번 이상 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하는 것이 좋습니다.  
+7.  여러 행을 보낸 후에는 이미 전송 된 행을 검사점에 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 합니다. 1000 행 당 한 번 이상 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 를 호출 하는 것이 좋습니다.  
   
-8.  모든 행을 보낸 후 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 를 호출 하 여 작업을 완료 합니다.  
+8.  모든 행을 보낸 후에는 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 를 호출 하 여 작업을 완료 합니다.  
 
- [Bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 대량 복사 작업 중에 프로그램 변수의 위치와 길이를 변경할 수 있습니다. [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 다양 한 대량 복사 옵션을 설정 합니다. [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 사용 하 여 **text**, **ntext**및 **image** 데이터를 세그먼트의 서버에 보냅니다.  
+ [Bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)를 호출 하 여 대량 복사 작업을 수행 하는 동안 프로그램 변수의 위치와 길이를 변경할 수 있습니다. [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 다양 한 대량 복사 옵션을 설정 합니다. [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 를 사용 하 여 **text**, **ntext**및 **image** 데이터를 세그먼트에 서버에 보냅니다.  
   
 ## <a name="example"></a>예제  
  이 예제는 IA64에서 지원되지 않습니다.  
@@ -305,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server odbc 드라이버를 사용 하 여 대량 복사 방법 항목 &#40;odbc&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+ [SQL Server odbc 드라이버를 사용 하 여 대량 복사 방법 항목 &#40;odbc&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [프로그램 변수에서 대량 복사](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

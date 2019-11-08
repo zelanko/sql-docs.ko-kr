@@ -1,5 +1,5 @@
 ---
-title: 모델 개체 사용 권한 할당(Master Data Services) | Microsoft Docs
+title: 모델 개체 사용 권한 할당
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21b3f21b33922a8967d800bf94db70e82a018e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c1dbc6be8ba8ddde53ea1ccdfa97fe7992a4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047599"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728744"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 할당(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68047599"
 > [!NOTE]  
 >  모델에 사용 권한을 할당하면 다른 모든 모델에 대한 사용 권한이 암시적으로 거부됩니다. 모델 개체 사용 권한을 할당하지 않으면 사용자나 그룹이 **탐색기**에서 데이터에 액세스할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "68047599"
   
 -   (옵션) [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델 개체 사용 권한 삭제&#40;Master Data Services&#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
  [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  

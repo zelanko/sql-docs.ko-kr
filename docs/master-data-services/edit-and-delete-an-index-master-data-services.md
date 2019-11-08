@@ -1,5 +1,5 @@
 ---
-title: 인덱스 편집 및 삭제(Master Data Services) | Microsoft Docs
+title: 인덱스 편집 및 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086436"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728218"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>인덱스 편집 및 삭제(Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68086436"
 
   특성에 대해 생성한 인덱스를 편집하고 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -62,7 +62,7 @@ ms.locfileid: "68086436"
   
 5.  확인 메시지 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [인덱스 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
