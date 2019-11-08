@@ -1,5 +1,5 @@
 ---
-title: 링크 특성 만들기(Master Data Services) | Microsoft Docs
+title: 링크 특성 만들기
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2689a75ed48e2affbe0c34bccb96014447cd7fae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906716"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728490"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>링크 특성 만들기(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67906716"
 > [!NOTE]  
 >  사용자가 링크 특성 값을 입력할 때 문자열은 **https://** 로 시작해야 하며, 그렇지 않으면 오류가 표시됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "67906716"
 ## <a name="attribute-information"></a>특성 정보  
  생성되는 각 특성에 대해 열이 7개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|설명|  
+|열|설명|  
 |------------|-----------------|  
-|상태|특성 상태입니다.<br /><br /> 저장을 클릭하면 특성이 업데이트 중임을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
+|상태|특성 상태입니다.<br /><br /> 저장을 클릭 하면 특성이 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con) 표시 됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ") 표시 됩니다.|  
 |이름|특성 이름입니다.|  
 |표시 이름|특성 표시 이름입니다.|  
 |설명|특성 설명입니다.|  
@@ -55,11 +55,11 @@ ms.locfileid: "67906716"
   
 -   **만든 사람**: 특성을 만든 사용자의 이름입니다.  
   
--   **On**: 특성을 만든 날짜와 시간입니다.  
+-   **날짜**: 특성을 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 특성을 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **On**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **날짜**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ### <a name="to-create-a-link-attribute"></a>링크 특성을 만들려면  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67906716"
   
 13. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

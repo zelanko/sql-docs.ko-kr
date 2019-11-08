@@ -1,6 +1,6 @@
 ---
-title: ErrorControl 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: ErrorControl 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad022b2c0a4b2dda7a5de2265c67dd3608b5389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929689"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659660"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ object.ErrorControl [= value]
  무시  
  사용자에게 오류를 알리지 않습니다.  
   
- Normal  
+ 보통  
  사용자에게 오류를 알립니다.  
   
  심각  
@@ -54,13 +54,13 @@ object.ErrorControl [= value]
  심각  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
- 알 수 없음  
+ Unknown  
  심각도를 알 수 없습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 값은 오류가 발생할 때 시작 프로그램에서 수행하는 동작을 나타냅니다. 모든 오류는 컴퓨터 시스템에 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

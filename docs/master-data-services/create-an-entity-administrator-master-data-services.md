@@ -1,5 +1,5 @@
 ---
-title: 엔터티 관리자 만들기(Master Data Services) | Microsoft Docs
+title: 엔터티 관리자 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025072"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729537"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>엔터티 관리자 만들기(Master Data Services)
 
@@ -26,12 +26,12 @@ ms.locfileid: "68025072"
 > [!TIP]  
 >  관리 작업을 간편하게 수행하려면 Windows 또는 로컬 그룹을 만든 다음 엔터티 관리자로 구성합니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ## <a name="to-create-an-entity-administrator"></a>엔터티 관리자를 만들려면  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68025072"
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

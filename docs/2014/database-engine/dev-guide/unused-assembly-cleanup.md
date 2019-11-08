@@ -1,5 +1,5 @@
 ---
-title: 사용 되지 않는 어셈블리 정리 | Microsoft Docs
+title: 사용 하지 않는 어셈블리 정리 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780180"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637692"
 ---
 # <a name="unused-assembly-cleanup"></a>사용하지 않는 어셈블리 정리
   `AssemblyCleanup` 예제에는 메타데이터 카탈로그를 쿼리하여 현재 데이터베이스에서 사용되지 않는 어셈블리를 정리하는 .NET 저장 프로시저가 포함되어 있습니다. 유일한 매개 변수인 `visible_assemblies`는 사용되지 않으면서 표시되는 어셈블리를 삭제할지 여부를 지정하는 데 사용됩니다. 값 'false'는 기본적으로 사용되지 않으면서 표시되지 않는 어셈블리만 삭제함을 나타냅니다. 다른 값은 사용되지 않는 모든 어셈블리를 삭제합니다. 사용되지 않는 어셈블리 집합은 진입점이 정의되어 있지 않으며(루틴/유형 및 집계) 해당 어셈블리를 직접 또는 간접적으로 참조하는 사용되는 어셈블리가 없는 어셈블리입니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62780180"
   
 2.  필요한 경우 예제에 대한 디렉터리를 만듭니다. 이 예에서는 C:\MySample을 사용합니다.  
   
-3.  c:\MySample에서 `AssemblyCleanup.vb`(Visual Basic 예제용) 또는 `AssemblyCleanup.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+3.  c:\MySample에서 `AssemblyCleanup.vb` (Visual Basic 예제용) 또는 `AssemblyCleanup.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 4.  선택하는 언어에 따라 다음 중 하나를 실행하여 명령줄 프롬프트에서 예제 코드를 컴파일합니다.  
   
@@ -649,7 +649,7 @@ DROP ASSEMBLY AssemblyCleanupUtils;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

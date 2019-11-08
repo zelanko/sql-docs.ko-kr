@@ -1,5 +1,5 @@
 ---
-title: 변경 내용 추적(Master Data Services) | Microsoft Docs
+title: 변경 내용 추적
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052063"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729658"
 ---
 # <a name="change-tracking-master-data-services"></a>변경 내용 추적(Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68052063"
 > [!NOTE]  
 >  변경 내용 추적 비즈니스 규칙은 준비된(가져온) 데이터가 변경된다고 간주합니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

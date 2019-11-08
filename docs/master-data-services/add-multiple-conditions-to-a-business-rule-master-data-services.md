@@ -1,6 +1,6 @@
 ---
-title: 비즈니스 규칙에 여러 조건 추가(Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: 비즈니스 규칙에 조건 추가
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047843"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728802"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>비즈니스 규칙에 여러 조건 추가(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047843"
 > [!NOTE]  
 >  **OR** 연산자를 사용하는 비즈니스 규칙을 만드는 경우 개별적으로 평가할 수 있는 각 조건 문에 대해 개별 규칙을 만드는 것을 고려해 보십시오. 그런 다음 필요에 따라 규칙을 제외시키면 유연성이 향상되고 더 쉽게 문제를 해결할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "68047843"
     > [!TIP]  
     >  여러 조건을 선택할 수 있으며, 마우스 오른쪽 단추를 클릭하여 하나의 논리 연산자 내에서 조건을 그룹화하거나 특정 논리 연산자 내에서 조건의 그룹을 해제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

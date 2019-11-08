@@ -1,5 +1,5 @@
 ---
-title: 버전 커밋(Master Data Services) | Microsoft Docs
+title: 버전 커밋
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: aa5096a19753bf860453b23476116fd422f3c6cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fa359de1daa844fbcce073b0c67efdd5f721b37
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941132"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728596"
 ---
 # <a name="commit-a-version-master-data-services"></a>버전 커밋(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67941132"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 멤버 및 특성이 변경되지 않게 하려면 모델의 버전을 커밋합니다. 커밋된 버전의 잠금은 해제할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "67941132"
   
 -   [버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

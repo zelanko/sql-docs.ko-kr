@@ -1,6 +1,6 @@
 ---
-title: 파생 계층에서 다 대 다 관계 표시(Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: 파생 계층에서 다 대 다 관계 표시
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085649"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728954"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68085649"
   
  위의 스크린 샷에서는 **Employee** 엔터티가 가운데 **현재 수준** 아래 유일한 수준으로 나타납니다. 오른쪽에 있는 파생 계층 **미리 보기** 는 **Employee** 엔터티의 모든 구성원 목록을 보여 줍니다. 왼쪽에 있는 **사용 가능한 수준** 섹션은 현재 최상위 수준(**Employee**)의 맨 위에 어떤 수준을 추가할 수 있는지 보여 줍니다. 이들 중 대부분은 **Department** DBA를 포함하여 **Employee** 엔터티에서 DBA(도메인 기반 특성)입니다.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **클래스(ClassRegistration.Student를 통해 매핑됨)** . 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **Class(ClassRegistration.Student를 통해 매핑됨)** ). 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -82,7 +82,7 @@ M2M 관계의 데모를 보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshor
 Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 기타 샘플 모델을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.   
   
 ## <a name="one-many-relationship"></a>일 대 다 관계  
- DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security)참조). 예를 들어, 다음 두 개의 엔터티가 있다고 가정합니다. Employee 및 Department, 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
+ DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security)참조). 예를 들어, Employee 및 Department라는 두 개의 엔터티가 있다고 가정해보겠습니다. 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -91,7 +91,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 멤버 보안  
- 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들어  
   
 -   null 재귀에 앵커를 지정하지 않는 재귀적 파생 계층(RDH)입니다(재귀 수준에서 각 구성원은 루트와 해당 재귀 부모 아래에 나타남).  
   
@@ -102,7 +102,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
 ## <a name="collections"></a>컬렉션  
  컬렉션 및 명시적 계층은 사용되지 않습니다. 변환 저장 프로시저(udpConvertCollectionAndConsolidatedMembersToLeaf)는 컬렉션 구성원을 리프 구성원으로 변환하고 컬렉션 구성원 정보를 캡처하기 위해 다 대 다 파생 계층을 만듭니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

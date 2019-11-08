@@ -1,6 +1,6 @@
 ---
-title: State 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: State 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06193b774484afd6e6f7f47f286498c0698ab7c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbccc720f30bd98660e48d7c82a132f76dcf1a26
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094736"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660850"
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ object.State [= value]
   
  다음 값 중 하나일 수 있습니다.  
   
- 1  
+ 1\.  
  중지됨. 서비스가 중지되었습니다.  
   
  2  
@@ -65,9 +65,9 @@ object.State [= value]
  7  
  일시 중지됨 서비스가 일시 중지되었습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

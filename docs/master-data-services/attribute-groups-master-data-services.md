@@ -1,5 +1,5 @@
 ---
-title: 특성 그룹(Master Data Services) | Microsoft Docs
+title: 특성 그룹
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047616"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729762"
 ---
 # <a name="attribute-groups-master-data-services"></a>특성 그룹(Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "68047616"
   
  그룹 내의 특정 특성을 숨기려면 해당 특성에 **거부** 권한을 할당하면 됩니다. 자세한 내용은 [리프 권한&#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

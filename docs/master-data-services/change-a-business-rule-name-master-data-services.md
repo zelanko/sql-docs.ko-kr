@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙 이름 변경(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047370"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728666"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>비즈니스 규칙 이름 변경(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68047370"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 할당된 이름이 비즈니스 요구에 맞지 않으면 비즈니스 규칙 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "68047370"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **비즈니스 규칙 상태**열의 값은 **활성**입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

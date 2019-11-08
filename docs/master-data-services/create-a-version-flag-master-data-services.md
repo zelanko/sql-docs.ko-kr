@@ -1,5 +1,5 @@
 ---
-title: 버전 플래그 만들기(Master Data Services) | Microsoft Docs
+title: 버전 플래그 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25c52ac4dc179940f1a3c45fd5200cf3525c56f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906589"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729557"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67906589"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전에 할당할 버전 플래그를 만듭니다. 플래그는 사용자나 구독 시스템에서 사용해야 하는 버전을 나타낼 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "67906589"
   
 -   [버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [버전 플래그 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

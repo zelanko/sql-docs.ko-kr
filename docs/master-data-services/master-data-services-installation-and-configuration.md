@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 설치 및 구성 | Microsoft Docs
+title: 설치 및 구성
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176299"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728072"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
+  이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)])를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
   
 > [!NOTE] 
 > 이제 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 지원하는 디벨로퍼 버전을 사용할 때 Windows 10 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치할 수 있습니다. 
@@ -46,7 +46,7 @@ ms.locfileid: "70176299"
 - 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
 ## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-기본적으로, [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 가 이미 설치 된 Azure 가상 컴퓨터를 실행 하면도 설치 됩니다. 
+기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 이미 설치 된 Azure 가상 컴퓨터를 실행 하는 경우 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치 됩니다. 
 
 다음 단계는 IIS(인터넷 정보 서비스)를 설치하는 것입니다. [IIS 설치 및 구성](#InstallIIS) 섹션을 참조하세요. 
 
@@ -55,7 +55,7 @@ ms.locfileid: "70176299"
 ## <a name="InstallMDS"></a> Master Data Services 설치  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램의 설치 마법사 또는 명령 프롬프트를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치합니다.  
   
- **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치하려면**  
+ **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 설치 프로그램을 사용하여 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하려면**  
   
 1.  Setup.exe를 두 번 클릭하고 설치 마법사의 단계를 따릅니다.  
   
@@ -87,14 +87,14 @@ ms.locfileid: "70176299"
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. **기능** 페이지에서 다음 기능이 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 기능은 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 필요합니다.
+9. **기능** 페이지에서 다음 기능이 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 기능은 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]의 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)]에 필요합니다.
   
     |기능|기능|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. 왼쪽 창에서 **웹 서버 역할(IIS)** 을 클릭한 후 **역할 서비스**를 클릭합니다.
-11. **역할 서비스** 페이지에서 다음 서비스가 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 서비스는 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 필요합니다.
+11. **역할 서비스** 페이지에서 다음 서비스가 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 서비스는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]에 필요합니다.
 
     > [!WARNING]  
     >  WebDAV 게시 역할 서비스를 설치하지 마세요. WebDAV 게시는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]와 호환되지 않습니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "70176299"
   
  설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하는 방법에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
- 명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 명령 프롬프트를 사용하는 경우 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 기능 매개 변수로 사용할 수 있습니다.  
+ 명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 설치하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 명령 프롬프트를 사용하는 경우 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 기능 매개 변수로 사용할 수 있습니다.  
   
  사전 설치 작업에 대한 추가 정보 링크가 있는 간단한 설명은 [Master Data Services 설치](../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
@@ -118,27 +118,27 @@ ms.locfileid: "70176299"
 
  
 > [!WARNING]
->  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager를 실행하기 전에 [IIS를 설치](#InstallIIS)해야 합니다. 그렇지 않으면 Configuration Manager에 인터넷 정보 서비스 오류가 표시되고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 애플리케이션을 만들 수 없게 됩니다.  
+>  [ Configuration Manager를 실행하기 전에 ](#InstallIIS)IIS를 설치[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]해야 합니다. 그렇지 않으면 Configuration Manager에 인터넷 정보 서비스 오류가 표시되고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 애플리케이션을 만들 수 없게 됩니다.  
 > 
 > **브라우저 요구 사항**
 > >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 애플리케이션은 IE(Internet Explorer) 9 이상에서만 작동합니다. IE 8 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.    
   
-1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 시작하고 왼쪽 창에서 **데이터베이스 구성** 을 클릭합니다.  
+1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 시작하고 왼쪽 창에서 **데이터베이스 구성**을 클릭합니다.  
   
 2.  **데이터베이스 만들기**를 클릭한 다음 **데이터베이스 만들기 마법사** 에서 **다음**을 클릭합니다.  
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. `xxxxxx.xxxxxx.database.windows.net` )을 입력합니다.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]는 SQL Server Managed Instance에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. `xxxxxx.xxxxxx.database.windows.net`)을 입력합니다.
 
 4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
-    >의 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]경우 관리 되는 인스턴스에 Azure SQL Database 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Azure SQL Database 관리 되는 인스턴스에 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
     >
-    >- Azure Active Directory 통합 인증: **현재 사용자-Active Directory 통합**
+    >- Azure Active Directory 통합 인증: **현재 사용자 – Active Directory 통합**
     >- SQL Server 인증: **SQL Server 계정**.
     >
-    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 `sysadmin` 고정 서버 역할의 멤버 여야 합니다.
+    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 고정 서버 `sysadmin` 역할의 멤버 여야 합니다.
 
     > [!NOTE]  
     >  인증 유형으로 **현재 사용자 – 통합 보안**을 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
@@ -161,7 +161,7 @@ ms.locfileid: "70176299"
   
      **데이터베이스 만들기 마법사**의 설정에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 **데이터베이스 구성** 페이지에서 **데이터베이스 선택**을 클릭합니다.  
+7.  **의** 데이터베이스 구성[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 페이지에서 **데이터베이스 선택**을 클릭합니다.  
   
 8.  **연결**을 클릭하고 7단계에서 만든 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 후 **확인**을 클릭합니다. 
 
@@ -194,7 +194,7 @@ ms.locfileid: "70176299"
   
      **웹 애플리케이션 만들기** 대화 상자에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
-12. **웹 구성** 페이지의 **웹 애플리케이션** 상자에서 만든 애플리케이션을 클릭한 다음 **데이터베이스에 애플리케이션 연결** 섹션에서 **선택**을 클릭합니다.  
+12. **웹 구성** 페이지의 **웹 애플리케이션** 상자에서 만든 애플리케이션을 클릭한 다음 **데이터베이스에 애플리케이션 연결** 섹션에서  **선택** 을 클릭합니다.  
   
 13. **연결**을 클릭하고 웹 애플리케이션에 연결할 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "70176299"
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 웹 애플리케이션 및 서비스에 대한 다른 설정을 지정할 수도 있습니다. 예를 들어 데이터를 로드하는 빈도나 유효성 검사 메일을 전송하는 빈도를 지정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 웹 애플리케이션 및 서비스에 대한 다른 설정을 지정할 수도 있습니다. 예를 들어 데이터를 로드하는 빈도나 유효성 검사 메일을 전송하는 빈도를 지정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
 ##  <a name="deploySample"></a> 샘플 모델 및 데이터 배포  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 다음 세 가지 샘플 모델 패키지가 포함되어 있습니다.   이러한 샘플 모델은 데이터를 포함합니다. **샘플 모델 패키지의 기본 위치는 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages입니다.**
@@ -225,13 +225,13 @@ ms.locfileid: "70176299"
   
  이 도구를 실행하기 위한 필수 조건에 대한 자세한 내용은 [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 새로운 기능을 지원하기 위한 데이터 업데이트에 대한 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지 정보(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 새로운 기능을 지원하기 위한 데이터 업데이트에 대한 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
  **샘플 모델을 배포하려면**  
   
 1.  샘플 모델 패키지를 *드라이브*\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration에 복사합니다.  
   
-2.  관리자 열기: 명령 프롬프트를 열고 다음 명령을 실행하여 MDSModelDeploy.exe로 이동합니다.  
+2.  관리자: 명령 프롬프트를 열고 다음 명령을 실행하여 MDSModelDeploy.exe로 이동합니다.  
   
     ```  
     cd c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration  
@@ -275,7 +275,7 @@ ms.locfileid: "70176299"
   
      다음 그림은 product_en.pkg 샘플 모델을 배포하기 위한 명령을 보여 줍니다.  
   
-     ![제품 샘플 모델을 배포하기 위한 명령 줄](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "제품 샘플 모델을 배포하기 위한 명령 줄")  
+     ![제품 샘플 모델을 배포 하기 위한 명령줄](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "제품 샘플 모델을 배포 하기 위한 명령줄")  
   
 4.  샘플 모델을 보려면 다음을 수행합니다.  
   
@@ -292,7 +292,7 @@ ms.locfileid: "70176299"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 및 엔터티를 사용하여 데이터 구조를 작성하는 방법에 대한 개요는 [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
     
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)   
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)   
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

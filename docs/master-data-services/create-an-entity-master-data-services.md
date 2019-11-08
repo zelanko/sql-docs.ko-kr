@@ -1,5 +1,5 @@
 ---
-title: 엔터티 만들기(Master Data Services) | Microsoft Docs
+title: 엔터티 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c47104459cfe9e764c857162be0baa7c84d74a24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133654"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728468"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68133654"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버와 해당 특성을 포함할 엔터티를 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -71,13 +71,13 @@ ms.locfileid: "68133654"
   
 |이름|설명|  
 |----------|-----------------|  
-|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
+|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con)<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ")<br /><br /> 비즈니스 규칙이 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ")|  
 |이름|엔터티 이름입니다.|  
 |설명|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
 |트랜잭션 로그 유형|엔터티의 트랜잭션 로그 유형입니다.|  
 |코드 자동 생성|코드 자동 생성을 사용할지 여부를 지정합니다.|  
-|Data Compression|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
+|데이터 압축|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
 |동기화 대상|엔터티가 동기화 관계의 대상인지 여부를 지정합니다.|  
 |계층 사용|명시적 계층에 엔터티를 사용할지 여부를 지정합니다. 엔터티에 대해 명시적 계층을 하나 이상 만들면 이 열에는 예가 표시됩니다.|  
 |만든 사람|엔터티를 만든 사용자의 사용자 이름입니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "68133654"
   
 -   [파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [엔터티 편집&#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

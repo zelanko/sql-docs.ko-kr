@@ -1,6 +1,6 @@
 ---
-title: StartService 메서드 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: StartService 메서드 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006848"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660836"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ object.StartService()
  다음 시작 상태 중 하나를 지정하는 uint32 값입니다.  
   
  0  
- 명령 실행 성공 요청이 수락되었습니다.  
+ 성공했습니다. 요청이 수락되었습니다.  
   
- 1  
+ 1\.  
  지원되지 않음. 요청이 지원되지 않습니다.  
   
  2  
@@ -117,9 +117,9 @@ object.StartService()
  24  
  서비스가 이미 일시 중지되었습니다. 서비스가 현재 시스템에서 일시 중지되었습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

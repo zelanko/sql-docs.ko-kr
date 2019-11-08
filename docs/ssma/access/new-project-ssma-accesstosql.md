@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002454"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632671"
 ---
 # <a name="new-project-ssma-accesstosql"></a>새 프로젝트 (SSMA) (AccessToSQL)
-사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  
+**새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **이름**  
   
-프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명이 추가 됩니다.  
+프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  
   
-**Location**:  
+**위치**  
   
-입력 하거나 폴더 또는 프로젝트를 저장할 네트워크 위치를 찾습니다.  
+프로젝트를 저장할 폴더 또는 네트워크 위치를 입력 하거나 찾습니다.  
   
 **MigrateTo**  
   
-대상 데이터베이스 버전인 목록 아래 중 하나를 선택합니다  
+아래 목록에서 대상 데이터베이스 버전 중 하나를 선택 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -47,6 +47,6 @@ ms.locfileid: "68002454"
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> ' SQL Azure ' 형식의 새 프로젝트에 필요한 SQL Server Native Client (SNAC) 버전 10.5 또는 위의 액세스 연결 테이블을 SQL Azure 데이터베이스.   
-> SNAC의 최신 버전을 가져올 수 있습니다 [Microsoft® SQL Server® 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=196940)합니다.  
+> ' SQL Azure ' 형식의 새 프로젝트에는 Access 테이블을 SQL Azure 데이터베이스에 연결 하는 데 SQL Server Native Client (SNAC) 버전 10.5 이상이 필요 합니다.   
+> [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)에서 최신 버전의 SNAC를 가져올 수 있습니다.  
   

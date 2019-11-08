@@ -1,5 +1,5 @@
 ---
-title: 엔터티 동기화 관계(Master Data Services) 만들기 및 실행 | Microsoft Docs
+title: 엔터티 동기화 관계 만들기 및 실행
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906531"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729526"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services) 만들기 및 실행
 
@@ -23,7 +23,7 @@ ms.locfileid: "67906531"
 
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  엔터티 동기화 관계를 만들기 위한 필수 구성 요소:  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -95,9 +95,9 @@ ms.locfileid: "67906531"
 ## <a name="sync-relationship-information"></a>동기화 관계 정보  
  각 만들어진 동기화 관계에 대해 열이 열 개인 행 하나가 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|설명|  
+|열|설명|  
 |------------|-----------------|  
-|상태|동기화 관계 상태입니다.<br /><br /> **저장** 을 클릭하거나 동기화 관계를 실행하는 경우 동기화 관계가 업데이트되고 있음을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 동기화 관계를 생성, 편집 또는 실행할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
+|상태|동기화 관계 상태입니다.<br /><br /> **저장** 을 클릭 하거나 동기화 관계를 실행 하는 경우 동기화 관계가 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con) 표시 됩니다.<br /><br /> 동기화 관계를 만들거나 편집 하거나 실행 하는 동안 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ") 표시 됩니다.|  
 |원본 모델|원본 모델 이름입니다.|  
 |원본 버전|원본 버전 이름입니다.|  
 |원본 엔터티|원본 엔터티 이름입니다.|  
@@ -114,11 +114,11 @@ ms.locfileid: "67906531"
   
 -   **만든 사람**: 동기화를 만든 사용자의 이름입니다.  
   
--   **On**: 동기화가 만들어진 날짜와 시간입니다.  
+-   **시기**: 동기화가 만들어진 날짜와 시간입니다.  
   
--   **업데이트한 사람**: 동기화를 마지막으로 업데이트한 사용자의 이름입니다.  
+-   **업데이트한 사람**: 동기화를 마지막 업데이트한 사용자의 이름입니다.  
   
--   **On**: 동기화를 마지막으로 업데이트한 날짜 및 시간입니다.  
+-   **시기**: 동기화를 마지막 업데이트한 날짜 및 시간입니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  [엔터티 동기화 관계 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

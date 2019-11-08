@@ -1,5 +1,5 @@
 ---
-title: ServerSettingsGeneralFlag 클래스 | Microsoft Docs
+title: ServerSettingsGeneralFlag 클래스
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1276e1411757dfc31d9fb874a8a78472591a0bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcc69f5dedb481f8e86d229740e39a7843c87765
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052702"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659758"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68052702"
   
 -   플래그 값을 보고 수정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

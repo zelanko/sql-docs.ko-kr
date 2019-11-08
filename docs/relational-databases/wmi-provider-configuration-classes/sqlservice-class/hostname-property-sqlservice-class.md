@@ -1,6 +1,6 @@
 ---
-title: HostName 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: HostName 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c14a4b77451ce566e576c597639580f6b404f4fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7237e84953ce8af4cd0b34e1e4dc219f772ef42
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929672"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659291"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.HostName [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스의 호스트 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637834"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637792"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "62637834"
   
 -   서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 [Windows Installer 3.0 재배포 가능 패키지](https://go.microsoft.com/fwlink/?LinkId=46459)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 [Windows Installer 3.0 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=16821)를 참조 하세요.  
   
 > [!NOTE]  
 >  이 소프트웨어를 설치하기 전에 관리자 권한으로 로그온했는지 확인하십시오.  
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- 지 원하는 운영 체제의 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client에 대 한 지원 정책을](applications/support-policies-for-sql-server-native-client.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 지 원하는 운영 체제 목록은 [SQL Server Native Client에 대 한 지원 정책](applications/support-policies-for-sql-server-native-client.md)을 참조 하세요.  
   
 ## <a name="sql-server-requirements"></a>SQL Server 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치되어 있어야 합니다.  
@@ -62,22 +62,22 @@ ms.locfileid: "62637834"
   
  ODBC에는 `DataTypeCompatibility` 컨트롤이 없습니다.  
   
- IDBInfo::GetKeywords는 항상 해당 서버 버전에 연결 하 고 영향을 받지는 키워드 목록을 반환 `DataTypeCompatibility`합니다.  
+ IDBInfo:: GetKeywords는 항상 연결의 서버 버전에 해당 하는 키워드 목록을 반환 하며 `DataTypeCompatibility`의 영향을 받지 않습니다.  
   
 |데이터 형식|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 애플리케이션에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|텍스트 모드|  
-|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|CLR UDT (> 8kb)|udt|varbinary|image|  
+|varbinary(max)|varbinary|varbinary|이미지|  
+|varchar(max)|varchar|varchar|텍스트|  
+|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|XML|XML|XML|Ntext|  
+|CLR UDT (> 8Kb)|udt|varbinary|이미지|  
 |date|date|varchar|Varchar|  
-|Datetime2|Datetime2|varchar|Varchar|  
+|datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
-|Time|Time|varchar|Varchar|  
+|time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 프로그래밍](sql-server-native-client-programming.md)   
  [SQL Server Native Client 설치](applications/installing-sql-server-native-client.md)  
   

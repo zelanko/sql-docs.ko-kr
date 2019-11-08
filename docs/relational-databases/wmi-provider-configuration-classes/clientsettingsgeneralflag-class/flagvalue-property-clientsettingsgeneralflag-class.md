@@ -1,6 +1,6 @@
 ---
-title: FlagValue 속성 (ClientSettingsGeneralFlag 클래스) | Microsoft Docs
-ms.custom: ''
+title: 플래그 값 속성 (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e733b3d8dfe56b896d1b880f1f5d7502e14b7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bdcb53b4f9654114e92b6d5bb7154652201da67
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049812"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660633"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 속성(ClientSettingsGeneralFlag 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  플래그의 값을 지정하는 부울 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

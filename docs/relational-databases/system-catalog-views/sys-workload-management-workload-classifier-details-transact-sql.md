@@ -1,7 +1,7 @@
 ---
-title: sys.workload_management_workload_classifier_details (TRANSACT-SQL) | Microsoft Docs
+title: sys. workload_management_workload_classifier_details (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061290"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632923"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact SQL)
+# <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys. workload_management_workload_classifier_details (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -27,8 +27,8 @@ ms.locfileid: "68061290"
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|분류자의 ID입니다. 에 조인 가능 [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)합니다. Null을 허용하지 않습니다.|
-|classifier_type|**sysname**|분류 수행 되는 엔터티입니다. Null을 허용하지 않습니다.|MEMBERNAME|
+|classifier_id|**int**|분류자의 ID입니다.  Null을 허용하지 않습니다.|
+|classifier_type|**sysname**|조인 가능를 [workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)합니다.|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
 |classifier_value|**sysname**|분류자의 값입니다. Null을 허용하지 않습니다.||
 
 ## <a name="permissions"></a>사용 권한
@@ -37,4 +37,4 @@ VIEW SERVER STATE 권한이 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
   
- SQL Data Warehouse 및 병렬 데이터 웨어하우스에 대 한 모든 카탈로그 뷰 목록을 참조 하세요 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)합니다. 워크 로드 분류자를 참조 하세요 [워크 로드 분류자 만들기](../../t-sql/statements/create-workload-classifier-transact-sql.md)합니다. 작업 분류에 대 한 자세한 내용은 SQL Data Warehouse를 참조 하세요 [워크 로드 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 및 [작업 중요도](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+SQL Data Warehouse 및 병렬 데이터 웨어하우스의 모든 카탈로그 뷰 목록은 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)를 참조 하세요. 작업 분류자를 만들려면 [작업 분류자 만들기](../../t-sql/statements/create-workload-classifier-transact-sql.md)를 참조 하세요. 작업 분류에 대 한 자세한 내용은 SQL Data Warehouse [작업 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 및 [작업 중요도](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 를 참조 하세요.
