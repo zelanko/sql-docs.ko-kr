@@ -1,8 +1,8 @@
 ---
-title: 업그레이드 하는 SQL Server에 대 한 데이터베이스 실험 도우미 솔루션의 개요
-description: 데이터베이스 실험 도우미의 개요
+title: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미 솔루션 개요
+description: 데이터베이스 실험 도우미 개요
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,101 +10,99 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 1183c6a443406f6031453b876f9165257db82c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 656236be66ecb2b7127e45ab1ef361f1eb7703e6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058904"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637939"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미의 개요
+# <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
 
-데이터베이스 실험 도우미 (비활성화)에 SQL Server 업그레이드에 대 한 실험 솔루션입니다. 비활성화는 특정 워크 로드에 대 한 SQL Server의 대상된 버전을 평가할 수 있습니다. 이전 SQL Server 버전 (2005부터 시작)에서 SQL Server의 최신 버전으로 업그레이드 하는 고객 도구에서 제공 하는 분석 메트릭을 사용 하 여 수 있습니다. 
+DEA (데이터베이스 실험 도우미)는 SQL Server 업그레이드를 위한 실험 솔루션입니다. DEA는 특정 작업에 대 한 대상 버전의 SQL Server을 평가 하는 데 도움이 됩니다. 이전 SQL Server 버전 (2005부터)에서 최신 버전의 SQL Server로 업그레이드 하는 고객은 도구가 제공 하는 분석 메트릭을 사용할 수 있습니다.
 
-비활성화 분석 메트릭은 다음과 같습니다.
+DEA 분석 메트릭은 다음과 같습니다.
+
 - 호환성 오류가 있는 쿼리
-- 성능이 저하 된 쿼리 및 쿼리 계획
-- 다른 작업 부하 비교 데이터
+- 저하 된 쿼리 및 쿼리 계획
+- 기타 워크 로드 비교 데이터
 
-비교 데이터 신뢰도 높은 및 업그레이드 환경이 성공적 이면 발생할 수 있습니다.
+비교 데이터는 더 높은 신뢰도와 성공적인 업그레이드 환경을 유발할 수 있습니다.
 
-비활성화 하는 데모 19 분 소개의 경우 다음 동영상을 시청 합니다.
+## <a name="get-dea"></a>DEA 가져오기
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+DEA를 설치 하려면 최신 버전의 도구를 [다운로드](https://www.microsoft.com/download/details.aspx?id=54090) 합니다. 그런 다음 **DatabaseExperimentationAssistant** 파일을 실행 합니다.
 
-## <a name="get-dea"></a>비활성화를 가져오기
+## <a name="solution-architecture-for-comparing-workloads"></a>워크 로드 비교를 위한 솔루션 아키텍처
 
-비활성화를 설치 하려면 [다운로드](https://www.microsoft.com/download/details.aspx?id=54090) 도구의 최신 버전입니다. 그런 다음 실행 합니다 **DatabaseExperimentationAssistant.exe** 파일입니다.
+다음 다이어그램에서는 워크 로드 비교에 대 한 솔루션 아키텍처를 보여 줍니다. 작업 비교는 SQL Server 2008에서 SQL Server 2016로 업그레이드 하는 동안 DEA 및 Distributed Replay를 사용 합니다.
 
-## <a name="solution-architecture-for-comparing-workloads"></a>워크 로드를 비교 하기 위한 솔루션 아키텍처
+![워크 로드 비교 솔루션 아키텍처](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
-다음 다이어그램은 작업 부하 비교에 대 한 솔루션 아키텍처를 보여 줍니다. SQL Server 2008에서 SQL Server 2016로 업그레이드 하는 동안 비활성화 및 Distributed Replay를 사용 하는 작업 부하 비교 합니다.
+## <a name="dea-prerequisites"></a>DEA 필수 구성 요소
 
-![작업 부하 비교 솔루션 아키텍처](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
+DEA를 실행 하기 위한 몇 가지 필수 구성 요소는 다음과 같습니다.
 
-## <a name="dea-prerequisites"></a>필수 구성 요소 비활성화
+- 최소 하드웨어 요구 사항: 3.5 GB의 RAM이 있는 단일 코어 컴퓨터입니다.
+- 이상적인 하드웨어 요구 사항: 8 코어 CPU (3.5 GB 이상의 RAM 이상). 코어 수가 8 개를 초과 하는 프로세서는 DEA 런타임을 향상 시 키 지 않습니다.
+- A, B 및 보고서 분석 데이터베이스를 저장 하려면 성능 추적 크기의 추가 33%가 필요 합니다.
 
-다음은 비활성화를 실행 하기 위한 일부 필수 구성 요소입니다.
-- 최소 하드웨어 요구 사항: 3.5GB RAM 사용 하 여 단일 코어 컴퓨터입니다.
-- 이상적인 하드웨어 요구 사항: 8 코어 CPU (3.5GB RAM 이상). 프로세서 8 개 이상의 코어가 있는 비활성화는 런타임을 개선 하지 않습니다.
-- 성능 추적 크기의 추가 33 %A, B 및 보고서 분석 데이터베이스가 필요 합니다.
+## <a name="configure-dea"></a>DEA 구성
 
-## <a name="configure-dea"></a>비활성화를 구성 합니다.
+필수 구성 요소 환경 아키텍처에서는 *Distributed Replay 컨트롤러와 동일한 컴퓨터에*DEA를 설치 하는 것이 좋습니다. 이 방법을 통해 시스템 간 호출을 방지 하 고 구성을 간소화 합니다.
 
-환경 필수 구성 요소 아키텍처에서는 비활성화를 설치 하는 권장 *Distributed Replay controller와 동일한 컴퓨터에*입니다. 이 방법은 컴퓨터 간 호출을 방지 하 고 구성을 간소화 합니다.
+### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>DEA를 사용 하 여 작업 비교에 필요한 구성
 
-### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>비활성화를 사용 하 여 작업 부하 비교에 대 한 필수 구성
+DEA는 Windows 인증을 사용 하 여 데이터베이스 서버에 연결 합니다. DEA를 실행 하는 사용자가 Windows 인증을 사용 하 여 데이터베이스 서버 (원본, 대상 및 분석)에 연결할 수 있는지 확인 합니다.
 
-비활성화는 Windows 인증을 사용 하 여 데이터베이스 서버에 연결 합니다. Windows 인증을 사용 하 여 비활성화를 실행 하는 사용자 데이터베이스 서버 (원본, 대상 및 분석)에 연결할 수 있는지 확인 해야 합니다.
+**캡처 구성 요구 사항**:
 
-**구성 요구 사항 캡처**:
+- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 원본 데이터베이스 서버에 연결할 수 있습니다.
+- DEA를 실행 하는 사용자에 게 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+- 원본 데이터베이스 서버를 실행 하는 서비스 계정에는 추적 폴더 경로에 대 한 쓰기 권한이 있습니다.
 
-*   비활성화를 실행 하는 사용자는 Windows 인증을 사용 하 여 원본 데이터베이스 서버에 연결할 수 있습니다.
-*   비활성화를 실행 하는 사용자에 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
-*   원본 데이터베이스 서버를 실행 하는 서비스 계정 추적 폴더 경로에 쓰기 액세스할 수 있습니다.
-
-자세한 내용은 참조는 [FAQ 캡처](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+자세한 내용은 [캡처 FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture) 를 참조 하세요.
 
 **재생 구성 요구 사항**: 
 
-*   비활성화를 실행 하는 사용자는 Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
-*   비활성화를 실행 하는 사용자에 대상 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
-*   대상 데이터베이스 서버를 실행 하는 서비스 계정 추적 폴더 경로에 쓰기 액세스할 수 있습니다.
-*   Distributed Replay client를 실행 하는 서비스 계정 Windows 인증을 사용 하 여 대상 데이터베이스 서버를 연결할 수 있습니다.
-*   비활성화는 COM 인터페이스를 사용 하 여 Distributed Replay controller와 통신 합니다. Distributed Replay 컨트롤러에서 들어오는 요청에 대 한 TCP 포트가 열려 있는지 확인 합니다.
+- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
+- DEA를 실행 하는 사용자에 게 대상 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+- 대상 데이터베이스 서버를 실행 하는 서비스 계정에는 추적 폴더 경로에 대 한 쓰기 권한이 있습니다.
+- Distributed Replay 클라이언트를 실행 하는 서비스 계정은 Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
+- DEA는 COM 인터페이스를 사용 하 여 Distributed Replay 컨트롤러와 통신 합니다. Distributed Replay 컨트롤러에서 들어오는 요청에 대해 TCP 포트가 열려 있는지 확인 합니다.
 
-자세한 내용은 참조는 [FAQ를 재생 합니다.](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+자세한 내용은 [재생 FAQ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay) 를 참조 하세요.
 
-**분석 구성 요구 사항**: 
+**분석 구성 요구 사항**:
 
-*   비활성화를 실행 하는 사용자는 Windows 인증을 사용 하 여 분석 데이터베이스 서버에 연결할 수 있습니다.
-*   비활성화를 실행 하는 사용자에 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 분석 데이터베이스 서버에 연결할 수 있습니다.
+- DEA를 실행 하는 사용자에 게 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
 
-자세한 내용은 참조는 [분석 FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+자세한 내용은 [분석 FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports) 를 참조 하세요.
 
 ## <a name="set-up-telemetry"></a>원격 분석 설정
 
-비활성화가 Microsoft에 원격 분석 정보를 보낼 수 있는 인터넷 사용 기능을 합니다. Microsoft 제품 환경을 개선 하기 위해 원격 분석을 수집 합니다. 원격 분석은 선택 사항입니다. 수집 되는 정보는 로컬 감사를 위해 컴퓨터에 저장 됩니다. 항상 수집 되는 항목을 볼 수 있습니다. 비활성화에서 모든 로그 파일은 %temp% 저장 됩니다\\비활성화 폴더입니다.
+DEA에는 원격 분석 정보를 Microsoft에 보낼 수 있는 인터넷 사용 기능이 있습니다. Microsoft는 제품 환경을 개선 하기 위해 원격 분석을 수집 합니다. 원격 분석은 선택 사항입니다. 수집 되는 정보는 로컬 감사를 위해 컴퓨터에도 저장 됩니다. 수집 된 항목을 언제 든 지 볼 수 있습니다. DEA의 모든 로그 파일 은% temp%\\DEA 폴더에 저장 됩니다.
 
-수집할 이벤트를 결정할 수 있습니다. 또한 수집 된 이벤트를 Microsoft로 보낼지 여부를 결정 합니다. 네 가지 유형의 이벤트는
+수집 되는 이벤트를 결정할 수 있습니다. 수집 된 이벤트를 Microsoft에 보낼지 여부도 결정 합니다. 이벤트에는 다음과 같은 네 가지 유형이 있습니다.
 
-*   **TraceEvent**: 응용 프로그램 (예: "트리거 중지 캡처")에 대 한 이벤트를 사용 합니다.
-*   **예외**: 응용 프로그램 사용 하는 동안 throw 된 예외입니다.
-*   **DiagnosticEvent**: 문제가 발생할 때 진단을 지원 하기 위해 이벤트 로그 (*되지* Microsoft로 전송) 합니다.
-*   **FeedbackEvent**: 응용 프로그램을 통해 제출 된 사용자 피드백
+- **Traceevent**: 응용 프로그램에 대 한 사용 이벤트 (예: "트리거된 캡처 중지")입니다.
+- **예외**: 응용 프로그램을 사용 하는 동안 예외가 throw 되었습니다.
+- **DiagnosticEvent**: 문제가 발생 하는 경우 진단에 도움이 되는 이벤트 로그 (Microsoft로 보내지지*않음* )입니다.
+- **FeedbackEvent**: 응용 프로그램을 통해 제출 된 사용자 의견입니다.
 
-이러한 단계 수집할 이벤트를 선택 하는 방법을 보여 줍니다. Microsoft로 이벤트가 전송 되는 여부 및:
+이러한 단계에서는 수집 되는 이벤트와 이벤트를 Microsoft로 보낼지 여부를 선택 하는 방법을 보여 줍니다.
 
-1.  비활성화를 설치한 위치로 이동 (예: c:\\프로그램 파일 (x86)\\Microsoft Corporation\\데이터베이스 실험 도우미).
-2.  두.config 파일을 엽니다. (응용 프로그램)에 대 한 DEA.exe.config 및 DEACmd.exe.config (CLI)에 대 한 합니다.
-3.  이벤트의 유형 수집을 중지 하려면 값을 설정 *이벤트* (예를 들어 **TraceEvent**)를 **false**합니다. 이벤트를 다시 수집을 시작 하려면 값을 설정 **true**합니다.
-4.  이벤트의 로컬 복사본을 저장을 중지 하려면 값을 설정 **TraceLoggerEnabled** 하 **false**합니다. 다시 로컬 복사본을 저장 하려면 값을 설정 **true**합니다.
-5.  Microsoft로 이벤트를 보내지 않으려면 값을 설정 **AppInsightsLoggerEnabled** 하 **false**합니다. 다시 Microsoft로 이벤트를 전송 하려면 값을 설정 **true**합니다.
+1. DEA가 설치 된 위치 (예: C:\\Program Files (x86)\\Microsoft Corporation\\데이터베이스 실험 도우미)로 이동 합니다.
+2. 두 .config 파일 인 DEA (응용 프로그램용) 및 DEACmd .exe .config (CLI의 경우)를 엽니다.
+3. 이벤트 유형 수집을 중지 하려면 *이벤트* 의 값 (예: **traceevent**)을 **false**로 설정 합니다. 이벤트 수집을 다시 시작 하려면 값을 **true**로 설정 합니다.
+4. 이벤트의 로컬 복사본을 저장 하는 것을 중지 하려면 **TraceLoggerEnabled** 의 값을 **false**로 설정 합니다. 로컬 복사본 저장을 다시 시작 하려면 값을 **true**로 설정 합니다.
+5. Microsoft로의 이벤트 전송을 중지 하려면 **AppInsightsLoggerEnabled** 의 값을 **false**로 설정 합니다. Microsoft로 이벤트를 다시 보내기 시작 하려면 값을 **true**로 설정 합니다.
 
-비활성화가 적용 된 [Microsoft 개인정보취급방침](https://aka.ms/dea-privacy).
+DEA은 [Microsoft 개인 정보 취급 방침](https://aka.ms/dea-privacy)의 적용을 받습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-[시작](database-experimentation-assistant-get-started.md) 캡처를 재생 하 고 추적을 분석 하는 데 필요한 단계를 안내 합니다.
+[시작](database-experimentation-assistant-get-started.md) 에서는 추적을 캡처, 재생 및 분석 하는 데 필요한 단계를 안내 합니다.

@@ -1,6 +1,6 @@
 ---
-title: Properties 속성 (ServerNetworkProtocol 클래스) | Microsoft Docs
-ms.custom: ''
+title: Properties 속성 (ServerNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71e99af016ab114eecaa170374f9e07bf53bd3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4d28d0d41ed28ac2f623f38e0a977ded66f3f88
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933663"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660394"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 속성(ServerNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,5 +42,5 @@ object.Properties [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜에서 지원하는 속성을 나타내는 [ServerNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) 개체의 배열입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   

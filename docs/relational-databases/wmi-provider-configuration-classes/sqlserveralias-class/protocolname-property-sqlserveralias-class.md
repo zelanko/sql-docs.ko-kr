@@ -1,6 +1,6 @@
 ---
-title: ProtocolName 속성 (SqlServerAlias 클래스) | Microsoft Docs
-ms.custom: ''
+title: ProtocolName 속성 (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74c78cd8f90890814921d7b1ce78e65ab8c78a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052434"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660417"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 속성(SqlServerAlias 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,5 +42,5 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 연결 별칭에서 사용하는 프로토콜의 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   

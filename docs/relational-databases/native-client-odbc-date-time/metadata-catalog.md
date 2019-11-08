@@ -1,5 +1,5 @@
 ---
-title: 메타 데이터 카탈로그 | Microsoft Docs
+title: 카탈로그 메타 데이터 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,39 +14,38 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0d9cf214833497734ed7dee8fdddbc227d4b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030301"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783699"
 ---
 # <a name="metadata---catalog"></a>메타데이터 - 카탈로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 항목에서 반환 된 열 메타 데이터를 설명 **SQLColumns** 및 **SQLProcedureColumns**, 장소와 데이터 형식을 메타 데이터에서 반환 된 **SQLGetTypeInfo**.  
+  이 항목에서는 **Sqlcolumns** 및 **SQLProcedureColumns**에서 반환 하는 열 메타 데이터와 **SQLGetTypeInfo**에서 반환 하는 데이터 형식 메타 데이터에 대해 설명 합니다.  
   
-## <a name="remarks"></a>설명  
- 다음과 같은 열 값으로 날짜/시간 형식에 대 한 반환 됩니다 **SQLColumns** 및 **SQLProcedureColumns**.  
+## <a name="remarks"></a>주의  
+ **Sqlcolumns** 및 **SQLProcedureColumns**에서 날짜/시간 형식에 대해 반환 되는 열 값은 다음과 같습니다.  
   
-|매개 변수 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|COLUMN_SIZE|10|8, 10 ... 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.7|1.7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 다음과 같은 열 값으로 날짜/시간 형식에 대 한 반환 됩니다 **SQLGetTypeInfo**.  
+ **SQLGetTypeInfo**에서 날짜/시간 형식에 대해 반환 되는 열 값은 다음과 같습니다.  
   
-|매개 변수 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -58,7 +57,7 @@ ms.locfileid: "68030301"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|0|0|0|3|0|0|  
 |MAXIMUM_SCALE|0|7|0|3|7|7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
@@ -67,7 +66,7 @@ ms.locfileid: "68030301"
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
   
-## <a name="see-also"></a>관련 항목  
- [메타 데이터 &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+## <a name="see-also"></a>관련 항목:  
+ [메타 &#40;데이터 ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

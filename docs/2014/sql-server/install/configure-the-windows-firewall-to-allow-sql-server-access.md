@@ -23,14 +23,14 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63058109"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637853"
 ---
-# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
+# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>SQL Server 액세스를 허용하도록 Windows 방화벽 구성
   방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
  방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 컴퓨터에서 액세스를 허용하도록 방화벽을 구성해야 합니다. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "63058109"
   
     -   일부 범위 제한 설정  
   
-     제어판의 **Windows 방화벽** 항목은 방화벽 구성에 익숙하지 않은 사용자, 그리고 모바일 형태가 아닌 컴퓨터에 대한 기본 방화벽 옵션을 구성하는 사용자에게 가장 적합합니다. 열 수도 있습니다는 **Windows 방화벽** 제어판의 항목을 `run` 명령을 다음 절차를 사용 하 여:  
+     제어판의 **Windows 방화벽** 항목은 방화벽 구성에 익숙하지 않은 사용자, 그리고 모바일 형태가 아닌 컴퓨터에 대한 기본 방화벽 옵션을 구성하는 사용자에게 가장 적합합니다. 다음 절차를 사용 하 여 `run` 명령에서 제어판의 **Windows 방화벽** 항목을 열 수도 있습니다.  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Windows 방화벽 항목을 열려면  
   
@@ -131,7 +131,7 @@ ms.locfileid: "63058109"
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  다음 표에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
   
-|시나리오|포트|주석|  
+|시나리오|포트|설명|  
 |--------------|----------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 1433|방화벽에서 허용되는 가장 일반적인 포트입니다. 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)]설치에 대한 일상적인 연결 또는 컴퓨터에서 실행 중인 유일한 인스턴스인 명명된 인스턴스에 적용됩니다. 명명된 인스턴스에는 특별 고려 사항이 있습니다. 이 항목의 뒷부분에 나오는 [동적 포트](#BKMK_dynamic_ports) 를 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스|TCP 포트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작할 때 결정되는 동적 포트입니다.|아래 [동적 포트](#BKMK_dynamic_ports)섹션의 설명을 참조하세요. 명명된 인스턴스를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 UDP 포트 1434가 필요할 수 있습니다.|  
@@ -143,14 +143,14 @@ ms.locfileid: "63058109"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 포트 4022. 사용되는 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 기본 포트는 없지만 이는 온라인 설명서 예에서는 이 구성이 일반적으로 사용됩니다.|  
 |데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 엔드포인트가 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
 |복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅샷을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 엔드포인트(포트를 구성할 수 있지만 기본 포트는 80)를 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_additional_ports) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [TRANSACT-SQL 디버거 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)합니다.|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_additional_ports) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [Transact-sql 디버거 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조 하세요.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.  
   
 ####  <a name="BKMK_dynamic_ports"></a> 동적 포트  
  기본적으로 명명된 인스턴스( [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]포함)는 동적 포트를 사용합니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 사용 가능한 포트를 식별하고 해당 포트 번호를 사용합니다. 명명된 인스턴스가 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 유일한 인스턴스인 경우 보통 TCP 포트 1433을 사용합니다. 다른 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 설치된 경우 이 인스턴스는 다른 TCP 포트를 사용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 선택되는 포트가 변경될 수 있기 때문에 올바른 포트 번호에 대한 액세스가 가능하도록 방화벽을 구성하기가 어렵습니다. 따라서 방화벽을 사용하는 경우 매번 동일한 포트 번호를 사용하도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 구성하는 것이 좋습니다. 이러한 방식을 고정 포트 또는 정적 포트라고 합니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
- 고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 **sqlservr.exe**와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램에 대한 예외를 방화벽에서 만드는 것입니다([!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
+ 고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **와 같은** 프로그램에 대한 예외를 방화벽에서 만드는 것입니다( [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
   
 > [!NOTE]  
 >  다음 절차에서는 제어판의 **Windows 방화벽** 항목을 사용합니다. 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하면 보다 복잡한 규칙을 구성할 수 있습니다. 여기에는 심층적인 방어를 제공하는 데 유용한 서비스 예외 구성이 포함됩니다. 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.  
@@ -159,21 +159,21 @@ ms.locfileid: "63058109"
   
 1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 **프로그램 추가**를 클릭합니다.  
   
-2.  인스턴스의 위치로 이동 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예를 들어 방화벽을 통과 하도록 허용 하려는 **C:\Program Files\Microsoft SQL Server\MSSQL12. < instance_name > \MSSQL\Binn**선택  **sqlservr.exe**를 클릭 하 고 **오픈**합니다.  
+2.  방화벽을 통해 허용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 위치 (예: **C:\Program FILES\MICROSOFT SQL Server\MSSQL12. < instance_name > \MSSQL\Binn**)로 이동한 후 sqlservr.exe를 선택 하 고 열기를 클릭 **합니다.** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)를 참조하세요.  
+ 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)를 참조하세요.  
   
 ###  <a name="BKMK_ssas"></a> Analysis Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
   
-|기능|포트|주석|  
+|기능|포트|설명|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|기본 인스턴스에 대한 TCP 포트 2383|기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 표준 포트입니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명명된 인스턴스에만 필요한 TCP 포트 2382|포트 번호를 지정하지 않는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 명명된 인스턴스에 대한 클라이언트 연결 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 수신하는 포트인 포트 2382로 전달됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 해당 요청을 명명된 인스턴스가 사용하는 포트로 리디렉션합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTP를 통해 사용하도록 구성<br /><br /> (피벗 테이블?? 서비스는 HTTP 또는 HTTPS)|TCP 포트 80|URL을 통한 HTTP 연결에 사용됩니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTPS를 통해 사용하도록 구성<br /><br /> (피벗 테이블?? 서비스는 HTTP 또는 HTTPS)|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTP를 통해 사용하도록 구성<br /><br /> 피벗 테이블 인가요? 서비스는 HTTP 또는 HTTPS를 사용 합니다.|TCP 포트 80|URL을 통한 HTTP 연결에 사용됩니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTPS를 통해 사용하도록 구성<br /><br /> 피벗 테이블 인가요? 서비스는 HTTP 또는 HTTPS를 사용 합니다.|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
   
  사용자가 IIS 및 인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 액세스하는 경우 IIS가 수신하고 있는 포트를 열고 클라이언트 연결 문자열에 해당 포트를 지정해야 합니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 직접 액세스하는 포트를 열 필요가 없습니다. 기본 포트 2389 및 포트 2382는 필요 없는 다른 모든 포트와 함께 제한해야 합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "63058109"
 ###  <a name="BKMK_ssrs"></a> Reporting Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
   
-|기능|포트|주석|  
+|기능|포트|설명|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 서비스|TCP 포트 80|URL을 통한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTP 연결에 사용됩니다. 미리 구성된 규칙 **World Wide Web 서비스(HTTP)** 는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - HTTPS를 통해 사용하도록 구성|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다. 미리 구성된 규칙 **보안 World Wide Web 서비스(HTTPS)** 는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
@@ -192,7 +192,7 @@ ms.locfileid: "63058109"
 ###  <a name="BKMK_ssis"></a> Integration Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 포트를 보여 줍니다.  
   
-|기능|포트|주석|  
+|기능|포트|설명|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 원격 프로시저 호출(MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 사용됩니다.|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 포트 135에서 DCOM을 사용합니다. 서비스 제어 관리자는 포트 135를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지, 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다. 포트 번호는 변경할 수 없습니다.<br /><br /> 이 포트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 사용자 지정 애플리케이션에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 서비스의 원격 인스턴스에 연결하는 경우에만 열면 됩니다.|  
   
@@ -201,15 +201,15 @@ ms.locfileid: "63058109"
 ###  <a name="BKMK_additional_ports"></a> 추가 포트 및 서비스  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 포트 및 서비스를 보여 줍니다.  
   
-|시나리오|포트|주석|  
+|시나리오|포트|설명|  
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> WMI에 대한 자세한 내용은 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)을 참조하세요.|WMI는 공유 서비스 호스트의 일부로 실행되며 포트는 DCOM을 통해 할당됩니다. WMI는 TCP 포트 135를 사용 중일 수 있습니다.<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 WMI를 사용하여 서비스를 나열하고 관리합니다. 미리 구성된 규칙 그룹 **WMI(Windows Management Instrumentation)** 를 사용하는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator(MS DTC)|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|애플리케이션에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에, 그리고 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등의 리소스 관리자 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 미리 구성된 **Distributed Transaction Coordinator** 규칙 그룹을 사용하는 것이 좋습니다.<br /><br /> 별도의 리소스 그룹에 있는 전체 클러스터에 단일 공유 MS DTC가 구성된 경우 방화벽에 sqlservr.exe를 예외로 추가해야 합니다.|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 찾아보기 단추를 클릭하면 UDP를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 연결됩니다. 자세한 내용은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.|UDP 포트 1434|UDP는 연결 없는 프로토콜입니다.<br /><br /> 방화벽에는 브로드캐스트(또는 멀티캐스트) UDP 요청에 대한 유니캐스트 응답과 관련하여 방화벽의 동작을 제어하는 [INetFwProfile 인터페이스의 UnicastResponsesToMulticastBroadcastDisabled 속성](https://go.microsoft.com/fwlink/?LinkId=118371) 이라는 설정이 포함됩니다.  여기에는 두 가지 동작이 있습니다.<br /><br /> 설정이 TRUE이면 브로드캐스트에 대한 유니캐스트 응답이 허용되지 않습니다. 서비스 열거는 실패합니다.<br /><br /> 설정이 FALSE(기본값)이면 유니캐스트 응답이 3초 동안 허용됩니다. 이 시간 길이는 구성할 수 없습니다. 혼잡하거나 지연 시간이 긴 네트워크 또는 부하가 높은 서버의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 열거하려고 시도하면 부분적인 목록만 반환되어 사용자에게 잘못된 정보를 줄 수 있습니다.|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 찾아보기 단추를 클릭하면 UDP를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 연결됩니다. 자세한 내용은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.|UDP 포트 1434|UDP는 연결 없는 프로토콜입니다.<br /><br /> 방화벽에는 브로드캐스트(또는 멀티캐스트) UDP 요청에 대한 유니캐스트 응답과 관련하여 방화벽의 동작을 제어하는 [INetFwProfile 인터페이스의 UnicastResponsesToMulticastBroadcastDisabled 속성](https://go.microsoft.com/fwlink/?LinkId=118371) 이라는 설정이 포함됩니다.  여기에는 두 가지 동작이 있습니다.<br /><br /> 설정이 TRUE이면 브로드캐스트에 대한 유니캐스트 응답이 허용되지 않습니다. 서비스 열거는 실패합니다.<br /><br /> 설정이 FALSE(기본값)이면 유니캐스트 응답이 3초 동안 허용됩니다. 이 시간 길이는 구성할 수 없습니다. 혼잡하거나 지연 시간이 긴 네트워크 또는 부하가 높은 서버의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 열거하려고 시도하면 부분적인 목록만 반환되어 사용자에게 잘못된 정보를 줄 수 있습니다.|  
 |IPsec 트래픽|UDP 포트 500 및 UDP 포트 4500|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 예외 목록에 UDP 포트 4500 및 UDP 포트 500도 추가해야 합니다. IPsec은 Windows 방화벽 스냅인의 **새 인바운드 규칙 마법사** 를 사용하는 옵션입니다. 자세한 내용은 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.|  
 |트러스트된 도메인에 Windows 인증 사용|인증 요청을 허용하도록 방화벽을 구성해야 합니다.|자세한 내용은 [도메인 및 트러스트를 위한 방화벽을 구성하는 방법](https://support.microsoft.com/kb/179442/)을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 클러스터링|클러스터링을 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 직접 관련되지 않은 추가 포트가 필요합니다.|자세한 내용은 [클러스터 사용을 위한 네트워크 설정(Enable a network for cluster use)](https://go.microsoft.com/fwlink/?LinkId=118372)을 참조하세요.|  
-|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](https://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보&amp;#40;SSRS 구성 관리자&amp;#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
+|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](https://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보 &#40;SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
   
 ##  <a name="BKMK_port_135"></a> 포트 135에 대한 특별 고려 사항  
  TCP/IP 또는 UDP/IP를 전송 수단으로 하여 RPC를 사용하는 경우 인바운드 포트는 필요에 따라 시스템 서비스에 동적으로 할당되는 경우가 많습니다. 포트 1024보다 큰 TCP/IP 및 UDP/IP 포트가 사용됩니다. 이러한 포트를 비공식적으로 "임의 RPC 포트"라고 합니다. 이 경우 RPC 클라이언트는 RPC 엔드포인트 매퍼를 사용하여 서버에 할당된 동적 포트를 알려 줍니다. 일부 RPC 기반 서비스의 경우 RPC가 포트를 동적으로 할당하도록 하는 대신 사용자가 직접 특정 포트를 구성할 수 있습니다. 또한 서비스에 관계없이 RPC가 동적으로 할당하는 포트의 범위를 좁은 범위로 제한할 수도 있습니다. 포트 135는 많은 서비스에서 사용되기 때문에 악의적인 사용자로부터 자주 공격을 받습니다. 포트 135를 열 때는 방화벽 규칙의 범위를 제한하는 것이 좋습니다.  
@@ -320,7 +320,7 @@ ms.locfileid: "63058109"
   
          **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
   
--   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=28590)에서 다운로드할 수 있습니다.  
+-   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=17148)에서 다운로드할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017)  

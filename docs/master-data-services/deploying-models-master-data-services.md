@@ -1,5 +1,5 @@
 ---
-title: 모델 배포(Master Data Services) | Microsoft Docs
+title: 모델 배포
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3cbd0815109b5242f7f49b791f24cfc348200ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906206"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728284"
 ---
 # <a name="deploying-models-master-data-services"></a>모델 배포(Master Data Services)
 
@@ -27,16 +27,16 @@ ms.locfileid: "67906206"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 MDS 환경에 새로운 모델을 만듭니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 도구** 는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 만든 패키지와 이전 버전에서 호환됩니다.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 도구**는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 만든 패키지와 이전 버전에서 호환됩니다.  
   
 ## <a name="tools-for-deploying-models"></a>모델 배포 도구  
  모델 패키지를 사용하려면 필요에 따라 다음 세 도구 중 하나를 사용합니다.  
   
--   **MDSModelDeploy 도구**: 를 만들고 모델 개체 및 데이터를 배포 하려면 MDSModelDeploy.exe 도구를 사용 합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
+-   **MDSModelDeploy 도구**: 모델 개체와 데이터를 만들고 배포하려면 MDSModelDeploy.exe 도구를 사용합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
   
--   **모델 배포 마법사**: 를 만들고 모델 구조만의 패키지를 배포 하려면 마법사를 사용 합니다 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램입니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
+-   **모델 배포 마법사**: 모델 구조만의 패키지를 만들고 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 마법사를 사용합니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
   
--   **모델 패키지 편집기**: 모델 패키지를 편집 하려면 모델 패키지 편집기 마법사를 시작 하는 ModelPackageEditor.exe를 사용 합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
+-   **모델 패키지 편집기**: 모델 패키지를 편집하려면 모델 패키지 편집기 마법사를 실행하는 ModelPackageEditor.exe를 사용합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
   
 > [!IMPORTANT]  
 >  MDSModelDeploy 도구를 사용하여 새 모델을 만들거나 모델의 복제본을 만들거나 기존 모델 및 해당 데이터를 업데이트할 수 있습니다. MDSModelDeploy 도구를 사용하여 기존 모델 및 해당 데이터를 업데이트하고 패키지에 엔터티, 특성 또는 대상 모델에 있는 멤버를 포함하지 않는 경우 MDSModelDeploy는 모델에서 해당 엔터티, 특성 또는 멤버를 삭제하지 않습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "67906206"
 ## <a name="sample-packages"></a>예제 패키지  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치하면 예제 패키지 파일이 포함됩니다. 이러한 패키지 파일은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치한 Master Data Services\Samples\Packages 디렉터리에 있습니다. MDSModelDeploy 도구를 사용하여 이러한 예제 패키지를 배포하면 예제 모델이 생성되어 데이터로 채워집니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

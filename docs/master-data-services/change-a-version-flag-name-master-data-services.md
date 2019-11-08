@@ -1,5 +1,5 @@
 ---
-title: 버전 플래그 이름 변경(Master Data Services) | Microsoft Docs
+title: 버전 플래그 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b92b93148d7baf1782820ccff6b033983bc6de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047326"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729713"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>버전 플래그 이름 변경(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68047326"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전 플래그의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "68047326"
   
 6.  Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

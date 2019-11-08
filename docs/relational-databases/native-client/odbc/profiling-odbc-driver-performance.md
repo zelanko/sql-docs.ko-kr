@@ -20,16 +20,15 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913156"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760712"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "67913156"
   
 -   로깅을 지정하는 데이터 원본에 연결합니다.  
   
--   호출 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 프로 파일링 해당 컨트롤에 드라이버별 특성을 설정할 수 있습니다.  
+-   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 프로 파일링을 제어 하는 드라이버 관련 특성을 설정 합니다.  
   
  애플리케이션 프로세스는 각자 고유의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 복사본을 받으며, 프로파일링은 드라이버 복사본과 애플리케이션 프로세스의 조합에 대해 전역으로 적용됩니다. 애플리케이션의 어떤 항목이 프로파일링을 활성화하면 프로파일링은 해당 애플리케이션의 드라이버에서 활성 상태인 모든 연결에 대한 정보를 기록합니다. 명확하게 프로파일링을 요청하지 않은 연결도 포함됩니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "67913156"
   
  애플리케이션이 로그 파일에 프로파일링을 시작한 상태에서 두 번째 애플리케이션이 동일한 로그 파일에 프로파일링을 시작하려고 시도하면 두 번째 애플리케이션은 어떠한 프로파일링 데이터도 기록할 수 없습니다. 첫 번째 애플리케이션이 드라이버를 언로드한 후 두 번째 애플리케이션이 프로파일링을 시작하면 두 번째 애플리케이션이 첫 번째 애플리케이션의 로그 파일을 덮어씁니다.  
   
- 응용 프로그램을 호출 하면 드라이버가 SQL_ERROR를 반환 응용 프로그램에 프로 파일링을 사용 하는 데이터 원본에 연결 된 경우 **SQLSetConnectOption** 로깅을 시작 합니다. 에 대 한 호출 **SQLGetDiagRec** 다음 다음을 반환 합니다.  
+ 응용 프로그램이 프로 파일링을 사용 하도록 설정 된 데이터 원본에 연결 하는 경우 응용 프로그램에서 **SQLSetConnectOption** 를 호출 하 여 로깅을 시작 하면 드라이버가 SQL_ERROR 반환 됩니다. **SQLGetDiagRec** 를 호출 하면 다음이 반환 됩니다.  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -85,14 +84,14 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
-|SQLPrepares|수가 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) SQL_PERF_START 이후 호출 합니다.|  
-|ExecDirects|수가 **SQLExecDirect** SQL_PERF_START 이후 호출 합니다.|  
-|SQLExecutes|수가 **SQLExecute** SQL_PERF_START 이후 호출 합니다.|  
+|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 호출 수입니다.|  
+|ExecDirects|SQL_PERF_START 후 **Sqlexecdirect** 호출 수입니다.|  
+|SQLExecutes|SQL_PERF_START 후의 **Sqlexecute** 호출 수입니다.|  
 |CursorOpens|SQL_PERF_START 이후 드라이버가 서버 커서를 연 횟수입니다.|  
 |CursorSize|SQL_PERF_START 이후 커서에서 연 결과 집합의 행 수입니다.|  
 |CursorUsed|SQL_PERF_START 이후 커서에서 드라이버를 통해 실제로 검색된 행의 수입니다.|  
-|PercentCursorUsed|CursorUsed/CursorSize와 같습니다. 예를 들어 응용 프로그램에 의해 드라이버가 서버 커서를 열어 "SELECT COUNT(*) FROM Authors,"를 수행할 경우 SELECT 문에 대한 결과 집합의 행은 23개입니다. 그런 다음 애플리케이션이 이 행에서 3개의 행만 인출할 경우 CursorUsed/CursorSize는 3/23이 되며, 따라서 PercentCursorUsed는 13.043478이 됩니다.|  
+|PercentCursorUsed|CursorUsed/CursorSize와 같습니다. 예를 들어 애플리케이션에 의해 드라이버가 서버 커서를 열어 &quot;SELECT COUNT(*) FROM Authors,&quot;를 수행할 경우 SELECT 문에 대한 결과 집합의 행은 23개입니다. 그런 다음 애플리케이션이 이 행에서 3개의 행만 인출할 경우 CursorUsed/CursorSize는 3/23이 되며, 따라서 PercentCursorUsed는 13.043478이 됩니다.|  
 |AvgFetchTime|SQLFetchTime/SQLFetchCount와 같습니다.|  
 |AvgCursorSize|CursorSize/CursorOpens와 같습니다.|  
 |AvgCursorUsed|CursorUsed/CursorOpens와 같습니다.|  
@@ -121,8 +120,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [ODBC 드라이버 성능 방법 도움말 항목을 프로 파일링 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ &#40;ODBC&#41;  SQL Server Native Client](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [ODBC 드라이버 성능 프로 파일링 방법 항목 &#40;odbc&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   
