@@ -1,24 +1,24 @@
 ---
-title: 열 마스터 키 만들기 및 저장(Always Encrypted) | Microsoft 문서
+title: Always Encrypted용 열 마스터 키 만들기 및 저장 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902959"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594432"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted용 열 마스터 키 만들기 및 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *열 마스터 키* 는 상시 암호화에서 열 암호화 키를 암호화하는 데 사용되는 키를 보호하는 키입니다. 열 마스터 키는 신뢰할 수 있는 키 저장소에 저장되어야 하며 데이터 암호화 또는 암호 해독이 필요한 애플리케이션, 그리고 상시 암호화 구성 및 상시 암호화 키 관리용 도구에 액세스할 수 있어야 합니다.
@@ -35,28 +35,20 @@ ms.locfileid: "72902959"
 
 * **로컬 키 저장소** - 로컬 키 저장소가 포함된 컴퓨터의 애플리케이션에서만 사용할 수 있습니다. 즉, 키 저장소 및 키를 애플리케이션이 실행 중인 각 컴퓨터에 복제해야 합니다. 로컬 키 저장소의 예는 Windows 인증서 저장소입니다. 로컬 키 저장소를 사용할 경우 애플리케이션을 호스트하는 각 컴퓨터에 키 저장소가 있고, 애플리케이션에서 상시 암호화를 사용하여 보호된 데이터에 액세스할 때 필요한 열 마스터 키가 컴퓨터에 있는지 확인해야 합니다. 열 마스터 키를 처음 프로비전하거나 키를 변경(순환)하는 경우 애플리케이션을 호스트하는 모든 컴퓨터에 키가 배포되었는지 확인해야 합니다.
 
-* **중앙 집중식 키 저장소** - 여러 컴퓨터의 애플리케이션에 제공합니다. 중앙 집중식 키 저장소의 예로는 [Azure 주요 자격 증명 모음](https://azure.microsoft.com/services/key-vault/)이 있습니다. 중앙 집중식 키 저장소는 여러 컴퓨터에서 열 마스터 키의 복사본을 여러 개 관리할 필요가 없으므로 일반적으로 키 관리가 더 쉬워집니다. 애플리케이션이 중앙 집중식 키 저장소에 연결하도록 구성되어 있는지 확인해야 합니다.
+* **중앙 집중식 키 저장소** - 여러 컴퓨터의 애플리케이션에 제공합니다. 중앙 집중식 키 저장소의 예로는 [Azure 주요 자격 증명 모음](https://azure.microsoft.com/services/key-vault/)이 있습니다. 중앙 집중식 키 저장소는 여러 컴퓨터에서 열 마스터 키의 복사본을 여러 개 관리할 필요가 없으므로 일반적으로 키 관리가 더 쉬워집니다. 애플리케이션이 중앙 집중식 키 저장소에 연결하도록 구성되어 있어야 합니다.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>상시 암호화 지원 클라이언트 드라이버에서 지원하는 키 저장소
 
 상시 암호화 지원 클라이언트 드라이버는 기본적으로 상시 암호화를 클라이언트 애플리케이션에 통합할 수 있는 SQL Server 클라이언트 드라이버입니다. 상시 암호화 지원 드라이버에는 인기 있는 키 저장소에 대한 기본 제공 공급자가 몇 가지 포함되어 있습니다. 일부 드라이버를 사용하면 사용자 지정 열 마스터 키 저장소 공급자를 구현 및 등록할 수 있으므로 지원하는 기본 제공 공급자가 없어도 모든 키 저장소를 사용할 수 있습니다. 기본 제공 공급자와 사용자 지정 공급자 중 사용할 공급자를 결정할 때는 기본 제공 공급자를 사용하는 것이 일반적으로 애플리케이션을 더 적게 변경한다는 사실을 고려하세요. 경우에 따라 데이터베이스 연결 문자열만 변경할 때도 있습니다.
 
-사용 가능한 기본 제공 공급자는 선택된 드라이버, 드라이버 버전 및 운영 체제에 따라 달라집니다.  특정 드라이버에서 기본적으로 지원하는 키 저장소와 사용 중인 드라이버가 사용자 지정 키 저장소 공급자를 지원하는지 여부는 상시 암호화 설명서를 참조하세요.
+사용 가능한 기본 제공 공급자는 선택된 드라이버, 드라이버 버전 및 운영 체제에 따라 달라집니다.  특정 드라이버에서 기본적으로 지원하는 키 저장소와 사용 중인 드라이버가 사용자 지정 키 저장소 공급자를 지원하는지 여부는 Always Encrypted 설명서에서 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.
 
-- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>지원되는 도구
-
-[SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 및 [SqlServer PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 을 사용하여 상시 암호화를 구성하고 상시 암호화 키를 관리할 수 있습니다. 이러한 도구에서 지원하는 키 저장소 목록은 다음을 참조하세요.
-
-- [SQL Server Management Studio를 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>SQL 도구에서 지원되는 키 저장소는 무엇입니까?
+SQL Server Management Studio 및 SqlServer PowerShell 모듈은 CNG(Cryptography Next Generation) API 또는 CAPI(암호화 API)를 제공하는 Azure Key Vault, Windows 인증서 저장소 및 키 저장소에 저장된 열 마스터 키만 지원합니다. 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Windows 인증서 저장소에서 열 마스터 키 만들기    
 
-열 마스터 키는 Windows 인증서 저장소에 저장된 인증서일 수 있습니다. 상시 암호화 지원 드라이버에서는 만료 날짜 또는 인증 기관 체인을 확인하지 않습니다. 인증서는 단지 퍼블릭 키와 프라이빗 키로 구성된 키 쌍으로만 사용됩니다.
+열 마스터 키는 Windows 인증서 저장소에 저장된 인증서일 수 있습니다. Always Encrypted 지원 드라이버에서는 만료 날짜 또는 인증 기관 체인을 확인하지 않습니다. 인증서는 단지 퍼블릭 키와 프라이빗 키로 구성된 키 쌍으로만 사용됩니다.
 
 올바른 열 마스터 키가 되려면 인증서가 다음 조건을 만족해야 합니다.
 * X.509 인증서여야 합니다.
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 자체 서명된 인증서 만들기
 
-자세한 내용은 [SQL Server Management Studio를 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)을 참조하세요.
+자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
 SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.
 
 
@@ -113,7 +105,7 @@ SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저�
 
 Azure 주요 자격 증명 모음은 암호화 키 및 암호를 보호하고 상시 암호화에 대한 열 마스터 키를 저장하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). [Azure 주요 자격 증명 모음](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)에서 키를 만들려면 [Azure 구독](https://azure.microsoft.com/free/) 및 Azure 주요 자격 증명 모음이 필요합니다.
 
-#### <a name="using-powershell"></a>PowerShell 사용
+### <a name="using-powershell"></a>PowerShell 사용
 
 다음 예제에서는 새 Azure 주요 자격 증명 모음 및 키를 만들고 원하는 사용자에게 권한을 부여합니다.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)
+### <a name="using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 사용
 
+SSMS를 사용하여 Azure Key Vault에서 열 마스터 키를 만드는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
 SSMS를 사용하고 Azure 주요 자격 증명 모음에 상시 암호화 키를 저장하는 단계별 자습서는 [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)를 참조하세요.
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>애플리케이션 및 사용자가 Azure 주요 자격 증명 모음을 사용할 수 있도록 설정
@@ -144,7 +137,7 @@ Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여
 
 #### <a name="using-powershell"></a>PowerShell 사용
 
-사용자와 애플리케이션에서 Azure Key Vault의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))을 설정해야 합니다.
+사용자와 애플리케이션이 Azure Key Vault의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))을 설정해야 합니다.
 
 ```
 $vaultName = "<vault name>"
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용
 
-[SSMS(SQL Server Management Studio)를 사용하여 열 마스터 프로비전](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)을 참조하세요.
-
+[SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>애플리케이션 및 사용자가 CNG 키를 사용할 수 있도록 설정
 
@@ -206,7 +198,10 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 상시 암호화를 위한 열 마스터 키를 CAPI(암호화 API)를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이러한 저장소는 HSM(하드웨어 보안 모듈)으로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 디바이스 형태입니다.
 
-특정 컴퓨터의 애플리케이션에서 HSM을 사용할 수 있도록 하려면 CAPI를 구현하는 CSP(Cryptography Service Provider)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 CSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다. 참고: CAPI는 사용되지 않는 레거시 API입니다. HSM에서 KSP를 사용할 수 있는 경우 CSP/CAPI 대신 사용해야 합니다.
+특정 컴퓨터의 애플리케이션에서 HSM을 사용할 수 있도록 하려면 CAPI를 구현하는 CSP(Cryptography Service Provider)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 CSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다. 
+
+> [!NOTE]
+> CAPI는 사용되지 않는 레거시 API입니다. HSM에서 KSP를 사용할 수 있는 경우 CSP/CAPI 대신 사용해야 합니다.
 
 CSP는 상시 암호화와 함께 사용하도록 RSA 알고리즘을 지원해야 합니다.
 
@@ -220,25 +215,15 @@ Windows에는 RSA를 지원하는 소프트웨어 기반(HSM에서 지원되지 
 HSM에 대한 설명서를 참조하세요.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 사용
-SQL Server Management Studio를 사용하여 상시 암호화 구성의 열 마스터 키 프로비전 섹션을 참조하세요.
+[SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)을 참조하세요.
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>애플리케이션 및 사용자가 CNG 키를 사용할 수 있도록 설정
 컴퓨터에서 CSP를 구성하고 애플리케이션 및 사용자에게 HSM 액세스 권한을 부여하는 방법은 HSM 및 CSP 설명서를 참조하세요.
  
- 
 ## <a name="next-steps"></a>Next Steps  
+- [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
+- [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
   
-- [PowerShell을 사용하여 상시 암호화 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>추가 리소스  
-
-- [상시 암호화를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [상시 암호화 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>참고 항목 
+- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

@@ -1,7 +1,7 @@
 ---
 title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작 | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909673"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592341"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 이 자습서에서는 [보안 Enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)를 시작하는 방법을 설명합니다. 다음이 설명됩니다.
 - 보안 enclave를 사용한 Always Encrypted를 테스트 및 평가하기 위한 기본 환경을 만드는 방법.
@@ -35,20 +35,17 @@ ms.locfileid: "72909673"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server 컴퓨터 요구 사항
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상.
-- Windows 10 Enterprise 버전 1809 또는 Windows Server 2019 Datacenter
-- SQL Server 컴퓨터가 물리적 컴퓨터인 경우 SQL Server 컴퓨터는 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 충족해야 합니다.
-   - SLAT(두 번째 수준 주소 변환)를 사용하는 64비트 프로세서
-   - VM 모니터 모드 확장(Intel CPU의 VT-c)에 대한 CPU 지원
-   - 가상화 지원 사용(Intel VT-x 또는 AMD-V)
-- SQL Server 컴퓨터가 가상 머신인 경우에는 가상화 기반 보안을 지원하도록 VM을 구성해야 합니다.
-   - Hyper-v 2016 이상에서 1세대 VM을 사용하고 VM 프로세서에서 [중첩된 가상화 확장을 사용](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)하도록 설정하거나 2세대 VM을 사용합니다. VM 세대에 대한 자세한 내용은 [Hyper-V에서 1세대 또는 2세대 가상 머신을 만들어야 하나요?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)를 참조하세요. 
-   - Azure에서 다음 중 하나를 지원하는 VM 크기를 실행하고 있는지 확인하세요.
-      - 중첩된 가상화(예: Dv3 및 Ev3 시리즈 VM). [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
-      - 2세대 VM(예: Dsv3 또는 Esv3 시리즈 VM). [Azure의 2세대용 VM 지원](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)을 참조하세요.
-   - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
-   - 다른 하이퍼바이저 및 퍼블릭 클라우드는 가상화 확장(중첩된 가상화라고도 함)이 VM에 노출되어 있는 한 VM에서 보안 enclave를 통해 Always Encrypted를 사용하도록 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.
-- [SSMS(SQL Server Management Studio) 18.0 이상](../../ssms/download-sql-server-management-studio-ssms.md).
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상
+- Windows 10 Enterprise 버전 1809 이상 또는 Windows Server 2019 Datacenter Edition. 다른 버전의 Windows 10 및 Windows Server는 HGS를 사용하는 증명을 지원하지 않습니다.
+- 가상화 기술에 대한 CPU 지원:
+  - Intel VT-x의 확장 페이지 테이블
+  - AMD-V의 신속한 가상화 인덱싱
+  - VM에서 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]를 실행하는 경우 하이퍼바이저 및 실제 CPU에서 중첩된 가상화 기능을 제공해야 합니다. 
+    - Hyper-V 2016 이상에서는 [VM 프로세서에서 중첩된 가상화 확장을 사용하도록 설정](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
+    - Azure에서는 중첩된 가상화를 지원하는 VM 크기를 선택합니다. 여기에는 모든 v3 시리즈 VM(예: Dv3 및 Ev3)이 포함됩니다. [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
+    - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
+    - 다른 하이퍼바이저 및 퍼블릭 클라우드는 VBS Enclaves 함께 Always Encrypted를 사용할 수 있는 중첩된 가상화 기능을 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.
+- [SSMS(SQL Server Management Studio) 18.3 이상](../../ssms/download-sql-server-management-studio-ssms.md).
 
 대안으로 다른 머신에 SSMS를 설치할 수 있습니다.
 
@@ -158,7 +155,7 @@ HostUnreachable 오류가 발생하면 SQL Server 컴퓨터가 HGS와 통신할 
 
 UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을 나타냅니다. 5단계와 6단계를 반복하여 이 오류를 해결하세요.
 
-모든 방법이 실패하면 Clear-HgsClientHostKey를 실행하고 4-7단계를 반복합니다.
+모든 방법이 실패하면 Remove-HgsClientHostKey를 실행하고 4~7단계를 반복합니다.
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>3단계: SQL Server에서 보안 Enclave를 사용한 Always Encrypted 사용
 
@@ -343,10 +340,12 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 3. Always Encrypted를 사용하지 않는 SSMS 인스턴스에서 동일한 쿼리를 다시 시도하고 발생하는 오류를 확인합니다.
 
 ## <a name="next-steps"></a>Next Steps
-이 자습서에 이어진 [자습서: 임의 암호화를 사용하여 enclave 사용 열에서 인덱스 만들기 및 사용](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)으로 이동합니다.
+이 자습서를 완료한 후 다음 자습서 중 하나로 이동할 수 있습니다.
+- [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-보안 enclave를 사용한 Always Encrypted의 다른 사용 사례에 대한 자세한 내용은 [보안 enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요. 예를 들어
-
-- [TPM 증명 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [HGS 인스턴스에 대해 HTTPS 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- 암호화된 열에 대해 리치 쿼리를 실행하는 애플리케이션 개발
+## <a name="see-also"></a>참고 항목
+- [Always Encrypted 서버 구성 옵션에 대한 enclave 유형 구성](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [Enclave 사용 키 프로비전](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Transact-SQL을 사용하여 내부 열 암호화 구성](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](encryption/always-encrypted-enclaves-query-columns.md)

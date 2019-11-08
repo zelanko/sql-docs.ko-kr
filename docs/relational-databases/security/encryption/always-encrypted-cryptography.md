@@ -1,7 +1,7 @@
 ---
-title: 상시 암호화되는 암호화 | Microsoft 문서
+title: Always Encrypted 암호화 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043292"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594401"
 ---
-# <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
+# <a name="always-encrypted-cryptography"></a>Always Encrypted 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 [및](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상시 암호화 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]기능에서 사용되는 암호화 관련 자료를 유도하기 위한 암호화 알고리즘 및 메커니즘을 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "68043292"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>키, 키 저장소 및 키 암호화 알고리즘
  Always Encrypted는 두 가지 유형의 키를 사용합니다. 열 마스터 키 및 열 암호화 키.  
   
- CMK(열 마스터 키)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하는 데 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 애플리케이션(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](/windows/desktop/SecCrypto/using-certificate-stores) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 애플리케이션 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
+ CMK(열 마스터 키)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하는 데 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 애플리케이션(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증서 저장소 [및 하드웨어 보안 모듈(HSM)용](/windows/desktop/SecCrypto/using-certificate-stores) 키 저장소 공급자에 포함됩니다. 공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 애플리케이션 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
   
  CEK(열 암호화 키)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하는 데 사용되는 키)입니다.  
   
@@ -72,7 +72,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  다른 방식과 비교했을 때 결정적 암호화는 미리 정의된 IV 값을 사용하는 것과 같이 패턴 숨기기에서 더 효과적입니다.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>2단계: AES_256_CBC Ciphertext 컴퓨팅  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>2단계: AES_256_CBC Ciphertext 컴퓨팅  
  IV를 계산한 후 **AES_256_CBC** 암호 텍스트가 생성됩니다.  
   
 ```  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|해당 없음(지원되지 않음)|  
   
 ## <a name="net-reference"></a>.NET 참조  
- 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 **.NET 참조** 에서 **SqlAeadAes256CbcHmac256Algorithm.cs** 및 [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)파일을 참조하세요.  
+ 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 [.NET 참조](https://referencesource.microsoft.com/)에서 **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** 및 **SqlColumnEncryptionCertificateStoreProvider.cs** 파일을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

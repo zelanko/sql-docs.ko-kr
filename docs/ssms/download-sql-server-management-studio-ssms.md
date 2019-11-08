@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 10/03/2019
-ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.date: 11/04/2019
+ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542217"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594322"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -42,13 +42,13 @@ SSMS는 무료입니다.
 
 ## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[SSMS 다운로드](https://aka.ms/ssmsfullsetup)
 
-SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치되어 있는 경우 SSMS 18.3.1을 설치하면 18.3.1로 업그레이드됩니다. SSMS 18.x의 이전 *미리 보기* 버전이 설치된 경우 SSMS 18.3.1을 설치하기 전에 제거해야 합니다.
+SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.4를 설치하면 18.4로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.4를 설치해야 합니다.
 
 **버전 정보**
 
-- 릴리스 번호: 18.3.1  
-- 빌드 번호: 15.0.18183.0  
-- 릴리스 날짜: 2019년 10월 2일  
+- 릴리스 번호: 18.4  
+- 빌드 번호: 15.0.18206.0  
+- 릴리스 날짜: 2019년 11월 4일  
 
 의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [UserVoice](https://aka.ms/sqlfeedback)를 사용하는 것입니다.
 
@@ -57,37 +57,45 @@ SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하�
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
 > [!Note]
-> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)에서 이 페이지를 방문하세요. [사용 가능한 언어](#available-languages-ssms-1831)를 선택하여 영어 버전 사이트에서 다른 언어를 다운로드할 수 있습니다.
+> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [영어 버전 사이트](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 방문하세요. 영어 버전 사이트에서 [사용 가능한 언어](#available-languages)를 선택하여 다른 언어를 다운로드할 수 있습니다.
 
-## <a name="available-languages-ssms-1831"></a>사용 가능한 언어(SSMS 18.3.1)
+## <a name="available-languages"></a>사용 가능한 언어
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 18.3.1:  
-[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
+SQL Server Management Studio 18.4:  
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
 
-## <a name="new-in-this-release-ssms-1831"></a>이 릴리스의 새로운 기능(SSMS 18.3.1)
+## <a name="new-in-this-release-ssms-184"></a>이 릴리스의 새로운 기능(SSMS 18.4)
 
 | 새 항목 | 세부 정보 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 데이터 분류 | 데이터 분류 정보를 열 속성 UI에 추가했습니다(*정보 유형*, *정보 유형 ID*, *민감도 레이블* 및 *민감도 레이블 ID*는 SSMS UI에 노출되지 않음). |
-| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: "ALTER SERVER CONFIGURATION"). |
-| Integration Services | ADF 파이프라인에서 통합 서비스 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`이 추가되었습니다. |
-| SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
-| SMO/스크립팅 | 데이터 분류 - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다.  - SQL 버전 15(SQL 2019) 이상 및 Azure SQL DB에 대한 새 민감도 특성 '순위'가 추가되었습니다. |
+| 데이터 분류 | 데이터 분류에 대한 사용자 지정 정보 보호 정책에 대한 지원을 추가했습니다. |
+| 쿼리 저장소 | 대화 상자 속성에서 *쿼리당 최대 계획* 값을 추가했습니다. |
+| 쿼리 저장소 | 새 사용자 지정 캡처 정책에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | SQL DW에서 구체화된 뷰의 스크립트를 지원합니다. |
+| SMO/스크립팅 | *SQL On Demand*에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 50개 평가 규칙을 추가했습니다(GitHub에서 세부 정보 참조). |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 조건에 기본 수학 식 및 비교를 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer 개체에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙이 JSON 형식으로 저장되는 방식을 업데이트하고 재정의/사용자 지정을 적용하는 메커니즘도 업데이트했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Linux에서 SQL을 지원하도록 규칙을 업데이트했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 JSON 형식을 업데이트하고 스키마 버전을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - cmdlet 출력을 업데이트하여 권장 사항의 가독성을 향상했습니다. |
+| XEvent 프로파일러 | XEvent Profiler 세션에 *error_reported* 이벤트를 추가했습니다. |
 
 이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS release notes](release-notes-ssms.md)(SSMS 릴리스 정보)를 참조하세요.
 
-## <a name="supported-sql-offerings-ssms-1831"></a>지원되는 SQL 제품(SSMS 18.3.1)
+## <a name="supported-sql-offerings-ssms-184"></a>지원되는 SQL 제품(SSMS 18.4)
 
 - 이 버전의 SSMS는 [지원되는 모든 버전의 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)에서 작동하며 Azure SQL Database와 Azure SQL Data Warehouse의 최신 클라우드 기능 사용에 대해 최고 수준의 지원을 제공합니다.
 - 또한 SSMS 18.x는 SSMS 17.x, SSMS 16.x 또는 SQL Server 2014 SSMS 및 이전 버전과 함께 설치할 수 있습니다.
 - SSIS(SQL Server Integration Services) - SSMS 버전 17.x 이상은 레거시 SQL Server Integration Services 서비스에 대한 연결을 지원하지 않습니다. 이전 버전의 레거시 Integration Services에 연결하려면 SQL Server의 버전과 정렬된 SSMS 버전을 사용합니다. 예를 들어 SSMS 16.x를 사용하여 레거시 SQL Server 2016 Integration Services 서비스에 연결합니다. SSMS 17.x 및 SSMS 16.x는 동일한 컴퓨터에 나란히 설치될 수 있습니다. SQL Server 2012 설치 이후 SSIS 카탈로그 데이터베이스인 SSISDB를 사용하여 Integration Services 패키지를 저장하고, 관리하고, 실행하고, 모니터링하는 것이 좋습니다. 자세한 내용은 [SSIS 카탈로그](../integration-services/catalog/ssis-catalog.md)를 참조하세요.
 
-## <a name="supported-operating-systems-ssms-1831"></a>지원되는 운영 체제(SSMS 18.3.1)
+## <a name="supported-operating-systems-ssms-184"></a>지원되는 운영 체제(SSMS 18.4)
 
 이 SSMS 릴리스는 사용 가능한 최신 서비스 팩과 함께 사용할 경우 다음과 같은 64비트 플랫폼을 지원합니다.
 
@@ -104,7 +112,7 @@ SQL Server Management Studio 18.3.1:
 > [!NOTE]
 > SSMS는 Windows에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows를 실행하는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
 
-## <a name="release-notes-ssms-1831"></a>릴리스 정보(SSMS 18.3.1)
+## <a name="release-notes-ssms-184"></a>릴리스 정보(SSMS 18.4)
 
 이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-1831)가 있습니다.
 

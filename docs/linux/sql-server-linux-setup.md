@@ -4,24 +4,30 @@ titleSuffix: SQL Server
 description: SQL Server on Linux를 설치, 업데이트 및 제거합니다. 이 문서에서는 온라인, 오프라인 및 무인 시나리오를 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032438"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593663"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 설치 지침
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux에서 SQL Server 2017 및 SQL Server 2019 미리 보기를 설치, 업데이트, 제거하는 방법을 설명합니다.
+이 문서에서는 Linux에서 SQL Server 2017 및 SQL Server 2019를 설치, 업데이트, 제거하는 방법을 설명합니다.
+
+기타 배포 시나리오는 다음을 참조하세요.
+
+- [창](../database-engine/install-windows/install-sql-server.md)
+- [Docker 컨테이너](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes-빅 데이터 클러스터](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > 이 가이드에서는 몇 가지 배포 시나리오를 설명합니다. 단계별 설치 지침만 보려면 다음 빠른 시작 중 하나로 이동합니다.
@@ -34,7 +40,10 @@ ms.locfileid: "68032438"
 
 ## <a id="supportedplatforms"></a> 지원되는 플랫폼
 
-SQL Server 2017은 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에서 지원됩니다. Linux Docker 엔진 또는 Windows/Mac용 Docker에서 실행할 수 있는 Docker 이미지로도 지원됩니다.
+SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에서 지원됩니다. Linux Docker 엔진 또는 Windows/Mac용 Docker에서 실행할 수 있는 Docker 이미지로도 지원됩니다.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 | 플랫폼 | 지원되는 버전 | 가져오기
 |-----|-----|-----
@@ -43,6 +52,20 @@ SQL Server 2017은 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Se
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 다운로드](http://releases.ubuntu.com/xenial/)
 | **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)
 
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+| 플랫폼 | 지원되는 버전 | 가져오기
+|-----|-----|-----
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 다운로드](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 가져오기](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Ubuntu 16.04 다운로드](http://releases.ubuntu.com/xenial/)
+| **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)
+
+::: moniker-end
+
 Microsoft는 OpenShift와 Kubernetes를 사용하여 SQL Server 컨테이너의 배포 및 관리도 지원합니다.
 
 > [!NOTE]
@@ -50,7 +73,7 @@ Microsoft는 OpenShift와 Kubernetes를 사용하여 SQL Server 컨테이너의 
 
 ## <a id="system"></a> 시스템 요구 사항
 
-SQL Server 2017에 대한 Linux의 시스템 요구 사항은 다음과 같습니다.
+SQL Server에 대한 Linux의 시스템 요구 사항은 다음과 같습니다.
 
 |||
 |-----|-----|
@@ -69,25 +92,24 @@ SQL Server 2017에 대한 Linux의 시스템 요구 사항은 다음과 같습�
 
 ## <a id="repositories"></a> 원본 리포지토리 구성
 
-SQL Server를 설치하거나 업그레이드하는 경우 구성된 Microsoft 리포지토리에서 최신 버전의 SQL Server를 다운로드합니다. 빠른 시작에서는 SQL Server 2017 누적 업데이트 **CU** 리포지토리를 사용합니다. 하지만 **GDR** 리포지토리 또는 **미리 보기(vnext)** 리포지토리를 대신 구성할 수 있습니다. 리포지토리 및 구성 방법에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
+SQL Server를 설치하거나 업그레이드하는 경우 구성된 Microsoft 리포지토리에서 최신 버전의 SQL Server를 다운로드합니다. 이 빠른 시작에서는 SQL Server용 누적 업데이트 **CU** 리포지토리를 사용합니다. 그러나 **GDR** 리포지토리를 대신 구성할 수 있습니다. 리포지토리 및 구성 방법에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
 
-## <a id="platforms"></a> SQL Server 2017 설치
+## <a id="platforms"></a> SQL Server 설치
 
-명령줄을 통해 Linux에서 SQL Server 2017을 설치할 수 있습니다. 단계별 지침은 다음 빠른 시작 중 하나를 참조하세요.
+명령줄을 통해 Linux에 SQL Server 2017 또는 SQL Server 2019을 설치할 수 있습니다. 단계별 지침은 다음 빠른 시작 중 하나를 참조하세요.
 
-- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
-- [Docker에서 실행](quickstart-install-connect-docker.md)
-- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+| 플랫폼 | 설치 빠른 시작 |
+|---|---|
+| RHEL(Red Hat Enterprise Linux) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SLES(SUSE Linux Enterprise Server) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+
+Azure 가상 머신에서도 SQL Server on Linux를 실행할 수 있습니다. 자세한 내용은 [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)을 참조하세요.
 
 설치 후에 성능을 최적화하기 위해 몇 가지 구성을 추가로 변경하는 것이 좋습니다. 자세한 내용은 [SQL Server on Linux의 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
 
-## <a id="sqlvnext"></a> SQL Server 2019 미리 보기 설치
-
-이전 섹션과 동일한 빠른 시작 링크를 사용하여 Linux에서 SQL Server 2019 미리 보기를 설치할 수 있습니다. 단, **CU** 리포지토리 대신 **미리보기(vnext)** 리포지토리를 등록해야 합니다. 빠른 시작에서는 이 작업을 수행하는 방법을 설명합니다.  
-
-## <a id="upgrade"></a> SQL Server 업데이트
+## <a id="upgrade"></a> SQL Server 설치 또는 업그레이드
 
 **mssql-server** 패키지를 최신 릴리스로 업데이트하려면 해당 플랫폼에 따라 다음 명령 중 하나를 사용합니다.
 
@@ -99,8 +121,7 @@ SQL Server를 설치하거나 업그레이드하는 경우 구성된 Microsoft �
 
 이 명령은 최신 패키지를 다운로드하고 `/opt/mssql/` 아래에 있는 이진 파일을 바꿉니다. 사용자가 생성한 데이터베이스와 시스템 데이터베이스는 이 작업의 영향을 받지 않습니다.
 
-> [!TIP]
-> [구성된 리포지토리를 처음 변경](sql-server-linux-change-repo.md)하는 경우 **업데이트** 명령이 SQL Server 버전을 업그레이드할 수 있습니다. 이 작업은 두 리포지토리 간에 업그레이드 경로가 지원되는 경우에만 수행됩니다.
+SQL Server를 업그레이드하려면 먼저 [구성된 리포지토리를 원하는 SQL Server 버전으로 변경](sql-server-linux-change-repo.md)합니다. 그런 다음 동일한 **업데이트** 명령을 사용하여 SQL Server 버전을 업그레이드합니다. 이 작업은 두 리포지토리 간에 업그레이드 경로가 지원되는 경우에만 가능합니다.
 
 ## <a id="rollback"></a> SQL Server 롤백
 
@@ -117,7 +138,7 @@ SQL Server를 이전 릴리스로 롤백 또는 다운그레이드하려면 다�
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> SQL Server 2017과 같은 동일한 주 버전 내의 릴리스로만 다운그레이드할 수 있습니다.
+> SQL Server 2019과 같은 동일한 주 버전 내의 릴리스로만 다운그레이드할 수 있습니다.
 
 ## <a id="versioncheck"></a> 설치된 SQL Server 버전 확인
 

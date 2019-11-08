@@ -1,5 +1,5 @@
 ---
-title: 상시 암호화로 보호되는 중요한 데이터 마이그레이션 | Microsoft 문서
+title: Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111670"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594162"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>상시 암호화로 보호되는 중요한 데이터 마이그레이션
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
+대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 Always Encrypted를 사용할 수 없는 레거시 도구 또는 타사 ETL(추출-변환-로드) 워크플로에서 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) 와 [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
   
 ## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
@@ -42,7 +42,7 @@ ms.locfileid: "68111670"
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  해당 사용자로 연결하는 대량 복사 애플리케이션 또는 도구를 실행합니다. (애플리케이션에서 상시 암호화가 사용 설정된 클라이언트 드라이버를 사용하고 있는 경우 암호화된 열에서 검색된 데이터가 암호화를 유지하도록 데이터 원본에 대한 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않아야 합니다. 자세한 내용은 [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.  
+2.  해당 사용자로 연결하는 대량 복사 애플리케이션 또는 도구를 실행합니다. (애플리케이션에서 상시 암호화가 사용 설정된 클라이언트 드라이버를 사용하고 있는 경우 암호화된 열에서 검색된 데이터가 암호화를 유지하도록 데이터 원본에 대한 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않아야 합니다. 자세한 내용은 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.)  
   
 3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 예를 들어  
 
@@ -69,11 +69,15 @@ ms.locfileid: "68111670"
  
 해독하지 않고 암호화된 데이터를 이동해야 하는 단기 실행 대량 복사 애플리케이션 또는 도구의 경우 애플리케이션을 실행하기 직전에 이 옵션을 ON으로 설정하고 작업을 실행한 직후에 다시 OFF로 설정합니다.  
  
-새 애플리케이션 개발에 이 옵션을 사용하지 말고 대신 단일 세션에 대한 암호화 메타데이터 검사 억제에 API를 제공하는 클라이언트 드라이버(예: ADO 4.6.1)를 사용하세요.  
+새 애플리케이션 개발에 이 옵션을 사용하지 말고 예를 들어 SQL Server용 .NET Framework 데이터 공급자의 AllowEncryptedValueModifications 옵션과 같이 단일 세션에 대한 암호화 메타데이터 검사를 억제하기 위한 API를 제공하는 클라이언트 드라이버를 대신 사용합니다. [SqlBulkCopy를 사용하여 암호화된 데이터 복사](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)를 참조하세요. 
+
+## <a name="next-steps"></a>Next Steps
+- [SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리](always-encrypted-query-columns-ssms.md)
+- [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목  
-[CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[상시 암호화 마법사](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [SQL Server 가져오기 및 내보내기 마법사로 Always Encrypted를 사용하여 열 간에 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+

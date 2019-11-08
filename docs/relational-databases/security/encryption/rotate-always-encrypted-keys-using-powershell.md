@@ -1,5 +1,5 @@
 ---
-title: PowerShell을 사용하여 Always Encrypted 키 순환 | Microsoft 문서
+title: PowerShell을 사용하여 Always Encrypted 키 순환 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 964095eb103e11fdf34e7cc0a29dfe7f668ef7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b5246dabbe205554b45cee91be93c4485a60f6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111610"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594128"
 ---
-# <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 순환
+# <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 Always Encrypted 키 순환
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 SqlServer PowerShell 모듈을 사용하여 상시 암호화 키를 순환하는 단계를 제공합니다. 상시 암호화에 SqlServer PowerShell 모듈을 사용 시작하는 방법은 [PowerShell을 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
@@ -37,7 +37,7 @@ ms.locfileid: "68111610"
 
 | 태스크 | 아티클 | 일반 텍스트 키/키 저장소 액세스| 데이터베이스 액세스
 |:---|:---|:---|:---
-|1단계. 키 저장소에 새 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer PowerShell 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 작업을 수행하려면 키 저장소와 관련된 도구를 사용해야 합니다. | [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 예 | 아니오
+|1단계. 키 저장소에 새 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer PowerShell 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 작업을 수행하려면 키 저장소와 관련된 도구를 사용해야 합니다. | [Always Encrypted용 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 예 | 아니오
 |2단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니오 | 아니오
 |3단계. 서버 및 데이터베이스에 연결합니다. | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니오 | 예
 |4단계. 새 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 개체를 만들려면 키 저장소에 관련된 cmdlet을 사용해야 합니다. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | 아니오 | 아니오
@@ -55,7 +55,7 @@ ms.locfileid: "68111610"
 
 아래 스크립트는 기존 열 마스터 키(CMK1)를 새 열 마스터 키(CMK2)로 대체하는 엔드투엔드 예제입니다.
 
-```
+```powershell
 # Create a new column master key in Windows Certificate Store.
 $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUser\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048
 
@@ -65,12 +65,9 @@ Import-Module "SqlServer"
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your new column master key. 
 $newCmkSettings = New-SqlCertificateStoreColumnMasterKeySettings -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint
@@ -117,7 +114,7 @@ DBA가 순환할 열 마스터 키 및 현재 열 마스터 키와 연결된 영
 | 태스크 | 아티클 | 일반 텍스트 키/키 저장소 액세스| 데이터베이스 액세스
 |:---|:---|:---|:---
 |1단계. 이전 열 마스터 키의 위치와 이전 열 마스터 키로 보호된 해당 열 암호화 키의 암호화된 값을 DBA로부터 얻습니다.|해당 사항 없음<br>다음 예를 참조하십시오.|아니오| 아니오
-|2단계. 키 저장소에 새 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 키 저장소의 유형에 관련된 도구를 사용해야 합니다.|[열 마스터 키 만들기 및 저장(Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 예 | 아니오
+|2단계. 키 저장소에 새 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 키 저장소의 유형에 관련된 도구를 사용해야 합니다.|[Always Encrypted용 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 예 | 아니오
 |3단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니오 | 아니오
 |4단계. **이전** 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. |New-SqlColumnMasterKeySettings| 아니오 | 아니오
 |5단계. **새** 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 개체를 만들려면 키 저장소에 관련된 cmdlet을 사용해야 합니다. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 아니오 | 아니오
@@ -151,19 +148,16 @@ DBA가 새 열 마스터 키에 대한 메타데이터를 만들고 영향을 �
 
 1부: DBA
 
-```
+```powershell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Retrieve the data about the old column master key, which needs to be rotated.
 $oldCmkName = "CMK1"
@@ -199,7 +193,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 
 2부: 보안 관리자
 
-```
+```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
 $oldCmkDataFile = "Z:\oldcmkdata.txt"
 $oldCmkData = Import-Csv $oldCmkDataFile
@@ -241,7 +235,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 
 3부: DBA
 
-```
+```powershell
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.
 $newCmkDataFile = "Z:\newcmkdata.txt"
 $newCmkData = Import-Csv $newCmkDataFile
@@ -254,12 +248,9 @@ Import-Module "SqlServer"
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your new column master key. 
 $newCmkSettings = New-SqlColumnMasterKeySettings -KeyStoreProviderName $newCmkData.KeyStoreProviderName -KeyPath $newCmkData.KeyPath
@@ -297,7 +288,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 열 암호화 키를 순환하려면 모든 열에서 순환할 키로 암호화된 데이터의 암호를 해독하고 새 열 암호화 키를 사용하여 데이터를 다시 암호화해야 합니다. 이 순환 워크플로는 키와 데이터베이스에 모두 액세스해야 하므로 역할 구분을 사용하여 수행할 수 없습니다. 순환할 키로 암호화된 열을 포함하는 테이블이 크면 열 암호화 키를 순환하는 데 시간이 오래 걸릴 수 있습니다. 따라서 조직에서 열 암호화 키 순환을 계획할 때는 주의해야 합니다.
 
-오프라인 또는 온라인 접근 방식을 사용하여 열 암호화 키를 회전할 수 있습니다. 오프라인 방식이 더 빠르지만 애플리케이션에서 영향을 받는 테이블에 쓸 수 없습니다. 온라인 방식은 시간이 더 오래 걸리지만 애플리케이션에서 영향을 받는 테이블을 사용할 수 없는 시간 간격을 제한할 수 있습니다. 자세한 내용은 [PowerShell을 사용하여 열 암호화 구성](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 및 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/)을 참조하세요.
+오프라인 또는 온라인 접근 방식을 사용하여 열 암호화 키를 회전할 수 있습니다. 오프라인 방식이 더 빠르지만 애플리케이션에서 영향을 받는 테이블에 쓸 수 없습니다. 온라인 방식은 시간이 더 오래 걸리지만 애플리케이션에서 영향을 받는 테이블을 사용할 수 없는 시간 간격을 제한할 수 있습니다. 자세한 내용은 [PowerShell로 Always Encrypted를 사용하여 열 암호화 구성](configure-column-encryption-using-powershell.md) 및 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/)을 참조하세요.
 
 | 태스크 | 아티클 | 일반 텍스트 키/키 저장소 액세스| 데이터베이스 액세스
 |:---|:---|:---|:---
@@ -312,22 +303,19 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 ### <a name="example---rotating-a-column-encryption-key"></a>예제 - 열 암호화 키 순환
 
-아래 스크립트는 열 암호화 키 순환을 보여 줍니다.  이 스크립트에서는 대상 데이터베이스에 CEK1(순환됨)이라는 열 암호화 키로 암호화된 일부 열이 있다고 가정합니다. 이 키는 CMK1이라는 열 마스터 키를 사용하여 보호됩니다(열 마스터 키는 Azure Key Vault에 저장되어 있지 않음).
+아래 스크립트는 열 암호화 키 순환을 보여 줍니다.  이 스크립트에서는 대상 데이터베이스에 CEK1(순환됨)이라는 열 암호화 키로 암호화된 일부 열이 있다고 가정합니다. 이 키는 CMK1이라는 열 마스터 키를 사용하여 보호됩니다(열 마스터 키는 Azure Key Vault에 저장되어 있지 않음). 
 
 
-```
+```powershell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database. 
 $cmkName = "CMK1"
@@ -356,16 +344,19 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -U
 Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 ```
 
-
+## <a name="next-steps"></a>Next Steps
+- [SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리](always-encrypted-query-columns-ssms.md)
+- [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
   
-## <a name="next-steps"></a>Next Steps  
-    
-- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-  
-## <a name="additional-resources"></a>추가 리소스  
-
-- [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
-- [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-
+## <a name="see-also"></a>참고 항목
+- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md) 
+- [PowerShell을 사용하여 Always Encrypted 구성](configure-always-encrypted-using-powershell.md)
+- [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-ssms.md)
+- [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
+- [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
+- [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
+- [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
+- [DROP COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
+- [sys.column_master_keys(Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
+- [sys.column_encryption_keys(Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)

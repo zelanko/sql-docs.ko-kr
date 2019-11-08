@@ -1,28 +1,28 @@
 ---
-title: 상시 암호화를 위한 키 관리 개요 | Microsoft 문서
+title: Always Encrypted를 위한 키 관리 개요 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111637"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594104"
 ---
-# <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
+# <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)는 사용자 데이터를 암호화하는 키와 데이터를 암호화하는 키를 암호화하는 다른 키 등 두 가지 유형의 암호화 키를 사용하여 데이터를 보호합니다. 열 암호화 키는 사용자 데이터를 암호화하고, 열 마스터 키는 열 암호화 키를 암호화합니다. 이 문서에서는 이러한 암호화 키 관리의 개요를 자세히 설명합니다.
+[상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 는 사용자 데이터를 암호화하는 키와 데이터를 암호화하는 키를 암호화하는 다른 키 등 두 가지 유형의 암호화 키를 사용하여 데이터를 보호합니다. 열 암호화 키는 사용자 데이터를 암호화하고, 열 마스터 키는 열 암호화 키를 암호화합니다. 이 문서에서는 이러한 암호화 키 관리의 개요를 자세히 설명합니다.  
 
 상시 암호화 키와 키 관리를 설명할 때는 실제 암호화 키와 키를 *설명* 하는 메타데이터 개체 간의 차이를 이해하는 것이 중요합니다. **열 암호화 키** 와 **열 마스터 키** 라는 용어는 실제 암호화 키를 가리키고, **열 암호화 키 메타데이터** 와 **열 마스터 키 메타데이터** 라는 용어는 데이터베이스의 상시 암호화 키 *설명* 을 가리킵니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "68111637"
 
 데이터베이스 시스템의 키 메타데이터에는 일반 텍스트 열 마스터 키 또는 일반 텍스트 열 암호화 키가 포함되지 않습니다. 데이터베이스에는 열 마스터 키의 유형 및 위치와 열 암호화 키의 암호화된 값에 대한 정보만 포함됩니다. 즉, 데이터베이스 시스템이 손상된 경우에도 상시 암호화를 사용하여 보호된 데이터가 안전하도록 일반 텍스트 키는 데이터베이스 시스템에 노출되지 않습니다. 데이터베이스 시스템이 일반 텍스트 키에 액세스할 수 없게 하려면 데이터베이스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 키 관리 도구를 실행해야 합니다. 자세한 내용은 아래 [키 관리에 대한 보안 고려 사항](#security-considerations-for-key-management) 섹션을 참조하세요.
 
-데이터베이스에는 암호화된 데이터(상시 암호화로 보호된 열)만 포함되며 일반 텍스트 키에 액세스할 수 없으므로 데이터 암호를 해독할 수 없습니다. 즉, 상시 암호화 열을 쿼리하면 암호화된 값만 반환되므로 보호된 데이터를 암호화하거나 암호를 해독해야 하는 클라이언트 애플리케이션이 열 마스터 키 및 관련된 열 암호화 키에 액세스할 수 있어야 합니다. 자세한 내용은 [상시 암호화(클라이언트 개발)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.
+데이터베이스에는 암호화된 데이터(상시 암호화로 보호된 열)만 포함되며 일반 텍스트 키에 액세스할 수 없으므로 데이터 암호를 해독할 수 없습니다. 즉, 상시 암호화 열을 쿼리하면 암호화된 값만 반환되므로 보호된 데이터를 암호화하거나 암호를 해독해야 하는 클라이언트 애플리케이션이 열 마스터 키 및 관련된 열 암호화 키에 액세스할 수 있어야 합니다. 자세한 내용은 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.
 
 
 
@@ -70,15 +70,12 @@ ms.locfileid: "68111637"
 상시 암호화 키는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) 및 [PowerShell](../../scripting/sql-server-powershell.md)을 사용하여 관리할 수 있습니다.
 
 - **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있습니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
-    - [열 마스터 키 프로비전](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [열 암호화 키 프로비전](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [열 마스터 키 순환](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [열 암호화 키 순환](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
+    - [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** – 역할 구분을 사용 및 사용하지 않는 상태로 Always Encrypted 키를 관리하기 위한 cmdlet이 포함됩니다. 참조 항목:
-    - [PowerShell을 사용하여 상시 암호화 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [PowerShell을 사용하여 Always Encrypted 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
+    - [PowerShell을 사용하여 Always Encrypted 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
 ## <a name="security-considerations-for-key-management"></a>키 관리에 대한 보안 고려 사항
@@ -96,16 +93,13 @@ ms.locfileid: "68111637"
 - 키 관리 프로세스에서 열 마스터 키 또는 열 암호화 키가 실수로 공개되지 않도록 하려면 키 관리 프로세스를 정의 및 구현하기 전에 잠재적인 악의적 사용자와 보안 위협을 확인하는 것이 중요합니다. 예를 들어 DBA가 중요한 데이터에 액세스할 수 없게 하려는 경우 DBA는 키 생성을 담당할 수 없습니다. 그러나 메타데이터에는 일반 텍스트 키가 포함되지 않으므로 DBA가 데이터베이스의 키 메타데이터를 *관리할 수 있습니다* .
 
 ## <a name="next-steps"></a>Next Steps
+- [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)
+- [Always Encrypted용 열 마스터 키 만들기 및 저장](create-and-store-column-master-keys-always-encrypted.md)
+- [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
+- [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
 
-- [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [PowerShell을 사용하여 상시 암호화 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>추가 리소스
-
-- [상시 암호화(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>참고 항목
+- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

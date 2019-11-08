@@ -1,7 +1,7 @@
 ---
-title: '자습서: 임의 암호화를 사용하는 Enclave 사용 열에 인덱스 만들기 및 사용 | Microsoft Docs'
+title: '자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126802"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592321"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 Enclave 사용 열에 인덱스 만들기 및 사용
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 이 자습서에서는 [보안 enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)에서 지원되는 임의 암호화를 사용하는 enclave 사용 열에 인덱스를 만들고 사용하는 방법을 설명합니다. 다음이 설명됩니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "68126802"
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>1단계: 데이터베이스에서 ADR(가속 데이터베이스 복구) 사용
 
-데이터베이스에서 ADR을 사용하도록 설정한 다음, 임의 암호화를 사용한 enclave 사용 열에 첫 번째 인덱스를 만드는 것이 좋습니다. [보안 Enclave를 사용한 Always Encrypted](./encryption/always-encrypted-enclaves.md)의 [데이터베이스 복구](./encryption/always-encrypted-enclaves.md##database-recovery) 섹션을 참조하세요.
+데이터베이스에서 ADR을 사용하도록 설정한 다음, 임의 암호화를 사용한 enclave 사용 열에 첫 번째 인덱스를 만드는 것이 좋습니다. [보안 enclave를 사용한 Always Encrypted](./encryption/always-encrypted-enclaves.md)의 [데이터베이스 복구](./encryption/always-encrypted-enclaves.md##database-recovery) 섹션을 참조하세요.
 
 1. 이전 자습서에서 사용한 SSMS 인스턴스를 모두 닫습니다. 그러면 ADR을 사용하는 데 필요한, 열려 있던 데이터베이스 연결도 닫힙니다.
 1. SSMS의 새 인스턴스를 연 다음, 데이터베이스 연결에 Always Encrypted를 사용하지 **않고** SQL Server 인스턴스에 sysadmin으로 연결합니다.
@@ -172,5 +172,7 @@ ms.locfileid: "68126802"
    1. **활성 쿼리 통계**(쿼리 창의 아래쪽 부분)에서 쿼리가 인덱스를 사용하는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
+- [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- 보안 enclave를 사용한 Always Encrypted의 다른 사용 사례에 대한 자세한 내용은 [보안 enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요.
+## <a name="see-also"></a>관련 항목:
+- [보안 enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용](encryption/always-encrypted-enclaves-create-use-indexes.md)

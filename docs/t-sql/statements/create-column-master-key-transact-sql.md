@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064558"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593892"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-데이터베이스에 열 마스터 키 메타데이터 개체를 만듭니다. 열 마스터 키 메타데이터 항목은 외부 키 저장소에 저장된 키를 나타냅니다. [Always Encrypted&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능을 사용할 경우 키가 열 암호화 키를 보호(암호화)합니다. 여러 열 마스터 키는 보안 향상을 위해 정기적으로 키 회전을 허용합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 PowerShell에서 개체 탐색기를 사용하여 키 저장소의 열 마스터 키 및 데이터베이스의 관련 메타데이터 개체를 만듭니다. 자세한 정보는 [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.  
+데이터베이스에 열 마스터 키 메타데이터 개체를 만듭니다. 열 마스터 키 메타데이터 항목은 외부 키 저장소에 저장된 키를 나타냅니다. 이 키는 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 사용하는 경우 열 암호화 키를 보호(암호화)합니다. 여러 열 마스터 키는 보안 향상을 위해 정기적으로 키 회전을 허용합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 PowerShell에서 개체 탐색기를 사용하여 키 저장소의 열 마스터 키 및 데이터베이스의 관련 메타데이터 개체를 만듭니다. 자세한 정보는 [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ ms.locfileid: "73064558"
 
 ## <a name="syntax"></a>구문  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ Always Encrypted를 통해 사용 가능한 클라이언트 드라이버는 다�
   
 상시 암호화 기반 클라이언트 드라이버 라이브러리에는 인기 있는 키 저장소를 위한 키 저장소 공급자가 포함됩니다.   
   
-사용 가능한 공급자 세트는 클라이언트 드라이버의 유형 및 버전에 따라 달라집니다. 특정 드라이버에 대한 Always Encrypted 설명서를 참조하세요.
-
-[.NET Framework Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+사용 가능한 공급자 세트는 클라이언트 드라이버의 유형 및 버전에 따라 달라집니다. 특정 드라이버에 대한 Always Encrypted 설명서를 참조하세요. [Always Encrypted를 사용하여 애플리케이션 개발](../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 
 다음 표는 시스템 공급자의 이름을 보여 줍니다.  
@@ -84,7 +82,8 @@ Always Encrypted를 통해 사용 가능한 클라이언트 드라이버는 다�
     |'MSSQL_CERTIFICATE_STORE'|Windows 인증서 저장소| 
     |'MSSQL_CSP_PROVIDER'|Microsoft CryptoAPI를 지원하는 HSM(하드웨어 보안 모듈) 같은 저장소입니다.|
     |'MSSQL_CNG_STORE'|Cryptography API: Next Generation을 지원하는 HSM(하드웨어 보안 모듈) 같은 저장소입니다.|  
-    |'Azure_Key_Vault'|[Azure Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 참조|  
+    |'AZURE_KEY_VAULT'|[Azure Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 참조|  
+    |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
 
 Always Encrypted 사용 가능 클라이언트 드라이버에서 기본 제공 키 저장소 공급자가 없는 경우 열 마스터 키를 저장하는 사용자 지정 키 저장소 공급자를 설정할 수 있습니다. 사용자 지정 키 저장소 공급자의 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 키 저장소 공급자용으로 예약된 접두사인 'MSSQL_'로 시작할 수 없습니다. 
@@ -172,6 +171,7 @@ ENCLAVE_COMPUTATIONS
 
 열 암호화 키 메타데이터 항목을 데이터베이스에서 만들기 전에 그리고 Always Encrypted를 사용하여 데이터베이스의 모든 열을 암호화하기 전에 열 마스터 키 메타데이터 항목을 만듭니다. 메타데이터의 열 마스터 키 항목에는 실제 열 마스터 키가 포함되지 않습니다. 열 마스터 키는 외부 열 키 저장소(SQL Server 외부)에 저장되어야 합니다. 메타데이터의 키 저장소 공급자 이름과 열 마스터 키 경로는 클라이언트 애플리케이션에 대해 유효해야 합니다. 클라이언트 애플리케이션은 열 마스터 키를 사용하여 열 암호화 키의 암호를 해독해야 합니다. 열 암호화 키는 열 마스터 키로 암호화됩니다. 또한 클라이언트 애플리케이션은 암호화된 열을 쿼리해야 합니다.
 
+SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용하여 열 마스터 키를 관리하는 것이 좋습니다. 이러한 도구는 서명(보안 enclave를 사용한 Always Encrypted를 이용하는 경우)을 생성하고 자동으로 `CREATE COLUMN MASTER KEY` 문을 실행하여 열 암호화 키 메타데이터 개체를 만듭니다. [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) 및 [PowerShell을 사용하여 Always Encrypted 키 프로비전](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)을 참조하세요. 
 
   
 ## <a name="permissions"></a>사용 권한  
@@ -182,7 +182,7 @@ ENCLAVE_COMPUTATIONS
 ### <a name="a-creating-a-column-master-key"></a>1\. 열 마스터 키 만들기  
 다음 예제에서는 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 열 마스터 키가 인증서 저장소에 저장됩니다.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys(Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [항상 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [보안 enclave를 사용한 Always Encrypted용 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

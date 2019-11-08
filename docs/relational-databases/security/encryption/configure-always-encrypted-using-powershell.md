@@ -1,32 +1,34 @@
 ---
 title: PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903015"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594412"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 모듈은 Azure SQL Database와 SQL Server 2016 둘 다에서 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 를 구성하기 위한 cmdlet을 제공합니다.
+SqlServer PowerShell 모듈은 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 구성하기 위한 cmdlet을 제공합니다.
 
-SqlServer 모듈의 Always Encrypted cmdlet은 키나 중요한 데이터로 작업하므로 보안 컴퓨터에서 실행해야 합니다. Always Encrypted를 관리하는 경우 SQL Server 인스턴스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 cmdlet을 실행합니다.
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell을 사용하여 Always Encrypted를 구성할 때의 보안 고려 사항
 
 Always Encrypted의 주요 목표는 데이터베이스 시스템이 손상된 경우에도 암호화된 중요한 데이터를 안전하게 보호하는 것이므로 SQL Server 컴퓨터에서 키 또는 중요한 데이터를 처리하는 PowerShell 스크립트를 실행하면 기능의 이점이 감소하거나 무효화될 수 있습니다. 보안과 관련된 추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
-개별 cmdlet 문서로 연결되는 링크는 [이 페이지 맨 아래](#aecmdletreference)에 있습니다.
+역할 구분이 있거나 없는 경우 모두 키 저장소에 실제 암호화 액세스 키에 대한 액세스 권한이 있는 사용자 및 데이터베이스에 대한 액세스 권한이 있는 사용자를 제어함으로써 PowerShell을 사용하여 Always Encrypted 키를 관리할 수 있습니다.
+
+ 추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -50,14 +52,43 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> 데이터베이스에 연결
 
 상시 암호화 cmdlet 중 일부는 데이터베이스의 데이터 또는 메타데이터로 작업하므로 먼저 데이터베이스에 연결해야 합니다. SqlServer 모듈을 사용하여 상시 암호화를 구성할 때 데이터베이스에 연결하는 다음 두 가지 권장 방법이 있습니다. 
-1. SQL Server PowerShell을 사용하여 연결합니다.
-2. SMO(SQL Server 관리 개체)를 사용하여 연결합니다.
+1. **Get-SqlDatabase** cmdlet을 사용하여 연결
+2. SQL Server PowerShell 공급자를 사용하여 연결
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>Get-SqlDatabase 사용
+**Get-SqlDatabase** cmdlet을 사용하여 SQL Server 또는 Azure SQL Database의 데이터베이스에 연결할 수 있습니다. 이 cmdlet은 데이터베이스 개체를 반환합니다. 그러면 데이터베이스에 연결하는 cmdlet의 **InputObject** 매개 변수를 사용하여 이 개체를 전달할 수 있습니다. 
 
 ### <a name="using-sql-server-powershell"></a>SQL Server PowerShell 사용
 
-이 방법은 SQL Server에서만 작동합니다(Azure SQL 데이터베이스에서는 지원되지 않음).
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-SQL Server PowerShell에서 파일 시스템 경로를 탐색하는 데 일반적으로 사용되는 명령과 비슷한 Windows PowerShell 별칭을 사용하여 경로를 탐색할 수 있습니다. 대상 인스턴스와 데이터베이스로 이동하면 이후 cmdlet은 다음 예제와 같이 해당 데이터베이스를 대상으로 합니다.
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+또는 파이프를 사용할 수 있습니다.
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자 사용
+[SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)는 SQL Server 개체의 계층 구조를 파일 시스템 경로와 비슷한 경로로 표시합니다. SQL Server PowerShell에서 파일 시스템 경로를 탐색하는 데 일반적으로 사용되는 명령과 비슷한 Windows PowerShell 별칭을 사용하여 경로를 탐색할 수 있습니다. 대상 인스턴스와 데이터베이스로 이동하면 이후 cmdlet은 다음 예제와 같이 해당 데이터베이스를 대상으로 합니다. 
+
+> [!NOTE]
+> 이 데이터베이스 연결 방법은 SQL Server에서만 작동합니다(Azure SQL 데이터베이스에서는 지원되지 않음).
 
 ```
 # Import the SqlServer module.
@@ -79,43 +110,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>SMO 사용
-
-이 방법은 Azure SQL 데이터베이스와 SQL Server 둘 다에서 작동합니다.
-SMO에서 [데이터베이스 클래스](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)개체를 만든 다음 데이터베이스에 연결하는 cmdlet의 **InputObject** 매개 변수를 사용하여 개체를 전달할 수 있습니다.
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-또는 파이프를 사용할 수 있습니다.
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>PowerShell을 사용하는 상시 암호화 작업
 
-- [PowerShell을 사용하여 상시 암호화 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
 - [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [PowerShell을 사용하여 열 암호화 구성](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [PowerShell을 사용하여 Always Encrypted로 열 암호화, 다시 암호화 또는 암호 해독](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> 상시 암호화 Cmdlet 참조
@@ -145,11 +144,9 @@ $database | Get-SqlColumnMasterKey
 
 
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="see-also"></a>참고 항목
 
-- [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [상시 암호화를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [.NET Framework Data Provider for SQL Server와 상시 암호화 사용](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)

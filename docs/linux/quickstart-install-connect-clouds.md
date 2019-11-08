@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: 이 빠른 시작에서는 선택한 클라우드의 Linux에서 SQL Server를 실행하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/25/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910519"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594552"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67910519"
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  마켓플레이스에서 최소 2GB의 메모리로 Linux AMI 만들기 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP2+](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  SSH를 사용하여 AMI에 연결
 1.  선택한 Linux 배포에 대한 빠른 시작을 따릅니다. 
@@ -53,7 +53,7 @@ ms.locfileid: "67910519"
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  Cloud Launcher에서 최소 2GB의 메모리로 Linux 이미지 만들기 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
+    * [SLES v12 SP4](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  SSH를 사용하여 이미지에 연결
 1.  선택한 Linux 배포에 대한 빠른 시작을 따릅니다. 

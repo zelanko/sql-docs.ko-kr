@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d49b2489cc17388029a9e44cce415b4040fc035f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 66b96ee7f4c7cbd17133149a138a60296c5cb24d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049756"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593683"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 
@@ -523,6 +523,9 @@ ALTER USER userName
 ### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>관리되는 인스턴스로 마이그레이션된 SQL 온-프레미스의 Windows 사용자에 대한 주의 사항
 
 이러한 주의 사항은 Azure AD와 페더레이션 및 동기화된 Windows 사용자로 인증하는 데 적용됩니다.
+
+> [!NOTE]
+> 관리되는 인스턴스 기능에 대한 Azure AD 관리자가 만든 후 변경되었습니다. 자세한 내용은 [MI에 대한 새로운 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 - Azure AD에 매핑되는 Windows 사용자 또는 그룹의 유효성 검사는 기본적으로 마이그레이션 목적에 사용되는 모든 버전의 ALTER USER 구문에서 Graph API를 통해 수행됩니다.
 - 별칭이 지정된 온-프레미스 사용자(원래 Windows 계정에서 다른 이름을 사용)는 별칭이 지정된 이름을 유지합니다.

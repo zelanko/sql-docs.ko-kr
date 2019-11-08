@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155663"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594483"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> SQL Database 관리되는 인스턴스에 대한 Azure AD 로그인은 **공개 미리 보기**로 제공됩니다. 이 구문은 **FROM EXTERNAL PROVIDER** 구문과 함께 도입되었습니다.
-
 ## <a name="arguments"></a>인수
 
 *login_name* **FROM EXTERNAL PROVIDER** 절과 함께 사용될 때 로그인은 Azure AD(Active Directory) 사용자, 그룹 또는 애플리케이션인 Azure AD 보안 주체를 지정합니다. 그렇지 않으면 로그인은 생성된 SQL 로그인의 이름을 나타냅니다.
@@ -423,12 +420,6 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
     - Azure AD 사용자에 대한 Azure AD 개체의 UserPrincipalName.
     - Azure AD 그룹 및 Azure AD 애플리케이션에 대한 Azure AD 개체의 DisplayName.
   - **PASSWORD** 옵션은 사용할 수 없습니다.
-  - 현재 첫 번째 Azure AD 로그인은 위의 구문을 사용하여 `sysadmin`인 표준 SQL Server 계정(비 Azure AD)에 의해 생성되어야 합니다.
-  - SQL Database 관리되는 인스턴스에 대한 Azure AD 관리자를 사용하여 Azure AD 로그인을 만들 때 다음 오류가 발생합니다.</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - 이는 **공개 미리 보기**의 알려진 제한 사항이며 나중에 수정될 예정입니다.
-  - 첫 번째 Azure AD 로그인이 생성되면 이 로그인은 필요한 권한이 부여 받은 후 다른 Azure AD 로그인을 만들 수 있습니다.
 - 기본적으로 **FROM EXTERNAL PROVIDER** 절을 생략하면 일반 SQL 로그인이 생성됩니다.
 - Azure AD 사용자에 매핑된 로그인의 경우 Azure AD 로그인은 sys.server_principals에 표시되며 형식 열 값은 **E**로 설정되고 type_desc는 **EXTERNAL_LOGIN**으로 설정되거나, Azure AD 그룹에 매핑된 로그인의 경우 형식 열 값은 **X**로 설정되고 type_desc 값은 **EXTERNAL_GROUP**으로 설정됩니다.
 - 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
@@ -463,6 +454,7 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 - `sysadmin` 역할의 일부인 SQL 서버 수준 보안 주체(로그인)만 Azure AD 보안 주체를 대상으로 다음 작업을 실행할 수 있습니다.
   - 사용자로 실행
   - 로그인으로 실행
+- 다른 Azure AD 디렉터리에서 가져온 외부(게스트) 사용자를 관리되는 인스턴스의 Azure AD 관리자로 직접 구성할 수 없습니다. 대신 외부 사용자를 Azure AD 보안 사용 그룹에 조인하고 해당 그룹을 인스턴스 관리자로 구성합니다.
 
 ## <a name="examples"></a>예
 

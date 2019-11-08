@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 5d0664b0d02eee638c3f8d9589ff3d883e6f0083
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586723"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594132"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server에 대한 최신 업데이트
 
@@ -30,8 +30,9 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
 
 |제품 버전   | 최신 서비스 팩 |  최신 GDR | 최신 누적 업데이트 | CU 릴리스 날짜 | 일반 지침  |
 |--|--|--|--|--|--|
-|SQL Server 2017|해당 사항 없음|KB 4505224|CU 16[(KB 4508218)](https://support.microsoft.com/en-us/help/4508218)|2019/8/1|[SQL Server 2017 설치](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server) |
-|SQL Server 2016|SP2[(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 8[(KB 4505830)](https://support.microsoft.com/en-us/kb/4505830)|2019/7/31|[SQL Server 2016 설치](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
+|SQL Server 2019|해당 사항 없음|[KB 4517790](https://support.microsoft.com/en-us/help/4517790)|해당 사항 없음|해당 사항 없음|[SQL Server 2019 설치](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|해당 사항 없음|[KB 4505224](https://support.microsoft.com/en-us/help/4505224)|CU 17[(KB 4515579)](https://support.microsoft.com/en-us/help/4515579)|2019/10/8|[SQL Server 2017 설치](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2[(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 10[(KB 4524334)](https://support.microsoft.com/en-us/kb/4524334)|2019/10/8|[SQL Server 2016 설치](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|SP1[(KB 3182545)](https://support.microsoft.com/en-us/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/en-us/help/4505219)|CU 15 + GDR[(KB 4505221)](https://support.microsoft.com/en-us/help/4505221)|2019/7/9|[SQL Server 2016 설치](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|해당 사항 없음|[KB4058560](https://support.microsoft.com/en-us/help/4058560)|CU 9[(KB 4058559)](https://support.microsoft.com/en-us/help/4058559)|2017/11/22|[SQL Server 2016 설치](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2014|SP3[(KB 4022619)](https://support.microsoft.com/en-us/kb/4022619)|[KB 4505218](https://support.microsoft.com/en-us/help/4505218)|CU 4[(KB 4500181)](https://support.microsoft.com/en-us/kb/4500181)|2019/7/29|[SQL Server 2014 설치](https://technet.microsoft.com/en-us/library/cc281837(v=sql.120).aspx)|
