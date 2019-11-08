@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server 예제: 모델 배포 패키지(MDS) | Microsoft Docs'
+title: 모델 배포 패키지 예
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- Master Data Services
+- master data services
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085638"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727882"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지(MDS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68085638"
  샘플 모델 패키지를 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조하세요. [MDSModelDeploy 도구](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 사용하여 샘플 모델 패키지를 배포합니다.  
   
 > [!IMPORTANT]
->  **의 샘플 업데이트(!!) [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 샘플 업데이트**  
 > 
 >  샘플 패키지가 다음과 같은 새로운 기능을 지원하도록 업데이트되었습니다.  
 > 
@@ -54,7 +54,7 @@ ms.locfileid: "68085638"
  
  Master Data Services에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 환경에 새로운 모델을 만듭니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

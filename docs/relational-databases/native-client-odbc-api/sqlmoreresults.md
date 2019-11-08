@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults | Microsoft 문서
+title: SQLMoreResults | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42e0135513fc84d96061864207d63487b5e65566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131307"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786294"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **SQLMoreResults** 는 애플리케이션에서 여러 결과 행 집합을 검색하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  
   
@@ -163,7 +162,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLMoreResults 함수](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

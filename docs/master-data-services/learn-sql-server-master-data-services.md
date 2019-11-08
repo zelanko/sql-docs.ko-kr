@@ -1,5 +1,5 @@
 ---
-title: SQL Server Master Data Services에 대해 알아보기 | Microsoft Docs
+title: SQL Server Master Data Services에 대해 알아보기
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007190"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729082"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server Master Data Services에 대해 알아보기
 
@@ -26,8 +26,8 @@ ms.locfileid: "68007190"
   
   
 ## <a name="training"></a>학습  
-* 새 기능 및에 도입 된 기능을 탐색 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용해를 [자기 진도 맞춘 랩](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Microsoft 계정으로 로그인 필수임).  
-* 개발 하는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 저장 하 고 Excel 용 추가 기능을 사용 하는 지리 데이터의 마스터 목록을 관리 솔루션 및 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]를 사용해를 [자기 진도 맞춘 랩](https://www.microsoft.com/handsonlabs/selfpacedlabs)합니다. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
+* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 도입 된 새로운 기능과 기능을 탐색 하려면 [자체 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs) 사용해 보세요 (Microsoft 계정 로그인 해야 함).  
+* Excel 용 추가 기능 및 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]를 사용 하 여 지리 데이터의 마스터 목록을 저장 하 고 관리 하는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 솔루션을 개발 하려면 [자가 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs)사용해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
   
 ## <a name="videos"></a>비디오  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]릴리스에 포함된 새로운 기능에 대해 알아보려면 [**이 비디오를 시청**](https://www.youtube.com/watch?v=cKA72FpOVxI)하세요.  

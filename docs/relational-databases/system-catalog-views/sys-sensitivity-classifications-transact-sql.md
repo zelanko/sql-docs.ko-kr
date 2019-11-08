@@ -1,5 +1,5 @@
 ---
-title: sensitivity_classifications (Transact-sql) | Microsoft Docs
+title: sys. sensitivity_classifications (Transact-sql) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -21,43 +21,46 @@ helpviewer_keywords:
 - classification [SQL]
 - labels [SQL]
 - information types
+- rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a9d14cd93b08c0094ad984a6469b433e0b266479
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929776"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73757467"
 ---
-# <a name="syssensitivity_classifications-transact-sql"></a>sensitivity_classifications (Transact-sql)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 데이터베이스의 각 분류 된 항목에 대해 행을 반환 합니다.
 
-|열 이름|데이터 형식|Description|
+|열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다.|  
-|**class_desc**|**varchar(16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다.|  
-|**major_id**|**int**|분류가 있는 항목의 ID입니다. < br \>< br \>클래스가 0 이면 major_id는 항상 0입니다.<br>class가 1, 2 또는 7이면 major_id는 object_id입니다.|  
-|**minor_id**|**int**|분류가 존재 하는 항목의 보조 ID입니다. 해당 클래스에 따라 해석 됩니다.<br><br>Class = 1 인 경우 minor_id은 column_id (if 열)이 고, 그렇지 않으면 0 (object)입니다.<br>class = 2이면 minor_id는 parameter_id입니다.<br>Class = 7 인 경우 minor_id은 index_id입니다. |  
+|**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다.|  
+|**major_id**|**int**|분류가 존재 하는 항목의 ID입니다.<br><br>class가 0이면 major_id는 항상 0입니다.<br>class가 1, 2 또는 7이면 major_id는 object_id입니다.|  
+|**minor_id**|**int**|분류가 존재 하는 항목의 보조 ID입니다. 해당 클래스에 따라 해석 됩니다.<br><br>Class = 1 인 경우 minor_id은 column_id (열 인 경우)이 고, 그렇지 않으면 0입니다 (개체의 경우).<br>class = 2이면 minor_id는 parameter_id입니다.<br>Class = 7 인 경우 minor_id은 index_id입니다. |  
 |**label**|**sysname**|민감도 분류에 할당 된 레이블 (사람이 읽을 수 있음)|  
 |**label_id**|**sysname**|레이블과 연결 된 ID입니다 .이 ID는 AIP (Azure Information Protection)와 같은 정보 보호 시스템에서 사용할 수 있습니다.|  
 |**information_type**|**sysname**|민감도 분류에 할당 된 정보 유형 (사람이 읽을 수 있음)|  
 |**information_type_id**|**sysname**|정보 보호 시스템에서 사용할 수 있는 정보 유형과 연결 된 ID입니다 (AIP (Azure Information Protection)).|  
+|**배열**|**int**|Rank의 숫자 값입니다. <br><br>없음의 경우 0<br>낮음의 경우 10<br>MEDIUM의 경우 20<br>높음의 경우 30<br>40 위험| 
+|**rank_desc**|**sysname**|Rank의 텍스트 표현입니다.  <br><br>없음, 낮음, 중간, 높음, 위험|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 
 - 이 보기는 데이터베이스의 분류 상태에 대 한 가시성을 제공 합니다. 데이터베이스 분류를 관리 하는 데 사용할 수 있으며 보고서를 생성 하는 데에도 사용할 수 있습니다.
 - 현재 데이터베이스 열의 분류만 지원 됩니다. 하므로
     - **클래스** -항상 값 1 (열을 나타냄)을 갖습니다.
-    - **class_desc** -항상 *OBJECT_OR_COLUMN* 값을 갖습니다.
-    - **major_id** -object_id에 해당 하는 분류 된 열이 포함 된 테이블의 id를 나타냅니다.
-    - **minor_id** -column_id에 해당 하는 분류가 있는 열의 id를 나타냅니다.
+    - **class_desc** -항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*
+    - **major_id** -all_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 id를 나타냅니다. object_id
+    - **minor_id** -all_columns에 해당 하는 분류가 있는 열의 id를 나타냅니다 column_id
 
 ## <a name="examples"></a>예
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 모든 분류 된 열 및 해당 분류 나열
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>1\. 모든 분류 된 열 및 해당 분류 나열
 
 다음 예에서는 데이터베이스의 각 분류 된 열에 대 한 테이블 이름, 열 이름, 레이블, 레이블 ID, 정보 유형, 정보 유형 ID를 나열 하는 테이블을 반환 합니다.
 
@@ -68,7 +71,7 @@ ms.locfileid: "70929776"
 SELECT
     SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
     sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
-    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID], [Rank], [Rank_Desc]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id
@@ -79,7 +82,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

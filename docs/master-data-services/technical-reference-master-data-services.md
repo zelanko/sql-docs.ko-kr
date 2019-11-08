@@ -1,5 +1,5 @@
 ---
-title: 기술 참조(Master Data Services) | Microsoft Docs
+title: 기술 참조
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f6eeba7adb9d1716120f046a3b937e0e9a0e21a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 397526d89ed6e89eb90f619b3bf891bf156e61be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085580"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727854"
 ---
 # <a name="technical-reference-master-data-services"></a>기술 참조(Master Data Services)
 
@@ -26,6 +26,6 @@ ms.locfileid: "68085580"
  
 -   [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)  
   
--   [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)  
+-   [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

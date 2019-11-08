@@ -1,5 +1,5 @@
 ---
-title: 겹치는 사용자 및 그룹 권한(Master Data Services) | Microsoft Docs
+title: 겹치는 사용자 및 그룹 권한
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44c4374e2c1304f381775be5a37f42ec3c88afc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904017"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727940"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67904017"
   
  그룹 2에 Product 엔터티에 대한 **읽기** 권한이 있습니다.  
   
- 결과: Product 엔터티에 대한 사용자의 유효 사용 권한은 **업데이트**입니다.  
+ 결과: Product 엔터티에 대한 사용자의 유효 권한은 **업데이트** 입니다.  
   
 ## <a name="example-2"></a>예제 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -66,7 +66,7 @@ ms.locfileid: "67904017"
   
  그룹 2는 Product 엔터티에 대한 **거부** 권한을 가지고 있습니다.  
   
- 결과: Product 엔터티에 대한 사용자의 유효 사용 권한은 **거부**입니다.  
+ 결과: Product 엔터티에 대한 사용자의 유효 권한은 **거부** 입니다.  
   
 ## <a name="example-3"></a>예 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -79,9 +79,9 @@ ms.locfileid: "67904017"
   
  그룹 2에 계층 노드의 멤버 그룹에 대한 **읽기** 권한이 있습니다.  
   
- 결과: 멤버에 대한 사용자의 유효 사용 권한은 **업데이트**입니다.  
+ 결과: 멤버에 대한 사용자의 유효 권한은 **업데이트** 입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

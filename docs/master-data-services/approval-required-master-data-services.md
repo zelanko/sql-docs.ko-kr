@@ -1,5 +1,5 @@
 ---
-title: 승인 필요(Master Data Services) | Microsoft Docs
+title: 승인 필요
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047765"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729761"
 ---
 # <a name="approval-required-master-data-services"></a>승인 필요(Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68047765"
 >   
 >  비즈니스 규칙을 통한 변경 역시 승인이 무시됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "68047765"
   
 4.  **편집**을 클릭하고 **승인 필요**를 선택한 후에 **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [변경 집합&#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

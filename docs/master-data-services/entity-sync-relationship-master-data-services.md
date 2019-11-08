@@ -1,5 +1,5 @@
 ---
-title: 엔터티 동기화 관계(Master Data Services) | Microsoft Docs
+title: 엔터티 동기화 관계
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0b989693c92bbecae3221f98a2ccc413700b994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915971"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729262"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67915971"
   
  동기화 관계가 설정되고 나면 동기화 프로세스를 통해서만 대상 엔터티를 수정할 수 있습니다. 언제든지 동기화 관계를 제거하여 대상 엔터티를 편집 가능하도록 설정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [엔터티 동기화 관계 만들기 및 실행&#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [엔터티 동기화 관계 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   

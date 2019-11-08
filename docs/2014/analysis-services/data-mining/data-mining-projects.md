@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085063"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705293"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
   데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "66085063"
   
  예를 들어 단일 데이터 마이닝 프로젝트에서 각각 여러 데이터 원본 뷰를 지원하는 여러 데이터 원본에 대한 참조를 포함할 수 있습니다. 또한 각 데이터 원본 뷰는 각각 여러 마이닝 모델과 관련된 여러 개의 마이닝 구조를 지원할 수 있습니다.  
   
- 그 밖에도 프로젝트는 플러그 인 알고리즘, 사용자 지정 어셈블리 또는 사용자 지정 저장 프로시저를 포함할 수 있지만 여기에서는 이러한 개체에 대해 설명하지 않습니다. 자세한 내용은 [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)합니다.  
+ 그 밖에도 프로젝트는 플러그 인 알고리즘, 사용자 지정 어셈블리 또는 사용자 지정 저장 프로시저를 포함할 수 있지만 여기에서는 이러한 개체에 대해 설명하지 않습니다. 자세한 내용은 [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)를 참조 하세요.  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -70,7 +70,7 @@ ms.locfileid: "66085063"
   
  단일 데이터 마이닝 프로젝트에서 여러 데이터 원본을 참조할 수 있습니다. 마이닝 모델은 한 번에 하나의 데이터 원본만 사용할 수 있지만 프로젝트에는 데이터 원본이 서로 다른 여러 개의 모델 드로잉이 있을 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트-관계형 원본 기반의 모델과 OLAP 큐브 기반 모델을 개발 하는 경우-개발 및 관리 하는 별도 프로젝트에서 선택할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트 (관계형 원본 및 OLAP 큐브 기반 모델을 기반으로 하는 모델)를 모두 개발할 경우 별도의 프로젝트에서 개발 하 고 관리할 수 있습니다.  
   
 -   일반적으로 OLAP 큐브를 기반으로 하는 모델은 OLAP 디자인 솔루션 내에서 개발해야 합니다. 그 이유 중 하나는 큐브를 기반으로 하는 모델은 큐브를 처리하여 데이터를 업데이트해야 하기 때문입니다. 일반적으로 큐브 데이터는 기본적인 데이터 스토리지 및 액세스 방법으로 사용되거나 다차원 프로젝트에서 만든 집계, 차원 및 특성이 필요한 경우에만 사용해야 합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66085063"
 > [!WARNING]  
 >  데이터를 필터링하려는 경우 데이터 원본 뷰에서 작업을 수행할 수 있지만 마이닝 모델 수준에서 데이터에 대한 필터를 만들 수도 있습니다. 필터 정의는 마이닝 모델과 함께 저장되므로 모델 필터를 사용하면 모델 학습에 사용된 데이터를 보다 쉽게 확인할 수 있습니다. 또한 여러 가지 필터 조건을 사용하여 여러 개의 관련 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
- 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md) 및 [드릴스루](drillthrough-queries-data-mining.md)를 참조하세요.  
+ 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md) 및 [드릴스루](drillthrough-queries-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
   
 
   
@@ -160,9 +160,7 @@ ms.locfileid: "66085063"
   
  이러한 시각화 요소는 일시적이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 세션을 종료할 때 저장하지 않고 닫힙니다. 따라서 이러한 시각화 요소를 프레젠테이션이나 이후의 분석에 사용하기 위해 다른 애플리케이션으로 내보내야 하는 경우 뷰어 인터페이스의 각 탭이나 창에 제공된 **복사** 명령을 사용합니다.  
   
- Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](https://go.microsoft.com/fwlink/?LinkID=123146)을 참조하세요.  
-  
-
+ Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](https://www.microsoft.com/download/details.aspx?id=7294)을 참조하세요.
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  모델을 만든 후 결과를 조사하여 가장 적합한 모델을 결정할 수 있습니다.  
@@ -191,20 +189,20 @@ ms.locfileid: "66085063"
   
   
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  다음 항목에서는 데이터 마이닝 마법사를 사용하여 데이터 마이닝 프로젝트와 관련 개체를 만드는 방법에 대해 설명합니다.  
   
-|태스크|항목|  
+|작업|항목|  
 |-----------|------------|  
 |마이닝 구조 열로 작업하는 방법에 대해 설명합니다.|[관계형 마이닝 구조 만들기](create-a-relational-mining-structure.md)|  
-|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[마이닝 모델 구조 & #40;에 추가 Analysis Services-데이터 마이닝 & #41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |마이닝 모델을 작성하는 알고리즘을 사용자 지정하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.|[마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)|  
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
 |Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 디자이너](data-mining-designer.md)   
  [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  

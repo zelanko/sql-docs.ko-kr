@@ -1,5 +1,5 @@
 ---
-title: SQL Server (ODBC)와 통신 | Microsoft Docs
+title: SQL Server와 통신 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,22 +15,21 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92e261d2c1cb1c96d3cce7cbb2ba13dcb0bad60c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce03a5f15e03193d708f30377996cca796eeeaa1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134209"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785004"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>SQL Server와 통신(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  인스턴스와 통신 하는 ODBC 응용 프로그램에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 환경 할당 해야 합니다 및 연결 처리 및 데이터 원본에 연결 합니다. 연결이 설정되면 애플리케이션에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 애플리케이션은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  
+  ODBC 응용 프로그램이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 통신 하려면 환경 및 연결 핸들을 할당 하 고 데이터 원본에 연결 해야 합니다. 연결이 설정되면 애플리케이션에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 애플리케이션은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  
   
  애플리케이션에서는 개수에 제한 없이 여러 데이터 원본에 연결할 수 있습니다. 애플리케이션은 여러 드라이버와 여러 데이터 원본의 조합, 단일 드라이버와 여러 데이터 원본 조합 또는 단일 드라이버와 단일 데이터 원본에 대한 여러 개의 연결을 사용할 수 있습니다.  
   
- 다운로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에서 샘플 합니다 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=62796) MSDN 페이지를 참조 합니다.  
+ MSDN의 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=62796) 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 샘플을 다운로드할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -40,12 +39,12 @@ ms.locfileid: "68134209"
   
 -   [SQL Server Native Client ODBC 데이터 원본](../../relational-databases/native-client-odbc-communication/sql-server-native-client-odbc-data-sources.md)  
   
--   [데이터 원본에 연결 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)  
+-   [데이터 원본 &#40;ODBC에 연결&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)  
   
 -   [데이터 원본에서 연결 끊기](../../relational-databases/native-client-odbc-communication/disconnecting-from-a-data-source.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+## <a name="see-also"></a>관련 항목:  
+ [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)  
   
   

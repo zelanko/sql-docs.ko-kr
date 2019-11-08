@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,25 +26,25 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064569"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593901"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-지정된 CMK(열 마스터 키)로 암호화된 값의 초기 세트를 사용하여 CEK(열 암호화 키)를 만듭니다. 이 암호화는 메타데이터 작업입니다. CEK는 CMK 회전을 허용하는 최대 2개 값을 가질 수 있습니다. [Always Encrypted&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능이 데이터베이스의 모든 열을 암호화하기 전에 CEK를 만들어야 합니다. CEK는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 만들 수도 있습니다. CEK를 만들기 전에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 사용하여 CMK를 정의해야 합니다.  
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)의 열 암호화 키 메타데이터 개체를 만듭니다. 열 암호화 키 메타데이터 개체에는 열에 있는 데이터를 암호화하는 데 사용되는 열 암호화 키의 암호화된 값이 한 개 또는 두 개 포함되어 있습니다. 각 값은 열 마스터 키를 사용하여 암호화됩니다. 
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -64,25 +64,28 @@ WITH VALUES
 _key\_name_  
 데이터베이스에서 열 암호화 키를 식별하는 이름입니다.  
   
-_column\_master\_key\_name_ CEK 암호화에 사용되는 사용자 지정 CMK의 이름을 지정합니다.  
+_column\_master\_key\_name_ 열 암호화 키 암호화에 사용되는 사용자 지정 CMK의 이름을 지정합니다.  
   
 _algorithm\_name_  
 열 암호화 키를 암호화하는 데 사용된 알고리즘의 이름입니다. 시스템 공급자에 대한 알고리즘은 **RSA_OAEP**이어야 합니다.  
   
 _varbinary\_literal_  
-암호화된 CEK 값 BLOB입니다.  
+암호화된 열 암호화 키 값 BLOB입니다.  
   
 > [!WARNING]  
->  일반 텍스트 CEK 값을 이 문에 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
+>  이 문의 일반 텍스트 열 암호화 키 값은 절대 전달하지 마세요. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
   
 ## <a name="remarks"></a>Remarks  
-CREATE COLUMN ENCRYPTION KEY 문은 하나 이상의 VALUES 절을 포함해야 하며 2개까지 보유할 수 있습니다. 하나를 지정한 경우 나중에 두 번째 값을 추가하려면 ALTER COLUMN ENCRYPTION KEY 문을 사용할 수 있습니다. 또한 VALUES 절을 제거하려면 ALTER COLUMN ENCRYPTION KEY 문을 사용할 수도 있습니다.  
+`CREATE COLUMN ENCRYPTION KEY` 문에는 적어도 한 개 또는 두 개의 값이 포함되어 있어야 합니다. [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](alter-column-encryption-key-transact-sql.md). `ALTER COLUMN ENCRYPTION KEY` 문을 사용하여 값을 제거할 수도 있습니다.  
   
-일반적으로 CEK는 단 하나의 암호화된 값을 사용하여 만들어집니다. 경우에 따라 CMK를 회전해야 합니다. 현재 CMK를 새 CMK로 바꿉니다. 키를 회전해야 하는 경우 새 CMK로 암호화된 열 암호화 키의 새 값을 추가합니다. 이 회전을 사용하면 클라이언트 애플리케이션이 CEK로 암호화된 데이터에 액세스할 수 있고, 동시에 클라이언트 애플리케이션에서 새 CMK를 사용할 수 있습니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 애플리케이션에서 Always Encrypted 사용 가능 드라이버는 이전 CMK로 암호화된 CEK 값을 사용하여 민감한 데이터에 액세스합니다.  
+일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키를 회전시켜 현재 열 마스터 키를 새 열 마스터 키로 바꿔야 하는 경우도 있습니다. 키를 회전시켜야 하는 경우 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가합니다. 회전을 통해 클라이언트 애플리케이션은 열 암호화 키로 암호화된 데이터에 액세스할 수 있을 뿐만 아니라 새 열 마스터 키를 사용할 수 있게 됩니다. 새 마스터 키에 액세스할 권한이 없는 클라이언트 애플리케이션의 Always Encrypted 지원 드라이버는 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용하여 중요한 데이터에 액세스합니다.  
+
   
 Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다.  
   
-암호화된 값은 CMK를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 생성되어야 합니다. 자세한 내용은 [상시 암호화 &#40;클라이언트 개발&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.  
+SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용하여 열 마스터 키를 관리하는 것이 좋습니다. 해당 도구는 암호화된 값을 생성하고 자동으로 `CREATE COLUMN ENCRYPTION KEY` 문을 실행하여 열 암호화 키 메타데이터 개체를 만듭니다. [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비저닝](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) 및 [PowerShell을 사용하여 Always Encrypted 키 프로비저닝](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)을 참조하세요. 
+
+열 마스터 키를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 프로그래밍 방식으로 열 암호화 키 값을 생성할 수도 있습니다. 자세한 내용은 [Always Encrypted를 사용하여 애플리케이션 개발](../../relational-databases/security/encryption/always-encrypted-client-development.md)을 참조하세요.
   
 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
@@ -129,9 +132,12 @@ GO
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
 [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+[Always Encrypted를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+[보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

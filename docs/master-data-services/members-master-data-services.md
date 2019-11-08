@@ -1,5 +1,5 @@
 ---
-title: 멤버(Master Data Services) | Microsoft Docs
+title: 멤버
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728009"
 ---
 # <a name="members-master-data-services"></a>멤버(Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68092590"
   
  이 예에서 테이블은 엔터티를 나타내고, 테이블의 행은 멤버를 나타내며, 테이블의 열은 특성을 나타냅니다. 각 셀은 특정 멤버의 특성 값을 나타냅니다.  
   
- ![테이블로 표시된 Master Data Services 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
+ ![테이블로 표시 된 MDS(Master Data Services) 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 MDS(Master Data Services) 엔터티")  
   
 ## <a name="member-types"></a>멤버 유형  
  리프 멤버, 통합 멤버 및 컬렉션 멤버로 세 가지 멤버 유형이 있습니다.  
@@ -58,9 +58,9 @@ ms.locfileid: "68092590"
 ## <a name="member-example"></a>멤버 예  
  다음 예의 각 멤버는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성 값으로 구성되어 있습니다.  
   
- ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
+ ![자전거 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "자전거 제품 엔터티 테이블")  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

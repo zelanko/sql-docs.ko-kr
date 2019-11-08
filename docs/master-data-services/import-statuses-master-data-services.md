@@ -1,5 +1,5 @@
 ---
-title: 가져오기 상태(Master Data Services) | Microsoft Docs
+title: 가져오기 상태
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945099"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728190"
 ---
 # <a name="import-statuses-master-data-services"></a>가져오기 상태(Master Data Services)
 
@@ -25,13 +25,13 @@ ms.locfileid: "67945099"
   
 |상태|설명|Status_ID|  
 |------------|-----------------|----------------|  
-|실행을 위해 대기|일괄 처리가 시작되지 않았습니다.|1|  
+|실행을 위해 대기|일괄 처리가 시작되지 않았습니다.|1\.|  
 |실행 중|일괄 처리가 진행 중입니다.|2|  
 |완료|일괄 처리가 완료되었습니다.|3|  
 |지우기 위해 대기|일괄 처리가 완료되었으며 지워질 예정입니다.|4|  
 |선택 취소|일괄 처리가 지워졌습니다.|5|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

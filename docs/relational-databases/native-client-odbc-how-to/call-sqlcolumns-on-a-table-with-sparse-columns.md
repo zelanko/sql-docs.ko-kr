@@ -1,5 +1,5 @@
 ---
-title: 스파스 열이 있는 테이블에 SQLColumns 호출 | Microsoft 문서
+title: 스파스 열이 있는 테이블에 대해 SQLColumns 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,16 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987593"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781702"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>스파스 열이 있는 테이블에 대해 SQLColumns 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 정의된 스파스 열이 있는 테이블에 대해 SQLColumns를 호출하는 방법을 보여 줍니다.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67987593"
   
  /EHsc /D, "UNICODE" 및 odbc32.lib를 사용하여 컴파일합니다.  
   
- 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 만든 테이블을 삭제 합니다.  
+ 두 번째 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 만든 테이블을 삭제 합니다.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

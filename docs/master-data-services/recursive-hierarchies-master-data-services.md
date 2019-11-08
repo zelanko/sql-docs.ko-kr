@@ -1,5 +1,5 @@
 ---
-title: 재귀 계층 구조(Master Data Services) | Microsoft Docs
+title: 재귀 계층 구조
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910029"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728958"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>재귀 계층 구조(Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67910029"
   
 -   재귀 계층 구조는 순환 관계를 포함할 수 없습니다. 예를 들어, Sandeep이 Katherine의 관리자인 경우 Katherine은 Sandeep의 관리자일 수 없습니다. 또한 Katherine은 자신을 관리할 수 없습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

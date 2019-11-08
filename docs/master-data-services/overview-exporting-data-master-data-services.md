@@ -1,5 +1,5 @@
 ---
-title: '개요: 데이터 내보내기(Master Data Services) | Microsoft Docs'
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904004"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728987"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>개요: 데이터 내보내기(Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67904004"
 
   이 문서에서는 구독 뷰 형식 유형 및 모델 개체에 대한 변경 내용으로 인해 뷰를 편집해야 하는 경우를 확인하는 방법을 소개합니다.  
   
- 구독 뷰를 만들어 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 등의 구독 시스템으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]데이터를 내보냅니다. 구독 시스템을 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 데이터를 확인합니다.  구독 뷰를 만드는 방법에 대한 자세한 내용은 [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ 구독 뷰를 만들어 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 등의 구독 시스템으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]데이터를 내보냅니다. 구독 시스템을 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 데이터를 확인합니다.  구독 뷰를 만드는 방법에 대한 자세한 내용은 [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67904004"
 ## <a name="subscription-views-can-become-out-of-date"></a>구독 뷰가 최신 내용을 반영하지 못할 수 있음  
  엔터티 또는 계층에 대한 구독 뷰를 만든 후 연결된 모델 개체의 변경 사항이 뷰에 자동으로 반영되지 않습니다. 또한 모델 개체에 대한 변경 사항을 반영하기 위해 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 구독 뷰를 다시 생성해야 할 수 있습니다. 모델 개체가 변경될 경우 **내보내기** 페이지의 **변경됨** 열이 **True** 로 업데이트됩니다. **True** 는 구독 뷰를 편집하고 저장하여 뷰를 다시 생성해야 한다는 것을 나타냅니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

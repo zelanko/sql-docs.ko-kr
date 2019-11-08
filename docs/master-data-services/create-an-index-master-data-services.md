@@ -1,5 +1,5 @@
 ---
-title: 인덱스 만들기(Master Data Services) | Microsoft Docs
+title: 인덱스 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896868"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728425"
 ---
 # <a name="create-an-index-master-data-services"></a>인덱스 만들기(Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "67896868"
 
   쿼리 성능을 개선하려면 자주 쿼리하는 특성 목록에 대해 사용자 지정 인덱스를 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -48,11 +48,11 @@ ms.locfileid: "67896868"
   
 8.  **저장**을 클릭합니다.  
   
- 생성되는 각 인덱스에 대해 열이 4개 포함된 행이 표에 추가됩니다. 다음 표에서는 이러한 열에 대해 설명합니다.  
+ 생성되는 각 인덱스에 대해 열이 4개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
 |열 이름|설명|  
 |-----------------|-----------------|  
-|상태|인덱스 상태입니다.<br /><br /> **저장**을 클릭하면 인덱스가 업데이트 중임을 나타내는 ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 이미지가 표시됩니다.<br /><br /> 인덱스를 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
+|상태|인덱스 상태입니다.<br /><br /> **저장**을 클릭 하면 인덱스가 업데이트 중임을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con) 표시 됩니다.<br /><br /> 인덱스를 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ") 표시 됩니다.|  
 |이름|인덱스 이름입니다.|  
 |고유|인덱스가 고유한지 여부를 지정합니다.|  
 |대상 특성|인덱스를 정의한 특성의 표시 이름을 표시합니다.|  
@@ -61,16 +61,16 @@ ms.locfileid: "67896868"
   
 -   **만든 사람**: 인덱스를 만든 사용자의 이름입니다.  
   
--   **On**: 인덱스를 만든 날짜와 시간입니다.  
+-   **날짜**: 인덱스를 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 인덱스를 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **On**: 인덱스를 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **날짜**: 인덱스를 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  [인덱스 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

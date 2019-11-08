@@ -18,18 +18,17 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 481f8847a3bc07c32ce4600005fe23684bd652d2
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 8f6c93002a5182375725703d159565782d978268
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874136"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73769725"
 ---
 # <a name="retrieving-error-information"></a>오류 정보 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 제공 하는 다양 한 오류 인터페이스에서 정보를 가져옵니다.  
+  이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 의해 노출 되는 다양 한 오류 인터페이스에서 정보를 가져옵니다.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -220,7 +219,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [오류](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

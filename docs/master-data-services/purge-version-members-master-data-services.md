@@ -1,5 +1,5 @@
 ---
-title: 버전 멤버 삭제(Master Data Services) | Microsoft Docs
+title: 버전 멤버 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 571ac34ad836bf25ad98f973f9fc33c9de499ba9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024654"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729011"
 ---
 # <a name="purge-version-members-master-data-services"></a>버전 멤버 삭제(Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68024654"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 멤버를 삭제해도 멤버가 비활성화(일시 삭제) 상태로만 전환됩니다. 멤버의 데이터는 데이터베이스에 계속 남아 있습니다. 이 항목에서는 모델 버전에서 일시 삭제된 모든 멤버를 영구적으로 삭제하는 방법을 설명합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면 다음 조건을 충족해야 합니다.  
   
 -   버전 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

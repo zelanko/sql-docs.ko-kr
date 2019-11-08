@@ -1,5 +1,5 @@
 ---
-title: 관리자(Master Data Services) | Microsoft Docs
+title: 관리자
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047815"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729796"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047815"
   이 문서에서는 모델 관리자, 엔터티 관리자, 슈퍼 사용자 등 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 관리자 유형을 설명합니다.  
   
 ## <a name="model-administrators"></a>모델 관리자  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 대한 **관리** 권한이 할당된 사용자입니다. 사용자에게 특정 모델에 대한 관리 권한이 있으면 모델 자식 개체에 대한 기타 모든 권한(모델 개체 및 멤버 권한)은 실질적으로 무시되며 모델 **관리** 권한이 우선적으로 적용됩니다.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 대 한 **관리자** 권한이 할당 된 사용자입니다. 사용자에 게 특정 모델에 대 한 관리자 권한이 있는 경우 모델의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 모델 **관리자** 권한으로 있으면 효과적으로 무시 됩니다.  
   
 -   **탐색기** 기능 영역에 대한 액세스 권한을 가진 사용자는 이 영역에서 모든 마스터 데이터를 추가하고, 삭제하고, 업데이트할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68047815"
  사용자는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 또는 프로그래밍 방식으로 모델 관리자로 구성될 수 있습니다. 자세한 내용은 [모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)를 참조하세요.  
   
 ## <a name="entity-administrators"></a>엔터티 관리자  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티 관리자는 모델 개체 탭의 엔터티 개체에 대한 관리자 권한이 할당된 사용자입니다. 사용자에게 특정 엔터티에 대한 관리자 권한이 있으면 엔터티 자식 개체에 대한 기타 모든 권한(모델 개체 및 멤버 권한)은 무시되며 관리자 권한이 우선적으로 적용됩니다.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티 관리자는 모델 개체 탭의 엔터티 개체에 대 한 관리자 권한이 할당 된 사용자입니다. 사용자에 게 엔터티에 대 한 관리자 권한이 있는 경우 엔터티의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 관리자 권한으로 대체 되며 무시 됩니다.  
   
 -   **탐색기** 기능 영역에 대한 액세스 권한을 가진 사용자는 이 영역에서 모든 마스터 데이터를 추가하고, 삭제하고, 업데이트할 수 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68047815"
 ## <a name="master-data-services-super-user"></a>Master Data Services 슈퍼 사용자  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 슈퍼 사용자 기능 영역에 사용자 권한을 할당할 수 있습니다. 슈퍼 사용자 기능 영역에 대한 권한이 있는 사용자는 실제로 모든 모델에 대한 관리자 권한과 다른 모든 기능 영역에 대한 권한을 갖습니다. 기능 영역의 사용 권한에 대한 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
- 기본 슈퍼 사용자는 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]데이터베이스를 만들 때 **관리자 계정**에 대해 지정됩니다.  
+ 기본 슈퍼 사용자는 **데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]데이터베이스를 만들 때 [관리자 계정](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)에 대해 지정됩니다.  
   
  슈퍼 사용자는 다음을 수행할 수 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68047815"
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  

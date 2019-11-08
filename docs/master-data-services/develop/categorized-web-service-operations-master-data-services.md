@@ -1,5 +1,5 @@
 ---
-title: 범주별로 분류한 웹 서비스 작업(Master Data Services) | Microsoft Docs
+title: 범주별로 분류한 웹 서비스 작업
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098596"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728297"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68098596"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>데이터 가져오기 작업  
- 이러한 작업은 데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스로 가져오는 데 사용됩니다. 자세한 내용은 [ 개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
+ 이러한 작업은 데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스로 가져오는 데 사용됩니다. 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098596"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>데이터 내보내기 작업  
- 이러한 작업은 구독 뷰를 통해 데이터를 내보내는 데 사용됩니다. 자세한 내용은 [ 개요: 데이터 내보내기&#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
+ 이러한 작업은 구독 뷰를 통해 데이터를 내보내는 데 사용됩니다. 자세한 내용은 [개요: 데이터 내보내기&#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  

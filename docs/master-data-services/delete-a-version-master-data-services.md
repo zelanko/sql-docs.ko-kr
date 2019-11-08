@@ -1,5 +1,5 @@
 ---
-title: 버전 삭제(Master Data Services) | Microsoft Docs
+title: 버전 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e0886701a5e3554702c077c2a165029af71a545e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906427"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728343"
 ---
 # <a name="delete-a-version-master-data-services"></a>버전 삭제(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67906427"
 > [!WARNING]  
 >  모델에 버전이 하나뿐인 경우 해당 버전을 삭제하면 모델을 사용할 수 없게 됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 mdm.viw_SYSTEM_SCHEMA_VERSION 뷰를 보고 mds.udpVersionDelete 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)을 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "67906427"
     > [!NOTE]  
     >  웹 애플리케이션에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   

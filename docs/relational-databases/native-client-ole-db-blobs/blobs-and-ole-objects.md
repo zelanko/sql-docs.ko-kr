@@ -17,26 +17,25 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4e284d2086684af232c17b59675b834b26f497b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128890"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790635"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)** , 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자에 게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max) 액세스를 지 원하는 ISequentialStream 인터페이스를 노출 합니다.** 및 xml 데이터 형식은 blob (binary large object)로 되어 있습니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
- 이 기능을 보여 주는 샘플을 참조 하세요 [큰 데이터 집합 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)합니다.  
+ 이 기능을 보여 주는 샘플은 [Large Data &#40;OLE DB&#41;설정](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)을 참조 하세요.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자가 구현한 따르면 **IStorage** 데이터 수정을 위해 바인딩한 접근자에서 인터페이스 포인터를 제공 하는 소비자 때 인터페이스입니다.  
+ 소비자가 데이터 수정에 바인딩된 접근자에 인터페이스 포인터를 제공 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자가 구현한 **IStorage** 인터페이스를 사용할 수 있습니다.  
   
- 큰 값 데이터 형식에 대 한 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 형식 크기 가정을 확인 **IRowset** 및 DDL 인터페이스입니다. 열 **varchar**를 **nvarchar**, 및 **varbinary** 무제한으로 설정 하는 최대 크기를 사용 하 여 데이터 형식이 스키마 행 집합 및 인터페이스를 통해 ISLONG으로 표현 열 데이터 형식을 반환 합니다.  
+ 큰 값 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 **IRowset** 및 DDL 인터페이스에서 형식 크기 가정을 확인 합니다. 최대 크기가 무제한으로 설정 된 **varchar**, **nvarchar**및 **varbinary** 데이터 형식의 열은 스키마 행 집합 및 열 데이터 형식을 반환 하는 인터페이스를 통해 islong으로 표시 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)** , **varbinary (max)** 하 고 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_ 형식 WSTR 각각.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 **varchar (max)** , **varbinary (max)** 및 **nvarchar (max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR으로 노출 합니다.  
   
  애플리케이션에서 이러한 형식을 사용하기 위해 처리하는 방법은 다음과 같습니다.  
   
@@ -46,17 +45,17 @@ ms.locfileid: "68128890"
   
 -   DBTYPE_IUNKNOWN으로 바인딩하고 스트리밍을 사용합니다.  
   
- DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 저장된 프로시저를 이러한 데이터를 반환 하는 시나리오를 용이 하 게 큰 값 데이터 형식에 대해 DBTYPE_IUNKNOWN 형식을 반환 값으로 노출 될 DBTYPE_IUNKNOWN으로 바인딩 출력 매개 변수 지원 클라이언트입니다.  
+ DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 출력 매개 변수를 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 바인딩하는 것을 지원 합니다 .이 경우 저장 프로시저는 이러한 데이터 형식을 반환 DBTYPE_IUNKNOWN 값으로 반환 하 여 클라이언트로.  
   
 ## <a name="storage-object-limitations"></a>스토리지 개체 제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열려 있는 저장소 개체를 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열린 단일 저장소 개체만 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
   
--   에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 이는 스토리지 개체가 활성화되면 스토리지 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패한다는 것을 의미합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 이는 스토리지 개체가 활성화되면 스토리지 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패한다는 것을 의미합니다.  
   
--   소비자가 구현한 저장소 개체에 의해 표시 되는 데이터의 길이를 알 수 있어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 저장소 개체를 참조 하는 행 접근자를 만들 때. 소비자는 접근자 생성에 사용되는 DBBINDING 구조에 길이 표시자를 바인딩해야 합니다.  
+-   소비자 구현 저장소 개체에서 제공 하는 데이터의 길이는 저장소 개체를 참조 하는 행 접근자가 만들어질 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 게 알려 두어야 합니다. 소비자는 접근자 생성에 사용되는 DBBINDING 구조에 길이 표시자를 바인딩해야 합니다.  
   
--   행을 큰 데이터 값 이상 있고 DBPROP_ACCESSORDER가 DBPROPVAL_AO_RANDOM이 아닌 경우 소비자에서 사용 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 커서 지원 행 집합 행 데이터를 검색 하거나 모든 큰 데이터를 처리 하기 전에 값 다른 행 값을 검색합니다. DBPROP_ACCESSORDER가 DBPROPVAL_AO_RANDOM 인 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 순서에 관계 없이 액세스할 수 있도록 모든 xml 데이터 형식 binary large object (Blob)으로 캐시 합니다.  
+-   행에 여러 개의 대량 데이터 값이 포함 되어 DBPROP_ACCESSORDER DBPROPVAL_AO_RANDOM 되지 않은 경우 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 커서 지원 행 집합을 사용 하 여 행 데이터를 검색 하거나 이전에 모든 데이터 값을 처리 해야 합니다. 다른 행 값을 검색 합니다. DBPROP_ACCESSORDER DBPROPVAL_AO_RANDOM 되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 모든 xml 데이터 형식을 Blob (binary large object)로 캐시 하 여 순서에 관계 없이 액세스할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -66,8 +65,8 @@ ms.locfileid: "68128890"
   
 -   [BLOB 출력 매개 변수에 대한 스트리밍 지원](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

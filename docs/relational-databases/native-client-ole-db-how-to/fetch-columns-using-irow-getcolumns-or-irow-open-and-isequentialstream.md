@@ -15,16 +15,15 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110257"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790106"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   큰 데이터는 **ISequentialStream** 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
   
@@ -37,13 +36,13 @@ ms.locfileid: "68110257"
   
 2.  명령을 실행합니다. 다음 예에서는 IID_IRow를 사용하여 **ICommandExecute::Execute()** 가 호출됩니다.  
   
-3.  사용 하 여 열의 데이터 페치 **IRow::Open()** 하거나 **IRow::GetColumns()** 합니다.  
+3.  **IRow:: Open ()** 또는 **IRow:: getcolumns ()** 를 사용 하 여 열 데이터를 가져옵니다.  
   
-    -   **IRow::Open()** 열에 사용할 수는 **ISequentialStream** 행입니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
+    -   **IRow:: open ()** 을 사용 하 여 행에서 **ISequentialStream** 를 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
     -   **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
   
-4.  사용 하 여 **ISequentialStream::Read()** 반복 하 여 소비자 버퍼에 지정 된 바이트 수를 읽습니다.  
+4.  **ISequentialStream:: Read ()** 를 반복 해 서 사용 하 여 지정 된 바이트 수를 소비자 버퍼로 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  
@@ -673,7 +672,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

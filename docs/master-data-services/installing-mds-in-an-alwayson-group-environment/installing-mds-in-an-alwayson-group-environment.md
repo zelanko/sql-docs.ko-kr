@@ -1,6 +1,6 @@
 ---
-title: Master Data Services에 대한 고가용성 및 재해 복구 | Microsoft Docs
-ms.custom: ''
+title: 고가용성 및 재해 복구
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874769"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728096"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -68,7 +68,7 @@ ms.locfileid: "70874769"
 
 재해 복구 데이터 센터에는 주 복제본과 함께 비동기 커밋 관계가 있는 보조 복제본이 있습니다. 이 데이터 센터는 일반적으로 기본 데이터 센터와 지리적으로 다른 지역에 있습니다. 보조 복제본에는 투표 권한이 없습니다.
 
-이 구성은 주 데이터 센터에 화재, 지진 등의 재해가 발생한 경우 복구를 달성하기 위해 사용됩니다. 구성은 상대적으로 낮은 비용으로 두 HA 및 재해 복구를 달성합니다.
+이 구성은 기본 데이터 센터가 화재, 지진 등의 재해가 발생 한 경우 복구를 위해 사용 됩니다. 이 구성은 비교적 저렴 한 비용으로 HA와 재해 복구를 모두 달성 합니다.
 
 ![Always On 가용성 그룹에 대 한 일반적인 구성](media/Fig1_TypicalConfig.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "70874769"
 
 WSFC는 애플리케이션 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 모든 인스턴스에서 Windows Server 운영 체제를 설치하고 모든 업데이트를 패치합니다.
 
@@ -183,7 +183,7 @@ Windows Server 인스턴스마다 다음 단계를 완료하여 각 인스턴스
 
 - WSFC 기능은 모든 Windows Server 버전에서 사용할 수 있는 것은 아닙니다. 버전에 이 기능이 있는지 확인합니다.
 
-- Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치(failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)을 참조하세요.
+- Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)을 참조하세요.
 
 WSFC에 대한 더 자세한 내용은 [장애 조치 클러스터](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)를 참조하세요.
 
@@ -207,7 +207,7 @@ AG는 데이터베이스 수준의 가용성을 제공 합니다. AG(사용자 �
 
 FCIs는 인스턴스 수준의 고가용성을 제공 합니다. SQL Server 서비스와 관련 서비스는 WSFC에서 리소스로 등록 됩니다. 또한 FCI 솔루션은 WFC 클러스터의 모든 노드에 사용할 수 있어야 하는 SAN 또는 SMB 파일 공유와 같이 대칭 공유 디스크 스토리지가 필요합니다.
    
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 - 모든 노드에서 SQL Server를 설치합니다. 자세한 내용은 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)를 참조하세요.
 
@@ -302,9 +302,9 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 일반적으로 동일한 데이터 센터에 두 개의 노드가 있는 경우 동기 커밋을 사용하도록 설정해야 합니다. 서로 다른 데이터 센터에 있는 경우 동기 커밋은 데이터베이스 성능이 느려질 수도 있습니다. 이 확인란을 선택하지 않으면 비동기 커밋이 사용됩니다.
 
-**자동 장애 조치(failover):** 주 복제본이 다운되는 경우 자동 장애 조치(failover)가 선택되어 있으면 AG가 자동으로 해당 보조 복제본에 장애 조치(failover)합니다. 이는 동기 커밋을 사용하는 복제본에서만 사용할 수 있습니다.
+**자동 장애 조치:** 주 복제본이 다운되는 경우 자동 장애 조치가 선택되어 있으면 AG가 자동으로 해당 보조 복제본에 장애 조치합니다. 이는 동기 커밋을 사용하는 복제본에서만 사용할 수 있습니다.
 
-**읽기용 보조 복제본:** 기본적으로 사용자는 보조 복제본에 연결할 수 없습니다. 사용자는 읽기 전용 액세스 권한이 있는 보조 복제본에 연결할 수 있습니다.
+**읽기용 보조:** 기본적으로 사용자는 보조 복제본에 연결할 수 없습니다. 사용자는 읽기 전용 액세스 권한이 있는 보조 복제본에 연결할 수 있습니다.
 
 8. **복제본 지정** 페이지에서 **수신기** 탭을 클릭하고 다음을 수행합니다. 그림 18을 참조하세요.
 
@@ -389,7 +389,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 이 백서에서는 AG의 일부로 MDS(Master Data Services) 백 엔드 데이터베이스를 설정 하 고 구성 하는 방법을 살펴보았습니다. 이 구성은 Master Data Services 백 엔드 데이터베이스에 고가용성 및 재해 복구를 제공합니다. 이 구성을 구현 하려면 Windows Server 장애 조치 (Failover) 클러스터, AG 및 MDS(Master Data Services)를 설치 하 고 구성 해야 합니다.
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback"></a>피드백
 
 이 백서가 도움이 되었습니까? 문서 맨 위에 있는 **주석**을 클릭하여 여러분의 의견을 보내주세요. 
 

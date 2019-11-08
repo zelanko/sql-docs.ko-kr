@@ -1,5 +1,5 @@
 ---
-title: 예약어(Master Data Services) | Microsoft Docs
+title: 예약어
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085687"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727922"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "68085687"
   
 -   **ID**  
   
--   **Code**  
+-   **코드**  
   
 -   **EnterUserName**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68085687"
 ##  <a name="members"></a> 멤버  
  멤버의 경우 **코드**특성 값에 대해 **MDMMemberStatus**, **MDMUnused** 또는 **ROOT** 을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

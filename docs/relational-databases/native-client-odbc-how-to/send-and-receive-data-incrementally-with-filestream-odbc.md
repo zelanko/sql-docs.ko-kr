@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM (ODBC)를 사용 하 여 증분 방식으로 데이터 보내기 및 받기 | Microsoft Docs
+title: FILESTREAM을 사용 하 여 증분 방식으로 데이터 보내기 및 받기 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,29 +11,28 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cd8c0de5e2ba4df7f5a07800ce77fd691a1c784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc86dcc180d7ee3009e906d08531174606341140
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937474"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780614"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM을 사용하여 데이터를 증분식으로 주고받기(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 예제에서는 FILESTREAM 기능을 사용하여 SQLPutData 및 SQLGetData로 데이터를 증분식으로 주고받는 방법을 보여 줍니다.  
   
- FILESTREAM 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)합니다.  
+ FILESTREAM 기능에 대 한 자세한 내용은 [Filestream Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)항목을 참조 하십시오.  
   
 ## <a name="example"></a>예제  
- 컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ 이 샘플을 컴파일하고 실행 하기 전에 FILESTREAM 지원 ([Filestream 설정 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md))을 사용 하도록 설정 합니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 이 스크립트를 실행할 수 있는 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 첫 번째 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 이 스크립트를 실행할 수 있는 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  두 번째 코드 목록은 C++ 코드입니다. 서버를 지정해야 합니다. C++ 코드 목록에서 "MyServer"를 유효한 서버 이름으로 변경합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다. odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib 및 /EHsc를 사용하여 C++ 코드 목록을 컴파일합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 삭제 합니다.  
+ 세 번째 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 삭제 합니다.  
   
 ```  
 USE master  

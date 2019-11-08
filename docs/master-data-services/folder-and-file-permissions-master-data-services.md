@@ -1,5 +1,5 @@
 ---
-title: 폴더 및 파일 사용 권한(Master Data Services) | Microsoft Docs
+title: 폴더 및 파일 사용 권한
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945263"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728202"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
 
@@ -38,8 +38,8 @@ ms.locfileid: "67945263"
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|특별 사용 권한|  
-|시스템|특별 사용 권한|  
-|Administrators|특별 사용 권한|  
+|SYSTEM|특별 사용 권한|  
+|관리자|특별 사용 권한|  
 |사용자|읽기 & 실행, 폴더 내용 보기, 읽기|  
 |TrustedInstaller|폴더 내용 보기, 특별 사용 권한|  
   
@@ -50,21 +50,21 @@ ms.locfileid: "67945263"
   
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
-|시스템|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
-|Administrators|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
+|SYSTEM|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
+|관리자|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
 |MDS_ServiceAccounts|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 사용 권한  
   
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
-|시스템|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
-|Administrators|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
+|SYSTEM|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
+|관리자|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
 |MDS_ServiceAccounts|읽기 & 실행, 읽기|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 파일의 내용에 대한 자세한 내용은 [웹 구성 참조&#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDS(Master Data Services) 설치](../master-data-services/install-windows/install-master-data-services.md)  
   
   

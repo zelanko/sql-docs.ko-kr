@@ -1,5 +1,5 @@
 ---
-title: 사용자의 사용 권한 테스트(Master Data Services) | Microsoft Docs
+title: 사용자&#39;의 사용 권한 테스트
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728866"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>사용자의 사용 권한 테스트(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68085588"
   
 4.  다음에 브라우저 창을 열면 사용자 이름과 암호를 입력하라는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

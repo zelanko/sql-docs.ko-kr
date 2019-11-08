@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙에 대해 버전 유효성 검사
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102547"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727830"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68102547"
 > [!NOTE]  
 >  모든 멤버가 유효성 검사를 통과해야 버전을 커밋할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "68102547"
   
 -   [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [유효성 검사 상태&#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

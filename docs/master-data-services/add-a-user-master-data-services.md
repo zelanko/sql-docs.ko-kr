@@ -1,5 +1,5 @@
 ---
-title: 사용자 추가(Master Data Services) | Microsoft Docs
+title: 사용자 추가
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047946"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729814"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047946"
 
   웹 애플리케이션에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "68047946"
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

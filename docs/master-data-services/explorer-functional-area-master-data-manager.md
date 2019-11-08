@@ -1,5 +1,5 @@
 ---
-title: 탐색기 기능 영역(마스터 데이터 관리자) | Microsoft Docs
+title: 탐색기 기능 영역
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19ffb4b29de5e343234bdf77b3c324a766e72ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915872"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729470"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>탐색기 기능 영역(마스터 데이터 관리자)
 
@@ -61,7 +61,7 @@ ms.locfileid: "67915872"
   
  [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -1,32 +1,32 @@
 ---
 title: 새 릴리스로 업그레이드
 titleSuffix: SQL Server big data clusters
-description: '@No__t-0 (미리 보기)을 새 릴리스로 업그레이드 하는 방법에 대해 알아봅니다.'
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)](미리 보기)를 새 릴리스로 업그레이드하는 방법을 알아봅니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bb1bf33c9ccb342e6afc4d22d67463791c0d67b6
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 90bfaaa1a8cb6fd42081d8afa5feff13f9aec37c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688271"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531956"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>@No__t 업그레이드 하는 방법-0
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 빅 데이터 클러스터를 새 릴리스로 업그레이드하는 방법을 설명합니다. 이 문서의 단계는 특히 미리 보기 릴리스 간에 업그레이드하는 방법에 적용됩니다.
+이 문서에서는 SQL Server 빅 데이터 클러스터를 새 릴리스로 업그레이드하는 방법을 설명합니다. 이 문서의 단계는 미리 보기 릴리스에서 SQL Server 2019 서비스 업데이트 릴리스로 업그레이드하는 방법을 설명합니다.
 
 ## <a name="backup-and-delete-the-old-cluster"></a>이전 클러스터 백업 및 삭제
 
-현재, 빅 데이터 클러스터를 새 릴리스로 업그레이드하는 방법은 클러스터를 수동으로 제거하고 다시 만드는 것뿐입니다. 각 릴리스에는 이전 버전과 호환 되지 않는 `azdata`의 고유한 버전이 있습니다. 또한 이전 클러스터가 새 노드에 이미지를 다운로드해야 했다면 최신 이미지가 클러스터의 이전 이미지와 호환되지 않을 수도 있습니다. 최신 릴리스로 업그레이드하려면 다음 단계를 사용합니다.
+현재 빅 데이터 클러스터의 현재 위치 업그레이드 방법은 없으며, 빅 데이터 클러스터를 새 릴리스로 업그레이드하는 방법은 클러스터를 수동으로 제거하고 다시 만드는 것뿐입니다. 각 릴리스에는 이전 버전과 호환되지 않는 고유한 `azdata` 버전이 있습니다. 또한 이전 클러스터가 새 노드에 컨테이너 이미지를 다운로드해야 했다면 최신 이미지가 클러스터의 이전 이미지와 호환되지 않을 수도 있습니다. 새 이미지는 컨테이너 설정의 배포 구성 파일에서 `latest` 이미지 태그를 사용하는 경우에만 끌어올 수 있습니다. 기본적으로 각 릴리스에는 SQL Server 릴리스 버전에 해당하는 특정 이미지 태그가 있습니다. 최신 릴리스로 업그레이드하려면 다음 단계를 사용합니다.
 
-1. 이전 클러스터를 삭제하기 전에 SQL Server 마스터 인스턴스와 HDFS의 데이터를 백업합니다. SQL Server 마스터 인스턴스의 경우 [SQL Server 백업 및 복원](data-ingestion-restore-database.md)을 사용할 수 있습니다. HDFS의 경우 [`curl`을 사용 하 여 데이터를 복사할 수](data-ingestion-curl.md)있습니다.
+1. 이전 클러스터를 삭제하기 전에 SQL Server 마스터 인스턴스와 HDFS의 데이터를 백업합니다. SQL Server 마스터 인스턴스의 경우 [SQL Server 백업 및 복원](data-ingestion-restore-database.md)을 사용할 수 있습니다. HDFS의 경우 [`curl`을 사용하여 데이터를 복사](data-ingestion-curl.md)할 수 있습니다.
 
 1. `azdata delete cluster` 명령을 사용하여 이전 클러스터를 삭제합니다.
 
@@ -35,20 +35,18 @@ ms.locfileid: "71688271"
    ```
 
    > [!Important]
-   > 클러스터와 일치 하는 `azdata` 버전을 사용 합니다. 최신 버전의 `azdata` 인 이전 클러스터를 삭제 하지 마십시오.
+   > 해당 클러스터와 일치하는 `azdata`버전을 사용합니다. 최신 버전의 `azdata`를 사용하여 이전 클러스터를 삭제하면 안 됩니다.
 
    > [!Note]
-   > @No__t-0 명령을 실행 하면 네임 스페이스 내에 생성 된 모든 개체가 삭제 될 빅 데이터 클러스터 이름으로 식별 되지만 네임 스페이스 자체는 생성 되지 않습니다. 네임 스페이스는 비어 있고 내에 다른 응용 프로그램이 생성 되지 않은 한 후속 배포에 다시 사용할 수 있습니다.
+   > `azdata bdc delete` 명령을 실행하면 해당 빅 데이터 클러스터를 사용하여 식별된 네임스페이스 안에 생성된 모든 개체가 삭제되지만 네임스페이스 자체는 삭제되지 않습니다. 네임스페이스는 비어 있고 그 안에 생성된 다른 애플리케이션이 없는 한 후속 배포에서 재사용할 수 있습니다.
 
-1. CTP 3.2 이전에 `azdata`이-1 @no__t 호출 되었습니다. @No__t-0 또는 `azdata`의 이전 릴리스가 설치 된 경우 최신 버전의 `azdata`를 설치 하기 전에 먼저를 제거 하는 것이 중요 합니다.
-
-   CTP 2.3 이상에서는 다음 명령을 실행합니다. 명령에서 `ctp3.1`을 제거할 `mssqlctl`의 버전으로 바꿉니다. CTP 3.1 이전 버전의 경우 버전 번호 앞에 대시를 추가합니다(예: `ctp-2.5`).
+1. `azdata`의 기존 버전을 제거합니다.
 
    ```powershell
-   pip3 uninstall -r https://aka.ms/azdata
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. @No__t-0의 최신 버전을 설치 합니다. 다음 명령은 릴리스 후보의 `azdata`을 설치 합니다.
+1. `azdata`의 최신 버전을 설치합니다. 다음 명령은 최신 릴리스의 `azdata`를 설치합니다.
 
    **Windows:**
 
@@ -63,11 +61,11 @@ ms.locfileid: "71688271"
    ```
 
    > [!IMPORTANT]
-   > 각 릴리스에 대해 `azdata`에 대 한 경로가 변경 됩니다. 이전에 `azdata` 또는 `mssqlctl`을 설치한 경우에도 새 클러스터를 만들기 전에 최신 경로에서 다시 설치 해야 합니다.
+   > 각 릴리스에 관해, `azdata`의 `n-1` 버전 경로가 변경됩니다. 이전에 `azdata`를 설치했더라도 새 클러스터를 만들기 전에 최신 경로에서 다시 설치해야 합니다.
 
 ## <a id="azdataversion"></a> azdata 버전 확인
 
-새 빅 데이터 클러스터를 배포 하기 전에 `--version` 매개 변수와 함께 `azdata`의 최신 버전을 사용 하 고 있는지 확인 합니다.
+새로운 빅 데이터 클러스터를 배포하기 전에 `--version` 매개 변수를 통해 최신 버전의 `azdata`를 사용하고 있는지 확인합니다.
 
 ```bash
 azdata --version
@@ -75,8 +73,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>새 릴리스 설치
 
-이전 빅 데이터 클러스터를 제거 하 고 최신 `azdata`을 설치한 후에는 현재 배포 지침을 사용 하 여 새 빅 데이터 클러스터를 배포 합니다. 자세한 내용은 [Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]을 배포 하는 방법](deployment-guidance.md)을 참조 하세요. 그런 다음, 필요한 데이터베이스 또는 파일을 모두 복원합니다.
+이전 빅 데이터 클러스터를 제거하고 최신 `azdata`를 설치한 후에는 현재 배포 지침을 사용하여 새로운 빅 데이터 클러스터를 배포합니다. 자세한 내용은 [Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md)을 참조하세요. 그런 다음, 필요한 데이터베이스 또는 파일을 모두 복원합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)을 참조 하세요.
+빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란?](big-data-cluster-overview.md)을 참조하세요.

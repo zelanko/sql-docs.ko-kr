@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707862"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782880"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  
   
@@ -55,9 +54,9 @@ RETCODE bcp_control (
  일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCPBATCH가 기본값으로 다시 설정됩니다.  
   
  BCPDELAYREADFMT  
- 부울 (true로 설정 된 경우)은 실행 시 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 를 읽도록 합니다. False (기본값) 이면 bcp_readfmt가 서식 파일을 즉시 읽습니다. BCPDELAYREADFMT가 true이 고 bcp_columns 또는 bcp_setcolfmt를 호출 하면 시퀀스 오류가 발생 합니다.  
+ 부울 값이 true로 설정 된 경우 실행 시 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 를 읽습니다. False (기본값) 이면 bcp_readfmt는 서식 파일을 즉시 읽습니다. BCPDELAYREADFMT가 true이 고 bcp_columns 또는 bcp_setcolfmt를 호출 하면 시퀀스 오류가 발생 합니다.  
   
- @No__t-2 BCPDELAYREADFMT @ no__t 및 bcp_writefmt를 호출한 후에 `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-1을 호출 하는 경우에도 시퀀스 오류가 발생 합니다.  
+ BCPDELAYREADFMT`, (void *)TRUE)` 및 bcp_writefmt `bcp_control(hdbc,`를 호출한 후 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)`를 호출 하는 경우에도 시퀀스 오류가 발생 합니다.  
   
  자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.  
   
  BCPFILEFMT  
- 데이터 파일 형식의 버전 번호입니다. 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 일 수 있습니다. 기본값은 120입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 가져온 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 서버에 있는 **varchar (max)** 열로 가져오려면 80을 지정 해야 합니다. 마찬가지로 **varchar (max)** 열에서 데이터를 내보낼 때 80을 지정 하면 텍스트 열이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 저장 되 고 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있는 것과 마찬가지로 저장 됩니다.  
+ 데이터 파일 형식의 버전 번호입니다. 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 일 수 있습니다. 기본값은 120입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 가져온 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 **varchar (max)** 열로 가져오려면 80을 지정 해야 합니다. 마찬가지로 **varchar (max)** 열에서 데이터를 내보낼 때 80을 지정 하면 텍스트 열이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 저장 되는 것 처럼 저장 되 고 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.  
   
  BCPFIRST  
  복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.  
@@ -116,7 +115,7 @@ RETCODE bcp_control (
  BCPODBC  
  TRUE 이면 문자 형식으로 저장 된 **datetime** 및 **SMALLDATETIME** 값이 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사를 사용 하도록 지정 합니다. BCPODBC.BCP 옵션은 DB_OUT에만 적용 됩니다.  
   
- FALSE 이면 1997 년 1 월 1 일을 나타내는 **datetime** 값이 문자열로 변환 됩니다. 1997-01-01 00:00:00.000. TRUE 이면 동일한 **datetime** 값이 {ts ' 1997-01-01 00:00:00.000 '}로 표시 됩니다.  
+ FALSE 인 경우 1997 년 1 월 1 일을 나타내는 **datetime** 값은 1997-01-01 00:00:00.000 문자열로 변환 됩니다. TRUE 이면 동일한 **datetime** 값이 {ts ' 1997-01-01 00:00:00.000 '}로 표시 됩니다.  
   
  BCPROWCOUNT  
  현재(또는 마지막) BCP 작업에 의해 영향을 받는 행의 수를 반환합니다.  
@@ -133,12 +132,12 @@ RETCODE bcp_control (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 함수는 대량 복사를 취소하기 전에 허용되는 오류 수, 데이터 파일에서 복사할 첫 번째 행과 마지막 행의 번호 및 일괄 처리 크기를 비롯하여 대량 복사 작업에 대한 여러 가지 제어 매개 변수를 설정합니다.  
   
  또한 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SELECT의 결과 집합을 대량 복사할 때 SELECT 문을 지정하는 데 사용됩니다. *Eoption* 을 BCPHINTS로 설정 하 고 SELECT 문을 포함 하는 sqltchar 문자열에 대 한 포인터를 갖도록 *ivalue* 를 설정 합니다.  
   
- 이러한 제어 매개 변수는 사용자 파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 간에 복사하는 경우에만 의미가 있습니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 복사 된 행에는 컨트롤 매개 변수 설정이 적용 되지 않습니다.  
+ 이러한 제어 매개 변수는 사용자 파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 간에 복사하는 경우에만 의미가 있습니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 복사 된 행에는 컨트롤 매개 변수 설정이 적용 되지 않습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -204,7 +203,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

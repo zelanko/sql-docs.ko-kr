@@ -18,16 +18,15 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783145"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용될 경우 **bcp_colfmt** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로의 대량 복사에서 데이터 원본으로 사용되는 기존 데이터 파일의 형식을 지정합니다. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  
   
@@ -53,10 +52,10 @@ RETCODE bcp_colfmt (
  *idxUserDataCol*  
  형식이 지정되는 사용자 데이터 파일의 서수 열 번호입니다. 첫 번째 열은 1입니다.  
   
- *eUserDataType*  
+ *에서는 euserdatatype*  
  사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식(*idxServerColumn*)과 다르면 가능한 경우 대량 복사에서 데이터를 변환합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]은 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원을 도입 했습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
   
  *eUserDataType* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
   
@@ -104,7 +103,7 @@ RETCODE bcp_colfmt (
  *cbUserDataTerm*  
  이 열에 사용할 종결자 시퀀스의 길이(바이트)입니다. 종결자가 없거나 데이터에 필요하지 않은 경우 이 값을 0으로 설정합니다.  
   
- *idxServerCol*  
+ *건너뛰려면 idxservercol*  
  데이터베이스 테이블에서 열의 서수 위치입니다. 첫 번째 열 번호는 1입니다. 열의 서수 위치는 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
  이 값이 0이면 대량 복사에서 데이터 파일의 열을 무시합니다.  
@@ -112,7 +111,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  **bcp_colfmt** 함수를 사용하여 대량 복사에 사용할 사용자 파일 형식을 지정할 수 있습니다. 대량 복사의 경우 형식에는 다음과 같은 부분이 포함됩니다.  
   
 -   사용자 파일 열에서 데이터베이스 열로의 매핑  
@@ -146,7 +145,7 @@ RETCODE bcp_colfmt (
   
  자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

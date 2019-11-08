@@ -13,21 +13,20 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898457"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781182"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-a-statement"></a>문을 사용하려면  
   
-1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)을 호출하여 문 핸들을 할당합니다.  
+1.  SQL_HANDLE_STMT의 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396)으로 *SQLAllocHandle*을 호출하여 문 핸들을 할당합니다.  
   
 2.  필요에 따라 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 문 옵션을 설정하거나 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)을 호출하여 문 특성을 가져옵니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "67898457"
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   
@@ -65,15 +64,15 @@ ms.locfileid: "67898457"
   
     -   SQL_NO_DATA가 반환될 때까지 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하지 않은 경우 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출하여 커서를 닫습니다.  
   
-    -   매개 변수 표식을 프로그램 변수에 바인딩한 경우 *Option*을 SQL_RESET_PARAMS로 설정한 상태로 [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)를 호출하여 바인딩된 매개 변수를 해제합니다.  
+    -   매개 변수 표식을 프로그램 변수에 바인딩한 경우 [Option](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)을 SQL_RESET_PARAMS로 설정한 상태로 *SQLFreeStmt*를 호출하여 바인딩된 매개 변수를 해제합니다.  
   
-    -   결과 집합 열을 프로그램 변수에 바인딩한 경우 *Option*을 SQL_UNBIND로 설정한 상태로 [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)를 호출하여 바인딩된 열을 해제합니다.  
+    -   결과 집합 열을 프로그램 변수에 바인딩한 경우 [Option](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)을 SQL_UNBIND로 설정한 상태로 *SQLFreeStmt*를 호출하여 바인딩된 열을 해제합니다.  
   
     -   문 핸들을 다시 사용하려면 2단계로 이동합니다.  
   
-8.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)을 호출하여 문 핸들을 해제합니다.  
+8.  SQL_HANDLE_STMT의 [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)으로 *SQLFreeHandle*을 호출하여 문 핸들을 해제합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리를 실행할 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

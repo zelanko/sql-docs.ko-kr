@@ -1,5 +1,5 @@
 ---
-title: MDS(Master Data Services)의 새로운 기능 | Microsoft Docs
+title: 새로운 기능
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810507"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727783"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -37,7 +37,7 @@ ms.locfileid: "68810507"
   
  성능 향상을 통해 더 큰 모델을 만들고, 데이터를 보다 효율적으로 로드하고, 전반적으로 더 나은 성능을 얻을 수 있습니다. 여기에는 데이터 로드 시간을 줄이고 추가 기능에서 더 큰 엔터티를 처리하도록 Microsoft Excel용 추가 기능의 성능이 향상된 개선 사항이 포함됩니다.  
   
- Microsoft Excel용 추가 기능에 대한 자세한 내용은 [Microsoft Excel용 Master Data Services 추가 기능](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)을 참조하세요.  
+ Microsoft Excel용 추가 기능에 대한 자세한 내용은 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)을 참조하세요.  
   
  향상된 기능은 다음과 같습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68810507"
   
  이제 사용자에게 모델 수준에서 관리자 권한이 명시적으로 할당될 수 있습니다 . 따라서 나중에 모델 하위 트리(예: 엔터티 수준)에서 사용자에게 권한이 할당된 경우 이 관리자 권한이 상실되지 않습니다.  
   
- 이 릴리스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 다음과 같은 권한을 도입하여 더 많은 수준의 권한을 제공합니다. 읽기, 만들기, 업데이트, 삭제. 예를 들어 업데이트만 있는 사용자는 이제 데이터를 만들거나 삭제하지 않고 마스터 데이터를 업데이트할 수 있습니다. 사용자에게 만들기, 업데이트 또는 삭제 권한을 부여한 경우 해당 사용자에게는 읽기 권한이 자동으로 할당됩니다. 읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수도 있습니다.  
+ 이 릴리스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 읽기, 만들기, 업데이트 및 삭제 권한을 도입하여 더 많은 수준의 권한을 제공합니다. 예를 들어 업데이트만 있는 사용자는 이제 데이터를 만들거나 삭제하지 않고 마스터 데이터를 업데이트할 수 있습니다. 사용자에게 만들기, 업데이트 또는 삭제 권한을 부여한 경우 해당 사용자에게는 읽기 권한이 자동으로 할당됩니다. 읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수도 있습니다.  
   
  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]로 업그레이드하는 경우 다음 표와 같이 이전 권한이 새 권한으로 변환됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810507"
 |원래 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 설치한 사용자가 서버 관리자 권한을 가짐|사용자가 슈퍼 사용자 기능 권한을 가짐|  
 |사용자가 모델 수준에서 업데이트 권한을 가지고 모델 하위 트리에서는 권한을 가지지 않으므로 암시적으로 모델 관리자가 됨|사용자가 모델 수준에서 명시적으로 관리자 권한을 가짐|  
 |사용자가 읽기 전용 권한을 가짐|사용자가 읽기 액세스 권한을 가짐|  
-|사용자가 업데이트 권한을 가짐|사용자에게는 다음 네 가지 액세스 권한이 있습니다. 만들기, 업데이트, 삭제, 읽기.|  
+|사용자가 업데이트 권한을 가짐|사용자가 만들기, 업데이트, 삭제 및 읽기의 네 가지 액세스 권한을 모두 가짐|  
 |사용자가 거부 권한을 가짐|사용자가 거부 권한을 가짐|  
   
  권한에 대한 자세한 내용은 [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)을 참조하세요.  
@@ -122,7 +122,7 @@ ms.locfileid: "68810507"
   
 -   Name 및 Code 특성 이름 바꾸기 및 숨기기  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
@@ -225,13 +225,13 @@ ms.locfileid: "68810507"
    
  **샘플 모델 배포 패키지 업데이트**  
   
- 샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
+ 샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 예제: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)  
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)

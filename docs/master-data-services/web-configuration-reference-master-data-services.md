@@ -1,5 +1,5 @@
 ---
-title: 웹 구성 참조(Master Data Services) | Microsoft Docs
+title: 웹 구성 참조
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9d3cd20fc219a7159de0b271dafcc0e9fb2c3ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017274"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728826"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
 
@@ -58,10 +58,10 @@ ms.locfileid: "68017274"
 |항목|설명|  
 |----------|-----------------|  
 |**instance**|자식 요소. 웹 서비스와 데이터베이스 연결 문자열에 대한 정보를 지정하는 특성을 포함합니다.|  
-|**virtualPath**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<site>** 요소 아래에 있는 **\<application>** 요소의 **path** 특성에 해당합니다.|  
-|**siteName**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<sites>** 아래에 있는 **\<site>** 요소의 **name** 특성에 해당합니다.|  
-|**connectionName**|특성. 사용할 연결 이름을 지정합니다. 이 값은 Web.config에서 **\<connectionStrings>** 요소 아래에 있는 **\<add>** 요소의 **name** 특성에 해당합니다.|  
-|**serviceName**|특성. 웹 서비스의 이름을 지정합니다. 이 값은 Web.config에서 **\<services>** 요소 아래에 있는 **\<service>** 요소의 **name** 특성에 해당합니다.|  
+|**virtualPath**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서site> **요소 아래에 있는 \<** application> **요소의 \<path** 특성에 해당합니다.|  
+|**siteName**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서sites> **아래에 있는 \<** site> **요소의 \<name** 특성에 해당합니다.|  
+|**connectionName**|특성. 사용할 연결 이름을 지정합니다. 이 값은 Web.config에서connectionStrings> **요소 아래에 있는 \<** add> **요소의 \<name** 특성에 해당합니다.|  
+|**serviceName**|특성. 웹 서비스의 이름을 지정합니다. 이 값은 Web.config에서services> **요소 아래에 있는 \<** service> **요소의 \<name** 특성에 해당합니다.|  
   
 ### <a name="example"></a>예제  
  다음 예에서는 MDSDB를 통해 지정된 연결 문자열을 사용하는 /MDS 경로와 Contoso 사이트의 MDS1이라는 서비스를 보여 줍니다.  

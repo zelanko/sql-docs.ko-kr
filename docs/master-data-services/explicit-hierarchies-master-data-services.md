@@ -1,5 +1,5 @@
 ---
-title: 명시적 계층(Master Data Services) | Microsoft Docs
+title: 명시적 계층
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915951"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729259"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
 
@@ -75,15 +75,15 @@ ms.locfileid: "67915951"
 |비정형 가능|항상 일관된 수의 수준 포함|  
   
 ## <a name="explicit-hierarchy-example"></a>명시적 계층 예  
- 다음 예제에서는 Product 엔터티에 이러한 리프 멤버를 포함 합니다. BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650}.  
+ 다음 예의 Product 엔터티에는 BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650} 리프 멤버가 포함되어 있습니다.  
   
  이러한 리프 멤버를 특정 통합 지점에서 요약하려면 Product 엔터티 내에 통합 멤버를 만들면 됩니다. 계층 트리에서 리프 멤버를 요약할 수준에 통합 멤버를 삽입합니다. 통합 멤버를 삽입할 수 있는 위치에 대한 제한은 없지만 각 멤버(리프 또는 통합)를 한 번만 사용할 수 있습니다.  
   
- ![Mountain Bike 명시적 계층 예제](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike 명시적 계층 예제")  
+ ![산지 자전거 명시적 계층 예제](../master-data-services/media/mds-conc-explicit-hierarchy.gif "산지 자전거 명시적 계층 예제")  
   
  통합 멤버를 사용하여 원하는 수준에서 멤버를 그룹화하고, 리프 및 통합 멤버를 원하는 순서대로 정렬할 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

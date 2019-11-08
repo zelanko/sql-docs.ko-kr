@@ -1,5 +1,5 @@
 ---
-title: 버전(Master Data Services) | Microsoft Docs
+title: 버전
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017320"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727801"
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "68017320"
     > [!NOTE]  
     >  모든 버전을 복사할 수 있는지 아니면 커밋된 버전만 복사할 수 있는지는 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 의 설정에 따라 결정됩니다. 동시 버전을 만들려면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 모든 버전 복사를 허용하도록 구성해야 합니다. 이 설정은 시스템 설정 테이블에서도 사용 가능합니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

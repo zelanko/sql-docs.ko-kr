@@ -1,5 +1,5 @@
 ---
-title: 준비와 문 실행 (ODBC) | Microsoft 문서
+title: 문 준비 및 실행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fd2ff0c2dae01c10b720ed31fee88430a82cbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898515"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781389"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>문을 한 번 준비한 후 여러 번 실행하려면  
@@ -58,11 +57,11 @@ ms.locfileid: "67898515"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 매개 변수 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[S]을 가리키도록 설정합니다.  
   
-2.  SQLPrepare 문 준비를 호출 합니다.  
+2.  SQLPrepare를 호출 하 여 문을 준비 합니다.  
   
 3.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
-4.  필요에 따라 준비 된 문의 각 매개 변수에 대해 매개 변수 정보를 가져오려면 SQLDescribeParam를 호출 합니다.  
+4.  필요에 따라 준비 된 문의 각 매개 변수에 대해 SQLDescribeParam를 호출 하 여 매개 변수 정보를 가져옵니다.  
   
 5.  각 매개 변수 표식에 대해 다음 작업을 수행합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "67898515"
   
     -   데이터 길이를 저장할 S개의 매개 변수 버퍼 배열을 할당합니다.  
   
-    -   매개 변수 데이터 값과 데이터 길이 배열을 문 매개 변수에 바인딩할 SQLBindParameter를 호출 합니다.  
+    -   SQLBindParameter를 호출 하 여 매개 변수 데이터 값 및 데이터 길이 배열을 문 매개 변수에 바인딩합니다.  
   
     -   매개 변수가 실행 시 데이터 text 또는 image 매개 변수인 경우 해당 매개 변수를 설정합니다.  
   
@@ -80,9 +79,9 @@ ms.locfileid: "67898515"
   
     -   S 데이터 값과 S 데이터 길이를 바인딩된 매개 변수 배열에 넣습니다.  
   
-    -   준비 된 문을 실행 하는 SQLExecute를 호출 합니다.  
+    -   SQLExecute를 호출 하 여 준비 된 문을 실행 합니다.  
   
-    -   실행 시 데이터 입력된 매개 변수를 사용 하는 경우 SQLExecute SQL_NEED_DATA를 반환 합니다. SQLParamData 및 SQLPutData를 사용 하 여 데이터 청크를 보냅니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용 하는 경우 SQLExecute는 SQL_NEED_DATA 반환 합니다. SQLParamData 및 Sqlparamdata를 사용 하 여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>행 단위 바인딩 매개 변수를 사용하여 문을 준비하려면  
   
@@ -102,19 +101,19 @@ ms.locfileid: "67898515"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 매개 변수 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[S]을 가리키도록 설정합니다.  
   
-3.  SQLPrepare 문 준비를 호출 합니다.  
+3.  SQLPrepare를 호출 하 여 문을 준비 합니다.  
   
-4.  각 매개 변수 표식에 대 한 매개 변수 데이터 값과 데이터 길이 포인터가 1 단계에서에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수를 가리키도록 SQLBindParameter을 호출 합니다. 매개 변수가 실행 시 데이터 매개 변수인 경우 해당 매개 변수를 설정합니다.  
+4.  각 매개 변수 표식에 대해 SQLBindParameter를 호출 하 여 1 단계에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수에 대 한 매개 변수 데이터 값 및 데이터 길이 포인터를 가리킵니다. 매개 변수가 실행 시 데이터 매개 변수인 경우 해당 매개 변수를 설정합니다.  
   
 5.  준비된 문을 실행할 때마다 다음 작업을 수행합니다.  
   
     -   바인딩된 매개 변수 버퍼 배열을 데이터 값으로 채웁니다.  
   
-    -   준비 된 문을 실행 하는 SQLExecute를 호출 합니다. 드라이버에서는 효율적으로 SQL 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
+    -   SQLExecute를 호출 하 여 준비 된 문을 실행 합니다. 드라이버에서는 효율적으로 SQL 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-    -   실행 시 데이터 입력된 매개 변수를 사용 하는 경우 SQLExecute SQL_NEED_DATA를 반환 합니다. SQLParamData 및 SQLPutData를 사용 하 여 데이터 청크를 보냅니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용 하는 경우 SQLExecute는 SQL_NEED_DATA 반환 합니다. SQLParamData 및 Sqlparamdata를 사용 하 여 데이터를 청크로 보냅니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리를 실행할 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 버전 이름 변경(Master Data Services) | Microsoft Docs
+title: 버전 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20c12d6eceac9c68ad30486f7bb5b7fcf861eb07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d74ce56cb1289e218d65370cd6de8fef653e462a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047302"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729698"
 ---
 # <a name="change-a-version-name-master-data-services"></a>버전 이름 변경(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68047302"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전 이름을 변경하여 조직에 맞게 사용자 지정합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "68047302"
   
 4.  Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [버전 커밋&#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   

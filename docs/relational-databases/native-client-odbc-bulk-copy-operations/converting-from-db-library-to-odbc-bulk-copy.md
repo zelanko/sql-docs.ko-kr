@@ -17,31 +17,30 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f41438f8ecd7a905201b8f912b3fee142716a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708088"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785192"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  @No__t-0 Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 DB-LIBRARY 대량 복사 함수와 유사 하므로 DB-LIBRARY 대량 복사 프로그램을 ODBC로 변환 하는 것이 쉽습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 DB-LIBRARY 대량 복사 함수와 유사 하므로 DB-LIBRARY 대량 복사 프로그램을 ODBC로 변환 하는 작업은 간단 합니다. 단, 다음과 같은 예외가 있습니다.  
   
 -   DB-Library 애플리케이션은 DBPROCESS 구조에 대한 포인터를 대량 복사 함수의 첫 번째 매개 변수로 전달합니다. ODBC 애플리케이션에서는 DBPROCESS 포인터가 ODBC 연결 핸들로 대체됩니다.  
   
--   DB-LIBRARY 응용 프로그램은 연결 하기 전에 **BCP_SETL** 를 호출 하 여 dbprocess에서 대량 복사 작업을 사용 하도록 설정 합니다. ODBC 응용 프로그램은 연결 하기 전에 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 연결 핸들에서 대량 작업을 사용 하도록 설정 합니다.  
+-   DB-LIBRARY 응용 프로그램은 DBPROCESS에서 대량 복사 작업을 사용할 수 있도록 연결 하기 전에 **BCP_SETL** 호출 합니다. ODBC 응용 프로그램은 연결 하기 전에 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 연결 핸들에서 대량 작업을 사용 하도록 설정 합니다.  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   @No__t-0 Native Client ODBC 드라이버는 DB-LIBRARY 메시지 및 오류 처리기를 지원 하지 않습니다. ODBC 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 DB-LIBRARY 메시지 및 오류 처리기를 지원 하지 않습니다. ODBC 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
   
--   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수에 지정 된 값은 ODBC **bcp_bind**_cbdata_ 매개 변수와 다르게 해석 됩니다.  
+-   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수에 대해 지정 된 값은 ODBC **bcp_bind**_cbdata_ 매개 변수와 다르게 해석 됩니다.  
   
     |나타내는 조건|DB-LIBRARY *varlen* 값|ODBC *Cbdata* 값|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -49,9 +48,9 @@ ms.locfileid: "71708088"
     |변수 데이터 제공|-1|-10(SQL_VARLEN_DATA)|  
     |길이가 0인 문자 또는 이진 문자열|NA|0|  
   
-     DB-LIBRARY에서 *varlen* 값-1은 가변 길이 데이터를 제공 하 고 있음을 나타냅니다 .이는 ODBC *CBDATA* 에서 NULL 값만 제공 됨을 의미 하는 것으로 해석 됩니다. -1의 DB-LIBRARY *varlen* 사양을 SQL_VARLEN_DATA으로 변경 하 고 모든 *varlen* 사양을 0에서 SQL_NULL_DATA로 변경 합니다.  
+     DB-LIBRARY에서 *varlen* 값-1은 가변 길이 데이터를 제공 하 고 있음을 나타냅니다 .이는 ODBC *CBDATA* 에서 NULL 값만 제공 됨을 의미 하는 것으로 해석 됩니다. -1의 DB-LIBRARY *varlen* 사양을 SQL_VARLEN_DATA로 변경 하 고 0의 *varlen* 사양을 SQL_NULL_DATA으로 변경 합니다.  
   
--   DB-LIBRARY **bcp_colfmt**_file_collen_ 및 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata* 는 위에서 언급 한 **bcp_bind**_varlen_ 및 *cbdata* 매개 변수와 동일한 문제를 가집니다. -1의 DB-LIBRARY *file_collen* 사양을 SQL_VARLEN_DATA로 변경 하 고 모든 *file_collen* 사양을 0에서 SQL_NULL_DATA로 변경 합니다.  
+-   DB-LIBRARY **bcp_colfmt**_file_collen_ 와 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata* 는 위에서 언급 한 **bcp_bind**_varlen_ 및 *cbdata* 매개 변수와 동일한 문제를 가집니다. -1의 DB-LIBRARY *file_collen* 사양을 SQL_VARLEN_DATA으로 변경 하 고 *file_collen* 지정을 0에서 SQL_NULL_DATA로 변경 합니다.  
   
 -   ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 함수의 *ivalue* 매개 변수는 void 포인터입니다. DB-LIBRARY에서 *Ivalue* 는 정수입니다. ODBC *Ivalue* 의 값을 void *로 캐스팅 합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "71708088"
   
          문자 모드 대량 복사 파일이 유니코드 파일이 되도록 지정합니다.  
   
--   Odbc **bcp_colfmt** 함수는 odbc SQLCHAR typedef와 충돌 하기 때문에 SQLCHAR의 *file_type* 지표를 지원 하지 않습니다. **Bcp_colfmt**에는 대신 sqlcharacter를 사용 합니다.  
+-   Odbc **bcp_colfmt** 함수는 odbc SQLCHAR typedef와 충돌 하기 때문에 SQLCHAR의 *file_type* 표시기를 지원 하지 않습니다. **Bcp_colfmt**대신 sqlcharacter를 사용 합니다.  
   
 -   ODBC 버전의 대량 복사 함수에서 문자열의 **datetime** 및 **smalldatetime** 값을 사용 하는 형식은 yyyy-mm-dd hh: mm: ss;의 odbc 형식입니다. **smalldatetime** 값은 yyyy-mm-dd hh: mm: SS의 ODBC 형식을 사용 합니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "71708088"
   
     -   DB-LIBRARY **dbconvert** 함수에서 지 원하는 모든 형식의 **datetime** 및 **smalldatetime** 문자열  
   
-    -   @No__t-2 클라이언트 네트워크 유틸리티의 DB-LIBRARY **옵션** 탭에서 **국가별 설정 사용** 확인란을 선택 하면 db-library 대량 복사 함수도 클라이언트의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다. 컴퓨터 레지스트리.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Network 유틸리티의 DB-LIBRARY **옵션** 탭에서 **국가별 설정 사용** 확인란을 선택 하는 경우 db-library 대량 복사 함수는의 로캘 설정에 대해 정의 된 날짜 형식으로 날짜를 적용 합니다. 클라이언트 컴퓨터 레지스트리  
   
      DB-LIBRARY 대량 복사 함수는 ODBC **datetime** 및 **smalldatetime** 형식을 허용 하지 않습니다.  
   
@@ -109,8 +108,8 @@ ms.locfileid: "71708088"
   
 -   문자 형식으로 **money** 값을 출력 하는 경우 ODBC 대량 복사 함수는 네 자리 전체 자릿수를 제공 하 고 쉼표 구분 기호는 제공 하지 않습니다. DB-LIBRARY 버전은 두 자릿수의 전체 자릿수를 제공 하 고 쉼표 구분 기호를 포함 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 작업 &#40;수행 ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+## <a name="see-also"></a>관련 항목:  
+ [대량 복사 작업 &#40;수행 ODBC&#41; ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

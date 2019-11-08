@@ -1,5 +1,5 @@
 ---
-title: 계층 멤버 권한(Master Data Services) | Microsoft Docs
+title: 계층 멤버 권한
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945203"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729241"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67945203"
 
   계층 멤버 권한은 선택 사항이며 사용자에게 특정 멤버에 대한 제한된 액세스 권한을 부여하려는 경우에만 사용해야 합니다. **계층 멤버** 탭에서 아무 권한도 할당하지 않을 경우 사용자의 권한은 전적으로 **모델** 탭에서 할당한 권한을 기반으로 합니다.  
   
- 계층 멤버 권한은 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 **계층 멤버** 탭에 있는 **사용자 및 그룹 권한** 기능 영역에서 할당됩니다. 이러한 사용 권한은 사용자가 UI의 **탐색기** 기능 영역에서 액세스할 수 있는 멤버를 결정합니다.  
+ 계층 멤버 권한은 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI (사용자 인터페이스)의 **계층 멤버** 탭에 있는 **사용자 및 그룹 권한** 기능 영역에서 할당 됩니다. 이러한 사용 권한은 사용자가 UI의 **탐색기** 기능 영역에서 액세스할 수 있는 멤버를 결정 합니다.  
   
  **계층 멤버** 탭에서 각 계층은 트리 구조로 표시됩니다. 트리의 노드에 사용 권한을 할당하면 하위 수준에서 권한이 명시적으로 할당된 경우를 제외하고 모든 자식이 해당 권한을 상속합니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "67945203"
   
 |사용 권한|설명|  
 |----------------|-----------------|  
-|**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트**에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트**로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
+|**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트** 에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트** 로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  
-|**Update 함수**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
+|**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
 |**Delete**|멤버가 표시되며 사용자가 멤버를 삭제할 수 있습니다.|  
 |**거부**|멤버가 표시되지 않습니다.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67945203"
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

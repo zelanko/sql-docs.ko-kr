@@ -1,5 +1,5 @@
 ---
-title: 버전에 플래그 할당(Master Data Services) | Microsoft Docs
+title: 버전에 플래그 할당
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e8f69d473ff15be3105c8dcef5f51edf30f4302
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047745"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729785"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>버전에 플래그 할당(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68047745"
 > [!NOTE]  
 >  버전 플래그는 한 번에 한 버전에만 할당할 수 있습니다. 다른 버전에 이미 할당되어 있는 플래그를 할당하는 경우에는 플래그가 선택한 버전으로 이동됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "68047745"
   
 4.  Enter 키를 눌러 변경 내용을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

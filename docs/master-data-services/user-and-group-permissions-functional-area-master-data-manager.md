@@ -1,5 +1,5 @@
 ---
-title: 사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자) | Microsoft Docs
+title: 사용자 및 그룹 권한 기능 영역
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102563"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727817"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
 
@@ -49,7 +49,7 @@ ms.locfileid: "68102563"
   
  [마스터 데이터 관리자 보안 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

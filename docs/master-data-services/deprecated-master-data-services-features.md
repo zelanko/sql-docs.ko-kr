@@ -1,5 +1,5 @@
 ---
-title: 사용되지 않는 Master Data Services 기능 | Microsoft Docs
+title: 사용되지 않는 Master Data Services 기능
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267028"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729350"
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
 
@@ -53,9 +53,9 @@ ms.locfileid: "68267028"
 * [멤버 수정 기록](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물, [사용되지 않음: 명시적 계층 및 컬렉션](https://go.microsoft.com/fwlink/p/?LinkId=615373).  
+ msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](https://go.microsoft.com/fwlink/p/?LinkId=615373)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 파생 계층(Master Data Services) | Microsoft Docs
+title: 파생 계층
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084214"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728280"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>파생 계층(Master Data Services)
 
@@ -58,20 +58,20 @@ ms.locfileid: "68084214"
   
  계층 구조는 멤버가 어떻게 그룹화되는지를 보여 줍니다. 멤버 수가 가장 많은 엔터티가 맨 아래에 있습니다.  
   
- ![모델 구조에서 파생된 계층](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "모델 구조에서 파생된 계층")  
+ ![모델 구조에서 파생 된 계층 구조](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "모델 구조에서 파생 된 계층 구조")  
   
  파생 계층에서 Product와 Subcategory 간의 관계를 강조 표시한 다음 Subcategory와 Category 간의 관계를 강조 표시할 수 있습니다. 이 계층의 멤버를 보면 트리의 각 수준에 같은 엔터티의 멤버가 포함되어 있습니다.  
   
- ![Mountain Bike 파생 계층 예제](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Mountain Bike 파생 계층 예제")  
+ ![산악 자전거 파생 계층 예제](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "산악 자전거 파생 계층 예제")  
   
  이 유형의 계층에서는 유효하지 않은 수준으로 멤버를 이동할 수 없습니다. 예들 들어 하나의 Subcategory, Road Bikes에서 다른 Subcategory, Mountain Bikes로 Road-650 bike를 이동할 수 있지만 1 {Bikes}와 같은 Category 바로 아래로 Road-650을 이동할 수는 없습니다. 계층 트리에서 멤버를 이동할 때마다 이를 반영하여 해당 멤버의 도메인 기반 특성 값이 변경됩니다.  
   
 ## <a name="notes"></a>참고  
- 파생된 계층 트리의 모든 멤버는 ID로 정렬 정렬 순서는 변경할 수 없습니다.  
+ 파생 계층 트리의 모든 멤버는 ID를 기준으로 정렬 됩니다. 정렬 순서는 변경할 수 없습니다.  
   
  멤버의 도메인 기반 특성이 비어 있거나 특성이 파생 계층에 사용되는 경우 해당 멤버는 계층에 표시되지 않습니다. 특성을 채워야 하는 비즈니스 규칙을 만드십시오. 자세한 내용은 [특성 값 요구&#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

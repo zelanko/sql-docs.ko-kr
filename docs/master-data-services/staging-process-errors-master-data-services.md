@@ -1,5 +1,5 @@
 ---
-title: 준비 프로세스 오류(Master Data Services) | Microsoft Docs
+title: 준비 프로세스 오류
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e719a0a96545bdc69134e42facca9bb4ad79069c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085635"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728924"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68085635"
 |210041|"ROOT"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "ROOT"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210042|"MDMUNUSED"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "MDMUNUSED"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210052|MemberCode는 도메인 기반 특성 값으로 사용되기 때문에 비활성화할 수 없습니다.|**ImportType** = **3** 또는 **4**일 때 멤버가 다른 멤버의 특성 값으로 사용되는 경우 준비할 수 없습니다. **ImportType5** 또는 **6** 을 사용하여 값을 NULL로 설정하거나 준비 프로세스를 실행하기 전에 값을 변경합니다.|리프<br /><br /> 통합|  
-|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재 하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4**이며 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
+|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4** 이며, 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |300004|멤버 코드가 이미 있습니다.|**ImportType** = **1** 이며, 이미 엔터티에 존재하는 멤버 코드를 사용했습니다.|리프<br /><br /> 통합|  
 |210011|**RelationshipType** 이 **1**인 경우 **ParentCode** 는 리프 멤버일 수 없습니다.|**ParentCode** 값이 통합 멤버 코드인지 확인합니다.|관계|  
 |210015|멤버 코드가 계층 및 배치에 대한 준비 테이블에 여러 번 나옵니다.|명시적 계층의 경우 동일한 배치에서 동일한 멤버의 위치를 여러 번 지정했습니다.|관계|  
@@ -45,7 +45,7 @@ ms.locfileid: "68085635"
 |210047|멤버는 사용 안 함의 형제일 수 없습니다.|**RelationshipType** = **2** (형제)이고 **ParentCode** 또는 **ChildCode** 가 **사용 안 함**인 경우에 발생합니다. 멤버는 사용 안 함 노드의 자식일 수만 있습니다.|관계|  
 |210048|**ParentCode** 와 **ChildCode** 는 같을 수 없습니다.|**ParentCode** 값은 **ChildCode** 값과 동일합니다. 이 값은 달라야 합니다.|관계|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [준비 과정에서 발생하는 오류 보기&#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

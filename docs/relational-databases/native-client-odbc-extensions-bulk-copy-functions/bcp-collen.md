@@ -18,16 +18,15 @@ ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cd5a91d3b72b0e3dcd520453373af2d8d4cc33f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 4d26efd0d7ebd395dd4453e773bc5bb089ae3792
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707751"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783197"
 ---
 # <a name="bcp_collen"></a>bcp_collen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   현재 대량 복사에 대한 프로그램 변수의 데이터 길이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설정합니다.  
   
@@ -48,20 +47,20 @@ RETCODE bcp_collen (
  *cbData*  
  길이 표시기나 종결자의 길이를 제외한 프로그램 변수의 데이터 길이입니다. *Cbdata* 를 SQL_NULL_DATA로 설정 하면 서버에 복사 된 모든 행에는 열에 대 한 NULL 값이 포함 됩니다. SQL_VARLEN_DATA로 설정하면 복사되는 데이터의 길이를 확인하는 데 문자열 종결자 또는 다른 메서드가 사용됩니다. 길이 표시기와 종결자가 모두 있으면 시스템에서는 복사되는 데이터 크기가 더 작은 것이 사용됩니다.  
   
- *idxServerCol*  
+ *건너뛰려면 idxservercol*  
  데이터가 복사되는 대상 테이블 열의 서수 위치입니다. 첫 번째 열은 1입니다. 열의 서수 위치는 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>설명  
- **Bcp_collen** 함수를 사용 하면 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ **Bcp_collen** 함수를 사용 하면 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다.  
   
- 처음에 데이터 길이는 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 가 호출 될 때 결정 됩니다. **Bcp_sendrow** 호출 사이에 데이터 길이가 변경 될 때 길이 접두사나 종결자가 사용 되지 않는 경우에는 **bcp_collen** 를 호출 하 여 길이를 다시 설정할 수 있습니다. **Bcp_sendrow** 에 대 한 다음 호출에서는 **bcp_collen**에 대 한 호출로 설정 된 길이를 사용 합니다.  
+ 처음에는 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출할 때 데이터 길이가 결정 됩니다. **Bcp_sendrow** 호출 사이에 데이터 길이가 변경 되 고 길이 접두사나 종결자가 사용 되지 않는 경우 **bcp_collen** 를 호출 하 여 길이를 다시 설정할 수 있습니다. **Bcp_sendrow** 에 대 한 다음 호출에서는 **bcp_collen**에 대 한 호출로 설정 된 길이를 사용 합니다.  
   
  데이터 길이가 수정 하려는 테이블의 각 열에 대해 **bcp_collen** 를 한 번씩 호출 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

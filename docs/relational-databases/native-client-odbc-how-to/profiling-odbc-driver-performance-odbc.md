@@ -1,5 +1,5 @@
 ---
-title: ODBC 드라이버 성능 방법 도움말 항목 (ODBC) 프로 파일링 | Microsoft Docs
+title: ODBC 드라이버 성능 프로 파일링 방법 도움말 항목 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af0d53b7eac7302dcf492eb72cf7f731434790d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782558d3c8325f1886310fea4d0291982544d16c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069635"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73791038"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>ODBC 드라이버 성능 프로파일링(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에는 드라이버의 성능을 프로파일링하기 위한 두 개의 드라이버 관련 옵션이 있습니다.  
   
@@ -30,11 +29,11 @@ ms.locfileid: "68069635"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [드라이버 성능 데이터 프로 파일링 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
+-   [프로필 드라이버 성능 데이터 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [장기 실행 쿼리 로그 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [장기 실행 쿼리 &#40;기록 ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙 조건(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙 조건
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047473"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728725"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "68047473"
 > [!NOTE]  
 >  비즈니스 규칙에 두 값을 비교하는 조건이 포함되었고 두 값이 모두 Null인 멤버에 대해 이 규칙을 적용할 경우 해당 멤버의 유효성 검사가 실패합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: 엔터티(Master Data Services) | Microsoft Docs
+title: 엔터티
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052044"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728161"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "68052044"
 ## <a name="how-entities-relate-to-other-model-objects"></a>다른 모델 개체와 엔터티의 관계  
  엔터티는 마스터 데이터가 포함되어 있으며 멤버를 나타내는 행과 특성을 나타내는 열로 구성된 테이블이라고 생각하면 됩니다.  
   
- ![테이블로 표시된 Master Data Services 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
+ ![테이블로 표시 된 MDS(Master Data Services) 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 MDS(Master Data Services) 엔터티")  
   
  관리하려는 마스터 데이터 목록으로 엔터티를 채웁니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "68052044"
  관련 모델 개체를 포함하여 엔터티에 대한 사용 권한을 사용자에게 부여할 수 있습니다. 자세한 내용은 [엔터티 권한&#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="entity-examples"></a>엔터티 예  
- 다음 예제에서는 이러한 특성을 가진 엔터티를 보여 줍니다. 이름, 코드, Subcategory, StandardCost, ListPrice 및 FilePhoto 합니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
- ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
+ ![자전거 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "자전거 제품 엔터티 테이블")  
   
  다음 예에서 Product 엔터티는 중앙 엔터티입니다. Subcategory 엔터티는 Product 엔터티의 도메인 기반 특성입니다. Category 엔터티는 Subcategory 엔터티의 도메인 기반 특성이고, StandardCost 및 ListPrice는 Product 엔터티의 자유 형식 특성이며, FilePhoto는 Product 엔터티의 파일 특성입니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68052044"
 > [!NOTE]  
 >  이 예는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)를 기반으로 합니다. 계층 트리 구조는 엔터티와 도메인 기반 특성의 관계를 표시합니다. 즉, 중요도가 아니라 관계를 보여 줍니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

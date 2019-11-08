@@ -14,16 +14,15 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131446"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786478"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 **SQLGetDiagField**에 대해 다음과 같은 추가 진단 필드를 지정합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68131446"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 문|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 또는 DUMP DATABASE 문|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 문|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. 있으면 CHECKPOINT 문에 대해서도 반환 합니다 **trunc. log 있습니다.** 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. **Trunc가 chkpt** 인 경우에는 CHECKPOINT 문에 대해서도 반환 됩니다. 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 흐름 제어 문|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 문|  
 |SQL_DIAG_DFC_SS_KILL|KILL 문|  
@@ -98,11 +97,11 @@ ms.locfileid: "68131446"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 문|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 및 테이블 반환 매개 변수  
- SQLGetDiagField 두 진단 필드를 검색에 사용할 수 있습니다. SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER를 제공 합니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
+ SQLGetDiagField를 사용 하 여 두 개의 진단 필드인 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER를 검색할 수 있습니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLGetDiagField 함수](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

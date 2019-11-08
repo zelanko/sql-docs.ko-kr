@@ -1,5 +1,5 @@
 ---
-title: 버전관리 기능 영역(마스터 데이터 관리자) | Microsoft Docs
+title: 버전 관리 기능 영역
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5d1cee329f1de8c838aede004cb44f03cc0d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017336"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728880"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>버전 관리 기능 영역(마스터 데이터 관리자)
 
@@ -50,7 +50,7 @@ ms.locfileid: "68017336"
   
  [트랜잭션 되돌리기&#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

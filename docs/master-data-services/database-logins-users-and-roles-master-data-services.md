@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 로그인, 사용자 및 역할(Master Data Services) | Microsoft Docs
+title: 데이터베이스 로그인, 사용자 및 역할
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094412"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729488"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68094412"
 |사용자|설명|  
 |----------|-----------------|  
 |**mds_clr_user**|사용되지 않습니다. mds_dlp_login에 매핑됩니다.|  
-|**mds_email_user**|알림에 사용됩니다.<br /><br /> -mds_email_login에 매핑됩니다.<br /><br /> -역할의 멤버: DatabaseMailUserRole.|  
+|**mds_email_user**|알림에 사용됩니다.<br /><br /> -mds_email_login에 매핑됩니다.<br /><br /> -DatabaseMailUserRole 역할의 멤버입니다.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 데이터베이스 사용자  
   
@@ -64,9 +64,9 @@ ms.locfileid: "68094412"
 |----------|-----------------|  
 |**mdm**|mdq 스키마에 포함된 함수 이외의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 Service Broker 개체를 모두 포함합니다.|  
 |**mdq**|정규식 또는 유사성에 따라 멤버 결과를 필터링하는 데 관련이 있으며 알림 전자 메일의 서식을 지정하기 위한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 함수를 포함합니다.|  
-|**stg**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 테이블, 저장 프로시저 및 준비 프로세스와 관련된 뷰를 포함합니다. 이러한 개체는 삭제하지 마십시오. 준비 단계에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.|  
+|**stg**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 테이블, 저장 프로시저 및 준비 프로세스와 관련된 뷰를 포함합니다. 이러한 개체는 삭제하지 마십시오. 준비 프로세스에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

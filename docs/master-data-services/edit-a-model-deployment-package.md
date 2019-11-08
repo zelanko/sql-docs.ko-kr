@@ -1,5 +1,5 @@
 ---
-title: 모델 배포 패키지 편집 | Microsoft Docs
+title: 모델 배포 패키지 편집
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086476"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728227"
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
 
@@ -27,7 +27,7 @@ ms.locfileid: "68086476"
   
  모델 패키지 편집기를 사용하여 MDSModelDeploy 도구(개체 및 데이터가 포함된 패키지 파일을 만드는 도구) 또는 모델 배포 마법사(모델 구조만 포함된 파일을 만드는 도구)를 사용하여 만든 패키지 파일에서 모델의 일부분을 선택할 수 있습니다. 패키지의 모델을 편집한 후에는 MDSModelDeploy 도구를 사용하여 개체 및 데이터를 배포하거나 모델 배포 마법사를 사용하여 모델 구조만 배포할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
