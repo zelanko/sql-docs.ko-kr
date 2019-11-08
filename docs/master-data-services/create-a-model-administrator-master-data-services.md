@@ -1,5 +1,5 @@
 ---
-title: 모델 관리자 만들기(Master Data Services) | Microsoft Docs
+title: 모델 관리자 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba53fbbbb86f40a5b93c748fcd31bf5e8d7f823d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906691"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729563"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67906691"
 > [!TIP]  
 >  관리를 단순화하기 위해 Windows 또는 로컬 그룹을 만들고 이를 모델 관리자로 구성합니다. 그러면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "67906691"
   
 10. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: SqlService 클래스 | Microsoft Docs
+title: SqlService 클래스
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4edf230bd551987642da43e36ef1dbd86d0d655a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054773"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660885"
 ---
 # <a name="sqlservice-class"></a>SqlService 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68054773"
   
 -   서비스 속성을 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

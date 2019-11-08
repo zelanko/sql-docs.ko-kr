@@ -1,5 +1,5 @@
 ---
-title: 구독 뷰 삭제(Master Data Services) | Microsoft Docs
+title: 구독 뷰 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094362"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729382"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>구독 뷰 삭제(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68094362"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 구독 뷰가 더 이상 필요하지 않으면 삭제할 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 구독 뷰를 삭제하면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 해당 뷰가 제거됩니다. 구독 뷰를 편집할 수도 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "68094362"
   
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   

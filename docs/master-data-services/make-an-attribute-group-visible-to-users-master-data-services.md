@@ -1,5 +1,5 @@
 ---
-title: 특성 그룹을 사용자에게 표시되도록 설정(Master Data Services) | Microsoft Docs
+title: 특성 그룹을 사용자에게 표시되도록 설정
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce8d0490625780459ecafd8e9d346af0fc9bd1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054535"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729072"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>특성 그룹을 사용자에게 표시되도록 설정(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68054535"
   
  특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "68054535"
   
 8.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [특성 그룹 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

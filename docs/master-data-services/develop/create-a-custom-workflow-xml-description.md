@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 워크플로 XML 설명(Master Data Services) | Microsoft Docs
+title: 사용자 지정 워크플로 XML 설명
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901671"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729309"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>사용자 지정 워크플로 만들기 - XML 설명
 
@@ -67,17 +67,17 @@ ms.locfileid: "67901671"
   
 |태그|설명|  
 |---------|-----------------|  
-|\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 유형** 입력란에 입력한 텍스트입니다.|  
-|\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  
-|<Server_URL>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 사이트** 입력란에 입력한 텍스트입니다.|  
-|<Action_ID>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 이름** 입력란에 입력한 텍스트입니다.|  
+|\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 **에서** 워크플로 유형[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 입력란에 입력한 텍스트입니다.|  
+|\<SendData>|**에서** 메시지에 멤버 데이터 포함[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  
+|<Server_URL>|**에서** 워크플로 사이트[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 입력란에 입력한 텍스트입니다.|  
+|<Action_ID>|**에서** 워크플로 이름[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 입력란에 입력한 텍스트입니다.|  
 |\<MemberData>|워크플로 동작을 트리거한 멤버의 데이터를 포함합니다. 이 태그는 \<SendData>의 값이 1인 경우에만 포함됩니다.|  
 |\<Enter*xxx*>|이 태그 집합에는 멤버 생성에 대한 메타데이터(예: 만든 날짜, 만든 사람 등)가 포함됩니다.|  
 |\<LastChg*xxx*>|이 태그 집합에는 멤버에 적용된 마지막 변경 내용에 대한 메타데이터(예: 변경 내용을 적용한 날짜, 변경 내용을 적용한 사람 등)가 포함됩니다.|  
 |\<Name>|변경된 멤버의 첫 번째 특성입니다. 이 예제 멤버에는 Name 및 Code 특성만 포함되어 있습니다.|  
 |\<Code>|변경된 멤버의 다음 특성입니다. 이 예제 멤버에 더 많은 특성이 포함될 경우 해당 특성은 이 특성 다음에 오게 됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 워크플로 만들기&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   

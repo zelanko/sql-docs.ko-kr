@@ -1,5 +1,5 @@
 ---
-title: Hello World 예제 | Microsoft Docs
+title: Hello World 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781256"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637761"
 ---
 # <a name="hello-world-sample"></a>Hello World 예제
   Hello World 예제는 간단한 CLR(공용 언어 런타임) 통합 기반 저장 프로시저의 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. 이 예제는 저장 프로시저에 의해 동적으로 생성되고 호출자로 반환되는 레코드를 통해 데이터를 반환하는 방법도 보여 줍니다.  
   
- `HelloWorld` "Hello world!" 프로시저가 문자열을 반환 합니다. 결과 하나의 행으로 구성 된 집합입니다. 이 예제에는 클래스에 대 한 몇 가지 사용 방법을 보여 줍니다. [Microsoft.SqlServer.Server.SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)하십시오 [Microsoft.SqlServer.Server.SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) 고 [ Microsoft.SqlServer.Server.Pipe](https://go.microsoft.com/fwlink/?LinkID=193571)합니다.  
+ `HelloWorld` 저장 프로시저는 "Hello 세계!" 문자열을 반환 합니다. 한 행으로 구성 된 결과 집합 이 예제 [에서는 클래스의](https://go.microsoft.com/fwlink/?LinkID=193572)몇 가지 사용 예를 보여 줍니다. [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) 및 microsoft. d s. [파이프](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62781256"
   
 2.  필요한 경우 예제에 대한 디렉터리를 만듭니다. 이 예에서는 C:\MySample을 사용합니다.  
   
-3.  c:\MySample에서 `HelloWorld.vb`(Visual Basic 예제용) 또는 `HelloWorld.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+3.  c:\MySample에서 `HelloWorld.vb` (Visual Basic 예제용) 또는 `HelloWorld.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 4.  선택하는 언어에 따라 다음 중 하나를 실행하여 명령줄 프롬프트에서 예제 코드를 컴파일합니다.  
   
@@ -194,7 +194,7 @@ DROP ASSEMBLY HelloWorld;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

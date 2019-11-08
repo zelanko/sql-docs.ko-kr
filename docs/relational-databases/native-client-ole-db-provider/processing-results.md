@@ -1,5 +1,5 @@
 ---
-title: 결과 처리 | Microsoft 문서
+title: 결과 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a44245519a8593f9beba28af12df5478fc783fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57e1187e7497cbb294689ba9abac775c90be3dce
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035544"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761724"
 ---
 # <a name="processing-results"></a>결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   명령을 실행하거나 공급자에서 직접 행 집합 개체를 생성하여 행 집합 개체가 만들어진 경우 소비자가 행 집합의 데이터를 검색하여 액세스해야 합니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "68035544"
   
  DBBINDING 구조가 지정된 후 접근자가 생성됩니다(**IAccessor::CreateAccessor**). 접근자는 바인딩 컬렉션으로, 소비자 버퍼의 데이터를 가져오거나 설정하는 데 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

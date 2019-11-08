@@ -1,5 +1,5 @@
 ---
-title: ODBC 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원 | Microsoft Docs
+title: ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030512"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784003"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
   
@@ -38,10 +37,10 @@ ms.locfileid: "68030512"
   
 |SQL Server 데이터 형식|SQL 데이터 형식|값|  
 |--------------------------|-------------------|-----------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
+|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
   
@@ -61,11 +60,11 @@ ms.locfileid: "68030512"
   
 |SQL Server 데이터 형식|ODBC 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-월-일 hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: ss [. 9999999] '<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
   
  날짜/시간 리터럴에 대한 ODBC 이스케이프 시퀀스에는 변경 내용이 없습니다.  
@@ -137,9 +136,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 경우는 **timezone_hour** 가 음수 이면 합니다 **timezone_minute** 음수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 이 양수인 경우 합니다 **timezone_minute** 양수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 0 이면 합니다 **timezone_minute** -59에서 + 59 까지의 모든 값을 가질 수 있습니다.  
+ **Timezone_hour** 음수 이면 **timezone_minute** 음수 이거나 0 이어야 합니다. **Timezone_hour** 양수 이면 **timezone_minute** 는 양수 또는 0 이어야 합니다. **Timezone_hour** 0 인 경우 **timezone_minute** 범위는-59에서 + 59 사이의 값이 될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC의 날짜 및 &#40;시간 기능 향상&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

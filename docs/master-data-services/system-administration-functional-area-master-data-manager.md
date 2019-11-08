@@ -1,5 +1,5 @@
 ---
-title: 시스템 관리 기능 영역(마스터 데이터 관리자) | Microsoft Docs
+title: 시스템 관리 기능 영역
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 340d4736754ab4e2ffd23043d8178d7ce4fdbe0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102615"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727866"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>시스템 관리 기능 영역(마스터 데이터 관리자)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68102615"
 
   시스템 관리 기능 영역에서 관리자는 모델 및 해당 모든 개체를 만들 수 있습니다. 또한 비즈니스 규칙을 만들 수 있으며 모델 패키지를 만들어 배포할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-## <a name="model"></a>Model  
+## <a name="model"></a>모델  
  [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "68102615"
   
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

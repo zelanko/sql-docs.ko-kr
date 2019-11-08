@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 데이터베이스 만들기 | Microsoft Docs
+title: Master Data Services 데이터베이스 만들기
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945047"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728121"
 ---
 # <a name="create-a-master-data-services-database"></a>Master Data Services 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 응용 프로그램 및 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 지원할 새 데이터베이스가 필요한 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 애플리케이션 및 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 지원할 새 데이터베이스가 필요한 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   데이터베이스를 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [데이터베이스 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)을 참조하세요.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67945047"
   
 -   데이터베이스 및 웹 애플리케이션에 대한 시스템 설정을 구성합니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
--   이 데이터베이스와 연결할 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
+-   이 데이터베이스와 연결할 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 애플리케이션 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
 -   데이터베이스 및 트랜잭션 로그를 백업하도록 유지 관리 계획을 구성합니다. 자세한 내용은 [데이터베이스 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

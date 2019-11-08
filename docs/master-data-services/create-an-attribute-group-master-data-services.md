@@ -1,5 +1,5 @@
 ---
-title: 특성 그룹 만들기(Master Data Services) | Microsoft Docs
+title: 특성 그룹 만들기
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 988d57ab3d0f86c3da1e45109a6ad818cecb894e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906570"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728446"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>특성 그룹 만들기(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67906570"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **탐색기** 표의 개별 탭에 특성을 표시하려는 경우 특성 그룹을 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "67906570"
   
 -   [특성 그룹을 사용자에게 표시되도록 설정&#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [특성 그룹 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

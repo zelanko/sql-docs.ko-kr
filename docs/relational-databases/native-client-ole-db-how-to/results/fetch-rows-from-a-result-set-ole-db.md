@@ -1,5 +1,5 @@
 ---
-title: 결과 집합 (OLE DB)에서 행을 인출 합니다. | Microsoft Docs
+title: 결과 집합에서 행 인출 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 880f98a73d384361113068c822da715da12f12cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22257604ca0aefcb58ea543df999adb506074f87
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908196"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789901"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>결과 집합에서 행 인출(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   이 예제에서는 결과 집합에서 행을 인출하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
@@ -379,7 +378,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

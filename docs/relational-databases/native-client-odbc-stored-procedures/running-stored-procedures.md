@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저를 실행 | Microsoft Docs
+title: 저장 프로시저 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3239172c0d2c86447f117eadc6fe1496b83d70d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020322"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73778083"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68020322"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장된 프로시저를 호출 하는 방법에 대 한 예제를 보려면 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     저장 프로시저를 호출 하는 방법에 대 한 예는 [프로세스 반환 코드 및 출력 매개 &#40;변수&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -69,8 +68,8 @@ ms.locfileid: "68020322"
   
 -   [저장 프로시저 결과 처리](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [저장된 프로시저 방법 도움말 항목을 실행 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+## <a name="see-also"></a>관련 항목:  
+ [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [저장 프로시저 실행 방법 항목 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

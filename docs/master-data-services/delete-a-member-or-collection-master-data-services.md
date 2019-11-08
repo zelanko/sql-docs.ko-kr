@@ -1,5 +1,5 @@
 ---
-title: 멤버 또는 컬렉션 삭제(Master Data Services) | Microsoft Docs
+title: 멤버 또는 컬렉션 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094367"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729379"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68094367"
 > [!NOTE]  
 >  다른 멤버의 도메인 기반 특성 값으로 사용되는 멤버는 삭제할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "68094367"
   
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  

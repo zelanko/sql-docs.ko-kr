@@ -13,16 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 641815e90080f7fce0499a3682e641892d6140bf
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106917"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773383"
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타데이터 - 매개 변수 및 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 항목에서는 향상된 OLE DB 날짜 및 시간 기능과 관련하여 다음과 같은 형식 및 형식 멤버에 대한 정보를 제공합니다.  
   
@@ -41,12 +40,12 @@ ms.locfileid: "68106917"
   
 |매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.34|0..7|Set|  
   
  값 범위가 연속되지 않을 수도 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
@@ -58,39 +57,39 @@ ms.locfileid: "68106917"
 |*pwszDataSourceType*<br /><br /> (공급자별로 다름)|*pwszDataSourceType*<br /><br /> (OLE DB 일반)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|무시됨|  
-|날짜|DBTYPE_DBDATE|6|무시됨|  
+|date|DBTYPE_DBDATE|6|무시됨|  
 ||DBTYPE_DBTIME|10|무시됨|  
-|Time|DBTYPE_DBTIME2|10|0..7|  
+|time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|무시됨|  
-|DATETIME||16|무시됨|  
+|datetime||16|무시됨|  
 |datetime2 또는 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- 합니다 *bPrecision* 매개 변수가 무시 됩니다.  
+ *Bprecision* 매개 변수는 무시 됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "**datetime**"또는"**smalldatetime**"는 데 사용 됩니다. 응용 프로그램에서 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. MDAC에서 업그레이드 하는 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 실패 *bScale* 올바르게 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. 공급자별 형식 이름 "**datetime**" 또는 "**smalldatetime**"을 사용 하는 경우에는 *눈금이* 무시 됩니다. 그렇지 않으면 appications는 *Bscale* 이 올바르게 설정 되었는지 확인 해야 합니다. "DBTYPE_DBTIMESTAMP"를 사용 하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client로 업그레이드 된 응용 프로그램은 *Bscale* 을 올바르게 설정 하지 않은 경우 실패 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
- Icommandwithparameters:: Setparameterinfo를 호출 하지 않은 경우 공급자 유추 서버 iaccessor:: Createaccessor에 지정 된 바인딩 유형에 서 다음과 같이 입력 합니다.  
+ ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 공급자는 다음과 같이 IAccessor:: CreateAccessor에 지정 된 바인딩 형식에서 서버 유형을 유추 합니다.  
   
 |바인딩 유형|*pwszDataSourceType*<br /><br /> (공급자별로 다름)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|날짜|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **Icolumnsrowset:: Getcolumnsrowset** 다음 열을 반환 합니다.  
+ **IColumnsRowset:: GetColumnsRowset** 는 다음 열을 반환 합니다.  
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  DBCOLUMN_FLAGS에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -120,11 +119,11 @@ ms.locfileid: "68106917"
   
 |매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  *dwFlags*에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -145,7 +144,7 @@ ms.locfileid: "68106917"
   
  새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 애플리케이션에서 *wType*이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 *dwFlags*에 제공됩니다. 서버 유형을 확인하려면 *bScale*도 사용해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메타 데이터 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+## <a name="see-also"></a>관련 항목:  
+ [메타 &#40;데이터 OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

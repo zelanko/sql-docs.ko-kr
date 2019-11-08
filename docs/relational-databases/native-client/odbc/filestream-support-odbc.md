@@ -13,31 +13,30 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 59be322c19ba0e2dc2f3b74f215e7d2d98e0c167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913243"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761195"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)합니다. FILESTREAM에 대 한 ODB 지원을 설명 하는 샘플을 보려면 [송신 및 수신 데이터 증분 방식으로 FILESTREAM을 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ &#40;&#41;filestream ODBC를 사용 하 여 증분 방식으로 데이터 전송 및 수신](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  
   
- 보내고 받을 **varbinary (max)** 2GB 보다 큰 값을 응용 프로그램으로 SQLBindParameter를 사용 하 여 매개 변수를 바인딩해야 합니다 *ColumnSize* 로 **SQL_SS_LENGTH_UNLIMITED**의 내용을 설정 하 고 *StrLen_or_IndPtr* 하 **SQL_DATA_AT_EXEC** SQLExecDirect 또는 SQLExecute 하기 전에 합니다.  
+ **Varbinary (max)** 값을 2gb 보다 크게 보내고 받으려면 응용 프로그램에서 *columnsize* 가 **SQL_SS_LENGTH_UNLIMITED**로 설정 된 SQLBindParameter를 사용 하 여 매개 변수를 바인딩하고 *StrLen_or_IndPtr* 의 콘텐츠를로 **설정 해야 합니다.** SQLExecDirect 또는 SQLExecute 이전에 SQL_DATA_AT_EXEC 합니다.  
   
- 으로 실행 시 데이터 매개 변수를 사용 하 여 데이터를 제공 됩니다 SQLParamData 및 SQLPutData를 사용 하 여.  
+ 실행 시 데이터 매개 변수와 마찬가지로 SQLParamData 및 Sqlparamdata를 사용 하 여 데이터를 제공 합니다.  
   
- SQLGetData 열 SQLBindCol과 바인딩되지 않은 경우 FILESTREAM 열에 대 한 청크에서 데이터를 가져오기 위해 호출할 수 있습니다.  
+ 열이 SQLBindCol에 바인딩되지 않은 경우 SQLGetData를 호출 하 여 FILESTREAM 열에 대 한 데이터를 청크로 페치할 수 있습니다.  
   
- SQLBindCol과 바인딩된 경우 FILESTREAM 데이터를 업데이트할 수 있습니다.  
+ SQLBindCol에 바인딩된 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
- 바인딩된 열에 SQLFetch를 호출 하는 경우 버퍼 전체 값을 보유할 만큼 크지 않은 경우 "데이터가 잘렸습니다." 경고가 나타납니다. 이 경고를 무시 하 고 SQLParamData 및 SQLPutData 호출을 사용 하 여이 바인딩된 열의 데이터를 업데이트 합니다. SQLBindCol과 바인딩된 경우 SQLSetPos를 사용 하 여 FILESTREAM 데이터를 업데이트할 수 있습니다.  
+ 바인딩된 열에서 SQLFetch를 호출 하는 경우 버퍼가 전체 값을 보유할 만큼 크지 않은 경우 "데이터가 잘렸습니다." 경고가 표시 됩니다. 이 경고를 무시 하 고 SQLParamData 및 Sqlparamdata 호출을 사용 하 여이 바인딩된 열의 데이터를 업데이트 합니다. SQLBindCol에 바인딩된 경우 SQLSetPos를 사용 하 여 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- FILESTREAM 열와 똑같이 동작 **varbinary (max)** 제한 하지만 크기는 열입니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 출력 매개 변수로 사용할 수는 SQL_LONGVARBINARY 없습니다.) 다음 예제에서는 FILESTREAM 열에 대 한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
+ FILESTREAM 열은 **varbinary (max)** 열과 똑같이 동작 하지만 크기 제한은 없습니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 SQL_LONGVARBINARY connot 매개 변수로 사용 되지 않습니다.) 다음 예에서는 FILESTREAM 열에 대 한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -267,7 +266,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

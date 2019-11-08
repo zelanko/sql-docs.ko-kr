@@ -13,20 +13,19 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 185040c174608d2f3a14d23047d63ab8ccf8c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50e1a6733976dee4dc6a7d429d5940bc1a08ea84
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898531"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781326"
 ---
 # <a name="set-cursor-options-odbc"></a>커서 옵션 설정(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  커서 옵션을 설정 하려면 호출 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 설정 또는 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 커서 동작을 제어 하는 문 옵션을 가져오려고 합니다.  
+  커서 옵션을 설정 하려면 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 호출 하 여 또는 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 로 설정 하 여 커서 동작을 제어 하는 문 옵션을 가져옵니다.  
   
-|*특성*|설명|  
+|*Attribute*|지정 내용|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|커서 유형(정방향 전용, 정적, 동적 또는 키 집합)|  
 |SQL_ATTR_CONCURRENCY|동시성 제어 옵션(읽기 전용, 잠금, 타임스탬프를 사용한 낙관적 또는 값을 사용한 낙관적)|  
@@ -34,7 +33,7 @@ ms.locfileid: "67898531"
 |SQL_ATTR_CURSOR_SENSITIVITY|다른 연결에서 만든 커서 행에 대한 업데이트를 표시하거나 표시하지 않는 커서|  
 |SQL_ATTR_CURSOR_SCROLLABLE|앞뒤로 스크롤할 수 있는 커서|  
   
- 이러한 특성의 기본값(정방향 전용, 읽기 전용, 행 집합 크기 1)을 설정하면 서버 커서가 사용되지 않습니다. 서버 커서를 사용하려면 이러한 특성 중 하나 이상을 기본값이 아닌 값으로 설정해야 하며 실행 중인 문이 단일 SELECT 문이거나 단일 SELECT 문을 포함하는 저장 프로시저여야 합니다. 서버 커서를 사용 하는 경우 SELECT 문을 서버 커서에서 지원 되지 않습니다 절을 사용할 수 없습니다. COMPUTE, COMPUTE BY, FOR BROWSE 및 INTO입니다.  
+ 이러한 특성의 기본값(정방향 전용, 읽기 전용, 행 집합 크기 1)을 설정하면 서버 커서가 사용되지 않습니다. 서버 커서를 사용하려면 이러한 특성 중 하나 이상을 기본값이 아닌 값으로 설정해야 하며 실행 중인 문이 단일 SELECT 문이거나 단일 SELECT 문을 포함하는 저장 프로시저여야 합니다. 서버 커서를 사용 하는 경우 SELECT 문은 서버 커서에서 지원 하지 않는 절 (COMPUTE, COMPUTE BY, FOR BROWSE 및 INTO)을 사용할 수 없습니다.  
   
  SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
@@ -60,7 +59,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CURSOR_SENSITIVITY, SQLPOINTER)SQL_INS
 retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리를 실행할 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

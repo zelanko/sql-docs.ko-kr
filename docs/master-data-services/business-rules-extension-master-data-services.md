@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙 확장(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙 확장
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047414"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728680"
 ---
 # <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
 
@@ -65,12 +65,12 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**스키마**|**Permissions**|  
+|**스키마**|**사용 권한**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -113,7 +113,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  

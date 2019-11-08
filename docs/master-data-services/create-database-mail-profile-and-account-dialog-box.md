@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 메일 프로필 및 계정 만들기 대화 상자 | Microsoft Docs
+title: 데이터베이스 메일 프로필 및 계정 만들기 대화 상자
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b08dcb47303d6198bb30d4415d2c00110fd7ab04
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729545"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자
 
@@ -59,7 +59,7 @@ ms.locfileid: "68094498"
 |**암호 확인**|암호를 다시 입력하여 암호를 확인합니다.|  
 |**익명 인증**|SMTP 서버에 인증이 필요하지 않음을 지정합니다. 데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)
   

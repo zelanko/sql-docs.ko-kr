@@ -1,5 +1,5 @@
 ---
-title: OLE DB 속성 정보 | Microsoft 문서
+title: OLE DB 속성 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,22 +16,21 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 265ace9286d9500fff914689a045261c1bec4905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 936a3de6838d61ea92d4c1443d31316eac76fd09
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050951"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761755"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB 속성 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   소비자는 속성 값을 설정하여 특정 개체 동작을 요청합니다. 예를 들어 소비자는 속성을 사용하여 행 집합에서 노출할 인터페이스를 지정합니다. 소비자는 속성 값을 가져와서 행 집합, 세션 또는 데이터 원본 개체와 같은 개체의 기능을 확인합니다.  
   
  각 속성에는 값, 유형, 설명 및 읽기/쓰기 특성이 있고 행 집합 속성의 경우 열 단위로 지정할 수 있는지 여부는 나타내는 표시도 있습니다.  
   
- 속성은 GUID와 속성 ID를 나타내는 정수로 식별됩니다. 속성 집합은 동일한 GUID를 공유하는 모든 속성의 집합입니다. 설정 하는 미리 정의 된 OLE DB 속성 외에도, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자별 속성 집합 및 속성에 구현 합니다. 각 속성은 하나 이상의 속성 그룹에 속합니다. 속성 그룹은 특정 개체에 적용되는 모든 속성의 그룹입니다. 예를 들어 초기화 속성 그룹, 데이터 원본 속성 그룹, 세션 속성 그룹, 행 집합 속성 그룹, 테이블 속성 그룹, 열 속성 그룹 등이 있습니다. 이러한 각 속성 그룹에는 속성들이 있습니다.  
+ 속성은 GUID와 속성 ID를 나타내는 정수로 식별됩니다. 속성 집합은 동일한 GUID를 공유하는 모든 속성의 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 미리 정의 된 OLE DB 속성 집합 외에 공급자별 속성 집합과 속성을 구현 합니다. 각 속성은 하나 이상의 속성 그룹에 속합니다. 속성 그룹은 특정 개체에 적용되는 모든 속성의 그룹입니다. 예를 들어 초기화 속성 그룹, 데이터 원본 속성 그룹, 세션 속성 그룹, 행 집합 속성 그룹, 테이블 속성 그룹, 열 속성 그룹 등이 있습니다. 이러한 각 속성 그룹에는 속성들이 있습니다.  
   
  속성 값을 설정하는 과정은 다음과 같습니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "68050951"
   
 7.  속성을 설정할 메서드를 호출하고 DBPROPSET 구조의 수 및 배열을 전달합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [속성(OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

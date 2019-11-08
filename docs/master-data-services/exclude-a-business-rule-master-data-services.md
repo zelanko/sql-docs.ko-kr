@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙 제외(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙 제외
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 333e147ebf74b8062852f838db4d1797ef6e457f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30088b6964ae8120bc5aa3c1cb401ec3d9bd1149
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915959"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728171"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>비즈니스 규칙 제외(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "67915959"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙을 영구적으로 삭제하지는 않되 규칙에 대해 데이터 유효성을 검사하지 않으려면 규칙을 제외합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "67915959"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **비즈니스 규칙 상태** 열의 값은 **제외됨** 이고 **제외된** 열의 값은 **예**입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: 명시적 캡이 포함된 파생 계층(Master Data Services) | Microsoft Docs
+title: 명시적 캡이 포함된 파생 계층
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c2d28ad9490e4bb9d9a8e30f1ba8356d4a6c7f4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084206"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729338"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>명시적 캡이 포함된 파생 계층(Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68084206"
   
 -   명시적 캡이 포함된 파생 계층에 계층 멤버 권한을 할당할 수 없습니다. 명시적 계층이나 파생 계층에 개별적으로 사용 권한을 할당할 경우 해당 권한이 두 계층에 모두 적용됩니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

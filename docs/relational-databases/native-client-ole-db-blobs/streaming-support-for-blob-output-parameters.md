@@ -1,5 +1,5 @@
 ---
-title: 출력 매개 변수 BLOB에 대 한 스트리밍 지원 | Microsoft Docs
+title: BLOB 출력 매개 변수에 대 한 스트리밍 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00c683cd2cd629d57def7437737d0e8499f9fd77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128822"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790486"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  
   
@@ -511,7 +510,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+## <a name="see-also"></a>관련 항목:  
+ [BLOB 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

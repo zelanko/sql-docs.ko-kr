@@ -1,5 +1,5 @@
 ---
-title: 엔터티 편집(Master Data Services) | Microsoft Docs
+title: 엔터티 편집
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086486"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729292"
 ---
 # <a name="edit-an-entity-master-data-services"></a>엔터티 편집(Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68086486"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 엔터티를 편집할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68086486"
 ## <a name="status"></a>상태  
  표의 상태 열에는 엔터티에 대한 작업의 상태가 표시됩니다. **엔터티 저장**을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.  
   
- ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")  
+ ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")  
   
  엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68086486"
   
  ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [엔터티 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

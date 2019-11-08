@@ -11,16 +11,15 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ed6f68883b73c9a4e51496451df6e6f60c7172b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: b157b95fe7175fb36bf7f1e064eca2179f571e38
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874174"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790147"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 예제에서는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정의 암호를 변경하는 방법을 보여 줍니다.  
   

@@ -50,12 +50,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 329903c084872be2a51ec9a79f72759d503f63dd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7d28f053af7a54f6abcaf0ca78243a18e842b827
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889455"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706985"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
@@ -138,17 +138,17 @@ ms.locfileid: "68889455"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe입니다.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  - 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  - 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.  
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  - 보고서를 관리, 실행, 작성, 예약 및 배달합니다. 실행 파일 경로는 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장 및 실행을 위한 관리를 지원합니다. 실행 파일 경로 \<는 MSSQLPATH > \120\DTS\Binn\MsDtsSrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 스토리지 및 실행을 위한 관리를 지원합니다. 실행 파일 경로는 \<MSSQLPATH > \120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 클라이언트 컴퓨터에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보를 제공하는 이름 확인 서비스입니다. 실행 경로는 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe입니다.  
   
 -   **전체 텍스트 검색** - 구조화 또는 반구조화된 데이터의 내용 및 속성에 대한 전체 텍스트 인덱스를 생성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 문서 필터링 및 단어 분리를 제공합니다.  
   
--   **SQL 기록기** - 백업 및 복원 응용 프로그램이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.  
+-   **SQL 기록기** - 백업 및 복원 애플리케이션이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** - 여러 Distributed Replay Client 컴퓨터 간의 추적 재생 오케스트레이션을 제공합니다.  
   
@@ -174,18 +174,18 @@ ms.locfileid: "68889455"
   
 |구성 요소|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 이상|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |전체 텍스트 검색 FD 표시 아이콘|[로컬 서비스](#Local_Service)|[가상 계정](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[로컬 서비스](#Local_Service)|[로컬 서비스](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[로컬 시스템](#Local_System)|[로컬 시스템](#Local_System)|  
   
- <sup>*</sup>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 외부 리소스가 필요한 경우에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필요한 최소 권한으로 구성 된 MSA (관리 서비스 계정)를 사용할 것을 권장 합니다.  
+ <sup>*</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 외부 리소스가 필요한 경우 필요한 최소 권한으로 구성 된 MSA (관리 서비스 계정)를 사용 하는 것이 좋습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  **SQL Server 장애 조치(Failover) 클러스터 인스턴스**  
   
@@ -246,14 +246,14 @@ ms.locfileid: "68889455"
   
  관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.  
   
- **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [가상 계정](#VA_Desc)을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
+ **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [virtual account](#VA_Desc) 을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
   
 ###  <a name="Auto_Start"></a> 자동 시작  
  모든 서비스에는 사용자 계정 외에 다음과 같이 사용자가 제어할 수 있는 3가지 시작 상태가 있습니다.  
   
 -   **사용 안 함** 서비스가 설치되어 있지만 현재 실행되지 않습니다.  
   
--   **수동** 서비스가 설치되어 있지만 다른 서비스 또는 응용 프로그램이 해당 기능을 필요로 하는 경우에만 시작됩니다.  
+-   **수동** 서비스가 설치되어 있지만 다른 서비스 또는 애플리케이션이 해당 기능을 필요로 하는 경우에만 시작됩니다.  
   
 -   **자동** 운영 체제에서 서비스를 자동으로 시작합니다.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "68889455"
   
  <sup>1</sup> 무인 설치에 대 한 자세한 내용 및 샘플 구문은 [명령 프롬프트에서 SQL Server 2014 설치](../install-windows/install-sql-server-from-the-command-prompt.md)를 참조 하세요.  
   
- <sup>2</sup> 에이전트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 인스턴스에서 사용할 수 없습니다.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에서 사용 하지 않도록 설정 되 고 고급 서비스를 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 합니다.  
   
 ###  <a name="Firewall"></a> 방화벽 포트  
  대부분의 경우 처음 설치할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 동일한 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 도구를 사용하여 연결할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows 방화벽의 포트를 열지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 TCP 포트에서 수신 대기하도록 구성하고 Windows 방화벽에서 적합한 연결 포트를 열지 않으면 다른 컴퓨터에서 연결할 수 없습니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
@@ -315,16 +315,16 @@ ms.locfileid: "68889455"
  서비스 구성에 따라 설치 또는 업그레이드 중 서비스 또는 서비스 SID에 대한 서비스 계정이 서비스 그룹의 멤버로 추가됩니다.  
   
 ###  <a name="Windows"></a> Windows 사용 권한 및 권한  
- 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)를 참조하세요.  
+ 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=7887)를 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용된 서비스별 SID 또는 Windows 그룹에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 요청하는 사용 권한을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|  
 |---------------------------------------|------------------------------------------------------------|  
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT 서비스\\InstanceName.)$**|**서비스로 로그온** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser** _$ComputerName_. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
@@ -332,7 +332,7 @@ ms.locfileid: "68889455"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
   
- <sup>1</sup> 에이전트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 사용 하지 않도록 설정 됩니다.  
+ <sup>1</sup> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 서비스를 사용할 수 없습니다.  
   
 ###  <a name="Reviewing_ACLs"></a> SQL Server의 서비스별 SID 또는 로컬 Windows 그룹에 부여된 파일 시스템 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 리소스에 대한 액세스 권한이 있어야 합니다. 액세스 제어 목록은 서비스별 SID 또는 로컬 Windows 그룹에 대해 설정됩니다.  
@@ -366,7 +366,7 @@ ms.locfileid: "68889455"
 ||120\shared\Errordumps|읽기, 쓰기|  
 ||Instid\MSSQL\Install|읽기, 실행|  
 ||Instid\MSSQL\jobs|읽기, 쓰기|  
-|MSSQLServerOLAPservice|120\shared\ASConfig|모든 권한|  
+|MSSQLServerOLAPService|120\shared\ASConfig|모든 권한|  
 ||Instid\OLAP|읽기, 실행|  
 ||Instid\Olap\Data|모든 권한|  
 ||Instid\Olap\Log|읽기, 쓰기|  
@@ -417,7 +417,7 @@ ms.locfileid: "68889455"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|  
   
- <sup>1</sup> 에이전트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 인스턴스에서 사용할 수 없습니다.  
+ <sup>1</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에서 사용 하지 않도록 설정 되 고 고급 서비스를 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 합니다.  
   
  데이터베이스 파일이 사용자 정의 위치에 저장된 경우 해당 위치에 대한 서비스별 SID 액세스 권한을 부여해야 합니다. 서비스별 SID에 파일 시스템 권한 부여에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](configure-file-system-permissions-for-database-engine-access.md)을 참조하세요.  
   
@@ -429,21 +429,21 @@ ms.locfileid: "68889455"
 |MSSQLServer|성능 로그 사용자|Instid\MSSQL\binn|폴더 내용 보기|  
 ||성능 모니터 사용자|Instid\MSSQL\binn|폴더 내용 보기|  
 ||성능, 로그 사용자, 성능 모니터 사용자|\WINNT\system32\sqlctr120.dll|읽기, 실행|  
-||관리자 전용|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name><sup>1</sup>|모든 권한|  
+||관리자 전용|\\\\.\root\Microsoft\SqlServer\ServerEvents\\< sql_instance_name ><sup>1</sup>|모든 권한|  
 ||관리자, 시스템|\tools\binn\schemas\sqlserver\2004\07\showplan|모든 권한|  
 ||사용자|\tools\binn\schemas\sqlserver\2004\07\showplan|읽기, 실행|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||보고서 관리자 애플리케이션 풀 ID, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정, 모든 사람|*\<설치>* \Reporting Services\ReportManager, *\<설치>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<설치>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<설치>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|읽기|  
 ||보고서 관리자 애플리케이션 풀 ID|*\<설치>* \Reporting Services\ReportManager\Pages\\*.\*|읽기|  
 ||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer|읽기|  
 ||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|  
 ||모든 사람|*\<설치>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||네트워크 서비스|*\<설치>* \Reporting Services\ReportServer\ReportService.asmx|전체|  
+||NETWORK SERVICE|*\<설치>* \Reporting Services\ReportServer\ReportService.asmx|전체|  
 ||모든 사람|*\<설치>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||ReportServer Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||모든 사람|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> 읽기 제어|  
-||터미널 서비스 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|  
-||고급 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|  
+||터미널 서비스 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> Delete<br /><br /> 읽기 제어|  
+||고급 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> Delete<br /><br /> 읽기 제어|  
   
  <sup>1</sup> WMI 공급자 네임 스페이스입니다.  
   
@@ -464,7 +464,7 @@ ms.locfileid: "68889455"
 ###  <a name="Review_additional_considerations"></a> 추가 고려 사항 검토  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 추가 기능을 제공하는 데 필요한 권한을 보여 줍니다.  
   
-|서비스/애플리케이션|기능|필요한 권한|  
+|서비스/애플리케이션|기능|필요한 사용 권한|  
 |--------------------------|-------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|xp_sendmail을 사용하여 메일 슬롯에 씁니다.|네트워크 쓰기 권한|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 이외의 사용자를 위해 xp_cmdshell을 실행합니다.|운영 체제의 일부로 작동하며 프로세스 수준의 토큰을 교체합니다.|  
@@ -477,19 +477,19 @@ ms.locfileid: "68889455"
 ###  <a name="Registry"></a> 레지스트리 권한  
  인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 **HKLM\Software\Microsoft\Microsoft SQL Server\\** _<Instance_ID>_ 아래에 생성됩니다. 예를 들면 다음과 같습니다.  
   
--   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL12.MyInstance**  
+-   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL12. MyInstance**  
   
--   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12.MyInstance**  
+-   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12. MyInstance**  
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL.120**  
   
  레지스트리는 또한 인스턴스 이름과 인스턴스 ID의 매핑을 유지 관리합니다. 인스턴스 이름과 인스턴스 ID의 매핑은 다음과 같이 유지 관리됩니다.  
   
--   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\SQL] "InstanceName"="MSSQL12"**  
+-   **[HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft SQL 서버 \ 인스턴스 Names\SQL] "InstanceName" = "MSSQL12.CONTOSO"**  
   
--   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\OLAP] "InstanceName"="MSASSQL12"**  
+-   **[HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft SQL 서버 \ 인스턴스 Names\OLAP] "InstanceName" = "MSASSQL12"**  
   
--   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL12"**  
+-   **[HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft SQL 서버 \ 인스턴스 Names\RS] "InstanceName" = "MSRSSQL12"**  
   
 ###  <a name="WMI"></a> WMI  
  WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 수 있어야 합니다. 이를 지원하기 위해 Windows WMI 공급자의 서비스별 SID(**NT SERVICE\winmgmt**)가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 프로비전됩니다.  
@@ -557,7 +557,7 @@ ms.locfileid: "68889455"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 **NT SERVICE\Winmgmt** 계정을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 프로비전하고 이를 **sysadmin** 고정 서버 역할에 추가합니다.  
   
 #### <a name="ssrs-provisioning"></a>SSRS 프로비전  
- 설치 중에 지정한 계정은 **RSExecRole** 데이터베이스 역할의 멤버로 프로비전됩니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
+ 설치 중에 지정한 계정은 **RSExecRole** 데이터베이스 역할의 멤버로 프로비전됩니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ###  <a name="SSAS"></a> SSAS 프로비전  
  [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스 계정 요구 사항은 서버 배포 방법에 따라 다릅니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 설치하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하려면 도메인 계정으로 실행하도록 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 구성해야 합니다. SharePoint에 기본 제공되는 관리 계정 기능을 지원하려면 도메인 계정이 필요합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에 대해 가상 계정과 같은 기본 서비스 계정을 제공하지 않습니다. SharePoint용 PowerPivot 프로비전에 대한 자세한 내용은 [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)을 참조하세요.  
@@ -569,7 +569,7 @@ ms.locfileid: "68889455"
  모든 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 설치에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 시스템 관리자를 지정해야 합니다. 관리자 권한은 Analysis Services **서버** 역할로 프로비전됩니다.  
   
 ###  <a name="SSRS"></a> SSRS 프로비전  
- 설치 중에 지정한 계정은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 **RSExecRole** 데이터베이스 역할의 멤버로 프로비전됩니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
+ 설치 중에 지정한 계정은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 **RSExecRole** 데이터베이스 역할의 멤버로 프로비전됩니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ##  <a name="Upgrade"></a> 이전 버전에서 업그레이드  
  이 섹션에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드하는 동안 수행되는 변경 사항에 대해 설명합니다.  

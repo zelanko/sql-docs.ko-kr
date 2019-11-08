@@ -1,5 +1,5 @@
 ---
-title: 탐색 액세스 권한(Master Data Services) | Microsoft Docs
+title: 탐색 액세스 권한
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1b6ba978887aed556b7a53e613c9f79e36875b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928111"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729003"
 ---
 # <a name="navigational-access-master-data-services"></a>탐색 액세스 권한(Master Data Services)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67928111"
   
  컬렉션에 사용 권한을 할당할 경우 이름, 코드, 설명 및 소유자 ID를 읽거나 업데이트할 수 있습니다. 모델 이름을 읽을 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

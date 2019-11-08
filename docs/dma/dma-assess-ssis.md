@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14e53b3820e784916484cbe6a15ba82cd2ed5c8e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70001375"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632874"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server Integration Service 마이그레이션 평가 수행
 
@@ -37,26 +37,31 @@ ms.locfileid: "70001375"
 
     ![평가 만들기](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
-## <a name="add-sources-to-assess"></a>평가할 소스 추가
+## <a name="connect-to-a-server"></a>서버에 연결
 
 1. 기본 옵션을 따르고 **원본 선택**에서 **다음** 을 클릭 합니다.
-
 1. SQL server 인스턴스 이름을 입력 하 고 인증 유형을 선택한 후 올바른 연결 속성을 설정 합니다.
-1. SSIS 패키지를 포함 하는 폴더 경로를 입력 하십시오.
-1. 패키지 암호화 암호 (해당 하는 경우)를 입력 한 다음 **연결**합니다.
-1. 평가할 파일 시스템을 선택한 다음 **추가**를 선택 합니다.
-  ![소스 추가](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+1. 필드 SSIS 패키지를 포함 하는 폴더 경로를 입력 하십시오.
+1. 필드 해당 하는 경우 패키지 암호화 암호를 입력 합니다.
+1. 원본 SQL server에 **연결** 을 클릭 합니다.
+  소스](media/dma-assess-ssis/dma-assess-ssis-addsource.png) 추가 ![
+
+## <a name="add-sources-to-assess"></a>평가할 소스 추가
+
+1. 평가할 SSIS 패키지 저장소 유형을 선택 하 고 **추가**를 선택 합니다.
+소스](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png) 추가 ![
 1. 여러 폴더를 평가 해야 하는 경우 **원본 추가** 를 선택 하 여 연결 플라이 아웃 메뉴를 엽니다.
 1. **평가 시작**을 클릭 합니다.
-  ![평가 시작](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+  평가를 시작 ![](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>결과 보기
 
-호환성 문제 범주는 온-프레미스 SSIS 패키지를 Azure SSIS Integration Runtime로 마이그레이션하는 것을 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하는 데 도움이 되는 권장 사항을 제공 합니다.
+호환성 문제 범주는 온-프레미스 SSIS 패키지를 Azure-SSIS Integration Runtime로 마이그레이션하는 것을 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하는 데 도움이 되는 권장 사항을 제공 합니다.
 
 ![결과 보기](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure SQL Database 관리 되는 인스턴스로 SQL Server Integration Services 패키지 마이그레이션](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages)
+- [ADF에서 SSIS로 온-프레미스 SSIS 작업 마이그레이션 개요](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
+- [Azure SQL Database 관리 되는 인스턴스로 SQL Server Integration Services 패키지 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

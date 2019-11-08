@@ -1,5 +1,5 @@
 ---
-title: 비즈니스 규칙의 예(Master Data Services) | Microsoft Docs
+title: 비즈니스 규칙의 예
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047461"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728703"
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 
@@ -102,7 +102,7 @@ Else
 샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|-----------  
 Product     | Product        |  Std Cost| 표준 원가가 0보다 크도록 요구합니다.        
-다음 비즈니스 규칙에서 모든 조건의 `must be greater than` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md) 은 제품의 StandardCost 특성에 적용됩니다.  
+다음 비즈니스 규칙에서 모든 조건의 `must be greater than` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)은 제품의 StandardCost 특성에 적용됩니다.  
 ```  
 If  
     None  

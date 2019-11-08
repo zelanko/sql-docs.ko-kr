@@ -10,27 +10,26 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e11bc1094f7bab993eb67542c16360e874db87f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031784"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759346"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-SNAC, 또는 SQL Server Native Client ODBC 및 OLE DB 드라이버 SQL Server에 대 한 참조를 같은 의미로 사용 된 용어입니다.
+SNAC 또는 SQL Server Native Client는 SQL Server에 대 한 ODBC 및 OLE DB 드라이버를 참조 하는 데 사용 되는 용어입니다.
 
 > [!IMPORTANT] 
-> SQL Server 네이티브 클라이언트 (SQLNCLI) 사용 되지 않는 상태로 유지 됩니다 하 고 새로운 개발 작업에 사용 하는 것은 권장 되지 않습니다. 대신 새 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 최신 서버 기능을 사용 하 여 업데이트 됩니다.
+> SQL Server Native Client (SQLNCLI)는 더 이상 사용 되지 않으며 새로운 개발 작업에 사용 하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.
 
 > [!NOTE]
-> 자세한 내용은 및 SNAC 또는 ODBC 드라이버를 다운로드 하려면 참조는 [SNAC 수명 주기 블로그 게시물 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)합니다.
-> SQL Server 용 ODBC 드라이버에 자세한 내용은 참조 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.  
+> SNAC 또는 ODBC 드라이버를 다운로드 하 고 다운로드 하는 방법에 대 한 자세한 내용은 [SNAC 수명 주기 설명 블로그 게시물](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)을 참조 하세요.
+> SQL Server에 대 한 ODBC 드라이버에 대 한 자세한 내용은 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)을 참조 하십시오.  
 
- 에 대 한 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 기능와 함께 릴리스된 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 마지막 사용 가능한 버전의 SQL Server native Client:
+ SQL Server native Client의 마지막 사용 가능한 버전인 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 사용 하 여 릴리스된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 기능에 대 한 정보:
 
 -   [LocalDB에 대한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -42,24 +41,24 @@ SNAC, 또는 SQL Server Native Client ODBC 및 OLE DB 드라이버 SQL Server에
 
 -   [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 Windows 7 SDK에 대 한 표준 ODBC에 추가 된 세 가지 기능을 지원 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 Windows 7 SDK의 표준 ODBC에 추가 된 세 가지 기능을 지원 합니다.  
 
--   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](https://go.microsoft.com/fwlink/?LinkID=191493)합니다.  
+-   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](https://go.microsoft.com/fwlink/?LinkID=191493)을 참조 하세요.  
 
--   C 데이터 형식 확장성. 자세한 내용은 [odbc에서 C 데이터 형식](https://go.microsoft.com/fwlink/?LinkID=191495)합니다.  
+-   C 데이터 형식 확장성. 자세한 내용은 [ODBC의 C 데이터 형식](https://go.microsoft.com/fwlink/?LinkID=191495)을 참조 하세요.  
 
-     이 기능을 지원 하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQLGetDescField 반환할 수 있습니다 **SQL_C_SS_TIME2** (에 대 한 **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**) 대신 **SQL_C_BINARY**응용 프로그램에서 ODBC 3.8을 사용 하는 경우. 자세한 내용은 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서이 기능을 지원 하기 위해 SQLGetDescField는 응용 프로그램의 경우 **SQL_C_BINARY**대신 시간 형식에 대 한 **SQL_C_SS_TIME2** ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**)를 반환할 수 있습니다. ODBC 3.8를 사용 합니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)을 참조 하세요.  
 
--   호출 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](https://go.microsoft.com/fwlink/?LinkID=191494)합니다.  
+-   작은 버퍼로 **SQLGetData** 를 여러 번 호출 하 여 많은 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](https://go.microsoft.com/fwlink/?LinkID=191494)을 참조 하세요.  
 
  다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 동작 변경에 대해 설명합니다.  
 
--   호출할 때 **icommandwithparameters:: Setparameterinfo**, 전달 되는 값을 *pwszName* 매개 변수는 유효한 식별자 여야 합니다. 자세한 내용은 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)합니다.  
+-   **ICommandWithParameters:: SetParameterInfo**를 호출 하는 경우 *pwszName* 매개 변수에 전달 된 값은 올바른 식별자 여야 합니다. 자세한 내용은 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)를 참조 하세요.  
 
--   **SQLDescribeParam** 은 ODBC 사양 표준에 맞는 값을 일관성 있게 반환 합니다. 자세한 내용은 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)합니다.  
+-   **SQLDescribeParam** 는 ODBC 사양에 맞는 값을 일관 되 게 반환 합니다. 자세한 내용은 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)를 참조 하세요.  
 
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

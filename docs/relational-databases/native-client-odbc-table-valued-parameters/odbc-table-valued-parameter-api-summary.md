@@ -14,16 +14,15 @@ ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea20dbe9d4c2f08fa0bfd2b25cde351bb0f92f94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e29f25b0e830efd784a4448531d0036dc2b91623
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129182"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790880"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 테이블 반환 매개 변수 API 요약
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 항목에서는 테이블 반환 매개 변수를 지원하기 위해 향상된 ODBC 함수를 보여 줍니다.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68129182"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC 테이블 반환 매개 &#40;변수&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

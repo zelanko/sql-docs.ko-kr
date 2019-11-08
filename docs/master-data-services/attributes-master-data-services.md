@@ -1,5 +1,5 @@
 ---
-title: 특성(Master Data Services) | Microsoft Docs
+title: 특성
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728746"
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "68047585"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>다른 모델 개체와 특성의 관계  
  특성은 엔터티 테이블의 열로 생각할 수 있습니다. 특성 값은 특정 멤버를 설명하는 데 사용되는 값입니다.  
   
- ![테이블로 표시된 Master Data Services 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
+ ![테이블로 표시 된 MDS(Master Data Services) 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 MDS(Master Data Services) 엔터티")  
   
- 다수의 특성이 포함된 엔터티를 만들 때는 특성을 특성 그룹으로 구성할 수 있습니다. 자세한 내용은 [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)을 참조하세요.  
+ 다수의 특성이 포함된 엔터티를 만들 때는 특성을 특성 그룹으로 구성할 수 있습니다. 자세한 내용은 [&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)을 참조하세요.  
   
 ## <a name="required-attributes"></a>필수 특성  
  엔터티를 만들면 Name 및 Code 특성이 자동으로 만들어집니다. Code는 값이 있어야 하고 엔터티 내에서 고유해야 합니다. Name 및 Code 특성은 제거할 수 없습니다.  
@@ -61,9 +61,9 @@ ms.locfileid: "68047585"
 -   부동 소수점 숫자가 포함된 경우 값은 *왕복* 이 아닐 수 있습니다. 작업이 원래 부동 소수점 숫자를 다른 형식으로 변환하고 역 작업이 변환된 형식을 부동 소수점 숫자로 다시 변환한 다음 최종 부동 소수점 숫자가 원래 부동 소수점 숫자와 같을 경우 값을 왕복이라고 합니다. 하나 이상의 최소 유효 자릿수가 변환 중에 손실되거나 변경되어 왕복이 실패할 수 있습니다.  
   
 ## <a name="attribute-examples"></a>특성 예  
- 다음 예제에서는 엔터티는 특성을 가집니다. 이름, 코드, Subcategory, StandardCost, ListPrice 및 FilePhoto 합니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
- ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
+ ![자전거 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "자전거 제품 엔터티 테이블")  
   
  다음 예에서 Product 엔터티는 다음을 포함합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68047585"
   
  ![제품 엔터티 트리 구조](../master-data-services/media/mds-conc-entity-ui.gif "제품 엔터티 트리 구조")  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

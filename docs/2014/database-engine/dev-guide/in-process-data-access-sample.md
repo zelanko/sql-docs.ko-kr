@@ -1,5 +1,5 @@
 ---
-title: In-process 데이터 액세스 예제 | Microsoft Docs
+title: In-process 데이터 액세스 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9854218e66d3edfe10f4220a5ac662cccc6f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781141"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637749"
 ---
 # <a name="in-process-data-access-sample"></a>In-Process 데이터 액세스 예제
   `InProcessDataAccess` 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 몇 가지 간단한 함수가 포함되어 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
@@ -355,7 +355,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`)이이 샘플에 정의 된 함수 및 저장된 프로시저를 실행 하 여 예제를 테스트 합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`)에서는이 샘플에 정의 된 저장 프로시저 및 함수를 연습 하 여 예제를 테스트 합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -410,7 +410,7 @@ IF EXISTS (SELECT * FROM sys.assemblies WHERE name = N'InProcDA') DROP ASSEMBLY 
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

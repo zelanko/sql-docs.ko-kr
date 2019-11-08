@@ -1,5 +1,5 @@
 ---
-title: 모델 개체 사용 권한 삭제(Master Data Services) | Microsoft Docs
+title: 모델 개체 사용 권한 삭제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906285"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728318"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 삭제(Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67906285"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "67906285"
   
 9. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

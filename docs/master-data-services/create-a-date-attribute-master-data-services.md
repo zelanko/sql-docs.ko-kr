@@ -1,5 +1,5 @@
 ---
-title: 날짜 특성 만들기(Master Data Services) | Microsoft Docs
+title: 날짜 특성 만들기
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65fd9442bc55c229ca20ca81151c84180de85094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079706"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728509"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68079706"
 > [!NOTE]  
 >  이 특성을 DateTime이라고 하지만 시간 값이 지원되지 않습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -82,14 +82,14 @@ ms.locfileid: "68079706"
 |Seq|19|  
 |List Option|dd/MM/yyyy hh:mm:ss tt|  
 |Option ID|19|  
-|IsVisible|1|  
+|IsVisible|1\.|  
 |Group_ID|3|  
   
  mdm.tblList 표에 위 값이 있는 행을 입력하면 입력 마스크 목록 상자에서 "dd/MM/yyyy hh:mm:ss tt" 마스크를 사용할 수 있습니다. 그러면 해당 엔터티를 선택하여 MDS 탐색기에서 엔터티의 datetime 특성 열에 날짜 및 시간을 표시할 수 있습니다.  
   
  입력 마스크는 사용자 지정 .NET DateTime 형식 문자열입니다. 자세한 내용은 [사용자 지정 날짜 및 시간 형식 문자열](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

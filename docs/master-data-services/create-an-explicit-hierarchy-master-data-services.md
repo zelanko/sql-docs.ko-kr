@@ -1,5 +1,5 @@
 ---
-title: 명시적 계층 만들기(Master Data Services) | Microsoft Docs
+title: 명시적 계층 만들기
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896910"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729514"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>명시적 계층 만들기(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67896910"
   
  명시적 계층을 만든 후에는 **탐색기** 기능 영역에서 해당 계층에 멤버를 추가할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "67896910"
   
 6.  **이름** 상자에 계층의 이름을 입력합니다.  
   
-7.  또는 **필수 계층** 확인란의 선택을 취소하여 계층을 필수가 아닌 계층으로 만듭니다. 계층 형식에 대한 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)를 참조하세요.  
+7.  또는 **필수 계층** 확인란의 선택을 취소하여 계층을 필수가 아닌 계층으로 만듭니다. 계층 형식에 대한 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)을 참조하세요.  
   
 8.  **저장**을 클릭합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67896910"
   
 |이름|설명|  
 |----------|-----------------|  
-|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
+|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "I상태 업데이트를 위한 con)<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "I오류 상태에 대 한 con ")<br /><br /> 비즈니스 규칙이 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "I정상 상태에 대 한 con ")|  
 |이름|명시적 계층의 이름입니다.|  
 |필수|명시적 계층이 필수 항목인지 여부를 지정합니다.|  
 |만든 사람|명시적 계층을 만든 사용자의 사용자 이름입니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "67896910"
   
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [명시적 캡이 포함된 파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [명시적 계층 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  

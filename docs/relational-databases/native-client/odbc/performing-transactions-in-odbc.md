@@ -1,5 +1,5 @@
 ---
-title: ODBC의 트랜잭션은 | Microsoft 문서
+title: ODBC의 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f076622b30d1f1102bac8ff6c89ecf2e36a96860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bffb00c2e6a4879befb91f002ac581c79251bfdf
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913161"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760486"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC에서 트랜잭션 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC의 트랜잭션은 연결 수준에서 관리됩니다. 애플리케이션에서는 트랜잭션이 완료되면 해당 연결에서 모든 문 핸들을 통해 완료한 모든 작업을 커밋하거나 롤백합니다. 애플리케이션에서는 트랜잭션을 커밋하거나 롤백할 때 COMMIT 또는 ROLLBACK 문을 전송하는 대신 [SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md) 을 호출해야 합니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "67913161"
   
  BEGIN TRANSACTION, COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 같은 Transact-SQL 트랜잭션 문을 사용하면 드라이버에서 예기치 않은 동작이 발생할 수 있으므로 ODBC 애플리케이션에서는 이러한 문을 사용하지 않는 것이 좋습니다. ODBC 애플리케이션은 자동 커밋 모드로 실행하면서 다른 트랜잭션 관리 함수나 문을 실행하지 않거나, 수동 커밋 모드로 실행하면서 ODBC **SQLEndTran** 함수를 사용하여 트랜잭션을 커밋하거나 롤백해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [트랜잭션 수행 &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+## <a name="see-also"></a>관련 항목:  
+ [트랜잭션 &#40;수행 ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

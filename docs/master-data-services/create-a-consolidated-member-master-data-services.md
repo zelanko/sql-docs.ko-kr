@@ -1,5 +1,5 @@
 ---
-title: 통합 멤버 만들기(Master Data Services) | Microsoft Docs
+title: 통합 멤버 만들기
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45c7b5568028a74c806ff4fe39b6b8c48070d41c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcca8ec5850b7f787fa4fcb99f2c009a77b56b48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079719"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729608"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>통합 멤버 만들기(Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68079719"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 명시적 계층에 대한 부모 노드가 필요한 경우 통합 멤버를 만듭니다. 대량으로 데이터를 추가하려는 경우 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "68079719"
   
 10. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [리프 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

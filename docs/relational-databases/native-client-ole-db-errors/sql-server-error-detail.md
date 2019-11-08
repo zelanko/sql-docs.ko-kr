@@ -1,5 +1,5 @@
 ---
-title: SQL Server 오류 세부 정보 | Microsoft 문서
+title: SQL Server 오류 세부 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,17 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7379b09d696f4e7e036b4ebfd42b8235f98e99f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3694733acb9dbf2a62aa5cb1b871cb6a3f81e09c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106853"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73769130"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자별 오류 인터페이스를 정의 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자별 오류 인터페이스 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
   
  **ISQLServerErrorInfo** 인터페이스에 액세스하는 두 가지 방법이 있습니다.  
   
@@ -53,12 +52,12 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지입니다. **IErrorInfo::GetDescription**에 반환된 문자열과 같습니다.|  
 |*pwszServer*|세션에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |*pwszProcedure*|해당되는 경우 오류가 발생한 프로시저의 이름입니다. 그렇지 않으면 빈 문자열입니다.|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원시 오류 번호입니다. **ISQLErrorInfo::GetSQLInfo**의 *plNativeError* 매개 변수에 반환된 값과 같습니다.|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원시 오류 번호입니다. *ISQLErrorInfo::GetSQLInfo*의 **plNativeError** 매개 변수에 반환된 값과 같습니다.|  
 |*bState*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지의 상태입니다.|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지의 심각도입니다.|  
 |*wLineNumber*|해당되는 경우 오류가 발생한 저장 프로시저의 줄 번호입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [오류](../../relational-databases/native-client-ole-db-errors/errors.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   

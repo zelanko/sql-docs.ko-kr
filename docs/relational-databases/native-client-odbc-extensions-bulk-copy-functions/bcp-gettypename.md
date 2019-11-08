@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707460"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782650"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
   
@@ -41,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>인수  
- *token*  
+ *토큰*  
  BCP 유형 토큰을 나타내는 값입니다.  
   
  *field*  
@@ -50,7 +49,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>반환 값  
  BCP 유형에 해당하는 SQL 유형 이름이 포함된 문자열입니다. 잘못된 BCP 유형을 지정하면 빈 문자열이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  BCP 유형 토큰은 sqlncli.h 헤더 파일과 sqlncli11.lib 라이브러리에서 정의됩니다.  
   
  다음 표에서는 가능한 BCP 유형, max 유형인지 여부 및 예상 출력을 지정합니다.  
@@ -65,16 +64,16 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|모두|**money**|  
 |**SQLFLT8**|모두|**float**|  
 |**SQLDATETIME**|모두|**datetime**|  
-|**SQLBITN**|모두|**bit-null**|  
+|**SQLBITN**|모두|**비트-null**|  
 |**SQLBIT**|모두|**bit**|  
-|**SQLBIGCHAR**|아니요|**char**|  
+|**SQL이상 문자**|아니요|**char**|  
 |**SQLCHARACTER**|아니요|**char**|  
-|**SQLBIGVARCHAR**|아니요|**varchar**|  
+|**SQL이상 VARCHAR**|아니요|**varchar**|  
 |**SQLVARCHAR**|아니요|**varchar**|  
 |**SQLTEXT**|모두|**text**|  
-|**SQLBIGBINARY**|아니요|**binary**|  
+|**SQL이상 이진**|아니요|**binary**|  
 |**SQLBINARY**|아니요|**이진**|  
-|**SQLBIGVARBINARY**|아니요|**Varbinary**|  
+|**SQL이상 VARBINARY**|아니요|**Varbinary**|  
 |**SQLVARBINARY**|아니요|**Varbinary**|  
 |**SQLIMAGE**|모두|**이미지**|  
 |**SQLINTN**|모두|**int-null**|  
@@ -84,7 +83,7 @@ RETCODE bcp_gettypename (
 |**SQLAOPSUM**|모두|**Sum**|  
 |**SQLAOPAVG**|모두|**Avg**|  
 |**SQLAOPCNT**|모두|**개수**|  
-|**SQLAOPMIN**|모두|**Min**|  
+|**SQLAOPMIN**|모두|**최소값**|  
 |**SQLAOPMAX**|모두|**Max**|  
 |**SQLDATETIM4**|모두|**smalldatetime**|  
 |**SQLMONEY4**|모두|**Smallmoney**|  
@@ -95,17 +94,17 @@ RETCODE bcp_gettypename (
 |**SQLNTEXT**|모두|**N**|  
 |**SQLVARIANT**|모두|**sql_variant**|  
 |**SQLINT8**|모두|**Bigint**|  
-|**SQLCHARACTER**|사용자 계정 컨트롤|**varchar(max)**|  
-|**SQLBIGCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
-|**SQLBIGVARCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
-|**SQLVARCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
-|**SQLBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
-|**SQLBIGBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
-|**SQLVARBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
-|**SQLNCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
-|**SQLNVARCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
-|**SQLXML**|사용자 계정 컨트롤|**Xml**|  
+|**SQLCHARACTER**|예|**varchar(max)**|  
+|**SQL이상 문자**|예|**varchar(max)**|  
+|**SQL이상 VARCHAR**|예|**varchar(max)**|  
+|**SQLVARCHAR**|예|**varchar(max)**|  
+|**SQLBINARY**|예|**varbinary(max)**|  
+|**SQL이상 이진**|예|**varbinary(max)**|  
+|**SQL이상 VARBINARY**|예|**varbinary(max)**|  
+|**SQLVARBINARY**|예|**varbinary(max)**|  
+|**SQLNCHAR**|예|**nvarchar(max)**|  
+|**SQLNVARCHAR**|예|**nvarchar(max)**|  
+|**SQLXML**|예|**Xml**|  
 |**SQLUDT**|모두|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
@@ -113,7 +112,7 @@ RETCODE bcp_gettypename (
   
  자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: SupportAlias 속성 (ClientNetworkProtocol 클래스) | Microsoft Docs
-ms.custom: ''
+title: SupportAlias 속성 (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cd3ba42974c65591f7920d5df8d7dd8a937d352
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cb18806ed4f83f34a6436c79c5a89acf68db294
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040828"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660229"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  현재 네트워크에 지정 된 프로토콜 여부를 지정 하는 부울 속성을 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) 별칭을 지원 합니다.  
+  [Setordervalue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) 에서 지정한 현재 네트워크 프로토콜이 별칭을 지원 하는지 여부를 지정 하는 부울 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,9 +46,9 @@ object.SupportAlias [= value]
   
  False인 경우 클라이언트 네트워크 프로토콜이 별칭을 지원하지 않습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

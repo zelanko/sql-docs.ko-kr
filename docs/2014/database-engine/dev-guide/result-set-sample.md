@@ -1,5 +1,5 @@
 ---
-title: 결과 집합 예제 | Microsoft Docs
+title: Result Set 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782146"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637634"
 ---
 # <a name="result-set-sample"></a>결과 집합 예제
   경우에 따라서는 쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 것이 유용할 수 있습니다. ADO.NET 2.0의 MARS(Multiple Active Result Set)는 이러한 작업을 가능하게 하는 기술입니다. 현재로서는 서버 쪽 프로그래밍에 사용되는 in-process 공급자에는 MARS가 구현되지 않습니다. 서버 쪽 커서를 사용하면 이러한 제한을 해결할 수 있습니다. 이 예제는 서버 쪽 커서를 사용하여 서버 쪽 프로그래밍을 지원하지 않는 MARS의 한계를 극복하는 방법을 보여 줍니다.  
@@ -25,10 +25,10 @@ ms.locfileid: "62782146"
   
  이 클래스에 대한 API는 결과 집합에서 앞으로 또는 뒤로 이동할 수 있다는 점과 결과 집합이 열려 있는 중에도 연결에서 다른 명령을 실행할 수 있다는 점을 제외하면 데이터 판독기와 유사합니다. 이 구현은 예제를 쉽게 이해할 수 있도록 하기 위해 상당 부분 간소화되었습니다. 보다 효율적인 구현 방법은 여러 행을 인출하여 인출된 행당 데이터베이스 반환이 발생하지 않게 하는 것입니다. 이 클래스를 사용하면 쿼리의 모든 결과로 데이터 세트를 채우는 것보다 메모리 사용량을 크게 줄일 수 있으며 이는 서버 쪽 프로그래밍에서 아주 중요합니다. 이 예제는 "부분적으로 신뢰하는 호출자 허용" 특성을 사용하여 결과 집합 어셈블리가 다른 어셈블리에서 안전하게 호출될 수 있는 라이브러리임을 나타내는 방법도 보여 줍니다. 이 방법은 안전하지 않은 권한을 사용하여 호출 어셈블리를 등록하는 것보다 좀 더 복잡하지만 훨씬 안전합니다. 호출 어셈블리를 안전한 어셈블리로 등록하면 호출 어셈블리가 서버의 리소스에 영향을 주지 않도록 제한하고 서버의 무결성에 손상을 주지 않도록 하므로 더 안전합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62782146"
   
 3.  명령 프롬프트에서 다음을 실행하여 강력한 이름의 키 파일을 만듭니다.  
   
-## <a name="sample-code"></a>샘플 코드  
+## <a name="sample-code"></a>예제 코드  
  다음은 이 예제에 대한 코드 목록입니다.  
   
  이는 라이브러리 `ResultSet.`의 코드입니다.  
@@ -1411,7 +1411,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

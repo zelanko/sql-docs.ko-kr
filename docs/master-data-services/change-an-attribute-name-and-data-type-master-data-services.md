@@ -1,5 +1,5 @@
 ---
-title: 특성 이름 및 데이터 형식 변경(Master Data Services) | Microsoft Docs
+title: 특성 이름 및 데이터 형식 변경
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 22a52ee146610dcacafc10dcd604441932a4fd17
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263988"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729672"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>특성 이름 및 데이터 형식 변경(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68263988"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "68263988"
   
 9. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

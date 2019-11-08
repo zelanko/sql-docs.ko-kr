@@ -1,5 +1,5 @@
 ---
-title: 행 인출 | Microsoft 문서
+title: 행 페치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,15 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcdb6fed061cb9f3783985d3cdf934e2d11df151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115206"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761707"
 ---
 # <a name="fetching-rows"></a>행 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **IRowset** 인터페이스는 기본 행 집합 인터페이스입니다. **IRowset** 인터페이스는 순차적으로 행을 인출하고, 해당 행에서 데이터를 가져오고, 행을 관리하기 위한 메서드를 제공합니다. 소비자는 모든 기본 행 집합 작업에 **IRowset**의 메서드를 사용합니다. 여기에는 행 인출 및 해제, 열 값 가져오기 등이 포함됩니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68115206"
   
 -   [다음 인출 위치](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [행 집합](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

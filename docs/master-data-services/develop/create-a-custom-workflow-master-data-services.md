@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 워크플로 만들기(Master Data Services) | Microsoft Docs
+title: 사용자 지정 워크플로 만들기
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033950"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729324"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68033950"
 5.  SQL Server MDS Workflow Integration Services가 해당 데이터를 워크플로 처리기 어셈블리로 라우팅합니다.  
   
 > [!NOTE]  
->  참고: SQL Server MDS Workflow Integration Service는 간단한 프로세스를 트리거하기 위한 것입니다. 사용자 지정 코드에 복잡한 처리가 필요한 경우 별도의 스레드나 워크플로 프로세스 외부에서 처리를 완료하십시오.  
+>  참고: SQL Server MDS Workflow Integration Service는 간단한 프로세스를 트리거하기 위한 서비스입니다. 사용자 지정 코드에 복잡한 처리가 필요한 경우 별도의 스레드나 워크플로 프로세스 외부에서 처리를 완료하십시오.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>사용자 지정 워크플로용 MDS(Master Data Services) 구성  
  사용자 지정 워크플로를 만들려면 사용자 지정 코드를 일부 작성하고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 워크플로 데이터를 사용자 워크플로 처리기로 전달하도록 구성해야 합니다. 사용자 지정 워크플로 처리를 사용하려면 다음 단계를 수행하십시오.  
@@ -63,7 +63,7 @@ ms.locfileid: "68033950"
   
 3.  'using Microsoft.MasterDataServices.Core.Workflow;'를 C# 코드 파일에 추가합니다.  
   
-4.  클래스 선언에 있는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>에서 상속합니다. 클래스 선언 유사 해야 합니다. ' public class WorkflowTester: IWorkflowTypeExtender'.  
+4.  클래스 선언에 있는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>에서 상속합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
   
 5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현합니다. SQL Server MDS Workflow Integration Service가 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 호출하여 워크플로를 시작합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68033950"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -104,7 +104,7 @@ ms.locfileid: "68033950"
   
 3.  mds_workflow_service 사용자에게 워크플로 처리기 어셈블리를 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 mds_workflow_service 사용자를 워크플로 처리기 어셈블리의 **속성**에 대한 **보안** 탭에 추가하고 mds_workflow_service 사용자에게 READ 및 EXECUTE 권한을 부여합니다.  
   
-4.  mds_workflow_service 사용자에게 SQL Server MDS Workflow Integration Service 실행 파일을 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 mds_workflow_service 사용자를 \<설치 폴더>\Master Data Services\WebApplication\bin에 있는 Microsoft.MasterDataServices.Workflow.exe의 **속성**에 대한 **보안** 탭에 추가하고 mds_workflow_service 사용자에게 READ 및 EXECUTE 권한을 부여합니다.  
+4.  mds_workflow_service 사용자에게 SQL Server MDS Workflow Integration Service 실행 파일을 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 mds_workflow_service 사용자를 **설치 폴더>\Master Data Services\WebApplication\bin에 있는 Microsoft.MasterDataServices.Workflow.exe의** 속성**에 대한** 보안\< 탭에 추가하고 mds_workflow_service 사용자에게 READ 및 EXECUTE 권한을 부여합니다.  
   
 5.  InstallUtil.exe라는 .NET 설치 유틸리티를 사용하여 SQL Server MDS Workflow Integration Service를 설치합니다. InstallUtil.exe는 .NET 설치 폴더(예: C:\Windows\Microsoft.NET\Framework\v4.0.30319\\)에 있습니다. 높은 권한의 명령 프롬프트에 다음을 입력하여 SQL Server MDS Workflow Integration Service를 설치합니다.  
   
@@ -144,14 +144,14 @@ ms.locfileid: "68033950"
   
 1.  서비스 스냅인을 사용하여 서비스를 중지합니다.  
   
-2.  명령 프롬프트를 열고 서비스의 위치로 이동 입력 하 여 콘솔 모드에서 서비스를 실행 합니다. Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  명령 프롬프트를 열고, 서비스 위치로 이동하고, Microsoft.MasterDataServices.Workflow.exe -console을 입력하여 서비스를 콘솔 모드로 실행합니다.  
   
 3.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 멤버를 업데이트하고 비즈니스 규칙을 다시 적용합니다. 콘솔 창에 자세한 로그가 표시됩니다.  
   
 ### <a name="view-the-service-broker-queue"></a>Service Broker 큐 보기  
  워크플로의 일환으로 전달되는 마스터 데이터가 포함된 Service Broker 큐는 mdm.microsoft/mdm/queue/externalaction입니다. 큐는 SQL Management Studio의 **개체 탐색기**에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 Service Broker 노드에 있습니다. 이때 서비스가 큐를 제대로 지우면 이 큐가 비게 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

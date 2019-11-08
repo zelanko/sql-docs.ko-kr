@@ -1,6 +1,6 @@
 ---
-title: SetEnable 메서드 (ClientNetworkProtocol 클래스) | Microsoft Docs
-ms.custom: ''
+title: SetEnable 메서드 (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2db233072eac18e0166eff524308a7ff0782eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3f92e3b417b3f669cc621e2d29c8ece24183af4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040856"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660125"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  지정 된 클라이언트 네트워크 프로토콜을 사용 하도록 설정 합니다 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)에서 지정한 클라이언트 네트워크 프로토콜을 사용 하도록 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,14 +37,14 @@ object.SetEnableMethod()
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ClientNetworkProtocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 사용 되는 네트워크 프로토콜을 나타내는 개체를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 사용 하는 네트워크 프로토콜을 나타내는 [Clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

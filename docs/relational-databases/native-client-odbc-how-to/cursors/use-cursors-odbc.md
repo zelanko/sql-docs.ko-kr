@@ -1,5 +1,5 @@
 ---
-title: 커서 사용 (ODBC) | Microsoft 문서
+title: 커서 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e5ac9edd01981b7f9c483b2e8002a2f741b4502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939540"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781619"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-cursors"></a>커서를 사용하려면  
@@ -75,7 +74,7 @@ ms.locfileid: "67939540"
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [커서 방법 도움말 항목을 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [커서 사용 방법 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

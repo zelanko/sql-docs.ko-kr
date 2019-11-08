@@ -14,23 +14,22 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4292022496d19ed80ff1cde71d5fbd4a35a68c9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67991d5bd50b9612b8f3eaff01d37eef581b22f5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069608"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761641"
 ---
 # <a name="table-valued-parameters-ole-db"></a>테이블 반환 매개 변수(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 테이블 반환 매개 변수 지원에 대해 설명합니다. 추가 개요 정보를 참조 하세요 [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)합니다. 샘플을 보려면 [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)합니다.  
+  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 테이블 반환 매개 변수 지원에 대해 설명합니다. 추가 개요 정보는 [SQL Server Native Client &#40;&#41;테이블 반환 매개 변수](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)를 참조 하세요. 샘플은 [OLE DB &#40;&#41;테이블 반환 매개 변수 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)을 참조 하세요.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  현재 매개 변수 집합(**ICommand::Execute**의 DBPARAMS 매개 변수)을 사용하여 다중 행 데이터를 프로시저에 대한 매개 변수로 서버에 보낼 수 있습니다. 매개 변수 집합을 사용할 경우 해당 집합의 모든 요소가 서버에 개별 RPC(원격 프로시저 호출) 요청으로 서버에 전송되어야 합니다. 테이블 반환 매개 변수는 유사한 기능을 제공하지만 서버와 더 밀접하게 통합됩니다. 따라서 RPC 요청 수가 감소하며 서버에서 집합 기반 작업을 사용할 수 있습니다.  
   
- 테이블 반환 매개 변수가 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자와 OLE DB **행 집합** 개체입니다. 모든 **행 집합** 소비자가 개체를 제공할 수 있습니다 (즉, 응용 프로그램 사용 하는 클라이언트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자) 매개 변수 테이블 반환 매개 변수에 대 한 자리 표시자로 합니다. 테이블 반환 매개 변수는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매개 변수 유형과 마찬가지로 처리됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 생성, 검색, 지정, 바인딩 및 스키마 인터페이스를 제공합니다.  
+ 테이블-값 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 OLE DB **행 집합** 개체로 지원 됩니다. 모든 **행 집합** 개체는 소비자 (즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하는 클라이언트 응용 프로그램)에서 테이블 반환 매개 변수 매개 변수의 자리 표시자로 제공 될 수 있습니다. 테이블 반환 매개 변수는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매개 변수 유형과 마찬가지로 처리됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 생성, 검색, 지정, 바인딩 및 스키마 인터페이스를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -50,8 +49,8 @@ ms.locfileid: "68069608"
   
 -   [OLE DB 테이블 반환 매개 변수 형식 지원&#40;Properties&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: SetValue 메서드 (ServerSettingsGeneralFlag 클래스) | Microsoft Docs
-ms.custom: ''
+title: SetValue 메서드 (ServerSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec0a215db84b8b1d8dbd2d12e603a365f6a54023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70d0965a127d8eeea22e6eedc448bab68d0bf312
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052675"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659738"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 메서드(ServerSettingsGeneralFlag 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ object.SetValue(Value)
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

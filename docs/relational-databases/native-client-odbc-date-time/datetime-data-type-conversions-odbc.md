@@ -15,16 +15,15 @@ ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d16221a47f2cee588d0c5ef38aaa179b61bdf8f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c5d601f53492b72efbcf730200fbd431f2649b1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030393"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783915"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   다음 변환은 OLE DB에서 이미 정의되었거나 OLE DB의 지속적인 확장에 포함됩니다. 각 공급자가 제공하는 변환은 공급자가 제공하는 커뮤니티에 의해 결정되며, 그 결과 공급자 간에 일치하지 않는 경우가 많습니다. 대괄호 안에 있는 값은 선택적 요소입니다.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68030393"
   
 -   날짜 문자열의 형식은 'yyyy-mm-dd'입니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 참조는 "데이터 형식: 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션을 참조 하세요.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "68030393"
  [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC의 날짜 및 &#40;시간 기능 향상&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

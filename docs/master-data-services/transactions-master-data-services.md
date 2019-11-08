@@ -1,5 +1,5 @@
 ---
-title: 트랜잭션(Master Data Services) | Microsoft Docs
+title: 트랜잭션
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102604"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728904"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
 
@@ -86,7 +86,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  설정된 트랜잭션에도 불구하고 두 명 이상의 사용자가 오류 없이 동일한 엔터티 값을 업데이트할 수 있습니다. 일반적으로 시간 시퀀스에서 마지막으로 편집된 값이 우선 적용됩니다. 중복된 편집 충돌은 트랜잭션 기록에서 수동으로 관측할 수 있으며 관리자가 수동으로 되돌릴 수 있습니다. 트랜잭션 기록에는 각 세션에서 문제의 특성에 대해 **이전 값** 및 **새 값** 의 개별 트랜잭션이 표시되지만 동일한 이전 값에 대해 여러 **새 값** 이 존재하는 경우 충돌을 자동으로 해결하지 않습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

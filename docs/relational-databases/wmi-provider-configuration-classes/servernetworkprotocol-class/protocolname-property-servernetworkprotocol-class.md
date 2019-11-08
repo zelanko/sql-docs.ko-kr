@@ -1,6 +1,6 @@
 ---
-title: ProtocolName 속성 (ServerNetworkProtocol 클래스) | Microsoft Docs
-ms.custom: ''
+title: ProtocolName 속성 (ServerNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 33b693fec552c94c80d49215cbd5253382f71de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f02c14e01a7b7dc58f9cd236c65c34cfeb771c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933670"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660336"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName 속성(ServerNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ object.ProtocolName [= value]
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 사용 되는 네트워크 프로토콜을 나타내는 [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜의 이름을 지정하는 문자열입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

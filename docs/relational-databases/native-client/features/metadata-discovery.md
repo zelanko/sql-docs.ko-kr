@@ -1,5 +1,5 @@
 ---
-title: 메타 데이터 검색 | Microsoft 문서
+title: 메타 데이터 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,24 +10,23 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb6edcb8855bdcc5deb6ff5943f89263f4d8c4be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 380d76fe0740a6c43584a68f9353d85539867fe3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987409"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761402"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  메타 데이터 검색 개선 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 허용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 응용 프로그램 쿼리 실행에서 반환 된 해당 열 또는 매개 변수 메타 데이터는 동일 하거나 메타 데이터와 호환 되도록 하기 전에 지정 된 형식 쿼리를 실행 합니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 메타 데이터 검색 개선 기능을 사용 하면 Native Client 응용 프로그램에서 쿼리 실행 시 반환 된 열 또는 매개 변수 메타 데이터가 실행 전에 지정한 메타 데이터 형식과 동일 하거나 호환 되는지 확인할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 수 있습니다. 쿼리입니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
   
  bcp 및 ODBC 함수와 IBCPSession 및 IBCPSession2 인터페이스에서는 이제 쿼리 출력 작업에서 메타데이터를 검색하지 않도록 지연된 읽기(지연된 메타데이터 검색)을 지정할 수 있습니다. 이로 인해 성능이 향상되고 메타데이터 검색 오류가 발생하지 않습니다.  
   
- 응용 프로그램을 개발 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 서버 버전에 연결 하지만 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 기능 버전의 서버에 해당 하는 메타 데이터 검색 합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용 하 여 응용 프로그램을 개발 하지만 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]이전 버전의 서버에 연결 하는 경우 메타 데이터 검색 기능은 서버 버전에 해당 합니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 bcp 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -40,9 +39,9 @@ ms.locfileid: "67987409"
   
 -   [bcp_setcolfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
- 사용 하 여 메타 데이터 형식을 지정 하는 경우 성능 향상을 또한 나타납니다 [bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)합니다.  
+ [Bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)를 사용 하 여 메타 데이터 형식을 지정 하는 경우 성능 향상도 표시 됩니다.  
   
- [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 에 있는 새 *eOption* bcp_readfmt의 동작을 제어 합니다. **BCPDELAYREADFMT**.  
+ [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 에는 **Bcpdelayreadfmt**bcp_readfmt의 동작을 제어 하는 새로운 *eoption* 가 있습니다.  
   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 ODBC 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "67987409"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) 자세한)  
+-   ICommandWithParameters:: GetParameterInfo (자세한 내용은 [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) 참조)  
   
  또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "67987409"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: SetStrValue 메서드 (ClientNetworkProtocolProperty 클래스) | Microsoft Docs
-ms.custom: ''
+title: SetStrValue 메서드 (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5edd424f06b53ef1a530a47b390640a7a1d8b604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072555"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660704"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue 메서드(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ object.SetStrValue(StrValue)
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

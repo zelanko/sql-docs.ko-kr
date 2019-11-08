@@ -1,6 +1,6 @@
 ---
-title: DisplayName 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: DisplayName 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a60ae08f500021d2c11dacbd4bcfd5a73395cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3103c9d91b8cc55c5f99f3cfa545207483e97e35
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929691"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659709"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.DisplayName [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스의 표시 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 문자열의 최대 길이는 256자입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서는 이름의 대/소문자가 유지되지만 표시 이름을 비교할 때는 항상 대/소문자가 무시됩니다.  
   
 ## <a name="example"></a>예제  
@@ -51,7 +51,7 @@ object.DisplayName [= value]
 mysqlservice.DisplayName = "Atdisk"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

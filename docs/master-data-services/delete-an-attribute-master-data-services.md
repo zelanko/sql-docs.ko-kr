@@ -1,5 +1,5 @@
 ---
-title: 특성 삭제(Master Data Services) | Microsoft Docs
+title: 특성 삭제
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906371"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728333"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67906371"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 및 연결된 모든 특성 값을 영구적으로 삭제하려는 경우 특성을 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "67906371"
   
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   

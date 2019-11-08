@@ -1,5 +1,5 @@
 ---
-title: 버전 잠금 해제(Master Data Services) | Microsoft Docs
+title: 버전 잠금 해제
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2c81d52fadad91bb91ccf69af4b77627ef53846a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102597"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727842"
 ---
 # <a name="unlock-a-version-master-data-services"></a>버전 잠금 해제(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68102597"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 멤버와 해당 특성을 변경할 수 있도록 모델 버전의 잠금을 해제합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "68102597"
   
 -   [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

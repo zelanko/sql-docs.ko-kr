@@ -1,6 +1,6 @@
 ---
-title: SetStrValue 메서드 (SqlServiceAdvancedProperty 클래스) | Microsoft Docs
-ms.custom: ''
+title: SetStrValue 메서드 (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a58248999ae44ef71d454bef5e0fbdc9802494c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139507"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659509"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ object.SetStrValue(StrValue)
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  속성을 문자열 값으로 설정하려면 속성 값 형식이 *string* 이어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

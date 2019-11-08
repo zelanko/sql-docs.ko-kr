@@ -1,5 +1,5 @@
 ---
-title: 변환은 클라이언트에서 서버로 수행 | Microsoft 문서
+title: 클라이언트에서 서버로 수행 되는 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,35 +13,34 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3828ebeff5740d066a55d85f5676ffdbf6e613af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107069"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773051"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성한 클라이언트 애플리케이션과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
  이 항목에서는 클라이언트에서 수행되는 변환에 대해 설명합니다. 클라이언트가 매개 변수에 지정한 소수 자릿수 초의 전체 자릿수가 서버에 정의된 것과 다르면 서버에서 작업을 허용하는 경우에 클라이언트 변환이 실패할 수 있습니다. 특히 클라이언트는 소수 자릿수 초 잘림을 모두 오류로 취급하는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시간 값을 가장 근사한 정수 초로 반올림합니다.  
   
- Icommandwithparameters:: Setparameterinfo를 호출 하지 않은 경우 DBTYPE_DBTIMESTAMP 바인딩은 것 처럼 변환 됩니다 **datetime2**합니다.  
+ ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 DBTYPE_DBTIMESTAMP 바인딩은 **datetime2**인 것 처럼 변환 됩니다.  
   
-|대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|대상 -><br /><br /> 원본|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> 날짜|  
-|DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
+|DBDATE|1\.|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1\.<br /><br /> date|  
+|DBTIME|-|1\.|1\.|1,7|1,7|1,7|1,5, 7|1,10|1,10|1\.<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|1\.|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1\.<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
+|VARIANT|1\.|1\.|1\.|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
 |SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|해당 사항 없음|해당 사항 없음|1,16|  
 |BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
@@ -51,9 +50,9 @@ ms.locfileid: "68107069"
   
 |기호|의미|  
 |------------|-------------|  
-|-|변환이 지원되지 않습니다. 바인딩을 iaccessor:: Createaccessor 호출 될 때 유효성이 검사 되는 경우에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 됩니다 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
+|-|변환이 지원되지 않습니다. IAccessor:: CreateAccessor가 호출 될 때 바인딩의 유효성을 검사 하는 경우에는 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*에 반환 됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |해당 사항 없음|이 오류에는 이 작업을 적용할 수 없습니다.|  
-|1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
+|1\.|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
 |4|날짜 구성 요소가 무시됩니다.|  
@@ -66,8 +65,8 @@ ms.locfileid: "68107069"
 |11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
 |12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
 |13|DBTYPE_FILETIME에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. Windows FileTimeToSystemTime API를 사용하는 경우 소수 자릿수 초의 전체 자릿수는 1밀리초로 제한됩니다.|  
-|14|**smalldatetime**에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
-|15|**datetime**에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
+|14|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]smalldatetime**에 대한**  이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
+|15|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]datetime**에 대한**  이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
 |16|SSVARIANT 클라이언트 구조에 포함된 값(지정된 형식)의 변환 동작은 SSVARIANT 클라이언트 구조에 포함되지 않은 동일한 값 및 형식의 동작과 같습니다.|  
   
 ||||  
@@ -77,7 +76,7 @@ ms.locfileid: "68107069"
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

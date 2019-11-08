@@ -1,5 +1,5 @@
 ---
-title: CInstance 클래스 | Microsoft Docs
+title: CInstance 클래스
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9052245314a5faae2e6b3c331082bd1ee30f84f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce0b050ac8b9224f8739c85e5f51208661e65ca3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044279"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659652"
 ---
 # <a name="cinstance-class"></a>CInstance 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

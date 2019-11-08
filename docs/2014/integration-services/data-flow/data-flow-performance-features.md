@@ -23,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828046"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637828"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "62828046"
  집계, 유사 항목 조회, 유사 항목 그룹화, 조회, 병합 조인 및 느린 변경 차원 변환의 성능을 향상시키려면 이 섹션의 제안 사항을 사용합니다.  
   
 #### <a name="aggregate-transformation"></a>집계 변환  
- 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 알고 있는 경우는 **그룹화** 작업을 설정 합니다 `Keys` 및 `KeysScale` 속성을 각각. 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 알고 있는 경우는 **고유 카운트** 작업을 설정 합니다 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 각각.  
+ 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. **Group by** 연산의 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 알고 있는 경우에는 각각 `Keys` 및 `KeysScale` 속성을 설정 합니다. **고유 카운트** 연산의 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 알고 있는 경우에는 각각 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 설정 합니다.  
   
  한 데이터 흐름에 여러 집계를 만들어야 하는 경우 여러 변환을 만드는 대신 하나의 집계 변환을 사용하는 여러 집계를 만드십시오. 이 방법을 사용하면 한 집계가 다른 집계의 하위 집합인 경우 성능이 향상됩니다. 이는 변환이 한 번만 들어오는 데이터를 검색하고 내부 스토리지를 최적화할 수 있기 때문입니다. 예를 들어 집계에서 GROUP BY 절 및 AVG 집계를 사용하는 경우 이를 하나의 변환으로 조합하면 성능을 향상시킬 수 있습니다. 그러나 하나의 집계 변환 내에서 여러 집계를 수행하면 집계 작업이 직렬화되므로 여러 집계가 독립적으로 계산되어야 하는 경우 성능이 향상되지 않을 수 있습니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828046"
 #### <a name="lookup-transformation"></a>조회 변환  
  필요한 열만 조회하는 SELECT 문을 입력하여 메모리에서 참조 데이터의 크기를 최소화합니다. 이 옵션은 불필요한 데이터를 대량 반환하는 전체 테이블 또는 뷰 선택 작업보다 성능을 향상시킵니다.  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>병합 조인 변환  
  병합 조인 변환에서 과도한 메모리를 사용할 위험을 줄이기 위해 Microsoft에서 필요한 변경을 수행했기 때문에 더 이상 `MaxBuffersPerInput` 속성 값을 구성할 필요가 없습니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환  
@@ -143,7 +143,7 @@ ms.locfileid: "62828046"
   
  일반적으로 느린 변경 차원 변환에서 가장 느린 구성 요소는 한 번에 하나의 행에 대해 UPDATE를 수행하는 OLE DB 명령 변환입니다. 따라서 느린 변경 차원 변환의 성능을 향상시키는 가장 효과적인 방법은 OLE DB 명령 변환을 바꾸는 것입니다. 업데이트할 모든 행을 준비 테이블에 저장하는 대상 구성 요소로 이러한 변환을 바꿀 수 있습니다. 그런 다음 모든 행에 대해 동시에 단일 집합 기반 Transact-SQL UPDATE를 수행하는 SQL 실행 태스크를 추가할 수 있습니다.  
   
- 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 “고유 차원 시나리오” 섹션을 참조하세요.  
+ 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://www.microsoft.com/download/details.aspx?id=14582)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
   
 ### <a name="destinations"></a>대상  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
@@ -159,16 +159,16 @@ ms.locfileid: "62828046"
   
  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다. 진행률 보고를 사용하지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 복잡한 패키지를 실행하는 동안 성능을 높일 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   technet.microsoft.com의 기술 문서 - [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com의 기술 문서 - [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "62828046"
   
 -   technet.microsoft.com의 비디오 - [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 트랜잭션에 주석 추가(Master Data Services) | Microsoft Docs
+title: 트랜잭션에 주석 추가
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e12ef7cf4be0259029b6214bd821bf85f89df73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047783"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728793"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>트랜잭션에 주석 추가(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047783"
 > [!NOTE]  
 >  주석은 삭제할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   만든 트랜잭션에 주석을 추가하려면 **탐색기** 기능 영역에 대한 액세스 권한과 주석을 추가할 모델 개체에 대한 **업데이트** 이상의 사용 권한이 있어야 합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68047783"
   
 5.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [주석&#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

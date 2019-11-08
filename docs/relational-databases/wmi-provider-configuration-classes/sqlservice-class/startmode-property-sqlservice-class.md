@@ -1,6 +1,6 @@
 ---
-title: StartMode 속성 (SqlService 클래스) | Microsoft Docs
-ms.custom: ''
+title: StartMode 속성 (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006859"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660867"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ object.StartMode [= value]
  값 = 0. 운영 체제 로더에 의해 서비스가 시작됩니다. 이 옵션은 드라이버 서비스에 대해서만 유효합니다.  
   
  시스템  
- 값 = 1입니다. 에 의해 서비스가 시작 된 **IoInitSystem** 메서드. 이 옵션은 드라이버 서비스에 대해서만 유효합니다.  
+ 값 = 1입니다. **Ioinitsystem** 메서드에 의해 서비스가 시작 되었습니다. 이 옵션은 드라이버 서비스에 대해서만 유효합니다.  
   
  자동  
  값 = 2입니다. 시스템 시작 중 서비스 제어 관리자에 의해 자동으로 서비스가 시작됩니다.  
   
  수동  
- 값 = 3입니다. 프로세스를 호출할 때 컴퓨터 관리자에 의해 시작 되도록 서비스를 **StartService** 메서드.  
+ 값 = 3입니다. 프로세스에서 **StartService** 메서드를 호출할 때 컴퓨터 관리자에 의해 서비스가 시작 됩니다.  
   
  사용 안 함  
  값 = 4입니다. 서비스를 시작할 수 없습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

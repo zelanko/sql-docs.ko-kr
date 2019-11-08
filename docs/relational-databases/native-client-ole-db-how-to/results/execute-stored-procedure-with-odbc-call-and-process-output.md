@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908270"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789871"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
@@ -357,7 +356,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   
