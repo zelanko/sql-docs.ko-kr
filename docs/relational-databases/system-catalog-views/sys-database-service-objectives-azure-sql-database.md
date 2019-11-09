@@ -1,6 +1,7 @@
 ---
-title: database_service_objectives (Azure SQL Database) | Microsoft Docs
-ms.custom: ''
+title: sys.database_service_objectives
+titleSuffix: Azure SQL Database
+ms.custom: seo-dt-2019
 ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
@@ -15,12 +16,12 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fc6c0fc0dbd9ce98d3be2e226e6b2ed3c01cb187
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893291"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844459"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68893291"
 Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 계층), 서비스 목표 (가격 책정 계층) 및 탄력적 풀 이름 (있는 경우)을 반환 합니다. Azure SQL Database 서버의 master 데이터베이스에 로그온 한 경우 모든 데이터베이스에 대 한 정보를 반환 합니다. Azure SQL Data Warehouse의 경우 master 데이터베이스에 연결 해야 합니다.  
   
   
- 가격 책정에 대 한 자세한 [내용은 SQL Database 옵션 및 성능을 참조 하세요. 가격 책정](https://azure.microsoft.com/pricing/details/sql-database/) 및 [SQL Data Warehouse 가격 책정](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)을 SQL Database 합니다.  
+ 가격 책정에 대 한 자세한 내용은 [SQL Database 옵션 및 성능: SQL Database 가격](https://azure.microsoft.com/pricing/details/sql-database/) 책정 및 [SQL Data Warehouse 가격 책정](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)을 참조 하세요.  
   
  서비스 설정을 변경 하려면 [ALTER database (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 및 [alter database (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)를 참조 하세요.  
   
@@ -36,9 +37,9 @@ Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|database_id|ssNoversion|Azure SQL Database server의 인스턴스 내에서 고유한 데이터베이스 ID입니다. 조인 가능를 [ &#40;&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)사용 하는 경우.|  
-|버전|sysname|데이터베이스 또는 데이터 웨어하우스의 서비스 계층: **기본**, **표준**, **프리미엄** 또는 **데이터 웨어하우스**.|  
-|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있는 경우 **ElasticPool**를 반환 합니다.<br /><br /> **기본** 계층에서 **basic**을 반환 합니다.<br /><br /> **표준 서비스 계층의 단일 데이터베이스** 는 다음 중 하나를 반환 합니다. S0, S1, S2, S3, S4, S6, S7, S9 또는 S 12입니다.<br /><br /> **프리미엄 계층의 단일 데이터베이스** 는 다음을 반환 합니다. P1, P2, P4, P6, P11 또는 P15입니다.<br /><br /> **SQL Data Warehouse** 는 DW30000c를 통해 DW100을 반환 합니다.<br /><br /> 자세한 내용은 [단일 데이터베이스](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [탄력적 풀](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [데이터 웨어하우스](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) 를 참조 하세요.|  
+|database_id|int|Azure SQL Database server의 인스턴스 내에서 고유한 데이터베이스 ID입니다. 조인 가능를 [사용 하는 &#40;&#41;경우.](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|  
+|버전|sysname|데이터베이스 또는 데이터 웨어하우스의 서비스 계층: **Basic**, **Standard**, **Premium** 또는 **data warehouse**.|  
+|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있는 경우 **ElasticPool**를 반환 합니다.<br /><br /> **기본** 계층에서 **basic**을 반환 합니다.<br /><br /> **표준 서비스 계층의 단일 데이터베이스** 는 S0, S1, S2, S3, S4, S6, S7, S9 또는 s 12 중 하나를 반환 합니다.<br /><br /> **프리미엄 계층의 단일 데이터베이스** 는 P1, P2, P4, P6, P11 또는 P15을 반환 합니다.<br /><br /> **SQL Data Warehouse** 는 DW30000c를 통해 DW100을 반환 합니다.<br /><br /> 자세한 내용은 [단일 데이터베이스](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [탄력적 풀](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [데이터 웨어하우스](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) 를 참조 하세요.|  
 |elastic_pool_name|sysname|데이터베이스가 속한 [탄력적 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 의 이름입니다. 데이터베이스가 단일 데이터베이스 또는 데이터 warehoue 경우 **NULL** 을 반환 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  

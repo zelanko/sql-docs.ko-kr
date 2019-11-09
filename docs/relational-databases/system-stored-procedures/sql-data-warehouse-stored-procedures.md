@@ -1,5 +1,5 @@
 ---
-title: SQL Data Warehouse는 저장된 프로시저 | Microsoft Docs
+title: 저장 프로시저 SQL Data Warehouse | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6dbde63f1f9468fc974b36fdd7e8b7af0ddf9da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950387"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844359"
 ---
-# <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse는 저장된 프로시저
+# <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse 저장 프로시저
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스 역할과 관련 된 작업을 수행 하는 데 사용할 수 있는 기본 제공 된 절차를 제공 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 다음과 같은 시스템 프로시저에 포함 됩니다.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 데이터베이스 역할과 관련 된 작업을 수행 하는 데 사용할 수 있는 기본 제공 프로시저를 제공 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 다음과 같은 시스템 프로시저를 포함 합니다.  
   
-##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41; ](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
- [가 sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
@@ -39,10 +39,10 @@ ms.locfileid: "67950387"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  일부 추가 시스템 저장된 프로시저의 인스턴스 내 에서만 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Api 없습니다 일반 고객에 대 한 클라이언트를 통해 사용 합니다. 이러한 절차에 나열 됩니다 [시스템 저장 프로시저 (Transact SQL)](https://msdn.microsoft.com/library/ms187961.aspx)합니다. 이러한 절차는 변경 될 수 있습니다 및 호환성이 보장 되지 않습니다. 목록에서 모든 절차에서 사용할 수 없는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
+>  일부 추가 시스템 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 또는 클라이언트 Api를 통해 사용 되며 일반적인 고객 용도로는 사용 되지 않습니다. 이러한 프로시저는 [시스템 저장 프로시저 (transact-sql)](https://msdn.microsoft.com/library/ms187961.aspx)에 나열 되어 있습니다. 이러한 절차는 변경 될 수 있으며 호환성이 보장 되지 않습니다. 이 목록에 있는 모든 절차는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 저장 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   
+## <a name="see-also"></a>관련 항목:  
+ [시스템 저장 함수 &#40;transact-sql&#41; ](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

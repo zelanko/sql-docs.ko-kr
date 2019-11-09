@@ -1,6 +1,6 @@
 ---
-title: SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰 | Microsoft Docs
-ms.custom: ''
+title: 카탈로그 뷰
+titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
 ms.service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -11,12 +11,13 @@ ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 00057aff4edcbef086dcf1752d9af5015708a672
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b3d5780daea40f229ed7d4d86438be814dfe7d29
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632975"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844519"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 

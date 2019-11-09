@@ -18,19 +18,19 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128718"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882313"
 ---
 # <a name="define-an-article"></a>아티클 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클을 정의하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63128718"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ' , \ , / , \< , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
+-   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ', \,/, \< >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
   
 ##  <a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
@@ -64,11 +64,11 @@ ms.locfileid: "63128718"
   
 3.  **새 게시**를 클릭합니다.  
   
-4.  새 게시 마법사의 페이지에 따라 다음을 수행하세요.  
+4.  새 게시 마법사의 페이지에 따라 다음을 수행하십시오.  
   
     -   서버에 배포가 구성되어 있지 않은 경우 배포자를 지정합니다. 배포 구성에 대한 자세한 내용은 [게시 및 배포 구성](../configure-publishing-and-distribution.md)을 참조하세요.  
   
-         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅숏 폴더** 페이지에서 배포자에 대해 기본 스냅숏 폴더를 지정하게 됩니다. 스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
+         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅샷 폴더** 페이지에서 배포자에 대해 기본 스냅샷 폴더를 지정하게 됩니다. 스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
   
          다른 서버가 배포자의 역할을 하도록 지정한 경우 게시자에서 배포자로 연결할 때 사용할 암호를 **관리 암호** 페이지에 입력해야 합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63128718"
   
     -   다음 복제 에이전트를 실행 및 연결하는 자격 증명을 지정합니다.  
   
-         모든 게시에 대한 \- 스냅숏 에이전트  
+         모든 게시에 대한 \- 스냅샷 에이전트  
   
          모든 트랜잭션 게시에 대한 \- 로그 판독기 에이전트  
   
@@ -103,11 +103,11 @@ ms.locfileid: "63128718"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을, **@article** 에 아티클 이름을, **@source_object** 에 게시되는 데이터베이스 개체를 지정하고, 그 밖의 선택적 매개 변수를 지정합니다. **dbo**가 아닌 경우 **@source_owner** 를 사용하여 개체의 스키마 소유권을 지정합니다. 로그 기반 테이블 아티클이 아닌 경우 **@type** 에 아티클 유형을 지정합니다. 자세한 내용은 [아티클 유형 지정&#40;복제 Transact-SQL 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@게시**에 대해 아티클이 속한 게시의 이름, **\@** 아티클의 아티클의 이름, **\@source_object**에 게시 되는 데이터베이스 개체 및 기타 선택적 매개 변수를 지정 합니다. **Dbo**가 아닌 경우 **\@source_owner** 를 사용 하 여 개체의 스키마 소유권을 지정 합니다. 로그 기반 테이블 아티클이 아닌 경우 **\@형식**에 대 한 아티클 유형을 지정 합니다. 자세한 내용은 [아티클 유형 &#40;복제 transact-sql 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)을 참조 하세요.  
   
-2.  테이블의 행을 행 필터링하거나 아티클을 보려면 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 를 사용하여 필터 절을 정의합니다. 자세한 내용은 [정적 행 필터 정의 및 수정](define-and-modify-a-static-row-filter.md)을 참조하세요.  
+2.  테이블의 행을 행 필터링하거나 아티클을 보려면 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 를 사용하여 필터 절을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-3.  테이블의 열을 열 필터링하거나 아티클을 보려면 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)을 사용합니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
+3.  테이블의 열을 열 필터링하거나 아티클을 보려면 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)을 사용합니다. 자세한 내용은 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요.  
   
 4.  아티클이 필터링되었으면 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행합니다.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "63128718"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication** 에 게시 이름을, **@article** 에 아티클 이름을, **@source_object** 에 게시되는 개체를 지정합니다. 테이블 행을 행 필터링하려면 **@subset_filterclause** 를 참조하세요. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [정적 행 필터 정의 및 수정](define-and-modify-a-static-row-filter.md)를 참조하세요. 테이블 아티클이 아니라면 **@type** 를 참조하세요. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **\@게시**에 대 한 게시 이름, **\@아티클의**아티클 이름 이름 및 **\@source_object**게시 되는 개체를 지정 합니다. 테이블 행을 행 필터링 하려면 **\@subset_filterclause**의 값을 지정 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [정적 행 필터 정의 및 수정](define-and-modify-a-static-row-filter.md)를 참조하세요. 아티클이 테이블 아티클이 아니면 **\@형식**에 대 한 아티클 유형을 지정 합니다. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
   
-2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 을 실행하여 테이블 열을 필터링합니다. 자세한 내용은 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요.  
   
@@ -151,8 +151,8 @@ ms.locfileid: "63128718"
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>관련 항목  
- [Create a Publication](create-a-publication.md)   
+## <a name="see-also"></a>관련 항목:  
+ [게시 만들기](create-a-publication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [게시된 데이터 필터링](filter-published-data.md)   

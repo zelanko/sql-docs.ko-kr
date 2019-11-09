@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721452"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882380"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 해제하는 방법에 대해 설명합니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "62721452"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅샷* 이 있는 경우 이 스냅샷을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.  
+-   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅샷* 이 있는 경우 이 스냅샷을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  게시 및 배포 해제 마법사를 사용하여 게시 및 배포를 해제합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "62721452"
 7.  배포자에서 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) 를 실행하여 서버에서 배포자 지정을 제거합니다.  
   
     > [!NOTE]  
-    >  모든 복제 게시 및 배포 개체가 삭제되지 않은 상태로 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 및 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)를 실행하면 오류가 반환됩니다. 게시자 또는 배포자를 삭제할 때 모든 복제 관련 개체를 삭제하려면 **@no_checks** 를 **1**을 참조하세요. 게시자 또는 배포자가 오프라인이거나 연결할 수 없는 경우에는 **@ignore_distributor** 매개 변수를 **1** 로 설정하여 삭제할 수 있습니다. 그러나 삭제되지 않고 남은 모든 게시 및 배포 개체는 수동으로 제거해야 합니다.  
+    >  모든 복제 게시 및 배포 개체가 삭제되지 않은 상태로 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 및 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)를 실행하면 오류가 반환됩니다. 게시자 또는 배포자를 삭제할 때 모든 복제 관련 개체를 삭제 하려면 **\@no_checks** 매개 변수를 **1**로 설정 해야 합니다. 게시자 또는 배포자가 오프 라인 이거나 연결할 수 없는 경우에는 **\@ignore_distributor** 매개 변수를 **1** 로 설정 하 여 삭제할 수 있습니다. 그러나 남겨진 모든 게시 및 배포 개체는 수동으로 제거 해야 합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 스크립트 예에서는 구독 데이터베이스에서 복제 개체를 제거합니다.  
@@ -112,11 +112,11 @@ ms.locfileid: "62721452"
   
 5.  필요에 따라 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 속성을 얻고 게시자가 있는지 확인합니다. 이 메서드가 `false`를 반환하면 4단계에서 지정한 게시자 이름이 올바르지 않거나 이 배포자에서 게시자를 사용하지 않는 것입니다.  
   
-6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 메서드를 호출합니다. 값을 전달 `true` 에 대 한 *강제로* 게시자 및 배포자가 다른 서버에 있으며 게시자에 게시가 더 이상 존재 하는 확인 하지 않고 배포자에서 제거 해야 하는 경우는 게시자입니다.  
+6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 메서드를 호출합니다. 게시자와 배포자가 서로 다른 서버에 있고 게시자에 게시가 더 이상 존재 하지 않는지 먼저 확인 하지 않고 배포자에서 게시자를 제거 해야 하는 경우 *force* 에 `true` 값을 전달 합니다.  
   
 7.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 3단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
-8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 메서드를 호출합니다. 값을 전달 `true` 에 대 한 *강제로* 를 먼저 확인 하지 않고 배포자의 모든 로컬 게시 데이터베이스가 해제 되었는지, 그리고 배포 데이터베이스가 제거 되었는지 여부를 지정 하는 모든 복제 개체를 제거 합니다.  
+8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 메서드를 호출합니다. 모든 로컬 게시 데이터베이스가 사용 하지 않도록 설정 되어 있고 배포 데이터베이스가 제거 되었는지 먼저 확인 하지 않고 배포자에서 모든 복제 개체를 *강제로* 제거 하려면 `true` 값을 전달 합니다.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  다음 예에서는 배포자에서 게시 등록을 제거하고 배포 데이터베이스 삭제하며 배포자를 제거합니다.  
@@ -131,8 +131,8 @@ ms.locfileid: "62721452"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
- [복제 시스템 저장 프로시저 개념](concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

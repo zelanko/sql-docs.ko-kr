@@ -13140,7 +13140,7 @@
             - name: sys.dm_tran_version_store_space_usage
               href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
     - name: 시스템 함수
-      href: relational-databases/system-functions/system-functions-for-transact-sql.md
+      href: relational-databases/system-functions/system-functions-category-transact-sql.md
       items:
         - name: Always On 가용성 그룹
           href: relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md

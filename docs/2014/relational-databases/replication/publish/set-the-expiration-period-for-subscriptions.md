@@ -15,19 +15,19 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212082"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882173"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간 설정
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 구독 만료 기간은 구독이 만료되어 제거되기 전까지 유효한 기간을 나타냅니다. 자세한 내용은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 구독 만료 기간은 구독이 만료되어 제거되기 전까지 유효한 기간을 나타냅니다. 자세한 내용은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [권장 사항](#Recommendations)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68212082"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -50,11 +50,11 @@ ms.locfileid: "68212082"
     -   구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 구독의 만료 기간을 설정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 -** Publication> **대화 상자의 \<일반** 페이지에서 구독의 만료 기간을 설정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간을 설정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **일반** 페이지에 있는 **구독 만료** 섹션에서 구독을 만료해야 할지 여부를 지정합니다.  
+1.  **게시 속성 -** 게시>**대화 상자의**일반 **페이지에 있는 \<구독 만료** 섹션에서 구독을 만료해야 할지 여부를 지정합니다.  
   
 2.  구독이 만료되어야 하는 경우 만료 기간을 지정합니다.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68212082"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 설정하려면  
   
-1.  게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 이때 **@retention** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
+1.  게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간(시간)을 지정합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>병합 게시에 대한 구독 만료 기간을 설정하려면  
   
-1.  게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 이때 **@retention** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. **@retention_period_unit** 에 다음과 같은 만료 기간 표현 단위 중 하나를 지정합니다.  
+1.  게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간 값을 지정하고 **\@retention_period_unit**에 다음과 같은 만료 기간 표현 단위 중 하나를 지정합니다.  
   
     -   **1** = 주  
   
@@ -75,15 +75,15 @@ ms.locfileid: "68212082"
   
     -   **3** = 년  
   
-     기본 만료 기간은 14일입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
+     기본 만료 기간은 14일입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 변경하려면  
   
-1.  게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 이때 **@property** 에 **@property** , **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+1.  게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 이때property**에 \@retention** , **\@value**에 새 구독 만료 기간(시간)을 지정합니다.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>병합 게시에 대한 구독의 만료 기간을 변경하려면  
   
-1.  게시자에서 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 실행하고 **@publication** 및 **@publisher** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 결과 집합의 **retention_period_unit** 값은 다음 중 하나일 수 있습니다.  
+1.  게시자에서 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 실행하고 **\@publication** 및 **\@publisher**를 지정합니다. 결과 집합의 **retention_period_unit** 값은 다음 중 하나일 수 있습니다.  
   
     -   **0** = 일  
   
@@ -93,11 +93,11 @@ ms.locfileid: "68212082"
   
     -   **3** = 년  
   
-2.  게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 이때 **@property** 에 **@property** 을 지정하고 **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+2.  게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 이때property**에 \@retention**을 지정하고 **\@value**에 1단계에서 만든 보존 기간 단위에 따라 텍스트로 새 구독 만료 기간을 지정합니다.  
   
-3.  (옵션) 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 이때 **retention_period_unit** 에 **@property** 을 지정하고 **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+3.  (옵션) 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 이때property**에 \@retention_period_unit**을 지정하고 **\@value**에 구독 만료 기간의 새 단위를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
