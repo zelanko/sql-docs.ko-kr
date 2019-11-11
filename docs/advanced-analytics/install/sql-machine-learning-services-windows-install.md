@@ -1,6 +1,5 @@
 ---
-title: Windows에 SQL Server Machine Learning Services(Python, R) 설치
-titleSuffix: ''
+title: Windows에 설치
 description: 이 문서에서는 Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 설명합니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 448bb460d3cb3d041fd44b582a383037fecb98d4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532618"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727646"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 

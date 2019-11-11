@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652341"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593550"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스 만들기
 
@@ -67,7 +67,7 @@ ms.locfileid: "62652341"
   
 6.  서비스를 다시 시작합니다.  
   
-7.  방화벽 소프트웨어를 연 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신할 포트를 엽니다. 기본 인스턴스의 경우 이는 일반적으로 TCP/IP 연결용 포트 1433입니다. 자세한 내용은 [온라인 설명서의](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+7.  방화벽 소프트웨어를 연 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신할 포트를 엽니다. 기본 인스턴스의 경우 이는 일반적으로 TCP/IP 연결용 포트 1433입니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.  
   
 ### <a name="to-create-a-local-report-server-database"></a>로컬 보고서 서버 데이터베이스를 만들려면  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62652341"
   
 7.  요약 페이지에서 설정이 올바른지 확인한 후 **다음**을 클릭합니다.  
   
-8.  보고서 서버 URL 페이지의 URL을 선택하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이 표시됩니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+8.  보고서 서버 URL 페이지의 URL을 선택하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이 표시됩니다. 자세한 내용은 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)을 참조하세요.  
 
 ## <a name="change-database-credentials"></a>데이터베이스 자격 증명 변경
 

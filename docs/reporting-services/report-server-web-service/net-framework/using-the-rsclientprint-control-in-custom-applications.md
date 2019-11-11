@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155727"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593772"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 애플리케이션에서 RSClientPrint 컨트롤 사용
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSPrintClient**는 HTML 뷰어에 표시되는 보고서에 대한 클라이언트 쪽 인쇄 기능을 제공합니다. 사용자는 제공된 **인쇄** 대화 상자를 사용하여 인쇄 작업 시작, 보고서 미리 보기, 인쇄할 페이지 지정, 여백 조정 등의 작업을 수행할 수 있습니다. 클라이언트 쪽 인쇄 작업 과정에서 보고서 서버는 이미지(EMF) 렌더링 확장 프로그램으로 보고서를 렌더링하고 운영 체제의 인쇄 기능으로 인쇄 작업을 만들어 프린터에 보냅니다.  
@@ -29,15 +29,14 @@ ms.locfileid: "70155727"
   
 -   컨트롤을 사용하여 웹 기반 보고서의 인쇄 품질을 향상시킬 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 호환 프로그래밍 언어나 스크립트에서 개체를 지정할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms 애플리케이션에서는 컨트롤을 사용할 수 없습니다.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 프로그램 파일에서 .cab 파일을 복사하여 사용자 지정 애플리케이션 코드베이스에 추가합니다.  
-  
+-   [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] 프로그램 파일에서 .cab 파일을 복사하여 사용자 지정 애플리케이션 코드베이스에 추가합니다.  
+ 
 -   \<OBJECT> 태그를 사용하여 컨트롤을 지정합니다.  
   
 -   OBJECT CODEBASE 특성에서 .cab 파일의 상대 URL이나 정규화된 URL을 지정합니다.  
   
 -   .cab 파일에 대한 사용자의 애플리케이션 버전 정보를 지정하여 애플리케이션에 사용되는 버전을 추적합니다.  
-  
--   이미지(EMF) 렌더링에 대한 온라인 설명서 항목을 검토하여 인쇄 미리 보기와 출력을 위해 페이지가 렌더링되는 방법을 이해합니다.  
+    
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 개요  
  이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤은 CAB 파일로 패키지됩니다. **인쇄** 대화 상자의 텍스트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 모든 언어로 지역화됩니다. **RSPrintClient** ActiveX 컨트롤은 이미지 렌더링 확장 프로그램(EMF)을 사용하여 보고서를 인쇄합니다. StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight 및 PageWidth와 같은 EMF 디바이스 정보를 사용합니다. 이미지 렌더링에 대한 다른 디바이스 정보 설정은 지원되지 않습니다.  

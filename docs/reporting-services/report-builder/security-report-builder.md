@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500528"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593848"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 애플리케이션입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "66500528"
   
      보고서 서버에서 항목을 보거나 게시하기 위해 보고서 관련 항목 및 작업에 적용되는 권한 집합이 역할로 구성됩니다. 보고서 서버 관리자는 하나 이상의 역할에 사용자를 할당합니다. 예를 들어 미리 정의된 역할인 브라우저를 통해 보고서, 폴더, 모델 및 리소스를 볼 수 있습니다.  
   
-     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)를 참조하세요.  
   
 -   SharePoint 통합 모드에서 구성된 보고서 서버  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66500528"
   
  게시한 항목을 다른 사용자가 찾아 공유할 수 있도록 하려면 보고서 서버 관리자와 작업하여 사용자에게 액세스를 제공하는 폴더 구성을 설정해야 합니다. 보고서를 제작하고 게시된 보고서를 실행하는 데 액세스를 사용할 수 있어야 합니다.  
   
- 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,11 +88,10 @@ ms.locfileid: "66500528"
   
  자격 증명은 보고서 정의에 저장되지 않으며 보고서 서버 또는 SharePoint 사이트 및 보고서 제작 클라이언트의 보고서와는 별도로 관리됩니다.  
   
- 보고서 디자인 타임에 자격 증명은 데이터 세트 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 세트 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 보고서 디자인 타임에 자격 증명은 데이터 세트 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 세트 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
- 데이터에 보안을 설정하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ 데이터 보안에 대 한 자세한 내용은 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 Security Center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)를 참조 하세요. 
   
--   [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -108,9 +107,9 @@ ms.locfileid: "66500528"
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&amp;UserID]를 사용하여 프라이빗 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 세트의 식에 사용하면 데이터 세트를 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+-   전역 [&amp;UserID]를 사용하여 프라이빗 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 세트의 식에 사용하면 데이터 세트를 캐시할 수 없습니다. 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조 하세요.  
   
- 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+ 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md)를 참조하세요.  
   
   
 ## <a name="see-also"></a>참고 항목  

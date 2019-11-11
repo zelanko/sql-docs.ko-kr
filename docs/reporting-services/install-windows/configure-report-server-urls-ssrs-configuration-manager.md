@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514422"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594071"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. 애플리케이션을 사용하려면 먼저 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 애플리케이션을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 애플리케이션 URL에 대한 기본값을 제공합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62514422"
 |호스트 이름|TCP/IP 네트워크는 IP 주소를 사용하여 네트워크에 있는 디바이스를 고유하게 식별합니다. 물리적 IP 주소는 컴퓨터에 설치된 네트워크 어댑터 카드당 한 개가 있습니다. IP 주소가 호스트 헤더로 확인되면 호스트 헤더를 지정할 수 있습니다. 보고서 서버를 회사 네트워크에 배포하는 경우 컴퓨터의 네트워크 이름을 사용할 수 있습니다.|  
 |포트|TCP 포트는 디바이스의 엔드포인트입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  
 |가상 디렉터리|포트는 종종 여러 웹 서비스나 애플리케이션에서 공유할 수 있습니다. 따라서 보고서 서버 URL에는 요청을 가져오는 애플리케이션에 해당하는 가상 디렉터리가 항상 포함되어야 합니다. 같은 IP 주소와 포트를 수신하는 각각의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에 대해 고유한 가상 디렉터리 이름을 지정해야 합니다.|  
-|SSL 설정|이전에 컴퓨터에 설치한 기존 SSL 인증서를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 URL을 구성할 수 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 기본 모드 보고서 서버에서 SSL 연결 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.|  
+|SSL 설정|이전에 컴퓨터에 설치한 기존 SSL 인증서를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 URL을 구성할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.|  
   
 ## <a name="default-urls"></a>기본 URL  
  URL을 통해 보고서 서버 또는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 액세스하는 경우 URL에는 IP 주소가 아닌 호스트 이름이 포함되어야 합니다. TCP/IP 네트워크에서는 IP 주소가 호스트 이름(또는 컴퓨터의 네트워크 이름)으로 확인됩니다. 기본값을 사용하여 URL을 구성한 경우 다음과 같이 컴퓨터 이름 또는 localhost가 호스트 이름으로 지정된 URL을 사용하여 보고서 서버 웹 서비스에 액세스할 수 있어야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "62514422"
  각 URL 엔드포인트에 대한 사용 권한은 보고서 서버 서비스 계정에 배타적으로 부여됩니다. 따라서 이 계정만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL로 전송된 요청을 받아들일 수 있습니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 서비스 ID를 구성할 경우 해당 계정에 대한 DACL(Discretionary Access Control List)이 생성되어 유지 관리됩니다. 서비스 계정을 변경하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구가 새 계정 정보를 선택하기 위해 만든 모든 URL 예약을 업데이트합니다. 자세한 내용은 [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>보고서 서버 URL로 전송된 클라이언트 요청 인증  
- 기본적으로 URL 엔드포인트에서 지원되는 인증 유형은 Windows 인증으로 이는 기본 보안 확장 프로그램입니다. 사용자 정의 또는 폼 인증 공급자를 구현하는 경우 보고서 서버에서 인증 설정을 수정해야 합니다. 선택적으로 네트워크에 사용된 인증 하위 시스템과 일치하도록 Windows 인증 설정을 변경할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+ 기본적으로 URL 엔드포인트에서 지원되는 인증 유형은 Windows 인증으로 이는 기본 보안 확장 프로그램입니다. 사용자 정의 또는 폼 인증 공급자를 구현하는 경우 보고서 서버에서 인증 설정을 수정해야 합니다. 선택적으로 네트워크에 사용된 인증 하위 시스템과 일치하도록 Windows 인증 설정을 변경할 수도 있습니다. 자세한 내용은 [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)을(를) 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

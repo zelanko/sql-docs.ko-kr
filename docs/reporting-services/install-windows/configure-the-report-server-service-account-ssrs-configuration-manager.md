@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261600"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594088"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261600"
   
 - 보고서 서버 데이터베이스 호스팅에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대한 로그인 권한을 자동으로 업데이트합니다. 새 계정이 **RSExecRole**에 추가됩니다.  
   
-     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [보고서 서버 데이터베이스 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)를 참조하세요.  
+     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;관리](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)를 참조 하세요.  
   
      처음에 서비스 계정을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에만 데이터베이스 권한이 새 서비스 계정에 부여됩니다. 도메인 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에는 연결 정보는 서비스 계정 업데이트의 영향을 받지 않습니다.  
   

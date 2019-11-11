@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503634"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593788"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65503634"
 
 - 구성하는 보고서 서버에 WMI(Windows Management Instrumentation) 서비스가 활성화되어 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 보고서 서버 WMI 공급자를 사용하여 로컬 및 원격 보고서 서버에 연결합니다. 원격 보고서 서버를 구성하는 경우에는 컴퓨터에서 원격 WMI 액세스를 허용해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
 
-- 원격 보고서 서버 인스턴스에 연결하여 구성하기 전에 원격 WMI(Windows Management Instrumentation) 호출이 Windows 방화벽을 통과하도록 설정해야 합니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 원격 관리를 위한 보고서 서버 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.
+- 원격 보고서 서버 인스턴스에 연결하여 구성하기 전에 원격 WMI(Windows Management Instrumentation) 호출이 Windows 방화벽을 통과하도록 설정해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.
 
 Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치됩니다.
 

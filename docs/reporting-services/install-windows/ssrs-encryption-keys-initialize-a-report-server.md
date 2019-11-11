@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1bf17d6635870a171ed1a20a1c659c190077d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513305"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593541"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 암호화 키 - 보고서 서버 시작
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 초기화된 서버는 보고서 서버 데이터베이스의 데이터를 암호화하고 해독할 수 있는 서버입니다. 보고서 서버 작업을 위해서는 초기화가 필요합니다. 초기화는 보고서 서버 서비스가 처음 시작될 때 발생합니다. 또한 보고서 서버를 기존 배포에 참여시키거나 복구 프로세스의 일환으로 키를 수동으로 다시 만들 때도 발생합니다. 암호화 키를 사용하는 방법과 이유에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
@@ -62,7 +62,7 @@ ms.locfileid: "62513305"
  보고서 서버는 설치 식별자와 공개 키가 일치할 경우에만 초기화됩니다. 일치가 성공하면 해독 가능한 암호화를 허용하는 대칭 키가 만들어집니다. 일치가 실패하면 보고서 서버는 비활성화됩니다. 이 경우 백업 키를 적용하도록 요청되며 백업 키가 사용 불가능하거나 유효하지 않으면 암호화된 데이터를 삭제하도록 요청될 수 있습니다. 보고서 서버에서 사용하는 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버를 프로그래밍 방식으로 초기화할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) Reporting Services WMI 공급자 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 참조하세요.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버를 프로그래밍 방식으로 초기화할 수도 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>보고서 서버 초기화를 확인하는 방법  
  보고서 서버 초기화를 확인하려면 명령 창에서 **https://\<servername>/reportserver**를 입력하여 보고서 서버 웹 서비스를 ping합니다. **RSReportServerNotActivated** 오류가 발생하면 초기화가 실패한 것입니다.  

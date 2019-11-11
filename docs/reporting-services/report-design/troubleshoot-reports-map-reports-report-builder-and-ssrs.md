@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574475"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594492"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
@@ -187,7 +187,7 @@ ms.locfileid: "65574475"
   
 -   지도 도법이 **메르카토르**여야 합니다.  
   
--   로컬 미리 보기의 경우 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에서 실행되는 보고서의 경우 보고서 서버가 타일 배경을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에서 "지도 지원 계획"을 참조하십시오.  
+-   로컬 미리 보기의 경우 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에서 실행되는 보고서의 경우 보고서 서버가 타일 배경을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [지도 보고서 계획](plan-a-map-report-report-builder-and-ssrs.md)을 참조 하세요.  
   
  타일 계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -206,6 +206,6 @@ ms.locfileid: "65574475"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 작성기 문제 해결](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [보고서 작성기 문제 해결](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

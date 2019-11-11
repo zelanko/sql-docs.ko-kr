@@ -13,16 +13,15 @@ ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02106c213c3ca1a0cb2708eb29899cd0b3047849
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a8335493cad5325d8433305a8a5d7968765cc39
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73757542"
 ---
-# <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server Native Client 오류 MSSQLSERVER_50000
+# <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client 오류 MSSQLSERVER_50000
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ## <a name="details"></a>세부 정보  

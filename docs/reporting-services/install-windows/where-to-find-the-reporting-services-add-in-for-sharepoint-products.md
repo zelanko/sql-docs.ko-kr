@@ -10,12 +10,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e91b3225087f7dac04e81f50a987ee441d110d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35d35caf3bf1d16696b88dcba9b81c2274be7234
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652236"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637844"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
@@ -38,7 +38,7 @@ SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconam
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
   
--   [Microsoft SharePoint용 Microsoft® SQL Server 2014 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=324852)  
+-   [Microsoft SharePoint용 Microsoft® SQL Server 2014 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=42294)  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 버전의 추가 기능은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 설치 마법사에서도 제공됩니다.  
   
@@ -53,7 +53,7 @@ SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconam
   
 -   **SP1 추가 기능:**  [Microsoft® SharePoint®용 Microsoft® SQL Server® 2012 SP1 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906)(https://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(SP1)](https://www.microsoft.com/download/details.aspx?id=35575)(https://www.microsoft.com/download/details.aspx?id=35575).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능
 

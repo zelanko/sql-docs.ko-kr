@@ -5,16 +5,16 @@ description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/s
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531903"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632789"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -76,11 +76,8 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-ADLS 드라이버의 기본 동작은 자격 증명을 캐시에 저장하는 것입니다. 즉, 잘못된 자격 증명도 캐시에 저장되므로 첫 번째 탑재 시도에서 잘못된 자격 증명을 입력하는 경우 문제가 발생할 수 있습니다. 위에서 자격 증명의 마지막 부분(fs.abfs.impl.disable.cache=true)은 캐시 저장을 사용하지 않도록 설정합니다.
 
 ## <a name="use-access-keys-to-mount"></a>액세스 키를 사용하여 탑재
 
@@ -99,11 +96,8 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-ADLS 드라이버의 기본 동작은 자격 증명을 캐시에 저장하는 것입니다. 즉, 잘못된 자격 증명도 캐시에 저장되므로 첫 번째 탑재 시도에서 잘못된 자격 증명을 입력하는 경우 문제가 발생할 수 있습니다. 위에서 자격 증명의 마지막 부분(fs.abfs.impl.disable.cache=true)은 캐시 저장을 사용하지 않도록 설정합니다.
 
 ## <a id="mount"></a> 원격 HDFS 스토리지 탑재
 

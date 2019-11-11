@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513315"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593532"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 삭제 및 다시 만들기
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "62513315"
   
 1.  각 공유 데이터 원본에 대해 연결 문자열을 다시 입력해야 합니다.  
   
-2.  저장된 자격 증명을 사용하는 각 보고서 및 공유 데이터 원본의 경우 사용자 이름과 암호를 다시 입력한 후 저장해야 합니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+2.  저장된 자격 증명을 사용하는 각 보고서 및 공유 데이터 원본의 경우 사용자 이름과 암호를 다시 입력한 후 저장해야 합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
 3.  각 데이터 기반 구독에 대해 각 구독을 열고 구독 데이터베이스에 대한 자격 증명을 다시 입력합니다.  
   

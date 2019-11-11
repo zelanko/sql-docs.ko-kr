@@ -23,14 +23,14 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffda5a599b9ef54f1e36e2d45d0c6c24117ba050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022207"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843335"
 ---
-# <a name="sessionuser-transact-sql"></a>SESSION_USER(Transact-SQL)
+# <a name="session_user-transact-sql"></a>SESSION_USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SESSION_USER는 현재 데이터베이스에 있는 현재 컨텍스트의 사용자 이름을 반환합니다.  
@@ -53,7 +53,7 @@ SESSION_USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>1\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>1\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 변수를 `nchar`로 선언하고 이 변수에 `SESSION_USER`의 현재 값을 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
 ```  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SESSION_USER 사용  
+### <a name="b-using-session_user-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SESSION_USER 사용  
  다음 예에서는 배송물 수령을 기록하는 사람의 이름에 대한 `SESSION_USER` 제약 조건으로 `DEFAULT`를 사용하는 테이블을 만듭니다.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C: SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 현재 세션의 세션 사용자를 반환합니다.  
   
 ```  
@@ -152,9 +152,9 @@ SELECT SESSION_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

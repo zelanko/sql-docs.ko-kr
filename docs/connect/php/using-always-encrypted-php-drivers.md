@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: v-mabarw
-ms.openlocfilehash: 08165bf0f60265e34f6b8022fd00e11dda47f672
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 60f4ee3839b91b60b950c1f3a6a351592a9581b2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258647"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593621"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +55,7 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
-연결에 대해 Always Encrypted을 사용 하도록 설정 하면 표준 SQLSRV Api ( [Sqlsrv 드라이버 Api 참조](../../connect/php/sqlsrv-driver-api-reference.md)참조) 또는 PDO_SQLSRV Api ( [PDO_SQLSRV driver api 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)참조)를 사용 하 여 암호화 된 데이터베이스 열의 데이터를 검색 하거나 수정할 수 있습니다. 애플리케이션에 필요한 데이터베이스 사용 권한이 있고 열 마스터 키에 액세스할 수 있다고 가정할 경우, 드라이버는 암호화된 열을 대상으로 하는 쿼리 매개 변수를 모두 암호화하고 암호화된 열에서 검색된 데이터의 암호를 해독하여 열이 암호화되지 않은 것처럼 애플리케이션에 투명하게 동작합니다.
+연결에 대해 Always Encrypted을 사용 하도록 설정 하면 표준 SQLSRV Api ( [Sqlsrv 드라이버 Api 참조](../../connect/php/sqlsrv-driver-api-reference.md)참조) 또는 PDO_SQLSRV api ( [PDO_SQLSRV 드라이버 api 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)참조)를 사용 하 여 암호화 된 데이터베이스 열의 데이터를 검색 하거나 수정할 수 있습니다. 애플리케이션에 필요한 데이터베이스 사용 권한이 있고 열 마스터 키에 액세스할 수 있다고 가정할 경우, 드라이버는 암호화된 열을 대상으로 하는 쿼리 매개 변수를 모두 암호화하고 암호화된 열에서 검색된 데이터의 암호를 해독하여 열이 암호화되지 않은 것처럼 애플리케이션에 투명하게 동작합니다.
 
 Always Encrypted를 사용하지 않는 경우 암호화된 열을 대상으로 하는 매개 변수가 있는 쿼리가 실패합니다. 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없는 경우 암호화된 열에서 데이터를 검색할 수 있습니다. 그러나 드라이버에서 암호 해독을 시도하지 않고, 애플리케이션이 암호화된 이진 데이터를 바이트 배열로 수신합니다.
 
@@ -91,16 +91,16 @@ CREATE TABLE [dbo].[Patients](
  -   암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다. 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값을 쿼리 문에 포함된 리터럴로 전달하면, 드라이버에서 쿼리의 리터럴을 암호화하거나 다른 방식으로 처리하지 않기 때문에 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
  -   Bind 매개 변수를 사용 하 여 값을 삽입할 때 대상 열의 데이터 형식과 동일 하거나 대상 열의 데이터 형식으로의 변환이 지원 되는 SQL 형식은 데이터베이스에 전달 되어야 합니다. 이 요구 사항은 Always Encrypted에서 몇 가지 형식 변환을 지원 하기 때문입니다. 자세한 내용은 [Always Encrypted (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조 하세요. 두 PHP 드라이버 SQLSRV 및 PDO_SQLSRV에는 사용자가 값의 SQL 유형을 결정 하는 데 도움이 되는 메커니즘이 있습니다. 따라서 사용자는 SQL 형식을 명시적으로 제공할 필요가 없습니다.
   -   SQLSRV 드라이버의 경우 사용자에 게 두 가지 옵션이 있습니다.
-   -   PHP 드라이버를 사용 하 여 올바른 SQL 유형을 확인 하 고 설정 합니다. 이 경우 사용자는 및 `sqlsrv_prepare` `sqlsrv_execute` 를 사용 하 여 매개 변수가 있는 쿼리를 실행 해야 합니다.
+   -   PHP 드라이버를 사용 하 여 올바른 SQL 유형을 확인 하 고 설정 합니다. 이 경우 사용자는 `sqlsrv_prepare` 및 `sqlsrv_execute`를 사용 하 여 매개 변수가 있는 쿼리를 실행 해야 합니다.
    -   SQL 유형을 명시적으로 설정 합니다.
   -   PDO_SQLSRV 드라이버의 경우 사용자에 게 매개 변수의 SQL 유형을 명시적으로 설정할 수 있는 옵션이 없습니다. PDO_SQLSRV 드라이버는 사용자가 매개 변수를 바인딩할 때 SQL 형식을 결정 하는 데 도움이 됩니다.
  -   드라이버가 SQL 유형을 결정 하는 데 몇 가지 제한 사항이 적용 됩니다.
   -   SQLSRV 드라이버
-   -   사용자가 드라이버를 사용 하 여 암호화 된 열에 대 한 SQL 형식을 확인 하려는 경우 사용자는 `sqlsrv_prepare` 및 `sqlsrv_execute`를 사용 해야 합니다.
-   -   가 `sqlsrv_query` 선호 되는 경우 사용자는 모든 매개 변수에 대해 SQL 형식을 지정 해야 합니다. 지정 된 SQL 형식은 문자열 형식에 대 한 문자열 길이와 소수 형식의 소수 자릿수 및 전체 자릿수를 포함 해야 합니다.
+   -   사용자가 암호화 된 열에 대 한 SQL 유형을 확인 하기 위해 사용자가 `sqlsrv_prepare` 및 `sqlsrv_execute`를 사용 해야 합니다.
+   -   `sqlsrv_query`를 선호 하는 경우 사용자는 모든 매개 변수에 대해 SQL 유형을 지정 해야 합니다. 지정 된 SQL 형식은 문자열 형식에 대 한 문자열 길이와 소수 형식의 소수 자릿수 및 전체 자릿수를 포함 해야 합니다.
   -   PDO_SQLSRV 드라이버
-   -   문 특성 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 은 매개 변수가 있는 쿼리에서 지원 되지 않습니다.
-   -   문 특성 `PDO::ATTR_EMULATE_PREPARES` 은 매개 변수가 있는 쿼리에서 지원 되지 않습니다.
+   -   매개 변수가 있는 쿼리에서는 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 문 특성을 지원 하지 않습니다.
+   -   매개 변수가 있는 쿼리에서는 `PDO::ATTR_EMULATE_PREPARES` 문 특성을 지원 하지 않습니다.
    
 SQLSRV 드라이버 및 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
 ```
@@ -133,7 +133,7 @@ $params = array(array(&$ssn, null, null, SQLSRV_SQLTYPE_CHAR(11)),
 sqlsrv_query($conn, $query, $params);
 ```
 
-PDO_SQLSRV driver 및 [PDO::p repare](../../connect/php/pdo-prepare.md):
+PDO_SQLSRV 드라이버 및 [PDO::p repare](../../connect/php/pdo-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -218,18 +218,18 @@ $row = $stmt->fetch();
 #### <a name="unsupported-data-type-conversion-errors"></a>지원되지 않는 데이터 형식 변환 오류
 
 상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지하려면 다음을 수행합니다.
- -   `sqlsrv_prepare` 및`sqlsrv_execute` SQL 형식과 함께 SQLSRV 드라이버를 사용 하는 경우 열 크기와 매개 변수의 소수 자릿수는 자동으로 결정 됩니다.
+ -   `sqlsrv_prepare`와 함께 SQLSRV 드라이버를 사용 하 `sqlsrv_execute` 고 SQL 형식을 열 크기와 함께 사용 하는 경우 매개 변수의 소수 자릿수를 자동으로 결정 합니다.
  -   PDO_SQLSRV 드라이버를 사용 하 여 쿼리를 실행 하는 경우 열 크기와 매개 변수의 소수 자릿수를 포함 하는 SQL 형식이 자동으로 결정 됩니다.
- -   에서 SQLSRV 드라이버 `sqlsrv_query` 를 사용 하 여 쿼리를 실행 하는 경우:
+ -   `sqlsrv_query`에서 SQLSRV 드라이버를 사용 하 여 쿼리를 실행 하는 경우:
   -   매개 변수의 SQL 형식이 대상 열의 형식과 정확히 같거나, SQL 형식에 열 형식으로의 변환이 지원되어야 합니다.
   -   `decimal` 및 `numeric` SQL Server 데이터 형식의 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다.
   -   대상 열을 수정하는 쿼리에서 SQL Server 데이터 형식이 `datetime2`, `datetimeoffset` 또는 `time`인 열을 대상으로 하는 매개 변수의 정밀도가 대상 열의 정밀도보다 크지 않아야 합니다.
- -   PDO_SQLSRV statement 특성 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 또는 `PDO::ATTR_EMULATE_PREPARES` 매개 변수가 있는 쿼리에 사용 하지 마십시오.
+ -   매개 변수가 있는 쿼리에 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 또는 `PDO::ATTR_EMULATE_PREPARES` PDO_SQLSRV 문 특성을 사용 하지 마십시오.
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>암호화된 값 대신 일반 텍스트를 전달하여 발생하는 오류
 
 암호화된 열을 대상으로 하는 값은 서버로 전송하기 전에 암호화해야 합니다. 암호화된 열의 일반 텍스트 값으로 삽입, 수정 또는 필터링하면 오류가 발생합니다. 이러한 오류를 방지하려면 다음을 확인합니다.
- -   Always Encrypted 사용 됩니다 (연결 문자열에서 `ColumnEncryption` 키워드를로 `Enabled`설정).
+ -   Always Encrypted 사용 됩니다 (연결 문자열에서 `ColumnEncryption` 키워드를 `Enabled`로 설정).
  -   바인딩 매개 변수를 사용하여 암호화된 열을 대상으로 하는 데이터를 전송합니다. 다음 예에서는 암호화 된 열 (SSN)에서 리터럴/상수를 기준으로 잘못 필터링 하는 쿼리를 보여 줍니다.
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -245,7 +245,7 @@ Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베�
 
 연결에 대한 Always Encrypted가 설정된 경우 기본적으로 ODBC 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장 프로시저는 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있을 경우 드라이버에서 매개 변수를 암호화할 수 있도록 각 매개 변수에 대한 암호화 관련 정보를 반환합니다.
 
-PHP 드라이버를 사용 하면 사용자가 SQL 형식을 제공 하지 않고 준비 된 문의 매개 변수를 바인딩할 수 있으므로 Always Encrypted 설정 된 연결에서 매개 변수를 바인딩할 때 PHP 드라이버는 매개 변수에 대해 [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) 를 호출 하 여 sql 형식을 가져옵니다. 열 크기 및 10 진수입니다. 메타 데이터는 [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)을 호출 하는 데 사용 됩니다. 가 호출 `SQLDescribeParam` 될 때 `sys.sp_describe_parameter_encryption` ODBC 드라이버에서 클라이언트 쪽에 정보를 이미 저장 했으므로 이러한 추가 호출에는 데이터베이스에 대 한 추가 왕복이 필요 하지 않습니다.
+PHP 드라이버를 사용 하면 사용자가 SQL 형식을 제공 하지 않고 준비 된 문의 매개 변수를 바인딩할 수 있으므로 Always Encrypted 설정 된 연결에서 매개 변수를 바인딩할 때 PHP 드라이버는 매개 변수의 [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) 를 호출 하 여 sql 형식, 열 크기 및 10 진수를 가져옵니다. 메타 데이터는 [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)을 호출 하는 데 사용 됩니다. `sys.sp_describe_parameter_encryption`를 호출할 때 ODBC 드라이버에서 클라이언트 쪽에 정보를 이미 저장 했으므로 이러한 추가 `SQLDescribeParam` 호출에는 데이터베이스에 대 한 추가 왕복이 필요 하지 않습니다.
 
 위의 동작은 클라이언트 애플리케이션에 대한 높은 수준의 투명성을 보장하며 암호화된 열을 대상으로 하는 값이 매개 변수로 드라이버에 전달되는 한 애플리케이션 개발자는 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
 
@@ -271,16 +271,16 @@ Windows의 ODBC Driver for SQL Server에는 `MSSQL_CERTIFICATE_STORE`라는 Wind
 
 ### <a name="using-azure-key-vault"></a>Azure Key Vault 사용
 
-Azure Key Vault는 Azure를 사용 하 여 암호화 키, 암호 및 기타 암호를 저장 하는 방법을 제공 하며 Always Encrypted 키를 저장 하는 데 사용할 수 있습니다. ODBC Driver for SQL Server (버전 17 이상)에는 Azure Key Vault에 대 한 기본 제공 마스터 키 저장소 공급자가 포함 되어 있습니다. 다음 연결 옵션은 구성 `KeyStoreAuthentication`Azure Key Vault, `KeyStorePrincipalId`및 `KeyStoreSecret`를 처리 합니다. 
- -   `KeyStoreAuthentication`는 가능한 두 가지 문자열 값 ( `KeyVaultPassword` 및 `KeyVaultClientSecret`) 중 하나를 사용할 수 있습니다. 이러한 값은 다른 두 키워드에 사용 되는 인증 자격 증명의 종류를 제어 합니다.
- -   `KeyStorePrincipalId`Azure Key Vault 액세스 하려는 계정에 대 한 식별자를 나타내는 문자열을 사용 합니다. 
-     -   가 `KeyStoreAuthentication` 로 `KeyVaultPassword` 설정된경우는AzureActiveDirectory사용자의`KeyStorePrincipalId` 이름 이어야 합니다.
-     -   가 `KeyStoreAuthentication` 로 `KeyVaultClientSecret` 설정된경우는응용프로그램클라이언트`KeyStorePrincipalId` ID 여야 합니다.
- -   `KeyStoreSecret`자격 증명 암호를 나타내는 문자열을 사용 합니다. 
-     -   가 `KeyStoreAuthentication` 로 `KeyVaultPassword` 설정된경우는사용자의`KeyStoreSecret` 암호 여야 합니다. 
-     -   가 `KeyStoreAuthentication` 로 `KeyVaultClientSecret` 설정된경우는응용프로그램클라이언트ID와연결된응용프로그램암호여야합니다.`KeyStoreSecret`
+Azure Key Vault는 Azure를 사용 하 여 암호화 키, 암호 및 기타 암호를 저장 하는 방법을 제공 하며 Always Encrypted 키를 저장 하는 데 사용할 수 있습니다. ODBC Driver for SQL Server (버전 17 이상)에는 Azure Key Vault에 대 한 기본 제공 마스터 키 저장소 공급자가 포함 되어 있습니다. Azure Key Vault 구성을 처리 하는 연결 옵션 `KeyStoreAuthentication`, `KeyStorePrincipalId`및 `KeyStoreSecret`입니다. 
+ -   `KeyStoreAuthentication`은 `KeyVaultPassword` 및 `KeyVaultClientSecret`의 두 가지 가능한 문자열 값 중 하나를 사용할 수 있습니다. 이러한 값은 다른 두 키워드에 사용 되는 인증 자격 증명의 종류를 제어 합니다.
+ -   `KeyStorePrincipalId`은 Azure Key Vault 액세스 하려는 계정에 대 한 식별자를 나타내는 문자열을 사용 합니다. 
+     -   `KeyStoreAuthentication` `KeyVaultPassword`으로 설정 된 경우 `KeyStorePrincipalId`은 Azure ActiveDirectory 사용자의 이름 이어야 합니다.
+     -   `KeyStoreAuthentication` `KeyVaultClientSecret`으로 설정 된 경우 `KeyStorePrincipalId`는 응용 프로그램 클라이언트 ID 여야 합니다.
+ -   `KeyStoreSecret`는 자격 증명 암호를 나타내는 문자열을 사용 합니다. 
+     -   `KeyStoreAuthentication` `KeyVaultPassword`으로 설정 된 경우 `KeyStoreSecret` 사용자의 암호 여야 합니다. 
+     -   `KeyStoreAuthentication` `KeyVaultClientSecret`로 설정 된 경우 `KeyStoreSecret`는 응용 프로그램 클라이언트 ID와 연결 된 응용 프로그램 암호 여야 합니다.
 
-Azure Key Vault 사용 하려면 연결 문자열에 세 가지 옵션이 모두 있어야 합니다. 또한 `ColumnEncryption` 은로 `Enabled`설정 해야 합니다. `ColumnEncryption` 가 로`Disabled` 설정 되어 있지만 Azure Key Vault 옵션이 있으면 스크립트가 오류 없이 계속 되지만 암호화가 수행 되지 않습니다.
+Azure Key Vault 사용 하려면 연결 문자열에 세 가지 옵션이 모두 있어야 합니다. 또한 `ColumnEncryption` `Enabled`로 설정 되어야 합니다. `ColumnEncryption`을 `Disabled`로 설정 했지만 Azure Key Vault 옵션이 있는 경우 스크립트는 오류 없이 계속 되지만 암호화가 수행 되지 않습니다.
 
 다음 예에서는 Azure Key Vault를 사용 하 여 SQL Server에 연결 하는 방법을 보여 줍니다.
 
@@ -314,15 +314,15 @@ SQLSRV 및 PDO_SQLSRV:
  -   Linux/macOS는 Windows 인증서 저장소 공급자를 지원 하지 않습니다.
  -   매개 변수 강제 암호화
  -   문 수준에서 Always Encrypted 사용 
- -   Linux 및 macOS에서 Always Encrypted 기능 및 비 UTF8 로캘 (예: "en_US")을 사용 하는 경우 ISO-8859-1 ")를 사용 하는 경우 코드 페이지 1252이 시스템에 설치 되지 않은 경우 null 데이터 또는 빈 문자열을 암호화 된 char (n) 열에 삽입 하지 못할 수 있습니다.
+ -   Linux 및 macOS에서 Always Encrypted 기능 및 비 UTF8 로캘을 사용 하는 경우 (예: "en_US. ISO-8859-1 ")를 사용 하는 경우 코드 페이지 1252이 시스템에 설치 되지 않은 경우 null 데이터 또는 빈 문자열을 암호화 된 char (n) 열에 삽입 하지 못할 수 있습니다.
  
 SQLSRV만:
- -   SQL `sqlsrv_query` 형식을 지정 하지 않고 바인딩 매개 변수에를 사용 합니다.
- -   SQL `sqlsrv_prepare` 문 일괄 처리에서 매개 변수를 바인딩하는 데 사용  
+ -   SQL 형식을 지정 하지 않고 바인딩 매개 변수에 `sqlsrv_query` 사용
+ -   SQL 문 일괄 처리에서 매개 변수를 바인딩하는 데 `sqlsrv_prepare` 사용  
  
-PDO_SQLSRV만 해당:
- -   `PDO::SQLSRV_ATTR_DIRECT_QUERY`매개 변수가 있는 쿼리에 지정 된 statement 특성
- -   `PDO::ATTR_EMULATE_PREPARE`매개 변수가 있는 쿼리에 지정 된 statement 특성
+PDO_SQLSRV에만 해당:
+ -   매개 변수가 있는 쿼리에 지정 된 `PDO::SQLSRV_ATTR_DIRECT_QUERY` statement 특성
+ -   매개 변수가 있는 쿼리에 지정 된 `PDO::ATTR_EMULATE_PREPARE` statement 특성
  -   SQL 문의 일괄 처리에서 매개 변수 바인딩
  
 PHP 드라이버는 ODBC 드라이버에서 SQL Server 및 데이터베이스용으로 적용 되는 제한 사항도 상속 합니다. [Always Encrypted 사용 시 ODBC 드라이버의 제한 사항](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 및 [Always Encrypted 기능 정보](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)를 참조 하세요.  
