@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594483"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659359"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -438,6 +438,9 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 - Azure SQL 관리되는 인스턴스에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
+
+> [!NOTE]
+> 관리되는 인스턴스 기능에 대한 Azure AD 관리자가 만든 후 변경되었습니다. 자세한 내용은 [MI에 대한 새로운 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 로그인을 만든 후 해당 로그인으로 SQL Database 관리되는 인스턴스에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 

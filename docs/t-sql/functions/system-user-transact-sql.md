@@ -26,14 +26,14 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 747ea38576b52b6a3011fd4f0b197a2b7222bcd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117495"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843568"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER(Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   기본값이 지정되지 않은 경우에 현재 로그인에 대해 시스템이 제공한 값을 테이블에 삽입할 수 있도록 허용합니다.  
@@ -47,7 +47,7 @@ SYSTEM_USER
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **nchar**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  CREATE TABLE 및 ALTER TABLE 문에서 SYSTEM_USER 함수를 DEFAULT 제약 조건으로 사용할 수 있습니다. 이 함수를 표준 함수로 사용할 수도 있습니다.  
@@ -60,7 +60,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>1\. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>1\. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `char` 변수를 선언하고 변수에 `SYSTEM_USER`의 현재 값을 저장한 다음에 변수에 저장된 값을 출력합니다.  
   
 ```  
@@ -79,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
+### <a name="b-using-system_user-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
  다음 예에서는 `SYSTEM_USER` 열에 대한 `DEFAULT` 제약 조건으로 `SRep_tracking_user`를 사용하는 테이블을 만듭니다.  
   
 ```  
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C: SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `SYSTEM_USER`의 현재 값을 반환합니다.  
   
 ```  
@@ -142,7 +142,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   

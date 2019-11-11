@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000272"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632900"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68000272"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다음과 같은 방법으로 작성하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 제출할 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://go.microsoft.com/fwlink/?linkid=67359)Express를 사용할 수도 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://www.microsoft.com/download/details.aspx?id=7593)Express를 사용할 수도 있습니다.  
   
 -   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)사용  
   

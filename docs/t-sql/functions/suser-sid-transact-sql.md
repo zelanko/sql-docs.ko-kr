@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6eed882fffc8d6752d4884f006450efc5b9257be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117596"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843594"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID(Transact-SQL)
+# <a name="suser_sid-transact-sql"></a>SUSER_SID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   지정된 로그인 이름에 대한 SID(보안 ID)를 반환합니다.  
@@ -70,14 +70,14 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-susersid"></a>1\. SUSER_SID 사용  
+### <a name="a-using-suser_sid"></a>1\. SUSER_SID 사용  
  다음 예제에서는 현재 보안 컨텍스트에 대한 SID(보안 ID)를 반환합니다.  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>2\. 특정 로그인에 SUSER_SID 사용  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>2\. 특정 로그인에 SUSER_SID 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 로그인에 대한 보안 ID를 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -87,7 +87,7 @@ SELECT SUSER_SID('sa');
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Windows 사용자 이름과 SUSER_SID 사용  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Windows 사용자 이름과 SUSER_SID 사용  
  다음 예에서는 Windows 사용자 `London\Workstation1`에 대한 보안 ID를 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -97,7 +97,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>D. SUSER_SID를 DEFAULT 제약 조건으로 사용  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. SUSER_SID를 DEFAULT 제약 조건으로 사용  
  다음 예에서는 `SUSER_SID`를 `DEFAULT` 문의 `CREATE TABLE` 제약 조건으로 사용합니다.  
   
 ```  
@@ -128,6 +128,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN&#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary 및 varbinary&#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

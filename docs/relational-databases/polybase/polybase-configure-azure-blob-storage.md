@@ -1,5 +1,5 @@
 ---
-title: Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft 문서
+title: Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +8,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81334dbfee970f7ce26ef723a463e10f7349d841
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 332187876562920ba1dfea4e57cc855f7d4a2876
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710652"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659571"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -47,7 +48,7 @@ PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.m
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
   
-   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc에서 PolyBase 서비스 중지 및 시작")  
   
 ## <a name="configure-an-external-table"></a>외부 테이블 구성
 

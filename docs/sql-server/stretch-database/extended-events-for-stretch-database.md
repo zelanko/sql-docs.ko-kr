@@ -1,5 +1,5 @@
 ---
-title: Stretch Database용 확장 이벤트 | Microsoft 문서
+title: 스트레치 데이터베이스용 확장 이벤트
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,14 +7,15 @@ ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb91bbf75b64123719c4b580dd31977363842feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136152"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844578"
 ---
-# <a name="extended-events-for-stretch-database"></a>Stretch Database용 확장 이벤트
+# <a name="extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 

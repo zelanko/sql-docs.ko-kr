@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142867"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659090"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복
 
 백업 압축은 기본 동작이 아닙니다. 하지만 이 기본값은 [백업 압축 기본값](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 서버 구성 옵션을 설정하여 변경할 수 있습니다. 이 옵션의 현재 값을 보는 방법은 [서버 속성 보기 또는 변경](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)을 참조하세요.
 
-[TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스에 백업 압축 사용에 대한 자세한 내용은 [주의 사항](#general-remarks) 섹션을 참조하세요.
-
 COMPRESSION 백업 압축을 명시적으로 사용하도록 설정합니다.
 
 NO_COMPRESSION 백업 압축을 명시적으로 사용하지 않도록 설정합니다.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > 단일 데이터 파일이 있는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스의 경우 기본 `MAXTRANSFERSIZE`는 65536(64 KB)입니다. 비-TDE 암호화된 데이터베이스의 경우 디스크 백업을 사용할 때 기본 `MAXTRANSFERSIZE`는 1048576(1MB)이고 VDI 또는 TAPE를 사용하는 경우에는 65536(64KB)입니다.
-> TDE 암호화된 데이터베이스에 백업 압축 사용에 대한 자세한 내용은 [주의 사항](#general-remarks) 섹션을 참조하세요.
 
 **오류 관리 옵션**
 

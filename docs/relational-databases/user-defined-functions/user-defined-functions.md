@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783303"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843836"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
  사용자 정의 테이블 값 함수는 **table** 데이터 형식을 반환합니다. 인라인 테이블 반환 함수에는 함수 본문이 없으며 테이블이 단일 SELECT 문의 결과 집합입니다. **[예](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **시스템 함수**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 작업을 수행하는 데 사용되는 다양한 시스템 함수를 제공합니다. 기본 제공 함수는 수정할 수 없습니다. 자세한 내용은 [기본 제공 함수&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [시스템 저장 함수&#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) 및 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 작업을 수행하는 데 사용되는 다양한 시스템 함수를 제공합니다. 기본 제공 함수는 수정할 수 없습니다. 자세한 내용은 [기본 제공 함수&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [시스템 저장 함수&#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md) 및 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조하세요.  
   
 ##  <a name="Guidelines"></a> 지침  
  한 문을 취소하고 모듈(트리거, 저장 프로시저 등)의 다음 문을 실행하도록 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류는 함수 내에서 다르게 처리됩니다. 함수에서 그러한 오류가 발생하면 함수의 실행이 중단됩니다. 이에 따라 함수를 호출한 문도 취소됩니다.  

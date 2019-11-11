@@ -12,12 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021137"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638035"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,6 +144,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>최신 문서 유형에 대한 선택적 지원 설치  
   
 ###  <a name="office"></a> Microsoft Office 및 다른 Microsoft 문서 유형에 대한 최신 필터 설치  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서는 최신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 단어 분리기 및 형태소 분석기를 설치하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 문서 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 문서 유형용 최신 필터는 설치하지 않습니다. 이 필터는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 애플리케이션을 사용하여 만든 문서를 인덱싱하는 데 필요합니다. 최신 필터를 다운로드하려면 [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293)를 참조하세요. (Office 2013 또는 Office 2016의 경우 Filter Pack 릴리스가 표시되지 않습니다.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서는 최신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 단어 분리기 및 형태소 분석기를 설치하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 문서 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 문서 유형용 최신 필터는 설치하지 않습니다. 이 필터는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 애플리케이션을 사용하여 만든 문서를 인덱싱하는 데 필요합니다. 최신 필터를 다운로드하려면 [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062)를 참조하세요. (Office 2013 또는 Office 2016의 경우 Filter Pack 릴리스가 표시되지 않습니다.)
   
   

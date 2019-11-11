@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155702"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632959"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "70155702"
 
 ### <a name="download-pages"></a>다운로드 페이지
 
-- [SQL Server 2012 SP4 기능 팩](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 패치 설치](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 기능 팩](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 패치 설치](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### <a name="performance-and-scale-improvements"></a>향상된 성능 및 크기 조정 기능

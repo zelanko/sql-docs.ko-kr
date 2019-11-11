@@ -10,12 +10,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542193"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659426"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL) 
 
@@ -80,7 +80,6 @@ SQL 문의 성능을 최적화하기 위한 권장 사항이 포함된 쿼리 �
 |작업 유형|콘텐츠|예제|  
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE 및 TRIM_MOVE|이러한 특성이 있는 `<operation_cost>` 요소입니다. 로컬 작업만 반영하는 값은 다음과 같습니다.<br /><br /> -   *cost*는 로컬 연산자 비용이며, 작업 실행에 대한 예상 시간(밀리초)을 표시합니다.<br />-   *accumulative_cost*는 병렬 작업에 대한 합계 값을 포함하여 계획에 표시된 모든 작업의 합계(밀리초)입니다.<br />-   *average_rowsize*는 작업 중에 검색되고 전달된 행의 예상 평균 행 크기(바이트)입니다.<br />-   *output_rows*는 출력(노드) 카디널리티이며, 출력 행 수를 표시합니다.<br /><br /> `<location>`: 작업이 발생할 노드 또는 배포입니다. 사용할 수 있는 옵션은 다음과 같습니다. "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution" 및 "SubsetNodes".<br /><br /> `<source_statement>`: 순서 섞기 이동에 대한 원본 데이터입니다.<br /><br /> `<destination_table>`: 데이터 이동의 대상이 되는 내부 임시 테이블입니다.<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 작업에만 적용 가능). 임시 테이블에 대한 배포 열로 사용할 하나 이상의 열입니다.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: 위의 `<operation_cost>` 내용을 참조하세요.<br /><br /> `<DestinationCatalog>`: 대상 노드 또는 노드.<br /><br /> `<DestinationSchema>`: DestinationCatalog의 대상 스키마입니다.<br /><br /> `<DestinationTableName>`: 대상 테이블의 이름 또는 "TableName".<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름 또는 연결 정보.<br /><br /> `<Username>` 및 `<Password>`: 대상에 대한 사용자 이름과 암호가 필요할 수 있음을 나타냅니다.<br /><br /> `<BatchSize>`: 복사 작업에 대한 일괄 처리 크기입니다.<br /><br /> `<SelectStatement>`: 복사를 수행하는 데 사용되는 select 문입니다.<br /><br /> `<distribution>`: 복사가 수행되는 배포입니다.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`: 작업에 대한 원본 테이블입니다.<br /><br /> `<destination_table>`: 작업에 대한 대상 테이블입니다.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`: 위의 `<location>` 내용을 참조하세요.<br /><br /> `<sql_operation>`: 노드에서 수행할 SQL 명령을 식별합니다.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`: 대상 카탈로그.<br /><br /> `<DestinationSchema>`: DestinationCatalog의 대상 스키마입니다.<br /><br /> `<DestinationTableName>`: 대상 테이블의 이름 또는 "TableName".<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름입니다.<br /><br /> `<Username>` 및 `<Password>`: 대상에 대한 사용자 이름과 암호가 필요할 수 있음을 나타냅니다.<br /><br /> `<CreateStatement>`: 대상 데이터베이스에 대한 테이블 생성 문입니다.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  

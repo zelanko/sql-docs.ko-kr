@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e9ad22c9490c04906dafcccb74d9dd16f9496852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040376"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843436"
 ---
-# <a name="appname-transact-sql"></a>APP_NAME(Transact-SQL)
+# <a name="app_name-transact-sql"></a>APP_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 애플리케이션이 해당 이름 값을 설정하는 경우 현재 세션의 애플리케이션 이름을 반환합니다.
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:
-[시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [함수](../../t-sql/functions/functions.md)
   
   

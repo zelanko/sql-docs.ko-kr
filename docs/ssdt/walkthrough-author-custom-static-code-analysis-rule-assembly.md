@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140939"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659546"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
 이 연습에서는 SQL Server 코드 분석 규칙을 만드는 데 사용되는 단계를 보여 줍니다. 이 연습에서 만든 규칙은 저장 프로시저, 트리거 및 함수에서 WAITFOR DELAY 문을 방지하는 데 사용됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "68140939"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>사용자 지정 코드 분석 규칙 지원 클래스 만들기  
 규칙 자체의 클래스를 만들기 전에 방문자 클래스와 특성 클래스를 프로젝트에 추가합니다. 이러한 클래스는 추가 사용자 지정 규칙을 만드는 데 유용할 수 있습니다.  
   
-정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용하면 쉽게 찾을 수 있습니다.  
+정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용하면 쉽게 찾을 수 있습니다.  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>WaitForDelayVisitor 클래스 정의  
   

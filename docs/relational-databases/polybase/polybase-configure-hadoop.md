@@ -1,5 +1,5 @@
 ---
-title: Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
+title: Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +8,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 83fb16a5c55d1f2f169268be6463d9735ce4e55c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907575"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659561"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 

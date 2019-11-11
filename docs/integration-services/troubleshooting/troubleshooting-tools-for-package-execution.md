@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2c2dc7aac7ae6eb86b66a6bbb371f11dc6372cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295080"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637948"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
 
@@ -85,7 +85,7 @@ ms.locfileid: "71295080"
   
     3.  **행 개수 데이터 캡처** 행 개수 정보에 대한 별도의 테이블을 만듭니다. 이 테이블에서 패키지 실행의 각 인스턴스는 ExecutionID로 식별됩니다. 행 개수 변환을 사용하여 데이터 흐름의 중요 지점에서 일련의 변수에 행 개수를 저장합니다. 데이터 흐름이 끝난 후에는 나중에 분석 및 보고할 수 있도록 SQL 실행 태스크를 사용하여 일련의 값을 이 테이블의 행에 삽입합니다.  
   
-     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 “ETL 감사 및 로깅” 섹션을 참조하세요.  
+     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://www.microsoft.com/download/details.aspx?id=14582)의 “ETL 감사 및 로깅” 섹션을 참조하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>디버그 덤프 파일을 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  

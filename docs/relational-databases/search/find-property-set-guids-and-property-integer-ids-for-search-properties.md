@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082807"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638051"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082807"
   
  명령 프롬프트에서 **filtdump.exe** 를 실행하고 단일 인수를 제공합니다. 이 인수는 IFilter가 설치된 파일 형식을 사용하는 개별 파일의 이름입니다. 이 유틸리티는 문서에서 IFilter를 통해 검색된 모든 속성의 목록을 속성 집합 GUID, 정수 ID 및 추가 정보와 함께 표시합니다.  
   
- 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
+ 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](https://www.microsoft.com/download/details.aspx?id=8279)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
   
 -   64비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`을 찾아봅니다.  
   
