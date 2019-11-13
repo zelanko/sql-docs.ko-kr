@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2e193f4ebbcca98fd27657618ef2e1a7f7ef92
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500199"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593878"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>원격 오류 활성화(Reporting Services)
-  원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 보고서 서버 시스템 속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+  원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)을 참조하세요.  
   
  항목 내용  
   
@@ -62,13 +62,13 @@ ms.locfileid: "67500199"
   
 ##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
   
-1.  Management Studio를 시작하여 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) Management Studio에서 보고서 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+1.  Management Studio를 시작하여 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
 2.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [서버 속성&#40;고급 페이지&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)를 참조하세요.  
+3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 [서버 속성&#40;고급 페이지&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)를 참조하세요.  
   
-4.  에 **보안** 섹션 **EnableRemoteErrors**를 선택 **True**합니다.  
+4.  **보안** 섹션의 **Enableremoteerrors**에서 **True**를 선택 합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

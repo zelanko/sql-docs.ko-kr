@@ -1,20 +1,20 @@
 ---
-title: 서버 속성(고급 페이지) - Reporting Services | Microsoft Docs
+title: 서버 속성 고급 페이지 - Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908259"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638022"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>서버 속성 고급 페이지 - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,7 +93,7 @@ ms.locfileid: "70908259"
 
 **AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
 
-**AllowedResourceExtensionsForUpload (Power BI Report Server 및 Reporting Services 2017이상 전용)** 보고서 서버에 업로드할 수 있는 리소스의 확장 기능을 설정합니다. &ast;.rdl 및 &ast;.pbix와 같은 기본 제공 파일 형식에 대한 확장 기능을 포함할 필요가 없습니다. 기본값은 “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”입니다.
+**AllowedResourceExtensionsForUpload** (Power BI Report Server 및 Reporting Services 2017이상 전용) 보고서 서버에 업로드할 수 있는 리소스의 확장 기능을 설정합니다. &ast;.rdl 및 &ast;.pbix와 같은 기본 제공 파일 형식에 대한 확장 기능을 포함할 필요가 없습니다. 기본값은 “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”입니다.
 
 **RestrictedResourceMimeTypeForUpload** 사용자가를 사용 하 여 콘텐츠를 업로드할 수 없는 mime 형식 집합입니다. 제한 된 mime 형식으로 이미 저장 된 모든 리소스는 브라우저에서 열거나 실행 하는 대신 응용 프로그램/8 진수 스트림으로만 다운로드할 수 있습니다.  기본적으로이 목록에는 제한 된 항목이 없지만 조직은이를 채워 가장 안전한 환경을 제공 하는 것이 좋습니다.
 

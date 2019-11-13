@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575497"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593762"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 내부 스토리지로 사용합니다. 기본적으로 데이터베이스 이름은 각각 ReportServer와 ReportServerTempdb입니다. ReportServerTempdb는 기본 보고서 서버 데이터베이스로 생성되며 임시 데이터, 세션 정보 및 캐시된 보고서를 저장하는 데 사용됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575497"
   
  보고서 서버 데이터베이스의 관리를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다양한 도구를 제공합니다.  
   
--   보고서 서버 데이터베이스를 백업/복원, 이동 또는 복구하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 또는 데이터베이스 명령 프롬프트 유틸리티를 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)을 참조하세요.  
+-   보고서 서버 데이터베이스를 백업/복원, 이동 또는 복구하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 또는 데이터베이스 명령 프롬프트 유틸리티를 사용합니다. 지침은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)를 참조하세요.  
   
 -   기존 데이터베이스 내용을 다른 보고서 서버 데이터베이스에 복사하려면 다른 보고서 서버 인스턴스에 보고서 서버 데이터베이스의 복사본을 연결하여 사용합니다. 또는 SOAP 호출을 사용하는 스크립트를 만들어서 실행하여 새 데이터베이스에 보고서 서버 내용을 다시 만들 수 있습니다. **rs** 유틸리티를 사용하여 스크립트를 실행할 수 있습니다.  
   

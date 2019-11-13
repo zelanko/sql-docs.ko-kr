@@ -1466,7 +1466,7 @@
     - name: Oracle 연결 관리자
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Oracle 원본
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Oracle 대상
       href: ../integration-services/data-flow/oracle-destination.md
     - name: 데이터 형식 지원

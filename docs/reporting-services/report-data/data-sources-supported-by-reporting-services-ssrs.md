@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 2a0777bc6d51ca99da3e52fc533306b49390d173
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951781"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593948"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "71951781"
   
  예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 확장 프로그램은 OLEDB-MD입니다.  
   
- 많은 타사 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=51456) 와 타사 사이트에서 다운로드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공개 포럼에서 타사 데이터 공급자에 대한 정보를 검색할 수도 있습니다.  
+ 많은 타사 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/default.aspx) 와 타사 사이트에서 다운로드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공개 포럼에서 타사 데이터 공급자에 대한 정보를 검색할 수도 있습니다.  
   
 > [!NOTE]  
 >  표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 제공하는 기능 중 일부를 지원하지 않을 수 있습니다. 또한 일부 OLE DB 데이터 공급자 및 ODBC 드라이버의 경우 보고서를 제작하고 미리 보는 데 사용할 수 있지만 보고서 서버에 게시된 보고서를 지원하지 않을 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet은 보고서 서버에서 지원되지 않습니다. 자세한 내용은 [데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자&#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)를 참조하세요.  
@@ -114,7 +114,7 @@ ms.locfileid: "71951781"
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 Hyperion 설명서를 참조하십시오.|Y|해당 사항 없음|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|해당 사항 없음|  
 |Oracle 관계형 데이터베이스|[Oracle](#OracleClient)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Oracle 클라이언트 구성 요소 12c 이상 필요|Y|해당 사항 없음|Oracle 11g, 11g R2, 12c|Y|Y|  
 |Teradata |[Teradata](#Teradata)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Teradata의 .NET Data Provider for Teradata 확장<br /><br /> Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|Y|해당 사항 없음|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
-|DB2 관계형 데이터베이스|사용자 지정 및 등록된 데이터 확장 프로그램 이름||2004 Host Integration (HI) Server<br /><br /> [HI Server 설명서](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)(영문)를 참조하세요.|Y|해당 사항 없음|해당 사항 없음|Y|N|  
+|DB2 관계형 데이터베이스|사용자 지정 및 등록된 데이터 확장 프로그램 이름||2004 Host Integration (HI) Server<br /><br /> |Y|해당 사항 없음|해당 사항 없음|Y|N|  
 |일반 OLE DB 데이터 원본|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|OLE DB를 지원하는 모든 데이터 원본<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 사항 없음|OLE DB를 지원하는 모든 데이터 원본 [참고](#OLEDBStandard)를 참조하십시오.|Y|해당 사항 없음|  
 |일반 ODBC 데이터 원본|[ODBC](#ODBCGeneric)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ODBC를 지원하는 모든 데이터 원본.<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 사항 없음|ODBC를 지원하는 모든 데이터 원본. [참고](#ODBCGeneric)를 참조하십시오.|Y|Y|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71951781"
 > [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 처리 확장 프로그램은 현재 지원되지 않습니다.  
   
- 보고서 작성기에서 지원하는 데이터 처리 확장 프로그램에 대한 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 에서 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://go.microsoft.com/fwlink/?LinkId=154494) 을 참조하세요.  
+ 보고서 작성기에서 지 원하는 데이터 처리 확장 프로그램에 대 한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조 하세요.
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server 데이터 처리 확장 프로그램  
  데이터 원본 유형 **Microsoft SQL Server** 는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 래핑하고 확장합니다. 이 데이터 처리 확장 프로그램은 x86 및 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]기반 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
@@ -235,7 +235,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  이 확장 프로그램은 명명된 매개 변수를 지원합니다. Oracle 버전 11g 이상의 경우 다중값 매개 변수가 지원됩니다. 위치에 종속적인 명명되지 않은 매개 변수의 경우 데이터 공급자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle과 함께 OLE DB 데이터 처리 확장 프로그램을 사용합니다. Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](https://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](https://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
- 다중 입력 매개 변수를 사용하여 저장 프로시저에서 데이터를 검색할 수 있지만 저장 프로시저는 하나의 출력 커서만 반환해야 합니다. 자세한 내용은 [DataReader를 사용하여 데이터 검색(Retrieving Data Using the DataReader)](https://go.microsoft.com/fwlink/?LinkId=81758)의 Oracle 섹션을 참조하십시오.  
+ 다중 입력 매개 변수를 사용하여 저장 프로시저에서 데이터를 검색할 수 있지만 저장 프로시저는 하나의 출력 커서만 반환해야 합니다. 자세한 내용은 "DataReader를 사용 하 여 데이터 검색"의 [ORACLE REF cursor를 사용 하 여 결과 반환](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) 을 참조 하세요.
   
  자세한 내용은 [Oracle 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요.  
   
@@ -290,7 +290,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  지정할 수 있는 자격 증명은 클라이언트 애플리케이션에서 사용하는 구현에 따라 다릅니다. 자세한 내용은 [SharePoint 목록 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)을 참조하세요.  
   
 ###  <a name="XML"></a> XML 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -304,13 +304,13 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  자세한 내용은 [Hyperion Essbase 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)를 참조하십시오.  
   
- [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]에 대한 자세한 내용은 [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용](https://go.microsoft.com/fwlink/?LinkId=81970)을 참조하십시오.  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]에 대한 자세한 내용은 [Hyperion Essbase와 함께 SQL Server Reporting Services 사용](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)을 참조하세요. 
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

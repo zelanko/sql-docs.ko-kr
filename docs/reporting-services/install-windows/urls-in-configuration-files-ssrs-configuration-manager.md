@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69f198696c434f53dfbef328bdbf3b9be832ca11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65370166"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593931"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>구성 파일의 URL(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에 애플리케이션 설정을 저장합니다. 이 파일에는 URL과 URL 예약, 두 가지에 대한 구성 설정이 포함됩니다. 이 두 구성 설정의 용도와 수정 규칙은 완전히 다릅니다. 구성 파일을 수정한 배포 튜닝에 익숙하다면 이 항목을 통해 각 URL 설정을 사용하는 방법을 보다 쉽게 이해할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "65370166"
 #### <a name="urls-for-application-access"></a>애플리케이션 액세스용 URL  
  URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. URL을 구성하려면 Reporting Services 구성 도구를 사용해야 합니다. 이 도구를 통해 HTTP.SYS에 각 애플리케이션에 대한 URL 예약을 만들고 RSReportServer.config의 **URLReservations** 섹션에 URL에 대한 항목을 추가합니다.  
   
--   **URLReservations** 섹션의 각 요소에 대한 설명은 [온라인 설명서에서](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) RsReportServer.config 구성 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+-   **URLReservations** 섹션의 각 요소에 대한 설명은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
 -   **UrlString** 요소만 사용하는 구문에 대한 자세한 내용은 [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)을 참조하세요.  
   

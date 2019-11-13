@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702701"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594372"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정
 
-17.4 버전부터 드라이버는 Secure Enclaves를 사용 하 여 Always Encrypted을 지원 합니다. SQL Server 2019 이상에 연결할 때 enclave를 사용 하도록 설정 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 enclave 유형 및 증명 프로토콜의 이름과 연결 된 증명 데이터를 쉼표로 구분 하 여 설정 합니다. 버전 17.4에서는로 `VBS-HGS`표시 되는 [가상화 기반 Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type 및 [Host 보호자 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜만 지원 됩니다 .이를 사용 하려면 증명 서버의 URL을 지정 합니다. 예를 들면 다음과 같습니다.
+버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 enclave 유형 및 증명 프로토콜 이름으로 설정 하 고, 연결 된 증명 데이터를 쉼표로 구분 하 여 설정 합니다. 버전 17.4에서는 `VBS-HGS`로 표시 되는 [가상화 기반 Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave Type 및 [Host 보호자 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜만 지원 됩니다. 이를 사용 하려면 증명 서버의 URL을 지정 합니다. 예를 들면 다음과 같습니다.
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -631,4 +631,3 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 - [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

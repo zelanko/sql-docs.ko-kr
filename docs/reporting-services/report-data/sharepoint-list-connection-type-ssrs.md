@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499979"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593953"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
@@ -90,7 +90,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  여러 목록에서 필드를 선택할 수는 없습니다. 각 목록에 대해 데이터 세트를 만들고 각 데이터 세트에서 필드를 선택할 수 있습니다. 목록에 공용 필드가 있는 경우, 한 데이터 세트에 바인딩된 테이블릭스 데이터 영역에서 Lookup 함수를 사용하여 데이터 영역에 바인딩되지 않는 다른 데이터 세트의 값을 검색할 수 있습니다. 자세한 내용은 [조회 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 참조하세요.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 세트 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 세트 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
@@ -98,7 +98,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 -   **쿼리 결과**  쿼리 실행 시 반환되는 예제 행을 표시합니다. SharePoint 사이트에서 SharePoint 목록 값이 자주 변경되는 경우 쿼리 결과 창에 표시되는 값과 보고서에 표시되는 값이 다를 수 있습니다.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 세트 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 세트 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
@@ -178,7 +178,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
 
 ## <a name="see-also"></a>참고 항목

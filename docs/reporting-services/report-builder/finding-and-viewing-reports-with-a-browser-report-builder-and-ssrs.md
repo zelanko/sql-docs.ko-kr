@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580751"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594002"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   지원되는 웹 브라우저에서 보고서 서버에 직접 연결하여 보고서를 볼 수 있습니다. 모든 보고서에는 보고서 서버에 대한 URL 주소가 있습니다. 보고서의 웹 주소를 입력하여 웹 애플리케이션과는 상관없이 브라우저 창에 보고서를 열 수 있습니다. 보고서는 HTML 형식으로 열리고 페이지를 탐색하거나 보고서 내의 데이터 값을 검색하는 데 사용할 수 있는 보고서 도구 모음이 함께 표시됩니다. URL에 매개 변수를 설정하여 도구 모음을 숨기거나 보고서의 출력 형식을 선택할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "65580751"
 > [!NOTE]  
 >  핸드헬드 디바이스에서 보고서에 액세스할 경우 브라우저를 사용하여 보고서를 열어야 합니다. 보고서 관리자는 핸드헬드 디바이스에서 사용할 수 없습니다.  
   
- 사용할 수 있는 브라우저 종류에 대한 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "Reporting Services에서 지원하는 브라우저 종류(Browser Types Supported by Reporting Services)"를 참조하십시오.  
+ 사용할 수 있는 브라우저 형식에 대 한 자세한 내용은 [Reporting Services 및 파워 뷰에 대 한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조 하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ ms.locfileid: "65580751"
   
  Internet Explorer에서 URL에 사용할 수 있는 문자는 최대 2,083자까지입니다. 자세한 내용은 [Internet Explorer의 최대 URL 길이(Maximum URL length in Internet Explorer)](https://support.microsoft.com/kb/208427)를 참조하십시오.  
   
- URL을 통해 보고서에 액세스하는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스(URL Access)"를 참조하십시오.  
+ URL을 통해 보고서에 액세스하는 방법 및 URL의 구조에 대한 자세한 내용은 [URL 액세스](../../reporting-services/url-access-ssrs.md)를 참조하세요.  
   
   

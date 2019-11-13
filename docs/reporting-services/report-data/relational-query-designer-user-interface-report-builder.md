@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499578"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593385"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 세트에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases와 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "66499578"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]를 참조하세요. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)을 참조하세요.  
   
  다음 표에서는 집계를 나열하고 각 집계에 대한 간단한 설명을 제공합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66499578"
   
 -   **왼쪽 테이블** 조인 관계에 속하는 첫 번째 테이블의 이름이 표시됩니다.  
   
--   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다. 조인 유형에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687) 에 있는 "조인 기본 사항"을 참조하십시오.  
+-   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다.  
   
 -   **오른쪽 테이블** 조인 관계에서 두 번째 테이블의 이름이 표시됩니다.  
   

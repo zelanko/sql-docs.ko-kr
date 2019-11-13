@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225674"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593854"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>확장 배포의 암호화 키 추가 및 제거
   여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 스케일 아웃 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행할 수 있습니다. 스케일 아웃 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 스케일 아웃 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "63225674"
     ```  
 4. Reporting Services Windows 서비스를 다시 시작합니다.
   
- 이 단계를 수행하면 스케일 아웃 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 스케일 아웃 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
+ 이 단계를 수행하면 스케일 아웃 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 스케일 아웃 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   

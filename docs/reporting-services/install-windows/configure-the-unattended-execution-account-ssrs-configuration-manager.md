@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502942"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593311"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
   
--   데이터베이스 인증을 사용하는 보고서에 대해 네트워크로 연결 요청을 전송하거나 인증을 요구 또는 사용하지 않는 외부 보고서 데이터 원본에 연결합니다. 자세한 내용은 SQL Server 온라인 설명서에서 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 을 참조하세요.  
-  
+-   데이터베이스 인증을 사용하는 보고서에 대해 네트워크로 연결 요청을 전송하거나 인증을 요구 또는 사용하지 않는 외부 보고서 데이터 원본에 연결합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.
+
 -   보고서에 사용되는 외부 이미지 파일 검색. 이미지 파일을 사용하려는 경우 익명 액세스를 통해 해당 파일에 액세스할 수 없으면 무인 모드로 실행되는 보고서 처리 계정을 구성하고 이 계정에 해당 파일에 액세스할 수 있는 권한을 부여할 수 있습니다.  
   
  무인 모드로 실행되는 보고서 처리란 사용자 요청 대신 이벤트(일정 기반 이벤트 또는 데이터 새로 고침 이벤트)에 의해 트리거되는 모든 보고서 실행 프로세스를 말합니다. 보고서 서버는 무인 모드로 실행되는 보고서 처리 계정을 사용하여 외부 데이터 원본을 호스팅하는 컴퓨터에 로그온합니다. 보고서 서버 서비스 계정의 자격 증명은 다른 컴퓨터에 연결할 때 사용되지 않으므로 이 계정이 필요합니다.  
@@ -56,8 +56,8 @@ ms.locfileid: "65502942"
   
      **rsconfig -e -u\<도메인/사용자 이름> -p\<암호>**  
   
- **rsconfig -e** 는 추가 인수를 지원합니다. 구문에 대한 자세한 내용 및 명령 예제를 보려면 SQL Server 온라인 설명서에서 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)를 참조하세요.  
-  
+ **rsconfig -e** 는 추가 인수를 지원합니다. 구문에 대한 자세한 내용 및 명령 예제를 보려면 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)을 참조하세요.
+ 
 ### <a name="how-account-information-is-stored"></a>계정 정보를 저장하는 방법  
  계정을 설정하면 로컬 또는 원격 보고서 서버 인스턴스의 RSreportserver.config 파일에 다음 설정이 암호화된 값으로 지정됩니다.  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502942"
  계정 정보가 RSReportServer.config 파일에서 제거됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 구성 관리자(SSRS 기본 모드)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 구성 관리자(SSRS 기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581621"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593799"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
 차트 데이터 영역을 사용하는 방법에 대해 읽고 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 읽는 사용자가 한 눈에 집계된 많은 양의 데이터를 이해할 수 있도록 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "65581621"
 ##  <a name="SimilarMatrix"></a>행렬같은 차트 방식  
  차트 작동 방식을 설명하는 방법 중 하나는 행렬과 비교하는 것입니다.  
   
- ![도구 상자에서 추가된 새 행렬 선택](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
+ ![도구 상자에서 추가된 새 행렬이 선택됨](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬이 선택됨")  
   
  개념상 차트와 행렬의 구성은 동일합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65581621"
 ##  <a name="DatasetConsiderations"></a> 차트를 만들기 전의 데이터 세트 고려 사항  
  차트는 데이터에 대한 요약 보기를 제공합니다. 그러나 데이터 세트가 큰 경우에는 차트의 정보가 가려지거나 알아볼 수 없게 표시될 수 있습니다. 누락된 또는 Null 데이터 요소, 차트 종류에 맞지 않는 데이터 형식, 차트와 테이블을 조합하는 등의 고급 애플리케이션은 모두 차트의 가독성에 영향을 미칠 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 디자인하기 전에 신중하게 데이터를 준비하고 이해해야 합니다.  
   
- 보고서에 포함할 수 있는 차트의 수에는 제한이 없습니다. 차트는 행렬 또는 테이블 등의 다른 데이터 영역과 마찬가지로 단일 데이터 세트에 바인딩됩니다. 여러 데이터 세트를 같은 차트에 표시하려면 차트에 데이터를 추가하기 전에 SQL 쿼리에서 JOIN 또는 UNION 문을 사용하는 추가 데이터 세트를 만듭니다. JOIN 및 UNION 문에 대한 자세한 내용은 온라인 설명서나 다른 SQL 참조를 참조하십시오.  
+ 보고서에 포함할 수 있는 차트의 수에는 제한이 없습니다. 차트는 행렬 또는 테이블 등의 다른 데이터 영역과 마찬가지로 단일 데이터 세트에 바인딩됩니다. 여러 데이터 세트를 같은 차트에 표시하려면 차트에 데이터를 추가하기 전에 SQL 쿼리에서 JOIN 또는 UNION 문을 사용하는 추가 데이터 세트를 만듭니다.  
   
  세부 데이터가 필요 없거나 유용하지 않은 경우에는 데이터 세트 쿼리에서 데이터를 사전 집계하는 것을 고려하세요. 각 데이터 요소를 보다 명확하게 표시하려면 데이터 세트에서 범주의 수를 줄입니다. 데이터 세트를 필터링하거나 반환되는 행의 수를 줄이는 조건을 쿼리에 추가할 수 있습니다. 
   

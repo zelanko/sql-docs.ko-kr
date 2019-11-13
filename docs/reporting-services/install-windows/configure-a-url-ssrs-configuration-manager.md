@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447372"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594114"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 애플리케이션에 대해 URL이 이미 구성되어 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "62447372"
   
 -   추가 URL을 정의하는 고급 URL 속성 설정  
   
- URL이 저장되고 유지 관리되는 방식 및 상호 운용성 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
+ URL이 저장되고 유지 관리되는 방식 및 상호 운용성 문제에 대한 자세한 내용은 [URL 예약 및 등록 정보&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
@@ -143,7 +143,7 @@ ms.locfileid: "62447372"
   
  인증서가 등록되어 있는 정규화된 컴퓨터 이름을 지정합니다. 지정하는 이름은 인증서가 등록된 이름과 같아야 합니다.  
   
- 이 옵션을 사용하려면 인증서가 설치되어 있어야 합니다. RSReportServer.config 파일에서 UrlRoot 구성 설정도 수정하여 인증서가 등록되어 있는 컴퓨터의 정규화된 이름을 지정하도록 해야 합니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 기본 모드 보고서 서버에서 SSL 연결 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+ 이 옵션을 사용하려면 인증서가 설치되어 있어야 합니다. RSReportServer.config 파일에서 UrlRoot 구성 설정도 수정하여 인증서가 등록되어 있는 컴퓨터의 정규화된 이름을 지정하도록 해야 합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>고급 URL 속성을 설정하려면  
   

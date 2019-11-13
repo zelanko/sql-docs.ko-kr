@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 31f81cb2e12360956d14d1706b119233add94a35
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026641"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594099"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,9 +56,9 @@ Microsoft JDBC Driver for SQL Server는 다음과 같은 기본 제공 열 마�
 이러한 모든 키 저장소 공급자에 대 한 자세한 내용은 다음 섹션을 참조 하십시오. Always Encrypted 사용할 키 저장소 공급자를 하나만 구현 하면 됩니다.
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). SQL Server 용 Microsoft JDBC Driver에는 Azure Key Vault에 저장 된 키를 포함 하는 응용 프로그램에 대 한 기본 제공 공급자 인 SQLServerColumnEncryptionAzureKeyVaultProvider이 포함 되어 있습니다. 이 공급자의 이름은 AZURE_KEY_VAULT입니다. Azure Key Vault 저장소 공급자를 사용 하기 위해 응용 프로그램 개발자는 Azure Key Vault에서 자격 증명 모음 및 키를 만들고 Azure Active Directory에서 앱 등록을 만들어야 합니다. Always Encrypted와 함께 사용 하기 위해 생성 된 key vault에 대해 정의 된 액세스 정책에서 등록 된 응용 프로그램에는 Get, 암호 해독, 암호화, 래핑 해제 키, 키 래핑 및 인증 권한 확인 권한이 있어야 합니다. 주요 자격 증명 모음을 설정 하 고 열 마스터 키를 만드는 방법에 대 한 자세한 내용은 [Azure Key Vault-](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) 단계별 및 [Azure Key Vault에서 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조 하세요.
+Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). SQL Server 용 Microsoft JDBC Driver에는 Azure Key Vault에 저장 된 키를 포함 하는 응용 프로그램에 대 한 기본 제공 공급자 인 SQLServerColumnEncryptionAzureKeyVaultProvider이 포함 되어 있습니다. 이 공급자의 이름을 AZURE_KEY_VAULT 합니다. Azure Key Vault 저장소 공급자를 사용 하기 위해 응용 프로그램 개발자는 Azure Key Vault에서 자격 증명 모음 및 키를 만들고 Azure Active Directory에서 앱 등록을 만들어야 합니다. Always Encrypted와 함께 사용 하기 위해 생성 된 key vault에 대해 정의 된 액세스 정책에서 등록 된 응용 프로그램에는 Get, 암호 해독, 암호화, 래핑 해제 키, 키 래핑 및 인증 권한 확인 권한이 있어야 합니다. 주요 자격 증명 모음을 설정 하 고 열 마스터 키를 만드는 방법에 대 한 자세한 내용은 [Azure Key Vault-](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) 단계별 및 [Azure Key Vault에서 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조 하세요.
 
-이 페이지의 예제에서는 SQL Server Management Studio를 사용 하 여 Azure Key Vault 기반 열 마스터 키 및 열 암호화 키를 만든 경우이를 다시 만드는 T-sql 스크립트는 고유한 특정 **KEY_PATH** 을 사용 하 여이 예제와 유사 하 게 보일 수 있습니다. 및 **ENCRYPTED_VALUE**:
+이 페이지의 예제에서는 SQL Server Management Studio를 사용 하 여 Azure Key Vault 기반 열 마스터 키 및 열 암호화 키를 만든 경우이를 다시 만드는 T-sql 스크립트는 고유한 특정 **KEY_PATH** 및 **ENCRYPTED_VALUE**를 사용 하 여이 예제와 유사 하 게 보일 수 있습니다.
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -87,7 +87,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 **clientID** 는 Azure Active Directory 인스턴스에서 앱 등록의 응용 프로그램 ID입니다. **Clientkey** 는 해당 응용 프로그램에 등록 된 키 암호로, Azure Key Vault에 대 한 API 액세스를 제공 합니다.
 
-응용 프로그램에서 SQLServerColumnEncryptionAzureKeyVaultProvider의 인스턴스를 만든 후에는 SQLServerConnection Sqlconnection.registercolumnencryptionkeystoreproviders () 메서드를 사용 하 여 해당 인스턴스를 드라이버에 등록 해야 합니다. SQLServerColumnEncryptionAzureKeyVaultProvider getName () API를 호출 하 여 얻을 수 있는 기본 조회 이름인 AZURE_KEY_VAULT를 사용 하 여 인스턴스를 등록 하는 것이 좋습니다. 기본 이름을 사용 하면 SQL Server Management Studio 또는 PowerShell과 같은 도구를 사용 하 여 Always Encrypted 키를 프로 비전 하 고 관리할 수 있습니다. 도구는 기본 이름을 사용 하 여 열 마스터 키에 대 한 메타 데이터 개체를 생성 합니다. 다음 예에서는 Azure Key Vault 공급자를 등록 하는 방법을 보여 줍니다. SQLServerConnection () 메서드에 대 한 자세한 내용은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조 하세요.
+응용 프로그램에서 SQLServerColumnEncryptionAzureKeyVaultProvider의 인스턴스를 만든 후에는 SQLServerConnection Sqlconnection.registercolumnencryptionkeystoreproviders () 메서드를 사용 하 여 해당 인스턴스를 드라이버에 등록 해야 합니다. SQLServerColumnEncryptionAzureKeyVaultProvider (getName) API를 호출 하 여 얻을 수 있는 기본 조회 이름인 AZURE_KEY_VAULT를 사용 하 여 인스턴스를 등록 하는 것이 좋습니다. 기본 이름을 사용 하면 SQL Server Management Studio 또는 PowerShell과 같은 도구를 사용 하 여 Always Encrypted 키를 프로 비전 하 고 관리할 수 있습니다. 도구는 기본 이름을 사용 하 여 열 마스터 키에 대 한 메타 데이터 개체를 생성 합니다. 다음 예에서는 Azure Key Vault 공급자를 등록 하는 방법을 보여 줍니다. SQLServerConnection () 메서드에 대 한 자세한 내용은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조 하세요.
 
 ```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
@@ -107,9 +107,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SSMS (SQL Server Management Studio) Always Encrypted 마법사나 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키 및 열 암호화 키 정의를 만들 수 있습니다. 동일한 마법사를 사용 하 여 Windows 인증서 저장소에서 Always Encrypted 데이터에 대 한 열 마스터 키로 사용할 수 있는 자체 서명 된 인증서를 생성할 수 있습니다. 열 마스터 키 및 열 암호화 키 T-sql 구문에 대 한 자세한 내용은 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 열 [암호화 키](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각 만들기를 참조 하세요.
 
-SQLServerColumnEncryptionCertificateStoreProvider의 이름은 MSSQL_CERTIFICATE_STORE이 고 공급자 개체의 getName () API를 통해 쿼리할 수 있습니다. 이 파일은 드라이버에 의해 자동으로 등록 되며 응용 프로그램을 변경 하지 않고 원활 하 게 사용할 수 있습니다.
+SQLServerColumnEncryptionCertificateStoreProvider 이름은 MSSQL_CERTIFICATE_STORE 되며 공급자 개체의 getName () API를 통해 쿼리할 수 있습니다. 이 파일은 드라이버에 의해 자동으로 등록 되며 응용 프로그램을 변경 하지 않고 원활 하 게 사용할 수 있습니다.
 
-이 페이지의 예제에서는 SQL Server Management Studio를 사용 하 여 열 마스터 키 및 열 암호화 키를 사용 하 여 Windows 인증서 저장소를 만든 경우이를 다시 만드는 T-sql 스크립트는 고유한 특정 KEY_을 사용 하 여이 예제와 유사 하 게 보일 수 있습니다.  **경로** 및 **ENCRYPTED_VALUE**:
+이 페이지의 예제에서는 SQL Server Management Studio를 사용 하 여 열 마스터 키 및 열 암호화 키를 사용 하 여 Windows 인증서 저장소를 만든 경우이를 다시 만드는 T-sql 스크립트는 고유한 특정 **KEY_PATH** 및 **ENCRYPTED_VALUE**를 사용 하 여이 예제와 유사 하 게 보일 수 있습니다.
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -129,14 +129,14 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 이 문서의 다른 키 저장소 공급자는 드라이버에서 지 원하는 모든 플랫폼에서 사용할 수 있지만 JDBC 드라이버의 SQLServerColumnEncryptionCertificateStoreProvider 구현은 Windows 운영 체제 에서만 사용할 수 있습니다. 드라이버 패키지에서 사용할 수 있는 sqljdbc_auth에 대 한 종속성이 있습니다. 이 공급자를 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 이 문서의 다른 키 저장소 공급자는 드라이버에서 지 원하는 모든 플랫폼에서 사용할 수 있지만 JDBC 드라이버의 SQLServerColumnEncryptionCertificateStoreProvider 구현은 Windows 운영 체제 에서만 사용할 수 있습니다. 드라이버 패키지에서 사용할 수 있는 sqljdbc_auth .dll에 대 한 종속성이 있습니다. 이 공급자를 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java 키 저장소 공급자 사용
-JDBC 드라이버는 Java 키 저장소를 위해 기본 제공된 키 저장소 공급자 구현을 제공합니다. Keyvault **authentication** 연결 문자열 속성이 연결 문자열에 있고 "JavaKeyStorePassword"로 설정 된 경우 드라이버는 Java 키 저장소에 대 한 공급자를 자동으로 인스턴스화하고 등록 합니다. Java 키 저장소 공급자의 이름은 MSSQL_JAVA_KEYSTORE입니다. 이 이름은 SQLServerColumnEncryptionJavaKeyStoreProvider (getName) API를 사용 하 여 쿼리할 수도 있습니다. 
+JDBC 드라이버는 Java 키 저장소를 위해 기본 제공된 키 저장소 공급자 구현을 제공합니다. **Keyvault authentication** 연결 문자열 속성이 연결 문자열에 있고 "JavaKeyStorePassword"로 설정 된 경우 드라이버는 Java 키 저장소에 대 한 공급자를 자동으로 인스턴스화하고 등록 합니다. Java 키 저장소 공급자의 이름이 MSSQL_JAVA_KEYSTORE. 이 이름은 SQLServerColumnEncryptionJavaKeyStoreProvider (getName) API를 사용 하 여 쿼리할 수도 있습니다. 
 
 클라이언트 응용 프로그램에서 Java 키 저장소에 인증 하는 데 필요한 자격 증명을 지정 하는 데 사용할 수 있는 세 가지 연결 문자열 속성이 있습니다. 드라이버는 연결 문자열에 있는이 세 속성의 값을 기준으로 공급자를 초기화 합니다.
 
-**Keyvault 인증:** 사용할 Java 키 저장소를 식별 합니다. SQL Server에 대 한 Microsoft JDBC Driver 6.0 이상에서이 속성을 통해서만 Java 키 저장소에 인증할 수 있습니다. Java 키 저장소의 경우이 속성의 값은 이어야 `JavaKeyStorePassword`합니다.
+**Keyvault 인증:** 사용할 Java 키 저장소를 식별 합니다. SQL Server에 대 한 Microsoft JDBC Driver 6.0 이상에서이 속성을 통해서만 Java 키 저장소에 인증할 수 있습니다. Java 키 저장소의 경우이 속성의 값은 `JavaKeyStorePassword`이어야 합니다.
 
 **keyStoreLocation:** 열 마스터 키를 저장 하는 Java 키 저장소 파일의 경로입니다. 경로에는 키 저장소 파일 이름이 포함 됩니다.
 
@@ -520,15 +520,15 @@ catch (SQLException e) {
 
 ### <a name="unsupported-data-type-conversion-errors"></a>지원되지 않는 데이터 형식 변환 오류
 
-상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지하기 위해 수행할 수 있는 작업은 다음과 같습니다. 다음을 확인 합니다.
+상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지하기 위해 수행할 수 있는 작업은 다음과 같습니다. 확인할 사항은 다음과 같습니다.
 
 - 암호화 된 열을 대상으로 하는 매개 변수의 값을 전달할 때 적절 한 setter 메서드를 사용 합니다. 매개 변수의 SQL Server 데이터 형식이 대상 열의 형식과 정확 하 게 일치 하거나 매개 변수의 SQL Server 데이터 형식이 열의 대상 형식으로 변환 되었는지 확인 하십시오. API 메서드는 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가 되어 특정 SQL Server 데이터 형식에 해당 하는 매개 변수를 전달 합니다. 예를 들어 열이 암호화 되지 않은 경우 setTimestamp () 메서드를 사용 하 여 매개 변수를 datetime2 또는 datetime 열에 전달할 수 있습니다. 그러나 열이 암호화 된 경우에는 데이터베이스의 열 유형을 나타내는 정확한 메서드를 사용 해야 합니다. 예를 들어 setTimestamp ()를 사용 하 여 암호화 된 datetime2 열에 값을 전달 하 고 Settimestamp ()을 사용 하 여 값을 암호화 된 datetime 열에 전달 합니다. 새 Api의 전체 목록은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) 를 참조 하세요.
 - SQL Server 데이터 형식이 decimal 및 numeric인 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다. Decimal 및 numeric 데이터 형식을 나타내는 매개 변수/열에 대 한 데이터 값과 함께 전체 자릿수 및 소수 자릿수를 허용 하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가 되었습니다. 새/오버 로드 된 Api의 전체 목록은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) 를 참조 하세요.  
-- datetime2, datetimeoffset 또는 time SQL Server 데이터 형식의 열을 대상으로 하는 매개 변수의 소수 자릿수 초의 전체 자릿수/소수 자릿수는 대상 열의 값을 수정 하는 쿼리의 대상 열에 대 한 소수 자릿수 초의 전체 자릿수/소수 자릿수 보다 크지 않습니다. . SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 API 메서드를 추가 하 여 이러한 데이터 형식을 나타내는 매개 변수의 데이터 값과 함께 소수 자릿수 초의 전체 자릿수/소수 자릿수를 허용 합니다. 새/오버 로드 된 Api의 전체 목록은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조 하세요.
+- datetime2, datetimeoffset 또는 time SQL Server 데이터 형식의 열을 대상으로 하는 매개 변수의 소수 자릿수 초의 전체 자릿수/소수 자릿수는 대상 열의 값을 수정 하는 쿼리의 대상 열에 대 한 소수 자릿수 초의 전체 자릿수/소수 자릿수 보다 크지 않습니다. SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 API 메서드를 추가 하 여 이러한 데이터 형식을 나타내는 매개 변수의 데이터 값과 함께 소수 자릿수 초의 전체 자릿수/소수 자릿수를 허용 합니다. 새/오버 로드 된 Api의 전체 목록은 [JDBC 드라이버에 대 한 ALWAYS ENCRYPTED API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조 하세요.
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>잘못 된 연결 속성으로 인 한 오류
 
-이 섹션에서는 Always Encrypted 데이터를 사용 하도록 연결 설정을 적절히 구성 하는 방법을 설명 합니다. 암호화 된 데이터 형식은 제한 된 변환을 지원 하므로 암호화 된 열을 사용할 때 **sendTimeAsDatetime** 및 **sendStringParametersAsUnicode** 연결 설정에 적절 한 구성이 필요 합니다. 다음을 확인 합니다.
+이 섹션에서는 Always Encrypted 데이터를 사용 하도록 연결 설정을 적절히 구성 하는 방법을 설명 합니다. 암호화 된 데이터 형식은 제한 된 변환을 지원 하므로 암호화 된 열을 사용할 때 **sendTimeAsDatetime** 및 **sendStringParametersAsUnicode** 연결 설정에 적절 한 구성이 필요 합니다. 확인할 사항은 다음과 같습니다.
 
 - [sendTimeAsDatetime](setting-the-connection-properties.md) 연결 설정은 암호화 된 시간 열에 데이터를 삽입할 때 false로 설정 됩니다. 자세한 내용은 [java. 시간 값을 서버로 보내는 방법 구성](configuring-how-java-sql-time-values-are-sent-to-the-server.md)을 참조 하세요.
 - [sendStringParametersAsUnicode](setting-the-connection-properties.md) 연결 설정은 암호화 된 char/varchar/varchar (max) 열에 데이터를 삽입할 때 true로 설정 되거나 기본값으로 유지 됩니다.
