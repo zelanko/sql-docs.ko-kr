@@ -38,15 +38,15 @@ ms.locfileid: "71952265"
   
 -   Reporting Services에는 SharePoint 제품용 추가 기능이 포함되어 있습니다. 해당 추가 기능 및 보고서 서버에 대해 지원되는 구성은 여기에 표시된 것보다 더 세분되어 있습니다. 자세한 내용은 [지원 되는 SharePoint 및 Reporting Services 서버 조합 및 &#40;SQL Server 2014&#41;의 추가 기능](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조 하세요.  
   
--   SharePoint 개발자 도구는 SharePoint 독립 실행형 구성만 지원합니다.  자세한 내용은 SharePoint 설명서를 참조 하십시오. [SharePoint 솔루션 개발을 위한 요구 사항](https://msdn.microsoft.com/library/ee231582.aspx)  
+-   SharePoint 개발자 도구는 SharePoint 독립 실행형 구성만 지원합니다.  자세한 내용은 SharePoint 설명서: [Sharepoint 솔루션 개발을 위한 요구 사항](https://msdn.microsoft.com/library/ee231582.aspx)을 참조 하세요.  
   
 ##  <a name="bkmk_vers"></a>SharePoint 버전 및 BI 기능 지원  
  일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence 기능은 SharePoint 제품의 특정 버전에서만 지원됩니다.  
   
 |지원되는 기능|SharePoint 제품|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition 용  @ no__t 추가 기능의 기능입니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
-|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition 용 추가 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능입니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 참조하세요.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
+|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 을 참조하세요.|  
   
  자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)을 참조 하세요.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71952265"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하려고 합니다.  
   
- S p 1이 @no__t 실행 되는 SharePoint 설치에는 s p 1이 필요 합니다.-0은 이전 릴리스에서 더 이상 사용 되지 않는 데이터베이스 엔진 기능 **sp_dboption**은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 더 이상 사용 되지 않습니다. 자세한 내용은 [SQL Server 2014에서](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) 지원 되지 않는 데이터베이스 엔진 기능을 참조 하세요.  
+ S p 1을 실행 하는 SharePoint 설치에는 s p 1이 필요 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]는 이전 릴리스에서 더 이상 사용 되지 않는 데이터베이스 엔진 기능 **sp_dboption**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 더 이상 사용 되지 않습니다. 자세한 내용은 [SQL Server 2014에서](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) 지원 되지 않는 데이터베이스 엔진 기능을 참조 하세요.  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 설치 지침  
  [SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkID=219697) s p 1을 다운로드 하 여 팜의 모든 서버에 적용 합니다.  
@@ -67,9 +67,9 @@ ms.locfileid: "71952265"
   
 -   **SharePoint 제품 구성 마법사:** 마법사를 실행 하 여 SP1 업그레이드 및 구성을 완료 합니다.  
   
--   **Psconfig.exe를 사용 하 여 업그레이드를 완료 합니다.** @No__t-0 명령을 실행 하 여 SP1 업그레이드를 완료 합니다.  
+-   **Psconfig.exe를 사용 하 여 업그레이드를 완료 합니다.** 명령 `psconfig -upgrade`를 실행 하 여 SP1 업그레이드를 완료 합니다.  
   
- 자세한 내용은 [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) 및 [resource center의 "업그레이드" 섹션을 참조 하세요. SharePoint 2010 제품에 대 한 업데이트 @ no__t-0  
+ 자세한 내용은 [(Sharepoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) 의 "업그레이드" 섹션 및 [리소스 센터: Sharepoint 2010 제품용 업데이트](https://technet.microsoft.com/sharepoint/ff800847.aspx) 를 참조 하세요.  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>SQL Server BI 기능을 사용한 SharePoint 설치  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71952265"
   
 |구성 요소|작업|  
 |---------------|------------|  
-|Reporting Services 추가 기능|SharePoint 2010 제품 준비 도구는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 Reporting Services 추가 기능을 설치합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능에 필요한 최신 버전의 추가 기능이 포함됩니다. 추가 기능은 MSDN에서 다운로드하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 설치할 수 있습니다. 최신 버전의 추가 기능과이를 설치 하는 방법에 대 한 자세한 내용은 [Sharepoint 제품용 Reporting Services 추가 기능을 찾을](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) 수 있는 위치 및 [Sharepoint &#40; 용 Reporting Services 추가 기능 설치 또는 제거를 참조 하세요. SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
+|Reporting Services 추가 기능|SharePoint 2010 제품 준비 도구는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 Reporting Services 추가 기능을 설치합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능에 필요한 최신 버전의 추가 기능이 포함됩니다. 추가 기능은 MSDN에서 다운로드하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 설치할 수 있습니다. 최신 버전의 추가 기능과이를 설치 하는 방법에 대 한 자세한 내용은 [Sharepoint 제품용 Reporting Services 추가](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) 기능을 찾을 수 있는 위치 및 sharepoint [ &#40;&#41;Sharepoint 2010 및 sharepoint 2013 용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조 하십시오.|  
 |Analysis Services OLE DB 공급자(MSOLAP)|SharePoint 2010은 Excel Services 배포의 일환으로 SQL Server 2008 버전의 OLE DB 공급자를 설치합니다. 이 버전은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하지 않습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결을 지원하는 SharePoint 서버에는 더 높은 버전의 공급자를 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.|  
 |ADO.NET Services|SharePoint 2010의 필수 구성 요소 목록에는 ADO.NET Services가 포함되지만 필수 구성 요소 설치 관리자 프로그램이 이 서비스를 설치하지는 않습니다. ADO.NET Services를 추가하려면 수동으로 설치해야 합니다. SharePoint 목록을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 또는 Reporting Services 보고서에 대한 데이터 피드로 사용하려면 ADO.NET Services를 설치해야 합니다. 지침은 [ADO.NET 설치 Data Services를 참조 하 여 SharePoint 목록의 데이터 피드 내보내기를 지원](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)합니다.|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71952265"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint Server 2010   설치 및 배포](https://technet.microsoft.com/sharepoint/ee518643.aspx)  
+ [SharePoint Server 2010  설치 및 배포](https://technet.microsoft.com/sharepoint/ee518643.aspx)  
  [3 계층 팜을 위한 다중 서버 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

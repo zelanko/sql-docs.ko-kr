@@ -25,11 +25,11 @@ ms.locfileid: "71952047"
 >   
 >  -   [SQL Server 서비스 설치 개요](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)의 "SQL SERVER 2012 SP1" 섹션.  
   
- Analysis Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대한 서버 쪽 처리를 제공합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 Analysis Services와 함께 작동하며 SharePoint 통합, 부하 분산 및 연결 관리 기능을 추가합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 대규모 데이터 처리 기능과 Excel에서 제공 하는 데이터 렌더링 서비스를 결합 하 여 Excel Services를 확장 합니다.  
+ Analysis Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대한 서버 쪽 처리를 제공합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 Analysis Services와 함께 작동하며 SharePoint 통합, 부하 분산 및 연결 관리 기능을 추가합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 대규모 데이터 처리 기능과 Excel에서 제공 하는 데이터 렌더링 서비스를 쌍으로 연결 하 여 Excel Services를 확장 합니다.  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 설치하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]설치 미디어를 사용합니다.  
   
- 고급 배포 시나리오에 대 한 자세한 내용은 [Deployment 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot @ no__t-0 및 [Deployment 검사 목록: SharePoint 2010 팜 @ no__t-0에 PowerPivot 서버를 추가 하 여 확장 합니다.  
+ 고급 배포 시나리오에 대 한 지침은 [배포 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) 및 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
