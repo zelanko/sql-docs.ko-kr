@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988428"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593475"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 암호화 키 - 암호화된 보고서 서버 데이터 저장
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "72988428"
   
 -   보고서에 데이터를 제공하는 외부 데이터 원본에 연결하기 위해 보고서 서버에서 사용하는 저장된 자격 증명  
   
-     이러한 값은 보고서에 대한 데이터 원본 정보를 구성할 때 정의된 후 보고서 서버 데이터베이스에 암호화된 값으로 저장됩니다. 보고서 서버는 대칭 키를 사용하여 이 데이터를 암호화 및 해독합니다. 저장 프로시저에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+     이러한 값은 보고서에 대한 데이터 원본 정보를 구성할 때 정의된 후 보고서 서버 데이터베이스에 암호화된 값으로 저장됩니다. 보고서 서버는 대칭 키를 사용하여 이 데이터를 암호화 및 해독합니다. 저장된 자격 증명에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
 -   보고서에 사용되는 외부 이미지 파일이나 외부 데이터를 검색하기 위해 보고서 서버에서 다른 컴퓨터에 연결하는 데 사용하는 무인 사용자 계정  
   

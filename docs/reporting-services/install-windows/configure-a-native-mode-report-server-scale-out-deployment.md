@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500576"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593864"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
@@ -93,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작합니다.  
   
-3.  보고서 서버 웹 서비스 URL, 웹 포털 URL 및 보고서 서버 데이터베이스를 구성합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [보고서 서버 구성&#40;Reporting Services 기본 모드&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)을 참조하세요.  
+3.  보고서 서버 웹 서비스 URL, 웹 포털 URL 및 보고서 서버 데이터베이스를 구성합니다. 자세한 내용은 [보고서 서버 구성&#40;Reporting Services 기본 모드&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)을 참조하세요.
   
-4.  보고서 서버가 작동하는지 확인합니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+4.  보고서 서버가 작동하는지 확인합니다. 자세한 내용은 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)를 참조하세요.  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>두 번째 보고서 서버 인스턴스를 설치 및 구성하려면  
   
@@ -131,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  **확장 배포** 를 클릭하여 확장 배포 페이지를 엽니다. 보고서 서버 데이터베이스에 연결되어 있는 각 보고서 서버 인스턴스당 하나씩 두 개의 항목이 표시되어야 합니다. 첫 번째 보고서 서버 인스턴스는 조인되어야 하고 두 번째 보고서 서버는 "조인될 때까지 기다려야" 합니다. 배포에 비슷한 항목이 보이지 않을 경우 보고서 서버 데이터베이스를 사용하도록 이미 구성되고 초기화된 첫 번째 보고서 서버에 연결된 것입니다.  
   
-     ![확장 배포 페이지의 부분 스크린 샷](../../reporting-services/install-windows/media/scaloutscreen.gif "확장 배포 페이지의 부분 스크린 샷")  
+     ![스케일 아웃 배포 페이지의 부분 스크린샷](../../reporting-services/install-windows/media/scaloutscreen.gif "스케일 아웃 배포 페이지의 부분 스크린샷")  
   
 3.  확장 배포 페이지에서 배포에 조인되기를 기다리고 있는 보고서 서버 인스턴스를 선택한 다음 **서버 추가**를 선택합니다.  
   
@@ -146,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>다음 단계
 
-[서비스 계정 구성](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[서비스 계정을 구성](configure-the-report-server-service-account-ssrs-configuration-manager.md) 하 여 [URL  구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+  
 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

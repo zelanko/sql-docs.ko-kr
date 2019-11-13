@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500287"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592310"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   데이터 세트는 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 세트는 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 세트는 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "66500287"
   
 -   등록 및 구성된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자의 결과 집합  
   
--   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 SQL  Server  온라인 설명서의 [Reporting  Services  설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에서 “보고서 모델을 데이터 원본으로 사용”을 참조하십시오.  
+-   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)의 "보고서 데이터 집합"을 참조 하십시오.  
   
  런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 Null 값은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 값 **System.DBNull.Value**로 매핑됩니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66500287"
 |필드|쿼리 명령의 필드<br /><br /> 데이터 세트 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 세트를 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 세트 속성** 대화 상자에서 **필드 새로 고침**을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
 |데이터 세트|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
- 데이터 세트를 만드는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
+ 데이터 세트를 만드는 방법은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
 ##  <a name="SortGroupFilter"></a> 데이터 세트의 데이터 필터링,  정렬 및 그룹화  
  데이터 세트의 데이터는 외부 데이터 원본에 대해 쿼리 명령을 실행한 결과로 반환되는 생성됩니다. 데이터 확장 프로그램의 쿼리 명령 구문에 따라 데이터 정렬 또는 그룹화 가능 여부가 결정됩니다. 보고서에서 데이터를 검색하기 전에 쿼리에서 정렬 및 그룹화가 수행됩니다. 필터링은 보고서에서 데이터를 검색한 후에 수행됩니다.  

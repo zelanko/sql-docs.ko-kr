@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513605"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593815"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
@@ -41,7 +41,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 
 - SMTP 서버와 전자 메일을 보낼 수 있는 권한이 있는 사용자 계정만 지정하는 경우 Reporting Services 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다.
 
-- 텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 구성 파일을 찾아서 수정하는 방법은 SQL Server 온라인 설명서의 [Reporting Services 구성 파일 수정(RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 을 참조하세요.
+- 텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 구성 파일을 찾아서 수정하는 방법은 [Reporting Services 구성 파일 수정(RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.
 
 > [!NOTE] 
 > 보고서 서버 전자 메일 설정은 CDO를 기반으로 합니다. 특정 설정에 대한 세부 정보를 보려면 CDO 제품 설명서를 참조하십시오.
@@ -77,7 +77,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 6. rsreportserver.config 내에 메일 구성에 대한 추가 필드를 필요에 따라 조정할 수 있습니다.
 
 ## <a name="example-report-server-e-mail-configuration"></a>보고서 서버 전자 메일 구성의 예
-다음 예에서는 원격 SMTP 서버에 대한 RSreportserver.config 파일 설정을 보여 줍니다. 설정에 대한 설명 및 유효한 값에 대한 자세한 내용은 SQL Server 온라인 설명서의 [Rsreportserver.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 을 참조하세요.
+다음 예에서는 원격 SMTP 서버에 대한 RSreportserver.config 파일 설정을 보여 줍니다. 설정에 대한 설명 및 유효한 값에 대한 자세한 내용은 [Rsreportserver.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.
 
 ```
 <RSEmailDPConfiguration>
