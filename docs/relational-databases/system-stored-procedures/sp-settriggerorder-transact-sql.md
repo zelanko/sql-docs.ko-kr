@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910e615cc5257eb5be65fe88b1694e0a3bc218c5
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000818"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982238"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,29 +43,29 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`트리거의 이름 및 트리거가 속한 스키마 (해당 하는 경우)를 설정 하거나 변경할 수 있는 스키마입니다. [_triggerschema_ **.** ] *triggername* 는 **sysname**입니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. DDL 또는 logon 트리거에 대해 *triggerschema* 를 지정할 수 없습니다.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`는 트리거의 이름 및 트리거의 스키마 (해당 하는 경우)를 설정 하거나 변경할 수 있는 스키마입니다. [_triggerschema_ **.** ] *triggername* 는 **sysname**입니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. DDL 또는 logon 트리거에 대해 *triggerschema* 를 지정할 수 없습니다.  
   
-`[ @order = ] 'value'`트리거의 새 순서에 대 한 설정입니다. *값* 은 **varchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @order = ] 'value'`는 트리거의 새 순서에 대 한 설정입니다. *값* 은 **varchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  **첫 번째** 트리거와 **마지막** 트리거는 서로 다른 두 트리거 여야 합니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**첫째**|트리거가 첫 번째로 실행됩니다.|  
 |**마지막**|트리거가 마지막으로 실행됩니다.|  
-|**None**|트리거가 정의되지 않은 순서로 실행됩니다.|  
+|**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
-`[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 은 **varchar (50)** 이며 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
+`[ @stmttype = ] 'statement_type'` 트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
   
- 트리거를 문 형식에 대 한 트리거로 정의한 후에만 트리거를 문 형식에 대 한 **첫 번째** 또는 **마지막** 트리거로 지정할 수 있습니다. 예를 들어 **tr1** 이 insert 트리거로 정의 된 경우 tr1 트리거는 **T1** 테이블에서 insert에 대해 **처음** 으로 지정할 수 있습니다. INSERT [!INCLUDE[ssDE](../../includes/ssde-md.md)] 트리거로만 정의 된 **TR1**이 UPDATE 문의 **First**또는 **Last**트리거로 설정 된 경우는 오류를 반환 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+ 트리거를 문 형식에 대 한 트리거로 정의한 후에만 트리거를 문 형식에 대 한 **첫 번째** 또는 **마지막** 트리거로 지정할 수 있습니다. 예를 들어 **tr1** 이 insert 트리거로 정의 된 **경우 Tr1 트리거** 는 **T1** 테이블에서 insert에 대해 **처음** 으로 지정할 수 있습니다. INSERT 트리거로만 정의 된 **TR1**이 UPDATE 문의 **첫 번째**또는 **마지막**트리거로 설정 된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 오류를 반환 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
- namespace = { **' DATABASE '**  |  **' SERVER '** |  **\@** N  
- *Triggername* 가 DDL 트리거  **\@이면 네임 스페이스** 는 데이터베이스 범위 또는 서버 범위를 사용 하 여 *triggername* 를 만들었는지 여부를 지정 합니다. *Triggername* 가 logon 트리거 이면 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 [Ddl 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요. 지정 하지 않거나 NULL을 지정 하면 *triggername* 는 DML 트리거입니다.  
+ **\@namespace =** { **' DATABASE '**  |  **' SERVER '** | N  
+ Triggername이\@DDL 경우 **네임 스페이스** 는 데이터베이스 범위 또는 서버 범위를 사용 하 여 *triggername* 를 만들었는지 여부를 지정 합니다. *Triggername* 가 logon 트리거 이면 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 [Ddl 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요. 지정 하지 않거나 NULL을 지정 하면 *triggername* 는 DML 트리거입니다.  
   
 ||  
 |-|  
-|서버 적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|서버 적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 및 1(실패)  
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>2\. DML 트리거의 실행 순서 설정  
- 다음 예에서는 `ddlDatabaseTriggerLog` 트리거를 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `ALTER_TABLE` 이벤트가 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  
+ 다음 예에서는 `ddlDatabaseTriggerLog` 트리거를 `ALTER_TABLE` 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이벤트가 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -126,9 +126,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql 저장 프로시저 &#40;데이터베이스 엔진&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [데이터베이스 엔진 저장 프로시저 &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

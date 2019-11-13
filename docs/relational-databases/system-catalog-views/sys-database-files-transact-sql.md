@@ -1,5 +1,5 @@
 ---
-title: database_files (Transact-sql) | Microsoft Docs
+title: sys. database_files (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313729"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983182"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "72313729"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|데이터베이스 내 파일의 ID입니다.|  
-|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 @no__t에서 업그레이드 되었습니다 (2005 및 이전 버전 SQL Server에 유효).|  
-|**type**|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 만들어진 전체 텍스트 카탈로그의 파일을 포함함)<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 생성된 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
-|**type_desc**|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 생성된 전체 텍스트 카탈로그의 파일을 포함함)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전의 전체 텍스트 카탈로그)|  
+|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드 되었습니다 (SQL Server 2005 및 이전 버전에 유효).|  
+|**유형**|**tinyint**|파일 유형입니다.<br/><br /> 0 = 행<br /><br/> 1 = 로그<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트|  
+|**type_desc**|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|값은 0 이상일 수 있습니다. 값 0은 데이터베이스 로그 파일을 나타내고 0보다 큰 값은 이 데이터 파일이 저장되는 파일 그룹의 ID를 나타냅니다.|  
 |**name**|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. 데이터베이스가 AlwaysOn [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)에 의해 호스트 되는 경우 **physical_name** 는 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽을 수 있는 보조 데이터베이스의 올바른 파일 위치에 대해 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)를 쿼리 합니다.|  
@@ -79,9 +79,9 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-@No__t를 사용 하는 방법에 대 한 자세한 내용은 SQL 고객 자문 팀 블로그에서 [Azure SQL Database V12에서 데이터베이스 크기 확인](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 을 참조 하세요.
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]사용 하는 방법에 대 한 자세한 내용은 SQL 고객 자문 팀 블로그에서 [Azure SQL Database V12에서 데이터베이스 크기 확인](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 을 참조 하세요.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [파일 상태](../../relational-databases/databases/file-states.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

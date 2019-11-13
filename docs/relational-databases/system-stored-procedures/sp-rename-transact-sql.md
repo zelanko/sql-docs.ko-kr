@@ -1,5 +1,5 @@
 ---
-title: sp_rename (TRANSACT-SQL) | Microsoft Docs
+title: sp_rename (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006938"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983068"
 ---
-# <a name="sprename-transact-sql"></a>sp_rename(Transact-SQL)
+# <a name="sp_rename-transact-sql"></a>sp_rename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에 있는 사용자가 만든 개체의 이름을 변경합니다. 이 개체 수는 테이블, 인덱스, 열, 별칭 데이터 형식 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임 (CLR) 사용자 정의 형식입니다.  
+  현재 데이터베이스에 있는 사용자가 만든 개체의 이름을 변경합니다. 이 개체는 테이블, 인덱스, 열, 별칭 데이터 형식 또는 CLR (공용 언어 런타임) 사용자 정의 형식 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 있습니다.  
   
 > [!CAUTION]  
 >  개체 이름의 일부를 변경하면 스크립트나 저장 프로시저가 작동되지 않을 수 있습니다. 이 문을 사용하여 저장 프로시저, 트리거, 사용자 정의 함수 또는 뷰의 이름을 변경하지 않는 것이 좋습니다. 대신 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
@@ -47,28 +47,28 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @objname =] '*object_name*'  
- 현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 변경할 개체가 테이블의 열 이면 *object_name* 형식에서 이어야 합니다 *테이블. 열* 하거나 *schema.table.column*합니다. 이름을 바꿀 수는 인덱스 *object_name* 형식에서 이어야 합니다 *table.index* 하거나 *schema.table.index*합니다. 이름을 변경할 개체가 제약 조건을 *object_name* 형식에서 이어야 합니다 *schema.constraint*합니다.  
+ [@objname =] '*object_name*'  
+ 현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 바꿀 개체가 테이블의 열인 경우에는 *테이블. column* 또는 *schema. table 열*에 *object_name* 있어야 합니다. 이름을 바꿀 개체가 인덱스 이면 *object_name* *테이블. index* 또는 *schema. table. index*형식 이어야 합니다. 이름을 바꿀 개체가 제약 조건이 면 *object_name* 은 *schema. 제약 조건*형식 이어야 합니다.  
   
- 정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
+ 정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
  [ @newname = ] '*new_name*'  
- 지정한 개체의 새 이름입니다. *new_name* 한 부분으로 이루어진 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 됩니다 **sysname**, 기본값은 없습니다.  
+ 지정한 개체의 새 이름입니다. *new_name* 은 한 부분으로 구성 된 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 은 **sysname**이며 기본값은 없습니다.  
   
 > [!NOTE]  
 >  트리거 이름은 # 또는 ##로 시작될 수 없습니다.  
   
- [ @objtype =] '*object_type*'  
- 이름을 바꾸는 개체의 유형입니다. *object_type* 됩니다 **varchar(13)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+ [@objtype =] '*object_type*'  
+ 이름을 바꾸는 개체의 유형입니다. *object_type* 는 **varchar (13)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |COLUMN|이름을 바꿀 열입니다.|  
 |DATABASE|사용자 정의 데이터베이스입니다. 이 개체 유형은 데이터베이스 이름을 바꿀 경우 필요합니다.|  
 |INDEX|사용자 정의 인덱스입니다. 통계가 포함된 인덱스의 이름을 바꾸면 통계 이름도 자동으로 바뀝니다.|  
-|OBJECT|형식 항목에서 추적할 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다. 예를 들어 OBJECT는 제약 조건(CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), 사용자 테이블 및 규칙을 포함하는 개체의 이름을 바꿀 때 사용될 수 있습니다.|  
-|STATISTICS|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지<br /><br /> 사용자가 명시적으로 만들었거나 인덱스를 통해 암시적으로 만들어진 통계입니다. 인덱스의 통계 이름을 바꾸면 인덱스 자체도 자동으로 이름이 바뀝니다.|  
-|USERDATATYPE|A [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) 실행 하 여 추가 [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 하거나 [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)합니다.|  
+|OBJECT|[Sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)에서 추적 되는 형식의 항목입니다. 예를 들어 OBJECT는 제약 조건(CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), 사용자 테이블 및 규칙을 포함하는 개체의 이름을 바꿀 때 사용될 수 있습니다.|  
+|STATISTICS|**적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 사용자가 명시적으로 만들었거나 인덱스를 통해 암시적으로 만들어진 통계입니다. 인덱스의 통계 이름을 바꾸면 인덱스 자체도 자동으로 이름이 바뀝니다.|  
+|USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 또는 [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)를 실행 하 여 추가 된 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) 입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
@@ -80,7 +80,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename을 사용하여 기본 XML 인덱스 및 보조 XML 인덱스의 이름을 변경할 수 있습니다.  
   
- 저장된 프로시저, 함수, 뷰 또는 트리거 변경 되지 것입니다 해당 개체의 이름을 정의 열에는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰 또는 사용 하 여 가져온는 [OBJECT_ 정의](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수입니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
+ 저장 프로시저, 함수, 뷰 또는 트리거의 이름을 바꾸면 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열 또는 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수를 사용 하 여 가져온 해당 개체의 이름이 변경 되지 않습니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
   
  테이블이나 열과 같은 개체의 이름을 변경해도 이 개체를 참조하는 개체의 이름은 자동으로 변경되지 않습니다. 이름을 변경한 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.  
   
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>2\. 열 이름 바꾸기  
- 다음 예제에서는 이름을 바꿉니다는 `TerritoryID` 열에는 `SalesTerritory` 테이블 `TerrID`합니다.  
+ 다음 예에서는 `TerrID`에 대 한 `SalesTerritory` 테이블의 `TerritoryID` 열 이름을 바꿉니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>6\. 통계 이름 바꾸기  
- 다음 예제에서는 contactMail1 라는 통계 개체를 만들고 NewContact에 통계 sp_rename을 사용 하 여 이름을 바꿉니다. 통계 이름을 바꾸면 개체를 schema.table.statistics_name 형식으로 지정해야 합니다.  
+ 다음 예에서는 contactMail1 라는 통계 개체를 만든 후 sp_rename를 사용 하 여 통계의 이름을 NewContact로 바꿉니다. 통계 이름을 바꾸면 개체를 schema.table.statistics_name 형식으로 지정해야 합니다.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -203,10 +203,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql 저장 프로시저 &#40;데이터베이스 엔진&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

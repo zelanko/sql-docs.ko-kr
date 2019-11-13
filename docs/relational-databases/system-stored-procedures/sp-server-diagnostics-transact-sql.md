@@ -1,5 +1,5 @@
 ---
-title: sp_server_diagnostics (TRANSACT-SQL) | Microsoft Docs
+title: sp_server_diagnostics (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056302"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982114"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 잠재적 오류를 감지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 진단 데이터 및 상태 정보를 캡처합니다. 이 프로시저는 반복 모드로 실행되며 주기적으로 결과를 보냅니다. 일반 연결 또는 DAC 연결에서 호출할 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 저장된 프로시저를 반복적으로 실행 상태 정보를 보내는 시간 간격을 나타냅니다.  
+상태 정보를 보내기 위해 저장 프로시저를 반복적으로 실행 하는 시간 간격을 나타내는 `[ @repeat_interval = ] 'repeat_interval_in_seconds'`입니다.  
   
- *repeat_interval_in_seconds* 됩니다 **int** 기본값인 0 사용 하 여 합니다. 올바른 매개 변수 값은 0 또는 5보다 크거나 같은 값입니다. 전체 데이터를 반환하려면 저장 프로시저가 적어도 5초 간격으로 실행되어야 합니다. 반복 모드에서 실행되는 저장 프로시저의 최소값은 5초입니다.  
+ *repeat_interval_in_seconds* 은 **int** 이며 기본값은 0입니다. 올바른 매개 변수 값은 0 또는 5보다 크거나 같은 값입니다. 전체 데이터를 반환하려면 저장 프로시저가 적어도 5초 간격으로 실행되어야 합니다. 반복 모드에서 실행되는 저장 프로시저의 최소값은 5초입니다.  
   
  이 매개 변수를 지정하지 않거나 지정한 값이 0이면 저장 프로시저가 데이터를 한 번만 반환한 후 종료됩니다.  
   
@@ -54,30 +54,30 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
-**sp_server_diagnostics** 다음 정보를 반환 합니다.  
+**sp_server_diagnostics** 는 다음 정보를 반환 합니다.  
   
 |Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
-|**component_type**|**sysname**|행에 대 한 정보를 포함 하는지 여부를 나타냅니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 합니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 이벤트<br /><br /> *\<가용성 그룹의 이름 >*|  
-|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소에 대 한 정보 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 이벤트<br /><br /> *가용성 그룹의 \<이름 >*|  
+|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1\.<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
 |**data**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
--   **system**: Spinlock, 엄격한 처리 조건, 잠겨 있는 태스크, 페이지 폴트 및 CPU 사용량에 시스템의 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **system**: spinlock, 심각한 처리 조건, 비 생성 작업, 페이지 폴트 및 CPU 사용에 대 한 시스템 관점에서 데이터를 수집 합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **resource**:  실제 및 가상 메모리를 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에서 리소스의 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **리소스**: 실제 및 가상 메모리, 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에 대 한 리소스 관점에서 데이터를 수집 합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **query_processing**: 작업자 스레드, 태스크, 대기 유형, CPU 사용량이 많은 세션 및 차단 작업에서 쿼리 처리 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **query_processing**: 작업자 스레드, 태스크, 대기 유형, CPU 집약적 세션 및 블로킹 태스크에 대 한 쿼리 처리 관점에서 데이터를 수집 합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **io_subsystem**: IO 시 데이터를 수집합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
+-   **io_subsystem**: io에서 데이터를 수집 합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
   
--   **이벤트**: 오류 및 링 버퍼 예외, 메모리, 스케줄러 모니터, 버퍼 풀, spinlock에서 메모리 브로커에 대 한 링 버퍼 이벤트에 대 한 세부 정보를 포함 하 여 서버에 의해 기록 된 이벤트 데이터 및 저장된 프로시저를 통해 화면 수집 보안 및 연결 합니다. 이벤트는 항상 상태로 0을 표시합니다.  
+-   **이벤트**: 링 버퍼 예외, 메모리 브로커에 대 한 링 버퍼 이벤트, 메모리 부족, 스케줄러 모니터, 버퍼 풀, spinlock, 보안 및 연결에 대 한 세부 정보를 포함 하 여 서버에서 기록 하는 오류 및 이벤트에 대 한 저장 프로시저를 통해 데이터 및 화면을 수집 합니다. 이벤트는 항상 상태로 0을 표시합니다.  
   
--   **\<가용성 그룹의 이름 >** : 지정된 된 가용성 그룹에 대 한 데이터 수집 (경우 component_type = "항상에서: AvailabilityGroup").  
+-   **가용성 그룹 >의\<이름**: 지정 된 가용성 그룹에 대 한 데이터를 수집 합니다 (component_type = "Always On: AvailabilityGroup").  
   
 ## <a name="remarks"></a>설명  
 오류 큐브 뷰에서 시스템, 리소스 및 쿼리 처리 구성 요소는 오류 감지에 활용되고, IO 하위 시스템 및 이벤트 구성 요소는 진단용으로만 활용됩니다.  
@@ -95,7 +95,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 각 행의 (x)는 구성 요소에 유효한 상태를 나타냅니다. 예를 들어 IO 하위 시스템은 정상 또는 경고로 표시됩니다. 오류 상태는 표시되지 않습니다.  
  
 > [!NOTE]
-> Sp_server_diagnostics 내부 프로시저의 실행은 높은 우선 순위로 preemptive 스레드에서 구현 됩니다.
+> Sp_server_diagnostics 내부 프로시저의 실행은 높은 우선 순위로 선점형 스레드에 구현 됩니다.
   
 ## <a name="permissions"></a>사용 권한  
 을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: fn_get_audit_file (Transact-sql) | Microsoft Docs
+title: sys. fn_get_audit_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72989502"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981869"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버 감사에 의해 생성된 감사 파일로부터 정보를 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,21 +49,21 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예를 들어  
+    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예:  
   
-    -   **\<path > \* \\** 지정 된 위치에 있는 모든 감사 파일을 수집 합니다.  
+    -   지정 된 위치에 있는 모든 감사 파일을 수집 하는 **\*\\>\<경로** 입니다.  
   
-    -   **\<경로 > \LoginsAudit_{GUID}** -지정 된 이름 및 GUID 쌍이 있는 모든 감사 파일을 수집 합니다.  
+    -   **\<경로 > \ LoginsAudit_ {guid}** -지정 된 이름 및 GUID 쌍을 가진 모든 감사 파일을 수집 합니다.  
   
-    -   **\<경로 > \LoginsAudit_{GUID}_00_29384.sqlaudit** -특정 감사 파일을 수집 합니다.  
+    -   **\<경로 > \ LoginsAudit_ {GUID} _00_29384입니다. sqlaudit** -특정 감사 파일을 수집 합니다.  
   
  - **Azure SQL Database 또는 Azure SQL Data Warehouse**:
  
-    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예를 들어
+    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예:
  
-      - **\<Storage_endpoint\>/\<컨테이너\>/ServerName**\<\>/DatabaseName\<\>-특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
+      - **\<Storage_endpoint\>/\<Container**\>/\<ServerName\>/\<DatabaseName\>/-특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       
-      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<파일 이름\>xel** -특정 감사 파일 (blob)을 수집 합니다.
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>. xel** -특정 감사 파일 (blob)을 수집 합니다.
   
 > [!NOTE]  
 >  파일 이름 패턴 없이 경로를 전달하면 오류가 생성됩니다.  
@@ -78,12 +78,12 @@ fn_get_audit_file ( file_pattern,
  initial_file_name에 지정된 파일 기준의 오프셋을 지정합니다. 이 인수를 사용하면 함수가 지정된 오프셋 바로 다음에 있는 버퍼의 첫 번째 레코드에서 읽기를 시작합니다.  
   
 > [!NOTE]  
->  *나타내지 않습니다* 인수는 유효한 항목을 포함 하거나 기본값 |을 포함 해야 합니다. NULL 값입니다. **Bigint**유형입니다.  
+>  *Audit_record_offset* 인수는 유효한 항목을 포함 하거나 기본값 |을 포함 해야 합니다. NULL 값입니다. **Bigint**유형입니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 이 함수가 반환할 수 있는 감사 파일 내용에 대해 설명합니다.  
   
-| 열 이름 | 설명에 | Description |  
+| 열 이름 | 형식 | 설명 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 동작의 ID입니다. Null을 허용하지 않습니다. |  
 | additional_information | **nvarchar(4000)** | 단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름은 `'\<'`, `'>'`, `'/'`, `'_x'`와 같이 잘못 된 xml 문자를 이스케이프 하기 위해 구문 분석 됩니다. `_xHHHH\_`으로 이스케이프 됩니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다. |
@@ -123,14 +123,14 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | 동작의 대상 로그인입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다. |  
 | target_server_principal_sid | **varbinary** | 대상 로그인의 SID입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다. |  
 | transaction_id | **bigint** | **적용 대상**: SQL Server에만 (2016부터)<br /><br /> 단일 트랜잭션에서 여러 감사 이벤트를 식별 하는 고유 식별자 |  
-| user_defined_event_id | **smallint** | **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], AZURE SQL DB 및 관리 되는 인스턴스<br /><br /> **Sp_audit_write**에 인수로 전달 되는 사용자 정의 이벤트 id입니다. 시스템 이벤트 (기본값)의 경우 **NULL** 이 고 사용자 정의 이벤트의 경우 0이 아닙니다. 자세한 내용은 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)을 참조 하세요. |  
-| user_defined_information | **nvarchar(4000)** | **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], AZURE SQL DB 및 관리 되는 인스턴스<br /><br /> 사용자가 **sp_audit_write** 저장 프로시저를 사용 하 여 감사 로그에 기록 하려는 추가 정보를 기록 하는 데 사용 됩니다. |  
+| user_defined_event_id | **smallint** | **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, AZURE SQL DB 및 관리 되는 인스턴스<br /><br /> **Sp_audit_write**에 인수로 전달 되는 사용자 정의 이벤트 id입니다. 시스템 이벤트 (기본값)의 경우 **NULL** 이 고 사용자 정의 이벤트의 경우 0이 아닙니다. 자세한 내용은 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)을 참조 하세요. |  
+| user_defined_information | **nvarchar(4000)** | **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, AZURE SQL DB 및 관리 되는 인스턴스<br /><br /> 사용자가 **sp_audit_write** 저장 프로시저를 사용 하 여 감사 로그에 기록 하려는 추가 정보를 기록 하는 데 사용 됩니다. |  
 
   
-## <a name="remarks"></a>Remarks  
- **Fn_get_audit_file** 에 전달 된 *file_pattern* 인수가 존재 하지 않는 경로 또는 파일을 참조 하거나 파일이 감사 파일이 아닌 경우 **MSG_INVALID_AUDIT_FILE** 오류 메시지가 반환 됩니다.  
+## <a name="remarks"></a>설명  
+ **Fn_get_audit_file** 에 전달 된 *file_pattern* 인수가 존재 하지 않는 경로 또는 파일을 참조 하거나 파일이 감사 파일이 아니면 **MSG_INVALID_AUDIT_FILE** 오류 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 - **SQL Server**: **CONTROL Server** 권한이 필요 합니다.  
 - **AZURE SQL DB**: **CONTROL DATABASE** 권한이 필요 합니다.     
@@ -178,10 +178,10 @@ fn_get_audit_file ( file_pattern,
 
 Azure SQL Database 감사를 설정 하는 방법에 대 한 자세한 내용은 [SQL Database 감사 시작](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)을 참조 하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

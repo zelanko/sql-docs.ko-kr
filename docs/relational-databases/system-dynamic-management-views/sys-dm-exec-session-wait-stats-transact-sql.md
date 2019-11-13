@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_exec_session_wait_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f04f959a55e183185796360476e7dc59a6889937
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936914"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982605"
 ---
-# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact SQL)
+# <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  각 세션에 대해 실행 중인 스레드로 인해 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 뷰를 사용 하 여 성능 문제를 진단할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 아니라 특정 쿼리 및 일괄 처리와 합니다.  이 보기는 세션에 대 한 집계 되는 동일한 정보를 반환 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 제공 하지만 합니다 **session_id** 번호도 합니다.  
+  각 세션에 대해 실행 된 스레드에서 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 뷰를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 및 특정 쿼리 및 일괄 처리와 관련 된 성능 문제를 진단할 수 있습니다.  이 뷰는 [ &#40;&#41; transact-sql dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 에 대해 집계 되는 것과 동일한 정보를 세션에 반환 하지만 **session_id** 수도 제공 합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
@@ -40,15 +40,15 @@ ms.locfileid: "67936914"
 |signal_wait_time_ms|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 DMV 세션 열릴 때나 세션 다시 설정 되는 세션에 대 한 정보를 다시 설정 (하는 경우 연결 풀링),  
+ 이 DMV는 세션이 열릴 때 또는 세션이 다시 설정 될 때 (연결 풀링 인 경우) 세션 정보를 다시 설정 합니다.  
   
- 대기 유형에 대 한 자세한 내용은 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.  
+ 대기 유형에 대 한 자세한 내용은 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)을 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- 사용자에 게 **VIEW SERVER STATE** 서버에 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다.  
+ 사용자에 게 서버에 대 한 **VIEW SERVER STATE** 권한이 있는 경우 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

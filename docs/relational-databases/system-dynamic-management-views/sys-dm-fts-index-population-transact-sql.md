@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_population (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_fts_index_population (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c97061b08475549b2e8ebccdc75a56f74eb6614
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265933"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983111"
 ---
-# <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
+# <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 진행 중인 전체 텍스트 인덱스 및 의미 키 구 채우기에 대한 정보를 반환합니다.  
@@ -43,8 +43,8 @@ ms.locfileid: "68265933"
 |**is_clustered_index_scan**|**bit**|채우기에 클러스터형 인덱스에 대한 스캔이 수반되는지 여부를 나타냅니다.|  
 |**range_count**|**int**|이 채우기가 병렬 처리된 하위 범위 수입니다.|  
 |**completed_range_count**|**int**|처리가 완료된 범위 수입니다.|  
-|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)합니다.|  
-|**상태**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나일 수 있습니다.<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 예를 들어 자동 병합이 진행 중일 때 이 상태가 될 수 있습니다.<br /><br /> 11 = 채우기 중단됨<br /><br /> 12 = 의미 유사 추출 처리|  
+|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 [dm_fts_outstanding_batches &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)을 참조 하세요.|  
+|**상태**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나일 수 있습니다.<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 예를 들어 자동 병합이 진행 중일 때 이 상태가 될 수 있습니다.<br /><br /> 11 = 채우기 중단됨<br /><br /> 12 = 의미 유사 추출 처리|  
 |**status_description**|**nvarchar(120)**|채우기 상태에 대한 설명입니다.|  
 |**completion_type**|**int**|이 채우기의 완료 상태입니다.|  
 |**completion_type_description**|**nvarchar(120)**|완료 유형에 대한 설명입니다.|  
@@ -55,15 +55,15 @@ ms.locfileid: "68265933"
 |**incremental_timestamp**|**timestamp**|전체 채우기의 시작 타임스탬프를 나타냅니다. 다른 모든 채우기 유형의 경우 이 값은 마지막으로 커밋된 검사점으로, 채우기의 진행 상태를 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
- 전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 [관리 및 모니터링 의미 체계 검색](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
+ 전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 [의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)을 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층에는 데이터베이스에 대 한 `VIEW DATABASE STATE` 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard 및 Basic 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="physical-joins"></a>물리적 조인  
- ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "이 동적 관리 뷰의 유효 조인")  
+ ![이 동적 관리 뷰의 중요 한 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "이 동적 관리 뷰의 중요 한 조인")  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
@@ -73,9 +73,9 @@ ms.locfileid: "68265933"
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|다 대 일|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

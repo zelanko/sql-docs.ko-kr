@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referencing_entities (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_sql_referencing_entities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090660"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982348"
 ---
-# <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
+# <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 하나의 엔터티만 호출 될 때 두 엔터티 간의 종속성이 만들어집니다 합니다 *엔터티를 참조*, 라는 다른 엔터티의 영구 SQL 식에서 이름별으로 나타날를 *참조 엔터티*합니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
+  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
   
  이 동적 관리 함수를 사용하면 지정된 엔터티를 참조하는 현재 데이터베이스에 있는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68090660"
   
 -   서버 수준 DDL 트리거  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,14 +63,14 @@ sys.dm_sql_referencing_entities (
  *schema_name.referenced*_*entity_name*  
  참조된 엔터티의 이름입니다.  
   
- *schema_name* 제외 하 고 참조 된 클래스가 PARTITION_FUNCTION 때 필요 합니다.  
+ 참조 된 클래스가 PARTITION_FUNCTION 되는 경우를 제외 하 고 *schema_name* 필요 합니다.  
   
- *schema_name.referenced_entity_name* 됩니다 **nvarchar(517)** 합니다.  
+ *schema_name referenced_entity_name* **nvarchar (517)** 입니다.  
   
- *< Referenced_class >* :: = {개체 | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *< referenced_class >* :: = {OBJECT | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  참조된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referenced_class >* 됩니다 **nvarchar**(60).  
+ *< referenced_class >* 은 **nvarchar**(60)입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |XML 스키마 컬렉션|아니요|예|  
 |파티션 함수|아니요|예|  
   
- \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \* 테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
@@ -128,7 +128,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조된 개체에 대한 CONTROL 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
--   Sys.dm_sql_referencing_entities에 대 한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
+-   Dm_sql_referencing_entities에 대 한 SELECT 권한이 필요 합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   
 ### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2\. 지정된 유형을 참조하는 엔터티 반환  
- 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. 합니다 `dbo.Flag` 형식에서 여러 열의 정의에 사용 되는 `HumanResources.Employee` 테이블; 있지만 형식 정의 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건을 테이블에 없기 때문에 아무 행도 반환 합니다 에대한`HumanResources.Employee`테이블입니다.  
+ 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag` 형식은 `HumanResources.Employee` 테이블에 있는 여러 열의 정의에도 사용 됩니다. 그러나이 형식은 테이블의 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에 있지 않기 때문에 `HumanResources.Employee` 테이블에 대 한 행이 반환 되지 않습니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
