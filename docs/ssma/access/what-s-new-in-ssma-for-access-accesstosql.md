@@ -2,19 +2,19 @@
 title: Access 용 SSMA의 새로운 기능 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 11/13/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 6e49c85bec2494d6a524a17f96ae735b0ed053f8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745434"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056170"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
@@ -56,7 +56,7 @@ Access 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 개선 하�
 
   ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
 
-* 변환 후 **수정 관리자**입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
+* 변환 후 **수정 관리자**입니다. [여기](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)에서 자세히 알아보세요.
 
 * 예비 데이터베이스/스키마 선택.
 
@@ -123,8 +123,7 @@ Access 용 SSMA의 v 7.3 릴리스에는 다음과 같은 변경 내용이 포�
         ![SSDT 프로젝트로 저장 명령](../media/export-schema-scripts_red.png)
   * 사용자 지정 변환을 수행 하기 위해 SSMA에서 사용할 수 있는 라이브러리입니다.
     * 이제 SSMA에서 이전에 처리 되지 않은 사용자 지정 구문 변환과 변환을 처리할 수 있는 코드를 생성할 수 있습니다.
-      * 사용자 지정 변환기를 구성 하는 방법에 대 한 지침은이 블로그 게시물에서 [SQL Server Migration Assistant의 변환 기능을 확장](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)하는 데 사용할 수 있습니다.
-      * 이 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)에서 변환할 샘플 프로젝트를 다운로드 합니다.
+      * 변환을 위한 샘플 프로젝트와 함께 사용자 지정 변환기를 구성 하는 방법에 대 한 지침은 [SQL Server Migration Assistant의 변환 기능을 확장](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Extending-SQL-Server-Migration-Assistant-s-conversion/ba-p/1004181)하는 블로그 게시물에서 확인할 수 있습니다.
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 
@@ -151,7 +150,7 @@ Access 용 SSMA의 2016 년 5 월 릴리스는 다음과 같은 변경 내용을
 * SSMA 콘솔에 대 한 "securepassword" 명령을 수정 했습니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * 액세스를 위한 UI 탭의 고정 테이블 데이터 로드
-* 전역 설정에서 버그가 수정 되었습니다. 
+* 전역 설정에서 버그가 수정 되었습니다.
 
 ## <a name="march-2016"></a>3 월 2016
 
@@ -204,12 +203,13 @@ Access 용 SSMA의 7 월 2011 릴리스는 데이터 마이그레이션 중에 �
 
 Access 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.  
   
-* 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 및 Azure SQL을 지 원하는 "ssma for Access"의 단일 설치를 추가 했습니다.  
-* "Denali"를 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 기능이 추가 되었습니다.  
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 및 Azure SQL을 지 원하는 "SSMA for Access"가 설치 된 단일 설치 프로그램이 추가 되었습니다.  
+* "Denali" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하는 기능이 추가 되었습니다.  
 * 이전 버전과의 호환성을 위해 Access Console 용 SSMA 버전 지원을 추가 했습니다. 이전 버전에서 만든 프로젝트를 SSMA v 5.0으로 열 수 있습니다.
 * 이전 버전의 SSMA 제품에서 SxS ()를 설치 하는 기능이 추가 되었습니다.  
   
-## <a name="july-2010"></a>7 월 2010  
+## <a name="july-2010"></a>7 월 2010
+
 Access 용 SSMA의 7 월 2010 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.  
   
 * SQL Server 2008 R2 및 Azure SQL로 마이그레이션에 대 한 지원이 추가 되었습니다.
@@ -235,10 +235,10 @@ Access 용 SSMA의 2007 년 5 월 릴리스는 다음과 같은 변경 내용을
 
 Access 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.  
   
-* 단일 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하는 과정을 안내 하는 새 데이터베이스 마이그레이션 마법사가 추가 되었습니다.  
-* Access 데이터베이스를 변환 하 고, 변환 된 개체를에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로드 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 모두 한 번에 마이그레이션하는 새 변환, 로드 및 마이그레이션 명령을 추가 했습니다.  
+* 단일 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]액세스에서 마이그레이션하는 과정을 안내 하는 새 데이터베이스 마이그레이션 마법사가 추가 되었습니다.  
+* Access 데이터베이스를 변환 하 고, 변환 된 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드 하 고, 데이터를 한 번에 하나씩 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 마이그레이션하는 새 변환, 로드 및 마이그레이션 명령을 추가 했습니다.  
 * 향상 된 쿼리 마이그레이션. 이제 쿼리 마이그레이션이 더 많은 SELECT 쿼리를 뷰로 변환 합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)을 참조 하세요.  
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **테이블** 탭의 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다.  
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **테이블** 탭에서 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다.  
 * 새 전역 설정이 추가 됨:
   * 편집기 창에 줄 번호를 표시 하도록 선택할 수 있습니다.  
   * 중복 된 개체를 바꿀지 묻는 메시지를 표시 하도록 SSMA를 구성 하거나 스키마를 변환 하는 동안 중복 개체를 항상 또는 절대 바꾸지 않도록 구성할 수 있습니다.  

@@ -1,7 +1,7 @@
 ---
-title: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미 솔루션 개요
+title: 데이터베이스 실험 도우미 개요
 description: 데이터베이스 실험 도우미 개요
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 11/05/2019
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 656236be66ecb2b7127e45ab1ef361f1eb7703e6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 7180656f8a4779c43f4c691f583aaaf5fcbf86d0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637939"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056579"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
 

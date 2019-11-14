@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) | Microsoft Docs
+title: sp_helpxactsetjob (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048190"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056792"
 ---
-# <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
+# <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Oracle 게시자에 대한 Xactset 작업 정보를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
@@ -37,8 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** = ] **'***publisher***'**  
- 비-의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업이 속한 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`은 작업이 속한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -52,7 +51,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**interval**|**varchar(200)**|작업 간격입니다.|  
 |**failures**|**int**|해당 작업에 대한 실패 횟수입니다.|  
 |**xactsetjobwhat**|**varchar(200)**|작업에 의해 실행된 프로시저 이름입니다.|  
-|**xactsetjob**|**varchar(1)**|작업의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** -작업을 사용 하도록 설정 합니다.<br /><br /> **0** -작업이 해제 합니다.|  
+|**xactsetjob**|**varchar(1)**|작업의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** -작업을 사용할 수 있습니다.<br /><br /> **0** -작업을 사용할 수 없습니다.|  
 |**xactsetlonginterval**|**int**|작업에 대한 긴 간격입니다.|  
 |**xactsetlongthreshold**|**int**|작업에 대한 긴 임계값입니다.|  
 |**xactsetshortinterval**|**int**|작업에 대한 짧은 간격입니다.|  
@@ -62,15 +61,15 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_helpxactsetjob** 스냅숏 복제 및 Oracle 게시자에 대 한 트랜잭션 복제에 사용 됩니다.  
+ **sp_helpxactsetjob** 은 Oracle 게시자에 대 한 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
- **sp_helpxactsetjob** 항상 게시자에서 Xactset 작업 (HREPL_XactSetJob) 현재 설정을 반환 합니다. Xactset 작업이 현재 작업 큐에 있는 경우 Oracle 게시자의 관리자 계정에서 만든 USER_JOB 데이터 사전 뷰에서 작업의 특성을 추가로 반환합니다.  
+ **sp_helpxactsetjob** 항상 게시자에서 Xactset 작업 (HREPL_XactSetJob)에 대 한 현재 설정을 반환 합니다. Xactset 작업이 현재 작업 큐에 있는 경우 Oracle 게시자의 관리자 계정에서 만든 USER_JOB 데이터 사전 뷰에서 작업의 특성을 추가로 반환합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 구성원만 합니다 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_helpxactsetjob**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_helpxactsetjob**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [Transact-sql &#40;sp_publisherproperty&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

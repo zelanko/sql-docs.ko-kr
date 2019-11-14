@@ -1,7 +1,7 @@
 ---
-title: Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 estate의 준비 상태를 평가 합니다. Microsoft Docs
+title: SQL Server 준비를 평가 하 여 Azure SQL Database로 마이그레이션
+titleSuffix: Data Migration Assistant
 description: Data Migration Assistant를 사용 하 여 마이그레이션하기 위한 SQL Server 데이터 공간을로 마이그레이션하는 방법에 대해 알아봅니다 Azure SQL Database
-ms.custom: ''
 ms.date: 07/16/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -15,12 +15,13 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: b3f47cee5cc091c52faa98438d22b88a18a06f03
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8261b38d57502584efbeee8d6bbcd0b1823d3786
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702818"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056688"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
@@ -71,11 +72,11 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
    > [!NOTE]
    > 프로젝트를 만들 때 하나 이상의 평가 또는 마이그레이션 도구를 추가 해야 합니다.
 
-8. **평가 도구 선택** 탭에서 다음을 **Azure Migrate 합니다. 데이터베이스 평가** 는 추가할 평가 도구로 표시 됩니다. 현재 평가 도구가 필요 하지 않은 경우 **지금 평가 도구 추가 건너뛰기** 확인란을 선택 합니다. **다음**을 선택합니다.
+8. **평가 도구 선택** 탭에서 **Azure Migrate: 데이터베이스 평가** 가 추가할 평가 도구로 표시 됩니다. 현재 평가 도구가 필요 하지 않은 경우 **지금 평가 도구 추가 건너뛰기** 확인란을 선택 합니다. **다음**을 선택합니다.
 
     ![Azure Migrate 선택 평가 도구 탭](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. **마이그레이션 도구 선택** 탭에서 다음을 **Azure Migrate 합니다. 데이터베이스 마이그레이션은** 추가할 마이그레이션 도구로 표시 됩니다. 현재 마이그레이션 도구가 필요 하지 않은 경우 **지금은 마이그레이션 도구 추가 건너뛰기**를 선택 합니다. **다음**을 선택합니다.
+9. **마이그레이션 도구 선택** 탭의 **Azure Migrate: 데이터베이스 마이그레이션이** 추가할 마이그레이션 도구로 표시 됩니다. 현재 마이그레이션 도구가 필요 하지 않은 경우 **지금은 마이그레이션 도구 추가 건너뛰기**를 선택 합니다. **다음**을 선택합니다.
 
     ![Azure Migrate-마이그레이션 도구 탭 선택](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -87,7 +88,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
 ## <a name="assess-and-upload-assessment-results"></a>평가 결과 평가 및 업로드
 
-마이그레이션 프로젝트를 성공적으로 만든 후 **평가 도구**의 Azure Migrate에서 다음을 **수행 합니다. 데이터베이스 평가** 상자, Data Migration Assistant 도구를 다운로드 하 고 사용 하는 방법에 대 한 지침을 표시 합니다.
+마이그레이션 프로젝트를 성공적으로 만든 후 **평가 도구**의 **Azure Migrate: 데이터베이스 평가** 상자에서 Data Migration Assistant 도구를 다운로드 하 고 사용 하는 방법에 대 한 지침을 표시 합니다.
 
    ![Azure Migrate-평가 도구가 추가 됨](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
@@ -96,7 +97,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
 ### <a name="create-an-assessment"></a>평가 만들기
 
-1. 왼쪽에서 **+** 아이콘을 선택한 다음 평가 **프로젝트 형식을** 선택 합니다.
+1. 왼쪽에서 **+** 아이콘을 선택 하 고 평가 **프로젝트 형식을** 선택 합니다.
 2. 프로젝트 이름을 지정 하 고 원본 서버 및 대상 서버 유형을 선택 합니다.
 
     온-프레미스 SQL Server 인스턴스를 SQL Server의 이후 버전으로 업그레이드 하는 경우 또는 Azure VM에서 호스트 되는 SQL Server 원본 및 대상 서버 유형을 **SQL Server**로 설정 합니다. 대상 서버 유형을 PaaS (Azure SQL Database) 대상 준비 평가에 **Azure SQL Database Managed Instance** 로 설정 합니다.
@@ -158,9 +159,9 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
    ![Azure Migrate-준비 결과 검토](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
-    **평가 데이터베이스 인스턴스**:  지금까지 평가한 SQL Server 인스턴스 수입니다.
-    **평가 데이터베이스**: **SQL DB에 대해 준비 된 데이터베이스**를 평가 하는 하나 이상의 SQL Server 인스턴스에 대해 평가 된 총 데이터베이스 수:  Azure SQL Database (PaaS)로 마이그레이션할 준비가 된 데이터베이스의 수입니다.
-    **AZURE SQL VM에 대해 준비 된 데이터베이스**:  데이터베이스 수가 하나 이상의 마이그레이션 차단기를 Azure SQL Database (PaaS)로 구성 되어 있지만 Azure SQL Server Vm으로 마이그레이션할 준비가 되었습니다.
+    **평가 된 데이터베이스 인스턴스**: 지금까지 평가한 SQL Server 인스턴스 수입니다.
+    **평가 된 데이터베이스**: 하나 이상의 SQL Server 인스턴스에서 평가 된 데이터베이스의 총 수입니다. **SQL DB에 대해 준비 된 데이터베이스**: PaaS (Azure SQL Database로 마이그레이션할 준비가 된 데이터베이스 수).
+    **AZURE SQL VM에 대해 준비 된 데이터베이스**: 데이터베이스 수는 PaaS (Azure SQL Database)로 하나 이상의 마이그레이션 차단기를 구성 했지만 Azure SQL Server vm으로 마이그레이션할 준비가 되었습니다.
 
 3. SQL Server 인스턴스 수준 뷰로 가져올 **평가 데이터베이스 인스턴스** 를 선택 합니다.
 
@@ -178,7 +179,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
    ![Azure Migrate-마이그레이션 차단기 검토](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)

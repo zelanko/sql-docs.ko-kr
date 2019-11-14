@@ -1,7 +1,8 @@
 ---
-title: SQL Server 마이그레이션 평가 (Data Migration Assistant)를 수행 합니다. Microsoft Docs
+title: SQL Server 마이그레이션 평가 수행
+titleSuffix: Data Migration Assistant
 description: Data Migration Assistant를 사용 하 여 다른 SQL Server 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하는 방법을 알아보고 Azure SQL Database
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892664"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056628"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행
 
@@ -140,7 +141,7 @@ Azure SQL Database의 경우 평가는 마이그레이션 차단 문제와 기�
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>대상 준비를 위한 데이터 공간 평가
 
-이러한 평가를 전체 데이터 공간으로 확장 하 고 Azure SQL Database로 마이그레이션할 SQL Server 인스턴스와 데이터베이스의 상대적 준비 상태를 확인 하려면 **업로드를** 선택 하 여 Azure 마이그레이션 허브에 결과를 업로드 Azure Migrate .
+이러한 평가를 전체 데이터 공간으로 확장 하 고 Azure SQL Database로 마이그레이션할 SQL Server 인스턴스와 데이터베이스의 상대적 준비 상태를 확인 하려면 **Azure Migrate에 업로드**를 선택 하 여 결과를 Azure 마이그레이션 허브에 업로드 합니다.
 
 이렇게 하면 Azure 마이그레이션 허브 프로젝트에서 통합 결과를 볼 수 있습니다.
 

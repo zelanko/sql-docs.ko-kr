@@ -1,7 +1,7 @@
 ---
-title: 명령줄에서 Data Migration Assistant 실행 (SQL Server) | Microsoft Docs
+title: 명령줄에서 Data Migration Assistant 실행
 description: 명령줄에서 Data Migration Assistant를 실행 하 여 마이그레이션을 위해 SQL Server 데이터베이스를 평가 하는 방법을 알아봅니다.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028710"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056621"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
@@ -256,15 +256,15 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationJsonOutputResultsFilePath` | JSON 결과 파일의 전체 경로입니다. | Y <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
 |`/SkuRecommendationHtmlResultsFilePath` | HTML 결과 파일의 전체 경로입니다. | Y <br> TSV 또는 JSON 또는 HTML 파일 경로 중 하나를 사용 해야 합니다.
 |`/SkuRecommendationPreventPriceRefresh` | 가격 새로 고침이 발생 하지 않도록 합니다. 오프 라인 모드에서 실행 하는 경우 (예: true)을 사용 합니다. | Y <br> (정적 가격에 대 한이 인수 또는 모든 인수를 선택 해야 최신 가격을 가져올 수 있습니다.)
-|`/SkuRecommendationCurrencyCode` | 가격을 표시할 통화 (예: "USD") | Y <br> (최신 가격)
-|`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0003P"). 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | Y <br> (최신 가격)
+|`/SkuRecommendationCurrencyCode` | 가격 (예: "USD")을 표시할 통화입니다. | Y <br> (최신 가격)
+|`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0017P-0003P")입니다. 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | Y <br> (최신 가격)
 |`/SkuRecommendationRegionName` | 영역 이름 (예: "WestUS") | Y <br> (최신 가격)
 |`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | Y <br> (최신 가격)
-|`/SkuRecommendationDatabasesToRecommend` | 에 대해 권장 되는 데이터베이스의 공백으로 구분 된 목록 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
+|`/SkuRecommendationDatabasesToRecommend` | 권장 되는 데이터베이스의 공백으로 구분 된 목록입니다 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
 |`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | Y <br> (최신 가격)
 |`/AzureAuthenticationClientId` | 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다. | Y <br> (최신 가격)
 |`/AzureAuthenticationInteractiveAuthentication` | 창을 팝업 하려면 true로 설정 합니다. | Y <br> (최신 가격) <br>3 인증 옵션 중 하나를 선택 합니다.-옵션 1
-|`/AzureAuthenticationCertificateStoreLocation` | 인증서 저장소 위치 (예:)로 설정 합니다. "CurrentUser"). | Y <br>(최신 가격) <br> (3 인증 옵션 중 하나 선택-옵션 2)
+|`/AzureAuthenticationCertificateStoreLocation` | 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다. | Y <br>(최신 가격) <br> (3 인증 옵션 중 하나 선택-옵션 2)
 |`/AzureAuthenticationCertificateThumbprint` | 인증서 지 문으로 설정 합니다. | Y <br> (최신 가격) <br>(3 인증 옵션 중 하나 선택-옵션 2)
 |`/AzureAuthenticationToken` | 인증서 토큰으로 설정 합니다. | Y <br> (최신 가격) <br>(3 개의 인증 옵션 중 하나 선택-옵션 3)
 
@@ -337,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - 다운로드를 [Data Migration Assistant](https://aka.ms/get-dma) 합니다.
 - 이 문서에서는 [온-프레미스 데이터베이스에 적합 한 AZURE SQL DATABASE SKU를 식별](https://aka.ms/dma-sku-recommend-sqldb)합니다.

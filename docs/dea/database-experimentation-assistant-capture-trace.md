@@ -1,7 +1,7 @@
 ---
-title: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미에서 추적 캡처
-description: 데이터베이스 실험 도우미에서 추적 캡처
-ms.custom: ''
+title: SQL Server 업그레이드에 대 한 추적 캡처
+description: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미에서 추적 캡처
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653810"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056598"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
 
@@ -40,7 +40,7 @@ SQL Server의 쿼리 캐싱은 평가 결과에 영향을 줄 수 있습니다. 
     - **추적 파일 이름**: 캡처에 대 한 추적 파일의 이름을 입력 합니다.
     - **최대 파일 크기 (MB)** : 파일의 롤오버 크기를 선택 합니다. 필요에 따라 선택한 파일 크기에 새 파일이 만들어집니다. 권장 롤오버 크기는 200 MB입니다.
     - **기간 (분)** : 추적 캡처를 실행할 시간 (분)을 선택 합니다.
-    - **출력 추적 파일 저장 경로**: 추적 파일의 대상 경로를 선택 합니다. 
+    - **저장소 출력 추적 파일 경로**: 추적 파일의 대상 경로를 선택 합니다. 
 
     > [!NOTE]
     > 추적 파일의 파일 경로는 SQL Server를 실행 하는 컴퓨터에 있어야 합니다. SQL Server 서비스가 특정 계정에 대해 설정 되지 않은 경우 서비스는 기록할 추적 파일에 대해 지정 된 폴더에 대 한 쓰기 권한이 필요할 수 있습니다.
@@ -116,7 +116,7 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 
 ### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>추적 대신 Xevent를 수집할 수 있으며 Xevent를 재생할 수 있나요?
     
-예. DEA는 Xevent을 지원 합니다. 최신 버전의 DEA를 다운로드 하 여 사용해 보세요.
+예 DEA는 Xevent을 지원 합니다. 최신 버전의 DEA를 다운로드 하 여 사용해 보세요.
 
 ## <a name="troubleshoot-trace-captures"></a>추적 캡처 문제 해결
 
@@ -125,11 +125,11 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 - SQL Server를 실행 하는 컴퓨터의 이름이 올바른지 확인 합니다. 확인 하려면 SSMS (SQL Server Management Studio)를 사용 하 여 SQL Server를 실행 하는 컴퓨터에 연결을 시도 합니다.
 - 방화벽 구성이 SQL Server를 실행 하는 컴퓨터에 대 한 연결을 차단 하지 않는지 확인 합니다.
 - 사용자에 게 블로그 게시 [재생 FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)에 나열 된 사용 권한이 있는지 확인 합니다.
-- 추적 이름이 표준 롤오버 규칙 (캡처\_1)을 따르지 않는지 확인 합니다. 대신 Capture\_1a 또는 Capture1와 같은 추적 이름을 사용해 보세요.
+- 추적 이름이 표준 롤오버 규칙 (캡처\_1)을 따르지 않는지 확인 합니다. 대신 Capture\_1A 또는 Capture1와 같은 추적 이름을 사용해 보세요.
 
 다음은 표시 될 수 있는 몇 가지 오류와 해결 방법입니다.
 
-|가능한 오류|솔루션|  
+|가능한 오류|해결 방법|  
 |---|---|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (53)에 대 한 쓰기 권한이 있는지 확인 하십시오.|DEA 도구를 실행 하는 사용자는 SQL Server를 실행 하는 컴퓨터에 액세스할 수 있어야 합니다. 사용자에 게 sysadmin 역할이 할당 되어야 합니다.|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (19062)에 대 한 쓰기 권한이 있는지 확인 하십시오.|지정 된 추적 경로가 없거나, 해당 폴더에 SQL Server 서비스가 실행 중인 계정에 대 한 쓰기 권한이 없는 경우 (예: 네트워크 서비스) 경로가 있어야 하 고 추적을 시작 하는 데 필요한 권한이 있어야 합니다.|  

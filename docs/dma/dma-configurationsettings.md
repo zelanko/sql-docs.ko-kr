@@ -1,7 +1,7 @@
 ---
-title: Data Migration Assistant (SQL Server)에 대 한 설정 구성 | Microsoft Docs
+title: Data Migration Assistant에 대 한 설정 구성
 description: 구성 파일에서 값을 업데이트 하 여 Data Migration Assistant에 대 한 설정을 구성 하는 방법을 알아봅니다.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345241"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056538"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
@@ -29,7 +29,7 @@ Dma .exe .config 파일에서 구성 값을 설정 하 여 Data Migration Assist
 
 - 데스크톱 응용 프로그램
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\ping.exe .config
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\를 실행 합니다.
 
 - 명령줄 유틸리티
 
@@ -90,7 +90,7 @@ Data Migration Assistant v2.0부터이 문제가 발생 하는 경우 parallelDa
 
 - databaseLockTimeout
 
-   이 매개 변수는 [잠금\_제한 시간 제한\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) *(밀리초)* 을 설정 하는 것과 같습니다. (기본값 = 5000)
+   이 매개 변수는 [LOCK\_timeout timeout\_period](../t-sql/statements/set-lock-timeout-transact-sql.md) ( *밀리초)* 를 설정 하는 것과 같습니다. (기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 권장 임계값
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 권장 사항 임계값
 
 [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)를 사용 하면 Microsoft SQL Server 2016에서 Azure로 웜 및 콜드 트랜잭션 데이터를 동적으로 확장할 수 있습니다. Stretch Database은 많은 양의 콜드 데이터를 포함 하는 트랜잭션 데이터베이스를 대상으로 합니다. Stretch Database 권장 사항은 저장소 기능 권장 사항에서 먼저이 기능을 사용 하는 것으로 간주 되는 테이블을 식별 한 다음이 기능에 대해 테이블을 사용 하도록 설정 하기 위해 수행 해야 하는 변경 내용을 식별 합니다.
 
@@ -152,6 +152,6 @@ Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [다운로드 Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)

@@ -1,7 +1,6 @@
 ---
-title: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미 시작
-description: 데이터베이스 실험 도우미 시작
-ms.custom: ''
+title: 데이터베이스 실험 도우미 시작
+description: DEA (데이터베이스 실험 도우미)는 업그레이드 또는 새 인덱스와 같은 SQL Server 환경의 변경에 대 한 A/B 테스트 솔루션입니다.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381767"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056710"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>데이터베이스 실험 도우미 시작
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>데이터베이스 실험 도우미 시작 (SQL Server)
 
 DEA (데이터베이스 실험 도우미)는 업그레이드 또는 새 인덱스와 같은 SQL Server 환경의 변경에 대 한 A/B 테스트 솔루션입니다. DEA를 사용 하면 현재 환경에서 원본 서버의 워크 로드가 새 환경에서 어떻게 수행 될 것인지 평가할 수 있습니다. DEA 3 단계를 완료 하 여 A/B 테스트를 실행 하는 과정을 안내 합니다. 
 
@@ -48,7 +48,7 @@ SQL Server A/B 테스트의 첫 번째 단계는 원본 서버에서 추적을 �
 
 1. 다음 정보를 입력 하거나 선택 합니다.
 
-   - **추적 이름**: 만들려는 새 추적 파일의 파일 이름입니다. 롤오버 파일 명명 규칙을 사용 하는 추적 이름 (예: CaptureName \_NNN)을 사용 하지 마십시오.
+   - **추적 이름**: 만들려는 새 추적 파일의 파일 이름입니다. 롤오버 파일 명명 규칙을 사용 하는 추적 이름 (예: CaptureName\_NNN)을 사용 하지 마십시오.
    - **기간**: 캡처에 대 한 기간입니다.
    - **SQL Server 인스턴스 이름**: 추적을 캡처할 SQL Server 인스턴스입니다.
    - **데이터베이스 이름**: 추적을 캡처할 SQL Server를 실행 하는 컴퓨터의 데이터베이스 이름입니다. 이 인수를 비워 두면 서버의 모든 데이터베이스에서 추적이 캡처됩니다.

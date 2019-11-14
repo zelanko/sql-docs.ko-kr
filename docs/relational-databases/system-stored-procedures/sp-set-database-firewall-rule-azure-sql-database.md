@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843849"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055085"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,21 +44,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- **[@name** =] [N] '*이름*'  
- 데이터베이스 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다. *name* 은 **nvarchar (128)** 이며 기본값은 없습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에 대 한 유니코드 식별자 `N`은 선택 사항입니다. 
+데이터베이스 수준 방화벽 설정을 설명 하 고 구별 하는 데 사용 되는 이름을 `[ @name = ] [N]'name'` 합니다. *name* 은 **nvarchar (128)** 이며 기본값은 없습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에 대 한 유니코드 식별자 `N`은 선택 사항입니다. 
   
- **[@start_ip_address** =] '*start_ip_address*'  
- 데이터베이스 수준의 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다. *start_ip_address* 는 **varchar (50)** 이며 기본값은 없습니다.  
+데이터베이스 수준 방화벽 설정 범위에서 가장 낮은 IP 주소를 `[ @start_ip_address = ] 'start_ip_address'` 합니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다. *start_ip_address* 는 **varchar (50)** 이며 기본값은 없습니다.  
   
- [ **@end_ip_address** =] '*end_ip_address*'  
- 데이터베이스 수준의 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다. *end_ip_address* 는 **varchar (50)** 이며 기본값은 없습니다.  
+데이터베이스 수준 방화벽 설정 범위에서 가장 높은 IP 주소를 `[ @end_ip_address = ] 'end_ip_address'` 합니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다. *end_ip_address* 는 **varchar (50)** 이며 기본값은 없습니다.  
   
  다음 표에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 지원 되는 인수와 옵션을 보여 줍니다.  
   
 > [!NOTE]  
 >  Azure 연결 시도는이 필드와 *start_ip_address* 필드가 `0.0.0.0`같을 때 허용 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  데이터베이스의 데이터베이스 수준 방화벽 설정 이름은 고유해야 합니다. 저장 프로시저에 대해 제공된 데이터베이스 수준 방화벽 설정 이름이 해당 데이터베이스 수준 방화벽 설정 테이블에 이미 있습니다. 시작 및 끝 IP 주소가 업데이트됩니다. 그렇지 않으면, 새 데이터베이스 수준 방화벽 설정이 만들어집니다.  
   
  시작 IP 주소와 끝 IP 주소가 `0.0.0.0`같은 데이터베이스 수준 방화벽 설정을 추가 하면 모든 Azure 리소스에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버의 데이터베이스에 액세스할 수 있습니다. 방화벽 설정의 용도를 기억할 수 있도록 하는 *이름* 매개 변수에 값을 제공 합니다.  
@@ -86,7 +83,7 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Azure SQL Database 방화벽](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [방법: 방화벽 설정 구성 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41; ](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   

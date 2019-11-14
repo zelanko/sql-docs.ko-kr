@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: 장애 조치(Failover) 및 장애 조치(Failover) 모드
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: 자동 장애 조치(Failover)에 대한 유연한 장애 조치(Failover) 정책
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: 읽기 확장 전용
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: 연결 리디렉션 읽기/쓰기
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: 릴리스 정보
       items:
-        - name: 이전 버전과의 호환성
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: SQL Server 에서 지원되지 않는 기능
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019에서 사용되지 않음
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017에서 사용되지 않음
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016에서 사용되지 않음
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server 에서 지원되지 않는 기능
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019의 주요 변경 내용
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017의 주요 변경 내용
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016의 주요 변경 내용
@@ -4779,7 +4779,7 @@
         - name: 개요
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: 이전 버전과의 호환성
               href: relational-databases/replication/replication-backward-compatibility.md
             - name: 사용되지 않는 기능
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
