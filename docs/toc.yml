@@ -1759,7 +1759,7 @@
               href: relational-databases/tables/table-properties-ssms.md
             - name: 열 속성
               href: relational-databases/tables/column-properties-general-page.md
-    - name: 변경 내용 추적
+    - name: 변경 내용 추적 작업
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
         - name: 변경 데이터 캡처
