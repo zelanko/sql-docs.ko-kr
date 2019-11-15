@@ -1,6 +1,6 @@
 ---
-title: Service Broker 관리 | Microsoft Docs
-ms.custom: ''
+title: Service Broker 관리
+ms.custom: seo-dt-2019
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1759ec9e89f53a224abd73a742d4c7dbaaeffe61
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e3fe187412a70956d1f4496b6c042e39edafd18c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148425"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094406"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
 
@@ -44,7 +44,7 @@ ms.locfileid: "70148425"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 개체는 서비스 및 서비스가 정의된 데이터베이스에 대한 위치 정보가 포함된 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 경로를 나타냅니다. 메시지를 배달하려면 경로가 있어야 합니다. 각 데이터베이스에는 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 위치로 지정하는 경로가 기본적으로 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

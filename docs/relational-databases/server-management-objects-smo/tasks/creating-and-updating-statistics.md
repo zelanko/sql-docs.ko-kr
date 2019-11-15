@@ -1,6 +1,6 @@
 ---
-title: 통계 만들기 및 업데이트 | Microsoft Docs
-ms.custom: ''
+title: 통계 생성 및 업데이트
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 9a63d9760142ec3d3f964d80334b2244a4cac4be
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911153"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095179"
 ---
 # <a name="creating-and-updating-statistics"></a>통계 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

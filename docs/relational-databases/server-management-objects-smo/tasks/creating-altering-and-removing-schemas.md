@@ -1,6 +1,5 @@
 ---
-title: 스키마 생성, 변경 및 제거 | Microsoft Docs
-ms.custom: ''
+title: 스키마 생성, 변경 및 제거
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,12 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c42b16ed0564154b75f60ff16e0e9bea170f2223
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 36141c426bb0d8906e5b2d2d7bb4d21aadace6f2
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911128"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095913"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

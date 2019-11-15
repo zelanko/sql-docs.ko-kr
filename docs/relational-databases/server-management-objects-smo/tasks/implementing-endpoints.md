@@ -1,6 +1,6 @@
 ---
-title: 끝점 구현 | Microsoft Docs
-ms.custom: ''
+title: 엔드포인트 구현
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,17 +13,17 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f63ee89bf2b338ec6d9145eb7ca36f04a27f8cf0
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: cb20b6bf7275dea4f44b21aa9deb0c3f0310bfea
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148445"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095193"
 ---
 # <a name="implementing-endpoints"></a>엔드포인트 구현
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
+  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. ph x="1" /&gt; 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 속성을 사용하여 다음 페이로드 유형 중 하나를 지정할 수 있습니다.  
   
@@ -132,7 +132,7 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

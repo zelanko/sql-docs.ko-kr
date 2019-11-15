@@ -1,6 +1,6 @@
 ---
-title: 규칙 생성, 변경 및 제거 | Microsoft Docs
-ms.custom: ''
+title: 규칙 생성, 변경 및 제거
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b96824bf3f79e2166a0198b0a56a60f8e7a3cf3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: b2f918e611a4bc88c1a77ad7d539a9101f3f8dac
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911134"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095521"
 ---
 # <a name="creating-altering-and-removing-rules"></a>규칙 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "70911134"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Visual Basic에서 규칙 생성, 변경 및 제거  
  이 코드 예제는 규칙을 만들고, 규칙을 열에 연결하고, <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 속성을 수정하고, 열에서 규칙을 분리하고, 규칙을 삭제하는 방법을 보여 줍니다.  
   
- System.object의 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 <xref:Microsoft.SqlServer.Management.Smo.Rule> 한 모호성을 방지 하기 위해 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
+ System.object 어셈블리에서 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 모호성을 방지 하기 위해 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -65,7 +65,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Visual C#에서 규칙 생성, 변경 및 제거  
  이 코드 예제는 규칙을 만들고, 규칙을 열에 연결하고, <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 속성을 수정하고, 열에서 규칙을 분리하고, 규칙을 삭제하는 방법을 보여 줍니다.  
   
- System.object의 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 <xref:Microsoft.SqlServer.Management.Smo.Rule> 한 모호성을 방지 하기 위해 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
+ System.object 어셈블리에서 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 모호성을 방지 하기 위해 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
   
 ```csharp  
 {  
@@ -98,7 +98,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>PowerShell에서 규칙 생성, 변경 및 제거  
  이 코드 예제는 규칙을 만들고, 규칙을 열에 연결하고, <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 속성을 수정하고, 열에서 규칙을 분리하고, 규칙을 삭제하는 방법을 보여 줍니다.  
   
- System.object의 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 <xref:Microsoft.SqlServer.Management.Smo.Rule> 한 모호성을 방지 하기 위해 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
+ System.object 어셈블리에서 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의 모호성을 방지 하기 위해 <xref:Microsoft.SqlServer.Management.Smo.Rule> 개체에 대 한 **Dim** 문은 전체 어셈블리 경로로 지정 됩니다.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
@@ -125,7 +125,7 @@ $ru.UnbindFromColumn("Product", "SellEndDate", "Production")
 $ru.Drop()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
   
   

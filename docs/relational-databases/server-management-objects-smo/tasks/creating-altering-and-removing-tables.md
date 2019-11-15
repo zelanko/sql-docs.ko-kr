@@ -1,6 +1,6 @@
 ---
-title: 테이블 생성, 변경 및 제거 | Microsoft Docs
-ms.custom: ''
+title: 테이블 생성, 변경 및 제거
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac595fca4283a2775304e0f228fdedae3ccf5504
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: b90e081c86aaee9fda1363185263fd6e53d4378f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148471"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095636"
 ---
 # <a name="creating-altering-and-removing-tables"></a>테이블 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -175,7 +175,7 @@ $tb.Drop()
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Table>  
   
   

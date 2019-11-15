@@ -1,6 +1,6 @@
 ---
-title: 기본값 생성, 변경 및 제거 | Microsoft Docs
-ms.custom: ''
+title: 기본값 생성, 변경 및 제거
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77cb993ada1fa09b62886bec1ac49eb43dad54f3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 17e7f0dd020004f0251fd470e42a591f926d7ce2
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148515"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094650"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>기본값 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -117,7 +117,7 @@ $def.UnbindFromColumn("SpecialOffer", "StartDate", "Sales")
 $def.Drop()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Default>  
   
   

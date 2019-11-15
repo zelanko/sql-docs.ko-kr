@@ -1,6 +1,6 @@
 ---
-title: 특정 작업 프로그래밍 | Microsoft Docs
-ms.custom: ''
+title: 프로그래밍 관련 태스크
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148394"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095205"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "70148394"
 |[SMO에서 SQL Server 구성](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 구성 설정을 보고 수정하는 방법에 대해 설명합니다.|  
 |[테이블 및 인덱스 분할 사용](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|SMO에서 인덱스 및 테이블 분할을 사용하는 방법에 대해 설명합니다.|  
 |[파일 그룹 및 파일을 사용하여 데이터 저장](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|SMO에서 파일 그룹을 사용하는 방법에 대해 설명합니다.|  
-|[WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|구성 관리용 WMI 공급자를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 추적하는 여러 가지 방법에 대해 설명합니다.|  
+|[WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|구성 관리용 WMI 공급자를 나타내는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 인스턴스를 추적하는 여러 가지 방법에 대해 설명합니다.|  
 |[데이터베이스 개체 작업](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 개체를 나타내는 인스턴스 클래스를 만드는 방법에 대해 설명합니다.|  
 |[사용자, 역할 및 로그인 관리](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|SMO에서 보안 역할을 사용하는 방법에 대해 설명합니다.|  
 |[권한 부여, 취소 및 거부](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|SMO를 사용하여 사용자 또는 역할 멤버에게 권한을 부여하고 취소하고 거부하는 방법에 대해 설명합니다.|  

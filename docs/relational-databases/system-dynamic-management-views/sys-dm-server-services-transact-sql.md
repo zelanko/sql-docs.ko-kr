@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592f39e997574313e9e61e626a90aa3ac5fa310f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982332"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095378"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server, 전체 텍스트 및 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 SQL Server 에이전트 서비스에 대한 정보를 반환합니다. 이 동적 관리 뷰를 사용하여 이러한 서비스에 대한 상태 정보를 보고할 수 있습니다.  
+  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 SQL Server, 전체 텍스트, SQL Server 실행 패드 서비스 (SQL Server 2017 +) 및 SQL Server 에이전트 서비스에 대 한 정보를 반환 합니다. 이 동적 관리 뷰를 사용하여 이러한 서비스에 대한 상태 정보를 보고할 수 있습니다.  
   
  
 |열 이름|데이터 형식|설명|  
@@ -51,6 +51,6 @@ ms.locfileid: "73982332"
 ### <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [sys. dm_server_registry &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

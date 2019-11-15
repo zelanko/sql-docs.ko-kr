@@ -1,6 +1,6 @@
 ---
-title: 데이터베이스 개체 작업 | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 개체 작업
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a59d039beed50543f1f7397bbceec24430c86a89
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0229ca7a79db5f502b603df2194843eb8a5fac7f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909744"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096045"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>데이터베이스 개체 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

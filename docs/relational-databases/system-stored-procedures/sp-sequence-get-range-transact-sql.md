@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304767"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095332"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @sequence_name = ] N'sequence'` 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar (776)** 입니다.  
+시퀀스 개체의 이름을 `[ @sequence_name = ] N'sequence'` 합니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar (776)** 입니다.  
   
-`[ @range_size = ] range_size` 시퀀스에서 인출할 값의 수입니다. **\@range_size** 는 **bigint**입니다.  
+시퀀스에서 인출할 값의 수를 `[ @range_size = ] range_size` 합니다. **\@range_size** 는 **bigint**입니다.  
   
-`[ @range_first_value = ] range_first_value` 출력 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 첫 번째 (최소 또는 최대) 값을 반환 합니다. **1range_first_value** 는 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 하는 **sql_variant** 입니다. @no__t  
+`[ @range_first_value = ] range_first_value` Output 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 첫 번째 (최소 또는 최대) 값을 반환 합니다. **\@range_first_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @range_last_value = ] range_last_value` 선택적 출력 매개 변수는 요청 된 범위의 마지막 값을 반환 합니다. **1range_last_value** 는 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 하는 **sql_variant** 입니다. @no__t  
+선택적 출력 매개 변수 `[ @range_last_value = ] range_last_value` 요청 된 범위의 마지막 값을 반환 합니다. **\@range_last_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @range_cycle_count = ] range_cycle_count` 선택적 출력 매개 변수는 시퀀스 개체가 요청 된 범위를 반환 하기 위해 순환 하는 횟수를 반환 합니다. **\@range_cycle_count** 는 **int**입니다.  
+선택적 출력 매개 변수 `[ @range_cycle_count = ] range_cycle_count`는 시퀀스 개체가 요청 된 범위를 반환 하기 위해 순환 하는 횟수를 반환 합니다. **\@range_cycle_count** 은 **int**입니다.  
   
-`[ @sequence_increment = ] sequence_increment` 선택적 출력 매개 변수는 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 증가값을 반환 합니다. **1sequence_increment** 는 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 하는 **sql_variant** 입니다. @no__t  
+선택적 출력 매개 변수 `[ @sequence_increment = ] sequence_increment` 요청 된 범위를 계산 하는 데 사용 되는 시퀀스 개체의 증가값을 반환 합니다. **\@sequence_increment** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @sequence_min_value = ] sequence_min_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 솟 값을 반환 합니다. **1sequence_min_value** 는 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 하는 **sql_variant** 입니다. @no__t  
+`[ @sequence_min_value = ] sequence_min_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 솟 값을 반환 합니다. **\@sequence_min_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
-`[ @sequence_max_value = ] sequence_max_value` 선택적 출력 매개 변수는 시퀀스 개체의 최 댓 값을 반환 합니다. **1sequence_max_value** 는 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 하는 **sql_variant** 입니다. @no__t  
+`[ @sequence_max_value = ] sequence_max_value` 선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환 합니다. **\@sequence_max_value** 는 요청에 사용 된 시퀀스 개체의 기본 유형과 동일한 **sql_variant** 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>설명  
- sys의 sp_sequence_get_rangeis입니다. 스키마를 sp_sequence_get_range로 참조할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ sys에서 sp_sequence_get_rangeis 합니다. 스키마 및을 (를) sp_sequence_get_range으로 참조할 수 있습니다.  
   
 ### <a name="cycling-sequences"></a>순환 시퀀스  
  필요할 경우 시퀀스 개체는 적절한 횟수로 순환하여 요청한 범위를 처리합니다. 순환 횟수는 `@range_cycle_count`를 통해 호출자에게 반환됩니다.  
@@ -109,8 +109,7 @@ CREATE SEQUENCE Test.RangeSeq
  다음 문은 RangeSeq 시퀀스 개체에서 4 개의 시퀀스 번호를 가져오고 사용자에 게 첫 번째 숫자를 반환 합니다.  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -122,7 +121,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>2\. 모든 출력 매개 변수 반환  
- 다음 예에서는 sp_sequence_get_range 프로시저의 모든 출력 값을 반환 합니다.  
+ 다음 예에서는 sp_sequence_get_range 프로시저에서 모든 출력 값을 반환 합니다.  
   
 ```  
 DECLARE    
@@ -180,7 +179,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
-title: 데이터베이스 생성, 변경 및 제거 | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 생성, 변경 및 제거
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10e6919bf15d824dae36096583ed44affa6ff9cc
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 6eafe885d3071731d2a3f8a4f40c375f36eafa53
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911146"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095221"
 ---
 # <a name="creating-altering-and-removing-databases"></a>데이터베이스 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,7 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 이전 SQL Server 버전 (OLE DB)을 사용 하는 새로운 날짜 및 시간 기능 | Microsoft Docs
-ms.custom: ''
+title: 이전 SQL Server 버전을 사용 하는 날짜 및 시간 OLE DB 기능
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,13 +9,14 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f12861b4bcd205263c54fae43e0a401b3219f33
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 100a0b6a96c9359e224e406928b03a2aa776511e
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73769374"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095451"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73769374"
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|날짜/시간|날짜|확인|확인|  
+|DBTYPE_DBDATE|DateTime|Date|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "73769374"
 |DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|확인|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|확인|확인|  
-|DBTYPE_DBDATE|Smalldatetime|날짜|확인|확인|  
+|DBTYPE_DBDATE|Smalldatetime|Date|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림 때문에 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -67,11 +67,11 @@ ms.locfileid: "73769374"
 |매개 변수 유형|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
-|time|DBTYPE_WSTR|8, 10..16|~0|~0|  
+|Time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
+|Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|Datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
  이러한 값 범위 중 일부는 연속되지 않습니다. 예를 들어 8, 10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "73769374"
 |열 유형|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
 |date|DBTYPE_WSTR|10|NULL|NULL|  
-|time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
+|Time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.27|NULL|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.34|NULL|NULL|  
+|Datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
+|Datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 구조는 다음 정보를 반환합니다.  
@@ -96,8 +96,8 @@ ms.locfileid: "73769374"
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
+|Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|Datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>스키마 행 집합  
  이 섹션에서는 새 데이터 형식의 매개 변수, 결과 열 및 스키마 행 집합에 대한 메타데이터에 대해 설명합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 이전의 도구를 사용 하 여 개발 된 클라이언트 공급자를 사용 하는 경우에 유용 합니다.  
@@ -108,11 +108,11 @@ ms.locfileid: "73769374"
 |열 유형|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8, 10..16|16, 20.32|NULL|  
+|Time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|datetime2|DBTYPE_WSTR|19, 21.27|38, 42.54|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.34|52, 56.68|NULL|  
+|Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
+|Datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
 #### <a name="procedure_parameters-rowset"></a>PROCEDURE_PARAMETERS 행 집합  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
@@ -120,18 +120,18 @@ ms.locfileid: "73769374"
 |열 유형|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8, 10..16|16, 20.32|time|  
+|Time|DBTYPE_WSTR|8, 10..16|16,20..32|Time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
-|datetime2|DBTYPE_WSTR|19, 21.27|38, 42.54|datetime2|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.34|52, 56.68|datetimeoffset|  
+|Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|Datetime2|  
+|Datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|Datetimeoffset|  
   
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> 열|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|Time|smalldatetime|datetime|Datetime2|Datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|smalldatetime|datetime|Datetime2|Datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -143,7 +143,7 @@ ms.locfileid: "73769374"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Time|smalldatetime|datetime|Datetime2|Datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -161,7 +161,7 @@ ms.locfileid: "73769374"
  버퍼 유형에서 연결의 서버 버전의 서버 유형으로 지원되는 클라이언트 변환이 있는 경우 모든 클라이언트 버퍼 유형을 사용할 수 있습니다. 이 컨텍스트에서 *서버 형식은* ICommandWithParameters:: SetParameterInfo로 지정 된 형식이 나 ICommandWithParameters:: SetParameterInfo가 호출 되지 않은 경우 버퍼 형식에 의해 암시 된 형식을 의미 합니다. 이는 하위 수준 서버에서, 또는 DataTypeCompatibility=80일 때 지원되는 서버 유형에 대한 클라이언트 변환이 성공할 경우 DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET을 사용할 수 있음을 의미합니다. 물론 서버 유형이 잘못된 경우 서버는 실제 서버 유형으로 암시적 변환을 수행하지 못하면 여전히 오류를 보고할 수 있습니다.  
   
 ## <a name="ssprop_init_datatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 동작  
- SSPROP_INIT_DATATYPECOMPATIBILITY을 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000로 설정 하면 [향상 된 날짜에 대 한 대량 복사 변경에 설명 된 대로 새로운 날짜/시간 형식 및 관련 메타 데이터가 클라이언트에 표시 됩니다. 시간 형식은 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)입니다.  
+ SSPROP_INIT_DATATYPECOMPATIBILITY을 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000로 설정 하면 [향상 된 날짜 및 시간 &#40;형식에 대 한 대량 복사 변경 내용&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에 설명 된 대로 새로운 날짜/시간 형식 및 관련 메타 데이터가 클라이언트에 표시 됩니다 OLE DB 및 ODBC.  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 비교  
  새 날짜/시간 형식은 날짜/시간 형식이 아니라 문자열 형식으로 표시되기 때문에 이러한 형식에 대해서는 모든 비교 연산자를 사용할 수 있습니다.  

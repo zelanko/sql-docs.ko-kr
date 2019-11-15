@@ -1,6 +1,5 @@
 ---
-title: 클라이언트에서 서버로 수행 되는 변환 | Microsoft Docs
-ms.custom: ''
+title: 클라이언트에서 서버로 수행되는 변환
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773051"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096005"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73773051"
   
  ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 DBTYPE_DBTIMESTAMP 바인딩은 **datetime2**인 것 처럼 변환 됩니다.  
   
-|대상 -><br /><br /> 원본|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1\.|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1\.<br /><br /> date|  
@@ -71,7 +71,7 @@ ms.locfileid: "73773051"
   
 ||||  
 |-|-|-|  
-|형식|길이(문자)|소수 자릿수|  
+|유형|길이(문자)|소수 자릿수|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

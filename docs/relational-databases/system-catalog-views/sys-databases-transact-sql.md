@@ -1,7 +1,7 @@
 ---
 title: sys. 데이터베이스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981852"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095863"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "73981852"
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT이 ON입니다.<br /> 0 = CURSOR_CLOSE_ON_COMMIT이 OFF입니다.|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT가 로컬입니다.<br /> 0 = CURSOR_DEFAULT가 전역입니다.|  
 |**is_fulltext_enabled**|**bit**|1 = 데이터베이스에서 전체 텍스트를 사용할 수 있습니다.<br /> 0 = 데이터베이스에서 전체 텍스트를 사용할 수 없습니다.|  
-|**is_trustworthy_on**|**bit**|1 = 데이터베이스가 신뢰할 수 있는 것으로 표시되어 있습니다.<br /> 0 = 데이터베이스가 신뢰할 수 있는 것으로 표시되지 않았습니다.|  
+|**is_trustworthy_on**|**bit**|1 = 데이터베이스가 신뢰할 수 있는 것으로 표시되어 있습니다.<br /> 0 = 데이터베이스가 신뢰할 수 있는 것으로 표시되지 않았습니다.<br /> 복원되거나 첨부된 데이터베이스의 경우 브로커를 사용하지 않도록 기본 설정됩니다. 단, 장애 조치(Failover) 후 브로커가 설정된 데이터베이스 미러링은 예외입니다.|  
 |**is_db_chaining_on**|**bit**|1 = 데이터베이스 간 소유권 체인이 ON 상태입니다.<br /> 0 = 데이터베이스 간 소유권 체인이 OFF 상태입니다.|  
 |**is_parameterization_forced**|**bit**|1 = 매개 변수화가 FORCED로 설정되어 있습니다.<br /> 0 = 매개 변수화가 SIMPLE로 설정되어 있습니다.|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 데이터베이스에 암호화된 마스터 키가 있습니다.<br /> 0 = 데이터베이스에 암호화된 마스터 키가 없습니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "73981852"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION이 ON입니다.<br /> 0 = DATE_CORRELATION_OPTIMIZATION이 OFF입니다.|  
 |**is_cdc_enabled**|**bit**|1 = 데이터베이스에 변경 데이터 캡처가 설정되어 있습니다. 자세한 내용은 [sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)을 참조 하세요.|  
 |**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다. `ALTER DATABASE SET ENCRYPTION` 절을 사용 하 여 마지막으로 설정 된 상태를 반영 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면 `is_encrypted`에 값 0이 표시 됩니다. [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
-|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 절을 사용 하 여 마지막으로 설정 된 상태를 반영). 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.|  
+|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 절을 사용 하 여 마지막으로 설정 된 상태를 반영). 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 복원되거나 첨부된 데이터베이스의 경우 브로커를 사용하지 않도록 기본 설정됩니다. 단, 장애 조치(Failover) 후 브로커가 설정된 데이터베이스 미러링은 예외입니다.|  
 |**replica_id**|**uniqueidentifier**|데이터베이스가 참여하는 가용성 그룹(있는 경우)의 로컬 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 고유 식별자입니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|데이터베이스가 참여 하는 Always On 가용성 그룹 (있는 경우) 내의 데이터베이스에 대 한 고유 식별자입니다. 주 복제본의이 데이터베이스와 데이터베이스가 가용성 그룹에 조인 된 모든 보조 복제본에 대 한 **group_database_id** 동일 합니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|이 데이터베이스에 매핑되는 리소스 풀의 ID입니다. 이 리소스 풀은 이 데이터베이스에서 메모리 최적화 테이블을 사용할 수 있는 총 메모리를 제어합니다.<br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
@@ -162,7 +162,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [database_recovery_status &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
