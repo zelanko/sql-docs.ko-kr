@@ -1,7 +1,7 @@
 ---
 title: SQL Server 데이터 풀에 데이터 수집
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 데이터 풀로 데이터를 수집하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653317"
@@ -20,9 +20,9 @@ ms.locfileid: "69653317"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 Transact-sql을 사용 하 여의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] [데이터 풀](concept-data-pool.md) 에 데이터를 로드 하는 방법을 보여 줍니다. 를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]사용 하면 다양 한 원본의 데이터를 수집 하 고 데이터 풀 인스턴스에 분산할 수 있습니다.
+이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 [데이터 풀](concept-data-pool.md)로 데이터를 수집하는 방법을 보여 줍니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 사용하여 다양한 원본의 데이터를 수집하고 데이터 풀 인스턴스 간에 분산할 수 있습니다.
 
-이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 데이터 풀에 외부 테이블을 만듭니다.

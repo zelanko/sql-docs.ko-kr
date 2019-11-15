@@ -1702,7 +1702,7 @@
         - name: 임시 테이블
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: 관리
+            - name: 만들기 및 관리
               items:
                 - name: 시작
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1730,17 +1730,17 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: 메타데이터 보기 및 함수
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: 메모리 액세스에 최적화된 테이블
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: 만들기
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: 작업
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: 모니터
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: 성능 고려 사항
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: 메모리 최적화 임시 테이블
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: 만들기
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: 작업
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: 모니터
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: 성능 고려 사항
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: 자습서
           items:
             - name: hierarchyid 데이터 형식 사용
