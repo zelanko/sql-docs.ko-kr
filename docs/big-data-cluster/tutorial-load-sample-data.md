@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653283"
@@ -20,10 +20,10 @@ ms.locfileid: "69653283"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 스크립트를 사용 하 여 샘플 데이터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를에 로드 하는 방법을 설명 합니다. 설명서의 다른 자습서는 대부분은 이 샘플 데이터를 사용합니다.
+이 자습서에서는 스크립트를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에 샘플 데이터를 로드하는 방법을 설명합니다. 설명서의 다른 자습서는 대부분은 이 샘플 데이터를 사용합니다.
 
 > [!TIP]
-> 에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 추가 샘플은 [sql server 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 리포지토리에서 찾을 수 있습니다. 샘플은 **sql-server-samples/samples/features/sql-big-data-cluster/** 경로에 있습니다.
+> [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 리포지토리에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 추가 샘플을 찾을 수 있습니다. 샘플은 **sql-server-samples/samples/features/sql-big-data-cluster/** 경로에 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

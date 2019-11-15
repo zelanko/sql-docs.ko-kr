@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589991"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240698"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -50,6 +50,7 @@ ms.locfileid: "72589991"
 - [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화합니다.
 - 새 `String or binary data would be truncated` 오류 메시지를 활성화하거나 비활성화합니다.
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 실제 실행 계획의 수집을 활성화하거나 비활성화합니다.
+- 일시 중지된 다시 시작 가능 인덱스 작업이 SQL Server 엔진에서 자동으로 중단되기 전에 일시 중지되는 시간(분)을 지정합니다.
 
 ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,9 +59,9 @@ ms.locfileid: "72589991"
 ```
 ALTER DATABASE SCOPED CONFIGURATION
 {
-     {  [ FOR SECONDARY] SET <set_options>}
+    { [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE  [plan_handle]
+| CLEAR PROCEDURE_CACHE [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,6 +89,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
 }
 ```
 
@@ -105,12 +107,11 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 CLEAR PROCEDURE_CACHE [plan_handle]
 
-데이터베이스에 대한 프로시저(플랜) 캐시를 지우고 기본 및 보조에서 둘 다 실행할 수 있습니다.  
+데이터베이스에 대한 프로시저(플랜) 캐시를 지우고 기본 및 보조에서 둘 다 실행할 수 있습니다.
 
 쿼리 계획 핸들을 지정하여 계획 캐시에서 단일 쿼리 계획을 지웁니다.
 
-> [!NOTE]
-> 쿼리 계획 핸들을 지정하는 작업은 Azure SQL Database 및 SQL Server 2019 이상에서 수행할 수 있습니다.
+**적용 대상**: 쿼리 계획 핸들을 지정하는 작업은 Azure SQL Database 및 SQL Server 2019 이상에서 수행할 수 있습니다.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -171,7 +172,7 @@ PRIMARY
 
 이 값은 데이터베이스가 기본에 있는 동안 보조에서만 유효하며, 모든 보조에서 이 설정에 대한 값이 기본에 대해 설정된 값이 되도록 지정합니다. 기본에 대한 구성이 변경되는 경우 보조에 있는 값은 보조 값을 명시적으로 설정할 필요 없이 적절하게 변경됩니다. PRIMARY는 보조에 대한 기본 설정입니다.
 
-IDENTITY_CACHE **=** { **ON** | OFF }      
+IDENTITY_CACHE **=** { **ON** | OFF }
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -180,7 +181,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 > [!NOTE]
 > 이 옵션은 기본에 대해서만 설정될 수 있습니다. 자세한 내용은 [ID 열](create-table-transact-sql-identity-property.md)을 참조하세요.
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -191,7 +192,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 >
 > SQL Server 2017(14.x)에서만 INTERLEAVED_EXECUTION_TVF 옵션에 **DISABLE**_INTERLEAVED_EXECUTION_TVF의 이전 이름이 있었습니다.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -200,7 +201,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 > [!NOTE]
 > 데이터베이스 호환성 수준 130 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -220,7 +221,7 @@ TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 엔진이 지원되는 작업의 권한을 online으로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 online으로 상승하지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ONLINE의 현재 값을 나타냅니다. 이러한 옵션은 online에 지원되는 작업에만 적용됩니다.
 
@@ -314,7 +315,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 [전역 임시 테이블](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)에 대한 자동 삭제 기능을 설정할 수 있습니다. 기본값은 ON입니다. 이는 전역 임시 테이블이 세션에서 사용되지 않을 때 자동으로 삭제됨을 의미합니다. OFF로 설정하면 DROP TABLE 문을 사용하여 전역 임시 테이블을 명시적으로 삭제하거나 서버를 다시 시작할 때 자동으로 삭제됩니다.
 
@@ -333,9 +334,9 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-새 `String or binary data would be truncated` 오류 메시지를 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.  
+새 `String or binary data would be truncated` 오류 메시지를 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -351,11 +352,25 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 쿼리 계획 통계(실제 실행 계획과 동일)의 수집을 활성화하거나 비활성화할 수 있습니다.
 
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
+
+**적용 대상**: Azure SQL Database만 해당
+
+`PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` 옵션은 엔진에 의해 자동으로 중단되기 전에 다시 시작 가능한 인덱스가 일시 중지되는 시간(분)을 결정합니다.
+
+- 기본값은 1일(1440분)로 설정됩니다.
+- 최소 지속 시간은 1분으로 설정됩니다.
+- 최대 기간은 71582분입니다.
+- 0으로 설정하면 일시 중지된 작업이 자동으로 중단되지 않습니다.
+
+이 옵션의 현재 값은 [database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에 표시됩니다.
+
 ## <a name="Permissions"></a> 사용 권한
 
 데이터베이스에 `ALTER ANY DATABASE SCOPE CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
+
 보조 데이터베이스가 해당 기본 데이터베이스와 서로 다른 범위 구성 설정을 갖도록 구성할 수도 있지만 모든 보조 데이터베이스는 동일한 구성을 사용합니다. 개별 보조에 대해 서로 다른 설정을 구성할 수 없습니다.
 
 이 명령문을 실행하면 현재 데이터베이스에서 프로시저 캐시를 지웁니다. 즉, 모든 쿼리를 다시 컴파일해야 합니다.
@@ -374,6 +389,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
 ### <a name="maxdop"></a>MAXDOP
+
 세부적인 설정은 전역 설정을 재정의하고 해당 리소스 관리자(resource governor)는 다른 모든 MAXDOP 설정을 제한할 수 있습니다. MAXDOP 설정에 대한 논리는 다음과 같습니다.
 
 - 쿼리 힌트는 `sp_configure`와 데이터베이스 범위 구성 모두를 재정의합니다. 리소스 그룹 MAXDOP가 작업 그룹에 대해 설정된 경우:
@@ -411,9 +427,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 시스템 뷰는 데이터베이스 내에서 범위 구성에 대한 정보를 제공합니다. 데이터베이스 범위 구성 옵션은 서버 차원의 기본 설정으로 재정의되면 sys.database_scoped_configurations에 나타납니다. [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 시스템 뷰는 서버 차원의 설정을 표시합니다.
 
 ## <a name="examples"></a>예
+
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION의 사용을 보여 줍니다.
 
 ### <a name="a-grant-permission"></a>1\. 사용 권한 부여
+
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 Joe에게 부여합니다.
 
 ```sql
@@ -421,6 +439,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>2\. MAXDOP 설정
+
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 MAXDOP = 1을 설정하고 보조 데이터베이스에 대해 MAXDOP = 4를 설정합니다.
 
 ```sql
@@ -435,6 +454,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacy_cardinality_estimation"></a>C. LEGACY_CARDINALITY_ESTIMATION 설정
+
 이 예제는 지역에서 복제 시나리오에서 보조 데이터베이스에 대해 LEGACY_CARDINALITY_ESTIMATION을 ON으로 설정합니다.
 
 ```sql
@@ -448,6 +468,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parameter_sniffing"></a>D. PARAMETER_SNIFFING 설정
+
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 PARAMETER_SNIFFING을 OFF로 설정합니다.
 
 ```sql
@@ -467,6 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMA
 ```
 
 ### <a name="e-set-query_optimizer_hotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES 설정
+
 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 QUERY_OPTIMIZER_HOTFIXES를 ON으로 설정합니다.
 
 ```sql
@@ -474,6 +496,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 프로시저 캐시 지우기
+
 이 예제에서는 프로시저 캐시를 지웁니다(기본 데이터베이스에 대해서만 사용 가능).
 
 ```sql
@@ -481,6 +504,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identity_cache"></a>G. IDENTITY_CACHE 설정
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예제는 ID 캐시를 비활성화합니다.
@@ -490,7 +514,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 이 예제는 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 활성화합니다.
 
@@ -499,7 +524,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevate_online"></a>9\. ELEVATE_ONLINE 설정
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.
 
@@ -508,7 +534,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevate_resumable"></a>J. ELEVATE_RESUMABLE 설정
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 퍼블릭 미리 보기 상태임)
 
 이 예에서는 ELEVATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.
 
@@ -517,12 +544,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11. 계획 캐시에서 쿼리 계획 지우기
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-이 예에서는 프로시저 캐시에서 특정 계획을 지웁니다. 
+이 예에서는 프로시저 캐시에서 특정 계획을 지웁니다.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
+### <a name="l-set-paused-duration"></a>12. 일시 중지 기간 설정
+
+**적용 대상**: Azure SQL Database만 해당
+
+이 예제에서는 다시 시작 가능한 인덱스 일시 중지 기간을 60분으로 설정합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
 ## <a name="additional-resources"></a>추가 리소스

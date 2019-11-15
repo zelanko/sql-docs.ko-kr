@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142792"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632931"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
 
@@ -48,17 +48,24 @@ ms.locfileid: "73142792"
 -  [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작과 관련하여 변경 사항이 있을 경우 정확성을 위해 애플리케이션을 재인증해야 함을 의미합니다. 그러나, [데이터베이스 호환성 수준 설정](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)은 전체 서버가 아닌 지정된 데이터베이스에 대해서만 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 제공합니다. 데이터베이스 호환성 수준을 그대로 유지하면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 전후에 기존 애플리케이션 쿼리가 동일한 동작을 계속 표시하게 할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 및 호환성 수준에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
 
 -  성능에 관련된 사항에서는 모든 버전에서 쿼리 최적화 프로그램의 향상된 기능을 도입하기 때문에 다른 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 버전 간에 쿼리 계획의 차이가 발생할 수 있습니다. 업그레이드 범위에서 쿼리 계획의 차이점은 일반적으로 특정 쿼리 또는 작업에 부정적인 변화가 있을 수 있는 경우 위험으로 변환됩니다. 결과적으로 업그레이드를 지연하고 수명 주기 및 지원 문제를 일으킬 수 있는 이 위험 때문에 재인증을 해야 합니다. 
-   업그레이드 위험을 완화하기 위해서 쿼리 최적화 프로그램의 향상된 기능이 새 릴리스의 기본 호환성 수준으로 제어되는 것입니다. 호환성 인증에는 **쿼리 계획 셰이프 보호**가 포함되어 있습니다. 이 개념은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 직후에 데이터베이스 호환성 수준을 그대로 유지하는 것은 새 버전의 쿼리 계획을 만드는 데 사용된 쿼리 최적화 모델이 업그레이드 이전과 동일하며 쿼리 계획 셰이프가 변경되지 않아야 한다는 의미입니다. 
+   업그레이드 위험을 완화하기 위해서 쿼리 최적화 프로그램의 향상된 기능이 새 릴리스의 기본 호환성 수준으로 제어되는 것입니다(즉, 새 버전에 대해 가장 높은 호환성 수준 사용 가능). 호환성 인증에는 **쿼리 계획 셰이프 보호**가 포함되어 있습니다. 이것은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 직후에 데이터베이스 호환성 수준을 그대로 유지하면 업그레이드 이전처럼 새 버전에서 동일한 쿼리 최적화 모델이 사용되고 쿼리 계획 셰이프가 변경되지 않는다는 개념입니다. 
+   자세한 내용은 이 문서의 [쿼리 계획 셰이프를 사용하는 이유](#queryplan_shape) 섹션을 참조하세요.
    
-   > [!NOTE]
-   > **쿼리 계획 셰이프**는 쿼리 계획을 구성하는 다양한 연산자의 시각적 표시를 나타냅니다. 여기에는 검색, 검사, 조인, 정렬 등의 연산자와 데이터 흐름 및 연산 순서를 나타내는 연산자 간의 연결이 포함됩니다. 쿼리 계획 셰이프는 쿼리 최적화 프로그램에서 결정됩니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)를 참조하세요.
-   
-   자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
+호환성 수준에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
    
 애플리케이션이 상위 데이터베이스 호환성 수준에서만 사용 가능한 향상 기능을 사용할 필요가 없는 한, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 업그레이드하고 이전 데이터베이스 호환성 수준을 유지하는 것이 유효한 접근법이며, 애플리케이션을 다시 인증할 필요가 없습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [호환성 수준 및 데이터베이스 엔진 업그레이드](#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
 
 새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우 데이터베이스 호환성 수준을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 최신 수준으로 업그레이드하고, 애플리케이션이 해당 호환성 수준과 함께 작동함을 인증하세요. 데이터베이스 호환성 수준을 업그레이드하는 방법에 대한 자세한 내용은 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.
+   
+### <a name="queryplan_shape"></a> 쿼리 계획 셰이프를 사용하는 이유      
+쿼리 계획 셰이프는 쿼리 계획을 구성하는 다양한 연산자의 시각적 표시를 나타냅니다. 여기에는 검색, 검사, 조인, 정렬 등의 연산자와 데이터 흐름을 나타내는 연산자 간 연결, 의도한 결과 세트를 생성하기 위해 실행해야 하는 연산 순서가 포함됩니다. 쿼리 계획 셰이프는 쿼리 최적화 프로그램에서 결정됩니다.
 
+업그레이드하는 동안 쿼리 성능을 예측 가능하게 유지하려면 기본적으로 동일한 쿼리 계획 셰이프를 사용해야 합니다. 이를 위해서는 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 버전이 다르더라도 업그레이드 직후에 데이터베이스 호환성 수준을 변경하지 않아야 합니다. 사용 가능한 리소스 또는 기본 데이터의 데이터 분산 방식을 획기적으로 변경하는 경우처럼 쿼리 실행 에코시스템을 변경하지 않았다면 쿼리 성능이 변경되지 않은 상태로 유지됩니다. 
+
+그러나 쿼리 계획 셰이프를 유지하는 것이 업그레이드 후 성능에 영향을 미치는 유일한 요인은 아닙니다. 데이터베이스를 최신 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]로 이동하고 환경적 측면을 변경할 경우 쿼리 계획이 버전 간에 동일한 셰이프를 유지하더라도 쿼리 성능에 즉각적으로 영향을 미칠 수 있습니다. 이러한 환경적 변화에는 어느 정도의 사용 가능한 메모리 및 CPU 리소스를 제공하는 새로운 [!INCLUDE[ssde_md](../../includes/ssde_md.md)], 서버 또는 데이터베이스 구성 옵션의 변경, 쿼리 계획을 만드는 방법에 영향을 주는 데이터 분산 방식의 변경 등이 포함될 수 있습니다. 이때문에 데이터베이스 호환성 수준을 유지할 경우 쿼리 계획 **셰이프**의 변경을 방지할 수 있지만, 쿼리 성능에 영향을 주는 사용자가 시작한 변경을 비롯한 기타 다른 환경적 측면에서는 보호를 제공할 수 없다는 사실을 이해하는 것이 중요합니다.
+
+자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)를 참조하세요.
+   
 ## <a name="compatibility-certification-benefits"></a>호환성 인증 이점
 명명된 버전 접근 방식이 아닌 호환성 기반 방법 방식의 데이터베이스 인증에는 다음과 같은 여러 가지 즉각적인 이점이 있습니다.
 

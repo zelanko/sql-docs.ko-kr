@@ -1,6 +1,7 @@
 ---
-title: 새로운 기능
-description: SQL Server 2016 R Services, R Server, SQL Server Machine Learning Services의 각 릴리스에 대한 새로운 기능 공지입니다.
+title: SQL Server Machine Learning Services의 새로운 기능
+titleSuffix: ''
+description: SQL Server Machine Learning Services 및 SQL Server 2016 R Services의 각 릴리스에 대한 새로운 기능 알림입니다.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532567"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707435"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -25,7 +26,7 @@ Microsoft는 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통�
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
-이 릴리스에는 SQL Server에서 Python 및 R 기계 학습 작업에 대해 가장 많이 요청된 기능이 추가되었습니다. 이 릴리스의 모든 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md) 및 [SQL Server 2019의 릴리스 정보](../sql-server/sql-server-ver15-release-notes.md)를 참조하세요.
+이 릴리스에는 SQL Server에서 Python 및 R 기계 학습 작업에 대해 가장 많이 요청된 기능이 추가되었습니다. 이 릴리스의 모든 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md) 및 [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)(SQL Server 2019 릴리스 정보)를 참조하세요.
 
 > [!NOTE]
 > SQL Server 2019의 Java에 대한 새로운 기능 설명서는 [SQL Server 언어 확장의 새로운 기능](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)을 참조하세요.

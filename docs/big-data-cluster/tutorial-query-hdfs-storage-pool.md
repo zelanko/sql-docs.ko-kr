@@ -1,7 +1,7 @@
 ---
 title: 스토리지 풀에서 HDFS 데이터 쿼리
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 데이터를 쿼리 하는 방법을 보여 줍니다. 스토리지 풀의 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
+description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 HDFS 데이터를 쿼리하는 방법을 보여 줍니다. 스토리지 풀의 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652448"
@@ -20,9 +20,9 @@ ms.locfileid: "69652448"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 데이터를 쿼리 하는 방법을 보여 줍니다.
+이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 HDFS 데이터를 쿼리하는 방법을 보여 줍니다.
 
-이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 빅 데이터 클러스터의 HDFS 데이터를 가리키는 외부 테이블을 만듭니다.

@@ -1,22 +1,22 @@
 ---
-title: 언어 확장이란 무엇인가요?
-titleSuffix: SQL Server Language Extensions
-description: SQL Server 내에서 외부 스크립트를 실행하는 SQL Server 2019 언어 확장(미리 보기)에 관해 알아봅니다.
+title: SQL Server 언어 확장이란?
+titleSuffix: ''
+description: 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. SQL Server 2019에서는 Java가 지원됩니다. 확장성 프레임워크를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589027"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658824"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>SQL Server 언어 확장(미리 보기)이란 무엇인가요?
+# <a name="what-is-sql-server-language-extensions"></a>SQL Server 언어 확장이란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. [확장성 프레임워크](concepts/extensibility-framework.md)를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.

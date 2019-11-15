@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909458"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632992"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>기존 추적 수정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909458"
   
 2.  추적 이벤트를 수정하려면 매개 변수를 통해 변경 내용을 지정하는 **sp_trace_setevent** 를 실행합니다. 순서대로 나열된 매개 변수는 다음과 같습니다.  
 
-    -   **@traceid** (추적 ID)  
+    -   **\@traceid**(추적 ID)  
   
-    -   **@eventid** (이벤트 ID)  
+    -   **\@eventid**(이벤트 ID)  
   
-    -   **@columnid** (열 ID)  
+    -   **\@columnid**(열 ID)  
   
-    -   **@on** (ON)  
+    -   **\@on**(켜기)  
   
-     **@on** 매개 변수를 수정할 경우 이 매개 변수가 **@columnid** 매개 변수와 상호 작용한다는 점에 유의하세요.  
+     **\@on** 매개 변수를 수정할 경우 이 매개 변수가 **\@columnid** 매개 변수와 상호 작용한다는 점에 유의하세요.  
   
     |ON|열 ID|결과|  
     |--------|---------------|------------|  

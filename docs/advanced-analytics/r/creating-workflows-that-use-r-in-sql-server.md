@@ -1,6 +1,6 @@
 ---
 title: R을 사용하여 SSIS 및 SSRS 워크플로 만들기
-description: SQL Server Machine Learning Services 및 R Services, Reporting Services (SSRS) 및 SQL Server Integration Services (SSIS)를 결합 하는 통합 시나리오.
+description: SQL Server Machine Learning Services 및 R Services, Reporting Services(SSRS) 및 SSIS(SQL Server Integration Services)를 조합하는 통합 시나리오입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/17/2019
@@ -10,21 +10,21 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
 ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715168"
 ---
-# <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용 하 여 SSIS 및 SSRS 워크플로 만들기
+# <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용하여 SSIS 및 SSRS 워크플로 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL Server SQL Server Machine Learning Services의 언어 및 데이터 과학 기능을 사용 하 여 포함 된 R 및 Python 스크립트를 사용 하는 방법에 대해 설명 합니다. SQL Server Integration Services (SSIS) 및 SQL Server Reporting Services SSRS. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공 합니다. SSIS 및 SSRS는 각각 조정 ETL 변환과 시각화를 제공 합니다. 이 문서에서는 이러한 모든 기능을이 워크플로 패턴에 함께 포함 하는 방법을 설명 합니다.
+이 문서에서는 2가지 중요한 SQL Server 기능인 SSIS(SQL Server Integration Services) 및 SSRS(SQL Server Reporting Services)를 사용하여 SQL Server Machine Learning Services의 언어 및 데이터 과학 기능과 함께 포함된 R 및 Python 스크립트를 사용하는 방법을 설명합니다. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공합니다. SSIS 및 SSRS는 각각 조정된 ETL 변환 및 시각화를 제공합니다. 이 문서에서는 이러한 모든 기능을 이 워크플로 패턴에 함께 포함하는 방법을 설명합니다.
 
 > [!div class="checklist"]
-> * R 또는 Python 실행 파일을 포함 하는 저장 프로시저 만들기
+> * R 또는 Python 실행 파일을 포함하는 저장 프로시저 만들기
 > * SSIS 또는 SSRS에서 저장 프로시저 실행
 
-이 문서의 예제는 대부분 R 및 SSIS에 대 한 것 이지만, 개념과 단계는 Python에 동일 하 게 적용 됩니다. 두 번째 섹션에서는 SSRS 시각화에 대 한 지침과 링크를 제공 합니다.
+이 문서의 예제는 대부분 R 및 SSIS에 대한 것이지만, 개념과 단계는 Python에도 동일하게 적용됩니다. 두 번째 섹션에서는 SSRS 시각화에 대한 지침과 링크를 제공합니다.
 
 <a name="bkmk_ssis"></a> 
 
@@ -32,28 +32,28 @@ ms.locfileid: "68715168"
 
 데이터 과학 워크플로는 반복이 매우 빈번하며, 크기 조정, 집계, 확률 계산, 특성 병합 및 이름 변경을 비롯한 데이터 변환이 많이 이루어집니다. 데이터 과학자는 R, Python 또는 기타 언어로 이러한 작업을 대부분 수행하지만 엔터프라이즈 데이터로 이러한 워크플로를 실행하려면 ETL 도구 및 프로세스와의 원활한 통합이 필요합니다.
 
-@No__t_0를 사용 하면 Transact-sql 및 저장 프로시저를 통해 R에서 복잡 한 작업을 실행할 수 있으므로 데이터 과학 작업을 기존 ETL 프로세스와 통합할 수 있습니다. 메모리를 많이 사용 하는 작업의 체인을 수행 하는 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 비롯 한 가장 효율적인 도구를 사용 하 여 데이터 준비를 최적화할 수 있습니다. 
+Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하여 R로 복잡한 작업을 실행할 수 있기 때문에 데이터 과학 작업과 기존 ETL 프로세스를 통합할 수 있습니다. 메모리를 많이 사용하는 일련의 작업을 수행하는 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 비롯한 가장 효율적인 도구를 사용하여 데이터 준비를 최적화할 수 있습니다. 
 
-다음은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용 하 여 데이터 처리 및 모델링 파이프라인을 자동화할 수 있는 방법에 대 한 몇 가지 아이디어입니다.
+다음은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 데이터 처리 및 모델링 파이프라인을 자동화할 수 있는 몇 가지 방법입니다.
 
-+ 온-프레미스 또는 클라우드 소스에서 데이터를 추출 하 여 학습 데이터 빌드 
++ 온-프레미스 또는 클라우드 원본에서 데이터를 추출하여 학습 데이터 작성 
 + 데이터 통합 워크플로의 일부로 R 또는 Python 모델 빌드 및 실행
-+ 정기적으로 (예약 된) 모델 다시 학습
-+ R 또는 Python 스크립트에서 Excel, Power BI, Oracle, Teradata 등의 다른 대상으로 결과를 로드 하 여
-+ SSIS 작업을 사용 하 여 SQL database에 데이터 기능 만들기
-+ 조건부 분기를 사용 하 여 R 및 Python 작업에 대 한 계산 컨텍스트 전환
++ 정기적으로(예약된) 모델 다시 학습
++ R 또는 Python 스크립트의 결과를 Excel, Power BI, Oracle, Teradata 등의 다른 대상으로 로드
++ SSIS 작업을 사용하여 SQL Database에서 데이터 기능 만들기
++ 조건부 분기를 사용하여 R 및 Python 작업에 대한 컴퓨팅 컨텍스트 전환
 
 ## <a name="ssis-example"></a>SSIS 예제
 
-다음 예제는 Jimmy Wong에서 작성 한 현재 사용이 중지 된 MSDN 블로그 게시물의 URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+다음 예제는 `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/` URL에서 Jimmy Wong이 작성한 현재 사용 중지된 MSDN 블로그 게시물에서 가져왔습니다.
 
-이 예에서는 SSIS를 사용 하 여 작업을 자동화 하는 방법을 보여 줍니다. SQL Server Management Studio를 사용 하 여 포함 된 R을 사용 하 여 저장 프로시저를 만든 후 SSIS 패키지의 [T-sql 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) 에서 해당 저장 프로시저를 실행 합니다.
+이 예제에서는 SSIS를 사용하여 작업을 자동화하는 방법을 보여 줍니다. SQL Server Management Studio를 사용하여 포함된 R로 저장 프로시저를 만든 다음, SSIS 패키지의 [T-SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)에서 해당 저장 프로시저를 실행합니다.
 
-이 예를 단계별로 실행 하려면 Management Studio, SSIS, SSIS 디자이너, 패키지 디자인 및 T-sql에 대해 잘 알고 있어야 합니다. SSIS 패키지는 학습 데이터를 테이블에 삽입 하 고, 데이터를 모델링 하 고, 데이터 점수를 매기는 세 개의 [T-sql 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) 를 사용 하 여 예측 출력을 가져옵니다.
+이 예제를 단계별로 실행하려면 Management Studio, SSIS, SSIS 디자이너, 패키지 디자인 및 T-SQL에 대해 잘 알고 있어야 합니다. SSIS 패키지는 학습 데이터를 테이블에 삽입하고, 데이터를 모델링하고, 데이터에 점수를 매겨 예측 출력을 가져오는 세 가지 [T-SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)를 사용합니다.
 
 ### <a name="load-training-data"></a>학습 데이터 로드
 
-SQL Server Management Studio에서 다음 스크립트를 실행 하 여 데이터를 저장 하는 테이블을 만듭니다. 이 연습에서는 테스트 데이터베이스를 만들어 사용 해야 합니다. 
+SQL Server Management Studio에서 다음 스크립트를 실행하여 데이터를 저장하기 위한 테이블을 만듭니다. 이 연습에서는 테스트 데이터베이스를 만들어 사용해야 합니다. 
 
 ```T-SQL
 Use test-db
@@ -68,7 +68,7 @@ Create table ssis_iris (
 GO
 ```
 
-데이터 프레임에 학습 데이터를 로드 하는 저장 프로시저를 만듭니다. 이 예에서는 기본 제공 되는 Iri 데이터 집합을 사용 합니다. 
+데이터 프레임에 학습 데이터를 로드하는 저장 프로시저를 만듭니다. 이 예제에서는 기본 제공되는 Iris 데이터 세트를 사용합니다. 
 
 ```T-SQL
 Create procedure load_iris
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행 하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) 를 만듭니다. **SQLStatement** 에 대 한 스크립트는 기존 데이터를 제거 하 고 삽입할 데이터를 지정한 다음 저장 프로시저를 호출 하 여 데이터를 제공 합니다.
+SSIS 디자이너에서 방금 정의한 저장 프로시저를 실행하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만듭니다. **SQLStatement**의 스크립트는 기존 데이터를 제거하고 삽입할 데이터를 지정한 다음, 저장 프로시저를 호출하여 데이터를 제공합니다.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -95,7 +95,7 @@ exec dbo.load_iris;
 
 ### <a name="generate-a-model"></a>모델 생성
 
-SQL Server Management Studio에서 다음 스크립트를 실행 하 여 모델을 저장 하는 테이블을 만듭니다. 
+SQL Server Management Studio에서 다음 스크립트를 실행하여 모델을 저장하는 테이블을 만듭니다. 
 
 ```T-SQL
 Use test-db
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-[RxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)를 사용 하 여 선형 모델을 생성 하는 저장 프로시저를 만듭니다. RevoScaleR 및 revoscalepy 라이브러리는 SQL Server의 R 및 Python 세션에서 자동으로 사용할 수 있으므로 라이브러리를 가져올 필요가 없습니다.
+[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)를 사용하여 선형 모델을 생성하는 저장 프로시저를 만듭니다. RevoScaleR 및 revoscalepy 라이브러리는 SQL Server의 R 및 Python 세션에서 자동으로 사용할 수 있으므로 라이브러리를 가져올 필요가 없습니다.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS 디자이너에서 **generate_iris_rx_model** 저장 프로시저를 실행 하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) 를 만듭니다. 모델이 직렬화 되 고 ssis_iris_models 테이블에 저장 됩니다. **SQLStatement** 에 대 한 스크립트는 다음과 같습니다.
+SSIS 디자이너에서 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만들어 **generate_iris_rx_model** 저장 프로시저를 실행합니다. 모델이 serialize되어 ssis_iris_models 테이블에 저장됩니다. **SQLStatement**에 대한 스크립트는 다음과 같습니다.
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -135,15 +135,15 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![선형 모델을 생성 합니다.](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델을 생성 합니다.")
+![선형 모델 생성](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델 생성")
 
-검사점으로이 작업이 완료 되 면 ssis_iris_models를 쿼리하여 이진 모델이 하나 포함 되어 있는지 확인할 수 있습니다.
+이 작업이 완료된 후에 검사점으로서 ssis_iris_models를 쿼리하여 이진 모델이 하나 포함되어 있는지 확인할 수 있습니다.
 
-### <a name="predict-score-outcomes-using-the-trained-model"></a>"학습 된" 모델을 사용 하 여 결과 예측 (점수)
+### <a name="predict-score-outcomes-using-the-trained-model"></a>"학습된" 모델을 사용하여 결과 예측(점수 매기기)
 
-이제 학습 데이터를 로드 하 고 모델을 생성 하는 코드가 있으므로 남은 단계는 예측을 생성 하는 모델을 사용 하는 것입니다. 
+이제 학습 데이터를 로드하고 모델을 생성하는 코드를 만들었으므로 남은 단계는 이 모델을 사용해서 예측을 생성하는 것입니다. 
 
-이렇게 하려면 SQL 쿼리에 R 스크립트를 배치 하 여 ssis_iris_model에서 [Rxpredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 r 함수를 트리거합니다. **Predict_species_length** 라는 저장 프로시저는이 작업을 수행 합니다.
+이렇게 하려면 SQL 쿼리에 R 스크립트를 추가하여 ssis_iris_model에서 [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 기본 제공 R 함수를 트리거합니다. **predict_species_length** 저장 프로시저가 이 작업을 수행합니다.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행 하 여 예측 꽃잎 길이를 생성 하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) 를 만듭니다.
+SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행하여 예측된 꽃잎 길이를 생성하는 [SQL 실행 태스크](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)를 만듭니다.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';
@@ -181,31 +181,31 @@ exec predict_species_length 'rxLinMod';
 
 ### <a name="run-the-solution"></a>솔루션 실행
 
-SSIS 디자이너에서 F5 키를 눌러 패키지를 실행 합니다. 다음 스크린샷에서 유사한 결과가 표시 됩니다.
+SSIS 디자이너에서 F5 키를 눌러 패키지를 실행합니다. 다음 스크린샷과 비슷한 내용이 출력됩니다.
 
-![디버그 모드에서 실행 하는 F5 키](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "디버그 모드에서 실행 하는 F5 키")
+![디버그 모드에서 실행하기 위한 F5 키](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "디버그 모드에서 실행하기 위한 F5 키")
 
 <a name="bkmk_ssrs"></a> 
 
 ## <a name="use-ssrs-for-visualizations"></a>시각화에 SSRS 사용
 
-R은 차트와 흥미로운 시각화를 만들 수 있지만 외부 데이터 원본과 잘 통합 되지 않으므로 각 차트 또는 그래프를 개별적으로 생성 해야 합니다. 공유도 어려울 수 있습니다.
+R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 원본과 잘 통합되지 않기 때문에 각 차트와 그래프를 개별적으로 생성해야 합니다. 공유도 어려울 수 있습니다.
 
-@No__t_0를 사용 하 여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯 한 다양 한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R에서 복잡 한 작업을 실행할 수 있습니다.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
 
-### <a name="ssrs-example"></a>SSRS 예
+### <a name="ssrs-example"></a>SSRS 예제
 
 [Microsoft Reporting Services(SSRS)용 R 그래픽 디바이스](https://rgraphicsdevice.codeplex.com/)
 
-이 CodePlex 프로젝트는 R의 그래픽 출력을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에서 사용할 수 있는 이미지로 렌더링 하는 사용자 지정 보고서 항목을 만드는 데 도움이 되는 코드를 제공 합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
+CodePlex 프로젝트는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 사용할 수 있는 이미지로 R의 그래픽 출력을 렌더링하는 사용자 지정 보고서 항목을 만드는 데 유용한 코드를 제공합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
 
 + R 그래픽 디바이스를 사용하여 만든 차트 및 그림을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대시보드에 게시
 
 + [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 매개 변수를 R 그림에 전달
 
 > [!NOTE]
-> 이 샘플에서는 Reporting Services에 대 한 R 그래픽 장치를 지 원하는 코드를 Visual Studio 뿐만 아니라 Reporting Services 서버에 설치 해야 합니다. 수동 컴파일 및 구성도 필요합니다.
+> 이 샘플의 경우 Reporting Services용 R 그래픽 디바이스를 지원하는 코드를 Visual Studio 및 Reporting Services 서버에 설치해야 합니다. 수동 컴파일 및 구성도 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서의 SSIS 및 SSRS 예제에서는 포함 된 R 또는 Python 스크립트를 포함 하는 저장 프로시저를 실행 하는 두 가지 사례를 보여 줍니다. 키 요점은 저장 프로시저에 실행 요청을 보낼 수 있는 모든 응용 프로그램이 나 도구에서 R 또는 Python 스크립트를 사용할 수 있도록 할 수 있습니다. SSIS에 대 한 추가 요점은은 작업 체인에 포함 된 R 또는 Python 데이터 과학 기능을 사용 하 여 데이터 취득, 정리, 조작 등의 광범위 한 작업을 자동화 하 고 예약 하는 패키지를 만들 수 있다는 것입니다. 자세한 내용 및 아이디어는 [SQL Server Machine Learning Services에서 저장 프로시저를 사용 하 여 운영 R 코드](operationalizing-your-r-code.md)를 참조 하세요.
+이 문서의 SSIS 및 SSRS 예제에서는 포함된 R 또는 Python 스크립트를 포함하는 저장 프로시저를 실행하는 두 가지 사례를 보여 줍니다. 핵심 요점은 저장 프로시저에 실행 요청을 보낼 수 있는 모든 애플리케이션이 나 도구에서 R 또는 Python 스크립트를 사용하도록 할 수 있다는 것입니다. SSIS에 대한 추가적인 사항은 작업 체인에 포함된 R 또는 Python 데이터 과학 기능을 사용하여 데이터 취득, 정리, 조작 등의 광범위한 작업을 자동화하고 예약하는 패키지를 만들 수 있다는 것입니다. 자세한 내용 및 아이디어를 보려면 [SQL Server Machine Learning Services에서 저장 프로시저를 사용하여 R 코드 운영](operationalizing-your-r-code.md)을 참조하세요.

@@ -1,25 +1,25 @@
 ---
-title: SQL Server에 대한 Java용 Microsoft 확장성 SDK
-description: Java용 Microsoft 확장성 SDK를 사용하여 SQL Server용 Java 프로그램을 구현하는 방법입니다.
+title: Java용 Microsoft 확장성 SDK
+description: Java용 Microsoft 확장성 SDK를 사용하여 SQL Server용 Java 프로그램을 구현하는 방법을 알아봅니다. 이 SDK는 SQL Server와 데이터를 교환하고 SQL Server에서 Java 코드를 실행하는 데 사용되는 Java 언어 확장용 인터페이스입니다.
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588797"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658852"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server에 대한 Java용 Microsoft 확장성 SDK
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 Java용 Microsoft 확장성 SDK를 사용하여 SQL Server용 Java 프로그램을 구현할 수 있는 방법을 설명합니다. 이 SDK는 SQL Server와 데이터를 교환하고 SQL Server에서 Java 코드를 실행하는 데 사용되는 Java 언어 확장용 인터페이스입니다.
+Java용 Microsoft 확장성 SDK를 사용하여 SQL Server용 Java 프로그램을 구현하는 방법을 알아봅니다. 이 SDK는 SQL Server와 데이터를 교환하고 SQL Server에서 Java 코드를 실행하는 데 사용되는 Java 언어 확장용 인터페이스입니다.
 
 이 SDK는 Windows 및 Linux에서 SQL Server 2019 릴리스 후보 1의 일부로 설치됩니다.
 

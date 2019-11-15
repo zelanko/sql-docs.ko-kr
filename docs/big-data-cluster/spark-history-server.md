@@ -1,7 +1,7 @@
 ---
 title: Spark 애플리케이션 디버그/진단
 titleSuffix: SQL Server big data clusters
-description: Spark 기록 서버를 사용 하 여에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]실행 중인 spark 응용 프로그램을 디버그 하 고 진단할 수 있습니다.
+description: Spark 기록 서버를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 실행되는 Spark 애플리케이션을 디버그하고 진단할 수 있습니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878694"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706120"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Spark 기록 서버 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 spark 응용 프로그램 디버그 및 진단
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Spark 기록 서버에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 Spark 애플리케이션 디버그 및 진단
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 확장된 Spark 기록 서버를 사용하여 SQL Server 2019(미리 보기) 빅 데이터 클러스터의 Spark 애플리케이션을 디버그하고 진단하는 방법을 설명합니다. 이러한 디버그 및 진단 기능은 Spark 기록 서버에 기본 제공되며 Microsoft에서 제공합니다. 확장에는 데이터 탭, 그래프 탭, 진단 탭이 포함되어 있습니다. 데이터 탭에서는 사용자가 Spark 작업의 입력 및 출력 데이터를 확인할 수 있습니다. 그래프 탭에서는 사용자가 데이터 흐름을 확인하고 작업 그래프를 재생할 수 있습니다. 진단 탭에서는 사용자가 데이터 기울이기, 시간 기울이기 및 실행기 사용량 분석을 참조할 수 있습니다.
+이 문서에서는 확장된 Spark 기록 서버를 사용하여 SQL Server 빅 데이터 클러스터의 Spark 애플리케이션을 디버그하고 진단하는 방법을 설명합니다. 이러한 디버그 및 진단 기능은 Spark 기록 서버에 기본 제공되며 Microsoft에서 제공합니다. 확장에는 데이터 탭, 그래프 탭, 진단 탭이 포함되어 있습니다. 데이터 탭에서는 사용자가 Spark 작업의 입력 및 출력 데이터를 확인할 수 있습니다. 그래프 탭에서는 사용자가 데이터 흐름을 확인하고 작업 그래프를 재생할 수 있습니다. 진단 탭에서는 사용자가 데이터 기울이기, 시간 기울이기 및 실행기 사용량 분석을 참조할 수 있습니다.
 
 ## <a name="get-access-to-spark-history-server"></a>Spark 기록 서버 액세스
 
 오픈 소스의 Spark 기록 서버 사용자 환경이 작업 그래프의 작업별 데이터 및 대화형 시각화와 빅 데이터 클러스터의 데이터 흐름을 포함하는 정보를 사용하여 향상되었습니다. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL을 통해 Spark 기록 서버 웹 UI 열기
-다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. 기본 인증 (사용자 이름/암호) 빅 데이터 클러스터 설정에서 게이트웨이 (Knox) 끝점에 로그인 하 라는 메시지가 표시 되 면 사용자 **루트** 를 제공 해야 합니다. 자세한 내용은 다음을 참조하세요. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
+다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. 기본 인증(사용자 이름/암호) 빅 데이터 클러스터 설정에서 게이트웨이(Knox) 엔드포인트에 로그인하라는 메시지가 표시되면 사용자 **루트**를 제공해야 합니다. 자세한 내용은 다음을 참조하세요. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Spark 기록 서버 웹 UI는 다음과 같습니다.
 
     ![그래프 작업 ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ **진행률**을 기본값으로 유지합니다. 사용자는 **표시**드롭다운 목록에서 **읽기** 또는 **쓰기** 를 선택 하 여 데이터 흐름을 확인할 수 있습니다.
++ **진행률**을 기본값으로 유지합니다. 사용자는 **표시** 드롭다운 목록에서 **읽기** 또는 **작성**을 선택하여 데이터 흐름을 확인할 수 있습니다.
 
     ![그래프 표시](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -203,5 +203,6 @@ Spark 기록 서버에는 다음과 같은 알려진 문제가 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* [시작 하기[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Spark 설정 구성](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [SQL Server 빅 데이터 클러스터 시작](../big-data-cluster/deploy-get-started.md)
+* Spark 설정 구성
+* [Spark 설정 구성](/azure/hdinsight/spark/apache-spark-settings/)

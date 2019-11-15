@@ -1,7 +1,7 @@
 ---
 title: SQL Server 빅 데이터 클러스터 릴리스 정보
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)](미리 보기)의 최신 업데이트 및 알려진 문제를 설명합니다.
+description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신 업데이트 및 알려진 문제를 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e868d5db99c3f0be141d28a881d8d8bc6f9c241e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531638"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706175"
 ---
 # <a name="sql-server-big-data-clusters-release-notes"></a>SQL Server 빅 데이터 클러스터 릴리스 정보
 

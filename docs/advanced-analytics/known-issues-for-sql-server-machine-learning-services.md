@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532600"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706847"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ R_SERVER는 Intel MKL(Math Kernel Library)을 사용합니다. MKL을 포함하�
 3. R_SERVER를 다시 시작합니다. SQL Server에서 SQL Server 실행 패드 서비스를 다시 시작할 수 있습니다.
 
 > [!NOTE]
-> Linux에서 SQL Server 2019 미리 보기를 실행하는 경우 사용자 홈 디렉터리에서 *.bash_profile*을 편집하거나 만들어 `export MKL_CBWR="AUTO"` 줄을 추가합니다. Bash 명령 프롬프트에서 `source .bash_profile`을 입력하여 이 파일을 실행합니다. R 명령 프롬프트에서 `Sys.getenv()`를 입력하여 R_SERVER를 다시 시작합니다.
+> Linux에서 SQL Server 2019를 실행하는 경우 사용자 홈 디렉터리에서 *.bash_profile*을 편집하거나 만들어 `export MKL_CBWR="AUTO"` 줄을 추가합니다. Bash 명령 프롬프트에서 `source .bash_profile`을 입력하여 이 파일을 실행합니다. R 명령 프롬프트에서 `Sys.getenv()`를 입력하여 R_SERVER를 다시 시작합니다.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. R 스크립트 런타임 오류(SQL Server 2017 CU5~CU7 재발)
 

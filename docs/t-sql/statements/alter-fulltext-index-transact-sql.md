@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067530"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049957"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 인덱스가 적용되는 테이블 열의 변경 내용(업데이트, 삭제 또는 삽입)을 해당 전체 텍스트 인덱스로 전파할지 여부를 지정합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
 > [!NOTE]  
->  변경 내용 추적과 WITH NO POPULATION 간의 상호 작용에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+>  자세한 내용은 [변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용](#change-tracking-no-population)을 참조하세요.
   
  MANUAL  
  ALTER FULLTEXT INDEX...를 호출하여 추적된 변경 내용이 수동으로 전파되도록 지정합니다. START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*수동 채우기*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 주기적으로 호출할 수 있습니다.  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  ADD 절에서 TYPE COLUMN 및 LANGUAGE를 사용하여 *column_name*에서 이러한 속성을 설정할 수 있습니다. 열이 추가되면 이 열에 대해 전체 텍스트 쿼리가 실행되도록 테이블의 전체 텍스트 인덱스를 다시 채워야 합니다.  
   
 > [!NOTE]  
->  전체 텍스트 인덱스에서 열을 추가하거나 삭제한 후 전체 텍스트 인덱스가 채워지는지 여부는 변경 내용 추적이 설정되어 있는지 여부와 WITH NO POPULATION이 지정되어 있는지 여부에 따라 달라집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+>  전체 텍스트 인덱스에서 열을 추가하거나 삭제한 후 전체 텍스트 인덱스가 채워지는지 여부는 변경 내용 추적이 설정되어 있는지 여부와 WITH NO POPULATION이 지정되어 있는지 여부에 따라 달라집니다. 자세한 내용은 [변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용](#change-tracking-no-population)을 참조하세요.
   
  TYPE COLUMN *type_column_name*  
  **varbinary**, **varbinary(max)** 또는 **image** 문서에 대한 문서 종류를 보유하는 데 사용하는 테이블 열 *type_column_name*의 이름을 지정합니다. 유형 열이라고 하는 이 열에는 사용자 제공 파일 확장명(.doc, .pdf, .xls 등)이 포함됩니다. 형식 열은 **char**, **nchar**, **varchar**또는 **nvarchar**형식이어야 합니다.  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  CHANGE_TRACKING을 활성화하고 WITH NO POPULATION을 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다. CHANGE_TRACKING이 설정되어 있고 WITH NO POPULATION이 지정되어 있지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인덱스에 대해 전체 채우기를 수행합니다.  
   
 > [!NOTE]  
->  변경 내용 추적과 WITH NO POPULATION 간의 상호 작용에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+>  자세한 내용은 [변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용](#change-tracking-no-population)을 참조하세요.
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  검색 속성 목록을 전체 텍스트 인덱스에 추가하려면 연결된 검색 속성 목록에 등록된 검색 속성을 인덱싱하기 위해 인덱스를 다시 채워야 합니다. 검색 속성 목록을 추가할 때 WITH NO POPULATION을 지정할 경우 적당한 때에 인덱스 채우기를 실행해야 합니다.  
   
 > [!IMPORTANT]  
->  전체 텍스트 인덱스가 이전에 다른 검색에 연결된 경우 속성 목록을 다시 작성해야 인덱스가 일관된 상태를 유지합니다. 인덱스는 즉시 잘려 전체 채우기를 실행할 때까지 비어 있습니다. 검색 속성 목록을 변경하여 다시 작성하는 경우에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+>  전체 텍스트 인덱스가 이전에 다른 검색에 연결된 경우 속성 목록을 다시 작성해야 인덱스가 일관된 상태를 유지합니다. 인덱스는 즉시 잘려 전체 채우기를 실행할 때까지 비어 있습니다. 자세한 내용은 [검색 속성 목록을 변경하여 인덱스 다시 작성](#change-search-property-rebuild-index)을 참조하세요. 
   
 > [!NOTE]  
 >  지정한 검색 속성 목록을 같은 데이터베이스에 있는 둘 이상의 전체 텍스트 인덱스와 연결할 수 있습니다.  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  검색 속성 목록에 대한 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용  
+## <a name="change-tracking-no-population"></a> 변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용  
  전체 텍스트 인덱스가 채워지는지 여부는 변경 내용 추적이 설정되어 있는지 여부와 ALTER FULLTEXT INDEX 문에 WITH NO POPULATION이 지정되어 있는지 여부에 따라 달라집니다. 다음 표에서는 이러한 상호 작용의 결과를 요약합니다.  
   
 |변경 내용 추적|WITH NO POPULATION|결과|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>검색 속성 목록을 변경하여 인덱스 다시 작성  
+## <a name="change-search-property-rebuild-index"></a> 검색 속성 목록을 변경하여 인덱스 다시 작성  
  처음으로 전체 텍스트 인덱스를 검색 속성 목록과 연결할 때 인덱스가 다시 채워져야 속성별 검색 단어가 인덱싱됩니다. 기존의 인덱스 데이터는 잘리지 않습니다.  
   
  그러나 전체 텍스트 인덱스를 다른 속성 목록과 연결할 경우 인덱스가 다시 작성됩니다. 다시 작성할 경우 전체 텍스트 인덱스가 즉시 잘리고 기존 데이터가 모두 제거되며 인덱스를 다시 채워야 합니다. 채우기가 진행되는 동안 기본 테이블의 전체 텍스트 쿼리는 채우기를 통해 이미 인덱싱된 테이블 행만 검색합니다. 새로 추가한 검색 속성 목록의 등록된 속성에서 가져온 메타데이터가 다시 채운 인덱스 데이터에 포함됩니다.  

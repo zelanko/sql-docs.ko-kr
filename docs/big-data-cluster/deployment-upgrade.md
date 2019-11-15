@@ -1,7 +1,7 @@
 ---
 title: 새 릴리스로 업그레이드
-titleSuffix: SQL Server big data clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)](미리 보기)를 새 릴리스로 업그레이드하는 방법을 알아봅니다.'
+titleSuffix: SQL Server Big Data Clusters
+description: SQL Server 빅 데이터 클러스터를 새 릴리스로 업그레이드하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90bfaaa1a8cb6fd42081d8afa5feff13f9aec37c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531956"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706303"
 ---
 # <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 

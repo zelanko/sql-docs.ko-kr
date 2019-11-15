@@ -1,7 +1,7 @@
 ---
 title: 모니터 및 문제 해결하기
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는의 모니터링 및 문제 해결 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]을 위한 유용한 명령을 제공 합니다.
+description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153629"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>모니터링 및 문제 해결[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]모니터링 하 고 문제를 해결 하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명 합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
 
 > [!TIP]
-> 빅 데이터 클러스터 구성 요소의 상태를 모니터링 하려면 [**azdata bdc 상태**](deployment-guidance.md#status) 명령 또는 Azure Data Studio와 함께 제공 되는 기본 제공 [문제 해결 노트북](manage-notebooks.md) 을 사용할 수 있습니다.
+> 빅 데이터 클러스터 구성 요소의 상태를 모니터링하기 위해 [**azdata bdc status**](deployment-guidance.md#status) 명령 또는 Azure Data Studio에서 제공되는 기본 제공 [문제 해결 Notebook](manage-notebooks.md)을 사용할 수 있습니다.
 
 > [!TIP]
 > Windows(cmd 또는 PS) 또는 Linux(bash) 클라이언트 머신에서 다음 **kubectl** 명령을 실행합니다. 명령이 제대로 실행되려면 클러스터 내의 이전 인증과 명령을 실행할 클러스터 컨텍스트가 필요합니다. 예를 들어 이전에 만든 AKS 클러스터의 경우 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>`을 실행하여 Kubernetes 클러스터 구성 파일을 다운로드하고 클러스터 컨텍스트를 설정할 수 있습니다.
@@ -209,9 +209,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}]’, 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다. *.*
+> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}]* , 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다.
 
-브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 ‘Pod를 사용할 수 없습니다.사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임 스페이스의 Pod를 나열할 수 없습니다.’가 표시됩니다. 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
+브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 *Pod를 사용할 수 없습니다. 사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임스페이스의 Pod를 나열할 수 없습니다.* 가 표시됩니다. 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)을 참조 하세요.
+빅 데이터 클러스터에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란?](big-data-cluster-overview.md)을 참조하세요.

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653495"
@@ -453,4 +453,4 @@ ms.locfileid: "69653495"
 
 ## <a name="next-steps"></a>다음 단계
 
-배포 구성 파일을 사용 하 고 사용자 지정 하는 방법에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md#configfile)을 참조 하세요.
+배포 구성 파일을 사용하고 사용자 지정하는 방법에 대한 자세한 내용은 [Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md#configfile)을 참조하세요.

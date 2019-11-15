@@ -7,12 +7,12 @@ ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032204"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240703"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 시작
 
@@ -305,6 +305,13 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - 다음 명령을 실행하여 로그 전달 장애 조치(failover)가 작동하는지 확인합니다.
+ 
+    > [!WARNING]
+    > 이 명령은 보조 데이터베이스를 온라인 상태로 전환하고 로그 전달 구성을 중단합니다. 이 명령을 실행한 후에는 로그 전달을 다시 구성해야 합니다.
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

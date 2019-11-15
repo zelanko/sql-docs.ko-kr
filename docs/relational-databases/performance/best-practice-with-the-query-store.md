@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142780"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "71974298"
   
  매개 변수 값 설정을 위해 따라야 할 지침은 아래와 같습니다.
   
- **최대 크기(MB)**: 데이터베이스 내부에서 쿼리 저장소가 사용하는 데이터 공간의 한도를 지정합니다. 쿼리 저장소의 작업 모드에 직접적으로 영향을 주는 가장 중요한 설정입니다.  
+ **최대 크기(MB)** : 데이터베이스 내부에서 쿼리 저장소가 사용하는 데이터 공간의 한도를 지정합니다. 쿼리 저장소의 작업 모드에 직접적으로 영향을 주는 가장 중요한 설정입니다.  
   
  쿼리 저장소에서 쿼리, 실행 계획 및 통계를 수집하는 동안 이 한도에 도달할 때까지 데이터베이스에서 해당 크기가 증가합니다. 한도에 도달하면 쿼리 저장소는 작업 모드를 자동으로 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 즉 성능 분석은 더 이상 정확하지 않게 됩니다.  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **데이터 플러시 간격(분)**: 수집된 런타임 통계를 디스크에 유지하는 빈도(초)를 정의합니다. 기본값은 900초(15분)입니다. 워크로드에서 서로 다른 쿼리와 계획을 대량으로 생성하지 않거나 데이터베이스가 종료되기까지 데이터를 더 오래 유지해도 되는 경우 값을 늘리는 것이 좋습니다.
+ **데이터 플러시 간격(분)** : 수집된 런타임 통계를 디스크에 유지하는 빈도를 정의합니다. GUI(그래픽 사용자 인터페이스)에서는 분 단위로 표시되지만 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 초 단위로 표시됩니다. 기본값은 900초이며 그래픽 사용자 인터페이스에서는 15분입니다. 워크로드에서 서로 다른 쿼리와 계획을 대량으로 생성하지 않거나 데이터베이스가 종료되기까지 데이터를 더 오래 유지해도 되는 경우 값을 늘리는 것이 좋습니다.
  
 > [!NOTE]
 > 추적 플래그 7745를 사용하면 장애 조치(failover) 또는 종료 명령 시 쿼리 저장소 데이터를 디스크에 쓸 수 없습니다. 자세한 내용은 [중요 업무용 서버에서 추적 플래그를 사용하여 재해 복구 개선](#Recovery)을 참조하세요.
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **통계 수집 간격**: 수집되는 런타임 통계의 세분성 수준을 정의합니다. 기본값은 60분입니다. 문제를 검색하고 완화하는 시간을 줄이거나 높은 수준의 세분성이 필요한 경우 값을 줄이는 것이 좋습니다. 하지만 이 값은 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **통계 수집 간격**에 다른 값을 설정할 수 있습니다.  
+ **통계 수집 간격**: 수집되는 런타임 통계의 세분성 수준(분)을 정의합니다. 기본값은 60분입니다. 문제를 검색하고 완화하는 시간을 줄이거나 높은 수준의 세분성이 필요한 경우 값을 줄이는 것이 좋습니다. 하지만 이 값은 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **통계 수집 간격**에 다른 값을 설정할 수 있습니다.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **부실 쿼리 임계값(일)**: 지속형 런타임 통계와 비활성 쿼리의 보존 기간을 제어하는 시간 기반 정리 정책입니다. 기본적으로 쿼리 저장소는 30일 동안 데이터를 유지하도록 구성되어 있으므로, 이 시간이 해당 시나리오에서 불필요하게 길 수도 있습니다.  
+ **부실 쿼리 임계값(일)** : 지속형 런타임 통계와 비활성 쿼리의 보존 기간(일)을 제어하는 시간 기반 정리 정책입니다. 기본적으로 쿼리 저장소는 30일 동안 데이터를 유지하도록 구성되어 있으므로, 이 시간이 해당 시나리오에서 불필요하게 길 수도 있습니다.  
   
  사용하지 않을 기록 데이터는 유지하지 않는 것이 좋습니다. 이렇게 하면 읽기 전용 상태로 변경되는 횟수가 줄어듭니다. 쿼리 저장소 데이터 크기와 문제를 검색하여 완화하는 시간도 더 예측 가능해집니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 다음 스크립트를 사용하여 시간 기반 정리 정책을 구성합니다.  
   
@@ -153,7 +153,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-다음 예제에서는 QUERY_CAPTURE_MODE를 AUTO로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 다른 권장 옵션을 설정하며, ‘필요에 따라’ 새로운 기본 AUTO 캡처 모드 대신 CUSTOM 캡처 정책을 기본값으로 설정합니다.  
+다음 예제에서는 QUERY_CAPTURE_MODE를 AUTO로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 다른 권장 옵션을 설정하며, ‘필요에 따라’ 새로운 기본 AUTO 캡처 모드 대신 CUSTOM 캡처 정책을 기본값으로 설정합니다.   
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -235,7 +235,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 -   쿼리에 최적 실행을 위한 인덱스가 없다는 결론을 내릴 수도 있습니다. 이 정보는 쿼리 실행 계획 내에 표시됩니다. 누락된 인덱스를 만들고 쿼리 저장소를 사용하여 쿼리 성능을 확인합니다.  
   
-       ![쿼리 저장소 실행 계획](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![쿼리 저장소 계획 표시](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  작업을 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행하는 경우 인덱스 권장 사항을 자동으로 받을 수 있도록 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인덱스 관리자에 등록합니다.
   

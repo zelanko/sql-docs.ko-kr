@@ -1,29 +1,28 @@
 ---
-title: '자습서: Java에서 regex(정규식)를 사용하여 문자열 검색'
-titleSuffix: SQL Server Language Extensions
-description: 이 자습서에서는 SQL Server 언어 확장을 사용하고 정규식을 사용하여 문자열을 검색하는 Java 코드를 실행하는 방법을 보여 줍니다.
+title: '자습서: Java에서 Regex 문자열 검색'
+description: 이 자습서에서는 SQL Server 언어 확장을 사용하고 정규식(regex)을 사용하여 문자열을 검색하는 Java 코드를 실행하는 방법을 보여 줍니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589007"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658797"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>자습서: Java에서 regex(정규식)를 사용하여 문자열 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 자습서에서는 [SQL Server 언어 확장](../language-extensions-overview.md)을 사용하고 입력 매개 변수로 SQL Server에서 두 개의 열(ID 및 text)과 정규식을 받는 Java 클래스를 만드는 방법을 보여 줍니다. 클래스는 두 개의 열을 다시 SQL Server(ID 및 text)로 반환합니다.
+이 자습서에서는 [SQL Server 언어 확장](../language-extensions-overview.md)을 사용하여 입력 매개 변수로 SQL Server에서 두 개의 열(ID 및 text)과 정규식(regex)을 받는 Java 클래스를 만드는 방법을 보여 줍니다. 클래스는 두 개의 열을 다시 SQL Server(ID 및 text)로 반환합니다.
 
 코드는 Java 클래스로 전송된 텍스트 열의 지정된 텍스트에 대해 지정된 정규식이 충족되는지 확인하고 원래 ID와 함께 해당 텍스트를 반환합니다.
 
-이 샘플은 텍스트에 "Java" 또는 "java"라는 단어가 포함되어 있는지 확인하는 정규식을 사용합니다.
+이 샘플 코드에서는 텍스트에 “Java” 또는 “java”라는 단어가 포함되어 있는지 확인하는 정규식을 사용합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

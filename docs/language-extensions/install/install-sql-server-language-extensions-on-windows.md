@@ -1,26 +1,26 @@
 ---
 title: Windows에 SQL Server 언어 확장 설치
-titleSuffix: SQL Server Language Extensions
-description: Windows용 SQL Server 2019 언어 확장 설치 단계입니다.
+titleSuffix: ''
+description: Windows에 SQL Server 언어 확장을 설치하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589067"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658844"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Windows에 SQL Server 언어 확장 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2019부터 언어 확장 및 Java 지원이 제공됩니다. 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 언어 확장 구성 요소를 설치하는 방법을 설명합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 SQL Server에서 언어 확장 구성 요소를 설치하는 방법을 알아봅니다.
 
 > [!NOTE]
 > 이 문서는 Windows에서 SQL Server 언어 확장을 설치하는 데 사용합니다. Linux의 경우, [Linux에 SQL Server 2019 언어 확장(Java) 설치](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)를 참조하세요.
@@ -61,11 +61,8 @@ SQL Server 2019 릴리스 후보 1에서는 SQL Server를 사용하여 Java를 �
     
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
 
-SQL Server 2019의 미리 보기 버전은 [SQL Server 2019 설치 사이트](https://www.microsoft.com/sql-server/sql-server-2019#Install)에서 사용할 수 있습니다.
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>설치 프로그램 실행
 
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.

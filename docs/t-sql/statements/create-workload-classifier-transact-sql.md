@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 분류자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,19 +20,22 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b5566230f1739fd1d19d7ffa9dd34ce07caf1fa4
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951656"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632891"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-워크로드 관리 분류자를 만듭니다.  분류자는 들어오는 요청을 작업 그룹에 할당하고 분류자 문 정의에 지정된 매개 변수에 따라 중요도를 할당합니다.  분류자는 제출된 모든 요청마다 평가됩니다.  요청이 분류자와 일치하지 않으면 기본 작업 그룹에 할당됩니다.  기본 작업 그룹은 smallrc 리소스 클래스입니다.  
-  
+워크로드 관리에 사용할 분류자 개체를 만듭니다.  분류자는 분류자 문 정의에 지정된 매개 변수에 따라 들어오는 요청을 워크로드 그룹에 할당합니다.  분류자는 제출된 모든 요청마다 평가됩니다.  요청이 분류자와 일치하지 않으면 기본 작업 그룹에 할당됩니다.  기본 작업 그룹은 smallrc 리소스 클래스입니다.
+
+> [!NOTE]
+> 워크로드 분류자는 sp_addrolemember 리소스 클래스 할당 대신 사용됩니다.  워크로드 분류자를 만든 후 sp_droprolemember를 실행하여 중복된 리소스 클래스 매핑을 모두 제거합니다.
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문
@@ -40,9 +43,14 @@ ms.locfileid: "71951656"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = 'name'  
-     ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
+    (   WORKLOAD_GROUP = ‘name’  
+    ,   MEMBERNAME = ‘security_account’ 
+[ [ , ] WLM_LABEL = ‘label’ ]  
+[ [ , ] WLM_CONTEXT = ‘context’ ]  
+[ [ , ] START_TIME = ‘HH:MM’ ]  
+[ [ , ] END_TIME = ‘HH:MM’ ]  
+  
+[ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
 
@@ -51,24 +59,67 @@ WITH
  *classifier_name*  
  워크로드 분류자를 식별하는 이름을 지정합니다.  classifier_name은 sysname입니다.  최대 128자까지 가능하며 인스턴스 내에서 고유해야 합니다.
 
-WORKLOAD_GROUP = *'name'* 조건이 분류자 규칙으로 충족되면 이름은 요청을 작업 그룹에 매핑합니다.  이름은 sysname입니다.  최대 128자까지 가능하며 분류자 생성 시 유효한 작업 그룹 이름이어야 합니다.
+ *WORKLOAD_GROUP* =  *'name'*    
+ 조건이 분류자 규칙으로 충족되면 이름은 요청을 작업 그룹에 매핑합니다.  이름은 sysname입니다.  최대 128자까지 가능하며 분류자 생성 시 유효한 작업 그룹 이름이어야 합니다.
 
-WORKLOAD_GROUP은 기존 리소스 클래스에 매핑해야 합니다.
+ 사용 가능한 워크로드 그룹은 [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) 카탈로그 뷰에서 찾을 수 있습니다.
 
-|정적 리소스 클래스|동적 리소스 클래스|
-|------------------------|-----------------------|
-|staticrc10|smallrc|
-|staticrc20|mediumrc|
-|staticrc30|largerc|
-|staticrc40|xlargerc|
-|staticrc50||
-|staticrc60||
-|staticrc70||
-|staticrc80||
+ *MEMBERNAME* ='security_account'*    
+ 역할에 추가될 보안 계정입니다.  Security_account는 sysname이며 기본값은 없습니다. Security_account는 데이터베이스 사용자, 데이터베이스 역할, Azure Active Directory 로그인 또는 Azure Active Directory 그룹일 수 있습니다.
+ 
+ *WLM_LABEL*   
+ 요청을 분류하는 데 사용할 수 있는 레이블 값을 지정합니다.  Label은 nvarchar(255) 형식의 선택적 매개 변수입니다.  요청에 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label)을 사용하여 분류자 구성과 일치시킵니다.
 
-MEMBERNAME = *'security_account'* 역할에 추가되는 보안 계정입니다.  Security_account는 sysname이며 기본값은 없습니다. Security_account는 데이터베이스 사용자, 데이터베이스 역할, Azure Active Directory 로그인 또는 Azure Active Directory 그룹일 수 있습니다.
+예:
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 요청의 상대적 중요도를 지정합니다.  중요도는 다음 값 중 하나입니다.
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,WLM_LABEL      = 'dimension_loads' )
+
+SELECT COUNT(*) 
+  FROM DimCustomer
+  OPTION (LABEL = 'dimension_loads')
+```
+
+*WLM_CONTEXT*  
+요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 `wlm_context` 변수와 동일한 변수 이름을 가진 [sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)를 사용합니다.
+
+예:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'
+ ,WLM_CONTEXT    = 'dim_load' )
+ 
+--set session context
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = 'dim_load'
+
+--run multiple statements using the wlm_context setting
+SELECT COUNT(*) FROM stg.daily_customer_load
+SELECT COUNT(*) FROM stg.daily_sales_load
+
+--turn off the wlm_context session setting
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
+```
+
+*START_TIME* 및 *END_TIME*  
+요청을 분류하는 데 사용할 수 있는 start_time 및 end_time을 지정합니다.  start_time 및 end_time은 UTC 표준 시간대로 HH:MM 형식입니다.  start_time과 end_time을 함께 지정해야 합니다.
+
+예:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoads'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,START_TIME     = '22:00'
+ ,END_TIME       = '02:00' )
+```
+
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+요청의 상대적 중요도를 지정합니다.  중요도는 다음 값 중 하나입니다.
 
 - LOW
 - BELOW_NORMAL
@@ -76,9 +127,37 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 요청의 상
 - ABOVE_NORMAL
 - HIGH  
 
-중요도는 요청이 예약된 순서에 영향을 미치므로 리소스 및 잠금에 첫 번째 액세스 권한을 부여합니다.
+중요도를 지정하지 않으면 워크로드 그룹의 중요도 설정이 사용됩니다.  기본 워크로드 그룹 중요도는 정상입니다.  중요도는 요청이 예약된 순서에 영향을 미치므로 리소스 및 잠금에 첫 번째 액세스 권한을 부여합니다.
 
-사용자가 여러 분류자에서 다른 리소스 클래스가 할당되거나 일치하는 여러 역할의 멤버인 경우, 사용자에게 가장 높은 리소스 클래스 할당이 제공됩니다. 자세한 내용은 [작업 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)를 참조하세요.
+## <a name="classification-parameter-precedence"></a>분류 매개 변수 우선 순위
+
+요청을 여러 분류자와 일치시킬 수 있습니다.  분류자 매개 변수에는 우선 순위가 있습니다.  우선 순위와 일치하는 분류자는 먼저 워크로드 그룹 및 중요도를 할당하는 데 사용됩니다.  우선 순위는 다음과 같습니다.
+1. User
+2. ROLE
+3. WLM_LABEL
+4. WLM_SESSION
+5. START_TIME/END_TIME
+
+다음 분류자 구성을 고려하세요.
+
+```sql
+CREATE WORKLOAD CLASSIFIER classiferA WITH  
+( WORKLOAD_GROUP = 'wgDashboards'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = HIGH
+ ,WLM_LABEL      = 'salereport' )
+
+CREATE WORKLOAD CLASSIFIER classiferB WITH  
+( WORKLOAD_GROUP = 'wgUserQueries'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = LOW
+ ,START_TIME     = '18:00')
+ ,END_TIME       = '07:00' )
+```
+
+사용자 `userloginA`는 두 분류자에 대해 구성됩니다.  userloginA가 UTC 오후 6시에서 오전 7시 사이에 `salesreport`와 동일한 레이블을 사용하여 쿼리를 실행하는 경우 요청은 HIGH 중요도의 wgDashboards 워크로드 그룹으로 분류됩니다.  휴가 보고에서 요청을 LOW 중요도의 wgUserQueries로 분류할 수 있지만 WLM_LABEL의 우선 순위는 START_TIME/END_TIME보다 높습니다.  이 경우 classiferA에 START_TIME/END_TIME을 추가할 수 있습니다.
+
+ 자세한 내용은 [워크로드 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 

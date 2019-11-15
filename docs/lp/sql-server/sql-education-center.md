@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 설명서
-description: Microsoft Azure cloud service를 사용하여 강력한 애플리케이션을 빌드하고 관리하는 방법을 알아봅니다. 설명서, 예제 코드, 자습서 등을 가져옵니다.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server 교육 센터
+description: SQL Server 및 Azure SQL Database를 학습하는 데 사용할 수 있는 리소스에 대한 요약입니다. 빠른 시작 및 자습서부터 Microsoft Learn 및 LinkedIn Learning까지 다양한 정보가 제공됩니다.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176278"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637921"
 ---
 <div id="main" class="v2">
     <div class="container">

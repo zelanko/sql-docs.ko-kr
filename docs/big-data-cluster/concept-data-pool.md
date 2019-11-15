@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bfd4d9d6ca24599a2297799555f53a83c6601420
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652260"
@@ -20,7 +20,7 @@ ms.locfileid: "69652260"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] *SQL Server 데이터 풀* 의 역할을 설명 합니다. 다음 섹션에서는 SQL 데이터 풀의 아키텍처 및 기능을 설명합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 ‘SQL Server 데이터 풀’의 역할을 설명합니다.  다음 섹션에서는 SQL 데이터 풀의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="data-pool-architecture"></a>데이터 풀 아키텍처
 
@@ -34,7 +34,7 @@ ms.locfileid: "69652260"
 
 ## <a name="next-steps"></a>다음 단계
 
-에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 리소스를 참조 하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)
 - [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

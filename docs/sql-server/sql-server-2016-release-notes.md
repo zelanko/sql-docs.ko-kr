@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874919"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632914"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70874919"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2에는 2016 SP1 이후부터 CU8까지 모든 누적 업데이트가 포함되어 있습니다.
 
-- [![Microsoft 다운로드 센터](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 서비스 팩 2(SP2) 다운로드](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Microsoft 다운로드 센터](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [SQL Server 2016 서비스 팩 2(SP2) 다운로드](https://www.microsoft.com/download/details.aspx?id=56836)
 - 업데이트의 전체 목록은 [SQL Server 2016 서비스 팩 2 릴리스 정보](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)를 참조하세요.
 
 SQL Server 2016 SP2를 설치하면 설치 후 다시 부팅이 필요할 수 있습니다. SQL Server 2016 SP2 설치 후 다시 부팅을 계획하고 설치를 수행하는 것이 가장 좋습니다.
@@ -210,7 +210,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
  **해결 방법:** 다음 해결 방법 중 하나를 사용하세요.
 
- ![SQL Server에 대한 도움말 설정 구성](../sql-server/media/docs-sql2016-managehelpsettings.png "SQL Server에 대한 도움말 설정 구성")
+ ![SQL Server에 대한 도움말 설정 관리](../sql-server/media/docs-sql2016-managehelpsettings.png "SQL Server에 대한 도움말 설정 관리")
 
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.
 

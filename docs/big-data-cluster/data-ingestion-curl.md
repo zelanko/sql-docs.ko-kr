@@ -1,7 +1,7 @@
 ---
 title: curl을 사용하여 HDFS로 데이터 로드 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS에 데이터를 로드 하려면 말아 넘기기를 사용 합니다.'
+description: curl을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS에 데이터를 로드합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049884"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706630"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>말아 넘기기를 사용 하 여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS로 데이터 로드
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>curl을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 HDFS에 데이터 로드
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에서 **말아 넘기기** 를 사용 하 여 HDFS로 데이터를 로드 하는 방법을 설명 합니다.
+이 문서에서는 **curl**을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS로 데이터를 로드하는 방법을 설명합니다.
 
 ## <a id="prereqs"></a> 사전 요구 사항
 
@@ -49,7 +49,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 ## <a name="list-a-file"></a>파일 나열
 
-**Hdfs:///product_review_data**아래에 있는 파일을 나열 하려면 다음의 말아 명령을 사용 합니다.
+**hdfs:///product_review_data** 아래에 있는 파일을 나열하려면 다음 curl 명령을 사용합니다.
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>HDFS에 로컬 파일 저장
 
-로컬 디렉터리에서 product_review_data 디렉터리에 새 파일을 저장 하려면 다음 말아 명령을 **사용 합니다 (** **content-type** 매개 변수가 필요 함).
+로컬 디렉터리의 새 파일 **test.csv**를 product_review_data 디렉터리에 저장하려면 다음 curl 명령을 사용합니다(**Content-Type** 매개 변수가 필요함).
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'

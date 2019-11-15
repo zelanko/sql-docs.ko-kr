@@ -1,7 +1,7 @@
 ---
 title: Kubeadm을 사용하여 Kubernetes 구성
-titleSuffix: SQL Server big data clusters
-description: 배포를 위해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 여러 Ubuntu 16.04 또는 18.04 컴퓨터 (물리적 또는 가상)에서 Kubernetes를 구성 하는 방법에 대해 알아봅니다.
+titleSuffix: SQL Server Big Data Clusters
+description: 여러 Ubuntu 16.04 또는 18.04 머신(물리적 또는 가상)에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포에 대해 Kubernetes를 구성하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688307"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706367"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>여러 머신에서 SQL Server 빅 데이터 클러스터 배포에 대해 Kubernetes 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 **kubeadm** 를 사용 하 여 배포에 대해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 여러 컴퓨터에서 Kubernetes를 구성 하는 방법에 대 한 예제를 제공 합니다. 이 예제에서는 여러 Ubuntu 16.04 또는 18.04 LTS 머신(물리적 또는 가상)이 대상입니다. 다른 Linux 플랫폼에 배포하는 경우 일부 명령을 시스템에 맞게 변경해야 합니다.  
+이 문서에서는 **kubeadm**을 사용하여 여러 머신에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포에 대해 Kubernetes를 구성하는 방법의 예제를 제공합니다. 이 예제에서는 여러 Ubuntu 16.04 또는 18.04 LTS 머신(물리적 또는 가상)이 대상입니다. 다른 Linux 플랫폼에 배포하는 경우 일부 명령을 시스템에 맞게 변경해야 합니다.  
 
 > [!TIP] 
 > Kubernetes를 구성하는 샘플 스크립트는 [Ubuntu 16.04 LTS 또는 18.04 LTS에서 Kubeadm을 사용하여 Kubernetes 클러스터 만들기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)를 참조하세요.
@@ -35,7 +35,7 @@ ms.locfileid: "71688307"
    - 100GB 스토리지
  
 > [!Important] 
-> 빅 데이터 클러스터 배포를 시작 하기 전에 배포가 대상으로 하는 모든 Kubernetes 노드에서 시계가 동기화 되도록 합니다. 빅 데이터 클러스터에는 시간이 중요 하 고 클록 기울어집니다으로 인해 잘못 된 상태가 될 수 있는 다양 한 서비스에 대 한 기본 제공 상태 속성이 있습니다.
+> 빅 데이터 클러스터 배포를 시작하기 전에 배포 대상인 모든 Kubernetes 노드에서 시계가 동기화되는지 확인합니다. 빅 데이터 클러스터에는 시간이 중요한 다양한 서비스에 대한 기본 상태 속성이 있으며 시간이 왜곡되면 상태가 잘못될 수 있습니다.
 
 ## <a name="prepare-the-machines"></a>머신 준비
 

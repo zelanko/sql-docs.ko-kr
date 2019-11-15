@@ -1,7 +1,7 @@
 ---
 title: 마스터 인스턴스란?
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]SQL Server 마스터 인스턴스에 대해 설명 합니다.
+description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 SQL Server 마스터 인스턴스를 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652271"
@@ -20,7 +20,7 @@ ms.locfileid: "69652271"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019에 대 한 빅 데이터 클러스터의 *SQL Server 마스터 인스턴스* 역할에 대해 설명 합니다. 마스터 인스턴스는 연결, 스케일 아웃 쿼리, 메타 데이터 및 사용자 데이터베이스, machine learning 서비스를 관리 하기 위해 빅 데이터 클러스터에서 실행 되는 SQL Server 인스턴스입니다.
+이 문서에서는 SQL Server 2019용 빅 데이터 클러스터에서 ‘SQL Server 마스터 인스턴스’의 역할을 설명합니다.  마스터 인스턴스는 연결, 스케일 아웃 쿼리, 메타데이터 및 사용자 데이터베이스, Machine Learning Services를 관리하기 위해 빅 데이터 클러스터에서 실행되는 SQL Server 인스턴스입니다.
 
 SQL Server 마스터 인스턴스는 다음과 같은 기능을 제공합니다.
 
@@ -51,9 +51,9 @@ Machine Learning Services는 SQL Server 빅 데이터 클러스터의 일부로,
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>빅 데이터 클러스터에서 Machine Learning Services의 장점
 
-SQL Server 2019를 사용하면 일반적으로 엔터프라이즈 데이터베이스에 저장된 차원 데이터에 빅 데이터를 쉽게 조인할 수 있습니다. 빅 데이터의 가치는 조직의 일부만 사용하는 것이 아니라 보고서, 대시보드 및 애플리케이션에도 포함될 때 크게 증가합니다. 이와 동시에 데이터 과학자는 Spark/HDFS 에코시스템 도구를 계속 사용하면서 SQL Server 마스터 인스턴스와 SQL Server 마스터 인스턴스를 ‘통해’ 액세스할 수 있는 외부 데이터 원본의 데이터를 실시간으로 쉽게 액세스할 수 있습니다.
+SQL Server 2019를 사용하면 일반적으로 엔터프라이즈 데이터베이스에 저장된 차원 데이터에 빅 데이터를 쉽게 조인할 수 있습니다. 빅 데이터의 가치는 조직의 일부만 사용하는 것이 아니라 보고서, 대시보드 및 애플리케이션에도 포함될 때 크게 증가합니다. 이와 동시에 데이터 과학자는 Spark/HDFS 에코시스템 도구를 계속 사용하면서 SQL Server 마스터 인스턴스와 SQL Server 마스터 인스턴스를 ‘통해’ 액세스할 수 있는 외부 데이터 원본의 데이터를 실시간으로 쉽게 액세스할 수 있습니다. 
 
-을 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]사용 하 여 엔터프라이즈 데이터 레이크 더 많은 작업을 수행할 수 있습니다. SQL Server 개발자와 분석가는 다음 작업을 수행할 수 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 사용하면 엔터프라이즈 데이터 레이크로 더 많은 작업을 수행할 수 있습니다. SQL Server 개발자와 분석가는 다음 작업을 수행할 수 있습니다.
 
 * 엔터프라이즈 데이터 레이크의 데이터를 사용하는 애플리케이션을 빌드합니다.
 * Transact-SQL 쿼리를 사용하여 모든 데이터를 추론합니다.
@@ -67,7 +67,7 @@ SQL Server 2019를 사용하면 일반적으로 엔터프라이즈 데이터베�
 
 ## <a name="next-steps"></a>다음 단계
 
-에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 리소스를 참조 하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)
 - [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

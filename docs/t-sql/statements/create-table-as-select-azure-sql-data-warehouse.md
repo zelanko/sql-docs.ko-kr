@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961803"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660789"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -137,6 +137,8 @@ CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대�
 
 ## <a name="limitations-and-restrictions"></a>제한 사항  
 Azure SQL Data Warehouse는 아직 자동 만들기 또는 자동 업데이트 통계를 지원하지 않습니다.  최상의 쿼리 성능을 얻으려면 CTAS를 실행한 후, 그리고 데이터에 중요한 변경이 일어난 후 모든 테이블의 모든 열에 대한 통계를 작성해야 합니다. 자세한 내용은 [CREATE STATISTICS(Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
+
+정렬된 클러스터형 columnstore 인덱스는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)은 CTAS에 아무런 영향도 주지 않습니다. 비슷한 동작을 얻으려면 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)를 사용합니다.  
  

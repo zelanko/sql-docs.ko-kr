@@ -1,22 +1,22 @@
 ---
-title: SQL Server에서 Java 호출
+title: Java Runtime 호출
 titleSuffix: SQL Server Language Extensions
-description: SQL Server 2019의 Java 프로그래밍 언어 확장을 사용하여 SQL Server 저장 프로시저에서 Java 클래스를 호출하는 방법에 대해 알아봅니다.
+description: SQL Server 언어 확장을 사용하여 SQL Server 저장 프로시저에서 Java 클래스를 호출하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34d8162961a9e6bbc850e8a80a96910e5aa41d7b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588807"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658891"
 ---
-# <a name="how-to-call-java-from-sql-server"></a>SQL Server에서 Java를 호출하는 방법
+# <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 언어 확장에서 Java 런타임을 호출하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [SQL Server 언어 확장](../language-extensions-overview.md)은 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저를 인터페이스로 사용하여 Java 런타임을 호출합니다. 

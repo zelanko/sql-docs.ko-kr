@@ -1,7 +1,7 @@
 ---
 title: 빅 데이터 클러스터란?
 titleSuffix: SQL Server Big Data Clusters
-description: Kubernetes에서 실행되고 관계형 및 HDFS 데이터 둘 다에 대해 스케일 아웃 옵션을 제공하는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에 대해 알아봅니다.
+description: Kubernetes에서 실행되고 관계형 및 HDFS 데이터 둘 다에 대해 스케일 아웃 옵션을 제공하는 SQL Server 2019 빅 데이터 클러스터에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532507"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706661"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
@@ -56,7 +56,7 @@ SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 
 
 관리 및 모니터링은 명령줄 도구, API, 포털 및 동적 관리 뷰를 조합하여 제공됩니다.
 
-Azure Data Studio를 사용하여 빅 데이터 클러스터에서 다양한 작업을 수행할 수 있습니다. 이러한 작업은 새 **SQL Server 2019 확장(미리 보기)** 을 통해 수행할 수 있습니다. 이 확장은 다음을 제공합니다.
+Azure Data Studio를 사용하여 빅 데이터 클러스터에서 다양한 작업을 수행할 수 있습니다. 이러한 작업은 새 **SQL Server 2019 확장**을 통해 수행할 수 있습니다. 이 확장은 다음을 제공합니다.
 
 - 일반적인 관리 작업을 위한 기본 제공 코드 조각
 - HDFS를 찾아보고, 파일을 업로드하고, 파일을 미리 보고, 디렉터리를 만드는 기능
@@ -107,4 +107,4 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터 시작](deploy-get-started.md)을 참조하세요.
+SQL Server 빅 데이터 클러스터 배포에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터 시작](deploy-get-started.md)을 참조하세요.

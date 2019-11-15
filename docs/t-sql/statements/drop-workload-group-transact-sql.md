@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -14,18 +14,32 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
-ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37a714956b6d4e21fbbc5daaddf083656bdedcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 90622710b19ef3c2692cdcff62089cb7539fcf97
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072019"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632804"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 및 SQL Database Managed Instance
+
 
   기존 사용자 정의 리소스 관리자 작업 그룹을 삭제합니다.  
   
@@ -58,10 +72,12 @@ DROP WORKLOAD GROUP group_name
   
 -   DROP WORKLOAD GROUP 문을 발행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않을 경우 DROP 문을 발행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동할 수 있습니다. 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE 문을 실행합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>사용 권한
+
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
+
  다음 예에서는 `adhoc`라는 작업 그룹을 삭제합니다.  
   
 ```  
@@ -80,4 +96,54 @@ GO
  [DROP RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse(미리 보기)
+
+워크로드 그룹을 삭제합니다.  문이 완료되면 설정이 적용됩니다.
+
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="syntax"></a>구문
+
+```
+DROP WORKLOAD GROUP group_name  
+```
+
+## <a name="arguments"></a>인수
+
+ *group_name*  
+ 기존 사용자 정의 작업 그룹의 이름입니다.
+
+## <a name="remarks"></a>Remarks
+
+워크로드 그룹에 대한 분류자가 있는 경우 워크로드 그룹을 삭제할 수 없습니다.  워크로드 그룹을 삭제하기 전에 분류자를 삭제합니다.  삭제하려는 워크로드 그룹의 리소스를 사용하는 활성 요청이 있는 경우 drop workload 문이 그 뒤에서 차단됩니다.
+
+## <a name="examples"></a>예
+
+다음 코드 예제를 사용하여 워크로드 그룹을 삭제하기 전에 삭제해야 하는 분류자를 확인할 수 있습니다.
+
+```sql
+SELECT c.name as classifier_name
+      ,'DROP WORKLOAD CLASSIFIER '+c.name as drop_command
+  FROM sys.workload_management_workload_classifiers c
+  JOIN sys.workload_management_workload_groups g
+    ON c.group_name = g.name
+  WHERE g.name = 'wgXYZ' --change the filter to the workload being dropped
+```
+
+## <a name="permissions"></a>사용 권한
+
+CONTROL DATABASE 권한이 필요합니다.
+
+## <a name="see-also"></a>관련 항목:
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ 
+::: moniker-end

@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,19 +16,32 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 6fda5419756689df6b9be1fda9a792c14229c1ce
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260323"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632843"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 및 SQL Database Managed Instance
 
 리소스 관리자 작업 그룹을 만든 후 이 작업 그룹을 리소스 관리자 리소스 풀에 연결합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 Resource Governor를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
 
@@ -171,3 +184,121 @@ GO
 - [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />관리되는 인스턴스](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse"></a>SQL Data Warehouse 
+
+CREATE WORKLOAD GROUP(Transact-SQL)(미리 보기)으로 워크로드 그룹을 만듭니다.  워크로드 그룹은 요청 세트에 대한 컨테이너로, 시스템에서 워크로드 관리를 구성하는 방법에 대한 기본 사항에 해당합니다.  워크로드 그룹은 워크로드 격리를 위해 리소스를 예약하고, 리소스를 포함하고, 요청별로 리소스를 정의하고, 실행 규칙을 따르도록 하는 기능을 제공합니다.  문이 완료되면 설정이 적용됩니다.
+
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+```
+CREATE WORKLOAD GROUP group_name  
+ WITH  
+ (        MIN_PERCENTAGE_RESOURCE = value  
+      ,   CAP_PERCENTAGE_RESOURCE = value 
+      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value   
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]  
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
+  [ ; ]
+```
+
+*group_name*</br>
+워크로드 그룹을 식별하는 이름을 지정합니다.  group_name은 sysname입니다.  최대 128자까지 가능하며 인스턴스 내에서 고유해야 합니다.
+
+*MIN_PERCENTAGE_RESOURCE* = value</br>
+이 워크로드 그룹에 대해 다른 작업 그룹과 공유되지 않도록 보장된 최소 리소스 할당을 지정합니다.  value는 0에서 100 사이의 정수 범위입니다.  모든 워크로드 그룹에서 min_percentage_resource의 합계는 100을 초과할 수 없습니다.  min_percentage_resource 값은 cap_percentage_resource보다 클 수 없습니다.  서비스 수준에 따라 허용되는 최소 유효 값이 있습니다.  자세한 내용은 유효 값<link>을 참조하세요.
+
+*CAP_PERCENTAGE_RESOURCE* = value</br>
+워크로드 그룹의 모든 요청에 대한 최대 리소스 사용률을 지정합니다.  허용되는 값의 범위는 1에서 100까지입니다.  cap_percentage_resource 값은 min_percentage_resource보다 커야 합니다.  다른 워크로드 그룹에서 min_percentage_resource가 0보다 크게 구성된 경우 cap_percentage_resource의 유효 값이 줄어들 수 있습니다.
+
+*REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
+요청별로 할당된 최소 리소스 크기를 설정합니다.  value는 0.75에서 100.00 사이의 10 진수 범위에 속하는 필수 매개 변수입니다.  request_min_resource_grant_percent 값은 0.25의 배수여야 하고 min_percentage_resource의 요소여야 하며, cap_percentage_resource보다 작아야 합니다.  서비스 수준에 따라 허용되는 최소 유효 값이 있습니다.  자세한 내용은 유효 값<link>을 참조하세요.
+
+예를 들어
+
+```sql
+CREATE WORKLOAD GROUP wgSample WITH  
+( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+ ,CAP_PERCENTAGE_RESOURCE = 100 )
+```
+
+리소스 클래스에 사용되는 값을 request_min_resource_grant_percent에 대한 지침으로 간주합니다.  다음 표에서는 Gen2에 대한 리소스 할당을 포함합니다.
+
+|리소스 클래스|리소스 비율|
+|---|---|
+|Smallrc|3%|
+|Mediumrc|10%|
+|Largerc|22%|
+|Xlargerc|70%|
+|||
+
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
+요청별로 할당된 최대 리소스 크기를 설정합니다.  value는 기본값이 request_min_resource_grant_percent와 같은 선택적 매개 변수입니다.  value는 request_min_resource_grant_percent보다 크거나 같아야 합니다.  request_max_resource_grant_percent 값이 request_min_resource_grant_percent보다 크고, 시스템 리소스를 사용할 수 있는 경우 추가 리소스가 요청에 할당됩니다.
+
+*IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+워크로드 그룹에 대한 요청의 기본 중요도를 지정합니다.  중요도는 다음 중 하나이며 NORMAL이 기본값입니다.
+- LOW
+- BELOW_NORMAL
+- NORMAL(기본값)
+- ABOVE_NORMAL
+- HIGH  
+
+워크로드 그룹에 설정된 중요도는 워크로드 그룹의 모든 요청에 대한 기본 중요도입니다.  또한 사용자는 분류자 수준에서 중요도를 설정할 수 있으며 이 중요도로 워크로드 그룹 중요도 설정을 재정의할 수 있습니다.  이렇게 하면 워크로드 그룹 내에서 요청의 중요도를 차별화하여 예약되지 않은 리소스에 더 빠르게 액세스할 수 있습니다.  워크로드 그룹의 min_percentage_resource 합계가 100보다 작으면 예약되지 않은 리소스가 중요도를 기준으로 할당됩니다.
+
+*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
+쿼리가 취소되기 전에 실행될 수 있는 최대 시간(초)을 지정합니다.  value는 0 또는 양의 정수여야 합니다.  value의 기본 설정인 0은 무제한을 의미합니다.  요청 큐에서 대기하는 데 걸린 시간은 쿼리 실행 시간으로 계산되지 않습니다.
+
+## <a name="remarks"></a>Remarks
+리소스 클래스에 해당하는 워크로드 그룹은 이전 버전과의 호환성을 위해 자동으로 만들어집니다.  이러한 시스템 정의 워크로드 그룹은 삭제할 수 없습니다.  추가로 8개의 사용자 정의 워크로드 그룹을 만들 수 있습니다.
+
+## <a name="effective-values"></a>유효 값
+
+min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent 및 request_max_resource_grant_percent 매개 변수에는 현재 서비스 수준의 컨텍스트 및 다른 워크로드 그룹의 구성에서 조정되는 유효 값이 있습니다.
+
+서비스 수준별로 지원되는 동시성은 리소스 클래스를 사용하여 쿼리당 리소스 허용을 정의할 때와 동일하게 유지됩니다. 따라서 request_min_resource_grant_percent에 대해 지원되는 값은 인스턴스가 설정된 서비스 수준에 따라 달라집니다.  가장 낮은 서비스 수준인 DW100c에서는 동시성 4가 지원됩니다.  구성된 워크로드 그룹의 유효 request_min_resource_grant_percent는 25% 이상일 수 있습니다.  자세한 내용은 아래 표를 참조하세요.
+
+|서비스 수준|최대 동시 쿼리 수|REQUEST_MIN_RESOURCE_GRANT_PERCENT 및 MIN_PERCENTAGE_RESOURCE에 대해 지원되는 최소 %|
+|---|---|---|
+|DW100c|4|25%|
+|DW200c|8|12.5%|
+|DW300c|12|8%|
+|DW400c|16|6.25%|
+|DW500c|20|5%|
+|DW1000c|32|3%|
+|DW1500c|32|3%|
+|DW2000c|48|2%|
+|DW2500c|48|2%|
+|DW3000c|64|1.5%|
+|DW5000c|64|1.5%|
+|DW6000c|128|0.75%|
+|DW7500c|128|0.75%|
+|DW10000c|128|0.75%|
+|DW15000c|128|0.75%|
+|DW30000c|128|0.75%|
+||||
+
+마찬가지로 request_min_resource_grant_percent, min_percentage_resource는 유효 request_min_resource_grant_percent보다 크거나 같아야 합니다.  유효 min_percentage_resource보다 작게 min_percentage_resource가 구성된 워크로드 그룹은 값이 런타임에 0으로 조정됩니다.  이 경우 min_percentage_resource에 대해 구성된 리소스를 모든 워크로드 그룹에서 공유할 수 있습니다.  예를 들어, DW1000c에서 10%의 min_percentage_resource가 실행되는 워크로드 그룹 wgAdHoc은 유효 min_percentage_resource가 10%입니다(3.25%는 DW1000c에서 지원되는 최솟값임).  DW100c에서 wgAdhoc의 유효 min_percentage_resource는 0%입니다.  wgAdhoc에 대해 구성된 10%는 모든 워크로드 그룹에서 공유됩니다.
+
+Cap_percentage_resource에도 유효 값이 있습니다.  워크로드 그룹 wgAdhoc이 100%의 cap_percentage_resource로 구성되고 다른 워크로드 그룹 wgDashboards가 25%의 min_percentage_resource로 생성되면 wgAdhoc의 유효 cap_percentage_resource는 75%가 됩니다.
+
+워크로드 그룹에 대한 런타임 값을 이해하는 가장 쉬운 방법은 시스템 보기[sys.dm_workload_management_workload_groups_stats]를 쿼리하는 것입니다(../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+
+## <a name="permissions"></a>사용 권한
+
+CONTROL DATABASE 권한이 필요합니다.
+
+## <a name="see-also"></a>관련 항목:
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+
+::: moniker-end

@@ -1,26 +1,26 @@
 ---
 title: SQL Server 언어 확장의 확장성 아키텍처
-titleSuffix: SQL Server Language Extensions
-description: 관계형 데이터에서 외부 언어를 실행하기 위한 이중 아키텍처를 사용하는 SQL Server 데이터베이스 엔진에 대한 외부 코드 지원
+titleSuffix: ''
+description: SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java가 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589087"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658878"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 확장성 아키텍처
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 언어 확장에는 서버에서 Java와 같은 외부 코드를 실행하기 위한 확장성 프레임워크가 있습니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
+SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java가 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 
 ## <a name="background"></a>배경
 
@@ -66,7 +66,7 @@ SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 �
 
 ## <a name="communication-channels-between-components"></a>구성 요소 간의 통신 채널
 
-이 섹션에는 구성 요소 및 데이터 플랫폼 간의 통신 프로토콜이 설명되어 있습니다.
+이 섹션에서는 구성 요소 및 데이터 플랫폼 간의 통신 프로토콜에 대해 설명합니다.
 
 + **TCP/IP**
 
@@ -74,19 +74,19 @@ SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 �
 
 + **ODBC**
 
-  외부 데이터 과학 클라이언트와 원격 SQL Server 인스턴스 간의 통신은 ODBC를 사용합니다. 스크립트 작업을 SQL Server로 보내는 계정에는 인스턴스에 연결하고 외부 스크립트를 실행하는 권한이 있어야 합니다.
+  외부 데이터 과학 클라이언트와 원격 SQL Server 인스턴스 간의 통신에서는 ODBC를 사용합니다. 스크립트 작업을 SQL Server로 보내는 계정에는 인스턴스에 연결하고 외부 스크립트를 실행할 수 있는 두 가지 권한이 모두 있어야 합니다.
 
-  또한 작업에 따라 계정에 다음 권한이 필요할 수 있습니다.
+  또한 작업에 따라 계정에 필요할 수 있는 권한은 다음과 같습니다.
 
   + 작업에서 사용하는 데이터 읽기
-  + 테이블에 데이터 쓰기: 예를 들어 테이블에 결과를 저장하는 경우
-  + 데이터베이스 개체 만들기: 예를 들어 외부 스크립트를 새 저장 프로시저의 일부로 저장하는 경우.
+  + 테이블에 데이터 쓰기: 예를 들어 결과를 테이블에 저장하는 경우
+  + 데이터베이스 개체 만들기: 예를 들어 외부 스크립트를 새 저장 프로시저의 일부로 저장하는 경우
 
-  SQL Server가 원격 클라이언트에서 실행된 스크립트의 컴퓨팅 컨텍스트로 사용되고 실행 파일이 외부 소스에서 데이터를 검색해야 하는 경우 ODBC가 쓰기 저장용으로 사용됩니다. SQL Server는 원격 명령을 실행하는 사용자의 ID를 현재 인스턴스의 사용자 ID로 매핑하고 해당 사용자의 자격 증명을 사용하여 ODBC 명령을 실행합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
+  SQL Server가 원격 클라이언트에서 실행되는 스크립트의 컴퓨팅 컨텍스트로 사용되고 실행 파일이 외부 원본에서 데이터를 검색해야 하는 경우 ODBC가 쓰기 저장에 사용됩니다. SQL Server에서 원격 명령을 실행하는 사용자의 ID를 현재 인스턴스의 사용자 ID에 매핑하고, 해당 사용자의 자격 증명을 사용하여 ODBC 명령을 실행합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
 
 + **기타 프로토콜**
 
-  "청크"로 작업하거나 원격 클라이언트에 데이터를 다시 전송해야 하는 프로세스는 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수도 있습니다. 실제 데이터는 인코딩된 blob을 통해 전송됩니다.
+  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 blob을 통해 전송됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -14,17 +14,26 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b4f60e7041801d67f93dab467b574e5d0da54e7d
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893982"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240742"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
- 
- [!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 애플리케이션으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
+
+이 문서에서는 Windows에 SQL Server를 설치하기 위한 지침을 제공합니다.
+
+기타 배포 시나리오는 다음을 참조하세요.
+
+- [Linux](../../linux/sql-server-linux-setup.md)
+- [Docker 컨테이너](../../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes - 빅 데이터 클러스터](../../big-data-cluster/deploy-get-started.md)
+
+[!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 애플리케이션으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
 
 ## <a name="installation-details"></a>설치 세부 정보
   
