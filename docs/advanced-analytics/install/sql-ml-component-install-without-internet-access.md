@@ -3,18 +3,18 @@ title: 인터넷 액세스 권한 없이 설치
 description: 네트워크 방화벽 뒤에 격리된 컴퓨터에 SQL Server 기계 학습 R 및 Python을 설치합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b37851e2becaeddb754339ed6fe850007e97a19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727550"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064134"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>인터넷 액세스가 없는 컴퓨터에 SQL Server 기계 학습 R 및 Python 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

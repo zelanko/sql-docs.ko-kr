@@ -1,6 +1,6 @@
 ---
-title: srv_message_handler(확장 저장 프로시저 API) | Microsoft Docs
-ms.custom: ''
+title: srv_message_handler(확장 저장 프로시저 API)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f6396b591733b6142dc2946040e06d902ad075b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064087"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119390"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler(확장 저장 프로시저 API)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -99,7 +99,7 @@ oserrtextlen
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **srv_message_handler** 함수를 사용하면 확장 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 중앙 집중식 오류 로깅 및 보고 기능과 통합될 수 있습니다. 확장 저장 프로시저의 이벤트에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고를 설정할 수 있으며, SQL Server 에이전트가 이러한 경고 조건을 모니터링합니다.  
   
  오류 메시지가 더 길면 412바이트로 잘립니다.  
