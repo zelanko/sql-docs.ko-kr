@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026044"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926034"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md
 
 ## <a name="try-it-out"></a>사용해 보세요! 
 
-- SQL Server Express LocalDB를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
+- SQL Server Express LocalDB를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-editions-express)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
 
  >[!TIP]
  > 또한 LocalDB를 Visual Studio의 일부로 설치할 수도 있습니다. Visual Studio 설치 중에 SQL Server Express LocalDB를 포함하는 **.NET 데스크톱 개발** 워크로드를 선택합니다.

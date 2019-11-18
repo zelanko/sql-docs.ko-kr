@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102122"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982404"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 쿼리 데이터는 임시 테이블에 저장됩니다. 요청한 모든 테이블이나 제약 조건의 검사가 끝나면 결과 집합이 반환됩니다.
 DBCC CHECKCONSTRAINTS는 FOREIGN KEY와 CHECK 제약 조건의 무결성을 검사하지만 테이블의 디스크에서 데이터 구조의 무결성은 검사하지 않습니다. 이러한 데이터 구조 검사는 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)을 사용하여 수행할 수 있습니다.
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상
   
 *table_name* 또는 *table_id*가 지정되고 시스템 버전 관리가 설정된 경우, DBCC CHECKCONSTRAINTS는 지정된 테이블에서 temporal 데이터 일관성 검사도 수행합니다. *NO_INFOMSGS*를 지정하지 않은 경우, 이 명령은 별도 줄의 출력에서 각 일관성 위반을 반환합니다. 출력의 형식은 ([pkcol1] [pkcol2]...) = (\<pkcol1_value>, \<pkcol2_value >...) 및 \<temporal 테이블 레코드의 문제점은 무엇입니까>입니다.
   

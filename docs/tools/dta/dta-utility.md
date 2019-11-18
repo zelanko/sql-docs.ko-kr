@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809715"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981801"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
  ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  쿼리 저장소 작업으로 사용 되도록 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소의 상위 1000 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
  ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
      
   
  **-if** _workload_file_  
@@ -273,7 +273,7 @@ dta -iq -I 48
 이 경우 DTA는 쿼리 저장소 작업의 원본으로 사용 하 고 지난 48 시간 동안 실행 된 쿼리만 고려 합니다.  
   ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
 
 
   
