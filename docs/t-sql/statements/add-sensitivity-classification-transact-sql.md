@@ -23,39 +23,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712369"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882404"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-하나 이상의 데이터베이스 열에 민감도 분류 메타데이터를 추가합니다. 분류에는 민감도 레이블과 정보 유형이 포함될 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+하나 이상의 데이터베이스 열에 민감도 분류 메타데이터를 추가합니다. 분류에는 민감도 레이블과 정보 유형이 포함될 수 있습니다.
+
+SQL Server의 경우 SQL Server 2019에서 도입되었습니다.
 
 데이터베이스 환경에서 중요한 데이터를 분류하면 표시 영역을 확장하고 보호를 강화할 수 있습니다. 자세한 내용은 [SQL Information Protection 시작](https://aka.ms/sqlip)을 참조하세요.
 
 ## <a name="syntax"></a>구문  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -83,6 +88,10 @@ ADD SENSITIVITY CLASSIFICATION TO
 *INFORMATION_TYPE_ID*
 
 정보 유형과 연결된 식별자입니다. 이는 일반적으로 중앙 집중식 정보 플랫폼에서 시스템의 정보 유형을 고유하게 식별하는 데 사용됩니다.
+
+*RANK*
+
+민감도 순위를 정의하는 사전 정의된 값 세트를 기반으로 하는 식별자입니다. Advanced Threat Protection과 같은 다른 서비스에서 순위에 따라 변칙을 검색하는 데 사용됩니다.
 
 
 ## <a name="remarks"></a>Remarks  

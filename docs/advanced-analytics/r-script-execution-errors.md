@@ -1,69 +1,71 @@
 ---
-title: R 스크립팅 오류 및 문제 해결
+title: R 스크립트 문제 해결
+description: 이 문서에서는 SQL Server에서 R 코드를 실행할 때의 여러 스크립팅 오류에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715751"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727508"
 ---
-# <a name="r-scripting-errors-in-sql-server"></a>SQL Server에서 R 스크립팅 오류
+# <a name="r-scripting-errors-in-sql-server"></a>SQL Server의 R 스크립팅 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL Server에서 R 코드를 실행할 때의 여러 스크립팅 오류에 대해 설명 합니다. 목록은 포괄적이 지 않습니다. 많은 패키지가 있으며, 동일한 패키지의 버전 마다 오류가 다를 수 있습니다. R Services (데이터베이스 내), Microsoft R Client 및 Microsoft R Server에서 사용 되는 기계 학습 구성 요소를 지 원하는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)에 스크립트 오류를 게시 하는 것이 좋습니다.
+이 문서에서는 SQL Server에서 R 코드를 실행할 때의 여러 스크립팅 오류에 대해 설명합니다. 이 목록에는 일부만 나와 있습니다. 많은 패키지가 있으며, 동일한 패키지의 버전마다 오류가 다를 수 있습니다. R Services(데이터베이스 내), Microsoft R Client 및 Microsoft R Server에서 사용되는 기계 학습 구성 요소를 지원하는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)에 스크립트 오류를 게시하는 것이 좋습니다.
 
-## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-sql 또는 저장 프로시저에서 올바른 스크립트가 실패 합니다.
+## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-SQL 또는 저장 프로시저에서 올바른 스크립트가 실패
 
-저장 프로시저에서 R 코드를 래핑 하기 전에 외부 IDE 또는 RTerm 또는 Rterm와 같은 R 도구 중 하나에서 R 코드를 실행 하는 것이 좋습니다. 이러한 메서드를 사용 하 여 R에서 반환 하는 자세한 오류 메시지를 사용 하 여 코드를 테스트 하 고 디버그할 수 있습니다.
+저장 프로시저에서 R 코드를 래핑하기 전에 외부 IDE 또는 RTerm이나 RGui와 같은 R 도구 중 하나에서 R 코드를 실행하는 것이 좋습니다. 이러한 메서드를 사용하면 R에서 반환하는 자세한 오류 메시지를 통해 코드를 테스트하고 디버그할 수 있습니다.
 
-그러나 외부 IDE 또는 유틸리티에서 완벽 하 게 작동 하는 코드는 저장 프로시저 또는 SQL Server 계산 컨텍스트에서 실행 되지 않을 수 있습니다. 이러한 상황이 발생 하는 경우 패키지가 SQL Server에서 작동 하지 않는다고 가정할 수 있도록 하기 위해 다양 한 문제를 찾아야 합니다.
+그러나 외부 IDE 또는 유틸리티에서 완벽하게 작동하는 코드는 저장 프로시저 또는 SQL Server 컴퓨팅 컨텍스트에서 실행되지 않을 수 있습니다. 이런 일이 발생하면 SQL Server에서 패키지가 작동하지 않는다고 가정하기 전에 살펴봐야 할 다양한 문제가 있습니다.
 
-1. 실행 패드가 실행 중인지 여부를 확인 합니다.
+1. 실행 패드의 실행 여부를 확인합니다.
 
-2. 메시지를 검토 하 여 입력 데이터 또는 출력 데이터에 호환 되지 않거나 지원 되지 않는 데이터 형식의 열이 포함 되어 있는지 확인 합니다. 예를 들어 SQL database에 대 한 쿼리는 종종 Guid 또는 RowGUIDs를 반환 하며, 둘 다 지원 되지 않습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조 하세요.
+2. 메시지를 검토하여 입력 데이터 또는 출력 데이터에 호환되지 않거나 지원되지 않는 데이터 형식의 열이 포함되어 있는지 확인합니다. 예를 들어 SQL 데이터베이스에 대한 쿼리는 종종 GUID 또는 RowGUID를 반환하며, 둘 다 지원되지 않습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조하세요.
 
-3. 개별 R 함수에 대 한 도움말 페이지를 검토 하 여 모든 매개 변수가 SQL Server 계산 컨텍스트에 지원 되는지 여부를 확인 합니다. ScaleR 도움말을 보려면 인라인 R 도움말 명령을 사용 하거나 [패키지 참조](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)를 참조 하세요.
+3. 개별 R 함수에 대한 도움말 페이지를 검토하여 모든 매개 변수가 SQL Server 컴퓨팅 컨텍스트에 지원되는지 여부를 확인합니다. ScaleR 도움말을 보려면 인라인 R 도움말 명령을 사용하거나 [패키지 참조](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)를 확인하세요.
 
-R 런타임이 작동 하지만 스크립트에서 오류를 반환 하는 경우 Visual Studio용 R 도구와 같은 전용 R 개발 환경에서 스크립트 디버깅을 시도 하는 것이 좋습니다.
+R 런타임이 작동하지만 스크립트에서 오류를 반환하는 경우 Visual Studio용 R 도구와 같은 전용 R 개발 환경에서 스크립트 디버깅을 시도하는 것이 좋습니다.
 
-또한 R과 데이터베이스 엔진 간에 데이터를 이동할 때 발생할 수 있는 데이터 형식의 문제를 해결 하기 위해 스크립트를 검토 하 고 약간 다시 작성 하는 것이 좋습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조 하세요.
+또한 R과 데이터베이스 엔진 간에 데이터를 이동할 때 발생할 수 있는 데이터 형식의 문제를 해결하기 위해 스크립트를 검토하고 약간 다시 작성하는 것이 좋습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조하세요.
 
-또한 sqlrutils 패키지를 사용 하 여 R 스크립트를 저장 프로시저로 더 쉽게 사용 되는 형식으로 묶을 수 있습니다. 참조 항목:
+또한 sqlrutils 패키지를 사용하면 저장 프로시저로 더 쉽게 사용되는 형식으로 R 스크립트를 번들로 포함할 수 있습니다. 참조 항목:
 * [sqlrutils 패키지](r/ref-r-sqlrutils.md)
-* [Sqlrutils를 사용 하 여 저장 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+* [sqlrutils를 사용하여 저장 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## <a name="script-returns-inconsistent-results"></a>스크립트가 일관 되지 않은 결과를 반환 합니다.
+## <a name="script-returns-inconsistent-results"></a>스크립트가 일관되지 않은 결과를 반환
 
 R 스크립트는 다음과 같은 여러 가지 이유로 SQL Server 컨텍스트에서 다른 값을 반환할 수 있습니다.
 
-- SQL Server와 R 간에 데이터가 전달 되는 경우 일부 데이터 형식에 대해 암시적 형식 변환이 자동으로 수행 됩니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조 하세요.
+- SQL Server와 R 간에 데이터가 전달될 때 일부 데이터 형식에 대해 암시적 형식 변환이 자동으로 수행됩니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조하세요.
 
-- 비트가 요소 인지 여부를 확인 합니다. 예를 들어 32 비트 및 64 비트 부동 소수점 라이브러리에 대 한 수치 연산 결과에는 종종 차이가 있습니다.
+- 비트 수가 요인인지 여부를 확인합니다. 예를 들어 32비트 및 64비트 부동 소수점 라이브러리에 대한 수학 연산 결과에는 종종 차이가 있습니다.
 
-- Nan가 작업에서 생성 되었는지 여부를 확인 합니다. 이로 인해 결과가 무효화 될 수 있습니다.
+- NaN이 작업에서 생성되었는지 여부를 확인합니다. 이로 인해 결과가 무효화될 수 있습니다.
 
-- 숫자의 역 수가 0에 도달 하면 작은 차이를 증폭 시킬 수 있습니다.
+- 작은 차이는 0에 가까운 숫자의 역수를 취할 때 증폭될 수 있습니다.
 
-- 누적 된 반올림 오류는 0이 아닌 0 보다 작은 값으로 인해 발생할 수 있습니다.
+- 누적된 반올림 오류는 0이 아닌 0보다 작은 값으로 인해 발생할 수 있습니다.
 
-## <a name="implied-authentication-for-remote-execution-via-odbc"></a>ODBC를 통한 원격 실행을 위한 묵시적 인증
+## <a name="implied-authentication-for-remote-execution-via-odbc"></a>ODBC를 통한 원격 실행을 위한 암시적 인증
 
-RevoScaleR 함수를 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 여 R 명령을 실행 하기 위해 컴퓨터에 연결 하는 경우 서버에 데이터를 쓰는 ODBC 호출을 사용 하면 오류가 발생할 수 있습니다. 이 오류는 Windows 인증을 사용 하는 경우에만 발생 합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴퓨터에 연결하여 **RevoScaleR** 함수로 R 명령을 실행하는 경우 서버에 데이터를 기록하는 ODBC 호출을 사용할 때 오류가 발생할 수 있습니다. 이 오류는 Windows 인증을 사용하는 경우에만 발생합니다.
 
-그 이유는 R Services에 대해 만들어진 작업자 계정에 서버에 연결할 수 있는 권한이 없기 때문입니다. 따라서 ODBC 호출은 사용자를 대신 하 여 실행할 수 없습니다. Sql 로그인을 사용 하면 R 클라이언트에서 SQL Server 인스턴스로 명시적으로 전달 된 다음 ODBC에 자격 증명이 전달 되기 때문에 SQL 로그인에 문제가 발생 하지 않습니다. 그러나 SQL 로그인을 사용 하는 것은 Windows 인증을 사용 하는 것 보다 더 안전 하지 않습니다.
+그 이유는 R Services에 대해 만들어진 작업자 계정에 서버에 연결할 수 있는 권한이 없기 때문입니다. 따라서 ODBC 호출은 사용자를 대신하여 실행할 수 없습니다. SQL 로그인을 사용하면 자격 증명이 R 클라이언트에서 SQL Server 인스턴스로 명시적으로 전달된 다음, ODBC에 전달되기 때문에 SQL 로그인에 문제가 발생하지 않습니다. 그러나 SQL 로그인 사용은 Windows 인증을 사용하는 것보다 안전성이 더 떨어집니다.
 
-원격으로 시작 된 스크립트에서 Windows 자격 증명을 안전 하 게 전달할 수 있도록 하려면 SQL Server 자격 증명을 에뮬레이션 해야 합니다. 이 프로세스는 _암시적 인증_이라고 합니다. 이 작업을 수행 하려면 SQL Server 컴퓨터에서 R 또는 Python 스크립트를 실행 하는 작업자 계정에 올바른 권한이 있어야 합니다.
+원격으로 시작된 스크립트에서 Windows 자격 증명을 안전하게 전달할 수 있도록 하려면 SQL Server에서 자격 증명을 에뮬레이션해야 합니다. 이 프로세스를 _암시적 인증_이라고 합니다. 이 작업을 수행하려면 SQL Server 컴퓨터에서 R 또는 Python 스크립트를 실행하는 작업자 계정에 올바른 권한이 있어야 합니다.
 
-1. R [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 코드를 실행 하려는 인스턴스에서 관리자 권한으로를 엽니다.
+1. R 코드를 실행할 인스턴스에서 관리자 권한으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.
 
-2. 다음 스크립트를 실행합니다. 기본값, 컴퓨터 및 인스턴스 이름을 변경한 경우 사용자 그룹 이름을 편집 해야 합니다.
+2. 다음 스크립트를 실행합니다. 기본값, 컴퓨터 및 인스턴스 이름을 변경한 경우 사용자 그룹 이름을 편집해야 합니다.
 
     ```sql
     USE [master]
@@ -74,19 +76,19 @@ RevoScaleR 함수를 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
     GO
     ```
 
-## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL 계산 컨텍스트에서 R을 실행 하는 동안 작업 영역을 지우지 마십시오.
+## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL 컴퓨팅 컨텍스트에서 R을 실행하는 동안 작업 영역을 지우지 마십시오.
 
-R 콘솔에서 작업 하는 경우 작업 영역을 제거 하는 것이 일반적 이지만 의도 하지 않은 결과를 SQL 계산 컨텍스트에서 사용할 수 있습니다.
+R 콘솔에서 작업할 때 작업 영역을 지우는 것은 일반적이지만, SQL 컴퓨팅 컨텍스트에서 의도하지 않은 결과가 발생할 수 있습니다.
 
-`revoScriptConnection`는 SQL Server에서 호출 되는 R 세션에 대 한 정보를 포함 하는 R 작업 영역에 있는 개체입니다. 그러나 r 코드에 작업 영역을 지우는 명령 (예: `rm(list=ls())`)이 포함 되어 있는 경우에는 r 작업 영역의 세션 및 기타 개체에 대 한 모든 정보도 지워집니다.
+`revoScriptConnection`은 SQL Server에서 호출된 R 세션에 대한 정보를 포함하는 R 작업 영역의 개체입니다. 그러나 R 코드에 작업 영역을 지우는 명령(예: `rm(list=ls())`)이 포함되어 있으면 세션 및 R 작업 영역의 다른 개체에 대한 모든 정보도 지워집니다.
 
-이 문제를 해결 하려면 SQL Server에서 R을 실행 하는 동안 변수 및 기타 개체를 무분별 지우지 마십시오. **Remove** 함수를 사용 하 여 특정 변수를 삭제할 수 있습니다.
+해결 방법은 SQL Server에서 R을 실행하는 동안에는 변수 및 기타 개체를 무차별적으로 지우지 않는 것입니다. **remove** 함수를 사용하면 특정 변수를 삭제할 수 있습니다.
 
 ```R
 remove('name1', 'name2', ...)
 ```
 
-삭제할 변수가 여러 개 있는 경우에는 임시 변수의 이름을 목록에 저장 한 다음 목록에서 주기적 가비지 수집을 수행 하는 것이 좋습니다.
+삭제할 변수가 여러 개인 경우 임시 변수 이름을 목록에 저장한 다음, 목록에서 주기적 가비지 수집을 수행합니다.
 
 
 

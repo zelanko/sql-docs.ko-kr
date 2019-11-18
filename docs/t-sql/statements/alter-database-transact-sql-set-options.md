@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729902"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -3049,16 +3049,20 @@ WHERE name = <'Your_Database_Name'>
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> 결과 집합 개시를 만들고 캐시에서 데이터를 검색하는 작업은 데이터 웨어하우스 인스턴스의 컨트롤 노드에서 수행됩니다. 결과 집합 캐싱이 켜져 있을 때 큰 결과 집합을 반환하는 쿼리(예: >100만개 행)를 실행하면 컨트롤 노드에서 CPU 사용량이 증가하고 인스턴스의 전체 쿼리 응답 속도가 느려질 수 있습니다. 이러한 쿼리는 일반적으로 데이터 탐색 또는 ETL 작업 중에 사용됩니다. 컨트롤 노드의 스트레스를 방지하고 성능 문제가 발생하는 것을 방지하려면 사용자는 해당 유형의 쿼리를 실행하기 전에 데이터베이스에서 결과 집합 캐싱을 해제해야 합니다.  
+
+결과 집합 캐싱을 사용한 성능 조정에 대한 자세한 내용은 [성능 조정 지침](/azure/sql-data-warehouse/performance-tuning-result-set-caching)을 참조하세요.
+
 ### <a name="permissions"></a>사용 권한
 RESULT_SET_CACHING 옵션을 설정하려면 사용자는 서버 수준 보안 주체 로그인(프로비저닝 프로세스에서 만든 로그인)가 있거나 `dbmanager` 데이터베이스 역할의 멤버여야 합니다.  
 
-
 **<snapshot_option> ::=**         
-**적용 대상**: Azure SQL Data Warehouse(미리 보기)
+**적용 대상**: Azure SQL 데이터 웨어하우스 
 
 데이터베이스의 트랜잭션 격리 수준을 제어합니다.
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>관련 항목:
 
-- [결과 집합 캐싱을 사용한 성능 조정](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

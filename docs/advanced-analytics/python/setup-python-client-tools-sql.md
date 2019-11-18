@@ -1,5 +1,5 @@
 ---
-title: Python 개발을 위한 데이터 과학 클라이언트 설정
+title: Python 데이터 과학 클라이언트 설정
 description: Python을 사용하여 SQL Server Machine Learning Services에 원격으로 연결할 수 있도록 Python 로컬 환경(Jupyter Notebook 또는 PyCharm)을 설정합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fb5881134b2498c8a362e1626a3744d843194a4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727523"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: R 프로그래밍 언어 확장
+title: R 언어 확장
 description: SQL Server R Services 또는 SQL Server Machine Learning Services의 R 코드 실행 및 기본 제공 R 라이브러리에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 802e5d6c5e769d59f255554f4f598d832160bbfa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532647"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727653"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server의 R 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

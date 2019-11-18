@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903620"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727769"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903620"
 이 문서에서는 [Azure Key Vault에서 고객 관리 키와 함께 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 사용하도록 구성된 데이터베이스에 액세스할 수 없는 Azure Key Vault 키 액세스 문제를 파악하고 해결하는 방법을 설명합니다.
 
 ## <a name="introduction"></a>소개
-TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경우 데이터베이스를 온라인 상태로 유지하려면 이 TDE 보호기에 지속적으로 액세스할 수 있어야 합니다.  논리 SQL Server가 Azure Key Vault의 고객 관리 TDE 보호기에 대한 액세스 권한을 잃게 되면 데이터베이스는 모든 연결을 거부하고 Azure Portal에서 액세스할 수 없는 것으로 나타납니다.
+TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경우 데이터베이스를 온라인 상태로 유지하려면 이 TDE 보호기에 지속적으로 액세스할 수 있어야 합니다.  논리 SQL 서버가 Azure Key Vault의 고객 관리 TDE 보호기에 대한 액세스 권한을 잃게 되면 데이터베이스는 적절한 오류 메시지와 함께 모든 연결을 거부하고 Azure Portal에서 해당 상태를 *액세스할 수 없음*으로 변경합니다.
 
-처음 48시간 동안 기본 Azure Key Vault 키 액세스 문제가 해결되면 데이터베이스가 자동으로 복구되고 온라인 상태가 됩니다.  즉, 일시적인 모든 네트워크 중단 시나리오의 경우 사용자 작업이 필요하지 않으며 데이터베이스는 자동으로 온라인 상태가 됩니다.  대부분의 경우 기본 Key Vault 키 액세스 문제를 해결하려면 사용자 작업이 필요합니다. 
+처음 8시간 동안 기본 Azure Key Vault 키 액세스 문제가 해결되면 데이터베이스가 자동으로 복구되고 온라인 상태가 됩니다. 즉, 일시적인 모든 네트워크 중단 시나리오의 경우 사용자 작업이 필요하지 않으며 데이터베이스는 자동으로 온라인 상태가 됩니다. 대부분의 경우 기본 Key Vault 키 액세스 문제를 해결하려면 사용자 작업이 필요합니다. 
 
-액세스할 수 없는 데이터베이스가 더 이상 필요 하지 않은 경우 즉시 삭제하여 비용 발생을 중지할 수 있습니다.  Azure Key Vault 키에 대한 액세스가 복원되고 데이터베이스가 다시 온라인 상태가 될 때까지 데이터베이스에 대한 기타 모든 작업은 허용되지 않습니다.   고객 관리 키로 암호화된 데이터베이스에 액세스할 수 없는 경우에도 고객 관리 키에서 서버 관리 키로 TDE 옵션을 변경하는 것은 지원되지 않습니다. 이 기능은 TDE 보호기에 대한 권한이 해지된 상태에서 무단 액세스로부터 데이터를 보호하는 데 필요합니다. 
+액세스할 수 없는 데이터베이스가 더 이상 필요 하지 않은 경우 즉시 삭제하여 비용 발생을 중지할 수 있습니다. Azure Key Vault 키에 대한 액세스가 복원되고 데이터베이스가 다시 온라인 상태가 될 때까지 데이터베이스에 대한 기타 모든 작업은 허용되지 않습니다. 고객 관리 키로 암호화된 데이터베이스에 액세스할 수 없는 동안에는 서버에서 고객 관리 키에서 서비스 관리 키로 TDE 옵션을 변경할 수도 없습니다. 이 기능은 TDE 보호기에 대한 권한이 해지된 상태에서 무단 액세스로부터 데이터를 보호하는 데 필요합니다. 
 
-데이터베이스가 48시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다.  필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 액세스의 유효성을 다시 검사해야 합니다.  48시간 넘게 액세스할 수 없는 경우 데이터베이스를 다시 온라인 상태로 만들면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있으며 현재 지원 티켓이 필요합니다. 데이터베이스가 다시 온라인 상태가 되면 Geo-DR(지역 재해 복구)을 구성한 경우 지역 링크와 같은 이전에 구성된 설정, PITR 기록 및 태그가 손실됩니다.  따라서 48시간 이내에 기본 Key Vault 문제를 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
-
+데이터베이스가 8시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다. 해당 기간 후에 필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 액세스의 유효성을 다시 검사해야 합니다. 이 경우 데이터베이스를 다시 온라인 상태로 만들려면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있으며 현재 지원 티켓을 열어야 합니다. 데이터베이스가 다시 온라인 상태가 되면 Geo-DR(지역 재해 복구)을 구성한 경우 지역 링크와 같은 이전에 구성된 설정, PITR 기록 및 태그가 손실됩니다. 따라서 가능한 한 빨리 기본 Key Vault 문제를 인식하고 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>데이터베이스에 액세스할 수 없는 일반적인 오류
 
@@ -176,13 +175,13 @@ EventName: MakeDatabaseInaccessible
 
  
 
-**자동 복구를 위한 48시간 대기 시간이 시작되는 경우 발생하는 이벤트** 
+**자동 복구를 위한 8시간 대기 시간이 시작되는 경우 발생하는 이벤트** 
 
 EventName: MakeDatabaseInaccessible 
 
 상태: InProgress 
 
-설명: 데이터베이스에서 Azure Key Vault 키 액세스 권한이 48시간 이내에 사용자에 의해 다시 설정될 때까지 대기 중입니다.   
+설명: 데이터베이스에서 Azure Key Vault 키 액세스 권한이 8시간 이내에 사용자에 의해 다시 설정될 때까지 대기 중입니다.   
 
  
 
@@ -196,7 +195,7 @@ EventName: MakeDatabaseAccessible
 
  
 
-**48시간 이내에 문제가 해결되지 않고 Azure Key Vault 키 액세스의 유효성을 수동으로 검사해야 하는 경우 발생하는 이벤트** 
+**8시간 이내에 문제가 해결되지 않고 Azure Key Vault 키 액세스의 유효성을 수동으로 검사해야 하는 경우 발생하는 이벤트** 
 
 EventName: MakeDatabaseInaccessible 
 

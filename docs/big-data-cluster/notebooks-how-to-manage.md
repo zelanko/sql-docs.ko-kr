@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958288"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844270"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Notebook을 관리하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 미리 보기를 사용하여 Azure Data Studio에서 Notebook 파일을 열고 저장하는 방법을 보여 줍니다. 또한 SQL Server 빅 데이터 클러스터에 대한 연결을 변경하는 방법을 보여 줍니다.
+이 문서에서는 SQL Server를 사용하여 Azure Data Studio에서 Notebook 파일을 열고 저장하는 방법을 보여 줍니다. 또한 SQL Server 빅 데이터 클러스터에 대한 연결을 변경하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 문서에서는 Azure Data Studio에서 사용하려는 Notebook이 이미 있다고 가정합니다. Notebook을 만들려면 [SQL Server 2019 미리 보기에서 노트북을 사용하는 방법](notebooks-guidance.md)을 참조하세요. Azure Data Studio에서 Notebook을 사용하려면 다음 필수 조건을 충족해야 합니다.
+이 문서에서는 Azure Data Studio에서 사용하려는 Notebook이 이미 있다고 가정합니다. Notebook을 만들려면 [SQL Server에서 Notebooks를 사용하는 방법](notebooks-guidance.md)을 참조하세요. Azure Data Studio에서 Notebook을 사용하려면 다음 필수 조건을 충족해야 합니다.
 
 - [빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
 - [SQL Server 2019 빅 데이터 도구](deploy-big-data-tools.md):
@@ -80,4 +80,4 @@ Notebook의 SQL Server 빅 데이터 클러스터를 변경하려면 다음을 �
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure Data Studio의 Notebook에 대한 자세한 내용은 [SQL Server 2019 미리 보기에서 Notebook을 사용하는 방법](notebooks-guidance.md)을 참조하세요.
+Azure Data Studio의 Notebooks에 대한 자세한 내용은 [SQL Server 2019에서 Notebooks를 사용하는 방법](notebooks-guidance.md)을 참조하세요.

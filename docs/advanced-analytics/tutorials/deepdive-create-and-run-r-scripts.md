@@ -1,65 +1,66 @@
 ---
-title: Compute summary statistics RevoScaleR 자습서
-description: SQL Server에서 R 언어를 사용 하 여 통계 요약 통계를 계산 하는 방법에 대 한 자습서 연습입니다.
+title: RevoScaleR의 요약 통계
+description: SQL Server에서 R 언어를 사용하여 통계적 요약 통계를 계산하는 방법에 대한 자습서 연습입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715568"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727298"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R의 계산 요약 통계 (SQL Server 및 RevoScaleR 자습서)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R의 컴퓨팅 요약 통계(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원에서는 SQL Server [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 사용 하는 방법에 대 한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 의 일부입니다.
+이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
 
-이전 단원에서 만든 설정 된 데이터 원본 및 계산 컨텍스트를 사용 하 여이 스크립트에서 고성능 R 스크립트를 실행 합니다. 이 단원에서는 로컬 및 원격 서버 계산 컨텍스트를 사용 하 여 다음 작업을 수행 합니다.
+이전 단원에서 만든 기존 데이터 원본 및 컴퓨팅 컨텍스트를 사용하여 이 스크립트에서 고성능 R 스크립트를 실행합니다. 이 단원에서는 다음 작업에 로컬 및 원격 서버 컴퓨팅 컨텍스트를 사용합니다.
 
 > [!div class="checklist"]
-> * 계산 컨텍스트를 SQL Server로 전환
-> * 원격 데이터 개체에 대 한 요약 통계 가져오기
-> * 로컬 요약 계산
+> * 컴퓨팅 컨텍스트를 SQL Server로 전환
+> * 원격 데이터 개체에 대한 요약 통계 가져오기
+> * 로컬 요약 컴퓨팅
 
-이전 단원을 완료 한 경우 다음과 같은 원격 계산 컨텍스트가 필요 합니다. sqlCompute 및 Sqlcompute Et레이스. 이후 단원에서 sqlCompute 및 로컬 계산 컨텍스트를 사용 합니다.
+이전 단원을 완료한 경우 sqlCompute 및 sqlComputeTrace라는 원격 컴퓨팅 컨텍스트가 있어야 합니다. 이후 단원에서는 sqlCompute 및 로컬 컴퓨팅 컨텍스트를 사용합니다.
 
-R IDE 또는 **Rgui** 를 사용 하 여이 단원에서 r 스크립트를 실행 합니다.
+이 단원에서는 R IDE 또는 **Rgui**를 사용하여 R 스크립트를 실행합니다.
 
-## <a name="compute-summary-statistics-on-remote-data"></a>원격 데이터에 대 한 계산 요약 통계
+## <a name="compute-summary-statistics-on-remote-data"></a>원격 데이터에 대한 요약 통계 컴퓨팅
 
-R 코드를 원격으로 실행 하려면 원격 계산 컨텍스트를 지정 해야 합니다. 모든 후속 계산은 *sqlcompute* 매개 변수에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에서 수행 됩니다.
+R 코드를 원격으로 실행하기 전에 원격 컴퓨팅 컨텍스트를 지정해야 합니다. 이후의 모든 계산은 *sqlCompute* 매개 변수에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 수행됩니다.
 
-계산 컨텍스트는 변경 될 때까지 활성 상태로 유지 됩니다. 그러나 원격 서버 컨텍스트에서 실행할 *수 없는* R 스크립트는 로컬로 자동으로 실행 됩니다.
+컴퓨팅 컨텍스트를 변경할 때까지 활성 상태로 유지됩니다. 그러나 원격 서버 컨텍스트에서 실행할 수 *없는* 모든 R 스크립트는 자동으로 로컬로 실행됩니다.
 
-계산 컨텍스트가 어떻게 작동 하는지 확인 하려면 원격 SQL Server에서 sqlFraudDS 데이터 원본에 대 한 요약 통계를 생성 합니다. 이 데이터 원본 개체는 [2 단원](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) 에서 생성 되었으며 RevoDeepDive 데이터베이스의 ccFraudSmall 테이블을 나타냅니다. 
+컴퓨팅 컨텍스트의 작동 방식을 확인하려면 원격 SQL Server의 sqlFraudDS 데이터 원본에 대한 요약 통계를 생성합니다. 이 데이터 원본 개체는 [2단원](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)에서 만들어졌으며 RevoDeepDive 데이터베이스의 ccFraudSmall 테이블을 나타냅니다. 
 
-1. 계산 컨텍스트를 이전 단원에서 만든 sqlCompute로 전환 합니다.
+1. 컴퓨팅 컨텍스트를 이전 단원에서 만든 sqlCompute로 전환합니다.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)를 수식이나 데이터 원본 등의 필수 인수와 함께 호출하고 그 결과를 `sumOut` 변수에 할당합니다.
+2. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 함수를 호출하고 수식 및 데이터 원본과 같은 필수 인수를 전달하고 결과를 변수 `sumOut`에 할당합니다.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 언어는 많은 요약 함수를 제공 하지만 **RevoScaleR** 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **rxsummary** 는를 비롯 한 다양 한 원격 계산 컨텍스트에서 실행을 지원 합니다. 이와 유사한 함수에 대한 정보는 [RevoScaleR을 사용하여 데이터 요약하기](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)를 참고하십시오.
+    R 언어는 많은 요약 함수를 제공하지만 **RevoScaleR**의 **rxSummary**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 비롯한 다양한 원격 컴퓨팅 컨텍스트에서의 실행을 지원합니다. 유사한 함수에 대한 자세한 내용은 [RevoScaleR을 사용한 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)을 참조하세요.
   
-3. SumOut의 내용을 콘솔에 인쇄 합니다.
+3. sumOut의 내용을 콘솔에 인쇄합니다.
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > 오류가 발생 하는 경우 명령을 다시 시도 하기 전에 실행이 완료 될 때까지 몇 분 정도 기다립니다.
+    > 오류가 발생하면 명령을 다시 시도하기 전에 실행이 완료될 때까지 몇 분 정도 기다립니다.
 
 **결과**
 
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. SQL Server에서 데이터를 추출할 때 증가 하는 블록 크기를 메모리에 수용할 수 있다고 가정 하 여 각 읽기에 대해 추출 되는 행 수를 늘려 성능을 향상 시킬 수 있습니다. 다음 명령을 실행 하 여 데이터 원본에 대 한 *Rowsperread* 매개 변수의 값을 늘립니다. 이전에는 *rowsPerRead* 값이 5000으로 설정되었습니다.
+2. SQL Server에서 데이터를 추출할 때 증가된 블록 크기를 메모리에 수용할 수 있다고 가정하여 각 읽기에 대해 추출되는 행 수를 늘려 성능을 향상시킬 수 있습니다. 다음 명령을 실행하여 데이터 원본에 대한 *rowsPerRead* 매개 변수의 값을 늘립니다. 이전에는 *rowsPerRead* 값이 5000으로 설정되었습니다.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -102,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. 새 데이터 원본에 대 한 **Rxsummary** 를 호출 합니다.
+3. 새 데이터 원본에 대해 **rxSummary**를 호출합니다.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -110,7 +111,7 @@ Number of valid observations: 10000
   
    실제 결과는 **컴퓨터의 컨텍스트에서** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 때와 같아야 합니다. 그러나 작업은 더 빠르거나 느릴 수 있습니다. 데이터가 분석을 위해 로컬 컴퓨터로 전송되므로 이러한 작업 속도는 데이터베이스에 대한 연결에 크게 좌우됩니다.
 
-4. 다음 몇 개의 단원을 위한 원격 계산 컨텍스트로 다시 전환 합니다.
+4. 다음 몇 가지 단원을 위한 원격 컴퓨팅 컨텍스트로 다시 전환합니다.
 
     ```R
     rxSetComputeContext(sqlCompute)

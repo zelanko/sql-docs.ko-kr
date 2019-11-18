@@ -1,35 +1,37 @@
 ---
-title: ODBC를 사용 하 여 SQL Server에서 R 개체 저장 및 로드
+title: ODBC를 사용하여 R 개체 저장 및 로드
+description: RevoScaleR 패키지에는 성능을 현저하게 향상시키고 개체를 보다 조밀하게 저장하는 직렬화 및 역직렬화 함수가 포함됩니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3d7891098727c066b05bbd9f2f23c41bbdcca59
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 98a14848db4854c0bcb19167e7fcf7d43eca5f2e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714981"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727401"
 ---
-# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC를 사용 하 여 SQL Server에서 R 개체 저장 및 로드
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC를 사용하여 SQL Server에서 R 개체 저장 및 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server R Services는 직렬화된 R 개체를 테이블에 저장한 다음 R 코드를 다시 실행하거나 모델을 다시 학습시키지 않고 필요에 따라 테이블에서 개체를 로드할 수 있습니다. R 개체를 데이터베이스에 저장하는 이 기능은 모델을 교육하고 저장한 다음 점수 매기기나 분석을 위해 나중에 사용하는 시나리오에서 매우 중요합니다.
 
-이 중요한 단계의 성능을 개선하기 위해 이제 **RevoScaleR** 패키지에는 성능을 현저하게 향상시키고 개체를 보다 조밀하게 저장하는 직렬화 및 역직렬화 함수가 포함됩니다. 이 문서에서는 이러한 함수와 이러한 기능을 사용 하는 방법을 설명 합니다.
+이 중요한 단계의 성능을 개선하기 위해 이제 **RevoScaleR** 패키지에는 성능을 현저하게 향상시키고 개체를 보다 조밀하게 저장하는 직렬화 및 역직렬화 함수가 포함됩니다. 이 문서에서는 이러한 함수와 사용 방법을 설명합니다.
 
 ## <a name="overview"></a>개요
 
-이제 **RevoScaleR** 패키지에는 보다 쉽게 SQL Server에 R 개체를 저장한 다음 SQL Server 테이블에서 개체를 읽을 수 있도록 하는 새 함수가 포함됩니다. 일반적으로 각 함수 호출은 키가 개체의 이름인 간단한 키 값 저장소를 사용 하 고 키와 연결 된 값은 테이블에서 이동 하거나 제거할 varbinary R 개체입니다.
+이제 **RevoScaleR** 패키지에는 보다 쉽게 SQL Server에 R 개체를 저장한 다음 SQL Server 테이블에서 개체를 읽을 수 있도록 하는 새 함수가 포함됩니다. 일반적으로 각 함수 호출은 간단한키 값 저장소를 사용합니다. 여기서 키는 개체의 이름이고 키와 관련된 값은 테이블 내부 또는 외부로 이동할 varbinary R 개체입니다.
 
-R 환경에서 직접 SQL Server R 개체를 저장 하려면 다음을 수행 해야 합니다.
+R 환경에서 직접 SQL Server에 R 개체를 저장하려면 다음을 수행해야 합니다.
 
-+ *RxOdbcData* 데이터 원본을 사용 하 여 SQL Server에 대 한 연결을 설정 했습니다.
-+ ODBC 연결을 통해 새 함수를 호출 합니다.
-+ 필요에 따라 개체가 serialize 되지 않도록 지정할 수 있습니다. 그런 다음 기본 압축 알고리즘 대신 사용할 새 압축 알고리즘을 선택 합니다.
++ *RxOdbcData* 데이터 원본을 사용하여 SQL Server에 대한 연결을 설정했습니다.
++ ODBC 연결을 통해 새 함수 호출
++ 필요에 따라 개체가 직렬화되지 않도록 지정할 수 있습니다. 그런 다음, 기본 압축 알고리즘 대신 사용할 새 압축 알고리즘을 선택합니다.
 
 기본적으로 SQL Server로 이동하기 위해 R에서 호출하는 모든 개체는 직렬화되고 압축됩니다. 반대로 R 코드에서 사용하기 위해 SQL Server 테이블에서 개체를 로드하는 경우 개체는 역직렬화되고 압축이 풀립니다.
 
@@ -43,7 +45,7 @@ R 환경에서 직접 SQL Server R 개체를 저장 하려면 다음을 수행 �
 
 - `rxListKeys` 는 사용 가능한 모든 개체를 키-값 쌍으로 나열합니다. 따라서 R 개체의 이름 및 버전을 확인하는 데 도움이 됩니다.
 
-각 함수의 구문에 대한 자세한 도움말을 보려면 R 도움말을 사용하세요. 세부 정보는 [ScaleR 참조](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)에서도 확인할 수 있습니다.
+각 함수의 구문에 대한 자세한 도움말을 보려면 R 도움말을 사용하세요. 자세한 내용은 [ScaleR 참조](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)에서도 확인할 수 있습니다.
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>ODBC를 사용하여 SQL Server에 R 개체를 저장하는 방법
 

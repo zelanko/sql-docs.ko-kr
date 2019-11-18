@@ -9,14 +9,14 @@ ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958294"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844296"
 ---
-# <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 Notebook을 사용하는 방법
+# <a name="how-to-use-notebooks-in-sql-server"></a>SQL Server에서 Notebooks를 사용하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

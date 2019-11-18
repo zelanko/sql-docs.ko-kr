@@ -1,7 +1,7 @@
 ---
-title: R 및 SQL 데이터 형식 및 개체 작업
+title: '빠른 시작: R 데이터 형식'
 titleSuffix: SQL Server Machine Learning Services
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용 하 여 R 및 SQL Server에서 데이터 형식 및 데이터 개체를 사용 하는 방법에 대해 알아봅니다.
+description: 이 빠른 시작에서는 SQL Server Machine Learning Services의 R 및 SQL Server에서 데이터 형식 및 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,41 +9,42 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006005"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726982"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용하여 데이터 형식 및 개체 처리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 R과 SQL Server 간에 데이터를 이동할 때 발생 하는 일반적인 문제에 대해 알아봅니다. 이 연습을 통해 제공 되는 경험을 통해 사용자 고유의 스크립트에서 데이터를 사용할 때 필요한 배경이 제공 됩니다.
+이 빠른 시작에서는 R 및 SQL Server 사이에 데이터를 이동할 때 발생하는 일반적인 문제에 대해 알아봅니다. 이 연습은 고유 스크립트로 데이터 작업을 수행할 때 필요한 기본 배경 지식을 제공합니다.
 
-앞에서 알아야 하는 일반적인 문제는 다음과 같습니다.
+처음에 알아야 할 일반적인 문제는 다음과 같습니다.
 
-- 데이터 형식이 일치 하지 않는 경우
-- 암시적 변환이 일어날 수 있음
-- CAST 및 Convert 연산이 필요함
+- 경우에 따라 데이터 형식이 일치하지 않음
+- 암시적 변환이 발생할 수 있음
+- 경우에 따라 캐스트 및 변환 작업이 필요함
 - R 및 SQL이 서로 다른 데이터 개체를 사용함
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작을 사용 하려면 R 언어가 설치 된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 를 사용 하 여 SQL Server 인스턴스에 액세스 해야 합니다.
+- 이 빠른 시작에서는 R 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)를 사용하여 SQL Server 인스턴스에 액세스해야 합니다.
 
-  SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용 하지 않도록 설정 되어 있으므로 [외부 스크립팅을 사용 하도록 설정](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) 하 고 시작 하기 전에 **SQL Server 실행 패드 서비스가** 실행 중인지 확인 해야 할 수 있습니다.
+  SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용하지 않도록 설정되어 있으므로 시작하기 전에 [외부 스크립팅을 활성화](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)하고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인해야 합니다.
 
-- R 스크립트를 포함 하는 SQL 쿼리를 실행 하기 위한 도구도 필요 합니다. 모든 데이터베이스 관리 또는 쿼리 도구를 사용 하 여 이러한 스크립트를 실행 하 고 SQL Server 인스턴스에 연결 하 고 T-sql 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용 합니다.
+- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구도 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
 
 ## <a name="always-return-a-data-frame"></a>항상 데이터 프레임 반환
 
-스크립트가 R에서 SQL Server로 결과를 반환할 경우 데이터를 **data.frame**으로 반환해야 합니다. 스크립트에서 생성 하는 다른 모든 유형의 개체 (목록, 인수, 벡터 또는 이진 데이터)를 저장 프로시저 결과의 일부로 출력 하려면 데이터 프레임으로 변환 해야 합니다. 다행히도 기타 개체를 데이터 프레임으로 변경하는 기능을 지원하는 여러 R 함수가 있습니다. 이진 모델을 직렬화 하 고 데이터 프레임에 반환할 수도 있습니다 .이는이 빠른 시작의 뒷부분에서 수행 합니다.
+스크립트가 R에서 SQL Server로 결과를 반환할 경우 데이터를 **data.frame**으로 반환해야 합니다. 스크립트에서 생성하는 다른 형식의 개체는 목록, 요소, 벡터 또는 이진 데이터이든 관계없이 저장 프로시저 결과의 일부로 출력하려면 데이터 프레임으로 변환되어야 합니다. 다행히도 기타 개체를 데이터 프레임으로 변경하는 기능을 지원하는 여러 R 함수가 있습니다. 이진 모델을 serialize하고 데이터 프레임에서 반환할 수 있고 이 작업은 이 빠른 시작의 뒷부분에서 수행하게 됩니다.
 
-먼저, 몇 가지 R 기본 R 개체 (벡터, 행렬 및 목록)를 실험 하 고 데이터 프레임으로 변환 하 여 SQL Server에 전달 된 출력을 변경 하는 방법을 살펴봅니다.
+먼저 R 기본 R 개체인 벡터, 메트릭 및 목록을 실험해 보고 데이터 프레임으로 변환하면 SQL Server에 전달되는 출력이 어떻게 변경되는지 살펴봅니다.
 
-R에서 다음 두 "Hello World" 스크립트를 비교하세요. 스크립트는 거의 동일 하지만 첫 번째는 세 개의 값을 단일 열로 반환하는 반면, 두 번째는 각각 단일 값을 가진 3개의 열을 반환합니다.
+R에서 두 가지 "Hello World" 스크립트를 비교합니다. 두 스크립트가 거의 동일하게 보이지만 첫 번째 스크립트는 3개 값의 단일 열을 반환하고, 두 번째 스크립트는 각각 하나의 단일 값이 포함된 세 개의 열을 반환합니다.
 
 **예제 1**
 
@@ -66,13 +67,13 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>스키마 및 데이터 형식 식별
 
-왜 결과가 다를까요?
+결과가 다른 이유는 무엇일까요?
 
-일반적으로 R `str()` 명령을 사용하여 그 대답을 찾을 수 있습니다. R 스크립트 임의 위치에 `str(object_name)` 함수를 추가하여 지정된 R 개체의 데이터 스키마를 정보성 메시지로 반환합니다. 메시지를 보려면 Visual Studio Code의 **Message** 창 또는 SSMS의 **메시지** 탭에서 확인합니다.
+일반적으로 R `str()` 명령을 사용하여 그 대답을 찾을 수 있습니다. R 스크립트에 `str(object_name)` 함수를 추가하여 지정된 R 개체의 데이터 스키마가 정보 메시지로 반환되도록 합니다. 메시지를 보려면 Visual Studio Code의 **메시지** 창 또는 SSMS의 **메시지** 탭에서 확인합니다.
 
 예제 1 및 예제 2의 결과가 다른 이유를 확인하려면 다음과 같이 각 문에서 _@script_ 변수 정의의 끝 부분에 `str(OutputDataSet)` 줄을 삽입합니다.
 
-**Str 함수가 추가 된 예 1**
+**str 함수가 추가된 예제 1**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -84,7 +85,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**Str 함수가 추가 된 예 2**
+**str 함수가 추가된 예제 2**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -94,7 +95,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-이제 **Message**에 텍스트를 검토하여 출력이 다른 이유를 확인합니다.
+이제 **메시지**의 텍스트를 검토하여 출력이 다른 이유를 확인합니다.
 
 **결과 - 예제 1**
 
@@ -114,16 +115,16 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. 그 이유는 다루지 않지만 R 데이터 형식의 차이점에 대해서는 [Hadley Wickham의 "고급 r"](http://adv-r.had.co.nz)의 *데이터 구조* 섹션에서 자세히 설명 합니다.
+확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. 여기에서 그 이유를 살펴보지는 않지만, R 데이터 형식의 차이는 [Hadley Wickham의 "Advanced R"(고급 R)](http://adv-r.had.co.nz)에 있는 *Data Structures*(데이터 구조)에 자세히 설명되어 있습니다.
 
-현재로서는 R 개체를 데이터 프레임으로 강제 변환할 때 예상되는 결과를 확인해야 합니다.
+우선은 R 개체를 데이터 프레임으로 강제 변환할 때 예상 결과를 확인해야 합니다.
 
 > [!TIP]
-> @No__t-0 `is.vector`과 같은 R id 함수를 사용 하 여 내부 데이터 구조에 대 한 정보를 반환할 수도 있습니다.
+> 또한 `is.matrix`, `is.vector`와 같은 R ID 함수를 사용하여 내부 데이터 구조에 대한 정보를 반환할 수 있습니다.
 
 ## <a name="implicit-conversion-of-data-objects"></a>데이터 개체의 암시적 변환
 
-각 R 데이터 개체에는 두 개의 데이터 개체가 같은 수의 차원을 가지거나 데이터 개체에 다른 데이터 형식이 포함될 경우 다른 데이터 개체와 결합될 때 값을 처리하는 방법에 대한 자체 규칙이 있습니다.
+각 R 데이터 개체에는 두 개의 개체에 같은 수의 차원이 포함되거나 데이터 개체에 다른 데이터 형식이 포함될 경우 다른 데이터 개체와 결합될 때 값을 처리하는 방법에 대한 자체 규칙이 있습니다.
 
 먼저 작은 테스트 데이터 테이블을 만듭니다.
 
@@ -141,7 +142,7 @@ VALUES (100);
 GO
 ```
 
-예를 들어 다음 문을 실행 하 여 R을 사용 하 여 행렬 곱셈을 수행 한다고 가정 합니다. 단일 열 행렬에 4 개의 값이 있는 배열을 사용 하 여 세 개의 값을 곱하고 그 결과로 4x3 매트릭스가 있다고 간주 합니다.
+예를 들어 다음 명령문을 실행하여 R을 사용한 행렬 곱셈을 수행한다고 가정합니다. 3개 값이 포함된 단일 열 행렬에 4개 값이 포함된 배열을 곱하고 결과로 4x3 행렬을 예상합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -154,7 +155,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (([Col1] int, [Col2] int, [Col3] int, Col4 int));
 ```
 
-내부적으로 3개의 값으로 구성된 단일 열이 단일-열 행렬로 변환됩니다. 행렬은 R에서 단지 배열의 특수한 형태이므로, 배열 `y`는 두 인수가 일치하도록 단일 열 행렬로 강제 변환됩니다.
+내부적으로 3개 열이 포함된 열이 단일 열 행렬로 변환됩니다. 행렬은 R에서 특별한 경우인 배열이므로 두 인수가 일치하도록 `y`는 암시적으로 단일 열 행렬로 강제 변환됩니다.
 
 **결과**
 
@@ -164,7 +165,7 @@ EXECUTE sp_execute_external_script
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-하지만 `y` 배열 크기를 변경하면 어떻게 되는지 주목하세요.
+하지만 `y` 배열의 크기를 변경할 경우 발생하는 상황을 확인하세요.
 
 ```sql
 execute sp_execute_external_script
@@ -185,19 +186,19 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-이유가 무엇일까요? 이 경우 두 인수는 동일한 길이의 벡터로 처리될 수 있으므로 R이 내적(inner product)을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 애플리케이션에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
+이유가 무엇일까요? 이 경우 두 인수가 동일한 길이의 벡터로 처리될 수 있기 때문에 R는 내부 곱을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 애플리케이션에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
 
 > [!TIP]
 > 
-> 오류가 발생 했습니까? 테이블이 포함 된 데이터베이스의 컨텍스트에서 저장 프로시저를 실행 하 고 있고 **master** 또는 다른 데이터베이스가 아닌 경우 저장 프로시저를 실행 하 고 있는지 확인 합니다.
+> 오류가 발생했나요? **마스터** 또는 다른 데이터베이스가 아닌 해당 테이블이 포함된 데이터베이스의 컨텍스트에서 저장 프로시저를 실행 중인지 확인하세요.
 >
-> 또한 예제에서 임시 테이블을 사용하지 않는 것이 좋습니다. 일부 R 클라이언트는 일괄 처리 사이의 연결을 종료하고 임시 테이블을 삭제합니다.
+> 또한 이 예제에 대해서는 임시 테이블을 사용하지 않는 것이 좋습니다. 일부 R 클라이언트가 일괄 처리 사이의 연결을 종료하여 임시 테이블이 삭제될 수 있습니다.
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>다른 길이의 열 병합 또는 곱하기
 
-R은 다양한 크기의 벡터로 작업하고 이러한 열과 같은 구조를 데이터 프레임에 결합하는데 뛰어난 유연성을 제공합니다. 벡터 리스트는 테이블처럼 보일 수 있지만 데이터베이스 테이블을 관리하는 모든 규칙을 따르지 않습니다.
+R은 다양한 크기의 벡터를 사용하고 이러한 열 유사 구조를 데이터 프레임으로 결합하는 뛰어난 유연성을 제공합니다. 벡터 목록은 테이블처럼 보일 수 있지만 데이터 테이블에 적용되는 모든 규칙을 따르는 것은 아닙니다.
 
-예를 들어 다음 스크립트는 길이가 6인 숫자 배열을 정의하고 R 변수 `df1`에 저장합니다. 그런 다음 숫자 배열에는 3개의 값이 포함된 RTestData 테이블의 정수와 결합하여 세 데이터 프레임 `df2`를 만듭니다.
+예를 들어 다음 스크립트는 길이가 6인 숫자 배열을 정의하고 R 변수 `df1`에 저장합니다. 그런 다음, 숫자형 배열을 3개의 값이 포함된 RTestData 테이블의 정수와 함께 결합하여 새 데이터 프레임 `df2`를 만듭니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -210,7 +211,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (( [Col2] int not null, [Col3] int not null ));
 ```
 
-R은 데이터 프레임을 채우기 위해 RTestData에서 검색된 요소를 `df1` 배열의 요소 수와 일치하도록 필요한 횟수만큼 반복합니다.
+데이터 프레임을 채우기 위해 R는 RTestData에서 검색된 요소를 `df1` 배열의 요소 수와 일치하도록 필요한 횟수만큼 반복합니다.
 
 **결과**
 
@@ -223,18 +224,18 @@ R은 데이터 프레임을 채우기 위해 RTestData에서 검색된 요소를
 |10|5|
 |100|6|
 
-데이터 프레임이 테이블처럼 보이지만 실제로는 벡터의 리스트라는 것을 기억하세요.
+데이터 프레임이 테이블처럼 보이지만 실제로는 벡터 목록이라는 것을 기억하세요.
 
-## <a name="cast-or-convert-sql-server-data"></a>SQL Server 데이터 Cast 또는 convert
+## <a name="cast-or-convert-sql-server-data"></a>SQL Server 데이터 캐스트 또는 변환
 
-R 과 SQL Server는 같은 데이터 형식을 사용하지 않으므로, SQL Server에서 쿼리를 실행하여 데이터를 가져오고 이를 R 런타임에 전달할 경우 일부 유형에서 종종 암시적 변환이 이루어집니다. R에서 SQL Server로 데이터를 반환할 경우에는 또 다른 일련의 변환이 이루어집니다.
+R 및 SQL Server는 같은 데이터 형식을 사용하지 않으므로, SQL Server에서 쿼리를 실행하여 데이터를 가져오고 이를 R 런타임에 전달할 경우 대개 일부 유형의 암시적 변환이 이루어집니다. R에서 SQL Server로 데이터를 반환할 경우 또 다른 일련의 변환이 이루어집니다.
 
-- SQL Server는 쿼리의 데이터를 Launchpad 서비스가 관리하는 R 프로세스에 넣고 효율성을 높이기 위한 내부 표현으로 변환합니다.
+- SQL Server는 실행 패드 서비스에서 관리하는 R 프로세스로 쿼리의 데이터를 푸시하고 내부 표현으로 변환하여 효율성을 높여줍니다.
 - R 런타임이 데이터를 data.frame 변수에 로드하고 데이터에서 고유한 작업을 수행합니다.
 - 데이터베이스 엔진은 보안 설정된 내부 연결을 통해 데이터를 SQL Server로 반환하고 SQL Server 데이터 형식을 기준으로 데이터를 제공합니다.
 - SQL 쿼리를 실행하고 테이블 형식 데이터 집합을 처리할 수 있는 클라이언트 또는 네트워크 라이브러리를 사용하여 SQL Server에 연결하는 방식으로 데이터를 가져옵니다. 이 클라이언트 애플리케이션은 다른 방식으로 데이터에 영향을 미칠 수 있습니다.
 
-이 기능이 어떻게 작동 하는지 확인 하려면 [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 데이터 웨어하우스에서 다음과 같은 쿼리를 실행 합니다. 이 뷰는 예측 생성에 사용된 매출 데이터를 반환합니다.
+이 애플리케이션이 작동하는 방식을 확인하려면 [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 데이터 웨어하우스에서 이와 같은 쿼리를 실행합니다. 이 뷰는 예측 생성에 사용된 매출 데이터를 반환합니다.
 
 ```sql
 USE AdventureWorksDW
@@ -250,9 +251,9 @@ SELECT ReportingDate
 
 > [!NOTE]
 >
-> 모든 버전의 AdventureWorks를 사용할 수 있으며, 자신의 데이터베이스를 사용해 다른 쿼리를 만들 수 있습니다. 요점은 텍스트, 날짜/시간 및 숫자 값이 포함된 일부 데이터를 처리하는 것입니다.
+> 모든 AdventureWorks 버전을 사용하거나 고유 데이터베이스를 사용해서 다른 쿼리를 만들 수 있습니다. 중요한 것은 텍스트, 날짜/시간 및 숫자 값이 포함된 일부 데이터를 처리하는 것입니다.
 
-이제, 저장된 프로시저에 입력으로 이 쿼리를 붙여넣으세요.
+이제 이 쿼리를 저장 프로시저에 대한 입력으로 붙여넣습니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -283,29 +284,29 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - datetime 열은 R 데이터 형식 **POSIXct**를 사용하여 처리되었습니다.
-- 텍스트 "ProductSeries"는 **팩터**로 인식되었으며 이는 범주 변수임을 의미합니다. 문자열 값은 기본적으로 팩터로 처리됩니다. 문자열 값은 기본적으로 요소로 처리됩니다. R에 문자열을 전달하면 문자열은 내부 사용을 위해 정수로 변환되고 다시 문자열에 매핑되어서 출력됩니다.
+- 텍스트 열 "ProductSeries"는 범주 변수를 의미하는 **요소**로 식별되었습니다. 문자열 값은 기본적으로 요소로 처리됩니다. R에 문자열을 전달하면 문자열은 내부에서 사용하도록 정수로 변환되고 다시 출력의 문자열에 매핑됩니다.
 
 ### <a name="summary"></a>요약
 
-간단한 예제를 통해 입력으로 SQL 쿼리를 전달할 때 데이터 변환의 결과를 확인할 필요가 있음을 볼 수 있습니다. 일부 SQL Server 데이터 형식은 R에서 지원되지 않으므로, 오류를 방지하려면 다음과 같은 방법을 고려합니다.
+이러한 간단한 예제로부터 SQL 쿼리를 입력으로 전달할 때 데이터 변환으로 인한 효과를 확인할 필요성이 있다는 것을 알 수 있습니다. 일부 SQL Server 데이터 형식은 R에서 지원되지 않기 때문에 오류 방지를 위해 다음과 같은 방법들을 고려하세요.
 
-- 데이터를 미리 테스트해서 R 코드에 전달할 때 문제가 될 수 있는 스키마의 열 혹은 값을 검사합니다.
+- 데이터를 미리 테스트하고 R 코드에 전달될 때 문제가 될 수 있는 스키마의 열 또는 값을 확인합니다.
 - `SELECT *`를 사용하지 않고 입력 데이터 원본에서 열을 개별적으로 지정하고 각 열이 어떻게 처리되는지 알아봅니다.
-- 문제를 방지하려면 입력 데이터를 준비할 때 필요에 따라 명시적 Cast를 수행합니다.
-- 오류를 유발하거나 모델링에 유용하지 않은 데이터 열(예: GUID 또는 rowguids)은 전달하지 않습니다.
+- 문제를 방지하려면 입력 데이터를 준비할 때 필요에 따라 명시적 캐스트를 수행합니다.
+- 오류를 일으키고 모델링에 유용하지 않은 데이터 열 전달(예: GUIDS 또는 rowguids)을 방지합니다.
 
-지원되는 혹은 지원되지 않는 데이터 형식에 대한 추가 정보는 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조하십시오.
+데이터 형식 지원 및 미지원에 대한 자세한 내용은 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조하세요.
 
-런타임에 문자열에서 숫자 팩터로의 변환이 성능에 미치는 영향에 대한 정보는 [SQL Server R Services 성능 튜닝](../r/sql-server-r-services-performance-tuning.md)을 참조하십시오.
+런타임에 문자열을 숫자 요소로 변환할 경우 성능에 미치는 영향에 대한 자세한 내용은 [SQL Server R Services 성능 튜닝](../r/sql-server-r-services-performance-tuning.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 고급 R 함수를 작성 하는 방법에 대 한 자세한 내용은 다음 빠른 시작을 따르세요.
+SQL Server에서 고급 R 함수 작성에 대해 알아보려면 다음 빠른 시작을 참조하세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services를 사용 하 여 고급 R 함수 작성](quickstart-r-functions.md)
+> [SQL Server Machine Learning Services를 사용하여 고급 R 함수 작성](quickstart-r-functions.md)
 
-SQL Server Machine Learning Services에서 R을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
+SQL Server Machine Learning Services에서 R 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [SQL Server를 사용 하 여 R에서 예측 모델 생성 및 점수 매기기 Machine Learning Services](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](quickstart-r-train-score-model.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)

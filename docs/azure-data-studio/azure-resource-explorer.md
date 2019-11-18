@@ -5,28 +5,27 @@ description: Azure Resource Explorer를 통해 Azure SQL Server, Azure SQL Datab
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959715"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801141"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer를 사용하여 Azure SQL 리소스 살펴보기 및 관리
 
 이 문서에서는 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]에서 Azure Resource Explorer를 통해 Azure SQL Server, Azure SQL Database 및 Azure SQL Managed Instance 리소스를 살펴보고 관리하는 방법을 알아봅니다.
 
 >[!NOTE]
->Azure Resource Explorer는 SQL Server 2019 10월 미리 보기에서 지원됩니다. 그런 다음, [확장 관리자](extensions.md) 또는 **파일** > **VSIX 패키지에서 파일 설치**통해 미리 보기 확장을 설치할 수 있습니다.
-
+>Azure Resource Explorer는 SQL Server 2019에서 지원됩니다. 그런 다음, [확장 관리자](extensions.md) 또는 **파일** > **VSIX 패키지에서 파일 설치**를 통해 확장을 설치할 수 있습니다.
 
 ## <a name="connect-to-azure"></a>Azure에 연결
 
-SQL 미리 보기 플러그 인을 설치하면 왼쪽 메뉴 모음에 Azure 아이콘이 표시됩니다. 이 아이콘을 클릭하여 Azure Resource Explorer를 엽니다. Azure 아이콘이 표시되지 않으면 왼쪽 메뉴 모음을 마우스 오른쪽 단추로 클릭하고 **Azure Resource Explorer**를 선택합니다.
+SQL 플러그 인을 설치하면 왼쪽 메뉴 모음에 Azure 아이콘이 표시됩니다. 이 아이콘을 클릭하여 Azure Resource Explorer를 엽니다. Azure 아이콘이 표시되지 않으면 왼쪽 메뉴 모음을 마우스 오른쪽 단추로 클릭하고 **Azure Resource Explorer**를 선택합니다.
 
 ### <a name="add-an-azure-account"></a>Azure 계정 추가
 
@@ -87,7 +86,7 @@ Azure Resource Explorer는 현재, Azure SQL Server, Azure SQL Database 및 Azur
 
 ## <a name="connect-to-azure-sql-resources"></a>Azure SQL 리소스에 연결
 
-Azure Resource Explorer는 쿼리 및 관리를 위해 SQL Server 및 데이터베이스에 연결하는 데 도움이 되는 빠른 액세스를 제공합니다. 
+Azure Resource Explorer는 쿼리 및 관리를 위해 SQL Server 및 데이터베이스에 연결하는 데 도움이 되는 빠른 액세스를 제공합니다.
 
 1. 트리 보기에서 연결하려는 SQL 리소스를 찾습니다.
 2. 리소스를 마우스 오른쪽 단추로 클릭하고 **연결**을 선택하여 리소스의 오른쪽에 있는 연결 단추를 찾을 수도 있습니다.

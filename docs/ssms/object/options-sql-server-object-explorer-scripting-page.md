@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264056"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844525"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,10 @@ ms.locfileid: "68264056"
 **편집** 및 **수정** 명령은 동일한 옵션 설정에 대해 **<object> 스크립팅** 명령과 다른 결과를 생성할 수 있습니다. **편집** 및 **수정** 명령은 쿼리 편집기 세션 중에 현재 데이터베이스의 개체를 수정하기 위해 디자인되었고, **<object> 스크립팅** 명령은 나중에 개체를 만드는 데 사용할 수 있도록 스크립트를 생성하기 위해 디자인되었습니다.  
   
 ## <a name="options"></a>옵션  
-각 옵션 오른쪽의 목록에 있는 사용 가능한 설정에서 선택하여 스크립팅 옵션을 지정합니다.  
+각 옵션 오른쪽의 목록에 있는 사용 가능한 설정에서 선택하여 스크립팅 옵션을 지정합니다.
+
+> [!NOTE]
+> 나열된 기본 설정은 **스크립트 전체 데이터베이스 및 모든 데이터베이스 개체** 옵션에만 적용되며 **특정 데이터베이스 개체 선택** 옵션을 사용하는 경우에는 달라질 수 있습니다.
   
 ### <a name="general-scripting-options"></a>일반 스크립팅 옵션  
 **개별 문 구분**  

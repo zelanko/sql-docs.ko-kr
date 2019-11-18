@@ -1,5 +1,5 @@
 ---
-title: SQL Server 설치 프로그램을 사용하여 R Server 또는 Machine Learning Server(독립 실행형) 설치
+title: Machine Learning Server 설치(독립 실행형)
 description: RevoScaleR, revoscalepy, MicrosoftML 및 기타 패키지를 사용하여 R 및 Python 개발용 인스턴스 비인식 독립 실행형 기계 학습 서버를 설치합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 14b0fc05a570a14c5ed613b438e2672098b67d4b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532666"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727633"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치 프로그램을 사용하여 Machine Learning Server(독립 실행형) 또는 R Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

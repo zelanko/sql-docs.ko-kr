@@ -1,7 +1,7 @@
 ---
 title: 샘플 Notebook 실행 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]샘플 Spark 노트북 실행을 로드 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 샘플 Spark Notebook을 로드 및 실행하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653264"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844237"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 샘플 Notebook 실행
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는의 Azure Data Studio [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 노트북을 로드 하 고 실행 하는 방법을 보여 줍니다. 이를 통해 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
+이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 Azure Data Studio에서 Notebook을 로드 및 실행하는 방법을 보여 줍니다. 이를 통해 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
 
 > [!TIP]
 > 원하는 경우 이 자습서의 명령에 대한 스크립트를 다운로드하여 실행할 수 있습니다. 지침에 대해서는 GitHub의 [Spark 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)을 참조하세요.
@@ -67,9 +67,9 @@ ms.locfileid: "69653264"
 
 ![Notebook 셀 실행](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-샘플 Notebook의 각 셀을 연속해서 실행합니다. 에서 노트북 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]을 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 참조 하세요.
+샘플 Notebook의 각 셀을 연속해서 실행합니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Notebooks를 사용하는 방법에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [SQL Server 2019 미리 보기에서 노트북을 사용하는 방법](notebooks-guidance.md)
+- [SQL Server에서 Notebooks를 사용하는 방법](notebooks-guidance.md)
 - [Azure Data Studio에서 Notebooks를 관리하는 방법](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>다음 단계

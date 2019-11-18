@@ -37,14 +37,14 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545078"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729843"
 ---
-# <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)(미리 보기)
+# <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -142,7 +142,8 @@ SQL 문이 새 구체화된 뷰로 인해 개선될 수 있는지 확인하려�
   
 ## <a name="see-also"></a>관련 항목:
 
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
+[구체화된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

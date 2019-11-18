@@ -1,38 +1,39 @@
 ---
-title: Azure 가상 컴퓨터에 R 언어 및 Python 기능 설치
-description: Azure 클라우드의 SQL Server 가상 머신에서 R 및 Python 데이터 과학 및 machine learning 솔루션을 실행 합니다.
+title: Azure 가상 머신에 설치
+description: Azure 클라우드의 SQL Server 가상 머신에서 R 및 Python 데이터 과학 및 기계 학습 솔루션을 실행합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715881"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727619"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에 R 및 Python을 사용 하 여 SQL Server Machine Learning Services 설치
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Azure 가상 머신에 R 및 Python과 함께 SQL Server Machine Learning Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Azure의 SQL Server 가상 머신에서 Machine Learning Services와 R 및 Python 통합을 설치 하 여 설치 및 구성 작업을 제거할 수 있습니다. 가상 머신을 배포한 후에는 기능을 사용할 수 있습니다.
+Azure의 SQL Server 가상 머신에 Machine Learning Services와 R 및 Python 통합을 설치하여 설치 및 구성 작업을 제거할 수 있습니다. 가상 머신이 배포되면 해당 기능을 사용할 수 있습니다.
  
-단계별 지침에 대해서는 [Azure Portal에서 Windows SQL Server 가상 머신을 프로 비전 하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조 하세요.
+단계별 지침은 [Azure Portal에서 Windows SQL Server 가상 머신을 프로비저닝하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조하세요.
 
-[SQL server 설정 구성](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계에서는 인스턴스에 machine learning을 추가 합니다.
+[SQL 서버 설정 구성](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계는 인스턴스에 기계 학습을 추가하는 단계입니다.
 
 <a name="firewall"></a>
 
 ## <a name="unblock-the-firewall"></a>방화벽 차단 해제
 
-기본적으로 Azure 가상 컴퓨터의 방화벽에는 로컬 사용자 계정에 대 한 네트워크 액세스를 차단 하는 규칙이 포함 되어 있습니다.
+기본적으로 Azure 가상 머신의 방화벽에는 로컬 사용자 계정에 대한 네트워크 액세스를 차단하는 규칙이 포함됩니다.
 
-원격 데이터 과학 클라이언트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스할 수 있도록 하려면이 규칙을 사용 하지 않도록 설정 해야 합니다.  그렇지 않으면 가상 컴퓨터의 작업 영역을 사용 하는 계산 컨텍스트에서 기계 학습 코드를 실행할 수 없습니다.
+원격 데이터 과학 클라이언트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스할 수 있도록 하려면 이 규칙을 비활성화해야 합니다.  그렇지 않으면 가상 머신의 작업 영역을 사용하는 컴퓨팅 컨텍스트에서 기계 학습 코드를 실행할 수 없습니다.
 
-원격 데이터 과학 클라이언트에서 액세스할 수 있도록 설정 하려면:
+원격 데이터 과학 클라이언트에서 액세스를 활성화하려면 다음을 수행합니다.
 
 1. 가상 머신에서 고급 보안이 포함된 Windows 방화벽을 엽니다.
 2. **아웃바운드 규칙**을 선택합니다.
@@ -42,9 +43,9 @@ Azure의 SQL Server 가상 머신에서 Machine Learning Services와 R 및 Pytho
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>원격 클라이언트에 대한 ODBC 콜백 사용
 
-서버를 호출 하는 클라이언트에서 해당 기계 학습 솔루션의 일부로 ODBC 쿼리를 실행 해야 하는 경우 실행 패드에서 원격 클라이언트 대신 ODBC 호출을 수행할 수 있는지 확인 해야 합니다. 
+서버를 호출하는 클라이언트가 ODBC 쿼리를 기계 학습 솔루션의 일부로 실행하게 하려는 경우 원격 클라이언트 대신 실행 패드가 ODBC 호출을 실행할 수 있는지 확인해야 합니다. 
 
-이 작업을 하려면 실행 패드에서 사용되는 SQL 작업자 계정이 인스턴스에 로그인하도록 허용해야 합니다. 자세한 내용은 [데이터베이스 사용자로 SQLRUserGroup 추가](../security/create-a-login-for-sqlrusergroup.md)를 참조 하세요.
+이 작업을 하려면 실행 패드에서 사용되는 SQL 작업자 계정이 인스턴스에 로그인하도록 허용해야 합니다. 자세한 내용은 [데이터베이스 사용자로 SQLRUserGroup 추가](../security/create-a-login-for-sqlrusergroup.md)를 참조하세요.
 
 <a name="network"></a>
 
@@ -56,4 +57,4 @@ Azure의 SQL Server 가상 머신에서 Machine Learning Services와 R 및 Pytho
   
 + TCP/IP 사용
 
-  루프백 연결에는 TCP/IP가 필요 합니다. 오류가 발생 하면 "DBNETLIB; SQL Server 존재 하지 않거나 액세스가 거부 되었습니다. "라는 메시지는 인스턴스를 지 원하는 가상 머신에서 TCP/IP를 사용 하도록 설정 합니다.
+  루프백 연결에는 TCP/IP가 필요합니다. "DBNETLIB; SQL Server가 없거나 액세스가 거부되었습니다" 오류가 발생하면 인스턴스를 지원하는 가상 머신에서 TCP/IP를 사용하도록 설정합니다.

@@ -1,48 +1,49 @@
 ---
-title: 'Python 자습서: 모델 배포 (선형 회귀)'
-description: 이 자습서에서는 SQL Server Machine Learning Services에서 Python 및 선형 회귀를 사용 하 여 ski 대 여의 수를 예측 합니다. Machine Learning Services를 사용 하 여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포할 수 있습니다.
+title: 'Python 자습서: 모델 배포'
+description: 이 자습서에서는 SQL Server Machine Learning Services에서 Python 및 선형 회귀를 사용하여 스키 대여 수를 예측합니다. Machine Learning Services를 사용하여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f5d19af93ab180c660a264d5aaabc538d527a5
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 3b1dd5eba014a48f661833b1f955135ebacc48cc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242521"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727071"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 자습서: 선형 회귀 모델을 배포 하 여 SQL Server Machine Learning Services
+# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python 자습서: SQL Server Machine Learning Services에 선형 회귀 모델 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-네 부분으로 구성 된 자습서 시리즈의 4 부에서는 Machine Learning Services를 사용 하 여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스로 배포 합니다.
+이 4부 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포합니다.
 
-이 문서에서는 다음 방법을 설명합니다.
+이 문서에서는 다음과 같은 방법을 알아봅니다.
 
 > [!div class="checklist"]
-> * Machine learning 모델을 생성 하는 저장 프로시저 만들기
-> * 모델을 데이터베이스 테이블에 저장 합니다.
-> * 모델을 사용 하 여 예측을 수행 하는 저장 프로시저 만들기
-> * 새 데이터를 사용 하 여 모델 실행
+> * 기계 학습 모델을 생성하는 저장 프로시저 만들기
+> * 모델을 데이터베이스 테이블에 저장
+> * 모델을 사용하여 예측을 수행하는 저장 프로시저 만들기
+> * 새 데이터로 모델 실행
 
-[1 부](python-ski-rental-linear-regression.md)에서는 샘플 데이터베이스를 복원 하는 방법을 배웠습니다.
+[1부](python-ski-rental-linear-regression.md)에서 샘플 데이터베이스를 복원하는 방법을 배웠습니다.
 
-[2 부](python-ski-rental-linear-regression-prepare-data.md)에서는 SQL Server에서 python 데이터 프레임으로 데이터를 로드 하 고 python에서 데이터를 준비 하는 방법을 배웠습니다.
+[2부](python-ski-rental-linear-regression-prepare-data.md)에서는 SQL Server에서 Python 데이터 프레임으로 데이터를 로드하고 Python에서 데이터를 준비하는 방법을 배웠습니다.
 
-[3 부](python-ski-rental-linear-regression-train-model.md)에서는 Python에서 선형 회귀 기계 학습 모델을 학습 하는 방법을 배웠습니다.
+[3부](python-ski-rental-linear-regression-train-model.md)에서는 Python에서 선형 회귀 기계 학습 모델을 학습하는 방법을 배웠습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-* 이 자습서의 4 부에서는 [1 부](python-ski-rental-linear-regression.md) 및 해당 필수 구성 요소를 완료 했다고 가정 합니다.
+* 이 자습서의 4부에서는 [1부](python-ski-rental-linear-regression.md)와 해당 필수 구성 요소를 완료했다고 가정합니다.
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>모델을 생성 하는 저장 프로시저 만들기
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>모델을 생성하는 저장 프로시저 만들기
 
-이제 개발한 Python 스크립트를 사용 하 여 scikit에서 LinearRegression를 사용 하 여 선형 회귀 모델을 학습 하 고 생성 하는 저장 프로시저 **generate_rental_rx_model** 를 만듭니다.
+이제 개발한 Python 스크립트를 사용하여 scikit-learn에서 LinearRegression을 사용하여 선형 회귀 모델을 학습하고 생성하는 저장 프로시저 **generate_rental_rx_model**을 만듭니다.
 
-Azure Data Studio에서 다음 T-sql 문을 실행 하 여 모델을 학습 하는 저장 프로시저를 만듭니다.
+Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 학습하는 저장 프로시저를 만듭니다.
 
 ```sql
 -- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
@@ -82,11 +83,11 @@ END;
 GO
 ```
 
-## <a name="store-the-model-in-a-database-table"></a>모델을 데이터베이스 테이블에 저장 합니다.
+## <a name="store-the-model-in-a-database-table"></a>모델을 데이터베이스 테이블에 저장
 
-TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블에 저장 합니다.
+TutorialDB 데이터베이스에 테이블을 만든 다음, 모델을 테이블에 저장합니다.
 
-1. Azure Data Studio에서 다음 T-sql 문을 실행 하 여 모델을 저장 하는 데 사용 되는 **rental_py_models** 라는 테이블을 만듭니다.
+1. Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 저장하는 데 사용되는 **dbo.rental_py_models**라는 테이블을 만듭니다.
 
     ```sql
     USE TutorialDB;
@@ -99,7 +100,7 @@ TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블�
     GO
     ```
 
-1. 모델 이름이 **linear_model**인 이진 개체로 모델을 테이블에 저장 합니다.
+1. 이름이 **linear_model**인 모델이 있는 이진 개체로 테이블에 저장합니다.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -108,9 +109,9 @@ TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블�
     INSERT INTO rental_py_models (model_name, model) VALUES('linear_model', @model);
     ```
 
-## <a name="create-a-stored-procedure-that-makes-predictions"></a>예측을 수행 하는 저장 프로시저 만들기
+## <a name="create-a-stored-procedure-that-makes-predictions"></a>예측을 수행하는 저장 프로시저 만들기
 
-1. 학습 된 모델과 새 데이터 집합을 사용 하 여 예측을 수행 하는 저장 프로시저 **py_predict_rentalcount** 를 만듭니다. Azure Data Studio 아래에서 T-sql을 실행 합니다.
+1. 학습된 모델과 새 데이터 세트를 사용하여 예측을 수행하는 저정 프로시저 **py_predict_rentalcount**를 만듭니다. 아래의 Azure Data Studio에서 T-SQL을 실행합니다.
 
     ```sql
     DROP PROCEDURE IF EXISTS py_predict_rentalcount;
@@ -161,7 +162,7 @@ TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블�
     GO
     ```
 
-1. 예측을 저장 하는 테이블을 만듭니다.
+1. 예측을 저장하기 위한 테이블을 만듭니다.
 
     ```sql
     DROP TABLE IF EXISTS [dbo].[py_rental_predictions];
@@ -180,7 +181,7 @@ TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블�
     GO
     ```
 
-1. 저장 프로시저를 실행 하 여 임대 횟수 예측
+1. 저장 프로시저를 실행하여 임대 횟수 예측
 
     ```sql
     --Insert the results of the predictions for test set into a table
@@ -191,17 +192,17 @@ TutorialDB 데이터베이스에 테이블을 만든 다음 모델을 테이블�
     SELECT * FROM py_rental_predictions;
     ```
 
-SQL Server Machine Learning Services에서 모델을 만들고 학습 하 고 배포 했습니다. 그런 다음 저장 프로시저에서 해당 모델을 사용 하 여 새 데이터를 기반으로 값을 예측 합니다.
+SQL Server Machine Learning Services에서 모델을 성공적으로 생성, 학습 및 배포했습니다. 그런 다음, 저장 프로시저에서 해당 모델을 사용하여 새 데이터를 기반으로 값을 예측합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서 시리즈의 4 부에서는 다음 단계를 완료 했습니다.
+이 자습서 시리즈의 4부에서 다음 단계를 완료했습니다.
 
-* Machine learning 모델을 생성 하는 저장 프로시저 만들기
-* 모델을 데이터베이스 테이블에 저장 합니다.
-* 모델을 사용 하 여 예측을 수행 하는 저장 프로시저 만들기
-* 새 데이터를 사용 하 여 모델 실행
+* 기계 학습 모델을 생성하는 저장 프로시저 만들기
+* 모델을 데이터베이스 테이블에 저장
+* 모델을 사용하여 예측을 수행하는 저장 프로시저 만들기
+* 새 데이터로 모델 실행
 
-SQL Server Machine Learning Services에서 Python을 사용 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
+SQL Server Machine Learning Services에서 Python을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.
 
-+ [SQL Server Machine Learning Services에 대 한 Python 자습서](sql-server-python-tutorials.md)
++ [SQL Server Machine Learning Services용 Python 자습서](sql-server-python-tutorials.md)

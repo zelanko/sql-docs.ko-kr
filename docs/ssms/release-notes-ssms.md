@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9d6e0484e5c3bdda9b46b381d574f84dd216c4f2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593694"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801148"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -346,7 +346,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 |Azure SQL Managed Instance|Azure SQL Managed Instance에 연결되는 경우 새 "AAD 로그인"을 새 로그인 유형으로 SMO 및 SSMS에 추가할 수 있습니다.|
 |Always On|SSMS Always on 대시보드에서 RTO(예상 복구 시간) 및 RPO(예상 데이터 손실)를 새로 고칩니다. [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)의 업데이트된 설명서를 참조하세요.|
 |Always Encrypted| 서버에 연결 상자의 Always Encrypted 탭에 있는 Always Encrypted 확인란을 선택하면 데이터베이스 연결에 대해 Always Encrypted를 활성화/비활성화하는 쉬운 방법이 제공됩니다.|
-|보안 Enclave를 사용한 Always Encrypted| SQL Server 2019 미리 보기의 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지 기능을 개선했습니다.  서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).  새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.  기타 Always Encrypted 키 관리 대화 상자에는 enclave 계산을 허용하는 열 마스터 키에 대한 정보를 제공합니다.|
+|보안 Enclave를 사용한 Always Encrypted| SQL Server 2019의 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지 기능을 개선했습니다.  서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).  새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.  기타 Always Encrypted 키 관리 대화 상자에는 enclave 계산을 허용하는 열 마스터 키에 대한 정보를 제공합니다.|
 |감사 파일|스토리지 계정 키에서 Azure AD 기반 인증으로 인증 방법을 변경했습니다.|
 |데이터 분류| 재구성된 데이터 분류 작업 메뉴: 데이터베이스 작업 메뉴에 하위 메뉴를 추가하고, 먼저 데이터 분류 창을 열지 않고도 메뉴에서 보고서를 여는 옵션을 추가했습니다.|
 |데이터 분류|'데이터 분류' 기능이 SMO에 새로 추가되었습니다. 열 개체에서 새로운 SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId 및 IsClassified(읽기 전용) 속성을 표시합니다. 자세한 내용은 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)을 참조하세요.|

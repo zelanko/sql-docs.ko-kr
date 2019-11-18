@@ -1,52 +1,53 @@
 ---
-title: Python 모델을 사용 하 여 잠재적 결과 예측
-description: T-sql 함수를 사용 하 여 SQL Server 저장 프로시저에 포함 된 PYthon 스크립트를 운영 하는 방법을 보여 주는 자습서
+title: 'Python + T-SQL: 예측 실행'
+description: T-SQL 함수를 사용하여 SQL Server 저장 프로시저에 포함된 PYthon 스크립트를 운영하는 방법을 보여주는 자습서
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715355"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724720"
 ---
-# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장 프로시저에 포함 된 Python을 사용 하 여 예측 실행
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장 프로시저에 포함된 Python을 사용하여 예측 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)자습서의 일부입니다. 
+이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md) 자습서의 일부입니다. 
 
-이 단계에서는 이전 단계에서 학습 하 고 저장 한 모델을 *운영* 하는 방법을 알아봅니다.
+이 단계에서는 이전 단계에서 학습시키고 저장한 모델을 *운영*하는 방법을 알아봅니다.
 
-이 시나리오에서 운영 화은 점수 매기기를 위해 프로덕션에 모델을 배포 하는 것을 의미 합니다. 저장 프로시저에 Python 코드를 포함할 수 있기 때문에 SQL Server와 통합 하면이 작업을 매우 쉽게 수행할 수 있습니다. 새 입력을 기반으로 모델에서 예측을 가져오려면 응용 프로그램에서 저장 프로시저를 호출 하 고 새 데이터를 전달 하면 됩니다.
+이 시나리오에서 말하는 운영은 채점에 사용할 수 있도록 프로덕션 환경에 모델을 배포하는 것을 의미합니다. SQL Server와 통합하면 Python 코드를 저장 프로시저에 포함할 수 있으므로 이 작업을 매우 쉽게 수행할 수 있습니다. 새 입력을 기반으로 모델에서 예측을 얻으려면 간단하게 애플리케이션에서 저장 프로시저를 호출하고 새 데이터를 전달하면 됩니다.
 
-이 단원에서는 Python 모델을 기반으로 하는 예측을 만드는 두 가지 방법, 즉 일괄 처리 점수 매기기 및 행별로 행 기준 점수 매기기 방법을 보여 줍니다.
+이 단원에서는 Python 모델을 기반으로 예측을 만드는 두 가지 방법인 일괄 처리 채점과 행 단위 채점을 보여줍니다.
 
-- **일괄 처리 점수 매기기:** 입력 데이터의 여러 행을 제공 하려면 SELECT 쿼리를 저장 프로시저에 인수로 전달 합니다. 그러면 입력 사례에 해당 하는 관찰 테이블이 생성 됩니다.
-- **개별 점수 매기기:** 개별 매개 변수 값 집합을 입력으로 전달 합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
+- **일괄 처리 채점:** 여러 입력 데이터 행을 제공하려면 SELECT 쿼리를 저장 프로시저에 인수로 전달합니다. 그 결과는 입력 사례에 해당하는 관찰 테이블입니다.
+- **개별 채점:** 개별 매개 변수 값 세트를 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
-점수 매기기에 필요한 모든 Python 코드는 저장 프로시저의 일부로 제공 됩니다.
+채점에 필요한 모든 Python 코드는 저장 프로시저의 일부로 제공됩니다.
 
 ## <a name="batch-scoring"></a>일괄 처리 채점
 
-처음 두 개의 저장 프로시저는 저장 프로시저에서 Python 예측 호출을 래핑하는 기본 구문을 보여 줍니다. 두 저장 프로시저 모두 입력으로 데이터 테이블이 필요 합니다.
+처음 두 저장 프로시저는 Python 예측 호출을 저장 프로시저에 래핑하는 기본 구문을 보여줍니다. 두 저장 프로시저 모두 입력으로 데이터 테이블이 필요합니다.
 
-- 사용할 정확한 모델의 이름은 저장 프로시저에 대 한 입력 매개 변수로 제공 됩니다. 저장 프로시저는 저장 프로시저의 SELECT 문을 사용 하 여 `nyc_taxi_models`데이터베이스 테이블에서 serialize 된 모델을 로드 합니다.
-- 직렬화 된 모델은 python을 사용 하 여 `mod` 추가 처리를 위해 python 변수에 저장 됩니다.
-- 점수가 매겨진 새 사례는에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `@input_data_1`지정 된 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다.
-- 두 저장 프로시저는의 `sklearn` 함수를 사용 하 여 정확도 메트릭 (곡선 아래의 영역)을 계산 합니다. 대상 레이블 ( _크리스마스_ 열)도 제공 하는 경우에만 cc와 같은 정확도 메트릭을 생성할 수 있습니다. 예측에는 대상 레이블 (변수 `y`)이 필요 하지 않지만 정확도 메트릭 계산은 필요 합니다.
+- 사용할 정확한 모델 이름은 저장 프로시저에 대한 입력 매개 변수로 제공됩니다. 저장 프로시저는 저장 프로시저의 SELECT 문을 사용하여 데이터베이스 테이블 `nyc_taxi_models`.table에서 직렬화된 모델을 로드합니다.
+- 직렬화된 모델은 Python을 사용하여 추가 처리할 수 있도록 Python 변수 `mod`에 저장됩니다.
+- 채점이 필요한 새로운 사례는 `@input_data_1`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다.
+- 두 저장 프로시저는 `sklearn`의 함수를 사용하여 정확도 메트릭 AUC(곡선 아래의 영역)를 계산합니다. AUC 같은 정확도 메트릭은 대상 레이블(_팁받음_ 열)까지 입력하는 경우에만 생성할 수 있습니다. 예측에는 대상 레이블(`y` 변수)이 필요 없지만, 정확도 메트릭 계산에는 필요합니다.
 
-    따라서 점수를 매길 데이터의 대상 레이블이 없는 경우에는 저장 프로시저를 수정 하 여이 계산을 제거 하 고 기능 (저장 프로시저의 변수 `X` )에서 팁 확률만 반환할 수 있습니다.
+    따라서 데이터를 채점할 대상 레이블이 없는 경우 저장 프로시저를 수정하여 AUC 계산을 제거하고, 기능의 팁 확률(저장 프로시저의 `X` 변수)만 반환할 수 있습니다.
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-다음 T-sql 문을 실행 하 여 저장 프로시저를 만듭니다. 이 저장 프로시저에는 해당 패키지와 관련 된 함수를 사용 하기 때문에 scikit 패키지를 기반으로 하는 모델이 필요 합니다.
+다음 T-SQL 문을 실행하여 저장 프로시저를 만듭니다. 이 저장 프로시저는 scikit-learn 패키지와 관련된 함수를 사용하므로 이 패키지를 기반으로 하는 모델이 필요합니다.
 
-+ 입력을 포함 하는 데이터 프레임은 로지스틱 `predict_proba` 회귀 `mod`모델의 함수에 전달 됩니다. 함수 `predict_proba` (`probArray = mod.predict_proba(X)`)는 팁 (임의 금액)이 지정 될 확률을 나타내는 **float** 를 반환 합니다.
++ 입력을 포함하고 있는 데이터 프레임은 로지스틱 회귀 모델 `mod`의 `predict_proba` 함수에 전달됩니다. `predict_proba` 함수(`probArray = mod.predict_proba(X)`)는 금액에 관계없이 팁을 받을 확률을 나타내는 **float** 입니다.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -90,7 +91,7 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-이 저장 프로시저는 동일한 입력을 사용 하며 이전 저장 프로시저와 동일한 종류의 점수를 만들지만 SQL Server machine learning과 함께 제공 되는 **revoscalepy** 패키지의 함수를 사용 합니다.
+이 저장 프로시저는 동일한 입력을 사용하여 이전 저장 프로시저와 동일한 종류의 점수를 만들지만, SQL Server 기계 학습과 함께 제공되는 **revoscalepy** 패키지의 함수를 사용합니다.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -131,16 +132,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>SELECT 쿼리를 사용 하 여 일괄 처리 점수 매기기 실행
+## <a name="run-batch-scoring-using-a-select-query"></a>SELECT 쿼리를 사용하여 일괄 처리 채점 실행
 
-저장 프로시저 **PredictTipSciKitPy** 및 **Predicttiprxpy** 에는 두 개의 입력 매개 변수가 필요 합니다. 
+**PredictTipSciKitPy** 및 **PredictTipRxPy** 저장 프로시저에는 두 개의 입력 매개 변수가 필요합니다. 
 
-- 점수 매기기를 위한 데이터를 검색 하는 쿼리입니다.
-- 학습 된 모델의 이름
+- 채점할 데이터를 검색하는 쿼리
+- 학습된 모델의 이름
 
-이러한 인수를 저장 프로시저에 전달 하 여 특정 모델을 선택 하거나 점수 매기기에 사용 되는 데이터를 변경할 수 있습니다.
+이러한 인수를 저장 프로시저에 전달하여 특정 모델을 선택하거나 채점에 사용할 데이터를 변경할 수 있습니다.
 
-1. 점수 매기기에 **scikit** 모델을 사용 하려면 모델 이름과 쿼리 문자열을 입력으로 전달 하 여 저장 프로시저 **PredictTipSciKitPy**를 호출 합니다.
+1. **scikit-learn** 모델을 채점에 사용하려면 **PredictTipSciKitPy** 저장 프로시저를 호출하고, 모델 이름과 쿼리 문자열을 입력으로 전달합니다.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -151,11 +152,11 @@ GO
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    저장 프로시저는 입력 쿼리의 일부로 전달 된 각 트립에 대해 예측 확률을 반환 합니다. 
+    저장 프로시저는 입력 쿼리의 일부로 전달된 각 운행의 예상 확률을 반환합니다. 
     
-    SSMS (SQL Server Management Studio)를 사용 하 여 쿼리를 실행 하는 경우 확률은 **결과** 창에 테이블로 표시 됩니다. **메시지** 창은 값 0.56를 사용 하 여 정확도 메트릭 (지 각 또는 곡선 아래의 영역)을 출력 합니다.
+    SSMS(SQL Server Management Studio)를 사용하여 쿼리를 실행하는 경우 확률은 **결과** 창에 표로 표시됩니다. **메시지** 창은 값이 약 0.56인 정확도 메트릭(AUC 또는 곡선 아래의 영역)을 출력합니다.
 
-2. 점수 매기기에 **revoscalepy** 모델을 사용 하려면 모델 이름과 쿼리 문자열을 입력으로 전달 하 여 **저장 프로시저를**호출 합니다.
+2. **revoscalepy** 모델을 채점에 사용하려면 **PredictTipRxPy** 저장 프로시저를 호출하고, 모델 이름과 쿼리 문자열을 입력으로 전달합니다.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -166,27 +167,27 @@ GO
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="single-row-scoring"></a>단일 행 점수 매기기
+## <a name="single-row-scoring"></a>단일 행 채점
 
-때로는 일괄 처리 점수 매기기 대신 단일 사례를 전달 하 고, 응용 프로그램에서 값을 가져오고, 해당 값을 기반으로 단일 결과를 반환할 수 있습니다. 예를 들어 저장 프로시저를 호출 하 고 사용자가 입력 하거나 선택한 입력으로 전달 하도록 Excel 워크시트, 웹 응용 프로그램 또는 보고서를 설정할 수 있습니다.
+일괄 처리 채점 대신, 단일 사례를 전달하고, 애플리케이션에서 값을 가져오고, 해당 값을 기반으로 단일 결과를 반환하려는 경우가 가끔 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력 또는 선택한 입력을 제공하도록 Excel 워크시트, 웹 애플리케이션 또는 보고서를 설정할 수 있습니다.
 
-이 섹션에서는 두 개의 저장 프로시저를 호출 하 여 단일 예측을 만드는 방법을 배웁니다.
+이 섹션에서는 다음 두 저장 프로시저를 사용하여 단일 예측을 만드는 방법을 알아봅니다.
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) 는 scikit 모델을 사용 하 여 단일 행 점수 매기기를 위해 설계 되었습니다.
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) 는 revoscalepy 모델을 사용 하 여 단일 행 점수 매기기를 위해 설계 되었습니다.
-+ 아직 모델을 학습 하지 않은 경우 [5 단계로](sqldev-py5-train-and-save-a-model-using-t-sql.md)돌아갑니다.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy)는 scikit-learn 모델을 사용하는 단일 행 채점을 위해 설계되었습니다.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)는 revoscalepy 모델을 사용하는 단일 행 채점을 위해 설계되었습니다.
++ 아직 모델을 학습시키지 않은 경우 [5단계](sqldev-py5-train-and-save-a-model-using-t-sql.md)로 돌아가세요.
 
-두 모델은 모두 승객 수, 거리 등과 같은 일련의 단일 값을 입력으로 사용 합니다. 테이블 반환 함수 `fnEngineerFeatures`는 입력의 위도 및 경도 값을 직접 거리의 새 기능으로 변환 하는 데 사용 됩니다. [4 단원](sqldev-py4-create-data-features-using-t-sql.md) 에는이 테이블 반환 함수에 대 한 설명이 포함 되어 있습니다.
+두 모델 모두 승객 수, 주행 거리 등 일련의 단일 값을 입력으로 사용합니다. 테이블 반환 함수 `fnEngineerFeatures`는 입력의 위도 및 경도 값을 새 기능인 직접 거리로 변환하는 데 사용됩니다. [단원 4](sqldev-py4-create-data-features-using-t-sql.md)에는 이 테이블 반환 함수에 대한 설명이 포함되어 있습니다.
 
-두 저장 프로시저는 모두 Python 모델을 기반으로 점수를 만듭니다.
+두 저장 프로시저 모두 Python 모델을 기반으로 점수를 만듭니다.
 
 > [!NOTE]
 > 
-> 외부 응용 프로그램에서 저장 프로시저를 호출할 때 Python 모델에 필요한 모든 입력 기능을 제공 하는 것이 중요 합니다. 오류를 방지 하려면 데이터 형식 및 데이터 길이의 유효성을 검사 하는 것 외에도 입력 데이터를 Python 데이터 형식으로 캐스팅 하거나 변환 해야 할 수 있습니다.
+> 외부 애플리케이션에서 저장 프로시저를 호출할 때 Python 모델에 필요한 모든 입력 기능을 제공해야 합니다. 오류를 방지하려면 데이터 형식 및 데이터 길이의 유효성을 검사하는 것 외에도 입력 데이터를 Python 데이터 형식으로 캐스팅하거나 변환해야 할 수도 있습니다.
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-**Scikit** 모델을 사용 하 여 점수 매기기를 수행 하는 저장 프로시저의 코드를 검토해 보십시오.
+**scikit-learn** 모델을 사용하여 채점을 수행하는 저장 프로시저의 코드를 잠시 검토해 보세요.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -253,7 +254,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-다음 저장 프로시저는 **revoscalepy** 모델을 사용 하 여 점수 매기기를 수행 합니다.
+다음 저장 프로시저는 **revoscalepy** 모델을 사용하여 채점을 수행합니다.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -324,7 +325,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>모델에서 점수 생성
 
-저장 프로시저를 만든 후에는 두 모델을 기준으로 점수를 쉽게 생성할 수 있습니다. 새 **쿼리** 창을 열고 각 기능 열에 대해 매개 변수를 입력 하거나 붙여 넣습니다. 이러한 기능 열에 대 한 7 가지 필수 값은 다음과 같습니다.
+저장 프로시저를 만든 후에는 두 모델 중 하나를 기반으로 간편하게 점수를 생성할 수 있습니다. 새 **쿼리** 창을 열고, 각 기능 열에 대한 매개 변수를 입력하거나 붙어넣으면 됩니다. 이러한 기능 열에 필요한 7개 값은 순서대로 다음과 같습니다.
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -333,28 +334,28 @@ GO
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. **Revoscalepy** 모델을 사용 하 여 예측을 생성 하려면 다음 문을 실행 합니다.
+1. **revoscalepy** 모델을 사용하여 예측을 생성하려면 다음 명령문을 실행합니다.
   
     ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. **Scikit** 모델을 사용 하 여 점수를 생성 하려면 다음 문을 실행 합니다.
+2. **scikit-learn** 모델을 사용하여 점수를 생성하려면 다음 명령문을 실행합니다.
 
     ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-두 절차의 출력은 지정 된 매개 변수 또는 기능을 사용 하 여 taxi 여행에 대 한 팁이 지불 될 확률입니다.
+두 프로시저의 출력은 매개 변수 또는 기능이 지정된 택시 운행에서 팁이 지불될 확률입니다.
 
 ## <a name="conclusions"></a>결론
 
-이 자습서에서는 저장 프로시저에 포함 된 Python 코드를 사용 하는 방법을 알아보았습니다. 와 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 통합을 통해 예측을 위해 Python 모델을 훨씬 쉽게 배포 하 고 엔터프라이즈 데이터 워크플로의 일부로 모델 재 학습을 통합할 수 있습니다.
+이 자습서에서는 저장 프로시저에 포함된 Python 코드를 사용하는 방법을 배웠습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]과 통합되므로 훨씬 간편하게 예측용 Python 모델을 배포하고, 모델 재학습을 엔터프라이즈 데이터 워크플로의 일부로 통합할 수 있습니다.
 
 ## <a name="previous-step"></a>이전 단계
 
 [Python 모델 학습 및 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server의 Python 확장](../concepts/extension-python.md)

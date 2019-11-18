@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이그레이션 모니터링 및 문제 해결(Stretch Database) | Microsoft 문서
+title: 데이터 마이그레이션 모니터링 및 문제 해결
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136083"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843775"
 ---
-# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(Stretch Database)
+# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(스트레치 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 

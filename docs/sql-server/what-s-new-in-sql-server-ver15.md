@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593883"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844562"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -37,7 +37,7 @@ ms.locfileid: "73593883"
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-| 확장 가능한 빅 데이터 솔루션 | Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장 가능한 클러스터를 배포](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리<br/><br/> 고용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석<br/><br/>외부 데이터 원본 쿼리<br/><br/>SQL Server에서 관리하는 HDFS에 빅 데이터 저장<br/><br/>클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리<br/><br/> AI, 기계 학습 및 기타 분석 작업에 데이터 사용<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server 마스터 인스턴스는 Always On 가용성 그룹 기술을 사용하여 모든 데이터베이스에 대해 고가용성 및 재해 복구를 제공합니다.<br/>|
+| 확장 가능한 빅 데이터 솔루션 | Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장 가능한 클러스터를 배포](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리<br/><br/> 대용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석<br/><br/>외부 데이터 원본 쿼리<br/><br/>SQL Server에서 관리하는 HDFS에 빅 데이터 저장<br/><br/>클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리<br/><br/> AI, 기계 학습 및 기타 분석 작업에 데이터 사용<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server 마스터 인스턴스는 Always On 가용성 그룹 기술을 사용하여 모든 데이터베이스에 대해 고가용성 및 재해 복구를 제공합니다.<br/>|
 |PolyBase를 사용한 데이터 가상화 | 외부 테이블을 사용하여 외부 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본의 데이터를 쿼리하며, 이제 [UTF-8 인코딩을 지원](../relational-databases/collations/collation-and-unicode-support.md)합니다. 자세한 내용은 [PolyBase란?](../relational-databases/polybase/polybase-guide.md)을 참조하세요.|
 | &nbsp; | &nbsp; |
 
@@ -153,6 +153,7 @@ ms.locfileid: "73593883"
 |:---|:---|
 |보안 Enclave를 사용한 Always Encrypted|서버 쪽 보안 Enclave 내에서 일반 텍스트 데이터에 대한 계산을 사용하도록 설정하여 현재 위치의 암호화 및 다양한 계산을 사용하여 Always Encrypted 시에 확장합니다. 내부 암호화는 데이터베이스 외부로 데이터 이동을 방지하므로 암호화 작업(열 암호화, 열 회전 암호화 키 등)의 성능 및 안정성을 개선합니다.<br><br> 다양한 계산(패턴 일치 및 비교 연산)이 지원되면 중요한 데이터 보호를 요구하는 한편 Transact-SQL 쿼리에서 풍부한 기능을 필요로 하는 광범위한 시나리오와 애플리케이션에서 Always Encrypted를 사용할 수 있게 됩니다. [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.|
 |SQL Server 구성 관리자의 인증서 관리|[인증서 관리(SQL Server 구성 관리자)](../database-engine/configure-windows/manage-certificates.md)를 참조하세요.|
+|데이터 검색 및 분류|데이터 검색 및 분류는 데이터베이스의 중요한 데이터 분류, 레이블 지정 및 보호를 위해 SQL Server에 기본적으로 제공되는 고급 기능을 제공합니다. 가장 중요한 데이터(비즈니스, 재무, 보건, PII 등)를 분류하면 조직의 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.<ul><li>데이터 개인 정보 보호 표준 및 규정 준수 요구 사항 충족 지원</li><li>중요한 데이터에 대한 비정상적인 액세스 모니터링(감사) 및 경고와 같은 다양한 보안 시나리오</li><li>엔터프라이즈에서 중요한 데이터가 있는 위치를 보다 쉽게 파악할 수 있으므로 관리자는 데이터베이스를 보호하기 위한 적절한 단계를 수행할 수 있습니다.</li></ul>또한 [감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그에 `data_sensitivity_information`라는 새 필드를 포함하도록 개선되었습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. 자세한 내용과 예제는 [민감도 분류 추가](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>고가용성
@@ -226,14 +227,6 @@ ms.locfileid: "73593883"
 |Windows Server 장애 조치(Failover) 클러스터| Windows Server 장애 조치(Failover) 클러스터에서 Machine Learning Services 고가용성을 구성할 수 있습니다.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| 새로운 기능 또는 업데이트 | 세부 정보 |
-|:---|:---|
-|Azure SQL Database 관리되는 인스턴스 데이터베이스 지원| 관리형 인스턴스에서 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]를 호스팅합니다. [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)을 참조하세요.|
-|새 HTML 컨트롤| HTML 컨트롤은 이전의 모든 Silverlight 구성 요소를 대체합니다. Silverlight 종속성이 제거되었습니다.|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 이 릴리스에는 성능, 리소스 관리 및 클라이언트 지원에 대한 새로운 기능과 향상된 기능이 도입되었습니다.
@@ -246,6 +239,23 @@ ms.locfileid: "73593883"
 |리소스 거버넌스에 대한 속성 설정| 이 릴리스에는 리소스 관리를 위한 새 메모리 설정(Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit 및 OLAP\Query\RowsetSerializationLimit)이 포함되어 있습니다. 자세히 알아보려면 [메모리 설정](/analysis-services/server-properties/memory-properties)을 참조하세요.|
 |Power BI 캐시 새로 고침에 대한 거버넌스 설정 | 이 릴리스에는 Power BI 서비스의 라이브 연결 보고서 초기 로드에 대한 캐싱 대시보드 타일 데이터 및 보고서 데이터를 재정의하는 ClientCacheRefreshPolicy 속성이 도입되었습니다. 자세히 알아보려면 [일반 속성](/analysis-services/server-properties/general-properties)을 참조하세요. |
 | 온라인 연결  | 온라인 연결 기능은 온-프레미스 쿼리 스케일 아웃 환경에서 읽기 전용 복제본을 동기화하는 데 사용할 수 있습니다. 자세히 알아보려면 [온라인 연결](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+이 릴리스에는 파일 작업을 개선하기 위한 새로운 기능이 도입되었습니다.
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|유연한 파일 작업 |로컬 파일 시스템, Azure Blob Storage 및 Azure Data Lake Storage Gen2에서 파일 작업을 수행합니다. [유연한 파일 작업](../integration-services/control-flow/flexible-file-task.md)을 참조하세요.|
+|유연한 파일 원본 및 대상 |Azure Blob Storage 및 Azure Data Lake Storage Gen2에 대한 데이터를 읽고 씁니다. [유연한 파일 원본](../integration-services/data-flow/flexible-file-source.md) 및 [유연한 파일 대상](../integration-services/data-flow/flexible-file-destination.md)을 참조하세요. |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|Azure SQL Database 관리되는 인스턴스 데이터베이스 지원| 관리형 인스턴스에서 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]를 호스팅합니다. [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)을 참조하세요.|
+|새 HTML 컨트롤| HTML 컨트롤은 이전의 모든 Silverlight 구성 요소를 대체합니다. Silverlight 종속성이 제거되었습니다.|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services

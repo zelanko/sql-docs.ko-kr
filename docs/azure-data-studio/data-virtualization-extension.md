@@ -2,20 +2,20 @@
 title: 데이터 가상화 확장
 titleSuffix: Azure Data Studio
 description: Azure Data Studio용 데이터 가상화 확장
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532554"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801127"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio용 데이터 가상화 확장
 
@@ -70,13 +70,13 @@ Azure Data Studio용 데이터 가상화 확장은 PolyBase [외부 테이블 �
 
 ## <a name="release-notes-v0102"></a>릴리스 정보(v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 지원
-SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 데이터 클러스터 인스턴스에 연결하면 탐색기 트리에 새 _Data Services_ 폴더가 나타납니다. 이 폴더에는 연결에 대해 새 Notebook 열기, Spark 작업 제출, HDFS 사용 등의 작업을 위한 시작 지점이 있습니다. HDFS 파일/폴더에 대한 _외부 데이터 만들기_ 등의 일부 작업을 수행하려면 _SQL Server 2019 미리 보기_ 확장을 설치해야 합니다.
+SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 데이터 클러스터 인스턴스에 연결하면 탐색기 트리에 새 _Data Services_ 폴더가 나타납니다. 이 폴더에는 연결에 대해 새 Notebook 열기, Spark 작업 제출, HDFS 사용 등의 작업을 위한 시작 지점이 있습니다. HDFS 파일/폴더에 대한 _외부 데이터 만들기_ 등의 일부 작업을 수행하려면 _SQL Server 2019_ 확장을 설치해야 합니다.
 
 ### <a name="notebook-support"></a>Notebook 지원
 이 릴리스에서는 Notebook 사용자 인터페이스의 중요한 기능이 업데이트되었습니다. 이러한 업데이트는 사용자와 공유하는 Notebook을 쉽게 읽을 수 있도록 하는 데 중점을 두고 진행되었습니다. 즉, 선택하거나 가리키지 않으면 셀 주변의 모든 개요 상자가 제거되고, 셀을 선택하지 않고도 쉬운 셀 수준 작업을 수행하기 위한 가리키기 지원이 추가되고, 실행 횟수, 애니메이션 _실행 중지_ 단추 등을 추가하여 실행 상태를 명확히 나타냅니다. 또한 _새 Notebook_(`Ctrl+Shift+N`), _셀 실행_(`F5`), _새 코드 셀_(`Ctrl+Shift+C`), _새 텍스트 셀_(`Ctrl+Shift+T`)의 바로 가기 키도 추가했습니다. 앞으로 모든 주요 작업을 바로 가기로 실행할 수 있도록 할 예정이므로 놓치기 쉬운 작업이 있으면 알려주세요.
 
 기타 개선 사항 및 수정 내용은 다음과 같습니다.
-* 이제 _SQL Server 2019 미리 보기_ 확장에서 Python 종속성의 설치 디렉터리를 선택하라는 메시지를 사용자에게 표시합니다. 또한 `.vsix file`에 더 이상 Python이 포함되지 않으므로 전반적인 확장 크기가 줄어듭니다. Python 종속성은 Spark 및 Python3 커널을 지원합니다.
+* 이제 _SQL Server 2019_ 확장에서 Python 종속성의 설치 디렉터리를 선택하라는 메시지를 사용자에게 표시합니다. 또한 `.vsix file`에 더 이상 Python이 포함되지 않으므로 전반적인 확장 크기가 줄어듭니다. Python 종속성은 Spark 및 Python3 커널을 지원합니다.
 * 명령줄에서 새 Notebook을 시작할 수 있는 지원이 추가되었습니다. 인수 `--command=notebook.command.new --server=myservername`을 사용하여 시작하면 새 Notebook이 열리고 이 서버에 연결됩니다.
 * 셀에 길이가 긴 코드가 포함된 Notebook의 성능이 수정되었습니다. 코드 셀이 250줄을 초과하면 스크롤 막대가 추가됩니다.
 * .ipynb 파일 지원이 개선되었습니다. 이제 버전 3 이상이 지원됩니다. 저장 시 파일이 버전 4 이상으로 업데이트됩니다.

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 5c456a4693b32a1f66b021b1dc8767a02a447d06
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609634"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844261"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "69609634"
     |ft crawl bandwidth(min), [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A) 참조|0|32767|0|  
     |ft notify bandwidth(max), [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) 참조|0|32767|100|  
     |ft notify bandwidth(min), [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) 참조|0|32767|0|  
+    |[hadoop 연결](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)(RP)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
@@ -123,8 +124,7 @@ ms.locfileid: "69609634"
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, 구식)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop 및 Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
-    |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)(A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
     |[query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  

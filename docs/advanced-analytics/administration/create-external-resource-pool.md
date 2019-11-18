@@ -1,38 +1,39 @@
 ---
-title: Python 및 R에 대 한 리소스 풀 만들기
-description: SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 하기 위해 리소스 풀을 만들고 사용 하는 방법에 대해 알아봅니다.
+title: 리소스 풀 만들기
+description: SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8c48665c2928a0c8133892cc0029b4bd82c4cc
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714327"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727778"
 ---
-# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 리소스 풀 만들기
+# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 사용자 계정 풀 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 하기 위해 리소스 풀을 만들고 사용 하는 방법에 대해 알아봅니다. 
+SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다. 
 
-프로세스에는 여러 단계가 포함 됩니다.
+이 프로세스에는 여러 단계가 포함됩니다.
 
-1. 기존 리소스 풀의 상태를 검토 합니다. 기존 리소스를 사용 하는 서비스를 이해 하는 것이 중요 합니다.
-2. 서버 리소스 풀을 수정 합니다.
-3. 외부 프로세스에 대 한 새 리소스 풀을 만듭니다.
-4. 외부 스크립트 요청을 식별 하는 분류 함수를 만듭니다.
-5. 새 외부 리소스 풀이 지정 된 클라이언트 또는 계정에서 R 또는 Python 작업을 캡처링 하는지 확인 합니다.
+1. 기존 리소스 풀의 상태를 검토합니다. 기존 리소스를 사용하는 서비스를 이해하는 것이 중요합니다.
+2. 서버 리소스 풀을 수정합니다.
+3. 외부 프로세스에 대한 새 리소스 풀을 만듭니다.
+4. 외부 스크립트 요청을 식별하는 분류 함수를 만듭니다.
+5. 새 외부 리소스 풀이 지정된 클라이언트 또는 계정에서 R 또는 Python 작업을 캡처하고 있는지 확인합니다.
 
 <a name="bkmk_ReviewStatus"></a>
 
 ##  <a name="review-the-status-of-existing-resource-pools"></a>기존 리소스 풀의 상태 검토
   
-1.  다음 문을 사용 하 여 서버에 대 한 기본 풀에 할당 된 리소스를 확인 합니다.
+1.  다음과 같은 명령문을 사용하여 서버에 대한 기본 풀에 할당된 리소스를 확인합니다.
   
     ```sql
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
@@ -56,7 +57,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
     |-|-|-|-|-|-|
     |2|기본|100|20|0|2|
  
-3.  이러한 서버 기본 설정에서는 외부 런타임에서 대부분의 작업을 완료 하는 데 충분 한 리소스가 없을 수 있습니다. 이를 변경하려면 다음과 같이 서버 리소스 사용을 수정해야 합니다.
+3.  이러한 서버 기본 설정에서 외부 런타임은 대부분의 작업을 완료하기 위한 리소스가 부족합니다. 이를 변경하려면 다음과 같이 서버 리소스 사용을 수정해야 합니다.
   
     -   데이터베이스 엔진에서 사용할 수 있는 최대 컴퓨터 메모리를 줄입니다.
   
@@ -83,13 +84,13 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
     ```
   
     > [!NOTE]
-    >  이러한 설정으로 시작 하는 것이 좋습니다. 사용자 환경 및 워크 로드에 대 한 올바른 잔액을 확인 하려면 다른 서버 프로세스의 조명에서 기계 학습 작업을 평가 해야 합니다.
+    >  이러한 설정은 시작하는 제안된 설정일 뿐입니다. 다른 서버 프로세스에 비추어 기계 학습 작업을 평가하여 환경 및 워크로드에 맞는 균형을 확인해야 합니다.
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>사용자 정의 외부 리소스 풀 만들기
   
 1.  리소스 관리자의 구성 변경 내용은 서버 전체에 적용되고 서버에 대한 기본 풀을 사용하는 워크로드 및 외부 풀을 사용하는 워크로드에 영향을 줍니다.
   
-     따라서 우선 순위가 있는 워크로드를 보다 세부적으로 제어하려면 사용자 정의 외부 리소스 풀을 새로 만들 수 있습니다. 또한 분류 함수를 정의하고 외부 리소스 풀에 할당해야 합니다. **EXTERNAL** 키워드는 new입니다.
+     따라서 우선 순위가 있는 워크로드를 보다 세부적으로 제어하려면 사용자 정의 외부 리소스 풀을 새로 만들 수 있습니다. 또한 분류 함수를 정의하고 외부 리소스 풀에 할당해야 합니다. **EXTERNAL** 키워드가 새로 생성되었습니다.
   
      먼저 새 *사용자 정의 외부 리소스 풀*을 만듭니다. 다음 예제에서는 풀 이름이 **ds_ep**로 지정됩니다.
   
@@ -107,11 +108,11 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
   
      자세한 내용은 [리소스 관리자 워크로드 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md) 및 [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.
   
-## <a name="create-a-classification-function-for-machine-learning"></a>기계 학습에 대 한 분류 함수 만들기
+## <a name="create-a-classification-function-for-machine-learning"></a>기계 학습에 대한 분류 함수 만들기
   
 분류 함수는 들어오는 태스크를 검사하고 현재 리소스 풀을 사용하여 실행할 수 있는 태스크인지 확인합니다. 분류 함수의 조건을 충족하지 않는 태스크는 서버의 기본 리소스 풀에 다시 할당됩니다.
   
-1. 먼저 Resource Governor에서 분류자 함수를 사용 하 여 리소스 풀을 확인 하도록 지정 합니다. 분류자 함수에 대 한 자리 표시자로 **null** 을 할당할 수 있습니다.
+1. 리소스 Resource Governor가 리소스 풀을 확인하기 위해 분류자 함수를 사용해야 함을 지정하여 시작합니다. 분류자 함수의 자리 표시자로 **null**을 할당할 수 있습니다.
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -120,7 +121,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
   
      자세한 내용은 [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)를 참조하세요.
   
-2.  각 리소스 풀의 분류자 함수에서 리소스 풀에 할당 해야 하는 문의 형식 또는 들어오는 요청을 정의 합니다.
+2.  각 리소스 풀에 대한 분류자 함수에서 리소스 풀에 할당되어야 하는 명령문 또는 들어오는 요청의 유형을 정의합니다.
   
      예를 들어 다음 함수는 요청을 보낸 애플리케이션이 'Microsoft R Host' 또는 'RStudio'인 경우 사용자 정의 외부 리소스 풀에 할당된 스키마의 이름을 반환하고, 그렇지 않으면 기본 리소스 풀을 반환합니다.
   
@@ -148,13 +149,13 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>새 리소스 풀 및 선호도 확인
 
-변경 된 내용이 있는지 확인 하려면 다음 인스턴스 리소스 풀과 연결 된 각 작업 그룹에 대 한 서버 메모리와 CPU의 구성을 확인 해야 합니다.
+변경 내용이 있는지 확인하려면 다음 인스턴스 리소스 풀과 연결된 각 작업 그룹에 대한 서버 메모리와 CPU의 구성을 확인해야 합니다.
 
-+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 기본 풀
-+ 외부 프로세스에 대 한 기본 리소스 풀
-+ 외부 프로세스에 대 한 사용자 정의 풀
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대한 기본 풀
++ 외부 프로세스에 대한 기본 리소스 풀
++ 외부 프로세스에 대한 사용자 정의 풀
 
-1. 모든 작업 그룹을 보려면 다음 문을 실행 합니다.
+1. 모든 작업 그룹을 보려면 다음 명령문을 실행합니다.
 
     ```sql
     SELECT * FROM sys.resource_governor_workload_groups;
@@ -168,7 +169,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
     |2|기본|보통|25|0|0|0|0|2|2|
     |256|ds_wg|보통|25|0|0|0|0|2|256|
   
-2.  새 카탈로그 뷰 [resource_governor_external_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)을 사용 하 여 모든 외부 리소스 풀을 볼 수 있습니다.
+2.  새 카탈로그 보기인 [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)를 사용하여 모든 외부 리소스 풀을 봅니다.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -183,7 +184,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
   
      자세한 내용은 [리소스 관리자 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)를 참조하세요.
   
-3.  다음 문을 실행 하 여 외부 리소스 풀에 선호도가 설정 된 컴퓨터 리소스에 대 한 정보를 반환 합니다 (해당 하는 경우).
+3.  해당되는 경우 다음 명령문을 실행하여 외부 리소스 풀에 선호도가 설정된 컴퓨터 리소스에 대한 정보를 반환합니다.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
@@ -193,11 +194,11 @@ SQL Server Machine Learning Services에서 Python 및 R 워크 로드를 관리 
 
 ## <a name="next-steps"></a>다음 단계
 
-서버 리소스를 관리 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
+서버 리소스 관리에 대한 자세한 내용은 다음을 참조하세요.
 
 + [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Resource Governor 관련 된 동적 관리 &#40;뷰 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
-기계 학습에 대 한 리소스 관리의 개요는 다음을 참조 하세요.
+기계 학습을 위한 리소스 거버넌스에 대한 개요는 다음을 참조하세요.
 
-+ [SQL Server Machine Learning Services에서 Resource Governor를 사용 하 여 Python 및 R 워크 로드 관리](resource-governor.md)
++ [SQL Server Machine Learning Services에서 Resource Governor를 사용하여 Python 및 R 워크로드 관리](resource-governor.md)

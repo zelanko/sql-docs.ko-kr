@@ -15,12 +15,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a613f8842cc6f067261e941bab39858d1727bb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e86955f75593c27e18de12bbcaf5bb6b7cf88b6a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909861"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843535"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준 보기 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "72909861"
   
      현재 호환성 수준이 **호환성 수준** 목록 상자에 표시됩니다.  
   
-5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. 선택 항목은 **SQL Server 2008(100)** , **SQL Server 2012(110)** , **SQL Server 2014(120)** , **SQL Server 2016(130)** 및 **SQL Server 2017(140)** 입니다.  
+5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. 다른 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 버전에 사용할 수 있는 옵션은 [ALTER DATABASE 호환성 수준(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 페이지에 나열되어 있습니다.  
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

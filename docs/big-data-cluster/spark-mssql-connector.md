@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531605"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844224"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법
 
@@ -76,7 +76,7 @@ SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API
 
 ## <a name="run-the-sample-notebook"></a>샘플 Notebook 실행
 
-이 데이터와 함께 MSSQL Spark 커넥터를 사용하는 방법을 보여 주기 위해 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server 2019 미리 보기에서 Notebook을 사용하는 방법](notebooks-guidance.md)을 참조하세요.
+이 데이터와 함께 MSSQL Spark 커넥터를 사용하는 방법을 보여 주기 위해 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. Notebooks 사용 방법에 대한 자세한 내용은 [SQL Server에서 Notebooks를 사용하는 방법](notebooks-guidance.md)을 참조하세요.
 
 1. PowerShell 또는 bash 명령줄에서 다음 명령을 실행하여 **mssql_spark_connector.ipynb** 샘플 Notebook을 다운로드합니다.
 

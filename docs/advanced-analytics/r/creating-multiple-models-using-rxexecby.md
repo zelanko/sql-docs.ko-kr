@@ -1,56 +1,57 @@
 ---
 title: rxExecBy를 사용하여 여러 모델 만들기
-description: RevoScaleR 라이브러리의 rxExecBy 함수를 사용 하 여 SQL Server에 저장 된 컴퓨터 데이터에 대해 여러 개의 미니 모델을 빌드합니다.
+description: RevoScaleR 라이브러리의 rxExecBy 함수를 사용하여 SQL Server에 저장된 컴퓨터 데이터에 대해 여러 개의 미니 모델을 빌드합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b2e6e1d546b9bbd1b3b3196c37716acbbe0ae74
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: dbba63ae69997c9c5dbdccf49ec590b3f4eba652
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715716"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727487"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy를 사용하여 여러 모델 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-RevoScaleR의 **Rxexecby** 함수는 여러 관련 모델의 병렬 처리를 지원 합니다. 여러 유사한 엔터티의 데이터를 기반으로 하는 하나의 커다란 모델을 학습 하는 대신, 데이터 과학자는 단일 엔터티와 관련 된 데이터를 사용 하 여 여러 개의 관련 모델을 신속 하 게 만들 수 있습니다. 
+RevoScaleR의 **rxExecBy** 함수는 여러 관련 모델의 병렬 처리를 지원합니다. 데이터 과학자는 여러 비슷한 엔터티 데이터를 기준으로 하나의 대형 모델을 학습하는 대신 각각 단일 엔터티와 관련된 데이터를 사용하여 여러 개의 관련 모델을 빠르게 만들 수 있습니다. 
 
-예를 들어 장치 오류를 모니터링 하 고 다양 한 유형의 장비에 대 한 데이터를 캡처하는 경우를 가정 합니다. RxExecBy를 사용 하 여 단일 대량 데이터 집합을 입력으로 제공 하 고, 데이터 집합을 층 화 기준 하는 열 (예: 장치 유형)을 지정한 다음 개별 장치에 대해 여러 모델을 만들 수 있습니다.
+예를 들어 디바이스 오류를 모니터링하고, 여러 유형의 장비에 대해 데이터를 캡처한다고 가정해보세요. rxExecBy를 사용하면 하나의 큰 데이터 세트를 입력으로 제공하고, 디바이스 유형과 같이 데이터 세트를 계층화할 열을 지정한 후, 개별 디바이스에 대해 여러 모델을 만들 수 있습니다.
 
-이 사용 사례는 동시 처리를 위해 구성 요소 부분으로 복잡 한 문제를 분리 하므로 ["pleasingly parallel"](https://en.wikipedia.org/wiki/Embarrassingly_parallel) 이라고 합니다.
+이러한 사용 사례는 동시 처리를 위해 하나의 크고 복잡한 문제를 구성 요소 부분들로 세분화하기 때문에 ["기분 좋은 병렬화(pleasingly parallel)"](https://en.wikipedia.org/wiki/Embarrassingly_parallel)라고 부릅니다.
 
-이러한 접근 방식의 일반적인 응용 프로그램에는 개별 가계 스마트 미터에 대 한 예측, 개별 제품 라인에 대 한 수익 예측 만들기 또는 개별 은행 분기에 맞게 조정 된 대출 승인을 위한 모델 생성이 포함 됩니다.
+이러한 접근 방식이 적용되는 일반적인 사례에는 개별적인 가정용 스마트 측정기를 위한 예측, 개별 제품 라인을 위한 수익 예상 생성, 개별 은행 지점에 맞게 맞춤화된 대출 승인을 위한 모델 생성 등이 포함됩니다.
 
-## <a name="how-rxexec-works"></a>RxExec 작동 방법
+## <a name="how-rxexec-works"></a>rxExec 작동 방법
 
-RevoScaleR의 rxExecBy 함수는 많은 수의 작은 데이터 집합에 대 한 고용량 병렬 처리를 위해 설계 되었습니다.
+RevoScaleR의 rxExecBy 함수는 대량의 소규모 데이터 세트에 대한 대량 병렬 처리를 위해 디자인되었습니다.
 
-1. R 코드의 일부로 rxExecBy 함수를 호출 하 고 정렬 되지 않은 데이터의 데이터 집합을 전달 합니다.
-2. 데이터를 그룹화 하 고 정렬 하는 데 사용할 파티션을 지정 합니다.
-3. 각 데이터 파티션에 적용 해야 하는 변환 또는 모델링 함수를 정의 합니다.
-4. 함수가 실행 되 면 데이터 쿼리는 환경에서 지원 되는 경우 병렬로 처리 됩니다. 또한 모델링 또는 변환 태스크는 개별 코어 간에 분산 되 고 병렬로 실행 됩니다. 작업에 대해 지원 되는 계산 컨텍스트는 RxSpark 및 RxInSQLServer입니다.
-5. 여러 결과가 반환 됩니다.
+1. rxExecBy 함수를 R 코드의 일부로 호출하고 정렬되지 않은 데이터의 데이터 세트를 전달합니다.
+2. 데이터를 그룹화하고 정렬해야 하는 파티션을 지정합니다.
+3. 각 데이터 파티션에 적용되어야 하는 변환 또는 모델링 함수를 정의합니다.
+4. 함수가 실행되면 데이터 쿼리가 병렬로 처리됩니다(해당 환경에서 지원되는 경우). 또한 모델링 또는 변환 작업이 개별 코어 사이에 분포되고 병렬로 실행됩니다. 이러한 작업에 대해 지원되는 계산 컨텍스트에는 RxSpark 및 RxInSQLServer가 포함됩니다.
+5. 여러 결과가 반환됩니다.
 
-## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 구문 및 예제
+## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 구문 및 예
 
-**Rxexecby** 는 지정 된 **키** 열에서 분할 될 수 있는 데이터 집합 또는 데이터 원본 개체의 입력 중 하나인 4 개의 입력을 사용 합니다. 함수는 각 파티션에 대 한 출력을 반환 합니다. 출력 형식은 인수로 전달 되는 함수에 따라 달라 집니다. 예를 들어 rxLinMod와 같은 모델링 함수를 전달 하는 경우 데이터 집합의 각 파티션에 대해 별도의 학습 된 모델을 반환할 수 있습니다.
+**rxExecBy**에는 4개의 입력이 사용됩니다. 입력 중 하나는 데이터 세트 또는 데이터 원본 개체로 사용되며, 지정된 **키** 열로 분할될 수 있습니다. 이 함수는 각 파티션에 대해 출력을 반환합니다. 출력 형식은 인수로 전달된 함수에 따라 달라집니다. 예를 들어 rxLinMod와 같은 모델링 함수를 전달하는 경우, 데이터 세트의 각 파티션에 대해 개별적인 학습 모델을 반환할 수 있습니다.
 
 ### <a name="supported-functions"></a>지원되는 함수
 
-모델링: `rxLinMod` `rxLogit` ,,,`rxGlm``rxDtree`
+모델링: `rxLinMod`, `rxLogit`, `rxGlm`, `rxDtree`
 
-점수 매기기 `rxPredict`:,
+채점: `rxPredict`,
 
-변환 또는 분석:`rxCovCor`
+변환 또는 분석: `rxCovCor`
 
 ## <a name="example"></a>예제
 
-다음 예에서는 [DayOfWeek] 열에서 분할 된 항공편 데이터 집합을 사용 하 여 여러 모델을 만드는 방법을 보여 줍니다. 사용자 정의 함수 `delayFunc`는 rxexecby를 호출 하 여 각 파티션에 적용 됩니다. 이 함수는 월요일, 화요일 등에 대 한 별도의 모델을 만듭니다.
+다음 예제는 [DayOfWeek] 열로 분할된 항공사 데이터 세트를 사용하여 여러 모델을 생성하는 방법을 보여줍니다. 사용자 정의 함수 `delayFunc`는 rxExecBy를 호출하여 각 파티션에 적용됩니다. 이 함수는 월요일, 화요일 등에 대해 개별적으로 모델을 만듭니다.
 
 ```sql
 EXEC sp_execute_external_script
@@ -67,11 +68,11 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 ```
 
-오류가 발생 `varsToPartition is invalid`하면 키 열 이름을 올바르게 입력 했는지 확인 합니다. R 언어는 대/소문자를 구분 합니다.
+`varsToPartition is invalid` 오류가 발생하면 키 열의 이름이 올바르게 입력되었는지 확인합니다. R 언어는 대/소문자를 구분합니다.
 
-이 특정 예제는 SQL Server에 대해 최적화 되지 않으므로 많은 경우에서 SQL을 사용 하 여 데이터를 그룹화 하 여 성능을 향상 시킬 수 있습니다. 그러나 rxExecBy를 사용 하 여 R에서 병렬 작업을 만들 수 있습니다.
+이 특정 예제는 SQL Server용으로 최적화되지 않았으며, 많은 경우에 데이터를 그룹화하는 SQL을 사용하여 더 나은 성능을 얻을 수 있습니다. 하지만 rxExecBy를 사용하면 R에서 병렬 작업을 만들 수 있습니다.
 
-다음 예에서는 SQL Server를 계산 컨텍스트로 사용 하 여 R의 프로세스를 보여 줍니다.
+다음 예제는 SQL Server를 계산 컨텍스트로 사용하는 R에서의 프로세스를 보여줍니다.
 
 ```R
 sqlServerConnString <- "SERVER=hostname;DATABASE=TestDB;UID=DBUser;PWD=Password;"

@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 titleSuffix: SQL Server big data clusters
-description: Azure Data Studio에서 Spark 작업 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 을 제출 합니다.
+description: Azure Data Studio에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업을 제출합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccaa9fbb10359791eb1d07ef8392a11977ae31db
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3c7d346148d7967543e334af07d6f06402d72a0d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653333"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844246"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Azure Data Studio [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 Spark 작업 제출
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Azure Data Studio에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-빅 데이터 클러스터의 주요 시나리오 중 하나는 SQL Server 2019 미리 보기에 대한 Spark 작업을 제출하는 기능입니다. Spark 작업 제출 기능을 사용하면 SQL Server 2019 빅 데이터 클러스터를 참조하는 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
+빅 데이터 클러스터의 주요 시나리오 중 하나는 SQL Server에 대한 Spark 작업을 제출하는 기능입니다. Spark 작업 제출 기능을 사용하면 SQL Server 2019 빅 데이터 클러스터를 참조하는 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

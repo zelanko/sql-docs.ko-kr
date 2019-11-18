@@ -1,5 +1,5 @@
 ---
-title: Stretch에 데이터베이스 사용 마법사를 실행하여 시작 | Microsoft 문서
+title: Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136127"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843797"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68136127"
   
 1.  **확장할 테이블을 선택하세요.** 목록에서 테이블에 대한 행에 **전체 테이블** 을 클릭합니다. **스트레치할 행 선택** 대화 상자가 열립니다.  
   
-     ![날짜를 기준으로 필터 조건자 정의](../../sql-server/stretch-database/media/stretch-wizard-2a.png "날짜를 기준으로 필터 조건자 정의")  
+     ![날짜 기반 필터 조건자 정의](../../sql-server/stretch-database/media/stretch-wizard-2a.png "날짜 기반 필터 조건자 정의")  
   
 2.  **스트레치할 행 선택** 대화 상자에서 **행 선택**을 선택합니다.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68136127"
 
 필터 함수는 마법사를 완료한 경우에만 SQL Server에서 생성됩니다. 그때까지는 **테이블 선택** 페이지로 돌아가 필터 함수를 변경하거나 이름을 바꿀 수 있습니다.
 
-![필터 조건자를 정의한 후 테이블 선택 페이지](../../sql-server/stretch-database/media/stretch-wizard-2b.png "필터 조건자를 정의한 후 테이블 선택 페이지")
+![필터 조건자를 정의한 후 테이블 페이지 선택](../../sql-server/stretch-database/media/stretch-wizard-2b.png "필터 조건자를 정의한 후 테이블 페이지 선택")
 
 다른 유형의 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 다음 중 하나를 수행합니다.  
   

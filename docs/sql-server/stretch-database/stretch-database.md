@@ -1,5 +1,5 @@
 ---
-title: Stretch Database | Microsoft 문서
+title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f5830ab8196c699e5d7b851c7ac82c1056ca919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: bd061c463afc55ab103646dcd1e0cc5994f43ed1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091827"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844600"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68091827"
 
 로컬 서버에서 문제를 해결하거나 사용 가능한 네트워크 대역폭을 최대화하기 위해**데이터 마이그레이션을 일시 중지할 수 있습니다** .  
   
- ![Stretch Database 개요](../../sql-server/stretch-database/media/stretch-overview.png "Stretch Database 개요")  
+ ![Stretch 데이터베이스 개요](../../sql-server/stretch-database/media/stretch-overview.png "Stretch 데이터베이스 개요")  
   
 ## <a name="is-stretch-database-for-you"></a>Stretch Database의 대상 사용자  
  다음에 해당하는 경우 Stretch Database를 사용하여 요구 사항을 충족하고 문제를 해결할 수 있습니다.  
@@ -75,6 +76,6 @@ ms.locfileid: "68091827"
  **AdventureWorks 예제 데이터베이스를 사용하여 Stretch Database를 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/download/details.aspx?id=49502). 예제 데이터베이스를 SQL Server 2016 인스턴스로 복원한 후 예제 파일의 압축을 풀고 Stretch DB 폴더에서 Stretch DB Samples 파일을 엽니다. 이 파일의 스크립트를 실행하여 Stretch Database를 사용하도록 설정하기 전과 후에 데이터에 사용되는 공간을 확인하고, 데이터 마이그레이션 진행 상황을 추적하고, 데이터 마이그레이션 중에, 그리고 그 후에 계속해서 기존 데이터를 쿼리하고 새 데이터를 삽입할 수 있는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- **Stretch Database에 적합한 데이터베이스 및 테이블 식별.** SQL Server 2016 업그레이드 관리자를 다운로드하고 스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스의 후보 데이터베이스 및 테이블을 식별할 수 있습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
+ **Stretch Database에 적합한 데이터베이스 및 테이블 식별.** SQL Server 2016 업그레이드 관리자를 다운로드하고 스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스의 후보 데이터베이스 및 테이블을 식별할 수 있습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
   
   

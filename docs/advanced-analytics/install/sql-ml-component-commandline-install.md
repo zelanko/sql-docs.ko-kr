@@ -1,5 +1,5 @@
 ---
-title: R 및 Python 구성 요소용 명령 프롬프트 설치
+title: 명령 프롬프트에서 설치
 description: SQL Server 명령줄 설치 프로그램을 실행하여 SQL Server 데이터베이스 엔진 인스턴스에 R 언어 및 Python 통합을 추가합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c89d1a0fb08e61cd6d42ac66339ccc6aa5eeef5b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594362"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727584"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>명령줄에서 SQL Server 기계 학습 R 및 Python 구성 요소 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

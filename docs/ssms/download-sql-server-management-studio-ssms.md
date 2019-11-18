@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594322"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843743"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -44,7 +44,7 @@ SSMS는 무료입니다.
 
 SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.4를 설치하면 18.4로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.4를 설치해야 합니다.
 
-**버전 정보**
+### <a name="version-information"></a>버전 정보
 
 - 릴리스 번호: 18.4  
 - 빌드 번호: 15.0.18206.0  
@@ -57,7 +57,7 @@ SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하�
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
 > [!Note]
-> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [영어 버전 사이트](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 방문하세요. 영어 버전 사이트에서 [사용 가능한 언어](#available-languages)를 선택하여 다른 언어를 다운로드할 수 있습니다.
+> 영어가 아닌 언어 버전에서 이 페이지에 액세스하고 최신 콘텐츠를 보려는 경우 [영어 버전 사이트](https://aka.ms/downloadssmsusenglish)를 방문하세요. 영어 버전 사이트에서 [사용 가능한 언어](#available-languages)를 선택하여 다른 언어를 다운로드할 수 있습니다.
 
 ## <a name="available-languages"></a>사용 가능한 언어
 
@@ -114,7 +114,7 @@ SQL Server Management Studio 18.4:
 
 ## <a name="release-notes-ssms-184"></a>릴리스 정보(SSMS 18.4)
 
-이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-1831)가 있습니다.
+이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-184)가 있습니다.
 
 이 릴리스에 대한 자세한 내용은 [SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
 

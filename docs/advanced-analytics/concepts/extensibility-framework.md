@@ -1,5 +1,5 @@
 ---
-title: 외부 스크립트에 대한 확장성 아키텍처
+title: 확장성 아키텍처
 description: 이 문서에서는 SQL Server에서 R 또는 Python과 같은 외부 스크립트를 실행하기 위한 확장성 프레임워크의 아키텍처에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532717"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727684"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,35 +1,36 @@
 ---
-title: RevoScaleR rxDataStep을 사용 하 여 청크 분석 수행
-description: SQL Server에서 R 언어를 사용 하 여 분산 분석용 데이터를 청크 하는 방법에 대 한 자습서 연습입니다.
+title: RevoScaleR의 청킹 분석
+description: SQL Server에서 R 언어를 사용하여 분산 분석용 데이터를 청크하는 방법에 대한 자습서 연습입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed22020b162bfac9f35eb8328ea6409903191a4c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714891"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727239"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep을 사용 하 여 청크 분석 수행 (SQL Server 및 RevoScaleR 자습서)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>rxDataStep을 사용하여 청킹 분석 수행(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원에서는 SQL Server [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 사용 하는 방법에 대 한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 의 일부입니다.
+이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
 
-이 단원에서는 **Rxdatastep** 함수를 사용 하 여 전체 데이터 집합을 메모리에 로드 하 고 기존 R 처럼 한 번에 처리 하도록 하는 대신 데이터를 청크로 처리 합니다. **Rxdatastep** 함수는 데이터를 청크로 읽어 오고 각 데이터 청크에 대해 차례로 R 함수를 적용 한 다음 각 청크에 대 한 요약 결과를 공통 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 저장 합니다. 모든 데이터를 읽으면 결과가 결합 됩니다.
+이 단원에서는 기존 R에서처럼 전체 데이터 세트를 메모리로 로드하여 한 번에 처리할 필요 없이 **rxDataStep** 함수를 사용하여 데이터를 청크로 처리합니다. **rxDataStep** 함수는 데이터를 청크로 읽고 각 데이터 청크에 R 함수를 차례로 적용한 다음, 각 청크에 대한 요약 결과를 공통 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 저장합니다. 모든 데이터를 읽으면 결과가 결합됩니다.
 
 > [!TIP]
-> 이 단원에서는 R의 **테이블** 함수를 사용 하 여 대체 테이블을 계산 합니다. 이 예는 교육용 으로만 제공 됩니다. 
+> 이 단원에서는 R의 **table** 함수를 사용하여 대체 테이블을 계산합니다. 이 예는 교육용으로만 제공됩니다. 
 > 
-> 실제 데이터 집합을 표로 해야 하는 경우이 작업을 위해 최적화 된 **RevoScaleR**에서 **RxCrossTabs** 또는 **rxcube** 함수를 사용 하는 것이 좋습니다.
+> 실제 데이터 세트를 테이블 형식으로 표시해야 하는 경우 이러한 종류의 작업에 최적화된 **RevoScaleR**의 **rxCrossTabs** 또는 **rxCube** 함수를 사용하는 것이 좋습니다.
 
-## <a name="partition-data-by-values"></a>값으로 데이터 분할
+## <a name="partition-data-by-values"></a>값에 따라 데이터 분할
 
-1. 데이터의 각 청크에 R **테이블** 함수를 호출 하는 사용자 지정 r 함수를 만들고 새 함수 **processchunk**이름을 지정 합니다.
+1. 데이터의 각 청크에서 **table** 함수를 호출하는 사용자 지정 R 함수를 만들고 새 함수의 이름을 **ProcessChunk**로 지정합니다.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -54,7 +55,7 @@ ms.locfileid: "68714891"
     rxSetComputeContext(sqlCompute)
     ```
   
-3. 처리 중인 데이터를 보관할 SQL Server 데이터 원본을 정의 합니다. 먼저 SQL 쿼리를 변수에 할당합니다. 그런 다음 새 SQL Server 데이터 원본의 *sqlQuery* 인수에서 해당 변수를 사용 합니다.
+3. 처리 중인 데이터를 저장할 SQL Server 데이터 원본을 정의합니다. 먼저 SQL 쿼리를 변수에 할당합니다. 그런 다음, 새 SQL Server 데이터 원본의 *sqlQuery* 인수에서 해당 변수를 사용합니다.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -65,9 +66,9 @@ ms.locfileid: "68714891"
             levels = as.character(1:7))))
     ```
 
-4. 필요에 따라이 데이터 원본에서 **Rxgetvarinfo** 를 실행할 수 있습니다. 이 시점에는 단일 열이 포함 되어 있습니다. *Var 1: DayOfWeek, Type: factor, 사용할 수 있는 요소 수준 없음*
+4. 필요에 따라 이 데이터 원본에서 **rxGetVarInfo**를 실행할 수 있습니다. 이 때 단일 열이 포함됩니다. *Var 1: DayOfWeek, Type: factor, no factor levels available*
      
-5. 이 요소 변수를 원본 데이터에 적용하기 전에 중간 결과를 저장할 별도의 테이블을 만듭니다. **RxSqlServerData** 함수를 사용 하 여 데이터를 정의 하 고 같은 이름의 기존 테이블을 모두 삭제 합니다.
+5. 이 요소 변수를 원본 데이터에 적용하기 전에 중간 결과를 저장할 별도의 테이블을 만듭니다. 다시 **RxSqlServerData** 함수를 사용하여 데이터를 정의하고 같은 이름의 모든 기존 테이블을 삭제합니다.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -75,13 +76,13 @@ ms.locfileid: "68714891"
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  사용자 지정 함수 **Processchunk** 를 호출 하 여 데이터를 읽을 때 **Rxdatastep** 함수의 *transformFunc* 인수로 사용 하 여 변환 합니다.
+7.  **rxDataStep** 함수에 대한 *transformFunc* 인수로 사용자 지정 함수 **ProcessChunk** 함수를 사용해 이 함수를 호출하여 읽은 데이터를 변환합니다.
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  **Processchunk**의 중간 결과를 보려면 **rximport** 의 결과를 변수에 할당 한 다음 결과를 콘솔에 출력 합니다.
+8.  **ProcessChunk**의 중간 결과를 보려면 **rxImport**의 결과를 변수에 할당한 다음, 결과를 콘솔에 출력합니다.
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -108,7 +109,7 @@ ms.locfileid: "68714891"
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 중간 결과 테이블을 제거 하려면 **rxSqlServerDropTable**를 호출 합니다.
+10. 중간 결과 테이블을 제거하려면 **rxSqlServerDropTable**을 호출합니다.
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

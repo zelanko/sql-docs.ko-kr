@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589750"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729923"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,7 +106,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    [ORDER (column [,...n] ) ] -- in preview
+    [ORDER (column [,...n] ) ]  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 
@@ -296,7 +296,9 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="GenRemarks"></a> 일반적인 주의 사항  
- 임시 테이블에 대한 columnstore 인덱스를 만들 수 있습니다. 테이블이 삭제되거나 세션이 종료되면 인덱스도 삭제됩니다.  
+임시 테이블에 대한 columnstore 인덱스를 만들 수 있습니다. 테이블이 삭제되거나 세션이 종료되면 인덱스도 삭제됩니다.  
+
+정렬된 클러스터형 columnstore 인덱스는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
  
 ## <a name="filtered-indexes"></a>필터링된 인덱스  
 필터링된 인덱스는 테이블에서 적은 비율의 행을 선택하는 쿼리에 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 데이터를 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 쿼리 성능을 개선하고 스토리지 비용과 유지 관리 비용을 줄일 수 있습니다.  
