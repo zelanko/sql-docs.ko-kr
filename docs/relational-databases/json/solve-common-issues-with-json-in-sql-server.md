@@ -1,6 +1,5 @@
 ---
-title: SQL Server에서 JSON으로 일반적인 문제 해결 | Microsoft 문서
-ms.custom: ''
+title: SQL Server에서 JSON으로 일반적인 문제 해결
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131456"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096109"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  선택적인 두 번째 매개 변수가 없는 JSON_QUERY는 첫 번째 인수만 결과로 반환합니다. JSON_QUERY는 항상 유효한 JSON을 반환하므로 FOR JSON은 이 결과가 이스케이프되지 않아야 한다는 것을 알고 있습니다.
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 절로 생성된 JSON은 FOR JSON 출력에서 이스케이프됨  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 절로 생성된 JSON은 FOR JSON 출력에서 이스케이프됨  
  **질문.** FOR JSON 및 WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 열 식을 포맷하려고 합니다.  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>JSON_VALUE 대신 OPENJSON을 사용하여 긴 텍스트 값 반환
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>JSON_VALUE 대신 OPENJSON을 사용하여 긴 텍스트 값 반환
  **질문.** 긴 텍스트를 포함하는 JSON 텍스트에 설명 키가 있습니다. `JSON_VALUE(@json, '$.description')` 이(가) 값 대신 NULL을 반환합니다.  
   
  **대답.** JSON_VALUE는 작은 스칼라 값을 반환하도록 설계되었습니다. 일반적으로 함수는 오버플로 오류가 아닌 NULL을 반환합니다. 긴 값을 반환하려면 다음 예제에서와 같이 NVARCHAR(MAX) 값을 지원하는 OPENJSON을 사용하십시오.  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>JSON_VALUE 대신 OPENJSON을 사용하여 중복 키 처리
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>JSON_VALUE 대신 OPENJSON을 사용하여 중복 키 처리
  **질문.** JSON 텍스트에 중복 키가 있습니다. JSON_VALUE는 경로에서 발견된 첫 번째 키만 반환합니다. 동일한 이름을 가진 모든 키를 어떻게 반환해야 하나요?  
   
  **대답.** 기본 제공 JSON 스칼라 함수는 참조된 개체의 첫 번째 일치 항목만 반환합니다. 다음 예제에서 보이는 것과 같이 둘 이상의 키가 필요한 경우 OPENJSON 테이블 반환 함수를 사용하십시오.  

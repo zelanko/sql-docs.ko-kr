@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049974"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982031"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  만들 수 있는 최대 감사 파일 수를 지정합니다. 이 제한에 도달하는 경우 첫 파일로 롤오버하지 않습니다. MAX_FILES 제한에 도달하면 추가 감사 이벤트를 생성하는 동작이 실패하며 오류가 발생합니다.  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  이 옵션은 디스크의 파일을 MAXSIZE 값으로 미리 할당하며, MAXSIZE가 UNLIMITED가 아닌 경우에만 적용됩니다. 기본값은 OFF입니다.  
@@ -111,7 +111,7 @@ SHUTDOWN
   
  FAIL_OPERATION  
  감사된 이벤트를 발생시키는 데이터베이스 동작이 실패합니다. 감사된 이벤트를 발생시키지 않는 동작은 계속할 수 있지만 감사된 이벤트는 발생할 수 없습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 모든 권한을 얻는 것보다 전체 감사를 유지 관리하는 것이 더 중요하면 이 옵션을 사용하십시오.  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지   
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상   
   
  STATE **=** { ON | OFF }  
  레코드 수집에서 감사를 설정하거나 해제합니다. 실행 중인 감사의 상태를 ON에서 OFF로 변경하면 감사가 중지되었다는 감사 항목, 감사를 중지한 보안 주체 및 감사가 중지된 시간이 생성됩니다.  
@@ -121,19 +121,19 @@ SHUTDOWN
   
  predicate_expression  
  이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  event_field_name  
  조건자 원본을 식별하는 이벤트 필드의 이름입니다. 감사 필드는 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)에 설명되어 있습니다. `file_name` 및 `audit_file_offset`을 제외한 모든 필드를 감사할 수 있습니다.  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  number  
  **decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  ' string '  
  조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 ## <a name="remarks"></a>Remarks  
  ALTER AUDIT를 호출할 때는 TO, WITH 또는 MODIFY NAME 절 중 하나 이상을 지정해야 합니다.  

@@ -22,12 +22,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702759"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982506"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|트리거|비활성화된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|트리거|NOT FOR REPLICATION으로 정의된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|트리거|UPDATE 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 프로시저는 기본적으로 컴파일됩니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 프로시저는 기본적으로 컴파일됩니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |HasAfterTrigger|테이블, 뷰|테이블이나 뷰에 AFTER 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|테이블, 뷰|테이블이나 뷰에 DELETE 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|테이블, 뷰|테이블이나 뷰에 INSERT 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -87,7 +87,7 @@ OBJECTPROPERTY ( id , property )
 |IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 테이블, [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거, 뷰|테이블에 대한 ANSI NULLS 옵션 설정을 ON으로 지정합니다. 이는 Null 값에 대한 모든 비교가 UNKNOWN으로 계산된다는 의미입니다. 이 설정은 테이블이 존재하는 한 계산 열과 제약 조건을 포함하여 테이블 정의 내의 모든 식에 적용됩니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsCheckCnst|임의의 스키마 범위 개체|CHECK 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsConstraint|임의의 스키마 범위 개체|열 또는 테이블에 대한 단일 열 CHECK, DEFAULT 또는 FOREIGN KEY 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsDefault|임의의 스키마 범위 개체|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 바운드 기본값입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsDefault|임의의 스키마 범위 개체|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 바운드 기본값입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|임의의 스키마 범위 개체|DEFAULT 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|함수, 뷰|함수 또는 뷰의 결정성 속성입니다.<br /><br /> 1 = 결정적<br /><br /> 0 = 비결정적|  
 |IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 테이블, [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거, 뷰|모듈 문의 원본 텍스트가 난독 처리된 형식으로 변환되었음을 나타냅니다. 난독 처리된 출력은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 난독 처리된 텍스트를 검색할 수 없습니다. 그러나 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 사용자는 난독 처리된 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 원래 프로시저를 검색할 수 있습니다.<br /><br /> 1 = 암호화됨<br /><br /> 0 = 암호화되지 않음<br /><br /> 기본 데이터 형식: **int**|  
@@ -118,17 +118,17 @@ OBJECTPROPERTY ( id , property )
 |SchemaId|임의의 스키마 범위 개체| 개체가 속한 스키마의 스키마 ID입니다.| 
 |TableDeleteTrigger|Table|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableDeleteTriggerCount|Table|테이블에 지정된 개수의 DELETE 트리거가 있습니다.<br /><br /> >0 = DELETE 트리거의 수입니다.|  
-|TableFullTextMergeStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블에 현재 병합 중인 전체 텍스트 인덱스가 있는지를 나타냅니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없거나 병합 중인 전체 텍스트 인덱스가 없습니다.<br /><br /> 1 = 전체 텍스트 인덱스가 병합 중입니다.|  
-|TableFullTextBackgroundUpdateIndexOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블이 활성화된 전체 텍스트 백그라운드 업데이트 인덱스(자동 변경 추적)를 가집니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextCatalogId|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0이 아닌 값 = 전체 텍스트 인덱싱된 테이블의 행을 식별하는 고유 인덱스와 연결된 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
-|TableFulltextChangeTrackingOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 변경 내용 추적이 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 또는 수동 변경 내용 추적 채우기가 시작된 이후에 삽입 또는 업데이트 작업으로 처리된 문서의 수입니다. B) 백그라운드 업데이트 인덱스 채우기로 변경 내용 추적이 활성화되고 전체 텍스트 인덱스 스키마가 변경되고 전체 텍스트 카탈로그 다시 작성되고 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 다시 시작된 이후에 삽입 또는 업데이트 작업에 의해 처리된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 이 속성은 삭제된 행을 모니터링하거나 세지 않습니다.|  
-|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 검색이 인덱싱하지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기가 시작된 이후에 인덱싱되지 않은 문서의 수입니다. B) 백그라운드 업데이트 인덱스가 지정된 변경 내용 추적에서 채우기가 시작 또는 다시 시작된 이후에 인덱싱되지 않은 행의 수입니다. 그 원인은 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등이 될 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
-|TableFulltextItemCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 성공적으로 전체 텍스트 인덱싱된 행의 수입니다.|  
-|TableFulltextKeyColumn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱스 정의에 사용되는 단일 열의 고유 인덱스와 관련된 열의 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
-|TableFulltextPendingChanges|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 처리할 보류 중인 변경 내용 추적 항목의 수입니다.<br /><br /> 0 = 변경 내용 추적이 활성화되지 않았습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
-|TableFulltextPopulateStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 유휴 상태<br /><br /> 1 = 전체 채우기가 진행 중입니다.<br /><br /> 2 = 증분 채우기가 진행 중입니다.<br /><br /> 3 = 추적된 변경 내용의 전파가 진행 중입니다.<br /><br /> 4 = 변경 내용 자동 추적과 같은 백그라운드 업데이트 인덱스가 진행 중입니다.<br /><br /> 5 = 전체 텍스트 인덱싱이 정체 또는 일시 중지되었습니다.|  
-|TableHasActiveFulltextIndex|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블에 활성 전체 텍스트 인덱스가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableFullTextMergeStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블에 현재 병합 중인 전체 텍스트 인덱스가 있는지를 나타냅니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없거나 병합 중인 전체 텍스트 인덱스가 없습니다.<br /><br /> 1 = 전체 텍스트 인덱스가 병합 중입니다.|  
+|TableFullTextBackgroundUpdateIndexOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블이 활성화된 전체 텍스트 백그라운드 업데이트 인덱스(자동 변경 추적)를 가집니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextCatalogId|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블의 전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0이 아닌 값 = 전체 텍스트 인덱싱된 테이블의 행을 식별하는 고유 인덱스와 연결된 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
+|TableFulltextChangeTrackingOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블의 전체 텍스트 변경 내용 추적이 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 또는 수동 변경 내용 추적 채우기가 시작된 이후에 삽입 또는 업데이트 작업으로 처리된 문서의 수입니다. B) 백그라운드 업데이트 인덱스 채우기로 변경 내용 추적이 활성화되고 전체 텍스트 인덱스 스키마가 변경되고 전체 텍스트 카탈로그 다시 작성되고 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 다시 시작된 이후에 삽입 또는 업데이트 작업에 의해 처리된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 이 속성은 삭제된 행을 모니터링하거나 세지 않습니다.|  
+|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 검색이 인덱싱하지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기가 시작된 이후에 인덱싱되지 않은 문서의 수입니다. B) 백그라운드 업데이트 인덱스가 지정된 변경 내용 추적에서 채우기가 시작 또는 다시 시작된 이후에 인덱싱되지 않은 행의 수입니다. 그 원인은 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등이 될 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
+|TableFulltextItemCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 성공적으로 전체 텍스트 인덱싱된 행의 수입니다.|  
+|TableFulltextKeyColumn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 인덱스 정의에 사용되는 단일 열의 고유 인덱스와 관련된 열의 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
+|TableFulltextPendingChanges|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 처리할 보류 중인 변경 내용 추적 항목의 수입니다.<br /><br /> 0 = 변경 내용 추적이 활성화되지 않았습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
+|TableFulltextPopulateStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 0 = 유휴 상태<br /><br /> 1 = 전체 채우기가 진행 중입니다.<br /><br /> 2 = 증분 채우기가 진행 중입니다.<br /><br /> 3 = 추적된 변경 내용의 전파가 진행 중입니다.<br /><br /> 4 = 변경 내용 자동 추적과 같은 백그라운드 업데이트 인덱스가 진행 중입니다.<br /><br /> 5 = 전체 텍스트 인덱싱이 정체 또는 일시 중지되었습니다.|  
+|TableHasActiveFulltextIndex|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블에 활성 전체 텍스트 인덱스가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasCheckCnst|Table|테이블에 CHECK 제약 조건이 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasClustIndex|Table|테이블에 클러스터형 인덱스가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasDefaultCnst|Table|테이블에 DEFAULT 제약 조건이 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -150,13 +150,13 @@ OBJECTPROPERTY ( id , property )
 |TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수.|  
 |TableIsFake|Table|실제 테이블이 아닙니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 요청이 있을 때 내부적으로 구체화됩니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|Table|**bcp** 또는 BULK INSERT 작업으로 인해 테이블이 잠깁니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Table|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블이 메모리 액세스에 최적화된 테이블임<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**<br /><br /> 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.|  
+|TableIsMemoryOptimized|Table|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 테이블이 메모리 액세스에 최적화된 테이블임<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**<br /><br /> 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.|  
 |TableIsPinned|Table|테이블이 데이터 캐시에 보유되도록 고정됩니다.<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서는 이 기능이 지원되지 않습니다.|  
 |TableTextInRowLimit|Table|text in row에 최대 바이트가 허용됩니다.<br /><br /> text in row 옵션을 설정하지 않으면 0입니다.|  
 |TableUpdateTrigger|Table|테이블에 UPDATE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableUpdateTriggerCount|Table|테이블에 지정된 개수의 UPDATE 트리거가 있습니다.<br /><br /> > 0 = UPDATE 트리거의 수.|  
 |TableHasColumnSet|Table|테이블에 열 집합이 있습니다.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|  
-|TableTemporalType|Table|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 형식을 지정합니다.<br /><br /> 0 = 비임시 테이블<br /><br /> 1 = 시스템 버전 테이블에 대한 기록 테이블<br /><br /> 2 = 시스템 버전 임시 테이블|  
+|TableTemporalType|Table|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 테이블의 형식을 지정합니다.<br /><br /> 0 = 비임시 테이블<br /><br /> 1 = 시스템 버전 테이블에 대한 기록 테이블<br /><br /> 2 = 시스템 버전 임시 테이블|  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

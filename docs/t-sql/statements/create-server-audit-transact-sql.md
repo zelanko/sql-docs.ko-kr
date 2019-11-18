@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117140"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982995"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  현재 파일 외에 파일 시스템에 보관할 최대 파일 수를 지정합니다. *MAX_ROLLOVER_FILES* 값은 정수 또는 UNLIMITED여야 합니다. 기본값은 UNLIMITED입니다. 이 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 다시 시작되거나 감사가 해제된 후 다시 활성화되어 감사가 다시 시작될 때마다 평가되거나 MAXSIZE에 도달하여 새 파일이 필요할 때 평가됩니다. *MAX_ROLLOVER_FILES*가 평가될 때 파일 수가 *MAX_ROLLOVER_FILES* 설정을 초과하면 가장 오래된 파일부터 삭제됩니다. 따라서 *MAX_ROLLOVER_FILES* 설정이 0이면 *MAX_ROLLOVER_FILES* 설정이 평가될 때마다 새 파일이 만들어집니다. *MAX_ROLLOVER_FILES* 설정이 평가될 때 파일이 한 개만 자동으로 삭제되므로 *MAX_ROLLOVER_FILES*의 값이 감소될 때 파일 수는 오래된 파일을 수동으로 삭제하지 않는 한 줄어들지 않습니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
  MAX_FILES =*integer*  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  만들 수 있는 최대 감사 파일 수를 지정합니다. 이 제한에 도달하는 경우 첫 파일로 롤오버하지 않습니다. MAX_FILES 제한에 도달하면 추가 감사 이벤트를 생성하는 동작이 실패하며 오류가 발생합니다.  
   
@@ -110,18 +110,18 @@ SHUTDOWN
   
  FAIL_OPERATION  
  감사된 이벤트를 발생시키는 데이터베이스 동작이 실패합니다. 감사된 이벤트를 발생시키지 않는 동작은 계속할 수 있지만 감사된 이벤트는 발생할 수 없습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 모든 권한을 얻는 것보다 전체 감사를 유지 관리하는 것이 더 중요하면 이 옵션을 사용하십시오.  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
  AUDIT_GUID =*uniqueidentifier*  
  데이터베이스 미러링과 같은 시나리오를 지원하려면 미러된 데이터베이스에서 찾은 GUID와 일치하는 특정 GUID가 감사에 필요합니다. 감사가 만들어진 후에는 이 GUID를 수정할 수 없습니다.  
   
  predicate_expression  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.  
   
  event_field_name  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  조건자 원본을 식별하는 이벤트 필드의 이름입니다. 감사 필드는 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)에 설명되어 있습니다. `file_name`, `audit_file_offset` 및 `event_time`을 제외한 모든 필드를 필터링할 수 있습니다.  
 
@@ -136,12 +136,12 @@ SHUTDOWN
 
 
  number  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  **decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
   
  ' string '  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.  
   

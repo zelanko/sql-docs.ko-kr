@@ -1,5 +1,6 @@
 ---
-title: 변경 데이터 작업(SQL Server) | Microsoft 문서
+title: 변경 데이터 작업
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d08ef02a81832ad532e184d6cae79d7fd03119a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006050"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095409"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

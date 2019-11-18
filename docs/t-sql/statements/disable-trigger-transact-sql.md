@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064578"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982975"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  DDL 트리거의 경우 데이터베이스 범위에서 실행하도록 *trigger_name*을 만들거나 수정했음을 나타냅니다.  
   
  ALL SERVER  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  DDL 트리거의 경우 서버 범위에서 실행하도록 *trigger_name*을 만들거나 수정했음을 나타냅니다. ALL SERVER는 로그온 트리거에도 적용됩니다.  
   

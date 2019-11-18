@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383830"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982577"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  새 동의어의 이름입니다.  
   
  *server_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  기준 개체가 있는 서버의 이름입니다.  
   
@@ -117,7 +117,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>1. 로컬 개체의 동의어 만들기  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>1\. 로컬 개체의 동의어 만들기  
  다음 예에서는 먼저 `Product` 데이터베이스의 기준 개체인 `AdventureWorks2012`에 대한 동의어를 만든 다음 동의어를 사용하여 쿼리합니다.  
   
 ```  
@@ -147,10 +147,10 @@ GO
  (4 row(s) affected)
 ``` 
   
-### <a name="b-creating-a-synonym-to-remote-object"></a>2. 원격 개체의 동의어 만들기  
+### <a name="b-creating-a-synonym-to-remote-object"></a>2\. 원격 개체의 동의어 만들기  
  다음 예에서 기준 개체인 `Contact`는 원격 서버인 `Server_Remote`에 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155665"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983323"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -149,12 +149,12 @@ AS { sql_statement
  현재 데이터베이스에 DDL 트리거의 해당 범위를 적용합니다. 지정하면 현재 데이터베이스에서 *event_type* 또는 *event_group*이 발생할 때마다 트리거가 실행됩니다.  
   
  ALL SERVER  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  현재 서버에 DDL 또는 LOGON 트리거의 범위를 적용합니다. 지정하면 현재 서버의 어디에서든 *event_type* 또는 *event_group*이 발생할 때마다 트리거가 실행됩니다.  
   
  WITH ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  ALTER TRIGGER 문의 텍스트가 포함된 sys.syscommentssys.sql_modules 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 트리거가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시되지 않도록 방지할 수 있습니다. CLR 트리거에 대해서는 WITH ENCRYPTION을 지정할 수 없습니다.  
   
@@ -202,7 +202,7 @@ AS { sql_statement
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 미리 정의된 그룹 이름입니다. *event_group*에 속한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트가 실행된 후에 DDL 트리거가 실행됩니다. DDL 트리거에 유효한 이벤트 그룹은 [DDL 이벤트 그룹](../../relational-databases/triggers/ddl-event-groups.md)에 나열되어 있습니다. ALTER TRIGGER 실행이 끝난 후, *event_group*은 처리할 이벤트 유형을 sys.trigger_events 카탈로그 뷰에 추가하여 매크로로 작동합니다.  
   
  NOT FOR REPLICATION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  복제 에이전트가 트리거와 연관된 테이블을 수정할 때 트리거를 실행할 수 없음을 나타냅니다.  
   
@@ -212,7 +212,7 @@ AS { sql_statement
  메모리 최적화 테이블의 트리거의 경우, 최상위 수준에서 허용되는 *sql_statement*는 ATOMIC 블록뿐입니다. ATOMIC 블록 내에서 허용되는 T-SQL은 네이티브 프로시저 내에서 허용되는 T-SQL로 제한됩니다.  
   
  EXTERNAL NAME \<method_specifier>  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  트리거와 바인딩할 어셈블리의 메서드를 지정합니다. 이 메서드는 인수가 없어야 하며 void를 반환해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. 클래스는 중첩 클래스일 수 없습니다.  
   

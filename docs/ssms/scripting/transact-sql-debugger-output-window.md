@@ -1,10 +1,8 @@
 ---
-title: 출력 창 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 출력 창
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Output Window [Transact-SQL]
@@ -12,17 +10,24 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cf13eff7a158e73811189523db4397b8731616d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2688432d81793cf4b4388283910e35811650ef0c
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253503"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119261"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 디버거 - 출력 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 창에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다양한 기능에 대한 상태 메시지가 표시됩니다. **디버거, 외부 도구 기능 또는 디버거** 명령 창 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 실행되는 명령의 출력은 **출력**창의 특수 창으로 전달됩니다 일반적으로 명령 프롬프트 창에 표시되는 .bat 파일이나 .com 파일과 같은 외부 도구의 출력도 확인할 수 있습니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+이 창에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다양한 기능에 대한 상태 메시지가 표시됩니다. **디버거, 외부 도구 기능 또는 디버거** 명령 창 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 실행되는 명령의 출력은 **출력**창의 특수 창으로 전달됩니다 일반적으로 명령 프롬프트 창에 표시되는 .bat 파일이나 .com 파일과 같은 외부 도구의 출력도 확인할 수 있습니다.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
  **출력 창에 액세스하려면**  
   

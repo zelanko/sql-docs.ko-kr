@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948320"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981700"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  지정된 열의 값이 오름차순으로 정렬되는지 내림차순으로 정렬되는지를 지정합니다. ASC가 기본 정렬 순서입니다. Null 값은 가능한 가장 작은 값으로 취급됩니다.  
   
  ROWS | RANGE  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  파티션 내의 시작점 및 끝점을 지정하여 파티션 내의 행을 추가로 제한합니다. 이 작업은 논리적 연결이나 물리적 연결을 통해 현재 행을 기준으로 한 행 범위를 지정하여 수행됩니다. 물리적 연결은 ROWS 절을 사용하여 수행됩니다.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS 또는 RANGE에는 ORDER BY 절을 지정해야 합니다. ORDER BY에 여러 개의 순서 식이 포함되어 있는 경우 CURRENT ROW FOR RANGE는 현재 행을 확인할 때 ORDER BY 목록의 모든 열을 고려합니다.  
   
  UNBOUNDED PRECEDING  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  창이 파티션의 첫 번째 행에서 시작되도록 지정합니다. UNBOUNDED PRECEDING은 창 시작 지점으로만 지정할 수 있습니다.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification>과 함께 지정되어 현재 행 앞의 행 또는 값 수를 나타냅니다. RANGE에는 이 인수를 지정할 수 없습니다.  
   
  CURRENT ROW  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  창이 현재 행(ROWS와 함께 사용될 경우) 또는 현재 값(RANGE와 함께 사용될 경우)에서 시작되거나 끝나도록 지정합니다. CURRENT ROW는 시작 지점 및 끝 지점 모두로 지정할 수 있습니다.  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  ROWS 또는 RANGE와 함께 사용되어 창의 하한(시작) 및 상한(끝) 지점을 지정합니다. \<window frame bound>는 경계 시작 지점을 정의하고 \<window frame bound>는 경계 끝 지점을 정의합니다. 상한은 하한보다 작을 수 없습니다.  
   
  UNBOUNDED FOLLOWING  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  창이 파티션의 마지막 행에서 끝나도록 지정합니다. UNBOUNDED FOLLOWING은 창 끝 지점으로만 지정할 수 있습니다. 예를 들어 RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING은 현재 행에서 시작하고 파티션의 마지막 행에서 끝나는 창을 정의합니다.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification>과 함께 지정되어 현재 행 다음의 행 또는 값 수를 나타냅니다. \<unsigned value specification> FOLLOWING이 창 시작 지점으로 지정된 경우 끝 지점은 \<unsigned value specification>FOLLOWING이어야 합니다. 예를 들어 ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING은 현재 행 다음의 두 번째 행에서 시작하고 현재 행 다음의 열 번째 행에서 끝나는 창을 정의합니다. RANGE에는 이 인수를 지정할 수 없습니다.  
   
  부호 없는 정수 리터럴  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  현재 행 이전 또는 다음의 행 또는 값 수를 지정하는 양의 정수 리터럴(0 포함)입니다. 이 인수는 ROWS에만 지정할 수 있습니다.  
   
@@ -188,7 +188,7 @@ ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window fra
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>1\. OVER 절에 ROW_NUMBER 함수 사용  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>1\. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예에서는 OVER 절에 ROW_NUMBER 함수를 사용하여 파티션 내의 각 행에 대한 행 번호를 표시하는 방법을 보여 줍니다. OVER 절에 지정된 ORDER BY 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. SELECT 문의 ORDER BY 절은 전체 쿼리 결과 집합이 반환되는 순서를 결정합니다.  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. ROWS 절 지정  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  다음 예에서는 ROWS 절을 사용하여 현재 행과 다음에 나오는 행의 *N* 번호(이 예에서는 1 행)로 행이 계산되는 창을 정의합니다.  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 절에 ROW_NUMBER 함수 사용  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 ROW_NUMBER를 반환합니다.  
   
 ```sql  

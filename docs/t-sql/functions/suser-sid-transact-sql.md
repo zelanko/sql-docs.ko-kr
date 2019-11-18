@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843594"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981742"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>인수  
  **'** *login* **'**  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  사용자의 로그인 이름입니다. *login*은 **sysname**입니다. *login*은 선택 사항이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹일 수 있습니다. *login*을 지정하지 않은 경우에는 현재 보안 컨텍스트에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
  *Param2*  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
  로그인 이름의 유효성을 검사할지 여부를 지정합니다. *Param2*는 **int** 형식이며 선택 사항입니다. *Param2*가 0이면 로그인 이름의 유효성을 검사하지 않습니다. *Param2*가 0으로 지정되지 않으면 Windows 로그인 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 로그인 이름과 정확하게 일치하는지 확인합니다.  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>2\. 특정 로그인에 SUSER_SID 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 로그인에 대한 보안 ID를 반환합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Windows 사용자 이름과 SUSER_SID 사용  
  다음 예에서는 Windows 사용자 `London\Workstation1`에 대한 보안 ID를 반환합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows 로그인 이름을 SQL Server에 저장된 로그인 이름과 비교  
  다음 예에서는 *Param2*를 사용하여 Windows에서 SID를 가져오는 방법을 보여 주고 해당 SID를 `SUSER_SNAME` 함수에 대한 입력으로 사용합니다. 이 예에서는 Windows에 저장된 형식으로 로그인을 제공하고(`TestComputer\User`), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 형식으로 로그인을 반환합니다(`TESTCOMPUTER\User`).  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

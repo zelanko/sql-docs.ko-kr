@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632891"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056489"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  조건이 분류자 규칙으로 충족되면 이름은 요청을 작업 그룹에 매핑합니다.  이름은 sysname입니다.  최대 128자까지 가능하며 분류자 생성 시 유효한 작업 그룹 이름이어야 합니다.
 
- 사용 가능한 워크로드 그룹은 [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) 카탈로그 뷰에서 찾을 수 있습니다.
+ 사용 가능한 워크로드 그룹은 [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) 카탈로그 뷰에서 찾을 수 있습니다.
 
  *MEMBERNAME* ='security_account'*    
  역할에 추가될 보안 계정입니다.  Security_account는 sysname이며 기본값은 없습니다. Security_account는 데이터베이스 사용자, 데이터베이스 역할, Azure Active Directory 로그인 또는 Azure Active Directory 그룹일 수 있습니다.

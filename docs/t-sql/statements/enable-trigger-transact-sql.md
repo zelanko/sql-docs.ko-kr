@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064552"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980941"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DATABASE
 DDL 트리거의 경우 데이터베이스 범위에서 실행하도록 *trigger_name*을 만들거나 수정했음을 나타냅니다.  
   
 ALL SERVER  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 DDL 트리거의 경우 서버 범위에서 실행하도록 *trigger_name*을 만들거나 수정했음을 나타냅니다. ALL SERVER는 로그온 트리거에도 적용됩니다.  
   
@@ -107,7 +107,7 @@ GO
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 같은 범위에서 정의된 모든 트리거 활성화  
 다음 예에서는 서버 범위에서 만든 모든 DDL 트리거를 활성화합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

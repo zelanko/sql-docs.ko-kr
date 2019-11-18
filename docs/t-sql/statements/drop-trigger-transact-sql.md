@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042044"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980992"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ON ALL SERVER
  현재 데이터베이스에 적용된 DDL 트리거의 범위를 나타냅니다. 트리거를 만들거나 수정할 때 DATABASE를 지정한 경우 DATABASE를 지정해야 합니다.  
   
  ALL SERVER  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  현재 서버에 적용된 DDL 트리거의 범위를 나타냅니다. 트리거를 만들거나 수정할 때 ALL SERVER를 지정한 경우 ALL SERVER를 지정해야 합니다. ALL SERVER는 로그온 트리거에도 적용됩니다.  
   

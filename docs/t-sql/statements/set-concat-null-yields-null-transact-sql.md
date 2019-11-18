@@ -23,12 +23,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdaa57594049ca9c7bd088120ae119ec7c58c151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a6e32fead5e2c16a9b1c66d6de78d49adbee58
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041839"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962438"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "68041839"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```sql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
@@ -70,17 +70,16 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
-```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
-  
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
 ## <a name="examples"></a>예  
  다음 예에서는 두 `SET CONCAT_NULL_YIELDS_NULL` 설정을 사용하는 방법을 보여 줍니다.  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  

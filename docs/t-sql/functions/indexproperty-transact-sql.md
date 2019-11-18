@@ -20,12 +20,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024284"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982944"
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|통계가 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성되었습니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsClustered**|인덱스가 클러스터형입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsDisabled**|인덱스가 비활성화되었습니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsFulltextKey**|인덱스가 테이블의 전체 텍스트 및 의미 체계 인덱싱 키입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**IsFulltextKey**|인덱스가 테이블의 전체 텍스트 및 의미 체계 인덱싱 키입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsHypothetical**|인덱스가 가상 인덱스이며 데이터 액세스 경로로 직접 사용할 수 없습니다. 가상 인덱스는 열 수준 통계를 보유하며 데이터베이스 엔진 튜닝 관리자에서 유지 관리 및 사용됩니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsPadIndex**|인덱스가 각 하위 노드에 남겨 둘 빈 공간을 지정합니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
-|**IsPageLockDisallowed**|ALTER INDEX의 ALLOW_PAGE_LOCKS 옵션으로 설정된 페이지 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 페이지 잠금이 허용되지 않습니다.<br /><br /> 0 = 페이지 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsRowLockDisallowed**|ALTER INDEX의 ALLOW_ROW_LOCKS 옵션으로 설정된 행 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 행 잠금이 허용되지 않습니다.<br /><br /> 0 = 행 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**IsPadIndex**|인덱스가 각 하위 노드에 남겨 둘 빈 공간을 지정합니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
+|**IsPageLockDisallowed**|ALTER INDEX의 ALLOW_PAGE_LOCKS 옵션으로 설정된 페이지 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = 페이지 잠금이 허용되지 않습니다.<br /><br /> 0 = 페이지 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**IsRowLockDisallowed**|ALTER INDEX의 ALLOW_ROW_LOCKS 옵션으로 설정된 행 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 1 = 행 잠금이 허용되지 않습니다.<br /><br /> 0 = 행 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsStatistics**|*index_or_statistics_name*은 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성된 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsUnique**|인덱스가 고유합니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
-|**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|인덱스에 대해 마지막 페이지 삽입 최적화가 사용됩니다.|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>반환 형식  

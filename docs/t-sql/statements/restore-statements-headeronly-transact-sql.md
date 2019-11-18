@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742968"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983025"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문 - HEADERONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -77,7 +77,7 @@ FROM <backup_device>
   
 ```  
 > [!NOTE] 
-> URL은 Microsoft Azure Blob Storage의 위치 및 파일 이름을 지정하는 데 사용되는 형식이며 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 지원됩니다. Microsoft Azure 저장소는 서비스이지만, 모든 세 장치에 대해 일관되고 원활한 복원 환경을 가능하게 하는 디스크와 테이프와 구현이 유사합니다.
+> URL은 Microsoft Azure Blob Storage의 위치 및 파일 이름을 지정하는 데 사용되는 형식이며 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 지원됩니다. Microsoft Azure Blob Storage는 서비스이지만, 모든 세 디바이스에 대해 일관되고 원활한 복원 환경을 가능하게 하는 디스크와 테이프와 구현이 유사합니다.
 
 ## <a name="arguments"></a>인수  
  RESTORE HEADERONLY 인수 설명은 [RESTORE 인수 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)을 참조하세요.  
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|백업 유형이 문자열인 경우 다음 중 하나입니다.<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|미디어에서 식별의 기준이 되는 백업 세트의 고유 ID|  
 |**CompressedBackupSize**|**bigint**|백업 세트의 바이트 수. 압축되지 않은 백업의 경우 이 값은 **BackupSize**와 같습니다.<br /><br /> 압축 비율을 계산하려면 **CompressedBackupSize** 및 **BackupSize**를 사용합니다.<br /><br /> **msdb**를 업그레이드하는 동안 이 값은 **BackupSize** 열의 값과 일치하도록 설정됩니다.|  
-|**포함**|NULL이 아닌 **tinyint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 데이터베이스의 포함 상태를 나타냅니다.<br /><br /> 0 = 데이터베이스가 포함되지 않습니다.<br /><br /> 1 = 데이터베이스가 부분적으로 포함됩니다.|  
+|**포함**|NULL이 아닌 **tinyint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 데이터베이스의 포함 상태를 나타냅니다.<br /><br /> 0 = 데이터베이스가 포함되지 않습니다.<br /><br /> 1 = 데이터베이스가 부분적으로 포함됩니다.|  
 |**KeyAlgorithm**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) ~ 현재 버전).<br /><br /> 백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption은 백업이 암호화되지 않았음을 나타냅니다. 올바른 값을 확인할 수 없는 경우 값은 NULL 이어야 합니다.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) ~ 현재 버전).<br /><br /> 데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
 |**EncryptorType**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) ~ 현재 버전).<br /><br /> 사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  

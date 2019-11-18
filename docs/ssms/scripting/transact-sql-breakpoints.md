@@ -1,33 +1,36 @@
 ---
 title: Transact-SQL 중단점 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b5e9d6e47a71f8bc65d71e0fb6364e352e8045
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 989c2d7143d48a4817b7a69cf08e2845b51300e6
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263228"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097922"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  중단점은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하도록 지정하여 사용자가 해당 지점에 있는 코드 요소의 상태를 확인할 수 있게 해 줍니다.  
-  
-## <a name="breakpoints"></a>중단점  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 실행하는 경우 특정 문에 대해 중단점을 설정/해제할 수 있습니다. 실행 중에 중단점이 있는 문에 도달하면 디버거는 변수 및 매개 변수 값과 같은 디버깅 정보를 볼 수 있도록 실행을 일시 중지합니다.  
-  
- 중단점은 편집기 창에서 개별적으로 관리하거나 **중단점** 창을 사용하여 전체적으로 관리할 수 있습니다. 실행을 일시 중지할 특정 조건, 중단점이 실행되는 경우에 수행할 동작 등과 같은 항목을 지정하여 중단점을 편집할 수 있습니다.  
-  
+
+중단점은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하도록 지정하여 사용자가 해당 지점에 있는 코드 요소의 상태를 확인할 수 있게 해 줍니다.
+
+## <a name="breakpoints"></a>중단점
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 실행하는 경우 특정 문에 대해 중단점을 설정/해제할 수 있습니다. 실행 중에 중단점이 있는 문에 도달하면 디버거는 변수 및 매개 변수 값과 같은 디버깅 정보를 볼 수 있도록 실행을 일시 중지합니다.
+
+중단점은 편집기 창에서 개별적으로 관리하거나 **중단점** 창을 사용하여 전체적으로 관리할 수 있습니다. 실행을 일시 중지할 특정 조건, 중단점이 실행되는 경우에 수행할 동작 등과 같은 항목을 지정하여 중단점을 편집할 수 있습니다.
+
 ## <a name="breakpoint-tasks"></a>중단점 태스크  
   
 |태스크 설명|항목|  

@@ -1,6 +1,5 @@
 ---
-title: PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: PATH 모드로 중첩 JSON 출력 서식 지정
 ms.date: 07/17/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,13 +8,14 @@ ms.topic: conceptual
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1f70b6a1c80273b64f7db33c57304630bd864d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d4132db44bb52835e277733365321d85342e670
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909401"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095849"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -26,14 +26,14 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117606"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981782"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SID(보안 ID)와 연결된 로그인 이름을 반환합니다.  
@@ -48,7 +48,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>인수  
  *server_user_sid*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  선택적 로그인 보안 ID입니다. *server_user_sid*는 **varbinary(85)** 입니다. *server_user_sid*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹의 보안 ID일 수 있습니다. *server_user_sid*가 지정되지 않은 경우 현재 사용자에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-susersname"></a>1\. SUSER_SNAME 사용  
+### <a name="a-using-suser_sname"></a>1\. SUSER_SNAME 사용  
  다음 예에서는 현재 보안 컨텍스트의 로그인 이름을 반환합니다.  
   
 ```  
@@ -75,17 +75,17 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>2\. Windows 사용자의 SID로 SUSER_SNAME 사용  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>2\. Windows 사용자의 SID로 SUSER_SNAME 사용  
  다음 예에서는 Windows SID와 연결된 로그인 이름을 반환합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>C. DEFAULT 제약 조건으로 SUSER_SNAME 사용  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. DEFAULT 제약 조건으로 SUSER_SNAME 사용  
  다음 예에서는 `SUSER_SNAME`를 `DEFAULT` 문의 `CREATE TABLE` 제약 조건으로 사용합니다.  
   
 ```  
@@ -102,10 +102,10 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. SUSER_SNAME을 EXECUTE AS와 함께 호출  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. SUSER_SNAME을 EXECUTE AS와 함께 호출  
  이 예에서는 SUSER_SNAME이 가장된 컨텍스트에서 호출된 경우의 동작을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 SELECT SUSER_SNAME();  
@@ -129,7 +129,7 @@ sa
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-susersname"></a>E. SUSER_SNAME 사용  
+### <a name="e-using-suser_sname"></a>E. SUSER_SNAME 사용  
  다음 예에서는 `0x01` 값을 갖는 SID에 대한 로그인 이름을 반환합니다.  
   
 ```  

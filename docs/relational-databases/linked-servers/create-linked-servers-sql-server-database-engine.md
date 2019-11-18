@@ -1,6 +1,5 @@
 ---
-title: 연결된 서버 만들기(SQL Server 데이터베이스 엔진) | Microsoft 문서
-ms.custom: ''
+title: 연결된 서버 만들기
 ms.date: 11/20/2015
 ms.prod: sql
 ms.technology: ''
@@ -17,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdbf53aae89ee6beb8e06fef9c51e1b72e34ab0e
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211341"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095881"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

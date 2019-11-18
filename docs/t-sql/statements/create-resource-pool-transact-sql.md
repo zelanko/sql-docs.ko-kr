@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117327"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982694"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT =*value*
 CPU 경합이 있을 때 이 리소스 풀의 모든 요청이 받는 최대 평균 CPU 대역폭을 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
   
 CAP_CPU_PERCENT =*value*   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡을 지정합니다. 최대 CPU 대역폭 수준을 지정된 값과 동일하게 제한합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 리소스 풀을 특정 스케줄러에 연결합니다. 기본값은 AUTO입니다.  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT =*value*
 이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.  
   
 MIN_IOPS_PER_VOLUME =*value*    
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 리소스 풀에 예약할 디스크 볼륨당 최소 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value*의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 최소 임계값이 없음을 나타내려면 0을 지정합니다. 기본값은 0입니다.  
   
 MAX_IOPS_PER_VOLUME =*value*    
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 리소스 풀에 대해 허용할 디스크 볼륨당 최대 IOPS(초당 IO 작업)를 지정합니다. 허용되는 *value*의 범위는 0에서 2^31-1(2,147,483,647)까지입니다. 풀에 대한 무제한 임계값을 설정하려면 0을 지정합니다. 기본값은 0입니다.  
   
@@ -135,11 +135,11 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. CAP_CPU_PERCENT를 하드 캡으로 설정하고 AFFINITY SCHEDULER를 설정합니다.
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. CAP_CPU_PERCENT를 하드 캡으로 설정하고 AFFINITY SCHEDULER를 설정합니다.
 
 CAP_CPU_PERCENT를 하드 캡 30%로 설정하고 AFFINITY SCHEDULER를 0-63과 128-191 범위로 설정합니다. 
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -153,11 +153,11 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. MIN_IOPS_PER_VOLUME과 MAX_IOPS_PER_VOLUME을 설정합니다.   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3. MIN_IOPS_PER_VOLUME과 MAX_IOPS_PER_VOLUME을 설정합니다.   
 
 MIN_IOPS_PER_VOLUME을 20으로 설정하고 MAX_IOPS_PER_VOLUME을 100을 설정합니다. 이러한 값은 리소스 풀에 대해 제공되는 물리적 I/O 읽기 및 쓰기 작업을 제어합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

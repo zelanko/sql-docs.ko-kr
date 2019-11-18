@@ -1,6 +1,6 @@
 ---
-title: 여러 행의 데이터를 처리하기 위한 DML 트리거 만들기 | Microsoft 문서
-ms.custom: ''
+title: 여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba7a31f880c33ce3f29d4ed2e8fb622ce3ee0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075534"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096011"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

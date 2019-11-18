@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064672"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983020"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|Null 값을 허용합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**ColumnId**|**sys.columns.column_id**에 해당하는 열 ID 값입니다.|열 ID<br /><br /> **참고:** 여러 열을 쿼리할 때 열 ID 값의 시퀀스에 간격이 나타날 수 있습니다.|  
 |**FullTextTypeColumn**|*열*의 문서 종류 정보를 보관하는 테이블의 TYPE COLUMN입니다.|이 함수의 두 번째 매개 변수로 전달된 열 이름 식에 대한 전체 텍스트 TYPE COLUMN의 ID입니다.|  
-|**GeneratedAlwaysType**|시스템에서 생성된 열 값입니다. **sys.columns.generated_always_type**에 해당합니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0: 항상 생성되지 않음<br /><br /> 1: 항상 행 시작에 생성됨<br /><br /> 2: 항상 행 끝에 생성됨|  
+|**GeneratedAlwaysType**|시스템에서 생성된 열 값입니다. **sys.columns.generated_always_type**에 해당합니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 0: 항상 생성되지 않음<br /><br /> 1: 항상 행 시작에 생성됨<br /><br /> 2: 항상 행 끝에 생성됨|  
 |**IsColumnSet**|열이 열 집합입니다. 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsComputed**|열이 계산 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsCursorType**|프로시저 매개 변수가 CURSOR 형식입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsDeterministic**|열이 결정적입니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력 계산 열 또는 뷰 열이 아닙니다.|  
 |**IsFulltextIndexed**|열이 전체 텍스트 인덱싱을 위해 등록됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
-|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0: 숨기지 않음<br /><br /> 1: 숨김|  
+|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 이상<br /><br /> 0: 숨기지 않음<br /><br /> 1: 숨김|  
 |**IsIdentity**|IDENTITY 속성을 사용하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsIdNotForRepl**|IDENTITY_INSERT 설정을 확인하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsIndexable**|열을 인덱싱할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  

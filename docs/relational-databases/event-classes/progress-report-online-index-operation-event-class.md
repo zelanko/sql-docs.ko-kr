@@ -1,6 +1,6 @@
 ---
-title: '진행률 보고서: Online Index Operation 이벤트 클래스 | Microsoft Docs'
-ms.custom: ''
+title: '진행률 보고서: Online Index Operation 이벤트 클래스'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811137"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056124"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>진행률 보고서: Online Index Operation 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

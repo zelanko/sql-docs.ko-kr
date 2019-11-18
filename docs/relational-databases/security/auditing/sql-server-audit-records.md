@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095118"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926026"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68095118"
 |**session_id**|이벤트가 발생한 세션의 ID입니다.|**int**|예|  
 |**server_principal_id**|동작을 수행한 로그인 컨텍스트의 ID입니다.|**int**|예|  
 |**database_principal_id**|동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다.|**int**|아니오|  
-|**object_ id**|감사가 수행된 엔터티의 주 ID이며 이 ID는 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|**int**|아니오|  
+|**object_id**|감사가 수행된 엔터티의 주 ID이며 이 ID는 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|**int**|아니오|  
 |**target_server_principal_id**|감사 가능한 동작이 적용되는 서버 보안 주체입니다.|**int**|예|  
 |**target_database_principal_id**|감사 가능한 동작이 적용되는 데이터베이스 보안 주체입니다.|**int**|아니오|  
 |**class_type**|감사가 수행되는 감사 가능한 엔터티의 형식입니다.|**varchar(2)**|예|  

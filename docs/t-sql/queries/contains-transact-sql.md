@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902123"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982828"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CONTAINS (
  지정된 검색 조건에 대해 쿼리가 FROM 절에 지정된 테이블에서 전체 텍스트 인덱싱된 열을 모두 검색하도록 지정합니다. CONTAINS 절의 열은 전체 텍스트 인덱스가 있는 단일 테이블에서 가져와야 합니다. *language_term*을 지정하지 않을 경우 테이블에 있는 모든 열의 언어가 같아야 합니다.  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  지정한 검색 조건을 검색할 문서 속성을 지정합니다.  
   
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  일반 근접 용어에 대한 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)을 참조하세요.  
   
  \<custom_proximity_term>  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
  일치시킬 단어나 구를 지정하고 선택적으로 검색 단어 사이에 허용할 최대 거리를 지정합니다. 검색 단어를 지정한 것과 동일한 순서로 찾도록 지정할 수도 있습니다(\<match_order>).  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-contains-with-simpleterm"></a>1\. \<simple_term>에 CONTAINS 사용  
+### <a name="a-using-contains-with-simple_term"></a>1\. \<simple_term>에 CONTAINS 사용  
  다음 예에서는 가격이 `$80.99` 이고 `Mountain`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>2\. \<simple_term>에 CONTAINS 및 구 사용  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>2\. \<simple_term>에 CONTAINS 및 구 사용  
  다음 예에서는 `Mountain`이나 `Road`라는 구가 포함된 모든 제품을 반환합니다.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. \<prefix_term>에 CONTAINS 사용  
+### <a name="c-using-contains-with-prefix_term"></a>C. \<prefix_term>에 CONTAINS 사용  
  다음 예에서는 `Name` 열에 접두사 chain으로 시작하는 단어가 하나 이상인 모든 제품 이름을 반환합니다.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. \<prefix_term>에 CONTAINS 및 OR 사용  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. \<prefix_term>에 CONTAINS 및 OR 사용  
  다음 예에서는 접두사가 `chain` 또는 `full`인 문자열을 포함하는 모든 범주 설명을 반환합니다.  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. \<proximity_term>에 CONTAINS 사용  
+### <a name="e-using-contains-with-proximity_term"></a>E. \<proximity_term>에 CONTAINS 사용  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  다음 예에서는 `Production.ProductReview` 테이블에서 단어 "`bike`"의 10 단어 이내로 지정한 순서에 따라 "`control`" 단어가 포함된 모든 설명을 검색합니다. 즉, "`bike`"는 "`control`"보다 우선합니다.  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. \<generation_term>에 CONTAINS 사용  
+### <a name="f-using-contains-with-generation_term"></a>F. \<generation_term>에 CONTAINS 사용  
  다음 예에서는 riding, ridden 등 `ride`에서 파생된 단어가 있는 모든 제품을 검색합니다.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. \<weighted_term>에 CONTAINS 사용  
+### <a name="g-using-contains-with-weighted_term"></a>G. \<weighted_term>에 CONTAINS 사용  
  다음 예에서는 `performance`, `comfortable` 또는 `smooth` 단어가 포함된 모든 제품 이름을 검색하며 각 단어에는 다른 가중치가 지정됩니다.  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>11. 문서 속성 쿼리  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
  다음 쿼리는 `Title` 테이블의 `Document` 열에서 인덱싱된 속성 `Production.Document`을 검색합니다. 쿼리는 `Title` 속성에 `Maintenance` 또는 `Repair` 문자열이 포함된 문서만 반환합니다.  
   

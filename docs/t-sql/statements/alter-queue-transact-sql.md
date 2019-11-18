@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5da8dd93022240d0d12543b0ee6cf756d70cae40
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73791326"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982051"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -104,12 +104,12 @@ WITH
  큐에서 저장 프로시저의 활성화 여부를 지정합니다. STATUS = ON이면 현재 실행 중인 프로시저 수가 MAX_QUEUE_READERS보다 작고, 큐에 도착하는 메시지가 저장 프로시저의 메시지 수신 속도보다 빠른 경우 큐에서 PROCEDURE_NAME에 지정된 저장 프로시저를 시작합니다. STATUS = OFF이면 큐에서 저장 프로시저를 활성화하지 않습니다.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
  큐 내부 테이블의 모든 인덱스를 다시 작성합니다. 과부하로 인해 조각화 문제가 발생하면 이 기능을 사용합니다. 지원되는 큐 다시 작성 옵션은 MAXDOP뿐입니다. REBUILD는 항상 오프라인 작업입니다.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
  큐 내부 테이블의 모든 인덱스를 다시 구성합니다.   
 사용자 테이블에 대한 REORGANIZE와 달리 큐에 대한 REORGANIZE는 큐에서 페이지 수준 잠금이 명시적으로 비활성화되기 때문에 항상 오프라인 작업으로 수행됩니다.  
@@ -118,7 +118,7 @@ WITH
 >  인덱스 조각화와 관련된 일반적인 지침은 조각화가 5%~30% 사이이면 인덱스를 다시 구성합니다. 조각화가 30%를 초과하면 인덱스를 다시 작성합니다. 하지만 이러한 숫자는 환경에 대한 시작점으로 일반적인 지침일뿐입니다. 인덱스 조각화의 양을 결정하려면 [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 사용하세요 예제는 이 문서의 예제 G를 참조하세요.  
   
  MOVE TO { *file_group* | "default" }  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
  큐 내부 테이블(인덱스 포함)을 사용자가 지정한 파일 그룹으로 이동합니다.  새 파일 그룹은 읽기 전용이 아니어야 합니다.  
   
@@ -223,7 +223,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. 큐 인덱스 다시 작성  
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
  다음 예에서는 큐 인덱스를 다시 작성합니다.  
   
@@ -233,7 +233,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. 큐 인덱스 다시 구성  
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
  다음 예에서는 큐 인덱스를 다시 구성합니다.  
   
@@ -243,7 +243,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: 큐 내부 테이블을 다른 파일 그룹으로 이동  
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
