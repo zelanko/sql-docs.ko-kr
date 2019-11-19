@@ -1,35 +1,36 @@
 ---
-title: T-sql을 사용 하 여 Python 모델 학습 및 저장
-description: SQL Server에서 Transact-sql을 사용 하 여 모델을 학습 하 고 저장 하는 방법을 보여 주는 Python 자습서입니다.
+title: 'Python + T-SQL: 모델 학습'
+description: SQL Server에서 Transact-SQL을 사용하여 모델을 학습시키고 저장하는 방법을 보여주는 Python 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 470d7be0e1777d029f406e183aad644359c82f13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005997"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724882"
 ---
-# <a name="train-and-save-a-python-model-using-t-sql"></a>T-sql을 사용 하 여 Python 모델 학습 및 저장
+# <a name="train-and-save-a-python-model-using-t-sql"></a>T-SQL을 사용하여 Python 모델 학습 및 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)자습서의 일부입니다. 
+이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md) 자습서의 일부입니다. 
 
-이 단계에서는 Python 패키지 **scikit-배우기** 및 **revoscalepy**를 사용 하 여 기계 학습 모델을 학습 하는 방법을 알아봅니다. 이러한 Python 라이브러리는 SQL Server Machine Learning Services와 함께 이미 설치 되어 있습니다.
+이 단계에서는 Python 패키지 **scikit-learn** 및 **revoscalepy**를 사용하여 기계 학습 모델을 학습시키는 방법을 알아봅니다. 이러한 Python 라이브러리는 SQL Server Machine Learning Services에 이미 설치되어 있습니다.
 
-모듈을 로드 하 고 필요한 함수를 호출 하 SQL Server 저장 프로시저를 사용 하 여 모델을 만들고 학습 합니다. 모델에는 이전 단원에서 엔지니어링 한 데이터 기능이 필요 합니다. 마지막으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 학습 된 모델을 저장 합니다.
+SQL Server 저장 프로시저를 통해 모듈을 로드하고 필요한 함수를 호출하여 모델을 만들고 학습시킵니다. 이 모델에는 이전 단원에서 엔지니어링한 데이터 요소가 필요합니다. 마지막으로 학습된 모델을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장합니다.
  
 
-## <a name="split-the-sample-data-into-training-and-testing-sets"></a>샘플 데이터를 학습 집합과 테스트 집합으로 분할
+## <a name="split-the-sample-data-into-training-and-testing-sets"></a>샘플 데이터를 학습 집합 및 테스트 집합으로 분할
 
-1. **PyTrainTestSplit** 라는 저장 프로시저를 만들어 nyctaxi_sample 테이블의 데이터를 nyctaxi_sample_training와 nyctaxi_sample_testing의 두 부분으로 나눕니다. 
+1. **PyTrainTestSplit**라는 저장 프로시저를 만들어 nyctaxi_sample 테이블의 데이터를 nyctaxi_sample_training 및 nyctaxi_sample_testing이라는 두 부분으로 나눕니다. 
 
-    이 저장 프로시저는 이미 생성 되어 있지만 다음 코드를 실행 하 여 만들 수 있습니다.
+    이 저장 프로시저는 이미 자동으로 생성되어 있지만 다음 코드를 실행하여 만들 수 있습니다.
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -47,27 +48,27 @@ ms.locfileid: "72005997"
     GO
     ```
 
-2. 사용자 지정 분할을 사용 하 여 데이터를 나누려면 저장 프로시저를 실행 하 고 학습 집합에 할당 된 데이터의 백분율을 나타내는 정수를 입력 합니다. 예를 들어 다음 문은 학습 집합에 60%의 데이터를 할당 합니다.
+2. 사용자 지정 분할을 사용하여 데이터를 나누려면 저장 프로시저를 실행하고 학습 집합에 할당된 데이터의 비율을 나타내는 정수를 입력합니다. 예를 들어 다음 명령문은 학습 집합에 60%의 데이터를 할당합니다.
 
     ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
 
-## <a name="build-a-logistic-regression-model"></a>로지스틱 회귀 모델 작성
+## <a name="build-a-logistic-regression-model"></a>로지스틱 회귀 모델 빌드
 
-데이터를 준비한 후 모델을 학습 하는 데 사용할 수 있습니다. 이렇게 하려면 일부 Python 코드를 실행 하는 저장 프로시저를 호출 하 여 학습 데이터 테이블을 입력 합니다. 이 자습서에서는 다음 두 가지 모델, 즉 이진 분류 모델을 만듭니다.
+데이터가 준비되면 데이터를 사용하여 모델을 학습시킬 수 있습니다. 이렇게 하려면 일부 Python 코드를 실행하는 저장 프로시저를 호출하고 학습 데이터 테이블을 입력합니다. 이 자습서에서는 두 가지 모델을 만들며, 둘 다 이진 분류 모델입니다.
 
-+ **PyTrainScikit** 저장 프로시저는 **scikit** 패키지를 사용 하 여 팁 예측 모델을 만듭니다.
-+ **TrainTipPredictionModelRxPy** 저장 프로시저는 **revoscalepy** 패키지를 사용 하 여 팁 예측 모델을 만듭니다.
++ 저장 프로시저 **PyTrainScikit**는 **scikit-learn** 패키지를 사용하여 팁 예측 모델을 만듭니다.
++ 저장 프로시저 **TrainTipPredictionModelRxPy**는 **revoscalepy** 패키지를 사용하여 팁 예측 모델을 만듭니다.
 
-각 저장 프로시저는 사용자가 제공 하는 입력 데이터를 사용 하 여 로지스틱 회귀 모델을 만들고 학습 합니다. 모든 Python 코드는 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 래핑됩니다.
+각 프로시저는 사용자가 제공한 입력 데이터를 사용하여 로지스틱 회귀 모델을 만들고 학습시킵니다. 모든 Python 코드는 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 래핑됩니다.
 
-새 데이터에 모델을 더 쉽게 다시 학습 수 있도록 다른 저장 프로시저에서 sp_execute_external_script 호출을 래핑하고 새 학습 데이터를 매개 변수로 전달 합니다. 이 섹션에서는 해당 프로세스를 안내 합니다.
+모델에 새 데이터를 더 쉽게 재학습시키려면 sp_execute_external_script에 대한 호출을 다른 저장 프로시저에 래핑하고 새 학습 데이터를 매개 변수로 전달합니다. 이 섹션에서는 이러한 프로세스를 안내합니다.
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  @No__t-0에서 새 **쿼리** 창을 열고 다음 문을 실행 하 여 **PyTrainScikit**저장 프로시저를 만듭니다.  저장 프로시저에 입력 데이터의 정의가 포함 되어 있으므로 입력 쿼리를 제공할 필요가 없습니다.
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 **쿼리** 창을 열고 다음 명령문을 실행하여 저장 프로시저 **PyTrainScikit**를 만듭니다.  이 저장 프로시저에는 입력 데이터 정의가 포함되어 있으므로 입력 쿼리를 제공하지 않아도 됩니다.
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -106,7 +107,7 @@ ms.locfileid: "72005997"
     GO
     ```
 
-2. 다음 SQL 문을 실행 하 여 학습 된 모델을 nyc @ no__t-0taxi_models 테이블에 삽입 합니다.
+2. 다음 SQL 문을 실행하여 학습된 모델을 nyc\_taxi_models 테이블에 삽입합니다.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -114,22 +115,22 @@ ms.locfileid: "72005997"
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    데이터 처리 및 모델 맞춤은 몇 분 정도 걸릴 수 있습니다. Python의 **stdout** 스트림으로 파이프 되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    데이터를 처리하고 모델을 맞추는 데 몇 분 정도 걸릴 수 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 예를 들어
 
-    *STDOUT message(s) from external script:* 
+    *외부 스크립트의 STDOUT 메시지:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. *Nyc @ no__t-1taxi_models*테이블을 엽니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
+3. *nyc\_taxi_models* 테이블을 엽니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
     *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-이 저장 프로시저는 새로운 Python 용 패키지인 새로운 **revoscalepy** 패키지를 사용 합니다. R 언어의 **RevoScaleR** 패키지에 제공 된 것과 유사한 개체, 변환 및 알고리즘을 포함 합니다. 
+이 저장 프로시저는 새로운 Python용 패키지인 새로운 **revoscalepy** 패키지를 사용합니다. 여기에는 R 언어의 **RevoScaleR** 패키지에 제공되는 것과 유사한 개체, 변환 및 알고리즘이 포함되어 있습니다. 
 
-**Revoscalepy**를 사용 하 여 로지스틱 및 선형 회귀, 의사 결정 트리 등 널리 사용 되는 알고리즘을 사용 하 여 원격 계산 컨텍스트를 만들고, 계산 컨텍스트 간에 데이터를 이동 하 고, 데이터를 변환 하 고, 예측 모델을 학습할 수 있습니다. 자세한 내용은 SQL Server 및 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) [의 revoscalepy 모듈](../python/ref-py-revoscalepy.md) 을 참조 하세요.
+**revoscalepy**를 사용하여 로지스틱 및 선형 회귀, 의사 결정 트리 등과 같이 널리 사용되는 알고리즘을 통해 원격 컴퓨팅 컨텍스트를 만들고, 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 데이터를 변환하고, 예측 모델을 학습시킬 수 있습니다. 자세한 내용은 [SQL Server의 revoscalepy 모듈](../python/ref-py-revoscalepy.md) 및 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)를 참조하세요.
 
-1. @No__t-0에서 새 **쿼리** 창을 열고 다음 문을 실행 하 여 _TrainTipPredictionModelRxPy_저장 프로시저를 만듭니다.  저장 프로시저에 이미 입력된 데이터의 정의가 포함되므로 입력 쿼리를 제공할 필요가 없습니다.
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 **쿼리** 창을 열고 다음 명령문을 실행하여 저장 프로시저 _TrainTipPredictionModelRxPy_를 만듭니다.  저장 프로시저에는 입력 데이터 정의가 이미 포함되어 있으므로 입력 쿼리를 제공하지 않아도 됩니다.
 
     ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -164,13 +165,13 @@ ms.locfileid: "72005997"
     GO
     ```
 
-    이 저장 프로시저는 모델 학습의 일부로 다음 단계를 수행 합니다.
+    이 저장 프로시저는 모델 학습의 일부로 다음 단계를 수행합니다.
 
-    - SELECT 쿼리는 사용자 지정 스칼라 함수 _fnCalculateDistance_ 을 적용 하 여 선택 및 드롭다운 위치 간의 직접 거리를 계산 합니다. 쿼리 결과는 `InputDataset` 인 기본 Python 입력 변수에 저장 됩니다.
-    - _Passenger_count_, _trip_distance_, _trip_time_in_secs_및 _direct_distance_기능 열을 사용 하 여 모델은 *레이블* 또는 결과 열로 _사용 되 고_ 모델은 적합 합니다.
-    - 학습 된 모델은 직렬화 되 고 Python 변수에 `logitObj`으로 저장 됩니다. T-sql 키워드 출력을 추가 하 여 저장 프로시저의 출력으로 변수를 추가할 수 있습니다. 다음 단계에서이 변수는 모델의 이진 코드를 데이터베이스 테이블 _nyc_taxi_models_삽입 하는 데 사용 됩니다. 이 메커니즘을 사용 하면 모델을 쉽게 저장 하 고 재사용할 수 있습니다.
+    - SELECT 쿼리는 사용자 지정 스칼라 함수 _fnCalculateDistance_를 적용하여 승하차 위치 사이의 직접 거리를 계산합니다. 쿼리 결과는 기본 Python 입력 변수인 `InputDataset`에 저장됩니다.
+    - 이진 변수 _tipped_는 *label* 또는 결과 열로 사용되며, 모델은 _passenger_count_, _trip_distance_, _trip_time_in_secs_, _direct_distance_ 등의 기능 열을 사용하여 맞춰집니다.
+    - 학습된 모델은 직렬화되어 Python 변수 `logitObj`에 저장됩니다. T-SQL 키워드 OUTPUT을 추가하여 이 변수를 저장 프로시저의 출력으로 추가할 수 있습니다. 다음 단계에서는 이 변수를 사용하여 모델의 이진 코드를 데이터베이스 테이블 _nyc_taxi_models_에 삽입합니다. 이 메커니즘을 사용하면 모델을 쉽게 저장하고 재사용할 수 있습니다.
 
-2. 다음과 같이 저장 프로시저를 실행 하 여 학습 된 **revoscalepy** 모델을 *nyc_taxi_models*테이블에 삽입 합니다.
+2. 다음과 같이 저장 프로시저를 실행하여 학습된 **revoscalepy** 모델을 *nyc_taxi_models* 테이블에 삽입합니다.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -178,20 +179,20 @@ ms.locfileid: "72005997"
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    데이터를 처리하고 모델에 맞추는 데 다소 시간이 걸릴 수 있습니다. Python의 **stdout** 스트림으로 파이프 되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    데이터를 처리하고 모델을 맞추는 데 시간이 걸릴 수도 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 예를 들어
 
-    *STDOUT message(s) from external script:* 
+    *외부 스크립트의 STDOUT 메시지:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. *nyc_taxi_models*테이블을 엽니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 
-다음 단계에서는 학습 된 모델을 사용 하 여 예측을 만듭니다.
+다음 단계에서는 학습된 모델을 사용하여 예측을 만듭니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[저장 프로시저에 포함 된 Python을 사용 하 여 예측 실행](sqldev-py6-operationalize-the-model.md)
+[저장 프로시저에 포함된 Python을 사용하여 예측 실행](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>이전 단계
 
