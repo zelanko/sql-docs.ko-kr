@@ -16,12 +16,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721261"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165019"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>동기화 중 스크립트 실행(복제 Transact-SQL 프로그래밍)
   복제는 트랜잭션 게시 및 병합 게시 구독자의 요청 시 스크립트 실행을 지원합니다. 이 기능은 복제 작업 디렉터리에 스크립트를 복사한 다음 **sqlcmd** 를 사용하여 구독자에서 스크립트를 적용합니다. 구독자의 스크립트를 트랜잭션 게시에 적용할 때 오류가 발생하면 기본적으로 배포 에이전트가 중지됩니다. 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 실행되도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 지정할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "62721261"
   
 2.  게시에 대한 스냅샷 에이전트가 액세스할 수 있는 위치에 스크립트 파일을 저장합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. **@publication** , **@scriptfile** 에 2단계에서 만든 전체 UNC 경로를 포함하는 스크립트 파일의 이름, **@skiperror** 에 다음 값 중 하나를 지정합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. **\@게시**, **\@scriptfile**에 대해 2 단계에서 만든 전체 UNC 경로를 사용 하는 스크립트 파일의 이름, **\@skiperror**에 대해 다음 값 중 하나를 지정 합니다.  
   
     -   **0** - 오류가 발생하면 스크립트 실행이 중지됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62721261"
   
 4.  지정된 스크립트는 구독을 동기화하기 위해 다음에 에이전트가 실행될 때 각 구독자에서 실행됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 동기화](synchronize-data.md)  
   
   

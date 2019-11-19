@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127372"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165554"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
 
@@ -102,13 +102,13 @@ DEA에는 제품 환경을 개선 하는 데 사용할 수 있도록 원격 분�
 원격 분석 데이터를 수집 하 고 보내는 것은 선택 사항입니다. 수집 되는 이벤트와 수집 된 이벤트를 Microsoft로 보낼지 여부를 지정 하려면 다음 단계를 사용 합니다.
 
 1. DEA가 설치 된 위치 (예: C:\\Program Files (x86)\\Microsoft Corporation\\데이터베이스 실험 도우미)로 이동 합니다.
-2. 다음과 같이 두 .config 파일 **DEA** (응용 프로그램의 경우) 및 **deacmd .EXE .config** (CLI)를 열고 수정 합니다.
+2. 응용 프로그램에 대 한 .config 파일 **DEA** (응용 프로그램의 경우) 및 **deacmd .EXE .config** (CLI)를 열고 수정 하 여 시나리오를 적절 하 게 처리 합니다.
     - 이벤트 유형 수집을 중지 하려면 *이벤트* 의 값 (예: **traceevent**)을 **false**로 설정 합니다. 이벤트 수집을 다시 시작 하려면 값을 **true**로 설정 합니다.
     - 이벤트의 로컬 복사본을 저장 하는 것을 중지 하려면 **TraceLoggerEnabled** 의 값을 **false**로 설정 합니다. 로컬 복사본 저장을 다시 시작 하려면 값을 **true**로 설정 합니다.
     - Microsoft로의 이벤트 전송을 중지 하려면 **AppInsightsLoggerEnabled** 의 값을 **false**로 설정 합니다. Microsoft로 이벤트를 다시 보내기 시작 하려면 값을 **true**로 설정 합니다.
 
 DEA은 [Microsoft 개인 정보 취급 방침](https://aka.ms/dea-privacy)의 적용을 받습니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="see-also"></a>참고 항목
 
-[시작](database-experimentation-assistant-get-started.md) 에서는 추적을 캡처, 재생 및 분석 하는 데 필요한 단계를 안내 합니다.
+두 환경에서 작업을 비교 하는 데 관련 된 프로세스를 설명 하는 [작업 비교 프로세스 개요](database-experimentation-assistant-get-started.md)입니다.

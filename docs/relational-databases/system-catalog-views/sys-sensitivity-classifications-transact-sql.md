@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757467"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164936"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "73757467"
 
 |열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다.|  
-|**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다.|  
-|**major_id**|**int**|분류가 존재 하는 항목의 ID입니다.<br><br>class가 0이면 major_id는 항상 0입니다.<br>class가 1, 2 또는 7이면 major_id는 object_id입니다.|  
-|**minor_id**|**int**|분류가 존재 하는 항목의 보조 ID입니다. 해당 클래스에 따라 해석 됩니다.<br><br>Class = 1 인 경우 minor_id은 column_id (열 인 경우)이 고, 그렇지 않으면 0입니다 (개체의 경우).<br>class = 2이면 minor_id는 parameter_id입니다.<br>Class = 7 인 경우 minor_id은 index_id입니다. |  
+|**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
+|**class_desc**|**varchar(16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다. 에는 항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|All_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 ID를 나타냅니다 object_id|  
+|**minor_id**|**int**|All_columns에 해당 하는 분류가 있는 열의 ID를 나타냅니다 column_id|   
 |**label**|**sysname**|민감도 분류에 할당 된 레이블 (사람이 읽을 수 있음)|  
 |**label_id**|**sysname**|레이블과 연결 된 ID입니다 .이 ID는 AIP (Azure Information Protection)와 같은 정보 보호 시스템에서 사용할 수 있습니다.|  
 |**information_type**|**sysname**|민감도 분류에 할당 된 정보 유형 (사람이 읽을 수 있음)|  
@@ -49,18 +49,14 @@ ms.locfileid: "73757467"
 |**rank_desc**|**sysname**|Rank의 텍스트 표현입니다.  <br><br>없음, 낮음, 중간, 높음, 위험|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 
 - 이 보기는 데이터베이스의 분류 상태에 대 한 가시성을 제공 합니다. 데이터베이스 분류를 관리 하는 데 사용할 수 있으며 보고서를 생성 하는 데에도 사용할 수 있습니다.
-- 현재 데이터베이스 열의 분류만 지원 됩니다. 하므로
-    - **클래스** -항상 값 1 (열을 나타냄)을 갖습니다.
-    - **class_desc** -항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*
-    - **major_id** -all_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 id를 나타냅니다. object_id
-    - **minor_id** -all_columns에 해당 하는 분류가 있는 열의 id를 나타냅니다 column_id
-
+- 현재 데이터베이스 열의 분류만 지원 됩니다.
+ 
 ## <a name="examples"></a>예
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>1\. 모든 분류 된 열 및 해당 분류 나열
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 모든 분류 된 열 및 해당 분류 나열
 
 다음 예에서는 데이터베이스의 각 분류 된 열에 대 한 테이블 이름, 열 이름, 레이블, 레이블 ID, 정보 유형, 정보 유형 ID를 나열 하는 테이블을 반환 합니다.
 

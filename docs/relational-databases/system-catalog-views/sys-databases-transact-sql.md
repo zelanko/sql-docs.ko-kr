@@ -1,7 +1,7 @@
 ---
 title: sys. 데이터베이스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095863"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165951"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다.  
@@ -76,7 +77,7 @@ ms.locfileid: "74095863"
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT이 ON입니다.<br /> 0 = CURSOR_CLOSE_ON_COMMIT이 OFF입니다.|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT가 로컬입니다.<br /> 0 = CURSOR_DEFAULT가 전역입니다.|  
 |**is_fulltext_enabled**|**bit**|1 = 데이터베이스에서 전체 텍스트를 사용할 수 있습니다.<br /> 0 = 데이터베이스에서 전체 텍스트를 사용할 수 없습니다.|  
-|**is_trustworthy_on**|**bit**|1 = 데이터베이스가 신뢰할 수 있는 것으로 표시되어 있습니다.<br /> 0 = 데이터베이스가 신뢰할 수 있는 것으로 표시되지 않았습니다.<br /> 복원되거나 첨부된 데이터베이스의 경우 브로커를 사용하지 않도록 기본 설정됩니다. 단, 장애 조치(Failover) 후 브로커가 설정된 데이터베이스 미러링은 예외입니다.|  
+|**is_trustworthy_on**|**bit**|1 = 데이터베이스가 신뢰할 수 있는 것으로 표시되어 있습니다.<br /> 0 = 데이터베이스가 신뢰할 수 있는 것으로 표시되지 않았습니다.<br /> 기본적으로 복원 또는 연결 된 데이터베이스에는 신뢰할 수 없는 데이터베이스가 있습니다.|  
 |**is_db_chaining_on**|**bit**|1 = 데이터베이스 간 소유권 체인이 ON 상태입니다.<br /> 0 = 데이터베이스 간 소유권 체인이 OFF 상태입니다.|  
 |**is_parameterization_forced**|**bit**|1 = 매개 변수화가 FORCED로 설정되어 있습니다.<br /> 0 = 매개 변수화가 SIMPLE로 설정되어 있습니다.|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 데이터베이스에 암호화된 마스터 키가 있습니다.<br /> 0 = 데이터베이스에 암호화된 마스터 키가 없습니다.|  
@@ -93,7 +94,7 @@ ms.locfileid: "74095863"
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION이 ON입니다.<br /> 0 = DATE_CORRELATION_OPTIMIZATION이 OFF입니다.|  
 |**is_cdc_enabled**|**bit**|1 = 데이터베이스에 변경 데이터 캡처가 설정되어 있습니다. 자세한 내용은 [sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)을 참조 하세요.|  
 |**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다. `ALTER DATABASE SET ENCRYPTION` 절을 사용 하 여 마지막으로 설정 된 상태를 반영 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면 `is_encrypted`에 값 0이 표시 됩니다. [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
-|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 절을 사용 하 여 마지막으로 설정 된 상태를 반영). 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 복원되거나 첨부된 데이터베이스의 경우 브로커를 사용하지 않도록 기본 설정됩니다. 단, 장애 조치(Failover) 후 브로커가 설정된 데이터베이스 미러링은 예외입니다.|  
+|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 (`ALTER DATABASE SET HONOR_BROKER_PRIORITY` 절을 사용 하 여 마지막으로 설정 된 상태를 반영). 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 기본적으로 복원 되거나 연결 된 데이터베이스의 broker 우선 순위는 off입니다.|  
 |**replica_id**|**uniqueidentifier**|데이터베이스가 참여하는 가용성 그룹(있는 경우)의 로컬 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 고유 식별자입니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|데이터베이스가 참여 하는 Always On 가용성 그룹 (있는 경우) 내의 데이터베이스에 대 한 고유 식별자입니다. 주 복제본의이 데이터베이스와 데이터베이스가 가용성 그룹에 조인 된 모든 보조 복제본에 대 한 **group_database_id** 동일 합니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|이 데이터베이스에 매핑되는 리소스 풀의 ID입니다. 이 리소스 풀은 이 데이터베이스에서 메모리 최적화 테이블을 사용할 수 있는 총 메모리를 제어합니다.<br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
@@ -118,41 +119,47 @@ ms.locfileid: "74095863"
 |**catalog_collation_type_desc**|**nvarchar(60)**|카탈로그 데이터 정렬 설정:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on on입니다.</br>0 = is_result_set_caching_on 꺼짐</br>**적용**대상: Azure SQL Data Warehouse Gen2. 이 기능을 모든 지역에 롤아웃하는 동안 인스턴스에 배포 된 버전 및 기능 가용성에 대 한 최신 [AZURE SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 를 확인 하세요.|
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>사용 권한
+
  `sys.databases`의 호출자가 데이터베이스의 소유자가 아니고 데이터베이스가 `master` 또는 `tempdb`되지 않은 경우 해당 행을 보는 데 필요한 최소 권한은 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 데이터베이스의 `CREATE DATABASE` 서버 수준 권한 또는 `master` 권한입니다. 호출자가 연결 된 데이터베이스는 항상 `sys.databases`에서 볼 수 있습니다.  
   
 > [!IMPORTANT]  
 > 기본적으로 public 역할에는 `VIEW ANY DATABASE` 권한이 있으므로 모든 로그인에서 데이터베이스 정보를 볼 수 있습니다. 데이터베이스 검색 기능에서 로그인을 차단 하려면 `public`에서 `VIEW ANY DATABASE` 권한을 `REVOKE` 하거나 개별 로그인에 대 한 `VIEW ANY DATABASE` 권한을 `DENY` 합니다.  
   
-## <a name="azure-sql-database-remarks"></a>Azure SQL Database 설명  
+## <a name="azure-sql-database-remarks"></a>Azure SQL Database 설명
+
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]이 뷰는 `master` 데이터베이스 및 사용자 데이터베이스에서 사용할 수 있습니다. `master` 데이터베이스에서이 뷰는 서버에 있는 `master` 데이터베이스와 모든 사용자 데이터베이스에 대 한 정보를 반환 합니다. 사용자 데이터베이스에서 이 뷰는 현재 데이터베이스와 master 데이터베이스에 있는 정보만을 반환합니다.  
   
  새 데이터베이스가 만들어지는 `sys.databases` 서버의 `master` 데이터베이스에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 뷰를 사용합니다. 데이터베이스 복사가 시작 된 후 대상 서버의 `master` 데이터베이스에서 `sys.databases` 및 `sys.dm_database_copies` 뷰를 쿼리하여 복사 진행에 대 한 자세한 정보를 검색할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases 뷰 쿼리  
- 다음 예에서는 `sys.databases` 뷰에서 사용할 수 있는 열 중 일부를 반환 합니다.  
+### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases 뷰 쿼리
+
+다음 예에서는 `sys.databases` 뷰에서 사용할 수 있는 열 중 일부를 반환 합니다.  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>2\. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 복사 상태 확인  
- 다음 예에서는 `sys.databases` 및 `sys.dm_database_copies` 뷰를 쿼리하여 데이터베이스 복사 작업에 대 한 정보를 반환 합니다.  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>2\. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 복사 상태 확인
+
+다음 예에서는 `sys.databases` 및 `sys.dm_database_copies` 뷰를 쿼리하여 데이터베이스 복사 작업에 대 한 정보를 반환 합니다.  
   
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```sql  
+```sql
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
-```  
-### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>3\. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 임시 보존 정책 상태를 확인 합니다.  
- 다음 예제에서는 임시 보존 정리 작업의 설정 여부에 대 한 정보를 반환 하는 `sys.databases`을 쿼리 합니다. 복원 작업 후 임시 보존은 기본적으로 사용 하지 않도록 설정 됩니다. `ALTER DATABASE`를 사용 하 여 명시적으로 사용 하도록 설정 합니다.
+```
+
+### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>3\. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 임시 보존 정책 상태를 확인 합니다.
+
+다음 예제에서는 임시 보존 정리 작업의 설정 여부에 대 한 정보를 반환 하는 `sys.databases`을 쿼리 합니다. 복원 작업 후 임시 보존은 기본적으로 사용 하지 않도록 설정 됩니다. `ALTER DATABASE`를 사용 하 여 명시적으로 사용 하도록 설정 합니다.
   
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -162,11 +169,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [database_recovery_status &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
- [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.dm_database_copies&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
-  
-  
+## <a name="next-steps"></a>다음 단계
+
+- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.database_mirroring_witnesses&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [sys. database_recovery_status &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [데이터베이스 및 파일 카탈로그 뷰 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.dm_database_copies&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

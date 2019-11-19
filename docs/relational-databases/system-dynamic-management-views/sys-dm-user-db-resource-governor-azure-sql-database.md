@@ -1,7 +1,7 @@
 ---
-title: sys. dm _user_db_ggggggggggggggg_l (Transact-sql) Microsoft Docs
+title: sys. dm_user_db_resource_governance (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 11/17/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-database
@@ -20,100 +20,108 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ea07ba28efc4ac50fdeef04bb1b3643c359ead28
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176261"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165924"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm _user_l (Transact-sql)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Azure SQL Database 데이터베이스에 대 한 리소스 관리 구성 및 용량 설정을 반환 합니다.  
+현재 데이터베이스 또는 탄력적 풀의 리소스 거 버 넌 스 메커니즘에서 사용 되는 실제 구성 및 용량 설정을 반환 합니다.
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|Azure SQL Database 서버 내에서 고유한 데이터베이스의 ID입니다.|
-|**logical_database_guid**|uniqueidentifier|사용자 데이터베이스의 논리적 guid 이며 사용자 데이터베이스의 수명 주기 동안 유지 됩니다.  데이터베이스 이름을 바꾸거나 다른 SLO로 설정 해도 GUID는 변경 되지 않습니다. |
-|**physical_database_guid**|uniqueidentifier|사용자 데이터베이스의 실제 인스턴스 수명 동안 유지 되는 사용자 데이터베이스의 실제 guid입니다. 를 다른 SLO로 설정 하면이 열이 변경 됩니다.|
+|**logical_database_guid**|uniqueidentifier|사용자 데이터베이스의 수명 동안 유지 되는 사용자 데이터베이스의 논리적 GUID입니다.  데이터베이스의 이름을 바꾸거나 서비스 수준 목표를 변경 해도이 값은 변경 되지 않습니다.|
+|**physical_database_guid**|uniqueidentifier|사용자 데이터베이스의 실제 인스턴스 수명 동안 유지 되는 사용자 데이터베이스의 실제 GUID입니다. 데이터베이스 서비스 수준 목표를 변경 하면이 값이 변경 됩니다.|
 |**server_name**|NVARCHAR|논리 서버 이름입니다.|
 |**database_name**|NVARCHAR|논리적 데이터베이스 이름입니다.|
-|**slo_name**|NVARCHAR|서비스 수준 목표 및 하드웨어 생성.|
+|**slo_name**|NVARCHAR|하드웨어 생성을 포함 한 서비스 수준 목표입니다.|
 |**dtu_limit**|int|데이터베이스의 DTU 한도 (vCore의 경우 NULL)입니다.|
 |**cpu_limit**|int|데이터베이스의 vCore 제한 (DTU 데이터베이스의 경우 NULL)입니다.|
-|**min_cpu**|tinyint|사용자 작업에서 사용할 수 있는 최소 CPU 비율입니다.|
-|**max_cpu**|tinyint|사용자 작업에서 사용할 수 있는 최대 CPU 비율입니다.|
-|**cap_cpu**|tinyint|사용자 작업 그룹의 CPU 백분율 (%)입니다.|
-|**min_cores**|SMALLINT|SQL에서 사용 하는 Cpu 수입니다.|
-|**max_dop**|SMALLINT|사용자 작업에서 사용 하는 최대 병렬 처리 수준입니다.|
-|**min_memory**|int|사용자 작업에서 사용할 수 있는 최소 메모리 비율입니다.|
-|**max_memory**|int|사용자 작업에서 사용할 수 있는 최대 메모리 비율입니다.|
-|**max_sessions**|int|사용자 그룹에 대 한 세션 제한입니다.|
-|**max_memory_grant**|int|사용자 작업의 각 쿼리에 대 한 최대 메모리 부여 비율 (%)입니다.|
-|**max_db_memory**|int|사용자 DB 작업에 대 한 최대 버퍼 풀 메모리 상한|
-|**govern_background_io**|bit|배경 쓰기가 사용자 그룹에 부과 되는지 여부를 나타냅니다.|
-|**min_db_max_size_in_mb**|bigint|최소 최대 데이터베이스 파일 크기 (MB)입니다.|
-|**max_db_max_size_in_mb**|bigint|최대 최대 데이터베이스 파일 (MB)입니다.|
-|**default_db_max_size_in_mb**|bigint|기본 최대 데이터베이스 파일 크기 (MB)입니다.|
-|**db_file_growth_in_mb**|bigint|Azure 데이터베이스 파일의 기본 증가 (MB)입니다.|
-|**initial_db_file_size_in_mb**|bigint|기본 데이터베이스 파일 크기 (MB)입니다.|
-|**log_size_in_mb**|bigint|기본 로그 파일 크기 (MB)입니다.|
-|**instance_cap_cpu**|int|인스턴스 수준에서 CPU 상한입니다.|
-|**instance_max_log_rate**|bigint|인스턴스 수준에서 로그 생성 속도 상한 (바이트/초)입니다.|
-|**instance_max_worker_threads**|int|인스턴스 수준에서 작업자 스레드 제한입니다.|
-|**replica_type**|int|복제본 유형 (0은 primary, 1은 보조)입니다.|
+|**min_cpu**|tinyint|사용자 작업 리소스 풀의 MIN_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**max_cpu**|tinyint|사용자 작업 리소스 풀의 MAX_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**cap_cpu**|tinyint|사용자 작업 리소스 풀의 CAP_CPU_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**min_cores**|SMALLINT|내부적으로만 사용됩니다.|
+|**max_dop**|SMALLINT|사용자 작업 그룹의 MAX_DOP 값입니다. [작업 그룹 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)를 참조 하세요.|
+|**min_memory**|int|사용자 작업 리소스 풀의 MIN_MEMORY_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**max_memory**|int|사용자 작업 리소스 풀의 MAX_MEMORY_PERCENT 값입니다. [리소스 풀 개념](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)을 참조 하세요.|
+|**max_sessions**|int|사용자 작업 그룹에 허용 되는 최대 세션 수입니다.|
+|**max_memory_grant**|int|사용자 작업 그룹의 REQUEST_MAX_MEMORY_GRANT_PERCENT 값입니다. [작업 그룹 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)를 참조 하세요.|
+|**max_db_memory**|int|내부적으로만 사용됩니다.|
+|**govern_background_io**|bit|내부적으로만 사용됩니다.|
+|**min_db_max_size_in_mb**|bigint|데이터 파일의 최소 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**max_db_max_size_in_mb**|bigint|데이터 파일의 최대 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**default_db_max_size_in_mb**|bigint|데이터 파일에 대 한 기본 max_size 값 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**db_file_growth_in_mb**|bigint|데이터 파일의 기본 증가분 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**initial_db_file_size_in_mb**|bigint|새 데이터 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**log_size_in_mb**|bigint|새 로그 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
+|**instance_cap_cpu**|int|내부적으로만 사용됩니다.|
+|**instance_max_log_rate**|bigint|SQL Server 인스턴스의 로그 생성 률 한도 (바이트/초)입니다. `tempdb` 및 기타 시스템 데이터베이스를 포함 하 여 인스턴스에 의해 생성 된 모든 로그에 적용 됩니다. 탄력적 풀에서는 풀에 있는 모든 데이터베이스에 의해 생성 된 로그에 적용 됩니다.|
+|**instance_max_worker_threads**|int|SQL Server 인스턴스에 대 한 작업자 스레드 제한입니다.|
+|**replica_type**|int|복제본 유형 (0은 Primary, 1은 보조)입니다.|
 |**max_transaction_size**|bigint|모든 트랜잭션에서 사용 되는 최대 로그 공간 (KB)입니다.|
-|**checkpoint_rate_mbps**|int|검사점 대역폭 (Mbps)입니다.|
-|**checkpoint_rate_io**|int|초당 IOs의 검사점 IO 요금입니다.|
-|**last_updated_date_utc**|datetime|마지막 설정 변경 또는 재구성 날짜 및 시간입니다.|
-|**primary_group_id**|int|기본 사용자 작업 그룹 ID입니다.|
-|**primary_group_max_workers**|int|주 사용자 작업 그룹 수준의 작업자 한도입니다.|
-|**primary_min_log_rate**|bigint|기본 사용자 작업 그룹 수준에서 최소 로그 속도 (초당 바이트)입니다.|
-|**primary_max_log_rate**|bigint|기본 사용자 작업 그룹 수준에서 최대 로그 속도 (초당 바이트)입니다.|
-|**primary_group_min_io**|int|기본 사용자 작업 그룹 수준의 최소 IO입니다.|
-|**primary_group_max_io**|int|기본 사용자 작업 그룹 수준의 최대 IO입니다.|
-|**primary_group_min_cpu**|FLOAT|기본 사용자 작업 그룹 수준에서 최소 CPU 비율 제한입니다.|
-|**primary_group_max_cpu**|FLOAT|기본 사용자 작업 그룹 수준의 최대 CPU 비율 제한입니다.|
-|**primary_log_commit_fee**|int|기본 사용자 작업 그룹 수준에서 로그 속도 거 버 넌 스 커밋 요금입니다.|
-|**primary_pool_max_workers**|int|주 사용자 풀 수준의 작업자 한도입니다.
-|**pool_max_io**|int|기본 사용자 풀 수준의 최대 IO 제한입니다.|
-|**govern_db_memory_in_resource_pool**|bit|버퍼 풀의 최대 크기를 리소스 풀 수준에서 제어할 지 여부를 나타냅니다. 일반적으로 탄력적 풀 내의 데이터베이스에 대해 설정 됩니다.|
-|**volume_local_iops**|int|로컬 볼륨 (예: C:, D:)에 대 한 초당 Io 수입니다.|
-|**volume_managed_xstore_iops**|int|원격 저장소 계정에 대 한 초당 Io 수입니다.|
-|**volume_external_xstore_iops**|int|Azure SQL DB 백업 및 원격 분석에서 사용 하는 원격 저장소 계정의 초당 Io 수입니다.|
-|**volume_type_local_iops**|int|모든 로컬 볼륨의 초당 Io 수입니다.|
-|**volume_type_managed_xstore_iops**|int|인스턴스에서 사용 하는 모든 원격 저장소 계정의 초당 Io 수입니다.|
-|**volume_type_external_xstore_iops**|int|Azure SQL DB 백업 및 인스턴스에 대 한 원격 분석에서 사용 하는 모든 원격 저장소 계정의 초당 Io 수입니다.|
-|**volume_pfs_iops**|int|프리미엄 파일 저장소에 대 한 초당 Io 수입니다.|
-|**volume_type_pfs_iops**|int|인스턴스에서 사용 하는 모든 프리미엄 파일 저장소에 대 한 초당 Io 수입니다.|
+|**checkpoint_rate_mbps**|int|내부적으로만 사용됩니다.|
+|**checkpoint_rate_io**|int|내부적으로만 사용됩니다.|
+|**last_updated_date_utc**|datetime|마지막 설정 변경 또는 재구성 날짜와 시간 (UTC)입니다.|
+|**primary_group_id**|int|주 복제본 및 보조 복제본의 사용자 작업에 대 한 작업 그룹 ID입니다.|
+|**primary_group_max_workers**|int|사용자 작업 그룹에 대 한 작업자 스레드 제한입니다.|
+|**primary_min_log_rate**|bigint|사용자 작업 그룹 수준에서 최소 로그 속도 (바이트/초)입니다. 리소스 관리는이 값 이하로 로그 율을 줄이려고 시도 하지 않습니다.|
+|**primary_max_log_rate**|bigint|사용자 작업 그룹 수준에서 초당 최대 로그 속도 (바이트)입니다. 리소스 관리에서는이 값을 초과 하는 로그 전송률을 허용 하지 않습니다.|
+|**primary_group_min_io**|int|사용자 작업 그룹의 최소 IOPS입니다. 리소스 관리는이 값 이하로 IOPS를 줄이려고 시도 하지 않습니다.|
+|**primary_group_max_io**|int|사용자 작업 그룹에 대 한 최대 IOPS입니다. 리소스 관리에서는이 값을 초과 하는 IOPS를 허용 하지 않습니다.|
+|**primary_group_min_cpu**|FLOAT|사용자 작업 그룹 수준에 대 한 최소 CPU 비율입니다. 리소스 관리는이 값 아래의 CPU 사용률을 줄이도록 시도 하지 않습니다.|
+|**primary_group_max_cpu**|FLOAT|사용자 작업 그룹 수준에 대 한 최대 CPU 비율입니다. 리소스 관리에서는이 값을 초과 하는 CPU 사용률을 허용 하지 않습니다.|
+|**primary_log_commit_fee**|int|사용자 작업 그룹의 로그 전송률 관리 커밋 요금 (바이트)입니다. 커밋 요금은 로그 율 계정에 대해서만 고정 값을 사용 하 여 각 로그 IO의 크기를 늘립니다. 저장소에 대 한 실제 로그 IO는 증가 되지 않습니다.|
+|**primary_pool_max_workers**|int|사용자 작업 리소스 풀에 대 한 작업자 스레드 제한입니다.|
+|**pool_max_io**|int|사용자 작업 리소스 풀에 대 한 최대 IOPS 제한입니다.|
+|**govern_db_memory_in_resource_pool**|bit|내부적으로만 사용됩니다.|
+|**volume_local_iops**|int|내부적으로만 사용됩니다.|
+|**volume_managed_xstore_iops**|int|내부적으로만 사용됩니다.|
+|**volume_external_xstore_iops**|int|내부적으로만 사용됩니다.|
+|**volume_type_local_iops**|int|내부적으로만 사용됩니다.|
+|**volume_type_managed_xstore_iops**|int|내부적으로만 사용됩니다.|
+|**volume_type_external_xstore_iops**|int|내부적으로만 사용됩니다.|
+|**volume_pfs_iops**|int|내부적으로만 사용됩니다.|
+|**volume_type_pfs_iops**|int|내부적으로만 사용됩니다.|
 |||
 
 ## <a name="permissions"></a>사용 권한
 
 이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>Remarks
 
-사용자는 Azure SQL Database 데이터베이스에 대 한 리소스 관리 구성 및 용량 설정에 대해이 동적 관리 뷰에 액세스할 수 있습니다. 
+Azure SQL Database의 리소스 관리에 대 한 설명은 [리소스 제한 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)을 참조 하세요.
 
 > [!IMPORTANT]
-> 이 DMV에 의해 표시 되는 대부분의 데이터는 내부 사용을 위한 것 이며 변경 될 수 있습니다.
+> 이 DMV에서 반환 하는 대부분의 데이터는 내부 사용을 위한 것 이며 언제 든 지 변경 될 수 있습니다.
 
 ## <a name="examples"></a>예
 
-다음 예에서는 데이터베이스 서버 내에서 단일 또는 풀링된 데이터베이스에 대 한 데이터베이스 이름별로 정렬 된 인스턴스 최대 로그 전송률 데이터를 반환 합니다.
+사용자 데이터베이스의 컨텍스트에서 실행 되는 다음 쿼리는 사용자 작업 그룹 및 리소스 풀 수준에서 최대 로그 속도 및 최대 IOPS를 반환 합니다. 단일 데이터베이스의 경우 하나의 행이 반환 됩니다. 탄력적 풀의 데이터베이스에 대해 풀의 각 데이터베이스에 대해 행이 반환 됩니다.
 
 ```
 SELECT database_name,
-       primary_max_log_rate
+       primary_group_id,
+       primary_max_log_rate,
+       primary_group_max_io,
+       pool_max_io
 FROM sys.dm_user_db_resource_governance
-ORDER BY database_name DESC;  
+ORDER BY database_name;  
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>관련 항목:
 
+- [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
+- [sys. dm_resource_governor_resource_pools (Transact-sql)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys. dm_resource_governor_workload_groups (Transact-sql)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
+- [dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [트랜잭션 로그 요금 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [단일 데이터베이스 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [단일 데이터베이스 vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

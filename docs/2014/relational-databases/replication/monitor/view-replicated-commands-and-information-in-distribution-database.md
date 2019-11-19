@@ -1,5 +1,5 @@
 ---
-title: 복제 된 명령 및 기타 정보 (복제 TRANSACT-SQL 프로그래밍) 배포 데이터베이스의 보기 | Microsoft Docs
+title: 배포 데이터베이스에서 복제 된 명령 및 기타 정보 보기 (복제 Transact-sql 프로그래밍) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666655"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164958"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>배포 데이터베이스의 복제된 명령 및 기타 정보 보기(복제 Transact-SQL 프로그래밍)
   트랜잭션 복제를 사용하는 경우 트랜잭션 명령은 배포 에이전트에서 해당 명령을 모든 구독자에 전파하거나 구독자의 배포 에이전트에서 변경 내용을 끌어올 때까지 배포 데이터베이스에 저장됩니다. 이와 같이 배포 데이터베이스에서 보류 중인 명령은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 볼 수 있습니다. 자세한 내용은 [복제 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)를 참조하세요.  
@@ -33,11 +33,11 @@ ms.locfileid: "62666655"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>트랜잭션 복제를 사용하여 게시된 특정 데이터베이스 또는 특정 아티클에서 배포 데이터베이스의 복제된 명령을 보려면  
   
-1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행합니다. **@publication** 및 **@article** 을 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
+1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행합니다. **\@게시** 및 **\@문서**를 지정 합니다. 결과 집합의 **article id** 값을 확인합니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)를 실행합니다. (옵션) **@article_id** 을 참조하세요. (옵션) **@publisher_database_id** 에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 **sys.databases** 카탈로그 뷰의 [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열에서 얻을 수 있습니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)를 실행합니다. 필드 **\@article_id**에 대해 2 단계의 문서 ID를 지정 합니다. 필드 **\@publisher_database_id**에 대 한 게시 데이터베이스의 ID를 지정 합니다 .이 ID는 [sys.debug](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 카탈로그 뷰의 **database_id** 열에서 가져올 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [프로그래밍 방식으로 복제 모니터링](../monitoring-replication.md)  
   
   
