@@ -24,11 +24,11 @@ ms.locfileid: "72798123"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>전제 조건  
  SharePoint 설치 프로그램에서 서버 팜 설치 옵션을 사용하여 SharePoint 서버를 설치해야 합니다. 기본 제공 데이터베이스를 사용하는 독립 실행형 SharePoint 서버는 지원되지 않습니다. 자세한 내용은 [SharePoint 2010 팜에서 SQL SERVER BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
->  SharePoint용 PowerPivot 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜을 구성하려면 먼저 SharePoint 2010 SP1을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 지금 설치합니다.  
+>  SharePoint용 PowerPivot  또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 서버를 사용하는 SharePoint  팜을 구성하려면 먼저 SharePoint  2010  SP1을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 지금 설치합니다.  
   
  SharePoint용 PowerPivot을 설치해야 합니다. 최소한 팜 솔루션이 배포되어 있어야 합니다. 팜 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell 스크립트를 사용합니다. 이 단계에 대한 지침은 이 항목에 설명되어 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72798123"
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
-     이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
+     이 cmdlet을 실행하면 솔루션의 이름, 솔루션 ID 및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
   
 3.  두 번째 cmdlet을 실행하여 솔루션을 배포합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72798123"
   
 1.  시작 단추를 클릭하고 **모든 프로그램**, **Microsoft SharePoint Products 2010**을 선택한 다음 **SharePoint 2010 중앙 관리**를 선택합니다.  
   
-2.  SharePoint  2010  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
+2.  SharePoint 2010 중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
   
      powerpivotfarm.wsp와 powerpivotwebapp.wsp의 두 개별 솔루션 패키지가 표시됩니다 첫 번째 솔루션(powerpivotfarm.wsp)은 이미 배포되어 있어야 합니다. 배포한 후에는 다시 배포할 필요가 없습니다. 두 번째 솔루션(powerpivotwebapp.wsp)은 중앙 관리용으로 배포되지만 PowerPivot 데이터 액세스를 지원할 각 SharePoint 웹 애플리케이션에 대해 이 솔루션을 수동으로 배포해야 합니다.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "72798123"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>3부: 무인 PowerPivot 데이터 새로 고침 계정 구성  
  데이터 새로 고침 중에 외부 데이터에 액세스하려면 PowerPivot 데이터 액세스용으로 무인 데이터 새로 고침 계정을 만들어야 하는 경우가 많습니다. 예를 들어 Kerberos가 설정되지 않은 경우에는 PowerPivot 서비스가 외부 데이터 원본에 연결하는 데 사용할 수 있는 무인 계정을 만들어야 합니다.  
   
- 무인 PowerPivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [PowerPivot 무인 데이터 새로 고침 &#40;계정&#41; 구성](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 을 참조 하세요 SharePoint용 PowerPivot [PowerPivot 데이터 새로 고침 &#40;SharePoint용 PowerPivot&#41;에 저장 된 자격 증명을 구성](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
+ 무인 powerpivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [powerpivot 무인 데이터 새로 고침 &#40;계정&#41; 구성 SharePoint용 PowerPivot](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 및 [powerpivot 데이터 새로 고침 &#40;을 위한 저장 된 자격 증명 구성 SharePoint용 PowerPivot&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)을 참조 하세요.  
   
 ##  <a name="Usage"></a>6 단계: 사용 현황 데이터 수집 사용  
  SharePoint용 PowerPivot은 SharePoint 사용량 현황 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
@@ -223,9 +223,9 @@ ms.locfileid: "72798123"
  자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)를 참조 하세요.  
   
 ##  <a name="bkmk_redist"></a>9 단계: SQL Server 2012 SharePoint용 PowerPivot 인스턴스에 OLE DB 공급자의 SQL Server 2008 R2 버전을 설치 합니다.  
- 이전 버전과 새 버전의 PowerPivot 통합 문서를 동일 서버에서 함께 실행하려면 SQL Server 2008 R2에서 제공되는 Analysis Services OLE DB 공급자를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint용 PowerPivot 서버에 설치해야 합니다.  
+ 이전 버전과 새 버전의 PowerPivot  통합 문서를 동일 서버에서 함께 실행하려면 SQL  Server  2008  R2에서 제공되는 Analysis  Services  OLE  DB  공급자를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint용 PowerPivot  서버에 설치해야 합니다.  
   
- 공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
+ 공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot  서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
   
  이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkId=159570)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 후 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램의 x64 패키지를 다운로드 합니다.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "72798123"
 9. 컴퓨터 파일 시스템의 다음 폴더에서 파일이 디스크로 캐시되었는지 확인합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시는 \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup 폴더에서 확인할 수 있습니다.  
   
 ##  <a name="nextsteps"></a>사후 설치 단계  
- 설치를 확인한 후에 PowerPivot 갤러리를 만들거나 개별 구성 설정을 조정하여 서비스 구성을 마칩니다. 앞서 설치한 모든 서버 구성 요소를 사용하려면 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 을 다운로드하여 첫 번째 PowerPivot 통합 문서를 만든 후에 게시하면 됩니다.  
+ 설치를 확인한 후에 PowerPivot 갤러리를 만들거나 개별 구성 설정을 조정하여 서비스 구성을 마칩니다. 앞서 설치한 모든 서버 구성 요소를 사용하려면 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]을 다운로드하여 첫 번째 PowerPivot  통합 문서를 만든 후에 게시하면 됩니다.  
   
 ### <a name="install-data-providers-used-for-data-refresh"></a>데이터 새로 고침에 사용되는 데이터 공급자 설치  
  데이터 고침을 설정한 경우 외부 데이터 액세스에 대해 PowerPivot 클라이언트 애플리케이션에서 원본 데이터를 가져오는 데 사용된 동일한 데이터 공급자가 필요합니다. 예를 들어 원래 32비트 공급자를 사용하여 데이터를 가져온 경우 서버 쪽 데이터 새로 고침에서도 동일한 외부 데이터 원본에 액세스할 때 32비트 공급자가 필요합니다. 자세한 내용은 [SharePoint 2010를 사용 하 여 PowerPivot 데이터 새로 고침](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)을 참조 하세요.  
@@ -292,8 +292,8 @@ ms.locfileid: "72798123"
   
  이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 2014 버전에서 지원 되는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+## <a name="see-also"></a>관련 항목  
+ [SQL Server 2014 버전에서 지원 되는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [중앙 관리 에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)  
  [SharePoint 에 PowerPivot 솔루션 배포](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)  

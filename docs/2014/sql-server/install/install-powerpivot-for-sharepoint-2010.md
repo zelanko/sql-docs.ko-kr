@@ -40,11 +40,11 @@ ms.locfileid: "71952250"
   
 5.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 프로비전하려면 도메인 사용자 계정이 있어야 합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 시에는 중앙 관리에서 관리할 수 있도록 Analysis Services 서비스 계정이 도메인 사용자 계정이어야 합니다. 이 문서의 단계를 수행하면서 **서버 구성** 페이지에 해당 계정 및 자격 증명을 입력하게 됩니다.  
   
-6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. SharePoint용 PowerPivot을 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
+6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. SharePoint용 PowerPivot을 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
   
 7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스는 SQL Server 장애 조치(Failover) 클러스터의 일부가 될 수 없습니다. SharePoint 제품의 고가용성 기능 사용 예를 들어, Excel Services는 SharePoint용 PowerPivot 서버의 부하 분산을 관리합니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)를 참조 하세요.  
   
-8.  기존 팜에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 응용 프로그램이 하나 이상 필요합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스는 웹 애플리케이션에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)를 참조하십시오.  
+8.  기존 팜에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 애플리케이션이 하나 이상 필요합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스는 웹 애플리케이션에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)를 참조하십시오.  
   
 9. 시스템 및 버전 요구 사항을 이해하려면 다음 항목을 검토하십시오.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "71952250"
   
 -   [Windows PowerShell을 사용하여 PowerPivot 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **데이터베이스 엔진 인스턴스에 연결 하는 중입니다.** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 SQL Server 설치 프로그램에서 설치에 데이터베이스 엔진 인스턴스를 추가할 수 있는 옵션을 제공했습니다. 새 팜을 설정 하 고 팜의 구성 및 콘텐츠 데이터베이스를 실행 하기 위해 데이터베이스 서버가 필요한 경우 설치에 데이터베이스 엔진 인스턴스를 추가 했을 수 있습니다. 데이터베이스 엔진을 추가한 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]이라고 명명된 인스턴스로 설치되었습니다. 이 인스턴스에 대 한 연결을 지정 해야 하는 경우 (예: 팜 구성 마법사에서 해당 마법사를 사용 하 여 팜을 구성 하는 경우)에는 <`servername`> \PowerPivot. 형식으로 데이터베이스 이름을 입력 해야 합니다.  
+ **데이터베이스 엔진 인스턴스에 연결 하는 중입니다.** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 SQL Server 설치 프로그램에서 설치에 데이터베이스 엔진 인스턴스를 추가할 수 있는 옵션을 제공했습니다. 새 팜을 설정 하 고 팜의 구성 및 콘텐츠 데이터베이스를 실행 하기 위해 데이터베이스 서버가 필요한 경우 설치에 데이터베이스 엔진 인스턴스를 추가 했을 수 있습니다. 데이터베이스 엔진을 추가한 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이라고 명명된 인스턴스로 설치되었습니다. 이 인스턴스에 대 한 연결을 지정 해야 하는 경우 (예: 팜 구성 마법사에서 해당 마법사를 사용 하 여 팜을 구성 하는 경우)에는 <`servername`> \PowerPivot. 형식으로 데이터베이스 이름을 입력 해야 합니다.  
   
 ##  <a name="bkmk_redist"></a>3 단계: Excel Services 응용 프로그램 서버에 Analysis Services OLE DB 공급자 설치  
  별도의 애플리케이션 서버에서 Excel 계산 서비스 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 경우 추가 설치 단계가 필요합니다. Excel Calculation Services를 실행하는 애플리케이션 서버에서 적절한 Analysis Services OLE DB(MSOLAP) 공급자 버전을 설치합니다.  

@@ -18,7 +18,7 @@ ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952645"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지
-  이 항목에서는 SharePoint 2010 및 SharePoint 2013 환경에 SQL Server Business Intelligence 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 을 설치하기 위한 일반적인 토폴로지에 대해 설명합니다. 예를 들어 단일 서버와 3계층 설치에 대해 설명합니다.  
+  이 항목에서는 SharePoint 2010 및 SharePoint 2013 환경에 SQL Server Business Intelligence 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]을 설치하기 위한 일반적인 토폴로지에 대해 설명합니다. 예를 들어 단일 서버와 3계층 설치에 대해 설명합니다.  
   
 ||  
 |-|  
@@ -155,7 +155,7 @@ ms.locfileid: "71952645"
 ##  <a name="bkmk_sharepoint2010_1server"></a>단일 서버 배포  
  데이터 계층을 포함하여 모든 서버 구성 요소를 단일 컴퓨터에 설치할 수 있습니다. 이 배포 구성은 SharePoint 모드에서 Reporting Services를 포함하는 사용자 지정 애플리케이션을 개발하거나 소프트웨어를 평가하는 경우 유용합니다. 이 배포는 구성이 가장 간단합니다. 모든 구성 요소가 같은 컴퓨터에 설치되므로 사용하는 라이선스도 가장 적습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 사용이 허가된 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설치됩니다.  
   
- 단일 서버에 모든 기능을 설치하기 위해 동일한 물리적 서버에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 순서대로 설치합니다. 독립 실행형 서버 구성에 대 한 지침은 [배포 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)를 참조 하세요.  
+ 단일 서버에 모든 기능을 설치하기 위해 동일한 물리적 서버에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 순서대로 설치합니다. 독립 실행형 서버 구성에 대 한 지침은 [배포 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)를 참조 하세요.  
   
 ##  <a name="bkmk_sharepoint2010_2server"></a>2 계층 배포  
  2계층 배포는 일반적으로 특정 컴퓨터에 SharePoint Server 2010을 배포하고 두 번째 컴퓨터에 SQL Server 데이터베이스 엔진을 배포하는 것입니다. 데이터 계층을 전용 서버로 이동하는 것이 2개 컴퓨터 팜에 대한 가장 일반적인 구성입니다. 2계층 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 모두 SharePoint 서버에 설치합니다. 프런트 엔드의 모든 웹 서비스와 애플리케이션 계층의 공유 서비스를 동일한 물리적 서버에서 실행합니다. 2계층 배포의 설치 단계는 독립 실행형 배포와 매우 유사하며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 동일한 물리적 서버에 순서대로 설치합니다.  
