@@ -169,7 +169,7 @@ SELECT AVG(row_count) FROM
   - 같지 않음: `WHERE StatusCode != 'Done'`  
   - 값 범위 검색: `WHERE Quantity >= 100`  
   
-다음 모든 SELECT 문에서는 비클러스터형 인덱스가 해시 인덱스 전체에서 선호됩니다.  
+다음 모든 SELECT 문에서는 비클러스터형 인덱스가 해시 인덱스보다 선호됩니다.  
 
 ```sql
 SELECT CustomerName, Priority, Description 

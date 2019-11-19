@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961785"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729867"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 
@@ -29,7 +29,7 @@ ms.locfileid: "71961785"
 > [!NOTE]
 >  이 문서에서 SQL Data Warehouse에 대한 토론은 다른 언급이 없는 경우 SQL Data Warehouse 및 병렬 데이터 웨어하우스 모두에 적용됩니다.
 
- ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  예제 섹션의 [분할된 테이블 만들기](#PartitionedTable)를 참조하세요.
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>순서가 지정된 클러스터형 columnstore 인덱스 옵션(Azure SQL Data Warehouse 미리 보기)
+### <a name="ordered-clustered-columnstore-index-option"></a>순서가 지정된 클러스터형 columnstore 인덱스 옵션 
 
-CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  CCI의 데이터는 columnstore 세그먼트로 압축되기 전에 정렬되지 않습니다.  ORDER를 사용하여 CCI를 만드는 경우, 데이터가 인덱스 세그먼트에 추가되기 전에 정렬되며, 쿼리 성능이 향상될 수 있습니다. 자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.  
+CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  CCI의 데이터는 columnstore 세그먼트로 압축되기 전에 정렬되지 않습니다.  ORDER를 사용하여 CCI를 만드는 경우, 데이터가 인덱스 세그먼트에 추가되기 전에 정렬되며, 쿼리 성능이 향상될 수 있습니다. 자세한 내용은 [순서가 지정된 클러스터형 Columnstore 인덱스를 사용한 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)을 참조하세요.  
 
-사용자는 sys.index_columns의 column_store_order_ordinal 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
+정렬된 CCI는 문자열 열을 제외하고 Azure SQL Data Warehouse에서 지원되는 모든 데이터 형식의 열에서 만들 수 있습니다.  
+
+사용자는 **sys.index_columns**의 **column_store_order_ordinal** 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
+
+자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.   
 
 ### <a name="DataTypes"></a> 데이터 형식
 
