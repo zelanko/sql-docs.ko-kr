@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1678db946145ae7780ed35fcf142f915aa2a8fa7
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: b09ea4349a710bad0ed228e6f16637878047e9bc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961951"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982208"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -286,7 +286,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 ON *partition_scheme_name* **( _column_name_ )**      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.
 
@@ -302,13 +302,13 @@ _partition_scheme_name_ 또는 _filegroup_이 지정되지 않고 테이블이 �
 
 ON _filegroup_name_      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상)
 
 주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.
 
 ON **"** default **"**      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 테이블 또는 보기와 동일한 파일 그룹 또는 파티션 구성표에 지정된 인덱스를 만듭니다.
 
@@ -319,7 +319,7 @@ ON **"** default **"**
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상)
 
 클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.
 
@@ -357,7 +357,7 @@ _database_name_
 
 PAD_INDEX = { ON | **OFF** }      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스 패딩을 지정합니다. 기본값은 OFF입니다.
 
@@ -373,7 +373,7 @@ PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지
 
 FILLFACTOR **=** _fillfactor_      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 *fillfactor*가 100이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 리프 페이지가 꽉 찬 인덱스를 만듭니다.
 
@@ -386,7 +386,7 @@ FILLFACTOR 설정은 인덱스를 만들거나 다시 작성하는 경우에만 
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 **tempdb**에 임시 정렬 결과를 저장할지 여부를 지정합니다. Azure SQL Database 하이퍼스케일을 제외하고 기본값은 OFF입니다. 하이퍼스케일의 모든 인덱스 작성 작업에서는, 다시 시작 가능한 인덱스 재작성을 사용하지 않을 경우 지정된 옵션에 관계없이 SORT_IN_TEMPDB가 항상 ON입니다.
 
@@ -495,7 +495,7 @@ OFF
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  온라인 인덱스 작업이 다시 시작될 수 있는지 여부를 지정합니다.
 
@@ -507,7 +507,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사용됩니다(**ONLINE = ON** 필요).   
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값).
 
@@ -518,7 +518,7 @@ MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사�
 > columnstore 인덱스에서는 다시 시작 가능한 온라인 인덱스 다시 빌드가 지원되지 않습니다.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.
 
@@ -529,7 +529,7 @@ OFF
 행 잠금이 사용되지 않습니다.
 
 ALLOW_PAGE_LOCKS = { **ON** | OFF }      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.
 
@@ -545,7 +545,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 [순차 키](#sequential-keys) 섹션을 참조하세요.
 
 MAXDOP = *max_degree_of_parallelism*      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
 
@@ -580,7 +580,7 @@ PAGE
 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 인덱스가 분할되지 않은 경우 ON PARTITIONS 인수를 사용하면 오류가 발생합니다. ON PARTITIONS 절을 제공하지 않으면 DATA_COMPRESSION 옵션이 분할된 인덱스의 모든 파티션에 적용됩니다.
 
@@ -751,7 +751,7 @@ DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭
 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.
 
 ### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다음 지침은 다시 시작 가능한 인덱스 작업에 적용됩니다.
 
@@ -1051,7 +1051,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. 분할된 인덱스 만들기
 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 기존 파티션 구성표인 `TransactionsPS1`에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1101,7 +1101,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>13. 다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1130,7 +1130,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>14. 기본 구문
 다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단       
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

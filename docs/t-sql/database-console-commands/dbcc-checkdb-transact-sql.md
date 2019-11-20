@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809895"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982417"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ DATA_PURITY
  이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 이러한 오류를 수동으로 수정하는 방법은 기술 자료 문서 923247: [SQL Server 2005 이상 버전에서 DBCC 오류 2570 문제 해결](https://support.microsoft.com/kb/923247)을 참조하세요.  
     
  MAXDOP  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상).  
     
  명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]가 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
  
@@ -192,7 +192,7 @@ DBCC CHECKDB는 비활성화된 인덱스는 검사하지 않습니다. 비활�
 -   [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷    
-DBCC CHECKDB는 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 위해 내부 데이터베이스 스냅샷을 사용합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC &amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요. 스냅샷을 만들 수 없거나 TABLOCK이 지정되면 DBCC CHECKDB는 필요한 일관성을 확보하기 위해 잠금을 설정합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다.
+DBCC CHECKDB는 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 위해 내부 데이터베이스 스냅샷을 사용합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요. 스냅샷을 만들 수 없거나 TABLOCK이 지정되면 DBCC CHECKDB는 필요한 일관성을 확보하기 위해 잠금을 설정합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다.
 내부 데이터베이스 스냅샷을 생성할 수 없는 경우 마스터에 대한 DBCC CHECKDB 실행은 실패합니다.
 tempdb에 대해 DBCC CHECKDB를 실행할 경우 할당 또는 카탈로그 검사는 수행되지 않으며 테이블 검사를 수행하려면 공유 테이블 잠금을 설정해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.
 Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 포맷된 볼륨에 파일이 있는 데이터베이스에 대해 DBCC CHECKDB 명령을 실행하면 오류 메시지가 발생할 수 있습니다. 자세한 내용은 기술 자료 문서 2974455: [SQL Server 데이터베이스가 ReFS 볼륨에 있는 경우 DBCC CHECKDB 동작](https://support.microsoft.com/kb/2974455)을 참조하세요.    
@@ -391,7 +391,7 @@ GO
     
 ## <a name="see-also"></a>참고 항목    
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[데이터베이스 스냅샷 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+[데이터베이스 스냅샷 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[시스템 테이블 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

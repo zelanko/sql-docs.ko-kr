@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149983"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056750"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
   
- ![데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리")  
+ ![데이터베이스 엔진 업그레이드 방법 의사 결정 트리](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "데이터베이스 엔진 업그레이드 방법 의사 결정 트리")  
   
  **다운로드**  
   
 -   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  계정이 있으면 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
+-   Azure 계정이 있으세요?  계정이 있으면 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
   
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.
@@ -57,7 +57,7 @@ ms.locfileid: "71149983"
   
  다음은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 현재 위치 업그레이드에 필요한 단계를 개략적으로 표시한 다이어그램입니다.  
   
- ![데이터베이스 엔진 업그레이드- 비HA 전체 업그레이드](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "데이터베이스 엔진 업그레이드- 비HA 전체 업그레이드")  
+ ![데이터베이스 엔진 업그레이드 비 HA 현재 위치 업그레이드](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "데이터베이스 엔진 업그레이드 비 HA 현재 위치 업그레이드")  
   
  자세한 내용은 [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조하세요.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "71149983"
   
 -   **연결된 스토리지 환경:** 연결된 스토리지를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
   
-     ![연결된 스토리지에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "연결된 스토리지에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법")  
+     ![연결된 스토리지에 대해 백업 및 복원을 사용하는 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "연결된 스토리지에 대해 백업 및 복원을 사용하는 새 설치 업그레이드 방법")  
   
 -   **SAN 스토리지 환경:**  SAN 스토리지를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
   
-     ![SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
+     ![SAN 스토리지에 대해 분리 및 연결을 사용하는 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 스토리지에 대해 분리 및 연결을 사용하는 새 설치 업그레이드 방법")  
   
 ## <a name="rolling-upgrade"></a>롤링 업그레이드  
  롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  

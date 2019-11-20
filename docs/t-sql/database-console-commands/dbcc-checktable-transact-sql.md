@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7352a7e2db64da959cbefaacee5c9f3d14a8a579
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809885"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982323"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ DATA_PURITY
  PHYSICAL_ONLY를 지정하면 열 무결성 검사는 수행되지 않습니다.  
     
 MAXDOP  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]부터 시작)  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상부터).  
  
  명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
     
@@ -160,7 +160,7 @@ DBCC CHECKTABLE은 지정한 테이블에 대해 다음 사항을 검사합니�
 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷    
-DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅샷을 사용합니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요.
+DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅샷을 사용합니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요.
 스냅샷을 만들 수 없거나 TABLOCK이 지정된 경우 DBCC CHECKTABLE은 공유 테이블 잠금을 획득하여 필요한 일관성을 확보합니다.
     
 > [!NOTE]    

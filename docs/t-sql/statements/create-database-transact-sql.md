@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536259"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983223"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ CREATE DATABASE database_snapshot_name
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스의 포함 상태를 지정합니다. NONE = 포함되지 않은 데이터베이스입니다. PARTIAL = 부분적으로 포함된 데이터베이스입니다.
 
@@ -202,7 +202,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 데이터베이스에 대한 비트랜잭션 FILESTREAM 액세스 수준을 지정합니다.
 
@@ -213,7 +213,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCL
 |FULL|FILESTREAM FileTable에 대한 전체 비트랜잭션 액세스를 사용할 수 있습니다.|
 
 DIRECTORY_NAME = \<directory_name>     
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 Database_Directory 이름 중에서 고유해야 합니다. 고유성 비교는 대/소문자를 구분하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 설정과 관계가 없습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
@@ -221,25 +221,25 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 전체 텍스트 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)을 참조하세요.
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [기본 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 참조하세요.
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [nested triggers 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)을 참조하세요.
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
   이 옵션에 대한 전체 설명은 [의미 없는 단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)을 참조하세요.
 
@@ -428,7 +428,7 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 파일 그룹이 memory_optimized 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP - 메모리 내 최적화](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 MEMORY_OPTIMIZED_DATA 파일 그룹이 하나만 허용됩니다. 메모리 최적화 데이터를 저장하기 위해 파일 그룹을 만드는 코드 샘플은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.
 

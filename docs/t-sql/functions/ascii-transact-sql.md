@@ -1,7 +1,7 @@
 ---
 title: ASCII(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019761"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119191"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,11 @@ ASCII ( character_expression )
 ## <a name="remarks"></a>Remarks
 ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
 
-## <a name="examples"></a>예  
-이 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
+ASCII는 7비트 문자 집합입니다. 확장 ASCII 또는 상위 ASCII는 `ASCII` 함수에서 처리하지 않는 8비트 문자 집합입니다. 
+
+## <a name="examples"></a>예 
+
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>1\. 이 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -62,18 +65,57 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>2\. 이 예제에서는 7비트 ASCII 값이 올바르게 반환되는 방법을 보여 주지만 8비트 확장 ASCII 값은 처리되지 않습니다.
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+위의 결과가 올바른 문자 코드 포인트에 매핑되는지 확인하려면 `CHAR` 또는 `NCHAR` 함수에서 출력 값을 사용합니다.
+
+```sql
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+이전 결과에서 코드 포인트 195에 대한 문자는 **æ**가 아니라 **Ã**입니다. `ASCII` 함수는 첫 번째 7비트 스트림을 읽을 수 있지만 추가 비트는 읽을 수 없기 때문입니다. 문자 `æ`에 대한 올바른 코드 포인트는 `UNICODE` 함수를 사용하여 찾을 수 있습니다. 이 함수는 올바른 문자 코드 포인트를 지원하거나 반환할 수 있습니다.
+
+```sql
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
+```
+
 ## <a name="see-also"></a>관련 항목:
  [CHAR&#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

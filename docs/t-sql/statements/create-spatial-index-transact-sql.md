@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8204471504e254c33d70adcce52490e0f5609985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117113"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982586"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -172,12 +172,12 @@ CREATE SPATIAL INDEX index_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
  ON *filegroup_name*      
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블이 분할되지 않은 경우 인덱스는 기본 테이블과 동일한 파일 그룹을 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
   
  ON "default"     
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  기본 파일 그룹에 지정된 인덱스를 만듭니다.  
   
@@ -203,7 +203,7 @@ CREATE SPATIAL INDEX index_name
  사용하려는 **geometry** 표 공간 분할 구성표를 지정합니다. GEOMETRY_GRID는 **geometry** 데이터 형식의 열에만 지정할 수 있습니다.  GEOMETRY_GRID는 공간 분할 구성표의 수동 조정을 허용합니다.  
   
  GEOMETRY_AUTO_GRID      
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  geometry 데이터 형식의 열에만 지정할 수 있습니다. 이 데이터 형식의 기본값이므로 따로 지정할 필요는 없습니다.  
   
@@ -211,7 +211,7 @@ CREATE SPATIAL INDEX index_name
  geography 표 공간 분할 구성표를 지정합니다. GEOGRAPHY_GRID는 **geography** 데이터 형식의 열에만 지정할 수 있습니다.  
   
  GEOGRAPHY_AUTO_GRID      
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  geography 데이터 형식의 열에만 지정할 수 있습니다.  이 데이터 형식의 기본값이므로 따로 지정할 필요는 없습니다.  
   
@@ -310,7 +310,7 @@ CELLS_PER_OBJECT =*n*
 CELLS_PER_OBJECT 값은 개체당 공간 분할 규칙에서 사용됩니다. 공간 분할 규칙에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
 PAD_INDEX = { ON | **OFF** }     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
@@ -323,7 +323,7 @@ OFF 또는 *fillfactor*를 지정되지 않음
 PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. *fillfactor* 값이 아무리 작더라도 중간 인덱스 페이지의 행 수는 두 개 이상입니다.  
   
 FILLFACTOR =*fillfactor*     
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. *fillfactor*가 100또는 0이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
@@ -338,7 +338,7 @@ FILLFACTOR =*fillfactor*
  자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   
 SORT_IN_TEMPDB = { ON | **OFF** }       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  tempdb에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
@@ -368,7 +368,7 @@ STATISTICS_NORECOMPUTE = { ON | **OFF**}
 > 배포 통계 자동 재계산 기능을 해제하면 쿼리 최적화 프로그램에서 테이블과 관련된 쿼리에 대해 최적의 실행 계획을 선택할 수 없습니다.  
   
 DROP_EXISTING = { ON | **OFF** }     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  명명된 기존 공간 인덱스를 삭제하고 다시 작성하도록 지정합니다. 기본값은 OFF입니다.  
   
@@ -389,7 +389,7 @@ ONLINE =**OFF**
 > 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -400,7 +400,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
  행 잠금이 사용되지 않습니다.  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -411,7 +411,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
  페이지 잠금이 사용되지 않습니다.  
   
 MAXDOP =*max_degree_of_parallelism*      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  인덱스 작업 중에 `max degree of parallelism` 구성 옵션을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -435,7 +435,7 @@ MAXDOP =*max_degree_of_parallelism*
 > 병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  인덱스에 사용되는 데이터 압축 수준을 결정합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서
+title: 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,14 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903806"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055192"
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
+# <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기(SQL Server 검색)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 문서에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
   

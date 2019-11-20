@@ -1,24 +1,24 @@
 ---
-title: 데이터베이스 엔진 이벤트 및 오류 | Microsoft 문서
+title: 데이터베이스 엔진 이벤트 및 오류
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127366"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119436"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 
-다음 표에는 오류 메시지 번호와 sys.messages 카탈로그 뷰의 오류 메시지 텍스트에 해당하는 설명이 나와 있습니다.
+다음 표에는 오류 메시지 번호와 sys.messages 카탈로그 뷰의 오류 메시지 텍스트에 해당하는 설명이 나와 있습니다. 해당하는 경우 오류 번호는 추가 정보에 대한 링크로 제공됩니다.
 
 ## <a name="errors--2-to-999"></a>오류 -2~999
 

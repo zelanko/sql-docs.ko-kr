@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344822"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982210"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 
@@ -74,27 +74,27 @@ WITH GRANT OPTION 지정된 권한을 다른 보안 주체에게 부여할 수 �
 *Database_role* 데이터베이스 역할을 지정합니다.
 
 *Application_role*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 애플리케이션 역할을 지정합니다.
 
 *Database_user_mapped_to_Windows_User*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.
 
 *Database_user_mapped_to_Windows_Group*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 
 *Database_user_mapped_to_certificate*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 인증서로 매핑된 데이터베이스 사용자를 지정합니다.
 
 *Database_user_mapped_to_asymmetric_key*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 비대칭 키로 매핑된 데이터베이스 사용자를 지정합니다.
 
@@ -122,7 +122,7 @@ Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**적용 대상**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -226,7 +226,7 @@ GO
 
  다음 예에서는 `SHOWPLAN` 애플리케이션 역할에 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 권한을 부여합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
 USE AdventureWorks2012;

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713194"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982287"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ KEEPFIXED PLAN
 통계 변경 시에 최적화 프로그램이 쿼리를 다시 컴파일하지 않도록 합니다. KEEPFIXED PLAN을 지정하면 원본으로 사용하는 테이블의 스키마가 바뀌거나 해당 테이블에 대해 **sp_recompile**이 실행되는 경우에만 쿼리를 다시 컴파일합니다.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상부터)  
   
 쿼리에 비클러스터형 메모리 액세스에 최적화된 columnstore 인덱스가 사용되지 않도록 방지합니다. 쿼리에 columnstore 인덱스 사용을 방지하기 위한 쿼리 힌트와 columnstore 인덱스를 사용하기 위한 인덱스 힌트가 포함되어 있으면 힌트가 충돌하게 되고 오류가 반환됩니다.  
   

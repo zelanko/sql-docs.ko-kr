@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798381"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982574"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > 테이블이 잘린 경우 잘린 HoBT에서 작성된 모든 통계가 기본 샘플링 비율을 사용하도록 되돌아갑니다.
 
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터)에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)까지.    
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터) 이상([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)    
   
  STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -196,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   내부 테이블에 대해 작성된 통계입니다.  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 MAXDOP = *max_degree_of_parallelism*  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  

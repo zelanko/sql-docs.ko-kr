@@ -1,6 +1,5 @@
 ---
-title: 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 문자 형식을 사용하여 데이터 가져오기 및 내보내기
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bf664a8171afabadc458cc9f4e24c8b77687e94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091508"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056330"
 ---
-# <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
+# <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
 

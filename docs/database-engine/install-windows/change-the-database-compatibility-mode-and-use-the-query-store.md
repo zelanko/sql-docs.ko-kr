@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034508"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982132"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)이 변경된 경우에만 일부 변경 내용이 활성화됩니다. 이 작업은 여러 가지 이유로 수행되었습니다.  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)이 변경된 경우에만 일부 변경 내용이 활성화됩니다. 이 작업은 여러 가지 이유로 수행되었습니다.  
   
 - 업그레이드는 단방향 작업이므로(파일 형식을 다운그레이드할 수 없음) 데이터베이스 내에서 별도 작업에 대한 새로운 기능의 사용을 분리하는 값이 있습니다. 이전 데이터베이스 호환성 수준으로 설정을 되돌릴 수 있습니다.  새 모델은 중단 창 동안 발생해야 하는 것의 수를 줄입니다.  
   

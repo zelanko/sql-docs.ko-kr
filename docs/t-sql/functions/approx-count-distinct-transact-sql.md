@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,19 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019793"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962338"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 이 함수는 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT는 공개 미리 보기 기능입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,11 +55,11 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT`에는 완전한 COUNT DISTINCT 작업보다 적은 메모리가 필요합니다.  메모리 사용 공간이 작을 경우 `APPROX_COUNT_DISTINCT`는 정확한 COUNT DISTINCT 작업에 비해 메모리를 디스크에 분산시킬 가능성이 적습니다. 이를 수행하는 데 사용되는 알고리즘에 대한 자세한 내용은 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog)를 참조하세요.
 
 > [!NOTE]
-> 데이터 정렬이 중요한 문자열을 사용하면 APPROX_COUNT_DISTINCT의 공개 미리 보기 버전은 이진 일치를 사용하고 BIN2가 아닌 BIN 데이터 정렬에서 생성된 결과를 제공합니다. 
+> 데이터 정렬이 중요한 문자열을 사용하면 APPROX_COUNT_DISTINCT는 이진 일치를 사용하고 BIN2가 아닌 BIN 데이터 정렬에서 생성된 결과를 제공합니다. 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-approxcountdistinct"></a>1\. APPROX_COUNT_DISTINCT 사용 
+### <a name="a-using-approx_count_distinct"></a>1\. APPROX_COUNT_DISTINCT 사용 
 이 예제에서는 orders 테이블에서 다양한 주문 키의 대략적인 개수를 반환합니다.
   
 ```sql
@@ -78,7 +75,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>2\. GROUP BY와 함께 APPROX_COUNT_DISTINCT 사용 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>2\. GROUP BY와 함께 APPROX_COUNT_DISTINCT 사용 
 이 예제에서는 orders 테이블에서 주문 상태별로 다양한 주문 키의 대략적인 개수를 반환합니다. 
   
 ```sql

@@ -1,6 +1,5 @@
 ---
-title: 네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 네이티브 형식을 사용하여 데이터 가져오기 및 내보내기
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908606"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055915"
 ---
-# <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 바람직합니다.  
 

@@ -21,12 +21,12 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232150"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982074"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,7 +119,7 @@ DOCUMENT
  *column_name*에 있는 **xml** 데이터 형식의 각 인스턴스가 최상위 요소를 하나만 포함할 수 있도록 지정합니다. DOCUMENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다.  
   
  *xml_schema_collection*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  XML 스키마 컬렉션과의 연결을 위해 **xml** 데이터 형식에만 적용됩니다. 스키마에 **xml** 열을 입력하기 전에 먼저 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스에 해당 스키마를 만들어야 합니다.  
   
@@ -178,12 +178,12 @@ IDENTITY
  이전에 로드된 행의 ID 값에 더해지는 증가 값입니다.  
   
 NOT FOR REPLICATION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  IDENTITY 속성에 지정할 수 있습니다. 이 절이 IDENTITY 속성에 지정된 경우 복제 에이전트가 삽입 작업을 수행할 때 ID 열의 값이 증가하지 않습니다.  
   
 ROWGUIDCOL  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  열이 ROWGUIDCOL(행 전역 고유 식별자 열)인지 여부를 지정합니다. ROWGUIDCOL은 **uniqueidentifier** 열에만 할당될 수 있고 한 테이블당 한 개의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 지정할 수 있습니다. ROWGUIDCOL은 사용자 정의 데이터 형식의 열에 할당할 수 없습니다.  
   
@@ -213,14 +213,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  열은 한정 데이터 형식이어야 합니다.  
   
 ALGORITHM  
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 이어야 합니다.  
   
  기능 제약 조건을 포함한 자세한 내용은 [Always Encrypted &#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)을 참조하세요.  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름입니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   

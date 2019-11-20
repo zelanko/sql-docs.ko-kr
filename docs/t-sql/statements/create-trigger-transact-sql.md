@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73168755"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982696"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -179,12 +179,12 @@ DATABASE
 현재 데이터베이스에 DDL 트리거의 해당 범위를 적용합니다. 지정하면 현재 데이터베이스에서 *event_type* 또는 *event_group*이 발생할 때마다 트리거가 실행됩니다.  
   
 ALL SERVER  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 현재 서버에 DDL 또는 LOGON 트리거의 범위를 적용합니다. 지정하면 현재 서버의 어디에서든 *event_type* 또는 *event_group*이 발생할 때마다 트리거가 실행됩니다.  
   
 WITH ENCRYPTION  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 CREATE TRIGGER 문의 텍스트를 난독 처리합니다. WITH ENCRYPTION을 사용하면 트리거가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시되지 않도록 방지할 수 있습니다. CLR 트리거에 대해서는 WITH ENCRYPTION을 지정할 수 없습니다.  
   
@@ -236,7 +236,7 @@ WITH APPEND
 CREATE TRIGGER 실행이 완료된 후 *event_group*은 해당 이벤트 유형을 sys.trigger_events 카탈로그 뷰에 추가하여 매크로 역할을 합니다.  
   
 NOT FOR REPLICATION  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 복제 에이전트가 트리거와 연관된 테이블을 수정할 때 트리거를 실행할 수 없다는 것을 나타냅니다.  
   
@@ -264,7 +264,7 @@ DDL 및 LOGON 트리거는 [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functio
   
 메모리 최적화 테이블의 트리거의 경우, 최상위 수준에서 허용되는 *sql_statement*는 ATOMIC 블록뿐입니다. ATOMIC 블록 내에서 허용되는 T-SQL은 네이티브 프로시저 내에서 허용되는 T-SQL로 제한됩니다.  
   
-\< method_specifier > **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+\< method_specifier > **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 CLR 트리거의 경우 트리거와 바인딩할 어셈블리의 메서드를 지정합니다. 이 메서드는 인수가 없어야 하며 void를 반환해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. 클래스가 마침표 '.'를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 [ ] 또는 " " 구분 기호를 사용하여 구분되어야 합니다. 클래스는 중첩 클래스일 수 없습니다.  
   
@@ -512,7 +512,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. 서버 범위 DDL 트리거 사용  
 다음 예에서는 DDL 트리거를 사용하여 현재 서버 인스턴스에서 CREATE DATABASE 이벤트가 발생할 경우 메시지를 출력하고 `EVENTDATA` 함수를 사용하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트를 검색합니다. DDL 트리거에 EVENTDATA를 사용하는 추가 예는 [EVENTDATA 함수 사용](../../relational-databases/triggers/use-the-eventdata-function.md)을 참조하세요.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -530,7 +530,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. LOGON 트리거 사용  
 다음 예에서는 LOGON 트리거가 *login_test* 로그인의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인을 시도할 때 해당 로그인에서 이미 3개의 사용자 세션이 실행 중일 경우 해당 시도를 거부합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql  
 USE master;  

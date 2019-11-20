@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532046"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127378"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
@@ -68,6 +68,12 @@ kubectl config view
 > `kubeadm`을 사용하여 부트스트랩한 다중 노드 Kuberntes 클러스터에 배포하는 경우 빅 데이터 클러스터 배포를 시작하기 전에 배포 대상인 모든 Kubernetes 노드에서 시계가 동기화되는지 확인합니다. 빅 데이터 클러스터에는 시간이 중요한 다양한 서비스에 대한 기본 상태 속성이 있으며 시간이 왜곡되면 상태가 잘못될 수 있습니다.
 
 Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이터 클러스터의 배포를 진행할 수 있습니다. 이전 릴리스에서 업그레이드하는 경우 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
+
+## <a name="ensure-you-have-storage-configured"></a>스토리지를 구성했는지 확인
+
+대부분의 빅 데이터 클러스터 배포는 영구 스토리지가 있어야 합니다. 이번에는 BDC를 배포하기 전에 Kubernetes 클러스터에서 영구 스토리지를 제공하는 방법에 대한 계획이 있는지 확인해야 합니다.
+
+AKS에서 배포하는 경우에는 스토리지를 설치할 필요가 없습니다. AKS는 동적 프로비저닝을 사용하는 기본 제공 스토리지 클래스를 제공합니다. 배포 구성 파일에서 스토리지 클래스(`default` 또는 `managed-premium`)를 사용자 지정할 수 있습니다. 기본 제공 프로필은 `default` 스토리지 클래스를 사용합니다. `kubeadm`을 사용하여 배포한 Kubernetes 클러스터에 배포하는 경우 원하는 크기의 클러스터에 대해 충분한 스토리지를 사용할 수 있는지 사용할 수 있게 구성되어 있는지 확인해야 합니다. 스토리지를 사용하는 방법을 사용자 지정하려는 경우 계속하기 전에 이 작업을 수행해야 합니다. [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
 
 ## <a id="deploy"></a> 배포 개요
 

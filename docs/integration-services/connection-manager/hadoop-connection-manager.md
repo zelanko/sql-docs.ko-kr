@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298534"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096126"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298534"
   
     3.  WebHCat 서비스에 액세스하는 데 사용할 **인증** 방법을 선택합니다. 사용 가능한 값은 **기본** 및 **Kerberos**입니다.  
   
-         ![기본 인증을 사용하는 Hadoop 연결 관리자 편집기의 스크린샷](../../integration-services/connection-manager/media/hadoop-cm-basic.png "기본 인증을 사용하는 Hadoop 연결 관리자 편집기")  
+         ![기본 인증을 사용하는 Hadoop 연결 관리자 편집기 스크린샷](../../integration-services/connection-manager/media/hadoop-cm-basic.png "기본 인증을 사용하는 Hadoop 연결 관리자 편집기")  
   
-         ![Kerberos 인증을 사용하는 Hadoop 연결 관리자 편집기의 스크린샷](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 인증을 사용하는 Hadoop 연결 관리자 편집기")  
+         ![Kerberos 인증을 사용하는 Hadoop 연결 관리자 편집기 스크린샷](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 인증을 사용하는 Hadoop 연결 관리자 편집기")  
   
     4.  **WebHCat 사용자**에는 WebHCat 액세스 권한이 있는 **사용자** 를 입력합니다.  
   
@@ -152,7 +152,7 @@ KDC 서버에서 다음을 수행합니다.
 
     구성 후 KDC 서비스를 다시 시작합니다.
 
-2.  KDC 서버에서 **krbtgt/REALM.COM@AD.COM** 이라는 보안 주체를 준비합니다. 다음 명령을 사용합니다.
+2.  KDC 서버에서 **krbtgt/REALM.COM\@AD.COM**이라는 보안 주체를 준비합니다. 다음 명령을 사용합니다.
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ KDC 서버에서 다음을 수행합니다.
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Windows 도메인과 Kerberos 영역 간의 신뢰를 설정합니다. 다음 예제에서 `[password]`는 보안 주체 **krbtgt/REALM.COM@AD.COM** 의 암호입니다.
+2.  Windows 도메인과 Kerberos 영역 간의 신뢰를 설정합니다. 다음 예제에서 `[password]`는 보안 주체 **krbtgt/REALM.COM\@AD.COM**의 암호입니다.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038870"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982665"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -142,7 +142,7 @@ OR ALTER
 >  CHECK OPTION을 지정해도 뷰의 기본 테이블을 직접 업데이트한 결과는 뷰에서 확인되지 않습니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  CREATE VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)의 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
   
@@ -369,7 +369,7 @@ GO
 ### <a name="b-using-with-encryption"></a>2\. WITH ENCRYPTION 사용  
  다음 예에서는 `WITH ENCRYPTION` 옵션을 사용하여 계산 열, 이름이 바뀐 열 및 복수 열을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  

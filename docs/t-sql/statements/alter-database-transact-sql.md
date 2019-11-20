@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff0c616342af9f00be56fbed3ecfb3d09dedb9ef
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532844"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982153"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -127,7 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.
 
-CURRENT **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
@@ -143,7 +143,7 @@ COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정
 Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE](~/t-sql/statements/collations.md)를 참조하세요.
 
 **\<delayed_durability_option> ::=** 
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.
 
@@ -235,7 +235,7 @@ GO
 
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 USE master;
@@ -463,13 +463,13 @@ DTU 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층�
 
 |MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:----- | ------: |-------: |-------: |-------: |--------: |
-|최대 vCore|1|2|4|6|8|
+|최대 vCore 수|1|2|4|6|8|
 
 **범용 - 서버리스 컴퓨팅 - Gen5(2부)**
 
 |MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
 |:----- | ------: |-------: |-------: |-------: |
-|최대 vCore|10|12|14|16|
+|최대 vCore 수|10|12|14|16|
 
 **중요 비즈니스용 - 프로비저닝된 컴퓨팅 - Gen4(1부)**
 

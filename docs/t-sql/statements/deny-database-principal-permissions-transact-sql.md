@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114885"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982520"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DENY permission [ ,...n ]
  사용 권한을 거부할 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  APPLICATION ROLE ::*application_role*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  사용 권한을 거부할 애플리케이션 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
@@ -93,7 +93,7 @@ DENY permission [ ,...n ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  애플리케이션 역할을 지정합니다.  
   
@@ -172,7 +172,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 애플리케이션 역할에 대해 사용자에 대한 IMPERSONATE 권한 거부  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 애플리케이션 역할 `IMPERSONATE`에 대해 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 거부합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

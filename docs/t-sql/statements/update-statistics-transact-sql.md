@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798412"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982561"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 및 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)는 선택된 통계에 대해 유지되는 샘플 비율 값을 표시합니다.
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터)에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)까지.  
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터) 이상([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 절에 지정된 파티션에 적용되는 리프 수준 통계를 강제로 다시 계산한 다음, 병합하여 글로벌 통계를 작성합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
   
  ALL | COLUMNS | INDEX  
  기존의 모든 통계, 하나 이상의 열에 대해 생성된 통계 또는 인덱스에 대해 생성된 통계를 업데이트합니다. 아무 옵션도 지정하지 않은 UPDATE STATISTICS 문은 테이블 또는 인덱싱된 뷰의 모든 통계를 업데이트합니다.  
@@ -163,7 +163,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 -   내부 테이블에 대해 작성된 통계입니다.  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 MAXDOP = *max_degree_of_parallelism*  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  

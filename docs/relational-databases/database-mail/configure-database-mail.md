@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909493"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095710"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909493"
  계정에 대한 설명을 확인하거나 업데이트합니다. 설명은 선택 사항입니다.  
   
  **전자 메일 주소**  
- 계정에 대한 전자 메일 주소의 이름을 확인하거나 업데이트합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 Microsoft SQL Server 에이전트의 계정은 **SqlAgent@Adventure-Works.com** 을 클릭합니다.  
+ 계정에 대한 전자 메일 주소의 이름을 확인하거나 업데이트합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 Microsoft SQL Server 에이전트의 계정은 **SqlAgent\@Adventure-Works.com** 주소에서 메일을 보낼 수 있습니다.  
   
  **표시 이름**  
  이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름을 확인하거나 업데이트합니다. 표시 이름은 선택 사항입니다. 이 이름은 이 계정에서 보내는 메시지에 표시되는 이름입니다. 예를 들어 SQL Server 에이전트의 계정은 메일 메시지에 **SQL Server Agent Automated Mailer** 의 이름을 표시할 수 있습니다.  
   
  **회신 전자 메일**  
- 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 확인하거나 업데이트합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 SQL Server 에이전트 계정에 대한 회신은 데이터베이스 관리자인 **danw@Adventure-Works.com** 을 클릭합니다.  
+ 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 확인하거나 업데이트합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 SQL Server 에이전트 계정에 대한 회신은 데이터베이스 관리자인 **danw\@Adventure-Works.com**으로 전송됩니다.  
   
  **서버 이름**  
  계정에서 전자 메일 전송을 위해 사용하는 SMTP 서버의 이름을 확인하거나 업데이트합니다. 일반적으로 이 주소는 **smtp.<your_company>.com**과 유사한 형식으로 구성됩니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  

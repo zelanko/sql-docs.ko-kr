@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670467"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983043"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68670467"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 성공적으로 DAC가 연결되도록 모든 시도를 하지만 극단적인 경우 연결이 실패할 수도 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>DAC를 사용하여 연결  
  기본적으로 서버에서 실행되는 클라이언트에서만 연결이 허용됩니다. [remote admin connections 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)이 사용된 sp_configure 저장 프로시저를 사용하여 구성하지 않은 경우에는 네트워크 연결이 허용되지 않습니다.  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809825"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982723"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ column_name <data_type>
  해당 형식이 Null 값을 보관할 수 있는지 여부를 지정합니다. 이를 지정하지 않으면 기본값은 NULL입니다.  
   
  *assembly_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  공용 언어 런타임에서 사용자 정의 형식의 구현을 참조하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리를 지정합니다. *assembly_name*은 현재 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있는 기존 어셈블리와 일치해야 합니다.  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  포함된 데이터베이스에서는 EXTERNAL_NAME을 사용할 수 없습니다.  
   
  **[.** *class_name*  **]**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  사용자 정의 형식을 구현하는 어셈블리 내 클래스를 지정합니다. *class_name*은 유효한 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. *class_name*은 데이터베이스의 데이터 정렬과 무관하게 대/소문자를 구분하며 해당 어셈블리의 클래스 이름과 정확히 일치해야 합니다. 클래스 작성에 사용되는 프로그래밍 언어가 C#과 같이 네임스페이스 개념을 사용하는 경우 클래스 이름이 대괄호( **[ ]** )로 묶은 정식 네임스페이스 이름이 될 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *type_name*과 동일한 것으로 간주합니다.  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 테이블에 인덱스를 만들도록 지정합니다. 이는 클러스터형 인덱스 또는 비클러스터형 인덱스일 수 있습니다. 인덱스는 나열된 열을 포함하며 데이터를 오름차순 또는 내림차순으로 정렬합니다.
   
@@ -237,17 +237,17 @@ column_name <data_type>
  CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정해야 합니다. CREATE INDEX 및 DROP INDEX는 메모리 최적화 테이블에서 지원되지 않습니다.  
   
  MEMORY_OPTIMIZED  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  테이블 형식이 메모리 액세스에 최적화된 형식인지 여부를 나타냅니다. 이 옵션은 기본적으로 해제됩니다. 테이블(형식)은 메모리 액세스에 최적화된 테이블(형식)이 아닙니다. 메모리 최적화 테이블 형식은 메모리 최적화 사용자 테이블입니다. 디스크에 저장된 스키마는 다른 사용자 테이블과 비슷합니다.  
   
  BUCKET_COUNT  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  해시 인덱스에서 만들어야 하는 버킷 수를 나타냅니다. 해시 인덱스에서 BUCKET_COUNT의 최대값은 1,073,741,824입니다. 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [Memory-Optimized Tables에 대한 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요. *bucket_count*는 필수 인수입니다.  
   
  HASH  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  HASH 인덱스가 만들어졌음을 나타냅니다. 해시 인덱스는 메모리 액세스에 최적화된 테이블에서만 지원됩니다.  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>2\. 사용자 정의 형식 만들기  
  다음 예에서는 `utf8string` 어셈블리 내의 `utf8string`클래스를 참조하는 `Utf8String` 형식을 만드는 방법을 보여 줍니다. 형식을 만들기 전에 로컬 데이터베이스에 `utf8string` 어셈블리를 등록합니다. CREATE ASSEMBLY의 이진 부분을 올바른 유효한 설명으로 대체합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```  
 CREATE ASSEMBLY utf8string  

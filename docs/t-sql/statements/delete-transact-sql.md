@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948055"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983236"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  행을 삭제할 테이블 또는 뷰를 나타내는 FROM *table_source* 절에 지정되는 별칭입니다.  
   
  *server_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  테이블이나 뷰가 위치한 서버의 이름입니다. 연결된 서버 이름 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 서버 이름으로 사용합니다. *server_name*이 지정되면 *database_name*과 *schema_name*이 필요합니다.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  공급자 기능에 관련된 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 함수입니다.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 다음 예서는 보다 복잡한 WHERE 절을 보여 줍니다. WHERE 절은 삭제할 행을 확인하기 위해 충족해야 하는 두 가지 조건을 정의합니다. `StandardCost` 열의 값은 `12.00` 에서 `14.00` 사이여야 하고, `SellEndDate` 열의 값은 Null이어야 합니다. 또한 이 예에서는 **@@ROWCOUNT** 함수 값을 인쇄하여 삭제된 행 수를 반환합니다.  
+ 다음 예서는 보다 복잡한 WHERE 절을 보여 줍니다. WHERE 절은 삭제할 행을 확인하기 위해 충족해야 하는 두 가지 조건을 정의합니다. `StandardCost` 열의 값은 `12.00` 에서 `14.00` 사이여야 하고, `SellEndDate` 열의 값은 Null이어야 합니다. 또한 이 예제에서는 **\@\@ROWCOUNT** 함수 값을 인쇄하여 삭제된 행 수를 반환합니다.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> 원격 테이블에서 행 삭제  
  이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md) 를 사용하여 원격 테이블에서 행을 삭제하는 방법을 보여 줍니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
  다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```sql

@@ -18,12 +18,12 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721cc221643ed1e315566f32fde5a24752083738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114914"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983232"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 데이터베이스 사용 권한(Transact-SQL)
 
@@ -71,7 +71,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 *Database_role* 데이터베이스 역할을 지정합니다.
 
 *Application_role*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 애플리케이션 역할을 지정합니다.
 
@@ -104,7 +104,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -115,7 +115,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|ALTER ANY SECURITY POLICY<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지|CONTROL|CONTROL SERVER|
+|ALTER ANY SECURITY POLICY<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -191,7 +191,7 @@ GO
 
 다음 예에서는 `REFERENCES` 애플리케이션 역할에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `AuditMonitor` 사용 권한을 거부합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
 USE AdventureWorks2012;

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0959a1a81ad0c373e67d2b2549f8792703261078
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729902"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982754"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -296,7 +296,7 @@ SET
 수정할 데이터베이스의 이름입니다.
 
 CURRENT        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
 
@@ -344,7 +344,7 @@ OFF
 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)에서 “데이터베이스 차원의 통계 옵션 사용” 섹션을 참조하세요.
 
 INCREMENTAL = ON | **OFF**        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 그러면 증분 통계가 지원될 때마다 자동으로 생성된 통계가 증분으로 설정됩니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
 
@@ -445,7 +445,7 @@ OFF
 데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
 **\<containment_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 데이터베이스 포함 옵션을 제어합니다.
 
@@ -599,7 +599,7 @@ MULTI_USER
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `user_access` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `UserAccess` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 **\<delayed_durability_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
@@ -649,7 +649,7 @@ TRUSTWORTHY는 데이터베이스가 연결될 때마다 OFF로 설정됩니다.
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_trustworthy_on` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다.
 
 DEFAULT_FULLTEXT_LANGUAGE        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 전체 텍스트 인덱싱된 열에 대한 기본 언어 값을 지정합니다.
 
@@ -657,27 +657,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 DEFAULT_LANGUAGE        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 새로 생성된 모든 로그인에 대한 기본 언어를 지정합니다. LCID(로컬 ID), 언어 이름 또는 언어 별칭을 제공하여 언어를 지정할 수 있습니다. 사용 가능한 언어 이름 및 별칭 목록은 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)를 참조하세요. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 NESTED_TRIGGERS        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 AFTER 트리거의 중첩(한 트리거가 다른 트리거를 시작하는 과정이 반복되는 동작) 여부를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TRANSFORM_NOISE_WORDS        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 의미 없는 단어 또는 중지 단어로 인해 전체 텍스트 쿼리에 대한 부울 연산이 실패할 경우 오류 메시지를 표시하지 않는 데 사용됩니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TWO_DIGIT_YEAR_CUTOFF        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 정수를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 **\<FILESTREAM_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 FileTable에 대한 설정을 제어합니다.
 
@@ -700,7 +700,7 @@ Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)을 참조하세요.
 
 **\<mixed_page_allocation_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있는지 여부를 제어합니다.
 
@@ -727,7 +727,7 @@ FORCED
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_parameterization_forced column` 열을 검사하여 확인할 수 있습니다.
 
 <a name="query-store"></a> **\<query_store_options> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 ON | **OFF** | CLEAR [ ALL ]        
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
@@ -889,7 +889,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `page_verify_option` 열이나 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsTornPageDetectionEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<remote_data_archive_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 데이터베이스에 Stretch Database를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
@@ -995,7 +995,7 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 > **DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }        
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
 
 ON        
 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
@@ -1150,7 +1150,7 @@ OFF
 이 옵션의 상태는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_recursive_triggers_on` 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsRecursiveTriggersEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<target_recovery_time_option> ::=**         
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 **1분**이며, 이 값은 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
@@ -1317,7 +1317,7 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="e-enabling-the-query-store"></a>E. 쿼리 저장소를 사용하도록 설정
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
 
@@ -3021,7 +3021,7 @@ OFF
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 사용자 데이터베이스에서 `ALTER DATABASE SET QUERY_STORE`를 실행해야 합니다. 다른 데이터 웨어하우스 인스턴스에서는 문을 실행할 수 없습니다.
 
 **<result_set_caching_option> ::=**         
-**적용 대상**: Azure SQL Data Warehouse(미리 보기)
+**적용 대상**: Azure SQL 데이터 웨어하우스  
 
 쿼리 결과를 데이터베이스에 캐시할지 여부를 제어합니다.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051885"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983249"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68051885"
 > [!NOTE]
 > 내부적으로 활성 쿼리 통계는 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV를 활용합니다.
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상).  
   
 > [!WARNING]  
 > 이 기능은 주로 문제 해결을 위해 사용됩니다. 이 기능을 사용하면 특히 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 전체 쿼리 성능이 약간 느려질 수 있습니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  

@@ -13,19 +13,28 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2cb41bdf37c1f748178f98a56b7f8df857a377e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092980"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119448"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 스토리지 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
   
- RBS는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어에 포함되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치되지 않습니다.  
+ RBS는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에 포함되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치되지 않습니다. 설치 미디어에서 RBS.msi를 검색하여 설치 파일을 찾습니다.
+
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어가 없는 경우 다음 위치 중 하나에서 RBS를 다운로드할 수 있습니다.
+
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 | RBS 다운로드 위치 |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS 다운로드 페이지](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   

@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680779"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982817"
 ---
 # <a name="collation-and-unicode-support"></a>데이터 정렬 및 유니코드 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 전 세계 대상 그룹이 요구하는 모든 문자를 지원할 문자 데이터 형식 코드 페이지를 선택하기란 어렵습니다. 국제 데이터베이스에서 문자 데이터를 관리하는 가장 쉬운 방법은 항상 유니코드를 지원하는 데이터 형식을 사용하는 것입니다. 
 
 ### <a name="unicode-data-types"></a>유니코드 데이터 형식
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상)에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar**, and **text**) 대신 항상 유니코드 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 
 
 > [!NOTE]
 > 유니코드 데이터 형식의 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 최대 65,535자 또는 보조 문자를 사용할 경우 전체 유니코드 범위(1,114,111자)를 나타낼 수 있습니다. 보조 문자를 사용하도록 설정하는 방법에 대한 자세한 내용은 [보조 문자](#Supplementary_Characters)를 참조하세요.
@@ -473,7 +473,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 > [!TIP]
 > 또한 서버의 데이터에 대해 다른 데이터 정렬을 사용할 수도 있습니다. 클라이언트의 코드 페이지에 매핑되는 데이터 정렬을 선택하세요.    
 >
-> 일부 유니코드 문자의 검색 및 정렬 성능을 향상하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 제공되는 UTF-16 데이터 정렬(Windows 데이터 정렬만 해당)을 사용하려면, 보조 문자(\_SC) 데이터 정렬 중 하나 또는 버전 140 데이터 정렬 중 하나를 선택할 수 있습니다.    
+> 일부 유니코드 문자의 검색 및 정렬 성능을 향상하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)에서 제공되는 UTF-16 데이터 정렬(Windows 데이터 정렬만 해당)을 사용하려면, 보조 문자(\_SC) 데이터 정렬 중 하나 또는 버전 140 데이터 정렬 중 하나를 선택할 수 있습니다.    
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 제공되는 UTF-8 데이터 정렬을 사용하고 일부 유니코드 문자의 검색 및 정렬을 향상하려면(Windows 데이터 정렬만 해당), UTF-8 인코딩 지원 데이터 정렬(\_UTF8)을 선택해야 합니다.
  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017615"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119208"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017615"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. 상관 하위 쿼리 사용  
+## <a name="e-using-correlated-subqueries"></a>E. 상관 하위 쿼리 사용
+상관 하위 쿼리는 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 이 쿼리는 외부 쿼리에서 선택한 행마다 한 번씩 반복적으로 실행될 수 있습니다.
+
  다음 예에서는 기능상 동일한 쿼리를 보여 주고 `EXISTS` 키워드와 `IN` 키워드를 사용할 때의 차이점에 대해 설명합니다. 두 예는 모두 제품 모델이 긴 팔 로고 셔츠이고 `ProductModelID`와 `Product` 테이블 간에 `ProductModel`가 일치하는 각 제품 이름의 인스턴스 하나를 검색하는 유효한 하위 쿼리입니다.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- 다음 예에서는 상관 또는 반복 하위 쿼리에 `IN`을 사용합니다. 이것은 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 이 쿼리는 외부 쿼리에서 선택한 각 행마다 한 번씩 반복적으로 실행됩니다. 이 쿼리는 `SalesPerson` 테이블에서 보너스가 `5000.00`이고 `Employee` 및 `SalesPerson` 테이블에서 직원 ID가 일치하는 각 직원의 이름 및 성의 인스턴스 하나를 검색합니다.  
+ 다음 예제에서는 `IN`을 사용하고 `SalesPerson` 테이블에서 보너스가 `5000.00`이고 `Employee` 및 `SalesPerson` 테이블에서 직원 ID가 일치하는 각 직원의 이름 및 성의 인스턴스 하나를 검색합니다.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

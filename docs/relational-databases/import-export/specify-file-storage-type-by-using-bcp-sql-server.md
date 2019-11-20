@@ -1,6 +1,5 @@
 ---
-title: bcp를 사용하여 파일 스토리지 유형 지정(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: bcp를 사용하여 파일 스토리지 유형 지정
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062519"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056386"
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
+# <a name="specify-file-storage-type-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   *파일 스토리지 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 **smallint** 를 **int**로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  
   

@@ -1,6 +1,6 @@
 ---
-title: '빠른 시작: Microsoft Azure Blob Storage 서비스로 SQL 백업 및 복원 | Microsoft Docs'
-ms.custom: ''
+title: '빠른 시작: Azure Blob 스토리지 서비스에 대한 SQL 백업 및 복원'
+ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906973"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095482"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

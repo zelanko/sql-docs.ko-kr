@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100968"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981948"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,7 @@ AS select_statement
 >  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문에서 **SalesOrderID** 열의 이름을 **OrderRef**로 변경할 수 있으며 이때 **SalesOrderID**를 사용하는 뷰와 관련된 권한은 계속 유지됩니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  ALTER VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 항목을 암호화합니다. WITH ENCRYPTION은 뷰가 SQL Server 복제의 일부로 게시되는 것을 방지합니다.  
   

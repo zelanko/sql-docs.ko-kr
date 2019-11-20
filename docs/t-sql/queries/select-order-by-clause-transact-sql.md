@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419635"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981717"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  쿼리 식에서 행을 반환하기 전에 건너뛸 행 수를 지정합니다. 값은 0보다 크거나 같은 정수 상수 또는 식일 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  *offset_row_count_expression*은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  OFFSET 절을 처리한 후에 반환할 행 수를 지정합니다. 값은 1보다 크거나 같은 정수 상수 또는 식일 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  *fetch_row_count_expression*은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
   
@@ -187,7 +187,7 @@ ORDER BY SchemaName + ''; -- wrong
 ## <a name="using-offset-and-fetch-to-limit-the-rows-returned"></a>OFFSET 및 FETCH를 사용하여 반환되는 행 수 제한  
  TOP 절 대신 OFFSET 및 FETCH 절을 사용하여 쿼리 페이징 솔루션을 구현하고 클라이언트 애플리케이션으로 보내는 행 수를 제한하는 것이 좋습니다.  
   
- OFFSET 및 FETCH를 페이징 솔루션으로 사용하려면 클라이언트 응용 프로그램에 반환되는 데이터의 각 "페이지"에 대해 쿼리를 한 번씩 실행해야 합니다. 예를 들어 행 수가 10개씩 증가하는 쿼리 결과를 반환하려면 1~10행을 반환하는 쿼리를 한 번 실행한 다음 11~20행을 반환하는 쿼리를 다시 실행하고 이런 식으로 계속 쿼리를 실행해야 합니다. 각 쿼리는 독립적이며 어떤 방식으로도 서로 관련이 없습니다. 즉, 쿼리가 한 번 실행되면 서버에 상태가 유지되는 커서와 달리 클라이언트 애플리케이션에서 상태를 추적해야 합니다. OFFSET 및 FETCH를 사용한 쿼리 요청 간에 안정적인 결과를 얻으려면 다음 조건을 충족해야 합니다.  
+ OFFSET 및 FETCH를 페이징 솔루션으로 사용하려면 클라이언트 애플리케이션에 반환되는 데이터의 각 &quot;페이지&quot;에 대해 쿼리를 한 번씩 실행해야 합니다. 예를 들어 행 수가 10개씩 증가하는 쿼리 결과를 반환하려면 1~10행을 반환하는 쿼리를 한 번 실행한 다음 11~20행을 반환하는 쿼리를 다시 실행하고 이런 식으로 계속 쿼리를 실행해야 합니다. 각 쿼리는 독립적이며 어떤 방식으로도 서로 관련이 없습니다. 즉, 쿼리가 한 번 실행되면 서버에 상태가 유지되는 커서와 달리 클라이언트 애플리케이션에서 상태를 추적해야 합니다. OFFSET 및 FETCH를 사용한 쿼리 요청 간에 안정적인 결과를 얻으려면 다음 조건을 충족해야 합니다.  
   
 1.  쿼리에 사용되는 기본 데이터가 변경되지 않아야 합니다. 즉, 쿼리와 연결된 행이 업데이트되지 않거나 페이지에 대한 모든 쿼리 요청이 스냅샷 또는 직렬화 가능 트랜잭션 격리를 사용하여 단일 트랜잭션에서 실행되어야 합니다. 이러한 트랜잭션 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> 반환되는 행 수 제한  
  다음 예에서는 OFFSET 및 FETCH를 사용하여 쿼리에서 반환되는 행 수를 제한합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1\. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 정수 상수를 OFFSET 및 FETCH 절의 값으로 지정합니다. 첫 번째 쿼리는 `DepartmentID` 열을 기준으로 정렬된 모든 행을 반환합니다. 이 쿼리에서 반환된 결과를 다음에 나오는 두 쿼리의 결과와 비교해 보세요. 다음 쿼리에서는 `OFFSET 5 ROWS` 절을 사용하여 처음 5개 행을 건너뛰고 나머지 행을 모두 반환합니다. 마지막 쿼리에서는 `OFFSET 0 ROWS` 절을 사용하여 첫 번째 행에서 시작한 다음 `FETCH NEXT 10 ROWS ONLY`를 사용하여 반환되는 행을 정렬된 결과 집합의 10개 행으로 제한합니다.  

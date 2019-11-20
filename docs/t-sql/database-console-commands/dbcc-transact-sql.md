@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040524"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982440"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68040524"
 DBCC 명령은 입력 매개 변수와 반환 값을 사용합니다. 모든 DBCC 명령 매개 변수는 유니코드와 DBCS 리터럴을 모두 사용할 수 있습니다.
   
 ## <a name="dbcc-internal-database-snapshot-usage"></a>DBCC 내부 데이터베이스 스냅샷 사용법  
-다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅샷에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
+다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅샷에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
 - DBCC CHECKALLOC
 - DBCC CHECKCATALOG
 - DBCC CHECKDB
@@ -143,6 +143,6 @@ DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베�
 |[DBCC dllname(FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상.|  
   
   

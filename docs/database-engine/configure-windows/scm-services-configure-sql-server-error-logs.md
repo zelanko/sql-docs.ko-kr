@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688320"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127484"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 서비스 - SQL Server 오류 로그 구성
 
@@ -38,7 +38,7 @@ ms.locfileid: "71688320"
   
       **최대 오류 로그 파일 수**
 
-      재활용하기 전의 오류 로그 파일 최대 개수를 지정합니다. 기본값은 6으로, 현재 로그 1개와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 로그를 재활용하기까지 유지하는 이전 백업 로그 5개입니다.
+      재활용하기 전의 보관된 오류 로그 파일 최대 개수를 지정합니다. 기본값은 6이며 현재 파일은 포함하지 않습니다. 이 값은 백업 로그를 재활용하기까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보유하는 이전 백업 로그의 수를 결정합니다.
 
     2\. 로그 파일 크기
 

@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843743"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097850"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -40,7 +40,9 @@ SSMS(SQL Server Management Studio)는 SQL Server에서 Azure SQL Database까지 
 
 SSMS는 무료입니다.
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[SSMS 다운로드](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>SSMS 다운로드
+
+**[![다운로드](media/download-icon.png) SSMS(SQL Server Management Studio) 다운로드](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.4를 설치하면 18.4로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.4를 설치해야 합니다.
 

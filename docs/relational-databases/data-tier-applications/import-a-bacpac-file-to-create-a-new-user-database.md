@@ -1,6 +1,6 @@
 ---
-title: BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기 | Microsoft 문서
-ms.custom: ''
+title: BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
+ms.custom: seo-dt-2019
 ms.date: 01/31/2017
 ms.prod: sql
 ms.technology: ''
@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908486"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094570"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "72908486"
 ## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 애플리케이션 가져오기 마법사 사용  
  **마법사를 시작하려면 다음 단계를 따르십시오.**  
   
-1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
+1.  온-프레미스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 2.  **개체 탐색기**에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 후 **데이터 계층 애플리케이션 가져오기** 메뉴 항목을 선택하여 마법사를 시작합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기 | Microsoft 문서
+title: 검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,14 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638051"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056526"
 ---
-# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   

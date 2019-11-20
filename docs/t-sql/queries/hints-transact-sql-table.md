@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901969"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981760"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ FORCESEEK가 인덱스 매개 변수와 함께 지정된 경우 다음 지침과
 > [!CAUTION]  
 > 매개 변수와 함께 FORCESEEK를 지정할 경우 매개 변수 없이 FORCESEEK를 지정할 때보다 최적화 프로그램에서 고려할 수 있는 계획 수가 더 제한됩니다. 이로 인해 더 많은 사례에서 `Plan cannot be generated` 오류가 발생할 수 있습니다. 후속 릴리스에서는 더 많은 계획을 고려할 수 있도록 쿼리 최적화 프로그램이 수정될 것입니다.  
   
-FORCESCAN **적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 이상
 쿼리 최적화 프로그램이 참조된 테이블 또는 뷰의 액세스 경로로 인덱스 검색 작업만 사용하도록 지정합니다. FORCESCAN 힌트는 최적화 프로그램이 영향을 받는 행의 수를 과소평가하고 검색 작업 대신 Seek 연산을 선택하는 경우 쿼리에 유용할 수 있습니다. 이러한 경우 작업에 할당되는 메모리 양이 적으며 쿼리 성능에도 영향을 줍니다.  
   
 FORCESCAN은 인덱스 힌트와 함께 또는 인덱스 힌트 없이 지정할 수 있습니다. 인덱스 힌트와 함께 사용할 경우(`INDEX = index_name, FORCESCAN`) 쿼리 최적화 프로그램은 참조 테이블에 액세스할 때 지정된 인덱스 전체에서 검색 액세스 경로만 고려합니다. 기본 테이블에 대해 테이블 검색 작업이 강제로 수행되도록 하기 위해 FORCESCAN을 인덱스 힌트 INDEX(0)와 함께 지정할 수 없습니다.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 HOLDLOCK과 동일합니다. 필요한 테이블 또는 데이터 페이지가 더 이상 필요 없을 때 트랜잭션의 완료 여부와 관계없이 즉시 공유 잠금을 해제하지 않고 트랜잭션 완료 시까지 유지함으로써 공유 잠금을 더욱 제한적으로 만듭니다. SERIALIZABLE 격리 수준에서 실행되는 트랜잭션과 동일한 잠금 기능으로 검색이 수행됩니다. 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 SNAPSHOT  
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 
   
 메모리 최적화 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 메모리 최적화 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
 geometry 또는 geography 개체의 공간 분할(tessellation)에 사용할 최대 셀 개수를 지정합니다. *number*는 1과 8192 사이의 값입니다.  
   
 이 옵션을 사용하면 기본 및 보조 필터 실행 시간을 서로 조정하여 쿼리 실행 시간을 미세 조정할 수 있습니다. 숫자가 클수록 보조 필터 실행 시간은 줄어들고 기본 실행 필터 시간은 늘어나며 숫자가 작을수록 기본 필터 실행 시간은 줄어들고 보조 필터 실행은 늘어납니다. 밀도가 높은 공간 데이터의 경우 숫자가 높을수록 기본 필터로 더 정확한 근사값을 제공하여 실행 시간이 빨라지고 보조 필터 실행 시간이 줄어듭니다. 스파스 데이터의 경우 숫자가 낮을수록 기본 필터 실행 시간이 줄어듭니다.  

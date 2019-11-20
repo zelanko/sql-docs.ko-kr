@@ -1,6 +1,6 @@
 ---
-title: Security Audit 이벤트 범주(SQL Server Profiler) | Microsoft 문서
-ms.custom: ''
+title: Security Audit 이벤트 범주 - Profiler
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0849a7180f6ababe9fa1311473ebcfd994d13b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911221"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056053"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

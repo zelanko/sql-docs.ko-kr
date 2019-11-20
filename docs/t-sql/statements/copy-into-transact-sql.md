@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882412"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055137"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -131,7 +131,7 @@ WITH
 AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
 
 - SAS(공유 액세스 서명)를 사용하여 인증 *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  *SECRET: * [*공유 액세스 서명*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
+  *SECRET: * [*공유 액세스 서명*](/azure/storage/common/storage-sas-overview) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
   필요한 최소 권한: 읽기 및 목록
 
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -164,7 +164,7 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
   
 - SAS(공유 액세스 서명)를 사용하여 인증
   - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:*  [*공유 액세스 서명*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
+  - *SECRET:*  [*공유 액세스 서명*](/azure/storage/common/storage-sas-overview) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
   - 필요한 최소 권한: 읽기, 나열, 쓰기, 만들기, 삭제
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -277,7 +277,7 @@ COPY 명령의 기본값은 다음과 같습니다.
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY는 내부적으로 ‘\n’을 ‘\r\n’으로 처리합니다. 자세한 내용은 [ROWTERMINATOR]() 섹션을 참조하세요.
+> COPY는 내부적으로 ‘\n’을 ‘\r\n’으로 처리합니다. 자세한 내용은 ROWTERMINATOR 섹션을 참조하세요.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>관련 항목:  
 
- [SQL Data Warehouse를 사용하여 개요 로드](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [SQL Data Warehouse를 사용하여 개요 로드](/azure/sql-data-warehouse/design-elt-data-loading)

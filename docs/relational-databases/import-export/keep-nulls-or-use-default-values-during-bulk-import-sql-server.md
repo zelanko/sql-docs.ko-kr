@@ -1,6 +1,5 @@
 ---
-title: 대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 대량 가져오기 수행 중 null 유지 또는 기본값 사용
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896676"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055961"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 null 유지 또는 기본값 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 기본적으로 데이터를 테이블로 가져올 때 [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다.  예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다.  [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.

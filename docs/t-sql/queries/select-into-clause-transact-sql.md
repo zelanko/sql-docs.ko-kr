@@ -29,12 +29,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948418"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981723"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
  *filegroup*    
  새 테이블을 만들 파일 그룹의 이름을 지정합니다. 지정한 파일 그룹이 데이터베이스에 있어야 합니다. 그렇지 않으면 SQL Server 엔진에서 오류를 throw합니다.   
  
- **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.
   
 ## <a name="data-types"></a>데이터 형식  
  FILESTREAM 특성은 새 테이블로 전송되지 않습니다. FILESTREAM BLOB은 **varbinary(max)** BLOB으로 복사되어 새 테이블에 저장됩니다. FILESTREAM 특성이 없으면 **varbinary(max)** 데이터 형식이 2GB로 제한됩니다. FILESTREAM BLOB이 이 값을 초과하면 오류 7119가 발생하고 해당 문이 중지됩니다.  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 원격 데이터 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 원격 데이터 원본의 로컬 서버에 새 테이블을 만드는 세 가지 방법을 보여 줍니다. 먼저 원격 데이터 원본과의 링크를 만듭니다. 그런 다음 첫 번째 SELECT...INTO 문의 FROM 절과 두 번째 SELECT...INTO 문의 OPENQUERY 함수에 연결된 서버 이름 `MyLinkServer,`를 지정합니다. 세 번째 SELECT...INTO 문에서는 연결된 서버 이름을 사용하는 대신 OPENDATASOURCE 함수를 사용하여 원격 데이터 원본을 직접 지정합니다.  
   
- **적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 다른 테이블의 복사본으로 새 테이블 만들기 및 지정된 파일 그룹에 로드
 다음 예제에서는 새 테이블을 다른 테이블의 복사본으로 만들고, 이를 사용자의 기본 파일 그룹과 다른 지정된 파일 그룹에 로드하는 방법을 보여 줍니다.
 
- **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

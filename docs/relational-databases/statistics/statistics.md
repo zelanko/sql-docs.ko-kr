@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907075"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982812"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다. ?
 
 > [!IMPORTANT]
-> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
   
 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
@@ -153,7 +153,7 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
 * 내부 테이블에 대해 작성된 통계입니다.  
 * 공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 
   
 ## <a name="CreateStatistics"></a> 통계 작성 시기  
  쿼리 최적화 프로그램은 다음과 같은 방법으로 통계를 작성합니다.  

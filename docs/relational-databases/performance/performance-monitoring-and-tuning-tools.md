@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113524"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962401"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113524"
   
 |도구|설명|  
 |----------|-----------------|  
-|[기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|기본 제공 함수는 서버가 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업에 대한 스냅샷 통계를 표시하며 이러한 통계는 미리 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 저장됩니다. 예를 들어 **@@CPU_BUSY** 에는 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드를 실행한 시간이 포함되고 **@@CONNECTIONS** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 수나 시도 횟수가 포함되며 **@@PACKET_ERRORS** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 발생한 네트워크 패킷 수가 포함됩니다.|  
+|[기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|기본 제공 함수는 서버가 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업에 대한 스냅샷 통계를 표시하며 이러한 통계는 미리 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 저장됩니다. 예를 들어 **\@\@CPU_BUSY**에는 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드를 실행한 시간이 포함되고 **\@\@CONNECTIONS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 수나 시도 횟수가 포함되며 **\@\@PACKET_ERRORS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 발생한 네트워크 패킷 수가 포함됩니다.|  
 |[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC(데이터베이스 콘솔 명령) 문을 사용하면 성능 통계 및 데이터베이스의 논리적, 물리적 일관성을 검사할 수 있습니다.|  
 |[DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)|데이터베이스 엔진 튜닝 관리자는 튜닝할 데이터베이스에 대해 실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 성능 영향을 분석합니다. 데이터베이스 엔진 튜닝 관리자는 인덱스, 인덱싱된 뷰 및 분할의 추가, 제거 또는 수정에 대한 권장 구성을 제공합니다.|  
 |[DEA(데이터베이스 실험 도우미)](https://www.microsoft.com/download/details.aspx?id=54090)|DEA(데이터베이스 실험 도우미)는 SQL Server용 새 A/B 테스트 솔루션입니다. 지정된 워크로드에 대한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 대상 버전의 평가를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 최신 버전으로 업그레이드할 때 DEA는 비교 분석 메트릭을 제공할 수 있습니다.|

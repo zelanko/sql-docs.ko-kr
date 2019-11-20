@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1932d5e174154d0c51d4693b49400aaf6282e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913908"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982899"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 유형 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,27 +81,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
  애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_Windows_Group*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_certificate*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  인증서로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  비대칭 키로 매핑된 데이터베이스 사용자를 지정합니다.  
   

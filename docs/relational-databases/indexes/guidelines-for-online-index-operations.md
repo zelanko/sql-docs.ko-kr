@@ -1,7 +1,7 @@
 ---
 title: 온라인 인덱스 작업에 대한 지침 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909797"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981793"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 
@@ -93,7 +93,7 @@ SQL Server 2016을 실행하는 다중 프로세서 컴퓨터에서는 다른 �
 ## <a name="resumable-index-considerations"></a>다시 시작 가능한 인덱스 고려 사항
 
 > [!NOTE]
-> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터)(인덱스 다시 작성만 해당) 및 SQL Database(인덱스 만들기 및 인덱스 다시 작성)에 적용됩니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md)(현재 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]의 공개 미리 보기로 제공됨) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요.
+> 인덱스 만들기 및 인덱스 다시 작성에 대한 다시 시작 가능한 인덱스 옵션은 SQL Server(인덱스 다시 작성은 SQL Server 2017부터, 인덱스 만들기는 SQL Server 2019 에서도 지원됨) 및 SQL Database에 적용됩니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요.
 
 다시 시작 가능한 온라인 인덱스 만들기 또는 다시 작성을 수행할 경우 다음 지침이 적용됩니다.
 

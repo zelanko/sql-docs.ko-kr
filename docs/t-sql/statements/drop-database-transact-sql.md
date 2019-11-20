@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898101"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982196"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
 
@@ -62,7 +62,7 @@ DROP DATABASE database_name [;]
 *database_name* 제거할 데이터베이스의 이름을 지정합니다. 데이터베이스 목록을 표시하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용합니다.
 
 *database_snapshot_name*
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 제거할 데이터베이스 스냅샷의 이름을 지정합니다.
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>2\. 여러 데이터베이스 삭제
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 다음 예에서는 목록의 데이터베이스 각각을 제거합니다.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. 데이터베이스 스냅샷 삭제
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 다음 예에서는 원본 데이터베이스에 영향을 주지 않으면서 `sales_snapshot0600`이라는 이름의 데이터베이스 스냅샷을 삭제합니다.
 

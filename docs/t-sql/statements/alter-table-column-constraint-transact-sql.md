@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070457"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982003"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68070457"
 > [!IMPORTANT]  
 >  현재 WITH FILLFACTOR = *fillfactor*가 PRIMARY KEY 또는 UNIQUE 제약 조건에 적용되는 유일한 인덱스 옵션으로 기술되어 있는 것은 이전 버전과의 호환성을 위한 것이며 이후 릴리스에서는 이런 식으로 기술되지 않을 것입니다. ALTER TABLE의 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 절에 다른 인덱스 옵션을 지정할 수 있습니다.  
   
- ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  제약 조건에 대해 만들어진 인덱스의 스토리지 위치를 지정합니다. *partition_scheme_name*을 지정하면 인덱스가 분할되고 파티션이 *partition_scheme_name*으로 지정된 파일 그룹에 매핑됩니다. *filegroup*을 지정하면 명명된 파일 그룹에 인덱스가 생성됩니다. **"** default **"** 를 지정하거나, ON을 지정하지 않으면 테이블이 있는 동일한 파일 그룹에 인덱스가 생성됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클러스터형 인덱스를 추가할 때 ON을 지정하면 클러스터형 인덱스가 생성될 때 전체 테이블이 지정한 파일 그룹으로 이동됩니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "68070457"
  반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
   
  NOT FOR REPLICATION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  FOREIGN KEY 제약 조건 및 CHECK 제약 조건에 대해 지정할 수 있습니다. 제약 조건에 대해 이 절을 지정하면 복제 에이전트가 삽입, 업데이트 또는 삭제 작업을 수행할 때 해당 제약 조건이 강제로 적용되지 않습니다.  
   

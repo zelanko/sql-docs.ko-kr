@@ -1,6 +1,5 @@
 ---
-title: 연결된 서버 공급자 만들기(SQL Server 데이터베이스 엔진) | Microsoft Docs
-ms.custom: ''
+title: 연결된 서버 공급자 만들기
 ms.date: 07/01/2019
 ms.prod: sql
 ms.technology: ''
@@ -10,12 +9,13 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929650"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095998"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 분산 쿼리: OLE DB 연결
 
@@ -195,7 +195,7 @@ sysadmin 역할의 멤버를 제외하고 기본적으로 임시 이름을 사�
 |`DBPROP_DBMSNAME`|없음|오류 메시지에 사용됩니다.|
 |`DBPROP_DBMSVER` |없음|오류 메시지에 사용됩니다.|
 |`DBPROP_PROVIDERNAME`|없음|오류 메시지에 사용됩니다.|
-|`DBPROP_PROVIDEROLEDBVER1`|1.5|2.0 기능의 가용성을 결정하는 데 사용됩니다.
+|`DBPROP_PROVIDEROLEDBVER1`|1.5|2\.0 기능의 가용성을 결정하는 데 사용됩니다.
 |`DBPROP_CONCATNULLBEHAVIOR`|없음|공급자의 `NULL` 연결 동작이 SQL Server와 동일한지 여부를 결정하는 데 사용됩니다.|
 |`DBPROP_NULLCOLLATION`|없음|`NULLCOLLATION`이 SQL Server 인스턴스 null 데이터 정렬 동작과 일치하는 경우에만 정렬/인덱스 사용을 허용합니다.|
 |`DBPROP_OLEOBJECTS`|없음|공급자가 큰 데이터 개체 열에 대해 구조적 스토리지 인터페이스를 지원하는지를 결정합니다.|
@@ -433,7 +433,7 @@ SQL Server는 OLE DB에 지정된 OLE DB 오류 개체를 사용합니다. 개�
 
 이러한 매핑은 지정된 연결된 서버에 대해 사용자가 지정할 수 있으며, 시스템 저장 프로시저 `sp_addlinkedsrvlogin` 및 `sp_droplinkedsrvlogin`에서 설정하고 관리할 수 있습니다. `IDBProperties::SetProperties`를 통해 초기화 그룹 속성 DBPROP_AUTH_USERID 및 DBPROP_AUTH_PASSWORD를 설정하면 매핑에 따라 결정된 사용자 ID와 암호가 연결 시 공급자에 전달됩니다.
 
-클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다.
+클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다. 
 
 연결에 사용되는 보안 컨텍스트를 확인한 후에 이 보안 컨텍스트의 인증과 데이터 원본의 데이터 개체에 대한 해당 컨텍스트의 사용 권한 확인은 전적으로 OLE DB 공급자의 책임입니다.
 

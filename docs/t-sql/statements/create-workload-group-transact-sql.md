@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fda5419756689df6b9be1fda9a792c14229c1ce
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632843"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982660"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
@@ -145,7 +145,7 @@ USING { *pool_name* |  **“default”** }
 > 미리 정의된 작업 그룹과 리소스 풀은 모두 "default"와 같은 소문자 이름을 사용합니다. 대/소문자 구분 데이터 정렬을 사용하는 서버의 경우 이러한 사항을 고려해야 합니다. 대/소문자 구분 데이터 정렬(예: SQL_Latin1_General_CP1_CI_AS)을 사용하는 서버는 "default"와 "Default"를 똑같이 처리합니다.
 
 EXTERNAL external_pool_name | "default"     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 작업 그룹은 외부 리소스 풀을 지정할 수 있습니다. 작업 그룹을 정의하고 다음 2개의 풀과 연결할 수 있습니다.
 

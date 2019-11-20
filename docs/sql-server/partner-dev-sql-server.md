@@ -1,20 +1,20 @@
 ---
-title: SQL Server 개발 파트너 | Microsoft Docs
+title: 개발 SQL Server 파트너
 description: 서버에 대한 개발 솔루션이 있는 타사 파트너 목록입니다.
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68132872"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095859"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -23,12 +23,12 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927243"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982067"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 이 프로시저에 대한 계획을 캐시하지 않고 런타임에 프로시저가 다시 컴파일됨을 나타냅니다.  
   
  ENCRYPTION  
- **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 ALTER PROCEDURE 문의 원본 텍스트가 알아보기 어려운 형식으로 변환됩니다. 난독 처리된 출력은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 그러나 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 권한을 가진 사용자는 이 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 원래 프로시저를 검색할 수 있습니다. 시스템 메타데이터에 액세스하는 방법에 대한 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -143,7 +143,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  프로시저 본문을 구성하는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 선택적 키워드인 BEGIN과 END를 사용하여 문을 묶을 수 있습니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)에서 최선의 구현 방법, 일반적인 주의 및 제한 사항 섹션을 참조하세요.  
   
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스에 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름이 있는 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
   

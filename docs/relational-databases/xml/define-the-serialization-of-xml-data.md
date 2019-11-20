@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984778"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127355"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- SQL 대상 유형이 VARCHAR 또는 NCHAR인 경우 결과는 바이트 순서 표시나 XML 선언이 없이 데이터베이스의 데이터 정렬 코드 페이지에 따른 인코딩으로 직렬화됩니다. 대상 유형이 너무 작거나 값을 대상 데이터 정렬 코드 페이지에 매핑할 수 없는 경우 오류가 발생합니다.  
+ SQL 대상 유형이 VARCHAR 또는 CHAR인 경우 결과는 바이트 순서 표시나 XML 선언이 없이 데이터베이스의 데이터 정렬 코드 페이지에 따른 인코딩으로 직렬화됩니다. 대상 유형이 너무 작거나 값을 대상 데이터 정렬 코드 페이지에 매핑할 수 없는 경우 오류가 발생합니다.  
   
  예를 들어  
   

@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122323"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981951"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ Execute a character string
  다른 데이터베이스에서 생성된 모듈은 이 모듈을 실행하는 사용자가 모듈을 소유하고 있거나 해당 데이터베이스에서 모듈을 실행할 수 있는 적절한 사용 권한이 있는 경우에 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 다른 서버에서 모듈을 실행하려면 모듈을 실행하는 사용자가 원격 액세스를 통해 서버에 연결하여 해당 데이터베이스에서 모듈을 실행할 수 있는 적절한 사용 권한을 갖고 있어야 합니다. 서버 이름은 지정했지만 데이터베이스 이름은 지정하지 않은 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 사용자의 기본 데이터베이스에서 모듈을 찾습니다.  
   
  ;*number*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  같은 이름의 프로시저를 그룹화하는 데 사용하는 정수입니다(선택 사항). 이 매개 변수는 확장 저장 프로시저에는 사용하지 않습니다.  
   
@@ -267,7 +267,7 @@ Execute a character string
  문이 실행될 컨텍스트를 지정합니다.  
   
  Login  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  가장할 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버입니다.  
   
@@ -291,7 +291,7 @@ Execute a character string
  EXEC('...', \<arg-list>) AT \<linkedsrv> 문에 사용되는 통과 명령의 \<arg-list>에 값을 제공할 매개 변수를 나타냅니다.  
   
  AT *linked_server_name*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  *command_string*이 *linked_server_name*에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *linked_server_name*은 로컬 서버의 기존 연결된 서버 정의를 참조해야 합니다. 연결된 서버는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의합니다.  
   
@@ -301,11 +301,11 @@ Execute a character string
 |용어|정의|  
 |----------|----------------|  
 |RECOMPILE|모듈을 실행한 후 새 계획을 컴파일하고 사용한 다음 삭제하도록 합니다. 모듈에 대한 기존 쿼리 계획이 있는 경우 이 계획은 캐시에 유지됩니다.<br /><br /> 제공하는 매개 변수가 불규칙하거나 데이터가 현저하게 변경된 경우에 이 옵션을 사용합니다. 이 옵션은 확장 저장 프로시저에는 사용하지 않습니다. 이 옵션은 비용이 많이 들기 때문에 반드시 필요한 경우에만 사용하는 것이 좋습니다.<br /><br /> **참고:** OPENDATASOURCE 구문을 사용하는 저장 프로시저를 호출할 경우 WITH RECOMPILE을 사용할 수 없습니다. WITH RECOMPILE 옵션은 네 부분으로 된 개체 이름이 지정될 때 무시됩니다.<br /><br /> **참고:** RECOMPILE은 고유하게 컴파일된 사용자 정의 스칼라 함수에서 지원되지 않습니다. 다시 컴파일해야 하는 경우 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)을 사용합니다.|  
-|**RESULT SETS UNDEFINED**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지<br /><br /> 이 옵션은 반환되는 결과(있는 경우)를 보장하지 않으며 정의를 제공하지 않습니다. 어떤 결과가 반환되거나 결과가 반환되지 않는 경우에도 이 문은 오류 없이 실행됩니다. RESULT SETS UNDEFINED는 result_sets_option을 제공하지 않는 경우의 기본 동작입니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
-|RESULT SETS NONE|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지<br /><br /> execute 문이 어떠한 결과도 반환하지 않습니다. 결과가 반환되는 경우 일괄 처리가 중단됩니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
-|*\<result_sets_definition>*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환하는 문의 경우 *result_sets_definition* 섹션을 여러 개 제공합니다. 각각의 *result_sets_definition*를 괄호로 묶고 쉼표로 구분합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 \<result_sets_definition>를 참조하세요.<br /><br /> 이 옵션에서는 함수가 결과 집합을 반환하지 않기 때문에 고유하게 컴파일된 스칼라 사용자 정의 함수에 대해 항상 오류를 냅니다.|
+|**RESULT SETS UNDEFINED**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 이 옵션은 반환되는 결과(있는 경우)를 보장하지 않으며 정의를 제공하지 않습니다. 어떤 결과가 반환되거나 결과가 반환되지 않는 경우에도 이 문은 오류 없이 실행됩니다. RESULT SETS UNDEFINED는 result_sets_option을 제공하지 않는 경우의 기본 동작입니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
+|RESULT SETS NONE|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> execute 문이 어떠한 결과도 반환하지 않습니다. 결과가 반환되는 경우 일괄 처리가 중단됩니다.<br /><br /> 해석된 스칼라 사용자 정의 함수와 고유하게 컴파일된 스칼라 사용자 정의 함수의 경우, 함수가 결과 집합을 반환하지 않기 때문에 이 옵션이 작동하지 않습니다.|  
+|*\<result_sets_definition>*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환하는 문의 경우 *result_sets_definition* 섹션을 여러 개 제공합니다. 각각의 *result_sets_definition*를 괄호로 묶고 쉼표로 구분합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 \<result_sets_definition>를 참조하세요.<br /><br /> 이 옵션에서는 함수가 결과 집합을 반환하지 않기 때문에 고유하게 컴파일된 스칼라 사용자 정의 함수에 대해 항상 오류를 냅니다.|
   
-\<result_sets_definition> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
+\<result_sets_definition> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  실행된 문이 반환하는 결과 집합에 대해 설명합니다. result_sets_definition 절의 의미는 다음과 같습니다.  
   
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. 변수와 함께 EXECUTE 'tsql_string' 사용  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. 변수와 함께 EXECUTE 'tsql_string' 사용  
  다음 예에서는 `EXECUTE`가 변수가 포함된 동적으로 작성된 문자열을 처리하는 방법을 보여 줍니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 사용자 정의 테이블의 목록을 유지하는 `tables_cursor` 커서를 만든 다음 해당 목록을 사용하여 테이블의 모든 인덱스를 다시 작성합니다.  
   
 ```  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 원격 저장 프로시저와 함께 EXECUTE 사용  
  다음 예에서는 `uspGetEmployeeManagers` 원격 서버에서 `SQLSERVER1` 저장 프로시저를 실행하고 성공이나 실패를 나타내는 반환 상태를 `@retstat`에 저장합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 DECLARE @retstat int;  
@@ -511,10 +511,10 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. AT linked_server_name과 함께 EXECUTE 사용  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. AT linked_server_name과 함께 EXECUTE 사용  
  다음 예에서는 원격 서버에 명령 문자열을 전달하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스를 가리키는 `SeattleSales` 연결된 서버를 만든 다음 이 연결된 서버에 대해 DDL 문(`CREATE TABLE`)을 실행합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. EXECUTE를 사용하여 연결된 서버의 Oracle 데이터베이스 쿼리  
  다음 예에서는 원격 Oracle 서버에서 몇 가지 `SELECT` 문을 실행합니다. 먼저 Oracle 서버를 연결된 서버로 추가한 다음 연결된 서버 로그인을 만듭니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 -- Setup the linked server.  
@@ -586,10 +586,10 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>12. EXECUTE 및 AT linked_server_name과 함께 매개 변수 사용  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>12. EXECUTE 및 AT linked_server_name과 함께 매개 변수 사용  
  다음 예에서는 매개 변수에 물음표(`?`) 자리 표시자를 사용하여 원격 서버로 명령 문자열을 전달합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스를 가리키는 `SeattleSales` 연결된 서버를 만든 다음 이 연결된 서버에 대해 `SELECT` 문을 실행합니다. `SELECT` 문은 물음표를 `ProductID` 매개 변수(`952`)에 대한 자리 표시자로 사용합니다. 이 매개 변수는 문 다음에 입력합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>13. EXECUTE를 사용하여 단일 결과 집합 다시 정의  
  이전의 일부 예에서는 `EXEC dbo.uspGetEmployeeManagers 6;`을 실행하여 7개의 열을 반환했습니다. 다음 예에서는 `WITH RESULT SET` 구문을 사용하여 반환되는 결과 집합의 이름과 데이터 형식을 변경하는 방법을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>14. EXECUTE를 사용하여 두 결과 집합 다시 정의  
  둘 이상의 결과 집합을 반환하는 문을 실행하는 경우 각 예상 결과 집합을 정의합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 다음 예에서는 두 결과 집합을 반환하는 프로시저를 만듭니다. 그런 다음, **WITH RESULT SETS** 절을 사용하고 두 결과 집합 정의를 지정하여 프로시저를 실행합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

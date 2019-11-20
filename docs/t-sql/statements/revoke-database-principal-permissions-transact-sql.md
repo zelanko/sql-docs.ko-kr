@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082325"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982912"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  사용 권한을 취소할 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  APPLICATION ROLE ::*application_role*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
  사용 권한을 취소할 애플리케이션 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
@@ -93,27 +93,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
  애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_Windows_Group*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_certificate*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  인증서로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  비대칭 키로 매핑된 데이터베이스 사용자를 지정합니다.  
   
@@ -180,7 +180,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 애플리케이션 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 애플리케이션 역할 `IMPERSONATE`로부터 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 취소합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 ```  
 USE AdventureWorks2012;  

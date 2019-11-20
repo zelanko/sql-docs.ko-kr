@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35fc3fb65347a7e7459df18495294a2491e270b4
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660810"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982089"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -372,7 +372,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -402,7 +402,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -615,7 +615,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 Azure SQL Database 관리되는 인스턴스.
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Database Managed Instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -645,7 +645,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 Azure SQL Database 관리되는 인스턴스.
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 Azure SQL Database Managed Instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -778,7 +778,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -808,7 +808,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -967,7 +967,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN Mary5
@@ -997,7 +997,7 @@ GO
 
 다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 
 ```sql
 ALTER LOGIN TestUser WITH

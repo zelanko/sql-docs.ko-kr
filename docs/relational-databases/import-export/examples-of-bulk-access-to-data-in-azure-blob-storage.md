@@ -1,6 +1,6 @@
 ---
-title: Azure Blob Storage의 데이터에 대량 액세스 예제 | Microsoft 문서
-ms.custom: ''
+title: Azure Blob 스토리지 데이터에 대한 대량 액세스
+ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,14 +16,15 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6874476fc7309a4bfed118bff76430bed395587
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798443"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056010"
 ---
-# <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure Blob Storage의 데이터에 대량 액세스 예제
+# <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure Blob 스토리지 데이터에 대한 대량 액세스 예제
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 

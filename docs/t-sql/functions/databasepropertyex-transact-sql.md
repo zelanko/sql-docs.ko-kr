@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 021c6be6d772b9aa7efd3f72302e5ebb31e5e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026206"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982169"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,15 +64,15 @@ DATABASEPROPERTYEX ( database , property )
 |IsArithmeticAbortEnabled|쿼리 실행 시 오버플로나 0으로 나누기 오류가 발생하면 쿼리가 종료됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoClose|마지막 사용자가 끝낸 후 데이터베이스가 완전히 종료되고 리소스가 해제됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoCreateStatistics|쿼리 최적화 프로그램에서 필요할 경우 단일 열 통계를 작성하여 쿼리 성능을 향상시킵니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
-|IsAutoCreateStatisticsIncremental|가능하면 자동으로 만든 단일 열 통계는 증분합니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
+|IsAutoCreateStatisticsIncremental|가능하면 자동으로 만든 단일 열 통계는 증분합니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoShrink|데이터베이스 파일을 주기적으로 자동 축소합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoUpdateStatistics|쿼리에서 오래된 기존 통계를 사용할 경우 쿼리 최적화 프로그램이 이러한 통계를 업데이트합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 잘못됨<br /><br /> 기본 데이터 형식: **int**|
-|IsClone|데이터베이스는 DBCC CLONEDATABASE로 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
+|IsClone|데이터베이스는 DBCC CLONEDATABASE로 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상.<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsCloseCursorsOnCommitEnabled|트랜잭션이 커밋되면 열려 있는 모든 커서가 닫힙니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
-|IsFulltextEnabled|데이터베이스에 전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 잘못됨<br /><br /> 기본 데이터 형식: **int**<br /><br /> **참고:** 이 속성의 값은 이제 아무런 영향을 주지 않습니다. 사용자 데이터베이스는 전체 텍스트 검색을 사용하도록 항상 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서는 이 속성이 제거될 예정입니다. 새 개발 작업에서는 이 속성을 사용하지 말고 현재 이 속성을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.|  
+|IsFulltextEnabled|데이터베이스에 전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 잘못됨<br /><br /> 기본 데이터 형식: **int**<br /><br /> **참고:** 이 속성의 값은 이제 아무런 영향을 주지 않습니다. 사용자 데이터베이스는 전체 텍스트 검색을 사용하도록 항상 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서는 이 속성이 제거될 예정입니다. 새 개발 작업에서는 이 속성을 사용하지 말고 현재 이 속성을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.|  
 |IsInStandBy|데이터베이스가 로그 복원이 허용된 읽기 전용으로 온라인 상태입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsLocalCursorsDefault|커서는 기본적으로 LOCAL로 선언됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
-|IsMemoryOptimizedElevateToSnapshotEnabled|메모리 액세스에 최적화된 테이블은 세션 설정 TRANSACTION ISOLATION LEVEL이 READ COMMITTED, READ UNCOMMITTED 또는 낮은 격리 수준으로 설정된 경우 SNAPSHOT 격리를 사용하여 액세스됩니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> 기본 데이터 형식: **int**|  
+|IsMemoryOptimizedElevateToSnapshotEnabled|메모리 액세스에 최적화된 테이블은 세션 설정 TRANSACTION ISOLATION LEVEL이 READ COMMITTED, READ UNCOMMITTED 또는 낮은 격리 수준으로 설정된 경우 SNAPSHOT 격리를 사용하여 액세스됩니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> 기본 데이터 형식: **int**|  
 |IsMergePublished|복제가 설치된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블을 병합 복제용으로 게시하도록 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsNullConcat|Null 연결 피연산자가 NULL을 반환합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsNumericRoundAbortEnabled|식의 전체 자릿수에서 일부가 손실되면 오류가 발생합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
@@ -84,7 +84,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsSyncWithBackup|데이터베이스는 게시된 데이터베이스이거나 배포 데이터베이스이며, 트랜잭션 복제를 중단하지 않는 복원을 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 시작<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
-|IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
+|IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
 |LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 시작<br /><br /> datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
@@ -115,7 +115,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>1\. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>1\. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
 이 예에서는 `AdventureWorks` 데이터베이스에 대한 AUTO_SHRINK 데이터베이스 옵션의 상태를 반환합니다.
   
 ```sql

@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
+ms.custom: seo-lt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea901179d5011744f1b44609ccb9c19c27c514e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082910"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056220"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

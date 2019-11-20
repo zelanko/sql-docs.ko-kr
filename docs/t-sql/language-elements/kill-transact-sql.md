@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122284"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981920"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 분산 트랜잭션의 UOW(작업 단위) ID를 식별합니다. _UOW_는 sys.dm_tran_locks 동적 관리 뷰의 request_owner_guid 열에서 구할 수 있는 GUID입니다. _UOW_는 오류 로그나 MS DTC 모니터를 통해 가져올 수도 있습니다. 분산 트랜잭션 모니터링 방법은 MS DTC 설명서를 참조하세요.  
   

@@ -1,5 +1,5 @@
 ---
-title: 의미 체계 검색을 사용하여 문서에서 키 구 찾기 | Microsoft 문서
+title: 의미 체계 검색을 사용하여 문서에서 키 구 찾기
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,12 +11,13 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 97ec2ae45c173660c4c18b36d3c20210614c2df6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 64060ae1662d9d1448695426da9e555afbf6869a
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082888"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056196"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>의미 체계 검색을 사용하여 문서에서 키 구 찾기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

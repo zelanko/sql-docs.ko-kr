@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019728"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982948"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   보안 개체에 대한 현재 사용자의 유효 사용 권한을 평가합니다. 연관된 함수는 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)입니다.  
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 이름을 나타내는 **sysname** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[** _sub name_ **]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'** _sub name_ **'** 을 사용하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전에서는 하위 보안 개체에 **'[** _sub name_ **]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'** _sub name_ **'** 을 사용하세요.  
   
  *sub-securable_class*  
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>1\. 서버 수준 VIEW SERVER STATE 권한이 있는지 확인  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>2\. Ps 서버 보안 주체에 대한 IMPERSONATE 권한이 있는지 확인  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

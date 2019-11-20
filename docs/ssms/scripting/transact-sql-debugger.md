@@ -1,29 +1,31 @@
 ---
-title: Transact-SQL 디버거 | Microsoft 문서
+title: Transact-SQL 디버거
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637990"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097929"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="stepping-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 
@@ -70,6 +72,6 @@ ms.locfileid: "73637990"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 실행하는 방법을 설명합니다.|[Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |디버거를 사용하여 매개 변수 및 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터와 시스템 정보를 보는 방법을 설명합니다.|[Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

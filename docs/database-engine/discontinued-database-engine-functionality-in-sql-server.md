@@ -1,7 +1,7 @@
 ---
 title: SQL Server에서 중단된 데이터베이스 엔진 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2017
+ms.date: 11/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,12 +35,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a708aad1d483eaf28d559ff04424e515ec9f6aa7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 0cafdaecf454d3726538f3f297d05566f6cb5b4a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816667"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095216"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server에서 중단된 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,12 @@ ms.locfileid: "71816667"
 
 - [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>관련 항목:
 
-- [SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [SQL Server 2019에서 사용되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2017.md)
+- [SQL Server 2016 이후에는 지원되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [SQL Server 2019 데이터베이스 엔진 기능의 주요 변경 사항](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [SQL Server 2017 데이터베이스 엔진 기능의 주요 변경](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [SQL Server 복제에서 사용되지 않는 기능](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

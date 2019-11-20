@@ -1,5 +1,5 @@
 ---
-title: 검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리 | Microsoft 문서
+title: 검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388339"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056257"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 단어 분리기와 형태소 분석기는 모든 전체 텍스트 인덱싱된 데이터에 대해 언어 분석을 수행합니다. 언어 분석에서는 다음 두 작업을 수행합니다.
 
@@ -92,7 +93,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ##  <a name="tshoot"></a> 단어 분리 시간 초과 오류 해결  
  단어 분리 시간 초과 오류는 다양한 상황에서 발생할 수 있습니다. 이러한 상황과 각 상황에서의 대처 방법에 대한 자세한 내용은 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)을 참조하세요.
 
-### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 오류에 대한 정보
+### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 오류에 대한 정보
   
 |속성|값|
 |-|-|

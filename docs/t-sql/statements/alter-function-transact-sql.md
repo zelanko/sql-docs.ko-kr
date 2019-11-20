@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067488"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982857"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -264,7 +264,7 @@ RETURNS return_data_type
  인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name*은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. *method_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
   
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서는 미리 보기로 제공됨](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   
@@ -300,7 +300,7 @@ RETURNS return_data_type
  함수에 다음 옵션 중 하나 이상이 적용되도록 지정합니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 ALTER FUNCTION 문의 텍스트가 포함된 카탈로그 뷰 열을 암호화하도록 지정합니다. ENCRYPTION을 사용하면 함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시되는 것을 방지할 수 있습니다. CLR 함수에는 ENCRYPTION을 지정할 수 없습니다.  
   

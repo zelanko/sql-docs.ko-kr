@@ -32,12 +32,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba3db3dae69f7b8353fd4f6a00e333b0e28be7f9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155426"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982167"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,12 +129,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
  \<drop_clustered_index_option>  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  클러스터형 인덱스 옵션을 제어합니다. 다른 인덱스 유형에는 이 옵션을 사용할 수 없습니다.  
   
  MAXDOP = *max_degree_of_parallelism*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](성능 수준 P2 및 P3만 해당)  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](성능 수준 P2 및 P3만 해당)  
   
  인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -158,7 +158,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ONLINE = ON | **OFF**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
@@ -174,21 +174,21 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 파일 그룹 이름으로 "default"를 지원합니다.  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 파일 그룹 이름으로 "default"를 지원합니다.  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. 인덱싱된 뷰나 비클러스터형 인덱스에는 MOVE TO를 사용할 수 없습니다. 파티션 구성표 또는 파일 그룹을 지정하지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파티션 구성표 또는 파일 그룹에 위치합니다.  
   
  MOVE TO를 사용하여 클러스터형 인덱스를 삭제하면 기본 테이블의 모든 비클러스터형 인덱스는 다시 작성되지만 원본 파일 그룹 또는 파티션 구성표에는 그대로 남습니다. 기본 테이블을 다른 파일 그룹 또는 파티션 구성표로 옮기면 비클러스터형 인덱스는 기본 테이블의 새 위치(힙)에 일치하게 옮겨지지 않습니다. 따라서 비클러스터형 인덱스가 전에 클러스터형 인덱스에 맞추어 정렬되었다 하더라도 더 이상 힙에 정렬되지는 않습니다. 분할된 인덱스 정렬에 대한 자세한 내용은 [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
   
  _partition_scheme_name_ **(** _column_name_ **)**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  파티션 구성표를 결과 테이블의 위치로 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 문을 실행하여 이미 생성되어 있어야 합니다. 지정된 위치가 없고 테이블이 분할되어 있다면 해당 테이블은 기존 클러스터형 인덱스와 동일한 파티션에 포함됩니다.  
   
  구성표의 열 이름으로 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다.  
   
  *filegroup_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  파일 그룹을 결과 테이블의 위치로 지정합니다. 지정된 위치가 없고 테이블이 분할되지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파일 그룹에 포함됩니다. 파일 그룹은 이미 존재해야 합니다.  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션에 대한 QUOTED_IDENTIFIER 옵션이 ON으로 설정되어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 FILESTREAM 테이블을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. FILESTREAM ON은 인덱싱된 뷰나 비클러스터형 인덱스에는 사용할 수 없습니다. 파티션 구성표를 지정하지 않으면 데이터가 클러스터형 인덱스에 대해 정의된 것과 동일한 파티션 구성표에 위치하게 됩니다.  
   
@@ -290,7 +290,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. 온라인으로 클러스터형 인덱스 삭제 및 MAXDOP 옵션 설정  
  다음 예에서는 `ONLINE` 옵션을 `ON`으로 설정하고 `MAXDOP`를 `8`로 설정해 클러스터형 인덱스를 삭제합니다. MOVE TO 옵션을 지정하지 않았기 때문에 결과 테이블은 인덱스와 동일한 파일 그룹에 저장됩니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. 온라인으로 클러스터형 인덱스 삭제 및 새 파일 그룹으로 테이블 이동  
  다음 예에서는 `NewGroup` 절을 사용하여 온라인으로 클러스터형 인덱스를 삭제하고 결과 테이블을 `MOVE TO` 파일 그룹으로 옮깁니다. 테이블을 이동하기 전과 이동한 후에 파일 그룹에서의 인덱스 및 테이블 배치를 확인하기 위해 `sys.indexes`, `sys.tables`및 `sys.filegroups` 카탈로그 뷰를 쿼리합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP INDEX IF EXISTS 구문을 사용할 수 있습니다.)  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. FILESTREAM 테이블에서 클러스터형 인덱스 삭제  
  다음 예에서는 클러스터형 인덱스를 온라인으로 삭제하고 `MyPartitionScheme` 절과 `MOVE TO` 절을 모두 사용하여 테이블(힙) 결과 및 FILESTREAM 데이터를 `FILESTREAM ON` 파티션 구성표로 이동합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   
@@ -397,7 +397,7 @@ GO
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

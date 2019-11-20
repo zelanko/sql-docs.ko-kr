@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809793"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982844"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -55,7 +55,7 @@ ms.locfileid: "68809793"
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
+## <a name="click-a-product"></a>제품 클릭
 
 다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
 
@@ -67,8 +67,6 @@ ms.locfileid: "68809793"
 |||
 
 &nbsp;
-
-# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>구문
 
@@ -139,7 +137,7 @@ REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
 > [!WARNING]
-> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 
@@ -269,7 +267,7 @@ CONTAINS FILESTREAM 파일 그룹이 FILESTREAM BLOB(Binary Large Object)을 파
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
 
 파일 그룹이 메모리 액세스에 최적화된 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP - 메모리 내 최적화](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 하나의 `MEMORY_OPTIMIZED_DATA` 파일 그룹만 허용됩니다. 메모리 액세스에 최적화된 테이블을 만들기 위해서는 파일 그룹을 비워 둘 수 없습니다. 적어도 한 개의 파일이 있어야 합니다. *filegroup_name*은 경로를 참조합니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다.
 
@@ -286,13 +284,13 @@ DEFAULT 기본 데이터베이스 파일 그룹을 *filegroup_name*으로 변경
 
 NAME = *new_filegroup_name* 파일 그룹 이름을 *new_filegroup_name*으로 변경합니다.
 
-AUTOGROW_SINGLE_FILE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+AUTOGROW_SINGLE_FILE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 기본값입니다.
 
 AUTOGROW_ALL_FILES
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다.
 

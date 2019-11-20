@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d2368cfe612831685da141f99069676ebf33cbb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729839"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962359"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "73729839"
 
 현재 클라이언트 세션에 대한 결과 집합 동작을 제어합니다.  
 
-적용 대상: Azure SQL Data Warehouse(미리 보기)
+Azure SQL Data Warehouse에 적용  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

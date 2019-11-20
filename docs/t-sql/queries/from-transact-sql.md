@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902030"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981978"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  테이블 참조 대신 사용할 수 있는 개체를 반환하는 행 집합 함수 중 하나(예: OPENROWSET)를 지정합니다. 행 집합 함수의 목록에 자세한 내용은 [행 집합 함수&#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)를 참조하세요.  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  결과 집합의 열 이름을 대체할 선택적인 별칭입니다. 열의 별칭은 BULK 옵션과 함께 OPENROWSET 함수를 사용하는 SELECT 문에서만 허용됩니다. *bulk_column_alias*를 사용하는 경우 파일의 열과 동일한 순서로 모든 테이블 열에 대한 별칭을 지정합니다.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  XML 문서를 통해 행 집합 뷰를 제공합니다. 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  지정된 임시 테이블 및 연결된 해당 시스템 버전 관리 기록 테이블에서 특정 버전의 데이터가 반환되도록 지정합니다.  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  과거의 지정된 시간에 실제(현재)였던 값이 포함된 각 행에 대한 단일 레코드를 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 해당 기록 테이블 간에 합집합이 계산되고, 결과가 필터링되어 *\<date_time>* 매개 변수로 지정된 시점에 유효했던 행의 값을 반환합니다. *system_start_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 작거나 같고, *system_end_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 큰 경우 행에 대한 값이 유효한 것으로 간주됩니다.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
   
  FROM 인수에 대한 *\<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었는지, 아니면 TO 인수에 대한 *\<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었는지 여부에 관계없이, 지정된 시간 범위 내에 활성 상태였던 모든 레코드 버전에 대한 값이 포함된 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트에서 정의된 하위 경계에서 정확히 활성화된 행은 포함되고, TO 엔드포인트에서 정의된 상위 경계에서 정확히 활성화된 행은 포함되지 않습니다.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  \<end_date_time> 엔드포인트에서 정의된 상위 경계에서 활성화된 행이 포함된다는 점을 제외하고는 위의 **FROM \<start_date_time> TO \<end_date_time>** 설명과 동일합니다.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 레코드 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>13. FOR SYSTEM_TIME 사용  
+### <a name="m-using-for-system_time"></a>13. FOR SYSTEM_TIME 사용  
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  다음 예제에서는 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 인수를 사용하여 2014년 1월 1일 현재의 실제(현재) 테이블 행을 반환합니다.  
   

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 468d9aabd58c8fcdca8403b1177eea92ced9212d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044834"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982182"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,14 +99,14 @@ ms.locfileid: "68044834"
 |[SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용 가능한 페이지를 요청하고 액세스하는 빈도에 대한 정보를 제공합니다.|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|SQL Server의 카탈로그 메타데이터 관리자 개체를 정의합니다.| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR(공용 언어 런타임)에 대한 정보를 제공합니다.|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> columnstore 인덱스에 대한 rowgroup 및 세그먼트에 대한 정보를 제공합니다.|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).<br /><br /> columnstore 인덱스에 대한 rowgroup 및 세그먼트에 대한 정보를 제공합니다.|  
 |[SQLServer:Cursor Manager by Type](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|커서에 대한 정보를 제공합니다.|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|커서에 대한 정보를 제공합니다.|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|데이터베이스 미러링에 대한 정보를 제공합니다.|  
 |[SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)|사용할 수 있는 로그 공간이나 데이터베이스에서 활성화된 트랜잭션 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관한 정보를 제공합니다. 이 개체에는 인스턴스가 여러 개 있을 수 있습니다.|  
 |[SQL Server:Deprecated Features](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|사용되지 않는 기능이 사용된 횟수를 나타냅니다.|  
 |[SQLServer:Exec Statistics](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|실행 통계에 대한 정보를 제공합니다.|  
-|[SQL Server:외부 스크립트](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 외부 스크립트 실행에 대한 정보를 제공합니다.|  
+|[SQL Server:외부 스크립트](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).<br /><br /> 외부 스크립트 실행에 대한 정보를 제공합니다.|  
 |[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|FileTable 및 트랜잭션되지 않은 액세스와 관련된 통계입니다.|  
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 현재 연결된 사용자 수와 같은 일반적인 서버 차원의 작업에 관한 정보를 제공합니다.|  
 |[SQL Server:HADR 가용성 복제본](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|현재 할당된 총 잠금 구조 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 정보를 제공합니다.|  

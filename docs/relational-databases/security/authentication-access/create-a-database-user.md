@@ -24,17 +24,17 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c65d0a8f7e435bb82bcbce43aa1fc27523e006cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094970"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981932"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 가장 일반적인 데이터베이스 사용자 유형을 만드는 방법을 설명합니다. 사용자 유형에는 다음과 같이 11가지가 있습니다. 전체 목록은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 항목에서 제공됩니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 변형에서 데이터베이스 사용자를 지원하지만 반드시 모든 사용자 유형을 지원하는 것은 아닙니다.  
+  이 항목에서는 가장 일반적인 데이터베이스 사용자 유형을 만드는 방법을 설명합니다. 사용자 유형에는 11가지가 있습니다. 전체 목록은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 항목에서 제공됩니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 변형에서 데이터베이스 사용자를 지원하지만 반드시 모든 사용자 유형을 지원하는 것은 아닙니다.  
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 데이터베이스 사용자를 만들 수 있습니다.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "68094970"
 ## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)   
- [CREATE LOGIN&#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   

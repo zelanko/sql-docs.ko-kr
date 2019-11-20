@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882423"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926046"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 스칼라 UDF를 호출하는 쿼리 성능을 높입니다.
+이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 스칼라 UDF를 호출하는 쿼리 성능을 높입니다.
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 스칼라 사용자 정의 함수
 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 구현되며 단일 데이터 값을 반환하는 UDF(사용자 정의 함수)를 T-SQL 스칼라 사용자 정의 함수라고 합니다. T-SQL UDF는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 코드 재사용과 모듈화를 구현하는 세련된 방법입니다. 일부 계산(예: 복잡한 비즈니스 규칙)은 명령적 UDF 형태에서 더 표현하기 쉽습니다. UDF는 복잡한 SQL 쿼리를 작성하기 위한 전문 지식 없이도 복잡한 논리를 구축하는 데 도움이 됩니다.
@@ -134,7 +134,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복잡할 수도 있습니다. 여기서 보듯이 UDF 내 연산은 더 이상 블랙 박스가 아니므로 쿼리 최적화 프로그램이 해당 연산을 희생하고 최적화할 수 있습니다. 또한 UDF가 더 이상 계획에 없으므로 반복 UDF 호출이 함수 호출 과부하를 완전히 방지하는 계획으로 바뀝니다.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>인라인 처리 가능한 스칼라 UDF 요구 사항
-다음 조건을 모두 만족하는 스칼라 T-SQL UDF를 인라인 처리할 수 있습니다.
+<a name="requirements"></a> 다음 조건을 모두 만족하는 스칼라 T-SQL UDF를 인라인 처리할 수 있습니다.
 
 - UDF는 다음 구문을 사용하여 작성됩니다.
     - `DECLARE`, `SET`: 변수 선언 및 할당.
@@ -165,7 +165,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 모든 T-SQL 스칼라 UDF에 대해 [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 보기에는 UDF의 인라인 처리 가능 여부를 표시하는 `is_inlineable`이라는 속성이 포함되어 있습니다. 
 
 > [!NOTE]
-> `is_inlineable` 속성은 UDF 정의 내에 있는 구성에서 파생됩니다. UDF가 실제로 컴파일 타임에 인라인 처리가 가능한지 여부는 확인하지 않습니다. 자세한 내용은 아래의 인라인 처리를 위한 조건을 참조하세요.
+> `is_inlineable` 속성은 UDF 정의 내에 있는 구성에서 파생됩니다. UDF가 실제로 컴파일 타임에 인라인 처리가 가능한지 여부는 확인하지 않습니다. 자세한 내용은 아래의 [인라인 처리를 위한 조건](#requirements)을 참조하세요.
 
 1 값은 인라인 처리 가능, 0은 그 반대를 나타냅니다. 이 속성은 모든 인라인 TVF에 대해 1 값을 갖습니다. 다른 모든 모듈에 대해서는 값이 0입니다.
 
@@ -258,7 +258,7 @@ END
 1. 인라인 처리에는 새 조인이 들어가므로 쿼리 수준 조인 힌트가 더 이상 유효하지 않을 수 있습니다. 로컬 조인 힌트를 대신 사용해야 합니다.
 1. 인라인 스칼라 UDF를 참조하는 보기를 인덱싱할 수 없습니다. 이런 보기에 대해 인덱스를 만들려면 참조된 UDF에 대해 인라인 처리를 사용하지 않습니다.
 1. UDF 인라인 처리에서 [동적 데이터 마스킹](../security/dynamic-data-masking.md)의 동작에 차이가 있을 수 있습니다. (UDF의 논리에 따라) 특정 상황에서는 인라인 처리가 w.r.t 마스킹 출력 열보다 더 보수적일 수 있습니다. UDF에서 참조하는 열이 출력 열이 아닌 시나리오에서는 마스킹되지 않습니다. 
-1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다.
+1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`, `@@ROWCOUNT` 또는 `@@ERROR`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다.
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

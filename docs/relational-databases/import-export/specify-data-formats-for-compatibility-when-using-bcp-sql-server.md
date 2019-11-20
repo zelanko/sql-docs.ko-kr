@@ -1,6 +1,5 @@
 ---
-title: bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: bcp를 사용하여 호환성 데이터 형식 지정
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e56c9013afbfce762f35edb41d0b411c426028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062545"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055932"
 ---
-# <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
+# <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp를 사용하는 경우 호환 데이터 형식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   이 항목에서는 데이터 형식 특성과 필드별 프롬프트에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** 명령의 비 xml 서식 파일에 필드 단위 데이터를 저장하는 방법에 대해 설명합니다. 이러한 개념을 잘 알고 있으면 다른 데이터베이스 프로그램과 같은 다른 프로그램으로 대량으로 가져오기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 대량으로 내보낼 때 특히 유용합니다. 원본 테이블의 기본 데이터 형식(네이티브, 문자 또는 유니코드)이 다른 프로그램에서 필요한 데이터 레이아웃과 호환되지 않을 수 있습니다. 호환되지 않는 경우 데이터를 내보낼 때는 데이터 레이아웃을 지정해야 합니다.  
   

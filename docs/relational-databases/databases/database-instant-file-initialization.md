@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909076"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982453"
 ---
 # <a name="database-file-initialization"></a>데이터베이스 파일 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "72909076"
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 설치하는 동안 이 권한을 서비스 계정에 부여할 수 있습니다. [명령 프롬프트 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 사용하는 경우 /SQLSVCINSTANTFILEINIT 인수를 추가하거나 [설치 마법사](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)의 *SQL Server 데이터베이스 엔진 서비스에 볼륨 유지 관리 작업 권한 부여* 확인란을 선택합니다.
 
 > [!NOTE]
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터 그리고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지는 [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV의 *instant_file_initialization_enabled* 열을 사용하여 인스턴트 파일 초기화가 사용되는지 확인할 수 있습니다.
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터 그리고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상에서 [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV의 *instant_file_initialization_enabled* 열을 사용하여 인스턴트 파일 초기화가 사용되는지 확인할 수 있습니다.
 
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME*이 부여되면 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 다음과 유사한 정보 메시지가 기록됩니다. 
@@ -78,7 +78,7 @@ ms.locfileid: "72909076"
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
 ## <a name="security-considerations"></a>보안 고려 사항  
 삭제된 디스크 내용은 새 데이터가 파일에 기록될 때만 덮어쓰기 때문에 인스턴트 파일 초기화(IFI)를 사용하는 경우 데이터 파일의 해당하는 특정 영역에 다른 데이터를 쓸 때까지 권한 없는 사용자가 삭제된 내용에 액세스할 수 있습니다. 데이터베이스 파일이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결되어 있는 동안 파일의 DACL(임의 액세스 제어 목록)에 의해 이러한 정보 공개 위협이 줄어듭니다. 이 DACL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 로컬 관리자에게만 파일 액세스를 허용합니다. 그러나 파일이 분리되면 *SE_MANAGE_VOLUME_NAME*이 없는 사용자 또는 서비스가 액세스할 수 있습니다. 데이터베이스를 백업할 때도 유사한 사항을 고려해야 합니다. 즉, 백업 파일이 적절한 DACL로 보호되지 않는 경우 권한이 없는 사용자 또는 서비스가 삭제된 내용을 사용할 수 있게 됩니다.  

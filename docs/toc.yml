@@ -5808,7 +5808,7 @@
     - name: DEA(데이터베이스 실험 도우미)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: 시작
+        - name: 워크로드 비교 개요
           href: dea/database-experimentation-assistant-get-started.md
         - name: 추적 캡처
           href: dea/database-experimentation-assistant-capture-trace.md

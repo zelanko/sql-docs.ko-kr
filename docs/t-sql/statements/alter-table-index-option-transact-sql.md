@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f40e6713c80c0f340303d0b62b629f53285c2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070219"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982012"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68070219"
   
 ## <a name="arguments"></a>인수  
  PAD_INDEX **=** { ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68070219"
  중간 수준 페이지는 중간 페이지의 키 집합이 지정된 경우 최소한 인덱스에 사용할 수 있는 최대 크기의 행 하나를 위한 공간을 남겨 두고 거의 채워집니다.  
   
  FILLFACTOR **=** _fillfactor_  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  인덱스를 만들거나 변경할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. 지정한 값은 1에서 100까지의 정수 값이어야 합니다. 기본값은 0입니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68070219"
  자동 통계 업데이트가 설정됩니다.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68070219"
  행 잠금이 사용되지 않습니다.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68070219"
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 CREATE INDEX 페이지의 [순차 키](./create-index-transact-sql.md#sequential-keys) 섹션을 참조하세요.
  
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  정렬 결과를 **tempdb**에 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68070219"
  중간 정렬 결과가 인덱스와 같은 데이터베이스에 저장됩니다.  
   
  ONLINE **=** { ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. REBUILD 작업은 ONLINE 작업으로만 수행할 수 있습니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68070219"
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  MAXDOP **=** _max_degree_of_parallelism_  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "68070219"
 >  병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  DATA_COMPRESSION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.  
   
@@ -202,18 +202,18 @@ ms.locfileid: "68070219"
  테이블 또는 지정된 파티션이 페이지 압축을 사용하여 압축됩니다. rowstore 테이블에만 적용되며 columnstore 테이블에는 적용되지 않습니다.  
   
  COLUMNSTORE  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
  columnstore 테이블에만 적용됩니다. COLUMNSTORE에서는 COLUMNSTORE_ARCHIVE 옵션으로 압축된 파티션을 압축 해제하도록 지정합니다. 데이터는 복구될 때 모든 columnstore 테이블에 사용된 columnstore 압축으로 COLUMNSTORE 인덱스는 계속 압축됩니다.  
   
  COLUMNSTORE_ARCHIVE  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
  클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관하거나 보다 적은 스토리지가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할되지 않은 경우 ON PARTITIONS 인수를 사용하면 오류가 발생합니다. ON PARTITIONS 절을 제공하지 않으면 DATA_COMPRESSION 옵션이 분할된 테이블의 모든 파티션에 적용됩니다.  
   
@@ -252,7 +252,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
  **SWITCH** 또는 온라인 인덱스 다시 작성은 이 테이블에 대한 차단 작업이 없는 경우 즉시 완료됩니다. *WAIT_AT_LOW_PRIORITY*는 **SWITCH** 또는 온라인 인덱스 다시 작성 작업을 즉시 완료할 수 없는 경우 대기한다는 것을 나타냅니다. 이 작업은 우선 순위가 낮은 잠금을 보류하여, DDL 문과 충돌하는 잠금을 가진 다른 작업이 계속 수행될 수 있도록 허용합니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`와 동일합니다.  
   

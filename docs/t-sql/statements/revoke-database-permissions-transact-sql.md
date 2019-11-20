@@ -17,12 +17,12 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d54baf32affef290334503d9c18c04a6c28c8d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082340"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983276"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,27 +85,27 @@ permission | ALL [ PRIVILEGES ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
  애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_Windows_Group*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_certificate*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  인증서로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  비대칭 키로 매핑된 데이터베이스 사용자를 지정합니다.  
   
@@ -132,7 +132,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
@@ -207,7 +207,7 @@ permission | ALL [ PRIVILEGES ]
 ### <a name="a-revoking-permission-to-create-certificates"></a>1\. 인증서를 만들기 위해 사용 권한 취소  
  다음 예에서는 사용자 `CREATE CERTIFICATE`에서 `AdventureWorks2012` 데이터베이스에 대한 `MelanieK` 사용 권한을 취소합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ```  
 USE AdventureWorks2012;  
@@ -218,7 +218,7 @@ GO
 ### <a name="b-revoking-references-permission-from-an-application-role"></a>2\. 애플리케이션 역할에서 REFERENCES 사용 권한 취소  
  다음 예에서는 애플리케이션 역할 `REFERENCES`에서 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 사용 권한을 취소합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 ```  
 USE AdventureWorks2012;  

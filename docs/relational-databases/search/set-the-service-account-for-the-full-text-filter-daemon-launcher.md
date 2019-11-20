@@ -1,5 +1,5 @@
 ---
-title: 전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정 | Microsoft 문서
+title: 전체 텍스트 필터 디먼 시작 관리자의 서비스 계정 설정
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,12 +13,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21e427db754f9ba76895800cad047697fed47379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912941"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055945"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

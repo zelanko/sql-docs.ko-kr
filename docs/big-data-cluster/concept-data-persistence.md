@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532385"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063972"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -87,8 +87,10 @@ AKS는 [두 가지 기본 제공 스토리지 클래스](/azure/aks/azure-disks-
 
 `kubeadm`을 사용하여 배포된 Kubernetes 클러스터에는 기본 제공 스토리지 클래스가 없습니다. 로컬 스토리지 또는 원하는 프로비저닝 프로그램(예: [Rook](https://github.com/rook/rook))을 사용하여 고유한 스토리지 클래스와 영구적 볼륨을 만들어야 합니다. 이 경우 `className`을 구성한 스토리지 클래스로 설정합니다. 
 
-> [!NOTE]
->  kubeadm의 기본 제공 배포 구성 파일(`kubeadm-dev-test` 또는 `kubeadm-prod`)에는 데이터 및 로그 스토리지에 대해 지정된 스토리지 클래스 이름이 없습니다. 배포 전에 구성 파일을 사용자 지정하고 className의 값을 설정해야 합니다. 설정하지 않으면 배포 전 유효성 검사에 실패합니다. 또한 배포에는 스토리지 클래스의 현재 상태를 확인하는 유효성 검사 단계가 있지만 필요한 영구적 볼륨을 검사하는 단계는 없습니다. 클러스터 규모에 따라 충분한 볼륨을 만들어야 합니다. 기본 최소 클러스터 크기(기본 규모, 고가용성 없음)의 경우 최소 24개의 영구적 볼륨을 만들어야 합니다. 로컬 프로비저닝 프로그램을 사용하여 영구적 볼륨을 만드는 방법의 예제는 [여기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)를 참조하세요.
+> [!IMPORTANT]
+>  kubeadm의 기본 제공 배포 구성 파일(`kubeadm-dev-test` 또는 `kubeadm-prod`)에는 데이터 및 로그 스토리지에 대해 지정된 스토리지 클래스 이름이 없습니다. 배포 전에 구성 파일을 사용자 지정하고 `className`의 값을 설정해야 합니다. 설정하지 않으면 배포 전 유효성 검사에 실패합니다. 또한 배포에는 스토리지 클래스의 현재 상태를 확인하는 유효성 검사 단계가 있지만 필요한 영구적 볼륨을 검사하는 단계는 없습니다. 클러스터 규모에 따라 충분한 볼륨을 만들어야 합니다. 기본 최소 클러스터 크기(기본 규모, 고가용성 없음)의 경우 최소 24개의 영구적 볼륨을 만들어야 합니다.
+>
+>[Kubernetes 클러스터 만들기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)는 로컬 프로비저닝 프로그램을 사용하여 영구 볼륨을 만드는 방법의 예를 제공합니다. 이 예제에서는 Kubernetes 스토리지를 소개합니다.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>각 풀의 스토리지 구성 사용자 지정

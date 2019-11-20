@@ -1,5 +1,5 @@
 ---
-title: 의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰 | Microsoft 문서
+title: 의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,12 +11,13 @@ ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: b21ff2b2db663aacc48ce5643b88034d91cf7771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fd69090db106894bd686ee74a801afeff2d79649
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912976"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056108"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

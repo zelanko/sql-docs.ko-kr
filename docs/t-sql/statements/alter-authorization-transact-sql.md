@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1732f099dcdf9ab5119ba288d625ad45384bd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066056"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982876"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -126,27 +126,27 @@ ALTER AUTHORIZATION ON
     
 |||    
 |-|-|    
-|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]까지.|    
-|ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|AVAILABILITY GROUP |**적용 대상**: SQL Server 2012부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|
-|CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
-|엔드포인트|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]까지.|    
-|SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
-|SYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
-|XML SCHEMA COLLECTION|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|AVAILABILITY GROUP |**적용 대상**: SQL Server 2012 이상|
+|CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
+|엔드포인트|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
+|SYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|XML SCHEMA COLLECTION|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
     
  *entity_name*    
  엔터티의 이름입니다.    
@@ -328,7 +328,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. 엔드포인트의 소유권을 SQL Server 로그인에게 이전    
  다음 예에서는 `CantabSalesServer1` 엔드포인트의 소유권을 `JaePak`에게 이전합니다. 엔드포인트는 서버 수준의 보안 개체이므로 서버 수준 보안 주체에게만 소유권을 이전할 수 있습니다.    
     
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지    
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상    
     
 ```    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -345,7 +345,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. 데이터베이스의 소유자 변경    
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지.    
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
     
  다음 예에서는 `Parts` 데이터베이스의 소유자를 로그인 `MichikoOsada`로 변경합니다.    
     

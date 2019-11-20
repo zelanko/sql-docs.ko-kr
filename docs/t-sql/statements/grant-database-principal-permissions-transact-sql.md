@@ -25,12 +25,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065501"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982241"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ GRANT permission [ ,...n ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  애플리케이션 역할을 지정합니다.  
   
@@ -187,7 +187,7 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. 애플리케이션 역할에 사용자에 대한 IMPERSONATE 권한 부여  
  다음 예에서는 `IMPERSONATE` 애플리케이션 역할 `HamithaL`에 대해 사용자 `AdventureWorks2012`에 대한 `AccountsPayable17` 권한을 부여합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

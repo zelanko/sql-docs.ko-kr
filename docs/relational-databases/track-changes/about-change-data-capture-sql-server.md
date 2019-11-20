@@ -1,5 +1,6 @@
 ---
-title: 변경 데이터 캡처 정보(SQL Server) | Microsoft 문서
+title: 변경 데이터 캡처 정보
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058122"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095324"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68058122"
 ## <a name="change-data-capture-data-flow"></a>변경 데이터 캡처 데이터 흐름  
  다음 그림에서는 변경 데이터 캡처의 주요 데이터 흐름을 보여 줍니다.  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![변경 데이터 캡처 데이터 흐름](../../relational-databases/track-changes/media/cdcdataflow.gif "변경 데이터 캡처 데이터 흐름")  
   
  변경 데이터 캡처에 대한 변경 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그입니다. 추적된 원본 테이블에 삽입, 업데이트 및 삭제가 적용되면 이러한 변경을 설명하는 항목이 로그에 추가됩니다. 로그는 캡처 프로세스에 대한 입력으로 사용됩니다. 이 프로세스는 로그를 읽고 변경에 대한 정보를 추적된 테이블의 관련 변경 테이블에 추가합니다. 지정된 범위에서 변경 테이블에 나타나는 변경을 열거하여 해당 정보를 필터링된 결과 집합의 형태로 반환하는 함수가 제공됩니다. 필터링된 결과 집합은 일반적으로 일부 외부 환경의 원본 표현을 업데이트하는 애플리케이션 프로세스에서 사용됩니다.  
   

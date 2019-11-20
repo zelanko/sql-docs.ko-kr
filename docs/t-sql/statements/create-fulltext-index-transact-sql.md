@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912768"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981890"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ BLOB이 아닌 열과 XML이 아닌 열에 여러 언어로 된 텍스트 데이
 XML 유형 또는 BLOB 유형의 열로 저장된 문서의 경우 인덱싱 시에 문서 내의 언어 인코딩이 사용됩니다. 예를 들어 XML 열에서는 XML 문서의 **xml:lang** 특성으로 언어를 식별합니다. 쿼리할 때 *language_term*이 전체 텍스트 쿼리의 일부로 지정되지 않은 경우에는 *language_term*에 지정된 이전 값이 전체 텍스트 쿼리의 기본 언어로 사용됩니다.  
   
 STATISTICAL_SEMANTICS       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지) 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 
   
 통계 의미 체계 인덱싱의 일부인 추가 키 구 및 문서 유사성 인덱스를 만듭니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  
   
@@ -143,7 +143,7 @@ OFF
 전체 텍스트 인덱스와 연결할 중지 목록의 이름을 지정합니다.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)  
   
 검색 속성 목록을 인덱스와 연결합니다.  
  

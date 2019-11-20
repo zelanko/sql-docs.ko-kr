@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000825"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982764"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ OR ALTER
  프로시저 또는 전역 임시 프로시저의 전체 이름은 ##을 포함하여 128자를 초과할 수 없습니다. 로컬 임시 프로시저의 전체 이름은 #을 포함하여 116자를 초과할 수 없습니다.  
   
  **;** *number*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  같은 이름의 프로시저를 그룹화하는 데 사용하는 정수입니다(선택 사항). 이렇게 그룹화된 프로시저는 DROP PROCEDURE 문 하나를 사용하여 한꺼번에 삭제할 수 있습니다.  
   
@@ -216,7 +216,7 @@ RECOMPILE
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 프로시저 안에 있는 개별 쿼리에 대한 쿼리 계획을 삭제하도록 하려면 쿼리 정의에서 RECOMPILE 쿼리 힌트를 사용합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ENCRYPTION  
- **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE PROCEDURE 문의 원본 텍스트를 난독 처리된 형식으로 변환하는 것을 나타냅니다. 난독 처리된 출력은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 하지만 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 권한이 있는 사용자는 난독 처리된 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 해독된 프로시저를 검색할 수 있습니다. 시스템 메타데이터에 액세스하는 방법에 대한 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -232,7 +232,7 @@ EXECUTE AS *절*
  자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
 FOR REPLICATION  
- **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  프로시저가 복제용으로 생성되도록 지정합니다. 따라서 구독자에서는 프로시저를 실행할 수 없습니다. FOR REPLICATION 옵션을 사용하여 만든 프로시저는 프로시저 필터로 사용되며 복제하는 동안에만 실행됩니다. FOR REPLICATION을 지정하면 매개 변수를 선언할 수 없습니다. CLR 프로시저에는 FOR REPLICATION을 지정할 수 없습니다. FOR REPLICATION으로 만든 프로시저의 경우 RECOMPILE 옵션이 무시됩니다.  
   
@@ -242,7 +242,7 @@ FOR REPLICATION
  프로시저 본문을 구성하는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 선택적 키워드인 BEGIN과 END를 사용하여 문을 묶을 수 있습니다. 자세한 내용은 다음에 나오는 최선의 구현 방법, 일반적인 주의 사항 및 제한 사항 섹션을 참조하세요.  
   
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
   
@@ -252,7 +252,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 >  CLR 프로시저는 포함된 데이터베이스에서 지원되지 않습니다.  
   
 ATOMIC WITH  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  원자성 저장 프로시저 실행을 나타냅니다. 변경 내용이 커밋되거나 모든 변경 내용이 예외를 발생하고 롤백됩니다. ATOMIC WITH 블록은 고유하게 컴파일된 저장 프로시저에 필요합니다.  
   
@@ -277,22 +277,22 @@ BEGIN, ROLLBACK 및 COMMIT 작업은 원자성 블록 내에서 사용할 수 �
  매개 변수에 null 값이 허용되는지 여부를 결정합니다. NULL이 기본값입니다.  
   
 NATIVE_COMPILATION  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  프로시저가 고유하게 컴파일되었음을 나타냅니다. NATIVE_COMPILATION, SCHEMABINDING 및 EXECUTE AS는 임의 순서로 지정할 수 있습니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
 SCHEMABINDING  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  프로시저에서 참조되는 테이블을 삭제 또는 변경할 수 없도록 보장합니다. SCHEMABINDING은 고유하게 컴파일된 저장 프로시저에 필요합니다. (자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.) SCHEMABINDING 제한은 사용자 정의 함수의 경우와 동일합니다. 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 SCHEMABINDING 섹션을 참조하세요.  
   
 LANGUAGE = [N] '언어'  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 세션 옵션에 해당합니다. LANGUAGE = [N] '언어'는 필수입니다.  
   
 TRANSACTION ISOLATION LEVEL  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  고유하게 컴파일된 저장 프로시저에 필요합니다. 저장 프로시저의 트랜잭션 격리 수준을 지정합니다. 다음과 같은 옵션이 있습니다.  
   
@@ -311,21 +311,21 @@ SNAPSHOT
  트랜잭션의 명령문이 읽은 데이터가 트랜잭션별로 트랜잭션을 시작할 때 존재한 데이터 버전과 일관성이 유지되도록 지정합니다.  
   
 DATEFIRST = *number*  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  일주일의 시작 요일을 1부터 7까지의 숫자로 지정합니다. DATEFIRST는 선택 사항입니다. 지정하지 않으면 지정된 언어로부터 설정이 유추됩니다.  
   
  자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.  
   
 DATEFORMAT = *format*  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  date, smalldatetime, datetime, datetime2 및 datetimeoffset 문자열 해석을 위한 월, 일 및 연도 날짜 부분의 순서를 지정합니다. DATEFORMAT은 선택 사항입니다. 지정하지 않으면 지정된 언어로부터 설정이 유추됩니다.  
   
  자세한 내용은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)을 참조하세요.  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다.  
   
@@ -542,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. CLR 저장 프로시저 만들기  
  다음 예에서는 `HandlingLOBUsingCLR`어셈블리에 있는 `LargeObjectBinary` 클래스의 `GetPhotoFromDB` 메서드를 참조하는 `GetPhotoFromDB` 프로시저를 만듭니다. 프로시저를 만들기 전에 `HandlingLOBUsingCLR` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](*assembly_bits*에서 생성된 어셈블리를 사용하는 경우)  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](*assembly_bits*에서 생성된 어셈블리를 사용하는 경우)  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -871,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>11. WITH ENCRYPTION 옵션 사용  
  다음 예에서는 `HumanResources.uspEncryptThis` 프로시저를 만듭니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, SQL Database  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, SQL Database.  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  

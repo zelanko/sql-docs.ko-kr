@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121595"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981906"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,9 +110,9 @@ _object\_name_
 많은 코드 예제에서 유니코드 문자열 상수 앞에 문자 **N**을 접두사로 붙입니다. **N** 접두사가 없으면 문자열이 데이터베이스의 기본 코드 페이지로 변환됩니다. 이 기본 코드 페이지는 일부 문자를 인식하지 않을 수 있습니다.  
   
 ## <a name="applies-to-references"></a>'적용 대상' 참조  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]와 관련된 항목이 포함되어 있습니다.   
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 관련 항목이 포함되어 있습니다.   
 
-각 문서의 위쪽에는 문서의 주제를 지원하는 제품을 나타내는 섹션이 있습니다. 제품이 생략되면 문서에서 설명하는 기능을 해당 제품에서 사용할 수 없습니다. 예를 들어 가용성 그룹이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. **CREATE AVAILABILITY GROUP** 문서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 적용되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에 적용됨을 나타냅니다.  
+각 문서의 위쪽에는 문서의 주제를 지원하는 제품을 나타내는 섹션이 있습니다. 제품이 생략되면 문서에서 설명하는 기능을 해당 제품에서 사용할 수 없습니다. 예를 들어 가용성 그룹이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. **CREATE AVAILABILITY GROUP** 문서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 적용되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)에 적용됨을 나타냅니다.  
   
 문서의 일반적인 주제를 제품에서 사용할 수 있지만 경우에 따라 일부 인수가 지원되지 않습니다. 예를 들어 포함된 데이터베이스 사용자가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 **CREATE USER** 문을 사용할 수 있지만, **WITH PASSWORD** 구문은 이전 버전에서 사용할 수 없습니다. 추가적인 **적용 대상** 섹션이 항목 본문의 적절한 인수 설명에 삽입됩니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/27/2019
+ms.date: 11/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240679"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127694"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 호환되도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 쿼리 처리 동작을 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+지정된 버전의 SQL 엔진과 호환되도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 쿼리 처리 동작을 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
@@ -48,11 +48,9 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>인수
 
-*database_name*      
-수정할 데이터베이스의 이름입니다.
+*database_name* 수정할 데이터베이스의 이름입니다.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
-데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다(모든 버전이 위의 나열된 호환성 수준을 모두 지원하지는 않음).
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다(모든 버전이 위의 나열된 호환성 수준을 모두 지원하지는 않음).
 
 <a name="supported-dbcompats"></a>
 
@@ -60,8 +58,8 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스/탄력적 풀|12|140|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스/탄력적 풀|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -70,7 +68,11 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> SQL Server 및 Azure SQL Database의 데이터베이스 엔진 버전 번호는 서로 비교할 수 없으며 이러한 개별 제품에 대한 내부 빌드 번호에 해당합니다. Azure SQL Database용 데이터베이스 엔진은 SQL Server 데이터베이스 엔진과 동일한 코드 베이스를 기준으로 합니다. 가장 중요한 사실은 Azure SQL Database의 데이터베이스 엔진에 항상 최신 SQL 데이터베이스 엔진 비트가 있다는 것입니다. Azure SQL Database 버전 12는 SQL Server 버전 15보다 최신 버전입니다.
+
 ## <a name="remarks"></a>Remarks
+
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 기본 호환성 수준은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전과 관련됩니다. 새로운 데이터베이스는 **model** 데이터베이스의 호환성 수준이 이보다 낮지 않은 한 이 수준으로 설정됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 첨부되거나 복구된 데이터베이스를 업그레이드할 때 데이터베이스의 호환성 수준이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 대해 허용된 최소 이상이면 기존 호환성 수준이 유지됩니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에 의해 허용된 수준보다 낮은 호환성 수준으로 데이터베이스를 이동하면 데이터베이스를 허용된 가장 낮은 호환성 수준으로 자동 설정합니다. 이는 시스템 및 사용자 데이터베이스 모두에 적용됩니다.
 
 데이터베이스가 연결 또는 복원된 경우, 그리고 현재 위치 업그레이드 이후에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 아래 동작이 예상됩니다.
@@ -81,18 +83,18 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 - master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.
 
 데이터베이스의 호환성 수준을 변경하려면 `ALTER DATABASE`를 사용합니다. 데이터베이스에 대한 새로운 호환성 수준 설정은 `USE <database>` 명령이 실행되거나 기본 데이터베이스로 해당 데이터베이스 컨텍스트를 사용하여 새 로그인이 처리될 때 적용됩니다.
-데이터베이스의 현재 호환성 수준을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 **compatibility_level** 열을 쿼리합니다.
+데이터베이스의 현재 호환성 수준을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 `compatibility_level` 열을 쿼리합니다.
 
 > [!NOTE]
 > 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 만들어져 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 또는 서비스 팩 1로 업그레이드되는 [배포 데이터베이스](../../relational-databases/replication/distribution-database.md)는 호환성 수준이 90이며 다른 데이터베이스에서 지원되지 않습니다. 복제 기능에는 영향을 미치지 않습니다. 이후의 서비스 팩 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 업그레이드하면 **master** 데이터베이스의 수준에 맞게 배포 데이터베이스의 호환성 수준이 높아집니다.
 
 > [!NOTE]
-> **2018년 1월** 기준으로 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새로 만들어진 데이터베이스에 대한 기본 호환성 수준은 140입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 기존 데이터베이스에 대해서는 데이터베이스 호환성 수준을 업데이트하지 않습니다. 이것은 고객의 판단할 문제입니다.        
+> **2019년 11월** 기준으로 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새로 만들어진 데이터베이스에 대한 기본 호환성 수준은 150입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 기존 데이터베이스에 대해서는 데이터베이스 호환성 수준을 업데이트하지 않습니다. 이것은 고객의 판단할 문제입니다.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 최신 쿼리 최적화 기능 향상을 활용할 수 있도록 최신 호환성 수준으로 업그레이드할 것을 권장합니다.        
 
 데이터베이스 전체에 데이터베이스 호환성 수준 120 이상을 활용하지만 데이터베이스 호환성 수준 110에 매핑되는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 [**카디널리티 추정**](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 옵트인하려면, [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), 특히 `LEGACY_CARDINALITY_ESTIMATION = ON` 키워드를 참조하세요.
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 가지 다른 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)을 참조하세요. 이 문서에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하지만, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 140으로 업그레이드하는 경우에도 같은 방법론이 적용됩니다.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 가지 다른 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)을 참조하세요. 이 문서에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하지만, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 140 이상으로 업그레이드하는 경우에도 같은 방법론이 적용됩니다.
 
 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전을 확인하려면 다음 쿼리를 실행합니다.
 
@@ -201,8 +203,6 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>호환성 수준 140과 수준 150 사이의 차이
 이 섹션에서는 호환성 수준 150으로 정의된 새로운 동작에 대해 설명합니다.
-
-데이터베이스 호환성 수준 150은 현재 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 퍼블릭 미리 보기에 포함됩니다. 이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.
 
 |호환성 수준 설정 140 이하|호환성 수준 설정 150|
 |--------------------------------------------------|-----------------------------------------|

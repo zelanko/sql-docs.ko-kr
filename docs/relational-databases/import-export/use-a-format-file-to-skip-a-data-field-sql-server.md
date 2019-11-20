@@ -1,6 +1,5 @@
 ---
-title: 서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 서식 파일을 사용하여 데이터 필드 건너뛰기
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +13,13 @@ ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ff08fc0f946633b13fa9b029d844390702681be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025033"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056325"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

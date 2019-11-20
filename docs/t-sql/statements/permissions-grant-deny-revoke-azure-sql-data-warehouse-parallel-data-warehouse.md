@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129374"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095583"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -243,7 +243,7 @@ REVOKE
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com** 에 이메일로 요청합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 **apsdoc\@microsoft.com**에 이메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
  다음 목록에서는 기본 사용 권한을 설명합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 관리 데이터 웨어하우스 구성(SQL Server Management Studio) | Microsoft 문서
+title: 관리 데이터 웨어하우스(SSMS) 구성
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1848be82d5ed1ddfbefd693303104ac4688eb59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909665"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056470"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
