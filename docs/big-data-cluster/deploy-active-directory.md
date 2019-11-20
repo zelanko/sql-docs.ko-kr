@@ -5,16 +5,16 @@ description: Active Directory 도메인에서 SQL Server 빅 데이터 클러스
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844307"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127445"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -107,7 +107,7 @@ BDC DSA(도메인 서비스 계정)는 OU에서 사용자, 그룹 및 컴퓨터 
        - **그룹 개체 만들기**
        - **그룹 개체 삭제**
        - **사용자 개체 만들기**
-       - **사용자 개체 만들기**
+       - **사용자 개체 삭제**
 
     - **확인**을 클릭합니다.
 
@@ -197,8 +197,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 위의 정보 외에도 다른 클러스터 엔드포인트에 대한 DNS 이름을 제공해야 합니다. 제공된 DNS 이름을 사용하는 DNS 항목은 배포 시 DNS 서버에 자동으로 만들어집니다. 이러한 이름은 다른 클러스터 엔드포인트에 연결할 때 사용됩니다. 예를 들어 SQL 마스터 인스턴스의 DNS 이름이 `mastersql`이면 `mastersql.contoso.local,31433`을 사용하여 도구에서 마스터 인스턴스에 연결합니다.
