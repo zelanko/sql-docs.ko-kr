@@ -57,7 +57,7 @@ ms.locfileid: "73759550"
   
  [LINKEDSERVERS 행 &#40;집합 OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [사용자 정의 형식 사용](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   

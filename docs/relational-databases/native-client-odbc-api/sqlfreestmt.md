@@ -29,7 +29,7 @@ ms.locfileid: "73786734"
   
  일반적으로 문을 삭제 하 고 새 문을 할당 하는 것 보다 문을 다시 사용 하는 것이 더 효율적입니다. 그러나 문 재사용과 같은 경우에도 SQLFreeStmt를 사용 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLFreeStmt 함수](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
