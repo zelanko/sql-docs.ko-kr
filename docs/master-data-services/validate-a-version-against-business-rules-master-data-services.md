@@ -59,11 +59,11 @@ ms.locfileid: "73727830"
     > [!NOTE]  
     >  진행률 표시기가 더 이상 표시되지 않으면 버전의 유효성 검사가 완료된 것입니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [유효성 검사 상태&#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

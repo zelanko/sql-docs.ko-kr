@@ -22,12 +22,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882330"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>게시 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73882330"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -115,14 +115,14 @@ ms.locfileid: "73882330"
     > [!NOTE]  
     >  게시 이름은 다음과 같은 문자를 포함할 수 없습니다:  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 4.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **\@publication**에 대해 3단계에서 사용된 게시 이름과 **\@snapshot_job_name** 및 **\@password**에 대해 스냅샷 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면publisher_security_mode**에 대해 값 \@0**을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 및** **publisher_password\@에 대해**  로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-5.  아티클을 게시에 추가합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+5.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 6.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -135,14 +135,14 @@ ms.locfileid: "73882330"
     > [!NOTE]  
     >  게시 이름은 다음과 같은 문자를 포함할 수 없습니다:  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **\@publication**에 대해 2단계에서 사용된 게시 이름과 **\@snapshot_job_name** 및 **\@password**에 대해 스냅샷 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면publisher_security_mode**에 대해 값 \@0**을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 및** **publisher_password\@에 대해**  로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-4.  아티클을 게시에 추가합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+4.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 5.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "73882330"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 필드를 설정하여 로드 판독기 에이전트가 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정에 대한 자격 증명을 제공합니다.  
   
         > [!NOTE]  
-        >  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을(를) 참조하세요.  
   
     -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> 필드  
   
@@ -190,7 +190,7 @@ ms.locfileid: "73882330"
     -   스냅샷 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅샷 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
-        >  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을(를) 참조하세요.  
   
     -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 필드  
   
@@ -224,7 +224,7 @@ ms.locfileid: "73882330"
     -   스냅샷 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅샷 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
-        >  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 경우에는 `sysadmin`를 설정하지 않아도 됩니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을(를) 참조하세요.  
   
     -   (옵션) 포함 논리적 OR 연산자(Visual C#의 `|` 및 Visual Basic의 `Or`) 및 배타적 논리적 OR 연산자(Visual C#의 `^` 및 Visual Basic의 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 설정합니다.  
   
@@ -248,11 +248,11 @@ ms.locfileid: "73882330"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립팅 변수와 함께 sqlcmd 사용](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
  [복제 관리 개체 개념](../concepts/replication-management-objects-concepts.md)   
- [아티클 정의](define-an-article.md)   
+ [Define an Article](define-an-article.md)   
  [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)   
  [배포 구성](../configure-distribution.md)   
  [배포자 보안 설정](../security/secure-the-distributor.md)   

@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [@target_server =] ' server_name '  
+ [ @target_server = ] 'server_name'  
  활성 보조 데이터베이스를 호스트하는 SQL Database 서버의 이름입니다. server_name은 sysname이며 기본값은 없습니다.  
   
- [@target_database =] ' database_name '  
+ [ @target_database = ] 'database_name'  
  활성 보조 데이터베이스의 이름입니다. database_name은 sysname이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>사용 권한  
  주 데이터베이스의 모든 사용자가 이 시스템 저장 프로시저를 호출할 수 있습니다. 로그인은 기본 및 활성 보조 데이터베이스 둘 다에 있는 사용자여야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  **Sp_wait_for_database_copy_sync** 호출 전에 커밋된 모든 트랜잭션이 활성 보조 데이터베이스에 전송 됩니다.  
   
 ## <a name="examples"></a>예  
@@ -74,7 +74,7 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [dm_continuous_copy_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [지역에서 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   

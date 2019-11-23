@@ -129,7 +129,7 @@ ms.locfileid: "73637832"
   
 9. 명령을 실행하려면 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
  [독립 실행형 버전의 보고서 작성기 &#40;보고서 작성기 제거&#41;](install-report-builder.md)  
   

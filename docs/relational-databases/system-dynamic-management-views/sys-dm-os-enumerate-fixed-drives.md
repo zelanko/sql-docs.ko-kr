@@ -1,5 +1,5 @@
 ---
-title: _os_enumerate_fixed_drives (Transact-sql) | Microsoft Docs
+title: sys. dm_os_enumerate_fixed_drives (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,26 +23,26 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342518"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>_os_enumerate_fixed_drives (Transact-sql)
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2019에서 도입 되었습니다.
 
-@No__t-0과 같은 드라이브 문자에 탑재 된 볼륨을 열거 합니다.
+`C:\`같은 드라이브 문자에 탑재 된 볼륨을 열거 합니다.
 
 |열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|@No__t-0과 같은 볼륨의 경로입니다.|  
-|`drive_type`|`int`|드라이브 종류에 대 한 코드입니다. [@No__t-1 함수](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)를 참조 하세요.|
-|`drive_type_desc`|`nvarchar(512)`|드라이브 유형에 대 한 설명입니다. [@No__t-1 함수](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)를 참조 하세요.|
+|`fixed_drive_path`|`nvarchar(512)`|`C:\`와 같은 볼륨의 경로입니다.|  
+|`drive_type`|`int`|드라이브 종류에 대 한 코드입니다. [`GetDriveTypeW` 함수](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)를 참조 하세요.|
+|`drive_type_desc`|`nvarchar(512)`|드라이브 유형에 대 한 설명입니다. [`GetDriveTypeW` 함수](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)를 참조 하세요.|
 |`free_space_in_bytes`|`bigint`|사용 가능한 디스크 공간 (바이트)입니다.|
 
 ## <a name="permissions"></a>사용 권한
 
 사용자에 게는 서버에 대 한 `VIEW SERVER STATE` 권한이 있어야 합니다.
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

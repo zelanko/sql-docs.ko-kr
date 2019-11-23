@@ -29,7 +29,7 @@ ms.locfileid: "72909691"
 
   지정된 주 데이터베이스에 대한 보조 서버에서 주 정보를 설정하고, 로컬 및 원격 모니터 링크를 추가하며, 복사본을 만들고 작업을 복원합니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ sp_add_log_shipping_secondary_primary
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
   
- *monitor_server_security_mode* 는 **bit** 이며 NULL 일 수 없습니다.  
+ *monitor_server_security_mode* 은 **bit** 이며 NULL 일 수 없습니다.  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`는 모니터 서버에 액세스 하는 데 사용 되는 계정의 사용자 이름입니다.  
   
@@ -91,9 +91,9 @@ sp_add_log_shipping_secondary_primary
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_log_shipping_secondary_primary** 는 보조 서버의 **master** 데이터베이스에서 실행 해야 합니다. 이 저장 프로시저는 다음을 수행합니다.  
   
 1.  지정한 주 서버 및 주 데이터베이스의 보조 ID를 생성합니다.  
@@ -110,11 +110,11 @@ sp_add_log_shipping_secondary_primary
   
     5.  **Log_shipping_secondary** 항목의 복원 작업 id를 복원 작업의 작업 id로 설정 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 이 예에서는 **sp_add_log_shipping_secondary_primary** 저장 프로시저를 사용 하 여 보조 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 주 데이터베이스에 대 한 정보를 설정 하는 방법을 보여 줍니다.  
+ 이 예에서는 **sp_add_log_shipping_secondary_primary** 저장 프로시저를 사용 하 여 보조 서버의 주 데이터베이스 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 대 한 정보를 설정 하는 방법을 보여 줍니다.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -133,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

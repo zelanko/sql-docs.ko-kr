@@ -45,23 +45,23 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'`추가할 범주의 클래스입니다. *클래스* 는 기본값은 JOB이 고 다음 값 중 하나일 수 있는 **varchar (8)** 입니다.  
+추가할 범주의 클래스를 `[ @class = ] 'class'` 합니다. *클래스* 는 기본값은 JOB이 고 다음 값 중 하나일 수 있는 **varchar (8)** 입니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |JOB|작업 범주를 추가합니다.|  
-|경으십시오|경고 범주를 추가합니다.|  
+|ALERT|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
-`[ @type = ] 'type'`추가할 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 **LOCAL**이 고 다음 값 중 하나일 수 있습니다.  
+추가할 범주의 유형을 `[ @type = ] 'type'` 합니다. *type* 은 **varchar (12)** 이며 기본값은 **LOCAL**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
 |없음|JOB이 아닌 다른 클래스에 대 한 범주입니다 **.**|  
   
-`[ @name = ] 'name'`추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+추가할 범주의 이름을 `[ @name = ] 'name'` 합니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -73,7 +73,7 @@ sp_add_category
  **sp_add_category** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_category**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_category**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `AdminJobs`라는 로컬 작업 범주를 만듭니다.  
@@ -89,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [sysjobs &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo. sysjobservers &#40;transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ &#40;transact-sql&#41;  sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
+ [sysjobs &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo. sysjobservers &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

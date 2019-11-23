@@ -50,7 +50,7 @@ ms.locfileid: "73729476"
   
 6.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

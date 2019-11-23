@@ -206,7 +206,7 @@ ms.locfileid: "73761353"
   
  C에서 SQL 데이터 형식으로 변환할 때 SQL_C_WCHAR, SQL_C_BINARY 및 SQL_C_CHAR을 모두 SQL_SS_UDT로 변환할 수 있습니다. 하지만 SQL_C_WCHAR 및 SQL_C_CHAR SQL 데이터 형식에서 변환할 경우에는 이진 데이터가 16진수 문자열로 변환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

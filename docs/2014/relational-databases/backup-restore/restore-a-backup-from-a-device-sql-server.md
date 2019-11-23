@@ -36,7 +36,7 @@ ms.locfileid: "70154740"
   
 -   **다음을 사용하여 장치에서 백업을 복원합니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70154740"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -61,13 +61,13 @@ ms.locfileid: "70154740"
   
 4.  원하는 복원 작업의 유형(**데이터베이스**, **파일 및 파일 그룹**또는 **트랜잭션 로그**)을 클릭합니다. 이렇게 하면 해당되는 복원 대화 상자가 열립니다.  
   
-5.  **일반** 페이지의 **복원 원본** 섹션에서 **장치**를 클릭합니다.  
+5.  **일반** 페이지의 **복원 원본** 섹션에서 **디바이스**를 클릭합니다.  
   
-6.  **장치** 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 지정** 대화 상자가 열립니다.  
+6.  **디바이스** 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 지정** 대화 상자가 열립니다.  
   
-7.  **백업 미디어** 입력란에서 **백업 장치**를 선택하고 **추가** 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
+7.  **백업 미디어** 입력란에서 **백업 디바이스**를 선택하고 **추가** 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.  
   
-8.  **백업 장치** 입력란에서 복원 작업에 사용하려는 장치를 선택합니다.  
+8.  **백업 디바이스** 입력란에서 복원 작업에 사용하려는 디바이스를 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70154740"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문에서 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
+3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문에서 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
   
 ```sql  
 RESTORE DATABASE AdventureWorks2012  
@@ -85,13 +85,13 @@ RESTORE DATABASE AdventureWorks2012
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [데이터베이스 백업 &#40;SQL Server Management Studio 복원&#41;](restore-a-database-backup-using-ssms.md)   
+ [데이터베이스 백업 &#40;SQL Server Management Studio&#41;  복원](restore-a-database-backup-using-ssms.md)  
  [차등 데이터베이스 백업 복원&#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

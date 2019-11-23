@@ -27,7 +27,7 @@ ms.locfileid: "73882300"
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 ID 열을 관리하는 방법에 대해 설명합니다. 구독자 삽입이 게시자로 복제되는 경우 구독자와 게시자 모두에 동일한 ID 값이 할당되지 않도록 ID 열을 관리해야 합니다. 복제는 ID 범위를 자동으로 관리할 수 있으며, 사용자가 ID 범위 관리를 수동으로 처리하도록 선택할 수도 있습니다.  복제에서 제공하는 ID 범위 관리 옵션에 대한 자세한 내용은 [ID 열 복제](replicate-identity-columns.md)를 참조하세요.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73882300"
   
 5.  4단계에서 **자동** 또는 **True** 를 선택한 경우 다음 표를 참조하여 옵션 값을 입력합니다. 이러한 설정의 사용 방법은 [ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.  
   
-    |옵션|값|설명|  
+    |옵션|Value|설명|  
     |------------|-----------|-----------------|  
     |**게시자 범위 크기**|범위 크기에 대한 정수 값(예: 20000)|[ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
     |**구독자 범위 크기**|범위 크기에 대한 정수 값(예: 10000)|[ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
@@ -136,8 +136,8 @@ ms.locfileid: "73882300"
   
     -   자동 ID 범위 관리를 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 실행합니다. property**에 \@identityrangemanagementoption** 값을 지정하고value**에** manual **또는 \@none**을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [피어 투 피어 트랜잭션 복제](../transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>참고 항목  
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [ID 열 복제](replicate-identity-columns.md)  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797861"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
-  **Invoke-Sqlcmd**는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery 언어로 된 문과 **sqlcmd** 유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
+  **Invoke-Sqlcmd**는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 XQuery 언어로 된 문과 [!INCLUDE[tsql](../includes/tsql-md.md)]sqlcmd**유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는** cmdlet입니다.  
   
 ## <a name="using-invoke-sqlcmd"></a>Invoke-Sqlcmd 사용  
  **Invoke-Sqlcmd** cmdlet을 사용하여 **sqlcmd** 스크립트 파일을 Windows PowerShell 환경에서 실행할 수 있습니다. **sqlcmd** 를 사용하여 수행할 수 있는 대부분의 작업은 **Invoke-Sqlcmd**로도 수행할 수 있습니다.  
@@ -63,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd의 경로 컨텍스트  
  -Database 매개 변수를 사용하지 않는 경우 Invoke-Sqlcmd에 대한 데이터베이스 컨텍스트는 cmdlet을 호출할 때 활성화된 경로에 의해 설정됩니다.  
   
-|PATH|데이터베이스 컨텍스트|  
+|경로|데이터베이스 컨텍스트|  
 |----------|----------------------|  
 |SQLSERVER: 이외의 드라이브로 시작|로컬 컴퓨터에 있는 기본 인스턴스의 로그인 ID에 대한 기본 데이터베이스입니다.|  
 |SQLSERVER:\SQL|로컬 컴퓨터에 있는 기본 인스턴스의 로그인 ID에 대한 기본 데이터베이스입니다.|  
@@ -95,7 +95,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** 는 **sqlcmd** 환경 변수 또는 스크립팅 변수(예: SQLCMDDBNAME, SQLCMDWORKSTATION)를 초기화하지 않습니다.  
   
- **Invoke-Sqlcmd** 는 Windows PowerShell **-Verbose** 공통 매개 변수를 지정해야 PRINT 문 출력과 같은 메시지를 표시합니다. 예를 들어  
+ **Invoke-Sqlcmd** 는 Windows PowerShell **-Verbose** 공통 매개 변수를 지정해야 PRINT 문 출력과 같은 메시지를 표시합니다. 예를 들어:  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  모든 **sqlcmd** 매개 변수가 PowerShell 환경에서 필요한 것은 아닙니다. 예를 들어 Windows PowerShell은 cmdlet의 모든 출력 서식을 지정하므로 서식 옵션을 지정하는 **sqlcmd** 매개 변수는 **Invoke-Sqlcmd**에서 구현되지 않습니다. 다음 표에는 **Invoke-Sqlcmd** 매개 변수와 **sqlcmd** 옵션 간의 관계가 나와 있습니다.  
   
-|Description|sqlcmd 옵션|Invoke-Sqlcmd 매개 변수|  
+|설명|sqlcmd 옵션|Invoke-Sqlcmd 매개 변수|  
 |-----------------|-------------------|------------------------------|  
 |서버 및 인스턴스 이름|-S|-ServerInstance|  
 |사용할 초기 데이터베이스|-d|-Database|  
 |지정된 쿼리 실행 후 종료|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인 ID|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 암호|-p|-Password|  
-|변수 정의|-V|-Variable|  
-|쿼리 제한 시간 간격|-T|-QueryTimeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 암호|-P|-암호|  
+|변수 정의|-v|-Variable|  
+|쿼리 제한 시간 간격|-t|-QueryTimeout|  
 |오류 발생 시 실행 중지|-b|-AbortOnError|  
 |관리자 전용 연결|-a|-DedicatedAdministratorConnection|  
 |대화형 명령, 시작 스크립트 및 환경 변수를 사용하지 않음|-X|-DisableCommands|  
-|변수 대체를 사용하지 않음|-X|-DisableVariables|  
+|변수 대체를 사용하지 않음|-x|-DisableVariables|  
 |보고할 최소 심각도 수준|-v|-SeverityLevel|  
 |보고할 최소 오류 수준|-M|-ErrorLevel|  
 |로그인 제한 시간 간격|-l|-ConnectionTimeout|  
-|호스트 이름|-H|-HostName|  
+|호스트 이름|-h|-HostName|  
 |암호 변경 후 종료|-Z|-NewPassword|  
 |쿼리가 포함된 입력 파일|-i|-InputFile|  
 |최대 문자 출력 길이|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |오류 표시|매개 변수 없음|-OutputSqlErrors|  
 |메시지를 stderr로 출력|-r|매개 변수 없음|  
 |클라이언트의 국가별 설정 사용|-r|매개 변수 없음|  
-|지정된 쿼리 실행 후 실행 중인 상태로 유지|-Q|매개 변수 없음|  
+|지정된 쿼리 실행 후 실행 중인 상태로 유지|-q|매개 변수 없음|  
 |출력 데이터에 사용할 코드 페이지|-f|매개 변수 없음|  
 |암호 변경 후 실행 중인 상태로 유지|-Z|매개 변수 없음|  
 |패킷 크기|-A|매개 변수 없음|  
-|열 구분 기호|-S|매개 변수 없음|  
+|열 구분 기호|-s|매개 변수 없음|  
 |출력 헤더 제어|-H|매개 변수 없음|  
 |제어 문자 지정|-k|매개 변수 없음|  
-|고정 길이 표시 너비|-y|매개 변수 없음|  
+|고정 길이 표시 너비|-Y|매개 변수 없음|  
 |변수 길이 표시 너비|-Y|매개 변수 없음|  
-|입력 에코|-E|매개 변수 없음|  
-|따옴표 붙은 식별자 사용|-i|매개 변수 없음|  
+|입력 에코|-e|매개 변수 없음|  
+|따옴표 붙은 식별자 사용|-I|매개 변수 없음|  
 |후행 공백 제거|-w|매개 변수 없음|  
-|인스턴스 나열|-l|매개 변수 없음|  
-|출력을 유니코드 형식으로 지정|-U|매개 변수 없음|  
-|통계 인쇄|-P|매개 변수 없음|  
+|인스턴스 나열|-L|매개 변수 없음|  
+|출력을 유니코드 형식으로 지정|-u|매개 변수 없음|  
+|통계 인쇄|-p|매개 변수 없음|  
 |명령 종료|-c|매개 변수 없음|  
 |Windows 인증을 사용하여 연결|-E|매개 변수 없음|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
+ [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)   
  [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

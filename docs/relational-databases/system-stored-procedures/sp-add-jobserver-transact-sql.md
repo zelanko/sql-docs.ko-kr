@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`은 작업의 id 번호입니다. *job_id* 는 **uniqueidentifier**이며 기본값은 NULL입니다.  
+작업의 id 번호를 `[ @job_id = ] job_id` 합니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+작업 이름을 `[ @job_name = ] 'job_name'` 합니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *Job_id* 또는 *job_name* 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
+>  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @server_name = ] 'server'` 작업을 대상으로 하는 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
+작업을 대상으로 하는 서버의 이름을 `[ @server_name = ] 'server'` 합니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  없음  
   
 ## <a name="remarks"></a>설명  
- **\@ 자동 게시가** **Sp_add_jobserver**에 있지만 인수 아래에 나열 되지 않습니다 (_s). **\@automatic_post** 는 내부용으로 예약 되어 있습니다.  
+ **\@automatic_post** **Sp_add_jobserver**에 있지만 인수 아래에는 나열 되어 있지 않습니다. **\@automatic_post** 내부용으로 예약 되어 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
@@ -71,7 +71,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- **Sysadmin** 고정 서버 역할의 멤버만 여러 서버와 관련 된 작업에 대해 **sp_add_jobserver** 을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 여러 서버를 포함 하는 작업에 대해 **sp_add_jobserver** 를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -106,9 +106,9 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_apply_job_to_targets &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ &#40;transact-sql&#41;  sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

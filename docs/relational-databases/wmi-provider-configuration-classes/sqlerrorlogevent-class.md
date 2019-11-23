@@ -46,10 +46,10 @@ class SQLErrorLogEvent
 |FileName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |LogDate|데이터 형식: **datetime**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
-|메시지|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
+|Message|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
 |ProcessInfo|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 |||  
 |-|-|  
@@ -78,7 +78,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  *InstanceName* 또는 *FileName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스와 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대 한 정보를 반환 합니다. 예를 들어 다음 WQL 문은 기본 인스턴스 (MSSQLSERVER)에서 현재 로그 파일 (오류 로그)의 모든 로그 이벤트를 반환 합니다.  
   
 ```  
@@ -92,11 +92,11 @@ Next
   
 -   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다. 여기서 \<*드라이브 >* 는 \<[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 *InstanceName*은 > 인스턴스의 이름입니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-     **\<드라이브 >: FILES\MICROSOFT SQL Server\MSSQL13** **.\<InstanceName > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13** **.\<InstanceName>\MSSQL\Log**  
   
  방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [Windows Vista부터 원격으로 WMI에 연결](https://go.microsoft.com/fwlink/?LinkId=178848)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sqlerrorlogfile 클래스](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [오프라인 로그 파일 보기](../../relational-databases/logs/view-offline-log-files.md)  
   

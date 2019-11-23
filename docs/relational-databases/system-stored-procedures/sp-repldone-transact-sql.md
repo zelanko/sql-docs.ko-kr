@@ -28,9 +28,9 @@ ms.locfileid: "72798393"
   서버에서 마지막으로 배포된 트랜잭션을 식별하는 레코드를 업데이트합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!CAUTION]  
->  **Sp_repldone** 을 수동으로 실행 하는 경우 전달 된 트랜잭션의 순서와 일관성을 무효화할 수 있습니다. **sp_repldone** 은 숙련 된 복제 지원 전문가의 지시에 따라 복제 문제를 해결 하는 데만 사용 해야 합니다.  
+>  **Sp_repldone** 를 수동으로 실행 하는 경우 전달 된 트랜잭션의 순서와 일관성을 무효화할 수 있습니다. **sp_repldone** 은 숙련 된 복제 지원 전문가의 지시에 따라 복제 문제를 해결 하는 데만 사용 해야 합니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,20 +56,20 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_repldone** 은 트랜잭션 복제에 사용 됩니다.  
   
- **sp_repldone** 은 배포 된 트랜잭션을 추적 하기 위해 로그 판독기 프로세스에서 사용 됩니다.  
+ **sp_repldone** 는 로그 판독기 프로세스에서 배포 된 트랜잭션을 추적 하는 데 사용 됩니다.  
   
- **Sp_repldone**을 사용 하면 트랜잭션이 복제 (배포자에 전송 됨) 되도록 서버에 수동으로 지시할 수 있습니다. 또한 트랜잭션을 복제를 대기하고 있는 다음 트랜잭션으로 표시하도록 변경할 수 있습니다. 복제된 트랜잭션 목록에서 앞뒤로 이동할 수 있습니다(해당 트랜잭션 이하의 모든 트랜잭션이 배포됨 표시됩니다).  
+ **Sp_repldone**를 사용 하면 트랜잭션이 복제 (배포자로 전송 됨) 되도록 서버에 수동으로 지시할 수 있습니다. 또한 트랜잭션을 복제를 대기하고 있는 다음 트랜잭션으로 표시하도록 변경할 수 있습니다. 복제된 트랜잭션 목록에서 앞뒤로 이동할 수 있습니다(해당 트랜잭션 이하의 모든 트랜잭션이 배포됨 표시됩니다).  
   
- *Xactid* 및 *xact_seqno* 필수 매개 변수는 **sp_repltrans** 또는 **sp_replcmds**를 사용 하 여 가져올 수 있습니다.  
+ **Sp_repltrans** 또는 **sp_replcmds**를 사용 하 여 필요한 *xactid* 및 *xact_seqno* 매개 변수를 가져올 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sp_repldone**을 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- *Xactid* 가 null 이면 *xact_seqno* 가 null이 고 *reset* 이 **1**이면 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. 이러한 방법은 더 이상 유효하지 않은 트랜잭션 로그에 복제된 트랜잭션이 있는 상태에서 로그를 자를 때 유용합니다. 예를 들어 다음과 같습니다.  
+ *Xactid* 가 null이 고 *xact_seqno* 가 null이 고 *reset* 이 **1**이면 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. 이러한 방법은 더 이상 유효하지 않은 트랜잭션 로그에 복제된 트랜잭션이 있는 상태에서 로그를 자를 때 유용합니다. 예를 들어 다음과 같습니다.  
   
 ```sql
 EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @reset = 1  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  이 프로시저는 트랜잭션 보류 중인 복제가 있을 때 트랜잭션 로그를 자를 수 있도록 하며 비상 시에 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [ &#40;transact-sql&#41;  sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

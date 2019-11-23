@@ -37,7 +37,7 @@ ms.locfileid: "73660594"
   
  구성 관리용 WMI 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 관리 콘솔을 사용하여 액세스할 수 있습니다. 사용자 인터페이스에서 WMI 공급자에 액세스 하는 방법에 대 한 자세한 내용은 [서비스 관리 방법 도움말 항목 &#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [WQL 를 사용 하 여 구성 관리용 WMI 공급자 액세스](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)  
  [VBScript를 사용 하 여 WMI 공급자 액세스](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
   

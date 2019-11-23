@@ -79,7 +79,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_publication_validation**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독자에서 데이터 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [ &#40;transact-sql&#41;  sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_table_validation](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)  

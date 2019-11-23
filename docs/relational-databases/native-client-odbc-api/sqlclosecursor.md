@@ -26,7 +26,7 @@ ms.locfileid: "73787468"
 
   **SQLCloseCursor** 는 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) 를 SQL_CLOSE의 *옵션* 값으로 바꿉니다. **SQLCloseCursor**를 수신한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 보류 중인 결과 집합 행을 무시합니다. 문의 열 및 매개 변수 바인딩(있는 경우)은 **SQLCloseCursor**에 의해 변경되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

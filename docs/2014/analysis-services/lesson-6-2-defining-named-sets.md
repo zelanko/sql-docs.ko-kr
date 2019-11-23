@@ -134,8 +134,8 @@ ms.locfileid: "69493890"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [7단원: KPI&#40;핵심 성과 지표&#41; 정의](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [계산](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+## <a name="see-also"></a>참고 항목  
+ [계산](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [명명된 집합 만들기](multidimensional-models/create-named-sets.md)  
   
   

@@ -34,7 +34,7 @@ ms.locfileid: "70874406"
   
 -   [극장식 보기 또는 갤러리 보기로 전환](#switch)  
   
-##  <a name="prereq"></a> 사전 요구 사항  
+##  <a name="prereq"></a> 필수 구성 요소  
   
 -   Silverlight가 있어야 합니다. Silverlight는 Microsoft Update를 통해 다운로드하여 설치할 수 있습니다. Silverlight가 없는 브라우저를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 보는 경우 페이지의 링크를 클릭하여 Silverlight를 설치합니다. 설치한 다음에는 브라우저를 닫은 후 다시 열어야 합니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874406"
   
  다음 표에서는 각 미리 보기 페이지의 축소판 그림 스케치를 표시하는 데 사용할 수 있는 여러 레이아웃을 설명합니다.  
   
-|보기|Description|  
+|보기|설명|  
 |----------|-----------------|  
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|  
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|  
@@ -146,10 +146,10 @@ ms.locfileid: "70874406"
   
 3.  보기 관리의 현재 보기 목록에서 사용할 보기를 선택합니다. 미리 정의된 보기에는 갤러리, 극장식 및 회전식 보기가 있습니다. 또는 라이브러리에서 문서를 이동, 삭제 또는 관리하려는 경우 모든 문서를 선택할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SharePoint용 PowerPivot 설치 문제 해결](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
- [PowerPivot 갤러리   사용](use-power-pivot-gallery.md)  
- [중앙 관리  에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)  
+## <a name="see-also"></a>참고 항목  
+ [SharePoint용 PowerPivot 설치 문제 해결](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [PowerPivot 갤러리  사용](use-power-pivot-gallery.md)  
+ [중앙 관리 에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)  
  [PowerPivot 갤러리 삭제](delete-power-pivot-gallery.md)  
   
   

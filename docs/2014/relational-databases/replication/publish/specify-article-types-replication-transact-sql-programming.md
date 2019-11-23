@@ -42,11 +42,11 @@ ms.locfileid: "73882123"
   
     -   **logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 **\@필터** 및 **\@sync_object**에 대해 지정 하는 로그 기반의 행 필터링 및 열 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
-     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 2.  **logbased manualboth** 및 **logbased manualfilter** 아티클의 경우 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 를 실행하여 행 필터링된 아티클에 대한 필터링 저장 프로시저를 생성합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요.  
+3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 뷰 또는 인덱싱된 뷰 아티클을 게시하려면  
   
@@ -64,11 +64,11 @@ ms.locfileid: "73882123"
   
     -   **인덱싱된 뷰 logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 **\@필터** 및 **\@sync_object**에 대해 지정 하는 로그 기반의 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
-     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 2.  **logbased manualboth** 및 **logbased manualfilter** 아티클의 경우 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 를 실행하여 행 필터링된 아티클에 대한 필터링 저장 프로시저를 생성합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요.  
+3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>저장 프로시저, 저장 프로시저 실행 또는 사용자 정의 함수 아티클을 트랜잭션 또는 스냅샷 게시에 게시하려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73882123"
   
     -   **func schema only** - 스키마 전용 사용자 정의 함수 아티클입니다.  
   
-     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>병합 게시에 테이블 또는 뷰 아티클을 게시하려면  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73882123"
   
     -   **view schema only** - 스키마 전용 뷰 아티클입니다.  
   
-     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>병합 게시에 저장 프로시저 또는 사용자 정의 함수 아티클을 게시하려면  
   
@@ -104,9 +104,9 @@ ms.locfileid: "73882123"
   
     -   **proc schema only** - 스키마 전용 저장 프로시저 아티클입니다.  
   
-     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+     게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  
   

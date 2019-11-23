@@ -84,7 +84,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
 |SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 호출 수입니다.|  
 |ExecDirects|SQL_PERF_START 후 **Sqlexecdirect** 호출 수입니다.|  
 |SQLExecutes|SQL_PERF_START 후의 **Sqlexecute** 호출 수입니다.|  
@@ -120,7 +120,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ &#40;ODBC&#41;  SQL Server Native Client](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [ODBC 드라이버 성능 프로 파일링 방법 항목 &#40;odbc&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

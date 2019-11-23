@@ -1,5 +1,5 @@
 ---
-title: sys. dm _stststststststststststststststststststst Microsoft Docs
+title: sys. dm_io_backup_tapes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -33,7 +33,7 @@ ms.locfileid: "70874155"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|백업을 수행할 수 있는 실제 물리적 디바이스의 이름입니다. Null을 허용하지 않습니다.|  
-|**logical_device_name**|**nvarchar(256)**|드라이브의 사용자 지정 이름입니다 ( **backup_devices**에서). 사용자가 지정한 이름이 없으면 NULL입니다. Null을 허용합니다.|  
+|**logical_device_name**|**nvarchar(256)**|드라이브에 대 한 사용자 지정 이름 ( **sys. backup_devices**)입니다. 사용자가 지정한 이름이 없으면 NULL입니다. Null을 허용합니다.|  
 |**상태**|**int**|테이프의 상태입니다.<br /><br /> 1 = 열려 있음. 사용 가능.<br /><br /> 2 = 탑재 보류 중<br /><br /> 3 = 사용 중<br /><br /> 4 = 로드 중<br /><br /> **참고:** 테이프를 로드 하는 동안 (**상태 = 4**) 미디어 레이블은 아직 읽지 않습니다. 미디어 레이블 값 (예: **media_sequence_number**)을 복사 하는 열은 예상 값을 보여 줍니다 .이 값은 테이프의 실제 값과 다를 수 있습니다. 레이블을 읽은 후에는 **상태가** **3** (사용 중인 경우)으로 바뀌고 미디어 레이블 열에는 로드 된 실제 테이프가 반영 됩니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**status_desc**|**nvarchar(520)**|테이프 상태에 대한 설명입니다.<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Null을 허용하지 않습니다.|  
 |**mount_request_time**|**datetime**|탑재를 요청한 시간입니다. 보류 중인 마운트가 없으면 NULL입니다 (**상태! = 2**). Null을 허용합니다.|  
@@ -48,13 +48,13 @@ ms.locfileid: "70874155"
 |**media_sequence_number**|**int**|미디어 패밀리 내 볼륨의 인덱스 (1 *... n*). Null을 허용합니다.|  
 |**tape_operation**|**int**|수행 중인 테이프 작업:<br /><br /> 1 = 읽기<br /><br /> 2 = 포맷<br /><br /> 3 = 초기화<br /><br /> 4 = 추가<br /><br /> Null을 허용합니다.|  
 |**tape_operation_desc**|**nvarchar(120)**|수행 중인 테이프 작업입니다.<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Null을 허용합니다.|  
-|**mount_request_type**|**int**|탑재 요청 유형입니다.<br /><br /> 1 = 특정 테이프. Media_ 필드로 식별 된 테이프가 필요 합니다. **\***<br /><br /> 2 = 다음 미디어 패밀리. 아직 복원되지 않은 다음 미디어 패밀리를 요청합니다. 이 유형은 복원하는 디바이스 수가 미디어 패밀리 수보다 적을 때 사용됩니다.<br /><br /> 3 = 연속 테이프. 미디어 패밀리를 확장 중이며 연속 테이프를 요청합니다.<br /><br /> Null을 허용합니다.|  
+|**mount_request_type**|**int**|탑재 요청 유형입니다.<br /><br /> 1 = 특정 테이프. **Media_\*** 필드로 식별 되는 테이프가 필요 합니다.<br /><br /> 2 = 다음 미디어 패밀리. 아직 복원되지 않은 다음 미디어 패밀리를 요청합니다. 이 유형은 복원하는 디바이스 수가 미디어 패밀리 수보다 적을 때 사용됩니다.<br /><br /> 3 = 연속 테이프. 미디어 패밀리를 확장 중이며 연속 테이프를 요청합니다.<br /><br /> Null을 허용합니다.|  
 |**mount_request_type_desc**|**nvarchar(120)**|탑재 요청 유형입니다.<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Null을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대해 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -26,7 +26,7 @@ ms.locfileid: "73882305"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73882305"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -107,11 +107,11 @@ ms.locfileid: "73882305"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 정적 행 필터를 정의하려면  
   
-1.  필터링할 아티클을 정의합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **\@article**에 아티클 이름, **\@publication**에 게시 이름, **\@filter_name**에 필터 이름, **\@filter_clause**에 필터링 절(`WHERE`를 포함하지 않음)을 지정합니다.  
   
-3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **\@publication**에 게시 이름, **\@article**에 필터링된 아티클 이름, **\@filter_clause**에 2단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
+3.  계속 열 필터를 정의하려면 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **\@publication**에 게시 이름, **\@article**에 필터링된 아티클 이름, **\@filter_clause**에 2단계에서 지정한 필터 절을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 정적 행 필터를 수정하려면  
   
@@ -133,9 +133,9 @@ ms.locfileid: "73882305"
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>병합 게시에 대한 정적 행 필터를 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 이때 **\@subset_filterclause** 에 필터링 절( `WHERE`를 포함하지 않음)을 지정합니다. 자세한 내용은 [Define an Article](define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 이때 **\@subset_filterclause** 에 필터링 절( `WHERE`를 포함하지 않음)을 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-2.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요.  
+2.  계속 열 필터를 정의하려면 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>병합 게시에 대한 정적 행 필터를 수정하려면  
   
@@ -145,7 +145,7 @@ ms.locfileid: "73882305"
   
 3.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
  다음 트랜잭션 복제 예에서는 지원되지 않는 모든 제품을 제거하도록 아티클을 행 필터링합니다.  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
@@ -154,8 +154,8 @@ ms.locfileid: "73882305"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-## <a name="see-also"></a>관련 항목:  
- [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정 | Microsoft 문서](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+## <a name="see-also"></a>참고 항목  
+ [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [게시된 데이터 필터링](filter-published-data.md)   
  [병합 복제의 게시된 데이터 필터링](../merge/filter-published-data-for-merge-replication.md)  

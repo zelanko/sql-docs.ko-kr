@@ -27,7 +27,7 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70154588"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 및 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 세트*를 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 및 [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ||  
 |-|  
@@ -76,14 +76,14 @@ ms.locfileid: "70154588"
   
 -   ODBC  
   
--   파워 뷰 용 Microsoft BI 의미 체계 모델: PowerPivot 갤러리 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]용으로 구성 된 SharePoint 사이트에서는이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
+-   Power View용 Microsoft BI 의미 체계 모델: PowerPivot 갤러리 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 지원하는 데이터 원본 및 버전의 전체 목록은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   
 ##  <a name="bkmk_create_data_source"></a>데이터 원본 만들기  
  데이터 원본을 만들려면 다음 정보가 있어야 합니다.  
   
--   **데이터 원본 유형** 연결 형식 (예: [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])입니다. 연결 유형 드롭다운 목록에서 이 값을 선택합니다.  
+-   **데이터 원본 유형** 연결 형식 (예: [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 연결 유형 드롭다운 목록에서 이 값을 선택합니다.  
   
 -   **연결 정보** 연결 정보에는 데이터 원본의 이름과 위치 및 각 데이터 공급자마다 다른 연결 속성이 포함됩니다. *연결 문자열* 연결 정보는 텍스트 표현입니다. 예를 들어 데이터 원본이 SQL Server 데이터베이스인 경우에는 데이터베이스 이름을 지정할 수 있습니다. 포함된 데이터 원본의 경우에는 런타임에 평가되는 식 기반 연결 문자열을 작성할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [식 기반 연결 문자열](#bkmk_Expressions_in_connection_strings) 을 참조하세요.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "70154588"
   
  보고서 서버 또는 SharePoint 사이트에 보고서를 배포하면 보고서의 포함된 데이터 원본 및 공유 데이터 원본은 독립적으로 관리됩니다. 컴퓨터에서 데이터에 액세스하기 위해 필요한 데이터 원본 자격 증명은 데이터에 액세스하기 위해 보고서 서버에 필요한 자격 증명과 다를 수 있습니다.  
   
- ![참고](media/rs-fyinote.png "참고") 보고서를 게시 한 후에도 데이터 원본 연결이 계속 성공적으로 연결 되는지 확인 하는 것이 좋습니다. 자격 증명을 변경해야 하는 경우에는 보고서 서버에서 직접 수정할 수 있습니다.  
+ ![참고](media/rs-fyinote.png "참고")보고서를 게시 한 후에도 데이터 원본 연결이 계속 성공적으로 연결 되는지 확인 하는 것이 좋습니다. 자격 증명을 변경해야 하는 경우에는 보고서 서버에서 직접 수정할 수 있습니다.  
   
  보고서에서 사용 하는 데이터 원본을 변경 하려면 기본 모드 보고서 관리자 또는 SharePoint 모드의 문서 라이브러리에서 보고서 속성을 수정 하면 됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Reporting Services 데이터 원본에 자격 증명 저장](report-data/store-credentials-in-a-reporting-services-data-source.md) [Reporting Services 데이터 원본에 자격 증명 저장](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Reporting Services 데이터 원본의](report-data/store-credentials-in-a-reporting-services-data-source.md) 자격 증명 [을 Reporting Services 데이터 원본](report-data/store-credentials-in-a-reporting-services-data-source.md) 저장소에 저장  
   
 -   [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "70154588"
 -   [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS 추가 및 확인&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> 자주 사용하는 연결 문자열 예  
- 연결 문자열은 데이터 공급자에 대한 연결 속성의 텍스트 표현입니다. 다음 표에서는 다양한 데이터 연결 형식에 대한 연결 문자열의 예를 보여 줍니다.  
+ 연결 문자열은 데이터 공급자에 대한 연결 속성의 텍스트 표현입니다. 다음 표에서는 다양한 데이터 연결 유형에 대한 연결 문자열의 예를 보여 줍니다.  
   
-|**데이터 원본**|**예제**|**설명**|  
+|**Data source**|**예제**|**설명**|  
 |---------------------|-----------------|---------------------|  
 |로컬 서버의 SQL Server 데이터베이스|`data source="(local)";initial catalog=AdventureWorks`|데이터 원본 유형을 `Microsoft SQL Server`로 설정합니다. 자세한 내용은 [SQL Server 연결 형식&#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)을 참조하세요.|  
 |로컬 서버의 SQL Server 데이터베이스|`data source="(local)";initial catalog=AdventureWorks`|데이터 원본 유형을 `Microsoft SQL Server`로 설정합니다.|  
@@ -173,7 +173,7 @@ ms.locfileid: "70154588"
   
 -   보고서를 게시하기 전에 정적 연결 문자열을 식으로 바꿉니다. 이때 정적 연결 문자열은 보고서 디자인을 완료한 다음에 식으로 바꿔야 합니다. 식을 사용한 다음에는 보고서 디자이너에서 쿼리를 실행할 수 없습니다. 또한 보고서 데이터 창의 필드 목록과 매개 변수 목록이 자동으로 업데이트되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   
  [데이터 원본 속성 대화 상자, 자격 증명](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   

@@ -23,7 +23,7 @@ ms.locfileid: "70212369"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성 하는 경우를 고려해 야 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 특정 코드 검사를 수행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 코드 어셈블리를 데이터베이스에 처음 등록할 때 **CREATE assembly** 문을 사용 하 여 관리 코드 어셈블리에 대 한 검사를 수행 하 고 런타임 시에도 검사를 수행 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드에서 충족 해야 하는 요구 사항은 어셈블리가 **safe**, **EXTERNAL_ACCESS**또는 **UNSAFE**로 등록 되었는지, **안전** 하 게 가장 엄격한 되는 것에 따라 다르며, 아래에 나열 되어 있습니다.  
+  관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성 하는 경우 고려해 야 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 의해 수행 되는 특정 코드 검사가 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터베이스에 처음 등록 될 때, **CREATE assembly** 문을 사용 하 여 관리 코드 어셈블리에 대 한 검사를 수행 하 고 런타임 시에도 검사를 수행 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드에서 충족 해야 하는 요구 사항은 어셈블리가 **safe**, **EXTERNAL_ACCESS**또는 **UNSAFE**로 등록 되었는지 여부에 따라 다르며, **안전** 하 고 가장 엄격한 됩니다.  
   
  관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. **SAFE**, **EXTERNAL_ACCESS**및 **UNSAFE** 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)을 참조 하세요.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "70212369"
   
 -   어셈블리가 지원되는 어셈블리 중 하나입니다. 자세한 내용은 [Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
   
--   _\<> 위치_ **에서 CREATE ASSEMBLY**를 사용 하 고 있으며, 참조 된 모든 어셈블리와 해당 종속성을  *\<위치 >* 에서 사용할 수 있습니다.  
+-   _\<위치 >_ **에서 CREATE ASSEMBLY** 를 사용 하 고 있으며, 참조 된 모든 어셈블리와 해당 종속성을 *\<location >* 에서 사용할 수 있습니다.  
   
--   _Bytes\<에서 CREATE ASSEMBLY를 사용 하 고 있습니다. >_ 모든 참조는 공백으로 구분 된 바이트를 통해 지정 됩니다.  
+-   \<바이트 **에서 CREATE ASSEMBLY** 를 사용 하 고 있습니다 ... _>_ 모든 참조는 공백으로 구분 된 바이트를 통해 지정 됩니다.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  모든 **EXTERNAL_ACCESS** 어셈블리는 다음 조건을 충족 해야 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "70212369"
   
 -   파이널라이저 메서드가 사용되지 않습니다.  
   
- 다음 사용자 지정 특성은 **EXTERNAL_ACCESS** 어셈블리에서 허용 되지 않습니다.  
+ **EXTERNAL_ACCESS** 어셈블리에는 다음과 같은 사용자 지정 특성이 허용 되지 않습니다.  
   
 -   System.ContextStaticAttribute  
   
@@ -86,7 +86,7 @@ ms.locfileid: "70212369"
  런타임에 코드 어셈블리에서 다음 조건이 검사됩니다. 이러한 조건 중 하나가 발견되면 관리 코드를 실행할 수 없으며 예외가 throw됩니다.  
   
 ### <a name="unsafe"></a>UNSAFE  
- 어셈블리 로드-바이트 배열에서 명시적으로 또는 리플렉션을 사용 하 여 암시적으로 또는 리플렉션을 사용 하 여 암시적으로 어셈블리를 로드 합니다 **. 내보내기** 네임 스페이스는 허용 되지 않습니다.  
+ 어셈블리 로드-바이트 배열에서 명시적으로 또는 리플렉션을 사용 하 여 암시적으로 또는 리플렉션을 사용 하 여 암시적 **으로 어셈블리를** 로드 합니다 **. 내보내기** 네임 스페이스는 허용 되지 않습니다.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  **안전 하지 않은** 모든 조건이 검사 됩니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "70212369"
   
 -   SelfAffectingThreading  
   
--   동기화  
+-   Synchronization  
   
 -   SharedState  
   
@@ -114,9 +114,9 @@ ms.locfileid: "70212369"
  Hpa 및 지원 되는 어셈블리에서 허용 되지 않는 형식 및 멤버 목록에 대 한 자세한 내용은 [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)을 참조 하세요.  
   
 ### <a name="safe"></a>SAFE  
- 모든 **EXTERNAL_ACCESS** 조건을 검사 합니다.  
+ 모든 **EXTERNAL_ACCESS** 조건이 검사 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지원 되는 .NET Framework 라이브러리](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

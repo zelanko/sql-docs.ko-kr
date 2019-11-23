@@ -19,9 +19,9 @@ ms.locfileid: "72252146"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL에 대 한 SQL Server Migration Assistant (MySQLToSQL)
 
-MySQL 용 SSMA (no__t Migration Assistant)는 MySQL 데이터베이스를 [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-3 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-5 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-7 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-9 2017 (windows 및 linux의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]0 @ no__t-11 2019)로 마이그레이션하기 위한 도구입니다. @no__t 또는 Azure 2 데이터베이스. MySQL 용 SSMA는 MySQL 데이터베이스 개체를 SQL Server database 개체로 변환 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 개체를 만든 다음, MySQL에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 마이그레이션합니다.  
+MySQL 용 SSMA ([!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant)는 Windows 및 Linux의 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017, Windows 및 linux의 [!INCLUDE[msCoName](../../includes/msconame_md.md)]2019 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] 또는 Azure Database로 MySQL 데이터베이스를 마이그레이션하기 위한 도구입니다. MySQL 용 SSMA는 MySQL 데이터베이스 개체를 SQL Server database 개체로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 이러한 개체를 만든 다음 MySQL에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 마이그레이션합니다.  
   
-이 문서에서는 MySQL 용 SSMA를 소개 하 고 MySQL 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 마이그레이션하는 방법에 대 한 단계별 지침을 제공 합니다. 다음 표에서는 자세한 정보를 확인할 수 있는 문서를 보여 줍니다.  
+이 문서에서는 MySQL 용 SSMA를 소개 하 고 MySQL 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 마이그레이션하기 위한 단계별 지침을 제공 합니다. 다음 표에서는 자세한 정보를 확인할 수 있는 문서를 보여 줍니다.  
   
 ## <a name="contents"></a>내용  
   

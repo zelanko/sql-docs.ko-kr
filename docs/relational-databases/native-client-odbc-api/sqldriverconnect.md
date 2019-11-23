@@ -42,7 +42,7 @@ ms.locfileid: "73787099"
   
  *Drivercompletion* 매개 변수 값이 SQL_DRIVER_NOPROMPT 또는 SQL_DRIVER_COMPLETE_REQUIRED이 고 언어나 데이터베이스가 연결 문자열에서 제공 되 고 잘못 된 경우에는 가 SQL_ERROR을 반환 합니다.  
   
- *Drivercompletion* 매개 변수 값이 SQL_DRIVER_NOPROMPT 또는 SQL_DRIVER_COMPLETE_REQUIRED이 고 언어나 데이터베이스가 ODBC 데이터 원본 정의에서 제공 되 고 잘못 된 경우, 는 기본 언어 또는 지정 된 사용자 ID에 대 한 데이터베이스 이며 SQL_SUCCESS_WITH_INFO을 반환 합니다.  
+ *Drivercompletion* 매개 변수 값이 SQL_DRIVER_NOPROMPT 또는 SQL_DRIVER_COMPLETE_REQUIRED이 고 언어나 데이터베이스가 ODBC 데이터 원본 정의에서 제공 되 고 유효 하지 않은 경우, 는 지정 된 사용자 ID에 기본 언어나 데이터베이스를 사용 하 고 SQL_SUCCESS_WITH_INFO을 반환 합니다.  
   
  *Drivercompletion* 매개 변수 값이 SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_PROMPT이 고 언어나 데이터베이스가 잘못 된 경우 **SQLDriverConnect** 는 대화 상자를 더 합니다.  
   
@@ -79,7 +79,7 @@ SQLDriverConnect(hdbc, hwnd,
 "DRIVER={SQL Server Native Client 10};SERVER=(local);Trusted_Connection=yes"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLDriverConnect 함수](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API 구현 세부 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   

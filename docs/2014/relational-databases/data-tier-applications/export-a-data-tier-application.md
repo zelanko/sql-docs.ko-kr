@@ -49,10 +49,10 @@ ms.locfileid: "70175979"
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.  
   
-##  <a name="UsingDeployDACWizard"></a> 데이터 계층 응용 프로그램 내보내기 마법사 사용  
+##  <a name="UsingDeployDACWizard"></a> 데이터 계층 애플리케이션 내보내기 마법사 사용  
  **마법사를 사용하여 DAC를 내보내려면**  
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
@@ -91,9 +91,9 @@ ms.locfileid: "70175979"
 ##  <a name="Export_settings"></a> 내보내기 설정 페이지  
  이 페이지에서는 BACPAC 파일을 만들려는 위치를 지정할 수 있습니다.  
   
--   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
+-   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Azure에 저장** -azure 컨테이너에 BACPAC 파일을 만듭니다. 이 옵션의 유효성을 검사 하려면 Azure 컨테이너에 연결 해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
+-   **Azure에 저장** - Azure 컨테이너에 BACPAC 파일을 만듭니다. 이 옵션의 유효성을 검사하려면 Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
   
  내보낼 테이블 하위 집합을 지정하려면 **고급** 옵션을 사용합니다.  
   
@@ -113,8 +113,8 @@ ms.locfileid: "70175979"
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
- **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
+##  <a name="NetApp"></a> .Net Framework 애플리케이션 사용  
+ **.Net Framework 애플리케이션에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70175979"
   
 3.  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 DAC를 내보냅니다. 내보낼 DAC의 이름과 내보내기 파일을 배치할 폴더의 경로를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](extract-a-dac-from-a-database.md)  
   

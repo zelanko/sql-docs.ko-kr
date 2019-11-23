@@ -55,7 +55,7 @@ ms.locfileid: "72782738"
 > [!WARNING]  
 >  복원하거나 다시 연결한 데이터베이스에서 DAC를 등록하여 DAC 인스턴스를 다시 작성하더라도 원래 DAC의 서버 선택 정책과 같은 일부 부분은 만들어지지 않습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 또는 데이터베이스 소유자를 통해서만 DAC를 삭제할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 마법사를 시작할 수 있습니다.  
   
 ##  <a name="UsingDeleteDACWizard"></a> 데이터 계층 애플리케이션 삭제 마법사 사용  
@@ -77,7 +77,7 @@ ms.locfileid: "72782738"
   
     3.  [요약](#Summary)  
   
-    4.  [데이터 계층 애플리케이션 삭제](#Delete_datatier_application)  
+    4.  [데이터 계층 응용 프로그램 삭제](#Delete_datatier_application)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션을 삭제하는 단계에 대해 설명합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "72782738"
   
  **\< 이전** - **방법 선택** 페이지로 돌아갑니다.  
   
- **다음 &gt;** - 이전 페이지에서 선택한 방법을 사용하여 DAC 인스턴스를 삭제하고 **데이터 계층 애플리케이션 삭제** 페이지로 진행합니다.  
+ **다음 >** - 이전 페이지에서 선택한 방법을 사용하여 DAC 인스턴스를 삭제하고 **데이터 계층 응용 프로그램 삭제** 페이지로 진행합니다.  
   
  **취소** - DAC 인스턴스를 삭제하지 않고 마법사를 종료합니다.  
   
@@ -218,10 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [개체 탐색기](data-tier-applications.md)   
- [개체 탐색기](data-tier-applications.md)   
- [데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 계층 응용 프로그램](data-tier-applications.md)   
+ [데이터 계층 응용 프로그램](data-tier-applications.md)   
+ [데이터 계층 응용 프로그램 배포](deploy-a-data-tier-application.md)   
  [DAC로 데이터베이스 등록](register-a-database-as-a-dac.md)   
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

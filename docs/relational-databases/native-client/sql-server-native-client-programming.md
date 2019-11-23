@@ -71,7 +71,7 @@ ms.locfileid: "73758327"
  [SQL Server Native Client 오류](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 연결된 런타임 오류에 대한 항목을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2005 Native Client에서 애플리케이션 업데이트](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

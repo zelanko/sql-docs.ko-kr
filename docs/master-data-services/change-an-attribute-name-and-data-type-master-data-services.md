@@ -59,7 +59,7 @@ ms.locfileid: "73729672"
   
 9. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

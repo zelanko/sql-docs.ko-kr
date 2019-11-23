@@ -24,7 +24,7 @@ ms.locfileid: "71952654"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
- 암호화 키 백업 대화 상자를 열려면 **구성 관리자의 탐색 창에서** 암호화 키 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 클릭한 다음 **백업**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. @No__t-0 Configuration Manager에 대 한 자세한 내용은 [ &#40;Reporting Services 구성 관리자 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
+ 암호화 키 백업 대화 상자를 열려면 **구성 관리자의 탐색 창에서**암호화 키[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 클릭한 다음 **백업**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대 한 자세한 내용은 [ &#40;Reporting Services 구성 관리자 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
 ## <a name="options"></a>변수  
  **파일 위치**  
@@ -36,8 +36,8 @@ ms.locfileid: "71952654"
  **암호 확인**  
  입력한 암호를 다시 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

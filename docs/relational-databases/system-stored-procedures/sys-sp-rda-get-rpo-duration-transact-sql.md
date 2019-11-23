@@ -1,5 +1,5 @@
 ---
-title: sp_rda_get_rpo_duration (Transact-sql) | Microsoft Docs
+title: sys. sp_rda_get_rpo_duration (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72252064"
 ---
-# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
+# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정 시간 복원이 필요한 경우 원격 Azure 데이터베이스를 전체 복원할 수 있도록 SQL Server 준비 테이블에 유지 되는 마이그레이션된 데이터의 시간을 가져옵니다. 
@@ -41,7 +41,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ```    
     
 ## <a name="output-parameter"></a>출력 매개 변수    
- *@no__t 1durationinhours*    
+ *\@durationinhours*    
   현재 스트레치 사용 데이터베이스에 대해 SQL Server 유지 하는 마이그레이션된 데이터의 시간 (null이 아닌 정수 값) 수입니다.    
     
 ## <a name="permissions"></a>사용 권한    
@@ -50,9 +50,9 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="remarks"></a>설명    
  [Sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)을 실행 하 여 값을 변경 합니다.    
     
-## <a name="see-also"></a>관련 항목    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
- [스트레치 사용 데이터베이스 (Stretch Database) @no__t 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)-1  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
+## <a name="see-also"></a>참고 항목    
+ [sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [스트레치 사용 데이터베이스 (Stretch Database) 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
+ [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md)    
     
   

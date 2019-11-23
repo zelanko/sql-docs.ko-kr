@@ -66,7 +66,7 @@ WHERE where_condition
  *event_property*  
  이벤트의 속성입니다. 예를 들어 **Posttime**, **SPID**및 **LoginName**이 있습니다. [서버 이벤트 용 WMI 공급자 클래스 및 속성](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) 에 나열 된 각 이벤트를 조회 하 여 보유 한 속성을 확인 합니다. 예를 들어 DDL_DATABASE_LEVEL_EVENTS 이벤트는 **DatabaseName** 및 **UserName** 속성을 보유 합니다. 또한 부모 이벤트에서 **SQLInstance**, **LoginName**, **Posttime**, **SPID**및 **ComputerName** 속성을 상속 합니다.  
   
- **,** *... n*  
+ **,** *...n*  
  *Event_property* 를 쉼표로 구분 하 여 여러 번 쿼리할 수 있음을 나타냅니다.  
   
  \*  
@@ -83,7 +83,7 @@ WHERE where_condition
   
  `=` 피연산자만 **DatabaseName**, **SchemaName**및 **ObjectName**과 함께 사용할 수 있습니다. 다른 식은 이러한 이벤트 속성과 함께 사용할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  서버 이벤트 용 WMI 공급자 구문의 *where_condition* 은 다음을 결정 합니다.  
   
 -   공급자가 지정 된 *event_type*를 검색 하려고 하는 범위입니다. 서버 수준, 데이터베이스 수준 또는 개체 수준 (현재 지원 되는 유일한 개체는 큐)입니다. 궁극적으로 이 범위는 대상 데이터베이스에 생성되는 이벤트 알림 유형을 결정합니다. 이 프로세스를 이벤트 알림 등록이라고 합니다.  
@@ -116,7 +116,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-querying-for-events-at-the-server-scope"></a>1\. 서버 범위에서 이벤트 쿼리  
+### <a name="a-querying-for-events-at-the-server-scope"></a>A. 서버 범위에서 이벤트 쿼리  
  다음 WQL 쿼리는 `SERVER_MEMORY_CHANGE` 인스턴스에서 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
   
 ```  
@@ -140,7 +140,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서버 이벤트의 WMI 공급자 개념](https://technet.microsoft.com/library/ms180560.aspx)   
  [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)  
   

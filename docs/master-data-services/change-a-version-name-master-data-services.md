@@ -44,7 +44,7 @@ ms.locfileid: "73729698"
   
 4.  Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [버전 커밋&#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   

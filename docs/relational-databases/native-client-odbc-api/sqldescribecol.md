@@ -42,16 +42,16 @@ ms.locfileid: "73787252"
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8, 10..16|0..7|  
-|datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
-|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
+|Time|SQL_SS_TIME2|8, 10..16|0..7|  
+|Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
+|Datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
  자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeCol 지원  
  **SQLDescribeCol** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLDescribeCol 함수](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -102,7 +102,7 @@ ms.locfileid: "69493786"
   
 5.  도구 모음의 **언어** 목록에서 **스페인어(스페인)** 를 선택합니다.  
   
-     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신 다음 그림에 표시 된 것 처럼 `Ventas del lnternet` 이라는 새 표시 폴더에 스페인어로 표시 됩니다.  
+     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신 다음 그림에 표시 된 것 처럼 `Ventas del lnternet`이라는 새 표시 폴더에 스페인어로 표시 됩니다.  
   
      ![메타 데이터 창 다시 채워집니다](../../2014/tutorials/media/l9-translations-6.gif "메타 데이터 창 다시 채워집니다")  
   
@@ -125,9 +125,9 @@ ms.locfileid: "69493786"
 ## <a name="next-lesson"></a>다음 단원  
  [10단원: 관리자 역할 정의](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)    
- [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
+## <a name="see-also"></a>참고 항목  
+ [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+ [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [번역 &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

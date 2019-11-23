@@ -82,11 +82,11 @@ ms.locfileid: "70175919"
   
      새 연결의 기본 공급자는 네이티브 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자입니다. 이 공급자는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스에 연결하는 데 사용됩니다. SQL Server 관계형 데이터베이스에 대한 연결의 경우 네이티브 OLE DB\SQL Server Native Client 11.0을 사용하면 다른 공급자를 사용할 때보다 더 빠른 경우가 많습니다.  
   
-     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]지 원하는 공급자 및 관계형 데이터베이스의 목록은 [데이터 원본에서 SSAS 다차원 &#40;&#41;지원](supported-data-sources-ssas-multidimensional.md)을 참조 하세요.  
+     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지 원하는 공급자 및 관계형 데이터베이스의 목록은 [데이터 원본에서 SSAS 다차원 &#40;&#41;지원](supported-data-sources-ssas-multidimensional.md)을 참조 하세요.  
   
 5.  기본 데이터 원본에 연결하기 위해 선택한 공급자가 요청한 정보를 입력합니다. **네이티브 OLE DB\SQL Server Native Client** 공급자를 선택한 경우 다음 정보를 입력합니다.  
   
-    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된 경우 인스턴스 이름 (예: computername > \<\\< instancename\>)을 포함 해야 합니다.  
+    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된 경우 인스턴스 이름을 포함 해야 합니다 (예: \<computername >\\< instancename\>).  
   
     2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지 원하는 Azure SQL 데이터베이스 또는 SQL Server 인스턴스에 대해 데이터베이스 사용자 로그인을 지정 합니다.  
   
@@ -171,8 +171,8 @@ ms.locfileid: "70175919"
   
 5.  추가한 테이블을 찾아 선택합니다. 테이블을 마우스 오른쪽 단추로 클릭하고 **새 관계**를 선택합니다. 일치하는 데이터가 들어 있는 원본 열과 대상 열을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [지원 되 &#40;는 데이터 원본 SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)   
+## <a name="see-also"></a>참고 항목  
+ [지원 되 &#40;는 데이터 원본&#41; SSAS 다차원](supported-data-sources-ssas-multidimensional.md)   
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  
   
   

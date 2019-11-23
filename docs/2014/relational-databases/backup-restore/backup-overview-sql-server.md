@@ -86,7 +86,7 @@ ms.locfileid: "70175987"
  **백업 미디어 용어 및 정의**  
   
  [백업 장치](backup-devices-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Azure Blob 저장소 서비스에 기록할 수도 있으며, **URL** 형식을 사용 하 여 백업 파일의 대상 및 이름을 지정 합니다. 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Azure Blob Storage 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
   
  [백업 미디어](media-sets-media-families-and-backup-sets-sql-server.md)  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  
@@ -133,18 +133,18 @@ ms.locfileid: "70175987"
   
 -   백업 작업이 진행 중일 때는 데이터베이스 파일을 만들거나 삭제하려고 해도 해당 작업이 실패합니다.  
   
- 백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 제한 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
+ 백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌 하는 작업 중 어떤 작업이 먼저 시작 되었는지에 관계 없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 시간이 초과 될 때까지 대기 합니다. 제한 시간은 세션 제한 시간 설정에 의해 제어 됩니다. 제한 시간 내에 잠금이 해제 되 면 두 번째 작업이 계속 됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **백업 장치 및 백업 미디어를 사용 하 여 작업 하려면**  
   
--   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [백업 장치 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
+-   [백업 디바이스 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 -   [백업의 만료 날짜 설정&#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
@@ -152,9 +152,9 @@ ms.locfileid: "70175987"
   
 -   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [장치에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [디바이스에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
 -   [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70175987"
   
 -   [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [유지 관리 계획](../maintenance-plans/maintenance-plans.md)   

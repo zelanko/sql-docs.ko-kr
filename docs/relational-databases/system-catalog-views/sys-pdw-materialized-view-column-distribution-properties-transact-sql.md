@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729857"
@@ -37,7 +37,7 @@ VIEW DATABASE STATE 권한이 필요합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[구체화 된 뷰로 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[구체화된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

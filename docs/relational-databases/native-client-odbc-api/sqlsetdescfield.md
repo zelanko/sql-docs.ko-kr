@@ -25,7 +25,7 @@ ms.locfileid: "73785699"
 
   SQLSetDescField를 사용 하 여 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 설명자 필드를 설정할 수 있습니다. 사용할 수 있는 필드에 대 한 자세한 내용은 테이블 반환 매개 변수 [설명자 필드](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) 및 [테이블 반환 매개 변수 구성 열의 설명자 필드](../../relational-databases/native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)를 참조 하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  테이블 반환 매개 변수 열은 설명자 헤더 필드 SQL_SOPT_SS_PARAM_FOCUS가 SQL_DESC_TYPE이 SQL_SS_TABLE로 설정된 레코드의 서수로 설정된 경우에만 사용할 수 있습니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 참조하십시오.  
   
  SQL_SOPT_SS_PARAM_FOCUS를 테이블 반환 매개 변수가 아닌 매개 변수의 서 수로 설정 하려고 하면 SQLSetStmtAttr가 SQL_ERROR를 반환 하 고 SQLSTATE = HY024 및 "잘못 된 특성 값입니다." 라는 메시지가 포함 된 진단 레코드가 생성 됩니다. SQL_SOPT_SS_PARAM_FOCUS는 SQL_ERROR가 반환될 때 변경되지 않습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "73785699"
   
  자세한 내용은 [스파스 열에서 ODBC &#40;&#41;지원](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798010"
 ---
 # <a name="copy-only-backups-sql-server"></a>복사 전용 백업(SQL Server)
-  *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.  
+  *복사 전용 백업* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.  
   
  복사 전용 백업의 종류는 다음과 같습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798010"
  복사 전용 백업은 **backupset** 테이블의 [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 열에 기록됩니다.  
   
 ## <a name="to-create-a-copy-only-backup"></a>복사 전용 백업을 만들려면  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
   
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -52,20 +52,20 @@ ms.locfileid: "72798010"
   
 -   복사 전용 전체 백업의 경우:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device *>* ... COPY_ONLY 사용 ...  
+     데이터베이스를 \<backup_device *>* 에 백업 *database_name* ... COPY_ONLY 사용 ...  
   
     > [!NOTE]  
     >  DIFFERENTIAL 옵션과 함께 지정하면 COPY_ONLY가 적용되지 않습니다.  
   
 -   복사 전용 로그 백업의 경우:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device *>* ... COPY_ONLY 사용 ...  
+     *\<* BACKUP_DEVICE *>* 백업 로그 *database_name* ... COPY_ONLY 사용 ...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
 `Backup-SqlDatabase` cmdlet을 `-CopyOnly` 매개 변수와 함께 사용합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
 
 ### <a name="to-create-a-full-or-log-backup"></a>전체 또는 로그 백업을 만들려면
   
@@ -81,7 +81,7 @@ ms.locfileid: "72798010"
   
 -   [SQL Server PowerShell 공급자](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)   

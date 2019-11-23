@@ -30,7 +30,7 @@ ms.locfileid: "72782924"
 > [!IMPORTANT]  
 >  가능하면 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있는 동안에만 가용성 그룹을 제거하세요. 주 복제본에서 가용성 그룹을 제거하면 이전 주 데이터베이스에서 변경이 허용됩니다(고가용성 보호 없이). 보조 복제본에서 가용성 그룹을 삭제하면 주 복제본이 RESTORING 상태로 유지되고 데이터베이스에서 변경이 허용되지 않습니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항 및 권장 사항](#Restrictions)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72782924"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다. 로컬 서버 인스턴스에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 CONTROL SERVER 권한이나 CONTROL 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -123,6 +123,6 @@ ms.locfileid: "72782924"
   
 -   [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

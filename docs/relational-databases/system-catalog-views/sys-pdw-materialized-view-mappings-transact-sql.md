@@ -29,7 +29,7 @@ Object_id 하 여 구체화 된 뷰를 내부 개체 이름과 연결 합니다.
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar (36)**|구체화 된 뷰의 물리적 이름입니다.|  
+|physical_name |**nvarchar(36)**|구체화 된 뷰의 물리적 이름입니다.|  
 |object_id  |**int**|구체화 된 뷰의 개체 ID입니다. [Sys. objects (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)를 참조 하세요.| 
 
 ## <a name="permissions"></a>사용 권한
@@ -38,7 +38,7 @@ VIEW DATABASE STATE 권한이 필요합니다.
   
 ## <a name="see-also"></a>참고 항목
 
-[구체화 된 뷰로 성능 튜닝](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[구체화된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

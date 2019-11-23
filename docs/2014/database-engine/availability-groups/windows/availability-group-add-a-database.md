@@ -24,11 +24,11 @@ ms.locfileid: "72782894"
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>가용성 그룹에 데이터베이스 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 데이터베이스를 추가하는 방법에 대해 설명합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [사전 요구 사항 및 제한 사항](#Prerequisites)  
   
-     [Permissions](#Permissions)  
+     [사용 권한](#Permissions)  
   
 -   **가용성 그룹에 데이터베이스를 추가하려면:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72782894"
   
 ###  <a name="Security"></a> 보안  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -81,7 +81,7 @@ ms.locfileid: "72782894"
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
   
-     여기서 *group_name* 은 가용성 그룹의 이름이고, *database_name* 은 그룹에 추가할 데이터베이스의 이름입니다.  
+     여기서 *group_name* 은 가용성 그룹의 이름이고 *database_name* 은 그룹에 추가할 데이터베이스의 이름입니다.  
   
      다음 예에서는 *MyDb3* 데이터베이스를 *MyAG* 가용성 그룹에 추가합니다.  
   
@@ -136,8 +136,8 @@ Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"
 Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio&#41;  를 사용 합니다](use-the-always-on-dashboard-sql-server-management-studio.md) .  
+ [AlwaysOn 대시보드 &#40;SQL Server Management Studio&#41; 를 사용 합니다](use-the-always-on-dashboard-sql-server-management-studio.md) .  
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

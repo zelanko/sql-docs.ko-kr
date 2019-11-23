@@ -108,8 +108,8 @@ HRESULT GetStatus(
  E_FAIL  
  공급자 관련 오류가 발생했습니다.  
   
-## <a name="remarks"></a>주의  
- **ISSAsynchStatus::GetStatus** 메서드는 데이터 원본 개체의 초기화가 중단될 경우 DB_E_CANCELED 대신 E_UNEXPECTED가 반환된다는 점만 제외하고 **IDBAsynchStatus::GetStatus** 메서드와 동일하게 동작합니다. 단, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)은 DB_E_CANCELED를 반환합니다. 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
+## <a name="remarks"></a>설명  
+ **ISSAsynchStatus::GetStatus** 메서드는 데이터 원본 개체의 초기화가 중단될 경우 DB_E_CANCELED 대신 E_UNEXPECTED가 반환된다는 점만 제외하고 **IDBAsynchStatus::GetStatus** 메서드와 동일하게 동작합니다. 단, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 은 DB_E_CANCELED를 반환합니다. 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
   
  행 집합이 비동기적으로 초기화되거나 채워진 경우 이 메서드를 지원해야 합니다.  
   
@@ -123,7 +123,7 @@ HRESULT GetStatus(
   
  초기화된 데이터 원본 개체나 채워진 행 집합에서 **ISSAsynchStatus::GetStatus** 를 호출하거나 *eOperation* 에 대해 DBASYNCHOP_OPEN 이외의 값을 전달하면 *pulProgress* 및 *pulProgressMax* 를 동일한 값으로 설정하여 S_OK가 반환됩니다. 행을 업데이트, 삭제 또는 삽입하는 명령을 실행하여 만든 개체에서 **ISSAsynchStatus::GetStatus** 를 호출하는 경우 *pulProgress* 및 *pulProgressMax* 는 모두 해당 명령이 적용된 총 행 수를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비동기 작업 수행](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

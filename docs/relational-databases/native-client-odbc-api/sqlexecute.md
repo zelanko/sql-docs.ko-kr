@@ -25,11 +25,11 @@ ms.locfileid: "73786933"
 
   SQL_SOPT_SS_PARAM_FOCUS statement 특성이 0으로 설정 되지 않은 경우 SQLExecute는 SQL_ERROR를 반환 하 고 SQLSTATE = HY024 및 "잘못 된 특성 값, SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)" 라는 메시지와 함께 진단 레코드를 생성 합니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 참조하십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [Sqlexecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
+## <a name="see-also"></a>참고 항목  
+ [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

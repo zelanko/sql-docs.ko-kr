@@ -41,14 +41,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_name = ] 'profile\_name'`새 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
+새 프로필의 이름을 `[ @profile_name = ] 'profile\_name'` 합니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
  
    > [!NOTE]
-   > Azure SQL Managed Instance SQL 에이전트를 사용 하는 프로필 이름은 **AzureManagedInstance_dbmail_profile** 로 호출 해야 합니다.
+   > Azure SQL Managed Instance SQL 에이전트를 사용 하는 프로필 이름을 호출 해야 합니다 **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`새 프로필에 대 한 선택적 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
+새 프로필에 대 한 선택적 설명을 `[ @description = ] 'description'` 합니다. *description* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`새 프로필의 ID를 반환 합니다. *new_profile_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` 새 프로필에 대 한 ID를 반환 합니다. *new_profile_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +56,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="remarks"></a>설명  
  데이터베이스 메일 프로필에는 여러 개의 데이터베이스 메일 계정이 있습니다. 데이터베이스 메일 저장 프로시저는 해당 프로시저에서 생성된 프로필 이름이나 프로필 ID로 프로필을 참조할 수 있습니다. 프로필에 계정을 추가 하는 방법에 대 한 자세한 내용은 [sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)을 참조 하세요.  
   
- 프로필 이름 및 설명은 저장 프로시저 **sysmail_update_profile_sp**를 사용 하 여 변경할 수 있지만 프로필 id는 프로필 수명 동안 일정 하 게 유지 됩니다.  
+ 프로필 이름 및 설명 **sysmail_update_profile_sp**저장 프로시저를 사용 하 여 변경할 수 있지만 프로필 id는 프로필 수명 동안 일정 하 게 유지 됩니다.  
   
  프로필 이름은 Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 고유해야 합니다. 그렇지 않으면 저장 프로시저가 오류를 반환합니다.  
   
@@ -66,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
- **A. 새 프로필 만들기**  
+ **한. 새 프로필 만들기**  
   
  다음 예에서는 `AdventureWorks Administrator`라는 새 데이터베이스 메일 프로필을 만듭니다.  
   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. 변수에 프로필 id를 저장 하 여 새 프로필 만들기**  
+ **2. 프로필 id를 변수에 저장 하는 새 프로필 만들기**  
   
  다음 예에서는 `AdventureWorks Administrator`라는 새 데이터베이스 메일 프로필을 만듭니다. 이 예에서는 프로필 ID를 `@profileId` 변수에 저장하고 새 프로필의 프로필 ID를 포함하는 결과 집합을 반환합니다.  
   
@@ -91,9 +91,9 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [데이터베이스 메일 계정을 만듭니다](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Transact-sql 저장 프로시저 &#40;데이터베이스 메일&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

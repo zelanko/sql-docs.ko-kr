@@ -36,13 +36,13 @@ ms.locfileid: "70154025"
  **Connection manager**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **새로 만들기**  
+ **단추를 사용하여 새**  
  **ADO.NET 연결 관리자 구성** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **테이블 또는 뷰 사용**  
  목록에서 기존 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 테이블을 만듭니다.  
   
- **새로 만들기**  
+ **단추를 사용하여 새**  
  **테이블 만들기** 대화 상자를 사용하여 새 테이블 또는 뷰를 만듭니다.  
   
 > [!NOTE]  
@@ -61,14 +61,14 @@ ms.locfileid: "70154025"
  **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결에서 CREATE TABLE 및 SET IDENTITY 문을 실행하려면 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자의 `RetainSameConnection` 속성을 `True`로 설정하십시오. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결에서 CREATE TABLE 및 SET IDENTITY 문을 실행하려면 `RetainSameConnection` 연결 관리자의 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 속성을 `True`로 설정하십시오. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
 >   
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
- Sqlcat.com의 기술 문서 [-빠른 방법으로 Azure SQL Database에 데이터 로드](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ sqlcat.com의 기술 문서 - [Azure SQL Database에 빨리 데이터 로드](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO NET 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md)   

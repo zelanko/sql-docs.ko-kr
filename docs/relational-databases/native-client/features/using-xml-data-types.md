@@ -218,7 +218,7 @@ ms.locfileid: "73761277"
   
  DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT의 경우 공급자가 소비자 버퍼의 XML 인스턴스를 적절한 열에 저장합니다.  
   
- DBTYPE_IUNKNOWN/ISequentialStream의 경우 소비자가 저장소 개체를 지정 하지 않은 경우 소비자는 사전에 **ISequentialStream** 개체를 만들고 XML 문서를 개체에 바인딩한 다음 개체를 공급자에 게 전달 해야 합니다. **IRowsetChange:: SetData** 메서드를 통해 소비자는 스토리지 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
+ DBTYPE_IUNKNOWN/ISequentialStream의 경우 소비자가 저장소 개체를 지정 하지 않은 경우 소비자는 사전에 **ISequentialStream** 개체를 만들고 XML 문서를 개체에 바인딩한 다음 **IRowsetChange:: SetData** 메서드를 통해 개체를 공급자에 게 전달 해야 합니다. 소비자는 스토리지 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 인터페이스  
  **IRowsetUpdate** 인터페이스는 지연된 업데이트에 사용할 수 있는 기능을 제공합니다. 소비자가 **IRowsetUpdate: Update** 메서드를 호출할 때까지 행 집합에 사용할 수 있는 데이터를 다른 트랜잭션에서 사용할 수 없습니다.  
@@ -269,7 +269,7 @@ ms.locfileid: "73761277"
   
  XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. SQL_C_BINARY 바인딩으로 작업 하는 경우 인코딩이 바인딩에서 암시적으로 암시 되므로 Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 BOM을 요구 하거나 추가 하지 않습니다. BOM을 추가하는 목적은 다른 XML 프로세서 및 스토리지 시스템을 간편하게 처리할 수 있도록 하기 위한 것입니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 애플리케이션에서는 실제 인코딩을 확인할 필요가 없습니다. SQL_C_BINARY 바인딩을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 받은 XML 데이터는 항상 u t f-16으로, BOM은 포함 된 인코딩 선언 없이 인코딩됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

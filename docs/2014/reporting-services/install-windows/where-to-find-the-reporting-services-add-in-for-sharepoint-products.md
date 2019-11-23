@@ -46,7 +46,7 @@ SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconam
 -   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(SP1)](https://www.microsoft.com/download/details.aspx?id=35575)(https://www.microsoft.com/download/details.aspx?id=35575).  
   
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능 [의](https://go.microsoft.com/fwlink/?LinkID=207242) 다운로드 센터에서 이 파일의 최신 버전을 얻을 수 있습니다.  
   
 ##  <a name="bkmk_sql2008r2"></a>SharePoint 2010 제품용 SQL Server 2008 R2 Reporting Services 추가 기능  
  Microsoft SharePoint 2010 제품용 Microsoft SQL Server 2008 R2 Reporting Services 추가 기능은 SharePoint 2010 제품 준비 도구(**PreRequisiteInstaller.exe**)로 설치됩니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Microsoft SharePoint 기술 2010용 SQL Server 2008 R2 Reporting Services 추가 기능 [의](https://www.microsoft.com/download/details.aspx?id=622)다운로드 센터에서 이 파일의 최신 버전을 얻을 수 있습니다.  
@@ -64,7 +64,7 @@ SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconam
   
  이 파일의 최신 버전은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft SharePoint 기술용 Microsoft SQL Server 2008 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=622)에서 온라인으로 제공됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sharepoint &#40;sharepoint 2010 및 sharepoint 2013&#41; 용 Reporting Services 추가 기능을 설치 하거나 제거](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [SharePoint 통합 모드 &#40;&#41; 에서 라이브러리 Reporting Services에 보고서 서버 콘텐츠 형식 추가](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Reporting Services 추가 기능을 제거한 후에는 기본값이 아닌 영역에서 SharePoint 페이지를 찾아볼 수 없습니다.](https://support.microsoft.com/kb/2009212)  

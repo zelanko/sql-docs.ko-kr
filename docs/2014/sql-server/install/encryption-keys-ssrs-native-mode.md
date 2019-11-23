@@ -60,15 +60,15 @@ ms.locfileid: "71952168"
   
  데이터 원본 및 구독이 많을 경우 대칭 키를 다시 생성하는 프로세스에 많은 시간이 소요될 수 있습니다.  
   
- **Delete**  
+ **삭제**  
  대칭 키는 물론 연결 문자열, 저장된 자격 증명 등의 암호화된 모든 내용을 삭제합니다. 복원할 수 없는 경우에는 대칭 키만 삭제해야 합니다.  
   
  대칭 키를 삭제한 다음에는 이제 보고서 및 공유 데이터 원본에 없는 연결 문자열 및 저장된 자격 증명을 다시 입력해야 합니다. 암호화된 데이터를 저장하는 배달 확장 프로그램을 사용하는 모든 구독도 업데이트해야 합니다. 여기에는 파일 공유 배달 확장 프로그램 및 암호화된 값을 사용하는 모든 타사 배달 확장 프로그램이 포함됩니다.  
   
  이러한 정보를 자동으로 업데이트하는 방법은 없습니다. 저장된 자격 증명 및 연결 문자열을 사용하는 각 보고서, 구독 및 공유 데이터 원본을 한 번에 하나씩 업데이트해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

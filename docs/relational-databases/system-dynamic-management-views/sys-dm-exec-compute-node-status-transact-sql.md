@@ -1,5 +1,5 @@
 ---
-title: _exec_compute_node_status (Transact-sql) | Microsoft Docs
+title: sys. dm_exec_compute_node_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532755"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>_exec_compute_node_status (Transact-sql)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   모든 PolyBase 노드의 성능 및 상태에 대 한 추가 정보를 포함 합니다. 노드당 하나의 행을 나열 합니다.  
@@ -44,14 +44,14 @@ ms.locfileid: "73532755"
 |total_cpu_usage|`bigint`|총 CPU 사용량 (틱)입니다.||  
 |thread_count|`bigint`|이 노드에서 사용 중인 총 스레드 수입니다.||  
 |handle_count|`bigint`|이 노드에서 사용 중인 총 핸들 수입니다.||  
-|total_elapsed_time|`bigint`|시스템을 시작 하거나 다시 시작한 이후 경과 된 총 시간입니다.|시스템을 시작 하거나 다시 시작한 이후 경과 된 총 시간입니다. Total_elapsed_time가 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로 때문에 구체화 실패가 발생 합니다. 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
+|total_elapsed_time|`bigint`|시스템을 시작 하거나 다시 시작한 이후 경과 된 총 시간입니다.|시스템을 시작 하거나 다시 시작한 이후 경과 된 총 시간입니다. Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다. 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
 |is_available|`bit`|이 노드를 사용할 수 있는지 여부를 나타내는 플래그입니다.||  
 |sent_time|`datetime`|네트워크 패키지가 마지막으로 전송 된 시간||  
 |received_time|`datetime`|이 노드에서 네트워크 패키지를 마지막으로 보낸 시간입니다.||  
 |error_id|`nvarchar(36)`|이 노드에서 발생 한 마지막 오류의 고유 식별자입니다.||
 |compute_pool_id|`int`|풀에 대 한 고유 식별자입니다.|
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

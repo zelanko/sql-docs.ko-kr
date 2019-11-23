@@ -39,7 +39,7 @@ ms.locfileid: "71096921"
   
   CLR은 가비지 수집 메모리, 선점형 스레딩, 메타 데이터 서비스 (형식 리플렉션), 코드 안정성 및 코드 액세스 보안 기능을 제공 합니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
   
- CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모두 런타임 환경이지만 메모리, 스레드 및 동기화를 처리하는 방식에 있어서 서로 다릅니다. 이 문서에서는 모든 시스템 리소스를 균일 하 게 관리할 수 있도록 이러한 두 실행 시간을 통합 하는 방법을 설명 합니다. 또한이 문서에서는 사용자 코드에 안정적이 고 안전한 실행 환경을 제공 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR CAS (코드 액세스 보안) 및 보안이 통합 되는 방법에 대해 설명 합니다.  
+ CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모두 런타임 환경이지만 메모리, 스레드 및 동기화를 처리하는 방식에 있어서 서로 다릅니다. 이 문서에서는 모든 시스템 리소스를 균일 하 게 관리할 수 있도록 이러한 두 실행 시간을 통합 하는 방법을 설명 합니다. 또한이 문서에서는 사용자 코드에 대해 신뢰할 수 있고 안전한 실행 환경을 제공 하기 위해 CLR CAS (코드 액세스 보안) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안을 통합 하는 방법을 설명 합니다.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>CLR 아키텍처의 기본 개념  
  .NET Framework에서 프로그래머는 클래스의 구조(예: 클래스의 필드나 속성)와 메서드를 정의하여 클래스를 구현하는 고급 언어로 코드를 작성합니다. 이러한 메서드 일부는 정적 함수일 수 있습니다. 프로그램을 컴파일하면 어셈블리라는 파일이 생성되는데 이 어셈블리 파일에는 MSIL([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language)로 컴파일된 코드 및 종속 어셈블리에 대한 모든 참조가 포함된 매니페스트가 들어 있습니다.  
@@ -102,8 +102,8 @@ ms.locfileid: "71096921"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server와 CLR이 함께 작동하는 방법  
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR의 스레딩, 일정 관리, 동기화 및 메모리 관리 모델을 통합하는 방법에 대해 설명합니다. 특히 이 섹션에서는 확장성, 안정성 및 보안 목표 측면에서의 통합을 검사합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 CLR을 호스팅하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CLR의 운영 체제 역할을 합니다. CLR에서는 스레딩, 일정 예약, 동기화 및 메모리 관리를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 하위 수준의 루틴을 호출합니다. 이러한 루틴은 나머지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진에서 사용 하는 것과 동일한 기본 형식입니다. 이 방식을 사용하면 확장성, 안정성 및 보안상 여러 가지 이점을 얻을 수 있습니다.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>향상 일반 스레딩, 일정 예약 및 동기화  
- CLR에서는 사용자 코드를 실행하기 위한 경우나 내부적인 용도로 사용하기 위한 경우 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API를 호출하여 스레드를 만듭니다. 여러 스레드를 동기화하기 위해 CLR에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동기화 개체를 호출합니다. 이 방법을 사용 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드가 동기화 개체를 대기 중일 때 스케줄러에서 다른 작업을 예약할 수 있습니다. 예를 들어 CLR에서 가비지 수집을 시작하면 가비지 수집이 완료될 때까지 모든 스레드가 대기합니다. CLR 스레드 및 CLR 스레드에서 대기 중인 동기화 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 알고 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR과 관련되지 않은 다른 데이터베이스 태스크를 실행하는 스레드를 예약할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 동기화 개체의 잠금과 관련된 교착 상태를 검색한 후 일반적인 기술을 사용하여 교착 상태를 해결할 수 있습니다.  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>확장성: 일반 스레딩, 일정 예약 및 동기화  
+ CLR에서는 사용자 코드를 실행하기 위한 경우나 내부적인 용도로 사용하기 위한 경우 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API를 호출하여 스레드를 만듭니다. 여러 스레드를 동기화하기 위해 CLR에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동기화 개체를 호출합니다. 이 방법을 사용 하면 스레드가 동기화 개체를 대기 하 고 있을 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 다른 작업을 예약할 수 있습니다. 예를 들어 CLR에서 가비지 수집을 시작하면 가비지 수집이 완료될 때까지 모든 스레드가 대기합니다. CLR 스레드 및 CLR 스레드에서 대기 중인 동기화 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 알고 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR과 관련되지 않은 다른 데이터베이스 태스크를 실행하는 스레드를 예약할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 동기화 개체의 잠금과 관련된 교착 상태를 검색한 후 일반적인 기술을 사용하여 교착 상태를 해결할 수 있습니다.  
   
  관리 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 선점형 모드로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러에는 리소스를 오랫동안 점유하고 있는 스레드를 확인하여 중지하는 기능이 있습니다. CLR 스레드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 후크하는 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 CLR의 "런어웨이" 스레드를 식별하여 해당 스레드의 우선 순위를 관리할 수 있음을 의미합니다. 이와 같은 런어웨이 스레드는 일시 중지되어 큐에 다시 배치됩니다. 런어웨이 스레드로 반복적으로 식별되는 스레드는 작업을 수행하는 다른 스레드가 실행될 수 있도록 일정 기간 동안 일시 중지됩니다.  
   
@@ -142,41 +142,41 @@ for (int i = 0; i < Int32.MaxValue; i++)
 Thread.EndThreadAffinity();
 ```
   
-###### <a name="scalability-common-memory-management"></a>향상 일반 메모리 관리  
+###### <a name="scalability-common-memory-management"></a>확장성: 일반적인 메모리 관리  
  CLR은 메모리를 할당하거나 할당을 취소하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 형식을 호출합니다. CLR에서 사용하는 메모리는 시스템의 총 메모리 사용량에 포함되기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 구성된 메모리 제한을 초과하지 않으면서 CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리를 차지하기 위해 서로 경쟁하지 않도록 할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 메모리가 제한되었을 때 CLR 메모리 요청을 거부할 수 있으며 다른 태스크에 메모리가 필요할 때 메모리 사용을 줄이도록 CLR에 요청할 수 있습니다.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성:  응용 프로그램 도메인 및 복구할 수 없는 예외  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성: 응용 프로그램 도메인 및 복구할 수 없는 예외  
  .NET Framework API의 관리 코드에서 메모리 부족 또는 스택 오버플로와 같은 중대한 예외가 발견되었을 때 이러한 오류를 복구하여 API 구현의 의미를 일관되고 올바르게 유지하지 못하는 경우도 있습니다. 이러한 API는 이와 같은 오류에 대한 응답으로 스레드 중단 예외를 발생시킵니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 경우 이러한 스레드 중단은 다음과 같이 처리됩니다. 즉, CLR이 애플리케이션 도메인 내에서 스레드 중단이 발생한 모든 공유 상태를 검색합니다. CLR은 동기화 개체가 있는지 확인 하 여이를 검색 합니다. 애플리케이션 도메인에 공유 상태가 있으면 애플리케이션 도메인 자체가 언로드됩니다. 애플리케이션 도메인이 언로드되면 해당 애플리케이션 도메인에서 현재 실행 중인 데이터베이스 트랜잭션이 중지됩니다. 공유 상태가 있는 경우 예외를 트리거한 세션 이외의 다른 사용자 세션도 이와 같은 중대한 예외의 영향을 받을 수 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR은 공유 상태의 가능성을 줄이기 위한 조치를 취합니다. 자세한 내용은 .NET Framework 설명서를 참조하십시오.  
   
 ###### <a name="security-permission-sets"></a>보안: 권한 집합  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 하면 어셈블리 작성자는 해당 어셈블리에 대 한 세 가지 권한 집합 중 하나를 지정할 수 있습니다. SAFE, EXTERNAL_ACCESS 및 UNSAFE입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 하면 어셈블리 작성자는 해당 어셈블리에 대해 SAFE, EXTERNAL_ACCESS 및 UNSAFE의 세 가지 권한 집합 중 하나를 지정할 수 있습니다.  
   
 |||||  
 |-|-|-|-|  
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
-|프로그래밍 모델 제한|예|사용자 계정 컨트롤|제한 없음|  
+|코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|Unrestricted|  
+|프로그래밍 모델 제한 사항|예|예|제한 없음|  
 |안정성 요구 사항|예|예|아니요|  
-|네이티브 코드 호출 기능|아니요|아니요|예|  
+|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
   
- SAFE는 허용되는 프로그래밍 모델 측면에서 연결된 제한 사항이 있는 가장 안정적인 보안 모드입니다. SAFE 어셈블리에는 충분한 실행 권한이 제공되며, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있습니다. SAFE 어셈블리는 형식이 안전해야 하며 비관리 코드를 호출할 수 없습니다.  
+ SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   
- UNSAFE는 데이터베이스 관리자만 만들 수 있는 고도로 신뢰할 수 있는 코드에 사용됩니다. 이 신뢰되는 코드는 코드 액세스 보안 제한이 없으며 비관리(네이티브) 코드를 호출할 수 있습니다.  
+ UNSAFE는 데이터베이스 관리자만 만들 수 있는 신뢰 수준이 높은 코드용입니다. 이 신뢰되는 코드는 코드 액세스 보안 제한이 없으며 비관리(네이티브) 코드를 호출할 수 있습니다.  
   
  EXTERNAL_ACCESS는 중급 보안 옵션을 제공하며 코드가 데이터베이스 외부의 리소스에 액세스하도록 허용하지만 여전히 SAFE 수준의 안정성과 보안을 갖습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내에서 실행되는 관리 코드는 항상 이러한 코드 액세스 권한 집합 중 하나를 가져옵니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내부에서 실행되는 관리 코드에는 항상 이러한 코드 액세스 권한 집합 중 하나가 부여됩니다.  
   
-### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞에서 설명한 것처럼 공유 상태가 있을 경우 애플리케이션의 안정성 및 확장성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
+### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한 사항  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞서 설명한 것과 같이 공유된 상태가 있으면 해당 애플리케이션의 확장성과 안정성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또한 **Sharedstate**, **Synchronization**및 **externalprocessmgmt** 호스트 보호 특성으로 주석이 지정 된 .NET Framework api에 대 한 호출을 허용 하지 않습니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
+ 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **Sharedstate**, **Synchronization**및 **externalprocessmgmt** 호스트 보호 특성으로 주석이 지정 된 .NET Framework api에 대 한 호출을 허용 하지 않습니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [통합된 CLR의 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

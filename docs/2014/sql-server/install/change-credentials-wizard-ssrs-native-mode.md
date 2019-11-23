@@ -25,7 +25,7 @@ ms.locfileid: "71952325"
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>자격 증명 변경 마법사(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 보고서 서버 데이터베이스에 연결할 때 보고서 서버에서 사용하는 계정을 다시 구성하는 단계를 안내하는 자격 증명 변경 마법사를 제공합니다. 자격 증명을 변경할 때 구성 관리자는 보고서 서버에서 현재 사용 중인 보고서 서버 데이터베이스의 데이터베이스 서버에 대한 모든 사용 권한과 데이터베이스 로그인 정보를 업데이트합니다.  
   
- 마법사를 시작하려면 **구성 관리자의 데이터베이스 페이지에서** 자격 증명 변경 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. @No__t-0 Configuration Manager를 시작 하는 방법에 대 한 지침은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
+ 마법사를 시작하려면 **구성 관리자의 데이터베이스 페이지에서** 자격 증명 변경 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager를 시작 하는 방법에 대 한 지침은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952325"
  다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 사용자로 연결하려면 해당 사용자로 로그인한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작합니다.  
   
  **자격 증명**  
- 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 보고서 서버와 데이터베이스가 같은 컴퓨터 또는 도메인 사용자 계정에 있는 경우 ( *\<computername > \\ < username @ no__t-3*) 로컬 계정을 지정할 수 있습니다 ( *\< 도메인 > \\ < 사용자 이름 @ no__t-7*)이 동일한 도메인의 서로 다른 컴퓨터에 있는 경우  
+ 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 보고서 서버와 데이터베이스가 같은 컴퓨터에 있으면 로컬 계정 ( *\<computername >\\< username\>* )을 지정 하거나, 동일한 도메인의 다른 컴퓨터에 있는 경우 도메인 사용자 계정 ( *\<도메인 >\\사용자 이름 <* )을 지정할 수 있습니다.\>  
   
  그러면 보고서 서버에서 지정한 계정에 대한 데이터베이스 로그인을 만들고 데이터베이스 권한을 할당합니다.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "71952325"
  **진행률 및 완료**  
  각 태스크의 진행률을 모니터링합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [데이터베이스 변경 마법사 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [데이터베이스 변경 마법사 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

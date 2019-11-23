@@ -29,7 +29,7 @@ ms.locfileid: "73727911"
 ##  <a name="TableColumns"></a> 테이블 열  
  다음 표에서는 간계 준비 테이블에 나오는 각 필드의 용도에 대해 설명합니다.  
   
-|열 이름|설명|값|  
+|열 이름|설명|Value|  
 |-----------------|-----------------|-----------|  
 |**ID**|자동으로 할당된 식별자입니다.|이 필드에 값을 입력하지 마십시오. 일괄 처리를 처리하지 않은 경우 이 필드가 비어 있습니다.|  
 |**RelationshipType**|필수<br /><br /> 설정하려는 관계의 유형입니다.|가능한 값은<br /><br /> **1**: 부모<br /><br /> **2**: 형제(같은 수준)|  
@@ -42,7 +42,7 @@ ms.locfileid: "73727911"
 |**정렬 순서**|선택 사항<br /><br /> 부모 아래에 있는 다른 멤버와 관련하여 해당 멤버의 순서를 나타내는 정수입니다. 각 자식 멤버마다 고유한 식별자를 지정해야 합니다.||  
 |**ErrorCode**|오류 코드를 표시합니다. **ImportStatus_ID**가 **2**인 모든 레코드의 경우 [준비 프로세스 오류&#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)를 참조하세요.||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [준비 과정에서 발생하는 오류 보기&#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [준비 프로세스 오류&#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  

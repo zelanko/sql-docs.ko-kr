@@ -39,14 +39,14 @@ ms.locfileid: "72782648"
 
 구문 및 예제에 대 한 자세한 내용은 [Analysis Services PowerShell 참조](/sql/analysis-services/powershell/analysis-services-powershell-reference)를 참조 하세요.
 
-##  <a name="bkmk_prereq"></a> 사전 요구 사항  
+##  <a name="bkmk_prereq"></a> 필수 구성 요소  
  Windows PowerShell 2.0이 설치되어 있어야 합니다. 새 Windows 운영 체제 버전에서는 Windows PowerShell 2.0이 기본적으로 설치됩니다. 자세한 내용은 [Windows PowerShell 2.0 설치](https://msdn.microsoft.com/library/ff637750.aspx) 를 참조 하세요.
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  SQLPS(SQL Server PowerShell) 모듈 및 클라이언트 라이브러리를 포함하는 SQL Server 기능을 설치해야 합니다. PowerShell 기능과 클라이언트 라이브러리가 포함되어 있는 SQL Server Management Studio를 설치하면 이러한 기능이 자동으로 설치됩니다. SQLPS(SQL Server PowerShell) 모듈에는 모든 SQL Server 기능에 대한 PowerShell 공급자 및 cmdlet이 포함되어 있습니다. 여기에는 Analysis Services 개체 계층 탐색에 사용되는 SQLAS 공급자 및 SQLASCmdlets 모듈도 포함됩니다.  
   
- @No__t_1 공급자 및 cmdlet을 사용 하려면 먼저 **SQLPS** 모듈을 가져와야 합니다. SQLAS 공급자는 `SQLServer` 공급자의 확장입니다. SQLPS 모듈은 여러 가지 방법으로 가져올 수 있습니다. 자세한 내용은 [SQLPS 모듈 가져오기](../../2014/database-engine/import-the-sqlps-module.md)를 참조하세요.  
+ `SQLAS` 공급자 및 cmdlet을 사용 하려면 먼저 **SQLPS** 모듈을 가져와야 합니다. SQLAS 공급자는 `SQLServer` 공급자의 확장입니다. SQLPS 모듈은 여러 가지 방법으로 가져올 수 있습니다. 자세한 내용은 [SQLPS 모듈 가져오기](../../2014/database-engine/import-the-sqlps-module.md)를 참조하세요.  
   
  Analysis Services 인스턴스에 원격으로 액세스하려면 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 자세한 내용은이 항목의 [원격 관리 사용](#bkmk_remote) 을 참조 하세요.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "72782648"
 |다차원 인스턴스 및 데이터베이스|로컬 및 원격 관리에 지원됩니다.<br /><br /> 병합 파티션에는 로컬 연결이 필요합니다.|  
 |테이블 형식 인스턴스 및 데이터베이스|로컬 및 원격 관리에 지원됩니다.<br /><br /> 자세한 내용은 [PowerShell을 사용 하 여 테이블 형식 모델 관리](https://go.microsoft.com/fwlink/?linkID=227685)에 대 한 8 월 2011 블로그를 참조 하세요.|  
 |SharePoint용 PowerPivot 인스턴스 및 데이터베이스|제한적으로 지원됩니다. HTTP 연결 및 SQLAS 공급자를 사용하여 인스턴스 및 데이터베이스 정보를 볼 수 있습니다.<br /><br /> 하지만 cmdlet은 사용할 수 없습니다. Analysis Services PowerShell을 사용하여 메모리 내 PowerPivot 데이터베이스를 백업 또는 복원하거나, 역할을 추가 또는 제거하거나, 데이터를 처리하거나, 임의의 XMLA 스크립트를 실행해서는 안 됩니다.<br /><br /> SharePoint용 PowerPivot에는 구성 작업에 사용할 수 있는 기본 제공 PowerShell 지원 기능이 포함되어 있습니다. 이 기능은 별도로 제공됩니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)를 참조 하세요.|  
-|로컬 큐브에 대한 네이티브 연결<br /><br /> "Data Source = c:\backup\test.cub"|지원되지 않습니다.|  
-|SharePoint의 BI 의미 체계 모델 연결 파일(.bism)에 대한 HTTP 연결<br /><br /> "Data Source = http://server/shared_docs/name.bism"|지원되지 않습니다.|  
+|로컬 큐브에 대한 네이티브 연결<br /><br /> "Data Source=c:\backup\test.cub"|지원되지 않습니다.|  
+|SharePoint의 BI 의미 체계 모델 연결 파일(.bism)에 대한 HTTP 연결<br /><br /> "Data Source=http://server/shared_docs/name.bism"|지원되지 않습니다.|  
 |PowerPivot 데이터베이스에 대한 포함된 연결<br /><br /> "Data Source = $Embedded $"|지원되지 않습니다.|  
 |Analysis Services 저장 프로시저의 로컬 서버 컨텍스트<br /><br /> "Data Source = *"|지원되지 않습니다.|  
   
@@ -76,13 +76,13 @@ ms.locfileid: "72782648"
   
  -Credential 매개 변수는 사용자 이름 및 암호를 지정 하는 PSCredential 개체를 사용 합니다. Analysis Services PowerShell에서-Credential 매개 변수는 기존 연결의 컨텍스트 내에서 실행 되는 cmdlet이 아닌 Analysis Services에 대 한 연결 요청을 수행 하는 cmdlet에 사용할 수 있습니다. 연결 요청을 수행하는 cmdlet에는 Invoke-ASCmd, Backup-ASDatabase, Restore-ASDatabase 등이 있습니다. 이러한 cmdlet의 경우 다음 조건을 충족 한다고 가정 하 여-Credential 매개 변수를 사용할 수 있습니다.  
   
-1.  서버가 HTTP 액세스를 사용하도록 구성된 경우, 즉 IIS가 연결을 처리하고, 사용자 이름 및 암호를 읽고, Analysis Services에 연결할 때 해당 사용자 ID를 가장하는 경우. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
+1.  서버가 HTTP 액세스를 사용하도록 구성된 경우, 즉 IIS가 연결을 처리하고, 사용자 이름 및 암호를 읽고, Analysis Services에 연결할 때 해당 사용자 ID를 가장하는 경우. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
 2.  Analysis Services HTTP 액세스를 위해 생성된 IIS 가상 디렉터리가 기본 인증을 사용하도록 구성된 경우  
   
 3.  자격 증명 개체가 제공하는 사용자 이름 및 암호는 Windows 사용자 ID로 확인됩니다. Analysis Services는 이 ID를 현재 사용자로 사용합니다. 사용자가 Windows 사용자가 아니거나 요청된 작업을 수행할 수 있는 권한이 없는 경우 해당 요청은 실패합니다.  
   
- 자격 증명 개체를 만들려면 Get-Credential cmdlet을 사용하여 작업자로부터 자격 증명을 수집합니다. 그런 다음 Analysis Services에 연결하는 명령에 이 자격 증명 개체를 사용할 수 있습니다. 다음 예에서는 이러한 접근 방법 중 하나를 보여 줍니다. 이 예에서는 HTTP 액세스에 대해 구성 된 `SQLSERVER:\SQLAS\HTTP_DS` (로컬 인스턴스)에 연결 합니다.  
+ 자격 증명 개체를 만들려면 Get-Credential cmdlet을 사용하여 작업자로부터 자격 증명을 수집합니다. 그런 다음 Analysis Services에 연결하는 명령에 이 자격 증명 개체를 사용할 수 있습니다. 다음 예에서는 이러한 접근 방법 중 하나를 보여 줍니다. 이 예에서는 HTTP 액세스에 대해 구성 된`SQLSERVER:\SQLAS\HTTP_DS`(로컬 인스턴스)에 연결 합니다.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +201,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 연결은이 항목의 지침을 사용 하 여 http 액세스를 사용 하도록 서버를 구성한 경우에 유용 합니다. [IIS&#41; 8.0 인터넷 정보 서비스 &#40;에서 Analysis Services에 대 한 http 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- @No__t_0의 서버 URL이 있다고 가정 하면 연결이 다음과 같이 표시 될 수 있습니다.  
+ http://localhost/olap/msmdpump.dll의 서버 URL이 있다고 가정 하면 연결이 다음과 같이 표시 될 수 있습니다.  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -273,9 +273,9 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 설치](../database-engine/install-windows/install-sql-server-powershell.md)   
- [PowerShell을 사용 하 여 테이블 형식 모델 관리 (블로그)](https://go.microsoft.com/fwlink/?linkID=227685)    
- [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [PowerShell을 사용 하 여 테이블 형식 모델 관리 (블로그)](https://go.microsoft.com/fwlink/?linkID=227685)   
+ [인터넷 정보 서비스 & #40; IIS & #41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

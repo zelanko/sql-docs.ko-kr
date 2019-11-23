@@ -33,7 +33,7 @@ ms.locfileid: "73983166"
 
   이 데이터베이스에 대 한 쿼리 저장소 옵션을 반환 합니다.  
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  

@@ -36,7 +36,7 @@ ms.locfileid: "73780665"
   
 3.  성능 데이터를 기록할 데이터 원본을 클릭합니다.  
   
-4.  **구성**을 클릭 합니다.  
+4.  클릭 **구성**합니다.  
   
 5.  Microsoft SQL Server DSN 구성 마법사에서 **로그 파일에 ODBC 드라이버 통계 로그**를 포함 하는 페이지로 이동 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73780665"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어  
+1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -240,7 +240,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Odbc 드라이버 성능 프로 파일링 방법 &#40;항목 odbc&#41; ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [ODBC 드라이버 성능 프로파일링](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   

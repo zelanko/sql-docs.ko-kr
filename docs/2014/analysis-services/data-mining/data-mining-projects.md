@@ -104,7 +104,7 @@ ms.locfileid: "73705293"
 > [!WARNING]  
 >  데이터를 필터링하려는 경우 데이터 원본 뷰에서 작업을 수행할 수 있지만 마이닝 모델 수준에서 데이터에 대한 필터를 만들 수도 있습니다. 필터 정의는 마이닝 모델과 함께 저장되므로 모델 필터를 사용하면 모델 학습에 사용된 데이터를 보다 쉽게 확인할 수 있습니다. 또한 여러 가지 필터 조건을 사용하여 여러 개의 관련 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
- 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md) 및 [드릴스루](drillthrough-queries-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
+ 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md) 및 [드릴스루](drillthrough-queries-data-mining.md)를 참조하세요.  
   
 
   
@@ -189,20 +189,20 @@ ms.locfileid: "73705293"
   
   
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  다음 항목에서는 데이터 마이닝 마법사를 사용하여 데이터 마이닝 프로젝트와 관련 개체를 만드는 방법에 대해 설명합니다.  
   
-|작업|항목|  
+|태스크|항목|  
 |-----------|------------|  
 |마이닝 구조 열로 작업하는 방법에 대해 설명합니다.|[관계형 마이닝 구조 만들기](create-a-relational-mining-structure.md)|  
-|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[마이닝 모델 구조 & #40;에 추가 Analysis Services-데이터 마이닝 & #41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |마이닝 모델을 작성하는 알고리즘을 사용자 지정하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.|[마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)|  
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
 |Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 디자이너](data-mining-designer.md)   
  [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  

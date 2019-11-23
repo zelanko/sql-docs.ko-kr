@@ -24,7 +24,7 @@ ms.locfileid: "73786250"
   
  자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sqlnumparams 함수](https://go.microsoft.com/fwlink/?LinkId=58404)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

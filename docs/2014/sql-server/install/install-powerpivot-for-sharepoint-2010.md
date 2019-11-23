@@ -28,7 +28,7 @@ ms.locfileid: "71952250"
   
  동일한 서버에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치 하는 방법에 대 한 지침은 [배포 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)을 참조 하세요.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 1.  SQL Server 설치 프로그램을 실행하려면 로컬 관리자여야 합니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "71952250"
 ##  <a name="bkmk_verify"></a>4 단계: 설치 확인  
  이 마지막 단계에서는 SharePoint 2010과 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 완벽하게 작동하는지 확인합니다. 자세한 내용은 [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [배포 검사 목록: Reporting Services, 파워 뷰 및 SharePoint용 PowerPivot](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
  [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   

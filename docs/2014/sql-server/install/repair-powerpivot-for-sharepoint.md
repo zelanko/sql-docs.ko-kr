@@ -22,9 +22,9 @@ ms.locfileid: "71952402"
   
  자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 설치](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  삭제  
- [SharePoint용 PowerPivot 2010 @no__t 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)-1  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014 설치 를 삭제 합니다](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md) .  
+ [SharePoint용 PowerPivot 2010  설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
  [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

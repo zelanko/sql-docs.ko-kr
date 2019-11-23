@@ -381,6 +381,6 @@ int main() {
 |데이터 열의 일부 또는 전체를 가져오는 중|[SQLGetData 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |결과 집합 열 수 반환|[SQLNumResultCols 함수](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

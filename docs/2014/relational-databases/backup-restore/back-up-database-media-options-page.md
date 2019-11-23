@@ -38,7 +38,7 @@ ms.locfileid: "70154835"
 ## <a name="options"></a>변수  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
- **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. 데이터베이스 백업 대화 상자의 일반 페이지에서 URL (Azure Storage)을 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
+ **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   
  **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "70154835"
  하나 이상의 오류가 발생한 다음에도 백업 작업이 계속됩니다.  
   
 ### <a name="transaction-log"></a>트랜잭션 로그  
- **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. **트랜잭션 로그** 가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
+ **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. **트랜잭션 로그**가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
 >  트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)을 참조하세요.  
@@ -111,7 +111,7 @@ ms.locfileid: "70154835"
  **언로드 전에 테이프 되감기**  
  테이프를 언로드하기 전에 되감습니다. **백업 후 테이프 언로드** 를 선택한 경우에만 이 옵션을 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

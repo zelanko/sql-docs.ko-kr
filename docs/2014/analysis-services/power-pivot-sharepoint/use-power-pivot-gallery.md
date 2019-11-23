@@ -49,14 +49,14 @@ ms.locfileid: "70874480"
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
 > Microsoft Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭 한 다음 문서 라이브러리 보기를 **모든 문서**로 변경 합니다.    
 > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
->  Microsoft Edge에서 지 원하는 항목에 대 한 자세한 내용은 Windows 블로그, [과거의 중단 (2 부)을 참조 하세요. ActiveX, VBScript ...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Microsoft Edge에서 지 원하는 항목에 대 한 자세한 내용은 Windows 블로그, [과거의 중단, 2 부: ActiveX에](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 대 한 의견을 표시 합니다. VBScript ...  
   
  필수 구성 요소의 전체 목록은 [PowerPivot 갤러리 만들기 및 사용자 지정](create-and-customize-power-pivot-gallery.md)을 참조 하세요.  
   
 ##  <a name="icons"></a>PowerPivot 갤러리의 아이콘  
  아이콘은 콘텐츠 사용 가능 여부와 상태를 시각적으로 표시합니다.  
   
-|아이콘|Description|  
+|아이콘|설명|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|문서의 각 페이지 축소판 이미지를 생성하는 동안에는 모래 시계 아이콘이 나타납니다. 업데이트된 이미지를 표시하려면 페이지를 새로 고칩니다.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|통합 문서 또는 보고서의 페이지 수가 PowerPivot 갤러리에 표시할 수 있는 것보다 많으면 페이지 아이콘이 나타납니다. 모든 페이지를 표시하려면 클라이언트 애플리케이션을 사용해야 합니다.|  
@@ -69,13 +69,13 @@ ms.locfileid: "70874480"
   
 1.  파일을 저장합니다.  
   
-2.  1.  **Excel 2010:** 파일 메뉴에서 **저장 & 보내기**를 클릭 합니다.  
+2.  1.  **Excel 2010:** 파일 메뉴에서 **저장 및 보내기**를 클릭합니다.  
   
     2.  **SharePoint에 저장**을 클릭합니다.  
   
     3.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **게시 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
-    1.  **Excel 2013:**  파일 메뉴에서 **저장**을 클릭 합니다.  
+    1.  **Excel 2013:**  파일 메뉴에서 **저장**을 클릭하세요.  
   
     2.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **브라우저 보기 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "70874480"
   
 3.  오른쪽에 있는 아래쪽 화살표를 클릭한 다음 **속성 편집**을 선택합니다.  
   
-4.  **저장**을 클릭합니다. 문서를 저장하면 스냅숏 서비스에서 미리 보기 이미지를 다시 생성합니다.  
+4.  **저장**을 클릭합니다. 문서를 저장하면 스냅샷 서비스에서 미리 보기 이미지를 다시 생성합니다.  
   
 ##  <a name="bkmk_known_issues"></a> 알려진 문제  
   
@@ -160,10 +160,10 @@ ms.locfileid: "70874480"
   
  **PowerPivot 갤러리 문서** 내용 유형이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 내용 유형을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot 갤러리 삭제](delete-power-pivot-gallery.md)   
- [PowerPivot 갤러리 만들기 및 사용자 지정](create-and-customize-power-pivot-gallery.md)   
+## <a name="see-also"></a>참고 항목  
+ [중앙 관리 에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)  
+ [PowerPivot 갤러리를 삭제](delete-power-pivot-gallery.md)   
+ [PowerPivot 갤러리  만들기 및 사용자 지정](create-and-customize-power-pivot-gallery.md)  
  [데이터 새로 고침 &#40;SharePoint용 PowerPivot 예약&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

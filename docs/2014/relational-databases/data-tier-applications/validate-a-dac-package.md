@@ -27,11 +27,11 @@ ms.locfileid: "72782664"
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **시작하기 전에:**  [필수 구성 요소](#Prerequisites)  
   
 2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 구성 요소  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   
 ##  <a name="ViewDACContents"></a> DAC 내용 보기  
@@ -168,7 +168,7 @@ $fileStream.Close()
   
  또는 별도의 폴더에 DAC의 압축을 풉니다. 그런 다음 WinDiff 유틸리티와 같은 비교 도구를 사용하여 차이를 분석할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [개체 탐색기](data-tier-applications.md)   
- [데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)   
- [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 계층 응용 프로그램](data-tier-applications.md)   
+ [데이터 계층 응용 프로그램 배포](deploy-a-data-tier-application.md)   
+ [데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)  

@@ -48,7 +48,7 @@ ms.locfileid: "73982710"
 |**authentication_type_desc**|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 인증 유형에 대한 설명입니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> 없음: 인증 안 함<br />인스턴스: 인스턴스 인증<br />데이터베이스: 데이터베이스 인증<br />WINDOWS: Windows 인증|  
 |**default_language_name**|**sysname**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 보안 주체의 기본 언어를 나타냅니다.|  
 |**default_language_lcid**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 보안 주체의 기본 LCID를 나타냅니다.|  
-|**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터의 암호를 해독 하지 않고 테이블 또는 데이터베이스 간에 Always Encrypted를 사용 하 여 암호화 된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다. |      
+|**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터의 암호를 해독 하지 않고 테이블 또는 데이터베이스 간에 Always Encrypted를 사용 하 여 암호화 된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다. |      
   
 ## <a name="remarks"></a>설명  
  *PasswordLastSetTime* 속성은 지원 되는 모든 SQL Server 구성에서 사용할 수 있지만 다른 속성은 SQL Server Windows Server 2003 이상에서 실행 중이 고 CHECK_POLICY와 CHECK_EXPIRATION 모두 사용 하도록 설정 된 경우에만 사용할 수 있습니다. 자세한 내용은 [암호 정책](../../relational-databases/security/password-policy.md) 을 참조 하세요.  

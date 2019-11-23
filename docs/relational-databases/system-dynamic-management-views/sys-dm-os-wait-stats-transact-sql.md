@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983088"
@@ -944,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |검사점이 완료 될 때까지 대기 하는 경우에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAIT_XTP_CKPT_ENABLED |검사점을 사용 하지 않도록 설정 하 고 검사점을 사용 하도록 설정할 때까지 대기 하는 경우에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAIT_XTP_CKPT_STATE_LOCK |검사점 상태 검사를 동기화 할 때 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
-|WAIT_XTP_COMPILE_WAIT |내부적으로만 사용됩니다. <br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상.| 
+|WAIT_XTP_COMPILE_WAIT |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 
 |WAIT_XTP_GUEST |데이터베이스 메모리 할당자에서 메모리 부족 알림 수신을 중지 해야 할 때 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |WAIT_XTP_HOST_WAIT |Wait가 데이터베이스 엔진에 의해 트리거되고 호스트에서 구현 될 때 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 

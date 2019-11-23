@@ -37,7 +37,7 @@ ms.locfileid: "72797955"
 > [!NOTE]  
 >  AlwaysOn 보조 데이터베이스를 일시 중지해도 주 데이터베이스의 가용성에 직접 영향을 주지는 않습니다. 그러나 보조 데이터베이스를 일시 중지하면 주 데이터베이스의 중복 및 장애 조치(failover) 기능에 영향을 줄 수 있습니다. 이것은 데이터베이스 미러링과는 대조적입니다. 데이터베이스 미러링의 경우에는 미러 데이터베이스 및 주 데이터베이스에서 미러링 상태가 일시 중지됩니다. AlwaysOn 주 데이터베이스를 일시 중지하면 모든 해당 보조 데이터베이스에서 데이터 이동이 일시 중지되고 주 데이터베이스를 재개할 때까지 해당 데이터베이스에 대한 중복 및 장애 조치(failover) 기능이 중단됩니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -57,14 +57,14 @@ ms.locfileid: "72797955"
   
 -   **후속 작업:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  SUSPEND 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 일시 중지는 비동기식으로 발생합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
@@ -72,7 +72,7 @@ ms.locfileid: "72797955"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "72797955"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  개체 탐색기에서 데이터베이스를 일시 중지할 가용성 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
+1.  개체 탐색기에서 데이터베이스를 일시 중지할 가용성 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
 2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72797955"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
+1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
 2.  다음의 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)문을 사용하여 데이터베이스를 일시 중지합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72797955"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하십시오.  
+1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
 2.  `Suspend-SqlAvailabilityDatabase` cmdlet을 사용하여 가용성 그룹을 일시 중지합니다.  
   
@@ -139,10 +139,10 @@ ms.locfileid: "72797955"
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

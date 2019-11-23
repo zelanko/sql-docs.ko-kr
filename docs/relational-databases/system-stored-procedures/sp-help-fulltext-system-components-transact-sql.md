@@ -28,7 +28,7 @@ ms.locfileid: "72304889"
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  등록된 단어 분리기, 필터 및 프로토콜 처리기에 대한 정보를 반환합니다. **sp_help_fulltext_system_components** 는 데이터베이스의 식별자 목록과 지정 된 구성 요소를 사용한 전체 텍스트 카탈로그도 반환 합니다.  
+  등록된 단어 분리기, 필터 및 프로토콜 처리기에 대한 정보를 반환합니다. 또한 **sp_help_fulltext_system_components** 는 데이터베이스의 식별자 목록과 지정 된 구성 요소를 사용한 전체 텍스트 카탈로그도 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  전체 텍스트 구성 요소에 대한 정보를 반환합니다.  
   
-`[ @component_type = ] component_type`은 구성 요소의 유형을 지정 합니다. *component_type* 은 다음 중 하나일 수 있습니다.  
+구성 요소의 유형을 지정 하 `[ @component_type = ] component_type`입니다. *component_type* 다음 중 하나일 수 있습니다.  
   
 -   **wordbreaker**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  전체 경로를 지정하는 경우 구성 요소 DLL의 전체 경로에도 *param* 을 지정해야 하며 그렇지 않으면 오류 메시지가 반환됩니다.  
   
-`[ @param = ] param`은 구성 요소 유형에 따라 LCID (로캘 id), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나입니다.  
+`[ @param = ] param` 구성 요소 유형에 따라 LCID (로캘 id), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>3\. 특정 단어 분리기의 등록 여부 확인  
- 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 이 예에서는 매개 변수 이름 **\@component_type** 및 **\@param**을 지정 합니다.  
+ 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 이 예에서는 매개 변수 이름, **\@component_type** 및 **\@** 매개 변수를 지정 합니다.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -135,8 +135,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [등록 된 필터와 단어 분리기](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md) 을 보거나 변경 합니다.  
+## <a name="see-also"></a>참고 항목  
+ [등록 된 필터와 단어 분리기를 보거나 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

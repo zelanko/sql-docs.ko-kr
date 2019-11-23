@@ -49,31 +49,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @distributor = ] 'distributor' OUTPUT`배포자의 이름입니다. 배포자는 **sysname**이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @distributor = ] 'distributor' OUTPUT`은 배포자의 이름입니다. 배포자는 **sysname**이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`배포 데이터베이스의 이름입니다. *distribdb* 는 **sysname**이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @distribdb = ] 'distribdb' OUTPUT`은 배포 데이터베이스의 이름입니다. *distribdb* 는 **sysname**이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @directory = ] 'directory' OUTPUT`작업 디렉터리입니다. *디렉터리* 는 **nvarchar (255)** 이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @directory = ] 'directory' OUTPUT`은 작업 디렉터리입니다. *디렉터리* 는 **nvarchar (255)** 이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @account = ] 'account' OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정입니다. *account*는 **nvarchar (255)** 이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @account = ] 'account' OUTPUT`은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정입니다. *account*는 **nvarchar (255)** 이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`최소 배포 보존 기간 (시간)입니다. *min_distretention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @min_distretention = ] _min_distretentionOUTPUT`는 최소 배포 보존 기간 (시간)입니다. *min_distretention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`최대 배포 보존 기간 (시간)입니다. *max_distretention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @max_distretention = ] _max_distretentionOUTPUT`은 최대 배포 보존 기간 (시간)입니다. *max_distretention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`기록 보존 기간 (시간)입니다. *history_retention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @history_retention = ] _history_retentionOUTPUT` 기록 보존 기간 (시간)입니다. *history_retention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`기록 정리 에이전트의 이름입니다. *history_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`은 기록 정리 에이전트의 이름입니다. *history_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`배포 정리 에이전트의 이름입니다. *distrib_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`은 배포 정리 에이전트의 이름입니다. *distrib_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`은 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @local = ] 'local'`가 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 값을 가져와야 하는지 여부입니다. *local* 은 **nvarchar (5)** 이며 기본값은 NULL입니다.  
+`[ @local = ] 'local'`은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 서버 값을 가져와야 하는지 여부입니다. *local* 은 **nvarchar (5)** 이며 기본값은 NULL입니다.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`원격 프로시저 호출을 발급 하는 서버의 이름입니다. *rpcsrvname* 는 **sysname**이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`은 원격 프로시저 호출을 발급 하는 서버의 이름입니다. *rpcsrvname* 는 **sysname**이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`게시자의 게시자 유형입니다. *publisher_type* 는 **sysname**이며 기본값은 결과 집합 **%** 을 반환 하는 유일한 값인입니다.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`은 게시자의 게시자 유형입니다. *publisher_type* 는 **sysname**이며 기본값은 결과 집합을 반환 하는 유일한 값인 **%** 입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -105,7 +105,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|account|**\@계정일**|  
+|account|**\@계정**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -121,14 +121,14 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|distributor|**\@총판**|  
+|distributor|**\@배포자**|  
 |distribution database|**\@distribdb**|  
 |rpc server name|**\@rpcsrvname**|  
 |publisher type|**\@publisher_type**|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
+ [Transact-sql &#40;sp_dropdistpublisher&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

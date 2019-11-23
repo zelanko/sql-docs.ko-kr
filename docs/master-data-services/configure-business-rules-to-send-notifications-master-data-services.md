@@ -62,7 +62,7 @@ ms.locfileid: "73728560"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **활성** 으로 변경된 **비즈니스 규칙 상태** 열의 값 및 **알림** 열에서는 알림을 보내도록 선택한 사용자 또는 그룹을 표시합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73728560"
   
     -   [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

@@ -32,7 +32,7 @@ ms.locfileid: "73728218"
   
  **인덱스를 편집하려면**  
   
-1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
   
 2.  **모델 관리** 페이지의 표에서 모델을 선택하고 **엔터티**를 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73728218"
   
 5.  확인 메시지 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [인덱스 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

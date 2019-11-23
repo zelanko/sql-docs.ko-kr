@@ -33,18 +33,18 @@ ms.locfileid: "72782912"
     > [!NOTE]  
     >  **확장 이벤트**아래의 모든 노드에서 PowerShell을 시작할 수 있습니다. 예를 들어 **세션**을 마우스 오른쪽 단추로 클릭한 다음 **PowerShell 시작**을 클릭하면 한 수준 아래인 세션 폴더에서 PowerShell이 시작됩니다.  
   
- XEvent 폴더 트리를 탐색하여 기존 확장 이벤트 세션 및 관련된 이벤트, 대상 및 조건자를 볼 수 있습니다. 예를 들어 PS SQLSERVER: \ XEvent \\*ServerName* \\*InstanceName*> 경로에서 `cd sessions`를 입력 하 고 enter `dir` 키를 누른 다음 enter 키를 누르면 해당 인스턴스에 저장 된 세션 목록을 볼 수 있습니다. 세션이 실행 중인지 여부(실행 중인 경우 실행 시간) 및 인스턴스가 시작될 때 세션이 시작되도록 구성되어 있는지 여부도 확인할 수 있습니다.  
+ XEvent 폴더 트리를 탐색하여 기존 확장 이벤트 세션 및 관련된 이벤트, 대상 및 조건자를 볼 수 있습니다. 예를 들어 PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*> 경로에서 `cd sessions`를 입력 하 고 enter `dir`키를 누른 다음 enter 키를 누르면 해당 인스턴스에 저장 된 세션 목록을 볼 수 있습니다. 세션이 실행 중인지 여부(실행 중인 경우 실행 시간) 및 인스턴스가 시작될 때 세션이 시작되도록 구성되어 있는지 여부도 확인할 수 있습니다.  
   
- 세션과 연결된 이벤트, 이벤트의 조건자 및 대상을 보려면 디렉터리를 세션 이름으로 변경한 다음 이벤트나 대상 폴더를 확인합니다. 예를 들어, 기본 시스템 상태 세션과 연결 된 이벤트 및 해당 조건자를 보려면 PS SQLSERVER: \ XEvent \\*ServerName* \\*InstanceName*\SESSIONS > path에서 enter `cd system_health\events,` enter 키를 누릅니다 @no __t_5를 입력 한 다음 enter 키를 누릅니다.  
+ 세션과 연결된 이벤트, 이벤트의 조건자 및 대상을 보려면 디렉터리를 세션 이름으로 변경한 다음 이벤트나 대상 폴더를 확인합니다. 예를 들어, 기본 시스템 상태 세션과 연결 된 이벤트 및 해당 조건자를 보려면 PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*\sessions > path에서 `cd system_health\events,` enter 키를 입력 하 고 `dir`를 입력 한 다음 enter 키를 누릅니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자는 확장 이벤트 세션을 생성, 변경 및 관리하는 데 사용할 수 있는 강력한 도구입니다. 다음 섹션에서는 확장 이벤트에 PowerShell 스크립트를 사용하는 몇 가지 기본적인 예를 제공합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서 다음 사항에 유의하십시오.  
   
--   스크립트는 PS SQLSERVER: \\ > 프롬프트에서 실행 해야 합니다 (명령 프롬프트에서 `sqlps`를 입력 하 여 사용 가능).  
+-   스크립트는 PS SQLSERVER:\\> 프롬프트에서 실행 해야 합니다 (명령 프롬프트에서 `sqlps`를 입력 하 여 사용 가능).  
   
--   스크립트가 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용합니다.  
+-   스크립트가 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 사용합니다.  
   
 -   스크립트를 .ps1 확장명으로 저장해야 합니다.  
   
@@ -109,7 +109,7 @@ $session.Create()
 ## <a name="security"></a>보안  
  확장 이벤트 세션을 생성, 변경 또는 삭제하려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [system_health 세션 사용](use-the-ssms-xe-profiler.md)   
  [확장 이벤트 도구](extended-events-tools.md)  

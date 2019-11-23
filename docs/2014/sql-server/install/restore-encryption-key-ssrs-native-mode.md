@@ -31,7 +31,7 @@ ms.locfileid: "71952030"
  데이터를 암호화하는 데 사용한 키와 다른 잘못된 키를 복원한 경우 현재 보고서 서버 데이터베이스에 저장된 데이터를 해독할 수 없습니다. 잘못된 키를 복원한 경우 올바른 키의 백업 복사본이 있으면 즉시 이 복사본을 복원해야 합니다. 데이터를 암호화하는 데 사용한 키의 백업 복사본이 없으면 암호화된 데이터를 모두 삭제해야 합니다. **암호화 키** 페이지에서 [삭제](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 단추를 클릭하여 이 단계를 수행합니다. 암호화된 내용을 삭제한 후에는 모든 구독을 수동으로 업데이트하고 보고서 서버에서 보고서 및 데이터 기반 구독에 정의된 모든 저장된 자격 증명을 다시 지정해야 합니다.  
   
 ## <a name="restore-encryption-key-dialog"></a>암호화 키 복원 대화 상자  
- @No__t-0 Configuration Manager를 찾을 수 있는 위치에 대 한 자세한 [내용은 &#40;Reporting Services 구성 관리자 기본&#41;모드](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager를 찾을 수 있는 위치에 대 한 자세한 [내용은 &#40;Reporting Services 구성 관리자 기본&#41;모드](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
  암호화 키 복원 대화 상자를 열려면 **구성 관리자의 탐색 창에서** 암호화 키 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 클릭한 다음 **복원**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. 자세한 내용은 다음을 참조하십시오.  
   
@@ -42,8 +42,8 @@ ms.locfileid: "71952030"
  **암호**  
  파일의 잠금을 해제하는 암호를 입력합니다. 암호를 아는 사용자만 키를 복원할 수 있습니다. 이처럼 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 강력한 암호 정책을 적용합니다. 암호는 8자 이상이어야 하며 대/소문자 조합과 하나 이상의 기호를 포함해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

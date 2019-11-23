@@ -28,7 +28,7 @@ ms.locfileid: "73912797"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73912797"
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>하나 이상의 에이전트에서 사용하는 계정의 암호를 변경하려면  
   
-1.  SQL Server 계정을 사용하는 경우 이 대화 상자에서 SQL Server 계정 암호도 변경합니다. Windows 계정을 사용하는 경우에는 Windows에서 해당 암호부터 변경합니다. 자세한 내용은 Windows 설명서를 참조하세요.  
+1.  SQL Server 계정을 사용하는 경우 이 대화 상자에서 SQL Server 계정 암호도 변경합니다. Windows 계정을 사용하는 경우에는 Windows에서 해당 암호부터 변경합니다. 자세한 내용은 Windows 설명서를 참조하십시오.  
   
     > [!NOTE]  
     >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
@@ -569,13 +569,13 @@ ms.locfileid: "73912797"
 ##  <a name="FollowUp"></a> 후속 작업: 복제 보안 설정 수정 후  
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [복제 관리 개체 개념](../concepts/replication-management-objects-concepts.md)   
  [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [복제 에이전트 보안 모델](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   
- [복제 시스템 저장 프로시저 개념](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

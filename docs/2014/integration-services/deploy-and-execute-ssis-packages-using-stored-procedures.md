@@ -36,9 +36,9 @@ ms.locfileid: "72251318"
   
 1.  [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database)를 호출하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 대한 패키지를 포함하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포합니다.  
   
-     @No__t-0 프로젝트 배포 파일의 이진 콘텐츠를 검색 하려면 *\@project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)을 참조하세요.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 배포 파일의 이진 콘텐츠를 검색 하려면 *\@project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)을 참조하세요.  
   
-     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 이진 데이터는 프로젝트 파일 (SSISPackage_ProjectDeployment. .ispac)에서 읽고 varbinary (max) 형식의 *\@ProjectBinary* 매개 변수에 저장 됩니다. *@No__t-1ProjectBinary* 매개 변수 값은 *\@project_stream* 매개 변수에 할당 됩니다.  
+     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 이진 데이터는 프로젝트 파일 SSISPackage_ProjectDeployment (.ispac)에서 읽고 varbinary (max) 형식의 *\@ProjectBinary* 매개 변수에 저장 됩니다. *\@ProjectBinary* 매개 변수 값이 *\@project_stream* 매개 변수에 할당됩니다.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -122,7 +122,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [SQL Server Data Tools에서 패키지 실행](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  

@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797879"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>SQL Server PowerShell 도움말 보기
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
@@ -44,7 +44,7 @@ ms.locfileid: "72797879"
   
 -   **sqlcmd** 변수 및 명령. 이러한 변수 및 명령에 대한 자세한 내용은 [sqlcmd Utility](../tools/sqlcmd-utility.md)의 주의 섹션을 참조하십시오.  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 통해 데이터를 대량으로 가져오는 데 서식 파일을 사용하는 방법을 보여 줍니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 언어에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] 문. [!INCLUDE[tsql](../includes/tsql-md.md)] 언어에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
   
 -   XQuery 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원하는 XQuery 언어에 대한 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
   
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

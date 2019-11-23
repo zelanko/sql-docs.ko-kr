@@ -66,7 +66,7 @@ ms.locfileid: "71952645"
 |-|-|  
 |**(1)**|Excel Services 애플리케이션. 서비스 애플리케이션은 SharePoint 설치의 일부로 만들어집니다.|  
 |**(2)**|서비스 응용 프로그램을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 합니다. 기본 이름은 **기본 PowerPivot 서비스 애플리케이션**입니다.|  
-|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.|  
+|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에서 SharePoint용 보고 서비스 추가 기능을 설치합니다.|  
 |**(5)**|**spPowerPivot.msi** 를 실행하여 데이터 공급자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 새로 고침 예약 기능을 설치합니다.|  
 |**(6)**|SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버. Excel Services 애플리케이션 **데이터 모델 설정** 에서 이 서버를 사용하도록 구성합니다.|  
@@ -127,7 +127,7 @@ ms.locfileid: "71952645"
 |-|-|  
 |**(1)**|Excel Services 애플리케이션. 서비스 애플리케이션은 SharePoint 설치의 일부로 만들어집니다.|  
 |**(2)**|PowerPivot 서비스 애플리케이션입니다. 기본 이름은 **기본 PowerPivot 서비스 애플리케이션**입니다.|  
-|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.|  
+|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에서 SharePoint용 보고 서비스 추가 기능을 설치합니다.|  
 |**(5)**|SharePoint 콘텐츠, 구성 및 서비스 애플리케이션 데이터베이스입니다.|  
 |**(6)**|SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버. Excel Services 애플리케이션 **데이터 모델 설정** 에서 이 서버를 사용하도록 구성합니다.|  
@@ -141,7 +141,7 @@ ms.locfileid: "71952645"
 |-|-|  
 |**(1)**|Excel Services 애플리케이션. 서비스 애플리케이션은 SharePoint 설치의 일부로 만들어집니다.|  
 |**(2)**|PowerPivot 서비스 애플리케이션입니다. 기본 이름은 **기본 PowerPivot 서비스 애플리케이션**입니다.|  
-|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.|  
+|**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |**(4)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에서 SharePoint용 보고 서비스 추가 기능을 설치합니다.|  
 |**(5)**|**spPowerPivot.msi** 를 실행하여 데이터 공급자, PowerPivot 구성 도구, PowerPivot 갤러리 및 일정 데이터 새로 고침을 설치합니다.|  
 |**(6)**|SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버. Excel Services 애플리케이션 **데이터 모델 설정** 에서 이 서버를 사용하도록 구성합니다.|  
@@ -172,7 +172,7 @@ ms.locfileid: "71952645"
   
  ![5-서버 토폴로지](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-서버 토폴로지")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  Sharepoint [모드 설치 &#40;Reporting Services sharepoint 2010 및 sharepoint 2013&#41; ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

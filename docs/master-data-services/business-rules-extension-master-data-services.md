@@ -81,7 +81,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>사용자 정의 스크립트를 조건이나 동작으로 사용하는 비즈니스 규칙 만들기  
   
-1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
   
 2.  메뉴 모음에서 **관리** 를 가리키고 **비즈니스 규칙**을 클릭합니다.  
   
@@ -113,7 +113,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  

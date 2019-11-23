@@ -30,9 +30,9 @@ ms.locfileid: "73784072"
   
 |파일 스토리지 유형|호스트 파일 데이터 형식|프롬프트에 대 한 응답: "필드의 파일 저장 유형 입력 < field_name > [\<default >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|날짜/시간|SQLDATETIME|d|  
+|DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|날짜|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -74,9 +74,9 @@ ms.locfileid: "73784072"
 |datetime|8|  
 |smalldatetime|4|  
 |date|3|  
-|time|6|  
-|datetime2|9|  
-|datetimeoffset|11|  
+|Time|6|  
+|Datetime2|9|  
+|Datetimeoffset|11|  
   
  ODBC의 경우에는 크기가 다음과 같습니다. 이 경우 BCP.exe가 서버에서 전체 자릿수를 항상 가져오기 때문에 서식 또는 데이터 파일에 전체 자릿수를 저장할 필요가 없습니다.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "73784072"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h의 BCP 형식  
  다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식은 OLE DB에서 IBCPSession:: BCPColFmt의 *Euserdatatype* 매개 변수와 함께 전달 됩니다.  
   
-|파일 스토리지 유형|호스트 파일 데이터 형식|IBCPSession:: BCPColFmt에 사용할 sqlncli을 입력 합니다.|값|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|IBCPSession:: BCPColFmt에 사용할 sqlncli을 입력 합니다.|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|날짜/시간|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|날짜|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -106,12 +106,12 @@ ms.locfileid: "73784072"
   
  **OLE DB 참고 사항** 다음 변환은 IBCPSession에 의해 수행됩니다. IRowsetFastLoad는 [클라이언트에서 서버로 수행](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)되는 변환에 정의 된 대로 OLE DB 변환을 사용 합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
-|대상 --><br /><br /> 원본|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|대상 --><br /><br /> 보낸 사람|date|Time|smalldatetime|datetime|Datetime2|Datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|날짜|1\.|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1\.|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|해당 사항 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1\.|1\.|1,10|1,5,10|1,11|1,11|  
-|날짜/시간|1,2|1,4,10|1,12|1\.|1,10|1,5,10|1,11|1,11|  
+|DateTime|1,2|1,4,10|1,12|1\.|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10(ODBC)1,12(OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar(date)|9|-|9,6(ODBC)9,6,12(OLE DB)|9,6(ODBC)9,6,12(OLE DB)|9,6|9,5,6|해당 사항 없음|해당 사항 없음|  
@@ -138,7 +138,7 @@ ms.locfileid: "73784072"
 |12|초는 0으로 설정되고 소수 자릿수 초는 삭제됩니다. 잘림 오류가 발생하지 않습니다.|  
 |해당 사항 없음|기존 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이전 동작이 유지됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  ODBC 의 [날짜 및 시간 기능 향상 &#40;&#41; ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   

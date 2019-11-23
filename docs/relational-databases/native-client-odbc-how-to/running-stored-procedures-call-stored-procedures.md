@@ -44,7 +44,7 @@ ms.locfileid: "73780639"
 > [!NOTE]  
 >  애플리케이션이 ODBC CALL 이스케이프 시퀀스가 아닌 Transact-SQL EXECUTE 구문을 사용하여 프로시저를 제출하는 경우 SQL Server ODBC 드라이버는 프로시저 호출을 RPC 대신 SQL 문으로 SQL Server에 전달합니다. 또한 Transact-SQL EXECUTE 문을 사용하면 출력 매개 변수가 반환되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   [저장 프로시저 호출 일괄 처리](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [저장 프로시저  실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
  [저장 프로시저  호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  

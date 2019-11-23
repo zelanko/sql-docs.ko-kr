@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882242"
 ---
-# <a name="replicate-schema-changes"></a>Replicate Schema Changes
+# <a name="replicate-schema-changes"></a>스키마 변경 내용 복제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마 변경 내용을 복제하는 방법에 대해 설명합니다.  
   
  게시된 아티클에서 다음 스키마를 변경하면 기본적으로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "73882242"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73882242"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73882242"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 스냅샷 또는 트랜잭션 게시를 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 **\@replicate_ddl**에 값 **0** 을 지정 하 여 [transact-sql &#40;&#41;sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)를 실행 합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 **\@replicate_ddl**에 값 **0** 을 지정 하 여 [transact-sql &#40;&#41;sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)를 실행 합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 병합 게시를 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 **\@replicate_ddl**에 값 **0** 을 지정 하 여 [transact-sql &#40;&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 실행 합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 **\@replicate_ddl**에 값 **0** 을 지정 하 여 [transact-sql &#40;&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 실행 합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대해 스키마 변경 내용 복제를 일시적으로 해제하려면  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73882242"
   
 3.  필드 **\@속성** 에 **replicate_ddl** 값을 지정 하 고 **\@값**에 **1** 값을 지정 하 여 [ &#40;sp_changemergepublication transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행 하 여 스키마 변경 내용 복제를 다시 사용 하도록 설정 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)  
   

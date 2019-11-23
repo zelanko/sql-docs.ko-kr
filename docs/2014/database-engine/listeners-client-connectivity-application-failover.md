@@ -47,7 +47,7 @@ ms.locfileid: "72797836"
  가용성 그룹 수신기는 다음에 의해 정의됩니다.  
   
  고유 DNS 이름  
- 이것은 VNN(가상 네트워크 이름)이라고도 합니다. DNS 호스트 이름에 대한 Active Directory 명명 규칙이 적용됩니다. 자세한 내용은 [컴퓨터, 도메인, 사이트 및 OU에 대한 Active Directory 명명 규칙(](https://support.microsoft.com/kb/909264) KB 문서를 참조하세요.  
+ 이것은 VNN(Virtual Network 이름)이라고도 합니다. DNS 호스트 이름에 대한 Active Directory 명명 규칙이 적용됩니다. 자세한 내용은 [컴퓨터, 도메인, 사이트 및 OU에 대한 Active Directory 명명 규칙(](https://support.microsoft.com/kb/909264) KB 문서를 참조하세요.  
   
  하나 이상의 VIP(가상 IP 주소)  
  VIP는 가용성 그룹이 장애 조치(failover)할 수 있는 하나 이상의 서브넷에 대해 구성됩니다.  
@@ -101,13 +101,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 2.  이러한 각 복제본에 대해 주 역할에 대한 읽기 전용 라우팅 목록을 지정해야 합니다. 하나 이상의 서버 이름을 라우팅 대상으로 지정합니다.  
   
-####  <a name="RelatedTasksROR"></a> 관련 태스크  
+####  <a name="RelatedTasksROR"></a> 관련 작업  
   
 -   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅  
+###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅  
  애플리케이션 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 애플리케이션의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 애플리케이션의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 애플리케이션 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
   
  애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
@@ -126,7 +126,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  애플리케이션 의도 연결 속성을 `ReadOnly`로 설정하지 않거나(이 속성을 지정하지 않을 경우 로그인 중 `ReadWrite`로 기본 설정됨) 가용성 그룹 수신기 이름을 사용하는 대신 SQL Server의 주 복제본 인스턴스에 직접 연결하여 읽기 전용 라우팅을 무시할 수 있습니다.  또한 읽기 전용 복제본에 직접 연결하면 읽기 전용 라우팅이 발생하지 않습니다.  
   
-####  <a name="RelatedTasksApps"></a> 관련 태스크  
+####  <a name="RelatedTasksApps"></a> 관련 작업  
   
 -   [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
@@ -190,7 +190,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
  SQL Server에 대한 SPN을 수동으로 등록하는 방법은 [Kerberos 연결의 서비스 사용자 이름 등록](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [AlwaysOn 클라이언트 연결 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
@@ -212,8 +212,8 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 클라이언트 연결 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 &#40;복제본&#41; AlwaysOn 가용성 그룹](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

@@ -57,7 +57,7 @@ ms.locfileid: "73729430"
 ## <a name="progress-and-finish"></a>진행 후 마침  
  만들기 프로세스의 진행률을 표시합니다. 데이터베이스가 만들어진 후 **마침** 을 클릭하면 데이터베이스 마법사가 닫히고 **데이터베이스** 페이지로 돌아갑니다. 이 페이지에는 새 데이터베이스가 선택되어 있으며 해당 시스템 설정을 보고 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md) [데이터베이스 요구 사항&#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   

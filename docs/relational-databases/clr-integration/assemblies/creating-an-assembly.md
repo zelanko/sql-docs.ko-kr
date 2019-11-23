@@ -129,7 +129,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  각 설정의 권한에 대한 자세한 내용은 [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [어셈블리  변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  
  [어셈블리  삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  

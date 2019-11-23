@@ -1,5 +1,5 @@
 ---
-title: 관리자
+title: Administrators
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -73,7 +73,7 @@ ms.locfileid: "73729796"
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  

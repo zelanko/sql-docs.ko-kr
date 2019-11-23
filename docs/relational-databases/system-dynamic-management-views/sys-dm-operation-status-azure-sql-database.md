@@ -1,5 +1,5 @@
 ---
-title: _operation_status (Azure SQL Database) | Microsoft Docs
+title: dm_operation_status (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -54,7 +54,7 @@ ms.locfileid: "70911205"
  이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. 서버의 master 데이터베이스 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 있는 뷰를 사용 하 여에 대해 수행 된 다음 작업의 상태를 추적할 수 있습니다. `sys.dm_operation_status` [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버의 **master** 데이터베이스에 있는 `sys.dm_operation_status` 뷰를 사용 하 여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행 되는 다음 작업의 상태를 추적할 수 있습니다.  
   
 -   데이터베이스 만들기  
   
@@ -83,10 +83,10 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [지역에서 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+## <a name="see-also"></a>참고 항목  
+ [지역에서 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

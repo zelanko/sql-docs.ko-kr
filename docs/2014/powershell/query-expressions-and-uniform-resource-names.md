@@ -22,7 +22,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782758"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
-  SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
+  SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782758"
  예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
   
  \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
+ *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 \@Database**클래스 속성인**IsAnsiNull**에** IsAnsiNull을 지정합니다.  
   
  \@*BooleanPropertyName*=true()  
  지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "72782758"
 |||  
 |-|-|  
 |yyyy|4자리 연도|  
-|mm|두 자리 월(01 - 12)|  
+|MM|두 자리 월(01 - 12)|  
 |dd|두 자리 날짜(01 - 31)|  
-|m|24시간제를 사용하는 두 자리 시간(01 - 23)|  
+|hh|24시간제를 사용하는 두 자리 시간(01 - 23)|  
 |mi|두 자리 분(01 - 59)|  
 |ss|두 자리 초(01 - 59)|  
 |mmm|밀리초 수(001 - 999)|  
@@ -98,7 +98,7 @@ ms.locfileid: "72782758"
  not(\<*PropertyExpression*>)  
  *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(\@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
@@ -114,7 +114,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enumerating-objects-using-false"></a>1\. false()를 사용하여 개체 열거  
+### <a name="a-enumerating-objects-using-false"></a>A. false()를 사용하여 개체 열거  
  이 쿼리 식은 **MyComputer** 의 기본 인스턴스에서 **AutoClose**특성이 false로 설정된 데이터베이스를 모두 열거합니다.  
   
 ```  
@@ -156,6 +156,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Invoke-PolicyEvaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

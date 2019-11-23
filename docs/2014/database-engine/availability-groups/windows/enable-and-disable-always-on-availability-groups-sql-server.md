@@ -26,9 +26,9 @@ ms.locfileid: "72782983"
   먼저 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정해야만 서버 인스턴스에서 가용성 그룹을 사용할 수 있습니다. 가용성 그룹을 만들고 구성하려면 먼저 하나 이상의 가용성 그룹에 대한 가용성 복제본을 호스팅할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하도록 설정해야 합니다.  
   
 > [!IMPORTANT]  
->  WSFC 클러스터를 삭제한 다음 다시 만들려는 경우 원본 WSFC 클러스터에서 가용성 복제본을 호스팅한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하지 않도록 설정한 후 다시 사용하도록 설정해야 합니다.  
+>  WSFC 클러스터를 삭제한 다음 다시 만들려는 경우 원본 WSFC 클러스터에서 가용성 복제본을 호스팅한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하지 않도록 설정한 후 다시 사용하도록 설정해야 합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72782983"
 ###  <a name="Security"></a> 보안  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 한 인스턴스에서 AlwaysOn 가용성 그룹을 사용할 수 있는 동안에는 서버 인스턴스가 WSFC 클러스터에 대한 모든 권한을 가집니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  로컬 컴퓨터 **관리자** 그룹의 멤버 자격과 WSFC 클러스터에 대한 모든 권한이 필요합니다. Powershell을 사용하여 AlwaysOn을 사용하도록 설정하는 경우 **관리자 권한으로 실행** 옵션을 사용하여 명령 프롬프트 창을 엽니다.  
   
  Active Directory 개체 만들기 및 개체 관리 권한이 필요합니다.  
@@ -97,12 +97,12 @@ ms.locfileid: "72782983"
     -   `IsHadrEnabled` = 0인 경우 AlwaysOn 가용성 그룹을 사용할 수 없습니다.  
   
     > [!NOTE]  
-    >  @No__t_0 서버 속성에 대 한 자세한 내용은 [SERVERPROPERTY &#40;transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)을 참조 하세요.  
+    >  `IsHadrEnabled` 서버 속성에 대 한 자세한 내용은 [SERVERPROPERTY &#40;transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)을 참조 하세요.  
   
 ###  <a name="PowerShell1Procedure"></a> PowerShell 사용  
  **AlwaysOn 가용성 그룹 사용 되는지 여부를 확인 하려면**  
   
-1.  기본값 (`cd`)을 서버 인스턴스로 설정 합니다 (예:  `\SQL\NODE1\DEFAULT`) [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용 여부를 확인 합니다.  
+1.  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용 여부를 결정 하려는 서버 인스턴스 (예: `\SQL\NODE1\DEFAULT`)로 기본값 (`cd`)을 설정 합니다.  
   
 2.  다음 PowerShell `Get-Item` 명령을 입력합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "72782983"
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 SQL Server ( **< *`instance name`* >)** 을 마우스 오른쪽 단추로 클릭 합니다. 여기서 **< *`instance name`***  0은 사용자가 AlwaysOn 가용성 그룹를 사용 하도록 설정 하 고 **속성을 클릭 합니다.**  
+3.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 고 SQL Server ( **< *`instance name`* >)** 을 마우스 오른쪽 단추로 클릭 한 다음<`instance name`를 사용 하도록 설정할 로컬 서버 인스턴스의 이름>속성을 클릭 **합니다.**  
   
 4.  **AlwaysOn 고가용성** 탭을 선택합니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "72782983"
      cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  @No__t_0 cmdlet이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작할지 여부를 제어 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 [cmdlet이 SQL Server 서비스를 다시 시작 하는 경우](#WhenCmdletRestartsSQL)를 참조 하세요.  
+    >  `Enable-SqlAlwaysOn` cmdlet이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작할지 여부를 제어 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 [cmdlet이 SQL Server 서비스를 다시 시작 하는 경우](#WhenCmdletRestartsSQL)를 참조 하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 SQL Server ( **< *`instance name`* >)** 을 마우스 오른쪽 단추로 클릭 합니다. 여기서 **< *`instance name`***  0은 사용자가 AlwaysOn 가용성 그룹를 사용 하지 않도록 설정 하 고 **속성**을 클릭 합니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 고 SQL Server ( **< *`instance name`* >)** 을 마우스 오른쪽 단추로 클릭 한 다음<`instance name`>를 사용 하지 않도록 설정할 로컬 서버 인스턴스의 이름 AlwaysOn 가용성 그룹 **속성**을 클릭 합니다.  
   
 4.  **AlwaysOn 고가용성**탭에서 **AlwaysOn 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   
@@ -210,14 +210,14 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  `Disable-SqlAlwaysOn` cmdlet을 사용하여 AlwaysOn 가용성 그룹을 사용하도록 설정합니다.  
   
-     예를 들어 다음 명령은 SQL Server (*컴퓨터* \\*인스턴스*) 인스턴스에서 AlwaysOn 가용성 그룹를 사용 하지 않도록 설정 합니다.  이 명령을 사용할 경우 인스턴스를 다시 시작해야 하며, 다시 시작을 확인하는 메시지가 표시됩니다.  
+     예를 들어 다음 명령은 SQL Server (*컴퓨터*\\*인스턴스*) 인스턴스에서 AlwaysOn 가용성 그룹를 사용 하지 않도록 설정 합니다.  이 명령을 사용할 경우 인스턴스를 다시 시작해야 하며, 다시 시작을 확인하는 메시지가 표시됩니다.  
   
     ```powershell
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  @No__t_0 cmdlet이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작할지 여부를 제어 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 [cmdlet이 SQL Server 서비스를 다시 시작 하는 경우](#WhenCmdletRestartsSQL)를 참조 하세요.  
+    >  `Disable-SqlAlwaysOn` cmdlet이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작할지 여부를 제어 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 [cmdlet이 SQL Server 서비스를 다시 시작 하는 경우](#WhenCmdletRestartsSQL)를 참조 하세요.  
   
      cmdlet의 구문을 보려면 `Get-Help` PowerShell 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
@@ -251,11 +251,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |-NoServiceRestart 매개 변수가 지정되었는지 여부|-Force 매개 변수가 지정되었는지 여부|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다시 시작되었는지 여부|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|아니오|아니오|기본적으로 선택되어 있지만 cmdlet에서 다음과 같이 묻는 메시지가 표시됩니다.<br /><br /> **이 작업을 완료 하려면 서버 인스턴스 ' < instance_name > '에 대 한 SQL Server 서비스를 다시 시작 해야 합니다. 계속 하 시겠습니까?**<br /><br /> **[Y] 예  [N] 아니요  [S] 일시 중단  [?] 도움말(기본값 "Y"):**<br /><br /> **N** 또는 **S**를 지정하면 서비스가 다시 시작되지 않습니다.|  
-|아니오|예|서비스가 다시 시작됩니다.|  
-|예|아니오|서비스가 다시 시작되지 않습니다.|  
+|아니요|아니요|기본적으로 선택되어 있지만 cmdlet에서 다음과 같이 묻는 메시지가 표시됩니다.<br /><br /> **이 작업을 완료 하려면 서버 인스턴스 ' < instance_name > '에 대 한 SQL Server 서비스를 다시 시작 해야 합니다. 계속 하 시겠습니까?**<br /><br /> **[Y] 예  [N] 아니요  [S] 일시 중단  [?] 도움말(기본값 "Y"):**<br /><br /> **N** 또는 **S**를 지정하면 서비스가 다시 시작되지 않습니다.|  
+|아니요|예|서비스가 다시 시작됩니다.|  
+|예|아니요|서비스가 다시 시작되지 않습니다.|  
 |예|예|서비스가 다시 시작되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  

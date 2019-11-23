@@ -162,7 +162,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLMoreResults 함수](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

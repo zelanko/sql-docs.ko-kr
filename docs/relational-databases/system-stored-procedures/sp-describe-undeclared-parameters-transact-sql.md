@@ -30,7 +30,7 @@ ms.locfileid: "72908323"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 되지 않은 매개 변수에 대 한 메타 데이터를 포함 하는 결과 집합을 반환 합니다. **\@tsql** 일괄 처리에 사용 되지만 **\@params**에 선언 되지 않은 각 매개 변수를 고려 합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. **\@params**에 선언 된 매개 변수를 제외 하 고 **\@tsql** 입력 일괄 처리에 매개 변수가 없는 경우이 프로시저는 빈 결과 집합을 반환 합니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,26 +44,26 @@ sp_describe_undeclared_parameters
 ## <a name="arguments"></a>인수  
 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 `[ \@tsql = ] 'Transact-SQL\_batch'` 합니다. *SQL_batch* 는 **nvarchar (** _n_ **)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
-`[ \@params = ] N'parameters'` \@params는 sp_executesql의 작동 방식과 비슷하게 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. *매개 변수* 는 **nvarchar (** _n_ **)** 또는 **nvarchar (max)** 일 수 있습니다.  
+`[ \@params = ] N'parameters'` \@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. sp_executesql와 유사 합니다. *매개 변수* 는 **nvarchar (** _n_ **)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- *SQL_batch*에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문의 Transact-sql 문 또는 일괄 처리에 매개 변수가 없으면 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
+ 는 *SQL_batch transact-sql*에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문의 Transact-sql 문 또는 일괄 처리에 매개 변수가 없으면 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
  데이터 형식  
  매개 변수의 데이터 형식입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- **sp_describe_undeclared_parameters** 는 성공 시 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 error_type의 _exec_describe_first_result_set 열에 설명 된 오류 유형으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ 성공 시 **sp_describe_undeclared_parameters** 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 대로 오류 유형에 의해 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_describe_undeclared_parameters** 는 다음 결과 집합을 반환 합니다.  
   
-|열 이름|이름|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**NULL이 아닌 int**|결과 집합에서 매개 변수의 서수 위치를 포함합니다. 첫 번째 매개 변수의 위치가 1로 지정됩니다.|  
 |**name**|**sysname NULL이 아님**|매개 변수의 이름을 포함합니다.|  
-|**suggested_system_type_id**|**NULL이 아닌 int**|System_type_id에 지정 된 매개 변수의 데이터 형식에 대 한 데이터 형식의 를 포함 합니다.<br /><br /> CLR 형식의 경우 **system_type_name** 열이 NULL을 반환 하는 경우에도이 열은 240 값을 반환 합니다.|  
+|**suggested_system_type_id**|**NULL이 아닌 int**|에 지정 된 매개 변수의 데이터 형식에 대 한 **system_type_id** 를 포함 하는 형식입니다.<br /><br /> CLR 형식의 경우 **system_type_name** 열이 NULL을 반환 하는 경우에도이 열은 240 값을 반환 합니다.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|데이터 형식 이름을 포함합니다. 매개 변수의 데이터 형식에 지정된 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 데이터 형식인 경우 이 열에 NULL이 반환됩니다. 매개 변수의 형식을 추론할 수 없는 경우 NULL이 반환됩니다.|  
-|**suggested_max_length**|**NULL이 아닌 smallint**|Sys. columns를 참조 하세요. **max_length** 열에 대 한 설명입니다.|  
+|**suggested_max_length**|**NULL이 아닌 smallint**|Sys. columns를 참조 하세요. **max_length** 열 설명입니다.|  
 |**suggested_precision**|**tinyint NOT NULL**|Sys. columns를 참조 하세요. 참조하세요.|  
 |**suggested_scale**|**tinyint NOT NULL**|Sys. columns를 참조 하세요. 참조하세요.|  
 |**suggested_user_type_id**|**int NULL**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -71,7 +71,7 @@ sp_describe_undeclared_parameters
 |**suggested_user_type_schema**|**sysname NULL**|CLR 및 별칭 형식의 경우 해당 형식이 정의된 스키마의 이름을 포함합니다. 그렇지 않으면 NULL입니다.|  
 |**suggested_user_type_name**|**sysname NULL**|CLR 및 별칭 형식의 경우 형식 이름입니다. 그렇지 않으면 NULL입니다.|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|CLR 형식의 경우 형식을 정의하는 어셈블리 및 클래스 이름을 반환합니다. 그렇지 않으면 NULL입니다.|  
-|**suggested_xml_collection_id**|**int NULL**|Xml_collection_id에 지정 된 매개 변수의 데이터 형식에 대 한 데이터 형식의를 포함 합니다. 반환된 형식이 XML 스키마 컬렉션과 연결되지 않은 경우 이 열은 NULL을 반환합니다.|  
+|**suggested_xml_collection_id**|**int NULL**|Sys. columns에 지정 된 매개 변수의 데이터 형식에 대 한 xml_collection_id를 포함 합니다. 반환된 형식이 XML 스키마 컬렉션과 연결되지 않은 경우 이 열은 NULL을 반환합니다.|  
 |**suggested_xml_collection_database**|**sysname NULL**|이 형식과 연결된 XML 스키마 컬렉션이 정의된 데이터베이스를 포함합니다. 반환된 형식이 XML 스키마 컬렉션과 연결되지 않은 경우 이 열은 NULL을 반환합니다.|  
 |**suggested_xml_collection_schema**|**sysname NULL**|이 형식과 연결된 XML 스키마 컬렉션이 정의된 스키마를 포함합니다. 반환된 형식이 XML 스키마 컬렉션과 연결되지 않은 경우 이 열은 NULL을 반환합니다.|  
 |**suggested_xml_collection_name**|**sysname NULL**|이 형식과 연결된 XML 스키마 컬렉션 이름을 포함합니다. 반환된 형식이 XML 스키마 컬렉션과 연결되지 않은 경우 이 열은 NULL을 반환합니다.|  
@@ -84,7 +84,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**NULL이 아닌 int**|내부적으로만 사용할 수 있습니다.|  
 |**suggested_tds_length**|**NULL이 아닌 int**|내부적으로만 사용할 수 있습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_describe_undeclared_parameters** 는 항상 반환 상태 0을 반환 합니다.  
   
  애플리케이션에 매개 변수를 포함할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지정되고 애플리케이션에서 이러한 문을 어떤 식으로든 처리해야 하는 경우에 가장 일반적으로 사용됩니다. 예를 들어 사용자가 ODBC 매개 변수 구문을 사용 하 여 쿼리를 제공 하는 사용자 인터페이스 (예: ODBCTest 또는 RowsetViewer)가 있습니다. 애플리케이션은 매개 변수 수를 동적으로 검색하여 해당 정보를 사용자에게 표시해야 합니다.  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  예를 들어 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 쿼리를 고려할 수 있습니다. 그런 다음 E (\@p1) = \@p1, E (\@p2) = \@p2 + c1, TT (\@p1)은 (는) dbo의 선언 된 반환 데이터 형식이 고, TT (\@p2)는 dbo의 선언 된 매개 변수 데이터 형식입니다.  
   
- \@p가 2 단계 시작 부분에 나열 된 식에 포함 되지 않은 경우 형식 추론 알고리즘은 E (\@p)가 \@p를 포함 하는 가장 큰 스칼라 식 임을 확인 하 고, 형식 추론 알고리즘은 대상 데이터를 계산 하지 않습니다. E (\@p)에 TT (\@p)를 입력 합니다. 예를 들어 쿼리가 SELECT `@p + 2` 된 경우 E (\@p) = \@p + 2이 고 TT (\@p)가 없는 경우입니다.  
+ \@p가 2 단계 시작 부분에 나열 된 식에 포함 되지 않은 경우 형식 추론 알고리즘은 E (\@p)가 \@p를 포함 하는 가장 큰 스칼라 식 임을 확인 하 고, 형식 추론 알고리즘은 E (\@p)의 대상 데이터 형식 TT (\@p)를 계산 하지 않습니다. 예를 들어 쿼리가 SELECT `@p + 2` 된 경우 E (\@p) = \@p + 2이 고 TT (\@p)가 없는 경우입니다.  
   
  **3 단계**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E (\@p) = \@p 및 TT (\@p)가 있는 경우, 즉 \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 직접 인수를 갖는 경우 형식 추론 알고리즘은 \@p의 데이터 형식을 TT로 추론 합니다.\@p). 예를 들어  
+     E (\@p) = \@p 및 TT (\@p)가 있는 경우, 즉 \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 직접 인수를 갖는 경우 형식 추론 알고리즘은 \@p의 데이터 형식을 TT (\@p)로 추론 합니다. 예를 들어:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -214,7 +214,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (\@p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 선택 됩니다. 특정 데이터 형식이 E (\@p)에 대해 TT (\@p)와 다른 데이터 형식을 생성 하는 경우 형식 추론 알고리즘은이를 E (\@p)의 데이터 형식에서 TT (\@p)로 추가 암시적 변환으로 간주 합니다.  
   
-     예를 들어  
+     예를 들어:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  마지막 예로, 쿼리 `SELECT NULL + @p`지정 된 경우 **int** 는 형식 (c)으로 변환 되기 때문에 \@p에 대해 선택 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  \@tsql 인수를 실행할 수 있는 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sp_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [_exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [_exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## <a name="see-also"></a>참고 항목  
+ [ &#40;transact-sql&#41;  sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

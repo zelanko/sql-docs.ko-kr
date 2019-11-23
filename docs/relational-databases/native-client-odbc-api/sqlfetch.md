@@ -30,8 +30,8 @@ ms.locfileid: "73786766"
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLFetch 지원  
  **SQLFetch** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
+## <a name="see-also"></a>참고 항목  
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -22,7 +22,7 @@ ms.locfileid: "71952515"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t SharePoint 모드입니다.|  
+|SharePoint 모드를[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** .|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "71952515"
  "보고서 서버가 SharePoint 팜 설치에서 지원되지 않는 기본 제공 NT AUTHORITY\NETWORK SERVICE 계정으로 실행되고 있습니다. 도메인 계정으로 실행되도록 보고서 서버를 다시 구성하십시오."  
   
 ## <a name="corrective-action"></a>수정 동작  
- @No__t-0 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 이전 버전의 경우 Reporting Services 구성 관리자를 사용 하 여 보고서 서버 서비스 계정으로 할당 된 계정을 변경 합니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 이전 버전의 경우 Reporting Services 구성 관리자를 사용 하 여 보고서 서버 서비스 계정으로 할당 된 계정을 변경 합니다.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>구성 관리자에서 서비스 계정을 변경하려면  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71952515"
   
 5.  **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

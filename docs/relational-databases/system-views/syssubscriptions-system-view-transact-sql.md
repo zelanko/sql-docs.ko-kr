@@ -46,9 +46,9 @@ ms.locfileid: "72304781"
 |**nosync_type**|**tinyint**|구독 초기화의 유형입니다.<br /><br /> **0** = 자동 (스냅숏)<br /><br /> **1** = 복제 지원만<br /><br /> **2** = 백업을 사용 하 여 초기화<br /><br /> **3** = LSN (로그 시퀀스 번호)에서 초기화<br /><br /> 자세한 내용은 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 **\@sync_type** 매개 변수를 참조 하세요.<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|구독자 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [복제 테이블 &#40;transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40;transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [복제 테이블 &#40;transact-sql&#41; ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;transact-sql&#41; ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [syssubscriptions&#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

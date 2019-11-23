@@ -1,5 +1,5 @@
 ---
-title: sp_rda_set_query_mode (Transact-sql) | Microsoft Docs
+title: sys. sp_rda_set_query_mode (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>인수  
- [@mode =] *\@mode*  
+ [@mode =] *\@모드*  
  는 다음 값 중 하나입니다.  
   
 -   **사용 안 함** 스트레치 사용 테이블에 대 한 모든 쿼리가 실패 합니다.  
@@ -48,7 +48,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 이는 기본 동작입니다.  
   
- [@force =]  *\@force*  
+ [@force =]  *\@적용*  
  는 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -64,16 +64,16 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
      **Sp_rda_deauthorize_db** 를 실행 하면 스트레치 사용 데이터베이스 및 테이블에 대 한 모든 쿼리가 실패 합니다. 즉, 쿼리 모드는 사용 안 함으로 설정 됩니다. 이 모드를 종료 하려면 다음 작업 중 하나를 수행 합니다.  
   
-    -   [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업은 자동으로 쿼리 모드를 Stretch Database의 기본 동작인 LOCAL_AND_REMOTE로 다시 설정 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
+    -   [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업은 자동으로 쿼리 모드를 LOCAL_AND_REMOTE으로 다시 설정 합니다 .이는 Stretch Database의 기본 동작입니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
   
     -   LOCAL_ONLY 인수를 사용 하 여 [sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 를 실행 하 여 쿼리가 로컬 데이터에 대해서만 계속 실행 되도록 합니다.  
   
 -   **sp_rda_reauthorize_db**  
   
-     [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 하는 경우이 작업은 자동으로 쿼리 모드를 Stretch Database의 기본 동작인 LOCAL_AND_REMOTE로 다시 설정 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
+     [Sys. sp_rda_reauthorize_db &#40;&#41; transact-sql](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 을 실행 하 여 원격 Azure 데이터베이스에 다시 연결 하는 경우이 작업은 자동으로 쿼리 모드를 Stretch Database의 기본 동작인 LOCAL_AND_REMOTE으로 다시 설정 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_rda_deauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>참고 항목  
+ [sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md)  
   
   

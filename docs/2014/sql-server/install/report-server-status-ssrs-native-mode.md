@@ -27,13 +27,13 @@ ms.locfileid: "71952466"
  이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)을 참조 하세요.  
   
 > [!TIP]  
->  @ No__t-0 Configuration Manager (Rsconfigtool.exe)는 "highestAvailable" 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (Rsconfigtool.exe)는 "highestAvailable" 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  
   
- 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **보고서 서비스 상태:** "Started" 여야 합니다. 관리자 도구의 서비스 콘솔 애플리케이션을 사용하여 서비스 상태를 확인할 수도 있습니다.  
+ 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **보고서 서비스 상태:** "시작 됨" 이어야 합니다. 관리자 도구의 서비스 콘솔 애플리케이션을 사용하여 서비스 상태를 확인할 수도 있습니다.  
   
 ## <a name="options"></a>변수  
  **SQL Server 인스턴스**  
- 현재 연결 중인 보고서 서버 인스턴스에 대한 정보를 표시합니다. 보고서 서버 인스턴스 이름은 명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기반으로 합니다. 기본 인스턴스는 MSSQLSERVER입니다. 명명된 인스턴스는 사용자가 설치 중 지정한 값입니다. 인스턴스에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [여러 버전 및 SQL Server 인스턴스 사용](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) 을 참조 하세요.  
+ 현재 연결 중인 보고서 서버 인스턴스에 대한 정보를 표시합니다. 보고서 서버 인스턴스 이름은 명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기반으로 합니다. 기본 인스턴스는 MSSQLSERVER입니다. 명명된 인스턴스는 사용자가 설치 중 지정한 값입니다. 인스턴스에 대 한 자세한 내용은 온라인 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [여러 버전 및 SQL Server 인스턴스 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) 을 참조 하세요.  
   
 > [!NOTE]  
 >  SQL Server Express with Advanced Services에서 기본 인스턴스는 SQLExpress입니다.  
@@ -70,9 +70,9 @@ ms.locfileid: "71952466"
  **중지**  
  보고서 서버 서비스를 중지합니다. 서비스를 중지하면 보고서 서버의 작동이 중지됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) 를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services 구성 관리자 &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 구성 관리자 &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

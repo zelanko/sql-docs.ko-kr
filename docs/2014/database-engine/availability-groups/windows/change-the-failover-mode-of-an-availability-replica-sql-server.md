@@ -37,7 +37,7 @@ ms.locfileid: "72783015"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -116,7 +116,7 @@ ms.locfileid: "72783015"
   
 SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)를 참조 하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [가용성 모드 &#40;AlwaysOn 가용성 그룹&#41; ](availability-modes-always-on-availability-groups.md)    
+ [가용성 모드 &#40;AlwaysOn 가용성 그룹&#41; ](availability-modes-always-on-availability-groups.md)   
  [장애 조치 (failover &#40;) 및 장애 조치 모드 AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

@@ -1,5 +1,5 @@
 ---
-title: _exec_dms_workers (Transact-sql) | Microsoft Docs
+title: sys. dm_exec_dms_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532937"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>_exec_dms_workers (Transact-sql)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 저장 합니다.  
@@ -38,19 +38,19 @@ ms.locfileid: "73532937"
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|이 DMS worker가 request_id, step_index 및 dms_step_index이 뷰에 대 한 키를 형성 하는 쿼리입니다.||  
-|step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|_Exec_distributed_request_steps의 단계 인덱스를 참조 하십시오. [ &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[_Exec_dms_workers (transact-sql)를](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
-|compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[ &#40;_Exec_compute_nodes&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 참조 하세요.|  
+|execution_id|`nvarchar(32)`|이 DMS worker가 속한 쿼리입니다. request_id, step_index 및 dms_step_index이 뷰에 대 한 키를 구성 합니다.||  
+|step_index|`int`|이 DMS 작업자의 일부인 쿼리 단계입니다.|[Dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)의 단계 인덱스를 참조 하십시오.|  
+|dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Dm_exec_dms_workers (transact-sql)을](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 참조 하세요.|  
+|compute_node_id|`int`|Worker가 실행 되는 노드입니다.|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)을 참조 하세요.|  
 |distribution_id|`int`|||  
-|형식|`nvarcha(32)`|||  
-|상태|`nvarchar(32)`|이 단계의 상태|' Pending ', ' Running ', ' Complete ', ' Failed ', ' 작업 취소 실패 ', ' PendingCancel ', ' 취소 됨 ', ' 실행 취소 됨 ', ' 중단 됨 '|  
+|type|`nvarcha(32)`|||  
+|status|`nvarchar(32)`|이 단계의 상태|' Pending ', ' Running ', ' Complete ', ' Failed ', ' 작업 취소 실패 ', ' PendingCancel ', ' 취소 됨 ', ' 실행 취소 됨 ', ' 중단 됨 '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  
-|start_time|`datetime`|단계가 실행을 시작한 시간입니다.|현재 시간 보다 작거나 같고이 단계가 속한 쿼리의 end_compile_time 크거나 같습니다.|  
+|start_time|`datetime`|단계가 실행을 시작한 시간입니다.|현재 시간 보다 작거나 같고이 단계가 속한 쿼리의 end_compile_time 보다 크거나 같습니다.|  
 |end_time|`datetime`|이 단계가 실행을 완료 하거나 취소 했거나 실패 한 시간입니다.|현재 시간 보다 작거나 같고 start_time 보다 크거나 같은 경우 현재 실행 중이거나 큐에 대기 중인 단계에 대해 NULL로 설정 합니다.|  
-|total_elapsed_time|`int`|쿼리 단계가 실행 된 총 시간 (밀리초)입니다.|0과 end_time와 start_time 간의 차이 대기 단계에 대해 0입니다.|  
+|total_elapsed_time|`int`|쿼리 단계가 실행 된 총 시간 (밀리초)입니다.|0과 start_time 사이의 차이를 end_time 합니다. 대기 단계에 대해 0입니다.|  
 |cpu_time|`bigint`|||  
 |query_time|`int`|||  
 |buffers_available|`int`|||  
@@ -62,7 +62,7 @@ ms.locfileid: "73532937"
 |command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|풀에 대 한 고유 식별자입니다.|
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

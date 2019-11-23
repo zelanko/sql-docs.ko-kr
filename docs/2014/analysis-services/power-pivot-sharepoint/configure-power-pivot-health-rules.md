@@ -34,7 +34,7 @@ ms.locfileid: "72797629"
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
- **항목 내용:**  
+ **항목 내용**  
   
  [PowerPivot 상태 규칙 보기](#bkmk_view)  
   
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [응용 프로그램 안정성을 평가 하는 데 사용 되는 상태 규칙 구성 (PowerPivot 서비스 응용 프로그램)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  Analysis Services 인스턴스 및 PowerPivot 서비스 애플리케이션의 구성 속성을 변경하려면 서비스 애플리케이션 관리자여야 합니다.  
   
 ##  <a name="bkmk_view"></a>PowerPivot 상태 규칙 보기  
@@ -96,7 +96,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: PowerPivot 데이터가 캐시된 드라이브의 디스크 공간이 부족합니다.** 규칙 정의에 해당합니다.  
   
      데이터 컬렉션 간격(시간)  
-     상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용량 현황 데이터를 검색하여 사용자 연결 수, 디스크 공간 사용, CPU 및 메모리 사용률을 평가합니다.  
+     상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용 데이터를 검색하여 사용자 연결 수, 디스크 공간 사용, CPU 및 메모리 사용률을 평가합니다.  
   
 ##  <a name="bkmk_evaluate_application_stability"></a>응용 프로그램 안정성을 평가 하는 데 사용 되는 상태 규칙 구성 (PowerPivot 서비스 응용 프로그램)  
   
@@ -106,7 +106,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
      ![ManageService 응용 프로그램 페이지의 스크린샷](../media/ssas-centraladmin-app.gif "ManageService 응용 프로그램 페이지의 스크린샷")  
   
-3.  PowerPivot 관리 대시보드가 나타납니다. **동작** 목록에서 **서비스 애플리케이션 설정 구성** 을 클릭하여 서비스 애플리케이션 설정 페이지를 엽니다.  
+3.  PowerPivot 관리 대시보드가 나타납니다. **동작** 목록에서 **서비스 응용 프로그램 설정 구성** 을 클릭하여 서비스 응용 프로그램 설정 페이지를 엽니다.  
   
      ![대시보드 스크린샷, 작업 목록에 집중](../media/ssas-centraladmin-actionslist.gif "대시보드 스크린샷, 작업 목록에 집중")  
   
@@ -118,7 +118,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: 연결에 대한 로드 이벤트의 비율이 너무 높습니다.** 규칙 정의에 해당합니다.  
   
      데이터 컬렉션 간격(기본값: 4시간)  
-     상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용량 현황 데이터를 검색하여 로드 대 수집 비율을 평가합니다.  
+     상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용 데이터를 검색하여 로드 대 수집 비율을 평가합니다.  
   
      PowerPivot Management Dashboard.xlsx에 대한 업데이트 확인(기본값: 5일)  
      PowerPivot Management Dashboard.xlsx 파일은 PowerPivot 관리 대시보드의 보고서에 사용되는 데이터 원본입니다. 기본 서버 구성에서 .xlsx 파일은 SharePoint 및 PowerPivot 시스템 서비스에 수집한 사용량 현황 데이터를 사용하여 매일 새로 고쳐집니다. 파일이 업데이트되지 않은 경우에는 상태 규칙에서 이를 문제로 보고합니다. 기본적으로 규칙은 파일의 타임스탬프가 5일 동안 변경되지 않은 경우에 트리거됩니다.  
@@ -127,6 +127,6 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: 사용량 현황 데이터가 예상된 빈도로 업데이트되지 않습니다.** 규칙 정의에 해당합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [디스크 공간 사용 &#40;&#41; SharePoint용 PowerPivot 구성](configure-disk-space-usage-power-pivot-for-sharepoint.md)  
- [PowerPivot 관리 대시보드 및 사용량 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [디스크 공간 사용 &#40;&#41; SharePoint용 PowerPivot  구성](configure-disk-space-usage-power-pivot-for-sharepoint.md)  
+ [PowerPivot 관리 대시보드 및 사용 데이터](power-pivot-management-dashboard-and-usage-data.md)  

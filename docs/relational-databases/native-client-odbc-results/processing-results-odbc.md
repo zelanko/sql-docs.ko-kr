@@ -79,7 +79,7 @@ ms.locfileid: "73778977"
   
 -   [문자 데이터 자동 변환](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [결과 처리 방법 도움말 항목 &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   

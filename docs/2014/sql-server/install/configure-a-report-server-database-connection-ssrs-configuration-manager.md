@@ -42,7 +42,7 @@ ms.locfileid: "71952630"
   
  보고서 서버 데이터베이스는 보고서 서버에 의해서만 액세스되는 내부 구성 요소이므로 보고서 서버 데이터베이스에 대해 지정된 자격 증명과 연결 정보는 보고서 서버에만 사용됩니다. 따라서 보고서를 요청하는 사용자에게는 보고서 서버 데이터베이스에 대한 데이터베이스 권한이나 데이터베이스 로그인이 필요하지 않습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `System.Data.SqlClient`을 사용 하 여 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `System.Data.SqlClient`를 사용 하 여 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
   
  인스턴스가 원격 연결을 허용하는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**를 차례로 클릭한 다음 각 서비스에 대해 TCP/IP 프로토콜이 설정되어 있는지 확인합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71952630"
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
- 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 경우) < `LogonUser` >, < `LogonDomain` > 및 < `LogonCred` >은 다음과 같이 비어 있습니다.  
+ 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 경우), <`LogonUser`>, <`LogonDomain`> 및 <`LogonCred`> 다음과 같이 비어 있게 됩니다.  
   
 ```  
 <Dsn></Dsn>  
@@ -116,12 +116,12 @@ ms.locfileid: "71952630"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 특정 보고서 서버 인스턴스에서 사용하는 보고서 서버 데이터베이스를 확인할 수 있습니다. 이름을 찾으려면 보고서 서버 인스턴스에 연결한 다음 데이터베이스 설치 페이지를 엽니다.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>다른 보고서 서버 데이터베이스 사용 또는 보고서 서버 데이터베이스 이동  
- 연결 정보를 변경하여 보고서 서버 인스턴스에서 다른 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 프로덕션 보고서 서버를 배포할 때 주로 데이터베이스를 전환합니다. 테스트 보고서 서버 데이터베이스에서 프로덕션 보고서 서버 데이터베이스로 전환하는 작업은 일반적으로 프로덕션 서버를 전달하는 방법입니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) Reporting Services 업그레이드 및 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+ 연결 정보를 변경하여 보고서 서버 인스턴스에서 다른 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 프로덕션 보고서 서버를 배포할 때 주로 데이터베이스를 전환합니다. 테스트 보고서 서버 데이터베이스에서 프로덕션 보고서 서버 데이터베이스로 전환 하는 것은 일반적으로 프로덕션 서버가 롤아웃 되는 방식입니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) Reporting Services 업그레이드 및 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성  
  여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 스케일 아웃 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 애플리케이션을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

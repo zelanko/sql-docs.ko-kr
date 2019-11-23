@@ -1,5 +1,5 @@
 ---
-title: query_store_runtime_stats (Transact-sql) | Microsoft Docs
+title: sys. query_store_runtime_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "70148292"
 ---
-# <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
+# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리에 대 한 런타임 실행 통계 정보에 대 한 정보를 포함 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|**Plan_id**, **execution_type** 및 **runtime_stats_interval_id**에 대 한 런타임 실행 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 **plan_id**에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 여러 행이 있을 수 있으며,이는 **execution_type**으로 표시 되는 실행 유형입니다. 일반적으로 한 행은 디스크에 플러시된 런타임 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 해야 합니다. **plan_id**, **execution_type** 및 **runtime_stats_interval_id**를 기준으로 그룹화 합니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**plan_id**|**bigint**|외래 키입니다. [ &#40;Query_store_plan&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 조인 합니다.|  
-|**runtime_stats_interval_id**|**bigint**|외래 키입니다. [ &#40;Query_store_runtime_stats_interval&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)에 조인 합니다.|  
+|**runtime_stats_id**|**bigint**|**Plan_id**, **execution_type** 및 **runtime_stats_interval_id**에 대 한 런타임 실행 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 **plan_id**에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 여러 행이 **execution_type**표시 되는 실행 유형과 함께 있을 수 있습니다. 일반적으로 한 행은 디스크에 플러시된 런타임 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 하 고 **plan_id**, **execution_type** 및 **runtime_stats_interval_id**를 기준으로 그룹화 해야 합니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**plan_id**|**bigint**|외래 키입니다. [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 조인 합니다.|  
+|**runtime_stats_interval_id**|**bigint**|외래 키입니다. [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)에 조인 합니다.|  
 |**execution_type**|**tinyint**|쿼리 실행 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료 됨)<br /><br /> 3-클라이언트에서 시작한 실행 중단<br /><br /> 4-예외 실행 중단|  
 |**execution_type_desc**|**nvarchar(128)**|실행 형식 필드에 대 한 텍스트 설명입니다.<br /><br /> 0-일반<br /><br /> 3-중단 됨<br /><br /> 4-예외|  
 |**first_execution_time**|**datetimeoffset**|집계 간격 내의 쿼리 계획에 대 한 첫 번째 실행 시간입니다. 이는 쿼리 실행의 종료 시간을 나타냅니다.|  
@@ -107,15 +107,15 @@ ms.locfileid: "70148292"
 ## <a name="permissions"></a>사용 권한  
 `VIEW DATABASE STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [database_query_store_options &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [query_context_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [query_store_query &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [query_store_query_text &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [database_query_store_options &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [query_context_settings &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [query_store_plan &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [query_store_query &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [query_store_query_text &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [query_store_runtime_stats_interval &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   

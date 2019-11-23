@@ -20,7 +20,7 @@ ms.locfileid: "72782727"
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
   
-1.  [시작하기 전에](#BeforeYouBegin)  
+1.  [시작하기 전 주의 사항](#BeforeYouBegin)  
   
 2.  **경로 노드에서 작업하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
   
@@ -46,7 +46,7 @@ $MyDBVar | Get-Member -Type Methods
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
- 또한 **Get-Member**를 사용하여 Windows PowerShell 경로의 끝 노드와 관련된 메서드 및 속성을 나열할 수 있습니다.  
+ 또한 **Get-Member** 를 사용하여 Windows PowerShell 경로의 끝 노드와 관련된 메서드 및 속성을 나열할 수 있습니다.  
   
  이 예에서는 SQLSERVER: 경로의 Databases 노드로 이동하고 컬렉션 속성을 나열합니다.  
   
@@ -93,8 +93,8 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 탐색](navigate-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

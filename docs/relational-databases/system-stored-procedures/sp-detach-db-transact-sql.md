@@ -47,14 +47,14 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="arguments"></a>인수  
 `[ @dbname = ] 'database_name'`은 분리 될 데이터베이스의 이름입니다. *database_name* 는 **sysname** 값 이며 기본값은 NULL입니다.  
   
-`[ @skipchecks = ] 'skipchecks'`은 업데이트 통계를 건너뛸지 아니면 실행할지를 지정 합니다. *skipchecks가* 는 **nvarchar (10)** 값 이며 기본값은 NULL입니다. 업데이트 통계를 건너뛰려면 **true**를 지정 합니다. 업데이트 통계를 명시적으로 실행 하려면 **false**를 지정 합니다.  
+`[ @skipchecks = ] 'skipchecks'` 업데이트 통계를 건너뛸지 아니면 실행할지를 지정 합니다. *skipchecks가* 는 **nvarchar (10)** 값 이며 기본값은 NULL입니다. 업데이트 통계를 건너뛰려면 **true**를 지정 합니다. 업데이트 통계를 명시적으로 실행 하려면 **false**를 지정 합니다.  
   
  기본적으로 UPDATE STATISTICS는 테이블과 인덱스에 있는 데이터에 관한 정보를 업데이트하기 위해 수행됩니다. UPDATE STATISTICS는 읽기 전용 미디어로 이동할 데이터베이스에 수행하면 유용합니다.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`은 분리 중인 데이터베이스와 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제 되지 않도록 지정 합니다. *KeepFulltextIndexFile* 은 **nvarchar (10)** 값 이며 기본값은 **true**입니다. *KeepFulltextIndexFile* 가 **false**이면 데이터베이스가 읽기 전용이 아니면 데이터베이스와 연결 된 전체 텍스트 인덱스 파일과 전체 텍스트 인덱스의 메타 데이터가 모두 삭제 됩니다. NULL 또는 **true**이면 전체 텍스트 관련 메타 데이터를 유지 합니다.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`은 분리 되는 데이터베이스와 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제 되지 않도록 지정 합니다. *KeepFulltextIndexFile* 은 **nvarchar (10)** 값 이며 기본값은 **true**입니다. *KeepFulltextIndexFile* 가 **false**이면 데이터베이스가 읽기 전용이 아니면 데이터베이스와 연결 된 전체 텍스트 인덱스 파일과 전체 텍스트 인덱스의 메타 데이터가 모두 삭제 됩니다. NULL 또는 **true**이면 전체 텍스트 관련 메타 데이터를 유지 합니다.  
   
 > [!IMPORTANT]
->  **@No__t-1keepfulltextindexfile** 매개 변수는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거 됩니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
+>  **\@keepfulltextindexfile** 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거 될 예정입니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -80,12 +80,12 @@ sp_detach_db [ @dbname= ] 'database_name'
     > [!NOTE]  
     >  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거할 수 있습니다.  
   
--   데이터베이스에 데이터베이스 스냅숏이 있는 경우  
+-   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
-     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅숏을 삭제해야 합니다. 자세한 내용은 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
   
     > [!NOTE]  
-    >  데이터베이스 스냅숏은 분리하거나 연결할 수 없습니다.  
+    >  데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
   
 -   데이터베이스가 미러링되고 있는 경우  
   
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  데이터베이스를 SINGLE_USER로 설정하기 전에 AUTO_UPDATE_STATISTICS_ASYNC 옵션이 OFF로 설정되어 있는지 확인합니다. 이 옵션이 ON으로 설정되면 통계 업데이트에 사용되는 백그라운드 스레드가 데이터베이스에 대한 연결을 점유하므로 사용자는 단일 사용자 모드로 데이터베이스에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스를 단일 사용자 모드로 설정](../databases/set-a-database-to-single-user-mode.md)을 참조 하세요.
 
- 예를 들어 다음 `ALTER DATABASE` 문은 모든 현재 사용자가 데이터베이스와의 연결을 끊은 후 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 대 한 단독 액세스 권한을 얻습니다.  
+ 예를 들어 다음 `ALTER DATABASE` 문은 모든 현재 사용자가 데이터베이스와의 연결을 끊은 후에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 대 한 단독 액세스 권한을 얻습니다.  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  현재 사용자를 데이터베이스에서 즉시 또는 지정 된 시간 (초) 내에 강제로 적용 하려면 ROLLBACK 옵션을 사용 합니다. ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+>  데이터베이스에서 현재 사용자를 즉시 또는 지정 된 시간 (초) 내에 강제로 적용 하려면 롤백 옵션인 ALTER DATABASE *database_name* 설정 SINGLE_USER 롤백 *rollback_option*을 사용 합니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="reattaching-a-database"></a>데이터베이스 다시 연결  
  분리된 파일은 그대로 남아 있으며 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 옵션과 함께 CREATE DATABASE를 사용하여 다시 연결할 수 있습니다. 또한 파일을 다른 서버로 이동하거나 첨부할 수 있습니다.  
@@ -134,7 +134,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

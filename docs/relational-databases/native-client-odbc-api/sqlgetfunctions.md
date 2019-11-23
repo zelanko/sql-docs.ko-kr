@@ -26,7 +26,7 @@ ms.locfileid: "73786307"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 인터페이스는 ODBC에 대해 정의된 세 가지 호환성 수준(ISO, Open Group 및 ODBC 수준 2)으로 컴파일됩니다. **SQLGetFunctions** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 모든 ODBC 함수가 지원된다는 것을 보고합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLGetFunctions 함수](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

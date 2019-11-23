@@ -47,7 +47,7 @@ ms.locfileid: "70212401"
  CLR 통합은 잠재적 성능 향상을 제공합니다. 자세한 내용은 [CLR 통합의 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)을 참조 하세요.  
  
 > [!WARNING]
->  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요. 
+>  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `sp_configure`라는 `clr strict security` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요. 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Transact-SQL 및 관리 코드 선택  
  저장 프로시저, 트리거 및 사용자 정의 함수를 작성하는 경우 일반적인 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할지 또는 Visual Basic .NET 또는 Visual C#과 같은 .NET Framework 언어를 사용할지 결정해야 합니다. 거의 또는 전혀 절차적 논리 없이 코드에서 대체로 데이터 액세스를 수행하는 경우에 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. 복잡한 논리를 제공하는 CPU 사용량이 많은 함수 및 프로시저의 경우나 .NET Framework의 BCL을 이용하려는 경우에 관리 코드를 사용합니다.  
@@ -58,9 +58,9 @@ ms.locfileid: "70212401"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>확장 저장 프로시저 및 관리 코드 선택  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저로는 수행할 수 없는 기능을 수행하도록 확장 저장 프로시저를 작성할 수 있습니다. 하지만 형식 안전성이 확인된 관리 코드와 달리 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성을 손상시킬 수 있습니다. 또한 메모리 관리, 스레드 및 파이버 예약, 동기화 서비스 등이 CLR의 관리 코드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 보다 강력하게 통합되어 있습니다. CLR 통합을 사용하면 확장 저장 프로시저보다 안전한 방식으로 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 불가능한 태스크를 수행하는 데 필요한 저장 프로시저를 작성할 수 있습니다. CLR 통합 및 확장 저장 프로시저에 대 한 자세한 내용은 [Clr 통합 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [.NET Framework 설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 통합의 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework  설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)  
+ [CLR 통합 의 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 통합 시작](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

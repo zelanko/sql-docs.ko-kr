@@ -128,7 +128,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [스냅샷 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   

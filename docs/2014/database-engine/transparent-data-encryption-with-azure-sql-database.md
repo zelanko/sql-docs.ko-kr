@@ -37,7 +37,7 @@ ms.locfileid: "72798065"
   
  TDE 상태 미리보기는 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL 데이터베이스의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  미리 보기에 등록하고 REST API나 PowerShell을 사용하여 Azure 포털을 통해 TDE를 구성하려면 Azure 소유자, 참가자 또는 SQL 보안 관리자로 연결되어 있어야 합니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 을 사용하여 TDE를 구성하려면 다음 요구 사항이 충족되어야 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "72798065"
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
-     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. M s e m. m a s e m. m a s e m [.](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) m a s e _ m a m e _ `encryption_state`  
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. [Dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 `encryption_state` 열을 쿼리 합니다.  
   
 ##  <a name="Encrypt"></a> Transact-SQL을 사용하여 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에서 TDE 사용 설정  
  다음 단계에서는 미리 보기에 이미 등록된 상태인 것으로 가정합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "72798065"
     GO  
     ```  
   
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대 한 암호화 진행률을 모니터링 하기 위해 **VIEW DATABASE STATE** 권한이 있는 데이터베이스 사용자는이를 통해 [sys. dm](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) _rm_ma_ma_s 뷰의 `encryption_state` 열을 쿼리할 수 있습니다.  
+3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대 한 암호화 진행률을 모니터링 하기 위해 **VIEW DATABASE STATE** 권한이 있는 데이터베이스 사용자는 [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 `encryption_state` 열을 쿼리할 수 있습니다.  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>PowerShell을 사용하여 SQL Database에서 TDE 사용 설정  
  Azure PowerShell을 사용하면 다음 명령을 실행하여 TDE를 설정하거나 해제할 수 있습니다. 명령을 실행하기 전에 계정을 PS 창에 연결해야 합니다. 다음 단계에서는 미리 보기에 이미 등록된 상태인 것으로 가정합니다. PowerShell에 대한 자세한 내용은 [Azure PowerShell을 설치 및 구성하는 방법](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)을 참조하세요.  
@@ -128,7 +128,7 @@ ms.locfileid: "72798065"
   
 6.  **투명한 데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **끔**으로 이동한 다음 페이지 상단의 **저장** 을 클릭하여 설정을 적용합니다. **암호화 상태** 는 투명한 데이터 암호 해독의 진행률과 비슷합니다.  
   
-     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. M s e m. m a s e m. m a s e m [.](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)m a s e _ m a m e _ `encryption_state`  
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. [Dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)뷰의 `encryption_state` 열을 쿼리 합니다.  
   
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Transact-SQL을 사용하여 TDE를 사용하지 않도록 설정하려면  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798065"
     GO  
     ```  
   
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대 한 암호화 진행률을 모니터링 하기 위해 **VIEW DATABASE STATE** 권한이 있는 데이터베이스 사용자는이를 통해 [sys. dm](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) _rm_ma_ma_s 뷰의 `encryption_state` 열을 쿼리할 수 있습니다.  
+3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대 한 암호화 진행률을 모니터링 하기 위해 **VIEW DATABASE STATE** 권한이 있는 데이터베이스 사용자는 [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 `encryption_state` 열을 쿼리할 수 있습니다.  
   
 ##  <a name="Working"></a>[!INCLUDE[ssSDS](../includes/sssds-md.md)]에서 TDE로 보호 되는 데이터베이스 작업  
  Azure 내에서의 작업을 위해 데이터베이스 암호를 해독할 필요는 없습니다. 원본 데이터베이스 또는 주 데이터베이스의 TDE 설정은 대상에서 투명하게 상속됩니다. 여기에는 다음과 관련된 작업이 포함됩니다.  
@@ -163,10 +163,10 @@ ms.locfileid: "72798065"
 ## <a name="related-sql-server-topic"></a>관련 SQL Server 항목  
  [EKM을 사용하여 TDE 설정](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [투명한 데이터 암호화&#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
- [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  

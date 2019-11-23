@@ -32,7 +32,7 @@ ms.locfileid: "73786826"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *FKCatalogName* 및 *PKCatalogName* 매개 변수에 대해 두 부분으로 구성 된 이름 ( *Linked_Server_Name. Catalog_Name*을 허용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLForeignKeys 함수](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

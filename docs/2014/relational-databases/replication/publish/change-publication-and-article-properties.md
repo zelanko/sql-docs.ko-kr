@@ -92,7 +92,7 @@ ms.locfileid: "73882342"
 |다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [스냅샷 만들기 및 적용](../create-and-apply-the-snapshot.md)   
  [구독 다시 초기화](../reinitialize-subscriptions.md)   

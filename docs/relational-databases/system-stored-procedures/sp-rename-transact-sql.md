@@ -67,7 +67,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|사용자 정의 데이터베이스입니다. 이 개체 유형은 데이터베이스 이름을 바꿀 경우 필요합니다.|  
 |INDEX|사용자 정의 인덱스입니다. 통계가 포함된 인덱스의 이름을 바꾸면 통계 이름도 자동으로 바뀝니다.|  
 |OBJECT|[Sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)에서 추적 되는 형식의 항목입니다. 예를 들어 OBJECT는 제약 조건(CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), 사용자 테이블 및 규칙을 포함하는 개체의 이름을 바꿀 때 사용될 수 있습니다.|  
-|STATISTICS|**적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 사용자가 명시적으로 만들었거나 인덱스를 통해 암시적으로 만들어진 통계입니다. 인덱스의 통계 이름을 바꾸면 인덱스 자체도 자동으로 이름이 바뀝니다.|  
+|STATISTICS|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 사용자가 명시적으로 만들었거나 인덱스를 통해 암시적으로 만들어진 통계입니다. 인덱스의 통계 이름을 바꾸면 인덱스 자체도 자동으로 이름이 바뀝니다.|  
 |USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 또는 [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)를 실행 하 여 추가 된 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) 입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

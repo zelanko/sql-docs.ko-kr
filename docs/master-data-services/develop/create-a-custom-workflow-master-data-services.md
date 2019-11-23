@@ -82,7 +82,7 @@ ms.locfileid: "73729324"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -151,7 +151,7 @@ ms.locfileid: "73729324"
 ### <a name="view-the-service-broker-queue"></a>Service Broker 큐 보기  
  워크플로의 일환으로 전달되는 마스터 데이터가 포함된 Service Broker 큐는 mdm.microsoft/mdm/queue/externalaction입니다. 큐는 SQL Management Studio의 **개체 탐색기**에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 Service Broker 노드에 있습니다. 이때 서비스가 큐를 제대로 지우면 이 큐가 비게 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

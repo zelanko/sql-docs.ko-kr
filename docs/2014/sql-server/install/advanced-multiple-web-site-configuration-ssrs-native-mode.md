@@ -34,13 +34,13 @@ ms.locfileid: "71952676"
  **IP 주소**  
  TCP/IP 네트워크의 보고서 서버 컴퓨터를 식별합니다. 유효한 값은 다음과 같습니다.  
   
--   **모두 할당됨** - 컴퓨터에 할당된 모든 IP 주소를 보고서 서버 응용 프로그램을 가리키는 URL에 사용할 수 있도록 지정합니다. 또한 이 값은 도메인 이름 서버에서 확인할 수 있는 호스트 이름(예: 컴퓨터 이름)부터 컴퓨터에 할당된 IP 주소까지 포함합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 기본값입니다.  
+-   **모두 할당됨** - 컴퓨터에 할당된 모든 IP 주소를 보고서 서버 애플리케이션을 가리키는 URL에 사용할 수 있도록 지정합니다. 또한 이 값은 도메인 이름 서버에서 확인할 수 있는 호스트 이름(예: 컴퓨터 이름)부터 컴퓨터에 할당된 IP 주소까지 포함합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 기본값입니다.  
   
 -   **모두 할당되지 않음** - IP 주소 또는 호스트 이름과 정확하게 일치하지 않는 모든 요청을 보고서 서버에서 받아들이도록 지정합니다. 다른 웹 애플리케이션에서 이미 이 값을 사용하고 있는 경우에는 사용하지 마십시오. 그럴 경우 다른 애플리케이션의 서비스가 중단됩니다.  
   
 -   **127.0.0.1** - localhost 액세스에 사용되며 보고서 서버 컴퓨터에 대한 로컬 관리를 지원합니다. 이 값만 선택할 경우 보고서 서버 컴퓨터에 로컬로 로그온한 사용자만 애플리케이션에 액세스할 수 있습니다.  
   
--   *Nnn.nnn.nnn.nnn* - 컴퓨터에 설치된 네트워크 어댑터 카드의 IPv4 주소입니다. 네트워크에서 IPv6 주소 지정을 사용 하는 경우 IP 주소는 \<header >:*nnnn: nnnn: nnnn: nnnn*형식과 비슷한 8 4 바이트 필드의 128 비트 값입니다.  
+-   *Nnn.nnn.nnn.nnn* - 컴퓨터에 설치된 네트워크 어댑터 카드의 IPv4 주소입니다. 네트워크에서 IPv6 주소 지정을 사용 하는 경우 IP 주소는 \<헤더 >:*nnnn: nnnn: nnnn: nnnn*형식과 비슷한 8 4 바이트 필드의 128 비트 값입니다.  
   
      카드가 여러 개인 경우 카드 하나당 한 개의 IP 주소가 표시됩니다. IP 주소를 한 개만 선택할 경우 해당 IP 주소와 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름만 애플리케이션에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71952676"
  **호스트 헤더**  
  컴퓨터로 확인되는 도메인 이름 서버에 호스트 헤더가 이미 정의되어 있는 경우 보고서 서버 액세스용으로 구성되는 호스트 헤더를 URL에 지정할 수 있습니다.  
   
- 호스트 헤더란 여러 웹 사이트에서 단일 IP 주소와 포트를 공유할 수 있도록 하는 고유한 이름으로, IP 주소와 포트 번호에 비해 기억하기 쉬울 뿐 아니라 입력하기도 쉽습니다. 호스트 헤더 이름의 예로는 [www.adventure-works.com](www.adventure-works.com) 을 들 수 있습니다.  
+ 호스트 헤더란 여러 웹 사이트에서 단일 IP 주소와 포트를 공유할 수 있도록 하는 고유한 이름으로, IP 주소와 포트 번호에 비해 기억하기 쉬울 뿐 아니라 입력하기도 쉽습니다. 호스트 헤더 이름의 예로는 www.adventure-works.com을 들 수 있습니다.  
   
  **SSL 포트**  
  SSL 연결용 포트를 지정합니다. SSL용 기본 포트는 443입니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "71952676"
  **제거**  
  목록에서 URL 항목을 지웁니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  

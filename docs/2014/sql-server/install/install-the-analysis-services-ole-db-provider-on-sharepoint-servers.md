@@ -12,13 +12,13 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952529"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>SharePoint 서버에서 Analysis Services OLE DB 공급자 설치
-  MSOLAP(Microsoft OLE DB Provider for Analysis Services)는 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터와 상호 작용하기 위해 사용하는 인터페이스입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 포함된 SharePoint 환경에서 공급자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 연결 요청을 처리합니다.  
+  MSOLAP(Microsoft OLE DB Provider for Analysis Services)는 클라이언트 애플리케이션에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터와 상호 작용하기 위해 사용하는 인터페이스입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 포함된 SharePoint 환경에서 공급자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 연결 요청을 처리합니다.  
   
  데이터 공급자에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 패키지(spPowerPivot.msi)가 포함되어 있지만 수동 설치가 필요할 수 있습니다. 클라이언트 라이브러리 또는 데이터 공급자를 SharePoint 서버에 수동으로 설치해야 하는 이유는 다음 두 가지입니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "71952529"
 -   **전용 Excel Services 인스턴스에서 데이터 액세스를 사용 하도록 설정**합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 없는 서버의 Excel Services가 SharePoint 팜에 포함되어 있는 경우 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 설치 패키지를 사용하여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 버전의 공급자 및 기타 클라이언트 연결 구성 요소를 설치하십시오.  
   
     > [!NOTE]  
-    >  이러한 시나리오는 상호 배타적인 것이 아닙니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 없이 Excel Services를 실행하는 응용 프로그램 서버가 포함된 팜에서 여러 통합 문서 버전을 호스팅할 경우 각 Excel Services 컴퓨터에 이전 버전의 데이터 공급자와 새 버전의 데이터 공급자를 모두 설치해야 합니다.  
+    >  이러한 시나리오는 상호 배타적인 것이 아닙니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 없이 Excel Services를 실행하는 애플리케이션 서버가 포함된 팜에서 여러 통합 문서 버전을 호스팅할 경우 각 Excel Services 컴퓨터에 이전 버전의 데이터 공급자와 새 버전의 데이터 공급자를 모두 설치해야 합니다.  
   
   
 ##  <a name="bkmk_vers"></a>PowerPivot 데이터 액세스를 지 원하는 OLE DB 공급자 버전  
@@ -49,9 +49,9 @@ ms.locfileid: "71952529"
 ##  <a name="bkmk_why"></a>OLE DB 공급자를 설치 해야 하는 이유  
  팜의 서버에서 OLE DB 공급자를 수동으로 설치하기 위한 두 가지 시나리오가 있습니다.  
   
- **가장 일반적인 시나리오** 는 팜의 문서 라이브러리에 저장 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 개의 통합 문서의 이전 버전과 최신 버전이 있는 경우입니다. 조직 내 분석가가 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel을 사용 중이고 이 통합 문서를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에 저장할 경우 이전 통합 문서는 작동하지 않습니다. 연결 문자열은 이전 버전의 공급자를 참조 하며,이는 설치 하지 않는 한 서버에 있지 않습니다. 두 버전을 모두 설치할 경우 이전 버전 및 새 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 생성된 PowerPivot 통합 문서에 대한 데이터 액세스가 가능합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 프로그램이 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 공급자를 설치하지 않기 때문에 이전 버전의 통합 문서를 사용 중인 경우 수동으로 설치해야 합니다.  
+ **가장 일반적인 시나리오** 는 팜의 문서 라이브러리에 저장 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 이전 버전 및 최신 버전이 있는 경우입니다. 조직 내 분석가가 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel을 사용 중이고 이 통합 문서를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에 저장할 경우 이전 통합 문서는 작동하지 않습니다. 연결 문자열은 이전 버전의 공급자를 참조 하며,이는 설치 하지 않는 한 서버에 있지 않습니다. 두 버전을 모두 설치할 경우 이전 버전 및 새 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 생성된 PowerPivot 통합 문서에 대한 데이터 액세스가 가능합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 프로그램이 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 공급자를 설치하지 않기 때문에 이전 버전의 통합 문서를 사용 중인 경우 수동으로 설치해야 합니다.  
   
- **두 번째 시나리오** 는 Excel 서비스를 실행 하는 SharePoint 팜에 서버가 있지만 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 아닌 경우입니다. 이 경우 Excel 서비스를 실행하는 응용 프로그램 서버가 최신 버전의 공급자를 사용할 수 있도록 수동으로 업데이트해야 합니다. 이러한 작업은 SharePoint용 PowerPivot 인스턴스에 연결하는 경우에 필요합니다. Excel Services가 이전 버전의 공급자를 사용하는 경우 연결 요청이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원을 위해 필요한 모든 구성 요소를 설치하기 위해서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 프로그램 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치 패키지(spPowerPivot.msi)를 사용하여 공급자를 설치해야 합니다.  
+ **두 번째 시나리오** 는 Excel Services를 실행 하지만 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]하지 않는 SharePoint 팜에 서버가 있는 경우입니다. 이 경우 Excel 서비스를 실행하는 응용 프로그램 서버가 최신 버전의 공급자를 사용할 수 있도록 수동으로 업데이트해야 합니다. 이러한 작업은 SharePoint용 PowerPivot 인스턴스에 연결하는 경우에 필요합니다. Excel Services가 이전 버전의 공급자를 사용하는 경우 연결 요청이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원을 위해 필요한 모든 구성 요소를 설치하기 위해서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 프로그램 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치 패키지(spPowerPivot.msi)를 사용하여 공급자를 설치해야 합니다.  
   
   
 ##  <a name="bkmk_sql11"></a>SQL Server 설치 프로그램을 사용 하 여 Excel Services 서버에 SQL Server 2012 OLE DB 공급자를 설치 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "71952529"
   
 #### <a name="run-sql-server-setup-and-install-the-client-connectivity-tools"></a>SQLServer 설치 프로그램 실행 및 클라이언트 연결 도구 설치  
   
-1.  Excel Services를 호스팅하는 응용 프로그램 서버에서 SQL Server 설치 프로그램을 실행합니다.  
+1.  Excel Services를 호스팅하는 애플리케이션 서버에서 SQL Server 설치 프로그램을 실행합니다.  
   
 2.  설치 페이지에서 **새로 만들기 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택 합니다.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "71952529"
   
 3.  **세부 정보**를 클릭합니다.  
   
-4.  파일 버전 정보를 봅니다. 버전은 11.00 \<buildnumber >를 포함 해야 합니다.  
+4.  파일 버전 정보를 봅니다. 버전에는 11.00이 포함 되어야 합니다.\<buildnumber >.  
   
 5.  Windows\assembly 폴더에 Microsoft.AnalysisServices.Xmla.dll, 버전11.0.0.0이 있는지 확인합니다.  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>SharePoint용 PowerPivot 설치 패키지 (spPowerPivot .msi)를 사용 하 여 SQL Server 2012 OLE DB 공급자를 설치 합니다.  
- @No__t 1 설치 패키지 **(Sppowerpivot .msi)** 를 사용 하 여 및 Excel Services 서버에 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB 공급자를 설치 합니다.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 패키지 **(Sppowerpivot .msi)** 를 사용 하 여 및 Excel Services 서버에 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB 공급자를 설치 합니다.  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71952529"
 ##  <a name="bkmk_kj"></a>SQL Server 2008 R2 OLE DB 공급자를 설치 하 여 이전 버전의 통합 문서를 호스트 합니다.  
  다음 지침에 따라 MSOLAP.4 공급자의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전을 설치하고 Microsoft.AnalysisServices.ChannelTransport.dll 파일을 등록합니다. ChannelTransport는 Analysis Services OLE DB 공급자의 하위 구성 요소입니다. 공급자의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전은 ChannelTransport를 사용하여 연결을 설정할 때 레지스트리를 읽습니다. 이 파일의 등록은 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 서버에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 공급자가 처리하는 연결에만 필요한 설치 후 단계입니다.  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>1단계: 클라이언트 라이브러리 다운로드 및 설치  
+#### <a name="step-1-download-and-install-the-client-library"></a>1 단계: 클라이언트 라이브러리 다운로드 및 설치  
   
 1.  [SQL Server 2008 R2 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkId=159570)에서 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2를 찾습니다.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952529"
   
 4.  동일 서버에서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 없이 Excel Services만 실행하는 서버가 팜에 있을 경우 이전 단계를 반복하여 Excel Services 컴퓨터에 공급자의 2008 R2 버전을 설치합니다.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>2단계: Microsoft.analysisservices.sharepoint.integration.dll 파일을 등록 합니다.  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>2 단계: Microsoft.analysisservices.sharepoint.integration.dll 파일을 등록 합니다.  
   
-1.  regasm.exe 유틸리티를 사용하여 파일을 등록합니다. 이전에 regasm.exe를 실행 하지 않은 경우에는 부모 폴더인 C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0을 시스템 경로 변수에 추가 합니다.  
+1.  regasm.exe 유틸리티를 사용하여 파일을 등록합니다. 이전에 regasm.exe를 실행 하지 않은 경우에는 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\부모 폴더를 시스템 경로 변수에 추가 합니다.  
   
 2.  관리자 권한으로 명령 프롬프트를 엽니다.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "71952529"
   
 2.  또한 파일 버전을 확인할 수 있습니다.  
   
-     로 이동하세요.`C:\Program files\Microsoft Analysis Services\AS OLEDB\10` **Msolap100.dll** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **세부 정보**를 클릭합니다.  
+     `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`으로 이동합니다. **Msolap100.dll** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **세부 정보**를 클릭합니다.  
   
-     파일 버전 정보를 봅니다. 버전은 10.50 \<buildnumber >를 포함 해야 합니다.  
+     파일 버전 정보를 봅니다. 버전에는 10.50이 포함 되어야 합니다.\<buildnumber >.  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

@@ -30,7 +30,7 @@ ms.locfileid: "72305265"
   서버에 데이터베이스를 연결합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE *database_name* FOR ATTACH를 대신 사용 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 CREATE DATABASE *database_name* 를 사용 하 여 연결 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
 >  하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성 하려면 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG를 사용 합니다.  
@@ -47,14 +47,14 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbnam_ '`은 서버에 연결할 데이터베이스의 이름입니다. 이름은 고유 해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'dbnam_ '`는 서버에 연결할 데이터베이스의 이름입니다. 이름은 고유 해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @filename1 = ] 'filename_n'`은 경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 **1filename1 @no__t** 에서 시작 하 고 **\@filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
+`[ @filename1 = ] 'filename_n'`은 경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 **\@filename1** 에서 시작 하 여 **\@filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -63,14 +63,14 @@ sp_attach_db [ @dbname= ] 'dbname'
  없음  
   
 ## <a name="remarks"></a>설명  
- **Sp_attach_db** 저장 프로시저는 명시적 **sp_detach_db** 작업을 사용 하 여 데이터베이스 서버에서 이전에 분리 된 데이터베이스나 복사 된 데이터베이스 에서만 실행 해야 합니다. 16 개 이상의 파일을 지정 해야 하는 경우 CREATE DATABASE *database_name* FOR ATTACH 또는 create database *database_name* FOR_ATTACH_REBUILD_LOG를 사용 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+ **Sp_attach_db** 저장 프로시저는 명시적 **sp_detach_db** 작업을 사용 하 여 데이터베이스 서버에서 이전에 분리 된 데이터베이스나 복사 된 데이터베이스 에서만 실행 해야 합니다. 16 개 이상의 파일을 지정 해야 하는 경우 CREATE DATABASE *database_name* 를 사용 하 여 ATTACH 또는 create database *database_name* FOR_ATTACH_REBUILD_LOG 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
  지정되지 않은 모든 파일은 마지막으로 알려진 위치에 있는 것으로 가정합니다. 다른 위치에서 파일을 사용하려면 새 위치를 지정해야 합니다.  
   
  최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스를 이전 버전에서 연결할 수 없습니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏은 분리하거나 연결할 수 없습니다.  
+>  데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
   
  분리되지 않고 복사된 복제 데이터베이스를 연결하는 경우에는 다음 사항을 고려합니다.  
   
@@ -96,7 +96,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   

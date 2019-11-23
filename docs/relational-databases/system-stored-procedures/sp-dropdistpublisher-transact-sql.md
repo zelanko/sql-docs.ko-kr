@@ -39,15 +39,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`은 삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+삭제할 게시자 `[ @publisher = ] 'publisher'`입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @no_checks = ] no_checks`은 게시자가 게시자가 배포자로 서버를 제거 했는지를 확인 **sp_dropdistpublisher** 여부를 지정 합니다. *no_checks* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @no_checks = ] no_checks` 게시자가 배포자로 서버를 제거 했는지 여부를 **sp_dropdistpublisher** 확인할 지 여부를 지정 합니다. *no_checks* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0**인 경우 복제는 원격 게시자가 로컬 서버를 배포자로 제거 했는지 확인 합니다. 게시자가 로컬인 경우에는 복제 시 로컬 서버에 게시 또는 배포 개체가 남아 있지 않음을 확인합니다.  
   
- **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 **\@ignore_distributor** = **1**과 함께 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 를 사용 하 여 복제를 제거 해야 합니다.  
+ **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 **\@ignore_distributor** = **1**인 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 사용 하 여 복제를 제거 해야 합니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`은 게시자가 제거 될 때 배포자에 배포 개체가 남아 있는지 여부를 지정 합니다. *ignore_distributor* 는 **bit** 이며 다음 값 중 하나일 수 있습니다.  
+게시자를 제거할 때 배포 개체가 배포자에 남아 있는지 여부를 지정 `[ @ignore_distributor = ] ignore_distributor` 합니다. *ignore_distributor* **비트** 이며 다음 값 중 하나일 수 있습니다.  
   
  **1** = *게시자* 에 속하는 배포 개체가 배포자에 남아 있습니다.  
   
@@ -59,17 +59,17 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_dropdistpublisher** 은 모든 유형의 복제에 사용 됩니다.  
   
- Oracle 게시자를 삭제할 수 없는 경우 게시자 **sp_dropdistpublisher** 을 삭제할 수 없으면 오류가 반환 되 고 게시자의 배포자 개체가 제거 됩니다.  
+ Oracle 게시자를 삭제할 수 없는 경우에서 **Sp_dropdistpublisher** 게시자를 삭제할 수 없으면 오류가 반환 되 고 게시자의 배포자 개체가 제거 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistpublisher**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistpublisher**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [ &#40;transact-sql&#41;  sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
  [sp_changedistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

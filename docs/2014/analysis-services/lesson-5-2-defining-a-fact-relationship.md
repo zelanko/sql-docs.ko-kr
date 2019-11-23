@@ -20,7 +20,7 @@ ms.locfileid: "69493861"
 # <a name="defining-a-fact-relationship"></a>팩트 관계 정의
   사용자는 팩트 테이블에 있는 데이터 항목별로 측정값 차원을 구분하거나 특정 판매 팩트에 관련된 송장 번호나 구매 주문 번호와 같은 특정 추가 관련 정보를 팩트 테이블에서 쿼리할 수 있습니다. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 쿼리 성능 향상을 위해 팩트 차원 데이터를 MOLAP 차원 구조로 복제할지 또는 쿼리 성능을 향상시키는 대신 스토리지 공간을 절약하기 위해 팩트 차원을 ROLAP 차원으로 정의할지 결정할 수 있습니다. MOLAP 스토리지 모드를 사용하여 차원을 저장하면 모든 차원 멤버는 측정값 그룹의 파티션에 저장될 뿐만 아니라 고도로 압축된 MOLAP 구조로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 저장됩니다. ROLAP 저장소 모드를 사용 하 여 차원을 저장 하면 차원 정의만 MOLAP 구조로 저장 되 고 차원 멤버 자체는 쿼리 시 기본 관계형 팩트 테이블에서 쿼리 됩니다. 팩트 차원의 쿼리 빈도, 표준 쿼리에서 반환된 행 수, 쿼리 성능 및 처리 비용에 따라 적절한 스토리지 모드를 결정하십시오. 차원을 ROLAP으로 정의한다고 해서 해당 차원을 사용하는 모든 큐브도 ROLAP 스토리지 모드를 사용하여 저장해야 하는 것은 아닙니다. 각 차원에 대한 스토리지 모드는 독립적으로 구성될 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 쿼리 성능 향상을 위해 팩트 차원 데이터를 MOLAP 차원 구조로 복제할지 또는 쿼리 성능을 향상시키는 대신 저장 공간을 절약하기 위해 팩트 차원을 ROLAP 차원으로 정의할지 결정할 수 있습니다. MOLAP 스토리지 모드를 사용하여 차원을 저장하면 모든 차원 멤버는 측정값 그룹의 파티션에 저장될 뿐만 아니라 고도로 압축된 MOLAP 구조로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 저장됩니다. ROLAP 저장소 모드를 사용 하 여 차원을 저장 하면 차원 정의만 MOLAP 구조로 저장 되 고 차원 멤버 자체는 쿼리 시 기본 관계형 팩트 테이블에서 쿼리 됩니다. 팩트 차원의 쿼리 빈도, 표준 쿼리에서 반환된 행 수, 쿼리 성능 및 처리 비용에 따라 적절한 스토리지 모드를 결정하십시오. 차원을 ROLAP으로 정의한다고 해서 해당 차원을 사용하는 모든 큐브도 ROLAP 스토리지 모드를 사용하여 저장해야 하는 것은 아닙니다. 각 차원에 대한 스토리지 모드는 독립적으로 구성될 수 있습니다.  
   
  팩트 차원을 정의하면 팩트 차원과 측정값 그룹의 관계를 팩트 관계로 정의할 수 있습니다. 팩트 관계에 적용되는 제약 조건은 다음과 같습니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "69493861"
   
      ![관계 정의 대화 상자](../../2014/tutorials/media/l5-factrelationship-2.gif "관계 정의 대화 상자")  
   
-3.  **취소**를 클릭합니다.  
+3.  클릭 **취소**합니다.  
   
 ## <a name="browsing-the-cube-by-using-the-fact-dimension"></a>팩트 차원을 사용하여 큐브 찾아보기  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69493861"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [다 대 다 관계 정의](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [팩트 관계 및 팩트 관계 속성 정의](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

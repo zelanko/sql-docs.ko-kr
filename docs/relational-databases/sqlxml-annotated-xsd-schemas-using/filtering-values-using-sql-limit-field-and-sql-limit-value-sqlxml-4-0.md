@@ -46,7 +46,7 @@ ms.locfileid: "72906096"
   
  아래의 예에서는 템플릿을 사용하여 매핑 XSD 스키마를 기준으로 XPath 쿼리를 지정합니다.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>1\. 고객 주소를 제한하여 특정 주소 형식만 반환  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. 고객 주소를 제한하여 특정 주소 형식만 반환  
  이 예에서 데이터베이스에는 다음과 같은 두 개의 테이블이 있습니다.  
   
 -   Customer (CustomerID, CompanyName)  
@@ -306,7 +306,7 @@ ms.locfileid: "72906096"
     </root>  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar 및 nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [SQL Server Native Client  설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  

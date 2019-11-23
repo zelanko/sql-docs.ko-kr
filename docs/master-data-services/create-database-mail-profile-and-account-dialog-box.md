@@ -59,7 +59,7 @@ ms.locfileid: "73729545"
 |**암호 확인**|암호를 다시 입력하여 암호를 확인합니다.|  
 |**익명 인증**|SMTP 서버에 인증이 필요하지 않음을 지정합니다. 데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)
   

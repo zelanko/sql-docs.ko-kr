@@ -31,10 +31,10 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값입니다.  
+ 스칼라 값  
   
 ## <a name="remarks"></a>설명  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 확률이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \<예측 상태 > **INCLUDE_NULL**으로 설정 합니다. 누락 상태에 대 한 확률을 반환 하려면 \<예측 상태 >를 NULL로 설정 합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 확률이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \<예측 상태 > **INCLUDE_NULL**으로 설정 합니다. 누락 상태에 대 한 확률을 반환 하려면 예측 상태 \<>을 NULL로 설정 합니다.  
   
 > [!NOTE]  
 >  일부 마이닝 모델은 확률 값을 제공하지 않으므로 이 함수를 사용할 수 없습니다. 또한 쿼리하는 모델 유형에 따라 특정 대상 값에 대한 확률 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대해 확률을 계산 하는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)의 개별 알고리즘 항목을 참조 하세요.  
@@ -60,11 +60,11 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|1|0.867074195848097|0.132755556974282|  
+|1\.|0.867074195848097|0.132755556974282|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [함수 &#40;DMX&#41; ](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

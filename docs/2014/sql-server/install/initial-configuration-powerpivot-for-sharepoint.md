@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798123"
@@ -24,7 +24,7 @@ ms.locfileid: "72798123"
   
  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  SharePoint 설치 프로그램에서 서버 팜 설치 옵션을 사용하여 SharePoint 서버를 설치해야 합니다. 기본 제공 데이터베이스를 사용하는 독립 실행형 SharePoint 서버는 지원되지 않습니다. 자세한 내용은 [SharePoint 2010 팜에서 SQL SERVER BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
@@ -178,7 +178,7 @@ ms.locfileid: "72798123"
   
 9. 애플리케이션 풀에 대한 보안 계정을 선택합니다. 도메인 사용자 계정을 사용할 관리 계정을 지정합니다.  
   
-10. 나머지 기본값을 적용 한 다음 확인을 클릭 **합니다.** 을 클릭합니다. 서비스 애플리케이션이 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
+10. 나머지 기본값을 적용 한 다음 확인을 클릭 **합니다.** 을 클릭합니다. 서비스 응용 프로그램이 다른 관리 서비스와 함께 팜의 서비스 응용 프로그램 목록에 표시됩니다.  
   
 ##### <a name="part-2-generate-the-master-key"></a>2부: 마스터 키 생성  
   
@@ -198,7 +198,7 @@ ms.locfileid: "72798123"
  무인 powerpivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [powerpivot 무인 데이터 새로 고침 &#40;계정&#41; 구성 SharePoint용 PowerPivot](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 및 [powerpivot 데이터 새로 고침 &#40;을 위한 저장 된 자격 증명 구성 SharePoint용 PowerPivot&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)을 참조 하세요.  
   
 ##  <a name="Usage"></a>6 단계: 사용 현황 데이터 수집 사용  
- SharePoint용 PowerPivot은 SharePoint 사용량 현황 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
+ SharePoint용 PowerPivot은 SharePoint 사용 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
   
 ##  <a name="Upload"></a>7 단계: SharePoint 웹 응용 프로그램 및 Excel 서비스의 최대 업로드 크기 늘리기  
  PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 크기를 늘려야 할 수 있습니다. 웹 애플리케이션에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [SharePoint용 PowerPivot &#40;&#41;최대 파일 업로드 크기 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)을 참조 하세요.  
@@ -292,7 +292,7 @@ ms.locfileid: "72798123"
   
  이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 버전에서 지원 되는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [중앙 관리 에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)  

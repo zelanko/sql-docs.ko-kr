@@ -30,7 +30,7 @@ ms.locfileid: "70155542"
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **참고: 이는 Azure SQL Database V11 적용 됩니다.**  
+  **참고: Azure SQL Database V11 적용 됩니다.**  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 있는 데이터베이스의 수, 유형 및 기간을 나열 합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "70155542"
 |열 이름|설명|  
 |-----------------|-----------------|  
 |Time|사용 이벤트가 발생한 날짜입니다.|  
-|sku|데이터베이스에 대 한 서비스 계층의 유형입니다. **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
+|sku|데이터베이스의 서비스 계층 형식: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|하루 동안 존재한 SKU 형식 데이터베이스의 최대 수입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -48,8 +48,8 @@ ms.locfileid: "70155542"
 ## <a name="remarks"></a>설명  
  **Database_usage** 뷰는 구독의 각 날짜에 대해 하나의 행을 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Database 가격 정보](https://go.microsoft.com/fwlink/?LinkID=394978)   
+## <a name="see-also"></a>참고 항목  
+ [가격 책정 세부 정보를 SQL Database](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Azure SQL Database의 계정 및 요금 청구](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

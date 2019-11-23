@@ -28,7 +28,7 @@ ms.locfileid: "73787109"
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시작 하는 데이터베이스 엔진의 향상 된 기능으로 인해 SQLDescribeParam에서 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 보다 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLDescribeParam에서 반환 된 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
- 또한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 새로 만들기, 이제 *ParameterSizePtr* 는 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 버전에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (값)이 될 수 있습니다. 무시 해야 합니다 (예:**SQL_INTEGER**).  
+ 또한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 새로 만들기, 이제 *ParameterSizePtr* 는 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 버전에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (예:**SQL_INTEGER**)이 될 수 있습니다.  
   
  드라이버는 다음과 같은 상황에서 SQLDescribeParam 호출을 지원 하지 않습니다.  
   
@@ -80,16 +80,16 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8, 10..16|0..7|  
-|datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
-|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
+|Time|SQL_SS_TIME2|8, 10..16|0..7|  
+|Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
+|Datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
  자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeParam 지원  
  **SQLDescribeParam** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLDescribeParam 함수](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 추적에서 추가 또는 제거될 수 있는 이벤트를 보여 줍니다.  
   
-|이벤트 번호|이벤트 이름|Description|  
+|이벤트 번호|이벤트 이름|설명|  
 |------------------|----------------|-----------------|  
 |0-9|예약됨|예약됨|  
 |10|RPC:Completed|RPC(원격 프로시저 호출)가 완료되면 발생합니다.|  
@@ -71,11 +71,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|데이터 페이지 등 리소스 잠금이 획득되었음을 나타냅니다.|  
 |25|Lock:Deadlock|다른 트랜잭션이 소유한 리소스에 대해 호환되지 않는 잠금을 가져오려고 시도하여 두 개의 동시 트랜잭션이 서로 교착 상태에 있음을 나타냅니다.|  
 |26|Lock:Cancel|리소스 잠금 획득이 교착 상태 등에 의해 취소되었음을 나타냅니다.|  
-|27|Lock:Timeout|필요한 리소스의 차단 잠금을 보유한 다른 트랜잭션으로 인해 페이지 등 리소스 잠금에 대한 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @ @LOCK_TIMEOUT 함수에 의해 결정 되며 SET LOCK_TIMEOUT 문을 사용 하 여 설정할 수 있습니다.|  
+|27|Lock:Timeout|필요한 리소스의 차단 잠금을 보유한 다른 트랜잭션으로 인해 페이지 등 리소스 잠금에 대한 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @@LOCK_TIMEOUT 함수에 의해 결정 되며 SET LOCK_TIMEOUT 문으로 설정할 수 있습니다.|  
 |28|Degree of Parallelism Event(7.0 Insert)|SELECT, INSERT 또는 UPDATE 문이 실행되기 전에 발생합니다.|  
 |29-31|예약됨|이벤트 28을 대신 사용합니다.|  
 |32|예약됨|예약됨|  
-|33|Exception|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
+|33|예외|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
 |34|SP:CacheMiss|저장 프로시저가 프로시저 캐시에서 발견되지 않는 때를 나타냅니다.|  
 |35|SP:CacheInsert|항목이 프로시저 캐시에 삽입되는 때를 나타냅니다.|  
 |36|SP:CacheRemove|항목이 프로시저 캐시에서 제거되는 때를 나타냅니다.|  
@@ -135,12 +135,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |104|Audit Addlogin Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거되면 발생합니다. **sp_addlogin**, **sp_droplogin** 대상|  
 |105|Audit Login GDR Event|Windows 로그인 권한이 추가되거나 제거되면 발생합니다. **sp_grantlogin**, **sp_revokelogin** 및 **sp_denylogin** 대상|  
 |106|Audit Login Change Property Event|암호를 제외한 로그인 속성을 수정하는 경우 발생합니다. **sp_defaultdb**, **sp_defaultlanguage** 대상|  
-|107|Audit Login Change Password Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호가 변경되면 발생합니다.<br /><br /> 암호는 기록되지 않습니다.|  
+|107|Audit Login Change Password Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호가 변경되면 발생합니다.<br /><br /> 암호가 기록되지 않았습니다.|  
 |108|Audit Add Login to Server Role Event|고정된 서버 역할에서 로그인을 추가하거나 제거할 때 발생합니다. **sp_addsrvrolemember** 및 **sp_dropsrvrolemember** 대상|  
 |109|Audit Add DB User Event|로그인이 데이터베이스에 데이터베이스 사용자(Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 추가 또는 제거될 때 발생합니다. **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 대상|  
 |110|Audit Add Member to DB Role Event|로그인이 데이터베이스에 데이터베이스 사용자(고정 또는 사용자 정의)로 추가 또는 제거될 때 발생합니다. **sp_addrolemember**, **sp_droprolemember** 및 **sp_changegroup** 대상|  
 |111|Audit Add Role Event|로그인이 데이터베이스에 데이터베이스 사용자로 추가 또는 제거될 때 발생합니다. **sp_addrole** 및 **sp_droprole** 대상|  
-|112|Audit App Role Change Password Event|응용 프로그램 역할의 암호가 변경되면 발생합니다.|  
+|112|Audit App Role Change Password Event|애플리케이션 역할의 암호가 변경되면 발생합니다.|  
 |113|Audit Statement Permission Event|CREATE TABLE 등 문 사용 권한이 사용되면 발생합니다.|  
 |114|Audit Schema Object Access Event|SELECT 등 개체 사용 권한이 성공적으로 사용되거나 성공적으로 사용되지 않은 모든 경우에 발생합니다.|  
 |115|Audit Backup/Restore Event|BACKUP 또는 RESTORE 명령을 실행하면 발생합니다.|  
@@ -205,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|서버 보안 주체를 생성, 변경 또는 삭제하면 발생합니다.|  
 |178|Audit Database Operation Event|쿼리 알림 구독 또는 검사점 설정 같은 데이터베이스 작업이 수행되면 발생합니다.|  
 |180|Audit Database Object Access Event|스키마 같은 데이터베이스 개체에 액세스하면 발생합니다.|  
-|181|TM: Begin Tran 시작|BEGIN TRANSACTION 요청이 시작되면 발생합니다.|  
+|181|TM: Begin Tran starting|BEGIN TRANSACTION 요청이 시작되면 발생합니다.|  
 |182|TM: Begin Tran completed|BEGIN TRANSACTION 요청이 완료되면 발생합니다.|  
-|183|TM: 승격 트랜잭션 시작|PROMOTE TRANSACTION 요청이 시작되면 발생합니다.|  
+|183|TM: Promote Tran starting|PROMOTE TRANSACTION 요청이 시작되면 발생합니다.|  
 |184|TM: Promote Tran completed|PROMOTE TRANSACTION 요청이 완료되면 발생합니다.|  
-|185|TM: 커밋 Tran 시작|COMMIT TRANSACTION 요청이 시작되면 발생합니다.|  
-|186|TM: 커밋 Tran completed|COMMIT TRANSACTION 요청이 완료되면 발생합니다.|  
+|185|TM: Commit Tran starting|COMMIT TRANSACTION 요청이 시작되면 발생합니다.|  
+|186|TM: Commit Tran completed|COMMIT TRANSACTION 요청이 완료되면 발생합니다.|  
 |187|TM: Rollback Tran starting|ROLLBACK TRANSACTION 요청이 시작되면 발생합니다.|  
 |188|TM: Rollback Tran completed|ROLLBACK TRANSACTION 요청이 완료되면 발생합니다.|  
 |189|Lock: Timeout (timeout > 0)|페이지 같은 리소스에 대한 잠금 요청 시간이 초과되면 발생합니다.|  
-|190|진행률 보고서: 온라인 인덱스 작업|빌드 프로세스가 실행되는 동안 온라인 인덱스 작성 작업의 진행률을 보고합니다.|  
-|191|TM: 저장 Tran 시작|SAVE TRANSACTION 요청이 시작되면 발생합니다.|  
-|192|TM: 저장 Tran 완료|SAVE TRANSACTION 요청이 완료되면 발생합니다.|  
+|190|Progress Report: Online Index Operation|빌드 프로세스가 실행되는 동안 온라인 인덱스 작성 작업의 진행률을 보고합니다.|  
+|191|TM: Save Tran starting|SAVE TRANSACTION 요청이 시작되면 발생합니다.|  
+|192|TM: Save Tran completed|SAVE TRANSACTION 요청이 완료되면 발생합니다.|  
 |193|Background Job Error|백그라운드 작업이 비정상적으로 종료되면 발생합니다.|  
 |194|OLEDB Provider Information|분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집하면 발생합니다.|  
 |195|Mount Tape|테이프 탑재 요청을 받으면 발생합니다.|  
@@ -227,22 +227,22 @@ sp_trace_setevent [ @traceid = ] trace_id
 |200|QN: parameter table|활성 구독에 대한 정보가 내부 매개 변수 테이블에 저장됩니다. 이 이벤트 클래스는 매개 변수 테이블을 만들거나 삭제하면 발생합니다. 일반적으로 이러한 테이블은 데이터베이스를 다시 시작할 때 생성되거나 삭제됩니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
 |201|QN: template|쿼리 템플릿은 구독 쿼리의 클래스를 나타냅니다. 일반적으로 매개 변수 값을 제외하면 같은 클래스의 쿼리는 동일합니다. 이 이벤트 클래스는 새로운 구독 요청이 기존 클래스(Match), 새 클래스(Create), 활성 구독이 없는 쿼리 클래스에 대한 템플릿 정리를 나타내는 Drop 클래스에 있으면 발생합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
 |202|QN: dynamics|쿼리 알림의 내부 동작을 추적합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
-|212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정될 때 나타납니다.|  
+|212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정한 시간을 나타냅니다.|  
 |213|Database Suspect Data Page|**msdb**의 **suspect_pages** 테이블에 페이지가 추가되었을 때 나타납니다.|  
-|214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지할 때 나타납니다.|  
+|214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지하는 시간을 나타냅니다.|  
 |215|PreConnect:Starting|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|  
-|216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수의 실행이 완료될 때 나타납니다.|  
+|216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 완료하는 시간을 나타냅니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`은 이벤트에 대해 추가할 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다.  
+`[ @columnid = ] column_id`는 이벤트에 대해 추가할 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다.  
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   
-|열 번호|열 이름|Description|  
+|열 번호|열 이름|설명|  
 |-------------------|-----------------|-----------------|  
-|1|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
+|1\.|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
 |2|**BinaryData**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|  
 |3|**DatabaseID**|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정 된 연결에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스입니다.<br /><br /> 데이터베이스의 값은 DB_ID 함수로 확인할 수 있습니다.|  
 |4|**TransactionID**|시스템이 할당한 트랜잭션의 ID입니다.|  
@@ -250,30 +250,30 @@ sp_trace_setevent [ @traceid = ] trace_id
 |6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 이름입니다.|  
 |7|**NTDomainName**|사용자가 속한 Windows 도메인입니다.|  
 |8|**HostName**|요청을 처음에 시작한 클라이언트 컴퓨터의 이름입니다.|  
-|9|**ClientProcessID**|클라이언트 응용 프로그램이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
-|10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
+|9|**ClientProcessID**|클라이언트 애플리케이션이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
+|10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
-|13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
+|13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
 |15|**EndTime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 또한 **해시 경고** 이벤트로 채워지지 않습니다.|  
 |16|**Reads**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
 |17|**Writes**|이벤트 대신 서버에서 수행한 물리적 디스크 쓰기 수입니다.|  
 |18|**CPU**|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
-|19|**Permissions**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
+|19|**사용 권한**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
 |20|**Severity**|예외적인 심각도입니다.|  
 |21|**EventSubClass**|이벤트 하위 클래스의 유형입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
 |22|**Exchange Spill**|시스템이 할당한 개체의 ID입니다.|  
-|23|**Success**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
+|23|**성공**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
 |24|**IndexID**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |25|**IntegerData**|추적에서 캡처된 이벤트 클래스에 의존하는 정수 값입니다.|  
-|26|**ServerName**|추적 중인 *servername* 또는 *servername\instancename*@no__t의 인스턴스 이름입니다.|  
+|26|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|추적 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름 ( *servername* 또는 *servername\instancename*)입니다.|  
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
-|29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. [@ @No__t- &#40;1 transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)을 참조 하세요.|  
-|30|**State**|오류 발생 시의 서버 상태입니다.|  
-|31|**Error**|오류 번호입니다.|  
-|32|**Mode**|획득된 잠금의 잠금 모드입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
+|29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. [@@NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)을 참조 하세요.|  
+|30|**상태**|오류 발생 시의 서버 상태입니다.|  
+|31|**오류**|오류 번호입니다.|  
+|32|**모드**|획득된 잠금의 잠금 모드입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
 |33|**Handle**|이벤트에 참조된 개체의 핸들입니다.|  
 |34|**ObjectName**|액세스된 개체의 이름입니다.|  
 |35|**DatabaseName**|USE *database* 문에 지정 된 데이터베이스의 이름입니다.|  
@@ -298,7 +298,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |55|**IntegerData2**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |56|**ObjectID2**|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
-|57|**Type**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|57|**형식**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자|  
@@ -314,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  *on*이 **0**으로 설정되고 *column_id*가 NULL인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id*가 null이 아니면, 열은 OFF로 설정됩니다.  
   
- 다음 표에서는 **\@** 과 **@no__t 3columnid**간의 상호 작용을 보여 줍니다.  
+ 다음 표에서는 **\@** 와 **\@columnid**간의 상호 작용을 보여 줍니다.  
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -326,10 +326,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |0|오류가 없습니다.|  
-|1|알 수 없는 오류입니다.|  
+|1\.|알 수 없는 오류입니다.|  
 |2|추적이 현재 실행 중입니다. 지금 추적을 변경하면 오류가 발생합니다.|  
 |3|지정한 이벤트가 유효하지 않습니다. 이벤트가 존재하지 않거나 저장 프로시저에 적합하지 않습니다.|  
 |4|지정한 열이 유효하지 않습니다.|  
@@ -338,7 +338,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_trace_setevent**는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있었던 확장 저장 프로시저가 실행했던 많은 작업을 수행합니다. 다음 대신 **sp_trace_setevent**를 사용합니다.  
   
 -   **xp_trace_addnewqueue**  
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각 실행 중에 **\@ on** 이 **1**로 설정 된 경우 **sp_trace_setevent** 는 지정 된 이벤트를 추적 이벤트 목록에 추가 합니다. **@No__t-1** 이 **0**으로 설정 된 경우 **sp_trace_setevent** 는 목록에서 지정 된 이벤트를 제거 합니다.  
+ 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각 실행 중 **에\@on** 이 **1**로 설정 된 경우 **sp_trace_setevent** 는 지정 된 이벤트를 추적 이벤트 목록에 추가 합니다. **\@on** 이 **0**으로 설정 된 경우 **sp_trace_setevent** 지정 된 이벤트를 목록에서 제거 합니다.  
   
  모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   
@@ -356,10 +356,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [fn_trace_geteventinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [fn_trace_geteventinfo &#40;transact-sql&#41; ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [ &#40;transact-sql&#41;  sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   

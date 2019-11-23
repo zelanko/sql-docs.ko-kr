@@ -26,7 +26,7 @@ ms.locfileid: "73728138"
  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 로컬 또는 원격 컴퓨터에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들고 구성할 수 있습니다. 여러 환경 간에 데이터베이스를 이동하는 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스 및 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 새 위치의 데이터베이스에 연결하여 새 환경에서 정보를 유지 관리할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 구성 요소를 설치할 모든 컴퓨터는 사용 허가를 받아야 합니다. 자세한 내용은 EULA(최종 사용자 사용권 계약)를 참조하십시오.  
+>  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 의 구성 요소를 설치할 모든 컴퓨터는 사용 허가를 받아야 합니다. 자세한 내용은 EULA(최종 사용자 사용권 계약)를 참조하십시오.  
   
 ## <a name="requirements"></a>요구 사항  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들기 전에 다음 요구 사항이 충족되는지 확인하십시오.  
@@ -55,7 +55,7 @@ ms.locfileid: "73728138"
   
 -   Microsoft SQL Server 2008 R2 Developer(64비트) x64  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 
   
 ### <a name="operating-system"></a>운영 체제  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 지원되는 Windows 운영 체제 및 기타 요구 사항에 대한 자세한 내용은 [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "73728138"
 ### <a name="database-backup"></a>데이터베이스 백업  
  매일 작업량이 적은 시간에 전체 데이터베이스를 백업하고 사용자 환경의 요구 사항에 따라 트랜잭션 로그를 보다 자주 백업하는 것이 가장 좋습니다. 데이터베이스 백업에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services 데이터베이스](../../master-data-services/master-data-services-database.md)   

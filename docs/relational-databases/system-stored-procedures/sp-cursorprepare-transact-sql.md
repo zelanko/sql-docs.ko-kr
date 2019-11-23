@@ -106,7 +106,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  *Scrollpt*와 마찬가지로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 요청한 것과 다른 값을 할당할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RPC 상태 매개 변수는 다음 중 하나일 수 있습니다.  
   
 |Value|설명|  
@@ -146,7 +146,7 @@ exec sp_cursorclose @p2
   
  { *\<지역 변수 이름 > * *\<데이터 형식 >* } [ ,... *n* ]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ &#40;transact-sql&#41;  sp_cursorexecute](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_cursorunprepare](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)  

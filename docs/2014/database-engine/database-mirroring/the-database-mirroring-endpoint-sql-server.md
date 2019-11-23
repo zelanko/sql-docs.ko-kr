@@ -24,7 +24,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797897"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
+  ph x="1" /&gt; 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
   
  데이터베이스 미러링 엔드포인트는 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 엔드포인트는 고유의 TCP 포트 번호에서 수신합니다.  
   
@@ -70,15 +70,15 @@ ms.locfileid: "72797897"
      인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 `New-SqlHadrEndpoint` PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다. 서버 인스턴스에서 인증서 인증을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [데이터베이스 미러링 끝점 &#40;에 대 한&#41;인증서 사용 transact-sql](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조 하세요.  
   
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>데이터베이스 미러링 엔드포인트를 구성하려면
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 #40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &40;Transact-SQL &#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
     -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
@@ -93,8 +93,8 @@ ms.locfileid: "72797897"
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 에 대 한 전송 보안](transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [_db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [dm_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys. dm_db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

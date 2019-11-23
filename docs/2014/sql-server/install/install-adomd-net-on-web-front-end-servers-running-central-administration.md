@@ -42,9 +42,9 @@ ms.locfileid: "71952148"
   
 3.  **버전**을 클릭합니다.  
   
-4.  버전에 12.00 @no__t 빌드 번호가 포함 되어 있는지 확인 하 고 > AnalysisService. Microsoft.analysisservices.adomdclient.cellset<를 입력 합니다.  
+4.  버전에 12.00이 포함 되어 있는지 확인 합니다.\<빌드 번호 > 고 설명은 AnalysisService. Microsoft.analysisservices.adomdclient.cellset<입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [PowerPivot 관리 대시보드 및 사용 데이터](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

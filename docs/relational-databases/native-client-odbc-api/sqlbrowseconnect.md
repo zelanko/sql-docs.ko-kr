@@ -54,7 +54,7 @@ ms.locfileid: "73787668"
   
  [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 호출 하 여 설정 되는 다음 특성은 **SQLBrowseConnect**에서 반환 하는 결과 집합을 결정 합니다.  
   
-|Attribute|설명|  
+|특성|설명|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|SQL_MORE_INFO_YES로 설정 된 경우 **SQLBrowseConnect** 는 서버 속성의 확장 문자열을 반환 합니다.<br /><br /> 다음은 **SQLBrowseConnect**에 의해 반환 되는 확장 문자열의 예입니다.<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 이 문자열에서 세미콜론은 서버에 대한 다양한 정보 부분을 구분합니다. 서로 다른 서버 인스턴스를 구분하려면 쉼표를 사용합니다.|  
 |SQL_COPT_SS_BROWSE_SERVER|서버 이름이 지정 된 경우 **SQLBrowseConnect** 는 지정 된 서버에 대 한 정보를 반환 합니다. SQL_COPT_SS_BROWSE_SERVER가 NULL로 설정 된 경우 **SQLBrowseConnect** 는 도메인에 있는 모든 서버에 대 한 정보를 반환 합니다.<br /><br /> <br /><br /> 네트워크 문제로 인해 **SQLBrowseConnect** 는 모든 서버에서 적시에 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 각 요청이 있을 때마다 다를 수 있습니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "73787668"
 |---------------------|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA에 대한 설명을 포함시켰습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLBrowseConnect 함수](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

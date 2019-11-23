@@ -68,16 +68,16 @@ ms.locfileid: "73637792"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|이미지|  
-|varchar(max)|varchar|varchar|텍스트|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|XML|XML|XML|Ntext|  
+|varchar(max)|varchar|varchar|Text|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
+|xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|이미지|  
 |date|date|varchar|Varchar|  
-|datetime2|datetime2|varchar|Varchar|  
-|datetimeoffset|datetimeoffset|varchar|Varchar|  
-|time|time|varchar|Varchar|  
+|Datetime2|Datetime2|varchar|Varchar|  
+|Datetimeoffset|Datetimeoffset|varchar|Varchar|  
+|Time|Time|varchar|Varchar|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 프로그래밍](sql-server-native-client-programming.md)   
  [SQL Server Native Client 설치](applications/installing-sql-server-native-client.md)  
   

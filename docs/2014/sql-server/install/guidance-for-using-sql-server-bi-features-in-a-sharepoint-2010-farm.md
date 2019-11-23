@@ -103,7 +103,7 @@ ms.locfileid: "71952265"
   
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint Server 2010  설치 및 배포](https://technet.microsoft.com/sharepoint/ee518643.aspx)  
  [3 계층 팜을 위한 다중 서버 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   

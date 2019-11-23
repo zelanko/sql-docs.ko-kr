@@ -65,8 +65,8 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|결과 집합에 있는 행의 Id입니다.|  
 |**database_id**|**int**|데이터베이스 id입니다.|  
 |**column_encryption_key_id**|**int**|열 암호화 키 id입니다. 참고:이 id는 [column_encryption_keys &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 카탈로그 뷰의 행을 나타냅니다.|  
-|**column_encryption_key_version**|**int**|나중에 사용하도록 예약되어 있습니다. 현재에는 항상 1이 포함 되어 있습니다.|  
-|**column_encryption_key_metadata_version**|**binary (8)**|열 암호화 키를 만든 시간을 나타내는 타임 스탬프입니다.|  
+|**column_encryption_key_version**|**int**|나중에 사용하기 위해 예약되어 있습니다. 현재에는 항상 1이 포함 되어 있습니다.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|열 암호화 키를 만든 시간을 나타내는 타임 스탬프입니다.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|열 암호화 키의 암호화 된 값입니다.|  
 |**column_master_key_store_provider_name**|**sysname**|열 암호화 키의 암호화 된 값을 생성 하는 데 사용 된 열 마스터 키를 포함 하는 키 저장소의 공급자 이름입니다.|  
 |**column_master_key_path**|**nvarchar(4000)**|열 암호화 키의 암호화 된 값을 생성 하는 데 사용 된 열 마스터 키의 키 경로입니다.|  
@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|첫 번째 결과 집합의 행에 대 한 코드입니다. 참조 된 행은 열에 대해 구성 된 열 암호화 키를 설명 하 고 매개 변수는에 해당 합니다.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|유형 정규화 알고리즘의 버전 번호입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Always Encrypted를 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 드라이버는 자동으로 **sp_describe_parameter_encryption** 를 호출 하 여 응용 프로그램에서 실행 되는 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 그런 다음, 드라이버는 암호화 메타 데이터를 사용 하 여 Always Encrypted로 보호 되는 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고 응용 프로그램에서 제출한 일반 텍스트 매개 변수 값을 암호화 된로 대체 합니다. 데이터베이스 엔진에 쿼리를 보내기 전에 매개 변수 값  
   
 ## <a name="permissions"></a>사용 권한  
@@ -163,7 +163,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1\.|1\.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted를 사용 하 여 응용 프로그램 개발](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

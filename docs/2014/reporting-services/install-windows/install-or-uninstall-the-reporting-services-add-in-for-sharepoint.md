@@ -24,7 +24,7 @@ ms.locfileid: "72796433"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [필수 구성 요소](#bkmk_prereq)  
   
@@ -44,12 +44,12 @@ ms.locfileid: "72796433"
   
 -   [업그레이드](#bkmk_upgrade)  
   
--   [Rscustomaction.exe](#bkmk_rscustomaction)  
+-   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
-##  <a name="bkmk_prereq"></a> 사전 요구 사항  
+##  <a name="bkmk_prereq"></a> 필수 구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 설치 작업은 보고서 서버를 SharePoint 제품 인스턴스와 통합하는 데 필요한 몇 가지 단계 중 하나입니다. SharePoint 모드 사용을 위한 전체 요구 사항 집합에 대한 자세한 내용은 [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)을 참조하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치 및 구성에 대 한 자세한 내용은 [sharepoint 2013에 대 한 Reporting Services Sharepoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)를 참조 하세요.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 웹 프런트 엔드 애플리케이션이 여러 개 있는 SharePoint 팜과 통합하는 경우 웹 서버 프런트 엔드가 있는 팜의 각 컴퓨터에 추가 기능을 설치합니다. 이 작업은 보고서 서버 내용에 액세스하는 데 사용될 웹 프런트 엔드에 대해서만 수행합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 웹 프런트 엔드 응용 프로그램이 여러 개 있는 SharePoint 팜과 통합하는 경우 웹 서버 프런트 엔드가 있는 팜의 각 컴퓨터에 추가 기능을 설치합니다. 이 작업은 보고서 서버 내용에 액세스하는 데 사용될 웹 프런트 엔드에 대해서만 수행합니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치하려면 컴퓨터의 관리자여야 합니다. 예를 들어 명령줄에서 rsSharePoint.msi를 실행하려면 **관리자 권한으로 실행** 옵션을 사용하여 관리자 권한으로 명령 프롬프트를 열어야 합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72796433"
 ##  <a name="bkmk_3ways_to_install"></a> 설치 방법 개요  
  SharePoint 제품용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 다음 두 가지 방법 중 하나를 사용하여 설치할 수 있습니다.  
   
--   **설치 마법사:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]![의 새로운 기능](../../../2014/reporting-services/media/rs-fyinote.png "두고")[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용 하 여 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능**을 선택합니다.  
+-   **설치 마법사:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]![의 새로운 기능](../../../2014/reporting-services/media/rs-fyinote.png "참고")[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용 하 여 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.  
   
 -   **rsSharepoint.msi:** 추가 기능 파일은 설치 미디어에서 직접 설치하거나 다운로드한 후 설치할 수 있습니다. rsSharepoint.msi는 그래픽 사용자 인터페이스 및 명령줄 설치를 둘 다 지원합니다. 먼저 승격된 권한으로 명령 프롬프트 창을 연 다음 명령줄에서 rsSharepoint.msi를 실행하여 관리자 권한으로 .msi를 실행해야 합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
@@ -115,7 +115,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  SharePoint 중앙 관리에서 보고서 서버 설정 및 기능 활성화를 구성합니다. 이라고도 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치 및 구성에 대한 자세한 내용은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)를 참조하세요.  
+3.  SharePoint 중앙 관리에서 보고서 서버 설정 및 기능 활성화를 구성합니다. 을 선택합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치 및 구성에 대한 자세한 내용은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)를 참조하세요.  
   
 ###  <a name="bkmk_files_only_installation"></a> 파일만 설치  
  파일을 설치하고 설치 중 사용자 지정 동작 단계를 건너뛰려면 SKIPCA 옵션을 사용하여 명령줄에서 rssharepoint.msi를 실행합니다.  
@@ -280,7 +280,7 @@ Rssharepoint.msi /?
   
 2.  출력은 다음과 비슷합니다.  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`가 될 때까지 태스크를 반복합니다.  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured` 을 참조하세요.  
   
 ##  <a name="bkmk_upgrade"></a> 업그레이드  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 이미 설치되어 있으면 현재 버전으로 업그레이드할 수 있습니다. 추가 기능 설치 프로그램이 기존 버전을 감지하여 업데이트할 것인지 확인하는 메시지를 표시합니다. 메시지는 다음과 유사합니다.  
@@ -294,7 +294,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  다음 표에서는 rscustomaction.exe 스위치를 요약해서 보여 줍니다.  
   
-|스위치|Description|  
+|스위치|설명|  
 |------------|-----------------|  
 |i|사용자 지정 동작을 설치합니다. 그러면 SharePoint의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소가 등록되고 W3SVCservice가 다시 시작됩니다.|  
 |r|Repair|  
@@ -305,6 +305,6 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>Reporting Services 구성  
  모든 필요한 컴퓨터에 추가 기능을 설치한 다음에는 SharePoint 중앙 관리에서 보고서 서버를 구성해야 합니다. 필요한 단계는 설치된 여러 기술의 순서에 따라 달라집니다. 자세한 내용은 [sharepoint 2010 용 Reporting Services Sharepoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 및 [Reporting Services 보고서 서버 &#40;sharepoint 모드&#41; ](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md) 설치를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sharepoint 2010  Reporting Services Sharepoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
  [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  

@@ -55,7 +55,7 @@ ms.locfileid: "70175936"
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SP4(서비스 팩 4) 이상을 실행하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에만 DAC를 가져올 수 있습니다. 이후 버전에서 DAC를 내보내는 경우 DAC에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원되지 않는 개체가 포함될 수 있습니다. 이러한 DAC를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]인스턴스에 배포할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 내보내기 파일은 가져오지 않는 것이 좋습니다. 이러한 파일에 포함된 악성 코드가 의도하지 않은 Transact-SQL 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 내보내기 파일을 사용하려면 먼저 DAC의 압축을 풀고 저장 프로시저 및 다른 사용자 정의 코드와 같은 코드를 검사하세요. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](validate-a-dac-package.md)를 참조하세요.  
   
 ## <a name="security"></a>보안  
@@ -69,7 +69,7 @@ ms.locfileid: "70175936"
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 후 **데이터 계층 응용 프로그램 가져오기** 메뉴 항목을 선택하여 마법사를 시작합니다.  
+2.  **개체 탐색기**에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 후 **데이터 계층 애플리케이션 가져오기** 메뉴 항목을 선택하여 마법사를 시작합니다.  
   
 3.  마법사 대화 상자를 완료합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70175936"
   
 -   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Azure에서 가져오기** -azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사 하려면 Azure 컨테이너에 연결 해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
+-   **Azure에서 가져오기** -azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
      Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70175936"
   
 -   **새 데이터베이스 이름** – 가져온 데이터베이스의 이름을 지정합니다.  
   
--   버전-비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 을 지정 합니다. **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전** -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹을 지정 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
   
 -   **최대 데이터베이스 크기 (GB)** -드롭다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "70175936"
   
  **닫기** 를 클릭하여 마법사를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   
  [데이터 계층 응용 프로그램 내보내기](export-a-data-tier-application.md)  
   

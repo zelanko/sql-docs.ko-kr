@@ -66,7 +66,7 @@ ms.locfileid: "73728793"
   
 5.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [주석&#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

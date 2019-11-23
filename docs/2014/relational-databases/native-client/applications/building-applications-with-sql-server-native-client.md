@@ -38,10 +38,10 @@ ms.locfileid: "70175419"
  [SQL Server Native Client 헤더 및 라이브러리 파일 사용](using-the-sql-server-native-client-header-and-library-files.md)  
  애플리케이션 내에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일을 사용하는 방법에 대해 설명합니다.  
   
- [MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트](updating-an-application-to-sql-server-native-client-from-mdac.md)  
+ [MDAC에서 SQL Server Native Client로 애플리케이션 업데이트](updating-an-application-to-sql-server-native-client-from-mdac.md)  
  MDAC에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client로 업그레이드할 때 고려해야 하는 문제 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC의 차이점에 대해 설명합니다.  
   
- [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](updating-an-application-from-sql-server-2005-native-client.md)  
+ [SQL Server 2005 Native Client에서 애플리케이션 업데이트](updating-an-application-from-sql-server-2005-native-client.md)  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client로 업그레이드할 때 고려해야 하는 문제에 대해 설명합니다.  
   
  [SQL Server Native Client와 함께 ADO 사용](using-ado-with-sql-server-native-client.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "70175419"
  [SQL Server Native Client를 사용 하 여 Azure SQL Database에 연결](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 프로그래밍](../sql-server-native-client-programming.md)   
  [ODBC 방법 도움말 항목](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  

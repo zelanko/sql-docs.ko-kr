@@ -37,7 +37,7 @@ ms.locfileid: "70874439"
 -   수동 장애 조치의 경우 장애 조치 명령이 실행된 후 데이터베이스를 장애 조치하는 데 필요한 시간만 고려됩니다.  
   
 ## <a name="error-detection"></a>오류 검색  
- 시스템에서 오류를 확인 하는 데 걸리는 시간은 오류 유형에 따라 달라 집니다. 예를 들어 네트워크 오류는 거의 즉시 발견 되지만 응답 하지 않는 서버를 인식 하는 경우에는 기본 시간 제한이 적용 되는 10 초가 걸립니다.  
+ 시스템에서 오류를 검색하는 데 걸리는 시간은 오류 유형에 따라 달라집니다. 예를 들어 네트워크 오류는 즉시 검색되지만 응답하지 않는 서버를 파악하는 데는 10초가 걸립니다(기본 제한 시간을 사용하는 경우).  
   
  데이터베이스 미러링 세션 중에 실패를 발생시킬 수 있는 오류와 자동 장애 조치를 지원하는 보호 우선 모드에서의 제한 시간 검색에 대한 자세한 내용은 [데이터베이스 미러링 중에 발생 가능한 오류](possible-failures-during-database-mirroring.md)를 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874439"
  장애 조치 시간은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다. 미러 서버에서 로그 레코드를 처리하는 방법은 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요. 장애 조치 시간을 계산하는 방법은 이 항목의 뒷부분에서 장애 조치 다시 실행 속도 계산을 참조하십시오.  
   
 > [!IMPORTANT]  
->  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어  테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
+>  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어 테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
   
 ### <a name="the-redo-queue"></a>Redo Queue  
  데이터베이스를 롤포워드하는 것은 현재 미러 서버에 있는 Redo Queue의 모든 로그 레코드를 적용하는 것입니다. *Redo Queue* 는 미러 서버의 디스크에 기록되었지만 미러 데이터베이스에서 롤포워드되지 않은 로그 레코드로 구성됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "70874439"
   
  ![오류 검색 및 장애 조치 시간](../media/dbm-failovauto-time.gif "오류 검색 및 장애 조치 시간")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

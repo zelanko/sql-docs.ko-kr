@@ -112,7 +112,7 @@ ms.locfileid: "73785529"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- 예를 들어  
+ 예를 들어:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -147,7 +147,7 @@ ms.locfileid: "73785529"
   
  SQL_SOPT_SS_NAME_SCOPE에 SQL_SS_NAME_SCOPE_TABLE 이외의 값이 있는 경우 SQLTables, Sqltables 또는 SQLPrimaryKeys의 다른 카탈로그 함수를 호출 하면 SQL_ERROR 반환 됩니다. SQLSTATE HY010 및 "함수 시퀀스 오류입니다(SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되지 않았습니다)" 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLGetStmtAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

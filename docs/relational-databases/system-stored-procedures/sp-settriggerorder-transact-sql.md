@@ -54,7 +54,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**첫째**|트리거가 첫 번째로 실행됩니다.|  
 |**마지막**|트리거가 마지막으로 실행됩니다.|  
-|**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
+|**None**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
 `[ @stmttype = ] 'statement_type'` 트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
   

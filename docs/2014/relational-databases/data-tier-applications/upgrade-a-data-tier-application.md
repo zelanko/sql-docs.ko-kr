@@ -36,7 +36,7 @@ ms.locfileid: "72797983"
   
 -   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
--   **DAC를 업그레이드하려면:** [데이터 계층 애플리케이션 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **DAC를 업그레이드하려면:**  [데이터 계층 응용 프로그램 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 애플리케이션](data-tier-applications.md)을 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "72797983"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  DAC 업그레이드는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 수행될 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  업그레이드를 시작하기 전에 전체 데이터베이스 백업을 수행하는 것이 좋습니다. 업그레이드할 때 오류가 발생하여 모든 변경 내용을 롤백할 수 없는 경우 백업을 복원해야 할 수 있습니다.  
   
  업그레이드를 시작하기 전에 DAC 패키지 및 업그레이드 동작의 유효성을 검사하기 위해 취해야 하는 조치는 여러 가지가 있습니다. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](validate-a-dac-package.md)를 참조하세요.  
@@ -73,7 +73,7 @@ ms.locfileid: "72797983"
 ###  <a name="Security"></a> 보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 패키지에 저장됩니다. 패키지가 배포 또는 업그레이드되면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 업그레이드할 수 있습니다. 로그인은 기존 데이터베이스의 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 업그레이드할 수 있습니다.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> 데이터 계층 애플리케이션 업그레이드 마법사 사용  
@@ -118,7 +118,7 @@ ms.locfileid: "72797983"
   
  **DAC 패키지** - 새 버전의 데이터 계층 애플리케이션이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
   
- **애플리케이션 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 애플리케이션 이름을 표시하는 읽기 전용 입력란입니다.  
+ **응용 프로그램 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 응용 프로그램 이름을 표시하는 읽기 전용 입력란입니다.  
   
  **버전** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 버전을 표시하는 읽기 전용 입력란입니다.  
   
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [개체 탐색기](data-tier-applications.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 계층 응용 프로그램](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

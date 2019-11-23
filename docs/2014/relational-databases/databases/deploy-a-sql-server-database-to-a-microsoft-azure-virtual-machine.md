@@ -50,7 +50,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175733"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포
-  **Azure vm에 SQL Server 데이터베이스 배포** 마법사를 사용 하 여 azure vm (가상 머신)의 인스턴스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 배포 합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
+  **AZURE vm에 SQL Server 데이터베이스 배포** 마법사를 사용 하 여 azure Vm (가상 머신)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터베이스를 배포할 수 있습니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
   
  마법사는 같은 데이터베이스 이름을 가진 기존 데이터베이스를 덮어쓰지 않으므로 차등 백업을 위해 마법사를 사용할 수 없습니다. VM에서 기존 데이터베이스를 바꾸려면 먼저 기존 데이터베이스를 삭제하거나 데이터베이스 이름을 변경해야 합니다. 진행 중인 배포 작업의 데이터베이스 이름과 VM의 기존 데이터베이스 간에 이름 충돌이 발생할 경우 마법사에서는 작업을 완료할 수 있도록 진행 중인 데이터베이스에 대해 추가된 데이터베이스 이름을 제안합니다.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "70175733"
   
  Windows Server 운영 체제를 실행 중인 컴퓨터에서 다음 구성 설정을 사용하여 이 마법사를 실행해야 합니다.  
   
--   보안 강화 구성 해제:  서버 관리자 > 로컬 서버를 사용 하 여 Internet Explorer ESC (보안 강화 구성)를 **OFF**로 설정 합니다.  
+-   보안 강화 구성 해제: 서버 관리자 사용 > Internet Explorer ESC(보안 강화 구성)를 설정할 로컬 서버 **해제**  
   
--   JavaScript 사용:  Internet Explorer > 인터넷 옵션 > 보안 > 사용자 지정 수준 > 스크립팅 > 액티브 스크립팅: **사용**.  
+-   JavaScript 사용:  Internet Explorer > 인터넷 옵션 > 보안 > 사용자 지정 수준 > 스크립팅 > 액티브 스크립팅: **사용**  
   
 ###  <a name="limitations"></a> 제한 사항  
  이 작업에 대한 데이터베이스 크기 제한은 1TB입니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "70175733"
   
             -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- 백업에 사용된 마지막 경로입니다. 마법사에서 기본값으로 사용됩니다. -->  
   
-            -   Cleanupdisabled = False/> \<!--마법사는 중간 파일 및 Azure 개체 (VM, CS, SA)를 삭제 하지 않습니다. -->  
+            -   CleanupDisabled = False/> \<!--마법사는 중간 파일 및 Azure 개체 (VM, CS, SA)를 삭제 하지 않습니다. -->  
   
         -   <PublishProfile \<!-- 마지막으로 사용된 게시 프로필 정보입니다. -->  
   
@@ -196,11 +196,11 @@ ms.locfileid: "70175733"
 -   **도움말** -마법사에 대 한 MSDN 도움말 항목을 시작 합니다.  
   
 ##  <a name="Source_settings"></a> 소스 설정  
- 이 페이지를 사용 하 여 Azure VM에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 하려는 데이터베이스를 호스팅하는 인스턴스에 연결 합니다. 또한 파일을 Azure로 전송 하기 전에 로컬 컴퓨터에서 저장할 파일의 임시 위치를 지정 합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
+ 이 페이지를 사용 하 여 Azure VM에 배포 하려는 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 또한 파일을 Azure로 전송 하기 전에 로컬 컴퓨터에서 저장할 파일의 임시 위치를 지정 합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
   
  **옵션**  
   
--   **연결 ...** 을 클릭 한 다음 배포할 데이터베이스를 호스팅하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 인스턴스에 대 한 연결 세부 정보를 지정 합니다.  
+-   **연결 ...** 을 클릭 한 다음 배포할 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대 한 연결 세부 정보를 지정 합니다.  
   
 -   **데이터베이스 선택** 드롭다운 목록을 사용하여 배포할 데이터베이스를 지정합니다.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "70175733"
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server용 클라우드 어댑터](../../database-engine/cloud-adapter-for-sql-server.md)   
  [데이터베이스 수명 주기 관리](../database-lifecycle-management.md)   
  [데이터 계층 애플리케이션 내보내기](../data-tier-applications/export-a-data-tier-application.md)   

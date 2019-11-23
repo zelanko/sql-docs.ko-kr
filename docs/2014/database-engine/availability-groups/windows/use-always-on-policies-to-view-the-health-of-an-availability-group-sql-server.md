@@ -31,7 +31,7 @@ ms.locfileid: "72782844"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a>AlwaysOn 대시보드 사용  
@@ -43,7 +43,7 @@ ms.locfileid: "72782844"
   
 3.  **AlwaysOn 고가용성** 노드를 확장합니다.  
   
-     **가용성 그룹** 을 마우스 오른쪽 단추로 클릭하거나 이 노드를 확장하고 특정 가용성 그룹을 마우스 오른쪽 단추로 클릭합니다.  
+     **가용성 그룹**을 마우스 오른쪽 단추로 클릭하거나 이 노드를 확장하고 특정 가용성 그룹을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  **대시보드 표시** 명령을 선택합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72782844"
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
   
-    |옵션|Description|  
+    |옵션|설명|  
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |`InputObject`|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 컴퓨팅합니다.|  
@@ -109,7 +109,7 @@ ms.locfileid: "72782844"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
--   [SQL Server PowerShell 도움말 보기](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
  **AlwaysOn 팀 블로그-PowerShell을 사용 하 여 AlwaysOn 상태 모니터링: SQL Server**  
@@ -122,8 +122,8 @@ ms.locfileid: "72782844"
   
 -   [4부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹의 작업 문제에 대 한 AlwaysOn 정책 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

@@ -37,9 +37,9 @@ ms.locfileid: "70874874"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|고유한 언어 ID입니다.|  
 |dateformat|**nchar(3)**|날짜 순서입니다(예: DMY).|  
-|datefirst|**tinyint**|첫 번째 요일: 월요일의 경우 1, 화요일의 경우 2, 일요일의 경우 7부터 까지입니다.|  
-|upgrade|**int**|시스템에서 사용하도록 예약됩니다.|  
-|name|**sysname**|공식 언어 이름 (예: Français)입니다.|  
+|datefirst|**tinyint**|첫 번째 요일: 월요일의 경우 1, 화요일의 경우 2, 일요일은 7까지입니다.|  
+|업그레이드|**int**|시스템에서 사용하도록 예약됩니다.|  
+|NAME|**sysname**|공식 언어 이름 (예: Français)입니다.|  
 |alias|**sysname**|대체 언어 이름입니다(예: 프랑스어).|  
 |months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
 |shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
@@ -85,8 +85,8 @@ ms.locfileid: "70874874"
 |아랍어|1025|1025|  
 |태국어|1054|1054|  
   
-## <a name="see-also"></a>관련 항목  
- [호환성 뷰 &#40;transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [호환성 뷰 &#40;transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [시스템 테이블을 시스템 뷰로 &#40;매핑 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

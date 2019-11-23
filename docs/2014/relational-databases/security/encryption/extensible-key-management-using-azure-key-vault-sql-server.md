@@ -52,14 +52,14 @@ ms.locfileid: "72798059"
  ![Azure Key Vault를 사용 하 여 EKM SQL Server](../../../database-engine/media/ekm-using-azure-key-vault.png "Azure Key Vault를 사용하는 SQL Server EKM")  
   
 ##  <a name="Step1"></a>1 단계:에서 사용할 Key Vault 설정 SQL Server  
- 다음 단계를 사용하여 암호화 키 보호를 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에 사용할 자격 증명 모음 키를 설정하세요. 자격 증명 모음은 이미 조직에 사용 중일 수 있습니다. 자격 증명 모음이 존재하지 않으면 암호화 키를 관리하도록 지정된 조직 내 Azure 관리자가 자격 증명 모음을 만들고, 이 자격 증명 모음에서 비대칭 키를 생성한 다음 키를 사용할 수 있는 권한을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 부여합니다. 자격 증명 모음 서비스에 대해 이해하려면 [Azure 키 자격 증명 모음 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문), 및 PowerShell [Azure 키 자격 증명 모음 Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) (영문) 참조를 검토하세요.  
+ 다음 단계를 사용하여 암호화 키 보호를 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 사용할 자격 증명 모음 키를 설정하세요. 자격 증명 모음은 이미 조직에 사용 중일 수 있습니다. 자격 증명 모음이 존재하지 않으면 암호화 키를 관리하도록 지정된 조직 내 Azure 관리자가 자격 증명 모음을 만들고, 이 자격 증명 모음에서 비대칭 키를 생성한 다음 키를 사용할 수 있는 권한을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 부여합니다. 자격 증명 모음 서비스에 대해 이해하려면 [Azure 키 자격 증명 모음 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문), 및 PowerShell [Azure 키 자격 증명 모음 Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) (영문) 참조를 검토하세요.  
   
 > [!IMPORTANT]  
 >  여러 Azure 구독이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 포함된 구독을 사용해야 합니다.  
   
 1.  **자격 증명 모음 만들기:** **Azure 키 자격 증명 모음 시작** 의 [키 자격 증명 모음 만들기](https://go.microsoft.com/fwlink/?LinkId=521402)섹션에 있는 지침을 사용하여 자격 증명 모음을 만듭니다. 자격 증명 모음의 이름은 기록합니다. 이 항목에서는 **ContosoKeyVault** 를 키 자격 증명 모음 이름으로 사용합니다.  
   
-2.  **자격 증명 모음에서 비대칭 키 생성:** 키 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 퍼블릭 부분만 자격 증명 모음을 떠나고 프라이빗 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure Key Vault에 위임되며, 키 자격 증명 모음 보안에 의해 보호됩니다.  
+2.  **자격 증명 모음에서 비대칭 키 생성:** 키 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure 키 자격 증명 모음에 위임되며, 키 자격 증명 모음 보안에 의해 보호됩니다.  
   
      비대칭 키를 생성하여 자격 증명 모음에 저장하는 방법에는 여러 가지가 있습니다. 외부에서 키를 생성한 다음 해당 키를 자격 증명 모음에 .pfx 파일로 가져올 수 있습니다. 또는 키 자격 증명 모음 API를 사용하여 자격 증명 모음에서 키를 직접 만들 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72798059"
   
     -   암호화에 사용된 키의 래핑 해제를 위해 자격 증명 모음에 액세스하기 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 또 다른 서비스 사용자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 필요로 하게 됩니다.  
   
-     애플리케이션을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작** (영문)의 [Register an Application with Azure Active Directory(Azure Active Directory로 애플리케이션 등록)](https://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **애플리케이션 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. `CREATE CREDENTIAL` 문에서 사용 하는 경우 **클라이언트 ID**에서 하이픈을 제거 해야 합니다. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.  
+     애플리케이션을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작**[(영문)의 Register an Application with Azure Active Directory(Azure Active Directory로 애플리케이션 등록)](https://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **애플리케이션 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. `CREATE CREDENTIAL` 문에서 사용 하는 경우 **클라이언트 ID**에서 하이픈을 제거 해야 합니다. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.  
   
     -   **sysadmin** 로그인용 **서비스 사용자** : **CLIENTID_sysadmin_login** 및 **SECRET_sysadmin_login**  
   
@@ -90,9 +90,9 @@ ms.locfileid: "72798059"
     > [!IMPORTANT]  
     >  사용자가 키 자격 증명 모음에 적어도 **wrapKey** 및 **unwrapKey** 작업을 사용할 수 있어야 합니다.  
   
-     자격 증명 모음에 사용 권한을 부여하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작**[(영문)의 Authorize the application to use the key or secret(키 또는 암호를 사용할 수 있도록 애플리케이션에 권한 부여)](https://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요.  
+     자격 증명 모음에 사용 권한을 부여하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작** (영문)의 [Authorize the application to use the key or secret(키 또는 암호를 사용할 수 있도록 애플리케이션에 권한 부여)](https://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요.  
   
-     Azure Key Vault 설명서 링크  
+     Azure 키 자격 증명 모음 설명서 링크  
   
     -   [Azure 키 자격 증명 모음이란?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72798059"
   
 ##  <a name="Step3"></a>3 단계: Key Vault에 대 한 EKM 공급자를 사용 하도록 SQL Server 구성  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  이 전체 프로세스를 완료하려면 **sysadmin** 고정 서버 역할에 CONTROL SERVER 권한이나 멤버 자격이 있어야 합니다. 특정 작업에는 다음 권한이 필요합니다.  
   
 -   암호화 공급자를 만들려면 **sysadmin** 고정 서버 역할에 CONTROL SERVER 권한 또는 멤버 자격이 있어야 합니다.  
@@ -200,7 +200,7 @@ ms.locfileid: "72798059"
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   [sp_configure&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
@@ -208,7 +208,7 @@ ms.locfileid: "72798059"
   
 -   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
@@ -221,7 +221,7 @@ ms.locfileid: "72798059"
   
 ##### <a name="to-enable-tde-using-ekm-and-the-key-vault"></a>EKM 및 키 자격 증명 모음을 사용한 TDE 사용 설정  
   
-1.  데이터베이스 로드 동안 키 자격 증명 모음 EKM에 액세스할 때 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 자격 증명을 만듭니다.  
+1.  데이터베이스 로드 동안 키 자격 증명 모음 EKM에 액세스할 때 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 자격 증명을 만듭니다.  
   
     > [!IMPORTANT]  
     >  `CREATE CREDENTIAL`의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요 합니다. `CREATE CREDENTIAL`의 **secret** 인수에는 *\<클라이언트 ID >* (하이픈 없이)와 *암호 >\<* 사이에 공백 없이 함께 전달 해야 합니다.  
@@ -236,7 +236,7 @@ ms.locfileid: "72798059"
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;  
     ```  
   
-2.  TDE용으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 사용할 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 로그인을 만들고 여기에 자격 증명을 추가합니다. 이 예제에서는 위에 있는 [섹션 3의 3단계](#Step3) 에 설명된 대로 master 데이터베이스용으로 이전에 가져왔거나 만든 키 자격 증명 모음에 저장된 CONTOSO_KEY 비대칭 키를 사용합니다.  
+2.  TDE용으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 로그인을 만들고 여기에 자격 증명을 추가합니다. 이 예제에서는 위에 있는 [섹션 3의 3단계](#Step3) 에 설명된 대로 master 데이터베이스용으로 이전에 가져왔거나 만든 키 자격 증명 모음에 저장된 CONTOSO_KEY 비대칭 키를 사용합니다.  
   
     ```sql
     USE master;  
@@ -341,7 +341,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

@@ -114,7 +114,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  SSMS **개체 탐색기**에서 **보안** 노드를 확장한 다음 **자격 증명** 노드를 확장합니다.  
   
-    2.  **UtilityAgentProxyCredential_\<GUID >** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+    2.  **UtilityAgentProxyCredential_\<GUID >** 을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
     3.  자격 증명 속성 대화 상자에서 **UtilityAgentProxyCredential_\<GUID >** 자격 증명에 필요한 자격 증명을 업데이트 합니다.  
   
@@ -148,7 +148,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     12. SQL Server Browser 서비스가 해제되어 있는 UCP에 연결하는 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 이 단계를 반복합니다.  
   
--   ph x="1" /&gt; 의 관리되는 인스턴스가 네트워크에 연결되어 있는지 확인합니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 네트워크에 연결되어 있는지 확인합니다.  
   
 -   이름은 같지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리되는 인스턴스의 대/소문자 설정이 다른 데이터베이스가 있는 경우 데이터베이스와 해당 뷰포인트 간의 식별이 잘못되어 데이터 수집이 실패할 수 있습니다. 예를 들어 "MYDATABASE"라는 데이터베이스가 "MyDatabase"라는 데이터베이스의 상태를 보여 줄 수 있습니다. 이 시나리오에서는 오류가 발생하지 않습니다. 또한 UCP에 표시되는 다른 객체에서 데이터베이스 파일 및 파일 그룹 이름 등의 대/소문자가 일치하지 않아 데이터 수집이 실패할 수도 있습니다.  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  사용자를 이 그룹에 추가하기 전에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 이미 UCP가 등록된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 리소스 상태 문제 해결&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

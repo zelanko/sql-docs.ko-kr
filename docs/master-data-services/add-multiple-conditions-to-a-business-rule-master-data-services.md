@@ -73,7 +73,7 @@ ms.locfileid: "73728802"
     > [!TIP]  
     >  여러 조건을 선택할 수 있으며, 마우스 오른쪽 단추를 클릭하여 하나의 논리 연산자 내에서 조건을 그룹화하거나 특정 논리 연산자 내에서 조건의 그룹을 해제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

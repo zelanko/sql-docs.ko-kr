@@ -42,13 +42,13 @@ ms.locfileid: "68890126"
   
 -   연결 구성 요소  
   
- 각 구성 요소를 개별적으로 설치하거나 위에 나열된 구성 요소 조합을 선택할 수 있습니다. 에서 사용할 수 있는 버전과 구성 요소 중에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]가장 적합 한 항목을 선택 하려면 [SQL Server 2014의 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
+ 각 구성 요소를 개별적으로 설치하거나 위에 나열된 구성 요소 조합을 선택할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 사용할 수 있는 버전과 구성 요소 중에서 가장 적합 한 항목을 선택 하려면 [SQL Server 2014의 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 32비트 및 64비트 버전으로 제공됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램은 다음 설치 옵션을 지원합니다.  
   
 -   **설치 마법사**  
   
-     설치 마법사를 사용 하 여를 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하는 방법에 대 한 절차 정보는 설치 마법사 [ &#40;&#41; 설치의 설치 SQL Server 2014을](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 참조 하세요.  
+     설치 마법사를 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치 하는 방법에 대 한 절차 정보를 보려면 설치 [마법사 &#40;&#41; 에서 SQL Server 2014 설치를](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 참조 하세요.  
   
 -   **명령 프롬프트**  
   
@@ -60,19 +60,19 @@ ms.locfileid: "68890126"
   
 -   **SysPrep**  
   
-     Sysprep을 사용 하 여 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하는 방법에 대 한 절차 정보를 보려면 sysprep을 [사용 하 여 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+     SysPrep을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치 하는 방법에 대 한 절차 정보는 [sysprep을 사용 하 여 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
 -   **Server Core 설치**  
   
-     Windows server core에를 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하는 방법에 대 한 절차 정보는 [server core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md) 를 참조 하세요.  
+     Windows Server Core에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치 하는 방법에 대 한 절차 정보는 [Server core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md) 를 참조 하세요.  
   
--   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]BI 기능 설치**  
+-   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] BI 기능 설치**  
   
-     에 사용 되는,,, 및 여러 클라이언트 응용 프로그램을 포함 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]하는 Microsoft BI 플랫폼의 일부인 기능을 설치 하는 방법에 대 한 자세한 내용은 [SQL Server 2014 BI 기능 설치](../sql-server/install/install-sql-server-business-intelligence-features.md) 를 참조 하세요. 분석 데이터를 만들거나 사용 합니다.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용 하는 데 사용 되는 일부 클라이언트 응용 프로그램을 포함 하는 Microsoft BI 플랫폼의 일부인 기능을 설치 하는 방법에 대 한 자세한 내용은 [SQL Server 2014 BI 기능 설치](../sql-server/install/install-sql-server-business-intelligence-features.md) 를 참조 하세요.  
   
 -   **장애 조치 클러스터 설치**  
   
-     장애 조치 클러스터에를 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 방법에 대 한 절차 정보는 [장애 조치 (failover) 클러스터 설치 SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치 (failover) 클러스터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치 하는 방법에 대 한 절차 정보는 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
   
  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68890126"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 결정합니다.|[SQL Server 2014 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |하드웨어 구성을 검토하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 설치를 준비하는 방법을 알아 봅니다.|[장애 조치(Failover) 클러스터링을 설치하기 전에](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
-###  <a name="BKMK_Upgrading"></a>로 업그레이드[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+###  <a name="BKMK_Upgrading"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드  
  기존 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [SQL Server 2014로 업그레이드를](../database-engine/install-windows/upgrade-sql-server.md)참조 하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드하기 전에 업그레이드 프로세스에 대한 다음 항목을 검토하십시오.  
   
 |설명|항목|  
@@ -115,7 +115,7 @@ ms.locfileid: "68890126"
 |특정 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전을 다른 버전으로 업그레이드하는 절차 항목입니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.|[SQL Server 2014 &#40;설치 프로그램의 다른 버전으로 업그레이드&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 모든 장애 조치(failover) 클러스터 노드에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 장애 조치(failover) 클러스터로 개별 업그레이드하도록 지원합니다. 자세한 내용은 이 항목을 검토하십시오.|[SQL Server 장애 조치(Failover) 클러스터 업그레이드](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
   
-###  <a name="BKMK_Install"></a>설치[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+###  <a name="BKMK_Install"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 다양한 설치 시나리오에 대한 정보는 다음 항목을 검토하십시오.  
   
 |설명|항목|  
@@ -124,7 +124,7 @@ ms.locfileid: "68890126"
 |Windows Server Core에 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 설치하려면 이 항목을 검토합니다.|[Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |기존 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에 개별 기능을 추가하려면 이 항목을 검토하십시오|[SQL Server 2014 &#40;설치의 인스턴스에 기능 추가&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |새 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스를 만들려면 이 항목을 검토하십시오.|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|이 항목에서는 기존 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리합니다.|[SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|이 항목에서는 기존 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리합니다.|[SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |이 항목에서는 장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다.|[SQL Server 장애 조치 클러스터에 클라이언트 도구 설치](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |SQL 검색 보고서 사용 방법을 검토하여 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 확인합니다.|[SQL Server 설치 유효성 검사](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
 |설치 마법사, 명령 프롬프트, 구성 파일 사용 및 SysPrep 사용 등의 방법으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 설치하는 절차 항목에 대한 링크를 제공합니다.|[설치 방법 도움말 항목](../../2014/sql-server/install/installation-how-to-topics.md)|  
@@ -132,26 +132,26 @@ ms.locfileid: "68890126"
 ## <a name="related-content"></a>관련 내용  
  이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 제거에 대해 설명합니다.  
   
-###  <a name="BKMK_Configure"></a>구성은[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+###  <a name="BKMK_Configure"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 구성  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 완료하면 그래픽 및 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 추가로 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 처음 구성할 때는 다음 항목을 참조하십시오.  
   
 |설명|항목|  
 |-----------------|-----------|  
 |이 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 SharePoint용 PowerPivot에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다.|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다.|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
-###  <a name="BKMK_Uninstalling"></a>제거[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+###  <a name="BKMK_Uninstalling"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제거  
  다음 항목에서는 독립 실행형 및 장애 조치(failover) 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.  
   
 |설명|항목|  
 |-----------------|-----------|  
-|이 항목에서는 독립 실행형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.|[SQL Server 2014 제거](../sql-server/install/uninstall-sql-server.md)|  
+|이 항목에서는 독립 실행형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.|[SQL Server 2014 제거](../sql-server/install/uninstall-sql-server.md)|  
 |이 항목에서는 장애 조치(failover) 클러스터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 제거하는 방법에 대해 설명합니다.|[SQL Server 장애 조치(Failover) 클러스터 인스턴스 제거&#40;설치&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
 |이 항목에서는 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]를 제거한 후 DQS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) 개체를 수동으로 제거하거나 DQS 서버만 제거하는 방법에 대해 자세히 설명합니다.|[Data Quality 서버 개체 제거](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 2014에 대 한 제품 사양](sql-server-2014-product-specifications.md)   
- [SQL Server에 대 한 제품 설명서 시작](../2014-toc/books-online-for-sql-server-2014.md) [이전 버전과의 호환성](backward-compatibility.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014 에 대 한 제품 사양](sql-server-2014-product-specifications.md)  
+ SQL Server [이전 버전과의 호환성](backward-compatibility.md) [을 위해 제품 설명서를 시작 하세요](../2014-toc/books-online-for-sql-server-2014.md) .  
   
   

@@ -66,16 +66,19 @@ ms.locfileid: "71708217"
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [원시 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-[INSERT &#40;&#41;transact-sql](/sql/t-sql/statements/insert-transact-sql)
-[SELECT 절 &#40;&#41;transact-sql](/sql/t-sql/queries/select-clause-transact-sql)
+[&#41; Transact-sql &#40;](/sql/t-sql/statements/insert-transact-sql)
+[SELECT 절 &#40;transact-sql&#41; ](/sql/t-sql/queries/select-clause-transact-sql)
 [bcp 유틸리티](../../tools/bcp-utility.md)   
-[데이터 &#40;대량 가져오기 준비 SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)
-[BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)@no__t 7[대량 가져오기 및 내보내기 &#40;&#41;](bulk-import-and-export-of-data-sql-server.md)SQL Server 1[OPENROWSET &#40; Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[서식 파일 &#40;만들기 SQL Server&#41; ](create-a-format-file-sql-server.md)
+[&#40;데이터 SQL Server&#41;
+대량 가져오기 준비](prepare-to-bulk-import-data-sql-server.md) [BULK INSERT &#40;transact-sql&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql)
+[데이터 &#40;SQL Server&#41; 대량 가져오기 및 내보내기](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;transact-sql&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
+[서식 파일 &#40;&#41; 만들기](create-a-format-file-sql-server.md) SQL Server

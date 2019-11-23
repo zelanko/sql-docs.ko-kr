@@ -49,7 +49,7 @@ ms.locfileid: "72688730"
   
  데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분이 있습니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 데이터 정렬은 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다. 다음 표에서는 이러한 옵션과 연결된 동작에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대/소문자를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|  
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 ' a '는 '&#x1EA5;'와 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "72688730"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 데이터 정렬 집합은 다음과 같습니다.  
   
  Windows 데이터 정렬  
- Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문자 데이터 저장 규칙을 정의합니다. Windows 데이터 정렬의 경우 유니코드 데이터를 비교할 때와 동일한 알고리즘을 사용하여 비유니코드 데이터도 비교합니다. 기본 Windows 데이터 정렬 규칙은 사전 정렬이 적용될 때 사용되는 알파벳이나 언어를 지정하고 유니코드가 아닌 문자 데이터를 저장하는 데 사용되는 코드 페이지를 지정합니다. 유니코드 정렬과 비유니코드 정렬은 모두 특정 버전의 Windows에서 수행되는 문자열 비교와 호환됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 데이터 형식에서 일관성이 유지되고 개발자는 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 것과 동일한 규칙을 사용하여 문자열을 정렬할 수 있습니다. 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요.  
+ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문자 데이터 저장 규칙을 정의합니다. Windows 데이터 정렬의 경우 유니코드 데이터를 비교할 때와 동일한 알고리즘을 사용하여 비유니코드 데이터도 비교합니다. 기본 Windows 데이터 정렬 규칙은 사전 정렬이 적용될 때 사용되는 알파벳이나 언어를 지정하고 유니코드가 아닌 문자 데이터를 저장하는 데 사용되는 코드 페이지를 지정합니다. 유니코드 정렬과 비유니코드 정렬은 모두 특정 버전의 Windows에서 수행되는 문자열 비교와 호환됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내의 데이터 형식에서 일관성이 유지되고 개발자는 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 것과 동일한 규칙을 사용하여 문자열을 정렬할 수 있습니다. 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요.  
   
  이진 데이터 정렬  
  이진 데이터 정렬은 로캘 및 데이터 형식으로 정의된 코딩 값 시퀀스에 따라 데이터를 정렬합니다. 이때 대/소문자가 구분됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이진 데이터 정렬은 사용할 로캘과 ANSI 코드 페이지를 정의하며 이진 정렬 순서를 적용합니다. 이진 데이터 정렬은 비교적 간단하므로 애플리케이션의 성능을 향상시키는 데 도움이 됩니다. 비유니코드 데이터 형식의 경우 데이터 비교는 ANSI 코드 페이지에 정의된 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식의 경우 데이터 비교는 유니코드 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식에서의 이진 데이터 정렬의 경우 데이터 정렬 시 로캘은 고려되지 않습니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다.  
@@ -135,7 +135,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  다음 표에서는 유니코드 서버 및 비유니코드 서버의 다양한 조합과 함께 다국어 데이터 사용에 대한 정보를 제공합니다.  
   
-|Server|클라이언트|이점 또는 제한 사항|  
+|서버|클라이언트|이점 또는 제한 사항|  
 |------------|------------|-----------------------------|  
 |유니코드|유니코드|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|  
 |유니코드|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 운영 체제에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|  
@@ -194,10 +194,10 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 -   태국어와 같이 단어 사이를 구분하는 공백이 없어 단어 인식을 위해 내부 사전이 필요한 언어  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 애플리케이션은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 응용 프로그램은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.  
   
   
-##  <a name="Related_Tasks"></a> 관련 태스크  
+##  <a name="Related_Tasks"></a> 관련 작업  
   
 |태스크|항목|  
 |----------|-----------|  
@@ -216,7 +216,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Contained Database Collations](../databases/contained-database-collations.md)   
  [전체 텍스트 인덱스 생성 시 언어 선택](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations(Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  

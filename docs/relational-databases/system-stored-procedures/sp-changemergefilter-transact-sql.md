@@ -43,7 +43,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`은 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'`는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @article = ] 'article'`은 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
@@ -51,13 +51,13 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'`은 변경할 속성의 이름입니다. *속성* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @value = ] 'value'`은 지정 된 속성의 새 값입니다. *value*는 **nvarchar (1000)** 이며 기본값은 없습니다.  
+`[ @value = ] 'value'`는 지정 된 속성의 새 값입니다. *value*는 **nvarchar (1000)** 이며 기본값은 없습니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|Value|설명|  
 |--------------|-----------|-----------------|  
-|**filter_type**|**1**|조인 필터입니다.<br /><br /> 이 옵션은 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
+|**filter_type**|**1.**|조인 필터입니다.<br /><br /> 이 옵션은 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
 ||**2**|논리적 레코드 관계입니다.|  
 ||**3**|조인 필터가 논리적 레코드 관계도 됩니다.|  
 |**filtername**||필터의 이름입니다.|  
@@ -66,13 +66,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|조인이 고유 키에 있습니다.|  
 ||**false**|조인이 고유 키에 없습니다.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`은이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`는이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 의미 하며, 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 사용 되지 않는 것으로 표시 되 고 새 스냅숏으로 생성 될 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`은이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 하는 경우를 승인 합니다. *force_reinit_subscription* 는 **bit** 이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 하는 경우를 승인 합니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -82,20 +82,20 @@ sp_changemergefilter [ @publication= ] 'publication'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_changemergefilter** 은 병합 복제에 사용 됩니다.  
+ **sp_changemergefilter** 는 병합 복제에 사용 됩니다.  
   
- 병합 아티클의 필터를 변경하려면 스냅샷이 하나 있는 경우 이를 다시 만들어야 합니다. 이는 **\@force_invalidate_snapshot** 을 **1**로 설정 하 여 수행 합니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 1force_reinit_subscription를 **1**로 **@no__t** 설정 하 여이 작업을 수행 합니다.  
+ 병합 아티클의 필터를 변경하려면 스냅샷이 하나 있는 경우 이를 다시 만들어야 합니다. 이는 **\@force_invalidate_snapshot** 를 **1**로 설정 하 여 수행 됩니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 이 작업은 **\@force_reinit_subscription** 를 **1**로 설정 하 여 수행 합니다.  
   
  논리적 레코드를 사용하려면 게시 및 아티클이 여러 가지 요구 사항을 만족해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_changemergefilter**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergefilter**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [ &#40;transact-sql&#41;  sp_helpmergefilter](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

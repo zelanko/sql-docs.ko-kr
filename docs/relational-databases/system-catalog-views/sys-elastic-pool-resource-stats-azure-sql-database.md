@@ -39,17 +39,17 @@ ms.locfileid: "73843867"
 |**start_time**|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |**end_time**|**datetime2**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |**elastic_pool_name**|**nvarchar(128)**|탄력적 데이터베이스 풀의 이름입니다.|  
-|**avg_cpu_percent**|**decimal (5, 2)**|풀 한도의 백분율로 나타낸 평균 계산 사용률입니다.|  
-|**avg_data_io_percent**|**decimal (5, 2)**|풀의 한도를 기준으로 하는 평균 i/o 사용률 (백분율)입니다.|  
-|**avg_log_write_percent**|**decimal (5, 2)**|풀 한도의 백분율로 나타낸 평균 쓰기 리소스 사용률입니다.|  
-|**avg_storage_percent**|**decimal (5, 2)**|풀 저장소 한도의 백분율로 나타낸 평균 저장소 사용률입니다.|  
-|**max_worker_percent**|**decimal (5, 2)**|풀의 한도를 기준으로 하는 최대 동시 작업자 (요청)의 백분율입니다.|  
-|**max_session_percent**|**decimal (5, 2)**|풀의 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.|  
+|**avg_cpu_percent**|**decimal(5,2)**|풀 한도의 백분율로 나타낸 평균 계산 사용률입니다.|  
+|**avg_data_io_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 평균 i/o 사용률 (백분율)입니다.|  
+|**avg_log_write_percent**|**decimal(5,2)**|풀 한도의 백분율로 나타낸 평균 쓰기 리소스 사용률입니다.|  
+|**avg_storage_percent**|**decimal(5,2)**|풀 저장소 한도의 백분율로 나타낸 평균 저장소 사용률입니다.|  
+|**max_worker_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 최대 동시 작업자 (요청)의 백분율입니다.|  
+|**max_session_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.|  
 |**elastic_pool_dtu_limit**|**int**|이 간격 동안이 탄력적 풀에 대 한 현재 최대 탄력적 풀 DTU 설정입니다.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|이 간격 중에이 탄력적 풀에 대 한 현재 최대 탄력적 풀 저장소 제한 설정 (mb)입니다.|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
  이 보기는 SQL Database 서버의 master 데이터베이스에 있습니다. **Elastic_pool_resource_stats**를 쿼리하려면 master 데이터베이스에 연결 되어 있어야 합니다.  
   
@@ -77,7 +77,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [탄력적  데이터베이스를 사용 하 여 끝날 때쯤 증가](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
  [SQL Database 탄력적 데이터베이스 풀 만들기 및 관리 (미리 보기)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   

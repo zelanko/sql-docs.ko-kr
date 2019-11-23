@@ -32,8 +32,8 @@ ms.locfileid: "73785696"
   
  OUTPUT 절이 있는 INSERT, UPDATE, DELETE 또는 MERGE 문을 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하면 OUTPUT 절에 의해 생성 된 결과 집합의 모든 행이 사용 될 때까지 SQLRowCount는 영향을 받는 행 수를 반환 하지 않습니다. 이러한 행을 사용 하려면 SQLFetch 또는 SQLFetchScroll을 호출 합니다. SQLResultCols는 모든 결과 행이 소비 될 때까지-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll SQL_NO_DATA 반환한 후 응용 프로그램은 Sqlfetch를 호출 하 여 다음 결과로 이동 하기 전에 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Sqlrowcount 함수](https://go.microsoft.com/fwlink/?LinkId=59367)   
+## <a name="see-also"></a>참고 항목  
+ [SQLRowCount Function](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

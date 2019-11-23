@@ -31,7 +31,7 @@ ms.locfileid: "72717255"
 
   애플리케이션 리소스에 잠금을 설정합니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,39 +46,39 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [@Resource =] '*resource_name*'  
- 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 애플리케이션은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 는 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열이 **nvarchar (255)** 보다 길면 **nvarchar (255)** 로 잘립니다.  
+ [@Resource=] '*resource_name*'  
+ 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 애플리케이션은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열이 **nvarchar (255)** 보다 길면 **nvarchar (255)** 로 잘립니다.  
   
  *resource_name* 은 이진 비교 되므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
   
 > [!NOTE]  
 >  애플리케이션 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
- [@LockMode =] '*lock_mode*'  
+ [@LockMode=] '*lock_mode*'  
  특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared**또는 **Exclusive**중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
   
- [@LockOwner =] '*lock_owner*'  
- 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**인 경우 기본적으로 또는 명시적으로 지정 된 경우 트랜잭션 내에서 sp_getapplock를 실행 해야 합니다.  
+ [@LockOwner=] '*lock_owner*'  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
   
- [@LockTimeout =] '*value*'  
- 잠금 제한 시간 값(밀리초)입니다. 기본값은 @ @LOCK_TIMEOUT에서 반환 하는 값과 같습니다. 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
+ [@LockTimeout=] '*value*'  
+ 잠금 제한 시간 값(밀리초)입니다. 기본값은 @@LOCK_TIMEOUT에서 반환 하는 값과 같습니다. 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
   
- [@DbPrincipal =] '*database_principal*'  
- 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 애플리케이션 역할입니다. 함수를 성공적으로 호출 하려면이 함수의 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버 여야 합니다. 기본값은 public입니다.  
+ [@DbPrincipal=] '*database_principal*'  
+ 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 애플리케이션 역할입니다. 함수를 성공적으로 호출 하려면 함수의 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버 여야 합니다. 기본값은 public입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- \> = 0 (성공) 또는 < 0 (실패)  
+ \>= 0 (성공) 또는 < 0 (실패)  
   
-|ReplTest1|결과|  
+|Value|결과|  
 |-----------|------------|  
 |0|동기식으로 잠금을 허가하는 데 성공했습니다.|  
-|@shouldalert|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
+|1\.|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
 |-1|잠금 요청이 시간을 초과하였습니다.|  
 |-2|잠금 요청이 취소되었습니다.|  
 |-3|잠금 요청이 교착 상태에서 처리되지 않았습니다.|  
 |-999|매개 변수 유효성 검사 또는 다른 호출에서 오류가 발생하였음을 나타냅니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  리소스에 설정된 잠금은 현재 트랜잭션 또는 현재 세션과 연관됩니다. 현재 트랜잭션과 연관된 잠금은 트랜잭션이 커밋되거나 롤백될 때 해제됩니다. 세션을 로그 아웃 하면 세션과 연결 된 잠금이 해제 됩니다. 어떤 이유로 든 서버가 종료 되 면 모든 잠금이 해제 됩니다.  
   
  sp_getapplock에서 만든 잠금 리소스는 세션에 대한 현재 데이터베이스에서 만들어집니다. 각 잠금 리소스는 다음을 조합한 값으로 식별됩니다.  
@@ -136,7 +136,7 @@ GO
   
  sys.dm_tran_locks 동적 관리 뷰나 sp_lock 시스템 저장 프로시저를 사용하여 잠금 정보를 검사하거나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 잠금을 모니터링할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -163,9 +163,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [APPLOCK_MODE &#40;transact-sql&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)    
- [APPLOCK_TEST &#40;transact-sql&#41; ](../../t-sql/functions/applock-test-transact-sql.md)    
+## <a name="see-also"></a>참고 항목  
+ [ &#40;Transact-sql&#41;  APPLOCK_MODE](../../t-sql/functions/applock-mode-transact-sql.md)  
+ [ &#40;Transact-sql&#41;  APPLOCK_TEST](../../t-sql/functions/applock-test-transact-sql.md)  
  [sp_releaseapplock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

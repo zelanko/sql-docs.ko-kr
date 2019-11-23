@@ -39,13 +39,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>인수  
 `[ @agent_type = ] 'agent_type'`은 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
-|**1**|스냅샷 에이전트입니다.|  
+|**1.**|스냅샷 에이전트입니다.|  
 |**2**|로그 판독기 에이전트입니다.|  
 |**3**|배포 에이전트입니다.|  
 |**4**|병합 에이전트입니다.|  
-|**되었는지**|큐 판독기 에이전트입니다.|  
+|**9**|큐 판독기 에이전트입니다.|  
   
 `[ @agent_id = ] 'agent_id'`은 에이전트의 ID입니다. *agent_id* 는 **int**이며 기본값은 없습니다.  
   
@@ -54,13 +54,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  **sp_update_agent_profile** 은 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_update_agent_profile**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [ &#40;transact-sql&#41;  sp_add_agent_profile](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_change_agent_profile](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)  

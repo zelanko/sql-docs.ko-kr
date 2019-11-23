@@ -1,5 +1,5 @@
 ---
-title: 'ADO 이벤트 인스턴스: ADO 및 WFC | Microsoft Docs'
+title: 'ADO 이벤트 인스턴스화: ADO 및 WFC | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -60,7 +60,7 @@ Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반
   
 7.  처리가 완료 되 면 ADO/WFC 이벤트 처리기 목록에서 처리기를 제거 합니다. **RemoveOn**_EventName_(*handler*)과 같은 이름을 사용 하 여 메서드를 사용 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-WFC 구문 인덱스](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   

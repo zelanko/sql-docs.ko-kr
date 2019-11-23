@@ -58,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
 운영자의 전자 메일 주소를 `[ @email_address = ] 'email_address'` 합니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예:  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어:  
   
  '**jdoe**' 또는 '**jdoe\@xyz.com**'  
   
@@ -83,7 +83,7 @@ sp_add_operator [ @name = ] 'name'
   
 |Value|설명|  
 |-----------|-----------------|  
-|**1**|일요일|  
+|**1.**|일요일|  
 |**2**|월요일|  
 |**4**|화요일|  
 |**8**|수요일|  
@@ -101,7 +101,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_operator** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
  호출은 전자 메일 시스템에 의해 지원되므로 호출 기능을 사용하려면 전자 메일에서 호출기로 전달되는 시스템이 있어야 합니다.  
@@ -129,7 +129,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ &#40;transact-sql&#41;  sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)  
  [ &#40;transact-sql&#41;  sp_update_operator](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)  

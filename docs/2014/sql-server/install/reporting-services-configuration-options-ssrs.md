@@ -30,7 +30,7 @@ ms.locfileid: "71952120"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련 된 최신 정보와이 릴리스의 설치 및 구성에 대 한 자세한 내용은 [추가 설치 정보](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425)를 참조 하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="reporting-services-native-mode"></a>Reporting Services 기본 모드  
  하나 이상의 요구 사항이 충족되지 않아 설치 프로그램이 기본 보고서 서버 구성을 수행할 수 없는 경우 설치 마법사는 최소 설치 옵션만 사용할 수 있습니다. 필요에 따라 파일을 복사할 수 있지만 설치가 완료된 후에는 Reporting Services 구성 관리자를 사용해야 기본 모드 보고서 서버를 구성할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "71952120"
   
 -   추가 기능을 다운로드하고 설치합니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자  시작](https://go.microsoft.com/fwlink/?LinkId=199096)  
  [보고서 서버 데이터베이스 만들기 (Reporting Services 구성)](https://go.microsoft.com/fwlink/?LinkId=199094)   
  [Reporting Services 업그레이드 및 마이그레이션](https://go.microsoft.com/fwlink/?LinkID=245628)   

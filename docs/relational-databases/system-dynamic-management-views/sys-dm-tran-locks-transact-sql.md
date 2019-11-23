@@ -1,5 +1,5 @@
 ---
-title: sys. dm _l (Transact-sql) | Microsoft Docs
+title: sys. dm_tran_locks (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -35,11 +35,11 @@ ms.locfileid: "72289368"
  결과 집합의 열은 리소스와 요청의 두 기본 그룹으로 나뉩니다. 리소스 그룹은 잠금이 요청된 리소스를 설명하고 요청 그룹은 잠금 요청을 설명합니다.  
   
 > [!NOTE]  
-> @No__t-0 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 **_pdw_nodes_tran_locks**이름을 사용 합니다.  
+> [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 **dm_pdw_nodes_tran_locks**이름을 사용 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|리소스 유형을 나타냅니다. 이 값은 데이터베이스, 파일, 개체, 페이지, 키, 익스텐트, RID, 응용 프로그램, 메타 데이터, HOBT 또는 ALLOCATION_UNIT입니다.|  
+|**resource_type**|**nvarchar(60)**|리소스 유형을 나타냅니다. 값은 DATABASE, FILE, OBJECT, PAGE, KEY, 익스텐트, RID, APPLICATION, METADATA, HOBT 또는 ALLOCATION_UNIT 중 하나일 수 있습니다.|  
 |**resource_subtype**|**nvarchar(60)**|**Resource_type**의 하위 유형을 나타냅니다. 부모 유형의 하위 유형이 아닌 유형을 잠그지 않고 하위 유형 잠금을 획득할 수 있습니다. 개별 하위 유형은 서로 충돌하지 않으며 하위 유형이 아닌 부모 유형과도 충돌하지 않습니다. 모든 리소스 유형에 하위 유형이 있는 것은 아닙니다.|  
 |**resource_database_id**|**int**|이 리소스의 범위를 한정하는 데이터베이스의 ID입니다. 잠금 관리자로 처리되는 모든 리소스의 범위는 데이터베이스 ID로 결정됩니다.|  
 |**resource_description**|**nvarchar(256)**|다른 리소스 열에서 사용할 수 없는 정보만 포함하는 리소스 설명입니다.|  
@@ -54,15 +54,15 @@ ms.locfileid: "72289368"
 |**request_exec_context_id**|**int**|현재 이 요청을 소유하는 프로세스의 실행 컨텍스트 ID입니다.|  
 |**request_request_id**|**int**|현재 이 요청을 소유하는 프로세스의 요청 ID(일괄 처리 ID)입니다. 이 값은 트랜잭션의 활성 MARS(Multiple Active Result Set) 연결이 변경될 때마다 달라집니다.|  
 |**request_owner_type**|**nvarchar(60)**|요청을 소유하는 엔터티 유형입니다. 다양한 엔터티가 잠금 관리자 요청을 소유할 수 있습니다. 가능한 값은<br /><br /> TRANSACTION = 트랜잭션이 요청을 소유합니다.<br /><br /> CURSOR = 커서가 요청을 소유합니다.<br /><br /> SESSION = 사용자 세션이 요청을 소유합니다.<br /><br /> SHARED_TRANSACTION_WORKSPACE = 트랜잭션 작업 영역 중 공유 부분이 요청을 소유합니다.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 트랜잭션 작업 영역 중 배타 부분이 요청을 소유합니다.<br /><br /> NOTIFICATION_OBJECT = 내부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 요청을 소유합니다. 이 구성 요소는 다른 구성 요소가 잠금을 수행하기 위해 기다리고 있는 경우 잠금 관리자가 이를 알리도록 요청했습니다. FileTable 기능은 이 값을 사용하는 구성 요소입니다.<br /><br /> **참고:** 작업 공간은 내부적으로 참여 하는 세션에 대 한 잠금을 보유 하기 위해 사용 됩니다.|  
-|**request_owner_id**|**bigint**|이 요청의 특정 소유자 ID입니다.<br /><br /> 트랜잭션이 요청의 소유자인 경우 이 값에는 트랜잭션 ID가 포함됩니다.<br /><br /> FileTable이 요청의 소유자 인 경우 **request_owner_id** 에는 다음 값 중 하나가 포함 됩니다.<br /><br /> <br /><br /> 3-4 FileTable이 데이터베이스 잠금을 수행 했습니다.<br /><br /> 3 FileTable이 테이블 잠금을 수행 했습니다.<br /><br /> 기타 값: 값은 파일 핸들을 나타냅니다. 이 값은 동적 [관리 뷰 &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) **fcb_id** 에도 표시 됩니다.|  
+|**request_owner_id**|**bigint**|이 요청의 특정 소유자 ID입니다.<br /><br /> 트랜잭션이 요청의 소유자인 경우 이 값에는 트랜잭션 ID가 포함됩니다.<br /><br /> FileTable이 요청의 소유자 인 경우 **request_owner_id** 에는 다음 값 중 하나가 포함 됩니다.<br /><br /> <br /><br /> -4: FileTable이 데이터베이스 잠금을 수행 했습니다.<br /><br /> -3: FileTable이 테이블 잠금을 수행 했습니다.<br /><br /> 기타 값: 값은 파일 핸들을 나타냅니다. 이 값은 동적 관리 뷰 [sys. dm_filestream_non_transacted_handles &#40;&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)에 **fcb_id** 표시 됩니다.|  
 |**request_owner_guid**|**uniqueidentifier**|이 요청의 특정 소유자 GUID입니다. 이 값이 트랜잭션의 MS DTC GUID와 일치하는 분산 트랜잭션에만 사용됩니다.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 이 값은 요청자의 잠금 공간 ID를 나타냅니다. 잠금 공간 ID는 두 요청자가 서로 충돌하지 않는지, 그리고 서로 충돌할 수 있는 모드의 경우 두 요청자에게 잠금을 허용할 수 있는지 여부를 결정합니다.|  
-|**lock_owner_address**|**varbinary(8)**|이 요청을 추적하는 데 사용되는 내부 데이터 구조의 메모리 주소입니다. 이 열은 resource_address **_os_waiting_tasks**의 with 열에 조인할 수 있습니다.|  
-|**pdw_node_id**|**int**|**적용**대상: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], @no__t<br /><br /> <br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**lock_owner_address**|**varbinary(8)**|이 요청을 추적하는 데 사용되는 내부 데이터 구조의 메모리 주소입니다. 이 열은 **sys. dm_os_waiting_tasks**의 **resource_address** 열에 조인할 수 있습니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
-@No__t-0에서 `VIEW SERVER STATE` 권한이 필요 합니다.   
-@No__t-0 Premium 계층에서는 데이터베이스에 대 한 `VIEW DATABASE STATE` 권한이 필요 합니다. @No__t-0 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층에는 데이터베이스에 대 한 `VIEW DATABASE STATE` 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard 및 Basic 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
  
 ## <a name="remarks"></a>설명  
  허용된 요청 상태는 요청자에게 리소스에 대한 잠금이 허용되었음을 나타냅니다. 대기 중인 요청은 해당 요청이 아직 허용되지 않았음을 나타냅니다. **Request_status** 열에 의해 반환 되는 대기 중인 요청 유형은 다음과 같습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "72289368"
   
 -   대기 요청 상태는 리소스에 대한 요청이 아직 허용되지 않았음을 나타냅니다.  
   
- 내부 잠금 관리자 데이터 구조에서 **sys. dm _astrstrstrats** 를 채우지 때문에이 정보를 유지 관리 하면 일반 처리에 오버 헤드가 추가 되지 않습니다. 뷰를 구체화하려면 잠금 관리자 내부 데이터 구조에 액세스해야 하므로 서버의 정상적인 처리에 사소한 영향을 줄 수 있습니다. 그러나 그 영향은 무시할 만한 수준이며 매우 많이 사용되는 리소스에만 영향을 미칩니다. 이 뷰의 데이터는 잠금 관리자의 현재 상태에 따라 달라지기 때문에 언제든지 변경될 수 있으며 잠금을 획득하고 해제할 때마다 행이 추가되거나 제거됩니다. 이 뷰에는 기록 정보가 없습니다.  
+ **Dm_tran_locks** 는 내부 잠금 관리자 데이터 구조에서 채워지기 때문에이 정보를 유지 관리 하면 일반 처리에 오버 헤드가 추가 되지 않습니다. 뷰를 구체화하려면 잠금 관리자 내부 데이터 구조에 액세스해야 하므로 서버의 정상적인 처리에 사소한 영향을 줄 수 있습니다. 그러나 그 영향은 무시할 만한 수준이며 매우 많이 사용되는 리소스에만 영향을 미칩니다. 이 뷰의 데이터는 잠금 관리자의 현재 상태에 따라 달라지기 때문에 언제든지 변경될 수 있으며 잠금을 획득하고 해제할 때마다 행이 추가되거나 제거됩니다. 이 뷰에는 기록 정보가 없습니다.  
   
  위의 두 요청은 리소스 열과 그룹 열이 모두 같은 경우에만 동일한 리소스에 대해 작동합니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "72289368"
   
 -   FROM 절에서 테이블 잠금 힌트를 사용하여 테이블의 개별 참조에 대한 잠금 수준을 지정합니다. 구문 및 제한 사항은 [테이블 힌트 &#40;transact-sql&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조 하세요.  
   
- 한 세션 ID로 실행되는 리소스에 둘 이상의 잠금을 허용할 수 있습니다. 한 세션에서 실행 되는 여러 엔터티는 각각 동일한 리소스에 대 한 잠금을 소유할 수 있으며 정보는 **request_owner_type** 및 **request_owner_id** 열에 표시 **됩니다.** 동일한 **request_owner_type** 의 인스턴스가 여러 개 있는 경우 **request_owner_id** 열을 사용 하 여 각 인스턴스를 구분 합니다. 분산 트랜잭션의 경우 **request_owner_type** 및 **request_owner_guid** 열에 다른 엔터티 정보가 표시 됩니다.  
+ 한 세션 ID로 실행되는 리소스에 둘 이상의 잠금을 허용할 수 있습니다. 한 세션에서 실행 되는 여러 엔터티는 각각 동일한 리소스에 대 한 잠금을 소유할 수 있으며,이 정보는 **sys. dm_tran_locks**에서 반환 되는 **request_owner_type** 및 **request_owner_id** 열에 표시 됩니다. 동일한 **request_owner_type** 의 인스턴스가 여러 개 있을 경우 **request_owner_id** 열을 사용 하 여 각 인스턴스를 구분 합니다. 분산 트랜잭션의 경우 **request_owner_type** 및 **request_owner_guid** 열은 다른 엔터티 정보를 표시 합니다.  
   
- 예를 들어 세션 S1은 **Table1**에 대 한 공유 잠금을 소유 합니다. 세션 s 1에서 실행 되는 트랜잭션 t 1도 **Table1**에 대 한 공유 잠금을 소유 합니다. 이 경우 **resource_description** 열에는 동일한 리소스의 두 인스턴스가 표시 됩니다 .이 열은 **sys.** **Request_owner_type** 열에는 하나의 인스턴스가 세션으로 표시 되 고 다른 인스턴스는 트랜잭션으로 표시 됩니다. 또한 **resource_owner_id** 열 값은 서로 다릅니다.  
+ 예를 들어 세션 S1은 **Table1**에 대 한 공유 잠금을 소유 합니다. 세션 s 1에서 실행 되는 트랜잭션 t 1도 **Table1**에 대 한 공유 잠금을 소유 합니다. 이 경우 **dm_tran_locks** 에 의해 반환 되는 **resource_description** 열은 동일한 리소스의 두 인스턴스를 표시 합니다. **Request_owner_type** 열에는 하나의 인스턴스가 세션으로 표시 되 고 다른 인스턴스는 트랜잭션으로 표시 됩니다. 또한 **resource_owner_id** 열 값은 서로 다릅니다.  
   
  한 세션에서 실행되는 여러 커서는 서로 구분되지 않으므로 하나의 엔터티로 간주됩니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72289368"
 |APPLICATION|애플리케이션이 지정한 리소스를 나타냅니다.|해당 사항 없음|  
 |METADATA|메타데이터 정보를 나타냅니다.|해당 사항 없음|  
 |HOBT|힙 또는 B-트리를 나타냅니다. 기본 액세스 경로 구조입니다.|HoBt ID입니다. 이 값은 **hobt_id**에 해당 합니다.|  
-|ALLOCATION_UNIT|인덱스 파티션과 같은 관련 페이지의 집합을 나타냅니다. 각 할당 단위는 단일 IAM(Index Allocation Map) 체인을 처리합니다.|할당 단위 ID입니다. 이 값은 **allocation_units. allocation_unit_id**에 해당 합니다.|  
+|ALLOCATION_UNIT|인덱스 파티션과 같은 관련 페이지의 집합을 나타냅니다. 각 할당 단위는 단일 IAM(Index Allocation Map) 체인을 처리합니다.|할당 단위 ID입니다. 이 값은 **allocation_units allocation_unit_id**에 해당 합니다.|  
   
  다음 표에서는 각 리소스 유형에 연결된 하위 유형을 나열합니다.  
   
@@ -206,9 +206,9 @@ ms.locfileid: "72289368"
 |KEY|<hash_value>|이 리소스가 나타내는 행에서 키 열의 해시를 나타냅니다.|  
 |EXTENT|< file_id >: < page_in_files >|이 리소스가 나타내는 익스텐트의 파일 및 페이지 ID를 나타냅니다. 익스텐트 ID는 익스텐트에서 첫 페이지의 페이지 ID와 같습니다.|  
 |RID|< file_id >: < page_in_file >: < row_on_page >|이 리소스가 나타내는 행의 페이지 ID와 행 ID를 나타냅니다. 연결된 개체 ID가 99인 경우 이 리소스는 IAM 체인의 첫 IAM 페이지에 있는 8개의 혼합 페이지 슬롯 중 하나를 나타냅니다.|  
-|APPLICATION|\<DbPrincipalId >: \<upto 자 >:(< hash_value >)|이 애플리케이션 잠금 리소스의 범위를 한정하는 데 사용된 데이터베이스 보안 주체의 ID를 나타냅니다. 또한 이 애플리케이션 잠금 리소스에 해당하는 리소스 문자열에서 최대 32자까지 포함합니다. 전체 문자열을 사용할 수 없어 두 문자만 표시되는 경우도 있습니다. 이 동작은 복구 과정에서 다시 획득한 애플리케이션 잠금에 대한 데이터베이스 복구 시에만 수행됩니다. 해시 값은 이 애플리케이션 잠금 리소스에 해당하는 전체 리소스 문자열의 해시를 나타냅니다.|  
-|HOBT|해당 사항 없음|HoBt ID는 **resource_associated_entity_id**로 포함 됩니다.|  
-|ALLOCATION_UNIT|해당 사항 없음|할당 단위 ID는 **resource_associated_entity_id**로 포함 됩니다.|  
+|APPLICATION|\<DbPrincipalId >:\<32 자 >:(< hash_value >)|이 애플리케이션 잠금 리소스의 범위를 한정하는 데 사용된 데이터베이스 보안 주체의 ID를 나타냅니다. 또한 이 애플리케이션 잠금 리소스에 해당하는 리소스 문자열에서 최대 32자까지 포함합니다. 전체 문자열을 사용할 수 없어 두 문자만 표시되는 경우도 있습니다. 이 동작은 복구 과정에서 다시 획득한 애플리케이션 잠금에 대한 데이터베이스 복구 시에만 수행됩니다. 해시 값은 이 애플리케이션 잠금 리소스에 해당하는 전체 리소스 문자열의 해시를 나타냅니다.|  
+|HOBT|해당 사항 없음|HoBt ID는 **resource_associated_entity_id**포함 되어 있습니다.|  
+|ALLOCATION_UNIT|해당 사항 없음|할당 단위 ID는 **resource_associated_entity_id**으로 포함 됩니다.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -283,12 +283,12 @@ ms.locfileid: "72289368"
   
 -   ddl_with_wait_at_low_priority  
   
- **Partition_number** 및 **partition_id**를 추가 하 여 기존 XEvent **progress_report_online_index_operation** for online 인덱스 작업을 확장 했습니다.  
+ 온라인 인덱스 작업에 대 한 기존 XEvent **progress_report_online_index_operation** **partition_number** 및 **partition_id**를 추가 하 여 확장 되었습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 다른 도구와 함께 sys.dm_tran_locks 사용  
- 다음 예에는 다른 트랜잭션에 의해 업데이트 작업이 차단되는 시나리오에서 실행됩니다. **Dm** 및 기타 도구를 사용 하 여 리소스 잠금에 대 한 정보가 제공 됩니다.  
+ 다음 예에는 다른 트랜잭션에 의해 업데이트 작업이 차단되는 시나리오에서 실행됩니다. **Dm_tran_locks** 및 기타 도구를 사용 하 여 리소스 잠금에 대 한 정보가 제공 됩니다.  
   
 ```sql  
 USE tempdb;  
@@ -326,7 +326,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- 다음 쿼리에서는 잠금 정보를 표시합니다. @No__t- **0의 값**은 **database_id** 의 값으로 바꾸어야 합니다.  
+ 다음 쿼리에서는 잠금 정보를 표시합니다. `<dbid>`의 값은 **sys. 데이터베이스**의 **database_id** 으로 바꾸어야 합니다.  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -384,8 +384,8 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
-[sys. dm &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)_ststststststststststststst_l transact-sql       
+## <a name="see-also"></a>참고 항목  
+[dm_tran_database_transactions &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
-[트랜잭션 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[트랜잭션 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
 [SQL Server, Locks 개체](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

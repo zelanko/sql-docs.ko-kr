@@ -47,9 +47,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_type = ] 'job_type'` 수정할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 ' capture '입니다. 올바른 입력 값은 'capture' 및 'cleanup'입니다.  
+수정할 작업의 유형 `[ @job_type = ] 'job_type'`입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 ' capture '입니다. 올바른 입력 값은 'capture' 및 'cleanup'입니다.  
   
-`[ @maxtrans ] = max_trans_` 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 은 **int** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다. 지정된 경우 값은 양의 정수여야 합니다.  
+각 검색 주기에서 처리할 최대 트랜잭션 수를 `[ @maxtrans ] = max_trans_` 합니다. *max_trans* 은 **int** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *max_trans* 는 캡처 작업에 대해서만 유효 합니다.  
   
@@ -57,7 +57,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *max_scan* 는 캡처 작업에 대해서만 유효 합니다.  
   
-`[ @continuous ] = continuous_`은 캡처 작업을 계속 실행할지 (1), 아니면 한 번만 실행 (0) 할지를 나타냅니다. *연속* 은 **bit** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다.  
+`[ @continuous ] = continuous_` 캡처 작업을 계속 실행할지 (1), 아니면 한 번만 실행 (0) 할지를 나타냅니다. *연속* 은 **bit** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다.  
   
  *연속* = 1 인 경우 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) 작업은 로그를 검색 하 고 최대 (*max_trans* \* *max_scans*) 트랜잭션을 처리 합니다. 그런 다음, 다음 로그 검색을 시작 하기 전에 *polling_interval* 에 지정 된 시간 (초) 동안 대기 합니다.  
   
@@ -77,7 +77,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *보존* 은 정리 작업에 대해서만 유효 합니다.  
   
-`[ @threshold = ] 'delete threshold'`은 정리 시 단일 문을 사용 하 여 삭제할 수 있는 삭제 항목의 최대 개수입니다. *delete 임계값* 은 **bigint** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다. *delete 임계값* 은 정리 작업에 대해서만 유효 합니다.  
+정리 시 단일 문을 사용 하 여 삭제할 수 있는 삭제 항목의 최대 수를 `[ @threshold = ] 'delete threshold'` 합니다. *delete 임계값* 은 **bigint** 이며 기본값은이 매개 변수에 대 한 변경 내용이 없음을 나타내는 NULL입니다. *delete 임계값* 은 정리 작업에 대해서만 유효 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-capture-job"></a>A. 캡처 작업 변경  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 캡처 작업의 `@job_type`, `@maxscans` 및 `@maxtrans` 매개 변수를 업데이트 합니다. 캡처 작업에 대한 다른 유효한 매개 변수인 `@continuous`와 `@pollinginterval`은 생략되며 해당 값은 수정되지 않습니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 캡처 작업의 `@job_type`, `@maxscans`및 `@maxtrans` 매개 변수를 업데이트 합니다. 캡처 작업에 대한 다른 유효한 매개 변수인 `@continuous`와 `@pollinginterval`은 생략되며 해당 값은 수정되지 않습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [cdc_jobs &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_enable_table &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  

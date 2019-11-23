@@ -25,7 +25,7 @@ ms.locfileid: "72797805"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
   
-|cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|Description|  
+|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|설명|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|현재 노드를 가져옵니다.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|현재 노드를 변경합니다.|  
@@ -130,8 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](work-with-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

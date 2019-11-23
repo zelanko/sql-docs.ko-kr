@@ -55,7 +55,7 @@ ms.locfileid: "73728343"
     > [!NOTE]  
     >  웹 애플리케이션에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   

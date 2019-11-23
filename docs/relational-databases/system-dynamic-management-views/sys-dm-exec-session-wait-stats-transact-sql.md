@@ -28,7 +28,7 @@ ms.locfileid: "73982605"
 
   각 세션에 대해 실행 된 스레드에서 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 뷰를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 및 특정 쿼리 및 일괄 처리와 관련 된 성능 문제를 진단할 수 있습니다.  이 뷰는 [ &#40;&#41; transact-sql dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 에 대해 집계 되는 것과 동일한 정보를 세션에 반환 하지만 **session_id** 수도 제공 합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  

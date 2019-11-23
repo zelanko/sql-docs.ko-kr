@@ -18,16 +18,16 @@ ms.lasthandoff: 10/10/2019
 ms.locfileid: "72251331"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle SQL Server Migration Assistant (OracleToSQL)
-Oracle 용 SSMA (@no__t [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant)는 Oracle 데이터베이스를 [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-3 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-5 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-7 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-9 2017 (windows 및 Linux의 경우 0 @ no__t-11 2019)로 마이그레이션하기 위한 도구입니다. , 및를 Azure SQL Database 합니다. Oracle 용 SSMA는 Oracle 데이터베이스 개체를 @no__t 0 데이터베이스 개체로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 해당 개체를 만든 다음 Oracle에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 마이그레이션합니다.  
+Oracle 용 SSMA ([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant)는 Windows 및 Linux에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017, Windows 및 linux의 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019, Azure SQL Database에 대 한 Oracle 데이터베이스 마이그레이션 도구입니다. Oracle 용 SSMA는 Oracle 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database 개체로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 해당 개체를 만든 다음 Oracle에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 마이그레이션합니다.  
   
-이 설명서에서는 Oracle 용 SSMA를 소개 하 고 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 마이그레이션하는 방법에 대 한 단계별 지침을 제공 합니다. 다음 표에서는 자세한 정보를 확인할 수 있는 문서를 보여 줍니다.  
+이 설명서에서는 Oracle 용 SSMA를 소개 하 고 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 마이그레이션하기 위한 단계별 지침을 제공 합니다. 다음 표에서는 자세한 정보를 확인할 수 있는 문서를 보여 줍니다.  
   
 ## <a name="contents"></a>내용  
   
 |섹션|설명|
 |-----------|---------------|
 |[Oracle 용 SSMA의 새로운 기능](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|이 버전의 Oracle 용 SSMA의 새로운 기능|  
-|[Oracle &#40;용 ssma OracleToSQL 설치&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|@No__t를 실행 하는 컴퓨터에 Oracle 클라이언트용 SSMA와 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  
+|[Oracle &#40;용 ssma OracleToSQL 설치&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 하는 컴퓨터에 Oracle 용 SSMA 클라이언트 및 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  
 |[Oracle &#40;용 ssma OracleToSQL 시작 하기&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|사용자 인터페이스, 프로젝트 및 구성 옵션을 소개 합니다.|  
 |[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL로 마이그레이션&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|변환 프로세스에 대 한 개요와 프로세스의 각 단계에 대 한 자세한 정보를 제공 합니다.|  
 |[사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Oracle 용 SSMA 대화 상자에 대 한 설명서가 포함 되어 있습니다.|  

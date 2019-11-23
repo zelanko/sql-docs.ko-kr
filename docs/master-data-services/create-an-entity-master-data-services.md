@@ -77,7 +77,7 @@ ms.locfileid: "73728468"
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
 |트랜잭션 로그 유형|엔터티의 트랜잭션 로그 유형입니다.|  
 |코드 자동 생성|코드 자동 생성을 사용할지 여부를 지정합니다.|  
-|데이터 압축|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
+|Data Compression|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
 |동기화 대상|엔터티가 동기화 관계의 대상인지 여부를 지정합니다.|  
 |계층 사용|명시적 계층에 엔터티를 사용할지 여부를 지정합니다. 엔터티에 대해 명시적 계층을 하나 이상 만들면 이 열에는 예가 표시됩니다.|  
 |만든 사람|엔터티를 만든 사용자의 사용자 이름입니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "73728468"
 |업데이트한 사람|엔터티를 마지막으로 업데이트한 사용자의 사용자 이름입니다.|  
 |업데이트한 날짜|엔터티를 마지막으로 업데이트한 날짜 및 시간입니다.|  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73728468"
   
 -   [파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [엔터티 편집&#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

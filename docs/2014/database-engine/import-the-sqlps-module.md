@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797873"
@@ -20,7 +20,7 @@ ms.locfileid: "72797873"
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 `sqlps` 모듈을 Windows PowerShell 2.0 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **시작하기 전에:**  [보안](#Security)  
   
 2.  **모듈을 로드하려면**  [sqlps 모듈 로드](#LoadSqlps)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72797873"
 Import-Module "sqlps" -DisableNameChecking  
 ```  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

@@ -62,7 +62,7 @@ CoType RowsetTVP
 ## <a name="properties"></a>속성  
  테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 자세한 내용은 [테이블 반환 매개 변수 형식 지원 &#40;속성&#41;OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

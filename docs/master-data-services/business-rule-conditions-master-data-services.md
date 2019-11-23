@@ -40,7 +40,7 @@ ms.locfileid: "73728725"
 |**제외할 시작 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **시작되지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**끝 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **끝나거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**제외할 끝 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **끝나지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
-|**포함**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
+|**contains**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**포함하지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**패턴 포함**|선택한 특성이 특정 특성 또는 특정 특성 값의 **패턴을 포함하거나** , 비어 있습니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**제외할 패턴**|선택한 특성이 특정 특성 또는 특정 특성 값의 **패턴을 포함하지 않거나** , 비어 있습니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "73728725"
 > [!NOTE]  
 >  비즈니스 규칙에 두 값을 비교하는 조건이 포함되었고 두 값이 모두 Null인 멤버에 대해 이 규칙을 적용할 경우 해당 멤버의 유효성 검사가 실패합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

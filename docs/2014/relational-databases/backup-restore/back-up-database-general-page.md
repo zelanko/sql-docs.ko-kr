@@ -45,7 +45,7 @@ ms.locfileid: "70155083"
 ### <a name="source"></a>원본  
  **원본** 패널의 옵션은 데이터베이스를 식별하고 백업 작업에 대한 구성 요소 및 백업 유형을 지정합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  백업할 데이터베이스를 선택합니다.  
   
  **복구 모델**  
@@ -61,26 +61,26 @@ ms.locfileid: "70155083"
 |트랜잭션 로그|트랜잭션 로그|단순 복구 모델에는 트랜잭션 로그 백업을 사용할 수 없습니다.|  
   
  **복사 전용 백업**  
- 복사 전용 백업을 만들려면 선택합니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](copy-only-backups-sql-server.md)를 참조하세요.  
+ 복사 전용 백업을 만들려면 선택합니다. *복사 전용 백업* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](copy-only-backups-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
 >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
   
  **백업 구성 요소**  
- 백업할 데이터베이스 구성 요소를 선택합니다. **백업 유형** 목록에서 **트랜잭션 로그** 를 선택한 경우에는 이 옵션을 사용할 수 없습니다.  
+ 백업할 데이터베이스 구성 요소를 선택합니다. **백업 유형** 목록에서 **트랜잭션 로그**를 선택한 경우에는 이 옵션을 사용할 수 없습니다.  
   
  다음 옵션 단추 중 하나를 선택합니다.  
   
 |||  
 |-|-|  
-|**데이터베이스 백업**|전체 데이터베이스를 백업할지를 지정합니다.|  
+|**Database**|전체 데이터베이스를 백업할지를 지정합니다.|  
 |**파일 및 파일 그룹**|선택한 파일 및/또는 파일 그룹을 백업할지를 지정합니다.<br /><br /> 이 옵션을 선택하면 **파일 및 파일 그룹 선택** 대화 상자가 열립니다. 백업하려는 파일 그룹이나 파일을 선택하고 **확인**을 클릭하면 **파일 그룹 및 파일** 상자에 선택한 내용이 나타납니다.|  
   
 ### <a name="destination"></a>Destination  
- **대상** 패널의 옵션을 사용하면 백업 작업에 대한 백업 장치 유형을 지정하고 기존 논리적 또는 물리적 백업 장치를 찾을 수 있습니다.  
+ **대상** 패널의 옵션을 사용하면 백업 작업에 대한 백업 디바이스 유형을 지정하고 기존 논리적 또는 물리적 백업 디바이스를 찾을 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치에 대한 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 디바이스에 대한 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.  
   
  **백업할 위치**  
  다음 중 백업할 미디어 유형 하나를 선택합니다. **백업할 위치** 목록에 선택한 대상이 나타납니다.  
@@ -94,10 +94,10 @@ ms.locfileid: "70155083"
  아래 표시된 다음 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 디스크 또는 테이프를 선택하면 다음 옵션이 표시됩니다.  
   
  **추가**  
- **백업할 위치** 목록에 파일이나 장치를 추가합니다. 로컬 디스크 또는 원격 디스크의 최대 64개의 디바이스로 동시에 백업할 수 있습니다. 원격 디스크에서 파일을 지정하려면 정규화된 UNC(Universal Naming Convention) 이름을 사용합니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)).  
+ **백업할 위치** 목록에 파일이나 디바이스를 추가합니다. 로컬 디스크 또는 원격 디스크의 최대 64개의 디바이스로 동시에 백업할 수 있습니다. 원격 디스크에서 파일을 지정하려면 정규화된 UNC(Universal Naming Convention) 이름을 사용합니다. 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.  
   
  **제거**  
- **백업할 위치** 목록에서 현재 선택한 장치를 하나 이상 제거합니다.  
+ **백업할 위치** 목록에서 현재 선택한 디바이스를 하나 이상 제거합니다.  
   
  **내용**  
  선택한 디바이스의 미디어 내용을 표시합니다.  
@@ -113,17 +113,17 @@ ms.locfileid: "70155083"
 > [!IMPORTANT]  
 >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. Transact-sql을 사용 하 여 [자격 증명을 만들려면](../security/authentication-access/create-a-credential.md#Credential)이 항목의 샘플 코드를 참조 하세요. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
- **Azure 저장소 컨테이너**  
- Azure 저장소 컨테이너의 이름을 지정 합니다.  
+ **Azure Storage 컨테이너**  
+ Azure Storage 컨테이너의 이름을 지정합니다.  
   
  **URL 접두사:**  
  이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. **\<storage account>.blob.core.windows.net** 이외의 형식을 사용하는 도메인을 사용하지 않는 경우 이 필드의 정보를 편집하지 않는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

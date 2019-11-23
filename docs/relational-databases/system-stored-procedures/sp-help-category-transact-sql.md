@@ -42,31 +42,31 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'` 정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
+요청 된 정보에 대 한 클래스를 `[ @class = ] 'class'` 합니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**JOB**|작업 범주에 관한 정보를 제공합니다.|  
 |**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
 |**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
   
-`[ @type = ] 'type'` 정보를 요청 하는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+정보를 요청 하는 범주의 유형을 `[ @type = ] 'type'` 합니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**LOCAL**|로컬 작업 범주입니다.|  
 |**다중 서버**|다중 서버 작업 범주입니다.|  
 |**NONE**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
-`[ @name = ] 'name'` 정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
+정보를 요청 하는 범주의 이름을 `[ @name = ] 'name'` 합니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @suffix = ] suffix`은 결과 집합의 **category_type** 열이 ID 인지 아니면 이름 인지를 지정 합니다. *접미사* 는 **bit**이며 기본값은 **0**입니다. **1** 은 **category_type** 를 이름으로 표시 하 고 **0** 은 ID로 표시 합니다.  
+`[ @suffix = ] suffix` 결과 집합의 **category_type** 열이 ID 인지 아니면 이름 인지를 지정 합니다. *접미사* 는 **bit**이며 기본값은 **0**입니다. **1** 은 **category_type** 를 이름으로 표시 하 고 **0** 은 ID로 표시 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- **@No__t-1suffix** 가 **0**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
+ **\@접미사가** **0**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
- **@No__t-1suffix** 가 **1**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
+ **\@접미사가** **1**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ &#40;transact-sql&#41;  sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

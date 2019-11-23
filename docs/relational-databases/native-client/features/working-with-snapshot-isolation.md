@@ -70,7 +70,7 @@ ms.locfileid: "73761272"
   
  트랜잭션에서 스냅숏 격리가 지원 되는 방법에 대 한 자세한 내용은 [커서 트랜잭션 격리 수준](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [행 집합 속성 및 동작](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

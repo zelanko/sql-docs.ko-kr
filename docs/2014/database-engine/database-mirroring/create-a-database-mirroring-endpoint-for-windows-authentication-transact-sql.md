@@ -31,7 +31,7 @@ ms.locfileid: "72797932"
   
  **항목 내용**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **시작하기 전 주의 사항:**  [보안](#Security)  
   
 -   **데이터베이스 미러링 엔드포인트를 만들려면:** [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72797932"
 > [!IMPORTANT]  
 >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -87,7 +87,7 @@ ms.locfileid: "72797932"
   
      [ **,** ] ROLE = *\<역할>*  
   
-     ).  
+     )  
   
      여기서  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72797932"
   
     -   ENCRYPTION은 기본적으로 REQUIRED로 설정되어 있으며 이는 엔드포인트에 대한 모든 연결에 암호화를 사용해야 함을 의미합니다. 그러나 다음과 같이 엔드포인트에 대해 암호화를 해제하거나 선택적으로 사용할 수 있습니다. 대체 방법은 다음과 같습니다.  
   
-        |ReplTest1|정의|  
+        |Value|정의|  
         |-----------|----------------|  
         |DISABLED|연결을 통해 전송되는 데이터를 암호화하지 않도록 지정합니다.|  
         |SUPPORTED|반대쪽 엔드포인트가 SUPPORTED나 REQUIRED로 지정된 경우에만 데이터를 암호화하도록 지정합니다.|  
@@ -177,15 +177,15 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>데이터베이스 미러링 엔드포인트를 구성하려면
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server PowerShell에 대 한 데이터베이스 미러링 끝점 만들기&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 #40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &40;Transact-SQL &#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
     -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
@@ -197,7 +197,7 @@ GO
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   

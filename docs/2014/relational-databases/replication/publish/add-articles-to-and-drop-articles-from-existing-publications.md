@@ -49,7 +49,7 @@ ms.locfileid: "73882336"
   
 3.  스냅샷이 생성된 후에 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 복사합니다.  
   
-    -   밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../synchronize-a-push-subscription.md)를 참조하십시오.  
+    -   밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md)를 참조하십시오.  
   
     -   끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)를 참조하십시오.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73882336"
   
  위에서 언급한 대로 경우에 따라서는 아티클을 삭제하면 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다. 자세한 내용은 [게시 구독](../subscribe-to-publications.md) 및 [데이터 동기화](../synchronize-data.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
  [구독 다시 초기화](../reinitialize-subscriptions.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)  

@@ -28,7 +28,7 @@ ms.locfileid: "70153966"
 # <a name="ado-net-source"></a>ADO.NET 원본
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
   
- ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. 에 대 한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]자세한 내용은 [일반 지침 및 제한 사항 (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조 하세요.  
+ ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 지침 및 제한 사항(Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
  원본은 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑되지 않는 모든 데이터 형식을 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 데이터 형식이 `System.Object`인 경우에도 이러한 변환이 발생합니다.  
@@ -79,13 +79,13 @@ ms.locfileid: "70153966"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [ADO.NET 사용자 지정 속성](ado-net-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataReader 대상](datareader-destination.md)   
  [ADO.NET 대상](ado-net-destination.md)   
  [데이터 흐름](data-flow.md)  

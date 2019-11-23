@@ -46,7 +46,7 @@ ms.locfileid: "73658912"
   
  WMI 공급자를 사용 하 여 관리 응용 프로그램을 프로그래밍 하는 방법에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK의 WMI 설명서를 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 관리용 WMI 공급자 작업](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [구성 관리용 WMI 공급자에 WQL 및 스크립트 언어 사용](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   

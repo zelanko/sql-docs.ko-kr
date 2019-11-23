@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collection_set_id = ] collection_set_id`은 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우에는 값이 있어야 합니다.  
+`[ @collection_set_id = ] collection_set_id`는 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
   
-`[ @name = ] 'name'`은 컬렉션 집합의 이름입니다. *name* 은 **sysname** 이며 *collection_set_id* 가 NULL 인 경우 값이 있어야 합니다.  
+`[ @name = ] 'name'`은 컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- *Collection_set_id* 또는 *name* 에는 값이 있어야 하며 둘 다 NULL 일 수 없습니다.  
+ *Collection_set_id* 또는 *이름* 에는 값이 있어야 하며 둘 다 NULL 일 수 없습니다.  
   
- 이 프로시저는 지정 된 컬렉션 집합에 대 한 컬렉션 및 업로드 작업을 시작 하 고, 컬렉션 집합의 **\@collection_mode** 가 캐시 안 됨 (1)으로 설정 된 경우 컬렉션 에이전트 작업을 즉시 시작 합니다. 자세한 내용은 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)을 참조 하세요.  
+ 이 프로시저는 지정 된 컬렉션 집합에 대 한 컬렉션 및 업로드 작업을 시작 하 고 컬렉션 집합의 **\@collection_mode** 캐시 안 됨 (1)으로 설정 된 경우 컬렉션 에이전트 작업을 즉시 시작 합니다. 자세한 내용은 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)을 참조 하세요.  
   
  sp_sycollector_run_collection_set는 또한 일정이 없는 컬렉션 집합을 실행하는 데도 사용할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저를 실행 하려면 **dc_operator** (EXECUTE 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
+ 이 프로시저를 실행 하려면 **dc_operator** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="example"></a>예제  
  식별자를 사용하여 컬렉션 집합을 시작합니다.  
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   

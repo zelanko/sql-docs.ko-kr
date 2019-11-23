@@ -24,28 +24,28 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72988217"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 IDbDataParameter **네임 스페이스에서** `IDbConnection`, `IDbCommand`및 인터페이스의 특수 구현을 포함 하는 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]System.IO**네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서** 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 IDbDataParameter **네임 스페이스에서** `IDbConnection`, `IDbCommand`및 인터페이스의 특수 구현을 포함 하는 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
   
 > [!NOTE]  
 >  이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 애플리케이션을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 애플리케이션으로 로드하려면  
   
 1.  패키지에서 DataReader 대상이 클라이언트 애플리케이션으로 읽어 올 출력을 받도록 구성합니다. DataReader 대상 이름은 나중에 클라이언트 애플리케이션에서 사용되므로 이 대상에 알기 쉬운 이름을 지정합니다. 또한 DataReader 대상의 이름을 적어 두어야 합니다.  
   
-2.  개발 프로젝트에서 **DtsClient**어셈블리를 찾아 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스에 대 한 참조를 설정 합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C#`Using`또는[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Imports`문을 사용 하 여 네임 스페이스를 코드로 가져옵니다.  
+2.  개발 프로젝트에서 **DtsClient**어셈블리를 찾아 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스에 대 한 참조를 설정 합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C# `Using` 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 문을 사용 하 여 네임 스페이스를 코드로 가져옵니다.  
   
 3.  코드에서 패키지를 실행 하는 데 **dtexec** 에 필요한 명령줄 매개 변수를 포함 하는 연결 문자열을 사용 하 여 `DtsClient.DtsConnection` 형식의 개체를 만듭니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요. 그런 다음 이 연결 문자열을 사용하여 연결을 엽니다. **dtexecui** 유틸리티를 사용하여 필요한 연결 문자열을 시각적으로 만들 수도 있습니다.  
   
     > [!NOTE]  
-    >  예제 코드에서는 `/FILE <path and filename>` 구문을 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 `/SQL <package name>` 구문을 사용하여 MSDB 데이터베이스에서 패키지를 로드하거나 `/DTS \<folder name>\<package name>` 구문을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
+    >  예제 코드에서는 `/FILE <path and filename>` 구문을 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 `/SQL <package name>` 구문을 사용하여 MSDB 데이터베이스에서 패키지를 로드하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구문을 사용하여 `/DTS \<folder name>\<package name>` 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
   
 4.  이전에 만든 `DtsClient.DtsCommand`을 사용하는 `DtsConnection` 형식의 개체를 만들고 이 개체의 `CommandText` 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 `ExecuteReader` 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.  
   
-5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 응용 프로그램의 `DtsDataParameter` 개체와 함께 사용 하려면 먼저 패키지의 **DtsClient** 네임 스페이스에 있는 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서 `DtsCommand`의 `Parameters` 컬렉션에 `DtsDataParameter`를 추가 하는 경우 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 예를 들어  
+5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 응용 프로그램의 `DtsDataParameter` 개체와 함께 사용 하려면 먼저 패키지의 **DtsClient** 네임 스페이스에 있는 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서 `DtsCommand`의 `Parameters` 컬렉션에 `DtsDataParameter`를 추가 하는 경우 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 예를 들어:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -91,7 +91,7 @@ ms.locfileid: "72988217"
   
 #### <a name="to-create-the-test-application"></a>테스트 애플리케이션을 만들려면  
   
-1.  새 Windows Forms 애플리케이션을 만듭니다.  
+1.  새 Windows Forms 응용 프로그램을 만듭니다.  
   
 2.  **%PROGRAMFILES%\MICROSOFT SQL Server\100\DTS\Binn**에서 동일한 이름의 어셈블리를 찾아 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스에 대 한 참조를 추가 합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "72988217"
   
 7.  애플리케이션을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports System.Data  
@@ -295,7 +295,7 @@ namespace DtsClientWParamCS
   
 ![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘 (작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [프로그래밍 방식으로 원격 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

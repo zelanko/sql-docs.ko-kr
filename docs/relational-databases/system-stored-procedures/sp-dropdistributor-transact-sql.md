@@ -38,15 +38,15 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @no_checks = ] no_checks`은 배포자를 삭제 하기 전에 종속 개체를 확인할 지 여부를 나타냅니다. *no_checks* 는 **bit**이며 기본값은 0입니다.  
+`[ @no_checks = ] no_checks` 배포자를 삭제 하기 전에 종속 개체를 확인할 지 여부를 나타냅니다. *no_checks* 은 **bit**이며 기본값은 0입니다.  
   
- **0**인 경우 **sp_dropdistributor** 는 배포자와 함께 모든 게시 및 배포 개체가 삭제 되었는지 확인 합니다.  
+ **0**인 경우, **sp_dropdistributor** 배포자와 함께 모든 게시 및 배포 개체가 삭제 되었는지 확인 합니다.  
   
- **1**인 경우 **sp_dropdistributor** 는 배포자를 제거 하기 전에 모든 게시 및 배포 개체를 삭제 합니다.  
+ **1**인 경우 **sp_dropdistributor** 배포자를 제거 하기 전에 모든 게시 및 배포 개체를 삭제 합니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`은이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @ignore_distributor = ] ignore_distributor`이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다.  
   
- **0**인 경우 **sp_dropdistributor** 는 배포자에 연결 하 고 모든 복제 개체를 제거 합니다. **Sp_dropdistributor** 가 배포자에 연결할 수 없는 경우 저장 프로시저가 실패 합니다.  
+ **0**인 경우 **sp_dropdistributor** 배포자에 연결 하 고 모든 복제 개체를 제거 합니다. **Sp_dropdistributor** 배포자에 연결할 수 없는 경우 저장 프로시저가 실패 합니다.  
   
  **1**인 경우 배포자에 대 한 연결이 설정 되지 않으며 복제 개체는 제거 되지 않습니다. 배포자가 제거되었거나 영구적으로 오프라인 상태인 경우에 사용합니다. 배포자에서 게시자에 대한 개체는 배포자가 나중에 다시 설치될 때까지 제거되지 않습니다.  
   
@@ -56,20 +56,20 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>설명  
  **sp_dropdistributor** 은 모든 유형의 복제에 사용 됩니다.  
   
- 서버에 다른 게시자 또는 배포 개체가 있는 경우 **\@no_checks** 가 **1**로 설정 되어 있지 않으면 **sp_dropdistributor** 가 실패 합니다.  
+ 서버에 다른 게시자 또는 배포 개체가 있는 경우 **\@no_checks** 를 **1**로 설정 하지 않으면 **sp_dropdistributor** 실패 합니다.  
   
- **Sp_dropdistributiondb**를 실행 하 여 배포 데이터베이스를 삭제 한 후이 저장 프로시저를 실행 해야 합니다.  
+ 이 저장 프로시저는 **sp_dropdistributiondb**를 실행 하 여 배포 데이터베이스를 삭제 한 후에 실행 해야 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistributor**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistributor**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [ &#40;transact-sql&#41;  sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_changedistributor_property](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
  [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

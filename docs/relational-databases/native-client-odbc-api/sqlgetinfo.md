@@ -209,7 +209,7 @@ ms.locfileid: "73786330"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|현재 사용자 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLGetInfo 함수](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

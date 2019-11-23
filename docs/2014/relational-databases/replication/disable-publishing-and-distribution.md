@@ -38,7 +38,7 @@ ms.locfileid: "73882380"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73882380"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73882380"
     > [!NOTE]  
     >  모든 복제 게시 및 배포 개체가 삭제되지 않은 상태로 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 및 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)를 실행하면 오류가 반환됩니다. 게시자 또는 배포자를 삭제할 때 모든 복제 관련 개체를 삭제 하려면 **\@no_checks** 매개 변수를 **1**로 설정 해야 합니다. 게시자 또는 배포자가 오프 라인 이거나 연결할 수 없는 경우에는 **\@ignore_distributor** 매개 변수를 **1** 로 설정 하 여 삭제할 수 있습니다. 그러나 남겨진 모든 게시 및 배포 개체는 수동으로 제거 해야 합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
  다음 스크립트 예에서는 구독 데이터베이스에서 복제 개체를 제거합니다.  
   
  [!code-sql[HowTo#sp_removedbreplication](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_removedbreplication)]  
@@ -131,7 +131,7 @@ ms.locfileid: "73882380"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   

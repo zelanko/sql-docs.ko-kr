@@ -134,7 +134,7 @@ ms.locfileid: "73787871"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ &#40;ODBC&#41; 참조 SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   

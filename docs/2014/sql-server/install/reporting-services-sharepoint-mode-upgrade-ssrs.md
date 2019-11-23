@@ -26,9 +26,9 @@ ms.locfileid: "71952427"
 ## <a name="options"></a>변수  
  **다음** 단추는 **업그레이드 계속** 확인란을 선택한 경우에만 사용할 수 있습니다. 이 확인란을 선택하지 않으면 업그레이드를 계속할 수 없습니다.  
   
- 자세한 내용은 [Reporting Services 업그레이드 및 마이그레이션](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628) 을 참조 하세요.  
+ 자세한 내용은 [Reporting Services 업그레이드 및 마이그레이션](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
  [Reporting Services SharePoint 모드 및 기본 모드의 명령 프롬프트 설치](https://go.microsoft.com/fwlink/?LinkId=217620)  
   

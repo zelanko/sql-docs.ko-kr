@@ -74,7 +74,7 @@ xp_msver [ optname ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [일반 확장 저장 프로시저 &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   

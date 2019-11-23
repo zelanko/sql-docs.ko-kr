@@ -37,7 +37,7 @@ ms.locfileid: "72782205"
 ## <a name="examples"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램에 대해 에이전트 네임스페이스를 한정하는 `Imports` 문을 포함해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램에 대해 에이전트 네임스페이스를 한정하는 `Imports` 문을 포함해야 합니다. 다음과 같이 응용 프로그램의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -166,18 +166,18 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Visual Basic에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. `operator`가 Visual Basic 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 Visual Basic 키워드이므로 `operator` 형식을 대괄호로 묶어야 합니다.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent3](SMO How to#SMO_VBAgent3)]  -->  
   
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
   
 ```csharp
 {  
@@ -208,9 +208,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
   
 ```powershell
 #Get a server object which corresponds to the default instance  
@@ -280,6 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 에이전트](../../../ssms/agent/sql-server-agent.md)    
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 에이전트](../../../ssms/agent/sql-server-agent.md)   
  [작업 구현](../../../ssms/agent/implement-jobs.md)  

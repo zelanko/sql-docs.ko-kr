@@ -135,7 +135,7 @@ ms.locfileid: "73637828"
 #### <a name="lookup-transformation"></a>조회 변환  
  필요한 열만 조회하는 SELECT 문을 입력하여 메모리에서 참조 데이터의 크기를 최소화합니다. 이 옵션은 불필요한 데이터를 대량 반환하는 전체 테이블 또는 뷰 선택 작업보다 성능을 향상시킵니다.  
   
-#### <a name="merge-join-transformation"></a>병합 조인 변환  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  병합 조인 변환에서 과도한 메모리를 사용할 위험을 줄이기 위해 Microsoft에서 필요한 변경을 수행했기 때문에 더 이상 `MaxBuffersPerInput` 속성 값을 구성할 필요가 없습니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환  
@@ -159,7 +159,7 @@ ms.locfileid: "73637828"
   
  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다. 진행률 보고를 사용하지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 복잡한 패키지를 실행하는 동안 성능을 높일 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "73637828"
   
 -   technet.microsoft.com의 비디오 - [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

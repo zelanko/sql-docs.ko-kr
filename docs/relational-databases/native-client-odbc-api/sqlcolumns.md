@@ -90,7 +90,7 @@ ms.locfileid: "73787417"
   
  ODBC의 스파스 열에 대 한 자세한 내용은 [스파스 열에서 Odbc &#40;&#41;지원](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sqlcolumns 함수](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

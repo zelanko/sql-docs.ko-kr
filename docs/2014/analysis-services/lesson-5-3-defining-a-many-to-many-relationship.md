@@ -53,7 +53,7 @@ ms.locfileid: "69493873"
   
      **SalesOrderNumber** 열의 데이터 형식은 문자열 데이터 형식입니다.  
   
-9. @No__t_0 테이블의 다른 열에 대 한 데이터 형식을 검토 합니다.  
+9. `InternetSalesReason` 테이블의 다른 열에 대 한 데이터 형식을 검토 합니다.  
   
      이 테이블의 다른 두 개의 열에 대한 데이터 형식은 숫자 데이터 형식입니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493873"
   
 5.  메타데이터 창에서 **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**, **Australia**를 차례로 확장하고 **Queensland**를 마우스 오른쪽 단추로 클릭한 다음 **필터에 추가**를 클릭합니다.  
   
-6.  @No__t_0 수준의 각 멤버를 확장 하 여 Queensland의 고객이 인터넷을 통해 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품의 구매를 위해 제공한 각 이유와 관련 된 달러 값을 검토 합니다.  
+6.  `Sales Reason Type` 수준의 각 멤버를 확장 하 여 Queensland의 고객이 인터넷을 통해 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품의 구매를 위해 제공한 각 이유와 관련 된 달러 값을 검토 합니다.  
   
      각 판매 이유와 연결된 합계가 총 판매량보다 크며 이는 일부 고객이 여러 구매 이유를 언급했기 때문입니다.  
   
@@ -172,8 +172,8 @@ ms.locfileid: "69493873"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [측정값 그룹의 차원 세분성 정의](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [다 대 다 관계 및 다 대 다 관계 속성 정의](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

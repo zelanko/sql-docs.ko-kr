@@ -11,7 +11,7 @@ ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0d9f6842ebe5e7d6ee923eef17f491f0cb7ef6ec
 ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "74056737"
@@ -21,7 +21,7 @@ ms.locfileid: "74056737"
 
 AdventureWorks 다운로드 링크 및 설치 지침을 참조 하세요. 
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). 샘플의 전체 버전은 SQL Server Evaluation/Developer/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과를 위해 6 월 2016 릴리스 이상을 사용 합니다.

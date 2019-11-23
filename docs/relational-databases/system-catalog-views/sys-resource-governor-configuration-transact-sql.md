@@ -69,6 +69,6 @@ GO
  [Resource Governor 카탈로그 뷰 &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [dm_resource_governor_configuration &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

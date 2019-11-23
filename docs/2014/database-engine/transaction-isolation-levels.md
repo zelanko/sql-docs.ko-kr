@@ -80,7 +80,7 @@ ms.locfileid: "73637784"
   
  오류 41325. 직렬화 유효성 검사 실패로 인해 현재 트랜잭션을 커밋하지 못했습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화 된 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [메모리 액세스에 최적화 된 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

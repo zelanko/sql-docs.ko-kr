@@ -43,27 +43,27 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filename = ] 'file_name'`은 데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @filename = ] 'file_name'`은 데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 하 여 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
   
 `[ @temp_dir = ] 'temp_dir'`은 임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL 인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`은 **\@filename**에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*는 **bit**이며 기본값은 **0**입니다. **1**인 경우 **\@filename**에 지정 된 파일 (있는 경우)을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`은 **\@filename**에 지정 된 것과 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 **\@filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_copysubscription** 는 구독자에서 스냅숏을 적용 하는 대신 구독 데이터베이스를 파일에 복사 하는 모든 유형의 복제에 사용 됩니다. 데이터베이스는 반드시 끌어오기 구독만을 지원하도록 구성되어야 합니다. 적절한 권한을 가진 사용자는 구독 데이터베이스를 복사할 수 있으며, 그런 다음 구독 파일(.msf)을 다른 구독자가 구독으로 사용할 수 있게끔 전자 메일로 보내거나 복사하거나 전송할 수 있습니다.  
+ 구독자에서 스냅숏을 적용 하는 대신 구독 데이터베이스를 파일에 복사 하기 위해 모든 유형의 복제에 **sp_copysubscription** 를 사용 합니다. 데이터베이스는 반드시 끌어오기 구독만을 지원하도록 구성되어야 합니다. 적절한 권한을 가진 사용자는 구독 데이터베이스를 복사할 수 있으며, 그런 다음 구독 파일(.msf)을 다른 구독자가 구독으로 사용할 수 있게끔 전자 메일로 보내거나 복사하거나 전송할 수 있습니다.  
   
  복사할 구독 데이터베이스의 크기는 2GB 미만이어야 합니다.  
   
  **sp_copysubscription** 은 클라이언트 구독이 있는 데이터베이스에 대해서만 지원 되며 데이터베이스에 서버 구독이 있는 경우에는 실행할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대체 스냅숏 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
+## <a name="see-also"></a>참고 항목  
+ [대체 스냅샷 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

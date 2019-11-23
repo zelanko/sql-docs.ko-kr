@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 형식의 이벤트 내용입니다. Null을 허용하지 않습니다.|  
 |file_name|**nvarchar(260)**|이벤트가 포함된 파일의 이름입니다. Null을 허용하지 않습니다.|  
 |file_offset|**bigint**|이벤트가 포함된 파일에 있는 블록의 오프셋입니다. Null을 허용하지 않습니다.|  
-|timestamp_utc|**datetime2**|**적용**대상: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
+|timestamp_utc|**datetime2**|**적용 대상**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
 
   
 ## <a name="remarks"></a>설명  

@@ -33,9 +33,9 @@ ms.locfileid: "73785739"
 |매개 변수|테이블 반환 매개 변수 열을 포함 하 여 비 테이블 반환 매개 변수 형식에 대 한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*하위 형식*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
+|*SubType*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
 |*길이*|SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 유형 이름의 길이입니다. 유형 이름이 null로 끝나는 경우 SQL_NTS이고, 테이블 반환 매개 변수 유형 이름이 필요하지 않은 경우 0입니다.|  
-|*전체 자릿수*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
+|*정밀도*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*소수 자릿수*|SQL_DESC_SCALE|사용되지 않습니다. 이 매개 변수는 0이어야 합니다.|  
 |*DataPtr*|APD의 SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> 저장 프로시저 호출에서 이 매개 변수는 선택 사항이며, 필요하지 않은 경우 NULL을 지정할 수 있습니다. 프로시저 호출이 아닌 SQL 문에 대해서는 이 매개 변수를 지정해야 합니다.<br /><br /> *Dataptr* 은 가변 행 바인딩이 사용 될 때 응용 프로그램에서이 테이블 반환 매개 변수를 식별 하는 데 사용할 수 있는 고유 값으로도 사용 됩니다.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 전송할 행 수나 SQL_DATA_AT_EXEC입니다. SQLExecDirect를 사용 하 여 전송할 행 수를 보유 하는 값에 대 한 포인터입니다.|  
@@ -46,21 +46,21 @@ ms.locfileid: "73785739"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescRec 지원  
  날짜/시간 유형에 대해 허용되는 값은 다음과 같습니다.  
   
-||*형식*|*하위 형식*|*길이*|*전체 자릿수*|*소수 자릿수*|  
+||*형식*|*SubType*|*길이*|*정밀도*|*소수 자릿수*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
-|time|SQL_SS_TIME2|0|10|0..7|0..7|  
-|datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
-|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
+|Time|SQL_SS_TIME2|0|10|0..7|0..7|  
+|Datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
+|Datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
  자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLSetDescRec 지원  
  **SQLSetDescRec** 는 많은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

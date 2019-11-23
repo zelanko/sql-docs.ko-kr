@@ -69,11 +69,11 @@ ms.locfileid: "73728811"
   
 10. 그룹에 포함할 모든 특성에 대해 이 절차를 반복합니다. 그룹의 각 특성에 대해 동일한 변경 내용 추적 그룹 번호를 사용합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [특성 값 변경 기반 동작 시작&#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   

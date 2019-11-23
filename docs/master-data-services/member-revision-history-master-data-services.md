@@ -70,7 +70,7 @@ ms.locfileid: "73729115"
 |----------------------|-----------|  
 |멤버 수정 기록 롤백|[멤버 수정 기록 롤백&#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   

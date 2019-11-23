@@ -38,9 +38,9 @@ ms.locfileid: "72797740"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
   
-|태스크|Permissions|  
+|태스크|사용 권한|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 복제본을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
@@ -143,7 +143,7 @@ GO
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 관련 매개 변수는 다음과 같습니다.  
   
-    -   보조 역할에 대 한 연결 액세스를 구성 하려면 `ConnectionModeInSecondaryRole`*secondary_role_keyword* 매개 변수를 지정 합니다. 여기서 *secondary_role_keyword* 은 다음 값 중 하나입니다.  
+    -   보조 역할에 대 한 연결 액세스를 구성 하려면 `ConnectionModeInSecondaryRole`*secondary_role_keyword* 매개 변수를 지정 합니다. 여기서 *secondary_role_keyword* 는 다음 값 중 하나입니다.  
   
          `AllowNoConnections`  
          보조 복제본의 데이터베이스에 대한 직접 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.  
@@ -154,7 +154,7 @@ GO
          `AllowAllConnections`  
          보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
-    -   주 역할에 대 한 연결 액세스를 구성 하려면 `ConnectionModeInPrimaryRole`*primary_role_keyword*를 지정 합니다. 여기서 *primary_role_keyword* 은 다음 값 중 하나입니다.  
+    -   주 역할에 대 한 연결 액세스를 구성 하려면 `ConnectionModeInPrimaryRole`*primary_role_keyword*를 지정 합니다. 여기서 *primary_role_keyword* 는 다음 값 중 하나입니다.  
   
          `AllowReadWriteConnections`  
          애플리케이션 의도 연결 속성이 ReadOnly로 설정된 연결은 허용되지 않습니다. 애플리케이션 의도 속성이 ReadWrite로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
@@ -186,10 +186,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 -   클라이언트 애플리케이션을 읽을 수 있는 보조 복제본에 연결할 수 있도록 설정하려면:  
   
-    ||필수 구성 요소|링크|  
+    ||사전 요구 사항|링크|  
     |-|------------------|----------|  
-    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "상자")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "상자")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **장애 조치(Failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
   
@@ -202,7 +202,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  쓰기 전용 데이터베이스를 식별하려면 READ_WRITE를 값으로 지정합니다.  
   
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
@@ -232,7 +232,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
 -   [AlwaysOn: 읽기 가능한 보조 복제본 및 데이터 대기 시간](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 &#40;복제본 AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

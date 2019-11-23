@@ -1,5 +1,5 @@
 ---
-title: _nodes_partitions (Transact-sql) | Microsoft Docs
+title: sys. pdw_nodes_partitions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,36 +22,36 @@ ms.locfileid: "72305231"
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  모든 테이블의 각 파티션에 대 한 행과 @no__t 0 데이터베이스의 대부분의 인덱스 유형을 포함 합니다. 모든 테이블 및 인덱스는 명시적으로 분할 되었는지 여부에 관계 없이 하나 이상의 파티션을 포함 합니다.  
+  모든 테이블의 각 파티션에 대 한 행과 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스에 있는 대부분의 인덱스 유형을 포함 합니다. 모든 테이블 및 인덱스는 명시적으로 분할 되었는지 여부에 관계 없이 하나 이상의 파티션을 포함 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|파티션의 id입니다. 데이터베이스 내에서 고유합니다.|  
 |object_id|**int**|이 파티션이 속한 개체의 id입니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
 |index_id|**int**|이 파티션이 속한 개체 내의 인덱스 id입니다.|  
-|partition_number|**int**|소유하는 인덱스나 힙 내의 1부터 시작하는 파티션 번호입니다. @No__t-0의 경우이 열의 값은 1입니다.|  
+|partition_number|**int**|소유하는 인덱스나 힙 내의 1부터 시작하는 파티션 번호입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우이 열의 값은 1입니다.|  
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID입니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수입니다. |  
 |data_compression|**int**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
 |data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. 가능한 값은 NONE, ROW 및 PAGE입니다.|  
-|pdw_node_id|**int**|@No__t-0 노드의 고유 식별자입니다.|  
+|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  필요한 `CONTROL SERVER` 권한.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예제 A: 각 배포 내의 각 파티션에 행 표시 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예 A: 각 배포 내의 각 파티션에 행 표시 
 
-**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], @no__t
+**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 각 배포 내의 각 파티션에 있는 행 수를 표시 하려면 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 를 사용 합니다.
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>예제 B: 시스템 뷰를 사용 하 여 테이블의 각 배포에 대 한 각 파티션의 행을 볼 수 있습니다.
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>예 2: 시스템 뷰를 사용 하 여 테이블의 각 배포에 대 한 각 파티션의 행을 볼 수 있습니다.
 
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-이 쿼리는 테이블의 각 배포에 대 한 각 파티션에 있는 행 수를 반환 `myTable`입니다.  
+이 쿼리는 테이블 `myTable`각 배포의 각 파티션에 있는 행 수를 반환 합니다.  
  
 ```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
@@ -69,7 +69,7 @@ WHERE o.name = 'myTable'
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

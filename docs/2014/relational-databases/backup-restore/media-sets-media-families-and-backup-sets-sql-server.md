@@ -54,13 +54,13 @@ ms.locfileid: "70154796"
  백업 미디어를 포맷하여 백업 작업을 수행하는 동안 백업 미디어에 미디어 세트가 생성됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [새 미디어 세트 만들기](#CreatingMediaSet)를 참조하십시오. 포맷 후에는 각 파일이나 테이프에 미디어 세트의 미디어 헤더가 포함되어 파일이나 테이프가 백업 내용을 수신할 수 있는 준비가 됩니다. 헤더가 있으면 백업 작업에서 작업에 지정된 모든 백업 디바이스에 있는 백업 미디어에 지정된 데이터를 백업합니다.  
   
 > [!NOTE]  
->  미디어 세트를 미러링하여 손상된 미디어 볼륨(테이프 또는 디스크 파일)으로부터 보호할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
+>  미디어 세트를 미러링하여 손상된 미디어 볼륨(테이프 또는 디스크 파일)으로부터 보호할 수 있습니다. 자세한 내용은 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)를 참조하세요.  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]이상에서는 압축 된 백업을 읽을 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 이상에서는 압축 된 백업을 읽을 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
   
   
 ### <a name="media-families"></a>미디어 패밀리  
- *미디어 패밀리*는 미디어 세트의 미러되지 않은 단일 장치나 일련의 미러된 장치에 생성된 백업으로 구성됩니다. 미디어 세트에 사용된 백업 디바이스 수에 따라 미디어 세트의 미디어 패밀리 수가 결정됩니다. 예를 들어 미디어 세트에 미러되지 않은 백업 디바이스 두 개가 사용되면 미디어 세트에는 두 개의 미디어 패밀리가 포함됩니다.  
+ *미디어 패밀리*는 미디어 세트의 미러되지 않은 단일 디바이스나 일련의 미러된 디바이스에 생성된 백업으로 구성됩니다. 미디어 세트에 사용된 백업 디바이스 수에 따라 미디어 세트의 미디어 패밀리 수가 결정됩니다. 예를 들어 미디어 세트에 미러되지 않은 백업 디바이스 두 개가 사용되면 미디어 세트에는 두 개의 미디어 패밀리가 포함됩니다.  
   
 > [!NOTE]  
 >  미러된 미디어 세트의 각 미디어 패밀리가 미러됩니다. 예를 들어 미러 두 개가 사용되는 미디어 세트 포맷에 백업 디바이스 6개가 사용되면 백업 데이터의 해당 복사본 두 개를 각각 포함하는 미디어 패밀리가 3개가 됩니다. 미러된 미디어 세트에 대한 자세한 내용은 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "70154796"
 -   미디어 설명에 MTF 미디어 레이블이나 미디어 설명이 포함되는지 여부  
   
     > [!NOTE]  
-    >  백업 또는 복원 작업에 사용 되는 모든 미디어는 다른 응용 프로그램에서 작성 한 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블은 쓰지 않는 표준 백업 형식을 사용 합니다.  
+    >  백업 또는 복원 작업에 사용 되는 모든 미디어는 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 이라는 표준 백업 형식을 사용 하 여 다른 응용 프로그램에서 작성 한 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블은 쓰지 않습니다.  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 미디어 레이블 또는 자유형 텍스트로 된 미디어 설명  
   
@@ -210,7 +210,7 @@ GO
  Microsoft Windows 백업 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 같은 미디어를 공유할 수 있지만 상호 운용되지는 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Windows 데이터를 백업할 수 없습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]이상 버전에서는 압축 된 백업을 읽을 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 이상 버전에서는 압축 된 백업을 읽을 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
   
   
 ####  <a name="Overwriting"></a>백업 세트 덮어쓰기  
@@ -247,7 +247,7 @@ GO
   
      미디어 시퀀스 번호는 미디어 패밀리 안의 실제 미디어 순서를 나타냅니다. 초기 백업 미디어의 시퀀스 번호는 1로 지정되어 1로 태그를 붙이고 두 번째 미디어(첫 번째 연속 미디어)는 2로 태그를 붙이며 나머지 미디어도 이와 같은 순서로 태그를 붙입니다. 백업을 복원하는 운영자는 백업 세트를 복원할 때 미디어 시퀀스 번호를 사용하여 올바른 순서로 정확하게 미디어를 탑재할 수 있습니다.  
   
-###  <a name="MultipleDevices"></a> 여러 장치  
+###  <a name="MultipleDevices"></a> 여러 디바이스  
  테이프 드라이브나 디스크 파일을 여러 개 사용할 때는 다음 사항을 고려해야 합니다.  
   
 -   백업의 경우  
@@ -258,7 +258,7 @@ GO
   
      디스크 백업에서 복원하는 경우와 온라인 복원의 경우 모든 미디어 패밀리를 동시에 탑재해야 합니다. 테이프 백업에서 오프라인으로 복원하는 경우 더 적은 백업 디바이스의 미디어 패밀리를 처리할 수 있습니다. 각 미디어 패밀리를 완전히 처리한 후에 다른 미디어 패밀리의 처리를 시작할 수 있습니다. 단일 디바이스를 사용하여 복원하는 경우가 아니면 미디어 패밀리는 항상 병렬로 처리됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **새 미디어 세트를 만들려면**  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)(**새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기** 옵션)  
@@ -285,7 +285,7 @@ GO
   
  **미디어 시퀀스 번호 및 패밀리 시퀀스 번호를 보려면**  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)(**family_sequence_number** 열)  
   
@@ -293,7 +293,7 @@ GO
   
 -   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -302,7 +302,7 @@ GO
 -   [RESTORE LABELONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
  [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   

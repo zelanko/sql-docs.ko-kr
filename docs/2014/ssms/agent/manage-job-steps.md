@@ -57,7 +57,7 @@ ms.locfileid: "72798223"
   
 -   실행 프로그램 및 운영 체제 명령  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 데이터를 대량으로 가져오는 데 서식 파일을 사용하는 방법을 보여 줍니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 태스크  
   
@@ -132,7 +132,7 @@ Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>복제 작업 단계  
- 복제를 사용하여 게시와 구독을 만드는 경우 기본적으로 복제 작업이 만들어집니다. 만들어지는 작업 유형은 복제 유형(스냅샷, 트랜잭션 또는 병합)과 사용되는 옵션에 따라 결정됩니다.  
+ 복제를 사용하여 게시와 구독을 만드는 경우 기본적으로 복제 작업이 만들어집니다. 만들어지는 작업 유형은 복제 유형(스냅숏, 트랜잭션 또는 병합)과 사용되는 옵션에 따라 결정됩니다.  
   
  복제 작업 단계는 다음 복제 에이전트 중 하나를 활성화합니다.  
   
@@ -194,22 +194,22 @@ Set oServer = nothing
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하는 작업 단계 만들기에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |실행 프로그램으로 작업 단계를 만드는 방법에 대해 설명합니다.|[CmdExec 작업 단계 만들기](create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 사용 권한을 다시 설정하는 방법에 대해 설명합니다.|[SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 만드는 방법에 대해 설명합니다.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 Transact-SQL 작업 단계의 옵션을 정의하는 방법에 대해 설명합니다.|[Transact-SQL 작업 단계 옵션 정의](define-transact-sql-job-step-options.md)|  
+|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 Transact-SQL 작업 단계의 옵션을 정의하는 방법에 대해 설명합니다.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |ActiveX 스크립트 작업 단계를 만드는 방법에 대해 설명합니다.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 명령과 쿼리를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.|[Analysis Services 작업 단계 만들기](create-an-analysis-services-job-step.md)|  
-|작업 실행 중에 오류가 발생하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수행해야 하는 동작에 대해 설명합니다.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 명령과 쿼리를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|작업 실행 중에 오류가 발생하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행해야 하는 동작에 대해 설명합니다.|[작업 단계 성공 또는 실패 흐름 설정](set-job-step-success-or-failure-flow.md)|  
 |작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다.|[작업 단계 정보 보기](view-job-step-information.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[작업 단계 로그 삭제](delete-a-job-step-log.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sysjobstepslogs &#40;transact-sql&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [작업  만들기](create-jobs.md)  
  [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

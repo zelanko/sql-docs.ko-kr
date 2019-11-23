@@ -39,8 +39,8 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>인수  
- **\@ 쿠키**  
- 응용 프로그램 역할을 활성화할 때 생성된 쿠키를 지정합니다. 쿠키는 [sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)에 의해 만들어집니다. **varbinary (8000)** .  
+ **\@쿠키**  
+ 애플리케이션 역할을 활성화할 때 생성된 쿠키를 지정합니다. 쿠키는 [sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)에 의해 만들어집니다. **varbinary (8000)** .  
   
 > [!NOTE]  
 >  현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 애플리케이션은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.  
@@ -48,8 +48,8 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 및 1(실패)  
   
-## <a name="remarks"></a>Remarks  
- **Sp_setapprole**을 사용 하 여 응용 프로그램 역할을 활성화 한 후에는 사용자가 서버에서 연결을 끊거나 **sp_unsetapprole**를 실행할 때까지 역할은 활성 상태로 유지 됩니다.  
+## <a name="remarks"></a>설명  
+ **Sp_setapprole**를 사용 하 여 응용 프로그램 역할을 활성화 한 후에는 사용자가 서버에서 연결을 끊거나 **sp_unsetapprole**를 실행할 때까지 역할은 활성 상태로 유지 됩니다.  
   
  응용 프로그램 역할에 대 한 개요는 [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)을 참조 하세요.  
   
@@ -58,8 +58,8 @@ sp_unsetapprole @cookie
   
 ## <a name="examples"></a>예  
   
-### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 응용 프로그램 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
- 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 응용 프로그램 역할을 활성화하고 쿠키를 만듭니다. 이 예에서는 현재 사용자의 이름을 반환 하 고 **sp_unsetapprole**를 실행 하 여 원래 컨텍스트로 되돌립니다.  
+### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 애플리케이션 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
+ 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 애플리케이션 역할을 활성화하고 쿠키를 만듭니다. 이 예에서는 현재 사용자의 이름을 반환 하 고 **sp_unsetapprole**를 실행 하 여 원래 컨텍스트로 되돌립니다.  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -77,10 +77,10 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [보안 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   

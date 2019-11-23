@@ -92,7 +92,7 @@ ms.locfileid: "72811596"
   
  계층 수준의 개수가 최종 사용자에게 표시될 수 있는 수준의 개수를 결정하는 사용자 정의 계층 구조와 달리 부모-자식 계층 구조는 특성 계층의 단일 수준과 사용자에게 표시되는 다중 수준을 생성하는 단일 수준의 값으로 정의됩니다. 표시되는 수준의 개수는 멤버 키와 부모 키가 저장된 차원 테이블 열의 내용에 따라 달라집니다. 차원 테이블의 데이터가 변경되면 수준의 개수가 변경될 수 있습니다. 자세한 내용은 [부모-자식 계층](../multidimensional-models/parent-child-dimension.md)및 [부모-자식 계층의 특성](../multidimensional-models/parent-child-dimension-attributes.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 정의 계층 만들기](../multidimensional-models/user-defined-hierarchies-create.md)   
  [사용자 계층 속성](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [차원 특성 속성 참조](../multidimensional-models/dimension-attribute-properties-reference.md)  

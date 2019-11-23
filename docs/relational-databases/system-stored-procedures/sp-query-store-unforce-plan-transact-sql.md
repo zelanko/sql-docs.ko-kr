@@ -42,9 +42,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @query_id = ] query_id`쿼리 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @query_id = ] query_id`는 쿼리 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
   
-`[ @plan_id = ] plan_id`더 이상 적용 되지 않을 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @plan_id = ] plan_id`는 더 이상 적용 되지 않을 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,19 +66,19 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 원하지 않는 query_id 및 plan_id를 확인 한 후에는 다음 예제를 사용 하 여 계획을 강제로 해제 합니다.  
+ Query_id를 확인 하 고 적용 하지 않으려는 plan_id 다음 예를 사용 하 여 계획을 강제로 해제 합니다.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;TRANSCT-SQL&AMP;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ &#40;transact-sql&#41;  sp_query_store_force_plan](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
+ [sp_query_store_remove_plan &#40;transct-sql&-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [ &#40;transact-sql&#41;  sp_query_store_remove_query](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_query_store_reset_exec_stats](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_query_store_flush_db](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [쿼리 저장소   를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   

@@ -41,15 +41,15 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`은 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
+`[ @publisher = ] 'publisher'`는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
   
-`[ @publisher_db = ] 'publisher_db'`은 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'`는 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`은 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'`는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @failover_mode = ] 'failover_mode'`은 구독의 장애 조치 (failover) 모드입니다. *failover_mode* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**즉시** 또는 **동기화**|구독자에서 수행된 데이터 변경 내용을 즉시 게시자로 대량 복사합니다.|  
 |**queued**|데이터 수정 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐에 저장 됩니다.|  
@@ -63,13 +63,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_setreplfailovermode** 는 즉시 업데이트에 대 한 장애 조치 (failover)가 포함 된 지연 업데이트 또는 지연 업데이트에 대 한 장애 조치 (failover)를 사용 하는 즉시 업데이트에 대해 구독이 사용 하도록 설정 된 스냅숏 복제 또는 트랜잭션 복제에 사용  
+ 즉시 업데이트에 대 한 장애 조치 (failover)가 포함 된 지연 업데이트 또는 지연 업데이트에 대 한 장애 조치 (failover)를 사용 하는 즉시 업데이트의 경우 구독이 사용 하도록 설정 된 스냅숏 복제 또는 트랜잭션 복제에 사용 됩니다. **sp_setreplfailovermode**  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_setreplfailovermode**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_setreplfailovermode**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업데이트 가능한 트랜잭션 구독에 대 한 업데이트 모드 간을 전환](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
+## <a name="see-also"></a>참고 항목  
+ [업데이트 가능한 트랜잭션 구독에 대 한 업데이트 모드를 전환](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

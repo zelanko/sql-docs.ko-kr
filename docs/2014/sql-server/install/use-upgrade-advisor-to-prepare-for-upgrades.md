@@ -78,7 +78,7 @@ ms.locfileid: "73632732"
   
  자세한 내용은 업그레이드 관리자 다운로드에 포함된 업그레이드 관리자 설명서 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스 정보를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 의 여러 버전 및 인스턴스 사용](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [이전 버전과의 호환성](../../../2014/getting-started/backward-compatibility.md)  

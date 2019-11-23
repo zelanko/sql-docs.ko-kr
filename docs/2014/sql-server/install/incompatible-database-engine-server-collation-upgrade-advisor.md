@@ -18,19 +18,19 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952230"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>호환되지 않는 데이터베이스 엔진 서버 데이터 정렬(업그레이드 관리자)
-  업그레이드 관리자가 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스를 사용 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t 검색 했습니다.  
+  업그레이드 관리자가 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 사용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 검색 했습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t SharePoint 모드입니다.|  
+|SharePoint 모드를[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** .|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>설명  
- 업그레이드 관리자가 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스를 사용 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t 검색 했습니다.  
+ 업그레이드 관리자가 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 사용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 검색 했습니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @no__t sharepoint 모드는 SharePoint 공유 서비스 아키텍처를 활용 합니다. SharePoint는 대/소문자를 구분하도록 구성된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 서버 데이터 정렬 또는 이진 서버 데이터 정렬을 지원하지 않습니다. 호환되지 않는 데이터 정렬에는 기본적으로 대/소문자 구분되는 데이터 정렬 또는 기본적으로 호환되지만 다음 데이터 정렬 지정자 중 하나로 구성된 이진 및 기본 데이터 정렬을 포함합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 공유 서비스 아키텍처를 활용 합니다. SharePoint는 대/소문자를 구분하도록 구성된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 서버 데이터 정렬 또는 이진 서버 데이터 정렬을 지원하지 않습니다. 호환되지 않는 데이터 정렬에는 기본적으로 대/소문자 구분되는 데이터 정렬 또는 기본적으로 호환되지만 다음 데이터 정렬 지정자 중 하나로 구성된 이진 및 기본 데이터 정렬을 포함합니다.  
   
 -   **이진**  
   

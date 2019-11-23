@@ -21,7 +21,7 @@ ms.locfileid: "72688712"
   `CircularString`은 0개 이상의 연속 원호 세그먼트 컬렉션입니다. 원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되는 곡선 세그먼트입니다. 첫 번째 점은 세 번째 점과 같을 수 없습니다. 원호 세그먼트의 세 점 모두가 공선상에 있는 경우 원호 세그먼트가 선분으로 처리됩니다.  
   
 > [!IMPORTANT]  
->  @No__t_1 하위 유형을 비롯 하 여 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입 된 새로운 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.  
+>  `CircularString` 하위 유형을 비롯 하 여 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입 된 새로운 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.  
   
 ## <a name="circularstring-instances"></a>CircularString 인스턴스  
  다음 그림에서는 유효한 `CircularString` 인스턴스를 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "72688712"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- @No__t_0 인스턴스는 비어 있거나 홀수의 지점 수 n을 포함 하는 경우 허용 됩니다. 여기서 n > 1입니다. 다음 `CircularString` 인스턴스가 허용됩니다.  
+ `CircularString` 인스턴스는 비어 있거나 홀수의 지점 수 n을 포함 하는 경우 허용 됩니다. 여기서 n > 1입니다. 다음 `CircularString` 인스턴스가 허용됩니다.  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -87,7 +87,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>1\. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 `CircularString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- @No__t_0 예의 값은 원의 실제 원주 인 2&#x03c0; (2 * pi)에 가깝습니다.  
+ `CircularString` 예의 값은 원의 실제 원주 인 2&#x03c0; (2 * pi)에 가깝습니다.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>4\. 동일한 문에서 CircularString을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 조각은 동일한 문에서 `geometry`을 사용하여 `CircularString` 인스턴스를 선언하고 인스턴스화하는 방법을 보여 줍니다.  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

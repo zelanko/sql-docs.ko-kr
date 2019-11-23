@@ -31,7 +31,7 @@ ms.locfileid: "73728862"
 |유효성 검사 실패|비즈니스 규칙 유효성 검사에 실패한 멤버입니다.|  
 |종속 멤버 유효성 재검사 대기 중|자식 멤버와 함께 유효성 검사를 받기 위해 대기 중인 업데이트된 통합 멤버입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

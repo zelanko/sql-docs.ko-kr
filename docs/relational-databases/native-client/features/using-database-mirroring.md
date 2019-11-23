@@ -30,7 +30,7 @@ ms.locfileid: "73761326"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] 대신 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터베이스 미러링은 데이터베이스 가용성과 데이터 중복을 높이는 솔루션입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 데이터베이스 미러링을 암시적으로 지원 하므로 개발자는 데이터베이스에 대해 구성 된 후 코드를 작성 하거나 다른 작업을 수행할 필요가 없습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73761326"
 > [!NOTE]  
 >  ODBC 드라이버 관리자는 장애 조치(Failover) 서버 이름의 사양을 지원하도록 향상되었습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

@@ -31,7 +31,7 @@ ms.locfileid: "72798352"
   
 
   
-##  <a name="bkmk_prereq"></a> 사전 요구 사항  
+##  <a name="bkmk_prereq"></a> 필수 구성 요소  
   
 -   > [!IMPORTANT]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 구성 및 관리하는 데 더 이상 필요하지 않으며 지원되지 않습니다. SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [SharePoint 서비스 응용 프로그램 Reporting Services 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)를 참조 하세요.  
@@ -78,7 +78,7 @@ ms.locfileid: "72798352"
   
      **다음**을 클릭합니다.  
   
-7.  라이선스 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용량 현황 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
+7.  라이선스 조건을 검토하고 동의합니다. 제품 기능 및 지원 향상에 도움이 되는 기능 사용 데이터 전송에 동의한 것에 감사한다는 메시지가 표시됩니다.  
   
      **다음**을 클릭합니다.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "72798352"
     > [!WARNING]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션이 목록에 나타나지 않으면 **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
-4.  **SQL Server Reporting Services 서비스 애플리케이션 만들기** 페이지에서 애플리케이션의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
+4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
   
-5.  **애플리케이션 풀** 섹션에서 애플리케이션에 대한 새 애플리케이션 풀을 만듭니다(권장). 새 애플리케이션 풀의 이름을 서비스 애플리케이션의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
+5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 새 애플리케이션 풀의 이름을 서비스 애플리케이션의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
   
      애플리케이션 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "72798352"
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
-9. **웹 애플리케이션 연결** 섹션에서 현재 Reporting Services 서비스 애플리케이션에 의해 액세스하기 위해 프로비전 대상 웹 애플리케이션을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
+9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
   
 10. **확인**을 클릭합니다.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "72798352"
 
   
 ### <a name="configure-e-mail-for-a-service-application"></a>서비스 애플리케이션에 대한 전자 메일 구성  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 애플리케이션에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
   
 
   
@@ -243,9 +243,9 @@ ms.locfileid: "72798352"
 
   
 ### <a name="activate-the-file-sync-feature"></a>파일 동기화 기능 활성화  
- 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능을 활성화](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)을 참조하세요.  
+ 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)(SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능을 활성화)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [SQL Server 2012의 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [SQL Server 2012 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

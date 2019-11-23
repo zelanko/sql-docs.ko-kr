@@ -41,9 +41,9 @@ ms.locfileid: "71952407"
  **고급**  
  현재 보고서 관리자 인스턴스에 대해 다른 URL을 추가합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [구성 파일 &#40;의 url SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [구성 파일 &#40;의 url SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

@@ -111,9 +111,9 @@ ms.locfileid: "72783248"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)    
- [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)    
+## <a name="see-also"></a>참고 항목  
+ [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md)   
  [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)   
  [전자 메일 배달 &#40;SSRS에 대 한 보고서 서버 구성 Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

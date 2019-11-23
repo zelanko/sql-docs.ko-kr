@@ -41,7 +41,7 @@ ms.locfileid: "70152574"
   
  잠긴 기술 자료는 사용자 자신이 잠근 경우에만 기술 자료를 열고 편집할 수 있습니다. 이 경우, 닫혔을 때의 상태로 기술 자료가 열리고 이러한 정보를 나타내기 위해 괄호로 표시됩니다. 기술 자료가 잠겨 있고 이를 사용자가 직접 잠근 것이 아니라면 읽기 전용으로만 열 수 있습니다.  
   
-### <a name="data-quality-projects"></a>데이터 품질 프로젝트  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  데이터 품질 프로젝트는 DQS에서 컴퓨터 기반 데이터 수정과 대화형 데이터 정리를 통해 데이터 수정 또는 데이터 일치를 수행하는 프로세스입니다.  
   
  **새 데이터 품질 프로젝트**  
@@ -62,7 +62,7 @@ ms.locfileid: "70152574"
  **Configuration**  
  참조 데이터 서비스 계정에 대 한 구성 속성 (Azure Marketplace 및 참조 데이터 서비스에 직접), 일반 설정 (대화형 정리, 일치 및 프로 파일링) 및 로그 심각도 설정을 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 관리](../data-quality-services/dqs-administration.md)  

@@ -40,18 +40,18 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>인수  
  *column_name*  
- **Varbinary (max)** FILESTREAM 열의 열 이름입니다. *column_name* 는 열 이름 이어야 합니다. 식이나 CAST 또는 CONVERT 문의 결과일 수 없습니다.  
+ **Varbinary (max)** FILESTREAM 열의 열 이름입니다. *column_name* 은 열 이름 이어야 합니다. 식이나 CAST 또는 CONVERT 문의 결과일 수 없습니다.  
   
  FILESTREAM 저장소 특성이 없는 **varbinary (max)** 또는 다른 데이터 형식의 열에 대해 PathName을 요청 하면 쿼리 컴파일 시간 오류가 발생 합니다.  
   
- *\@option*  
- 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. *\@option* 은 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
+ *\@옵션*  
+ 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. *\@옵션* 은 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
-|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다 (예: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`).|  
-|1|변환 없이 서버 이름을 반환 합니다 (예: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`).|  
-|2|전체 서버 경로를 반환 합니다 (예: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`).|  
+|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다 (예: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1\.|변환 없이 서버 이름을 반환 합니다 (예: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`).|  
+|2|전체 서버 경로를 반환 합니다 (예: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  서버 이름이 Always On 가용성 그룹에서 반환 되는 방법을 정의 하는 비트 값입니다.  
@@ -60,11 +60,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  데이터베이스가 Always On 가용성 그룹에 속하는 경우 *use_replica_computer_name* 의 값은 **PathName** 함수의 출력에 다음과 같은 영향을 미칠 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
-|1|함수가 경로에 컴퓨터 이름을 반환합니다.|  
+|1\.|함수가 경로에 컴퓨터 이름을 반환합니다.|  
   
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
@@ -147,9 +147,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [ &#40;Transact-sql&#41;  GET_FILESTREAM_TRANSACTION_CONTEXT](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

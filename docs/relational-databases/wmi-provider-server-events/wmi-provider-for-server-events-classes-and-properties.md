@@ -42,7 +42,7 @@ ms.locfileid: "74164913"
   
  ![추적 이벤트 및 이벤트 그룹](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "추적 이벤트 및 이벤트 그룹")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서버 이벤트의 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [서버 이벤트용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

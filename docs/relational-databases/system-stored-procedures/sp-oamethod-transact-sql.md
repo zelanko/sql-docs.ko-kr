@@ -50,9 +50,9 @@ sp_OAMethod objecttoken , methodname
  _returnvalue_  **출력**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
- 메서드가 단일 값을 반환 하는 경우 *returnvalue*에 대 한 지역 변수를 지정 합니다 .이 변수는 지역 변수의 메서드 반환 값을 반환 하거나, 메서드 반환 값을 클라이언트에 반환 하는 *returnvalue*를 지정 하지 않습니다. 단일 열, 단일 행 결과 집합.  
+ 메서드가 단일 값을 반환 하는 경우 *returnvalue*에 대 한 지역 변수를 지정 합니다 .이 변수는 지역 변수의 메서드 반환 값을 반환 하거나, 메서드 반환 값을 클라이언트에 단일 열, 단일 행 결과 집합으로 반환 하는 *returnvalue*를 지정 하지 않습니다.  
   
- 메서드 반환 값이 OLE 개체 이면 *returnvalue* 는 **int**데이터 형식의 지역 변수 여야 합니다. 개체 토큰은 지역 변수에 저장되면 다른 OLE Automation 저장 프로시저에 사용할 수 있습니다.  
+ 메서드 반환 값이 OLE 개체 이면 *returnvalue* 는 **int**데이터 형식의 지역 변수 여야 합니다. 개체 토큰은 지역 변수에 저장 되 고이 개체 토큰은 다른 OLE 자동화 저장 프로시저와 함께 사용 될 수 있습니다.  
   
  메서드 반환 값이 배열인 경우 *returnvalue* 가 지정 되 면 NULL로 설정 됩니다.  
   
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  출력 매개 변수의 반환 값을 가져오려면 *매개 변수* 는 적절 한 데이터 형식의 지역 변수 여야 하며 **output** 을 지정 해야 합니다. 상수 매개 변수를 지정 하거나 **output** 을 지정 하지 않은 경우 출력 매개 변수의 모든 반환 값은 무시 됩니다.  
   
- 지정 된 경우 *parametername* 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t 명명 된 매개 변수의 이름 이어야 합니다. **@No__t-1**_parametername_is은 @no__t 지역 변수가 아닙니다. At 기호 ( **@** )가 제거 되 고 *parametername*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 지정 된 경우 *parametername* 은 명명 된 매개 변수 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이름 이어야 합니다. **@** _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수가 아닙니다. At 기호 ( **@** )가 제거 되 고 *parametername*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
 > [!NOTE]
->  *\@parametername* 은 지정 된 메서드의 일부이 고 개체에 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
+>  *\@parametername* 은 지정 된 메서드의 일부이 고 개체로 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 숫자(실패)이며 OLE Automation 개체가 반환한 HRESULT의 정수 값입니다.  
@@ -88,7 +88,7 @@ sp_OAMethod objecttoken , methodname
   
 -   2차원 배열은 배열의 첫 번째 차원에 있는 요소 수만큼의 열과 두 번째 차원에 있는 요소 수만큼의 행이 포함된 결과 집합으로 클라이언트에게 반환됩니다. 즉, 배열이 (열, 행)으로 반환됩니다.  
   
- 속성 반환 값 또는 메서드 반환 값이 배열인 경우 **sp_OAGetProperty** 또는 **sp_OAMethod** 는 결과 집합을 클라이언트에 반환 합니다. (메서드 출력 매개 변수는 배열이 될 수 없습니다) 이러한 프로시저는 배열의 모든 데이터 값을 검색하여 결과 집합의 각 열에 알맞은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 데이터 길이를 결정합니다. 특정 열에 대해서는 이러한 프로시저에서 해당 열의 모든 데이터 값을 나타내기 위해 필요한 데이터 형식과 길이를 사용합니다.  
+ 속성 반환 값 또는 메서드 반환 값이 배열인 경우 **sp_OAGetProperty** 또는 **sp_OAMethod** 결과 집합을 클라이언트에 반환 합니다. (메서드 출력 매개 변수는 배열이 될 수 없습니다) 이러한 프로시저는 배열의 모든 데이터 값을 검색하여 결과 집합의 각 열에 알맞은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 데이터 길이를 결정합니다. 특정 열에 대해서는 이러한 프로시저에서 해당 열의 모든 데이터 값을 나타내기 위해 필요한 데이터 형식과 길이를 사용합니다.  
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
@@ -136,8 +136,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [OLE 자동화 저장 프로시저 &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE 자동화 저장 프로시저 &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

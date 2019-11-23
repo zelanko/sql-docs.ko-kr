@@ -24,7 +24,7 @@ ms.locfileid: "73785748"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLPutData를 사용 하 여 SQL_LONGVARCHAR (**텍스트**), SQL_WLONGVARCHAR (**ntext**) 또는 SQL_에 대해 65535 바이트 이상의 데이터 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송할 때 다음 제한 사항이 적용 됩니다. 가 나 VARBINARY (**이미지**) 열:  
+  SQLPutData를 사용 하 여 SQL_LONGVARCHAR (**텍스트**), SQL_WLONGVARCHAR (**ntext**) 또는 SQL_LONGVARBINARY (**이미지**) 열에 대해 65535 바이트 이상의 데이터 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다.  
   
 -   참조 된 매개 변수는 INSERT 문에서 *insert_value* 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785748"
 ## <a name="diagnostics"></a>진단  
  SQLPutData에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|오류|설명|  
+|SQLSTATE|Error|설명|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73785748"
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLPutData 지원  
  **Sqlputdata** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Sqlputdata 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

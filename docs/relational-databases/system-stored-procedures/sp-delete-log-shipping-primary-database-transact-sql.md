@@ -29,7 +29,7 @@ ms.locfileid: "72909865"
 
   이 저장 프로시저는 백업 작업과 로컬 및 원격 기록을 포함하여 주 데이터베이스의 로그 전달을 제거합니다. **Sp_delete_log_shipping_primary_secondary**를 사용 하 여 보조 데이터베이스를 제거한 후에만이 저장 프로시저를 사용 하십시오.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_delete_log_shipping_primary_database** 는 주 서버의 **master** 데이터베이스에서 실행 해야 합니다. 이 저장 프로시저는 다음을 수행합니다.  
   
 1.  지정한 주 데이터베이스에 대한 백업 작업을 삭제합니다.  
@@ -57,26 +57,26 @@ sp_delete_log_shipping_primary_database
   
 3.  **Log_shipping_monitor_history_detail** 및 **log_shipping_monitor_error_detail**에서 해당 항목을 제거 합니다.  
   
-4.  모니터 서버가 주 서버와 다른 경우는 모니터 서버의 **log_shipping_monitor_primary** 에서 모니터 레코드를 제거 합니다.  
+4.  모니터 서버가 주 서버와 다른 경우는 모니터 서버에서 **log_shipping_monitor_primary** 의 모니터 레코드를 제거 합니다.  
   
 5.  모니터 서버에서 **log_shipping_monitor_history_detail** 및 **log_shipping_monitor_error_detail** 의 해당 항목을 제거 합니다.  
   
 6.  이 주 데이터베이스에 대 한 **log_shipping_primary_databases** 의 항목을 제거 합니다.  
   
-7.  모니터 서버에서 **sp_delete_log_shipping_alert_job** 을 호출 합니다.  
+7.  모니터 서버에서 **sp_delete_log_shipping_alert_job** 를 호출 합니다.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 이 예에서는 **sp_delete_log_shipping_primary_database** 를 사용 하 여 주 데이터베이스 **AdventureWorks2012**를 삭제 하는 방법을 보여 줍니다.  
+ 이 예에서는 **sp_delete_log_shipping_primary_database** 를 사용 하 여 주 데이터베이스 **AdventureWorks2012**을 삭제 하는 방법을 보여 줍니다.  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

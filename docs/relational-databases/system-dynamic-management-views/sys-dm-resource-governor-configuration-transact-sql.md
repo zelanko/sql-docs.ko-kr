@@ -67,7 +67,7 @@ go
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [resource_governor_configuration &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   
 

@@ -43,9 +43,9 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`은 대기 시간이 측정 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`은 삽입 된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 이며 기본값은 NULL이 고 OUTPUT 매개 변수입니다. 이 값은 [ &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) sp_helptracertokens [ &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) [transact-sql을 먼저 실행 하지 않고 sp_helptracertokenhistory transact-sql 또는 sp_deletetracertokenhistory transact-sql을 실행 하는 데 사용할 수 있습니다. &#40; &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT`은 삽입 된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 이며 기본값은 NULL이 고 OUTPUT 매개 변수입니다. [Sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)을 먼저 실행 하지 않고이 값을 사용 하 여 transact-sql 또는 [ &#40;sp_deletetracertokenhistory&#41; transact-sql](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) [sp_helptracertokenhistory &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) 를 실행할 수 있습니다.  
   
-`[ @publisher = ] 'publisher'`은 @no__t가 아닌 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL이 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서는 지정 하지 않아야 합니다.  
+`[ @publisher = ] 'publisher'` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하지 않습니다. *publisher* 는 **sysname**이며 기본값은 NULL이 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서는 지정 하지 않아야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,9 +57,9 @@ sp_posttracertoken [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_posttracertoken**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_posttracertoken**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
