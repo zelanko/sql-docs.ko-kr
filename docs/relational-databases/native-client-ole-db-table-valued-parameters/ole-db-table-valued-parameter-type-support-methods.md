@@ -37,7 +37,7 @@ ms.locfileid: "73761662"
 |IColumnsRowset::GetColumnsRowset|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대한 메타데이터 정보를 검색합니다. 테이블 반환 매개 변수의 경우에는 동일한 인터페이스에서 다음과 같은 각 열에 대한 자세한 메타데이터 정보를 제공합니다.<br /><br /> DBCOLUMN_FLAGS는 DBCOLUMNFLAGS_ISNULLABLE 비트를 통해 Null 허용 여부를 나타냅니다.<br /><br /> DBCOLUMN_ISUNIQUE는 열이 ID 열인지 여부를 나타냅니다.<br /><br /> DBCOLUMN_COMPUTEMODE는 열이 계산되는지 여부를 나타냅니다.|  
 |IAccessor::CreateAccessor|테이블 반환 매개 변수 행 집합 개체를 명령 매개 변수에 바인딩하려면 해당 *wType* 멤버를 DBTYPE_TABLE로 설정하여 접근자를 만듭니다. DBOBJECT 구조체에는 IID_IRowset 또는 *iid* 멤버의 기타 유효한 행 집합 개체 인터페이스가 포함됩니다. 나머지 필드는 DBTYPE_IUNKNOWN과 유사하게 처리됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 테이블 반환 매개 변수 형식 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [테이블 반환 매개 변수 행 집합 만들기](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  

@@ -29,7 +29,7 @@ ms.locfileid: "71952268"
   
  c2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한됨)과 "모든 인증 프로토콜 사용" 구성 옵션에서만 작동합니다. 앞에서 설명한 것처럼 데이터 원본이 공유 서비스와 동일한 컴퓨터에 있으면 제한된 위임이 필요하지 않습니다.  
   
- 사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [Microsoft SharePoint 2010 제품용 Kerberos 인증 개요 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)을 참조 하세요.  
+ 사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [Microsoft SharePoint 2010 제품용 Kerberos 인증 개요 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)를 참조 하세요.  
   
  이 항목에 절차가 요약되어 있습니다.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "71952268"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 > [!NOTE]  
->  참고: 일부 구성 단계가 변경 되거나 특정 팜 토폴로지에서 작동 하지 않을 수 있습니다. 예를 들어 단일 서버 설치에는 Windows Identity Foundation C2WTS 서비스가 지원되지 않으므로 이 팜 구성에서는 Windows 토큰 위임에 대한 클레임 시나리오가 가능하지 않습니다.  
+>  참고: 일부 구성 단계는 특정 팜 토폴로지에 따라 변경될 수 있으며 작동하지 않을 수도 있습니다. 예를 들어 단일 서버 설치에는 Windows Identity Foundation C2WTS 서비스가 지원되지 않으므로 이 팜 구성에서는 Windows 토큰 위임에 대한 클레임 시나리오가 가능하지 않습니다.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>c2WTS를 구성하기 위해 필요한 기본 단계  
   
@@ -96,9 +96,9 @@ ms.locfileid: "71952268"
   
     2.  시작 유형을 "**자동**"으로 변경 하 고 서비스를 시작 합니다.  
   
-4.  SharePoint ' Windows 토큰 서비스에 대 한 클레임 '을 시작 합니다. **서버의 서비스 관리** 페이지에서 SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대한 클레임을 시작합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 실행되는 애플리케이션 서버인 다른 서버가 있는 경우 애플리케이션 서버에서만 c2WTS를 시작하면 됩니다. WFE에는 c2WTS가 필요하지 않습니다.  
+4.  SharePoint ' Windows 토큰 서비스에 대 한 클레임 ' 시작: **서버의 서비스 관리** 페이지에서 Sharepoint 중앙 관리를 통해 Windows 토큰 서비스에 대 한 클레임을 시작 합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 실행되는 애플리케이션 서버인 다른 서버가 있는 경우 애플리케이션 서버에서만 c2WTS를 시작하면 됩니다. WFE에는 c2WTS가 필요하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [C2WTS (Windows 토큰 서비스에 대 한 클레임) 개요 (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
  [Microsoft SharePoint 2010 제품에 대 한 Kerberos 인증 개요 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   

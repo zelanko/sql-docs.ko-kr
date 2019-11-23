@@ -84,7 +84,7 @@ ms.locfileid: "72798125"
   
 4.  태스크 목록의 각 동작을 검토하여 각 동작이 수행하는 작업을 이해합니다.  
   
-     **PowerPivot 서비스 애플리케이션 제거**에는 서비스 애플리케이션과 관련된 애플리케이션 데이터를 삭제할 수 있는 옵션이 제공됩니다. 애플리케이션 데이터는 SharePoint용 PowerPivot에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용량 현황 데이터 및 기타 데이터를 저장하기 위해 서비스 애플리케이션에서 만드는 SQL Server 데이터베이스입니다. PowerPivot 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 애플리케이션 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 애플리케이션 데이터베이스를 삭제할 수 있습니다.  
+     **PowerPivot 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 애플리케이션 데이터는 SharePoint용 PowerPivot에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용량 현황 데이터 및 기타 데이터를 저장하기 위해 서비스 애플리케이션에서 만드는 SQL Server 데이터베이스입니다. PowerPivot 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 애플리케이션 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 애플리케이션 데이터베이스를 삭제할 수 있습니다.  
   
      데이터베이스를 삭제하려면 **PowerPivot 서비스 애플리케이션 제거** 를 선택한 다음 **이 서비스 애플리케이션에 연결된 애플리케이션 데이터를 삭제합니다.** 를 선택합니다.  
   
@@ -179,7 +179,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  보안 저장소 서비스에서 SharePoint용 PowerPivot에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 PowerPivot을 제거할 때 삭제됩니다. PowerPivot 무인 데이터 새로 고침 계정에 대해 만든 대상 애플리케이션 및 데이터 새로 고침을 위해 만든 모든 대상 애플리케이션은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
-     반면, PowerPivot 시스템 서비스에 의해 자동 생성된 개별 대상 애플리케이션은 PowerPivot을 제거할 때 자동으로 삭제됩니다.  
+     반면, PowerPivot 시스템 서비스에 의해 자동 생성된 개별 대상 응용 프로그램은 PowerPivot을 제거할 때 자동으로 삭제됩니다.  
   
 4.  제어판에서 **프로그램**, **프로그램 제거** 를 차례로 클릭합니다. 더 이상 사용되지 않는 모든 Analysis Services 클라이언트 라이브러리를 제거합니다. Analysis Services ADOMD.NET 및 Microsoft SQL Server Analysis Management Objects는 SharePoint용 PowerPivot을 제거할 때 제거되지 않습니다. 이러한 라이브러리는 Analysis Services 데이터를 사용하는 다른 프로그램에서 사용할 수 있으므로 SQL Server 설치 프로그램이 자동으로 제거하지 않습니다. 더 이상 필요하지 않은 경우 클라이언트 라이브러리를 개별적으로 제거해야 합니다.  
   
@@ -187,6 +187,6 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      Analysis Services OLE DB 공급자를 제거하지 마세요. SharePoint는 OLE DB 공급자를 Analysis Services 데이터베이스에 연결하는 Excel 통합 문서의 필수 구성 요소로 설치합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서 최신 버전을 설치하지만 이 버전은 이전 버전과 호환되므로 나중에 데이터 연결 문제를 피하려면 OLE DB 공급자를 시스템에 그대로 두어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint용 PowerPivot 추가 기능 &#40;SharePoint 2013&#41; 를 설치 하거나 제거 합니다](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) .  
  [PowerPivot 구성 도구](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  

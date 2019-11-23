@@ -23,7 +23,7 @@ ms.locfileid: "72783008"
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 기존 AlwaysOn 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [사전 요구 사항 및 제한 사항](#PrerequisitesRestrictions)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72783008"
   
 ##  <a name="Security"></a> 보안  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -128,11 +128,11 @@ ms.locfileid: "72783008"
   
 2.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
-3.  가용성 그룹의 각 데이터베이스에 대해 보조 복제본을 호스팅하는 서버 인스턴스에 보조 데이터베이스를 만듭니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다.  
+3.  가용성 그룹의 각 데이터베이스에 대해 보조 복제본을 호스팅하는 서버 인스턴스에 보조 데이터베이스를 만듭니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
   
 4.  각각의 새로운 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **가용성 복제본을 관리하려면**  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "72783008"
   
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)    
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio&#41;  를 사용 합니다](use-the-always-on-dashboard-sql-server-management-studio.md) .  
+ [AlwaysOn 대시보드 &#40;SQL Server Management Studio&#41; 를 사용 합니다](use-the-always-on-dashboard-sql-server-management-studio.md) .  
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

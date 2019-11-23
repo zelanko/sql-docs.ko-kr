@@ -25,7 +25,7 @@ ms.locfileid: "73728924"
 
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
   
-|코드|오류|발생하는 경우/세부 정보|적용 테이블|  
+|코드|Error|발생하는 경우/세부 정보|적용 테이블|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|동일한 멤버 코드가 준비 테이블에 여러 번 나옵니다.|준비 배치에 동일한 멤버 코드가 여러 번 나옵니다. 멤버가 생성 또는 업데이트되지 않았습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210003|특성 값이 존재하지 않거나 비활성인 멤버를 참조합니다.|도메인 기반 특성을 준비할 때는 이름이 아니라 코드를 사용해야 합니다. **ImportType0**, **1**및 **2**에 적용됩니다.|리프<br /><br /> 통합|  
@@ -45,7 +45,7 @@ ms.locfileid: "73728924"
 |210047|멤버는 사용 안 함의 형제일 수 없습니다.|**RelationshipType** = **2** (형제)이고 **ParentCode** 또는 **ChildCode** 가 **사용 안 함**인 경우에 발생합니다. 멤버는 사용 안 함 노드의 자식일 수만 있습니다.|관계|  
 |210048|**ParentCode** 와 **ChildCode** 는 같을 수 없습니다.|**ParentCode** 값은 **ChildCode** 값과 동일합니다. 이 값은 달라야 합니다.|관계|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [준비 과정에서 발생하는 오류 보기&#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

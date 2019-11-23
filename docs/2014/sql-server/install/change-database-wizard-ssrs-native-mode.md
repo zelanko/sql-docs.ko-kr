@@ -27,25 +27,25 @@ ms.locfileid: "71952658"
   
  이전 버전에서 보고서 서버 데이터베이스를 선택하는 경우 이 데이터베이스는 연결된 보고서 서버 인스턴스의 버전과 일치하도록 업그레이드됩니다. 서비스를 시작하면 데이터베이스 버전이 검사되고 현재 스키마로 자동 업그레이드됩니다.  
   
- 마법사를 시작하려면 **구성 관리자의 데이터베이스 페이지에서** 데이터베이스 변경 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. @No__t-0 Configuration Manager를 시작 하는 방법에 대 한 지침은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
+ 마법사를 시작하려면 **구성 관리자의 데이터베이스 페이지에서** 데이터베이스 변경 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager를 시작 하는 방법에 대 한 지침은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
 ## <a name="options"></a>변수  
- **작업**  
+ **동작**  
  수행할 태스크를 선택합니다. 기본 모드 또는 SharePoint 통합 모드로 새 데이터베이스를 만들거나 현재 보고서 서버 인스턴스에서 사용할 기존 보고서 서버 데이터베이스를 선택할 수 있습니다.  
   
  **데이터베이스 서버**  
- 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름을 지정합니다. 로컬 컴퓨터나 원격 컴퓨터에서 기본 또는 명명된 인스턴스를 사용할 수 있습니다. 명명 된 인스턴스에 연결 하는 경우 서버 이름을 \<*server*> @ no__t @ no__t-4*인스턴스*> 형식으로 입력 합니다.  
+ 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름을 지정합니다. 로컬 컴퓨터나 원격 컴퓨터에서 기본 또는 명명된 인스턴스를 사용할 수 있습니다. 명명 된 인스턴스에 연결 하는 경우 서버 이름을 \<*server*>\\<*instance*> 형식으로 입력 합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 서버에 로그온하여 데이터베이스 정보를 업데이트할 권한이 있는 자격 증명을 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 사용자의 현재 Windows 자격 증명을 사용하지만 사용자에게 로그인 또는 데이터베이스 권한이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 지정해야 합니다. 다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 사용자로 연결하려면 해당 사용자로 로그인한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작합니다.  
   
  원격 인스턴스에 연결하려면 먼저 원격 연결을 사용할 수 있도록 해당 인스턴스를 설정해야 합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 기본적으로 원격 연결을 허용하지 않습니다. 원격 연결의 허용 여부를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 및 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다. 원격 인스턴스도 명명된 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 대상 서버에서 활성화되어 실행되고 있는지 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 명명된 인스턴스에서 사용되는 포트 번호를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에 제공합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  서버 데이터를 저장하는 보고서 서버 데이터베이스의 이름을 지정합니다. 기존 데이터베이스를 지정하거나 새 데이터베이스를 만들 수 있습니다.  
   
- 동작 페이지에서 **새 데이터베이스 만들기** 를 선택하면 새 데이터베이스를 만드는 데 사용되는 속성이 마법사에 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 정적 데이터를 포함하는 데이터베이스와 세션 및 작업 데이터를 저장하기 위한 임시 데이터베이스를 이름별로 바인딩하여 만듭니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [보고서 서버 &#40;데이터베이스&#41; SSRS 기본 모드](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) 를 참조 하세요.  
+ 동작 페이지에서 **새 데이터베이스 만들기** 를 선택하면 새 데이터베이스를 만드는 데 사용되는 속성이 마법사에 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 정적 데이터를 포함하는 데이터베이스와 세션 및 작업 데이터를 저장하기 위한 임시 데이터베이스를 이름별로 바인딩하여 만듭니다. 자세한 내용은 온라인 설명서의 [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41; ](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하십시오.  
   
  기존 보고서 서버 데이터베이스를 선택할 수도 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 잘못된 데이터베이스를 필터링하지 않습니다. 올바른 데이터베이스는 보고서 서버 스키마를 기반으로 합니다(필수 테이블, 뷰 또는 저장 프로시저가 누락된 데이터베이스는 선택할 수는 없음). 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 만든 데이터베이스를 선택하면 데이터베이스가 현재 형식으로 업그레이드됩니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71952658"
  다른 보고서 서버 데이터베이스를 선택하면 현재 데이터베이스의 사용 방식을 알 수 있도록 현재 데이터베이스 모드가 표시됩니다.  
   
  **자격 증명**  
- 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 보고서 서버와 데이터베이스가 같은 컴퓨터 또는 도메인 사용자 계정에 있는 경우 ( *\<computername > \\ < username @ no__t-3*) 로컬 계정을 지정할 수 있습니다 ( *\< 도메인 > \\ < 사용자 이름 @ no__t-7*)이 동일한 도메인의 서로 다른 컴퓨터에 있는 경우  
+ 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 보고서 서버와 데이터베이스가 같은 컴퓨터에 있으면 로컬 계정 ( *\<computername >\\< username\>* )을 지정 하거나, 동일한 도메인의 다른 컴퓨터에 있는 경우 도메인 사용자 계정 ( *\<도메인 >\\사용자 이름 <* )을 지정할 수 있습니다.\>  
   
  그러면 보고서 서버에서 지정한 계정에 대한 데이터베이스 로그인을 만들고 데이터베이스 권한을 할당합니다.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "71952658"
  **진행률 및 완료**  
  각 태스크의 진행률을 모니터링합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [자격 증명 변경 &#40;마법사 SSRS 기본&#41;모드](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [자격 증명 변경 &#40;마법사 SSRS 기본&#41; 모드](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
  [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

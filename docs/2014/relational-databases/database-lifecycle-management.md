@@ -44,7 +44,7 @@ ms.locfileid: "70154550"
   
  전체 항목을 읽으려면 [DLM(데이터베이스 수명 주기 관리)](https://go.microsoft.com/fwlink/?LinkId=276949)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Azure 홈 페이지](http://www.windowsazure.com/)   
  [Azure 개발자 센터](http://www.windowsazure.com/develop/overview/)   
  [Azure 관리 센터](http://www.windowsazure.com/manage/overview/)   

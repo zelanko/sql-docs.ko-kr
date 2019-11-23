@@ -26,7 +26,7 @@ ms.locfileid: "71952241"
   
   
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  SQL Server 및 SharePoint 2010을 설치하려면 로컬 관리자여야 합니다.  
   
  SharePoint를 설치하는 관리자가 팜도 구성해야 합니다. 팜을 구성하려면 데이터베이스 서버에 SQL Server 로그인이 있어야 합니다. 로그인은 `dbcreator`, `securityadmin` 및 `public`역할에 할당 되어야 합니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "71952241"
   
  PowerPivot 데이터 액세스를 지원하기 위해서는 Excel Services 및 PerformancePoint Services 모두 새 버전의 Analysis Services OLE DB Provider가 필요합니다. 최신 OLE DB Provider가 없는 컴퓨터에서 애플리케이션을 실행할 경우 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.  
   
- 마찬가지로 동일 컴퓨터에 SharePoint용 PowerPivot 없이 중앙 관리만 있는 컴퓨터에는 ADOMD.NET 클라이언트 라이브러리가 필요합니다. 이 라이브러리는 대시보드를 채우기 위해 사용하는 내부 데이터에 액세스하기 위해 PowerPivot 관리 대시보드에서 사용됩니다. 자세한 내용은 [Install ADOMD.NET on Web Front-End Servers Running Central Administration](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)을 참조하세요.  
+ 마찬가지로 동일 컴퓨터에 SharePoint용 PowerPivot 없이 중앙 관리만 있는 컴퓨터에는 ADOMD.NET 클라이언트 라이브러리가 필요합니다. 이 라이브러리는 대시보드를 채우기 위해 사용하는 내부 데이터에 액세스하기 위해 PowerPivot 관리 대시보드에서 사용됩니다. 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)를 참조하세요.  
   
 ##  <a name="configsrvr"></a>서버 구성  
  PowerPivot 구성 도구를 사용하여 SharePoint용 PowerPivot을 구성합니다. 이 도구는 팜의 기존 구성을 검사 하 고 SharePoint용 PowerPivot에 필요한 SharePoint 기능을 설치 하거나 활성화 하는 옵션을 제공 합니다. 이 단계 동안 Windows 토큰 서비스에 대한 클레임이 시작됩니다. 또한 다른 필요한 SharePoint 기능이 아직 활성화되지 않은 경우 구성 도구가 이러한 기능을 목록에 추가하고 기능 활성화를 위한 작업을 포함합니다.  
@@ -263,7 +263,7 @@ ms.locfileid: "71952241"
 #### <a name="tune-configuration-settings"></a>구성 설정 조정  
  PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용량 현황 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2012 버전에서 지원 되는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
  [SharePoint용 PowerPivot 2010  설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
  [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  

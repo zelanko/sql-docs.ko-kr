@@ -41,7 +41,7 @@ ms.locfileid: "73844359"
 > [!NOTE]  
 >  일부 추가 시스템 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 또는 클라이언트 Api를 통해 사용 되며 일반적인 고객 용도로는 사용 되지 않습니다. 이러한 프로시저는 [시스템 저장 프로시저 (transact-sql)](https://msdn.microsoft.com/library/ms187961.aspx)에 나열 되어 있습니다. 이러한 절차는 변경 될 수 있으며 호환성이 보장 되지 않습니다. 이 목록에 있는 모든 절차는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 함수 &#40;transact-sql&#41; ](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

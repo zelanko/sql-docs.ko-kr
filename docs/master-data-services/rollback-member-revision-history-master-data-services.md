@@ -39,7 +39,7 @@ ms.locfileid: "73727930"
   
 4.  롤백할 수정을 선택하고 **롤백**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [멤버 수정 기록&#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
  [엔터티 트랜잭션 로그 유형 변경&#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

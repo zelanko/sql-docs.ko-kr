@@ -57,7 +57,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 요청을 완료 하기에 충분 한 메모리를 할당할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자가 전달한 포인터를 통해 반환 된 SSERRORINFO 및 OLECHAR 문자열에 대해 메모리를 할당 합니다. 소비자는 오류 데이터에 액세스할 필요가 없게 되면 **IMalloc::Free** 메서드를 사용하여 이 메모리의 할당을 취소해야 합니다.  
   
  SSERRORINFO 구조는 다음과 같이 정의됩니다.  
@@ -88,7 +88,7 @@ SSERRORINFO;
   
  *ppErrorStrings* 인수에 반환된 문자열의 구조 참조 주소에 있는 포인터입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ISQLServerErrorInfo &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   

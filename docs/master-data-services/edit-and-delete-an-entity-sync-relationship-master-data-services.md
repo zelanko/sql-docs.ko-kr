@@ -60,7 +60,7 @@ ms.locfileid: "73728242"
   
  **엔터티 동기화 관계를 편집하려면**  
   
-1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
   
 2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73728242"
   
  **엔터티 동기화 관계를 삭제하려면**  
   
-1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
   
 2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73728242"
   
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [엔터티 동기화 관계 만들기 및 실행&#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

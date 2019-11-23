@@ -66,8 +66,8 @@ ms.locfileid: "70212384"
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  CLR 개체를 사용하는 사용 시나리오 및 코드 예제에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>참고 항목  
+ [어셈블리 &#40;데이터베이스 엔진&#41; ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [.NET Framework SDK 설치](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

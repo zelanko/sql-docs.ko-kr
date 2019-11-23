@@ -62,7 +62,7 @@ ms.locfileid: "72278209"
   
 3.  **Sp_addlogin** 시스템 프로시저를 사용 하 여 새 로그인을 만듭니다. 각 해당 로그인에 대 한 **\@sid** 매개 변수에 1 단계에서 반환 된 sid를 지정 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [업그레이드 문제를 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   

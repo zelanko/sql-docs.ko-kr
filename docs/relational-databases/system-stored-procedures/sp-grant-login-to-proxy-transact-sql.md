@@ -44,15 +44,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login_name = ] 'login_name'`에 대 한 액세스 권한을 부여할 로그인 이름입니다. *Login_name* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **@No__t-1login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
+에 대 한 액세스 권한을 부여할 로그인 이름을 `[ @login_name = ] 'login_name'` 합니다. *Login_name* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **\@login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`에 대 한 액세스 권한을 부여할 고정 서버 역할입니다. *Fixed_server_role* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **@No__t-1login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
+에 대 한 액세스 권한을 부여 하려면 고정 서버 역할을 `[ @fixed_server_role = ] 'fixed_server_role'` 합니다. *Fixed_server_role* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **\@login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
   
-`[ @msdb_role = ] 'msdb_role'`에 대 한 액세스 권한을 부여할 **msdb** 데이터베이스의 데이터베이스 역할입니다. *Msdb_role* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **@No__t-1login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
+에 대 한 액세스 권한을 부여 하려면 **msdb** 데이터베이스에서 데이터베이스 역할을 `[ @msdb_role = ] 'msdb_role'` 합니다. *Msdb_role* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **\@login_name**, **\@fixed_server_role**또는 **\@msdb_role** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
   
-`[ @proxy_id = ] id`에 대 한 액세스 권한을 부여할 프록시의 식별자입니다. *Id* 는 **int**이며 기본값은 NULL입니다. **@No__t-1proxy_id** 또는 **\@proxy_name** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
+액세스 권한을 부여할 프록시의 식별자를 `[ @proxy_id = ] id` 합니다. *Id* 는 **int**이며 기본값은 NULL입니다. **\@proxy_id** 또는 **\@proxy_name** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
   
-`[ @proxy_name = ] 'proxy_name'` 액세스 권한을 부여할 프록시의 이름입니다. *Proxy_name* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **@No__t-1proxy_id** 또는 **\@proxy_name** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
+액세스 권한을 부여할 프록시의 이름을 `[ @proxy_name = ] 'proxy_name'` 합니다. *Proxy_name* 은 **nvarchar (256)** 이며 기본값은 NULL입니다. **\@proxy_id** 또는 **\@proxy_name** 중 하나를 지정 해야 합니다. 그렇지 않으면 저장 프로시저가 실패 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,10 +61,10 @@ sp_grant_login_to_proxy
  **sp_grant_login_to_proxy** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_grant_login_to_proxy**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_grant_login_to_proxy**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `adventure-works\terrid`에서 프록시 `Catalog application proxy`을 사용 하도록 허용 합니다.  
+ 다음 예에서는 로그인 `adventure-works\terrid`에서 프록시 `Catalog application proxy`를 사용할 수 있도록 허용 합니다.  
   
 ```sql
 USE msdb ;  
@@ -76,9 +76,9 @@ EXEC dbo.sp_grant_login_to_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_add_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [ &#40;transact-sql&#41;  sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [Transact-sql &#40;sp_revoke_login_from_proxy&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   
