@@ -42,7 +42,7 @@ ms.locfileid: "71710919"
   
 1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 `@publication`에 게시 이름, `@repl_freq`에 **snapshot** 또는 **continuous** 값을 지정하고 다음 스냅샷 관련 매개 변수를 하나 이상 지정합니다.  
   
-    -   **@alt_snapshot_folder** - 이 게시의 스냅샷을 스냅샷 기본 폴더 대신 또는 추가로 액세스하는 위치의 경로를 지정합니다.    
+    -   **\@alt_snapshot_folder** - 이 게시의 스냅샷을 스냅샷 기본 폴더 대신 또는 추가로 액세스하는 위치의 경로를 지정합니다.    
     -   `@compress_snapshot` - 대체 스냅샷 폴더의 스냅샷 파일이 CAB 파일 형식으로 압축된 경우 **true** 값을 지정합니다.   
     -   `@pre_snapshot_script` - 초기 스냅샷을 적용하기 전에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
     -   `@post_snapshot_script` - 초기 스냅샷을 적용한 후에 초기화 시 구독자에서 실행할 **.sql** 파일 이름 및 전체 경로를 지정합니다.    
