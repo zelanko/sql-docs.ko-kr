@@ -49,10 +49,10 @@ ms.locfileid: "73595758"
    
     위의 키 저장소에 대한 자세한 내용은 [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
 
-5. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용 중이며 SQL Server 인스턴스가 보안 enclave로 구성된 경우, **enclave 계산 허용** 확인란을 선택하여 마스터 키에서 enclave를 사용하도록 설정할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요. 
+5. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용 중이며 SQL Server 인스턴스가 보안 Enclave로 구성된 경우, **Enclave 계산 허용** 확인란을 선택하여 마스터 키에서 Enclave를 사용하도록 설정할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요. 
 
     > [!NOTE]
-    > SQL Server 인스턴스가 보안 enclave를 사용하여 올바르게 구성되어 있지 않은 경우에는 **enclave 계산 허용** 확인란이 표시되지 않습니다.
+    > SQL Server 인스턴스가 보안 Enclave를 사용하여 올바르게 구성되지 않은 경우에는 **Enclave 계산 허용** 확인란이 표시되지 않습니다.
 
 6.  키 저장소에서 기존 키를 선택하거나 **키 생성** 또는 **인증서 생성** 단추를 클릭하여 키 저장소에 키를 만듭니다. 
 7.  **확인** 을 클릭하면 새 키가 목록에 표시됩니다. 
@@ -61,7 +61,7 @@ ms.locfileid: "73595758"
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 SSMS가 열 마스터 키를 사용하여 메타데이터에 서명합니다. 
+Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 SSMS가 열 마스터 키를 사용하여 메타데이터에 서명합니다. 
 
 ::: moniker-end
 
@@ -69,7 +69,7 @@ enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 
 대화 상자에서 열 마스터 키를 만들려면 데이터베이스에서 *ALTER ANY COLUMN MASTER KEY* 권한이 있어야 합니다. 대화 상자를 사용하여 새 열 마스터 키를 만들거나 키 저장소 만들기에서 기존 키를 사용하려면 키 저장소 및/또는 키에 대한 권한을 요구해야 합니다.
 - **인증서 저장소 - 로컬 컴퓨터** - 열 마스터 키로 사용되는 인증서에 대한 읽기 권한이 있거나 컴퓨터의 관리자여야 합니다.
-- **Azure Key Vault** - 키를 선택하고 사용하기 위한 *get* 및 *list* 권한과 새 키를 만들기 위한 *create* 권한이 필요합니다. enclave를 사용하도록 설정된 열 마스터 키를 구성하려면 권한에 *서명*하여 키 메타데이터의 서명을 생성해야 합니다.
+- **Azure Key Vault** - 키를 선택하고 사용하기 위한 *get* 및 *list* 권한과 새 키를 만들기 위한 *create* 권한이 필요합니다. Enclave를 사용하도록 설정된 열 마스터 키를 구성하려면 권한에 *서명*하여 키 메타데이터의 서명을 생성해야 합니다.
 - **CNG(키 저장소 공급 기업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 - **CAPI(암호화 서비스 공급 기업)** – 저장소 및 CSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 
@@ -105,7 +105,7 @@ enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 
 ## <a name="next-steps"></a>Next Steps
 - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)
-- [DAC package로 Always Encrypted를 사용하여 열 암호화 구성](configure-always-encrypted-using-dacpac.md)
+- [DAC 패키지로 Always Encrypted를 사용하여 열 암호화 구성](configure-always-encrypted-using-dacpac.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 키 회전](rotate-always-encrypted-keys-using-ssms.md)
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 - [SQL Server 가져오기 및 내보내기 마법사에서 Always Encrypted를 사용하여 열에서 또는 열로 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)

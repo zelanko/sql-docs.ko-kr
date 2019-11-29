@@ -34,7 +34,7 @@ SSMS를 사용하여 보안 enclave로 암호화된 열에 대한 쿼리를 실�
 - [보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>참고 항목  
-- [자습서: SSMS를 사용하여 보안 enclave를 사용한 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Transact-SQL을 사용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [보안 enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)
 

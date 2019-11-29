@@ -132,4 +132,4 @@ HGS는 암호화 및 암호 해독이 필요한 작업 수 때문에 CPU 바인�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: SSMS를 사용하여 보안 enclave를 사용한 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)

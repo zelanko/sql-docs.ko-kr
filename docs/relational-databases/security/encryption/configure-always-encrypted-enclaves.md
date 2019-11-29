@@ -44,10 +44,10 @@ ms.locfileid: "73594473"
 > [!NOTE]
 > 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)을 참조하세요.
 
-## <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
+## <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
 자세한 내용은 다음 문서를 참조하세요.
 - [보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리 - 개요](always-encrypted-enclaves-query-columns.md)
-- [SSMS로 보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](always-encrypted-enclaves-query-columns-ssms.md)
+- [SSMS로 보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](always-encrypted-enclaves-query-columns-ssms.md)
 
 ## <a name="create-and-use-indexes-on-enclave-enabled-columns"></a>Enclave 사용 열에 인덱스 만들기 및 사용
 자세한 내용은 다음 문서를 참조하세요.
