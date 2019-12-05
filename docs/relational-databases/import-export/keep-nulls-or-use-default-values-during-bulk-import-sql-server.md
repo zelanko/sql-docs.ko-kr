@@ -53,7 +53,7 @@ ms.locfileid: "74055961"
 > [!NOTE]
 > 이러한 한정자는 대량 가져오기 명령을 통해 테이블에서 DEFAULT 정의 확인을 비활성화합니다.  그러나 동시 INSERT 문의 경우 DEFAULT 정의가 있어야 합니다.
  
-## INSERT ... SELECT * FROM OPENROWSET(BULK...) SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
+## INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>에 기본값 사용  
 데이터 파일의 빈 필드의 경우 해당 테이블 열에서 기본값(있는 경우)을 사용하도록 지정할 수 있습니다.  기본값을 사용하려면 테이블 힌트 [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md)를 사용하세요.
  
 > [!NOTE]
