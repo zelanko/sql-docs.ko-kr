@@ -25,7 +25,7 @@ ms.locfileid: "73729292"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 엔터티를 편집할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "73729292"
   
      자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)를 참조하세요.  
   
-## <a name="status"></a>상태  
+## <a name="status"></a>Status  
  표의 상태 열에는 엔터티에 대한 작업의 상태가 표시됩니다. **엔터티 저장**을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.  
   
  ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")  
