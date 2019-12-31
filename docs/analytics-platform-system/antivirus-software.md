@@ -1,5 +1,5 @@
 ---
-title: 바이러스 백신 소프트웨어-APS (분석 플랫폼 시스템) | Microsoft Docs
+title: 바이러스 백신 소프트웨어
 description: 데이터 센터에 바이러스 백신 소프트웨어가 필요한 경우 다음 지침을 사용 하 여 AP (Analytics Platform System)에 바이러스 백신 소프트웨어를 설치 합니다. 데이터 센터의 기업 요구 사항이 아닌 경우에는 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176059"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401469"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Analytics Platform System (APS)의 바이러스 백신 소프트웨어
 데이터 센터에 바이러스 백신 소프트웨어가 필요한 경우 다음 지침을 사용 하 여 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 합니다. 데이터 센터의 기업 요구 사항이 아닌 경우에는 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
@@ -47,17 +48,17 @@ Vm에 바이러스 백신 소프트웨어를 설치 하려면 다음 디렉터�
   
 **_PDW_region_-CTL01**  
   
--   C:\windows\cluster\  
+-   C:\a\  
   
 -   G:\  
   
-**_appliance_domain_-AD01** 및  **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01** 및 ** _appliance_domain_-AD02**  
   
 -   제한 없음  
   
 **계산 노드 Vm**  
   
--   C:\windows\cluster\  
+-   C:\a\  
   
 -   G:\  
   
@@ -73,6 +74,6 @@ Vm에 바이러스 백신 소프트웨어를 설치 하려면 다음 디렉터�
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>관련 항목  
-[어플라이언스 관리 작업 &#40;분석 플랫폼 시스템&#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>참고 항목  
+[기기 관리 작업 &#40;분석 플랫폼 시스템&#41;](appliance-management-tasks.md)  
   

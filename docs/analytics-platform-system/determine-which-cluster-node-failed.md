@@ -1,6 +1,6 @@
 ---
-title: 실패 한 클러스터 노드-Analytics Platform System 확인 | Microsoft Docs
-description: 이 문서에서는 클러스터 장애 조치가 발생 한 후 클러스터 장애 조치 경고를 발생 하지 못한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제 해결을 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 합니다.
+title: 실패 한 클러스터 노드 확인
+description: 이 문서에서는 클러스터 장애 조치 (failover)가 발생 하 고 클러스터 장애 조치 (failover) 경고가 발생 한 후 실패 한 AP (분석 플랫폼 시스템) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치 (failover)의 일부로 문제 해결을 위해 Microsoft에 연결 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,29 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 68ebdb7f17ddee311644e11c48eaa4b586beac74
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961050"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401204"
 ---
-# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>클러스터 확인 Analytics Platform System에 대 한 노드 실패 했습니다.
-이 항목에는 클러스터 장애 조치가 발생 한 후 클러스터 장애 조치 경고를 발생 하지 못한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제 해결을 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 합니다.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대해 실패 한 클러스터 노드 확인
+이 항목에서는 클러스터 장애 조치 (failover)가 발생 하 고 클러스터 장애 조치 (failover) 경고가 발생 한 후 실패 한 AP (분석 플랫폼 시스템) 노드의 이름을 확인 하는 방법에 대해 설명 합니다. 클러스터 장애 조치 (failover)의 일부로 문제 해결을 위해 Microsoft에 연결 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.  
   
-## <a name="Background"></a>배경  
-SQL Server PDW에서 고가용성을 위해 제어 노드와 계산 노드 Windows 장애 조치 클러스터의 활성 또는 수동 구성 요소로 구성 됩니다. 중요 한 시스템 요청에 응답 하는 활성 서버가 실패 하면 수동 서버는 장애 조치 하 고 실패 한 서버 기능을 수행 합니다.  
+## <a name="Background"></a>백그라운드  
+SQL Server PDW에서 고가용성을 위해 제어 노드와 계산 노드는 Windows 장애 조치 (failover) 클러스터의 활성 또는 수동 구성 요소로 구성 됩니다. 활성 서버가 심각한 시스템 요청에 응답 하지 못하면 수동 서버가 장애 조치 (failover) 되 고 실패 한 서버의 기능을 수행 합니다.  
   
-클러스터 장애 조치 후 SQL Server PDW 노드 상태를 보고 하는 경우 수동 서버에는 실패 한 상태 위로 그러나이 분명 하지 않습니다는 서버 또는 노드 실패, 실패 한 서버가 아직 온라인 상태인 경우에 특히. 클러스터 오류를 해결 하려면 장애 조치 노드의 이름을 결정 합니다.  
+클러스터 장애 조치 (failover) 후 노드 상태에 대 한 SQL Server PDW 보고 하는 경우 수동 서버의 장애 조치 (failover) 상태가 됩니다. 그러나 실패 한 서버 또는 노드가 아직 온라인 상태 이면 어떤 서버 또는 노드가 실패 했는지 명확 하지 않습니다. 클러스터 오류 문제를 해결 하려면 장애 조치 (failover) 된 노드의 이름을 확인 해야 합니다.  
   
 ## <a name="AdminConsoleSolution"></a>관리 콘솔 솔루션  
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>실패 한 노드의 이름을 찾으려면  
   
-1.  관리자 콘솔을 엽니다. 관리 콘솔에 대 한 자세한 내용은 참조 하세요. [관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)합니다. 장애 조치 후 장애 조치 이벤트에 경고 수가 포함 되어는 **상태** 페이지입니다. **상태** 페이지 및 어플라이언스 패브릭 지역 PDW 영역에 대 한 합니다. 각 상태 페이지에는 **경고** 탭 합니다. 경고에 대 한 자세한 내용은 상태 페이지에서 경고 탭을 클릭 하 고 경고를 클릭 합니다.  
+1.  관리 콘솔을 엽니다. 관리 콘솔에 대 한 자세한 내용은 [관리 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)을 참조 하세요. 장애 조치 (failover)가 발생 한 후에는 **상태** 페이지의 경고 수에 장애 조치 (failover) 이벤트가 포함 됩니다. PDW 지역 및 어플라이언스의 패브릭 영역에 대 한 **상태** 페이지가 있습니다. 각 상태 페이지에는 **경고** 탭이 있습니다. 경고에 대 한 자세한 내용을 보려면 상태 페이지, 경고 탭을 클릭 한 다음 경고를 클릭 합니다.  
   
 ## <a name="SystemView"></a>시스템 뷰 솔루션  
-다음 SQL 문을 사용 하는 방법을 보여 줍니다 합니다 [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) 실패 하는 서버의 이름을 찾으려면 시스템 뷰.  
+다음 SQL 문은 [dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) 시스템 뷰를 사용 하 여 실패 한 서버의 이름을 찾는 방법을 보여 줍니다.  
   
 ```sql  
 SELECT  

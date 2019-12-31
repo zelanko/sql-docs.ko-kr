@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf40b3ea8a8984ee711401adfb561ac86fe0a6ea
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000437"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866049"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,27 +33,27 @@ ms.locfileid: "70000437"
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
-|**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
+|**publisher_db**|**sysname 이며**|게시자 데이터베이스의 이름입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**subscriber_id**|**smallint**|구독자의 ID입니다.|  
-|**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
+|**subscriber_db**|**sysname 이며**|구독 데이터베이스의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 푸시합니다.<br /><br /> **1** = 끌어오기<br /><br /> **2** = 익명.|  
 |**sync_type**|**tinyint**|동기화 유형입니다.<br /><br /> **1** = 자동<br /><br /> **2** = 동기화 하지 않습니다.|  
-|**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 구독 됨<br /><br /> **2** = 활성|  
-|**subscription_seqno**|**varbinary(16)**|스냅샷 트랜잭션 시퀀스 번호입니다.|  
-|**snapshot_seqno_flag**|**bit**|스냅숏 트랜잭션 시퀀스 번호의 원본을 나타냅니다. 여기서 값 **1** 은 **subscription_seqno** 가 스냅숏 시퀀스 번호 임을 의미 합니다.|  
+|**업무**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 구독 됨<br /><br /> **2** = 활성|  
+|**subscription_seqno**|**varbinary (16)**|스냅샷 트랜잭션 시퀀스 번호입니다.|  
+|**snapshot_seqno_flag**|**bit**|스냅숏 트랜잭션 시퀀스 번호의 원본을 나타냅니다. 여기서 값 **1** 은 **subscription_seqno** 이 스냅숏 시퀀스 번호 임을 의미 합니다.|  
 |**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
-|**subscription_time**|**datetime**|내부적으로만 사용됩니다.|  
-|**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> 참고: 이 열은의 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]양방향 복제 기능과의 이전 버전과의 호환성을 위해서만 지원 됩니다. 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 피어 투 피어 복제를 대신 사용해야 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
+|**subscription_time**|**날짜**|내부적으로만 사용됩니다.|  
+|**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> **0** = 다시 보냅니다.<br /><br />|  
 |**agent_id**|**int**|에이전트의 ID입니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  
-|**publisher_seqno**|**varbinary(16)**|이 구독에 대한 게시자에서의 트랜잭션 시퀀스 번호입니다.|  
-|**ss_cplt_seqno**|**varbinary(16)**|동시 스냅샷 처리의 완료를 표시하는 데 사용되는 시퀀스 번호입니다.|  
+|**publisher_seqno**|**varbinary (16)**|이 구독에 대한 게시자에서의 트랜잭션 시퀀스 번호입니다.|  
+|**ss_cplt_seqno**|**varbinary (16)**|동시 스냅샷 처리의 완료를 표시하는 데 사용되는 시퀀스 번호입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [복제 테이블 &#40;transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40;transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;sp_helpsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

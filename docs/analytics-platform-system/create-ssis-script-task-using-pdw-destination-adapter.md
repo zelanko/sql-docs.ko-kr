@@ -1,5 +1,5 @@
 ---
-title: 스크립트 태스크를 SSIS PDW 대상 어댑터를 사용 하 여 만들기 | Microsoft Docs
+title: SSIS PDW 대상 어댑터를 사용 하 여 스크립트 태스크 만들기
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961060"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401227"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>병렬 데이터 웨어하우스 SSIS 대상 어댑터를 사용 하는 스크립트 작업 만들기
-이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하 여에 대 한 코드 예제입니다.  Integration Services 스크립트 태스크를 사용 하는 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS 병렬 데이터 웨어하우스 대상 어댑터를 사용 하는 스크립트 태스크 만들기
+이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하는 코드 예제입니다.  Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서 .Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
   
 1.  SSIS에서 빈 스크립트 태스크를 만듭니다.  
   
-2.  작업을 엽니다는 **스크립트 태스크 편집기**, 클릭 **스크립트 편집**합니다.  
+2.  **스크립트 태스크 편집기**에서 작업을 열고 **스크립트 편집**을 클릭 합니다.  
   
-3.  아래에 제공 된 코드를 사용 하는 스크립트를 편집 합니다. 다음과 같이 변경 하 여 사용자 환경에 스크립트를 사용자 지정:  
+3.  아래에 제공 된 코드를 사용 하도록 스크립트를 편집 합니다. 다음과 같이 변경 하 여 사용자 환경에 맞게 스크립트를 사용자 지정 합니다.  
   
-    -   스크립트 태스크에서 만든 스크립트의 네임 스페이스를 유지 해야 합니다. 네임 스페이스의 이름을 적어 둡니다 `namespace ST_<GUID>` 변경 아래 스크립트를 편집 하 고 *ST_<GUID>*  원래 *GUID* 스크립트 태스크의 합니다.  
+    -   스크립트 태스크에서 만든 스크립트의 네임 스페이스를 유지 해야 합니다. 네임 스페이스 `namespace ST_<GUID>` 의 이름을 확인 하 고 스크립트 태스크의 원래 *GUID* 로 *ST_<GUID> * 를 변경 하 여 아래 스크립트를 편집 합니다.  
   
-    -   4 자리 표시자 값을 바꿀 *XXXXXXXX* 환경 및 의도 된 작업에 적합 한 값을 사용 합니다.  
+    -   자리 표시자 값의 네 번째 항목 *을 사용자* 환경 및 의도 한 작업에 적절 한 값으로 바꿉니다.  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -263,8 +264,8 @@ ms.locfileid: "67961060"
     }  
     ```  
   
-## <a name="see-also"></a>관련 항목  
-[Integration Services 사용 하 여 데이터 로드](load-with-ssis.md)  
+## <a name="see-also"></a>참고 항목  
+[Integration Services를 사용 하 여 데이터 로드](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

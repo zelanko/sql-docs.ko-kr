@@ -1,5 +1,5 @@
 ---
-title: 분석 플랫폼 시스템의 새로운 기능-스케일 아웃 데이터 웨어하우스
+title: 새로운 기능
 description: MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 확장 온-프레미스 어플라이언스 인 Microsoft Analytics Platform System의 새로운 기능을 참조 하세요.
 author: mzaman1
 manager: craigg
@@ -9,23 +9,24 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399426"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.5"></a>
-## <a name="aps-cu75"></a>APS CU 7.5
+## <a name="aps-cu75"></a>APS CU7.5
 릴리스 날짜-9 월 2019
 
 ### <a name="alter-external-data-source"></a>외부 데이터 원본 변경
-고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 LOCATION, RESOURCE_MANAGER_LOCATION 및 CREDENTIAL만 변경할 수 있습니다. 자세한 내용은 [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 를 참조 하세요.
+고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 위치, RESOURCE_MANAGER_LOCATION 및 자격 증명만 변경할 수 있습니다. 자세한 내용은 [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 를 참조 하세요.
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>PolyBase를 사용한 CDH 5.15 및 5.16 지원
 CU 7.5 업데이트를 사용 하는 APS의 PolyBase는 이제 Cloudera에서 CDH 5.15 및 5.16 버전의 Hadoop 배포를 지원 합니다. Cdh .x 버전의 경우 옵션 6을 사용 합니다. 
@@ -56,7 +57,7 @@ APS CU 7.3은 SQL 쿼리 최적화 프로그램에서 일반적인 하위 식 �
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica 10.2.0 게시 된 APS Informatica 커넥터
 Informatica 버전 10.2.0 및 10.2.0 핫픽스 1에서 작동 하는 AP 용 Informatica 커넥터의 새 버전을 릴리스 했습니다. 새 커넥터는 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)에서 다운로드할 수 있습니다.
 
-#### <a name="supported-versions"></a>Supported Versions
+#### <a name="supported-versions"></a>지원되는 버전
 
 | APS 버전 | Informatica PowerCenter | 드라이버 |
 |:---|:---|:---|
@@ -120,7 +121,7 @@ from cte;
 릴리스 날짜-7 월 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 명령은 동시성 슬롯을 사용 하지 않습니다 (동작 변경).
-APS는 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)와 같은 t-sql [DBCC 명령의](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 하위 집합을 지원 합니다. 이전에는 이러한 명령을 사용 하 여 실행 될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) 을 사용 합니다. 그러면 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이실행됩니다.`DBCC`
+APS는 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)와 같은 t-sql [DBCC 명령의](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 하위 집합을 지원 합니다. 이러한 명령은 이전에 실행될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)을 사용했습니다. 그러면 `DBCC` 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이 실행 됩니다.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>일부 메타 데이터 호출을 카탈로그 개체로 바꿉니다.
 SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개체를 사용 하는 경우 APS의 성능이 개선 되었습니다. CU 7.1부터 이러한 메타 데이터 호출 중 일부는 이제 기본적으로 카탈로그 개체를 사용 합니다. 메타 데이터 쿼리를 사용 하는 고객이 문제를 해결 하는 경우이 동작은 [기능 전환](appliance-feature-switch.md) 에 의해 해제 될 수 있습니다.
@@ -172,17 +173,17 @@ APS AU6는 최신 SQL Server 2016 릴리스에서 실행 되며 기본 데이터
 ### <a name="t-sql"></a>T-SQL
 APS AU6는 이러한 T-sql 호환성 개선 사항을 지원 합니다.  이러한 추가 언어 요소를 사용 하 여 SQL Server 및 기타 데이터 원본에서 쉽게 마이그레이션할 수 있습니다. 
 
-- 이제 Windows 데이터 정렬과 더불어 [열 수준 SQL 데이터 정렬][] 지원 됩니다.
+- 이제 Windows 데이터 정렬과 더불어 [열 수준 SQL 데이터 정렬이][] 지원 됩니다.
 - [클러스터형 columnstore 인덱스의 비클러스터형 인덱스][] 는 클러스터형 columnstore 인덱스에서 특정 값을 검색 하는 쿼리 성능을 향상 시킵니다. 
-- [SELECT...INTO][] 
-- [sp_spaceused ()][] 는 테이블이 나 데이터베이스에서 사용 또는 예약 된 디스크 공간을 표시 합니다.
+- [...를 선택 합니다. 범주로][] 
+- [sp_spaceused ()][] 는 테이블이 나 데이터베이스에서 사용 되거나 예약 된 디스크 공간을 표시 합니다.
 - [넓은 테이블][] 지원 SQL Server 2016와 동일 합니다. 행 크기의 이전 제한인 32 K가 더 이상 존재 하지 않습니다. 
 
 **데이터 형식**
 
-- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] 및 [VARBINARY(MAX)][]입니다. 이러한 LOB 데이터 형식의 최대 크기는 2gb입니다. 이러한 개체를 로드 하려면 [Bcp 유틸리티][]를 사용 합니다. PolyBase 및 dwloader는 현재 이러한 데이터 형식을 지원 하지 않습니다. 
-- [SYSNAME][]
-- [UNIQUEIDENTIFIER][]
+- [VARCHAR (max)][], [NVARCHAR (Max)][] 및 [VARBINARY (max)][]입니다. 이러한 LOB 데이터 형식의 최대 크기는 2gb입니다. 이러한 개체를 로드 하려면 [Bcp 유틸리티][]를 사용 합니다. PolyBase 및 dwloader는 현재 이러한 데이터 형식을 지원 하지 않습니다. 
+- [SYSNAME 이며][]
+- [없으면][]
 - [NUMERIC][] 및 DECIMAL 데이터 형식입니다.
 
 **창 함수**
@@ -195,13 +196,13 @@ APS AU6는 이러한 T-sql 호환성 개선 사항을 지원 합니다.  이러�
 
 **보안 함수**
 
-- [CHECKSUM()][] 및 [BINARY_CHECKSUM()][]
-- [HAS_PERMS_BY_NAME()][]
+- [CHECKSUM ()][] 및 [BINARY_CHECKSUM ()][]
+- [HAS_PERMS_BY_NAME ()][]
 
 **추가 함수**
 
-- [NEWID()][]
-- [RAND()][]
+- [NEWID ()][]
+- [RAND ()][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop 향상 된 기능
 
@@ -242,27 +243,27 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [열 수준 SQL 데이터 정렬]: ~/relational-databases/collations/collation-and-unicode-support.md
 
 [클러스터형 columnstore 인덱스의 비클러스터형 인덱스]:/sql/t-sql/statements/create-index-transact-sql
-[VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
-[SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
+[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[SYSNAME 이며]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
+[...를 선택 합니다. 범주로]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [넓은 테이블]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 유틸리티]:/sql/tools/bcp-utility
-[UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[없으면]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[번호]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [행 또는 범위]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
 [PERCENT_RANK]:/sql/t-sql/functions/percent-rank-transact-sql
-[CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
-[BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
-[HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[CHECKSUM ()]:/sql/t-sql/functions/checksum-transact-sql
+[BINARY_CHECKSUM ()]:/sql/t-sql/functions/binary-checksum-transact-sql
+[HAS_PERMS_BY_NAME ()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
+[NEWID ()]:/sql/t-sql/functions/newid-transact-sql
+[RAND ()]:/sql/t-sql/functions/rand-transact-sql
 
 
   

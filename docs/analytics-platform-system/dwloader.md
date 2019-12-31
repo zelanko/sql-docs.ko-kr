@@ -1,5 +1,5 @@
 ---
-title: dwloader 명령줄 로더-병렬 데이터 웨어하우스 | Microsoft Docs
+title: dwloader 명령줄 로더
 description: dwloader는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다.
 author: mzaman1
 ms.prod: sql
@@ -8,19 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212270"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401173"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
-**dwloader** 는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가 (*추가 모드* 또는 *fastappend 모드*) 하거나, 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*) 하거나, 로드 하기 전에 기존 행을 모두 삭제 하 고 모든 행을 빈 테이블에 삽입할 수 있습니다. (*다시 로드 모드*).  
+**dwloader** 는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가 (*추가 모드* 또는 *fastappend 모드*) 하거나, 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*) 하거나, 로드 하기 전에 기존 행을 모두 삭제 하 고 모든 행을 빈 테이블 (*다시 로드 모드*)에 삽입할 수 있습니다.  
   
 **데이터 로드 프로세스**  
   
-1.  원본 데이터를 준비 합니다.  
+1.  원본 데이터를 준비합니다.  
   
     자체 ETL 프로세스를 사용 하 여 로드 하려는 원본 데이터를 만듭니다. 원본 데이터는 대상 테이블의 스키마와 일치 하도록 형식이 지정 되어야 합니다. 원본 데이터를 하나 이상의 텍스트 파일에 저장 하 고 텍스트 파일을 로드 하는 서버에서 동일한 디렉터리에 복사 합니다. 로드 서버에 대 한 자세한 내용은 [로드 서버 가져오기 및 구성](acquire-and-configure-loading-server.md) 을 참조 하세요.  
   
@@ -122,22 +123,22 @@ dwloader.exe
 **-U** *login_name*  
 로드를 수행할 수 있는 적절 한 권한이 있는 유효한 SQL Server 인증 로그인입니다.  
   
-**-P** *password*  
-SQL Server 인증 *login_name*의 암호입니다.  
+**-P** *암호*  
+*Login_name*SQL Server 인증에 대 한 암호입니다.  
   
 **-W**  
-Windows 인증을 사용합니다. *Login_name* 또는 *password* 가 필요 하지 않습니다. 
+Windows 인증을 사용합니다. *Login_name* 또는 *암호가* 필요 하지 않습니다. 
 
 <!-- MISSING LINK
 For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
 -->
   
 **-f** *parameter_file_name*  
-명령줄 매개 변수 대신 *parameter_file_name*매개 변수 파일을 사용 합니다. *parameter_file_name* 는 *user_name* 과 *password*를 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다. 명령줄과 매개 변수 파일에 매개 변수가 지정 된 경우 명령줄은 file 매개 변수를 재정의 합니다.  
+명령줄 매개 변수 대신 *parameter_file_name*매개 변수 파일을 사용 합니다. *parameter_file_name* 는 *user_name* 와 *암호*를 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다. 명령줄과 매개 변수 파일에 매개 변수가 지정 된 경우 명령줄은 file 매개 변수를 재정의 합니다.  
   
 매개 변수 파일에는 한 줄에 **-** 접두사 없이 하나의 매개 변수가 포함 되어 있습니다.  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
 `rt=percentage`  
   
@@ -146,7 +147,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-S** *target_appliance*  
 로드 된 데이터를 받을 SQL Server PDW 어플라이언스를 지정 합니다.  
   
-*Infiniband 연결의*경우 *target_appliance* 은 < 어플라이언스-이름 >-SQLCTL01로 지정 됩니다. 이 명명 된 연결을 구성 하려면 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)을 참조 하세요.  
+*Infiniband 연결의*경우 *target_appliance* <어플라이언스-이름>-SQLCTL01로 지정 됩니다. 이 명명 된 연결을 구성 하려면 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)을 참조 하세요.  
   
 이더넷 연결의 경우 *target_appliance* 는 제어 노드 클러스터에 대 한 IP 주소입니다.  
   
@@ -156,7 +157,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [ *schema*].*table_name*  
+**-T** *target_database_name입니다.* [*schema*]. *table_name*  
 대상 테이블의 세 부분으로 구성 된 이름입니다.  
   
 **-I** *source_data_location*  
@@ -168,7 +169,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   원본 파일의 각 줄은 하나의 테이블 행에 대 한 데이터를 포함 합니다. 원본 데이터는 대상 테이블의 스키마와 일치 해야 합니다. 열 순서와 데이터 유형도 일치 해야 합니다. 행의 각 필드는 대상 테이블의 열을 나타냅니다.  
   
--   기본적으로 필드는 가변 길이 이며 구분 기호로 구분 됩니다. 구분 기호 유형을 지정 하려면 < variable_length_column_options > 명령줄 옵션을 사용 합니다. 고정 길이 필드를 지정 하려면 < fixed_width_column_options > 명령줄 옵션을 사용 합니다.  
+-   기본적으로 필드는 가변 길이 이며 구분 기호로 구분 됩니다. 구분 기호 유형을 지정 하려면 <variable_length_column_options> 명령줄 옵션을 사용 합니다. 고정 길이 필드를 지정 하려면 <fixed_width_column_options> 명령줄 옵션을 사용 합니다.  
   
 원본 데이터 위치를 지정 하려면:  
   
@@ -192,26 +193,26 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   모든 파일은 하나의 파일 처럼 연결 되 고 로드 되며 거부 된 행은 단일 거부 파일로 이동 합니다.  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
--   -i \\\loadserver\loads\daily\\*.gz  
+-   -i \\\loadserver\loads\daily\\*. release.tar.gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\loadserver\loads\daily\\* .txt  
   
--   -i \\\loadserver\loads\daily\monday.*  
+-   -i \\\loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
 -   -i \\\loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
-로드 오류가 발생 한 경우 **dwloader** 는 로드에 실패 한 행을 저장 하 고 실패 설명은 *load_failure_file_name*이라는 파일에 오류 정보를 저장 합니다. 이 파일이 이미 있으면 dwloader는 기존 파일을 덮어씁니다. *load_failure_file_name* 은 첫 번째 오류가 발생할 때 생성 됩니다. 모든 행이 성공적으로 로드 되 면 *load_failure_file_name* 가 생성 되지 않습니다.  
+로드 오류가 발생 한 경우 **dwloader** 는 로드에 실패 한 행을 저장 하 고 오류는 *load_failure_file_name*이라는 파일에 오류 정보를 설명 합니다. 이 파일이 이미 있으면 dwloader는 기존 파일을 덮어씁니다. *load_failure_file_name* 는 첫 번째 오류가 발생할 때 생성 됩니다. 모든 행이 성공적으로 로드 되 면 *load_failure_file_name* 생성 되지 않습니다.  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*의 시작 부분에서 무시할 줄 (행)의 수입니다. 기본값은 0입니다.  
+*Source_data_file_name*시작 부분에서 무시할 줄 (행) 수입니다. 기본값은 0입니다.  
   
 <variable_length_column_options>  
-문자 구분 가변 길이 열이 있는 *source_data_file_name* 옵션입니다. 기본적으로 *source_data_file_name* 는 가변 길이 열에 ASCII 문자를 포함 합니다.  
+문자 구분 가변 길이 열을 포함 하는 *source_data_file_name* 에 대 한 옵션입니다. 기본적으로 *source_data_file_name* 는 가변 길이 열에 ASCII 문자를 포함 합니다.  
   
 ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null이 표시 됩니다. 예를 들어, 파이프로 구분 된 파일 ("|")에서 NULL은 "| |"로 표시 됩니다. 쉼표로 구분 된 파일에서 NULL은 ",,"로 표시 됩니다. 또한 **-E** (--emptyStringAsNull) 옵션을 지정 해야 합니다. -E에 대 한 자세한 내용은 아래를 참조 하세요.  
   
@@ -221,7 +222,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
 **-t** *field_delimiter*  
 행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호는 이러한 ASCII 이스케이프 문자 또는 ASCII 16 진수 값 중 하나 이상입니다.  
   
-|이름|이스케이프 문자|16 진수 문자|  
+|이름|Escape Character|16 진수 문자|  
 |--------|--------------------|-----------------|  
 |탭|\t|0x09|  
 |CR (캐리지 리턴)|\r|0x0d|  
@@ -233,7 +234,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
   
 명령줄에서 파이프 문자를 지정 하려면 큰따옴표 ("|")로 묶습니다. 이렇게 하면 명령줄 파서에서 잘못 해석 하지 않습니다. 다른 문자는 작은따옴표로 묶여 있습니다.  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
 -t "|"  
   
@@ -243,7 +244,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
   
 -t \t  
   
--t '~|~'  
+-t ' ~ | ~ '  
   
 **-r** *row_delimiter*  
 원본 데이터 파일의 각 행에 대 한 구분 기호입니다. 행 구분 기호는 하나 이상의 ASCII 값입니다.  
@@ -273,9 +274,9 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 **-s** *string_delimiter*  
 텍스트 구분 입력 파일의 문자열 데이터 형식 필드에 대 한 구분 기호입니다. 문자열 구분 기호는 하나 이상의 ASCII 값입니다.  문자 (예:-s *) 또는 16 진수 값으로 지정할 수 있습니다 (예: 큰따옴표의 경우-s 0x22).  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
--s *  
+삭제  
   
 -s 0x22  
   
@@ -295,9 +296,9 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
   
 고정 너비 구성 파일의 예:  
   
-SalesCode=3  
+SalesCode = 3  
   
-SalesID=10  
+SalesID = 10  
   
 *Source_data_file_name*의 예제 줄:  
   
@@ -343,13 +344,13 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 입력 파일의 모든 날짜/시간 필드에 대 한 월 (m), 일 (d) 및 연도 (y)의 순서를 지정 합니다. 기본 순서는 ymd입니다. 동일한 원본 파일에 대해 여러 주문 형식을 지정 하려면-dt 옵션을 사용 합니다.  
   
 ymd | dmy  
-ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
+ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate **** 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
   
 ydm  
 Datetime 및 smalldatetime 데이터 형식의 열에는 ydm 형식의 입력만 로드할 수 있습니다. 데이터 형식의 datetime2, date 또는 datetimeoffset 열에 ydm 값을 로드할 수 없습니다.  
   
 mdy  
-mdy는 <month>를 허용 <space> <day> <comma>합니다. <year>  
+mdy는 <month> <space> <day> <comma> <year>를 허용 합니다.  
   
 1975 년 1 월 1 일에 대 한 mdy 입력 데이터의 예:  
   
@@ -365,12 +366,12 @@ myd
 2010 년 3 월 4 일에 대 한 입력 파일 예제: 03-2010-04, 3/2010/4  
   
 dym  
-2010 년 3 월 4 일에 대 한 입력 파일 예제: 04-2010-03, 4/2010/3  
+3 월 4 일에 대 한 입력 파일 예제 2010:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* 은 사용자 지정 날짜 형식 (예: MM/dd/yyyy) 이며 이전 버전과의 호환성을 위해서만 포함 됩니다. dwloader는 사용자 지정 날짜 형식을 적용 하지 않습니다. 대신, 사용자 지정 날짜 형식을 지정 하는 경우 **dwloader** 는이를 ymd, ydm, mdy, myd, dym 또는 dmy의 해당 설정으로 변환 합니다.  
   
-예를 들어-D MM/dd/yyyy를 지정 하는 경우 dwloader는 모든 날짜 입력이 month first, day, year (mdy)로 정렬 될 것으로 예상 합니다. 사용자 지정 날짜 형식으로 지정 된 두 개의 문자 월, 2 자리 날짜 및 4 자리 연도를 적용 하지 않습니다. 날짜 형식이-D MM/dd/yyyy 인 경우 입력 파일에서 날짜 형식을 지정할 수 있는 몇 가지 예는 다음과 같습니다. 01/02/2013, 02.2013, 1/2/2013  
+예를 들어-D MM/dd/yyyy를 지정 하는 경우 dwloader는 모든 날짜 입력이 month first, day, year (mdy)로 정렬 될 것으로 예상 합니다. 사용자 지정 날짜 형식으로 지정 된 두 개의 문자 월, 2 자리 날짜 및 4 자리 연도를 적용 하지 않습니다. 날짜 형식이-D MM/dd/yyyy: 01/02/2013, 02.2013, 1/2/2013 인 경우 입력 파일에서 날짜 형식을 지정할 수 있는 몇 가지 예는 다음과 같습니다.  
   
 보다 포괄적인 서식 지정 정보는 [dwloader의 데이터 형식 변환 규칙](dwloader-data-type-conversion-rules.md)을 참조 하세요.  
   
@@ -379,7 +380,7 @@ dym
   
 각 줄에는 대상 테이블의 열 이름과 해당 날짜/시간 형식이 포함 됩니다.  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
 `LastReceiptDate=ymd`  
   
@@ -391,13 +392,13 @@ dym
 **-M** *load_mode_option*  
 데이터를 추가, upsert 또는 다시 로드할지 여부를 지정 합니다. 기본 모드는 추가입니다.  
   
-추가할  
+추가  
 로더는 대상 테이블의 기존 행 끝에 행을 삽입 합니다.  
   
 fastappend  
 로더는 임시 테이블을 사용 하지 않고 행을 대상 테이블의 기존 행 끝에 직접 삽입 합니다. fastappend에는 다중 트랜잭션 (-m) 옵션이 필요 합니다. Fastappend를 사용 하는 경우 준비 데이터베이스를 지정할 수 없습니다. Fastappend를 사용 하는 롤백이 없습니다. 즉, 실패 하거나 중단 된 로드에서의 복구가 사용자의 부하 프로세스에 의해 처리 되어야 합니다.  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert **-K**  *merge_column* [,... *n* ]  
 로더는 SQL Server Merge 문을 사용 하 여 기존 행을 업데이트 하 고 새 행을 삽입 합니다.  
   
 -K 옵션은 병합의 기준이 될 열을 지정 합니다. 이러한 열은 고유 행을 나타내는 병합 키를 형성 합니다. 병합 키가 대상 테이블에 있으면 해당 행이 업데이트 됩니다. Merge 키가 대상 테이블에 없으면 해당 행이 추가 됩니다.  
@@ -414,7 +415,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 로더는 원본 데이터를 삽입 하기 전에 대상 테이블을 자릅니다.  
   
 **-b** *batchsize*  
-Microsoft 지원에서 사용 하는 경우에 만 사용 하는 것이 좋습니다 .이는 DMS가 계산 노드에서 SQL Server 인스턴스로 수행 하는 대량 복사의 SQL Server 일괄 처리 크기입니다.  *Batchsize* 를 지정 하면 SQL Server PDW는 각 부하에 대해 동적으로 계산 되는 일괄 처리 로드 크기를 재정의 합니다.  
+Microsoft 지원에서 사용 하는 경우에만 사용 하는 것이 좋습니다 *.이는 DMS가 계산* 노드에서 SQL Server 인스턴스로 수행 하는 대량 복사의 SQL Server 일괄 처리 크기입니다.  *Batchsize* 를 지정 하면 SQL Server PDW는 각 부하에 대해 동적으로 계산 되는 일괄 처리 로드 크기를 재정의 합니다.  
   
 SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한 일괄 처리 크기를 동적으로 계산 합니다. 이 자동 계산은 메모리 크기, 대상 테이블 형식, 대상 테이블 스키마, 로드 형식, 파일 크기 및 사용자의 리소스 클래스와 같은 여러 매개 변수를 기반으로 합니다.  
   
@@ -425,8 +426,8 @@ SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한
 <reject_options>  
 로더에서 허용할 로드 실패 횟수를 결정 하는 옵션을 지정 합니다. 로드 실패가 임계값을 초과 하면 로더가 중단 되 고 행이 커밋되지 않습니다.  
   
-**-rt** { **value** | 비율}  
-\- **Rv** *reject_value* 옵션의-*reject_value* 가 리터럴 행 수 (값) 또는 실패 비율 (백분율) 인지 여부를 지정 합니다. 기본값은 value입니다.  
+**-rt** { **value** | 백분율}  
+**-Rv** *reject_value* 옵션의-*reject_value* 행 수 (값) 또는 실패 비율 (백분율) 인지 여부를 지정 합니다. 기본값은 value입니다.  
   
 백분율 옵션은-rs 옵션에 따라 간격으로 발생 하는 실시간 계산입니다.  
   
@@ -437,17 +438,17 @@ SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한
   
 기본 *reject_value* 는 0입니다.  
   
--Rt 값과 함께 사용 하는 경우, 거부 된 행 개수가 reject_value를 초과 하면 로더가 로드를 중지 합니다.  
+-Rt 값과 함께 사용 하는 경우, 거부 된 행 수가 reject_value을 초과 하면 로더가 로드를 중지 합니다.  
   
 -Rt 백분율을 사용 하는 경우 로더는 간격 (-rs 옵션)에서 백분율을 계산 합니다. 따라서 실패 한 행의 백분율이 *reject_value*를 초과할 수 있습니다.  
   
 **-rs** *reject_sample_size*  
 증분 백분율 검사 `-rt percentage` 를 지정 하는 옵션과 함께 사용 됩니다. 예를 들어 reject_sample_size가 1000 인 경우 로더는 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 계산 합니다. 각 추가 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 다시 계산 합니다.  
   
-**-t**  
+**-c**  
 Char, nchar, varchar 및 nvarchar 필드의 왼쪽과 오른쪽에서 공백 문자를 제거 합니다. 공백 문자만 포함 하는 각 필드를 빈 문자열로 변환 합니다.  
   
-예를 들면 다음과 같습니다.  
+예제:  
   
 ' '이 ' ' (으)로 잘렸습니다.  
   
@@ -489,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예:  
   
 ```  
 dwloader  
@@ -500,7 +501,7 @@ if %errorlevel%==0 echo Success
   
 PowerShell을 사용 하는 `$LastExitCode`경우를 사용 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 대상 테이블에서 로드 권한 및 해당 사용 권한 (INSERT, UPDATE, DELETE)이 필요 합니다. 준비 데이터베이스에 대 한 CREATE 권한 (임시 테이블을 만드는 경우)이 필요 합니다. 준비 데이터베이스를 사용 하지 않는 경우 대상 데이터베이스에 대 한 CREATE 권한이 필요 합니다. 
 
 <!-- MISSING LINK
@@ -555,12 +556,12 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |힙|예|예|예|최소|  
 |힙|예|아니요|예|최소|  
-|힙|아니요|사용자 계정 컨트롤|아니요|최소|  
+|힙|아니요|예|아니요|최소|  
 |힙|아니요|아니요|아니요|최소|  
-|Cl|예|예|아니요|최소|  
-|Cl|예|아니요|예|전체|  
-|Cl|아니요|사용자 계정 컨트롤|아니요|최소|  
-|Cl|아니요|아니요|예|전체|  
+|Cl.exe|예|예|아니요|최소|  
+|Cl.exe|예|아니요|예|전체|  
+|Cl.exe|아니요|예|아니요|최소|  
+|Cl.exe|아니요|아니요|예|전체|  
   
 위의 표에서는 추가 모드를 힙 또는 CI (클러스터형 인덱스) 테이블로 로드 하 여 다중 트랜잭션 플래그를 사용 하거나 사용 하지 않고 빈 테이블이 나 비어 있지 않은 테이블에 로드 하는 **dwloader** 를 보여 줍니다. 이러한 각 부하 조합의 잠금 및 로깅 동작이 표에 표시 됩니다. 예를 들어, 추가 모드를 사용 하 여 다중 트랜잭션 모드를 사용 하지 않는 클러스터형 인덱스에 추가 모드를 로드 하 고 빈 테이블로 로드 하는 경우 PDW는 테이블에 대 한 배타적 잠금을 만들고 로깅은 최소화 합니다. 즉, 고객은 두 번째 단계와 쿼리를 빈 테이블로 동시에 로드할 수 없습니다. 그러나 동일한 구성을 사용 하 여 비어 있지 않은 테이블에 로드 하는 경우 PDW는 테이블에 대해 배타 잠금을 실행 하지 않으며 동시성이 가능 합니다. 그러나 전체 로깅이 발생 하 여 프로세스가 느려집니다.  
   
@@ -596,14 +597,14 @@ dwloader.exe -S MyPDW-SQLCTL01 -W -f /configfiles/loadparamfile.txt
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>2\. AdventureWorks 테이블로 데이터 로드  
-다음 예는 **AdventureWorksPDW2012**으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create 파일을 엽니다. 
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. AdventureWorks 테이블로 데이터 로드  
+다음 예는 **AdventureWorksPDW2012**으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create .bat 파일을 엽니다. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-다음 스크립트 조각에서는 dwloader를 사용 하 여 데이터를 나이 계정 및 나이에 대 한 통화 테이블로 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하는 경우 서버는 *appliance_name >* `-SQLCTL01`< 됩니다.  
+다음 스크립트 조각에서는 dwloader를 사용 하 여 데이터를 나이 계정 및 나이에 대 한 통화 테이블로 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하는 경우 서버는 `-SQLCTL01` *>appliance_name<* 됩니다.  
   
 ```  
 set server=10.193.63.134  
@@ -665,7 +666,7 @@ DISTRIBUTION = REPLICATE);
 13|3|1170|110|Deferred Taxes|Assets|+||Currency|  
 ```  
   
-### <a name="c-load-data-from-the-command-line"></a>3\. 명령줄에서 데이터 로드  
+### <a name="c-load-data-from-the-command-line"></a>C. 명령줄에서 데이터 로드  
 다음 예제와 같이 명령줄에 모든 매개 변수를 입력 하 여 예 B의 스크립트를 바꿀 수 있습니다.  
   
 ```  
@@ -694,7 +695,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \r\n* 은 각 행을 나이를 지정 합니다. txt는 캐리지 리턴 및 줄 바꿈 문자로 끝납니다.  
   
--   *-U < login_name >-P <password>*  는 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
+-   *-U <login_name>-P <password> * 는 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
   
 
 <!-- MISSING LINK

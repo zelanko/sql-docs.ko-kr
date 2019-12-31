@@ -1,6 +1,6 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,38 +12,38 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089135"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401646"
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact SQL)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. **sys.dm_pdw_nodes_database_encryption_keys** 각 노드에 대해이 정보를 제공 합니다. 데이터베이스 암호화에 대 한 자세한 내용은 참조 하세요. [투명 한 데이터 암호화 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)합니다.  
+  연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. **dm_pdw_nodes_database_encryption_keys** 각 노드에 대해이 정보를 제공 합니다. 데이터베이스 암호화에 대 한 자세한 내용은 [투명한 데이터 암호화 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)를 참조 하세요.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|각 노드에서 실제 데이터베이스의 ID입니다.|  
-|encryption_state|**int**|이 노드에서 데이터베이스의 암호화 되지 않은 암호화 여부를 나타냅니다.<br /><br /> 0 = 데이터베이스 암호화 키가 없고 암호화되지 않음<br /><br /> 1 = 암호화되지 않음<br /><br /> 2 = 암호화 진행 중<br /><br /> 3 = 암호화됨<br /><br /> 4 = 키 변경 진행 중<br /><br /> 5 = 해독 진행 중<br /><br /> 6 = 보호 변경 진행 중 (데이터베이스 암호화 키를 암호화 하는 인증서가 변경 됩니다.)|  
-|create_date|**datetime**|암호화 키를 만든 날짜를 표시합니다.|  
-|regenerate_date|**datetime**|암호화 키를 다시 생성한 날짜를 표시합니다.|  
-|modify_date|**datetime**|암호화 키를 수정한 날짜를 표시합니다.|  
-|set_date|**datetime**|암호화 키가 데이터베이스에 적용된 날짜를 표시합니다.|  
-|opened_date|**datetime**|데이터베이스 키가 마지막으로 열린 시간을 표시합니다.|  
-|key_algorithm|**varchar(?)**|키에 사용된 알고리즘을 표시합니다.|  
+|database_id|**int**|각 노드에 있는 물리적 데이터베이스의 ID입니다.|  
+|encryption_state|**int**|이 노드의 데이터베이스가 암호화 되었는지 아니면 암호화 되지 않는지를 나타냅니다.<br /><br /> 0 = 데이터베이스 암호화 키가 없고 암호화되지 않음<br /><br /> 1 = 암호화되지 않음<br /><br /> 2 = 암호화 진행 중<br /><br /> 3 = 암호화됨<br /><br /> 4 = 키 변경 진행 중<br /><br /> 5 = 해독 진행 중<br /><br /> 6 = 보호 변경 진행 중 (데이터베이스 암호화 키를 암호화 하는 인증서를 변경 하는 중)|  
+|create_date|**날짜**|암호화 키를 만든 날짜를 표시합니다.|  
+|regenerate_date|**날짜**|암호화 키를 다시 생성한 날짜를 표시합니다.|  
+|modify_date|**날짜**|암호화 키를 수정한 날짜를 표시합니다.|  
+|set_date|**날짜**|암호화 키가 데이터베이스에 적용된 날짜를 표시합니다.|  
+|opened_date|**날짜**|데이터베이스 키가 마지막으로 열린 시간을 표시합니다.|  
+|key_algorithm|**varchar (?)**|키에 사용된 알고리즘을 표시합니다.|  
 |key_length|**int**|키의 길이를 표시합니다.|  
 |encryptor_thumbprint|**varbin**|암호기의 손도장을 표시합니다.|  
 |percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|  
 |node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 조인을 `sys.dm_pdw_nodes_database_encryption_keys` 각 노드의 TDE 데이터베이스 보호에 대 한 암호화 상태를 나타내기 위해 다른 시스템 테이블에 있습니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 다른 `sys.dm_pdw_nodes_database_encryption_keys` 시스템 테이블에 조인 하 여 tde로 보호 되는 데이터베이스의 각 노드에 대 한 암호화 상태를 표시 합니다.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -59,11 +59,11 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

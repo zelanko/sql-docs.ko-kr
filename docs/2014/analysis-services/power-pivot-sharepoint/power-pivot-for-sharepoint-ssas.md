@@ -1,7 +1,7 @@
 ---
-title: PowerPivot for SharePoint (SSAS) | Microsoft Docs
+title: SharePoint용 PowerPivot (SSAS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 486db389b3cca8936a5350da61880637406a1387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071138"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683584"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>SharePoint용 PowerPivot(SSAS)
   SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버입니다. SharePoint용 PowerPivot은 SharePoint 팜에서 PowerPivot 데이터의 서버 호스팅을 제공합니다. PowerPivot 데이터는 다음 중 하나를 사용하여 빌드하는 분석 데이터 모델입니다.  
@@ -24,12 +24,12 @@ ms.locfileid: "66071138"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  이 데이터의 서버 호스팅에는 SharePoint, Excel 서비스 및 SharePoint용 PowerPivot 설치가 필요합니다. 데이터는 SharePoint용 PowerPivot 인스턴스에 로드되며 여기서 서버가 Excel 2010 통합 문서용으로 제공하거나 SharePoint 2013 Excel 서비스가 Excel 2013 통합 문서용으로 제공하는 PowerPivot 데이터 새로 고침 기능을 사용하여 예약된 간격으로 데이터를 새로 고칠 수 있습니다.  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>SharePoint 2013용 PowerPivot  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 데이터 모델 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 뷰 보고서를 포함하는 Excel 통합 문서의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2013 Excel Services 사용을 지원합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 모델 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파워 뷰 보고서를 포함 하는 Excel 통합 문서의 SharePoint 2013 excel Services 사용을 지원 합니다.  
   
  SharePoint 2013의 Excel Services에는 브라우저에서 PowerPivot 통합 문서와 상호 작용할 수 있도록 데이터 모델 기능이 포함되어 있습니다. SharePoint 2013용 PowerPivot 추가 기능을 팜에 배포하지 않아도 됩니다. SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 설치하고 Excel Services **데이터 모델** 설정 내에 서버를 등록해야 합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66071138"
   
  ![SSAS PowerPivot 모드 2 서버 배포](../media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot 모드 2 서버 배포")  
   
-## <a name="powerpivot-for-sharepoint-2010"></a>PowerPivot for SharePoint 2010  
+## <a name="powerpivot-for-sharepoint-2010"></a>SharePoint용 PowerPivot 2010  
  SharePoint용 PowerPivot 2010은 SharePoint 2010 팜에서 PowerPivot 데이터의 서버 호스팅을 제공합니다. PowerPivot 데이터는 PowerPivot for Excel 추가 기능을 사용하여 Excel에서 작성하는 분석 데이터 모델입니다. 이 데이터의 서버 호스팅에는 SharePoint 2010, Excel 서비스 및 SharePoint용 PowerPivot 설치가 필요합니다. 데이터는 팜에서 SharePoint용 PowerPivot 인스턴스에 로드되며 여기서 서버가 제공하는 PowerPivot 데이터 새로 고침 기능을 사용하여 예약된 간격으로 데이터를 새로 고칠 수 있습니다.  
   
 ### <a name="components-of-powerpivot-for-sharepoint-2010"></a>SharePoint용 PowerPivot 2010의 구성 요소  
@@ -53,20 +53,20 @@ ms.locfileid: "66071138"
   
  SharePoint 통합 모드의 Analysis Service 서비스 인스턴스는 배포를 완료합니다. 이 인스턴스는 데이터를 로드, 쿼리 및 언로드합니다. 또한 이 인스턴스는 통합 문서가 PowerPivot 데이터 새로 고침에 대해 구성된 경우 데이터도 처리합니다.  각 인스턴스는 동일한 설치에 속하는 로컬 PowerPivot 시스템 서비스와 긴밀하게 결합됩니다.  
   
-##  <a name="bkmk_RelatedContent"></a> 섹션 내용  
+##  <a name="bkmk_RelatedContent"></a>섹션 항목  
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [Windows PowerShell을 사용하여 PowerPivot 구성](power-pivot-configuration-using-windows-powershell.md)  
+ [Windows PowerShell을 사용 하 여 PowerPivot 구성](power-pivot-configuration-using-windows-powershell.md)  
   
  [PowerPivot 구성 도구](power-pivot-configuration-tools.md)  
   
  [PowerPivot 인증 및 권한 부여](power-pivot-authentication-and-authorization.md)  
   
- [PowerPivot 상태 규칙-구성](configure-power-pivot-health-rules.md)  
+ [PowerPivot 상태 규칙 - 구성](configure-power-pivot-health-rules.md)  
   
- [PowerPivot 관리 대시보드 및 사용 데이터](power-pivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot 관리 대시보드 및 사용량 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot 갤러리](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot 갤러리](../../2014-toc/index.yml)  
   
  [PowerPivot 데이터 액세스](power-pivot-data-access.md)  
   
@@ -74,21 +74,21 @@ ms.locfileid: "66071138"
   
  [PowerPivot 데이터 피드](power-pivot-data-feeds.md)  
   
- [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [PowerPivot BI 의미 체계 모델 연결 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **다른 섹션**  
   
 ## <a name="additional-topics"></a>추가 항목  
- [SharePoint용 PowerPivot 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+ [업그레이드 SharePoint용 PowerPivot](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [SharePoint 2013용 PowerPivot 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [SharePoint용 PowerPivot 2013 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [SharePoint 용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [SharePoint용 PowerPivot에 대한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- [예제 라이선스 토폴로지 및 SQL Server 2014 셀프 서비스 비즈니스 인텔리전스에 대 한 비용](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [SQL Server 2014 셀프 서비스 비즈니스 인텔리전스에 대 한 예제 라이선스 토폴로지 및 비용](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [PowerPivot 계획 및 배포](https://go.microsoft.com/fwlink/?linkID=220972)   
- [SharePoint 용 powerpivot 재해 복구](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [SharePoint용 PowerPivot 재해 복구](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

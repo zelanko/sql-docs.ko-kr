@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087762"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833024"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
-ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 또는 대 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 지원 합니다. 유니코드 함수 함수로 구현 됩니다 (의 접미사로 *W*) 아니라 매크로입니다. ANSI 함수 (접미사 없이 호출할 수 *는*)는 현재 ODBC API 함수를 사용 하 여 동일 합니다.  
+ODBC 3.5 이상 드라이버 관리자는 해당 인수에서 문자 문자열 또는 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 모두 지원 합니다. 유니코드 함수는 매크로가 아니라 함수 ( *W*접두사 포함)로 구현 됩니다. *의 접미사*를 사용 하거나 사용 하지 않고 호출할 수 있는 ANSI 함수는 현재 ODBC API 함수와 동일 합니다.  
   
 ## <a name="remarks"></a>설명  
- 항상 반환 하거나 문자열 또는 길이 인수를 사용 하는 유니코드 함수는 문자 수로 전달 됩니다. 서버 데이터에 대 한 길이 정보를 반환 하는 함수에 대 한 디스플레이 크기 및 전체 자릿수를 문자 수에 설명 되어 있습니다. 문자열 또는 문자열이 아닌 데이터 길이 (데이터 전송 크기)를 참조할 수, 하는 경우 8 진수 길이 길이 설명 합니다. 예를 들어 **SQLGetInfoW** 바이트의 수와 길이가 걸립니다 여전히 있지만 **SQLExecDirectW** 문자 수를 사용 합니다.  
+ 항상 문자열이 나 길이 인수를 반환 하거나 사용 하는 유니코드 함수는 문자 수로 전달 됩니다. 서버 데이터의 길이 정보를 반환 하는 함수의 경우 표시 크기와 전체 자릿수는 문자 수로 설명 됩니다. 길이 (데이터의 전송 크기)가 문자열 또는 문자열이 아닌 데이터를 참조할 수 있는 경우 길이는 8 진수 길이에 설명 되어 있습니다. 예를 들어 **SQLGetInfoW** 는 길이가 바이트 수로 계속 사용 되지만 **Sqlexecdirectw** 는 문자 수를 사용 합니다.  
   
- 문자 수 (8 진수) ANSI 함수에 대 한 바이트 수와 유니코드 함수에 대 한 WCHAR (16 비트 단어)의 수를 나타냅니다. 특히, 여러 바이트를 더블 바이트 문자 시퀀스 (DBCS) 또는 멀티 바이트 문자 시퀀스 (MBCS)을 구성할 수 있습니다. 여러 WCHARs의 utf-16 유니코드 문자 시퀀스를 구성할 수 있습니다.  
+ 문자 수는 ANSI 함수의 바이트 수 (8 진수)와 유니코드 함수의 WCHAR (16 비트 단어) 수를 나타냅니다. 특히 DBCS (더블 바이트 문자 시퀀스) 또는 MBCS (멀티 바이트 문자 시퀀스)를 여러 바이트로 구성할 수 있습니다. UTF-16 유니코드 문자 시퀀스는 여러 개의 WCHARs로 구성 될 수 있습니다.  
   
- 다음은 유니코드 (W) 및 ANSI (A) 버전을 지 원하는 ODBC API 함수 목록입니다.  
+ 다음은 유니코드 (W) 및 ANSI (A) 버전을 모두 지 원하는 ODBC API 함수 목록입니다.  
   
 |||  
 |-|-|  
-|**SQLBrowseConnect**|**SQLGetDiagField**|  
-|**SQLColAttribute**|**SQLGetDiagRec**|  
-|**SQLColAttributes**|**SQLGetInfo**|  
-|**SQLColumnPrivileges**|**SQLGetStmtAttr**|  
+|**SQLBrowseConnect**|**SQLGetDiagRec**|  
+|**SQLColAttribute**|**SQLGetInfo**|  
+|**SQLColAttributes**|**SQLGetStmtAttr**|  
+|**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
 |**SQLColumns**|**SQLNativeSQL**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
@@ -50,8 +50,9 @@ ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 �
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
 |**SQLGetDescRec**|**SQLTables**|  
+|**SQLGetDiagField**||  
   
- 다음은 유니코드 (W) 및 ANSI (A) 버전을 지 원하는 ODBC 설치 관리자 및 ODBC 변환기 함수 목록.  
+ 다음은 유니코드 (W) 및 ANSI (A) 버전을 모두 지 원하는 ODBC 설치 관리자 및 ODBC 변환기 함수 목록입니다.  
   
 |||  
 |-|-|  
@@ -60,16 +61,16 @@ ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 �
 |**SQLDataSourceToDriver**|**SQLInstallODBC**|  
 |**SQLDriverToDataSource**|**SQLReadFileDSN**|  
 |**SQLGetAvailableDrivers**|**SQLRemoveDSNFromINI**|  
-|**SQLGetInstalledDrivers**|**SQLValidDSN**|  
+|**SQLGetInstalledDrivers**|**Sql유효한 Dsn**|  
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  사용 되지 않는 함수는 유니코드에서 ANSI로 매핑을 지원 하므로 ODBC *3.x* 드라이버 관리자가 지 원하는 ODBC 다시 컴파일하지 *2.x* 유니코드를 사용 하 여 응용 프로그램 **#define**.  
+>  사용 되지 않는 함수는 유니코드 **#define**를 사용 하 여 odbc *2.x 응용 프로그램* 을 다시 컴파일할 수 있도록 지원 하기 때문에 유니코드-ANSI 매핑 지원이 *있습니다.*  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [유니코드 애플리케이션](../../../odbc/reference/develop-app/unicode-applications.md)  
+-   [유니코드 응용 프로그램](../../../odbc/reference/develop-app/unicode-applications.md)  
   
 -   [유니코드 드라이버](../../../odbc/reference/develop-app/unicode-drivers.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 시스템 데이터베이스-병렬 데이터 웨어하우스 | Microsoft Docs
-description: 시스템 데이터베이스에서 데이터 웨어하우스 (PDW (병렬).
+title: 시스템 데이터베이스
+description: PDW (병렬 데이터 웨어하우스)의 시스템 데이터베이스.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,15 +8,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bfcd183804a545f5e170548833246bbedd231a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 720dd70896fe4c30d10214b7102bbd77beab5e48
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960003"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400211"
 ---
-# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>시스템 데이터베이스에서 데이터 웨어하우스 (PDW (병렬)
-시스템 데이터베이스는 SQL Server PDW 사용자, 데이터베이스 및 임시 데이터를 관리 하는 데 사용 하는 데이터베이스입니다. 다음 시스템 데이터베이스를 포함 하는 SQL Server PDW: 마스터 및 tempdb입니다.  
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>PDW (병렬 데이터 웨어하우스)의 시스템 데이터베이스
+시스템 데이터베이스는 SQL Server PDW 사용자, 데이터베이스 및 임시 데이터를 관리 하는 데 사용 하는 데이터베이스입니다. SQL Server PDW은 master 및 tempdb 시스템 데이터베이스를 포함 합니다.  
   
 ## <a name="system-database-topics"></a>시스템 데이터베이스 항목  
   

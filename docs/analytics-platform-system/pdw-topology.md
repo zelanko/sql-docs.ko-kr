@@ -1,6 +1,6 @@
 ---
-title: PDW 토폴로지-Analytics Platform System | Microsoft Docs
-description: Analytics Platform system의 PDW 토폴로지입니다.
+title: PDW 토폴로지
+description: 분석 플랫폼 시스템용 PDW 토폴로지
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 665bd84c6f44c23559ef6450111c045d2701811b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5dd758cec82a9839d14ae98c03bd232d560e48e9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960359"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400847"
 ---
 # <a name="pdw-topology"></a>PDW 토폴로지
-SQL Server PDW 구성 요소에 대 한 이름 및 네트워크 정보를 표시합니다. 사용 된 **어플라이언스 토폴로지 네트워크 구성** 네트워크 IP 주소를 변경 하는 페이지입니다.  
+SQL Server PDW 구성 요소에 대 한 이름 및 네트워크 정보를 표시 합니다. **어플라이언스 토폴로지 네트워크 구성** 페이지를 사용 하 여 네트워크 IP 주소를 변경할 수 있습니다.  
   
 ![DWConfig PDW 최상위 메뉴](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   
-## <a name="see-also"></a>관련 항목  
-[Configuration Manager 시작 &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>참고 항목  
+[Configuration Manager &#40;Analytics Platform System을 시작&#41;](launch-the-configuration-manager.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 원격 테이블 복사본-병렬 데이터 웨어하우스를 받으려면 Windows 구성 | Microsoft Docs
-description: 구매 및 Parallel Data Warehouse의 원격 테이블 복사 기능 사용에 대 한 InfiniBand 네트워크를 사용 하 여 연결 하는 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다. Windows 시스템 데이터베이스를 SQL Server PDW에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스트 합니다. 어플라이언스에서 별매 이며 어플라이언스 InfiniBand 네트워크에 연결 합니다.
+title: 원격 테이블 복사본을 받도록 Windows 구성
+description: 병렬 데이터 웨어하우스의 원격 테이블 복사 기능과 함께 사용 하기 위해 InfiniBand 네트워크를 사용 하 여 연결 된 비 어플라이언스 Windows 시스템을 구입 및 구성 하는 방법을 설명 합니다. Windows 시스템에서는 SQL Server PDW 데이터베이스에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스팅합니다. 어플라이언스와 별도로 구입 하 여 어플라이언스 InfiniBand 네트워크에 연결 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,58 +8,59 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961305"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401310"
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand-병렬 데이터 웨어하우스를 사용 하 여 원격 테이블 복사본을 받도록 외부 Windows 시스템 구성
-구입 하 고 사용 하 여 SQL Server PDW의 원격 테이블 복사 기능에 대 한 InfiniBand 네트워크를 사용 하 여 연결 하는 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다. Windows 시스템 데이터베이스를 SQL Server PDW에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스트 합니다. 어플라이언스에서 별매 이며 어플라이언스 InfiniBand 네트워크에 연결 합니다.  
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand 데이터 웨어하우스를 사용 하 여 원격 테이블 복사본을 받도록 외부 Windows 시스템 구성
+SQL Server PDW의 원격 테이블 복사 기능과 함께 사용 하기 위해 InfiniBand 네트워크를 사용 하 여 연결 된 비 어플라이언스 Windows 시스템을 구입 및 구성 하는 방법을 설명 합니다. Windows 시스템에서는 SQL Server PDW 데이터베이스에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스팅합니다. 어플라이언스와 별도로 구입 하 여 어플라이언스 InfiniBand 네트워크에 연결 합니다.  
   
 > [!NOTE]  
-> InfiniBand 네트워크를 통해 연결 하 여 원격 테이블 복사본을 사용 하 여 필요 하지 않습니다. 이더넷 대역폭 요구 사항을 충족 하는 경우 이더넷 네트워크를 통해 연결을 수행할 수 있습니다.  
+> 원격 테이블 복사를 사용 하는 경우 InfiniBand 네트워크를 통한 연결은 필요 하지 않습니다. 이더넷 대역폭이 사용자의 요구를 충족 하는 경우 이더넷 네트워크를 통한 연결을 수행할 수 있습니다.  
   
-이 항목에서는 원격 테이블 복사본을 구성 하기 위한 구성 단계 중 하나를 설명 합니다. 모든 구성 단계 목록을 참조 하세요. [원격 테이블 복사](remote-table-copy.md)  
+이 항목에서는 원격 테이블 복사를 구성 하는 구성 단계 중 하나에 대해 설명 합니다. 모든 구성 단계 목록은 [원격 테이블 복사](remote-table-copy.md) 를 참조 하세요.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
 외부 Windows 시스템을 구성 하기 전에 다음을 수행 해야 합니다.  
   
-1.  구매 또는 원격 복사본을 받는 Windows 시스템을 제공 합니다.  
+1.  원격 복사본을 받을 Windows 시스템을 구입 하거나 제공 합니다.  
   
-2.  (충분 한 공간이 있는 경우) Windows 시스템 컨트롤 랙에 랙 또는 가까이에 기기 어플라이언스 InfiniBand 네트워크에 연결할 수 있도록 합니다.  
+2.  기기 InfiniBand 네트워크에 연결할 수 있도록 컨트롤 랙에 (충분 한 공간이 있는 경우) 또는 어플라이언스에 가까이 가까이 있는 Windows 시스템을 랙 합니다.  
   
-3.  어플라이언스 하드웨어 공급 업체에서 InfiniBand 케이블 및 InfiniBand 네트워크 어댑터를 구입 합니다. 내보낸된 데이터를 수신 하는 경우 내결함성에 대 한 두 개의 포트를 사용 하 여 네트워크 어댑터를 구입 하는 것이 좋습니다. 두 포트 네트워크 어댑터는 것이 좋지만 요구 사항은 아닙니다.  
+3.  어플라이언스 하드웨어 공급 업체에서 InfiniBand 케이블과 InfiniBand 네트워크 어댑터를 구매 합니다. 내보낸 데이터를 받을 때 내결함성을 위해 두 개의 포트를 사용 하 여 네트워크 어댑터를 구매 하는 것이 좋습니다. 두 개의 포트 네트워크 어댑터를 권장 하지만 요구 사항은 아닙니다.  
   
-## <a name="HowToWindows"></a>원격 테이블 복사본을 받도록 외부 Windows 시스템을 구성 합니다.  
+## <a name="HowToWindows"></a>원격 테이블 복사본을 받도록 외부 Windows 시스템 구성  
 외부 Windows 시스템을 구성 하려면 다음 단계를 사용 합니다.  
   
 1.  Windows 시스템에 InfiniBand 네트워크 어댑터를 설치 합니다.  
   
-2.  InfiniBand 케이블을 사용 하 여 컨트롤 랙에 주 InfiniBand 스위치에 InfiniBand 네트워크 어댑터를 연결 합니다.  
+2.  InfiniBand 케이블을 사용 하 여 InfiniBand 네트워크 어댑터를 제어 랙의 주 InfiniBand 스위치에 연결 합니다.  
   
-3.  설치 하 고 InfiniBand 네트워크 어댑터에 대 한 적절 한 Windows 드라이버를 구성 합니다.  
+3.  InfiniBand 네트워크 어댑터용으로 적절 한 Windows 드라이버를 설치 하 고 구성 합니다.  
   
-    Windows에 대 한 infiniband InfiniBand 공급 업체의 업계 컨소시엄 OpenFabrics Alliance에서 개발 됩니다.  올바른 드라이버 InfiniBand 어댑터와 함께 배포 될 수 있습니다. 그렇지 않은 경우 www.openfabrics.org 에서 드라이버를 다운로드할 수 있습니다.  
+    Windows 용 InfiniBand 드라이버는 InfiniBand 공급 업체의 업계 컨소시엄의 OpenFabrics 동맹에 의해 개발 되었습니다.  올바른 드라이버가 InfiniBand 어댑터와 함께 배포 되었을 수 있습니다. 그렇지 않은 경우 www.openfabrics.org에서 드라이버를 다운로드할 수 있습니다.  
   
-4.  어댑터에서 각 포트에 대 한 IP 주소를 구성 합니다. SMP 시스템은이 목적을 위해 예약 된 주소 범위에서 고정 IP 주소를 사용 해야 합니다. 다음 매개 변수에 따라 첫 번째 포트를 구성 합니다.  
+4.  어댑터의 각 포트에 대 한 IP 주소를 구성 합니다. SMP 시스템은이 목적을 위해 예약 된 주소 범위에서 고정 IP 주소를 사용 해야 합니다. 다음 매개 변수에 따라 첫 번째 포트를 구성 합니다.  
   
-    -   IP 네트워크 주소: 172.16.132.x  
-  
-    -   IP 서브넷 마스크: 255.255.128.0  
-  
-    -   호스트 IP 범위: 1-254  
-  
-    두 개의 포트 InfiniBand 네트워크 어댑터에 대 한 다음 매개 변수에 따라 두 번째 포트를 구성 합니다.  
-  
-    -   IP 네트워크 주소: 172.16.132.x  
+    -   IP 네트워크 주소: 172.16.132  
   
     -   IP 서브넷 마스크: 255.255.128.0  
   
-    -   호스트 IP 범위: 1-254  
+    -   IP 호스트 범위: 1-254  
   
-5.  두 포트 어댑터를 사용할 경우 여러 외부 Windows 시스템 어플라이언스에 연결 된 각 시스템을 각 IP 서브넷 내의 다른 호스트 번호를 할당 합니다.  
+    두 개의 포트가 있는 InfiniBand 네트워크 어댑터의 경우 다음 매개 변수에 따라 두 번째 포트를 구성 합니다.  
+  
+    -   IP 네트워크 주소: 172.16.132  
+  
+    -   IP 서브넷 마스크: 255.255.128.0  
+  
+    -   IP 호스트 범위: 1-254  
+  
+5.  두 포트 어댑터를 사용 하거나 여러 외부 Windows 시스템이 어플라이언스에 연결 된 경우 각 IP 서브넷 내에서 각 시스템에 다른 호스트 번호를 할당 합니다.  
   
 <!-- MISSING LINKS 
 ## See Also  

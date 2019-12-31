@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System의 공통 부분식 설명 | Microsoft Docs
-description: 분석 플랫폼 시스템 CU7.3에 도입 된 표시 예제 쿼리 개선
+title: 공통 하위 식
+description: 분석 플랫폼 시스템 CU 7.3에 도입 된 예제 쿼리 개선 사항을 표시 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961311"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401330"
 ---
-# <a name="common-subexpression-elimination-explained"></a>공용 부분식 제거 설명
+# <a name="common-subexpression-elimination-explained"></a>Common 부분식 제거 설명
 
-AP CU7.3 SQL 쿼리 최적화 프로그램의 공용 부분식 제거를 사용 하 여 쿼리 성능을 향상 시킵니다. 향상 두 가지 방법으로 쿼리를 개선합니다. 첫 번째 이점은 식별 하 고 제거 하는 등 있다는 점입니다 식 SQL 컴파일 시간을 줄이는 데 도움이 됩니다. 두 번째 및 더 중요 한 장점은 쿼리가 더 빠르게 됩니다에 대 한 이러한 중복 하위 식에 대 한 데이터 이동 작업 실행 시간에 따라서 제거 됩니다.
+APS CU 7.3은 SQL 쿼리 최적화 프로그램에서 일반적인 하위 식 제거를 사용 하 여 쿼리 성능을 향상 시킵니다. 향상 된 기능은 두 가지 방법으로 쿼리를 향상 시킵니다. 첫 번째 혜택은 이러한 식을 확인 하 고 제거 하는 기능을 통해 SQL 컴파일 시간을 단축 하는 것입니다. 두 번째와 더 중요 한 혜택은 이러한 중복 부분식에 대 한 데이터 이동 작업은 제거 되므로 쿼리의 실행 시간이 더 빨라집니다.
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -54,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-TPC-DS 벤치 마크 도구에서 위의 쿼리를 살펴보십시오.  위의 쿼리에서 하위 동일 하지만 order by와 함수를 통해을 사용 하 여 절에 두 가지 방법으로 정렬 됩니다. CU7.3, 이전에이 하위 쿼리를 계산 하 고 오름차순 및 내림차순에 대 한 두 가지 데이터 이동 작업을 발생 한 번에 한 번 실행을 두 번 가져오기 됩니다. AP CU7.3를 설치한 후 데이터 이동을 줄이고 더 빠른 쿼리를 완료 합니다. 따라서 한 번 하위 파트를 평가 됩니다.
+TPC-DS 벤치 마크 도구에서 위의 쿼리를 참조 하세요.  위의 쿼리에서 하위 쿼리는 동일 하지만 rank () over 함수를 사용 하는 order by 절은 서로 다른 두 가지 방법으로 정렬 됩니다. CU 7.3 이전에는이 하위 쿼리를 평가 하 고 두 번 실행 합니다. 오름차순으로 한 번, 내림차순으로 한 번, 두 개의 데이터 이동 작업을 발생 시킵니다. APS CU 7.3을 설치한 후에는 하위 쿼리 부분이 한 번 평가 되어 데이터 이동이 줄어들고 쿼리가 더 빨리 완료 됩니다.
 
-도입 했습니다를 [기능 스위치가](appliance-feature-switch.md) 'OptimizeCommonSubExpressions' 하는 호출을 AP CU7.3로 업그레이드 한 후에 기능을 테스트 하면 합니다. 기능을 기본적으로 켜져 있지만 해제할 수 있습니다. 
+APS CU 7.3로 업그레이드 한 후에도 기능을 테스트 하는 데 사용할 수 있는 ' OptimizeCommonSubExpressions ' 라는 [기능 스위치](appliance-feature-switch.md) 를 도입 했습니다. 이 기능은 기본적으로 켜져 있지만 해제할 수 있습니다. 
 
 > [!NOTE] 
-> 기능 스위치 값 변경에는 서비스를 다시 시작을 해야합니다.
+> 기능 스위치 값을 변경 하려면 서비스를 다시 시작 해야 합니다.
 
-다음 표에서 테스트 환경에서 만들고 위에 언급 한 쿼리에 대해 explain 계획을 평가 하 여 샘플 쿼리를 시도할 수 있습니다. 
+테스트 환경에서 다음 테이블을 만들고 위의 설명 된 쿼리에 대 한 설명 계획을 평가 하 여 샘플 쿼리를 시도할 수 있습니다. 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -117,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-쿼리 작업 및 CU7.3 후 (또는 설정 기능 스위치를 사용 하 여) 17 총 수는 쿼리의 explain 계획 살펴보면, CU7.3 하기 전에 확인할 수 있습니다 (또는 기능 스위치가 해제 되었습니다 하는 경우) 하는 경우 동일한 쿼리 9 총 작업 수를 보여 줍니다. 데이터 이동 작업을 세기만 하는 경우 이전 계획이 새 계획의 두 이동 작업 및 네 개의 이동 작업에 표시 됩니다. 새로운 쿼리 최적화는 쿼리 런타임의 줄이기 새 계획을 사용 하 여 만든 임시 테이블을 다시 사용 하 여 두 데이터 이동 작업을 줄일 수 있었습니다. 
+쿼리의 설명 계획을 살펴보면 CU 7.3 이전에 (또는 기능 스위치가 해제 된 경우) 쿼리는 총 작업 수 17 개, CU 7.3 이후, 즉 기능 스위치가 설정 된 상태에서 동일한 쿼리는 총 9 개의 작업 수를 표시 합니다. 데이터 이동 작업을 계산 하는 경우에는 이전 계획에 두 개의 이동 작업과 두 개의 이동 작업이 새 계획에 포함 된 것을 알 수 있습니다. 새 쿼리 최적화 프로그램은 새 계획으로 이미 만든 임시 테이블을 다시 사용 하 여 두 데이터 이동 작업을 줄일 수 있으므로 쿼리 런타임이 줄어듭니다. 
 
 

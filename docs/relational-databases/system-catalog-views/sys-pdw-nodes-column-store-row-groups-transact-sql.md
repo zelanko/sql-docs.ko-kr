@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_column_store_row_groups (Transact-sql)
+ms.custom: seo-dt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,49 +12,49 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399871"
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  관리자가 시스템 관리 의사 결정을 확인 하는 데는 세그먼트 단위 기반의 방식으로 클러스터형된 columnstore 인덱스 정보를 제공 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. **sys.pdw_nodes_column_store_row_groups** (삭제 된 것으로 표시 된 포함) 물리적으로 저장 된 행의 총 수에 대 한 열이 있고 삭제 됨으로 표시 된 행의 수에 대 한 열입니다. 사용 하 여 **sys.pdw_nodes_column_store_row_groups** 행을 확인 하려면 그룹 삭제 된 행의 비율이 높아 및 다시 작성 해야 합니다.  
+  에서는 클러스터 된 columnstore 인덱스 정보를 사용 하 여 관리자가에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]시스템 관리를 결정 하도록 지원 합니다. **pdw_nodes_column_store_row_groups** 에는 실제로 저장 된 총 행 수 (삭제 된 것으로 표시 된 행 수 포함)와 삭제 된 것으로 표시 된 행 수에 대 한 열이 있습니다. **Pdw_nodes_column_store_row_groups** 를 사용 하 여 삭제 된 행의 비율이 높은 행 그룹을 확인 하 고 다시 작성 해야 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|기본 테이블의 ID입니다. 제어 노드에 논리 테이블의 object_id 하지 계산 노드에서 실제 테이블입니다. 예를 들어 object_id sys.tables의 object_id를 사용 하 여 일치 하지 않습니다.<br /><br /> Sys.tables를 사용 하 여 sys.pdw_index_mappings를 사용 합니다.|  
-|**index_id**|**int**|클러스터형된 columnstore 인덱스의 ID *object_id* 테이블입니다.|  
-|**partition_number**|**int**|행 그룹을 포함 하는 테이블 파티션의 ID입니다 *row_group_id*합니다. 사용할 수 있습니다 *partition_number* 이 DMV를 sys.partitions에 조인할 합니다.|  
+|**object_id**|**int**|기본 테이블의 ID입니다. 이는 계산 노드의 물리적 테이블 이며, 컨트롤 노드의 논리 테이블에 대 한 object_id이 아닙니다. 예를 들어 object_id은 sys. tables의 object_id와 일치 하지 않습니다.<br /><br /> Sys. tables에 조인 하려면 pdw_index_mappings를 사용 합니다.|  
+|**index_id**|**int**|*Object_id* 테이블에 대 한 클러스터형 columnstore 인덱스의 ID입니다.|  
+|**partition_number**|**int**|행 그룹 *row_group_id*를 보유 하는 테이블 파티션의 ID입니다. *Partition_number* 를 사용 하 여이 DMV를 sys 파티션에 조인할 수 있습니다.|  
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 이 번호는 파티션 내에서 고유합니다.|  
-|**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹에는 **열고** 상태입니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
-|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> 열림-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 닫힘-가득 차면 되었지만 아직 tuple mover 프로세스에 의해 압축 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹.|  
+|**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹은 **열림** 상태를 가집니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
+|**상태일**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar (60)**|행 그룹의 영구 상태 설명:<br /><br /> OPEN-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED-튜플 이동 프로세스가 아직 압축 하지 않은 채 채워져 있지만 아직 압축 하지 않은 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹입니다.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
-|**deleted_rows**|**bigint**|삭제 표시 된 행 그룹에 물리적으로 저장 하는 행 수입니다.<br /><br /> 항상 0을 델타 행 그룹입니다.|  
-|**size_in_bytes**|**int**|이 행 그룹의 모든 페이지를 바이트 단위로 결합 된 크기입니다. 이 크기는 메타 데이터 또는 공유 사전 제외를 저장 하는 데 필요한 크기로 포함 되지 않습니다.|  
-|**pdw_node_id**|**int**|고유 id를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|  
+|**deleted_rows**|**bigint**|삭제 되도록 표시 된 행 그룹에 물리적으로 저장 된 행의 수입니다.<br /><br /> 델타 행 그룹의 경우 항상 0입니다.|  
+|**size_in_bytes**|**int**|이 행 그룹에 있는 모든 페이지의 조합 된 크기 (바이트)입니다. 이 크기에는 메타 데이터 또는 공유 사전을 저장 하는 데 필요한 크기가 포함 되지 않습니다.|  
+|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 id입니다.|  
 |**distribution_id**|**int**|분포의 고유 id입니다.|
   
 ## <a name="remarks"></a>설명  
  클러스터형 또는 비클러스터형 columnstore 인덱스가 있는 각 테이블에 대해 columnstore 행 그룹당 한 행을 표시합니다.  
   
- 사용 하 여 **sys.pdw_nodes_column_store_row_groups** 행 그룹과 행 그룹의 크기에 포함 된 행 수를 결정 합니다.  
+ **Pdw_nodes_column_store_row_groups** 를 사용 하 여 행 그룹에 포함 되는 행 수와 행 그룹의 크기를 확인 합니다.  
   
- 행 그룹에서 삭제된 행 수가 총 행 수 대비 큰 비율로 증가하면 테이블의 효율성이 저하됩니다. columnstore 인덱스를 다시 작성하여 테이블 크기를 줄이면 테이블을 읽는 데 필요한 디스크 I/O가 줄어듭니다. Columnstore 인덱스 사용을 다시 작성 하는 **다시 작성** 옵션을 합니다 **ALTER INDEX** 문.  
+ 행 그룹에서 삭제된 행 수가 총 행 수 대비 큰 비율로 증가하면 테이블의 효율성이 저하됩니다. columnstore 인덱스를 다시 작성하여 테이블 크기를 줄이면 테이블을 읽는 데 필요한 디스크 I/O가 줄어듭니다. Columnstore 인덱스를 다시 작성 하려면 **ALTER index** 문의 **rebuild** 옵션을 사용 합니다.  
   
- 새 데이터를 먼저 삽입 하는 업데이트 가능한 columnstore를 **열려** rowstore 형식으로 이며 델타 테이블 이라고 되기도 하는 행 그룹입니다.  해당 상태가 변경 후 열린 행 그룹이 꽉 차면 **닫힘**합니다. 닫힌된 행 그룹이 tuple mover에 의해 columnstore 형식으로 압축 되 고 상태 변경 **압축**합니다.  Tuple mover는 정기적으로 켜지는 백그라운드 프로세스로, 닫힌 열 그룹 중 columnstore 행 그룹으로 압축할 수 있는 그룹이 있는지 확인합니다.  또한 Tuple mover는 모든 행이 삭제된 행 그룹에 대한 할당을 취소합니다. 할당 취소 된 행 그룹으로 표시 됩니다 **사용 중지**합니다. 튜플 이동 기를 즉시 실행 하려면 사용 합니다 **REORGANIZE** 옵션을는 **ALTER INDEX** 문.  
+ 업데이트 가능한 columnstore는 먼저 rowstore 형식으로 된 **OPEN** 행 그룹에 새 데이터를 삽입 하며,이를 델타 테이블이 라고도 합니다.  열린 행 그룹 가득 차면 상태가 **CLOSED**로 변경 됩니다. 폐쇄형 행 그룹은 튜플 이동 기에 의해 columnstore 형식으로 압축 되 고 상태는 **압축**됨으로 변경 됩니다.  Tuple mover는 정기적으로 켜지는 백그라운드 프로세스로, 닫힌 열 그룹 중 columnstore 행 그룹으로 압축할 수 있는 그룹이 있는지 확인합니다.  또한 Tuple mover는 모든 행이 삭제된 행 그룹에 대한 할당을 취소합니다. 할당 취소 된 행 그룹은 사용 **중지**됨으로 표시 됩니다. 튜플 이동 기를 즉시 실행 하려면 **ALTER INDEX** 문의 다시 **구성 옵션을 사용 합니다.**  
   
  다 채워진 columnstore 행 그룹은 압축되며, 새 행을 수락하지 않습니다. 압축된 그룹에서 행을 삭제하면 삭제된 것으로 표시되고 행 자체는 그대로 유지됩니다. 압축된 그룹을 업데이트할 때는 압축된 그룹의 삭제 또는 열린 그룹에 대한 삽입을 이용합니다.  
   
-## <a name="permissions"></a>사용 권한  
- **VIEW SERVER STATE** 권한이 필요합니다.  
+## <a name="permissions"></a>권한  
+ **VIEW SERVER STATE** 권한이 필요 합니다.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 조인 합니다 **sys.pdw_nodes_column_store_row_groups** 특정 테이블에 대 한 정보를 반환할 다른 시스템 테이블에는 테이블입니다. 계산된 `PercentFull` 열은 행 그룹의 효율성 예상치입니다. 단일 테이블 제거 하는 방법은 WHERE 절 앞에 주석 하이픈 찾아 테이블 이름을 제공 합니다.  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 다른 시스템 테이블에 **pdw_nodes_column_store_row_groups** 테이블을 조인 하 여 특정 테이블에 대 한 정보를 반환 합니다. 계산된 `PercentFull` 열은 행 그룹의 효율성 예상치입니다. 단일 테이블에 대 한 정보를 찾으려면 WHERE 절 앞에 주석 하이픈을 제거 하 고 테이블 이름을 제공 합니다.  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-다음 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 예에서는 클러스터형된 열 저장소도 Open, 닫힘 또는 압축 행 그룹에 얼마나 많은 행이 방법과 파티션당 행을 셉니다.  
+다음 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 예에서는 클러스터 된 열 저장소에 대 한 파티션당 행 수 뿐만 아니라 열려 있는 행, 닫힌 행 또는 압축 된 행 그룹의 행 수를 계산 합니다.  
 
 ```
 SELECT
@@ -104,10 +104,10 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [COLUMNSTORE 인덱스를 만들 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

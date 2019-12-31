@@ -1,6 +1,6 @@
 ---
-title: 폴링 빈도-Analytics Platform System 결정 | Microsoft Docs
-description: 이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.
+title: 폴링 주기 확인
+description: 이 문서에서는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도를 결정 하는 방법을 설명 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961077"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401211"
 ---
-# <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
-이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.  
+# <a name="determine-polling-frequency"></a>폴링 빈도 결정
+이 문서에서는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도를 결정 하는 방법을 설명 합니다.  
   
-## <a name="to-determine-the-polling-frequency"></a>폴링 빈도 확인 하려면  
-경고가 발생할 경우 PDW 사전 알림의 현재 지원 되지 않으므로, 모니터링 솔루션에 Dll 어플라이언스 폴링을 계속 해야 합니다.  내부적으로 PDW 다른 간격으로 구성 요소를 폴링합니다.  
+## <a name="to-determine-the-polling-frequency"></a>폴링 빈도를 확인 하려면  
+PDW는 경고 발생 시 현재 사전 알림을 지원 하지 않으므로 모니터링 솔루션은 어플라이언스 Dll을 지속적으로 폴링합니다.  내부적으로 PDW는 서로 다른 간격으로 구성 요소를 폴링합니다.  
   
 -   클러스터-60 초  
   
 -   하트 비트-60 초  
   
--   다른 모든 구성 요소-5 분  
+-   기타 모든 구성 요소-5 분  
   
 -   성능 카운터-3 초  
   
-또한 System Center에서 사용 되는 경고에 대 한 폴링 하려면 일반적인 간격이 **15 분 마다**합니다.  물론 자주 보내거나 가끔 쿼리할 수 있지만 6 시간 미만 마다 폴링 권장 되지 않습니다.  
+시스템 센터 에서도 사용 되는 경고를 폴링하는 일반적인 간격은 **15 분**입니다.  분명히 또는 덜 자주 쿼리를 할 수 있지만, 6 시간 이내에 폴링 하지 않는 것이 좋습니다.  
   
-더 자주 폴링은 사용할 수 있지만 너무 자주 폴링 복잡 하 게 합니다 [sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV 합니다.  너무 자주 폴링을 수행 하기가 더 어려운 쿼리 성능을 진단 하는 작업을 할 때 문제가 해당 보기에서 신속 하 게 롤업.  
+더 자주 폴링하는 것이 가능 하지만, 너무 자주 폴링은 [dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV를 복잡 하 게 만들 수 있습니다.  너무 자주 폴링하는 경우 사용자가 신속 하 게 뷰를 사용할 수 없을 때 쿼리 성능 문제를 진단 하기 어려울 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[어플라이언스 모니터링 &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   

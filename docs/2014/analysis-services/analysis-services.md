@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 06/07/2019
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025451"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683474"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "69025451"
 설명서는 버전으로 구분 됩니다. 현재 SQL Server 2014 Analysis Services 설명서입니다.
 
 - SQL Server 2012 및 이전 버전에 대 한 자세한 내용은 [이전 버전 SQL Server 설명서](https://docs.microsoft.com/previous-versions/sql/)를 참조 하세요.
-- SQL Server 2014에 대 한 자세한 내용은 [SQL Server 2014 온라인 설명서](../2014-toc/books-online-for-sql-server-2014.md) 를 참조 하십시오.
+- SQL Server 2014에 대 한 자세한 내용은 [SQL Server 2014 온라인 설명서](../2014-toc/index.yml) 를 참조 하십시오.
 - SQL Server 2016 이상에 대 한 자세한 내용은 [MICROSOFT SQL 설명서](https://docs.microsoft.com/sql/)를 참조 하세요.
 - Azure Analysis Services에 대 한 자세한 내용은 [Azure Analysis Services 설명서](https://docs.microsoft.com/azure/analysis-services/)를 참조 하세요.
 
@@ -61,22 +61,23 @@ ms.locfileid: "69025451"
  Analysis Services에 대한 기본 설명서는 작성할 프로젝트 유형에 해당하는 여러 섹션으로 구성되어 있습니다. 다음 링크를 선택하면 각 모드 또는 기능 영역에 대한 자세한 내용을 볼 수 있습니다.  
   
  **영역별 내용 찾아보기**  
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [테이블 형식 및 다차원 솔루션 &#40;비교&#41; SSAS](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [테이블 형식 및 다차원 솔루션을 비교 하](comparing-tabular-and-multidimensional-solutions-ssas.md) 는 ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") SSAS&#41;&#40;  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Analysis Services 인스턴스 관리](instances/analysis-services-instance-management.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [테이블 형식 &#40;모델링 SSAS&#41; 테이블 형식](tabular-models/tabular-models-ssas.md)  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [테이블 형식 모델링 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-models-ssas.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [다차원 모델링 &#40;SSAS&#41; ](multidimensional-models/multidimensional-models-ssas.md)  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [다차원 모델링 &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [데이터 마이닝 &#40;SSAS&#41; ](data-mining/data-mining-ssas.md)  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [데이터 마이닝 &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [SharePoint용 PowerPivot &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [&#40;SSAS&#41;SharePoint용 PowerPivot](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘")  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기능은 버전별로 다릅니다. 다차원 및 데이터 마이닝 모델은 스탠더드 버전에서 사용할 수 있지만 상위 버전에 비해 기능이 제한됩니다. 테이블 형식 모델 및 SharePoint용 PowerPivot은 프리미엄 기능으로 스탠더드 버전 라이선스에서 사용할 수 없습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
+>  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기능은 버전별로 다릅니다. 다차원 및 데이터 마이닝 모델은 스탠더드 버전에서 사용할 수 있지만 상위 버전에 비해 기능이 제한됩니다. 테이블 형식 모델 및 SharePoint용 PowerPivot은 프리미엄 기능으로 스탠더드 버전 라이선스에서 사용할 수 없습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services 자습서 &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 설치](../database-engine/install-windows/installation-for-sql-server.md)   
  [개발자 가이드 &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   

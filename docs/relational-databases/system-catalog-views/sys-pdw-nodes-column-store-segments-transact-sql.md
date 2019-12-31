@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_column_store_segments (Transact-sql)
+ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,43 +13,43 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822515"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401677"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact SQL)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Columnstore 인덱스의 각 열에 대해 행을 하나씩 포함합니다.
 
-| 열 이름                 | 데이터 형식  | Description                                                  |
+| 열 이름                 | 데이터 형식  | 설명                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.     |
 | **hobt_id**                 | **bigint** | 이 Columnstore 인덱스를 가진 테이블의 B-트리 인덱스(hobt) 또는 힙의 ID입니다. |
 | **column_id**               | **int**    | Columnstore 열의 ID입니다.                                |
-| **segment_id**              | **int**    | 열 세그먼트의 ID입니다. 이전 버전과 호환성을 위해 열 이름을 계속 해 서 행 그룹 ID입니다.이 경우에 segment_id 호출 < Hobt_id, partition_id, column_id >를 사용 하 여 세그먼트를 고유 하 게 식별할 수 있습니다 < segment_id >. |
-| **version**                 | **int**    | 열 세그먼트 형식의 버전입니다.                        |
-| **encoding_type**           | **int**    | 세그먼트에 사용 되는 인코딩 유형:<br /><br /> 1 = VALUE_BASED-문자열/이진이 아닌 없습니다 사전 (일부 내부 변형 4 유사)를 사용 하 여<br /><br /> 2 = VALUE_HASH_BASED-사전에 공통 값과 문자열/이진이 아닌 열<br /><br /> 3 = STRING_HASH_BASED-사전에 공통 값과 문자열/이진 열<br /><br /> 4 = STORE_BY_VALUE_BASED-문자열/이진이 아닌 없습니다 사전 사용 하 여<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-없습니다 사전 사용 하 여 문자열 이진 파일<br /><br /> 모든 인코딩을 비트 압축 및 실행 길이 인코딩 가능 하면 활용 합니다. |
+| **segment_id**              | **int**    | 열 세그먼트의 ID입니다. 이전 버전과의 호환성을 위해 행 그룹 ID 인 경우에도 열 이름은 segment_id 계속 호출 됩니다. <hobt_id, partition_id, column_id> <segment_id>를 사용 하 여 세그먼트를 고유 하 게 식별할 수 있습니다. |
+| **버전**                 | **int**    | 열 세그먼트 형식의 버전입니다.                        |
+| **encoding_type**           | **int**    | 해당 세그먼트에 사용 되는 인코딩 유형입니다.<br /><br /> 1 = VALUE_BASED-사전 없이 문자열이 아닌/이진 (일부 내부 변형이 있는 4와 유사)<br /><br /> 2 = VALUE_HASH_BASED-사전에 공통 값이 있는 문자열이 아닌/이진 열<br /><br /> 3 = STRING_HASH_BASED-사전에 공통 값이 있는 문자열/이진 열<br /><br /> 4 = STORE_BY_VALUE_BASED-사전이 없는 문자열/이진<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-사전 없는 문자열/이진<br /><br /> 모든 인코딩은 가능 하면 비트 압축 및 실행 길이 인코딩을 활용 합니다. |
 | **row_count**               | **int**    | 행 그룹의 행 수입니다.                             |
 | **has_nulls**               | **int**    | 열 세그먼트에 Null 값이 있으면 1입니다.                     |
-| **base_id**                 | **bigint** | 인코딩 유형 1을 사용 하는 경우 ID를 기본 값입니다.  인코딩 유형 1은 사용 되지 base_id가 1로 설정 됩니다. |
-| **magnitude**               | **float**  | 인코딩 유형 1을 사용 하는 경우 크기입니다.  인코딩 유형 1은 사용 되지 경우 크기는 1로 설정 됩니다. |
-| **primary__dictionary_id**  | **int**    | 기본 사전의 ID입니다. 현재 세그먼트 (즉, rowgroup)에서이 열에 대 한 로컬 사전에 0이 아닌 값을 가리킵니다. -1 값이이 세그먼트에 대 한 사전이 없습니다 로컬 인지를 나타냅니다. |
-| **secondary_dictionary_id** | **int**    | 보조 사전의 ID입니다. 현재 세그먼트 (즉, rowgroup)에서이 열에 대 한 로컬 사전에 0이 아닌 값을 가리킵니다. -1 값이이 세그먼트에 대 한 사전이 없습니다 로컬 인지를 나타냅니다. |
+| **base_id**                 | **bigint** | 인코딩 유형 1을 사용 하는 경우 기준 값 ID입니다.  인코딩 유형 1을 사용 하지 않는 경우 base_id 1로 설정 됩니다. |
+| **magnitude**               | **float**  | 인코딩 유형 1을 사용 하는 경우 크기입니다.  인코딩 유형 1을 사용 하지 않는 경우 크기는 1로 설정 됩니다. |
+| **primary__dictionary_id**  | **int**    | 기본 사전의 ID입니다. 0이 아닌 값은 현재 세그먼트 (즉, 행 그룹)의이 열에 대 한 로컬 사전을 가리킵니다. 값-1은이 세그먼트에 대 한 로컬 사전이 없음을 나타냅니다. |
+| **secondary_dictionary_id** | **int**    | 보조 사전의 ID입니다. 0이 아닌 값은 현재 세그먼트 (즉, 행 그룹)의이 열에 대 한 로컬 사전을 가리킵니다. 값-1은이 세그먼트에 대 한 로컬 사전이 없음을 나타냅니다. |
 | **min_data_id**             | **bigint** | 열 세그먼트의 최소 데이터 ID입니다.                       |
 | **max_data_id**             | **bigint** | 열 세그먼트의 최대 데이터 ID입니다.                       |
 | **null_value**              | **bigint** | Null을 나타내는 데 사용되는 값입니다.                               |
 | **on_disk_size**            | **bigint** | 세그먼트의 크기(바이트)입니다.                                    |
-| **pdw_node_id**             | **int**    | 고유 식별자를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드. |
+| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다. |
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Sys.pdw_nodes_column_store_segments 논리 테이블당 columnstore 세그먼트의 수를 확인 하려면 다른 시스템 테이블을 조인 합니다.
+다른 시스템 테이블과 pdw_nodes_column_store_segments를 조인 하 여 논리적 테이블당 columnstore 세그먼트 수를 확인 합니다.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -80,13 +80,13 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
-**VIEW SERVER STATE** 권한이 필요합니다.
+**VIEW SERVER STATE** 권한이 필요 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
