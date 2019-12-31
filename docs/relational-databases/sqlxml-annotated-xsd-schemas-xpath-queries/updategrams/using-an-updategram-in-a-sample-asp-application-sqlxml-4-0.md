@@ -1,6 +1,5 @@
 ---
-title: Updategram을 사용 하 여 예제 ASP 응용 프로그램 (SQLXML 4.0) | Microsoft 문서
-ms.custom: ''
+title: 샘플 ASP 응용 프로그램에서 Updategram 사용 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246089"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 애플리케이션에서 Updategram 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68046542"
   
  그런 다음 사용자가 연락처 정보를 업데이트할 수 있습니다. 그러나 ContactID가 기본 키이므로 연락처 ID는 업데이트할 수 없습니다. 사용자가 정보를 제출하면 Updategram이 실행되고 모든 폼 매개 변수가 Updategram에 전달됩니다.  
   
- 다음은 첫 번째 템플릿(GetContact.xml)입니다. 이 서식 파일의 가상 이름과 사용 하 여 연결 된 디렉터리에 저장 **템플릿** 형식입니다.  
+ 다음은 첫 번째 템플릿(GetContact.xml)입니다. **템플릿** 형식의 가상 이름과 연결 된 디렉터리에이 템플릿을 저장 합니다.  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +50,7 @@ ms.locfileid: "68046542"
 </root>  
 ```  
   
- 다음은 두 번째 템플릿(UpdateContact.xml)입니다. 이 서식 파일의 가상 이름과 사용 하 여 연결 된 디렉터리에 저장 **템플릿** 형식입니다.  
+ 다음은 두 번째 템플릿(UpdateContact.xml)입니다. **템플릿** 형식의 가상 이름과 연결 된 디렉터리에이 템플릿을 저장 합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -160,7 +160,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [Updategram 보안 고려 사항은 SQLXML 4.0&#41;&#40;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

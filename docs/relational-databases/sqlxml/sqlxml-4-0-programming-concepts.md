@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 프로그래밍 개념 | Microsoft Docs
+title: SQLXML 4.0 프로그래밍 개념
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,22 +14,23 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c7616b36b99041a323d6e758c6ee654dfc6163f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135384"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242620"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
   
  이 섹션에서는 SQLXML 4.0에 대한 정보를 제공합니다.  
   
- [SQLXML이 SQL Server에 설치되지 않음](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [SQLXML이 SQL Server에 설치 되어 있지 않습니다.](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  이 항목에서는 SQLXML 4.0을 설치하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 SP1의 새로운 기능](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
@@ -53,10 +54,10 @@ ms.locfileid: "68135384"
  [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  XPath 언어의 하위 집합을 사용하여 주석이 추가된 XSD 스키마로 만든 XML 뷰를 쿼리하는 방법에 대해 설명하고 예를 제공합니다.  
   
- [SQLXML 4.0에서 updategram을 사용하여 데이터 수정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Updategrams을 사용 하 여 SQLXML 4.0에서 데이터 수정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  주석이 추가된 XSD(또는 XDR) 스키마가 제공하는 XML 뷰에서 작업하여 데이터베이스의 데이터를 수정하는 Updategram에 대한 정보를 제공합니다.  
   
- [XML 데이터 대량 로드 수행 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;XML 데이터 대량 로드를 수행 하는 중](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  SQLXML 4.0에서 XML을 대량 로드하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 데이터 액세스 구성 요소](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -65,7 +66,7 @@ ms.locfileid: "68135384"
  [SQLXML 4.0 .NET Framework 지원](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  .NET Framework에 대한 SQLXML 4.0 지원을 설명합니다.  
   
- [템플릿, XSL 및 스키마 캐싱 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;템플릿, XSL 및 스키마 캐싱&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  성능 향상을 위해 SQLXML에서 제공되는 캐싱 기능에 대해 설명합니다.  
   
  [SQLXML 4.0 보안 고려 사항](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -74,7 +75,7 @@ ms.locfileid: "68135384"
  [SQLXML 4.0에 대한 지침 및 제한 사항](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  SQLXML 4.0에서 작업할 때 주의할 문제를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [XML 데이터 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

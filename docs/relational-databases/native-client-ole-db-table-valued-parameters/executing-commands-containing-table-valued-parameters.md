@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수가 포함된 명령 실행 | Microsoft Docs
+title: 테이블 반환 매개 변수를 사용 하는 명령
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99b36c3213a2fae81eec80bf7efbf09f3aac6c6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: a41e0e4993bc9a742f4b116ec2434fd3d8c09b76
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788760"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242747"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>테이블 반환 매개 변수가 포함된 명령 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,8 @@ ms.locfileid: "73788760"
 ## <a name="table-valued-parameter-specification"></a>테이블 반환 매개 변수 사양  
  소비자는 테이블 반환 매개 변수의 유형을 지정할 수 있습니다. 이 정보에는 테이블 반환 매개 변수 유형 이름이 포함됩니다. 연결의 현재 기본 스키마에 테이블 반환 매개 변수의 사용자 정의 테이블 형식이 없는 경우에는 스키마 이름도 포함됩니다. 서버에서 지원하는 경우 소비자는 열의 순서와 같은 선택적인 메타데이터 정보를 지정할 수 있으며 특정 열의 모든 행이 기본값을 가지도록 지정할 수 있습니다.  
   
- 소비자는 테이블 반환 매개 변수를 지정 하기 위해 ISSCommandWithParameter:: SetParameterInfo를 호출 하 고 필요에 따라 ISSCommandWithParameters:: SetParameterProperties를 호출 합니다. 테이블 반환 매개 변수에서 DBPARAMBINDINFO 구조의 *pwszDataSourceType* 필드는 DBTYPE_TABLE 값을 갖습니다. *ulParamSize* 필드는 길이를 알 수 없음을 나타내기 위해 ~0으로 설정됩니다. 스키마 이름, 유형 이름, 열 순서 및 기본 열과 같은 테이블 반환 매개 변수의 특정 속성은 ISSCommandWithParameters:: SetParameterProperties를 통해 설정할 수 있습니다.  
+ 소비자는 테이블 반환 매개 변수를 지정 하기 위해 ISSCommandWithParameter:: SetParameterInfo를 호출 하 고 필요에 따라 ISSCommandWithParameters:: SetParameterProperties를 호출 합니다. 테이블 반환 매개 변수에서 DBPARAMBINDINFO 구조의 *pwszDataSourceType* 필드는 DBTYPE_TABLE 값을 갖습니다. 
+  *ulParamSize* 필드는 길이를 알 수 없음을 나타내기 위해 ~0으로 설정됩니다. 스키마 이름, 유형 이름, 열 순서 및 기본 열과 같은 테이블 반환 매개 변수의 특정 속성은 ISSCommandWithParameters:: SetParameterProperties를 통해 설정할 수 있습니다.  
   
 ## <a name="table-valued-parameter-binding"></a>테이블 반환 매개 변수 바인딩  
  테이블 반환 매개 변수는 모든 행 집합 개체가 될 수 있습니다. 공급자는 실행 중에 서버로 테이블 반환 매개 변수를 보내는 동안 이 개체를 읽어 들입니다.  
@@ -50,7 +51,7 @@ ms.locfileid: "73788760"
 -   SSPROP_PARAM_TABLE_DEFAULT를 함께 설정하지 않으면 DBPROP_COL_AUTOINCREMENT 또는 SSPROP_COL_COMPUTED가 포함된 열의 데이터가 서버로 전송됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수 OLE DB &#40;&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수를 사용 하 여 OLE DB &#40;&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

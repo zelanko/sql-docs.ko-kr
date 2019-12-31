@@ -1,5 +1,5 @@
 ---
-title: sys. dm _db_l (Azure SQL Database) | Microsoft Docs
+title: dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/21/2019
 ms.service: sql-database
@@ -19,23 +19,24 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471080"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245959"
 ---
-# <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
+# <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에서 활동이 없더라도 15초 간격으로 한 행이 있습니다. 기록 데이터는 한 시간 동안 유지됩니다.  
   
-|열|데이터 형식|Description|  
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에 작업이 없는 경우에도 한 행은 15초 간격으로 존재합니다. 기록 데이터는 약 1 시간 동안 유지 관리 됩니다.  
+  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
-|end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
-|avg_cpu_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 컴퓨팅된 평균 컴퓨팅 활용률입니다.|  
-|avg_data_io_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 데이터 i/o 사용률입니다.|  
+|end_time|**날짜**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
+|avg_cpu_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
+|avg_data_io_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 데이터 i/o 사용률입니다. Hyperscale 데이터베이스의 경우 [리소스 사용률 통계의 데이터 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)를 참조 하세요.|  
 |avg_log_write_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 트랜잭션 로그 쓰기 (MBps)입니다.|  
 |avg_memory_usage_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 여기에는 메모리 내 OLTP 개체의 버퍼 풀 페이지 및 저장소에 사용 되는 메모리가 포함 됩니다.|  
 |xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
@@ -52,15 +53,15 @@ ms.locfileid: "68471080"
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 계층 및 [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)항목을 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
- 반환 되는 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 됩니다 **.**
+## <a name="remarks"></a>설명  
+ Dm_db_resource_stats에서 반환 된 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 됩니다 **.**
  
  데이터베이스가 지난 60분 안에 다른 서버로 장애 조치된 경우 이 뷰는 해당 장애 조치 이후 주 데이터베이스였던 시간에 대해서만 데이터를 반환합니다.  
   
- 이 데이터를 세부적으로 보려면 **master** 데이터베이스에서 **resource_stats** 카탈로그 뷰를 사용 합니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)를 참조 하세요.  
+ 보존 기간이 긴이 데이터에 대 한 보다 세분화 된 보기를 위해 **master** 데이터베이스에서 **resource_stats** 카탈로그 뷰를 사용 합니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)를 참조 하세요.  
   
  데이터베이스가 탄력적 풀의 구성원이 면 백분율 값으로 표시 되는 리소스 통계가 탄력적 풀 구성에 설정 된 데이터베이스에 대 한 최대 한도의 백분율로 표시 됩니다.  
   
@@ -100,9 +101,9 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [서비스 계층 기능 및 한도](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

@@ -2,7 +2,7 @@
 title: 데이터베이스 실험 도우미 개요
 description: 데이터베이스 실험 도우미 개요
 ms.custom: seo-lt-2019
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,26 +10,26 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247119"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
 
-DEA (데이터베이스 실험 도우미)는 SQL Server 업그레이드를 위한 실험 솔루션입니다. DEA는 특정 작업에 대 한 대상 버전의 SQL Server을 평가 하는 데 도움이 됩니다. 이전 SQL Server 버전 (2005부터)에서 최신 버전의 SQL Server로 업그레이드 하는 고객은 도구가 제공 하는 분석 메트릭을 사용할 수 있습니다.
+DEA (데이터베이스 실험 도우미)는 SQL Server 업그레이드를 위한 실험 솔루션입니다. DEA는 특정 작업에 대 한 대상 버전의 SQL Server을 평가 하는 데 도움이 됩니다. 이전 버전의 SQL Server (2005부터)에서 최신 버전의 SQL Server로 업그레이드 하는 고객은 도구에서 제공 하는 분석 메트릭을 사용할 수 있습니다.
 
 DEA 분석 메트릭은 다음과 같습니다.
 
-- 호환성 오류가 있는 쿼리
+- 호환성 오류가 발생 한 쿼리입니다.
 - 저하 된 쿼리 및 쿼리 계획
-- 기타 워크 로드 비교 데이터
+- 다른 워크 로드 비교 데이터입니다.
 
-비교 데이터는 더 높은 신뢰도와 성공적인 업그레이드 환경을 유발할 수 있습니다.
+비교 데이터는 더 높은 신뢰도를 초래 하 고 성공적인 업그레이드 환경을 보장 하는 데 도움이 될 수 있습니다.
 
 ## <a name="get-dea"></a>DEA 가져오기
 
@@ -46,12 +46,12 @@ DEA를 설치 하려면 최신 버전의 도구를 [다운로드](https://www.mi
 DEA를 실행 하기 위한 몇 가지 필수 구성 요소는 다음과 같습니다.
 
 - 최소 하드웨어 요구 사항: 3.5 GB의 RAM이 있는 단일 코어 컴퓨터입니다.
-- 이상적인 하드웨어 요구 사항: 8 코어 CPU (3.5 GB 이상의 RAM 이상). 코어 수가 8 개를 초과 하는 프로세서는 DEA 런타임을 향상 시 키 지 않습니다.
+- 이상적인 하드웨어 요구 사항: 8 코어 CPU (3.5 GB 이상의 RAM 이상). 코어 수가 8 개를 초과 하는 프로세서는 DEA 실행 시간을 향상 시 키 지 않습니다.
 - A, B 및 보고서 분석 데이터베이스를 저장 하려면 성능 추적 크기의 추가 33%가 필요 합니다.
 
 ## <a name="configure-dea"></a>DEA 구성
 
-필수 구성 요소 환경 아키텍처에서는 *Distributed Replay 컨트롤러와 동일한 컴퓨터에*DEA를 설치 하는 것이 좋습니다. 이 방법을 통해 시스템 간 호출을 방지 하 고 구성을 간소화 합니다.
+필수 구성 요소 환경 아키텍처에서는 *Distributed Replay 컨트롤러와 동일한 컴퓨터에*DEA를 설치 하는 것이 좋습니다. 이 방법은 컴퓨터 간 호출을 방지 하 고 구성을 간소화 합니다.
 
 ### <a name="required-configuration-for-workload-comparison-using-dea"></a>DEA를 사용 하 여 작업 비교에 필요한 구성
 
@@ -59,34 +59,38 @@ DEA는 Windows 인증을 사용 하 여 데이터베이스 서버에 연결 합�
 
 **캡처 구성 요구 사항**
 
-추적을 캡처하려면 다음이 필요 합니다.
+추적을 캡처하려면 DEA를 실행 하는 사용자가 필요 합니다.
 
-- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 원본 데이터베이스 서버에 연결할 수 있습니다.
-- DEA를 실행 하는 사용자에 게 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
-- 원본 데이터베이스 서버를 실행 하는 서비스 계정에는 추적 폴더 경로에 대 한 쓰기 권한이 있습니다.
+- Windows 인증을 사용 하 여 원본 데이터베이스 서버에 연결할 수 있습니다.
+- 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
 
-자세한 내용은 [추적 캡처에 대 한 질문과 대답](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture) 을 참조 하세요.
+또한 원본 데이터베이스 서버를 실행 하는 서비스 계정에는 추적 폴더 경로에 대 한 쓰기 권한이 있어야 합니다.
+
+자세한 내용은 [추적 캡처에 대 한 질문과 대답](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)을 참조 하세요.
 
 **재생 구성 요구 사항**
 
-추적을 재생 하려면 다음이 필요 합니다.
+추적을 재생 하려면 DEA를 실행 하는 사용자가 필요 합니다.
 
-- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
-- DEA를 실행 하는 사용자에 게 대상 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+- Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
+- 대상 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+
+또한 추적을 재생 하려면 다음이 필요 합니다.
+
 - 대상 데이터베이스 서버를 실행 하는 서비스 계정에는 추적 폴더 경로에 대 한 쓰기 권한이 있습니다.
 - Distributed Replay 클라이언트를 실행 하는 서비스 계정은 Windows 인증을 사용 하 여 대상 데이터베이스 서버에 연결할 수 있습니다.
 - Distributed Replay 컨트롤러에서 들어오는 요청에 대해 TCP 포트가 열립니다. DEA는 COM 인터페이스를 사용 하 여 Distributed Replay 컨트롤러와 통신 합니다.
 
-자세한 내용은 [추적 재생에 대 한 질문과 대답](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay) 을 참조 하세요.
+자세한 내용은 [추적 재생에 대 한 질문과 대답](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)을 참조 하세요.
 
 **분석 구성 요구 사항**
 
-분석을 수행 하려면 다음이 필요 합니다.
+분석을 수행 하려면 DEA를 실행 하는 사용자가 필요 합니다.
 
-- DEA를 실행 하는 사용자는 Windows 인증을 사용 하 여 분석 데이터베이스 서버에 연결할 수 있습니다.
-- DEA를 실행 하는 사용자에 게 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
+- Windows 인증을 사용 하 여 분석 데이터베이스 서버에 연결할 수 있습니다.
+- 원본 데이터베이스 서버에 대 한 sysadmin 권한이 있습니다.
 
-자세한 내용은 [분석 보고서에 대 한 질문과 대답](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports) 을 참조 하세요.
+자세한 내용은 [분석 보고서에 대 한 질문과 대답](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)을 참조 하세요.
 
 ## <a name="set-up-telemetry"></a>원격 분석 설정
 
@@ -111,4 +115,4 @@ DEA은 [Microsoft 개인 정보 취급 방침](https://aka.ms/dea-privacy)의 �
 
 ## <a name="see-also"></a>참고 항목
 
-두 환경에서 작업을 비교 하는 데 관련 된 프로세스를 설명 하는 [작업 비교 프로세스 개요](database-experimentation-assistant-get-started.md)입니다.
+- 두 환경에서 작업을 비교 하는 것과 관련 된 프로세스를 설명 하는 [작업 비교 프로세스에 대 한 개요](database-experimentation-assistant-get-started.md)문서입니다.

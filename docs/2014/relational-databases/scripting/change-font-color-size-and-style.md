@@ -1,6 +1,6 @@
 ---
-title: 글꼴 색상, 크기 및 스타일 변경 | Microsoft 문서
-ms.custom: ''
+title: 글꼴 색상, 크기 및 스타일 변경
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,21 +17,24 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064178"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244994"
 ---
 # <a name="change-font-color-size-and-style"></a>글꼴 색상, 크기 및 스타일 변경
   편집기뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다른 위치에서 텍스트가 표시되는 방법을 사용자 지정할 수 있습니다.  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>편집기에서 글꼴 색, 크기 및 스타일을 변경하려면  
   
-1.  **도구** 메뉴에서 **옵션** 을 클릭합니다. **환경**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
+1.  
+  **도구** 메뉴에서 **옵션** 을 클릭합니다. 
+  **환경**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
   
-2.  **설정 표시** 목록에서 **텍스트 편집기**를 선택합니다.  
+2.  
+  **설정 표시** 목록에서 **텍스트 편집기**를 선택합니다.  
   
 3.  글꼴, 크기, 표시 항목, 전경색 및 배경색을 변경합니다.  
   
@@ -42,8 +45,8 @@ ms.locfileid: "66064178"
   
  텍스트 색과 글꼴 유형에 대한 설정은 주석, 문자열 등의 모든 텍스트 요소 유형 전체에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [코드 및 결과 인쇄](print-code-and-results.md)   
- [쿼리 편집기에서 코드 색상 지정](color-coding-in-query-editors.md)  
+ [쿼리 편집기의 색 구분](color-coding-in-query-editors.md)  
   
   

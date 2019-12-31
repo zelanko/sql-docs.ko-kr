@@ -1,6 +1,5 @@
 ---
-title: 데이터 형식과 XML 대량 로드 동작 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: 데이터 형식 및 XML 대량 로드 동작 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,32 +13,33 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 820d2b083544542d1c1414f978105fe992b0ce36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915155"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246728"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>데이터 형식과 XML 대량 로드 동작(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  매핑 스키마에 지정 된 데이터 형식 (XSD 또는 XDR 형식 및 **sql: datatype**) 일반적으로 무시 되며 다음과 같은 경우를 제외 하 고:  
+  매핑 스키마 (XSD 또는 XDR 형식 및 **sql: datatype**)에 지정 된 데이터 형식은 일반적으로 다음과 같은 경우를 제외 하 고 무시 됩니다.  
   
  XSD  
   
--   형식이 **날짜/시간** 또는 **시간**를 지정 해야 합니다 **sql: datatype** XML 대량 로드 Microsoft로데이터를보내기전에데이터변환을수행하기때문에[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   형식이 **dateTime** 또는 **TIME**인 경우 XML 대량 로드에서 데이터를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보내기 전에 데이터 변환을 수행 하기 때문에 **sql: datatype** 을 지정 해야 합니다.  
   
--   열으로 대량 로드 하는 경우 **uniqueidentifier** 입력 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XSD 값이 중괄호 ({및}) 수를 포함 하는 GUID를 지정 해야 합니다 **sql: datatype = "uniqueidentifier"** 를 열에 값을 삽입 하기 전에 중괄호를 제거 합니다. 하는 경우 **sql: datatype** 지정 하지 않으면 값이 괄호와 함께 전송 되 고 삽입이 실패 합니다.  
+-   에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **uniqueidentifier** 형식의 열로 대량 로드 하 고 XSD 값이 중괄호 ({및})를 포함 하는 GUID 인 경우 열에 값을 삽입 하기 전에 중괄호를 제거 하려면 **sql: datatype = "uniqueidentifier"** 를 지정 해야 합니다. **Sql: datatype** 을 지정 하지 않으면 값이 중괄호와 함께 전송 되 고 삽입이 실패 합니다.  
   
- 에 대 한 자세한 내용은 **sql: datatype**를 참조 하십시오 [데이터 형식 강제 변환 및 sql: datatype 주석 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ **Sql: datatype**에 대 한 자세한 내용은 [데이터 형식 강제 변환 및 Sql: DATATYPE 주석 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)을 참조 하세요.  
   
  XDR  
   
--   경우는 **dt: type** 됩니다 **datetime**, **시간**, **dateTime.tz**, 또는 **time.tz**를 둘 다 지정 해야 합니다 합니다 **dt: type** 하 고 **sql: datatype** XML 대량 로드 데이터를 보내기 전에 데이터 변환을 수행 하기 때문에 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+-   **Dt: type** 이 **datetime**, **time**, **DateTime.tz**또는 **time.tz**인 경우 XML 대량 로드는 데이터를로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]보내기 전에 데이터 변환을 수행 하기 때문에 **dt: type** 및 **sql: datatype** 데이터 형식을 모두 지정 해야 합니다.  
   
--   XML 데이터 형식의 경우 **uuid**하십시오 **sql: datatype** 지정 해야 합니다. **dt: type = "uuid"** 데이터가 문자열 데이터 경우가 아니면 필요 이기도 합니다. 지정 하지 않는 경우 **dt:uuid**, 중괄호를 사용 하 여 문자열을 허용 (및 필요한 경우 제거) XML 대량 로드 합니다.  
+-   XML 데이터가 **uuid**형식인 경우 **sql: datatype** 을 지정 해야 합니다. **dt: type = "uuid"** 는 데이터가 문자열 데이터가 아닌 경우에도 필요 합니다. **Dt: uuid**를 지정 하지 않으면 XML 대량 로드는 중괄호를 사용 하 여 문자열을 수락 하 고 필요한 경우 제거 합니다.  
   
--   XML 데이터가 **bin.base64** 또는 **bin.hex**를 사용 하 여 XML 데이터 형식을 지정 해야 **dt: type**합니다. 그러면 XML 대량 로드에서는 데이터의 16진수 표현으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 데이터를 로드합니다.  
+-   XML 데이터가 **bin. base64** 또는 **bin. hex**인 경우 **dt: TYPE**을 사용 하 여 xml 데이터 형식을 지정 해야 합니다. 그러면 XML 대량 로드에서는 데이터의 16진수 표현으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 데이터를 로드합니다.  
   
   

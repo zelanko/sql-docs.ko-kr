@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL 코드 조각 완성 | Microsoft 문서
-ms.custom: ''
+title: Transact-SQL 코드 조각 완성
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,18 +14,21 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103b8c23dba7119dde28a8d6e87b963400eaf0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98c72aad94c34f40538670a7a7c8df945a9c4970
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090592"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244934"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL 코드 조각 완성
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 스크립트에 삽입한 후 코드 조각의 내용을 편집하여 완전한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 만들 수 있습니다.  
   
 ## <a name="completing-snippets"></a>코드 조각 완성  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 스크립트에 추가하면 삽입된 코드 조각 문에서 하나 이상의 대체 지점이 강조 표시됩니다. 마우스 포인터를 대체 지점에 놓으면 사용자가 지정할 수 있는 구문 요소에 대한 설명이 포함된 도구 설명이 나타납니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 원본 파일을 닫기 전까지는 코드 조각을 주변 스크립트와는 별개로 인식합니다. 대체 지점은 원본 파일을 닫을 때까지 활성 상태로 유지됩니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 스크립트에 추가하면 삽입된 코드 조각 문에서 하나 이상의 대체 지점이 강조 표시됩니다. 마우스 포인터를 대체 지점에 놓으면 사용자가 지정할 수 있는 구문 요소에 대한 설명이 포함된 도구 설명이 나타납니다. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 원본 파일을 닫기 전까지는 코드 조각을 주변 스크립트와는 별개로 인식합니다. 대체 지점은 원본 파일을 닫을 때까지 활성 상태로 유지됩니다.  
   
  코드 조각을 통해 삽입된 템플릿 코드에 다른 구문 요소를 추가할 수도 있습니다. 예를 들어 Create Table 코드 조각 템플릿은 두 개의 열 정의를 생성합니다. 열이 둘 이상인 테이블을 만들려면 여기에 다른 열 정의를 추가해야 합니다.  
   
@@ -37,8 +40,8 @@ ms.locfileid: "66090592"
   
 3.  목록에서 항목을 선택하거나 원하는 대체 텍스트를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Transact-SQL 코드 조각 삽입](insert-transact-sql-snippets.md)   
- [코드 감싸기 Transact-SQL 조각 삽입](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql 코드 조각 삽입](insert-transact-sql-snippets.md)   
+ [코드 감싸기 Transact-sql 코드 조각 삽입](insert-surround-with-transact-sql-snippets.md)  
   
   

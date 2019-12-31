@@ -1,6 +1,6 @@
 ---
-title: 코드 개요 | Microsoft 문서
-ms.custom: ''
+title: 코드 개요
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,14 +13,15 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090625"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244967"
 ---
 # <a name="code-outlining"></a>코드 개요
+  
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 쿼리를 편집할 때 개요 기능을 사용하여 코드를 필요에 따라 숨길 수 있습니다. 이 기능을 사용하면 특히 큰 쿼리 파일에서 작업 중인 코드를 쉽게 볼 수 있습니다.  
   
 ## <a name="outlining-overview"></a>개요 기능 개요  
@@ -32,11 +33,13 @@ ms.locfileid: "66090625"
  MDX 및 DMX 코드 편집기는 여러 줄로 된 각 문에 대한 개요 영역을 만듭니다. 이것이 이러한 편집기에서 지원하는 유일한 개요 수준입니다.  
   
 ### <a name="analysis-services-xmla-query-editor-regions"></a>Analysis Services XMLA 쿼리 편집기 영역  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 쿼리 편집기는 여러 줄로 된 각 XML 특성에 대한 개요 영역을 생성합니다. 중첩 태그에 대한 개요 영역은 중첩됩니다. 예를 들어 XMLA 편집기는 다음 문서에 대해 3개의 개요 영역을 만듭니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 쿼리 편집기는 여러 줄로 된 각 XML 특성에 대한 개요 영역을 생성합니다. 중첩 태그에 대한 개요 영역은 중첩됩니다. 예를 들어 XMLA 편집기는 다음 문서에 대해 3개의 개요 영역을 만듭니다.  
   
  ![개요를 보여 주는 XML 코드](../../database-engine/media/editoutlinexmlfull.gif "개요를 보여 주는 XML 코드")  
   
- \<InnerTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 InnerTag만 축소됩니다.  
+ 
+  \<InnerTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 InnerTag만 축소됩니다.  
   
  ![내부 노드가 숨겨진 XML 코드](../../database-engine/media/editoutlinexmlinnercol.gif "내부 노드가 숨겨진 XML 코드")  
   
@@ -44,16 +47,19 @@ ms.locfileid: "66090625"
   
  ![숨겨진 코드를 보여 주는 도구 설명을 포함하는 XML 코드](../../database-engine/media/editoutlinexmlmouse.gif "숨겨진 코드를 보여 주는 도구 설명을 포함하는 XML 코드")  
   
- \<MiddleTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 MiddleTag 및 InnerTag가 모두 축소됩니다.  
+ 
+  \<MiddleTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 MiddleTag 및 InnerTag가 모두 축소됩니다.  
   
  ![내부 및 가운데 태그가 숨겨진 XML 코드](../../database-engine/media/editoutlinexmlmiddlecol.gif "내부 및 가운데 태그가 숨겨진 XML 코드")  
   
- \<OuterTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 3개의 줄이 모두 축소됩니다.  
+ 
+  \<OuterTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 3개의 줄이 모두 축소됩니다.  
   
  ![숨겨진 3개의 태그를 모두 보여 주는 XML 코드](../../database-engine/media/editoutlinexmloutercol.gif "숨겨진 3개의 태그를 모두 보여 주는 XML 코드")  
   
 ### <a name="database-engine-query-editor-regions"></a>데이터베이스 엔진 쿼리 편집기 영역  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 쿼리 편집기는 다음 계층의 각 요소에 대한 개요 영역을 생성합니다.  
+ 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 쿼리 편집기는 다음 계층의 각 요소에 대한 개요 영역을 생성합니다.  
   
 1.  일괄 처리. 첫 번째 일괄 처리는 파일의 시작 부분과 첫 번째 GO 명령 사이에 있는 코드입니다. GO 명령이 없는 경우에는 파일의 시작 부분과 파일의 끝 부분 사이에 있는 코드입니다. 첫 번째 GO 다음에는 각 GO 명령과 다음 GO 명령 또는 파일의 끝 부분 사이에 하나의 일괄 처리가 있습니다.  
   
@@ -81,6 +87,8 @@ END;
 GO  
 ```  
   
- `SELECT *` 줄의 빼기 기호를 클릭하여 해당 `SELECT` 문만 축소할 수 있습니다. 전체 `BEGIN - END` 블록을 축소하려면 `BEGIN` 줄의 빼기 기호를 클릭합니다. 전체 일괄 처리를 `GO` 명령으로 축소하려면 `CREATE PROCEDURE` 줄의 빼기 기호를 클릭합니다. `SELECT GETDATE()` 또는 `SELECT @@VERSION` 줄은 한 줄로 된 문이고 개요 영역이 없기 때문에 개별적으로 축소할 수 없습니다.  
+ 
+  `SELECT *` 줄의 빼기 기호를 클릭하여 해당 `SELECT` 문만 축소할 수 있습니다. 전체 `BEGIN - END` 블록을 축소하려면 `BEGIN` 줄의 빼기 기호를 클릭합니다. 전체 일괄 처리를 `GO` 명령으로 축소하려면 `CREATE PROCEDURE` 줄의 빼기 기호를 클릭합니다. 
+  `SELECT GETDATE()` 또는 `SELECT @@VERSION` 줄은 한 줄로 된 문이고 개요 영역이 없기 때문에 개별적으로 축소할 수 없습니다.  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'sql: 매핑됨 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'sql: 매핑됨 (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907134"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246783"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 대량 로드는 XSD 스키마의 **sql: mapped** 주석을 예상 대로 처리 합니다. 즉, 매핑 스키마가 모든 요소나 특성에 대해 **sql: mapped = "false"** 를 지정 하는 경우 xml 대량 로드는 연결 된 데이터를 해당 열.  
+  XML 대량 로드는 XSD 스키마의 **sql: 매핑** 주석을 예상 대로 처리 합니다. 즉, 매핑 스키마가 모든 요소나 특성에 대해 **sql: mapped = "false"** 를 지정 하는 경우 xml 대량 로드는 관련 데이터를 해당 열에 저장 하지 않습니다.  
   
  XML 대량 로드는 매핑되지 않은 요소 및 특성 (스키마에 설명 되어 있지 않거나 **sql: mapped = "false"** 로 XSD 스키마에 주석이 추가 되어 있기 때문)을 무시 합니다. 이러한 열이 **sql: 오버플로-필드**를 사용 하 여 지정 된 경우 매핑되지 않은 모든 데이터는 오버플로 열로 이동 합니다.  
   

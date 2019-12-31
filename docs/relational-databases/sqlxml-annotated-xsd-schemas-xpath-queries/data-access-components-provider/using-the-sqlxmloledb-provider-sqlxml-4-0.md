@@ -1,6 +1,5 @@
 ---
-title: SQLXMLOLEDB 공급자 사용 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: SQLXMLOLEDB 공급자 사용 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bc5e79f52f3aabbe157065db86e8d0968537ef7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a2a24cd7ced3430f3ba59da6489e557f32bf7c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909362"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246635"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,25 +42,25 @@ ms.locfileid: "72909362"
      자세한 내용은 [SQLXML 4.0 프로그래밍 개념](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) 및 [SQL Server Native Client 설치](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SQL 쿼리 &#40;실행 SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB 공급자&#41;&#40;SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
  ClientSideXML 및 xml 루트 속성을 사용 하 여 SQL 쿼리를 실행 하는 방법을 보여 줍니다.  
   
- [SQLXMLOLEDB Provider를 포함 하는 &#40;SQL 쿼리를 포함 하는 템플릿 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB Provider &#40;SQL 쿼리를 포함 하는 템플릿 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  ClientSideXML 속성을 사용 하는 방법을 보여 줍니다.  
   
- [SQLXMLOLEDB Provider에서 &#40;XPath 쿼리 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB 공급자를 &#40;XPath 쿼리 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
  ClientSideXML, 기본 경로 및 매핑 스키마 속성을 사용 하는 방법을 보여 줍니다.  
   
- [네임 스페이스 &#40;SQLXMLOLEDB 공급자를 사용 하 여 XPath 쿼리 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB 공급자를 사용 하 &#40;네임 스페이스가 있는 XPath 쿼리 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  네임스페이스로 한정된 스키마에 대해 쿼리하는 방법을 설명합니다.  
   
- [SQLXMLOLEDB Provider XPath 쿼리 &#40;를 포함 하는 템플릿 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB Provider &#40;XPath 쿼리를 포함 하는 템플릿 실행&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
  ClientSideXML, 기본 경로 및 매핑 스키마 속성을 사용 하 여 SQL 쿼리를 사용 하 여 템플릿을 실행 하는 방법을 보여 줍니다.  
   
- [XSL 변환 &#40;SQLXMLOLEDB 공급자 적용&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB 공급자&#41;&#40;XSL 변환 적용](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Xml 및 xsl 속성을 사용 하 여 XSL 변환을 적용 하는 방법을 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client의 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
   
   

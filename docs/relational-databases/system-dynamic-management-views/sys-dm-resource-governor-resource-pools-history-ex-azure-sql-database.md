@@ -1,5 +1,5 @@
 ---
-title: _resource_governor_resource_pools_history_ex (Transact-sql) | Microsoft Docs
+title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873923"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247305"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -36,10 +36,10 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
-|**name**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
-|**snapshot_time**|Datetime2|리소스 풀 통계 스냅숏의 날짜/시간|
+|**이름의**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
+|**snapshot_time**|datetime2|리소스 풀 통계 스냅숏의 날짜/시간|
 |**duration_ms**|int|현재 스냅숏과 이전 스냅숏 간의 지속 시간|
-|**statistics_start_time**|Datetime2|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다.|
+|**statistics_start_time**|datetime2|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다.|
 |**active_session_count**|int|현재 스냅숏의 총 활성 세션|
 |**active_worker_count**|int|현재 스냅숏의 총 작업자|
 |**delta_cpu_usage_ms**|int|마지막 스냅숏 이후 CPU 사용량 (밀리초)입니다. Null을 허용하지 않습니다.|
@@ -84,22 +84,22 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**max_vcores**|decimal (5, 2)|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 허용되는 최대 평균 CPU 대역폭에 대한 현재 구성입니다.  VCores 단위|
 |**cap_vcores**|decimal (5, 2)|리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡입니다.  VCores의 단위|
 |**instance_cpu_count**|int|인스턴스에 대해 구성 된 CPU 수|
-|**instance_cpu_percent|decimal (5, 2)|인스턴스에 대해 구성 된 CPU 백분율|
+|**instance_cpu_percent**|decimal (5, 2)|인스턴스에 대해 구성 된 CPU 백분율|
 |**instance_vcores**|decimal (5, 2)|인스턴스에 대해 구성 된 vCores 수|
 |**delta_log_bytes_used**|decimal (5, 2)|마지막 스냅숏 이후 풀 수준에서 총 로그 생성 (바이트)|
 |**avg_login_rate_percent**|decimal (5, 2)|로그인 제한과 비교한 마지막 스냅숏 이후의 로그인 수|
 |**delta_vcores_used**|decimal (5, 2)|마지막 스냅숏 이후 vCores 수의 계산 사용률입니다.|
-|**cap_vcores_used_percent**|decimal (5, 2)|풀 한도의 백분율로 나타낸 평균 계산 사용률입니다.|
+|**cap_vcores_used_percent**|decimal (5, 2)|풀 한도의 백분율로 평균 컴퓨팅 사용률.|
 |**instance_vcores_used_percent**|decimal (5, 2)|SQL 인스턴스 제한의 백분율로 나타낸 평균 계산 사용률입니다.|
-|**avg_data_io_percent**|decimal (5, 2)|풀의 한도를 기준으로 하는 평균 i/o 사용률 (백분율)입니다.|
-|**avg_log_write_percent**|decimal (5, 2)|풀 한도의 백분율로 나타낸 평균 쓰기 리소스 사용률입니다.|
-|**avg_storage_percent**|decimal (5, 2)|풀 저장소 한도의 백분율로 나타낸 평균 저장소 사용률입니다.|
-|**avg_allocated_storage_percent**|decimal (5, 2)|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다. 탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다. 자세한 내용은 다음을 참조 하세요. SQL DB의 파일 공간 관리|
-|**max_worker_percent**|decimal (5, 2)|풀의 한도를 기준으로 하는 최대 동시 작업자 (요청)의 백분율입니다.|
-|**max_session_percent**|decimal (5, 2)|풀의 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.|
+|**avg_data_io_percent**|decimal (5, 2)|풀 한도에 따른 백분율로 평균 I/O 사용률|
+|**avg_log_write_percent**|decimal (5, 2)|풀 한도의 백분율로 평균 쓰기 리소스 사용률|
+|**avg_storage_percent**|decimal (5, 2)|풀의 스토리지 한도의 백분율로 평균 스토리지 사용률|
+|**avg_allocated_storage_percent**|decimal (5, 2)|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다. 탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다. 자세한 내용은 SQL DB의 파일 공간 관리를 참조 하세요.|
+|**max_worker_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 작업자(요청)|
+|**max_session_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 세션|
 |||
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 이 보기에는 VIEW SERVER STATE 권한이 필요 합니다.
 
@@ -132,7 +132,7 @@ select snapshot_time, name, cap_vcores_used_percent,
     from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 - [변환 로그 율 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [탄력적 풀 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

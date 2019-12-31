@@ -1,6 +1,6 @@
 ---
-title: 등록 된 서버 또는 등록 된 서버 그룹 (SQL Server Management Studio)를 이동 합니다. | Microsoft Docs
-ms.custom: ''
+title: 등록 된 서버 또는 그룹 이동
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298048"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241328"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>등록된 서버 및 등록된 서버 그룹 이동(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  
@@ -32,10 +32,11 @@ ms.locfileid: "63298048"
   
 1.  등록된 서버에서 서버나 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **이동**을 클릭합니다.  
   
-2.  **서버 등록 이동** 대화 상자에서 서버 그룹 목록을 확장하고 서버나 서버 그룹을 표시할 노드를 클릭한 다음 **확인**을 클릭합니다.  
+2.  
+  **서버 등록 이동** 대화 상자에서 서버 그룹 목록을 확장하고 서버나 서버 그룹을 표시할 노드를 클릭한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 등록](register-servers.md)   
- [서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
+ [SQL Server Management Studio&#41;&#40;서버 그룹 만들기 또는 편집](create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   

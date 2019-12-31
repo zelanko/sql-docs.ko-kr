@@ -1,5 +1,5 @@
 ---
-title: 실행 시 데이터를 사용 하 여 테이블 반환 매개 변수로 데이터 전송 (ODBC) | Microsoft Docs
+title: 테이블 반환 매개 변수, 실행 시 데이터 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775908"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246368"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이는 [모든 메모리 내](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저와 유사 하지만 테이블 반환 매개 변수에 대해 실행 시 데이터를 사용 합니다.  
   
- 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC &#40;&#41;테이블 반환 매개 변수 사용](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)을 참조 하세요.  
+ 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;테이블 반환 매개 변수 사용 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)을 참조 하세요.  
   
  이 예에서 SQLExecute 또는 SQLExecDirect를 호출 하면 드라이버는 SQL_NEED_DATA을 반환 합니다. 그러면 응용 프로그램은 드라이버가 SQL_NEED_DATA 이외의 값을 반환할 때까지 SQLParamData를 반복 해 서 호출 합니다. 드라이버는 매개 변수에서 데이터를 요청 하 고 있음을 응용 프로그램에 알리기 위해 *Parametervalueptr* 을 반환 합니다. 응용 프로그램은 SQLPutData를 호출 하 여 다음에 Sqlputdata를 호출 하기 전에 매개 변수 데이터를 제공 합니다. 테이블 반환 매개 변수의 경우 SQLPutData에 대 한 호출은 드라이버에 대해 준비 된 행 수를 나타냅니다 (이 예에서는 항상 1). 테이블 값의 모든 행이 드라이버에 전달 된 경우 SQLPutData를 호출 하 여 0 개 행을 사용할 수 있음을 표시 합니다.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "73775908"
   
  테이블 값에 대해 SQLPutData가 호출 되 면 사용 가능한 행 수 (이 예에서는 항상 1)에 대해 *Dataptr* 이 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 테이블 값의 모든 행이 전달 되 면 SQLPutData가 *Dataptr* 값 0으로 호출 됩니다.  
   
-## <a name="prerequisite"></a>필수 구성 요소  
+## <a name="prerequisite"></a>필수 요소  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  SQL 매개 변수의 변수를 선언합니다. 이 예에서 테이블 반환 매개 변수의 버퍼는 배열이 아니어도 됩니다. 한 번에 하나씩 행이 전달됩니다.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  매개 변수를 바인딩합니다. *Columnsize* 는 1 이며, 한 번에 하나의 행만 전달 됨을 의미 합니다.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  테이블 반환 매개 변수에 대한 열을 바인딩합니다.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  매개 변수를 초기화합니다. 이 예에서는 테이블 반환 매개 변수의 크기를 행 수가 아니라 SQL_DATA_AT_EXEC로 설정합니다.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  프로시저를 호출합니다. 테이블 반환 매개 변수는 실행 시 데이터 매개 변수 이므로 SQLExecDirect는 SQL_NEED_DATA을 반환 합니다.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  실행 시 데이터 매개 변수 데이터를 제공합니다. SQLParamData가 테이블 반환 매개 변수에 대 한 *Parametervalueptr* 을 반환 하는 경우 응용 프로그램은 테이블 값의 다음 행에 대 한 열을 준비 해야 합니다. 그런 다음 응용 프로그램은 *Dataptr* 이 사용 가능한 행 수 (이 예에서는 1)로 설정 된 SQLPutData를 호출 하 고 *StrLen_or_IndPtr* 를 0으로 설정 합니다.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  이 예제에서는 기본 데이터베이스를 사용합니다. 이 예제를 실행하기 전에 사용할 데이터베이스에서 다음 명령을 실행합니다.  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -216,7 +216,7 @@ go
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  이 예제에서는 기본 데이터베이스를 사용합니다. 이 예제를 실행하기 전에 사용할 데이터베이스에서 다음 명령을 실행합니다.  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -404,7 +404,7 @@ go
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -580,7 +580,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ODBC 테이블 반환 매개 변수 프로그래밍 예제](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'sql: relationship 및 키 순서 지정 규칙 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'sql: relationship 및 키 순서 지정 규칙 (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,19 +13,20 @@ helpviewer_keywords:
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb8807e5a5fe63ee18e6932d6e102175e3d6cc63
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908735"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246767"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>주석 해석 - sql:relationship 및 키 순서 지정 규칙
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 대량 로드는 해당 노드의 범위가 시작될 때 레코드를 생성하고 해당 노드의 범위가 끝날 때 이러한 노드를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내기 때문에 레코드의 데이터는 노드 범위 내에 있어야 합니다.  
   
- 다음 XSD 스키마를 고려해 보십시오 .이 스키마는 **\<고객 >** 와 **\<주문 >** 요소 (한 명의 고객이 여러 주문을 저장할 수 있음) 간의 일 대 다 관계를 **\<sql: relationship을 사용 하 여 지정할 수 있습니다 >** 요소:  
+ ** \<Customer>** 와 ** \<Order>** 요소 간의 일 대 다 관계 (한 명의 고객이 많은 주문을 저장할 수 있음)가 ** \<sql: relationship>** 요소를 사용 하 여 지정 된 다음 XSD 스키마를 고려해 보십시오.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +60,7 @@ ms.locfileid: "72908735"
 </xsd:schema>  
 ```  
   
- **\<customer >** 요소 노드가 범위에 들어가면 XML 대량 로드에서 고객 레코드를 생성 합니다. 이 레코드는 XML 대량 로드가 **\</고객 >** 를 읽을 때까지 유지 됩니다. XML 대량 로드는 **\<Order >** 요소 노드를 처리할 때 **\<sql: relationship >** 를 사용 하 여 **\<Customer >** 부모 요소에서 CustOrder 테이블의 CustomerID 외래 키 열 값을 가져옵니다. **\<Order >** 요소가 **CustomerID** 특성을 지정 하지 않기 때문입니다. 즉, **\<Customer >** 요소를 정의 하는 경우 **\<sql: relationship >** 를 지정 하기 전에 스키마에 **CustomerID** 특성을 지정 해야 합니다. 그렇지 않고 **\<Order >** 요소가 범위에 들어가면 Xml 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 하 고 Xml 대량 로드가 **\</order >** 끝 태그에 도달 하면 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]으로 보냅니다. CustomerID 외래 키 열 값입니다.  
+ Customer>요소 노드가 범위에 들어가면 XML 대량 로드에서 고객 레코드를 생성 합니다. ** \<** 이 레코드는 XML 대량 로드 reads ** \</Customer>** 때까지 유지 됩니다. **Order>\<** 요소가 **customerid** 특성을 지정 하지 않기 때문에 XML 대량 로드는 **order>요소 노드를 처리할 때 sql: relationship>를 사용 하 여 Customer>부모 요소에서 CustOrder 테이블의 CustomerID 외래 키 열 값을 \<** 가져옵니다. ** \<** ** \<** 즉, ** \<Customer>** 요소를 정의 하는 경우 ** \<sql: relationship>** 를 지정 하기 전에 스키마에 **CustomerID** 특성을 지정 해야 합니다. 그렇지 않으면 ** \<Order>** 요소가 scope로 전환 될 때 xml 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 하 고 xml 대량 로드가 ** \</order>** 끝 태그에 도달 하면 CustomerID 외래 키 열 값 없이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 레코드를 보냅니다.  
   
  이 예에서 제공하는 스키마를 SampleSchema.xml로 저장합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "72908735"
     set objBL=Nothing  
     ```  
   
-     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. **\<CustomerID >** 자식 요소가 **\<Order >** 자식 요소 앞에 나타나도록 xml 샘플 데이터를 수정 하는 경우 예상 결과를 얻을 수 있습니다. xml 대량 로드는 지정 된 외래 키 값을 열에 삽입 합니다.  
+     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. CustomerID>자식 요소가 ** \<Order>** 자식 요소 앞에 나타나도록 xml 샘플 데이터를 수정 하는 경우 예상 결과를 얻을 수 있습니다. xml 대량 로드는 지정 된 외래 키 값을 열에 삽입 합니다. ** \<**  
   
  다음은 동등한 XDR 스키마입니다.  
   

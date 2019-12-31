@@ -1,6 +1,5 @@
 ---
-title: 서식 파일을 캐싱을 (SQLXML 4.0) | Microsoft 문서
-ms.custom: ''
+title: 템플릿 캐싱 (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd36af88aa2cb01c0c2bce05c7c023122eea87cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac28f41ca90b686dd469640abaaabe6855b07766
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093264"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246663"
 ---
 # <a name="template-caching-sqlxml-40"></a>템플릿 캐싱(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,17 +35,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 템플릿 크기는 사용 가능한 메모리와 사용 중인 템플릿 개수에 따라 설정해야 합니다. 기본값인 **TemplateCacheSize** 크기는 31. 템플릿 액세스 속도가 느리다고 생각되면 캐시 크기를 늘리고, 메모리가 부족하면 캐시 크기를 줄일 수 있습니다.  
+ 템플릿 크기는 사용 가능한 메모리와 사용 중인 템플릿 개수에 따라 설정해야 합니다. **Templatecachesize** 크기의 기본값은 31입니다. 템플릿 액세스 속도가 느리다고 생각되면 캐시 크기를 늘리고, 메모리가 부족하면 캐시 크기를 줄일 수 있습니다.  
   
- 성능 향상을 위해 좋습니다 설정 하는 **TemplateCacheSize** 보다 일반적으로 사용 되는 템플릿의 수입니다. 경우 **TemlateCacheSize** 작은 서식 있는 수보다 템플릿 증가의 수로 성능이 저하 됩니다. **TemplateCacheSize** 최대 128로 설정할 수 있습니다.  
+ 성능을 향상 시키려면 일반적으로 사용 하는 템플릿 수보다 많은 **Templatecachesize** 를 설정 하는 것이 좋습니다. **TemlateCacheSize** 가 템플릿 수보다 적으면 템플릿 수가 증가 하면 성능이 저하 됩니다. **Templatecachesize** 를 최대 128로 설정할 수 있습니다.  
   
  캐시된 템플릿이 사용될 때마다 템플릿을 새로 고쳐야 하는지 확인하기 위해 템플릿 파일의 수정 시간이 검사됩니다. 왜냐하면 캐시 복사본보다 디스크 복사본이 최신이기 때문입니다.  
   
 > [!NOTE]  
 >  템플릿 매개 변수와 명령 속성은 캐시되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [스키마 캐시 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
- [XSL 캐시 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [스키마 캐싱은 SQLXML 4.0 &#40;&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;XSL 캐싱](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

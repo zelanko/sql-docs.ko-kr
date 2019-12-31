@@ -1,6 +1,6 @@
 ---
-title: 공간 데이터 결과 창 | Microsoft 문서
-ms.custom: ''
+title: 공간 데이터 결과 창
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,20 +10,21 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063795"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243248"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
-  **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
+  **공간 데이터 결과** 창에서는 공간 데이터를 보기 위한 시각적 매핑 도구를 제공 합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
   
 > [!NOTE]  
->  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
+>  
+  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **공간 열 선택**  
  쿼리 결과의 공간 열 중에서 보려는 공간 열을 지정합니다. 열은 한 번에 하나씩만 선택할 수 있습니다.  
   
@@ -33,11 +34,11 @@ ms.locfileid: "66063795"
  쿼리로 점만 반환된 경우 이 옵션을 사용할 수 없습니다.  
   
  **투영 선택**  
- Equirectangular, Mercator, Robinson 또는 Bonne 투영 모드 중 하나로 지리 데이터를 표시합니다.  
+ 등장방형(Equirectangular), 메르카토르(Mercator), 로빈슨(Robinson) 또는 본느(Bonne) 투영 모드 중 하나로 지리 데이터를 표시합니다.  
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   
- **확대/축소**  
+ **맞게**  
  맵 표시를 지수 배율로 조정합니다.  
   
  **눈금선 표시**  
@@ -48,10 +49,10 @@ ms.locfileid: "66063795"
 > [!NOTE]  
 >  점에는 레이블을 지정할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [개체 탐색기에서 공간 데이터 보기](view-spatial-data-in-object-explorer.md)   
- [공간 데이터&#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [공간 데이터 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
+ [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [쿼리 및 텍스트 편집기 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

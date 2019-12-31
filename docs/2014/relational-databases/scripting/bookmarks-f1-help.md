@@ -1,6 +1,6 @@
 ---
-title: 책갈피 F1 도움말 | Microsoft 문서
-ms.custom: ''
+title: 책갈피 F1 도움말
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,16 +14,15 @@ ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9221781d921e1eae72c87bb5c1d211394fcd61c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090655"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244792"
 ---
 # <a name="bookmarks-f1-help"></a>책갈피 F1 도움말
-  이 섹션에서는 **의** 책갈피 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]페이지에 대한 F1 도움말을 제공합니다.  
+
+ 이 섹션에서는의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **책갈피** 페이지에 대 한 F1 도움말을 포함 합니다.  
   
- [책갈피 관리](manage-bookmarks.md)  
-  
-  
+ [책갈피 관리](manage-bookmarks.md)

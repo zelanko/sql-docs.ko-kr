@@ -1,6 +1,6 @@
 ---
-title: IntelliSense 문제 해결(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 문제 해결 IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063255"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242977"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio) 문제 해결
   다음과 같은 몇몇 경우에서는 IntelliSense 옵션이 제대로 작동하지 않을 수 있습니다.  
@@ -49,24 +49,30 @@ ms.locfileid: "66063255"
      자동 문 완성이 해제된 경우에도 IntelliSense 기능을 사용할 수 있습니다. 자세한 내용은 [IntelliSense 구성&#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md)을 참조하세요.  
   
 ## <a name="database-engine-query-intellisense"></a>데이터베이스 엔진 쿼리 IntelliSense  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기에는 다음과 같은 문제가 적용됩니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기에는 다음과 같은 문제가 적용됩니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 기능이 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 요소를 지원하지 않습니다. 매개 변수 도움말은 일부 개체에서 확장 저장 프로시저와 같은 매개 변수를 지원하지 않습니다. 자세한 내용은 [IntelliSense에서 지원되는 Transact-SQL 구문](transact-sql-syntax-supported-by-intellisense.md)을 참조하세요.  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 기능이 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 요소를 지원하지 않습니다. 매개 변수 도움말은 일부 개체에서 확장 저장 프로시저와 같은 매개 변수를 지원하지 않습니다. 자세한 내용은 [IntelliSense에서 지원되는 Transact-SQL 구문](transact-sql-syntax-supported-by-intellisense.md)을 참조하세요.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스에 연결되는 경우에만 IntelliSense를 사용할 수 있습니다. 쿼리 편집기가 이전 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결되는 경우에는 IntelliSense를 사용할 수 없습니다.  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스에 연결되는 경우에만 IntelliSense를 사용할 수 있습니다. 쿼리 편집기가 이전 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결되는 경우에는 IntelliSense를 사용할 수 없습니다.  
   
 -   SQLCMD 모드를 설정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 IntelliSense가 해제됩니다.  
   
 -   IntelliSense 기능은 편집기 창이 데이터베이스에 연결된 후 다른 연결에서 만든 데이터베이스 개체를 처리하지 않습니다. 개체가 완성 목록과 같은 IntelliSense 기능에서 누락되어 있는 경우 다음 세 가지 메커니즘 중 하나를 선택하여 편집기 창의 개체 캐시를 새로 고칠 수 있습니다.  
   
-    -   **편집** 메뉴를 선택하고 **IntelliSense**를 선택한 다음 **로컬 캐시 새로 고침**을 선택합니다.  
+    -   
+  **편집** 메뉴를 선택하고 **IntelliSense**를 선택한 다음 **로컬 캐시 새로 고침**을 선택합니다.  
   
     -   바로 가기 키 Ctrl+Shift+R을 사용합니다.  
   
-    -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 편집기 창의 연결을 끊은 후 다시 연결합니다.  
+    -   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 편집기 창의 연결을 끊은 후 다시 연결합니다.  
   
 -   사용자가 권한을 가지고 있지 않은 데이터베이스 개체는 완성 목록에 포함되지 않습니다. IntelliSense 플래그는 사용자가 권한을 가지고 있는 개체를 참조합니다. 예를 들어 다른 사용자가 작성한 스크립트를 열면 스크립트 작성한 사용자만 권한을 가지고 있고 사용자 자신은 권한을 가지고 있지 않은 개체에 대한 모든 참조는 올바르지 않은 것으로 플래그가 지정됩니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와의 연결이 끊어지면 완성 목록이 작동하지 않을 수 있습니다. 인스턴스에 다시 연결하십시오.  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와의 연결이 끊어지면 완성 목록이 작동하지 않을 수 있습니다. 인스턴스에 다시 연결하십시오.  
   
   

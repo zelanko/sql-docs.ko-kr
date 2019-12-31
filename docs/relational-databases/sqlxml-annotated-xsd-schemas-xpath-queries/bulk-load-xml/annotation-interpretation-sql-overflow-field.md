@@ -1,6 +1,5 @@
 ---
-title: sql:overflow-필드 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: 'sql: 오버플로 필드 (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902229"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246808"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>주석 해석 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 사용 하 여 스키마에 지정 된 **sql:overflow-필드** 주석. 오버플로 열을 여러 개 지정할 수도 있습니다.  
+  스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 **sql: 오버플로 필드** 주석을 사용 하 여 스키마에 지정 됩니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
   
- 때마다이 있는 XML 노드 (요소 또는 특성)를 **sql:overflow-필드** 범위로 정의 주석을 입력, 오버플로 열에 활성화 되 고 사용 되지 않은 데이터를 수신 합니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
+ **Sql: 오버플로 필드가** 정의 된 XML 노드 (요소 또는 특성)가 범위에 들어올 때마다 오버플로 열이 활성화 되 고 소비 되지 않은 데이터를 수신 합니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
   
- 오버플로 열에 데이터를 저장할 때 XML 대량 로드에도 저장와 부모 요소의 닫는 태그는 **sql:overflow-필드** 정의 됩니다.  
+ 오버플로 열에 데이터를 저장 하는 경우 XML 대량 로드는 **sql: 오버플로 필드가** 정의 된 부모 요소의 여는 태그와 닫는 태그를 저장 합니다.  
   
- 예를 들어 다음 스키마에 설명 합니다  **\<고객 >** 하 고  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마는 ** \<고객>** 및 ** \<CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +75,9 @@ ms.locfileid: "67902229"
 </xsd:schema>  
 ```  
   
- 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑합니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에서 ** \<Customer>** 요소는 Cust 테이블에 매핑되고 ** \<Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- 모두를  **\<고객 >** 하 고  **\<순서 >** 오버플로 열을 식별 하는 요소입니다. 요소 및 특성의 XML 대량 로드에서 사용 되지 않은 모든 자식을 저장 하는 따라서 합니다  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 사용 되지 않은 자식 요소 및 특성을  **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
+ ** \<Customer>** 와 ** \<Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \<Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

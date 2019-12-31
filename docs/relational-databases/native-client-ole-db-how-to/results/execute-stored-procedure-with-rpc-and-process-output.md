@@ -1,5 +1,5 @@
 ---
-title: RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행 | Microsoft Docs
+title: 저장 프로시저, RPC, 출력
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,34 +14,38 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c720e67b9f320fc7981fbf717e2496d863f57f6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 9148f3aca9a5ea66407a2b471516cc4eade16f39
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73767707"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244466"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
 1.  RPC 이스케이프 시퀀스를 사용하는 SQL 문을 생성합니다.  
   
-2.  **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. PARAMBINDINFO 구조의 배열에 매개 변수 정보를 채웁니다.  
+2.  
+  **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. PARAMBINDINFO 구조의 배열에 매개 변수 정보를 채웁니다.  
   
 3.  DBBINDING 구조의 배열을 사용하여 각 매개 변수 작성자에 대해 하나씩, 바인딩 집합을 만듭니다.  
   
-4.  **IAccessor::CreateAccessor** 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. **CreateAccessor** 는 바인딩 집합에서 접근자를 만듭니다.  
+4.  
+  **IAccessor::CreateAccessor** 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. **Createaccessor** 는 바인딩 집합에서 접근자를 만듭니다.  
   
 5.  DBPARAMS 구조를 채웁니다.  
   
-6.  **Execute** 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
+6.  
+  **Execute** 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
   
 7.  행 집합을 처리하고 **IRowset::Release** 메서드를 사용하여 해제합니다.  
   
@@ -58,7 +62,7 @@ ms.locfileid: "73767707"
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 애플리케이션에서 사용하는 저장 프로시저를 삭제합니다.  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -80,7 +84,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -390,13 +394,13 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

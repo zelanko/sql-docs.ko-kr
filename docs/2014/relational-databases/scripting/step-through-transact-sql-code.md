@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL 코드 단계별 실행| Microsoft 문서
-ms.custom: ''
+title: Transact-SQL 코드 단계별 실행
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,21 +15,23 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090005"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243163"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
   
 ## <a name="breakpoints"></a>중단점  
  중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 Transact-SQL 중단점 사용을 참조하십시오.  
   
 ## <a name="controlling-statement-execution"></a>문 실행 제어  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 현재 문에서 실행하기 위해 다음 옵션을 지정할 수 있습니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 현재 문에서 실행하기 위해 다음 옵션을 지정할 수 있습니다.  
   
 -   다음 중단점까지 실행합니다.  
   
@@ -51,13 +53,13 @@ ms.locfileid: "66090005"
   
 |작업|절차|  
 |------------|---------------|  
-|현재 문부터 다음 중단점까지 모든 문을 실행합니다.|에 **디버그** 메뉴에서 클릭 **계속**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **계속** 단추입니다.|  
-|다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|에 **디버그** 메뉴에서 클릭 **단계씩**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **한 단계씩 코드 실행** 단추입니다.<br /><br /> F11 키를 누릅니다.|  
-|다음 문 또는 모듈을 프로시저 단위로 실행합니다.|에 **디버그** 메뉴에서 클릭 **단계씩**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **프로시저 단위 실행** 단추입니다.<br /><br /> F10 키를 누릅니다.|  
-|모듈 프로시저를 나갑니다.|에 **디버그** 메뉴에서 클릭 **나가기**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **프로시저 나가기** 단추입니다.<br /><br /> Shift+F11을 누릅니다.|  
+|현재 문부터 다음 중단점까지 모든 문을 실행합니다.|**디버그** 메뉴에서 **계속**을 클릭 합니다.<br /><br /> **디버그** 도구 모음에서 **계속** 단추를 클릭 합니다.|  
+|다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|**디버그** 메뉴에서 한 **단계씩 코드 실행**을 클릭 합니다.<br /><br /> **디버그** 도구 모음에서 한 **단계씩 코드 실행** 단추를 클릭 합니다.<br /><br /> F11 키를 누릅니다.|  
+|다음 문 또는 모듈을 프로시저 단위로 실행합니다.|**디버그** 메뉴에서 **프로시저 단위 실행**을 클릭 합니다.<br /><br /> **디버그** 도구 모음에서 **프로시저 단위 실행** 단추를 클릭 합니다.<br /><br /> F10 키를 누릅니다.|  
+|모듈 프로시저를 나갑니다.|**디버그** 메뉴에서 **프로시저 아웃**을 클릭 합니다.<br /><br /> **디버그** 도구 모음에서 **프로시저 아웃** 단추를 클릭 합니다.<br /><br /> Shift+F11을 누릅니다.|  
 |현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행**을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql 디버거 정보](transact-sql-debugger-information.md)  
   
   

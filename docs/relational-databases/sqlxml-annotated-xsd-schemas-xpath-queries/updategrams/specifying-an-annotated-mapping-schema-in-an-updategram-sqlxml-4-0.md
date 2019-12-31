@@ -1,6 +1,5 @@
 ---
-title: (SQLXML 4.0) Updategram에 주석이 추가 된 매핑 스키마 지정 | Microsoft Docs
-ms.custom: ''
+title: Updategram에 대 한 주석이 추가 된 매핑 스키마 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,35 +19,36 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f75d127b6b8bd723a4d39a5e0610884010e4106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018506"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243573"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 항목에서는 Updategram에 지정된 매핑 스키마(XSD 또는 XDR)를 사용하여 업데이트를 처리하는 방법에 대해 설명합니다. Updategram에서 updategram의 특성과 해당 요소에서 테이블 및 열에 매핑할 때 사용할 주석이 추가 된 매핑 스키마의 이름을 제공할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. Updategram에 매핑 스키마가 지정되어 있으면 Updategram에 지정된 요소 및 특성 이름이 매핑 스키마의 요소와 특성에 매핑되어야 합니다.  
+  이 항목에서는 Updategram에 지정된 매핑 스키마(XSD 또는 XDR)를 사용하여 업데이트를 처리하는 방법에 대해 설명합니다. Updategram에서 updategram의 요소와 특성을의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]테이블과 열에 매핑하는 데 사용할 주석이 추가 된 매핑 스키마의 이름을 제공할 수 있습니다. Updategram에 매핑 스키마가 지정되어 있으면 Updategram에 지정된 요소 및 특성 이름이 매핑 스키마의 요소와 특성에 매핑되어야 합니다.  
   
- 매핑 스키마를 지정 하려면 사용 합니다 **매핑 스키마** 특성을  **\<동기화 >** 요소. 다음 예에서는 두 개의 Updategram을 보여 줍니다. 하나는 단순한 매핑 스키마를 사용하고 다른 하나는 더 복잡한 스키마를 사용합니다.  
+ 매핑 스키마를 지정 하려면 ** \<sync>** 요소의 **매핑 스키마** 특성을 사용 합니다. 다음 예에서는 두 개의 Updategram을 보여 줍니다. 하나는 단순한 매핑 스키마를 사용하고 다른 하나는 더 복잡한 스키마를 사용합니다.  
   
 > [!NOTE]  
->  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XDR을 사용 하는 레거시 응용 프로그램에 대 한 참조 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
+>  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 주석이 추가 된 [XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)를 참조 하세요. XDR을 사용 하는 레거시 응용 프로그램의 경우 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 Xdr 스키마 ](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="dealing-with-data-types"></a>데이터 형식 처리  
- 스키마를 지정 하는 경우는 **이미지**를 **이진**, 또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (사용 하 여 **sql: datatype**) 하지 않습니다 하 고 XML 데이터 형식을 지정 updategram은 XML 데이터 형식 이라고 가정 **base 64 이진**합니다. 데이터가 있으면 **bin.base** 형식 종류를 명시적으로 지정 해야 합니다 (**dt:type=bin.base** 또는 **형식 = "xsd: hexbinary"** ).  
+ 스키마가 **sql: datatype**을 사용 하 여 **image**, **binary**또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 지정 하 고 xml 데이터 형식을 지정 하지 않는 경우 updategram는 xml 데이터 형식이 **binary base 64**이라고 가정 합니다. 데이터가 **bin. 기본** 형식 인 경우 형식을 명시적으로 지정 해야 합니다 (**dt: type = bin. base** 또는 **Type = "xsd: hexBinary"**).  
   
- 스키마를 지정 하는 경우는 **날짜/시간**를 **날짜**, 또는 **시간** XSD 데이터 형식을 지정 해야 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 하 여 데이터 형식을  **sql: datatype = "dateTime"** 합니다.  
+ 스키마가 **dateTime**, **date**또는 **time** XSD 데이터 형식을 지정 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql: datatype = "dateTime"** 을 사용 하 여 해당 데이터 형식을 지정 해야 합니다.  
   
- 매개 변수를 처리 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** 형식을 명시적으로 지정 해야 **sql: datatype = "money"** 매핑 스키마에서 적절 한 노드.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Money** 형식의 매개 변수를 처리 하는 경우 매핑 스키마의 해당 노드에 **sql: datatype = "money"** 를 명시적으로 지정 해야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제를 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 합니다 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 단순한 매핑 스키마를 사용하여 Updategram 만들기  
- 다음 XSD 스키마 (SampleSchema.xml)는 매핑되는 매핑 스키마를  **\<고객 >** Sales.Customer 테이블에는 요소:  
+ 다음 XSD 스키마 (sampleschema.xml)는 ** \<customer>** 요소를 Sales. customer 테이블에 매핑하는 매핑 스키마입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -66,7 +66,7 @@ ms.locfileid: "68018506"
 </xsd:schema>  
 ```  
   
- 다음 Updategram은 Sales.Customer 테이블에 레코드를 삽입하고 이전 매핑 스키마를 사용하여 이 데이터를 테이블에 올바르게 매핑합니다. Updategram에서는 동일한 요소 이름으로는 통지  **\<고객 >** 스키마에 정의 된 대로 합니다. Updategram에서 특정 스키마를 지정하기 때문에 이 작업은 필수입니다.  
+ 다음 Updategram은 Sales.Customer 테이블에 레코드를 삽입하고 이전 매핑 스키마를 사용하여 이 데이터를 테이블에 올바르게 매핑합니다. Updategram는 스키마에 정의 된 것과 같은 요소 이름인 ** \<Customer>** 를 사용 합니다. Updategram에서 특정 스키마를 지정하기 때문에 이 작업은 필수입니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68018506"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 동등한 XDR 스키마입니다.  
   
@@ -114,10 +114,10 @@ ms.locfileid: "68018506"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>2\. 매핑 스키마에 지정된 부모-자식 관계를 사용하여 레코드 삽입  
- 스키마 요소를 연결할 수 있습니다. 합니다  **\<sql: relationship >** 요소 스키마 요소 간의 부모-자식 관계를 지정 합니다. 이 정보는 기본 키/외래 키 관계가 있는 해당 테이블을 업데이트하는 데 사용됩니다.  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 매핑 스키마에 지정된 부모-자식 관계를 사용하여 레코드 삽입  
+ 스키마 요소를 연결할 수 있습니다. Sql: relationship>요소는 스키마 요소 간의 부모-자식 관계를 지정 합니다. ** \<** 이 정보는 기본 키/외래 키 관계가 있는 해당 테이블을 업데이트하는 데 사용됩니다.  
   
- 다음 매핑 스키마 (SampleSchema.xml) 구성의 두 요소간  **\<순서 >** 하 고  **\<OD >** :  
+ 다음 매핑 스키마 (sampleschema.xml)는 ** \<Order>** 및 ** \<OD>** 라는 두 개의 요소로 구성 됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -156,7 +156,7 @@ ms.locfileid: "68018506"
 </xsd:schema>  
 ```  
   
- 다음 updategram은이 XSD 스키마를 사용 하 여 새 주문 정보 레코드를 추가 (을  **\<OD >** 요소에는  **\<후 >** 블록) 주문 43860에 대해 합니다. 합니다 **매핑 스키마** 특성은 updategram에 매핑 스키마를 지정 하는 데 사용 됩니다.  
+ 다음 updategram에서는이 XSD 스키마를 사용 하 여 주문 43860에 대해 새 주문 정보 레코드 ( ** \<after>** 블록의 ** \<OD>** 요소)를 추가 합니다. **매핑 스키마** 특성은 updategram에서 매핑 스키마를 지정 하는 데 사용 됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -188,7 +188,7 @@ ms.locfileid: "68018506"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 동등한 XDR 스키마입니다.  
   
@@ -231,14 +231,16 @@ ms.locfileid: "68018506"
 </Schema>  
 ```  
   
-### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>3\. XSD 스키마에 지정된 부모-자식 관계 및 inverse 주석을 사용하여 레코드 삽입  
- 다음이 예에서는 updategram 논리가 XSD에 지정 된 부모-자식 관계를 업데이트를 처리 하는 데 사용 하는 방법 하는 방법과 **역** 주석이 사용 됩니다. 에 대 한 자세한 내용은 합니다 **역** 주석을 참조 하세요 [sql: relationship에 sql: inverse 특성 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. XSD 스키마에 지정된 부모-자식 관계 및 inverse 주석을 사용하여 레코드 삽입  
+ 이 예에서는 updategram 논리가 XSD에 지정 된 부모-자식 관계를 사용 하 여 업데이트를 처리 하는 방법과 **역** 주석을 사용 하는 방법을 보여 줍니다. **역** 주석에 대 한 자세한 내용은 sql: [relationship에 Sql: 역함수 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)을 참조 하세요.  
   
- 이 예제에서는 다음 테이블에 있는 것으로 가정 합니다 **tempdb** 데이터베이스:  
+ 이 예에서는 다음 테이블이 **tempdb** 데이터베이스에 있다고 가정 합니다.  
   
--   `Cust (CustomerID, CompanyName)`. 여기서 `CustomerID`는 기본 키입니다.  
+-   
+  `Cust (CustomerID, CompanyName)`. 여기서 `CustomerID`는 기본 키입니다.  
   
--   `Ord (OrderID, CustomerID)`. 여기서 `CustomerID`는 `CustomerID` 테이블의 `Cust` 기본 키를 참조하는 외래 키입니다.  
+-   
+  `Ord (OrderID, CustomerID)`. 여기서 `CustomerID`는 `CustomerID` 테이블의 `Cust` 기본 키를 참조하는 외래 키입니다.  
   
  Updategram은 다음 XSD 스키마를 사용하여 Cust 및 Ord 테이블에 레코드를 삽입합니다.  
   
@@ -275,11 +277,11 @@ ms.locfileid: "68018506"
 </xsd:schema>  
 ```  
   
- 이 예에서 XSD 스키마에  **\<고객 >** 하 고  **\<순서 >** 요소가 있으며, 두 요소 간의 부모-자식 관계를 지정 합니다. 식별  **\<순서 >** 부모 요소와 및  **\<고객 >** 자식 요소로 합니다.  
+ 이 예의 XSD 스키마에는 ** \<Customer>** 와 ** \<Order>** 요소가 있으며 두 요소 간의 부모-자식 관계를 지정 합니다. 부모 요소와 ** \<Customer>** 를 자식 요소로 ** \<>순서** 를 식별 합니다.  
   
- Updategram 처리 논리에서는 부모-자식 관계에 대한 정보를 사용하여 레코드가 테이블에 삽입되는 순서를 확인합니다. 이 예에서 updategram 논리는 먼저 시도 Ord 테이블에 레코드를 삽입 하려면 (때문  **\<순서 >** 부모인) Cust 테이블에 레코드를 삽입 하려고 시도 하 고 (때문에  **\<고객 >** 자식인). 하지만 데이터베이스 테이블 스키마에 포함된 기본 키/외래 키 정보 때문에 이 삽입 작업을 수행하면 데이터베이스에서 외래 키 위반이 발생하고 삽입이 실패합니다.  
+ Updategram 처리 논리에서는 부모-자식 관계에 대한 정보를 사용하여 레코드가 테이블에 삽입되는 순서를 확인합니다. 이 예에서 updategram 논리는 먼저 Ord 테이블에 레코드를 삽입 한 다음 ( ** \<Order>** 는 부모), ** \<Customer>** 가 자식 이기 때문에 Cust 테이블에 레코드를 삽입 하려고 시도 합니다. 하지만 데이터베이스 테이블 스키마에 포함된 기본 키/외래 키 정보 때문에 이 삽입 작업을 수행하면 데이터베이스에서 외래 키 위반이 발생하고 삽입이 실패합니다.  
   
- 업데이트 작업 중 부모-자식 관계를 반대로 하려면 updategram 논리에 지시 하는 **역** 에 주석이 지정 된 된  **\<관계 >** 요소. 그 결과, 레코드가 먼저 Cust 테이블에 추가된 다음 Ord 테이블에 추가되어 작업이 성공합니다.  
+ 업데이트 작업 중에 부모-자식 관계를 updategram 논리에 지시 하기 위해 **역** 주석은 ** \<relationship>** 요소에 지정 됩니다. 그 결과, 레코드가 먼저 Cust 테이블에 추가된 다음 Ord 테이블에 추가되어 작업이 성공합니다.  
   
  다음 Updategram은 지정한 XSD 스키마를 사용하여 Ord 테이블에 주문(OrderID=2)을 삽입하고 Cust 테이블에 고객(CustomerID='AAAAA')을 삽입합니다.  
   
@@ -298,7 +300,7 @@ ms.locfileid: "68018506"
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
-1.  이러한 테이블을 만들 합니다 **tempdb** 데이터베이스:  
+1.  **Tempdb** 데이터베이스에 다음 테이블을 만듭니다.  
   
     ```  
     USE tempdb  
@@ -322,9 +324,9 @@ ms.locfileid: "68018506"
   
 4.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [Updategram 보안 고려 사항은 SQLXML 4.0&#41;&#40;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
