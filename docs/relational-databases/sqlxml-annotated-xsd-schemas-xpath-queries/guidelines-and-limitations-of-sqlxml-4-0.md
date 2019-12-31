@@ -1,5 +1,5 @@
 ---
-title: 지침 및 SQLXML 4.0의 제한 사항 | Microsoft Docs
+title: SQLXML 4.0에 대한 지침 및 제한 사항
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 411495986ed700a069a7c8124a7d0829102138fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba2e7438a9084d7ad2d4f8edee9564236ecbadd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073370"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257246"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,6 +30,6 @@ ms.locfileid: "68073370"
   
      SQLXML 4.0 및 버전 독립 PROGID를 사용하는 애플리케이션을 실행하고 있는데 다른 몇 가지 소프트웨어 프로그램을 설치하려는 경우. 해당 프로그램에 의해 이전 버전의 SQLXML이 설치될 수 있습니다. 해당 애플리케이션의 버전 독립 PROGID가 애플리케이션에 현재 사용되고 있는 기능이 없을 수도 있는 이전 버전의 SQLXML을 가리키게 되므로 애플리케이션에 문제가 발생할 수 있습니다.  
   
--   SQLXMLOLEDB 공급자를 사용 하려면 하지을 대신 SQLOLEDB를 사용 하려면 어떤 이유로 공급자를 SQLXML 기능을 설정 합니다 **SQLXML Version** 속성을 "SQLXML.4.0" 합니다.  
+-   어떤 이유로 든 SQLXMLOLEDB 공급자를 사용 하지 않고 SQLXML 기능에 대해 SQLOLEDB 공급자를 사용 하려면 **Sqlxml 버전** 속성을 "sqlxml. 4.0"으로 설정 합니다.  
   
   

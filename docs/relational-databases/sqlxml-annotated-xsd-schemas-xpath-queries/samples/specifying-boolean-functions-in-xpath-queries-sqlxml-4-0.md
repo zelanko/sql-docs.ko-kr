@@ -1,6 +1,5 @@
 ---
-title: XPath 쿼리에 부울 함수 지정 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: XPath 쿼리에 부울 함수 사용 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,22 +15,23 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907761"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252585"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [XPath 예제에 대 한 주석 처리 &#40;된 XSD&#41;스키마 예제 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)을 참조 하세요.  
+  다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
-## <a name="a-specify-the-not-boolean-function"></a>1\. not() 부울 함수 지정  
- 이 쿼리는 **\<Order >** 자식 요소가 없는 컨텍스트 노드의 자식 요소 **> 모든\<고객** 을 반환 합니다.  
+## <a name="a-specify-the-not-boolean-function"></a>A. not() 부울 함수 지정  
+ 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +78,8 @@ ms.locfileid: "72907761"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>2\. true() 및 false() 부울 함수 지정  
- 이 쿼리는 **\<Order >** 자식 요소가 없는 컨텍스트 노드의 모든 **\<Customer >** 요소 자식을 반환 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 및 false() 부울 함수 지정  
+ 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<Customer>** 요소 자식을 반환 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
   
 ```  
 /child::Customer[child::Order=false()]  

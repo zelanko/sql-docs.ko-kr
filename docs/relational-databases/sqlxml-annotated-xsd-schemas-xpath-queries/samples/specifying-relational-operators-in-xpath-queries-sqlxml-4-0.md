@@ -1,6 +1,5 @@
 ---
-title: XPath 쿼리에 관계형 연산자 지정 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: XPath 쿼리에 관계형 연산자 사용 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252547"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 관계형 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 관계형 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [XPath 예제에 대 한 주석 처리 &#40;된 XSD&#41;스키마 예제 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)을 참조 하세요.  
+  다음 예에서는 XPath 쿼리에 관계형 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-relational-operator"></a>1\. 관계형 연산자 지정  
- 이 XPath 쿼리는 **CustomerID** 특성 값이 "1"이 고 자식 **\<Order >** 요소가 **\<orderdetail >** 자식을 포함 하는 **\<Customer >** 요소의 자식 요소를 반환 합니다. 값이 3 보다 큰 **OrderQty** 특성 사용:  
+### <a name="a-specify-relational-operator"></a>A. 관계형 연산자 지정  
+ 이 XPath 쿼리는 **CustomerID** 특성 값이 "1"이 고 모든 자식 ** \<Order>** 요소에 ** \<orderdetail>** 자식이 포함 된 ** \<Customer>** 요소의 자식 요소를 반환 합니다 .이 요소에는 값이 3 보다 큰 **OrderQty** 특성이 있습니다.  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 대괄호에 지정 된 조건자는 **\<Customer >** 요소를 필터링 합니다. OrderQty 특성 값이 3 보다 큰 하나 이상의 **\<OrderDetail >** 있는 **\<고객 >** 요소만 반환 됩니다.  
+ 대괄호에 지정 된 조건자는 ** \<Customer>** 요소를 필터링 합니다. **하나 \<이상의 orderdetail** 이 포함 된 ** \<고객>** 요소만 OrderQty 특성 값이 3 보다 큰 요소>반환 됩니다.  
   
  **자식** 축이 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "72909435"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>2\. XPath 쿼리에 관계형 연산자 지정 및 부울 함수를 사용하여 결과 비교  
- 이 쿼리는 **SalesPersonID** 특성 값이 270 보다 작은 컨텍스트 노드의 모든 **\<Order >** 요소 자식을 반환 합니다.  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath 쿼리에 관계형 연산자 지정 및 부울 함수를 사용하여 결과 비교  
+ 이 쿼리는 **SalesPersonID** 특성 값이 270 보다 작은 컨텍스트 노드의 모든 ** \<Order>** 요소 자식을 반환 합니다.  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +94,7 @@ ms.locfileid: "72909435"
 ```  
   
 > [!NOTE]  
->  이 쿼리를 템플릿에서 지정 하는 경우 < 문자는 XML 문서에서 특별 한 의미가 있기 때문에 < 문자는 엔터티 인코딩 이어야 합니다. 템플릿에서 `<`를 사용 하 여 < 문자를 지정 합니다.  
+>  이 쿼리를 템플릿에서 지정 하는 경우 < 문자는 XML 문서에서 특별 한 의미가 있기 때문에 < 문자는 엔터티 인코딩 이어야 합니다. 템플릿에서 < 문자를 지정 `<` 하는 데 사용 합니다.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

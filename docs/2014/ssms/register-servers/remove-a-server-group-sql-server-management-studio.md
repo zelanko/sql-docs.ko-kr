@@ -1,6 +1,6 @@
 ---
-title: 서버 그룹 제거(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 서버 그룹 제거
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 446705799f117c23786799789657e9fa89f9fa39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956068"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251804"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>서버 그룹 제거(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에서 서버 그룹을 제거하는 방법에 대해 설명합니다. 언제든지 서버 그룹을 삭제할 수 있습니다. 서버 그룹이 비어 있지 않으면 삭제한 서버 그룹에 포함된 서버나 서버 그룹도 삭제됩니다. 서버 그룹을 삭제하기 전에 유지할 서버나 서버 그룹을 새 서버 그룹으로 이동합니다.  
@@ -32,9 +32,10 @@ ms.locfileid: "62956068"
   
 1.  등록된 서버에서 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-2.  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
+2.  
+  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [등록된 서버 및 등록된 서버 그룹 이동&#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
+## <a name="see-also"></a>참고 항목  
+ [등록 된 서버 또는 등록 된 서버 그룹 &#40;SQL Server Management Studio으로 이동&#41;](move-a-registered-server-or-registered-server-group.md)  
   
   

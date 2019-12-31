@@ -1,6 +1,5 @@
 ---
-title: 'Sql: limit 필드 및 sql: limit 값을 사용 하 여 값 필터링 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'Sql: limit 필드 및 sql: limit 값 (SQLXML)으로 필터링'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906096"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257416"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "72906096"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>2\. Real 데이터 형식의 할인 값을 기준으로 결과 제한  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Real 데이터 형식의 할인 값을 기준으로 결과 제한  
  이 예에서 데이터베이스에는 다음과 같은 두 개의 테이블이 있습니다.  
   
 -   Orders (OrderID)  
@@ -307,9 +307,9 @@ ms.locfileid: "72906096"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 및 nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [SQL Server Native Client  설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
- [쿼리에서 &#40;주석이 추가 된 XSD 스키마 사용 SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [float 및 real &#40;Transact-sql&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar 및 nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [쿼리에 주석이 추가 된 XSD 스키마 사용 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: XPath 쿼리에 부울 반환 조건자 지정 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: XPath 쿼리에서 부울 조건자 지정 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,28 +17,30 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907726"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252571"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 반환 조건자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 부울 반환 조건자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [XPath 예제에 대 한 주석 처리 &#40;된 XSD&#41;스키마 예제 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)을 참조 하세요.  
+  다음 예에서는 XPath 쿼리에 부울 반환 조건자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-multiple-predicates"></a>1\. 여러 조건자 지정  
+### <a name="a-specify-multiple-predicates"></a>A. 여러 조건자 지정  
  다음 XPath 쿼리에서는 여러 조건자를 사용하여 지정된 주문 ID 및 고객 ID에 대한 주문 정보를 찾습니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]/child::Order[attribute::OrderID="Ord-43860"]  
 ```  
   
- `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
+ 
+  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
   
 ```  
 /Customer[@CustomerID="1"]/Order[@SalesOrderID="Ord-43860"]  
@@ -90,14 +91,14 @@ ms.locfileid: "72907726"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>2\. 연속 및 중첩된 조건자 지정  
- 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성이 277이 고 값이 3 인 **TerritoryID** 특성을 모두 포함 하는 context 노드의 자식 요소 **> 모든\<고객** 을 반환 합니다.  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. 연속 및 중첩된 조건자 지정  
+ 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성 값이 277이 고 값이 3 인 **TerritoryID** 특성을 모두 포함 하는 context 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 이 쿼리는 조건자에 지정 된 조건을 모두 충족 하는 **\<Customer >** 요소를 반환 합니다.  
+ 이 쿼리는 조건자에 지정 된 조건을 모두 충족 하는 ** \<고객>** 요소를 반환 합니다.  
   
  **특성** 축에 대 한 바로 가기 (@)를 지정할 수 있으며, **자식** 축이 기본값 이므로 쿼리에서 생략할 수 있습니다.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "72907726"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성 값이 인 **\<order >** 요소를 하나 이상 포함 하는 **\<order >** 자식 요소를 포함 하는 컨텍스트 노드의 자식 요소 **> 모든\<고객** 을 반환 합니다. sr-2.  
+ 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성 값이 2 인 ** \<order>** 요소를 하나 이상 포함 하는 ** \<order>** 자식 요소를 포함 하는 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -167,8 +168,8 @@ ms.locfileid: "72907726"
 </ROOT>  
 ```  
   
-### <a name="c-specify-a-top-level-predicate"></a>3\. 최상위 조건자 지정  
- 다음 쿼리는 **\<Order >** 요소 자식이 있는 컨텍스트 노드의 **\<Customer >** 자식 요소 노드를 반환 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
+### <a name="c-specify-a-top-level-predicate"></a>C. 최상위 조건자 지정  
+ 다음 쿼리는 ** \<Order>** 요소 자식이 있는 컨텍스트 노드의 ** \<Customer>** 자식 요소 노드를 반환 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
   
 ```  
 /child::Customer[child::Order]  

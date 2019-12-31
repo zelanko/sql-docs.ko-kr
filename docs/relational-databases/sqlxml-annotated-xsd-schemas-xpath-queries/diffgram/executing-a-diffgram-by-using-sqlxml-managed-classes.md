@@ -1,5 +1,5 @@
 ---
-title: 관리 되는 클래스 SQLXML을 사용 하 여 DiffGram 실행 | Microsoft 문서
+title: SQLXML 관리되는 클래스를 사용하여 DiffGram 실행
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429538b93bc4b25b68dc8867c90462e9c43a164e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c92072290b8f0115470bccae46ab0e5fe111a0b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073458"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257271"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML 관리되는 클래스를 사용하여 DiffGram 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  DiffGram 파일을 실행 하는 방법을 보여 주는이 예제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경의 데이터에 적용할 업데이트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml)를 사용 하 여 테이블입니다.  
+  이 예에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경에서 DiffGram 파일을 실행 하 여 SQLXML 관리 되는 클래스 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlxml)를 사용 하 여 테이블에 데이터 업데이트를 적용 하는 방법을 보여 줍니다.  
   
  이 예에서 DiffGram은 고객 ALFKI의 고객 정보(CompanyName 및 ContactName)를 업데이트합니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68073458"
 </ROOT>  
 ```  
   
- 합니다  **\<하기 전에 >** 블록 포함을  **\<고객 >** 요소 (**diffgr: id = "Customer1"** ). 합니다  **\<DataInstance >** 해당 블록 포함  **\<고객 >** 동일한 요소 **id**합니다. 합니다  **\<고객 >** 요소에는  **\<NewDataSet >** 도 지정 **diffgr: haschanges = "modified"** 합니다. 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. 경우는 **diffgr: haschanges** 특성이 지정 되지 않은 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트가 수행 되지 않습니다.  
+ ** \<Before>** 블록은 ** \<Customer>** 요소 (**diffgr: id = "Customer1"**)를 포함 합니다. ** \<Datainstance>** 블록에는 동일한 **id**를 가진 해당 ** \<Customer>** 요소가 포함 됩니다. Newdataset>의 ** \<customer>** 요소는 **diffgr: haschanges = "modified"** 도 지정 합니다. ** \<** 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. **Diffgr: hasChanges** 특성이 지정 되지 않은 경우 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트를 수행 하지 않습니다.  
   
- 다음은 C# 자습서 응용 프로그램에 SQLXML 관리 되는 클래스를 사용 하 여 위의 DiffGram을 실행에 만들려는 두 테이블 (Cust, Ord)을 업데이트 하는 방법을 보여 주는 코드를 **tempdb** 데이터베이스입니다.  
+ 다음은 SQLXML 관리 되는 클래스를 사용 하 여 위의 DiffGram을 실행 하 고 **tempdb** 데이터베이스에도 만들 두 개의 테이블 (Cust, Ord)을 업데이트 하는 방법을 보여 주는 c # 자습서 응용 프로그램의 코드입니다.  
   
 ```  
 using System;  
@@ -130,7 +130,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  이러한 테이블을 만들 합니다 **tempdb** 데이터베이스입니다.  
+3.  이러한 테이블을 **tempdb** 데이터베이스에 만듭니다.  
   
     ```  
     CREATE TABLE Cust(  
@@ -179,7 +179,7 @@ class Test
   
 8.  명령 프롬프트에서 DiffgramSample.exe를 실행합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [DiffGram 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

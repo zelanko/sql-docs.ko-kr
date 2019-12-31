@@ -1,6 +1,5 @@
 ---
-title: 'Sql: max-depth를 사용 하 여 재귀 관계의 깊이 지정 Microsoft Docs'
-ms.custom: ''
+title: 'Sql: max-depth를 사용 하 여 재귀 깊이 관계 설정'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a77c5a9e36a644c35edf9a31c63b6b3ef18bef1c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: aaeeae8c0adfc34c80b986898c5209b744d7efc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257349"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  이 조각에서 직원 5는 직원 4에게, 직원 4는 직원 3에게, 직원 3 및 2는 직원 1에게 보고합니다.  
   
- 이러한 결과를 얻으려면 다음 XSD 스키마를 사용하고 해당 스키마에 대해 XPath 쿼리를 지정할 수 있습니다. 이 스키마는 동일한 유형인 EmployeeType > 자식 요소로 **\<** 구성 된 EmployeeType 형식의 **\<emp >** 요소를 설명 합니다. 이는 요소와 해당 상위 항목이 동일한 유형인 재귀 관계입니다. 또한 스키마는 **\<sql: relationship >** 를 사용 하 여 감독자와 supervisee 간의 부모-자식 관계를 설명 합니다. 이 **\<sql: relationship >** 에서 Emp는 부모 및 자식 테이블입니다.  
+ 이러한 결과를 얻으려면 다음 XSD 스키마를 사용하고 해당 스키마에 대해 XPath 쿼리를 지정할 수 있습니다. 이 스키마는 동일한 유형인 EmployeeType의 ** \<emp>** 자식 요소로 구성 된 EmployeeType 형식의 ** \<emp>** 요소를 설명 합니다. 이는 요소와 해당 상위 항목이 동일한 유형인 재귀 관계입니다. 또한 스키마는 ** \<sql: relationship>** 를 사용 하 여 감독자와 supervisee 간의 부모-자식 관계를 설명 합니다. 이 ** \<sql: relationship>** 에서 Emp는 부모 및 자식 테이블입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -171,7 +171,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  결과에서 계층의 다른 깊이를 생성 하려면 스키마에서 **sql: max-depth** 주석의 값을 변경 하 고 각 변경 후 템플릿을 다시 실행 합니다.  
   
- 이전 스키마에서 모든 **\<Emp >** 요소에는 정확히 동일한 특성 집합 (**EmployeeID**, **FirstName**및 **LastName**)이 있습니다. 다음 스키마는 관리자에 게 보고 하는 모든 **\<Emp >** 요소에 대 한 추가 **ReportsTo** 특성을 반환 하도록 약간 수정 되었습니다.  
+ 이전 스키마에서 모든 ** \<Emp>** 요소에는 정확히 동일한 특성 집합 (**EmployeeID**, **FirstName**및 **LastName**)이 있습니다. 다음 스키마는 관리자에 게 보고 하는 모든 ** \<Emp>** 요소에 대 한 추가 **ReportsTo** 특성을 반환 하도록 약간 수정 되었습니다.  
   
  예를 들어 다음 XML 조각에서는 직원 1의 부하 직원을 보여 줍니다.  
   
@@ -243,7 +243,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  **Sql: max-depth** 주석은 모든 복합 콘텐츠 요소에 지정할 수 있습니다.  
   
 ### <a name="recursive-elements"></a>재귀적 요소  
- 재귀 관계의 부모 요소와 자식 요소 모두에 **sql: max-depth** 가 지정 되 면 부모에 지정 된 **sql: max-depth** 주석이 우선 적용 됩니다. 예를 들어 다음 스키마에서 **sql: max-depth** 주석은 부모 및 자식 employee 요소 모두에 지정 됩니다. 이 경우 **\<Emp >** 부모 요소 (감독자 역할 재생)에 지정 된 **sql: max-depth = 4**가 우선적으로 적용 됩니다. 자식 **\<Emp >** 요소 (supervisee의 역할 재생)에 지정 된 **sql: 최대 깊이** 는 무시 됩니다.  
+ 재귀 관계의 부모 요소와 자식 요소 모두에 **sql: max-depth** 가 지정 되 면 부모에 지정 된 **sql: max-depth** 주석이 우선 적용 됩니다. 예를 들어 다음 스키마에서 **sql: max-depth** 주석은 부모 및 자식 employee 요소 모두에 지정 됩니다. 이 경우 ** \<Emp>** 부모 요소 (감독자 역할 재생)에 지정 된 **sql: max-depth = 4**가 우선적으로 적용 됩니다. **자식 \<Emp>** 요소 (supervisee의 역할 재생)에 지정 된 **sql: 최대 깊이** 는 무시 됩니다.  
   
 #### <a name="example-b"></a>예 2  
   
@@ -283,9 +283,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  이 스키마를 테스트하려면 이 항목의 앞부분에 있는 예 1에 제공된 단계를 따릅니다.  
   
 ### <a name="nonrecursive-elements"></a>비재귀 요소  
- 재귀를 발생 시 키 지 않는 스키마의 요소에 **sql: max-depth** 주석이 지정 된 경우 무시 됩니다. 다음 스키마에서 **\<Emp >** 요소는 **\<상수 >** 자식 요소로 구성 되며,이 요소는 **\<Emp >** 자식 요소를 포함 합니다.  
+ 재귀를 발생 시 키 지 않는 스키마의 요소에 **sql: max-depth** 주석이 지정 된 경우 무시 됩니다. 다음 스키마에서 ** \<emp>** 요소는 ** \<>** 자식 요소로 구성 되며,이 요소로 인해 ** \<emp>** 자식 요소가 있습니다.  
   
- 이 스키마에서 **\<상수 >** 요소에 지정 된 **sql: 최대 깊이** 주석은 **\<Emp >** 부모와 **\<상수 >** 자식 요소 사이에 재귀가 없으므로 무시 됩니다. 그러나 **\<emp >** 상위 항목 및 **\<emp >** 자식 사이에 재귀가 있습니다. 스키마는 두 가지 모두에 대해 **sql: max-depth** 주석을 지정 합니다. 따라서 상위 항목 (감독자 역할의 **\<Emp >** )에 지정 된 **sql: 최대 깊이** 주석이 우선 적용 됩니다.  
+ 이 스키마에서 ** \<상수>** 요소에 지정 된 **sql: max-depth** 주석은 ** \<Emp>** 부모와 ** \<상수>** 자식 요소 사이에 재귀가 없기 때문에 무시 됩니다. 그러나 ** \<emp>** 상위 및 ** \<emp>** 자식 사이에 재귀가 있습니다. 스키마는 두 가지 모두에 대해 **sql: max-depth** 주석을 지정 합니다. 따라서 상위 항목 (**\<** 감독자 역할의 Emp>)에 지정 된 **sql: 최대 깊이** 주석이 우선적으로 적용 됩니다.  
   
 #### <a name="example-c"></a>예 3  
   
@@ -329,11 +329,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  이 스키마를 테스트하려면 이 항목의 앞부분에 있는 예 1에 제공된 단계를 따릅니다.  
   
 ## <a name="complex-types-derived-by-restriction"></a>제한에 의해 파생되는 복합 유형  
- **\<restriction >** 의 복합 형식 파생이 있는 경우 해당 하는 기본 복합 형식의 요소는 **sql: max-depth** 주석을 지정할 수 없습니다. 이러한 경우에는 **sql: max-depth** 주석을 파생 형식의 요소에 추가할 수 있습니다.  
+ 제한>의 복합 형식 파생이 있는 경우 해당 하는 기본 복합 형식의 요소는 **sql: max-depth** 주석을 지정할 수 없습니다. ** \< ** 이러한 경우에는 **sql: max-depth** 주석을 파생 형식의 요소에 추가할 수 있습니다.  
   
- 반면 **\<확장 >** 에의 한 복합 형식 파생이 있는 경우 해당 하는 기본 복합 형식의 요소는 **sql: max-depth** 주석을 지정할 수 있습니다.  
+ 반면에 ** \<확장>** 에의 한 복합 형식 파생이 있는 경우 해당 하는 기본 복합 형식의 요소는 **sql: max-depth** 주석을 지정할 수 있습니다.  
   
- 예를 들어 다음 XSD 스키마는 기본 형식에 **sql: max-depth** 주석이 지정 되어 있기 때문에 오류를 생성 합니다. 다른 형식에서 **\<제한** 에 의해 파생 된 형식에서는이 주석이 지원 되지 않습니다. 이 문제를 해결 하려면 스키마를 변경 하 고 파생 형식의 요소에 대해 **sql: max-depth** 주석을 지정 해야 합니다.  
+ 예를 들어 다음 XSD 스키마는 기본 형식에 **sql: max-depth** 주석이 지정 되어 있기 때문에 오류를 생성 합니다. 이 주석은 다른 형식에서 ** \<>제한** 에 의해 파생 된 형식에서 지원 되지 않습니다. 이 문제를 해결 하려면 스키마를 변경 하 고 파생 형식의 요소에 대해 **sql: max-depth** 주석을 지정 해야 합니다.  
   
 #### <a name="example-d"></a>예 4  
   
@@ -377,7 +377,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 스키마에서 **sql: max-depth** 는 **customerbasetype** 복합 유형에 서 지정 됩니다. 또한 스키마는 **customertype**( **customertype**에서 파생 됨) 형식의 **\<Customer >** 요소를 지정 합니다. 이러한 스키마에 지정 된 XPath 쿼리는 제한 기본 유형에 정의 된 요소에 대해 **sql: max 깊이가** 지원 되지 않기 때문에 오류를 생성 합니다.  
+ 스키마에서 **sql: max-depth** 는 **customerbasetype** 복합 유형에 서 지정 됩니다. 또한 스키마는 **customertype**형식의 ** \<Customer>** 요소를 지정 합니다 .이 요소는 **customertype**에서 파생 됩니다. 이러한 스키마에 지정 된 XPath 쿼리는 제한 기본 유형에 정의 된 요소에 대해 **sql: max 깊이가** 지원 되지 않기 때문에 오류를 생성 합니다.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>중첩이 많은 계층 구조가 있는 스키마  
  요소에 자식 요소가 있고 자식 요소에는 또 다른 자식 요소가 있는 형식의 중첩이 많은 계층 구조를 포함하는 스키마가 있을 수 있습니다. 이러한 스키마에 지정 된 **sql: max-depth** 주석이 500 수준 이상의 계층을 포함 하는 XML 문서를 생성 하는 경우 (수준 1의 최상위 요소, 수준 2의 자식 등) 오류가 반환 됩니다.  

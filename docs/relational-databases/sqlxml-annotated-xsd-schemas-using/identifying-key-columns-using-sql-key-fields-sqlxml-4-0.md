@@ -1,6 +1,5 @@
 ---
-title: 'Sql: 키-필드를 사용 하 여 키 열 식별 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'Sql: 키 필드 (SQLXML)를 사용 하 여 키 열 식별'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d17e47f86060871ea7dd3f2b0b1e9ed2e06c241
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905893"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257387"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "72905893"
   
  **Sql: 키 필드** 의 값은 관계의 행을 고유 하 게 식별 하는 열을 식별 합니다. 행을 고유하게 식별하는 데 둘 이상의 열이 필요한 경우 열 값이 공백으로 구분됩니다.  
   
- 요소에 요소와 자식 요소 사이에 정의 된 **\<sql: relationship >** 포함 되어 있지만 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않는 경우 **sql: 키-필드** 주석을 사용 해야 합니다. .  
+ 요소에 요소와 자식 요소 사이에 정의 된 ** \<sql: relationship>** 포함 되어 있지만 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않는 경우 **sql: 키-필드** 주석을 사용 해야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1\. \<sql: relationship >에서 충분 한 정보를 제공 하지 않을 때 적절 한 중첩을 생성 합니다.  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Sql: relationship>에서 \<충분 한 정보를 제공 하지 않을 때 적절 한 중첩을 생성 합니다.  
  이 예에서는 **sql: key 필드** 를 지정 해야 하는 경우를 보여 줍니다.  
   
- 다음과 같은 스키마를 살펴 보십시오. 이 스키마는 **\<order >** 와 **\<customer >** 요소 간의 계층을 지정 합니다. 여기서 **\<order >** 요소는 부모이 고 **\<customer >** 요소는 자식입니다.  
+ 다음과 같은 스키마를 살펴 보십시오. **이 \<** 스키마는 order>요소가 부모이 고 ** \<customer>** 요소가 자식인 ** \<order>** 와 ** \<customer>** 요소 간의 계층을 지정 합니다.  
   
- **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. **\<sql: relationship >** 에 제공 된 정보는 부모 테이블 (SalesOrderHeader)에서 행을 고유 하 게 식별 하는 데 충분 하지 않습니다. 따라서 **sql: 키-필드** 주석이 없으면 생성 되는 계층 구조가 정확 하지 않습니다.  
+ Sql: relationship>태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. ** \<** Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. ** \<Sql: relationship>** 에 제공 된 정보는 부모 테이블 (SalesOrderHeader)에서 행을 고유 하 게 식별 하는 데 충분 하지 않습니다. 따라서 **sql: 키-필드** 주석이 없으면 생성 되는 계층 구조가 정확 하지 않습니다.  
   
- **\<Order >** 에 지정 된 **sql: 키 필드** 를 사용 하 여 주석은 부모 (SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소가 부모 아래에 나타납니다.  
+ ** \<Order>** 에 지정 된 **sql: 키 필드** 를 사용 하 여 주석은 부모 (SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소가 부모 아래에 나타납니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72905893"
   
 1.  위 스키마 코드를 복사한 후 텍스트 파일에 붙여넣습니다. 파일을 KeyFields1.xml로 저장합니다.  
   
-2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields1.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields1T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리는 CustomerID가 3 미만인 모든 **\<Order >** 요소를 반환 합니다.  
+2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields1.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields1T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리는 CustomerID가 3 보다 작은 모든 ** \<주문>** 요소를 반환 합니다.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -126,8 +126,8 @@ ms.locfileid: "72905893"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>2\. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
- 다음 스키마에는 **\<sql: relationship >** 를 사용 하 여 지정 된 계층이 없습니다. 스키마에서는 HumanResources 테이블의 직원을 고유 하 게 식별 하기 위해 **sql: 키-필드** 주석을 지정 해야 합니다.  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
+ 다음 스키마에는 ** \<sql: relationship>** 를 사용 하 여 지정 된 계층이 없습니다. 스키마에서는 HumanResources 테이블의 직원을 고유 하 게 식별 하기 위해 **sql: 키-필드** 주석을 지정 해야 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +154,7 @@ ms.locfileid: "72905893"
   
 1.  위 스키마 코드를 복사한 후 텍스트 파일에 붙여넣습니다. 파일을 KeyFields2.xml로 저장합니다.  
   
-2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields2.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields2T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리는 **\<HumanResources >** 요소를 모두 반환 합니다.  
+2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields2.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields2T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리에서는 ** \<HumanResources>** 요소를 모두 반환 합니다.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -1,6 +1,5 @@
 ---
-title: XPath 쿼리 (SQLXMLOLEDB 공급자)를 포함 하는 템플릿 실행 | Microsoft 문서
-ms.custom: ''
+title: XPath 쿼리를 포함 하는 템플릿 실행 (SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035d9c4cb94a52d964d26c2b6b94180eb7eefaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109604"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257296"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "68109604"
   
 -   매핑 스키마  
   
- 이 예제 ADO 응용 프로그램에서는 XPath 쿼리 (루트)로 구성 된 XML 템플릿을에 설명 된 XSD 매핑 스키마 (MySchema.xml)에 대해 지정 됩니다 [XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ 이 예제 ADO 응용 프로그램에서 XPath 쿼리 (루트)로 구성 된 XML 템플릿은 [xpath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)에 설명 된 XSD 매핑 스키마 (myschema.xml)에 대해 지정 됩니다.  
   
- 매핑 스키마 속성 XPath 쿼리가 실행 되는 XSD 매핑 스키마를 제공 합니다. Base Path 속성 매핑 스키마를 파일 경로 제공합니다.  
+ 매핑 스키마 속성은 XPath 쿼리가 실행 되는 XSD 매핑 스키마를 제공 합니다. 기본 경로 속성은 매핑 스키마에 대 한 파일 경로를 제공 합니다.  
   
- ClientSideXML 속성을 true로 설정 됩니다. 따라서 XML 문서는 클라이언트에서 생성됩니다.  
+ ClientSideXML 속성이 True로 설정 되어 있습니다. 따라서 XML 문서는 클라이언트에서 생성됩니다.  
   
  애플리케이션에서 XPath 쿼리는 직접 지정됩니다. 따라서 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}을 포함해야 합니다.  
   
 > [!NOTE]  
->  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 데이터 공급자로 사용하도록 지정하고 있으며 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)합니다.  
+>  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 데이터 공급자로 사용하도록 지정하고 있으며 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)을 참조 하세요.  
   
 ```  
 Option Explicit  

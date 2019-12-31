@@ -1,6 +1,5 @@
 ---
-title: 샘플 XPath 쿼리 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: 예제 XPath 쿼리 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc1ba85aa5705094e3873381ee443413cee9f8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a741c0b2bfe3cc64efd850c4d9a6201e9f9ff501
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119464"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252613"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath 쿼리 예제(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "68119464"
 >  이 섹션의 예제 쿼리는 쿼리에서 수행되는 XPath 작업의 유형별로 그룹화됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [주석이 추가 된 예제 XSD 스키마 XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0의 XPath 예제에 대해 주석이 추가 된 샘플 XSD 스키마&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  이 섹션에 제공된 XPath 쿼리 예제에서 이 파일을 사용합니다.  
   
  [XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 축을 지정하는 방법을 보여 줍니다.  
   
- [XPath 쿼리에 부울 반환 조건자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath 쿼리에서 부울 값 조건자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 부울 값 조건자를 지정하는 방법을 보여 줍니다.  
   
  [XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68119464"
  [XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다.  
   
- [XPath 쿼리에 명시적 변환 함수를 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath 쿼리에 명시적 변환 함수 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 명시적 변환 함수를 지정하는 방법을 보여 줍니다.  
   
  [XPath 쿼리에 부울 연산자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  

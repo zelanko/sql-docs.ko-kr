@@ -1,6 +1,5 @@
 ---
-title: 'BLOB 데이터를 사용 하 여 sql에 대 한 URL 참조 요청: 인코딩 (SQLXML 4.0) | Microsoft 문서'
-ms.custom: ''
+title: 'Sql: 인코드 (SQLXML)를 사용 하 여 BLOB 데이터에 대 한 URL 참조 가져오기'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,34 +18,35 @@ ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148eb98bb160557d4188941d293d96c0e5ac5ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1cd65cce635c89cb7ece1b88851d5f4a9b7cb09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067018"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257424"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   주석이 추가된 XSD 스키마에서 특성(또는 요소)이 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 BLOB 열에 매핑된 경우 XML 내의 Base 64 인코딩 형식으로 데이터가 반환됩니다.  
   
- 데이터에 대 한 참조를 원하는 경우 (URI)를 반환 하는 데 사용할 수 나중에 이진 형식으로 BLOB 데이터 검색을 지정 합니다 **sql: 인코딩** 주석. 지정할 수 있습니다 **sql: 인코딩** 단순 유형의 요소 또는 특성입니다.  
+ 나중에 이진 형식으로 BLOB 데이터를 검색 하는 데 사용할 수 있는 데이터에 대 한 참조 (URI)를 반환 하려면 **sql:** encoding 주석을 지정 합니다. 단순 형식의 특성 또는 요소에 대해 **sql:** encoding을 지정할 수 있습니다.  
   
- 지정 된 **sql: 인코딩** 주석 필드에 대 한 URL 필드 값 대신 반환 되어야 함을 나타냅니다. **sql: 인코딩** URL에 단일 선택을 생성 기본 키에 따라 달라 집니다. 사용 하 여 기본 키를 지정할 수 있습니다 합니다 **sql:-필드** 주석입니다.  
+ 필드 값 대신 필드에 대 한 URL을 반환 하도록 지정 하려면 **sql:** encoding 주석을 지정 합니다. **sql: 인코드** 는 기본 키에 따라 URL에서 단일 select를 생성 합니다. **Sql: 키-필드** 주석을 사용 하 여 기본 키를 지정할 수 있습니다.  
   
- 합니다 **sql: 인코딩** 주석에 "url" 또는 "default" 값을 할당할 수 있습니다. "default" 값은 Base 64 인코딩 형식으로 데이터를 반환합니다.  
+ **Sql: 인코드** 주석에는 "url" 또는 "default" 값을 할당할 수 있습니다. "default" 값은 Base 64 인코딩 형식으로 데이터를 반환합니다.  
   
- 합니다 **sql: 인코딩** 주석을 사용할 수 없습니다 **sql:use-cdata** 나 ID, IDREF, IDREFS, NMTOKEN 또는 NMTOKENS 특성 유형에 합니다. 것도 사용할 수 없습니다 XSD를 사용 하 여 **고정** 특성입니다.  
+ Sql **: encoding 주석은** **sql: use-cdata** 또는 ID, IDREF, IDREFS, NMTOKEN 또는 NMTOKENS 특성 유형에 사용할 수 없습니다. XSD **fixed** 특성에도 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  BLOB 유형의 열은 키 또는 외래 키의 일부로 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  
- 이 예에서 매핑 스키마 지정 **sql: 인코딩** 에 **LargePhoto** (Base 64-에서 이진 데이터를 검색 하는 대신 특정 제품 사진에 대 한 URI 참조를 검색 하는 특성 인코딩된 형식)입니다.  
+ 이 예에서 매핑 스키마는 **LargePhoto** 특성에 **sql:** encoding을 지정 하 여 기본 64 인코딩 형식으로 이진 데이터를 검색 하는 대신 특정 제품 사진에 대 한 URI 참조를 검색 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -84,7 +84,7 @@ ms.locfileid: "68067018"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 결과입니다.  
   

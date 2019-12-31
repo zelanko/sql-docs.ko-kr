@@ -1,5 +1,5 @@
 ---
-title: 결과 집합의 특징 확인 (ODBC) | Microsoft Docs
+title: 결과 집합의 특징 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1319bf3f4004b9fcb398f71099ac738086692b2a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: e580cd7bcb4b84f72d7523cdc57a6424861a589e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73779256"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258511"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   메타데이터는 다른 데이터를 설명하는 데이터입니다. 예를 들어 결과 집합 메타데이터는 결과 집합에 있는 열 수, 이러한 열의 데이터 형식, 이름, 전체 자릿수, Null 허용 여부 등과 같은 결과 집합의 특징을 설명합니다.  
   
- ODBC는 카탈로그 API 함수를 통해 애플리케이션에 메타데이터를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 프로시저에 대 한 호출로 많은 ODBC API 카탈로그 함수를 구현 합니다.  
+ ODBC는 카탈로그 API 함수를 통해 애플리케이션에 메타데이터를 제공합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 프로시저에 대 한 호출로 많은 ODBC API 카탈로그 함수를 구현 합니다.  
   
  애플리케이션에서는 대부분의 결과 집합 작업에 대해 메타데이터를 요구합니다. 예를 들어 애플리케이션에서는 열의 데이터 형식을 사용하여 해당 열에 바인딩할 변수의 종류를 확인하고 문자 열의 바이트 길이를 사용하여 열 데이터를 표시하는 데 필요한 공간을 확인합니다. 애플리케이션에서 열의 메타데이터를 확인하는 방법은 애플리케이션 종류에 따라 다릅니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73779256"
   
  애플리케이션에서 특정 메타데이터 세트을 두 번 이상 사용하는 경우 이러한 메타데이터 세트을 처음으로 가져올 때 프라이빗 변수에 해당 정보가 캐시되는 이점을 얻을 수 있습니다. 이는 나중에 드라이버를 강제로 서버에 왕복하게 하는 ODBC 카탈로그 함수가 동일한 정보에 대해 호출되지 않도록 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [결과 &#40;ODBC 처리&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;결과 처리](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

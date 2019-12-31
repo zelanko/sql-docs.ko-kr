@@ -1,6 +1,5 @@
 ---
-title: '유효 기간을 만들려면 ID-IDREF-IDREFS 유형 특성-sql: prefix (SQLXML 4.0) | Microsoft 문서'
-ms.custom: ''
+title: 'Sql: prefix를 사용 하는 유효한 ID 특성 (SQLXML)'
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,19 +21,20 @@ ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad2b357a826a0c8baf8fa98ae69fce4433135998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89864caade618ad4e42890ae3711f3eee50ce231
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126466"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257460"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   특성을 ID 유형 특성으로 지정할 수 있습니다. 그런 다음 IDREF 또는 IDREFS로 지정된 특성을 사용하여 ID 유형 특성을 참조하고 문서 간의 링크를 사용할 수 있습니다.  
   
- ID, IDREF 및 IDREFS는 몇 가지 차이점은 있지만 데이터베이스의 PK/FK(기본 키/외래 키) 관계에 해당합니다. XML 문서에서 ID 유형 특성 값은 고유해야 합니다. 하는 경우 **CustomerID** 하 고 **OrderID** XML 문서에서 ID 유형으로 이러한 값은 고유 해야 하는 특성을 지정 합니다. 하지만 데이터베이스의 CustomerID 및 OrderID 열은 동일한 값을 가질 수 있습니다. 예를 들어 CustomerID = 1 및 OrderID = 1은 데이터베이스에서 유효합니다.  
+ ID, IDREF 및 IDREFS는 몇 가지 차이점은 있지만 데이터베이스의 PK/FK(기본 키/외래 키) 관계에 해당합니다. XML 문서에서 ID 유형 특성 값은 고유해야 합니다. **CustomerID** 및 **OrderID** 특성이 XML 문서에서 ID 유형으로 지정 된 경우 이러한 값은 고유 해야 합니다. 하지만 데이터베이스의 CustomerID 및 OrderID 열은 동일한 값을 가질 수 있습니다. 예를 들어 CustomerID = 1 및 OrderID = 1은 데이터베이스에서 유효합니다.  
   
  ID, IDREF 및 IDREFS 특성이 유효하려면 다음 조건을 충족해야 합니다.  
   
@@ -44,19 +44,19 @@ ms.locfileid: "68126466"
   
 -   ID, IDREF 및 IDREFS 값은 명명된 토큰이어야 합니다. 예를 들어 정수 값 101은 ID 값일 수 없습니다.  
   
--   ID, IDREF 및 IDREFS 유형의 특성은 형식의 열에 매핑할 수 없습니다 **텍스트**하십시오 **ntext**, 또는 **이미지** 또는 기타 이진 데이터 형식 (예를 들어 **타임 스탬프**).  
+-   ID, IDREF 및 IDREFS 유형의 특성은 **text**, **ntext**또는 **image** 형식의 열 또는 기타 이진 데이터 형식 (예: **timestamp**)에 매핑할 수 없습니다.  
   
- 여러 Id를 포함 하는 XML 문서를 사용 합니다 **sql: prefix** 주석 값이 고유한 지 확인 합니다.  
+ XML 문서에 Id가 여러 개 있는 경우 **sql: prefix** 주석을 사용 하 여 값이 고유한 지 확인 합니다.  
   
- 사실은 **sql: prefix** 주석 XSD 고정 특성을 사용 하 여 사용할 수 없습니다.  
+ **Sql: prefix** 주석은 XSD fixed 특성과 함께 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 및 IDREFS 유형 지정  
- 다음 스키마에는  **\<고객 >** 구성 요소는  **\<순서 >** 자식 요소입니다. 합니다  **\<순서 >** 도 요소가 자식 요소에는  **\<OrderDetail >** 요소입니다.  
+ 다음 스키마에서 ** \<Customer>** 요소는 ** \<Order>** 자식 요소로 구성 됩니다. Order>요소에는 자식 요소인 ** \<orderdetail>** 요소가 있습니다. ** \<**  
   
- **OrderIDList** 특성  **\<고객 >** 참조 하는 IDREFS 형식 특성을 **OrderID** 특성은  **\< 순서 >** 요소입니다.  
+ ** \<Customer>** 의 **orderidlist** 특성은 ** \<Order>** 요소의 **OrderID** 특성을 참조 하는 IDREFS 유형 특성입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "68126466"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 결과의 일부입니다.  
   

@@ -1,6 +1,7 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (Transact-sql) | Microsoft Docs
-ms.custom: ''
+title: sp_replmonitorsubscriptionpendingcmds (T-sql)
+description: 트랜잭션 게시에 대 한 구독에서 보류 중인 명령 수에 대 한 정보를 반환 하는 sp_replmonitorsubscriptionpendingcmds 저장 프로시저에 대해 설명 합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6059c4834c37c3c61227fdaf3c9ea3c94e1b5b9a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770897"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319994"
 ---
-# <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
+# <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   트랜잭션 게시의 구독에 대해 보류 중인 명령의 수와 이러한 명령을 처리하는 데 걸리는 대략적인 예상 시간에 대한 정보를 반환합니다. 이 저장 프로시저는 반환된 각 구독에 대해 한 행을 반환합니다. 복제 모니터링에 사용되는 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,10 +55,10 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`구독의 유형입니다. *publication_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|밀어넣기 구독|  
-|**1**|끌어오기 구독|  
+|**1(sp1)**|끌어오기 구독|  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -70,12 +71,12 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_replmonitorsubscriptionpendingcmds** 는 트랜잭션 복제에 사용 됩니다.  
+ **sp_replmonitorsubscriptionpendingcmds** 은 트랜잭션 복제와 함께 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
- 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스의 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replmonitorsubscriptionpendingcmds**을 실행할 수 있습니다. 배포 데이터베이스를 사용 하는 게시에 대 한 게시 액세스 목록의 멤버는 **sp_replmonitorsubscriptionpendingcmds** 을 실행 하 여 해당 게시에 대해 보류 중인 명령을 반환할 수 있습니다.  
+## <a name="permissions"></a>권한  
+ 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replmonitorsubscriptionpendingcmds**을 실행할 수 있습니다. 배포 데이터베이스를 사용 하는 게시에 대 한 게시 액세스 목록의 멤버는 **sp_replmonitorsubscriptionpendingcmds** 를 실행 하 여 해당 게시에 대 한 보류 중인 명령을 반환할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 복제 모니터링](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

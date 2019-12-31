@@ -1,6 +1,5 @@
 ---
-title: 기술 자료 구축 | Microsoft Docs
-ms.custom: ''
+title: 기술 자료 구축
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: eaa57e58b05b1a5d68355d71cbd6fa6c2ca47ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014795"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258837"
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
 

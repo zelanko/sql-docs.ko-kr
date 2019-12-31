@@ -1,7 +1,7 @@
 ---
-title: ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원 | Microsoft Docs
+title: 형식 지원, ODBC 날짜 및 시간
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 2b8af68f94a9da2e771074a8a4366417b91f5c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73784003"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254844"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,8 @@ ms.locfileid: "73784003"
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>매개 변수 및 결과 집합의 데이터 형식 매핑  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에는 ODBC 데이터 형식(SQL_TYPE_TIMESTAMP 및 SQL_TIMESTAMP) 외에 새 서버 유형을 노출하기 위한 두 개의 새로운 데이터 형식이 추가되었습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에는 ODBC 데이터 형식(SQL_TYPE_TIMESTAMP 및 SQL_TIMESTAMP) 외에 새 서버 유형을 노출하기 위한 두 개의 새로운 데이터 형식이 추가되었습니다.  
   
 -   SQL_SS_TIME2  
   
@@ -35,15 +36,16 @@ ms.locfileid: "73784003"
   
  다음 표는 데이터 전체 서버 유형 매핑을 보여 줍니다. 이 표의 일부 셀에는 두 개의 항목이 포함되어 있는데, 이 경우 첫 번째 항목은 ODBC 3.0 값이고 두 번째 항목은 ODBC 2.0 값입니다.  
   
-|SQL Server 데이터 형식|SQL 데이터 형식|값|  
+|SQL Server 데이터 형식|SQL 데이터 형식|Value|  
 |--------------------------|-------------------|-----------|  
-|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
+|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
+|시간|SQL_SS_TIME2|-154 (SQLNCLI)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
-  
+||||
+
  다음 표에서는 해당되는 구조 및 ODBC C 형식을 보여 줍니다. ODBC는 드라이버 정의 C 형식을 허용하지 않으므로 time 및 datetimeoffset에 대해서는 SQL_C_BINARY가 이진 구조로 사용됩니다.  
   
 |SQL 데이터 형식|메모리 레이아웃|기본 C 데이터 형식|값(sqlext.h)|  
@@ -52,7 +54,8 @@ ms.locfileid: "73784003"
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
 |SQL_SS_TIME2|SQL_SS_TIME2_STRUCT|SQL_C_SS_TIME2<br /><br /> SQL_C_BINARY(ODBC 3.5 및 이전)|0x4000(sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
 |SQL_SS_TIMESTAMPOFFSET|SQL_SS_TIMESTAMPOFFSET_STRUCT|SQL_C_SS_TIMESTAMPOFFSET<br /><br /> SQL_C_BINARY(ODBC 3.5 및 이전)|0x4001(sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
-  
+|||||
+
  SQL_C_BINARY 바인딩이 지정된 경우 맞춤 검사가 수행되며 잘못된 맞춤에 대해서는 오류가 보고됩니다. 이 오류에 대한 SQLSTATE는 IM016이 되며 메시지는 "잘못된 구조체 맞춤"입니다.  
   
 ## <a name="data-formats-strings-and-literals"></a>데이터 형식: 문자열 및 리터럴  
@@ -60,13 +63,15 @@ ms.locfileid: "73784003"
   
 |SQL Server 데이터 형식|ODBC 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |--------------------------|--------------------|------------------------------------------|  
-|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|시간|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: ss [. 9999999] '<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
-  
+||||
+
  날짜/시간 리터럴에 대한 ODBC 이스케이프 시퀀스에는 변경 내용이 없습니다.  
   
  결과의 소수 자릿수 초는 항상 콜론(:)이 아닌 점(.)을 사용합니다.  
@@ -92,7 +97,8 @@ ms.locfileid: "73784003"
   
 -   초 범위는 0에서 61.9까지입니다. 이는 항성시와의 동기화를 유지하기 위한 최대 2초의 윤초를 허용합니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 윤초가 허용되지 않으므로 초 값이 59보다 클 경우 서버 오류가 발생합니다.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 윤초가 허용되지 않으므로 초 값이 59보다 클 경우 서버 오류가 발생합니다.  
   
  다음과 같은 기존 ODBC 구조체 구현은 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하도록 수정되었습니다. 단, 정의는 변경되지 않았습니다.  
   
@@ -111,7 +117,7 @@ ms.locfileid: "73784003"
 ### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  이 구조체는 32비트와 64비트 운영 체제 모두에서 12바이트까지 채워집니다.  
   
-```  
+```cpp
 typedef struct tagSS_TIME2_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
@@ -122,7 +128,7 @@ typedef struct tagSS_TIME2_STRUCT {
   
 ### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-```  
+```cpp
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
    SQLSMALLINT year;  
    SQLUSMALLINT month;  
@@ -138,7 +144,5 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  **Timezone_hour** 음수 이면 **timezone_minute** 음수 이거나 0 이어야 합니다. **Timezone_hour** 양수 이면 **timezone_minute** 는 양수 또는 0 이어야 합니다. **Timezone_hour** 0 인 경우 **timezone_minute** 범위는-59에서 + 59 사이의 값이 될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC의 날짜 및 &#40;시간 기능 향상&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

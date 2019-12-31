@@ -1,6 +1,5 @@
 ---
-title: DQS 데이터베이스 분리 및 연결 | Microsoft Docs
-ms.custom: ''
+title: DQS 데이터베이스 분리 및 연결
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: b891c7edc9fc8deb7c3f8dd033997525ef4e8f49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992141"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251675"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS 데이터베이스 분리 및 연결
 
@@ -23,20 +22,21 @@ ms.locfileid: "67992141"
 
   이 항목에서는 DQS 데이터베이스를 분리 및 연결하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a>시작 하기 전에  
   
-###  <a name="Limitations"></a> 제한 사항  
+###  <a name="Limitations"></a>제한 사항  
  제한 사항 목록은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)의 데이터베이스를 분리하는 방법에 대해 설명합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a>사전  
   
 -   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면을 사용하는 방법은 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)을 참조하세요.  
   
--   [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온한 사용자가 없는지 확인합니다.  
+-   
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온한 사용자가 없는지 확인합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="Security"></a>보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>권한에  
   
 -   DQS 데이터베이스를 분리하려면 Windows 사용자 계정은 SQL Server 인스턴스에서 db_owner 고정 서버 역할의 멤버여야 합니다.  
   
@@ -44,29 +44,34 @@ ms.locfileid: "67992141"
   
 -   DQS에서 실행 중인 작업을 종료하거나 실행 중인 프로세스를 중지하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Detach"></a> DQS 데이터베이스 분리  
- SQL Server Management Studio를 사용하여 DQS 데이터베이스를 분리하는 경우 분리된 파일은 컴퓨터에 남아 있으므로 동일한 SQL Server 인스턴스에 다시 연결되거나 다른 서버로 이동하여 거기에서 연결될 수 있습니다. DQS 데이터베이스 파일은 대개 Data Quality Services 컴퓨터의 다음 위치: C:\Program Files\Microsoft SQL Server\MSSQL13. *<Instance_Name>* \MSSQL\DATA 위치에서 사용할 수 있습니다.  
+##  <a name="Detach"></a>DQS 데이터베이스 분리  
+ SQL Server Management Studio를 사용하여 DQS 데이터베이스를 분리하는 경우 분리된 파일은 컴퓨터에 남아 있으므로 동일한 SQL Server 인스턴스에 다시 연결되거나 다른 서버로 이동하여 거기에서 연결될 수 있습니다. DQS 데이터베이스 파일은 대개 Data Quality Services 컴퓨터의 C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA에서 사용할 수 있습니다.  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
 2.  개체 탐색기에서 **데이터베이스** 노드를 확장합니다.  
   
-3.  **DQS_MAIN** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **분리**를 클릭합니다. **데이터베이스 분리** 대화 상자가 나타납니다.  
+3.  
+  **DQS_MAIN** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **분리**를 클릭합니다. 
+  **데이터베이스 분리** 대화 상자가 나타납니다.  
   
-4.  **삭제** 열 아래 확인란을 선택하고 **확인** 을 클릭하여 DQS_MAIN 데이터베이스를 분리합니다.  
+4.  
+  **삭제** 열 아래 확인란을 선택하고 **확인** 을 클릭하여 DQS_MAIN 데이터베이스를 분리합니다.  
   
 5.  DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스에서 3단계와 4단계를 반복하여 해당 데이터베이스를 분리합니다.  
   
  Transact-SQL 문에서 sp_detach_db 저장 프로시저를 사용하여 DQS 데이터베이스를 분리할 수도 있습니다. Transact-SQL 문을 사용하여 데이터베이스를 분리하는 방법은 [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) 의 [Detach a Database](../relational-databases/databases/detach-a-database.md)을 참조하세요.  
   
-##  <a name="Attach"></a> DQS 데이터베이스 연결  
+##  <a name="Attach"></a>DQS 데이터베이스 연결  
  다음 지침을 사용하여 DQS 데이터베이스를 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 다른 SQL Server 인스턴스에 연결하거나 분리되었던 SQL Server 인스턴스에 연결할 수 있습니다.  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
-2.  개체 탐색기에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **연결**을 클릭합니다. **데이터베이스 연결** 대화 상자가 나타납니다.  
+2.  개체 탐색기에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **연결**을 클릭합니다. 
+  **데이터베이스 연결** 대화 상자가 나타납니다.  
   
-3.  연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. **데이터베이스 파일 찾기** 대화 상자가 나타납니다.  
+3.  연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. 
+  **데이터베이스 파일 찾기** 대화 상자가 나타납니다.  
   
 4.  데이터베이스가 있는 디스크 드라이브를 선택하고 디렉터리 트리를 확장하여 데이터베이스의 .mdf 파일을 찾은 다음 이 파일을 선택합니다. 예를 들어 DQS_MAIN 데이터베이스의 경우 다음 파일을 선택합니다.  
   
@@ -74,9 +79,11 @@ ms.locfileid: "67992141"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **데이터베이스 정보** (아래쪽) 창에 연결될 파일 이름이 표시됩니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(...)를 클릭합니다.  
+5.  
+  **데이터베이스 정보** (아래쪽) 창에 연결될 파일 이름이 표시됩니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(...)를 클릭합니다.  
   
-6.  **확인** 을 클릭하여 DQS_MAIN 데이터베이스를 연결합니다.  
+6.  
+  **확인** 을 클릭하여 DQS_MAIN 데이터베이스를 연결합니다.  
   
 7.  DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스에서 2~6단계를 반복하여 해당 데이터베이스를 연결합니다.  
   
@@ -102,7 +109,7 @@ ms.locfileid: "67992141"
   
  Transact-SQL 문을 사용하여 DQS 데이터베이스를 연결할 수도 있습니다. Transact-SQL 문을 사용하여 데이터베이스를 연결하는 방법은 [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) 의 [Attach a Database](../relational-databases/databases/attach-a-database.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DQS 데이터베이스 관리](../data-quality-services/manage-dqs-databases.md)  
   
   

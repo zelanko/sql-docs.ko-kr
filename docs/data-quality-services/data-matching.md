@@ -1,6 +1,5 @@
 ---
-title: 데이터 일치 | Microsoft Docs
-ms.custom: ''
+title: Data Matching
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,16 +7,16 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251754"
 ---
-# <a name="data-matching"></a>데이터 일치
+# <a name="data-matching"></a>Data Matching
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -41,14 +40,14 @@ ms.locfileid: "67992240"
   
  ![DQS의 일치 과정](../data-quality-services/media/dqs-matchingprocess.gif "DQS의 일치 과정")  
   
-##  <a name="How"></a> 데이터 일치를 수행하는 방법  
+##  <a name="How"></a>데이터 일치를 수행 하는 방법  
  DQS의 다른 데이터 품질 프로세스와 마찬가지로 다음 단계에 따라 기술 자료를 구축하고 데이터 품질 프로젝트의 일치 작업을 실행하여 일치를 수행하세요.  
   
 1.  기술 자료에 일치 정책을 만듭니다.  
   
 2.  데이터 품질 프로젝트의 일부인 일치 작업에서 중복 제거 프로세스를 수행합니다.  
   
-###  <a name="Policy"></a> 일치 정책 작성  
+###  <a name="Policy"></a>일치 정책 빌드  
  기술 자료에 DQS가 일치 확률을 할당하는 방법을 정의한 일치 정책을 만들어 일치 수행을 위해 기술 자료를 준비해야 합니다. 일치 정책은 DQS에서 레코드가 서로 얼마나 일치하는지 평가할 때 사용될 도메인을 식별하고, 일치 평가에서 각 도메인 값이 가지는 가중치를 지정하는 하나 이상의 일치 규칙으로 구성됩니다. 이 규칙에 도메인 값이 정확히 일치하는 항목이어야 하는지, 또는 유사하기만 해도 되는지 여부와 유사성 수준을 지정합니다. 또한 도메인 일치 항목이 필수 구성 요소인지 여부도 지정합니다.  
   
  기술 자료 관리 마법사의 일치 정책 작업은 각 일치 규칙을 적용하여 샘플 데이터를 분석함으로써 레코드 범위 전체에서 한 번에 두 레코드를 비교합니다. 지정된 최소값보다 일치 점수가 큰 레코드는 일치 결과에서 클러스터로 그룹화됩니다. 이러한 일치 결과는 기술 자료에 추가되지 않습니다. 이 결과를 사용하여 일치 규칙을 조정하세요. 일치 정책 만들기는 일치 결과 또는 프로파일링 통계에 따라 일치 규칙을 수정하는 반복 프로세스가 될 수 있습니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "67992240"
   
  각 일치 규칙은 생성될 때 기술 자료에 저장됩니다. 그러나 기술 자료는 게시된 경우에만 데이터 품질 프로젝트에서 사용할 수 있습니다. 또한 기술 자료가 게시될 때까지 해당 기술 자료의 일치 규칙은 해당 규칙을 만든 사용자가 아닌 다른 사용자가 변경할 수 없습니다.  
   
-###  <a name="Project"></a> 일치 프로젝트 실행  
+###  <a name="Project"></a>일치 프로젝트 실행  
  DQS에서는 원본 데이터의 각 행을 서로 비교하고 기술 자료에 정의된 일치 정책을 사용하여 행이 일치 항목일 확률을 생성하는 방식으로 데이터 중복 제거를 수행합니다. 이러한 작업은 일치 유형의 데이터 품질 프로젝트에서 수행됩니다. 일치는 데이터 품질 프로젝트의 주요 단계 중 하나입니다. 데이터 정리 후에는 일치시킬 데이터에 오류가 없으므로 이때 일치를 수행하는 것이 가장 좋습니다. 일치 프로세스를 실행하기 전에 정리 프로젝트의 결과를 데이터 테이블 또는 .csv 파일로 내보낸 다음 일치 프로젝트를 만들어 일치 프로젝트의 도메인에 정리 결과를 매핑할 수 있습니다.  
   
  데이터 일치 프로젝트는 컴퓨터 기반 프로세스와 반복 프로세스로 구성됩니다. 일치 프로젝트는 평가할 데이터 원본에 일치 정책의 일치 규칙을 적용합니다. 이 프로세스는 두 행이 일치 항목일 가능성을 일치 점수에 평가합니다. 데이터 관리자가 일치 정책에 설정한 값보다 일치 확률이 높은 레코드만 일치 항목으로 간주됩니다.  

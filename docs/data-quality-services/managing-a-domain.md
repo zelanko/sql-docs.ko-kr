@@ -1,6 +1,5 @@
 ---
-title: 도메인 관리 | Microsoft Docs
-ms.custom: ''
+title: 도메인 관리
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991917"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258437"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
 
@@ -48,7 +47,7 @@ ms.locfileid: "67991917"
 |||  
 |-|-|  
 |특정 데이터 형식의 데이터 필드를 의미 체계에 따라 표현, 도메인을 채우는 방법 지정, 도메인의 출력 형식 지정|[도메인 만들기](../data-quality-services/create-a-domain.md)|  
-|도메인을 다른 도메인에 연결하여 동일한 설정 및 값 공유|[연결된 도메인 만들기](../data-quality-services/create-a-linked-domain.md)|  
+|도메인을 다른 도메인에 연결하여 동일한 설정 및 값 공유|[연결 된 도메인 만들기](../data-quality-services/create-a-linked-domain.md)|  
 |단일 또는 복합 도메인에 참조 데이터 서비스 연결|[참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |기술 자료의 값 변경 또는 보강|[도메인 값 변경](../data-quality-services/change-domain-values.md)|  
 |유효성 검사 및 표준화 규칙 사용|[도메인 규칙 만들기](../data-quality-services/create-a-domain-rule.md)|  
@@ -59,7 +58,7 @@ ms.locfileid: "67991917"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기술 자료 검색을 실행하고 대화식으로 정보를 관리하여 기술 자료 구축|[기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)|  
+|기술 자료 검색을 실행하고 대화식으로 정보를 관리하여 기술 자료 구축|[기술 자료 빌드](../data-quality-services/building-a-knowledge-base.md)|  
 |기술 자료로 정보 가져오기 또는 기술 자료에서 정보 내보내기|[기술 자료 가져오기 및 내보내기](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |복합 도메인 만들기 및 단일 도메인에 정보 추가|[복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)|  
   

@@ -1,6 +1,5 @@
 ---
-title: 'Sql: 오버플로 필드를 사용 하 여 사용 되지 않은 데이터 검색 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'Sql: 오버플로 필드 (SQLXML)를 사용 하 여 데이터 가져오기'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,19 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907166"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257402"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색 하는 경우 **sql: 오버플로 필드** 특성을 지정 하 여 오버플로 데이터가 저장 되는 테이블의 열을 식별할 수 있습니다. **Sql: 오버플로 필드** 특성은 **\<요소 >** 에 지정할 수 있습니다.  
+  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색 하는 경우 **sql: 오버플로 필드** 특성을 지정 하 여 오버플로 데이터가 저장 되는 테이블의 열을 식별할 수 있습니다. **Sql: 오버플로 필드** 특성은 ** \<요소>** 에 지정할 수 있습니다.  
   
  이 데이터는 다음과 같은 방법으로 검색할 수 있습니다.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "72907166"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>1\. 요소에 Specifying sql:overflow-field 지정  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 요소에 Specifying sql:overflow-field 지정  
  이 예에서는 다음 스크립트를 실행한 결과 tempdb 데이터베이스에 Customers2라는 테이블이 생성되었다고 가정합니다.  
   
 ```  

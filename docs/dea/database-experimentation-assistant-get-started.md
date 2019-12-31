@@ -1,7 +1,7 @@
 ---
 title: 작업 비교 프로세스 개요
 description: DEA (데이터베이스 실험 도우미)는 업그레이드 또는 새 인덱스와 같은 SQL Server 환경의 변경에 대 한 A/B 테스트 솔루션입니다.
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -9,15 +9,15 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18cba7abf0d73197c248a62283d52126873169a3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165754"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258519"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>작업 비교 프로세스 개요
 
@@ -35,9 +35,9 @@ SQL Server A/B 테스트의 첫 번째 단계는 원본 서버에서 추적을 �
 
 고려 사항:
 
-- 작업 추적 캡처를 시작 하기 전에 추적을 캡처할 데이터베이스를 백업 해야 합니다.
-- DEA 사용자는 Windows 인증을 사용 하 여 데이터베이스에 연결 하도록 구성 해야 합니다.
-- SQL Server 서비스 계정에는 원본 추적 파일 경로에 대 한 액세스 권한이 있어야 합니다.
+- 시작 하기 전에 추적을 캡처할 데이터베이스를 백업 해야 합니다.
+- DEA 사용자는 Windows 인증을 사용 하 여 데이터베이스에 연결할 수 있어야 합니다.
+- SQL Server 서비스 계정에서 원본 추적 파일 경로에 액세스할 수 있어야 합니다.
 - DEA는 쿼리 성능이 향상 되는지 또는 저하 되는지 확인 하기 위해 캡처 기간 동안 쿼리를 15 번 이상 실행 해야 합니다.
 
 ## <a name="replaying-a-workload-trace"></a>작업 추적 재생
@@ -46,7 +46,7 @@ SQL Server A/B 테스트의 두 번째 단계는 두 개의 대상 서버에서 
 
 대상 1은 제안 된 대상 환경을 모방 하는 원본 서버 대상 2를 모방 합니다.
 
-대상 1과 대상 2의 하드웨어 구성은 가능한 한 유사 하므로 제안 된 변경의 성능 효과를 정확 하 게 분석할 수 SQL Server.
+대상 1과 대상 2의 하드웨어 구성은 가능한 한 유사 하 여 SQL Server에서 제안 된 변경의 성능 효과를 정확 하 게 분석할 수 있도록 해야 합니다.
 
 고려 사항:
 
@@ -56,7 +56,7 @@ SQL Server A/B 테스트의 두 번째 단계는 두 개의 대상 서버에서 
 
 ## <a name="analyzing-the-replayed-workload-traces"></a>재생 된 작업 추적 분석
 
-프로세스의 마지막 단계는 재생 추적을 사용 하 여 분석 보고서를 생성 하는 것입니다. 그런 다음 분석 보고서를 검토 하 여 제안 된 변경의 잠재적인 성능 영향에 대 한 정보를 확인할 수 있습니다.
+프로세스의 마지막 단계는 재생 추적을 사용 하 여 분석 보고서를 생성 하 고, 제안 된 변경의 잠재적인 성능 영향에 대 한 정보를 얻기 위해 보고서를 검토 하는 것입니다.
 
 고려 사항:
 
@@ -65,4 +65,4 @@ SQL Server A/B 테스트의 두 번째 단계는 두 개의 대상 서버에서 
 
 ## <a name="see-also"></a>참고 항목
 
-- 서버에서 발생 하는 이벤트 로그를 사용 하 여 추적 파일을 생성 하는 방법을 알아보려면 [추적 캡처](database-experimentation-assistant-capture-trace.md)를 참조 하세요.
+- 서버에서 발생 하는 이벤트 로그를 사용 하 여 추적 파일을 생성 하는 방법에 대 한 자세한 내용은 [데이터베이스 실험 도우미 추적 캡처](database-experimentation-assistant-capture-trace.md)문서를 참조 하세요.

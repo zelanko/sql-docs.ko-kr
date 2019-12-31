@@ -1,6 +1,5 @@
 ---
-title: XPath 쿼리에 산술 연산자 지정 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: XPath 쿼리에 산술 연산자 사용 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907767"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252628"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [XPath 예제에 대 한 주석 처리 &#40;된 XSD&#41;스키마 예제 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)을 참조 하세요.  
+  다음 예에서는 XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-the--arithmetic-operator"></a>1\. \* 산술 연산자 지정  
- 이 XPath 쿼리는 지정 된 조건자를 충족 하는 **\<OrderDetail >** 요소를 반환 합니다.  
+### <a name="a-specify-the--arithmetic-operator"></a>A. * 산술 연산자 지정  
+ 이 XPath 쿼리는 지정 된 조건자를 충족 하는 ** \<orderdetail>** 요소를 반환 합니다.  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 쿼리에서 `child`는 축이 고 `OrderDetail`는 노드 테스트입니다. **Orderdetail** 이 **\<요소 노드인**경우 TRUE이 고, **\<요소 >** 노드가 **자식** 축의 주 노드 이기 때문입니다. 모든 **\<OrderDetail >** element 노드에 대해 조건자의 테스트가 적용 되며 조건을 충족 하는 노드만 반환 됩니다.  
+ `child` 쿼리에서는 축 이며 `OrderDetail` 노드 테스트 ( **orderdetail** 이 ** \<요소>노드인 **경우 TRUE)입니다. ** \<요소>** 노드가 **자식** 축에 대 한 주 노드인지 때문입니다. 모든 ** \<orderdetail>** element 노드에 대해 조건자의 테스트가 적용 되며 조건을 충족 하는 노드만 반환 됩니다.  
   
 > [!NOTE]  
 >  XPath의 숫자는 배정밀도 부동 소수점 숫자이며 이 예와 같이 부동 소수점 숫자를 비교하면 반올림됩니다.  

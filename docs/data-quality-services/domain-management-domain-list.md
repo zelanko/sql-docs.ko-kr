@@ -1,6 +1,5 @@
 ---
-title: '도메인 관리: 도메인 목록 | Microsoft Docs'
-ms.custom: ''
+title: '도메인 관리: 도메인 목록'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,26 +9,27 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935339"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251661"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
+  이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. 
+  **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="domains-list"></a>도메인 목록  
  **도메인**  
- 이 목록에서는 기술 자료의 모든 도메인을 보여 줍니다. 오른쪽 창의 탭 페이지에서 수행한 모든 작업이 이 목록에서 선택한 도메인에 대해 수행됩니다. 자세한 내용은 다음을 참조하세요.  
+ 이 목록에서는 기술 자료의 모든 도메인을 보여 줍니다. 오른쪽 창의 탭 페이지에서 수행한 모든 작업이 이 목록에서 선택한 도메인에 대해 수행됩니다. 자세한 내용은  항목을 참조하세요.  
   
  **복합 도메인 만들기**  
  기술 자료에 새 복합 도메인을 만듭니다. 이 명령은 **복합 도메인 만들기** 대화 상자를 표시합니다. 도메인을 마우스 오른쪽 단추로 클릭하거나 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다. 자세한 내용은 [복합 도메인 만들기](../data-quality-services/create-a-composite-domain.md)을 참조하세요.  
@@ -44,9 +44,10 @@ ms.locfileid: "67935339"
  .dqs 파일에서 도메인을 가져옵니다. 이 명령은 파일 시스템을 찾아보고 단일 도메인 또는 복합 도메인의 .dqs 파일을 선택하는 데 사용되는 **데이터 파일에서 가져오기** 대화 상자를 표시합니다. 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다. 자세한 내용은 [.dqs 파일에서 도메인을 가져옵니다](../data-quality-services/import-a-domain-from-a-dqs-file.md)을 참조하세요.  
   
  **도메인 삭제**  
- 기술 자료에서 선택한 도메인을 삭제합니다. 이 명령은 **SQL Server Data Quality Services** 대화 상자를 표시합니다. **예**를 클릭하면 도메인과 모든 데이터가 영구적으로 삭제됩니다. 도메인을 마우스 오른쪽 단추로 클릭하거나 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다.  
+ 기술 자료에서 선택한 도메인을 삭제합니다. 이 명령은 **SQL Server Data Quality Services** 대화 상자를 표시합니다. 
+  **예**를 클릭하면 도메인과 모든 데이터가 영구적으로 삭제됩니다. 도메인을 마우스 오른쪽 단추로 클릭하거나 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다.  
   
- **연결된 도메인 만들기**  
+ **연결 된 도메인 만들기**  
  선택한 도메인에 연결된 도메인을 만듭니다. 이 명령은 **도메인 만들기** 대화 상자를 표시합니다. 도메인을 마우스 오른쪽 단추로 클릭한 후 선택한 도메인에 연결되어 있는 **연결된 도메인 만들기** 를 클릭하면 이 명령을 사용할 수 있습니다. 연결을 설정할 도메인이 도메인 만들기 대화 상자에 표시됩니다. 이 명령은 복합 도메인에 대해 사용할 수 없습니다. 두 도메인의 연결을 해제하는 데 사용할 수 있는 명령은 없습니다. 그렇게 하려면 연결된 도메인을 삭제하십시오. 연결된 도메인은 연결된 도메인으로 만들 수 없습니다. 자세한 내용은 [연결된 도메인 만들기](../data-quality-services/create-a-linked-domain.md)을 참조하세요.  
   
  연결된 도메인은 원본 도메인과 같은 값을 가집니다. 도메인의 이름과 속성만 다릅니다. 원본 도메인의 도메인 규칙, 도메인 값, 참조 데이터 연결 또는 용어 기반 관계를 변경하면 연결된 도메인의 도메인 규칙, 도메인 값, 참조 데이터 연결 또는 용어 기반 관계도 변경됩니다. 연결된 도메인의 값을 변경하면 변경 사항이 원본 도메인에도 적용됩니다.  

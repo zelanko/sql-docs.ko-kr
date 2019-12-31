@@ -1,6 +1,5 @@
 ---
-title: 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: 서버 쪽 XML 서식 지정 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,21 +12,23 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70771bcb9256b53f4bb8ca459bd7e3836dfcea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005216"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255897"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대해 실행한 쿼리로 생성된 행 집합의 XML 문서 서식을 서버 쪽에서 지정하는 방법을 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 테이블에 XML 문서를 저장하거나 데이터베이스 테이블에서 XML 문서를 검색할 수 있습니다. XML 문서를 검색하려면 SELECT 쿼리에서 FOR XML 쿼리 확장을 사용합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 테이블에 XML 문서를 저장하거나 데이터베이스 테이블에서 XML 문서를 검색할 수 있습니다. XML 문서를 검색하려면 SELECT 쿼리에서 FOR XML 쿼리 확장을 사용합니다.  
   
- 예를 들어, 클라이언트 응용 프로그램에 대해 명령을 실행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음으로 구성 된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리:  
+ 예를 들어 클라이언트 응용 프로그램이 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리로 구성 된에 대해 명령을 실행 한다고 가정 합니다.  
   
 ```  
 SELECT FirstName, LastName  
@@ -52,11 +53,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 절에 대 한 자세한 내용은 참조 하세요. [생성할 XML Using FOR X](../../../relational-databases/xml/for-xml-sql-server.md)합니다.  
+ FOR xml 절에 대 한 자세한 내용은 [FOR xml을 사용 하 여 Xml 생성](../../../relational-databases/xml/for-xml-sql-server.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+## <a name="see-also"></a>참고 항목  
+ [클라이언트 쪽 및 서버 쪽 XML 서식 &#40;SQLXML 4.0&#41;의 아키텍처](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML&#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
+ [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
   
   

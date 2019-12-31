@@ -1,6 +1,5 @@
 ---
-title: 대량 로드 보안 고려 사항 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: 대량 로드 보안 고려 사항 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027003"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252532"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>대량 로드 보안 고려 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  
   
--   트랜잭션으로 수행할 작업이 대량 로드를 사용 하는 지정 된 **TempFilePath** 임시 파일을 만들 폴더를 지정 하는 속성.  
+-   대량 로드 작업을 트랜잭션으로 수행 하도록 지정 하는 경우 **Tempfilepath** 속성을 사용 하 여 임시 파일을 만들 폴더를 지정 합니다.  
   
      대량 로드 프로세스에서는 이러한 임시 파일을 다음과 같은 사용 권한으로 만듭니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68027003"
   
 -   사용자가 SQLXML에서 오류를 기록할 오류 로그 파일을 설정하는 경우 대량 로드를 실행할 때마다 이 파일이 마지막 대량 로드 프로세스의 데이터로 덮어쓰여집니다.  
   
-## <a name="see-also"></a>관련 항목  
- [XML 데이터 대량 로드 수행 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQLXML 4.0&#41;&#40;XML 데이터 대량 로드를 수행 하는 중](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

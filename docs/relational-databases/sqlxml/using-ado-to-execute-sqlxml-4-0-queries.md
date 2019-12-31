@@ -1,7 +1,7 @@
 ---
-title: ADO를 사용 하 여 SQLXML 4.0 쿼리 실행 | Microsoft Docs
+title: ADO를 사용하여 SQLXML 4.0 쿼리 실행
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,16 +17,17 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909127"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254137"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
+  SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
   
  또는 MDAC(Microsoft Data Access Components) 2.6 이상에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 이용하여 쿼리를 실행하고 COM 기반 애플리케이션에서 SQLXML 4.0을 사용할 수 있습니다.  
   
@@ -95,7 +96,7 @@ ms.locfileid: "72909127"
   
     -   "`@@FILE_NAME@@`"을 찾아 해당 템플릿 파일 이름으로 바꿉니다.  
   
-    -   "`@@SERVER_NAME@@`"을 찾아 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름(예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬로 실행되고 있는 경우 "`(local)`")으로 바꿉니다.  
+    -   "`@@SERVER_NAME@@`"을 찾아 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름(예를 들어 `(local)`가 로컬로 실행되고 있는 경우 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]")으로 바꿉니다.  
   
     -   "`@@DATABASE_NAME@@`"을 찾아 데이터베이스 이름(예를 들어 "`AdventureWorks2012`" 또는 "`tempdb`")으로 바꿉니다.  
   
@@ -121,9 +122,9 @@ ms.locfileid: "72909127"
     3.  현재 설치 된 프로그램 목록에서 **Microsoft SQL Server Native Client** 가 목록에 나타나는지 확인 합니다.  
   
         > [!NOTE]  
-        >  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 해야 하는 경우 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
+        >  Native Client를 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 하는 경우 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
   
-2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인해야 하는 경우 Microsoft 웹 사이트(www.microsoft.com)에서 무료 다운로드로 제공되는 MDAC Component Checker 도구를 사용할 수 있습니다. 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
+2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인 해야 하는 경우 Microsoft 웹 사이트에서 무료 다운로드로 제공 되는 MDAC 구성 요소 검사기 도구를 사용할 수 있습니다 [http://www.microsoft.com](https://www.microsoft.com). 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
   
 3.  스크립트를 실행합니다.  
   

@@ -1,6 +1,5 @@
 ---
-title: XML Updategrams을 사용 하 여 데이터 삽입 (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: XML Updategrams을 사용 하 여 데이터 삽입 (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -33,17 +32,18 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87e63076b0c078484d3cfac9128459cb93b06098
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638069"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252495"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Updategram는 **> 블록 이후에** 는 레코드 인스턴스가\<에 표시 되 고 해당 **\<> 전에** 는 표시 되지 않을 때 삽입 작업을 나타냅니다. 이 경우 updategram는 **> 블록 후\<** 레코드를 데이터베이스에 삽입 합니다.  
+  Updategram는 레코드 인스턴스가 ** \<after>** 블록에 표시 되 고 해당 ** \<>블록 앞** 에는 없는 경우 삽입 작업을 나타냅니다. 이 경우 updategram는 ** \<after>** 블록의 레코드를 데이터베이스에 삽입 합니다.  
   
  삽입 작업에 대한 Updategram 형식은 다음과 같습니다.  
   
@@ -66,33 +66,34 @@ ms.locfileid: "73638069"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>> 블록 전 \<  
- 삽입 작업의 경우 **> 블록 앞에\<** 를 생략할 수 있습니다. 선택적 **매핑 스키마** 특성을 지정 하지 않으면 updategram에 지정 된 **\<ElementName >** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
+## <a name="before-block"></a>\<> 블록 이전  
+ 삽입 작업에 대해 ** \<before>** 블록을 생략할 수 있습니다. 선택적 **매핑 스키마** 특성을 지정 하지 않으면 updategram에 지정 된 ** \<ElementName>** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
   
-## <a name="after-block"></a>> 블록 후 \<  
- **> 블록 후\<** 에서 하나 이상의 레코드를 지정할 수 있습니다.  
+## <a name="after-block"></a>\<> 블록 이후  
+ After>블록에서 하나 이상의 레코드를 지정할 수 있습니다. ** \<**  
   
- > 블록 **다음에\<** 특정 열의 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마 (스키마가 지정 된 경우)에 지정 된 기본값을 사용 합니다. 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적인 **updg: returnid** 특성은 id 유형 열이 있는 테이블에 레코드가 추가 될 때 시스템에서 생성 하는 id 값을 반환 하는 데 사용 됩니다.  
+ After>블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). ** \<** 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적인 **updg: returnid** 특성은 id 유형 열이 있는 테이블에 레코드가 추가 될 때 시스템에서 생성 하는 id 값을 반환 하는 데 사용 됩니다.  
   
 ## <a name="updgid-attribute"></a>updg:id 특성  
- Updategram는 레코드만 삽입 하는 경우 updategram에 **updg: id** 특성이 필요 하지 않습니다. **Updg: id**에 대 한 자세한 내용은 [ &#40;XML Updategrams SQLXML 4.0&#41;을 사용 하 여 데이터 업데이트](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
+ Updategram는 레코드만 삽입 하는 경우 updategram에 **updg: id** 특성이 필요 하지 않습니다. **Updg: id**에 대 한 자세한 내용은 [XML UPDATEGRAMS &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 업데이트 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 특성  
  Updategram가 ID 유형 열을 포함 하는 테이블에 레코드를 삽입 하는 경우 updategram는 선택적 **updg: id** 특성을 사용 하 여 시스템 할당 값을 캡처할 수 있습니다. Updategram은 이 값을 이후 작업에 사용할 수 있습니다. Updategram 실행 시 **updg: returnid** 특성을 지정 하 여 생성 된 id 값을 반환할 수 있습니다.  
   
 ## <a name="updgguid-attribute"></a>updg:guid 특성  
- **Updg: guid** 특성은 guid (globally unique identifier)를 생성 하는 선택적 특성입니다. 이 값은 지정 된 전체 **\<sync >** 블록의 범위 내에 유지 됩니다. **\<sync >** 블록의 어디에서 나이 값을 사용할 수 있습니다. 특성은 **Newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 함수를 호출 하 여 고유 식별자를 생성 합니다.  
+ **Updg: guid** 특성은 guid (globally unique identifier)를 생성 하는 선택적 특성입니다. 이 값은 지정 된 전체 ** \<동기화>** 블록의 범위 내에 유지 됩니다. Sync>블록의 어디에서 나이 값을 사용할 수 있습니다. ** \<** 특성은 **newguid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 함수를 호출 하 여 고유 식별자를 생성 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
   
--   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
+-   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
   
 -   대부분의 예에서는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>1\. Updategram을 사용하여 단일 레코드 삽입  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Updategram을 사용하여 단일 레코드 삽입  
  이 특성 중심 Updategram은 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Employee 테이블에 레코드를 삽입합니다.  
   
  이 예에서 Updategram은 매핑 스키마를 지정하지 않으므로 요소 이름은 테이블 이름에 매핑되고 특성 또는 자식 요소는 해당 테이블의 열에 매핑되는 기본 매핑을 사용합니다.  
@@ -158,8 +159,8 @@ ms.locfileid: "73638069"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>2\. Updategram을 사용하여 여러 레코드 삽입  
- 이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram는 > 블록 앞에 선택적 **\<** 를 지정 하지 않습니다.  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Updategram을 사용하여 여러 레코드 삽입  
+ 이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram ** \<>블록 앞** 에는 옵션을 지정 하지 않습니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -186,7 +187,7 @@ ms.locfileid: "73638069"
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
- 이 예의 또 다른 버전은 두 개의 직원을 삽입 하는 한 블록 대신 **> 블록 후에** 두 개의\<를 사용 하는 updategram입니다. 이 작업은 유효하며 다음과 같이 인코딩할 수 있습니다.  
+ 이 예제의 또 다른 버전은 두 개의 직원을 삽입 하는 한 블록 대신 ** \<>** 블록 두 개를 사용 하는 updategram입니다. 이 작업은 유효하며 다음과 같이 인코딩할 수 있습니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -209,13 +210,14 @@ ms.locfileid: "73638069"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>3\. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 올바른 XML 식별자는 ' __xHHHH\_\_'을 (를) 사용 하 여 인코딩 값으로 인코딩할 수 있는 XML 문자에서는 유효 하지 않습니다. 여기서 HHHH은의 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다. 가장 중요 한 비트 우선 순서입니다.  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
   
 > [!NOTE]  
 >  이 예에서는 Northwind 데이터베이스를 사용합니다. 이 [Microsoft 웹 사이트](https://www.microsoft.com/download/details.aspx?id=23654)에서 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다.  
   
- 또한 요소 이름을 대괄호 ([])로 묶어야 합니다. XML에서 [및] 문자는 유효 하지 않으므로 각각 _x005B\_ 및 _x005D\_로 인코딩해야 합니다. 매핑 스키마를 사용하는 경우 공백과 같은 유효하지 않은 문자가 포함된 요소 이름을 제공할 수 있습니다. 매핑 스키마에서 필요한 매핑을 수행하므로 이러한 문자를 인코딩할 필요가 없습니다.  
+ 또한 요소 이름을 대괄호([ ])로 묶어야 합니다. XML에서 [및] 문자는 유효 하지 않으므로 각각 _x005B\_ 및 _x005D\_로 인코딩해야 합니다. 매핑 스키마를 사용하는 경우 공백과 같은 유효하지 않은 문자가 포함된 요소 이름을 제공할 수 있습니다. 매핑 스키마에서 필요한 매핑을 수행하므로 이러한 문자를 인코딩할 필요가 없습니다.  
   
  이 Updategram은 Northwind 데이터베이스의 Order Details 테이블에 레코드를 추가합니다.  
   
@@ -247,10 +249,10 @@ ms.locfileid: "73638069"
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>4\. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
  다음 Updategram은 두 개의 레코드를 삽입합니다. 하나는 Sales.SalesOrderHeader 테이블에 삽입하고 다른 하나는 Sales.SalesOrderDetail 테이블에 삽입합니다.  
   
- 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서이 레코드를 테이블에 추가 하면 updategram는 **id** 특성을 사용 하 여 할당 된 SalesOrderID 값을 "x" (자리 표시자 값)로 캡처합니다. 그런 다음 updategam은이 **id** 변수를 \<SalesOrderDetail > 요소의 SalesOrderID 특성 값으로 지정 합니다.  
+ 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서이 레코드를 테이블에 추가 하면 updategram는 **id** 특성을 사용 하 여 할당 된 SalesOrderID 값을 "x" (자리 표시자 값)로 캡처합니다. 그런 다음 updatSalesOrderDetail> 요소에서 **** \<이 id 변수를 SalesOrderID 특성의 값으로 지정 합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -327,7 +329,7 @@ ms.locfileid: "73638069"
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>5\. updg:guid 특성을 사용하여 고유한 값 생성  
+### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>E. updg:guid 특성을 사용하여 고유한 값 생성  
  이 예에서 Updategram은 Cust 및 CustOrder 테이블에 레코드를 삽입합니다. 또한 updategram는 **updg: guid** 특성을 사용 하 여 CustomerID 특성에 대 한 고유한 값을 생성 합니다.  
   
 ```  
@@ -375,7 +377,7 @@ ms.locfileid: "73638069"
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="f-specifying-a-schema-in-an-updategram"></a>6\. Updategram에 스키마 지정  
+### <a name="f-specifying-a-schema-in-an-updategram"></a>F. Updategram에 스키마 지정  
  이 예의 Updategram은 다음 테이블에 레코드를 삽입합니다.  
   
 ```  
@@ -384,7 +386,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  이 Updategram에는 XSD 스키마가 지정됩니다. 즉, Updategram 요소 및 특성의 기본 매핑이 없습니다. 스키마는 데이터베이스 테이블과 열에 필요한 요소 및 특성의 매핑을 제공합니다.  
   
- 다음 스키마 (Custorderschema.xml)는 **OrderID** 및 **EmployeeID** 특성으로 구성 된 **\<CustOrder >** 요소에 대해 설명 합니다. 스키마를 더 흥미롭게 만들려면 **EmployeeID** 특성에 기본값이 할당 됩니다. Updategram은 삽입 작업에 대해서만 및 Updategram에서 해당 특성을 지정하지 않는 경우에만 특성의 기본값을 사용합니다.  
+ 다음 스키마 (custorderschema.xml)는 **OrderID** 및 **EmployeeID** 특성으로 구성 된 ** \<CustOrder>** 요소를 설명 합니다. 스키마를 더 흥미롭게 만들려면 **EmployeeID** 특성에 기본값이 할당 됩니다. Updategram은 삽입 작업에 대해서만 및 Updategram에서 해당 특성을 지정하지 않는 경우에만 특성의 기본값을 사용합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -412,7 +414,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- 매핑 스키마를 지정 하는 updategram의 추가 예는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
+ 매핑 스키마를 지정 하는 updategram의 추가 예는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -483,7 +485,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- XSD 스키마는 **\<fname >** 요소에 대해 **nillable = "true"** 를 지정 합니다. 다음 Updategram은 이 스키마를 사용합니다.  
+ XSD 스키마는 ** \<fname>** 요소에 대해 **nillable = "true"** 를 지정 합니다. 다음 Updategram은 이 스키마를 사용합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -503,7 +505,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram은 **> after\<** 블록의 **\<fname >** 요소에 대해 **xsi: nil** 을 지정 합니다. 따라서 이 Updategram을 실행하면 테이블의 first_name 열에 대해 NULL 값이 삽입됩니다.  
+ Updategram **는 \<after>** 블록에서 ** \<fname>** 요소에 대해 **xsi: nil** 을 지정 합니다. 따라서 이 Updategram을 실행하면 테이블의 first_name 열에 대해 NULL 값이 삽입됩니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -528,10 +530,10 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="h-specifying-namespaces-in-an-updategram"></a>8\. Updategram에 네임스페이스 지정  
+### <a name="h-specifying-namespaces-in-an-updategram"></a>H Updategram에 네임스페이스 지정  
  Updategram에는 Updategram의 동일한 요소에서 선언된 네임스페이스에 속하는 요소가 있을 수 있습니다. 이 경우 해당 스키마에서도 동일한 네임스페이스를 선언해야 하며 요소가 대상 네임스페이스에 속해야 합니다.  
   
- 예를 들어 다음 updategram (Updategram-elementhavingnamespace.xml)에서 **\<Order >** 요소는 요소에 선언 된 네임 스페이스에 속합니다.  
+ 예를 들어 다음 updategram (updategram-elementhavingnamespace.xml)에서 ** \<Order>** 요소는 요소에 선언 된 네임 스페이스에 속합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -611,14 +613,14 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9\. XML 데이터 형식 열에 데이터 삽입  
- **Xml** 데이터 형식은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입 되었습니다. Updategram을 사용 하 여 **xml** 데이터 형식 열에 저장 된 데이터를 삽입 하 고 업데이트할 수 있습니다.  
+### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. XML 데이터 형식 열에 데이터 삽입  
+ **Xml** 데이터 형식은에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]도입 되었습니다. Updategram을 사용 하 여 **xml** 데이터 형식 열에 저장 된 데이터를 삽입 하 고 업데이트할 수 있습니다.  
   
 -   **Xml** 열은 기존 행을 식별 하는 데 사용할 수 없습니다. 따라서 updategram의 **updg: before** 섹션에 포함할 수 없습니다.  
   
 -   **Xml** 열에 삽입 되는 xml 조각 범위 내에 있는 네임 스페이스는 유지 되 고 해당 네임 스페이스 선언이 삽입 된 조각의 최상위 요소에 추가 됩니다.  
   
- 예를 들어 다음 updategram (Sampleupdategram.xml)에서 **Desc > 요소\<** 는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 프로덕션 > 제품 모델 테이블에서 제품 설명 열을 업데이트 합니다. 이 updategram의 결과는 제품 설명 열의 XML 콘텐츠가 **\<Desc >** 요소의 xml 내용으로 업데이트 된다는 것입니다.  
+ 예를 들어 다음 updategram (sampleupdategram.xml)에서 ** \<Desc>** 요소는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 샘플 데이터베이스의 Production>제품 모델 테이블에서 제품 설명 열을 업데이트 합니다. 이 updategram의 결과는 제품 설명 열의 xml 콘텐츠가 ** \<Desc>** 요소의 xml 내용으로 업데이트 된다는 것입니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -727,7 +729,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [Updategram 보안 고려 &#40;사항 SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [Updategram 보안 고려 사항은 SQLXML 4.0&#41;&#40;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

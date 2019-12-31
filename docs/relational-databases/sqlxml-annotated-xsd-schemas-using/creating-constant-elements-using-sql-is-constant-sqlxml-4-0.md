@@ -1,6 +1,5 @@
 ---
-title: 'Sql: is 상수를 사용 하 여 상수 요소 만들기 (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'Sql: is 상수 (SQLXML)를 사용 하 여 상수 요소 만들기'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906052"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257484"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
 
@@ -35,17 +35,17 @@ ms.locfileid: "72906052"
   
 -   XML 문서에 최상위 요소 추가. XML 문서에는 단일 최상위 요소(root 요소)가 필요합니다.  
   
--   모든 주문을 래핑하는 **\<orders >** 요소와 같은 컨테이너 요소 만들기  
+-   모든 주문을 래핑하는 ** \<orders>** 요소와 같은 컨테이너 요소 만들기  
   
- **Sql: is 상수** 주석은 **\<complexType >** 요소에 추가할 수 있습니다.  
+ **Sql: is 상수** 주석은 ** \<complexType>** 요소에 추가할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>1\. 컨테이너 요소를 추가하는 sql:is-constant 지정  
- 주석이 추가 된이 XSD 스키마에서 **\<CustomerOrders >** 는 값이 1 인 **sql: is 상수** 특성을 지정 하 여 상수 요소로 정의 됩니다. 따라서 **CustomerOrders >\<** 데이터베이스 테이블 또는 열에 매핑되지 않습니다. 이 상수 요소는 자식 요소 **\<순서** 를 구성 합니다.  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 컨테이너 요소를 추가하는 sql:is-constant 지정  
+ 주석이 추가 된이 XSD 스키마에서 ** \<customerorders>** 은 값이 1 인 **sql: is 상수** 특성을 지정 하 여 상수 요소로 정의 됩니다. 따라서 ** \<customerorders>** 은 데이터베이스 테이블 또는 열에 매핑되지 않습니다. 이 상수 요소는 ** \<자식 요소>순서 대로** 구성 됩니다.  
   
- **CustomerOrders >** 는 어떤 데이터베이스 테이블이 나 열에도 매핑되지\<않지만 결과 XML에는 **\<순서 >** 자식 요소를 포함 하는 컨테이너 요소로 표시 됩니다.  
+ ** \<Customerorders>** 는 어떠한 데이터베이스 테이블이 나 열에도 매핑되지 않지만 결과 XML에는 자식 요소 ** \<>순서** 를 포함 하는 컨테이너 요소로 표시 됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

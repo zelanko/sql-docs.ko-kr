@@ -1,6 +1,5 @@
 ---
-title: (SQLXML 4.0) XPath 쿼리에 축 지정 | Microsoft Docs
-ms.custom: ''
+title: XPath 쿼리에 축 지정 (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,30 +17,31 @@ helpviewer_keywords:
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fd00cae14d5dd3f00a848edc166b7fbe8c4b7c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102407"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252597"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   다음 예에서는 XPath 쿼리에 축을 지정하는 방법을 보여 줍니다.  
   
- 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
+ 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 컨텍스트 노드의 자식 요소 검색  
- 다음 XPath 쿼리에서 모든 선택 된  **\<연락처 >** 컨텍스트 노드의 자식 요소:  
+ 다음 XPath 쿼리는 컨텍스트 노드의 모든 ** \<연락처>** 자식 요소를 선택 합니다.  
   
 ```  
 /child::Contact  
 ```  
   
- 쿼리에서 `child` 는 축이고 및 `Contact` 는 노드 테스트 (TRUE 이면 `Contact` 가  **\<요소 >** 노드를 때문에 \<요소 > 연결 된 주 노드 유형에 `child` 축).  
+ `child` 쿼리에서 `Contact` 는 축 이며은 노드 테스트 (가 `Contact` \< `child` ** \<요소>** 노드인 경우 TRUE)입니다. 요소>는 축과 연결 된 주 노드 형식 이기 때문입니다.  
   
  기본값은 `child` 축입니다. 따라서 다음과 같이 쿼리를 작성할 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68102407"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 를 복사 하 여 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(XPathAxesSampleA.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68102407"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   
@@ -85,16 +85,16 @@ ms.locfileid: "68102407"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>2\. 컨텍스트 노드의 손자 검색  
- 다음 XPath 쿼리에서 모든 선택 된  **\<순서 >** 요소 자식을 합니다  **\<고객 >** 컨텍스트 노드의 요소 자식을:  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 컨텍스트 노드의 손자 검색  
+ 다음 XPath 쿼리는 컨텍스트 노드의 ** \<Customer>** 요소 자식의 모든 ** \<Order>** 요소 자식을 선택 합니다.  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 쿼리에서 `child` 는 축이고 및 `Customer` 하 고 `Order` 는 노드 테스트 (이러한 노드 테스트 Customer와 Order는 경우 TRUE를  **\<요소 >** 노드를 때문에  **\<요소 >** 노드는 주 노드를 **자식** 축). 일치 하는 각 노드  **\<고객 >** , 일치 하는 노드  **\<주문 >** 결과에 추가 됩니다. 만  **\<순서 >** 결과 집합에 반환 됩니다.  
+ `child` 쿼리에서는 축이 `Customer` 고 및 `Order` 는 노드 테스트입니다. 이러한 노드 테스트는 ** \<요소>** 노드가 **자식** 축에 대 한 주 노드인지 때문에 Customer와 Order가 ** \<요소>** 노드인 경우 TRUE입니다. ** \<고객>** 일치 하는 각 노드에 대해 ** \<주문>** 일치 하는 노드가 결과에 추가 됩니다. 결과 집합에는 ** \<Order>** 반환 됩니다.  
   
- 합니다 **자식** 축은 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
+ **자식** 축이 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
 ```  
 /Customer/Order  
@@ -102,7 +102,7 @@ ms.locfileid: "68102407"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 를 복사 하 여 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(XPathAxesSampleB.xml)을 만들고 다음과 같은 디렉터리에 저장합니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68102407"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   
@@ -161,16 +161,16 @@ ms.locfileid: "68102407"
 </ROOT>  
 ```  
   
- XPath 쿼리로 지정 된 경우 `Customer/Order/OrderDetail`에서 일치 하는 각 노드  **\<고객 >** 쿼리 이동할 해당  **\<순서 >** 요소입니다. 와 일치 하는 각 노드  **\<순서 >** 는 노드를 추가 하는 쿼리  **\<OrderDetail >** 결과에 합니다. 만  **\<OrderDetail >** 결과 집합에 반환 됩니다.  
+ XPath 쿼리가와 같이 `Customer/Order/OrderDetail`지정 된 경우 ** \<고객>** 일치 하는 각 노드에서 쿼리가 ** \<Order>** 요소로 이동 합니다. 그리고 ** \<순서>** 일치 하는 각 노드에 대해 쿼리는 ** \<orderdetail>** 노드를 결과에 추가 합니다. ** \<Orderdetail>** 만 결과 집합에 반환 됩니다.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>3\. ..를 사용하여 부모 축 지정  
- 다음 쿼리를 모두 검색 합니다  **\<순서 >** 부모 요소가  **\<고객 >** 요소를 **CustomerID** 특성 1의 값입니다. 쿼리에서 사용 합니다 **자식** 의 부모를 찾습니다는 조건자에서는 축 합니다  **\<순서 >** 요소.  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. ..를 사용하여 부모 축 지정  
+ 다음 쿼리는 **CustomerID** 특성 값이 1 인 부모 ** \<Customer>** 요소를 사용 하 여 모든 ** \<Order>** 요소를 검색 합니다. 쿼리에서는 조건자의 **자식** 축을 사용 하 여 ** \<Order>** 요소의 부모를 찾습니다.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
 ```  
   
- 합니다 **자식** 축이 기본 축입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
+ **자식** 축이 기본 축입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
 ```  
 /Customer/Order[../@CustomerID="1"]  
@@ -183,11 +183,11 @@ ms.locfileid: "68102407"
 ```  
   
 > [!NOTE]  
->  XPath 쿼리 `/Order[../@CustomerID="1"]` 의 부모가 없기 때문에 오류가 반환 됩니다  **\<순서 >** 합니다. 매핑 스키마에 포함 된 요소가 있을 수 있지만  **\<순서 >** , 하며에서 XPath를 시작 하지 따라서  **\<순서 >** 것으로 간주 됩니다는 문서의 최상위 요소 형식입니다.  
+>  ** \<Order>** 의 `/Order[../@CustomerID="1"]` 부모가 없기 때문에 XPath 쿼리는 오류를 반환 합니다. 매핑 스키마에 ** \<Order>** 포함 된 요소가 있을 수 있지만 XPath가 어떤 경우에도 시작 되지 않았습니다. 따라서 ** \<순서>** 문서의 최상위 요소 형식으로 간주 됩니다.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 를 복사 하 여 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(XPathAxesSampleC.xml)을 만들고 다음과 같은 디렉터리에 저장합니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68102407"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   
@@ -247,16 +247,17 @@ ms.locfileid: "68102407"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>4\. 특성 축 지정  
- 다음 XPath 쿼리에서 모든 선택 합니다  **\<고객 >** 인 컨텍스트 노드의 자식 요소를 **CustomerID** 값이 1 특성:  
+### <a name="d-specify-the-attribute-axis"></a>D. 특성 축 지정  
+ 다음 XPath 쿼리는 **CustomerID** 특성 값이 1 인 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 선택 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 조건자에서 `attribute::CustomerID`, `attribute` 는 축이고 및 `CustomerID` 는 노드 테스트 (경우 `CustomerID` 이므로 노드 테스트가 특성을  **\<특성 >** 노드는 주 노드 `attribute` 축).  
+ 조건자 `attribute::CustomerID`에서는 축 `attribute` 이 `CustomerID` 고는 노드 테스트입니다 `CustomerID` .이 특성 ** \<>** 노드가 `attribute` 축에 대 한 주 노드인지 때문에 노드 테스트는 TRUE입니다.  
   
- `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본 축이므로 쿼리에서 생략할 수 있습니다.  
+ 
+  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본 축이므로 쿼리에서 생략할 수 있습니다.  
   
 ```  
 /Customer[@CustomerID="1"]  
@@ -264,7 +265,7 @@ ms.locfileid: "68102407"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 를 복사 하 여 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(XPathAxesSampleD.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -284,7 +285,7 @@ ms.locfileid: "68102407"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   

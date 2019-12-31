@@ -1,6 +1,5 @@
 ---
-title: .dqs 파일로 기술 자료 내보내기 | Microsoft Docs
-ms.custom: ''
+title: Export a Knowledge Base to a .dqs File
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,16 +7,16 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 57f8524cde4404a4380cc58454b348af27b9d094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935286"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251604"
 ---
-# <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
+# <a name="export-a-knowledge-base-to-a-dqs-file"></a>Export a Knowledge Base to a .dqs File
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -27,29 +26,33 @@ ms.locfileid: "67935286"
   
  내보내기 프로세스에서 만든 .dqs 데이터 파일은 암호화되므로 내용을 볼 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a>시작 하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a>사전  
  기술 자료를 .dqs 데이터 파일로 내보내려면 기술 자료를 만들고 열어 두어야 합니다. 기술 자료를 내보낼 .dqs 파일은 자동으로 생성되므로 필요하지 않습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="Security"></a>보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>권한에  
  기술 자료를 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Export"></a> .dqs 파일로 기술 자료 내보내기  
+##  <a name="Export"></a>기술 자료를 dqs 파일로 내보내기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
+2.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
 3.  도메인 관리 페이지(원하는 탭 선택)에서 도메인 목록 위의 **기술 자료 데이터를 내보냅니다** 아이콘을 클릭한 다음 **기술 자료 내보내기**를 클릭합니다. 또는 **도메인** 목록에서 마우스 오른쪽 단추를 클릭하고 **내보내기**위로 마우스를 이동한 후 **기술 자료 내보내기**를 클릭할 수도 있습니다.  
   
-4.  **데이터 파일로 내보내기** 대화 상자에서 파일을 저장할 폴더로 이동하여 파일의 이름을 지정하거나 기술 자료 이름을 유지한 후 **다른 이름으로 저장** 형식으로 **DQS 데이터 파일(\*.dqs)** 을 지정하고 **저장**을 클릭합니다.  
+4.  
+  **데이터 파일로 내보내기** 대화 상자에서 파일을 저장할 폴더로 이동하여 파일의 이름을 지정하거나 기술 자료 이름을 유지한 후 **다른 이름으로 저장\* 형식으로 **DQS 데이터 파일(**.dqs)** 을 지정하고 **저장**을 클릭합니다.  
   
-5.  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
+5.  
+  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. 
+  **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인을.dqs 파일로 내보낸 후  
+##  <a name="FollowUp"></a>후속 작업: 도메인을 dqs 파일로 내보낸 후  
  기술 자료를 .dqs 파일로 내보낸 후 기술 자료를 동일한 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (새 이름 적용) 또는 다른 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 가져올 수 있습니다.  
   
   

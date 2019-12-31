@@ -1,6 +1,5 @@
 ---
-title: DQS의 데이터 프로파일링 및 알림 | Microsoft Docs
-ms.custom: ''
+title: DQS의 데이터 프로파일링 및 알림
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 6d331065c8e5d44cd2abeed9c85ce55d146006e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935473"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251745"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
 
@@ -33,7 +32,7 @@ ms.locfileid: "67935473"
   
  프로파일링을 통해 Data Quality Services를 기술 자료 검색, 정리 및 일치 용도뿐만 아니라 분석 도구로도 사용할 수 있습니다. 분석용 기술 자료를 하나 만들고 해당 기술 자료로 기술 자료 검색을 실행하여 프로파일 통계를 통해 기술 자료가 검색, 정리 및 일치 요구 사항을 만족하는지 파악할 수 있습니다.  
   
-##  <a name="How"></a> 프로파일 작동 방식  
+##  <a name="How"></a>프로 파일링 작동 방법  
  프로파일링은 기술 자료의 품질을 평가하지 않습니다. 원본 데이터의 품질을 평가합니다. 프로파일링은 원본 데이터에 대한 기술 자료 관리 또는 데이터 품질 프로젝트에서 수행 중인 특정 작업의 결과를 나타내는 통계를 제공합니다. 프로파일링은 항상 현재 수행 중인 특정 작업의 컨텍스트에서 실행됩니다. 특정 화면에서 프로파일링 탭을 클릭하면 현재 수행 중인 작업의 단계를 나가지 않고도 프로파일링 데이터를 표시할 수 있습니다. 프로파일링 테이블은 프로세스가 수행될 때 실시간으로 채워지므로 데이터 품질 태스크를 수행하면서 해당 태스크를 평가할 수 있습니다. 정리 또는 중복 제거 후 원본 데이터가 개선되었는지, 그렇다면 얼마나 개선되었는지 확인할 수 있습니다.  
   
  모든 프로파일링 숫자는 값의 발생 횟수를 나타내며 고유성 메트릭을 제외하고 대부분 합계에 대한 백분율로 표시됩니다. 고유성 메트릭은 값의 발생 횟수에 관계없이 값의 절대 개수를 나타냅니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "67935473"
   
  DQS에서는 도메인 관리 작업에 대한 프로파일링 통계를 제공하지 않습니다.  
   
-##  <a name="Activity"></a> 작업별 데이터 프로파일링  
+##  <a name="Activity"></a>작업 별로 데이터 프로 파일링  
  DQS 프로파일링에서는 완결성(데이터가 존재하는 정도), 정확도(데이터를 의도된 용도에 맞게 사용할 수 있는 정도) 및 고유성(여러 값이 여러 엔터티를 나타내는 정도)의 표준 데이터 품질 차원을 사용하여 데이터의 품질을 나타냅니다. 기본적으로 NULL과 빈 값은 누락되었거나 완결성 백분율이 낮은 것으로 간주됩니다. 그러나 다른 값을 NULL에 해당하는 값으로 정의할 수 있으며, 이 경우 이러한 값은 누락된 것으로 간주됩니다.  
   
  프로파일링에서 프로세스를 평가하는 데 필요한 통계를 제공하지만 통계 해석은 사용자가 수행해야 합니다. 통계를 열 단위로 보면서 프로파일링의 결과를 이해하세요.  
@@ -69,21 +68,21 @@ ms.locfileid: "67935473"
   
 -   [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;내부&#41; 기술 자료를 사용 하 여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)  
   
 -   [일치 프로젝트 실행](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> 작업 모니터링 데이터 프로파일링  
+##  <a name="Monitoring"></a>작업 모니터링의 데이터 프로 파일링  
  기술 자료 검색, 일치 정책, 일치 및 정리 작업에 대한 프로파일링 정보는 Data Quality 클라이언트의 작업 페이지뿐만 아니라 작업 모니터링에서도 볼 수 있습니다. 작업 모니터링은 현재 및 이전 작업에 대한 개요를 제공합니다. 작업의 속성 및 관련 계산 프로세스 외에도 각 작업에 대해 생성된 프로파일링 정보를 한 곳에서 볼 수 있습니다. 작업 테이블에서 특정 작업을 선택하여 아래 테이블에 프로파일링 결과를 표시할 수 있습니다. 또한 프로파일링 결과를 내보낼 수도 있습니다. 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)을 참조하세요.  
   
-##  <a name="Notifications"></a> 알림  
+##  <a name="Notifications"></a>알림을  
  DQS에서는 프로파일링을 통해 중요한 통계와 메트릭을 수집하고 표시하는 것 외에도 표시된 프로파일링 통계에 따라 작업을 수행해야 할 시기를 알려 주는 알림을 생성합니다(설정된 경우). DQS에서는 알림을 사용하여 데이터 원본에 대한 중요한 사실을 강조하고 실행 목적을 기준으로 한 현재 작업의 효율성을 표시합니다. 알림은 팁과 권장 사항을 제공하여 특정 상태를 나타내고 기술 자료 검색, 데이터 정리 또는 데이터 일치 작업을 개선할 수 있는 방법을 권장합니다.  
   
  DQS 알림은 사용자가 관심을 가질만한 문제를 언급하거나 잠재적인 문제를 해결하는 데 사용됩니다. 알림이 목적과 관련이 있는지에 따라 알림에 대해 작업을 수행할지 여부가 달라집니다. 예를 들어 완결성과 정확도가 모두 100%인 상태에서 데이터 정리가 수정된 값이나 제안된 값을 생성하지 않은 경우 DQS에서 알림을 게시했다고 가정하겠습니다. 이 알림에서는 작업을 실행할 필요가 없다는 메시지가 표시될 것입니다. 그러나 작업을 실행하도록 선택할지 여부는 사용자가 결정할 일입니다.  
   
- 알림은 **프로파일링** 탭에서 느낌표가 있는 도구 설명으로 표시됩니다. 알림과 관련된 통계가 빨간색으로 표시되어 알림에 대한 통계적 이유를 알려줍니다.  
+ 알림은 **프로 파일링** 탭에서 느낌표가 있는 도구 설명으로 표시 됩니다. 알림의 통계 근거를 나타내기 위해 알림과 관련 된 통계가 빨간색으로 표시 됩니다.  
   
  Data Quality 클라이언트 홈 페이지의 **관리** 섹션에 있는 **일반 설정** 탭에서 알림을 설정하거나(기본값) 해제할 수 있습니다. 알림이 해제되면 도구 설명이 표시되지 않고 통계가 빨간색으로 표시되지 않습니다. 알림을 해제할 경우 성능에 큰 이점은 없습니다. 알림을 해제해도 프로파일링은 계속 작동합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "67935473"
   
 -   [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;내부&#41; 기술 자료를 사용 하 여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)  
   
@@ -101,6 +100,6 @@ ms.locfileid: "67935473"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로 파일링 알림 사용 또는 사용 안 함](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   
