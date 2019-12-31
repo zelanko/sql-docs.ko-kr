@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB) | Microsoft Docs
+title: 데이터 FILESTREAM, IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3bee5fbe809476ef0be1be28a06909cc470a073
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73767269"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225949"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,8 @@ ms.locfileid: "73767269"
   
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "73767269"
   
  네 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 이 예제에서 만든 데이터베이스를 삭제합니다.  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 #define AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_  
@@ -95,7 +96,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
 #pragma once  
   
@@ -240,7 +241,7 @@ return S_OK;
 }  
 ```  
   
-```  
+```cpp
 //  IRowsetFastLoadUpload.cpp  
 #pragma once  
   
@@ -588,7 +589,7 @@ MainCleanup:
 }  
 ```  
   
-```  
+```sql
 sp_detach_db 'DBFsa'  
 IF EXISTS (SELECT name FROM master..sysdatabases WHERE name = 'DBFsa') DROP DATABASE [DBFsa] |  
 ```  

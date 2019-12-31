@@ -26,55 +26,57 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874834"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232277"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
-  다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 CLR (공용 언어 런타임)에 있는 동등한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 `System.Data.SqlTypes` 네임 스페이스와 해당 기본 CLR에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  다음 표에서는 데이터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `System.Data.SqlTypes` 네임 스페이스의에 대 한 CLR (공용 언어 런타임)의 해당 형식 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework의 해당 네이티브 clr에 해당 하는 데이터 형식을 보여 줍니다.  
   
 ||||  
 |-|-|-|  
-|**SQL Server 데이터 형식**|System.Data.SqlTypes 또는 Microsoft.SqlServer.Types의 형식|**CLR 데이터 형식 (.NET Framework)**|  
-|`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
+|**SQL Server 데이터 형식**|System.Data.SqlTypes 또는 Microsoft.SqlServer.Types의 형식|**CLR 데이터 형식(.NET Framework)**|  
+|`bigint`|`SqlInt64`|**Int64, Nullable\<int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Boolean, Nullable\<Boolean>**|  
+|`bit`|`SqlBoolean`|**부울, Nullable\<부울>**|  
 |`char`|없음|없음|  
 |`cursor`|없음|없음|  
-|`date`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
-|`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
-|`datetime2`|없음|**DateTime, Nullable\<DateTime>**|  
+|`date`|`SqlDateTime`|**DateTime, Nullable\<datetime>**|  
+|`datetime`|`SqlDateTime`|**DateTime, Nullable\<datetime>**|  
+|`datetime2`|없음|**DateTime, Nullable\<datetime>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|`decimal`|`SqlDecimal`|**Decimal, Nullable\<10 진수 >**|  
-|`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=53164)합니다.|없음|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=53164)합니다.|없음|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=53164)합니다.|없음|  
+|`decimal`|`SqlDecimal`|**Decimal, Nullable\<decimal>**|  
+|`float`|`SqlDouble`|**Double, Nullable\<double>**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`는 SQL Server와 함께 설치 되 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=53164)에서 다운로드할 수 있는 Microsoft. i m l. d l l .dll에 정의 되어 있습니다.|없음|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`는 SQL Server와 함께 설치 되 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=53164)에서 다운로드할 수 있는 Microsoft. i m l. d l l .dll에 정의 되어 있습니다.|없음|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`는 SQL Server와 함께 설치 되 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=53164)에서 다운로드할 수 있는 Microsoft. i m l. d l l .dll에 정의 되어 있습니다.|없음|  
 |`image`|없음|없음|  
-|`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
-|`money`|`SqlMoney`|**Decimal, Nullable\<10 진수 >**|  
+|`int`|`SqlInt32`|**Int32, Nullable\<int32>**|  
+|`money`|`SqlMoney`|**Decimal, Nullable\<decimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|없음|없음|  
-|`numeric`|`SqlDecimal`|**Decimal, Nullable\<10 진수 >**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars`는 데이터 전송 및 액세스에 더 적합하고 `SQLString`은 문자열 작업에 더 적합합니다.|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char[], Nullable\<char>**|  
-|`real`|`SqlSingle`(`SqlSingle` 범위, 단, `real`보다 큼)|**Single, Nullable\<Single>**|  
+|`numeric`|`SqlDecimal`|**Decimal, Nullable\<decimal>**|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
+  `SQLChars`는 데이터 전송 및 액세스에 더 적합하고 `SQLString`은 문자열 작업에 더 적합합니다.|`String, Char[]`|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<문자>**|  
+|`real`|
+  `SqlSingle`(`SqlSingle` 범위, 단, `real`보다 큼)|**단일 Nullable\<단일>**|  
 |`rowversion`|없음|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
-|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<10 진수 >**|  
+|`smallint`|`SqlInt16`|**Int16, Nullable\<int16>**|  
+|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<decimal>**|  
 |`sql_variant`|없음|`Object`|  
 |`table`|없음|없음|  
 |`text`|없음|없음|  
-|`time`|없음|**TimeSpan, Nullable\<TimeSpan>**|  
+|`time`|없음|**TimeSpan, Nullable\<timespan>**|  
 |`timestamp`|없음|없음|  
-|`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
-|`uniqueidentifier`|`SqlGuid`|**Guid, Nullable\<Guid>**|  
+|`tinyint`|`SqlByte`|**바이트, Nullable\<바이트>**|  
+|`uniqueidentifier`|`SqlGuid`|**Guid, Nullable\<guid>**|  
 |`User-defined type(UDT)`|없음|동일한 어셈블리 또는 종속 어셈블리의 사용자 정의 형식에 바인딩된 동일한 클래스입니다.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte[], Nullable\<byte>**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte [], Nullable\<바이트>**|  
 |`varchar`|없음|없음|  
 |`xml`|`SqlXml`|없음|  
   
@@ -96,7 +98,7 @@ Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- 어셈블리가 데이터베이스에서 만들어진 후에는 저장 프로시저가 `int`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 OUTPUT 매개 변수로 지정하는 다음 Transact-SQL을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만들어집니다.  
+ 어셈블리가 데이터베이스에서 만들어진 후에는 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 OUTPUT 매개 변수로 지정하는 다음 Transact-SQL을 사용하여 `int`에서 만들어집니다.  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -109,20 +111,21 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**CLR 데이터 형식 (SQL Server)**|**SQL Server 데이터 형식**|  
-|`Decimal`|SMALLMONEY|  
-|`SqlMoney`|SMALLMONEY|  
+|**CLR 데이터 형식(SQL Server)**|**SQL Server 데이터 형식**|  
+|`Decimal`|smallmoney|  
+|`SqlMoney`|smallmoney|  
 |`Decimal`|money|  
-|`DateTime`|Smalldatetime|  
-|`SQLDateTime`|Smalldatetime|  
+|`DateTime`|smalldatetime|  
+|`SQLDateTime`|smalldatetime|  
   
 ## <a name="change-history"></a>변경 내역  
   
 |업데이트된 내용|  
 |---------------------|  
-|`SqlGeography`, `SqlGeometry` 및 `SqlHierarchyId` 형식이 매핑 테이블에 추가되었습니다.|  
+|
+  `SqlGeography`, `SqlGeometry` 및 `SqlHierarchyId` 형식이 매핑 테이블에 추가되었습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [.NET Framework의 SQL Server 데이터 형식](sql-server-data-types-in-the-net-framework.md)  
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework의 데이터 형식 SQL Server](sql-server-data-types-in-the-net-framework.md)  
   
   

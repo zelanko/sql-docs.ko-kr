@@ -10,24 +10,24 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176036"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228067"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
  대부분의 애플리케이션에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 프라이빗 클라우드, 퍼블릭 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 
  
- 비즈니스에 필요할 때 확장할 수 있는 유연한 IT 인프라가 필요한 경우 Azure 글로벌 데이터 센터에서 데이터 센터 또는 공용 클라우드에서 사설 클라우드를 구축할 수 있습니다. 공용 클라우드와 합쳐지도록 데이터 센터를 확장하면 하이브리드 클라우드 모델을 구축하게 됩니다. 
+ 비즈니스에 필요할 때 확장할 수 있는 유연한 IT 인프라가 필요한 경우 Azure 글로벌 데이터 센터에서 데이터 센터 또는 공용 클라우드에서 사설 클라우드를 구축할 수 있습니다. 퍼블릭 클라우드와 합쳐지도록 데이터 센터를 확장하면 하이브리드 클라우드 모델을 구축하게 됩니다. 
  
  이 항목에서는 하이브리드 클라우드 시나리오를 지원하는 SQL Server 2014 기능을 소개합니다. Microsoft 하이브리드 클라우드 전략 및 SQL Server에 대한 자세한 내용은 [SQL Server 하이브리드 IT](https://www.microsoft.com/sqlserver/solutions-technologies/hybrid-It.aspx) 웹 사이트를 참조하십시오. 
  
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure 및 하이브리드 클라우드 
  Microsoft 기술을 사용하여 온-프레미스와 클라우드 양쪽에서 코드를 실행하거나, 온-프레미스 데이터를 사용하여 클라우드에서 실행하거나, 두 개 이상의 데이터 센터를 이용하여 완전히 클라우드에서 실행할 수 있습니다. 따라서 기존 레거시 IT 투자를 보존하면서 원하는 속도로 애플리케이션을 클라우드로 이동할 수 있습니다. 
  
- 이 문서에서는 온-프레미스 SQL Server에서 Azure 공용 클라우드 제품으로 확장 되는 하이브리드 클라우드 시나리오에 중점을 둡니다. [Azure Virtual Machines에서 SQL Server](https://msdn.microsoft.com/library/azure/jj823132.aspx) 하 고 [Azure Storage](http://www.azure.com/documentation/services/storage/)합니다. 구체적으로 다음 시나리오에 대해 설명 합니다. 
+ 이 문서에서는 온-프레미스 SQL Server에서 Azure 공용 클라우드 제품으로 확장 되는 하이브리드 클라우드 시나리오 ( [SQL Server azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) 및 [Azure Storage](https://www.azure.com/documentation/services/storage/)에 대해 집중적으로 설명 합니다. 구체적으로 다음 시나리오에 대해 설명 합니다. 
  
 -  [Azure Storage에서 데이터베이스 백업 및 복원](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -60,7 +60,7 @@ ms.locfileid: "70176036"
  
 -  [백업 압축 (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) 기능을 사용 하면 동일한 데이터의 압축 되지 않은 백업 보다 작은 백업을 만들 수 있습니다. 백업을 압축하면 필요한 디바이스 I/O가 감소하므로 일반적으로 백업 속도가 크게 향상됩니다. 이렇게 하면 Azure Storage에 백업 파일을 저장할 때 큰 혜택을 얻을 수 있습니다. 
  
--  [Azure에 대 한 관리 되는 백업](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) 기능을 사용 하 SQL Server 여 [Azure Storage](http://www.azure.com/documentation/services/storage/)에 SQL Server 데이터베이스를 자동으로 백업할 수 있습니다. 이 기능을 사용하여 백업 전략을 관리하고 단일 데이터베이스나 여러 데이터베이스에 대한 백업을 예약하도록 SQL Server를 구성하거나 인스턴스 수준에서 기본값을 설정할 수 있습니다. 
+-  [Azure에 대 한 관리 되는 백업](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) 기능을 사용 하 SQL Server 여 [Azure Storage](https://www.azure.com/documentation/services/storage/)에 SQL Server 데이터베이스를 자동으로 백업할 수 있습니다. 이 기능을 사용하여 백업 전략을 관리하고 단일 데이터베이스나 여러 데이터베이스에 대한 백업을 예약하도록 SQL Server를 구성하거나 인스턴스 수준에서 기본값을 설정할 수 있습니다. 
  
 -  [Azure에 백업 SQL Server 도구](https://www.microsoft.com/download/details.aspx?id=40740) 를 사용 하 여 백업이 로컬 또는 클라우드에 저장 된 SQL Server 백업을 Azure Blob Storage 하 고 암호화 하 고 압축할 수 있습니다. 이 도구를 통해 SQL Server 2005, 2008, 2008 R2 및 2014와 같은 SQL Server의 여러 버전에 대한 단일 클라우드 백업 전략을 수립할 수 있습니다. 
  
@@ -105,12 +105,11 @@ ms.locfileid: "70176036"
  
 -  **전체 가상 컴퓨터 이동:** 사용자 SQL Server 고유의 가상 컴퓨터를 Azure로 가져오거나 플랫폼 이미지를 사용 하 여 가상 컴퓨터를 만들 수 있습니다. 그런 다음 데이터가 이미 포함되어 있는 데이터 디스크를 업로드하여 가상 머신에 연결하거나 빈 디스크를 머신에 연결할 수 있습니다. 연결 된 데이터 디스크를 사용 하 여 Azure Virtual Machines에 SQL Server 데이터 인스턴스가 있으면 데이터 파일과 응용 프로그램 데이터에 대 한 또 다른 영구 저장소를 제공 합니다. 종합적인 정보 및 방법에 대 한 자세한 내용은 [Azure Virtual Machines에서 SQL Server 배포](https://msdn.microsoft.com/library/dn133141.aspx)를 참조 하세요. 
  
- 응용 프로그램 계층 (예: 프레젠테이션 계층, 비즈니스 계층 및 데이터베이스 계층)을 Azure Virtual Machines로 이동 하려는 경우 [에는 SQL 용 응용 프로그램 패턴 및 개발 전략에 제공 된 권장 사항을 검토 하는 것이 좋습니다. Azure Virtual Machines의 서버를](https://msdn.microsoft.com/library/dn574746.aspx) 참조 하세요. 이 문서의 목표는 솔루션 설계자와 개발자에 게 기존 응용 프로그램을 Azure로 마이그레이션하고 Azure에서 새로운 응용 프로그램을 개발할 때 따를 수 있는 훌륭한 응용 프로그램 아키텍처 및 디자인을 위한 기초를 제공 하는 것입니다. 이 문서에서는 각 애플리케이션 패턴에 대한 온-프레미스 시나리오, 해당 클라우드 사용 솔루션 및 관련된 기술 권장 사항을 설명합니다. 또한이 문서에서는 응용 프로그램을 올바르게 디자인할 수 있도록 Azure 특정 개발 전략에 대해 설명 합니다. 
+ 응용 프로그램 계층 (예: 프레젠테이션 계층, 비즈니스 계층 및 데이터베이스 계층)을 Azure Virtual Machines로 이동 하려는 경우 [azure Virtual Machines의 SQL Server에 대 한 응용 프로그램 패턴 및 개발 전략](https://msdn.microsoft.com/library/dn574746.aspx) 문서에 제공 된 권장 사항을 검토 하는 것이 좋습니다. 이 글의 목표는 설계자 및 개발자들이 기존 애플리케이션을 Azure로 마이그레이션하고 Azure에서 새로운 애플리케이션을 개발할 때 활용할 수 있도록 좋은 애플리케이션 아키텍처 및 설계에 대한 기초 지식을 제공하는 것입니다. 이 문서에서는 각 애플리케이션 패턴에 대한 온-프레미스 시나리오, 해당 클라우드 사용 솔루션 및 관련된 기술 권장 사항을 설명합니다. 또한 애플리케이션의 올바른 개발에 도움이 되는 Azure 특정 개발 전략에 대해서도 논의합니다. 
  
-## <a name="see-also"></a>참고자료 
+## <a name="see-also"></a>참고 항목 
  [SQL Server 2014 CTP2 제품 가이드](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [하이브리드 클라우드 블로그 시리즈 Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Microsoft SQL Server 하이브리드 클라우드 블로그 시리즈](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [데이터 중심 응용 프로그램을 Azure로 마이그레이션](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
  

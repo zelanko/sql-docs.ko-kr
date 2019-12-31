@@ -15,17 +15,19 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919609"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232223"
 ---
 # <a name="creating-a-user-defined-type"></a>사용자 정의 형식 만들기
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 설치할 수 있는 UDT(사용자 정의 형식)를 만들려면 먼저 Visual C# 또는 Visual Basic과 같은 지원되는 .NET Framework 프로그래밍 언어 중 하나에서 UDT를 만들기 위한 사양에 맞는 클래스를 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 같이 `sp_configure` 시스템 저장 프로시저를 사용하여 CLR을 사용하도록 설정할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. 다음 `sp_configure` 문과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저를 사용하여 CLR을 사용하도록 설정할 수 있습니다.  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +42,9 @@ Reconfigure
  사용자 정의 형식을 만드는 것과 관련된 코딩 방법을 설명합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 샘플에서 자세히 설명 된 Point UDT를 정의 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 다음 코드 목록에서는 [사용자 정의 형식 코딩](creating-user-defined-types-coding.md)에 자세히 설명 되어 있는 Point UDT를 정의 합니다.  
   
- 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 이러한 예제를 설치 하는 방법에 대 한 지침은 [데이터베이스 엔진 샘플 SQL Server](https://msftengprodsamples.codeplex.com/)를 참조 하세요.  
   
  C#  
   
@@ -330,7 +332,6 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](clr-user-defined-types.md)  
-  
   

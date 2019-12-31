@@ -1,5 +1,5 @@
 ---
-title: EKM을 사용 하 여 TDE를 사용 하도록 설정 | Microsoft Docs
+title: EKM을 사용 하 여 TDE 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011505"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957237"
 ---
 # <a name="enable-tde-using-ekm"></a>EKM을 사용하여 TDE 설정
   이 항목에서는 EKM(확장 가능 키 관리) 모듈에 저장된 비대칭 키를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용하여 데이터베이스 암호화 키를 보호하기 위해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 TDE(투명한 데이터 암호화)를 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -29,32 +29,34 @@ ms.locfileid: "63011505"
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작 하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
      [보안](#Security)  
   
--   [EKM을 사용 하 여, TRANSACT-SQL을 사용 하 여 TDE를 사용 하도록 설정 하려면](#TsqlProcedure)  
+-   [Transact-SQL에서 EKM을 사용하여 TDE를 사용하도록 설정하려면](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a>시작 하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="Restrictions"></a>제한 사항  
   
 -   데이터베이스 암호화 키를 만들고 데이터베이스를 암호화하려면 시스템 관리자와 같은 높은 권한이 필요합니다. 해당 사용자는 EKM 모듈로 인증될 수 있어야 합니다.  
   
--   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 시작 시 데이터베이스를 열어야 합니다. 이를 위해서는 EKM에서 인증할 인증서를 만들고 비대칭 키를 기반으로 하는 로그인에 인증서를 추가해야 합니다. 사용자는 이 로그인을 사용하여 로그인할 수 없지만 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 이를 사용하여 EKM 디바이스에서 인증할 수 있습니다.  
+-   
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 시작 시 데이터베이스를 열어야 합니다. 이를 위해서는 EKM에서 인증할 인증서를 만들고 비대칭 키를 기반으로 하는 로그인에 인증서를 추가해야 합니다. 사용자는 이 로그인을 사용하여 로그인할 수 없지만 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 이를 사용하여 EKM 디바이스에서 인증할 수 있습니다.  
   
 -   EKM 모듈에 저장된 비대칭 키를 분실한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 해당 데이터베이스를 열 수 없습니다. EKM 공급자가 비대칭 키를 백업할 수 있도록 허용하는 경우 백업을 만들고 안전한 위치에 저장해야 합니다.  
   
 -   EKM 공급자에 필요한 옵션 및 매개 변수는 아래 코드 예에 제공된 것과 다를 수 있습니다. 자세한 내용은 해당 EKM 공급자를 참조하십시오.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="Security"></a>보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>권한에  
  이 항목에서는 다음 권한이 사용됩니다.  
   
--   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+-   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. 
+  **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 -   ALTER ANY CREDENTIAL 권한이 필요합니다.  
   
@@ -64,7 +66,7 @@ ms.locfileid: "63011505"
   
 -   데이터베이스를 암호화하려면 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="TsqlProcedure"></a>Transact-sql 사용  
   
 #### <a name="to-enable-tde-using-ekm"></a>EKM을 사용하여 TDE를 사용하도록 설정하려면  
   
@@ -73,11 +75,14 @@ ms.locfileid: "63011505"
 2.  EKM 공급자의 요구 사항에 따라 컴퓨터에 인증서를 설치합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자를 제공하지 않습니다. 각 EKM 공급자에 따라 사용자 설치, 구성 및 권한 부여에 대한 절차가 다릅니다.  이 단계를 수행하려면 해당 EKM 공급자 설명서를 참조하십시오.  
+    >  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자를 제공하지 않습니다. 각 EKM 공급자에 따라 사용자 설치, 구성 및 권한 부여에 대한 절차가 다릅니다.  이 단계를 수행하려면 해당 EKM 공급자 설명서를 참조하십시오.  
   
-3.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+3.  
+  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-4.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+4.  
+  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 5.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
@@ -147,26 +152,26 @@ ms.locfileid: "63011505"
     GO  
     ```  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은  
   
--   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [Transact-sql&#41;sp_configure &#40;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [Transact-sql&#41;&#40;암호화 공급자 만들기](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [Transact-sql&#41;자격 증명 &#40;만들기](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [Transact-sql&#41;로그인 &#40;만들기](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
--   [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [Azure Key Vault &#40;SQL Server를 사용 하는 확장 가능 키 관리&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
--   [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+-   [Azure SQL Database 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   
   

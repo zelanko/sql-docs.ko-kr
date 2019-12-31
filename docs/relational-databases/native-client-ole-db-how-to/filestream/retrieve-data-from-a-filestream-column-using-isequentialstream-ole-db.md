@@ -1,5 +1,5 @@
 ---
-title: ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB) | Microsoft Docs
+title: ISequentialStream를 사용 하는 FILESTREAM (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c32630be13f643276ac2767953f91b541eef3b1
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8a296327dae84f5b799fc6aef07e3e4022bb83
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790091"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225837"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "73790091"
   
  다음 예제 중 하나를 사용하여 이 예제에서 읽어들이는 테이블을 만듭니다.  
   
--   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText 매개 변수에 바인딩된 ISequentialStream를 사용 하 여 FILESTREAM 열에 데이터 전송 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload &#40;OLE DB를 사용 하 여 FILESTREAM 열에 데이터 전송&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73790091"
   
  이 예제를 실행할 때는 서버 이름 또는 server\instance_name을 전달해야 합니다.  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
   
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
@@ -97,7 +97,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
 #pragma once  
   
@@ -242,7 +242,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
 }  
 ```  
   
-```  
+```cpp
 //  ICommandDownload.cpp  
 #pragma once  
   

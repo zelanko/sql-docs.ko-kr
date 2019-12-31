@@ -1,5 +1,5 @@
 ---
-title: SQL Server 인증 사용자 암호 변경(OLE DB) | Microsoft Docs
+title: SQL 인증 사용자 암호 (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b157b95fe7175fb36bf7f1e064eca2179f571e38
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790147"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226173"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,13 @@ ms.locfileid: "73790147"
   
  ole32.lib oleaut32.lib를 사용하여 컴파일합니다.  
   
- 이 예제를 빌드하려면 암호를 알고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 계정이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 로그인할 수 있게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio를 열고 개체 탐색기에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. 보안을 선택하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드를 활성화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정을 추가하려면 개체 탐색기에서 보안 노드를 마우스 오른쪽 단추로 클릭하고 추가를 선택합니다.  
+ 이 예제를 빌드하려면 암호를 알고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 계정이 필요합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 로그인할 수 있게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio를 열고 개체 탐색기에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. 보안을 선택하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드를 활성화합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정을 추가하려면 개체 탐색기에서 보안 노드를 마우스 오른쪽 단추로 클릭하고 추가를 선택합니다.  
   
  이 예제를 실행할 서버에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증용으로 활성화된 로그인이 최소한 하나 이상 있어야 합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인을 허용하도록 서버를 설정해야 합니다.  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   

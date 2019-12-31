@@ -1,5 +1,5 @@
 ---
-title: OR 구현 고유 하 게 컴파일된 저장된 프로시저에서 연산자 | Microsoft Docs
+title: 고유 하 게 컴파일된 저장 프로시저에서 OR 연산자 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778914"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228205"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 OR 연산자 구현
   OR 연산자는 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않습니다. NOT 연산자도 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않으므로 동등한 논리 연산자만 사용하여 OR 연산자를 시뮬레이션할 수 없습니다. 그러나 메모리 최적화 테이블 변수를 통해 OR 연산자의 효과를 시뮬레이션할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "62778914"
   
 5.  메모리 최적화 테이블 변수를 쿼리의 결과로 사용합니다.  
   
- 다음 샘플에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]에 대해 업데이트된 AdventureWorks2012 데이터베이스에서 테이블을 사용합니다. 이 샘플에서는 goto 파일을 다운로드 하려면 [AdventureWorks 데이터베이스-2012, 2008R2 및 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)합니다. AdventureWorks2012에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 코드 샘플을 적용하려면 [SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)로 이동하십시오.  
+ 다음 샘플에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]에 대해 업데이트된 AdventureWorks2012 데이터베이스에서 테이블을 사용합니다. 이 샘플에 대 한 파일을 다운로드 하려면 [AdventureWorks 데이터베이스-2012, 2008 r2 및 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)로 이동 합니다. AdventureWorks2012에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 코드 샘플을 적용하려면 [SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)로 이동하십시오.  
   
  다음 저장 프로시저를 데이터베이스에 추가합니다. 네이티브 컴파일을 사용하도록 이 저장 프로시저를 변환합니다.  
   
@@ -161,7 +161,7 @@ GO
   
 5.  메모리 최적화 테이블 변수를 쿼리의 결과로 사용합니다.  
   
- 다음 샘플에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]에 대해 업데이트된 AdventureWorks2012 데이터베이스에서 테이블을 사용합니다. 이 샘플에서는 goto 파일을 다운로드 하려면 [AdventureWorks 데이터베이스-2012, 2008R2 및 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)합니다. AdventureWorks2012에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 코드 샘플을 적용하려면 [SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)로 이동하십시오.  
+ 다음 샘플에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]에 대해 업데이트된 AdventureWorks2012 데이터베이스에서 테이블을 사용합니다. 이 샘플에 대 한 파일을 다운로드 하려면 [AdventureWorks 데이터베이스-2012, 2008 r2 및 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)로 이동 합니다. AdventureWorks2012에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 코드 샘플을 적용하려면 [SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)로 이동하십시오.  
   
  다음 저장 프로시저를 데이터베이스에 추가합니다. 네이티브 컴파일을 사용하도록 이 저장 프로시저를 변환합니다. 이 샘플에서는 INNER JOIN 조건을 사용합니다.  
   
@@ -245,7 +245,6 @@ GO
 ## <a name="side-effects"></a>부작용  
  WHERE 절 또는 JOIN 조건에 OR 연산자가 둘 이상 있는 경우 동작을 시뮬레이션하는 데 실행해야 하는 쿼리 수가 기하급수적으로 증가할 수 있습니다. 이로 인해 쿼리 성능이 저하되고, 메모리 최적화 테이블 변수를 사용해야 하므로 메모리 사용량이 증가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-  
+## <a name="see-also"></a>참고 항목  
+ [고유 하 게 컴파일된 저장 프로시저의 마이그레이션 문제](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

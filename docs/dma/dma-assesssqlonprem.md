@@ -3,7 +3,7 @@ title: SQL Server 마이그레이션 평가 수행
 titleSuffix: Data Migration Assistant
 description: Data Migration Assistant를 사용 하 여 다른 SQL Server 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하는 방법을 알아보고 Azure SQL Database
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,26 +15,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056628"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001908"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 SQL Server 마이그레이션 평가 수행
 
 다음 단계별 지침은 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server, Azure VM에서 실행 되는 SQL Server 또는 Azure SQL Database으로 마이그레이션하기 위한 첫 번째 평가를 수행 하는 데 도움이 됩니다.
+
+   > [!NOTE]
+   > Data Migration Assistant v 5.0에서는 응용 프로그램 코드에서 데이터베이스 연결 및 포함 된 SQL 쿼리를 분석 하는 기능이 도입 되었습니다. 자세한 내용은 [Data Migration Assistant를 사용 하 여 응용 프로그램의 데이터 액세스 계층을 평가 하](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)는 블로그 게시물을 참조 하세요.
 
 ## <a name="create-an-assessment"></a>평가 만들기
 
 1. **새로 만들기** (+) 아이콘을 선택 하 고 **평가** 프로젝트 형식을 선택 합니다.
 
-2. 원본 및 대상 서버 유형을 설정 합니다.
+2. 원본 및 대상 서버 유형을 설정합니다.
 
     온-프레미스 SQL Server 인스턴스를 최신 온-프레미스 SQL Server 인스턴스로 업그레이드 하는 경우 또는 Azure VM에서 호스트 되는 SQL Server 원본 및 대상 서버 유형을 **SQL Server**로 설정 합니다. Azure SQL Database로 마이그레이션하는 경우 대신 대상 서버 유형을 **Azure SQL Database**로 설정 합니다.
 
-3. **만들기**를 클릭합니다.
+3. 
+  **만들기**를 클릭합니다.
 
    ![평가 만들기](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -53,7 +57,7 @@ ms.locfileid: "74056628"
 
    Azure SQL Database으로 마이그레이션하기 위해 원본 SQL Server 인스턴스를 평가 하는 경우 다음 평가 보고서 유형 중 하나 또는 둘 다를 선택할 수 있습니다.
 
-    - **데이터베이스 호환성 검사**
+    - **데이터베이스 호환성 확인**
     - **기능 패리티 확인**
 
     ![SQL Database 대상에 대 한 평가 보고서 유형 선택](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
@@ -107,7 +111,8 @@ ms.locfileid: "74056628"
         go
     ```
 
-5. **다음** 을 클릭 하 여 평가를 시작 합니다.
+5. 
+  **다음**을 클릭하여 평가를 시작합니다.
 
     ![원본 추가 및 평가 시작](../dma/media/dma-assesssqlonprem/select-database1.png)
 
@@ -129,21 +134,21 @@ ms.locfileid: "74056628"
 
 ![기능 권장 사항 보기](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Azure SQL Database의 경우 평가는 마이그레이션 차단 문제와 기능 패리티 문제를 제공 합니다. 특정 옵션을 선택 하 여 두 범주에 대 한 결과를 검토 합니다.
+Azure SQL Database의 경우 평가는 마이그레이션 차단 문제와 기능 패리티 문제를 제공 합니다.특정 옵션을 선택 하 여 두 범주에 대 한 결과를 검토 합니다.
 
 - **SQL Server 기능 패리티** 범주는 포괄적인 권장 사항 집합, Azure에서 사용할 수 있는 대체 방법 및 완화 단계를 제공 합니다. 이를 통해 마이그레이션 프로젝트에서 이러한 작업을 계획할 수 있습니다.
 
   ![SQL Server 기능 패리티 정보 보기](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- **호환성 문제** 범주는 온-프레미스 SQL Server 데이터베이스를 Azure SQL 데이터베이스로 마이그레이션하는 것을 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하는 데 도움이 되는 권장 사항을 제공 합니다.
+- **호환성 문제** 범주는 온-프레미스 SQL Server 데이터베이스를 Azure SQL 데이터베이스로 마이그레이션하는 것을 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다.그런 다음 해당 문제를 해결 하는 데 도움이 되는 권장 사항을 제공 합니다.
 
   ![호환성 문제 보기](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>대상 준비를 위한 데이터 공간 평가
 
-이러한 평가를 전체 데이터 공간으로 확장 하 고 Azure SQL Database로 마이그레이션할 SQL Server 인스턴스와 데이터베이스의 상대적 준비 상태를 확인 하려면 **Azure Migrate에 업로드**를 선택 하 여 결과를 Azure 마이그레이션 허브에 업로드 합니다.
+이러한 평가를 전체 데이터 공간으로 확장 하 고 Azure SQL Database로 마이그레이션할 SQL Server 인스턴스와 데이터베이스의 상대적 준비 상태를 확인 하려면 **Azure Migrate에 업로드**를 선택 하 여 Azure Migrate 허브에 결과를 업로드 합니다.
 
-이렇게 하면 Azure 마이그레이션 허브 프로젝트에서 통합 결과를 볼 수 있습니다.
+이렇게 하면 Azure Migrate 허브 프로젝트에서 통합 결과를 볼 수 있습니다.
 
 자세한 내용은 [여기](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017)에서 목표 준비 평가에 대 한 단계별 지침을 제공 합니다.
 
@@ -153,4 +158,4 @@ Azure SQL Database의 경우 평가는 마이그레이션 차단 문제와 기�
 
 모든 데이터베이스가 평가를 완료 한 후 **보고서 내보내기** 를 선택 하 여 결과를 JSON 파일이 나 CSV 파일로 내보냅니다. 그런 다음 사용자의 편의를 위해 데이터를 분석할 수 있습니다.
 
-여러 평가를 동시에 실행 하 고 **모든 평가** 페이지를 열어 평가 상태를 볼 수 있습니다.
+여러 평가를 동시에 실행하고 **모든 평가** 페이지를 열어서 평가 상태를 볼 수 있습니다.

@@ -1,5 +1,5 @@
 ---
-title: IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 인출 | Microsoft Docs
+title: 'Fetch, IRow:: GetColumns 및 ISequentialStream'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1151da2b2763aec188682ba6e5e227a8b560855f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790106"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226078"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,8 @@ ms.locfileid: "73790106"
   
     -   **IRow:: open ()** 을 사용 하 여 행에서 **ISequentialStream** 를 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
-    -   **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
+    -   
+  **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
   
 4.  **ISequentialStream:: Read ()** 를 반복 해 서 사용 하 여 지정 된 바이트 수를 소비자 버퍼로 읽습니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "73790106"
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -96,7 +97,7 @@ values
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #define DBINITCONSTANTS  
 #define INITGUID  
@@ -663,7 +664,7 @@ int InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -672,7 +673,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

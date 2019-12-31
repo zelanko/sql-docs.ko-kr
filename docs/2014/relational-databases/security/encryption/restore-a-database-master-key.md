@@ -9,32 +9,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011553"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957161"
 ---
 # <a name="restore-a-database-master-key"></a>데이터베이스 마스터 키 복원
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 복원하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작 하기 전에:**  
   
      [제한 사항](#Restrictions)  
   
      [보안](#Security)  
   
--   [Transact-SQL을 사용하여 데이터베이스 마스터 키를 복원하려면](#SSMSProcedure)  
+-   [Transact-sql을 사용 하 여 데이터베이스 마스터 키를 복원 하려면](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a>시작 하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="Restrictions"></a>제한 사항  
   
 -   마스터 키가 복원되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 현재 사용 중인 마스터 키로 암호화된 모든 키의 암호를 해독한 다음 복원된 마스터 키를 사용하여 이러한 키를 암호화합니다. 이 리소스를 많이 사용하는 작업은 사용량이 낮은 기간 동안에만 수행하도록 예약해야 합니다. 현재 데이터베이스 마스터 키가 열려 있지 않거나 열 수 없는 경우 또는 이 키를 사용하여 암호화된 일부 키의 암호를 해독할 수 없는 경우 복원 작업이 실패합니다.  
   
@@ -44,20 +44,22 @@ ms.locfileid: "63011553"
   
 -   현재 데이터베이스에 마스터 키가 없는 경우 RESTORE MASTER KEY가 마스터 키를 만듭니다. 새 마스터 키는 서비스 마스터 키로 자동으로 암호화되지 않습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="Security"></a>보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>권한에  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> Transact-SQL과 함께 SQL Server Management Studio 사용  
+##  <a name="SSMSProcedure"></a>Transact-sql과 함께 SQL Server Management Studio 사용  
   
 #### <a name="to-restore-the-database-master-key"></a>데이터베이스 마스터 키를 복원하려면  
   
 1.  물리적 백업 미디어 또는 로컬 파일 시스템의 디렉터리에서 백업한 데이터베이스 마스터 키의 복사본을 검색합니다.  
   
-2.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+2.  
+  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-3.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+3.  
+  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   

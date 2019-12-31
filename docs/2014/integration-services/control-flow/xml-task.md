@@ -15,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829366"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232734"
 ---
 # <a name="xml-task"></a>XML 태스크
   XML 태스크는 XML 데이터를 통한 작업 시 사용됩니다. 패키지는 이 태스크를 사용하여 XML 문서를 검색하고, XSLT(Extensible Stylesheet Language Transformations) 스타일시트 및 XPath 식을 통해 문서에 작업을 적용하고, 여러 문서를 병합하거나 업데이트된 문서를 파일 및 변수에 대해 유효성을 검사하고, 비교 및 저장할 수 있습니다.  
@@ -46,18 +46,18 @@ ms.locfileid: "62829366"
   
  원본이 변수인 경우 지정된 변수에는 XML 문서의 경로가 포함됩니다.  
   
- 원본이 파일 연결 관리자인 경우 지정된 파일 연결 관리자는 원본 정보를 제공합니다. 파일 연결 관리자는 XML 태스크와 별도로 구성되며 XML 태스크에서 참조됩니다. 파일 연결 관리자의 연결 문자열은 XML 파일의 경로를 지정합니다. 자세한 내용은 [File Connection Manager](../connection-manager/file-connection-manager.md)를 참조하세요.  
+ 원본이 파일 연결 관리자인 경우 지정된 파일 연결 관리자는 원본 정보를 제공합니다. 파일 연결 관리자는 XML 태스크와 별도로 구성되며 XML 태스크에서 참조됩니다. 파일 연결 관리자의 연결 문자열은 XML 파일의 경로를 지정합니다. 자세한 내용은 [파일 연결 관리자](../connection-manager/file-connection-manager.md)를 참조 하세요.  
   
  XML 태스크는 작업 결과를 변수나 파일로 저장하도록 구성될 수 있습니다. 파일로 저장하는 경우 XML 태스크는 파일 연결 관리자를 사용하여 파일에 액세스합니다. 또한 비교 작업으로 생성된 Diffgram의 결과를 파일 및 변수로 저장할 수 있습니다.  
   
 ## <a name="predefined-xml-operations"></a>미리 정의된 XML 작업  
  XML 태스크에는 XML 문서 작업을 위해 미리 정의된 일련의 작업이 포함됩니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|작업|설명|  
 |---------------|-----------------|  
 |Diff|두 개의 XML 문서를 비교합니다. 원본 XML 문서를 기본 문서로 사용하는 비교 작업은 원본 XML 문서를 보조 XML 문서와 비교하고, 차이점을 검색하고, 해당 차이점을 XML Diffgram 문서에 기록합니다. 이 작업에는 비교를 사용자 지정하기 위한 속성이 포함됩니다.|  
 |병합|두 개의 XML 문서를 병합합니다. 원본 XML 문서를 기본 문서로 사용하는 병합 작업은 보조 문서의 내용을 기본 문서에 추가합니다. 이 작업에서는 기본 문서 내의 병합 위치를 지정할 수 있습니다.|  
-|Patch|Diffgram 문서로 불리는 비교 작업의 출력을 XML 문서에 적용하여 Diffgram 문서 내용이 포함된 새로운 상위 문서를 만듭니다.|  
+|패치|Diffgram 문서로 불리는 비교 작업의 출력을 XML 문서에 적용하여 Diffgram 문서 내용이 포함된 새로운 상위 문서를 만듭니다.|  
 |유효성 검사|DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마와 비교하여 XML 문서의 유효성을 검사합니다.|  
 |XPath|XPath 쿼리 및 계산을 수행합니다.|  
 |XSLT|XML 문서에 대해 XSL 변환을 수행합니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "62829366"
   
  비교 작업에는 XML 비교를 사용자 지정하는 일련의 옵션이 포함됩니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**IgnoreComments**|열 노드가 비교되는지 여부를 지정하는 값입니다.|  
 |**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션을 `true`로 설정하면 로컬 이름이 같지만 네임스페이스가 다른 두 요소는 동일한 것으로 간주됩니다.|  
@@ -93,7 +93,8 @@ ms.locfileid: "62829366"
 ### <a name="validation-operation"></a>유효성 검사 작업  
  유효성 검사 작업은 DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마를 사용하도록 구성될 수 있습니다.  
   
- `ValidationDetails`를 사용하도록 설정하여 자세한 오류 출력을 가져옵니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
+ 
+  `ValidationDetails`를 사용하도록 설정하여 자세한 오류 출력을 가져옵니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
   
 ## <a name="xml-document-encoding"></a>XML 문서 인코딩  
  XML 태스크는 유니코드 문서의 병합만 지원합니다. 즉, 태스크에서 유니코드 인코딩이 포함된 문서로만 병합 작업을 적용할 수 있습니다. 다른 인코딩을 사용하면 XML 태스크가 실패합니다.  
@@ -110,22 +111,25 @@ ms.locfileid: "62829366"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 XML 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`XMLOperation`|태스크에서 수행한 작업에 대한 정보를 제공합니다.|  
   
 ## <a name="configuration-of-the-xml-task"></a>XML 태스크 구성  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [XML 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [XML 태스크를 사용 하 여 XML 유효성 검사](xml-task.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
@@ -137,10 +141,9 @@ ms.locfileid: "62829366"
 ## <a name="related-tasks"></a>관련 작업  
  [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-content"></a>관련 내용  
+## <a name="related-content"></a>관련 콘텐츠  
   
 -   agilebi.com의 블로그 항목 - [XML 대상 스크립트 구성 요소](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   
--   www.codeplex.com의 CodePlex 예제 - [프로세스 XML 데이터 패키지 예제](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
-  
+-   [www.codeplex.com](www.codeplex.com) 의 CodePlex 예제 - [프로세스 XML 데이터 패키지 예제](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
