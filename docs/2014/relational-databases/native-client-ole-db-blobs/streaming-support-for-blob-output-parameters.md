@@ -1,5 +1,5 @@
 ---
-title: 출력 매개 변수 BLOB에 대 한 스트리밍 지원 | Microsoft Docs
+title: BLOB 출력 매개 변수에 대 한 스트리밍 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -507,7 +507,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Blob 및 OLE 개체](blobs-and-ole-objects.md)  
   
   
