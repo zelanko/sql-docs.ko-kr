@@ -1,5 +1,7 @@
 ---
-title: DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식
+title: DQS 도메인에 대해 지원 되는 SQL Server 및 SSIS 데이터 형식
+description: SQL Server의 DQS (Data Quality Services) 도메인 (데이터, 10 진수, 정수 및 문자열)에 대 한 네 가지 데이터 형식에 대해 설명 합니다.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257769"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558173"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 도메인에 대해 지원 되는 SQL Server 및 SSIS 데이터 형식
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257769"
 > [!NOTE]  
 >  .xlsx 및 .xls 파일에서는 처음 8개 행에서 가장 많이 사용된 데이터 형식에 의해 원본 열의 데이터 형식이 결정됩니다. 데이터 형식을 따르지 않는 셀에는 null 값이 지정됩니다. 마찬가지로 .csv 파일에서는 처음 8개 행에서 가장 많이 사용된 데이터 형식에 의해 원본 열의 데이터 형식이 결정됩니다.  
   
-##  <a name="SQLServer"></a>지원 되는 SQL Server 데이터 형식  
+##  <a name="SQLServer"></a>지원 되는 SQL Server 데이터 형식 
  다음 표에서는 각 DQS 도메인 데이터 형식에 대해 지원되는 SQL Server 데이터 형식에 대한 정보를 제공합니다.  
   
 |DQS 도메인 데이터 형식|지원되는 SQL Server 데이터 형식|  

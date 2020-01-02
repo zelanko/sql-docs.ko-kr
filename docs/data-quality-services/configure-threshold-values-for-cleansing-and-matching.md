@@ -1,5 +1,7 @@
 ---
-title: 정리 및 일치에 대한 임계값 구성
+title: 정리 및 일치에 대 한 임계값 구성
+description: DQS (SQL Server Data Quality Services에서 활동의 컴퓨터 기반 정리 및 일치 작업 중에 사용할 임계값을 구성 하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -15,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d31066ff172b0677e83e7a5dbe68f5d70e7136c8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75255630"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557895"
 ---
-# <a name="configure-threshold-values-for-cleansing-and-matching"></a>정리 및 일치에 대한 임계값 구성
+# <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>정리 및 일치-DQS (Data Quality Services)에 대 한 임계값 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

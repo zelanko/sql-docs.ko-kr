@@ -1,5 +1,7 @@
 ---
-title: 참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
+title: '(외부) 기술 자료 참조 데이터를 사용 하 여 데이터 정리 '
+description: SQL Server에서 DQS (Data Quality Services)를 사용 하 여 참조 데이터 공급자의 정보를 사용 하 여 데이터를 정리 하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 30ef5c06ff9b528eaa46127f1c98b0f430a71f7d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75255668"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557908"
 ---
-# <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
+# <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>(외부) 기술 자료 참조 데이터-DQS (Data Quality Services)를 사용 하 여 데이터 정리
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

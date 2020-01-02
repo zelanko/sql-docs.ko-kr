@@ -1,5 +1,7 @@
 ---
 title: .NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
+description: .NET framework를 업데이트 한 후 DQS (SQL Server Data Quality Services)에서 사용 하는 SQLCLR 어셈블리를 업데이트 하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ce898b31a3fa964a57492987f70356c18fd2964
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 623fbf69ef49ceb7dfea7f2d9c6e96b7520ded3e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252797"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558091"
 ---
-# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
+# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET framework 업데이트 후 SQLCLR 어셈블리 업그레이드
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
