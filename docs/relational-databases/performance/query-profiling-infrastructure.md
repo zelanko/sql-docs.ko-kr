@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559471"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257670"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,14 +180,14 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |Global|`query_post_execution_showplan` XE가 있는 xEvent 세션, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상|추적 플래그 7412, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상|
 |Global|`Showplan XML` 추적 이벤트를 포함하는 SQL 추적 및 SQL Server Profiler, SQL Server 2000 이상|`query_thread_profile` XE가 있는 xEvent 세션, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상|
 |Global|-|`query_post_execution_plan_profile` XE가 있는 xEvent 세션, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상|
-|Session|`SET STATISTICS XML ON` 사용, SQL Server 2000 이상|`query_plan_profile` XE에서 xEvent 세션과 함께 `QUERY_PLAN_PROFILE` 쿼리 힌트 사용, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 이상|
-|Session|`SET STATISTICS PROFILE ON` 사용, SQL Server 2000 이상|-|
-|Session|SSMS에서 [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) 단추 클릭, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상|-|
+|세션|`SET STATISTICS XML ON` 사용, SQL Server 2000 이상|`query_plan_profile` XE에서 xEvent 세션과 함께 `QUERY_PLAN_PROFILE` 쿼리 힌트 사용, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 이상|
+|세션|`SET STATISTICS PROFILE ON` 사용, SQL Server 2000 이상|-|
+|세션|SSMS에서 [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) 단추 클릭, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상|-|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 > [!IMPORTANT]
-> [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)을 참조하는 저장 프로시저를 모니터링하는 동안 임의 AV가 발생할 수 있으므로 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 [KB 4078596](http://support.microsoft.com/help/4078596)을 설치해야 합니다.
+> [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)을 참조하는 저장 프로시저를 모니터링하는 동안 임의 AV가 발생할 수 있으므로 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 [KB 4078596](https://support.microsoft.com/help/4078596)을 설치해야 합니다.
 
 오버헤드가 적은 간단한 프로파일링 v2부터는 아직 CPU의 제약을 받지 않는 모든 서버는 간단한 프로파일링을 **지속적으로** 실행할 수 있으며, 데이터베이스 전문가는 언제든지 진행 중인 실행으로 이동할 수 있습니다. 예를 들어 Activity Monitor를 사용하여 또는 `sys.dm_exec_query_profiles`를 직접 쿼리하여 런타임 통계가 포함된 쿼리 계획을 가져올 수 있습니다.
 
@@ -209,4 +209,3 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [실제 실행 모드](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)      
- [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

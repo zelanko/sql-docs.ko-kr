@@ -1,10 +1,8 @@
 ---
 title: 가속 데이터베이스 복구 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245258"
 ---
 # <a name="manage-accelerated-database-recovery"></a>가속 데이터베이스 복구 관리
 
@@ -84,10 +83,10 @@ PVS의 위치를 변경하는 과정은 세 단계로 진행됩니다.
    영구 버전 저장소의 새 위치를 사용하여 ADR을 설정하려면 먼저 모든 버전 정보가 이전 PVS 위치에서 제거되었는지 확인해야 합니다. 정리가 강제로 이루어지도록 하려면 다음 명령을 실행합니다.
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` 저장 프로시저는 동기적입니다. 즉, 모든 버전 정보가 현재 PVS에서 정리될 때까지 완료되지 않습니다.  완료되면 DMV `sys.dm_persistent_version_store_stats`를 쿼리하고 `persistent_version_store_size_kb`의 값을 검사하여 버전 정보가 실제로 제거되었는지 확인할 수 있습니다.
+   `sys.sp_persistent_version_cleanup` 저장 프로시저는 동기적입니다. 즉, 모든 버전 정보가 현재 PVS에서 정리될 때까지 완료되지 않습니다.  완료되면 DMV `sys.dm_persistent_version_store_stats`를 쿼리하고 `persistent_version_store_size_kb`의 값을 검사하여 버전 정보가 실제로 제거되었는지 확인할 수 있습니다.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

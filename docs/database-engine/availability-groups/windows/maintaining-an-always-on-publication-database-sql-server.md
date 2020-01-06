@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
-description: 'SQL 복제에서 게시자 역할을 하고 Always On 가용성 그룹에 참여하는 데이터베이스를 관리하고 유지하는 방법에 대한 설명입니다. '
+description: SQL 복제에서 게시자 역할을 하고 Always On 가용성 그룹에 참여하는 데이터베이스를 관리하고 유지하는 방법에 대한 설명입니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bdb26625e1b461e9f82342824f07f73a02f863bf
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846773"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228186"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "70846773"
   
      이때 게시된 데이터베이스의 복사본을 유지하거나 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   

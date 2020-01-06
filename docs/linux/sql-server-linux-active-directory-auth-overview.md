@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834419"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329965"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대한 Active Directory 인증
 
@@ -44,8 +44,8 @@ AD 인증을 구성하는 방법에 대한 자세한 내용은 [자습서: Linux
 1. [SQL Server 호스트를 Active Directory 도메인 가입](sql-server-linux-active-directory-join-domain.md)
 1. [SQL Server의 AD 사용자를 만들고 ServicePrincipalName 설정](sql-server-linux-active-directory-authentication.md#createuser)
 1. [SQL Server 서비스 키탭 구성](sql-server-linux-active-directory-authentication.md#configurekeytab)
-1. [키탭 파일 보호](sql-server-linux-active-directory-authentication.md#securekeytab)
-1. [Kerberos 인증에 키탭 파일을 사용하도록 SQL Server 구성](sql-server-linux-active-directory-authentication.md#keytabkerberos)
+1. [키탭 파일 보호](sql-server-linux-active-directory-authentication.md#configurekeytab)
+1. [Kerberos 인증에 키탭 파일을 사용하도록 SQL Server 구성](sql-server-linux-active-directory-authentication.md#configurekeytab)
 1. [Transact-SQL에서 AD 기반 SQL Server 로그인 만들기](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [AD 인증을 사용하여 SQL Server에 연결](sql-server-linux-active-directory-authentication.md#connect)
 
@@ -53,6 +53,6 @@ AD 인증을 구성하는 방법에 대한 자세한 내용은 [자습서: Linux
 
 - 현재, 데이터베이스 미러링 엔드포인트에 지원되는 인증 방법은 인증서뿐입니다. 이후 릴리스에서는 WINDOWS 인증 방법을 사용할 수 있습니다.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 Linux의 SQL Server에 대한 Active Directory 인증 구현 방법과 관련된 자세한 내용은 [자습서: Linux에서 SQL Server와 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md)을 참조하세요.

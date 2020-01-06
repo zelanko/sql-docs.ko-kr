@@ -1,5 +1,6 @@
 ---
-title: Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler) | Microsoft Docs
+title: Showplan XML Statistics Profile 이벤트를 개별적으로 저장
+titleSuffix: SQL Server Profiler
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 72d07cc36de00fd0f6fc2b9377a5ed3870413c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113403"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165576"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68113403"
   
 11. SQL Server Management Studio에서 **Showplan XML Statistics Profile** 이벤트 파일을 보려면 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다. **Showplan XML Statistics Profile** 이벤트 파일을 저장한 디렉터리를 찾아본 다음 파일을 선택하여 엽니다. **Showplan XML Statistics Profile** 이벤트 파일의 확장명은 .SQLPlan입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler에서 Showplan 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

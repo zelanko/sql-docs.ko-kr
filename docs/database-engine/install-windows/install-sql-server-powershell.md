@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991065"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200478"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "67991065"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 은 개체 탐색기 트리에서 Windows PowerShell 세션을 시작하도록 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 Windows PowerShell 작업 단계를 지원합니다.  
   
-Windows Server 2012 이상 및 Windows 8 이상 버전에는 PowerShell이 설치 및 구성되어 있습니다. Windows PowerShell 설치에 대한 자세한 내용은 [Windows PowerShell 설치](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell)를 참조하세요.  
+Windows Server 2012 이상 및 Windows 8 이상 버전에는 PowerShell이 설치 및 구성되어 있습니다. Windows PowerShell 설치에 대한 자세한 내용은 [Windows PowerShell 설치](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell)를 참조하세요.  
 
-참조 항목:   
+자세한 내용은 다음을 참조하세요.   
 
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

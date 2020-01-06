@@ -1,5 +1,5 @@
 ---
-title: '자습서: 5개의 가장 느린 쿼리 샘플 위젯 사용'
+title: 5개의 가장 느린 쿼리 샘플 위젯 사용
 titleSuffix: Azure Data Studio
 description: 이 자습서에서는 데이터베이스 대시보드에서 5개의 가장 느린 쿼리 샘플 위젯을 사용하도록 설정하는 방법을 보여 줍니다.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810882"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957047"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 데이터베이스 대시보드에 *5개의 가장 느린 쿼리* 샘플 위젯 추가
 

@@ -1,6 +1,5 @@
 ---
-title: Windows용 이벤트 추적 대상 | Microsoft 문서
-ms.custom: ''
+title: Windows용 이벤트 추적 대상
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021865"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234660"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 
@@ -52,7 +51,7 @@ ms.locfileid: "68021865"
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용된 값|설명|  
+|옵션|허용되는 값|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
 |default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  

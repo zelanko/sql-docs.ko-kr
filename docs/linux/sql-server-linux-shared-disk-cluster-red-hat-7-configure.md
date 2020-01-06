@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809783"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252237"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server용 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
@@ -108,7 +108,7 @@ ms.locfileid: "70809783"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>공유 스토리지 구성 및 데이터베이스 파일 이동 
 
-공유 스토리지를 제공하는 다양한 솔루션이 있습니다. 이 연습에서는 NFS를 사용하여 공유 스토리지를 구성하는 방법을 보여 줍니다. 모범 사례를 따르고 Kerberos를 사용하여 NFS를 보호하는 것이 좋습니다(예제는 https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)에서 확인할 수 있음). 
+공유 스토리지를 제공하는 다양한 솔루션이 있습니다. 이 연습에서는 NFS를 사용하여 공유 스토리지를 구성하는 방법을 보여 줍니다. 모범 사례를 따르고 Kerberos를 사용하여 NFS를 보호하는 것이 좋습니다(예제는 https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 에서 확인할 수 있음). 
 
 >[!Warning]
 >NFS의 보안을 유지하지 않으면 네트워크에 액세스하고 SQL 노드의 IP 주소를 스푸핑할 수 있는 누구든지 데이터 파일에 액세스할 수 있습니다. 언제나와 마찬가지로, 프로덕션 환경에서 사용하기 전에 시스템의 위협을 모델링해야 합니다. 또 다른 스토리지 옵션은 다음과 같이 SMB 파일 공유를 사용하는 것입니다.
@@ -138,7 +138,7 @@ NFS 서버에서 다음 작업을 수행합니다.
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  `/etc/exports`를 편집하여 공유하려는 디렉터리를 내보냅니다. 원하는 각 공유를 1줄로 입력합니다. 예를 들어 
+1.  `/etc/exports`를 편집하여 공유하려는 디렉터리를 내보냅니다. 원하는 각 공유를 1줄로 입력합니다. 다음은 그 예입니다. 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -202,7 +202,7 @@ NFS 사용 방법에 대한 자세한 내용은 다음 리소스를 참조하세
 
 * [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)(NFS 서버 및 firewalld | 스택 교환)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)(NFS 볼륨 탑재 | Linux 네트워크 관리자 가이드)
-* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)(NFS 서버 구성 | Red Hat 고객 포털)
+* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)(NFS 서버 구성 | Red Hat 고객 포털)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>공유 스토리지를 가리키도록 데이터베이스 파일 디렉터리 탑재
 

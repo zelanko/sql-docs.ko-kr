@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553222"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246936"
 ---
 # <a name="oracle-destination"></a>Oracle 대상
 
@@ -56,7 +56,7 @@ Oracle 대상에는 하나의 오류 출력이 있습니다. 구성 요소 오�
 
 **최대 오류 개수(MaxErrors)** 속성은 발생할 수 있는 최대 오류 수를 설정합니다. 최대 개수에 도달하면 실행이 중지되고 오류가 반환됩니다. 최대 오류 수에 도달하기 전의 실행 레코드만 대상 테이블에 포함됩니다. 자세한 구성은 [Oracle 대상 편집기(연결 관리자 페이지)](#oracle-destination-editor-connection-manager-page)를 참조하세요.
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>병렬 처리
 
 일괄 로드 모드에서는 병렬 실행의 구성에 제한이 없지만, 성능이 표준 레코드 잠금 메커니즘의 영향을 받을 수 있습니다. 성능 손실의 양은 데이터와 테이블 구성에 따라 달라집니다.
 
@@ -79,14 +79,14 @@ Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 �
 
 다음 표에서는 Oracle 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.
 
-|속성 이름|데이터 형식|설명|로드 모드|
+|속성 이름|데이터 형식|Description|로드 모드|
 |:-|:-|:-|:-|
 |BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 일괄 처리로 로드되는 행의 개수입니다.|일괄 처리 모드에서만 사용됩니다.|
 |DefaultCodePage|정수|데이터 원본에 코드 페이지 정보가 없을 때 사용할 코드 페이지입니다. <br>**참고**: 이 속성은 **고급 편집기**에서만 설정됩니다.|두 모드에 사용합니다.|
-|FastLoad|Boolean|빠른 로드 사용 여부입니다. 기본 값은 **false**입니다. [Oracle 대상 편집기(연결 관리자 페이지)](#oracle-destination-editor-connection-manager-page)에서 설정할 수도 있습니다. |두 모드에 사용합니다.|
+|FastLoad|부울|빠른 로드 사용 여부입니다. 기본 값은 **false**입니다. [Oracle 대상 편집기(연결 관리자 페이지)](#oracle-destination-editor-connection-manager-page)에서 설정할 수도 있습니다. |두 모드에 사용합니다.|
 |MaxErrors|정수|데이터 흐름이 중지되기 전에 발생할 수 있는 오류 수입니다. 기본값은 오류 번호 제한이 없음을 의미하는 **0**입니다.<br> **오류 처리** 페이지에서 **흐름 리디렉션**을 선택한 경우입니다. 오류 번호 제한에 도달하기 전에 오류 출력에 모든 오류가 반환됩니다. 자세한 내용은 [오류 처리](#error-handling)를 참조하세요.|빠른 로드 모드에서만 사용됩니다.|
-|NoLogging|Boolean|데이터베이스 로깅을 사용하지 않도록 설정할지 여부입니다. 기본값은 로깅을 사용하도록 설정함을 의미하는 **False**입니다.|두 모드에 사용합니다.|
-|Parallel|Boolean|병렬 로드 허용 여부입니다. **True**는 다른 로드 세션이 동일한 대상 테이블에 대해 실행될 수 있음을 나타냅니다.<br> 자세한 내용은 [병렬 처리](#parallelism)를 참조하세요.|빠른 로드 모드에서만 사용됩니다.|
+|NoLogging|부울|데이터베이스 로깅을 사용하지 않도록 설정할지 여부입니다. 기본값은 로깅을 사용하도록 설정함을 의미하는 **False**입니다.|두 모드에 사용합니다.|
+|병렬|부울|병렬 로드 허용 여부입니다. **True**는 다른 로드 세션이 동일한 대상 테이블에 대해 실행될 수 있음을 나타냅니다.<br> 자세한 내용은 [병렬 처리](#parallelism)를 참조하세요.|빠른 로드 모드에서만 사용됩니다.|
 |TableName|String|사용되는 데이터가 포함된 테이블의 이름입니다.|두 모드에 사용합니다.|
 |TableSubName|String|하위 이름 또는 하위 파티션입니다. 이 값은 선택 사항입니다.<br> **참고**: 이 속성은 **고급 편집기**에서만 설정할 수 있습니다.|빠른 로드 모드에서만 사용됩니다.|
 |TransactionSize|정수|단일 트랜잭션에서 수행할 수 있는 삽입 수입니다. 기본값은 **BatchSize**입니다.|일괄 처리 모드에서만 사용됩니다.|
@@ -139,7 +139,7 @@ Oracle 대상 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 
 원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.
 
-|옵션|설명|
+|옵션|Description|
 |:-|:-|
 |테이블 이름|일괄 처리 모드에서 작동하도록 Oracle 대상을 구성합니다. 옵션:<br><br> **테이블 또는 뷰 이름**: 목록의 데이터베이스에서 사용 가능한 테이블이나 뷰를 선택합니다.<br><br> **트랜잭션 크기**: 단일 트랜잭션에서 수행할 수 있는 삽입 수를 입력합니다. 기본값은 **BatchSize**입니다.<br><br> **일괄 처리 크기**: 대량 로드에 대한 일괄 처리 크기(로드한 행 수)를 입력합니다.
 |테이블 이름 – 빠른 로드|빠른(직접 경로) 로드 모드에서 작동하도록 Oracle 대상을 구성합니다. <br><br>다음과 같은 옵션을 사용할 수 있습니다.<br><br> **테이블 또는 뷰 이름**: 목록의 데이터베이스에서 사용 가능한 테이블이나 뷰를 선택합니다.<br><br> **병렬 로드**: 병렬 로드 사용 여부입니다. 자세한 내용은 [병렬 처리](#parallelism)를 참조하세요.<br><br> **로깅 안 함**: 데이터베이스 로깅을 사용하지 않도록 설정하기 위한 확인란입니다. 이 로깅은 추적이 아닌 복구 목적으로 사용되는 Oracle 데이터베이스입니다.<br><br> **최대 오류 개수**: 데이터 흐름이 중지되기 전에 발생할 수 있는 최대 오류 수입니다. 기본값은 개수 제한이 없음을 의미하는 0입니다.<br><br> 오류 출력에 모든 오류가 반환될 수 있습니다.<br><br> **전송 버퍼 크기(KB)** : 전송 버퍼의 크기를 입력합니다. 기본 크기는 64KB입니다.|
@@ -199,7 +199,7 @@ Oracle 대상 편집기 대화 상자의 오류 출력 페이지를 사용하여
 **오류 동작**
 
 Oracle 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
-**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **잘림**
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020812"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228246"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020812"
  읽기/쓰기 액세스를 위해 가용성 그룹 수신기를 사용하여 주 복제본에 연결하려면 연결 문자열에서 가용성 그룹 수신기 DNS 이름을 지정합니다.  가용성 그룹 주 복제본이 새 복제본으로 변경되면 가용성 그룹 수신기의 네트워크 이름을 사용하는 기존 연결이 끊어집니다.  그러면 가용성 그룹 수신기에 대한 새 연결이 새 주 복제본에 전달됩니다. ADO.NET 공급자(System.Data.SqlClient)에 대한 기본 연결 문자열의 예는 다음과 같습니다.  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  가용성 그룹 수신기 서버 이름을 사용하는 대신 주 복제본 또는 보조 복제본의 SQL Server 이름 인스턴스를 직접 참조하도록 선택할 수 있지만, 이렇게 할 경우 새 연결이 현재 주 복제본에 자동으로 전달되지 않습니다.  또한 읽기 전용 라우팅의 이점도 누릴 수 없게 됩니다.  
@@ -102,7 +102,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 2.  이러한 각 복제본에 대해 주 역할에 대한 읽기 전용 라우팅 목록을 지정해야 합니다. 하나 이상의 서버 이름을 라우팅 대상으로 지정합니다.  
   
-####  <a name="RelatedTasksROR"></a> 관련 태스크  
+####  <a name="RelatedTasksROR"></a> 관련 작업  
   
 -   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  읽기 전용 애플리케이션 의도를 지정하는 ADO.NET 공급자(System.Data.SqlClient)에 대한 연결 문자열의 예는 다음과 같습니다.  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener`라는 가용성 그룹 수신기를 통해 AdventureWorks 데이터베이스에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 **ApplicationIntent** 속성이 **ReadOnly**로 설정되어 있으므로 이 연결 문자열은 *읽기 전용 연결 문자열*입니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
@@ -127,7 +127,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  애플리케이션 의도 연결 속성을 **ReadOnly** 로 설정하지 않거나(이 속성을 지정하지 않을 경우 로그인 중 **ReadWrite** 로 기본 설정됨) 가용성 그룹 수신기 이름을 사용하는 대신 SQL Server의 주 복제본 인스턴스에 직접 연결하여 읽기 전용 라우팅을 무시할 수 있습니다.  또한 읽기 전용 복제본에 직접 연결하면 읽기 전용 라우팅이 발생하지 않습니다.  
   
-####  <a name="RelatedTasksApps"></a> 관련 태스크  
+####  <a name="RelatedTasksApps"></a> 관련 작업  
   
 -   [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  다중 서브넷 장애 조치를 사용할 수 있게 하는 ADO.NET 공급자(System.Data.SqlClient) 연결 문자열의 예제는 다음과 같습니다.  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  가용성 그룹이 단일 서브넷에 대해서만 적용되는 경우에도 **MultiSubnetFailover** 연결 옵션을 **True** 로 설정해야 합니다.  그러면 나중에 클라이언트 연결 문자열을 변경하지 않고도 서브넷 확장을 지원하도록 새 클라이언트를 미리 구성하여 단일 서브넷 장애 조치(failover)에 대한 장애 조치(failover) 성능을 최적화할 수 있습니다.  **MultiSubnetFailover** 연결 옵션은 필수가 아니지만 서브넷 장애 조치(failover) 시간을 단축하는 이점이 있습니다.  클라이언트 드라이버가 가용성 그룹과 병렬로 연결된 각 IP 주소에 대해 TCP 소켓을 열려고 하기 때문입니다.  클라이언트 드라이버는 첫 번째 IP가 응답할 때까지 기다린 다음 성공적으로 응답하면 해당 IP를 사용하여 연결합니다.  
@@ -191,7 +191,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
  SQL Server에 대한 SPN을 수동으로 등록하는 방법은 [Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   

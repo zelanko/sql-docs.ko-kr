@@ -1,8 +1,8 @@
 ---
-title: PowerShell Desired State Configuration을 사용하여 SQL Server 설치 | Microsoft Docs
+title: '설치: PowerShell Desired State Configuration'
 description: PowerShell DSC(Desired State Configuration)를 사용하여 SQL Server를 설치하는 방법을 알아봅니다.
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041061"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258980"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration을 사용하여 SQL Server 설치
 
@@ -69,7 +69,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ## <a name="create-the-configuration"></a>구성 만들기
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>구성
 
 [MOF(Managed Object Format)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) 문서를 생성하기 위해 호출될 구성 함수를 만듭니다.
 
@@ -187,7 +187,7 @@ PS C:\> Test-DscConfiguration
 True
 ```
 
-### <a name="services"></a>서비스
+### <a name="services"></a>Services
 
 서비스 목록은 이제 SQL Server 서비스를 반환합니다.
 
@@ -211,7 +211,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 1> quit
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell Desired State Configuration 개요](/powershell/scripting/dsc/overview/overview)
 

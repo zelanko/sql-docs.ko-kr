@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296063"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257069"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 
@@ -35,7 +35,7 @@ ms.locfileid: "71296063"
   
 * 이 자습서의 모든 단원 패키지를 다운로드하려면:
 
-    1.  [Integration Services 자습서 파일](https://www.microsoft.com/en-us/download/details.aspx?id=56827)로 이동합니다.
+    1.  [Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)로 이동합니다.
 
     2.  **다운로드** 단추를 선택합니다.
 
@@ -68,10 +68,10 @@ ms.locfileid: "71296063"
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|없음|없음|  
+|AverageRate|float|None|None|  
 |CurrencyKey|int(FK)|DimCurrency|CurrencyKey(PK)|  
 |DateKey|int(FK)|FactOnlineSales|DateKey (PK)|  
-|EndOfDayRate|FLOAT|없음|없음|  
+|EndOfDayRate|float|None|None|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>원본 데이터를 대상에 매핑  
 원본 및 대상 데이터 형식의 분석에는 **CurrencyKey** 및 **DateKey** 값에 대한 조회가 필요함을 나타냅니다. 이러한 조회를 수행하는 변환은 **DimCurrency** 및 **DimDate** 차원 테이블의 대체 키를 사용하여 해당 값을 가져옵니다.  
@@ -80,8 +80,8 @@ ms.locfileid: "71296063"
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|FactOnlineSales|FullDateAlternateKey|날짜|  
-|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
+|2|FactOnlineSales|FullDateAlternateKey|date|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  

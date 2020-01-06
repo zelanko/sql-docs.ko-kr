@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f404b0993978f48a940d301453ba276ccdc28abb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014778"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822088"
 ---
-# <a name="always-on-client-connectivity-sql-server"></a>Always On 클라이언트 연결(SQL Server)
+# <a name="driver-and-client-connectivity-support-for-availability-groups"></a>가용성 그룹에 대한 드라이버 및 클라이언트 연결 지원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 클라이언트 구성 및 설정에 대한 사전 요구 사항, 제한 사항 및 권장 사항을 비롯하여 Always On 가용성 그룹에 클라이언트를 연결할 때 고려해야 할 사항에 대해 설명합니다.  
@@ -36,18 +36,18 @@ ms.locfileid: "68014778"
   
 |드라이버|다중 서브넷 장애 조치(Failover)|애플리케이션 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|예|예|예|예|예|  
-|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET*|예|예|예|예|예|  
-|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET**|예|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예| 
-|SQL Server용 Microsoft OLE DB 드라이버|예|예|예|예|예| 
+|SQL Native Client 11.0 ODBC|yes|yes|yes|yes|yes|  
+|SQL Native Client 11.0 OLEDB|예|yes|yes|예|예|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET*|yes|yes|yes|yes|yes|  
+|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET**|yes|yes|yes|yes|yes|  
+|SQL Server용 Microsoft JDBC Driver 4.0|yes|yes|yes|yes|yes| 
+|SQL Server용 Microsoft OLE DB 드라이버|yes|yes|yes|yes|yes| 
   
  *.NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치를 다운로드합니다.  
   
  **.NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치를 다운로드합니다.  
  
- *SQL Server용 Microsoft OLE DB 드라이버를 다운로드합니다: [https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730).  
+ *SQL Server용 Microsoft OLE DB 드라이버를 다운로드합니다: [https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730).  
 
 > [!IMPORTANT]  
 >  가용성 그룹 수신기에 연결하려면 클라이언트에서 TCP 연결 문자열을 사용해야 합니다.  

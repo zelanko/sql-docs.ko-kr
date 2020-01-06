@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586761"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243593"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -57,7 +57,7 @@ Windows Server에서 많은 작업을 관리자 권한으로 수행해야 하는
 한 서버에서 다른 서버로 파일을 복사하는 작업은 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 사용하는 사용자가 수행할 수 있어야 합니다. 이 작업은 AG 구성에 매우 중요합니다.
 
 권한 문제와 같은 항목은 Windows 기반 설치뿐 아니라 Linux에도 있을 수 있습니다. 그러나 Windows에서 서버 간에 복사하는 방법에 익숙한 사용자는 Linux에서 복사하는 방법에 익숙하지 않을 수 있습니다. 일반적인 방법은 Secure Copy의 약어인 명령줄 유틸리티 `scp`를 사용하는 것입니다. 내부적으로는 `scp`는 OpenSSH를 사용합니다. SSH는 Secure Shell의 약어입니다. Linux 배포에 따라 OpenSSH 자체가 설치되지 않을 수 있습니다. 그렇지 않으면 OpenSSH가 먼저 설치되어야 합니다. OpenSSH 구성에 대한 자세한 내용은 각 배포에 대한 다음 링크의 정보를 참조하세요.
--   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server(SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Windows 기반 SMB 공유를 사용할 수도 있으며, Samba의 클라이언�
 ### <a name="configure-the-firewall"></a>방화벽 구성
 Windows와 마찬가지로 Linux 배포에는 기본 제공 방화벽이 있습니다. 회사에서 서버에 대한 외부 방화벽을 사용하는 경우 Linux에서 방화벽을 사용하지 않도록 설정할 수 있습니다. 그러나 방화벽이 사용하도록 설정된 위치에 관계없이 포트가 열려 있어야 합니다. 다음 표에서는 Linux에서 고가용성 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포에 필요한 공통 포트를 설명합니다.
 
-| 포트 번호 | 형식     | 설명                                                                                                                 |
+| 포트 번호 | Type     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba(사용되는 경우) - 엔드포인트 매퍼                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **방화벽 설명서:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>가용성을 위한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 패키지 설치

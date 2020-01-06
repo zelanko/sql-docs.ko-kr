@@ -10,14 +10,14 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111619"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957391"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68111619"
 > [!WARNING]  
 > 이 키는 복원할 필요가 거의 없습니다. 만약 키를 복원할 경우 각별히 주의해야 합니다. 자세한 내용은 [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)을 참조하세요.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
   

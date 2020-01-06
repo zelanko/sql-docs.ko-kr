@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095769"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190364"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 
@@ -60,7 +60,7 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 다음 섹션에서는 SQL Server에서 기본 제공 JSON 지원을 통해 제공하는 주요 기능을 설명합니다. 다음 동영상에서 JSON 함수 및 연산자를 사용하는 방법을 볼 수 있습니다.
 
 *SQL Server 2016 및 JSON 지원*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON 텍스트에서 값을 추출하여 쿼리에서 사용
 
@@ -73,7 +73,7 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 
 **예제**
 
-다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(`jsonCol` 열에 저장됨)를 사용합니다.  
+다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(`jsonCol` 열에 저장됨)를 모두 사용합니다.  
   
 ```sql  
 SELECT Name, Surname,
@@ -403,7 +403,7 @@ AdventureWorks 샘플 데이터베이스를 가져오려면 [Microsoft 다운로
 SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.
 
 *SQL Server 2016 및 Azure SQL Database에서 JSON 사용*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *JSON 함수를 사용하여 SQL Server로 REST API 빌드하기*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

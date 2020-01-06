@@ -1,21 +1,21 @@
 ---
-title: '빠른 시작: Azure SQL 데이터베이스 연결 및 쿼리'
+title: Azure SQL 데이터베이스 연결 및 쿼리
 titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL 데이터베이스에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959432"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957077"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL 데이터베이스 연결 및 쿼리
 
@@ -44,11 +44,11 @@ Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 �
 
 2. 이 문서에서는 SQL 로그인을 사용하지만 Windows 인증도 지원합니다. 해당 Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음 필드를 채웁니다.
 
-   | 설정       | 제안된 값 | 설명 |
+   | 설정       | 제안 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 | 예: **servername.database.windows.net** |
    | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증을 사용합니다. |
-   | **User name** | 서버 관리자 계정 사용자 이름 | 서버를 만드는 데 사용된 계정의 사용자 이름입니다. |
+   | **사용자 이름** | 서버 관리자 계정 사용자 이름 | 서버를 만드는 데 사용된 계정의 사용자 이름입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정 암호 | 서버를 만드는 데 사용된 계정의 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 **예**를 선택합니다. |
    | **데이터베이스 이름** | ‘비워 둠’  | 여기서는 서버에만 연결합니다. |

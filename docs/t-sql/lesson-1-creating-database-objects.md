@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632900"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257023"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 데이터 형식 목록과 각 형식에 대한 설명 링크를 보려면 [데이터 형식&#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
-> [!INCLUDE[ssDE](../includes/ssde-md.md)]을 대/소문자를 구분하거나 구분하지 않도록 설치할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하도록 설치할 경우 개체 이름은 항상 대/소문자가 동일해야 합니다. 예를 들면 OrderData 테이블은 ORDERDATA 테이블과 다릅니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하지 않도록 설치할 경우 이러한 두 테이블 이름은 같은 것으로 간주되므로 해당 이름을 한 번만 사용할 수 있습니다.  
+> [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하거나 구분하지 않도록 설치할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하도록 설치할 경우 개체 이름은 항상 대/소문자가 동일해야 합니다. 예를 들면 OrderData 테이블은 ORDERDATA 테이블과 다릅니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하지 않도록 설치할 경우 이러한 두 테이블 이름은 같은 것으로 간주되므로 해당 이름을 한 번만 사용할 수 있습니다.  
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>쿼리 편집기 연결을 TestData 데이터베이스로 전환  
@@ -84,14 +84,14 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
   ```  
   
 ### <a name="create-the-table"></a>테이블 만들기
-쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 간단한 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `text` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
+쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 간단한 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `varchar(max)` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -212,7 +212,7 @@ SELECT 문에서 데이터 작업을 수행하는 데 사용할 수 있는 일�
   
 |||  
 |-|-|  
-|[문자열 함수&#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
+|[문자열 함수&#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
 |[수치 연산 함수&#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[텍스트 및 이미지 함수&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>보기 및 저장 프로시저 만들기

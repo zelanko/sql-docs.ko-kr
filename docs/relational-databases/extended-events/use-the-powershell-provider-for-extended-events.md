@@ -1,6 +1,5 @@
 ---
-title: 확장 이벤트에 PowerShell 공급자 사용 | Microsoft 문서
-ms.custom: ''
+title: 확장 이벤트에 PowerShell 공급자 사용
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009321"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242893"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
 
@@ -48,7 +47,7 @@ ms.locfileid: "68009321"
   
 -   스크립트는 PS SQLSERVER:\\> 프롬프트(명령 프롬프트에서 **sqlps**를 입력하면 사용할 수 있음)에서 실행해야 합니다.  
   
--   스크립트가 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용합니다.  
+-   스크립트가 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 사용합니다.  
   
 -   스크립트를 .ps1 확장명으로 저장해야 합니다.  
   
