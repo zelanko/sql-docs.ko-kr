@@ -2,22 +2,23 @@
 title: SQL Server 중앙 관리 서버 확장
 titleSuffix: Azure Data Studio
 description: Azure Data Studio용 중앙 관리 서버 확장(미리 보기) 설치 및 사용
-ms.custom: seodec18
-ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959201"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957027"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 중앙 관리 서버 확장(미리 보기)
+
 중앙 관리 서버 확장을 사용하면 사용자가 하나 이상으로 구성된 SQL Server 인스턴스 목록을 저장할 수 있습니다. CMS 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에서 적용됩니다.
 
 이 환경은 현재 최초 미리 보기로 제공됩니다. [여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.

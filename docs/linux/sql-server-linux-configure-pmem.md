@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531298"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243602"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법
 
@@ -79,7 +79,7 @@ ndctl list
 
   디바이스가 ndctl을 통해 구성되고, 형식이 지정되고, 탑재된 후 디바이스에 데이터베이스 파일을 배치할 수 있습니다. 새 데이터베이스를 만들 수도 있습니다. 
 
-1. PMEM 디바이스는 O_DIRECT에 안전하므로 추적 플래그 3979를 사용하도록 설정하면 강제 플러시 메커니즘이 사용되지 않습니다. 이 추적 플래그는 시작 추적 플래그이므로, mssql-conf 유틸리티를 사용하여 사용하도록 설정해야 합니다. 이는 서버 수준 구성 변경이며 데이터 무결성을 보장하기 위해 강제 플러시 메커니즘이 필요한 O_DIRECT 비규격 디바이스가 있는 경우 이 추적 플래그를 사용하면 안 됩니다. 자세한 내용은 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux 을 참조하십시오.
+1. PMEM 디바이스는 O_DIRECT에 안전하므로 추적 플래그 3979를 사용하도록 설정하면 강제 플러시 메커니즘이 사용되지 않습니다. 이 추적 플래그는 시작 추적 플래그이므로, mssql-conf 유틸리티를 사용하여 사용하도록 설정해야 합니다. 이는 서버 수준 구성 변경이며 데이터 무결성을 보장하기 위해 강제 플러시 메커니즘이 필요한 O_DIRECT 비규격 디바이스가 있는 경우 이 추적 플래그를 사용하면 안 됩니다. 자세한 내용은 https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux 을 참조하십시오.
 
 1. SQL Server를 다시 시작하십시오.
 

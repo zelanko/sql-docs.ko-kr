@@ -1,6 +1,5 @@
 ---
-title: 확장 이벤트를 사용하여 시스템 작업 모니터링 | Microsoft 문서
-ms.custom: ''
+title: 확장 이벤트를 사용하여 시스템 작업 모니터링
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56286a2684f5b8b7f7af9915f3148c0a4c99771e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7fa450f49fdd4dfb2eb229bbd4280d5dcd0162b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906086"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254797"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>확장 이벤트를 사용하여 시스템 작업 모니터링
 

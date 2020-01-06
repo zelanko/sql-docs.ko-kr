@@ -1,6 +1,5 @@
 ---
-title: '빠른 시작: SQL Server의 확장 이벤트 | Microsoft Docs'
-ms.custom: ''
+title: '빠른 시작: SQL Server의 확장 이벤트'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798434"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242917"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -59,7 +58,7 @@ ms.locfileid: "72798434"
 1. [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)
   - 매월 SSMS의 최신 월별 업데이트를 설치해야 합니다.
 2. Microsoft SQL Server 2014 이상 또는 Azure SQL 데이터베이스 데이터베이스에 로그인합니다. `SELECT @@version` 은 첫 번째 노드가 12 이상인 값을 반환합니다.
-3. 사용자 계정에 [서버 사용 권한](../../t-sql/statements/grant-server-permissions-transact-sql.md) **ALTER ANY EVENT SESSION**이 있는지 확인합니다.
+3. 사용자 계정에 [서버 사용 권한](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION**이 있는지 확인합니다.
   - 확장 이벤트 관련 보안 및 사용 권한에 대한 자세한 내용은 이 문서 뒷부분에 있는 [부록](#appendix1)을 확인하세요.
 
 
@@ -424,11 +423,11 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 다음 표에서는 확장 이벤트에 사용된 용어를 나열하고 그 의미를 설명합니다.
 
 
-| 용어 | 설명 |
+| 용어 | Description |
 | :--- | :---------- |
 | 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 다음에서 설명되어 있습니다. [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | 이벤트 | 활성 이벤트 세션에서 감시하는 시스템의 특정 항목입니다. <br/> <br/> 예를 들어 *sql_statement_completed* 이벤트는 지정한 T-SQL 문이 완료되는 시점을 나타냅니다. 이벤트는 지속 시간 및 기타 데이터를 보고할 수 있습니다. |
-| target | 캡처한 이벤트에서 출력 데이터를 수신하는 항목입니다. 대상은 데이터를 표시합니다. <br/> <br/> 예제에는 *event_file*및 간편한 메모리 *ring_buffer*가 있습니다. 조금 더 복잡한 *histogram* 대상은 표시하기 전에 데이터를 일부 처리합니다. <br/> <br/> 모든 대상을 모든 이벤트 세션에 대해 사용할 수 있습니다. 자세한 내용은 [SQL Server에서 확장 이벤트에 대한 대상](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)을 참조하세요. |
+| 대상 | 캡처한 이벤트에서 출력 데이터를 수신하는 항목입니다. 대상은 데이터를 표시합니다. <br/> <br/> 예제에는 *event_file*및 간편한 메모리 *ring_buffer*가 있습니다. 조금 더 복잡한 *histogram* 대상은 표시하기 전에 데이터를 일부 처리합니다. <br/> <br/> 모든 대상을 모든 이벤트 세션에 대해 사용할 수 있습니다. 자세한 내용은 [SQL Server에서 확장 이벤트에 대한 대상](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)을 참조하세요. |
 | action | 이벤트에 알려진 필드입니다. 필드의 데이터가 대상으로 전송됩니다. 작업 필드는 *조건자 필터*와 밀접한 관련이 있습니다. |
 | 조건자 필터 | 이벤트 필드의 데이터 테스트는 이벤트 항목 중 관심 있는 하위 집합만 대상으로 전송되도록 하는 데 사용됩니다. <br/> <br/> 예를 들어 T-SQL 문에 *HAVING* 문자열이 포함된 *sql_statement_completed*이벤트 항목만 필터에 포함할 수 있습니다. |
 | 패키지 | 이벤트의 핵심과 관련된 항목 집합의 각 항목에 연결된 이름 한정자입니다. <br/> <br/> 예를 들어 패키지에는 T-SQL 텍스트에 대한 이벤트가 있을 수 있습니다. 하나의 이벤트가 GO로 구분된 일괄 처리의 모든 T-SQL과 관련될 수 있습니다. 한편 개별 T-SQL 문에 대한 이벤트도 있습니다. 또한 모든 T-SQL 문에 대해 시작 및 완료 이벤트가 있습니다. <br/> <br/> 이벤트에 적합한 필드는 이벤트가 있는 패키지에도 있습니다. 대부분의 대상은 *package0* 에 있으며 다른 여러 패키지의 이벤트와 함께 사용됩니다. |

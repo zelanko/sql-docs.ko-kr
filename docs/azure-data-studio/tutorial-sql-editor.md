@@ -1,5 +1,5 @@
 ---
-title: '자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기'
+title: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기
 titleSuffix: Azure Data Studio
 description: 이 자습서에서는 T-SQL 작업을 간소화하는 Azure Data Studio의 주요 기능을 보여 줍니다.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278239"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957037"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

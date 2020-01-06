@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032428"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325479"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SSIS(SQL Server Integration Services) 설치
 
@@ -36,11 +36,18 @@ Ubuntu에서 `mssql-server-is` 패키지를 설치하려면 다음 단계를 수
    ```
 
 2. Microsoft SQL Server Ubuntu 리포지토리를 등록합니다.
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. 다음 명령을 실행하여 SQL Server Integration Services를 설치합니다.
 
    ```bash
@@ -78,10 +85,18 @@ RHEL에서 `mssql-server-is` 패키지를 설치하려면 다음 단계를 수�
 
 1. Microsoft SQL Server Red Hat 리포지토리 구성 파일을 다운로드합니다.
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. 다음 명령을 실행하여 SQL Server Integration Services를 설치합니다.
 
    ```bash
@@ -131,10 +146,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>무인 설치의 환경 변수
 
-| 환경 변수 | 설명 |
+| 환경 변수 | Description |
 |---|---|
 | **ACCEPT_EULA** | 임의 값(예: `Y`)으로 설정된 경우 SQL Server 사용권 계약에 동의합니다.|
-| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>제품 키<br/><br/>제품 키를 지정하는 경우 제품 키는 `#####-#####-#####-#####-#####` 형식이어야 합니다. 여기서 `#`은 문자 또는 숫자입니다.  |
+| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>평가<br/>Developer<br/>Express <br/>웹 <br/>Standard<br/>Enterprise <br/>제품 키<br/><br/>제품 키를 지정하는 경우 제품 키는 `#####-#####-#####-#####-#####` 형식이어야 합니다. 여기서 `#`은 문자 또는 숫자입니다.  |
 | | |
 
 ## <a name="next-steps"></a>다음 단계
