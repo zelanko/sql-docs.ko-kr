@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215634"
----
 ## <a name="connect-locally"></a>로컬로 연결
 
 다음 단계에서는 **sqlcmd**를 사용하여 새 SQL Server 인스턴스에 로컬로 연결합니다.
@@ -92,7 +84,7 @@ ms.locfileid: "68215634"
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. 명령을 실행합니다.
+1. 다음 명령을 실행합니다.
 
    ```sql
    GO
@@ -108,7 +100,7 @@ QUIT
 
 ## <a name="performance-best-practices"></a>성능 모범 사례
 
-Linux에 SQL Server를 설치한 후에는 프로덕션 시나리오에 대한 성능을 향상시키도록 Linux 및 SQL Server를 구성하기 위한 모범 사례를 검토하세요. 자세한 내용은 [Linux의 SQL Server에 대한 성능 모범 사례 및 구성 지침](../linux/sql-server-linux-performance-best-practices.md)을 참조하세요.
+Linux에 SQL Server를 설치한 후에는 프로덕션 시나리오에 대한 성능을 향상시키도록 Linux 및 SQL Server를 구성하기 위한 모범 사례를 검토하세요. 자세한 내용은 [SQL Server on Linux의 성능 모범 사례 및 구성 지침](../linux/sql-server-linux-performance-best-practices.md)을 참조하세요.
 
 ## <a name="cross-platform-data-tools"></a>플랫폼 간 데이터 도구
 
@@ -145,7 +137,7 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
 > [!TIP]
-> 자주하는 질문과 대답은 [Linux의 SQL Server FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
+> 질문과 대답은 [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

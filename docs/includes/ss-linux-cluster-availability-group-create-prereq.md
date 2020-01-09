@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215574"
----
 ## <a name="prerequisites"></a>사전 요구 사항
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.

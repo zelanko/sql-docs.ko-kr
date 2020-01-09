@@ -1,21 +1,21 @@
 ---
-title: '빠른 시작: Azure SQL Data Warehouse 연결 및 쿼리'
+title: Azure SQL Data Warehouse 연결 및 쿼리
 titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL Data Warehouse에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959404"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957110"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Data Warehouse에서 데이터 연결 및 쿼리
 
@@ -24,7 +24,7 @@ ms.locfileid: "67959404"
 ## <a name="prerequisites"></a>사전 요구 사항
 이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 Azure SQL Data Warehouse가 필요합니다.
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)를 설치합니다.
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
 
 SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
 
@@ -41,11 +41,11 @@ SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 
 2. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.   Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음과 같이 필드를 채웁니다. 
 
-   | 설정       | 제안된 값 | 설명 |
+   | 설정       | 제안 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 | 이름은 **sqldwsample.database.windows.net**과 같이 지정해야 합니다. |
    | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증을 사용합니다. |
-   | **User name** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
+   | **사용자 이름** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 Yes를 선택합니다. |
    | **데이터베이스 이름** | ‘비워 둠’  | 연결할 데이터베이스의 이름입니다. |

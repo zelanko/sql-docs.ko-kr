@@ -1,5 +1,5 @@
 ---
-title: '자습서: 테이블 공간 사용량 샘플 인사이트 위젯 사용'
+title: 테이블 공간 사용량 샘플 인사이트 위젯 사용
 titleSuffix: Azure Data Studio
 description: 이 자습서에서는 Azure Data Studio 데이터베이스 대시보드에서 테이블 공간 사용량 샘플 인사이트 위젯을 사용하도록 설정하는 방법을 보여 줍니다.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878669"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957017"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용
 
@@ -37,11 +37,11 @@ ms.locfileid: "70878669"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에는 데이터베이스 테이블에서 사용되는 공간을 모니터링하는 기본 제공 샘플 위젯이 있습니다.
 
-1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다.
+1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다.  
 
-2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기**를 선택합니다.
+2. 검색 상자에 ‘설정’을 입력하고 **기본 설정:  사용자 설정 열기**를 선택합니다.
 
-3. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**를 찾습니다.
+3. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**를 찾습니다. 
 
 4. **dashboard.database.widgets** 설정을 사용자 지정하려면 **사용자 설정** 섹션에서 **dashboard.database.widgets** 항목을 편집해야 합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "70878669"
 
 7. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭하여 데이터베이스 대시보드를 엽니다.
 
-8. 다음 그림과 같이 ‘테이블 공간’ 인사이트 위젯을 봅니다.
+8. 다음 그림과 같이 ‘테이블 공간’ 인사이트 위젯을 봅니다. 
 
    ![위젯](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
