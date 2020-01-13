@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959113"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776514"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 확장(미리 보기)
 
-SQL Server Profiler 확장(미리 보기)은 XEvent를 사용하여 빌드된다는 점을 제외하고 SSMS(SQL Server Management Studio) Profiler와 유사하게, 간단한 SQL Server 추적 솔루션을 제공합니다. SQL Server Profiler는 사용하기 쉬우며, 가장 일반적인 추적 구성에 적합한 기본값을 제공합니다. UX는 이벤트를 탐색하고 연결된 T-SQL(Transact-SQL) 텍스트를 보는 데 최적화되어 있습니다. 또한 Azure Data Studio용 SQL Server Profiler는 사용하기 쉬운 UX를 통해 T-SQL 실행 작업을 수집하는 데 적합한 기본값을 가정합니다. 이 확장은 현재 미리 보기로 제공됩니다.
+SQL Server Profiler 확장(미리 보기)은 확장 이벤트를 사용하여 빌드된 것을 제외하고 SSMS(SQL Server Management Studio) Profiler와 유사한 간단한 SQL Server 추적 솔루션을 제공합니다. SQL Server Profiler는 사용하기 쉬우며, 가장 일반적인 추적 구성에 적합한 기본값을 제공합니다. UX는 이벤트를 탐색하고 연결된 T-SQL(Transact-SQL) 텍스트를 보는 데 최적화되어 있습니다. 또한 Azure Data Studio용 SQL Server Profiler는 사용하기 쉬운 UX를 통해 T-SQL 실행 작업을 수집하는 데 적합한 기본값을 가정합니다. 이 확장은 현재 미리 보기로 제공됩니다.
 
 **일반적인 SQL Profiler 사용 사례:**
 

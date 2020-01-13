@@ -3,17 +3,17 @@ title: SQL Server 2017 및 2019에 대한 Linux 리포지토리 구성
 description: Linux에서 SQL Server 2019 및 SQL Server 2017의 원본 리포지토리를 확인하고 구성합니다. 원본 리포지토리는 설치 및 업그레이드 중에 적용되는 SQL Server 버전에 영향을 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531327"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776379"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux 설치 및 업그레이드를 위한 리포지토리 구성
 
@@ -38,7 +38,7 @@ ms.locfileid: "73531327"
 
 SQL Server on Linux를 설치하는 경우 Microsoft 리포지토리를 구성해야 합니다. 이 리포지토리는 데이터베이스 엔진 패키지인 **mssql-server** 및 관련 SQL Server 패키지를 가져오는 데 사용됩니다. 현재 다음과 같은 다섯 가지 기본 리포지토리가 있습니다.
 
-| 리포지토리 | 속성 | 설명 |
+| 리포지토리 | 속성 | Description |
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 CU(누적 업데이트) 리포지토리. |
 | **2019 GDR** | **mssql-server-2019-gdr** | 중요 업데이트 전용 SQL Server 2019 GDR 리포지토리. |
@@ -173,10 +173,15 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성합니다. 다음 명령 중 하나를 사용하여 선택한 리포지토리를 구성합니다.
 
-| 리포지토리 | 버전 옵션 | Command |
+> [!NOTE]
+> SQL Server 2019에 대한 다음 명령은 RHEL 8 리포지토리를 가리킵니다. RHEL 8에는 SQL Server에 필요한 python2이 사전 설치되어 있지 않습니다. 자세한 내용은 python2 설치 및 기본 인터프리터로 구성하는 방법에 대한 블로그(https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta )를 참조하세요.
+>
+> RHEL 7을 사용 중인 경우 아래 경로를 `/rhel/8` 대신 `/rhel/7`(으)로 변경합니다.
+
+| 리포지토리 | 버전 | 명령 |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
 ::: zone pivot="ld2-sles"
 SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성합니다. 다음 명령 중 하나를 사용하여 선택한 리포지토리를 구성합니다.
 
-| 리포지토리 | 버전 옵션 | Command |
+| 리포지토리 | 버전 | 명령 |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -207,7 +212,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
 
 2. 다음 명령 중 하나를 사용하여 선택한 리포지토리를 구성합니다.
 
-   | 리포지토리 | 버전 옵션 | Command |
+   | 리포지토리 | 버전 | 명령 |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |

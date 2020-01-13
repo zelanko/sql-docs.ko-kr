@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903029"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776396"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "72903029"
  **로그인 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **서버 역할**, **사용자 매핑**, **보안 개체** 및 **상태**.  
   
 ### <a name="server-roles"></a>서버 역할  
- **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 다음 옵션을 사용할 수 있습니다.  
   
  **bulkadmin** 확인란  
  **bulkadmin** 고정 서버 역할의 멤버는 BULK INSERT 문을 실행할 수 있습니다.  
@@ -134,12 +134,12 @@ ms.locfileid: "72903029"
  **사용자 매핑** 페이지에는 사용 가능한 모든 데이터베이스와 이러한 데이터베이스에서 해당 로그인에 적용할 수 있는 데이터베이스 역할이 나열됩니다. 선택한 데이터베이스에 따라 로그인에 사용할 수 있는 역할 멤버 자격이 결정됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **이 로그인으로 매핑된 사용자**  
- 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
+ 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격 대상:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
   
- **지도**  
+ **Map**  
  아래 나열되는 데이터베이스에 해당 로그인이 액세스하는 것을 허용합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  서버의 사용 가능한 데이터베이스를 나열합니다.  
   
  **사용자**  
@@ -148,10 +148,10 @@ ms.locfileid: "72903029"
  **기본 스키마**  
  사용자의 기본 스키마를 지정합니다. 사용자를 처음 만들 경우 기본 스키마는 **dbo**입니다. 아직 존재하지 않는 기본 스키마를 지정할 수도 있습니다. Windows 그룹, 인증서 또는 비대칭 키에 매핑된 사용자에 대해서는 기본 스키마를 지정할 수 없습니다.  
   
- **Guest account enabled for:**  _database_name_  
+ **게스트 계정 활성화 대상:**  _database_name_  
  선택한 데이터베이스에 게스트 계정이 설정되어 있는지 여부를 나타내는 읽기 전용 특성입니다. 게스트 계정에 대한 **로그인 속성** 대화 상자의 **상태** 페이지를 사용하여 게스트 계정을 설정하거나 해제할 수 있습니다.  
   
- **Database role membership for:**  _database_name_  
+ **데이터베이스 역할 멤버 자격 대상:**  _database_name_  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
 ### <a name="securables"></a>보안 개체  
@@ -191,7 +191,7 @@ ms.locfileid: "72903029"
  **명시적 탭**  
  상단 표에서 선택한 보안 개체에 대해 사용 가능한 사용 권한이 나열됩니다. 모든 명시적 사용 권한에 대해 모든 옵션을 사용할 수 있는 것은 아닙니다.  
   
- **사용 권한**  
+ **권한**  
  사용 권한의 이름입니다.  
   
  **Grantor**  
@@ -223,7 +223,7 @@ ms.locfileid: "72903029"
   
  이 로그인을 사용하거나 사용하지 않도록 선택합니다. 이 옵션은 ALTER LOGIN 문에 ENABLE 또는 DISABLE 옵션을 사용합니다.  
   
- **SQL Server Authentication**  
+ **SQL Server 인증**  
  **로그인 잠겨 있음** 확인란은 선택한 로그인을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다. 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
   
 ##  <a name="TsqlProcedure"></a> T-SQL에서 Windows 인증을 사용하여 로그인 만들기  
@@ -243,7 +243,7 @@ ms.locfileid: "72903029"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>SSMS에서 SQL Server 인증을 사용하여 로그인 만들기  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>T-SQL을 사용하는 SQL Server 인증을 통한 로그인 만들기
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -273,6 +273,6 @@ ms.locfileid: "72903029"
 -   로그인에 사용 권한을 부여하려면 [보안 주체에 사용 권한 부여](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012536"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776418"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68012536"
     |CPU 수|32비트 컴퓨터|64비트 컴퓨터|  
     |------------|------------|------------| 
     |\<4개 이하 프로세서|256|512|
-    |\> 4개 프로세서 및 \< 64개 프로세서|256 + ((논리 CPU 수 - 4) * 8)|512 + ((논리 CPU 수 - 4) * 16)|
+    |\> 4개 프로세서 및 \< = 64개의 프로세서|256 + ((논리 CPU 수 - 4) * 8)|512 + ((논리 CPU 수 - 4) * 16)|
     |\> 64개 프로세서|256 + ((논리 CPU 수 - 4) * 32)|512 + ((논리 CPU 수 - 4) * 32)|
   
     > [!NOTE]  
@@ -102,7 +102,7 @@ ms.locfileid: "68012536"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 `RECONFIGURE` 문을 실행하는 두 매개 변수를 사용하여 **sp_configure**를 실행하려면 사용자에게 `ALTER SETTINGS` 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 `ALTER SETTINGS` 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
