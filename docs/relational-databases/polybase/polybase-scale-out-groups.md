@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710471"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623236"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 
@@ -28,7 +28,7 @@ PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또�
   
 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.
   
-![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 스케일 아웃 그룹")  
+![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>헤드 노드  
 
@@ -47,7 +47,7 @@ PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또�
 > [!NOTE]
 >  이 방식은 Hadoop을 통한 스케일 아웃 읽기와 다릅니다. 
 
-![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 스케일 아웃 그룹")
+![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>분산형 쿼리 처리  
 
@@ -66,3 +66,10 @@ SQL Server를 설치한 후에 인스턴스가 헤드 노드 또는 컴퓨팅 �
 PolyBase 스케일 아웃 그룹을 구성하려면 다음 안내서를 참조하세요.
 
 [Windows에서 PolyBase 스케일 아웃 그룹 개선](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>참고 항목
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

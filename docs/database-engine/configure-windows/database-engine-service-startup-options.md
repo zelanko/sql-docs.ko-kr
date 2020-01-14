@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763226"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252866"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 
@@ -51,19 +51,19 @@ ms.locfileid: "68763226"
 ## <a name="list-of-startup-options"></a>시작 옵션 목록  
 ### <a name="default-startup-options"></a>기본 시작 옵션  
 
-|옵션|설명|  
+|옵션|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master 데이터베이스 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
-|**-e** *error_log_path*|오류 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
+|**-e**  *error_log_path*|오류 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
 |**-l**  *master_log_path*|master 데이터베이스 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf입니다. 이 옵션을 지정하지 않으면 기존의 레지스트리 매개 변수가 사용됩니다.|  
   
 ### <a name="other-startup-options"></a>다른 시작 옵션   
 
-|옵션 |설명|   
+|옵션 |Description|   
 |---------------------------|-----------------|  
 |**-c**|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 시작 시간을 단축시킵니다. 일반적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 서비스 제어 관리자를 호출하여 서비스로 시작됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 명령 프롬프트에서 시작하는 경우 서비스로 시작되지 않으므로 **-c** 를 사용하여 이 단계를 건너뛸 수 있습니다.|  
 |**-f**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 최소 구성 모드로 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 단일 사용자 모드로 실행됩니다. 자세한 내용은 뒷부분에 나오는 **-m** 에 대한 설명을 참조하세요.|  
-|**-kDecimalNumber**| 이 시작 매개 변수는 초당 체크포인트 I/O 요청 수를 제한하며 **DecimalNumber**는 초당 체크포인트 속도(MB)를 나타냅니다.  이 값을 변경하면 백업 수행이나, 복구 프로세스 처리 속도에 영향을 미칠 수 있으므로 주의가 필요합니다. 이 시작 매개 변수에 대한 자세한 내용은 [-k 매개 변수](https://support.microsoft.com/en-us/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus)를 소개하는 핫픽스를 참조하세요.| 
+|**-kDecimalNumber**| 이 시작 매개 변수는 초당 체크포인트 I/O 요청 수를 제한하며 **DecimalNumber**는 초당 체크포인트 속도(MB)를 나타냅니다.  이 값을 변경하면 백업 수행이나, 복구 프로세스 처리 속도에 영향을 미칠 수 있으므로 주의가 필요합니다. 이 시작 매개 변수에 대한 자세한 내용은 [-k 매개 변수](https://support.microsoft.com/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus)를 소개하는 핫픽스를 참조하세요.| 
 |**-m**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있으며 CHECKPOINT 프로세스가 시작되지 않습니다. CHECKPOINT는 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 디바이스에 기록되도록 합니다. 일반적으로 이 옵션은 복구해야 할 시스템 데이터베이스에 문제가 발생했을 때 사용합니다. sp_configure allow updates 옵션을 설정합니다. 기본적으로 allow updates는 사용할 수 없습니다. 단일 사용자 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하면 컴퓨터에서 로컬 Administrators 그룹의 모든 멤버가 sysadmin 고정 서버 역할의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 자세한 내용은 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요. 단일 사용자 모드에 대한 자세한 내용은 [단일 사용자 모드로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)을 참조하세요.|  
 |**-mClient Application Name**|지정된 클라이언트 애플리케이션에 대한 연결 수를 제한합니다. 예를 들어 `-mSQLCMD`  는 연결 수를 단일 연결로 제한하며 이 경우 연결은 스스로 SQLCMD 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. SSMS 쿼리 편집기와 연결하려면 `"Microsoft SQL Server Management Studio - Query"` 를 사용합니다. SSMS 쿼리 편집기 옵션은 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 구성 관리자 도구를 사용하여 구성할 수 없습니다. 도구에서 거부된 대시 문자가 포함되어 있기 때문입니다.<br /><br /> 클라이언트 애플리케이션 이름은 대/소문자를 구분합니다. 큰따옴표는 애플리케이션 이름에 공백이나 특수 문자가 포함되어 있는 경우 필요합니다.<br /><br />**명령줄에서 시작하는 예제:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **보안 정보:** 이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.|  
 |**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 기록하는 데 Windows 애플리케이션 로그를 사용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **으로**인스턴스를 시작하는 경우 **-e** 시작 옵션도 사용하는 것이 좋습니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트가 로깅되지 않습니다.|  
