@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545062"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542201"
 ---
 # <a name="oracle-source"></a>Oracle 원본
 
@@ -49,7 +49,7 @@ Oracle 원본이 Oracle 데이터 원본에 대해 수행하는 ODBC 호출을 �
 
 Oracle 원본의 사용자 지정 속성은 다음과 같습니다. 모든 속성은 읽기/쓰기가 가능합니다.
 
-|속성 이름|데이터 형식|설명|
+|속성 이름|데이터 형식|Description|
 |:-|:-|:-|
 |AccessMode|Integer(열거형)|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **테이블 이름** 및 **SQL 명령**입니다. 기본값은 **테이블 이름**입니다.|
 |BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 배열로 추출되는 레코드의 수입니다. <br>이 속성은 **고급 편집기**에서만 설정됩니다.|
@@ -103,7 +103,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 
 원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.
 
-|옵션|설명|
+|옵션|Description|
 |:-|:-|
 |테이블 또는 뷰|Oracle 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다. 이 옵션을 선택한 경우 **테이블 또는 뷰 이름** 목록에서 사용 가능한 테이블 또는 뷰를 선택합니다.|
 |SQL 명령|SQL 쿼리를 사용하여 Oracle 데이터 원본에서 데이터를 검색합니다. 이 옵션을 선택할 경우 다음 중 한 가지 방법으로 쿼리를 입력합니다. <br>**SQL 명령 텍스트** 필드에 SQL 쿼리 텍스트를 입력합니다. <br>**찾아보기** 를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다. <br>**쿼리 구문 분석** 을 클릭하여 쿼리 텍스트의 구문을 확인합니다.|
@@ -161,7 +161,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 **오류 동작**
 
 Oracle 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.
-**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**관련 섹션**: [데이터 오류 처리](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **잘림**
 

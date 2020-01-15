@@ -1,6 +1,5 @@
 ---
-title: SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서
-ms.custom: ''
+title: SQL Server에서 확장 이벤트에 대한 대상
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907994"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501987"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -76,7 +75,7 @@ Transact-SQL에서 [CREATE EVENT SESSION](~/t-sql/statements/create-event-sessio
 ## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target 대상
 
 
-SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동하여 시스템 작업을 모니터링할 수 있습니다. 참조 항목:
+SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동하여 시스템 작업을 모니터링할 수 있습니다. 자세한 내용은 다음을 참조하세요.
 
 - [Windows용 이벤트 추적 대상](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [확장 이벤트를 사용하여 시스템 작업 모니터링](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
@@ -676,7 +675,7 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM

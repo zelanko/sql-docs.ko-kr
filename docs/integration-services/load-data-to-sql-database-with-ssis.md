@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295890"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924983"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server 또는 [Azure SQL Database](/azure/sql-database/)에 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 
@@ -30,7 +28,6 @@ SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server 또는 [
 * Visual Studio에서 새 Integration Services 프로젝트를 만듭니다.
 * 원본에서 대상으로 데이터를 로드하는 SSIS 패키지를 디자인합니다.
 * SSIS 패키지를 실행하여 데이터를 로드합니다.
-
 
 ## <a name="basic-concepts"></a>기본 개념
 
@@ -60,7 +57,7 @@ SQL Server 및 SQL Database에 연결하려면 ADO.NET 연결 관리자와 원�
 3. **Visual Studio용 SSDT(SQL Server Data Tools)** Visual Studio용 SQL Server Data Tools를 가져오려면 [SSDT(SQL Server Data Tools) 다운로드][Download SQL Server Data Tools (SSDT)]를 참조하세요.
 4. 이 자습서에서는 SQL Server 또는 SQL Database 인스턴스에 연결하고 여기에 데이터를 로드합니다. 다음 중 하나에 연결하고, 테이블을 만들고, 데이터를 로드할 수 있는 권한이 있어야 합니다.
    - **Azure SQL Database 데이터베이스**. 자세한 내용은 [Azure SQL Database](/azure/sql-database/)를 참조하세요.  
-      로 구분하거나 여러
+      또는
    - **SQL Server 인스턴스**입니다. SQL Server는 온-프레미스 또는 Azure 가상 머신에서 실행됩니다. SQL Server의 평가판 또는 개발자 버전을 다운로드하려면 [SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.
 
 5. **샘플 데이터** 이 자습서에서는 원본 데이터로 AdventureWorks 샘플 데이터베이스의 SQL Server에 저장된 샘플 데이터를 사용합니다. AdventureWorks 샘플 데이터베이스를 가져오려면 [AdventureWorks 샘플 데이터베이스][AdventureWorks 2014 Sample Databases]를 참조하세요.
@@ -140,9 +137,9 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
    2. **서버 이름**의 경우 SQL Server 또는 SQL Database 서버의 이름을 입력합니다.
    3. **서버에 로그온** 섹션에서 **SQL Server 인증 사용**을 선택하고 인증 정보를 입력합니다.
    4. **데이터베이스에 연결** 섹션에서 기존 데이터베이스를 선택합니다.
-    1\. **연결 테스트**를 클릭합니다.
-    2\. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
-    c. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
+    a. **연결 테스트**를 클릭합니다.
+    b. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
+    다. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
 5. **ADO.NET 연결 관리자 구성** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 대상 편집기**로 돌아갑니다.
 6. **ADO.NET 대상 편집기**에서 **테이블 또는 뷰 사용** 목록 옆의 **새로 만들기**를 클릭하여 **테이블 만들기** 대화 상자를 열고 원본 테이블과 일치하는 열 목록으로 새 대상 테이블을 만듭니다.
    
@@ -172,13 +169,13 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 ![][15]
 
-축하합니다. SQL Server Integration Services를 사용하여 SQL Server 또는 Azure SQL Database에 데이터를 성공적으로 로드했습니다.
+축하합니다! SQL Server Integration Services를 사용하여 SQL Server 또는 Azure SQL Database에 데이터를 성공적으로 로드했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 - 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작하세요. [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development].
 
-- SSIS 프로젝트 및 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법을 알아봅니다. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
+- SSIS 프로젝트와 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법에 대해 알아보세요. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png
