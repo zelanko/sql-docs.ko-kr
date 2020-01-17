@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러링 모니터 제거
+description: SSMS(SQL Server Management Studio) 또는 T-SQL(Transact-SQL)을 사용하여 데이터베이스 미러링 세션에서 미러링 모니터를 제거하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025274"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822526"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68025274"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -91,7 +92,7 @@ ms.locfileid: "68025274"
 > [!TIP]  
 >  각 파트너의 데이터베이스 트랜잭션 보안 설정은 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 카탈로그 뷰의 **mirroring_safety_level** 및 **mirroring_safety_level_desc** 열에 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

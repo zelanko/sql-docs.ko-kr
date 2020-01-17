@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c259066aca1a4302fcd1a0caeb7fb3122c97147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084561"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244593"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68084561"
 > [!IMPORTANT]  
 >  새 가용성 그룹의 초기 주 복제본으로 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 CREATE AVAILABILITY GROUP을 실행합니다. 이 서버 인스턴스는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 있어야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -132,7 +132,7 @@ CREATE AVAILABILITY GROUP group_name
  백업이 주 복제본에서 수행되지 않도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우에는 백업이 수행되지 않아야 합니다.  
   
  SECONDARY  
- 백업이 보조 복제본에서 수행되도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우는 예외로, 이 경우에는 백업이 주 복제본에서 수행되어야 합니다. 이것이 기본 동작입니다.  
+ 백업이 보조 복제본에서 수행되도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우는 예외로, 이 경우에는 백업이 주 복제본에서 수행되어야 합니다. 기본 동작입니다.  
   
  없음  
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
@@ -152,7 +152,7 @@ CREATE AVAILABILITY GROUP group_name
 |-----------|-----------------------|  
 |1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> -서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)을 참조하세요.|  
 |2|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 클러스터에 연결되어 있지 않고 가용성 그룹의 사용자 지정 HEALTH_CHECK_TIMEOUT 임계값이 초과된 경우<br /><br /> -가용성 복제본이 실패 상태인 경우|  
-|3|분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> 이것이 기본 동작입니다.|  
+|3|분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> 기본 동작입니다.|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
 |5|다음과 같은 오류 상태가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> -SQL 엔진 작업자 스레드가 소진된 경우<br /><br /> -해결할 수 없는 교착 상태가 발견된 경우|  
   
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다. 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]장애 조치(failover) 파트너로 참여하는 경우 이 인수를 사용합니다. FCI 서버 인스턴스에서 SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)을 실행하면 전체 복제본 이름인 '*FCI_network_name*[\\*instance_name*]' 문자열 전체가 반환됩니다.  
   
  *instance_name*  
- *system_name* 또는 *FCI_network_name*으로 호스팅되고 HADR 서비스를 사용하도록 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 독립 실행형 서버 인스턴스에서 이 값 이름은 SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)을 실행할 때 반환되는 값과 동일합니다.  
+ *system_name* 또는 *FCI_network_name*으로 호스팅되고 HADR 서비스를 사용하도록 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 명명된 인스턴스에서 이 값 이름은 `select ServerProperty(N'InstanceName');`를 실행하여 반환되는 값과 같습니다.  
   
  \  
  *system_name* 또는 *FCI_network_name*에서 구분하기 위해 *instance_name*을 지정하는 경우에만 사용되는 구분 기호입니다.  
@@ -230,7 +230,7 @@ CREATE AVAILABILITY GROUP group_name
  ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  현재 REPLICA ON 절에서 정의 중인 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)에 대한 URL 경로를 지정합니다.  
   
- ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **'** TCP **://** _system-address_ **:** _port_ **'**  
  엔드포인트 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
@@ -305,7 +305,7 @@ CREATE AVAILABILITY GROUP group_name
  보조 역할, 즉 보조 복제본의 역할을 수행하는 지정된 가용성 복제본의 데이터베이스에서 클라이언트의 연결을 허용할 수 있는지 여부를 다음 중 하나로 지정합니다.  
   
  아니요  
- 이 복제본의 보조 데이터베이스에 대한 사용자 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 이것이 기본 동작입니다.  
+ 이 복제본의 보조 데이터베이스에 대한 사용자 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 기본 동작입니다.  
   
  READ_ONLY  
  애플리케이션 의도 속성이 **ReadOnly**로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
@@ -337,7 +337,7 @@ CREATE AVAILABILITY GROUP group_name
  애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  애플리케이션 의도 속성이 **ReadWrite** 로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
  ALL  
- 주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이것이 기본 동작입니다.  
+ 주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 기본 동작입니다.  
   
  READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
@@ -354,7 +354,7 @@ CREATE AVAILABILITY GROUP group_name
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 읽기 가능한 보조 복제본에서 읽기 전용 요청을 부하 분산할 수 있습니다. 복제본을 읽기 전용 라우팅 목록 내의 중첩된 괄호 쌍에 배치하여 이를 지정합니다. 자세한 내용 및 예제는 [읽기 전용 복제본에 대한 부하 분산 구성](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)을 참조하세요.  
   
  없음  
- 이 가용성 복제본이 주 복제본인 경우 읽기 전용 라우팅이 지원되지 않도록 지정합니다. 이것이 기본 동작입니다.  
+ 이 가용성 복제본이 주 복제본인 경우 읽기 전용 라우팅이 지원되지 않도록 지정합니다. 기본 동작입니다.  
   
  SESSION_TIMEOUT **=** *integer*  
  세션 제한 시간(초)을 지정합니다. 이 옵션을 지정하지 않으면 기본적으로 제한 시간은 10초로 설정됩니다. 최소값은 5초입니다.  
@@ -413,7 +413,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  수동 시드(기본값)를 지정합니다. 이 메서드를 사용하면 주 복제본에서 데이터베이스의 백업을 만들고 보조 가용성 그룹의 복제본에서 해당 백업을 수동으로 복원해야 합니다.  
   
- LISTENER **‘** _dns\_name_ **’(** \<listener_option\> **)** 이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. LISTENER는 선택적 인수입니다.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** 이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. LISTENER는 선택적 인수입니다.  
   
 > [!IMPORTANT]
 >  첫 번째 수신기를 만들기 전에 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 읽는 것이 좋습니다.  
@@ -441,14 +441,14 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -480,10 +480,10 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>1\. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
+### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
  다음 예에서는 두 개의 사용자 데이터베이스 `MyAg` 및 `ThisDatabase`에 대해 `ThatDatabase`라는 가용성 그룹을 만듭니다. 다음 표에는 가용성 그룹 전체에 대해 설정되는 옵션에 지정되는 값이 요약되어 있습니다.  
   
-|그룹 옵션|설정|설명|  
+|그룹 옵션|설정|Description|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|이 자동화된 백업 기본 설정은 주 복제본이 유일한 온라인 복제본일 경우(기본 동작)를 제외하고 백업이 보조 복제본에서 수행되도록 지정합니다. 자동화된 백업 기본 설정을 고려하도록 가용성 데이터베이스에서 백업 작업을 스크립팅해야 AUTOMATED_BACKUP_PREFERENCE 설정이 적용됩니다.|  
 |FAILURE_CONDITION_LEVEL|3|이 오류 상태 수준 설정은 분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 SQL Server 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
@@ -491,7 +491,7 @@ CREATE AVAILABILITY GROUP group_name
   
  세 가지 가용성 복제본은 `COMPUTER01`, `COMPUTER02` 및 `COMPUTER03`이라는 컴퓨터의 기본 서버 인스턴스가 호스팅합니다. 다음 표에는 각 복제본의 복제본 옵션에 지정되는 값이 요약되어 있습니다.  
   
-|복제본 옵션|`COMPUTER01`의 설정|`COMPUTER02`의 설정|`COMPUTER03`의 설정|설명|  
+|복제본 옵션|`COMPUTER01`의 설정|`COMPUTER02`의 설정|`COMPUTER03`의 설정|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|이 예에서는 시스템이 같은 도메인에 있으므로 엔드포인트 URL에서 컴퓨터 시스템의 이름을 시스템 주소로 사용할 수 있습니다.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|두 복제본이 동기-커밋 모드를 사용합니다. 동기화된 복제본은 데이터 손실 없는 장애 조치(failover)를 지원합니다. 비동기-커밋을 가용성 모드를 사용하는 세 번째 복제본입니다.|  
@@ -558,7 +558,7 @@ ALTER AVAILABILITY GROUP [MyAg]
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
@@ -574,7 +574,7 @@ GO
  [DROP AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

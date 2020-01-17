@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹 옵션 지정 페이지(가용성 그룹 마법사) - SQL Server | Microsoft Docs
+title: '가용성 그룹 마법사: 가용성 그룹 옵션 지정'
 ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014020"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822571"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 가용성 그룹 옵션 지정 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014020"
 
  **클러스터 유형** 다음으로 클러스터 유형을 지정합니다. 가능한 클러스터 유형은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 및 운영 체제에 따라 다릅니다. 다음 목록에서 하나를 선택합니다.
 
-   * **Windows Server 장애 조치 클러스터링**
+   * **Windows Server 장애 조치(failover) 클러스터링**
    
       고가용성 및 재해 복구를 위해 Windows Server 장애 조치 클러스터에 속한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 그룹을 호스팅할 때 사용합니다. 지원되는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 적용됩니다. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "68014020"
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
-##  <a name="LaunchWiz"></a> 관련 태스크  
+##  <a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

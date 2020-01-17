@@ -1,6 +1,7 @@
 ---
-title: Azure 복제본 추가 마법사 사용(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에서 Azure VM을 보조 복제본으로 구성
+description: Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176209"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822665"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>가용성 그룹에서 Azure VM을 보조 복제본으로 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
   
@@ -26,7 +27,7 @@ ms.locfileid: "70176209"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "70176209"
   
      마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
  가용성 그룹에 복제본 추가 마법사에서 데이터베이스 미러링 엔드포인트를 관리할 수 있도록 하려면 CONTROL ON ENDPOINT 권한도 필요합니다.  
@@ -62,7 +63,7 @@ ms.locfileid: "70176209"
   
 4.  새 보조 복제본을 호스트할 Azure VM에 대한 설정을 지정합니다.  
   
-     image  
+     이미지  
      Azure VM에 사용할 SQL Server 이미지의 이름  
   
      VM 크기  
@@ -77,7 +78,7 @@ ms.locfileid: "70176209"
      VM 관리자 암호(및 암호 확인)  
      Azure VM 기본 관리자의 암호  
   
-     가상 네트워크  
+     Virtual Network  
      Azure VM을 배치할 가상 네트워크  
   
      가상 네트워크 서브넷  
@@ -98,7 +99,7 @@ ms.locfileid: "70176209"
   
      가용성 그룹 마법사 또는 가용성 그룹에 복제본 추가 마법사를 마치면 구성 프로세스를 통해 Azure에서 새 VM 만들기, AD 도메인에 VM 조인, Windows 클러스터에 VM 추가, Always On 고가용성 사용 설정, 가용성 그룹에 새 복제본 추가 등의 모든 작업이 수행됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

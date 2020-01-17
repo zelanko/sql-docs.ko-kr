@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531337"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721565"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
@@ -25,7 +25,7 @@ ms.locfileid: "73531337"
 
 기타 배포 시나리오는 다음을 참조하세요.
 
-- [창](../database-engine/install-windows/install-sql-server.md)
+- [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Kubernetes - 빅 데이터 클러스터](../big-data-cluster/deploy-get-started.md)
 
@@ -35,7 +35,12 @@ ms.locfileid: "73531337"
 > 이 문서에서는 특히 mssql-server-linux 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows Docker Hub 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
 
 > [!IMPORTANT]
-> 프로덕션 사용 사례를 위해 SQL Server 컨테이너를 실행하기로 선택하기 전에 [SQL Server 컨테이너에 대한 지원 정책](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server)을 검토하여 지원되는 구성에서 실행 중인지 확인하세요.
+> 프로덕션 사용 사례를 위해 SQL Server 컨테이너를 실행하기로 선택하기 전에 [SQL Server 컨테이너에 대한 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)을 검토하여 지원되는 구성에서 실행 중인지 확인하세요.
+
+6분 분량의 다음 동영상은 컨테이너에서 SQL Server를 실행하는 방법을 소개합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 끌어와 실행하기
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 이 방법을 사용하여 Docker 외부에서 호스트의 파일을 공유하고 볼 수도 있습니다.
 
 > [!IMPORTANT]
-> SQL Server on Linux 이미지와 Docker on Mac 간의 호스트 볼륨 매핑은 현재 지원되지 않습니다. 대신, 데이터 볼륨 컨테이너를 사용합니다. 이 제한 사항은 `/var/opt/mssql` 디렉터리에만 적용됩니다. 탑재된 디렉터리에서 읽을 수는 있습니다. 예를 들어 Mac에서-v를 사용하여 호스트 디렉터리를 탑재하고 호스트에 있는 .bak 파일에서 백업을 복원할 수 있습니다.
+> **Docker on Windows**의 호스트 볼륨 매핑은 현재 전체 `/var/opt/mssql` 디렉터리 매핑을 지원하지 않습니다. 그러나 `/var/opt/mssql/data` 등의 하위 디렉터리를 호스트 머신에 매핑할 수 있습니다.
+
+> [!IMPORTANT]
+> SQL Server on Linux 이미지와 **Docker on Mac** 간의 호스트 볼륨 매핑은 현재 지원되지 않습니다. 대신, 데이터 볼륨 컨테이너를 사용합니다. 이 제한 사항은 `/var/opt/mssql` 디렉터리에만 적용됩니다. 탑재된 디렉터리에서 읽을 수는 있습니다. 예를 들어 Mac에서-v를 사용하여 호스트 디렉터리를 탑재하고 호스트에 있는 .bak 파일에서 백업을 복원할 수 있습니다.
 
 ### <a name="use-data-volume-containers"></a>데이터 볼륨 컨테이너 사용
 
@@ -336,7 +344,7 @@ docker exec -it <Container ID> /bin/bash
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**예제:**
+**예:**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -354,7 +362,7 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**예제:**
+**예:**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -615,7 +623,7 @@ SQL Server에 지속형 데이터베이스 파일에 대한 액세스 권한이 
 루트가 아닌 SQL Server 컨테이너가 데이터베이스 파일에 액세스할 수 있도록 루트 그룹에 다음 디렉터리에 대한 권한을 부여합니다.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 
@@ -662,7 +670,7 @@ Windows에서 PowerShell 또는 명령 프롬프트를 관리자 권한으로 �
 
 SQL Server 컨테이너가 실행되지 않으면 다음 테스트를 시도합니다.
 
-- **‘네트워크 브리지에서 CONTAINER_NAME 엔드포인트를 만들지 못했습니다. 프록시를 시작하는 중 오류 발생: listen tcp 0.0.0.0:1433 bind: 주소가 이미 사용 중입니다.’** 와 같은 오류가 발생할 경우 컨테이너 포트 1433을 이미 사용 중인 포트에 매핑하려고 한 것입니다. 이 문제는 호스트 머신에서 SQL Server를 로컬로 실행하는 경우에 발생할 수 있습니다. 두 개의 SQL Server 컨테이너를 시작하고 둘 다 동일한 호스트 포트에 매핑하려고 하는 경우에도 발생할 수 있습니다. 이 문제가 발생할 경우 `-p` 매개 변수를 사용하여 컨테이너 포트 1433을 다른 호스트 포트에 매핑합니다. 예를 들어 
+- **‘네트워크 브리지에서 CONTAINER_NAME 엔드포인트를 만들지 못했습니다. 프록시를 시작하는 중 오류 발생: listen tcp 0.0.0.0:1433 bind: 주소가 이미 사용 중입니다.’** 와 같은 오류가 발생할 경우 컨테이너 포트 1433을 이미 사용 중인 포트에 매핑하려고 한 것입니다. 이 문제는 호스트 머신에서 SQL Server를 로컬로 실행하는 경우에 발생할 수 있습니다. 두 개의 SQL Server 컨테이너를 시작하고 둘 다 동일한 호스트 포트에 매핑하려고 하는 경우에도 발생할 수 있습니다. 이 문제가 발생할 경우 `-p` 매개 변수를 사용하여 컨테이너 포트 1433을 다른 호스트 포트에 매핑합니다. 다음은 그 예입니다. 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

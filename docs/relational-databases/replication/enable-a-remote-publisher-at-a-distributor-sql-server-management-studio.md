@@ -1,6 +1,7 @@
 ---
-title: 배포자에서 원격 게시자 설정(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 배포자에서 원격 게시자 사용(SSMS)
+description: SSMS(SQL Server Management Studio)를 사용하여 배포자에서 원격 게시자를 사용하도록 설정하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b6b87fef15f8d052542aa2d0ba2c05c815092bf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2cc0b1cd3c395a1c603e2e2aa9a94521788f11ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908280"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321750"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

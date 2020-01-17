@@ -1,6 +1,6 @@
 ---
-title: 메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수 | Microsoft 문서
-ms.custom: ''
+title: 임시 테이블 및 테이블 변수 성능 향상을 위한 메모리 최적화
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713247"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412681"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713247"
   
 임시 테이블, 테이블 변수 또는 테이블 반환 매개 변수를 사용하는 경우 메모리 최적화 테이블 및 테이블 변수를 활용하도록 변환하여 성능을 향상시키는 것이 좋습니다. 코드는 일반적으로 최소로 변경됩니다.  
   
-이 문서에서는 다음에 대해 설명합니다.  
+이 문서에서는 다음을 설명합니다.  
   
 - 메모리 내로 변환을 위한 시나리오  
 - 메모리 내로 변환의 기술 구현 단계  
@@ -32,7 +32,7 @@ ms.locfileid: "71713247"
 - 메모리 액세스에 최적화된 성능 이점을 강조하는 코드 샘플
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>1\. 메모리 최적화 테이블 변수 기본 사항  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. 메모리 최적화 테이블 변수 기본 사항  
   
 메모리 최적화 테이블 변수는 메모리 최적화 테이블에서 사용하는 동일한 메모리 최적화 알고리즘 및 데이터 구조를 사용하여 훌륭한 효율성을 제공합니다. 테이블 변수가 고유하게 컴파일된 모듈 내에서 액세스될 때 효율성은 최대가 됩니다.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "71713247"
   
 메모리 내 OLTP는 메모리 액세스 최적화 임시 테이블 및 테이블 변수에 사용할 수 있는 다음과 같은 개체를 제공합니다.  
   
-- 메모리 액세스에 최적화된 테이블  
+- 메모리 최적화 테이블  
   - Durability = SCHEMA_ONLY  
 - 메모리 액세스에 최적화된 테이블 변수  
   - 인라인 대신 두 단계로 선언해야 합니다.  
     - `CREATE TYPE my_type AS TABLE ...;` 그런 다음  
-    - `DECLARE @mytablevariable my_type;`를 참조하세요.  
+    - `DECLARE @mytablevariable my_type;`입니다.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>2\. 시나리오: 글로벌 tempdb &#x23;&#x23;table 바꾸기  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 시나리오: 글로벌 tempdb &#x23;&#x23;table 바꾸기  
   
 메모리 최적화 SCHEMA_ONLY 테이블이 포함된 전역 임시 테이블을 교체하는 작업은 매우 간단합니다. 런타임 시가 아니라 배포 시 테이블을 만든다는 것이 가장 큰 차이점입니다. 컴파일 시간 최적화로 인해 메모리 최적화 테이블을 만드는 시간은 기존의 테이블을 만드는 것보다 오래 걸립니다. 온라인 워크로드의 일부로 메모리 최적화 테이블을 만들고 삭제하는 작업은 워크로드의 성능뿐만 아니라 AlwaysOn 보조 데이터베이스와 데이터베이스 복구에 대한 다시 실행 성능에도 영향을 미칩니다.
 
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-첫째, 다음과 같이 테이블 반환 함수를 만들어 **@@spid** 로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
+첫째, 다음과 같이 테이블 반환 함수를 만들어 **\@\@spid**로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
   
   
   
@@ -415,7 +415,7 @@ Batch execution completed 5001 times.
   
   
   
-## <a name="g-predict-active-memory-consumption"></a>7\. 활성 메모리 사용량 예측  
+## <a name="g-predict-active-memory-consumption"></a>G. 활성 메모리 사용량 예측  
   
 다음 리소스를 사용하면 메모리 최적화 테이블의 활성 메모리 요구량을 예측할 수 있습니다.  
   
@@ -426,7 +426,7 @@ Batch execution completed 5001 times.
   
 메모리 최적화 테이블 변수가 액세스당 하나의 정확한 키 값에만 액세스하는 경우 비클러스터형 인덱스보다 해시 인덱스가 더 적합할 수 있습니다. 그러나 적절한 BUCKET_COUNT를 예측할 수 없는 경우 비클러스터형 인덱스가 차선책입니다.  
   
-## <a name="h-see-also"></a>H. 관련 항목:  
+## <a name="h-see-also"></a>H. 참고 항목  
   
 - [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

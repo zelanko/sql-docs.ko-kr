@@ -1,21 +1,21 @@
 ---
-title: Azure Data Studio에서 SQL Notebook을 사용하는 방법
+title: SQL Notebook을 사용하는 방법
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 SQL Notebook을 사용하는 방법을 알아봅니다.
-ms.custom: seodec18
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; sstein
+ms.reviewer: achatter; alayu; maghan; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/28/2019
+ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959267"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957087"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Notebook을 사용하는 방법
 
@@ -82,7 +82,7 @@ PostgreSQL Server 인스턴스에 연결하기 위한 SQL 커널
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|커널|설명
+|커널|Description
 |:-----|:-----
 | SQL 커널 | 관계형 데이터베이스를 대상으로 하는 SQL 코드를 작성합니다.
 |PySpark3 및 PySpark 커널| 클러스터의 Spark 컴퓨팅을 사용하여 Python 코드를 작성합니다.

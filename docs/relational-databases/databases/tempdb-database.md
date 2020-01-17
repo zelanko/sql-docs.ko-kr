@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909546"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190149"
 ---
 # <a name="tempdb-database"></a>TempDB 데이터베이스
 
@@ -56,7 +56,7 @@ ms.locfileid: "72909546"
 |----------|------------------|-------------------|------------------|-----------------|  
 |주 데이터|tempdev|tempdb.mdf|8MB|디스크가 꽉 찰 때까지 64MB씩 자동 증가|  
 |보조 데이터 파일*|temp#|tempdb_mssql_#.ndf|8MB|디스크가 꽉 찰 때까지 64MB씩 자동 증가|  
-|Log|templog|templog.ldf|8MB|최대 2TB까지 64MB씩 자동 증가|  
+|로그|templog|templog.ldf|8MB|최대 2TB까지 64MB씩 자동 증가|  
   
 \* 파일의 수는 컴퓨터의 논리 프로세서 수에 따라 달라집니다. 일반적으로 논리 프로세서의 수가 8 이하인 경우 논리 프로세서와 같은 수의 데이터 파일을 사용합니다. 논리 프로세서의 수가 8보다 클 경우 8개의 데이터 파일을 사용합니다. 그런 다음에도 경합이 계속될 경우 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일의 수를 4의 배수로 늘리거나 작업/코드를 변경합니다.
 
@@ -73,35 +73,35 @@ ms.locfileid: "72909546"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|아니오|  
-|AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|아니오|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니오|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|ON|아니오|  
-|ENCRYPTION|OFF|아니오|  
-|MIXED_PAGE_ALLOCATION|OFF|아니오|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|아니오|  
-|RECOVERY|SIMPLE|아니오|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|ENABLE_BROKER|예|  
-|TRUSTWORTHY|OFF|아니오|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|yes|  
+|ANSI_NULLS|OFF|yes|  
+|ANSI_PADDING|OFF|yes|  
+|ANSI_WARNINGS|OFF|yes|  
+|ARITHABORT|OFF|yes|  
+|AUTO_CLOSE|OFF|예|  
+|AUTO_CREATE_STATISTICS|켜기|yes|  
+|AUTO_SHRINK|OFF|예|  
+|AUTO_UPDATE_STATISTICS|켜기|yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|CHANGE_TRACKING|OFF|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
+|CURSOR_DEFAULT|GLOBAL|yes|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|DB_CHAINING|켜기|예|  
+|ENCRYPTION|OFF|예|  
+|MIXED_PAGE_ALLOCATION|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|yes|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|yes|  
+|PARAMETERIZATION|SIMPLE|yes|  
+|QUOTED_IDENTIFIER|OFF|yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|예|  
+|RECOVERY|SIMPLE|예|  
+|RECURSIVE_TRIGGERS|OFF|yes|  
+|Service Broker 옵션|ENABLE_BROKER|yes|  
+|TRUSTWORTHY|OFF|예|  
   
 이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "72909546"
 
 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits) 참조
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>제한
 
 다음 작업은 **TempDB** 데이터베이스에서 수행할 수 없습니다.  
   
@@ -214,7 +214,14 @@ TempDB의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를
 [TEMPDB – 파일, 추적 플래그 및 업데이트](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터
-TempDB 메타데이터 경합이 기존에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행하는 많은 워크로드의 확장성에 병목 상태가 발생했습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 TempDB 메타데이터를 도입하여 해당 병목 상태를 효과적으로 제거하고 TempDB 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
+TempDB 메타데이터 경합이 기존에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행하는 많은 워크로드의 확장성에 병목 상태가 발생했습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 TempDB 메타데이터를 도입하여 해당 병목 상태를 효과적으로 제거하고 TempDB 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다.
+
+메모리 최적화 TempDB 메타데이터를 사용하는 방법과 시기에 대한 개요는 7분 분량의 다음 동영상을 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -232,7 +239,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
     ```
     
-    예:
+    예제:
     
     ```sql
     BEGIN TRAN

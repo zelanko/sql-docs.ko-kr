@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014463"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720847"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-가용성 그룹은 SQL Server에 고가용성 기능을 제공하고 통합된 확장 솔루션을 제공하는 포괄적인 솔루션입니다. 일반적인 데이터베이스 애플리케이션에서는 여러 클라이언트가 다양한 유형의 작업을 실행합니다. 경우에 따라 리소스 제약으로 인해 병목 현상이 발생할 수 있습니다. 리소스를 확보하고 OLTP 워크로드의 처리량을 높일 수 있습니다. 또한 읽기 전용 작업 부하에서 더 높은 성능과 확장성을 제공할 수 있습니다. SQL Server에 대한 가장 빠른 복제 기술을 활용하여 복제된 데이터베이스 그룹을 만들어 보고 및 분석 워크로드를 읽기 전용 복제본으로 오프로드합니다.
+가용성 그룹은 SQL Server에 고가용성 기능을 제공하고 통합된 확장 솔루션을 제공하는 포괄적인 솔루션입니다. 일반적인 데이터베이스 애플리케이션에서는 여러 클라이언트가 다양한 유형의 작업을 실행합니다. 경우에 따라 리소스 제약으로 인해 병목 현상이 발생할 수 있습니다. 
+
+가용성 그룹의 컨텍스트에서 읽기 확장은 읽기 워크로드를 보조 복제본으로 오프로드합니다. 리소스를 확보하고 OLTP 워크로드의 처리량을 높일 수 있습니다. 또한 읽기 전용 작업 부하에서 더 높은 성능과 확장성을 제공할 수 있습니다. SQL Server에 대한 가장 빠른 복제 기술을 활용하여 복제된 데이터베이스 그룹을 만들어 보고 및 분석 워크로드를 읽기 전용 복제본으로 오프로드합니다.
 
 가용성 그룹을 사용하면 보조 데이터베이스에 대한 읽기 전용 액세스를 지원하기 위해 하나 이상의 보조 복제본을 구성할 수 있습니다.
 
@@ -52,6 +54,6 @@ ms.locfileid: "68014463"
 
 [Windows에서 읽기-배율 가용성 그룹 구성](../../../database-engine/availability-groups/windows/configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

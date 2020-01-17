@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531194"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721828"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -84,8 +84,8 @@ ms.locfileid: "73531194"
 
    이 명령은 Developer Edition(기본값)을 사용하여 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433**은 호스트에서 포트 **1401**로 공개됩니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수는 **sql1ddata**라는 데이터 볼륨 컨테이너를 만듭니다. 이 컨테이너는 SQL Server에서 생성된 데이터를 유지하는 데 사용됩니다.
 
-   > [!NOTE]
-   > 컨테이너에서 프로덕션 SQL Server 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용하는 경우 이 연습의 나머지 부분은 프로덕션 컨테이너에서도 계속 작동합니다.
+   > [!IMPORTANT]
+   > 이 예제에서는 Docker 내의 데이터 볼륨 컨테이너를 사용합니다. 대신 호스트 디렉터리를 매핑하도록 선택한 경우, Mac 및 Windows용 Docker에서는 이 방법에 제한 사항이 있습니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](sql-server-linux-configure-docker.md#persist)을 참조하세요.
 
 1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 

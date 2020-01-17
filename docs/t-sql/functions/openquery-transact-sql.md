@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313741"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542276"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   지정한 연결된 서버에서 지정한 통과 쿼리를 실행합니다. 이 서버는 OLE DB 데이터 원본입니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 또한 OPENQUERY는 INSERT, UPDATE 또는 DELETE 문의 대상 테이블로 참조될 수도 있습니다. 이것은 OLE DB 공급자 기능에 종속됩니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 OPENQUERY는 첫 번째 것만 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,10 +49,10 @@ OPENQUERY ( linked_server ,'query' )
  **'** *query* **'**  
  연결된 서버에서 실행된 쿼리 문자열입니다. 문자열의 최대 길이는 8KB입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OPENQUERY는 변수를 인수로 받아들이지 않습니다.  
   
- OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들어  
+ OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 다음은 그 예입니다.  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -65,7 +65,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
 ## <a name="examples"></a>예  
   
-### <a name="a-executing-an-update-pass-through-query"></a>1\. UPDATE 통과 쿼리 실행  
+### <a name="a-executing-an-update-pass-through-query"></a>A. UPDATE 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `UPDATE` 통과 쿼리를 사용합니다.  
   
 ```sql  
@@ -73,7 +73,7 @@ UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')
 SET name = 'ADifferentName';  
 ```  
   
-### <a name="b-executing-an-insert-pass-through-query"></a>2\. INSERT 통과 쿼리 실행  
+### <a name="b-executing-an-insert-pass-through-query"></a>B. INSERT 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `INSERT` 통과 쿼리를 사용합니다.  
   
 ```sql  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE&#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Rowset 함수&#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

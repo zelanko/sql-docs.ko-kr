@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 선택 페이지(새 가용성 그룹 마법사 및 데이터베이스 추가 마법사) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 선택 페이지(새 가용성 그룹 및 데이터베이스 추가 마법사)
+description: SQL Server Management Studio GUI에 있는 새 가용성 그룹 및 데이터베이스 추가 마법사 모두의 “데이터베이스 선택” 페이지에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04836a29531c1eaab61277891e22e31b669d9ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014194"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235382"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68014194"
  **새로 고침**  
  표를 새로 고치려면 클릭합니다. 이 기능은 사전 요구 사항을 충족하기 위해 데이터베이스에서 작업을 수행한 이후에 유용합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

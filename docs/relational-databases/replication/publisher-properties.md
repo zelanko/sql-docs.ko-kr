@@ -1,6 +1,7 @@
 ---
-title: SQL Server 복제 게시자 속성 대화 상자 | Microsoft Docs
-ms.custom: ''
+title: 게시자 속성 대화 상자(SSMS)
+description: SSMS(SQL Server Management Studio) 특정 게시용 ‘게시자 속성’ 대화 상자를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908311"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320730"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 복제 게시자 속성 대화 상자 |
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "72908311"
   
 
 ## <a name="subcribers"></a>구독자
-  **게시자 속성** 대화 상자의 **구독자** 페이지는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  
+  **게시자 속성** 대화 상자의 **구독자** 페이지는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  
   
 ### <a name="options"></a>옵션  
  **게시자 속성**  

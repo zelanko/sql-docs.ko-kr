@@ -1,6 +1,7 @@
 ---
-title: 분류자 사용자 정의 함수 만들기 및 테스트 | Microsoft 문서
-ms.custom: ''
+title: 분류자 사용자 정의 함수 만들기 및 테스트 - Resource Governor
+description: 이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다.
+ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aff12e92692ebd3bd53319a91b0a480338458dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136868"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165566"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68136868"
   
  아래 절차에 나오는 예에서는 매우 복잡한 분류자 사용자 정의 함수를 만드는 경우에 대해 설명합니다.  
   
- 이 예에서는 다음과 같은 작업이 수행됩니다.  
+ 이 예제에서는 다음과 같습니다.  
   
 -   지정한 시간 범위 동안의 프로덕션 처리를 위해 리소스 풀(pProductionProcessing) 및 작업 그룹(gProductionProcessing)을 만듭니다.  
   

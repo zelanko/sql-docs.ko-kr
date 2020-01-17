@@ -1,6 +1,7 @@
 ---
-title: DMV를 사용하여 뷰의 사용 통계 및 성능 확인
+title: DMV - 뷰의 사용 통계 및 성능
 description: DMV를 사용하여 뷰의 사용 통계 및 성능 확인
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986668"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165892"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV를 사용하여 뷰의 사용 통계 및 성능 확인
 이 문서에서는 **보기를 사용하는 쿼리 성능**에 대한 정보를 가져오는 데 사용되는 방법 및 스크립트를 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 보기의 사용 및 성능 표시기를 제공하는 것입니다. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 수행한 최적화에 대한 통계를 제공합니다. 이러한 값은 누적되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 기록을 시작합니다. 쿼리 최적화 프로그램에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.   
 
 아래의 common_table_expression(CTE)는 이 DMV를 사용하여 뷰를 참조하는 쿼리의 비율과 같은 워크로드 관련 정보를 제공합니다. 이 쿼리에서 반환하는 결과가 자체적으로 성능 문제를 나타내지는 않지만 느리게 작동하는 쿼리에 대한 사용자 불만과 관련이 있는 기본 문제를 나타낼 수 있습니다. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 최종 쿼리는 DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)를 사용하여 사용하지 않는 뷰에 대한 정보를 제공합니다. 그러나 실행 계획 캐시는 동적이므로 결과는 달라질 수 있습니다. 따라서 이 쿼리를 지속적으로 사용하면서 뷰가 실제로 사용되고 있는지 여부를 확인합니다. 
 
 ```sql
@@ -192,5 +193,5 @@ WHERE
 GO
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

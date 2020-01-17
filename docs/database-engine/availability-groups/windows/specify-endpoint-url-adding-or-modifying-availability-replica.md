@@ -1,6 +1,7 @@
 ---
-title: 엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정 | Microsoft Docs
-ms.custom: ''
+title: 가용성 복제본의 엔드포인트 URL 지정
+description: SQL Server의 Always On 가용성 그룹 내에서 복제본을 추가 또는 수정할 경우 엔드포인트 URL을 지정하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014016"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251281"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68014016"
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
- 여기서  
+ 라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
 -   *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68014016"
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         _computer_name_ **)을 사용할 수 있습니다.** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
          여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[... **.** _domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
@@ -70,12 +71,12 @@ ms.locfileid: "68014016"
   
 ### <a name="examples"></a>예  
   
-#### <a name="a-using-a-system-name"></a>1\. 시스템 이름 사용  
+#### <a name="a-using-a-system-name"></a>A. 시스템 이름 사용  
  다음 엔드포인트 URL은 시스템 이름 `SYSTEM46` 및 포트 `7022`를 지정합니다.  
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>2\. 정규화된 도메인 이름 사용  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. 정규화된 도메인 이름 사용  
  다음 엔드포인트 URL은 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com` 및 포트 `7024`를 지정합니다.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -112,16 +113,16 @@ ms.locfileid: "68014016"
 > [!NOTE]  
 >  정규화된 도메인 이름에 대한 자세한 내용은 시스템 관리자에게 문의하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
     -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   

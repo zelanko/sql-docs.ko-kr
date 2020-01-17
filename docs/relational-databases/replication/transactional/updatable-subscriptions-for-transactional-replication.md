@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 복제를 위한 업데이트 가능 구독 | Microsoft 문서
-ms.custom: ''
+title: 업데이트할 수 있는 구독(트랜잭션)
+description: SQL Server에서 트랜잭션 복제에 사용할 수 있는 업데이트할 수 있는 구독 기능을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7baa131caa531038d8764c070ebd00ba44147c54
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121216"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321442"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>트랜잭션 복제를 위한 업데이트 가능 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

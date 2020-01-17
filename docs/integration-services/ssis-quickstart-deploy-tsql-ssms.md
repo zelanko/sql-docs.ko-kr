@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281496"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947095"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
@@ -39,6 +39,10 @@ SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL �
 
 이 빠른 시작의 정보를 사용하여 SQL Server on Linux에 SSIS 패키지를 배포할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
+## <a name="supported-authentication-method"></a>지원되는 인증 방법
+
+[배포를 위한 인증 방법](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)을 참조하세요.
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS 카탈로그 데이터베이스에 연결
 
 SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결을 설정합니다. 
@@ -47,17 +51,18 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 
 2. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안된 값 | 추가 정보 | 
+   | 설정       | 제안 값 | 추가 정보 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
+   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수입니다. |
    | **서버 이름** | 정규화된 서버 이름 |  |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | |
+   | **인증** | SQL Server 인증 | |
    | **로그인** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
 
 3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
 4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+
 
 ## <a name="run-the-t-sql-code"></a>T-SQL 코드 실행
 다음 Transact-SQL 코드를 실행하여 SSIS 프로젝트를 배포합니다.
@@ -87,7 +92,7 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 ## <a name="next-steps"></a>다음 단계
 - 패키지를 배포하는 다른 방법을 고려합니다.
     - [SSMS를 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-ssms.md)
-    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Transact-SQL(VS 코드)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 배포](./ssis-quickstart-deploy-cmdline.md)
     - [PowerShell을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-powershell.md)
     - [C#을 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-dotnet.md) 

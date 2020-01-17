@@ -1,10 +1,11 @@
 ---
 title: SQL Server 구성 관리자 | Microsoft 문서
+description: SQL Server 구성 관리자 클라이언트 활용
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 12/31/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,21 +22,22 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f01b4f4bfc79adfbbc1fb0f183b012d288927ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b447e659b68ced56484296f4763a25e843022b06
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081655"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608022"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console(**mmc.exe**)은 **SQLServerManager\<version>.msc**(예: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우 **SQLServerManager13.msc**) 파일을 사용하여 구성 관리자를 엽니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 SQL Server 설치와 함께 설치됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console(**mmc.exe**)은 **SQLServerManager\<version>.msc**(예: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우 **SQLServerManager13.msc**) 파일을 사용하여 구성 관리자를 엽니다. 특정 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하려면 해당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 버전이 필요합니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 5개 버전의 경로는 다음과 같습니다.  
   
 |||  
 |-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
@@ -45,7 +47,7 @@ ms.locfileid: "68081655"
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다.  
 > 
 >  -   **Windows 10**:  
->          [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **시작 페이지**에 SQLServerManager13.msc를 입력합니다( [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이전 버전의 경우 13을 더 작은 수로 바꿉니다. SQLServerManager13.msc를 클릭하면 구성 관리자가 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄에 고정하려면 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭한 다음 **파일 위치 열기**를 클릭합니다. Windows 파일 탐색기에서 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭하고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 클릭합니다.  
+>          [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **시작 페이지**에 SQLServerManager13.msc를 입력합니다( [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우). 다른 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전의 경우 13을 해당 번호로 바꿉니다. SQLServerManager13.msc를 클릭하면 구성 관리자가 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄에 고정하려면 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭한 다음 **파일 위치 열기**를 클릭합니다. Windows 파일 탐색기에서 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭하고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 클릭합니다.  
 > -   **Windows 8**:  
 >          [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**에 **SQLServerManager\<version>.msc**(예: **SQLServerManager13.msc**)를 입력한 다음 **Enter** 키를 누릅니다.  
   
@@ -71,7 +73,7 @@ ms.locfileid: "68081655"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하면 프로토콜 암호화를 강제하거나 별칭 속성을 확인하거나 프로토콜을 설정/해제하는 기능을 비롯하여 서버 및 클라이언트 네트워크 프로토콜을 관리할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하면 별칭을 작성 또는 제거하거나 프로토콜이 사용되는 순서를 변경하거나 다음을 비롯한 서버 별칭의 속성을 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하면 별칭을 생성 또는 제거하거나, 프로토콜이 사용되는 순서를 변경하거나, 다음을 비롯한 서버 별칭 속성을 볼 수 있습니다.  
   
 -   서버 별칭 - 클라이언트가 연결되는 컴퓨터에 사용되는 서버 별칭입니다.  
   
@@ -82,7 +84,7 @@ ms.locfileid: "68081655"
  서비스를 시작 및 중지하는 등의 일부 동작에 클러스터 관리자를 사용해야 하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 장애 조치(failover) 클러스터 인스턴스에 대한 정보를 볼 수도 있습니다.  
   
 ### <a name="available-network-protocols"></a>사용 가능한 네트워크 프로토콜  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 공유 메모리, TCP/IP 및 명명된 파이프 프로토콜을 지원합니다. 네트워크 프로토콜을 선택하는 방법은 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 VIA, Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜이 지원되지 않습니다. 이전에 이러한 프로토콜을 사용하여 연결된 클라이언트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결하기 위해 다른 프로토콜을 선택해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 WinSock 프록시를 구성할 수 없습니다. WinSock 프록시를 구성하려면 ISA 서버 설명서를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 공유 메모리, TCP/IP 및 명명된 파이프 프로토콜을 지원합니다. 네트워크 프로토콜을 선택하는 방법은 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 VIA, Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜이 지원되지 않습니다. 이전에 이러한 프로토콜을 사용하여 연결된 클라이언트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결하기 위해 다른 프로토콜을 선택해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 WinSock 프록시를 구성할 수 없습니다. WinSock 프록시를 구성하려면 ISA 서버 설명서를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  

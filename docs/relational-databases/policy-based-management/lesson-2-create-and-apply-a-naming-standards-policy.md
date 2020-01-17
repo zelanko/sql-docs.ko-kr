@@ -1,6 +1,7 @@
 ---
-title: '2단원: 명명 표준 정책 만들기 및 적용 | Microsoft Docs'
-ms.custom: ''
+title: '2단원: 명명 표준 정책 만들기 및 적용'
+description: 이 자습서에서는 SQL Server에서 정책 기반 관리를 위한 명명 표준 정책을 만들고 적용하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907055"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558698"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>2단원: 명명 표준 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
+title: 보조 가용성 그룹 복제본에 대한 워크로드 오프로드
 description: 읽기 전용 쿼리 및 보고서를 SQL Server에서 Always On 가용성 그룹의 보조 복제본으로 오프로드하는 방법에 대해 알아봅니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991663"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822408"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67991663"
   
 -   디스크 기반 테이블에 대한 읽기 전용 작업에서는 행 버전 관리를 사용하여 보조 데이터베이스에 대한 차단 경합을 제거합니다. 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅샷 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다. 또한 모든 잠금 힌트가 무시됩니다. 따라서 읽기/쓰기 경합이 없어집니다.  
   
--   메모리 액세스에 최적화된 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅샷 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
+-   메모리 최적화 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅샷 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
   
--   보조 복제본에서는 디스크 기반 및 메모리 액세스에 최적화된 테이블 유형 모두에 대해 테이블 변수에서 DML 작업이 허용됩니다.  
+-   보조 복제본에서는 디스크 기반 및 메모리 최적화 테이블 유형 모두에 대해 테이블 변수에서 DML 작업이 허용됩니다.  
   
 ##  <a name="bkmk_Prerequisites"></a> 가용성 그룹에 대한 필수 구성 요소  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67991663"
      자세한 내용은 이 항목 뒷부분에 있는 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
 > [!NOTE]  
->  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
+>  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다.  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> 제한 사항  
  일부 작업은 다음과 같이 완전히 지원되지 않습니다.  
@@ -90,9 +90,9 @@ ms.locfileid: "67991663"
 -   읽기 가능한 복제본이 읽기에 대해 활성화되는 즉시 보조 데이터베이스에 대한 연결 수락을 시작할 수 있습니다. 하지만 주 데이터베이스에 활성 트랜잭션이 있는 경우 해당 보조 데이터베이스에서 행 버전을 완전히 사용할 수 없습니다. 보조 복제본을 구성할 때 주 복제본에 있던 활성 트랜잭션은 커밋하거나 롤백해야 합니다. 이 프로세스가 완료될 때까지 보조 데이터베이스의 트랜잭션 격리 수준 매핑은 완전하지 않으며 쿼리가 일시적으로 차단됩니다.  
   
     > [!WARNING]  
-    >  디스크 기반 테이블과 메모리 액세스에 최적화된 테이블 모두, 경우 장기 트랜잭션을 실행하면 유지되는 버전 관리 행 수에 영향을 줍니다.  
+    >  디스크 기반 테이블과 메모리 최적화 테이블 모두, 경우 장기 트랜잭션을 실행하면 유지되는 버전 관리 행 수에 영향을 줍니다.  
   
--   메모리 액세스에 최적화된 테이블이 있는 보조 데이터베이스에서는 메모리 액세스에 최적화된 테이블에 대해 행 버전이 항상 생성되더라도 보조 복제본이 활성화될 때 주 복제본에 있던 모든 활성 트랜잭션이 완료될 때까지 쿼리가 차단됩니다. 그러면 디스크 기반 테이블과 메모리 액세스에 최적화된 테이블을 보고 작업과 읽기 전용 쿼리에 모두 동시에 사용할 수 있습니다.  
+-   메모리 액세스에 최적화된 테이블이 있는 보조 데이터베이스에서는 메모리 액세스에 최적화된 테이블에 대해 행 버전이 항상 생성되더라도 보조 복제본이 활성화될 때 주 복제본에 있던 모든 활성 트랜잭션이 완료될 때까지 쿼리가 차단됩니다. 그러면 디스크 기반 테이블과 메모리 최적화 테이블을 보고 작업과 읽기 전용 쿼리에 모두 동시에 사용할 수 있습니다.  
   
 -   읽기 가능한 보조 복제본에 속하는 보조 데이터베이스에서는 변경 내용 추적 및 변경 데이터 캡처가 지원되지 않습니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67991663"
  이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [Always On 대시보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰를 사용하면 됩니다.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> 메모리 최적화 테이블이 포함된 데이터베이스의 데이터 대기 시간  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)을 참조하세요). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 액세스에 최적화된 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)을 참조하세요). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 최적화 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> 읽기 전용 작업의 영향  
  읽기 전용 액세스를 사용하도록 보조 복제본을 구성하면 특히 디스크 기반 테이블의 읽기 전용 작업이 I/O를 매우 많이 사용하는 경우 보조 데이터베이스의 읽기 전용 작업은 다시 실행 스레드의 CPU 및 I/O(디스크 기반 테이블의 경우)와 같은 시스템 리소스를 소비합니다. 모든 행이 메모리 내에 상주하기 때문에 메모리 액세스에 최적화된 테이블에 액세스할 때 IO의 영향이 없습니다.  
@@ -183,10 +183,10 @@ ms.locfileid: "67991663"
   
 -   임시 통계는 **tempdb**에 저장되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
   
--   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [Statistics](../../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
+-   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [통계](../../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
 ##  <a name="bkmk_AccessInMemTables"></a> 보조 복제본에서 메모리 최적화 테이블 액세스  
- 보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어  
+ 보조 복제본의 메모리 최적화 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 다음은 그 예입니다.  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -215,12 +215,12 @@ GO
   
     |읽기 가능한 보조 복제본인지 여부|스냅샷 격리 또는 RCSI 수준이 설정되었는지 여부|주 데이터베이스|보조 데이터베이스|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |아니오|아니오|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
-    |아니오|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
-    |예|아니오|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
-    |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |예|예|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
+    |예|yes|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
+    |yes|예|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |yes|yes|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
-##  <a name="bkmk_RelatedTasks"></a> 관련 태스크  
+##  <a name="bkmk_RelatedTasks"></a> 관련 작업  
   
 -   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   

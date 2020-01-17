@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 데이터베이스의 지능형 쿼리 처리 | Microsoft Docs
+title: 인텔리전트 쿼리 처리
 description: SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 지능형 쿼리 처리 기능입니다.
-ms.custom: ''
-ms.date: 11/12/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962426"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821971"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -27,7 +27,11 @@ IQP(인텔리전트 쿼리 처리) 기능 제품군에는 최소한의 구현 �
 
 ![지능형 쿼리 처리](./media/iqp-feature-family.png)
 
-데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 예를 들어  
+인텔리전트 쿼리 처리에 대한 개요는 6분 분량의 다음 동영상을 시청하세요.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
+데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 다음은 그 예입니다.  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -38,12 +42,12 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | **IQP 기능** | **Azure SQL Database에서 지원** | **SQL Server에서 지원** |**설명** |
 | --- | --- | --- |--- |
 | [적응 조인(일괄 처리 모드)](#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|적응형 조인은 실제 입력된 행에 따라 런타임 동안 조인 유형을 동적으로 선택합니다.|
-| [대략적인 Count Distinct](#approximate-query-processing) | 예| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
+| [대략적인 Count Distinct](#approximate-query-processing) | yes| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
 | [Rowstore의 일괄 처리 모드](#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
 | [인터리브 실행](#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
 | [메모리 부여 피드백(일괄 처리 모드)](#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
 | [메모리 부여 피드백(행 모드)](#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
-| [스칼라 UDF 인라인 처리](#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|스칼라 UDF는 호출 쿼리로 “인라인”되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
+| [스칼라 UDF 인라인 처리](#scalar-udf-inlining) | 예 | 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|스칼라 UDF는 호출 쿼리로 “인라인”되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
 | [테이블 변수 지연 컴파일](#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
@@ -111,7 +115,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-또한 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 예를 들어
+또한 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT * FROM Person.Address  
@@ -135,7 +139,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 *LastRequestedMemory*는 이전 쿼리 실행에서 부여된 메모리를 KB(킬로바이트) 단위로 표시합니다. *IsMemoryGrantFeedbackAdjusted* 특성을 사용하면 실제 쿼리 실행 계획 내의 명령문에 대한 메모리 부여 피드백의 상태를 확인할 수 있습니다. 이 특성에 표시된 값은 다음과 같습니다.
 
-| IsMemoryGrantFeedbackAdjusted 값 | 설명 |
+| IsMemoryGrantFeedbackAdjusted 값 | Description |
 |---|---|
 | 아니요: 첫 번째 실행 | 메모리 부여 피드백은 첫 번째 컴파일 및 연결된 실행에 대한 메모리를 조정하지 않습니다.  |
 | 아니요: Accurate Grant | 디스크에 분산이 없고 문이 부여된 메모리의 50% 이상을 사용하면 메모리 부여 피드백이 트리거되지 않습니다. |
@@ -156,7 +160,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-또한 `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 예를 들어
+또한 `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT * FROM Person.Address  
@@ -208,14 +212,14 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 ### <a name="tracking-interleaved-execution-activity"></a>인터리브 실행 작업 추적
 실제 쿼리 실행 계획에서 다음 사용 특성을 확인할 수 있습니다.
 
-| 실행 계획 특성 | 설명 |
+| 실행 계획 특성 | Description |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | *QueryPlan* 노드에 적용됩니다. *true*이면 계획에 인터리브 실행 후보가 포함됩니다. |
 | IsInterleavedExecuted | TVF 노드에 대한 RelOp 아래의 *RuntimeInformation* 요소의 특성입니다. *true*이면 작업이 인터리브 실행 작업의 일부로 구체화된 것입니다. |
 
 다음과 같은 xEvent를 통해 인터리브 실행 발생을 추적할 수도 있습니다.
 
-| xEvent | 설명 |
+| xEvent | Description |
 | ---- | --- |
 | interleaved_exec_status | 이 이벤트는 인터리브 실행 시 발생합니다. |
 | interleaved_exec_stats_update | 이 이벤트는 카디널리티 예상치가 인터리브 실행에 의해 업데이트되었음을 설명합니다. |
@@ -252,7 +256,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-또한 `DISABLE_INTERLEAVED_EXECUTION_TVF`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다. 예를 들어
+또한 `DISABLE_INTERLEAVED_EXECUTION_TVF`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -276,13 +280,55 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-테이블 변수 지연 컴파일은 테이블 변수를 참조하는 쿼리의 계획 품질 및 전체 성능을 개선합니다. 최적화 및 초기 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화합니다.
+**테이블 변수 지연 컴파일**은 테이블 변수를 참조하는 쿼리의 플랜 품질 및 전체 성능을 개선합니다. 최적화 및 초기 플랜 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화하는 데 사용됩니다.
 
-테이블 변수 지연 컴파일은 문이 실제로 처음 실행될 때까지 테이블 변수를 참조하는 문 컴파일을 지연합니다. 이 지연 컴파일 동작은 임시 테이블의 동작과 동일합니다. 이 변경으로 인해 원래 1행 추측 대신에 실제 카디널리티가 사용됩니다. 
+테이블 변수 지연 컴파일을 사용하면 테이블 변수를 참조하는 문 컴파일은 문이 실제로 처음 실행될 때까지 지연됩니다. 이 지연 컴파일 동작은 임시 테이블의 동작과 동일합니다. 이 변경으로 인해 원래 1행 추측 대신에 실제 카디널리티가 사용됩니다. 
 
-Azure SQL Database에서 테이블 변수 지연 컴파일을 사용하도록 설정할 수 있습니다. 이 작업을 수행하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
+테이블 변수 지연 컴파일을 사용하도록 설정하려면 쿼리가 실행될 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
 
-자세한 내용은 [테이블 변수 지연 컴파일](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)을 참조하세요.
+테이블 변수 지연 컴파일은 테이블 변수의 다른 특성을 변경하지 **않습니다**. 예를 들어 이 기능은 테이블 변수에 열 통계를 추가하지 않습니다.
+
+테이블 변수 지연 컴파일은 **다시 컴파일 빈도를 늘리지 않습니다**. 대신 초기 컴파일이 발생하는 위치를 이동합니다. 그 결과로 캐시된 계획은 초기 지연 컴파일 테이블 변수 행 개수를 기반으로 생성됩니다. 캐시된 계획은 연속 쿼리에서 다시 사용됩니다. 해당 계획은 계획이 제거되거나 다시 컴파일될 때까지 다시 사용됩니다. 
+
+초기 계획 컴파일에 사용되는 테이블 변수 행 개수는 일반적인 값이 고정된 행 개수 추측과 다를 수 있음을 나타냅니다. 이러한 행 개수가 다른 경우 다운스트림 작업에 도움이 됩니다. 테이블 변수 행 개수가 실행 간에 크게 달라지는 경우, 이 기능으로 성능이 향상되지 않을 수 있습니다.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 테이블 변수 지연 컴파일 비활성화
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 문 범위에서 테이블 변수 지연 컴파일을 사용하지 않도록 설정합니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 테이블 변수 지연 컴파일을 사용하지 않도록 설정하려면 해당 데이터베이스의 컨텍스트 내에서 다음 예제를 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 테이블 변수 지연 컴파일을 다시 사용하도록 설정하려면 해당 데이터베이스의 컨텍스트 내에서 다음 예제를 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+DISABLE_DEFERRED_COMPILATION_TV를 USE HINT 쿼리 힌트로 할당하여 특정 쿼리에 대한 테이블 변수 지연 컴파일을 사용하지 않도록 설정할 수도 있습니다.  다음은 그 예입니다.
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -311,41 +357,45 @@ rowstore의 일괄 처리 모드는 columnstore 인덱스를 요구하지 않고
 - **columnstore** 인덱스를 사용하면 분석 쿼리는 필요한 열의 데이터에만 액세스합니다. 또한 columnstore 형식의 페이지 압축은 기존 **rowstore** 인덱스의 압축보다 더 효과적입니다. 
 - **일괄 처리 모드** 처리를 사용하면 쿼리 연산자가 데이터를 더 효율적으로 처리합니다. 이 연산자는 한 번에 하나의 행이 아니라 행 일괄 처리에서 작동합니다. 향상된 여러 다른 확장성이 일괄 처리 모드와 관련이 있습니다. 일괄 처리 모드에 대한 자세한 내용은 [실행 모드](../../relational-databases/query-processing-architecture-guide.md#execution-modes)를 참조하세요.
 
-다음 두 가지 기능이 함께 작동해서 I/O(입출력) 및 CPU 사용을 개선합니다.
-- columnstore 인덱스를 사용하면 더 많은 데이터가 메모리에 저장됩니다. I/O에 대한 필요성이 줄어듭니다.
+다음 두 가지 기능이 함께 작동해서 I/O(입출력) 및 CPU 사용률을 개선합니다.
+- columnstore 인덱스를 사용하면 더 많은 데이터가 메모리에 저장됩니다. 이로 인해 I/O 워크로드가 줄어듭니다.
 - 일괄 처리 모드는 CPU를 보다 효율적으로 사용합니다.
 
-두 기술은 가능한 경우 서로를 활용합니다. 예를 들어, 일괄 처리 모드 집계를 columnstore 인덱스 검색의 일부로 평가할 수 있습니다. 일괄 처리 모드 조인 및 일괄 처리 모드 집계를 사용하면 실행 길이 인코딩을 사용하여 압축한 columnstore 데이터를 훨씬 더 효율적으로 처리할 수 있습니다. 
+두 기술은 가능한 경우 서로를 활용합니다. 예를 들어, 일괄 처리 모드 집계를 columnstore 인덱스 검색의 일부로 평가할 수 있습니다. 또한 일괄 처리 모드 조인 및 일괄 처리 모드 집계를 사용하면 실행 길이 인코딩을 사용하여 압축한 columnstore 데이터가 훨씬 더 효율적으로 처리됩니다. 
  
-두 가지 기능은 개별적으로 사용할 수 있습니다.
-* Columnstore 인덱스를 사용하는 행 모드 계획을 가져옵니다.
-* rowstore 인덱스만 사용하는 일괄 처리 모드 계획을 가져옵니다. 
+그러나 두 기능이 독립적이라는 것을 이해해야 합니다.
+* columnstore 인덱스를 사용하는 행 모드 계획을 가져올 수 있습니다.
+* rowstore 인덱스만 사용하는 일괄 처리 모드 계획을 가져올 수 있습니다. 
 
 일반적으로 두 기능을 함께 사용할 때 최상의 결과를 얻을 수 있습니다. 따라서 현재까지 SQL Server 쿼리 최적화 프로그램은 columnstore 인덱스에 하나 이상의 테이블을 연결하는 쿼리에 대해서만 일괄 처리 모드를 고려했습니다.
 
-Columnstore 인덱스는 일부 애플리케이션에 적합하지 않습니다. 애플리케이션이 columnstore 인덱스에서 지원되지 않는 일부 다른 기능을 사용할 수 있습니다. 예를 들어 바로 수정 기능은 columnstore 압축과 호환되지 않습니다. 따라서 클러스터형 columnstore 인덱스가 있는 테이블에서는 트리거가 지원되지 않습니다. 무엇보다도 columnstore 인덱스는 **DELETE** 및 **UPDATE** 문에 대한 오버헤드를 추가합니다. 
+columnstore 인덱스는 일부 애플리케이션에 적합하지 않을 수 있습니다. 애플리케이션이 columnstore 인덱스에서 지원되지 않는 일부 다른 기능을 사용할 수 있습니다. 예를 들어 바로 수정 기능은 columnstore 압축과 호환되지 않습니다. 따라서 클러스터형 columnstore 인덱스가 있는 테이블에서는 트리거가 지원되지 않습니다. 무엇보다도 columnstore 인덱스는 **DELETE** 및 **UPDATE** 문에 대한 오버헤드를 추가합니다. 
 
-일부 하이브리드 트랜잭션 분석 워크로드에서는 columnstore 인덱스의 이점보다 워크로드의 트랜잭션 측면에서 발생하는 오버헤드가 더 큽니다. 해당 시나리오는 일괄 처리 모드 처리에서만 CPU 사용을 개선할 수 있습니다. 그 이유는 rowstore 기능의 일괄 처리 모드는 모든 쿼리에서 일괄 처리 모드를 고려하기 때문입니다. 사용된 인덱스가 무엇인지는 중요하지 않습니다.
+일부 하이브리드 트랜잭션 분석 워크로드에서는 columnstore 인덱스 사용에서 얻는 이점보다 트랜잭션 워크로드의 오버헤드가 더 큽니다. 해당 시나리오는 일괄 처리 모드 처리만 채택하여 개선된 CPU 사용량을 활용할 수 있습니다. 그 이유는 rowstore 기능의 일괄 처리 모드는 관련된 인덱스 형식과 관계없이 모든 쿼리에서 일괄 처리 모드를 고려하기 때문입니다.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>rowstore에서 일괄 처리 모드를 활용할 수 있는 워크로드
 다음 워크로드는 rowstore에서 일괄 처리 모드를 활용할 수 있습니다.
-* 워크로드의 상당한 부분이 분석 쿼리로 구성됩니다. 일반적으로 해당 쿼리에는 수십만 개 이상의 행을 처리하는 조인 또는 집계 같은 연산자가 포함됩니다.
+* 워크로드의 상당한 부분이 분석 쿼리로 구성됩니다. 일반적으로 해당 쿼리에는 수십만 개 이상의 행을 처리하는 조인 또는 집계 같은 연산자가 사용됩니다.
 * 워크로드는 CPU에 따라 제한됩니다. I/O에서 병목 상태가 나타나면 가능한 경우 columnstore 인덱스를 고려하는 것이 좋습니다.
 * Columnstore 인덱스를 만들면 워크로드의 트랜잭션 부분에 너무 많은 오버헤드가 추가됩니다. 그렇지 않더라도 애플리케이션이 columnstore 인덱스에서 아직 지원되지 않는 기능을 사용하기 때문에 columnstore 인덱스는 적합하지 않습니다.
 
+
 > [!NOTE]
-> rowstore의 일괄 처리 모드는 CPU 사용량을 줄여야 도움이 됩니다. 병목 상태가 I/O와 관련되고 데이터가 아직 캐시(“콜드” 캐시)되지 않은 경우 rowstore의 일괄 처리 모드는 경과된 시간을 개선하지 않습니다. 마찬가지로 컴퓨터에 모든 데이터를 캐시할 메모리가 충분하지 않은 경우 성능이 저하될 가능성이 높습니다.
+> rowstore의 일괄 처리 모드는 CPU 사용량을 줄여야 도움이 됩니다. 병목 상태가 I/O와 관련되고 데이터가 아직 캐시(“콜드” 캐시)되지 않은 경우 rowstore의 일괄 처리 모드는 쿼리 경과 시간을 개선하지 않습니다. 마찬가지로 머신에 모든 데이터를 캐시할 메모리가 충분하지 않은 경우 성능이 저하될 가능성이 높습니다.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>rowstore의 일괄 처리 모드 변경 내용은?
-호환성 수준 150으로 전환하는 것 외에, 후보 워크로드의 rowstore에서 일괄 처리 모드를 사용하도록 설정하기 위해 사용자가 수행해야 하는 변경 작업은 없습니다.
 
-쿼리가 columnstore 인덱스에 어떤 테이블도 연결하지 않지만, 쿼리 프로세서는 이제 추론을 사용하여 일괄 처리 모드를 고려할지 여부를 결정합니다. 추론은 다음 검사로 구성됩니다.
+데이터베이스를 호환성 수준 150으로 설정합니다. 다른 변경은 필요하지 않습니다.
+
+쿼리가 columnstore 인덱스에 어떤 테이블에도 액세스하지 않지만, 쿼리 프로세서는 추론을 사용하여 일괄 처리 모드를 고려할지 여부를 결정합니다. 추론은 다음 검사로 구성됩니다.
 1. 입력 쿼리에서 테이블 크기, 사용되는 연산자, 예상 카디널리티의 초기 검사
 2. 추가 검사점(최적화 프로그램이 쿼리에 대해 좀 더 저렴한 새 계획을 검색하기 때문에 필요) 이 대체 계획이 일괄 처리 모드를 충분히 사용하지 않을 경우 최적화 프로그램은 일괄 처리 모드의 대안을 더 이상 검색하지 않습니다.
 
+
 rowstore에서 일괄 처리 모드가 사용되는 경우에는 쿼리 계획에서 실제 실행 모드가 **일괄 처리 모드**로 표시됩니다. scan 연산자는 디스크의 힙 및 B-트리 인덱스에 일괄 처리 모드를 사용합니다. 이 일괄 처리 모드 검사는 일괄 처리 모드 비트맵 필터를 평가할 수 있습니다. 또한 계획에 다른 일괄 처리 모드 연산자가 표시될 수 있습니다. 예를 들어 해시 조인, 해시 기반 집계, 정렬, 창 집계, 필터, 연결 및 컴퓨팅 스칼라 연산자가 있습니다.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>설명
+
 쿼리 계획이 항상 일괄 처리 모드를 사용하는 것은 아닙니다. 쿼리 최적화 프로그램에서 일괄 처리 모드가 쿼리에 도움이 되는지 결정할 수 있습니다. 
 
 쿼리 최적화 프로그램의 검색 공간이 변경되고 있습니다. 행 모드 계획을 가져오는 경우 더 낮은 호환성 수준에서 가져오는 계획과 같을 수 있습니다. 일괄 처리 모드 계획을 가져오는 경우 columnstore 인덱스와 함께 가져오는 계획과 같지 않을 수 있습니다. 
@@ -391,7 +441,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

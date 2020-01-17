@@ -1,7 +1,7 @@
 ---
-title: Docker에서 SQL Server Linux 컨테이너 시작
-titleSuffix: SQL Server
+title: 'Docker: SQL Server on Linux의 컨테이너 설치'
 description: 이 빠른 시작에서는 Docker를 사용하여 SQL Server 2017 및 2019 컨테이너 이미지를 실행하는 방법을 보여 줍니다. 그런 다음, sqlcmd 사용하여 데이터베이스를 만들고 쿼리합니다.
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531383"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558681"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 
@@ -45,7 +44,7 @@ ms.locfileid: "73531383"
 
 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다. 이 빠른 시작에서는 특히 SQL Server on **Linux** 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
 
-## <a id="requirements"></a> 사전 요구 사항
+## <a id="requirements"></a> 필수 조건
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 - Docker **overlay2** 스토리지 드라이버. 대부분의 사용자에게 적용되는 기본값입니다. 이 스토리지 공급자를 사용하지 않고 변경해야 하는 경우 [overlay2 구성에 대한 docker 설명서](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)의 지침 및 경고를 참조하세요.
@@ -124,7 +123,7 @@ any changes to one section should be duplicated in the other-->
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
@@ -243,7 +242,7 @@ SELECT @@SERVERNAME,
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
@@ -424,7 +423,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-2. 명령을 실행합니다.
+2. 다음 명령을 실행합니다.
 
    ```sql
    GO

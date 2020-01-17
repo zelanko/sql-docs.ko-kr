@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 보안 구성 마법사 시작 | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러링 보안 구성 마법사
+description: SQL Server Management Studio의 ‘데이터베이스 미러링 보안 구성’ 마법사에 대한 설명입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1858a76625e4caaaa913c4d1bf91a466e04ef712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048024"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252742"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>데이터베이스 미러링 보안 구성 마법사 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

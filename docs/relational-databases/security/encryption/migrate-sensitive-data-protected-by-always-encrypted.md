@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드 | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
+description: SQL Server와 함께 Always Encrypted를 사용하여 열에 데이터를 대량 로드하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594162"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558208"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +32,12 @@ ms.locfileid: "73594162"
 ## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>암호화된 데이터의 대량 로드  
 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
 
-1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 예를 들어  
+1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 다음은 그 예입니다.  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -44,7 +45,7 @@ ms.locfileid: "73594162"
 
 2.  해당 사용자로 연결하는 대량 복사 애플리케이션 또는 도구를 실행합니다. (애플리케이션에서 상시 암호화가 사용 설정된 클라이언트 드라이버를 사용하고 있는 경우 암호화된 열에서 검색된 데이터가 암호화를 유지하도록 데이터 원본에 대한 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않아야 합니다. 자세한 내용은 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.)  
   
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 예를 들어  
+3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 다음은 그 예입니다.  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
@@ -63,7 +64,7 @@ ms.locfileid: "73594162"
  
 4.  같거나 다른 애플리케이션이 상시 암호화 사용 설정된 드라이버를 사용하고 연결 문자열에서 **column encryption setting=enabled** 상태로 데이터베이스에 연결하며 데이터를 검색합니다. 애플리케이션은 데이터가 투명하게 암호 해독될 것을 예상합니다. 그러나 데이터가 잘못된 암호 텍스트이므로 데이터의 암호를 해독하지 못합니다.  
 
-## <a name="best-practice"></a>최선의 구현 방법  
+## <a name="best-practice"></a>모범 사례  
  
 이 옵션을 사용하여 장기 실행 작업에 지정된 사용자 계정을 사용합니다.  
  
@@ -71,13 +72,13 @@ ms.locfileid: "73594162"
  
 새 애플리케이션 개발에 이 옵션을 사용하지 말고 예를 들어 SQL Server용 .NET Framework 데이터 공급자의 AllowEncryptedValueModifications 옵션과 같이 단일 세션에 대한 암호화 메타데이터 검사를 억제하기 위한 API를 제공하는 클라이언트 드라이버를 대신 사용합니다. [SqlBulkCopy를 사용하여 암호화된 데이터 복사](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)를 참조하세요. 
 
-## <a name="next-steps"></a>Next Steps
-- [SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>다음 단계
+- [SQL Server Management Studio로 Always Encrypted를 사용하여 열 쿼리](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목  
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [SQL Server 가져오기 및 내보내기 마법사로 Always Encrypted를 사용하여 열 간에 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [SQL Server 가져오기 및 내보내기 마법사에서 Always Encrypted를 사용하여 열에서 또는 열로 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
 

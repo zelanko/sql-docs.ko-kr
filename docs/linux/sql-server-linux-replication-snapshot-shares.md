@@ -1,6 +1,8 @@
 ---
-title: Linux에서 스냅샷 폴더 공유를 SQL Server 복제로 구성
-description: 이 문서에서는 Linux에서 스냅샷 폴더 공유를 SQL Server 복제로 구성하는 방법을 설명합니다.
+title: 스냅샷 폴더 공유 구성
+titleSuffix: SQL Server on Linux
+description: Linux에서 스냅샷 폴더 공유 SQL Server 복제를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +11,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c5deaf7fbe62b30140f476a37ad096d080e00c49
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093121"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558358"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>공유를 사용하여 복제 스냅샷 폴더 구성
 
@@ -141,6 +143,6 @@ sudo service smb status
 
 [개념: Linux의 SQL Server 복제](sql-server-linux-replication.md)
 
-[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46630e36db03d55c8e90be64570975e42466fbba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71b949178269c2777f5cacd32997d872d36cfc32
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991362"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74685650"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>단일 데이터베이스에 대한 기본 Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67991362"
 
 - 기본 가용성 그룹은 분산 가용성 그룹의 일부가 될 수 없습니다. 
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
  Always On 기본 가용성 그룹은 두 개의 SQL Server 2016 Standard Edition 서버에서 만들 수 있습니다. 기본 가용성 그룹을 만드는 경우에는, 만드는 동안 두 개의 복제본을 모두 지정해야 합니다.  
   
  기본 가용성 그룹을 만들려면 **CREATE AVAILABILITY GROUP** transact-SQL 명령을 사용하고 **WITH BASIC** 옵션을 지정합니다(기본값: **ADVANCED**). 17.8 버전부터 SQL Server Management Studio에서 UI를 사용하여 기본 가용성 그룹을 만들 수도 있습니다. 자세한 내용은 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요. 

@@ -1,6 +1,7 @@
 ---
-title: Azure Key Vault를 사용한 확장 가능 키 관리(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: Azure Key Vault를 사용하는 확장 가능 키 관리
+description: SQL Server용 Azure Key Vault와 함께 확장 가능 키 관리용 SQL Server 커넥터를 사용합니다.
+ms.custom: seo-lt-2019
 ms.date: 07/22/2016
 ms.prod: sql
 ms.reviewer: vanto
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Key Management with key vault
 - SQL Server Connector, about
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: dafd18b302ecc988270128ddb616e5a1764fb69e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049836"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558074"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68049836"
   
  다음 이미지에 키 자격 증명 모음을 사용한 EKM의 프로세스 흐름이 요약되어 있습니다. 이미지의 프로세스 단계 번호는 이미지에서 설명하는 설정 단계 번호와 일치하지 않습니다.  
   
- ![Azure Key Vault를 사용하는 SQL Server EKM](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
+ ![Azure Key Vault를 사용하는 SQL Server EKM](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "Azure Key Vault를 사용하는 SQL Server EKM")  
 
 > [!NOTE]  
 >  1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.

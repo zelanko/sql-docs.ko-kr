@@ -1,6 +1,7 @@
 ---
-title: 게시 정보, 에이전트(트랜잭션 게시) | Microsoft 문서
-ms.custom: ''
+title: 에이전트(트랜잭션 - SSMS)
+description: SSMS(SQL Server Management Studio) 선택한 트랜잭션 게시의 ‘에이전트’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36c0233d5ba6f51f0cc7cd354bd810a08b2d3b72
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ae95cc4fd67b7843d773a2dc175dd89f1784025b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770028"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321380"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>게시 정보, 에이전트(트랜잭션 게시)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68770028"
   
 -   실행 중  
   
--   완료  
+-   Completed  
   
  **에이전트**  
  게시와 연결된 각 복제 에이전트의 이름입니다. 배포 에이전트는 이 게시에 대한 구독과 연결됩니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
@@ -56,7 +57,7 @@ ms.locfileid: "68770028"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  

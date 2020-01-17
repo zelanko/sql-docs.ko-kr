@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 게시에서 저장 프로시저 실행 게시 | Microsoft 문서
-ms.custom: ''
+title: 저장 프로시저 실행 게시(트랜잭션)
+description: SQL Server Management Studio를 사용하여 저장 프로시저 실행을 게시하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ad6e985006ffb1d6ad2e95d7d36b966e92e180b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8d3fc140fbadcb9000a8f6ff6b357e9750f95343
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769808"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321190"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>트랜잭션 게시에서 저장 프로시저 실행 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,6 +47,6 @@ ms.locfileid: "68769808"
 5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
+ [트랜잭션 복제에서 저장 프로시저 실행 게시](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
   
   

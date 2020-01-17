@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127214"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246132"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127214"
   포함된 데이터베이스에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 관리자가 이해하고 완화해야 하는 고유한 위협 요소가 있습니다. 대부분의 위협 요소는 **수준에서 데이터베이스 수준으로 인증 경계를 이동하는** USER WITH PASSWORD [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증 프로세스와 관련되어 있습니다.  
   
 ## <a name="threats-related-to-users"></a>사용자 관련 위협 요소  
- **db_owner** 및 **db_securityadmin** 고정 데이터베이스 역할의 멤버와 같이 **ALTER ANY USER** 사용 권한이 있는 포함된 데이터베이스의 사용자는 지식이나 사용 권한 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자가 없어도 데이터베이스에 대한 액세스 권한을 부여할 수 있습니다. 사용자에게 포함된 데이터베이스에 대한 액세스 권한을 부여하면 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 잠재적인 공격 노출 영역이 늘어납니다. 관리자는 이러한 액세스 제어 위임을 인지하고 포함된 데이터베이스의 사용자에게 **ALTER ANY USER** 사용 권한을 부여할 때는 신중을 기해야 합니다. 모든 데이터베이스 소유자는 **ALTER ANY USER** 사용 권한을 가지고 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 포함된 데이터베이스 사용자를 정기적으로 감사해야 합니다.  
+ **db_owner** 및 **db_accessadmin** 고정 데이터베이스 역할의 멤버와 같이 **ALTER ANY USER** 권한이 있는 포함된 데이터베이스의 사용자는 지식이나 권한 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자가 없어도 데이터베이스에 대한 액세스 권한을 부여할 수 있습니다. 사용자에게 포함된 데이터베이스에 대한 액세스 권한을 부여하면 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 잠재적인 공격 노출 영역이 늘어납니다. 관리자는 이러한 액세스 제어 위임을 인지하고 포함된 데이터베이스의 사용자에게 **ALTER ANY USER** 사용 권한을 부여할 때는 신중을 기해야 합니다. 모든 데이터베이스 소유자는 **ALTER ANY USER** 사용 권한을 가지고 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 포함된 데이터베이스 사용자를 정기적으로 감사해야 합니다.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>게스트 계정을 사용하여 다른 데이터베이스 액세스  
  데이터베이스 소유자 및 **ALTER ANY USER** 사용 권한이 있는 데이터베이스 사용자는 포함된 데이터베이스 사용자를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 포함된 데이터베이스에 연결한 후 포함된 데이터베이스 사용자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **계정을 사용하도록 설정한** 의 다른 데이터베이스에 액세스할 수 있습니다.  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>포함된 데이터베이스 이스케이프  
  데이터베이스가 부분적으로 포함되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 포함된 데이터베이스의 사용자 및 모듈의 기능을 정기적으로 감사해야 합니다.  
   
-## <a name="denial-of-service-through-autoclose"></a>AUTO_CLOSE를 통한 서비스 거부  
+## <a name="denial-of-service-through-auto_close"></a>AUTO_CLOSE를 통한 서비스 거부  
  포함된 데이터베이스가 자동으로 닫히도록 구성하지 마십시오. 데이터베이스가 닫히면 사용자를 인증하기 위해 데이터베이스를 여는 데 추가 리소스가 소비되며 서비스 거부 공격이 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,7 +1,7 @@
 ---
-title: 표시된 트랜잭션이 포함된 관련 데이터베이스 복구 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 표시된 트랜잭션을 사용하여 관련 데이터베이스 복구
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31ef04cc1aa02985fe699b0192c25bfbc4e88ca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033525"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238885"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

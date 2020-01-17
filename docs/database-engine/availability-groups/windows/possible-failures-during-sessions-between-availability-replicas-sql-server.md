@@ -1,7 +1,7 @@
 ---
-title: 가용성 복제본 간의 연결 실패에 대한 가능한 원인 확인
+title: 가용성 복제본 간의 연결 실패 원인
 description: 이 항목에서는 Always On 가용성 그룹에 참여하는 복제본 간의 연결 실패에 대한 가능한 다양한 이유를 설명합니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874535"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235650"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"가용성 복제본 간의 연결 실패에 대한 가능한 원인 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

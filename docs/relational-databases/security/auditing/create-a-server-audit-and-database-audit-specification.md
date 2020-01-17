@@ -1,6 +1,7 @@
 ---
-title: 서버 감사 및 데이터베이스 감사 사양 만들기 | Microsoft 문서
-ms.custom: ''
+title: 서버 감사 및 데이터베이스 감사 사양 만들기
+description: SQL Server Management Studio 또는 T-SQL(Transact-SQL)을 사용하여 SQL Server 감사 및 데이터베이스 감사 사양을 만드는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903863"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557878"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>서버 감사 및 데이터베이스 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "72903863"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
   
 -   ALTER ANY DATABASE AUDIT 권한이 있는 사용자는 데이터베이스 감사 사양을 만들어 모든 감사에 바인딩할 수 있습니다.  
   
@@ -134,7 +135,7 @@ ms.locfileid: "72903863"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 위에 정의된 서버 감사를 기반으로 `Audit_Pay_Tables` 테이블에 대해 `dbo` 사용자가 SELECT 및 INSERT 문을 감사하는 `HumanResources.EmployeePayHistory`이라는 데이터베이스 감사 사양을 만듭니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 위에 정의된 서버 감사를 기반으로 `Audit_Pay_Tables` 테이블에 대해 `dbo` 사용자가 SELECT 및 INSERT 문을 감사하는 `HumanResources.EmployeePayHistory` 이라는 데이터베이스 감사 사양을 만듭니다.  
   
     ```  
     USE AdventureWorks2012 ;   

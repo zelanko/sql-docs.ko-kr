@@ -1,6 +1,8 @@
 ---
-title: REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE 데이터베이스 보안 주체 사용 권한
+description: 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대한 권한을 취소합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982912"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243338"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -120,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="database-user-permissions"></a>데이터베이스 사용자 권한  
  데이터베이스 사용자는 사용 권한 계층에서 해당 사용자의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 데이터베이스 사용자에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
@@ -158,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>1\. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
+### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
  다음 예에서는 사용자 `CONTROL`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 사용자 `Wanida`에 대한 `RolandX` 권한을 취소합니다.  
   
 ```  
@@ -167,7 +169,7 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>2\. WITH GRANT OPTION이 부여된 사용자로부터 역할에 대한 VIEW DEFINITION 권한 취소  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. WITH GRANT OPTION이 부여된 사용자로부터 역할에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 데이터베이스 사용자 `VIEW DEFINITION`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 역할 `SammamishParking`에 대한 `JinghaoLiu` 권한을 취소합니다. 사용자 `CASCADE`에게 `JinghaoLiu` 권한 `VIEW DEFINITION`이 부여되었기 때문에 `WITH GRANT OPTION` 옵션이 지정됩니다.  
   
 ```  

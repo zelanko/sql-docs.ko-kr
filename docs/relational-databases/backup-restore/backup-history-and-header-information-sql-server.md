@@ -1,7 +1,7 @@
 ---
-title: 백업 기록 및 헤더 정보(SQL Server) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/17/2017
+title: 백업 기록 및 헤더 | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081457"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242592"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68081457"
 ##  <a name="BnRHistoryTables"></a> 백업 및 복원 기록 테이블  
  이 섹션에서는 **msdb** 시스템 데이터베이스에 백업 및 복원 메타데이터를 저장하는 기록 테이블에 대해 설명합니다.  
   
-|기록 테이블|설명|  
+|기록 테이블|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|백업되는 각 데이터 또는 로그 파일에 대해 한 행을 포함합니다.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|백업 세트의 각 파일 그룹에 대해 한 행을 포함합니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "68081457"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY 및 RESTORE VERIFYONLY Transact-SQL 문에는 CREATE DATABASE 권한이 필요합니다. 이 요구 사항을 통해 이전 버전보다 더욱 백업 파일의 보안을 유지하고 백업 정보를 보호할 수 있습니다. 이 사용 권한에 대한 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
-|정보 문|백업 기록 테이블|설명|  
+|정보 문|백업 기록 테이블|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|지정한 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 있는 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스와 트랜잭션 로그 파일 목록 만들기"를 참조하세요.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|특정 백업 디바이스의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
@@ -143,7 +143,7 @@ ms.locfileid: "68081457"
 ##  <a name="Verification"></a> 백업 확인  
  백업 확인은 필수는 아니지만 유용한 기능입니다. 백업 확인은 백업의 모든 파일을 읽을 수 있고 저장할 수 있으며 백업을 사용해야 할 때 복원할 수 있도록 백업이 물리적으로 손상되지 않고 그대로인지 확인합니다. 백업 확인은 백업의 데이터 구조를 확인하지 않는다는 점을 이해하는 것이 중요합니다. 그러나 WITH CHECKSUMS를 사용하여 백업을 만든 경우 WITH CHECKSUMS를 사용하여 백업을 확인하면 백업 데이터의 안정성을 정확히 확인할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **백업 및 복원 기록 테이블에서 오래된 행을 삭제하려면**  
   
 -   [sp_delete_backuphistory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

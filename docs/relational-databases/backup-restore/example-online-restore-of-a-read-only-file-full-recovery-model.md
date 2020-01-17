@@ -1,5 +1,5 @@
 ---
-title: '예: 읽기 전용 파일 온라인 복원(전체 복구 모델) | Microsoft Docs'
+title: '온라인 복원: 읽기 전용 파일(전체 복구 모델)'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089802"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227973"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>예: 읽기 전용 파일의 온라인 복원(전체 복구 모델)
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>예제: 읽기 전용 파일의 온라인 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 여러 개의 파일 또는 파일 그룹이 있는 전체 복구 모델에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  

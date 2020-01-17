@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 - 인바운드 연결에 대한 인증서 사용 | Microsoft Docs
-ms.custom: ''
+title: 인바운드 연결에 대한 인증서 사용
+description: 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997911"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822274"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>데이터베이스 미러링 - 인바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+  이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
  인바운드 연결 구성은 대개 다음과 같은 단계로 진행됩니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67997911"
   
  다음 절차에서 이러한 단계를 자세히 설명합니다. 각 단계에서는 HOST_A라는 시스템에서 서버 인스턴스를 구성하는 예를 제공합니다. 예 섹션에서는 HOST_B라는 시스템에 또 다른 서버 인스턴스를 구성하는 동일한 단계를 보여 줍니다.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>인바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>인바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
   
 1.  다른 시스템에 대한 로그인을 만듭니다.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "67997911"
     GO  
     ```  
   
-     자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+     자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
  이로써 HOST_B에서 HOST_A에 로그인하기 위한 인증서 인증 설정이 끝났습니다.  
   
@@ -165,9 +166,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

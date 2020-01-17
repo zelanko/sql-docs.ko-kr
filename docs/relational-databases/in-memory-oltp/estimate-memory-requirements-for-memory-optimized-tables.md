@@ -1,6 +1,6 @@
 ---
-title: 메모리 액세스에 최적화된 테이블에 필요한 메모리 예측 | Microsoft 문서
-ms.custom: ''
+title: 메모리 요구 사항 - 메모리 최적화 테이블
+ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811168"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412693"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

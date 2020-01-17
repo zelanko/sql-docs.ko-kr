@@ -1,6 +1,8 @@
 ---
-title: 별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스) | Microsoft Docs
-ms.custom: ''
+title: 별칭 지정
+description: Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 별칭 지정
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +12,12 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9aee41091d2ca77d4fd23fb4997e49644360392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031565"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244756"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  테이블 또는 열에 대해 원하는 임시 참조 이름입니다. 올바른 개체 이름은 모두 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 “개체 명명 규칙”을 참조하세요.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 여러 Join을 사용하여 쿼리를 보여 줍니다. 이 예에서는 테이블 및 열 별칭 지정을 모두 보여줍니다.  
   
 -   열 별칭 지정: 선택 목록에 열을 포함한 열과 식 모두가 이 예에서 별칭이 지정됩니다. `SalesTerritoryRegion AS SalesTR` 단순 열 별칭을 보여줍니다. `Sum(SalesAmountQuota) AS TotalSales` 데모  

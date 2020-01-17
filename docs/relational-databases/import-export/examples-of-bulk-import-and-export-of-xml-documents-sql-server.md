@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056026"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401582"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>설명  
  이 경우 SINGLE_BLOB을 사용하면 XML 인코딩 선언에 지정된 XML 문서의 인코딩과 서버가 적용한 문자열 코드 페이지 간 불일치를 피할 수 있습니다.  
   
  NCLOB 또는 CLOB 데이터 형식을 사용할 경우 코드 페이지 또는 인코딩 충돌이 발생하면 다음 중 하나를 수행해야 합니다.  
@@ -253,7 +253,7 @@ GO
  [&#91;맨 위로 이동&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> XML 데이터 대량 내보내기  
- 다음 예에서는 `bcp` 를 사용하여 동일한 XML 서식 파일로 앞의 예에서 만든 테이블에서 XML 데이터를 대량으로 내보냅니다. 다음 `bcp` 명령에서 `<server_name>` 및 `<instance_name>` 은 적절한 값으로 바꿔야 하는 자리 표시자를 나타냅니다.  
+ 다음 예에서는 [bcp](../../tools/bcp-utility.md)를 사용하여 동일한 XML 서식 파일로 앞의 예에서 만든 테이블에서 XML 데이터를 대량으로 내보냅니다. 다음 `bcp` 명령에서 `<server_name>` 및 `<instance_name>` 은 적절한 값으로 바꿔야 하는 자리 표시자를 나타냅니다.  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

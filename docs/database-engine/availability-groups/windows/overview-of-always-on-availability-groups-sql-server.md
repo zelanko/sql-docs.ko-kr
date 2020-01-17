@@ -1,7 +1,7 @@
 ---
-title: Always On 가용성 그룹 개요
+title: Always On 가용성 그룹이란?
 description: Always On 가용성 그룹을 구성하고 관리하는 데 중심이 되는 개념을 소개합니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974384"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236297"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
+ 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   
  *가용성 그룹*은 *가용성 데이터베이스*라고 하는 개별 사용자 데이터베이스의 불연속 집합에 대해 복제된 환경을 지원합니다. HA(고가용성) 또는 읽기-배율에 대한 가용성 그룹을 만들 수 있습니다. HA 가용성 그룹은 함께 장애 조치를 수행하는 데이터베이스 그룹입니다. 읽기-배율 가용성 그룹은 읽기 전용 작업을 위해 다른 SQL Server 인스턴스에 복사되는 데이터베이스 그룹입니다. 가용성 그룹은 하나의 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 보조 데이터베이스는 백업이 *아닙니다* . 계속하여 정기적으로 데이터베이스 및 해당 트랜잭션 로그를 백업하세요.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71974384"
   
  다음 그림에서는 하나의 주 복제본과 네 개의 보조 복제본이 포함된 가용성 그룹을 보여 줍니다. 하나의 주 복제본과 두 개의 동기 커밋 보조 복제본을 포함하여 최대 8개의 보조 복제본이 지원됩니다.  
   
- ![5개 복제본이 있는 가용성 그룹](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "5개 복제본이 있는 가용성 그룹")  
+ ![5개의 복제본이 있는 가용성 그룹](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "5개의 복제본이 있는 가용성 그룹")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
  데이터베이스를 가용성 그룹에 추가하려면 데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있는 온라인 읽기-쓰기 데이터베이스여야 합니다. 데이터베이스를 추가하면 이 데이터베이스는 가용성 그룹을 주 데이터베이스로 조인하며 클라이언트에서 사용할 수 있는 상태로 유지됩니다. 새로운 주 데이터베이스의 백업이 보조 복제본을 호스팅하는 서버 인스턴스로 복원될 때까지 해당 보조 데이터베이스는 존재하지 않습니다(RESTORE WITH NORECOVERY 사용). 새 보조 데이터베이스는 가용성 그룹에 조인될 때까지 RESTORING 상태에 있습니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
@@ -84,7 +84,7 @@ ms.locfileid: "71974384"
   
      이 가용성 모드를 사용하는 가용성 복제본을 *동기-커밋 복제본*이라고 합니다. 동기-커밋 모드에서는 동기-커밋 주 복제본이 트랜잭션을 커밋하기 전에 동기-커밋 보조 복제본이 로그 확정을 완료했음을 확인할 때까지 기다립니다. 동기-커밋 모드에서는 지정된 보조 데이터베이스가 주 데이터베이스와 동기화되고 나면 커밋된 트랜잭션이 완전히 보호됩니다. 이렇게 보호되는 대신에 트랜잭션 대기 시간이 증가합니다.  
   
- 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)개념을 소개합니다.  
+ 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
 ##  <a name="FormsOfFailover"></a> 장애 조치(Failover) 유형  
  주 복제본과 보조 복제본 간의 섹션 컨텍스트 내에서 주 역할과 보조 역할은 *장애 조치(Failover)* 라는 프로세스에서 서로 교환할 수 있습니다. 장애 조치(Failover) 중에 대상 보조 복제본은 주 역할로 전환되어 새로운 주 복제본이 됩니다. 새로운 주 복제본은 해당 데이터베이스를 주 데이터베이스로 온라인으로 전환하며 클라이언트 애플리케이션은 이 데이터베이스에 연결할 수 있습니다. 이전의 주 복제본이 사용 가능한 경우 이 복제본은 보조 역할로 전환되어 보조 복제본이 됩니다. 이전의 주 복제본은 보조 데이터베이스가 되고 데이터 동기화가 다시 시작됩니다.  
@@ -109,12 +109,12 @@ ms.locfileid: "71974384"
   
 -   비동기-커밋 모드에서 유일한 형태의 장애 조치(failover)는 일반적으로 *강제 장애 조치(failover)* 라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)입니다. 강제 장애 조치(failover)는 수동으로만 시작될 수 있기 때문에 수동 장애 조치(failover)의 한 형태로 간주됩니다. 강제 장애 조치(failover)는 재해 복구 옵션입니다. 이것은 대상 보조 복제본이 주 복제본과 동기화되지 않은 경우 가능한 유일한 형태의 장애 조치(failover)입니다.  
   
- 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)개념을 소개합니다.  
+ 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
 ##  <a name="ClientConnections"></a> 클라이언트 연결  
  가용성 그룹 수신기를 만들어 지정된 가용성 그룹의 주 복제본에 대한 클라이언트 연결을 제공할 수 있습니다. *가용성 그룹 수신기* 는 지정된 가용성 그룹에 연결된 리소스 집합을 해당 가용성 복제본에 대한 직접 클라이언트 연결에 제공합니다.  
   
- 가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+ 가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
 > [!TIP]  
 >  가용성 그룹에 두 개의 가용성 복제본만 있고 보조 복제본에 대한 읽기 액세스를 허용하도록 구성되지 않은 경우, 클라이언트는 [데이터베이스 미러링 연결 문자열](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 사용하여 주 복제본에 연결할 수 있습니다. 이 방법은 데이터베이스 미러링에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 데이터베이스를 마이그레이션한 후 일시적으로 유용할 수 있습니다. 보조 복제본을 더 추가하기 전에 가용성 그룹의 가용성 그룹 수신기를 만들고 수신기의 네트워크 이름을 사용하도록 애플리케이션을 업데이트해야 합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "71974384"
   
      보조 가용성 복제본을 로컬 데이터베이스에 대한 읽기 전용 액세스만 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 그러면 보조 복제본에 대한 읽기/쓰기 연결 시도가 차단됩니다. 읽기/쓰기 액세스만 허용하여 _주_ 복제본에서 읽기 전용 워크로드를 방지하는 것도 가능합니다. 이렇게 하면 주 복제본으로 읽기 전용 연결이 설정되지 않습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
-     가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+     가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
 ##  <a name="SessionTimeoutPerios"></a> 세션 제한 시간  
  세션 제한 시간은 다른 가용성 복제본과의 연결이 얼마 동안 비활성으로 유지되면 연결이 종료되는지를 결정하는 가용성 복제본 속성입니다. 주 복제본과 보조 복제본은 활성 상태임을 알리기 위해 서로 ping합니다. 제한 시간 내에 다른 복제본으로부터 ping을 받으면 연결이 아직 열려 있고 서버 인스턴스가 통신하고 있음을 나타냅니다. ping을 받으면 가용성 복제본은 해당 연결에서의 세션 제한 시간 카운터를 다시 설정합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "71974384"
   
  자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 가용성 그룹 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   

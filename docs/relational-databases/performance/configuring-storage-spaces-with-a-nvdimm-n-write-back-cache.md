@@ -1,6 +1,6 @@
 ---
-title: NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성 | Microsoft 문서
-ms.custom: ''
+title: 스토리지 구성 - NVDIMM-N 나중 쓰기 캐시
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137987"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165985"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![FriendlyName 선택](../../relational-databases/performance/media/select-friendlyname.png "FriendlyName 선택")  
+ ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>스토리지 풀 만들기  
  PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 스토리지 풀을 쉽게 빌드할 수 있습니다.  
@@ -68,11 +68,11 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  가상 디스크가 만들어지고 초기화되며 NTFS로 포맷됩니다. 아래 화면 캡처에서 가상 디스크 크기는 300GB, 쓰기 캐시 크기는 1GB로, NVDIMM-N에서 호스트됩니다.  
   
- ![Get-virtualdisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-virtualdisk")  
+ ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  이제 서버에 이 새 볼륨이 표시되는 것을 볼 수 있습니다. 이제 SQL Server 트랜잭션 로그에 이 드라이브를 사용할 수 있습니다.  
   
- ![Log_Space 드라이브](../../relational-databases/performance/media/log-space-drive.png "Log_Space 드라이브")  
+ ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 10에서 Windows 스토리지 공간](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055137"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321838"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -65,7 +65,7 @@ WITH
 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블의 스키마인 경우에는 선택 사항입니다. *schema*가 지정되지 않고 COPY 작업을 수행하는 사용자의 기본 스키마가 지정된 테이블과 다를 경우 COPY가 취소되고 오류 메시지가 반환됩니다.  
 
 *table_name*  
-데이터를 복사할 대상 테이블의 이름입니다. 대상 테이블은 임시 테이블 또는 영구 테이블일 수 있습니다.
+데이터를 복사할 대상 테이블의 이름입니다. 대상 테이블은 임시 또는 영구 테이블일 수 있으며, 데이터베이스에 이미 있어야 합니다. 
 
 *(column_list)*  
 데이터를 로드하기 위해 원본 데이터 필드를 대상 테이블 열로 매핑하는 데 사용되는 하나 이상의 열에 대한 선택적 목록입니다. *column_list*는 괄호로 묶고 쉼표로 구분해야 합니다. 열 목록은 다음과 같은 형식입니다.
@@ -131,7 +131,7 @@ WITH
 AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
 
 - SAS(공유 액세스 서명)를 사용하여 인증 *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  *SECRET: * [*공유 액세스 서명*](/azure/storage/common/storage-sas-overview) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
+  *SECRET: [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’*  
   필요한 최소 권한: 읽기 및 목록
 
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -163,8 +163,8 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
 - SAS(공유 액세스 서명)를 사용하여 인증
-  - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:*  [*공유 액세스 서명*](/azure/storage/common/storage-sas-overview) *은 스토리지 계정의 리소스에 대한 위임된 액세스를 제공합니다.*
+  - *IDENTITY:* ‘공유 액세스 서명’의 값이 있는 상수
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’  
   - 필요한 최소 권한: 읽기, 나열, 쓰기, 만들기, 삭제
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -214,13 +214,13 @@ COPY 명령은 이 매개 변수가 지정되지 않은 경우 파일 확장명�
 > FIELDQUOTE 문자는 이중 FIELDQUOTE(구분 기호)가 있는 문자열 열에서 이스케이프됩니다. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 필드 종결자를 지정합니다. 필드 종결자는 여러 문자일 수 있습니다. 기본 필드 종결자는 (,)입니다.
+*FIELDTERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 필드 종결자를 지정합니다. 16진수 표기법을 사용하여 필드 종결자를 지정할 수 있습니다. 필드 종결자는 여러 문자일 수 있습니다. 기본 필드 종결자는 (,)입니다.
 자세한 내용은 [필드 및 행 종결자 지정(SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)을 참조하세요.
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 행 종결자를 지정합니다. 행 종결자는 여러 문자일 수 있습니다. 기본적으로 행 종결자는 \r\n입니다. 
+*ROW TERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 행 종결자를 지정합니다. 16진수 표기법을 사용하여 행 종결자를 지정할 수 있습니다. 행 종결자는 여러 문자일 수 있습니다. 기본적으로 행 종결자는 \r\n입니다. 
 
-COPY 명령은 \n(줄 바꿈)을 지정할 때 \r 문자를 접두사하여 \r\n을 생성합니다. \n 문자만 지정하려면 16진수(0x0A)를 사용합니다. 다중 문자 행 종결자를 16진수로 지정할 때 각 문자 사이에 0x를 지정하지 마세요.
+COPY 명령은 \n(줄 바꿈)을 지정할 때 \r 문자를 접두사하여 \r\n을 생성합니다. \n 문자만 지정하려면 16진수 표기법(0x0A)을 사용합니다. 다중 문자 행 종결자를 16진수로 지정할 때 각 문자 사이에 0x를 지정하지 마세요.
 
 행 종결자를 지정하는 방법에 대한 추가 지침은 다음 [설명서](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)를 검토하세요.
 
@@ -254,12 +254,12 @@ INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Data 
 
 ## <a name="examples"></a>예  
 
-### <a name="a-load-from-a-public-storage-account"></a>1\. 퍼블릭 스토리지 계정에서 로드
+### <a name="a-load-from-a-public-storage-account"></a>A. 퍼블릭 스토리지 계정에서 로드
 
 다음 예제는 퍼블릭 스토리지 계정에서 데이터를 로드하는 COPY 명령의 가장 간단한 형태입니다. 이 예제에서 COPY 문의 기본값은 줄 항목 csv 파일의 형식과 일치합니다.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 COPY 명령의 기본값은 다음과 같습니다.
@@ -287,7 +287,7 @@ COPY 명령의 기본값은 다음과 같습니다.
 
 - IDENTITY_INSERT = ‘OFF’
 
-### <a name="b-load-authenticating-via-share-access-signature-sas"></a>2\. SAS(공유 액세스 서명)를 통한 로드 인증
+### <a name="b-load-authenticating-via-share-access-signature-sas"></a>B. SAS(공유 액세스 서명)를 통한 로드 인증
 
 다음 예제에서는 UNIX 출력과 같은 행 종결자로 줄 바꿈을 사용하는 파일을 로드합니다. 이 예제에서는 SAS 키를 사용하여 Azure Blob 스토리지에 대해서도 인증합니다.
 
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -358,6 +358,46 @@ WITH (
 )
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="faq"></a>FAQ
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase 대비 COPY 명령의 성능은 어떤가요?
+기능이 출시될 시점에는 COPY 명령의 성능이 향상될 예정입니다. 퍼블릭 미리 보기 중에 최상의 로드 성능을 얻으려면 CSV를 로드할 때 입력을 여러 개의 파일로 분할하는 것이 좋습니다. 현재 COPY는 INSERT SELECT 사용 시 PolyBase와 성능이 같습니다. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
+파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. COPY 명령이 출시되면 압축되지 않은 파일을 분할할 필요가 없습니다. 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Parquet 또는 ORC 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
+Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파일을 분할할 필요가 없습니다. 최상의 성능을 얻으려면 Azure Storage 계정의 Parquet 및 ORC 파일이 256MB 이상이어야 합니다. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 명령은 언제 출시되나요?
+COPY 명령은 내년(2020년) 초에 출시될 예정입니다. 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 명령에 알려진 문제가 있나요?
+
+- (n)varchar(max)와 같은 LOB 지원은 COPY 문에서 사용할 수 없습니다. 이 기능은 내년 초에 제공될 예정입니다.
+
+피드백이나 문제가 있으면 배포 목록(sqldwcopypreview@service.microsoft.com)으로 보내주세요.
+
+## <a name="see-also"></a>참고 항목  
 
  [SQL Data Warehouse를 사용하여 개요 로드](/azure/sql-data-warehouse/design-elt-data-loading)

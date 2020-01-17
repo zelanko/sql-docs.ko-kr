@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ba62b4908c73b018ae4cdda1a9b2bda3098f1ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281762"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947117"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell을 사용하여 SSIS 프로젝트 배포
 
@@ -24,7 +24,7 @@ ms.locfileid: "71281762"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
+Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
@@ -32,7 +32,7 @@ Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 �
 
 -   Windows의 SQL Server
 
--   Azure SQL Database Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+-   Azure SQL Database. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 이 빠른 시작의 정보를 사용하여 SQL Server on Linux에 SSIS 패키지를 배포할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
@@ -46,6 +46,10 @@ Azure SQL Database에 프로젝트를 배포하려면 SSISDB(SSIS 카탈로그 �
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 5. **데이터베이스 연결 문자열 표시**를 클릭합니다.
 6. **ADO.NET** 연결 문자열 전체를 검토합니다.
+
+## <a name="supported-authentication-method"></a>지원되는 인증 방법
+
+[배포를 위한 인증 방법](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)을 참조하세요.
 
 ## <a name="ssis-powershell-provider"></a>SSIS PowerShell 공급자
 다음 스크립트를 기반으로 변수에 적절한 값을 제공한 후 SSIS 프로젝트를 배포하는 스크립트를 실행하세요.

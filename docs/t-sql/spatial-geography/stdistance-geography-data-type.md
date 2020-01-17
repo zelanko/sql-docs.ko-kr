@@ -1,7 +1,7 @@
 ---
 title: STDistance(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042291"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200504"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,12 @@ ms.locfileid: "68042291"
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- STDistance()는 **geography** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 Null을 반환합니다.  
+## <a name="remarks"></a>설명  
+ 결과는 공간 데이터의 [SRID&#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)에서 정의한 측정 단위로 표현됩니다.
+STDistance()는 **geography** 인스턴스의 SRID(Spatial Reference ID)가 일치하지 않으면 항상 *null*을 반환합니다.  
   
 > [!NOTE]  
->  면적 또는 거리를 계산하는 **geography** 데이터 형식에 대한 메서드는 메서드에서 사용되는 인스턴스의 SRID에 따라 다른 결과를 반환합니다.   SRID에 대한 자세한 내용은 [Spatial Reference Identifiers&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
+>  면적 또는 거리를 계산하는 **geography** 데이터 형식에 대한 메서드는 메서드에서 사용되는 인스턴스의 SRID에 따라 다른 결과를 반환합니다. SRID에 대한 자세한 내용은 [SRID&#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 두 **geography** 인스턴스 간의 거리를 찾습니다.  

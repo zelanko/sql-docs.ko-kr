@@ -1,6 +1,6 @@
 ---
-title: 메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴 | Microsoft 문서
-ms.custom: ''
+title: 애플리케이션 패턴 - 메모리 최적화 테이블 분할
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f23f65299365b0716cd2a94f48e3a050fb18b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951237"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412804"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67951237"
   
 -   활성 파티션을 추가합니다.  
   
- ![파티션 전환.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "파티션 전환.")  
+ ![파티션 전환](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 활성 데이터 유지 관리  
   
  데이터 삭제와 준비 테이블 전환 사이의 시간 중에 누락된 데이터 쿼리가 수행되지 않도록 하려면 활성 주문 삭제로 시작되는 작업을 유지 관리 시간 중에 수행해야 합니다.  
@@ -227,6 +227,6 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

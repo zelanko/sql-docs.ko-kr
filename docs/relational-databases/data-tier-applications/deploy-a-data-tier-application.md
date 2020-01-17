@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907884"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190123"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907884"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>동일한 DAC 패키지를 여러 번 배포 
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 단일 인스턴스에 여러 번 배포할 수 있지만 한 번에 하나씩 배포를 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
   
- DAC를 데이터베이스 엔진의 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
+ DAC를 데이터베이스 엔진의 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. 그러면 DAC가 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**의 **배포된 데이터 계층 애플리케이션 노드**에 표시되고 **배포된 데이터 계층 애플리케이션** 세부 정보 페이지에 보고됩니다.  
   
 ###  <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 다음을 제외한 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다.  
@@ -145,6 +145,10 @@ ms.locfileid: "72907884"
 
 다음 예에서는 MyApplication.dacpac 패키지의 DAC 정의를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 기본 인스턴스에서 MyApplication이라는 DAC를 배포합니다.  
   
+## <a name="powershell-examples"></a>PowerShell 예제  
+
+다음 예에서는 MyApplication.dacpac 패키지의 DAC 정의를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 기본 인스턴스에서 MyApplication이라는 DAC를 배포합니다.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

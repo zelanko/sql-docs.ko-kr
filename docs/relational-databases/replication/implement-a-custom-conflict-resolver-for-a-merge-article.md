@@ -1,6 +1,7 @@
 ---
-title: 병합 아티클용 사용자 지정 충돌 해결 프로그램 구현 | Microsoft Docs
-ms.custom: ''
+title: 사용자 지정 충돌 해결 프로그램 구현(병합)
+description: SQL Server에서 병합 게시의 사용자 지정 충돌 해결 프로그램을 구현하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905122"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322167"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "72905122"
   
 1.  게시 또는 **msdb** 데이터베이스에 있는 게시자에서 다음 필수 매개 변수를 구현하는 새 시스템 저장 프로시저를 만듭니다.  
   
-    |매개 변수|데이터 형식|설명|  
+    |매개 변수|데이터 형식|Description|  
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|충돌을 해결 중인 테이블의 소유자 이름. 게시 데이터베이스에 있는 테이블의 소유자입니다.|  
     |**\@tablename**|**sysname**|충돌을 해결 중인 테이블의 이름|  
@@ -70,7 +71,7 @@ ms.locfileid: "72905122"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
-1.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 **MicrosoftSQL** **Server Stored ProcedureResolver** 값을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
+1.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 **MicrosoftSQL** **Server 저장 프로시저 해결 프로그램** 값을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
 2.  **\@publication** 및 **\@article**을 지정하고 **\@property**에 **resolver_info** 값, **\@value**에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "72905122"
 2.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 1단계의 아티클 해결 프로그램 식별 이름을 지정하여 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM 기반 사용자 지정 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  

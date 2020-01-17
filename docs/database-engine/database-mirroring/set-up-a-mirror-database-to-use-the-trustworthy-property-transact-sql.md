@@ -1,6 +1,7 @@
 ---
-title: Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 미러된 데이터베이스에 대한 신뢰할 수 있는 속성 사용
+description: 새로 미러된 데이터베이스에서 신뢰할 수 있는 속성을 사용하도록 설정하는 데 필요한 단계를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aa56d674393087bdde1d8ada61f4ef920e4d6f75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 20ee7631b1fd4ca8613191ac67a0e13ee1cb028c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025243"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822384"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

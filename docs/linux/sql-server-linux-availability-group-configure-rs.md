@@ -1,7 +1,7 @@
 ---
-title: Linux에서 읽기 확장에 대한 SQL Server 가용성 그룹 구성
-titleSuffix: SQL Server
+title: 읽기 확장 가용성 그룹 구성(SQL Server on Linux)
 description: Linux에서 읽기 확장 워크로드에 대한 SQL Server Always On AG(가용성 그룹)를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027263"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558412"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux에서 읽기 확장에 대한 SQL Server 가용성 그룹 구성
 

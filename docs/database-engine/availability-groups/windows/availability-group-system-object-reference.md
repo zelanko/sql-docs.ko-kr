@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹 시스템 개체 참조 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 시스템 개체 참조
+description: Always On 가용성 그룹으로 작업하는 경우 사용할 수 있는 다양한 시스템 개체에 대한 참조입니다.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991388"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822459"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Always On 가용성 그룹 시스템 개체 참조
 
@@ -24,7 +25,7 @@ ms.locfileid: "67991388"
 
 ## <a name="system-catalog-views"></a>시스템 카탈로그 뷰
 
-| 시스템 카탈로그 뷰 | 설명|
+| 시스템 카탈로그 뷰 | Description|
 | :------ | :----------------------------- |
 | [가용성 데이터베이스 모니터링](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | 로컬 복사본 데이터베이스가 가용성 그룹에 조인되어 있는지 여부에 상관없이 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 모든 Always On 가용성 그룹에 대해 하나의 가용성 복제본을 호스팅하는 SQL Server 인스턴스에서 가용성 데이터베이스별로 하나의 행을 포함합니다. |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 Always On 가용성 그룹 수신기에 연결되는 모든 IP 주소에 대해 하나의 행을 반환합니다. |
@@ -38,7 +39,7 @@ ms.locfileid: "67991388"
 ## <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 
 
-| 시스템 동적 관리 뷰 | 설명|
+| 시스템 동적 관리 뷰 | Description|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | 서버 인스턴스가 모든 가용성 그룹에 대해 호스팅하는 가용성 복제본의 모든 가용성 데이터베이스에 대해 수행하는 자동 페이지 복구 시도당 한 개의 행을 반환합니다.  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | SQL Server의 로컬 인스턴스에 가용성 복제본이 있는 각 Always On 가용성 그룹에 대해 하나의 행을 반환합니다. 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다. |
@@ -58,7 +59,7 @@ ms.locfileid: "67991388"
 ## <a name="system-functions"></a>시스템 함수
 
 
-| 시스템 함수 | 설명|
+| 시스템 함수 | Description|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | 현재 복제본이 주 복제본인지 확인하는 데 사용됩니다. |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | 현재 복제본이 기본 백업 복제본인지 확인하는 데 사용됩니다. |

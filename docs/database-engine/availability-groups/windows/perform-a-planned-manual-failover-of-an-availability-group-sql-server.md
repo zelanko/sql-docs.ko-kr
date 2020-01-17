@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014588"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822498"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68014588"
 > [!NOTE]  
 >  보조 복제본과 주 복제본이 모두 자동 장애 조치(Failover) 모드에 대해 구성된 경우 보조 복제본이 동기화되면 자동 장애 조치(Failover)의 대상 역할도 수행할 수 있습니다. 자세한 내용은 [가용성 모드&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
    
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 
+##  <a name="BeforeYouBegin"></a> 시작하기 전에 
 
 >[!IMPORTANT]
 >클러스터 관리자가 없는 읽기 확장 가용성 그룹을 장애 조치하는 특정 절차가 있습니다. 가용성 그룹에 CLUSTER_TYPE = NONE이 있는 경우 [읽기 확장 가용성 그룹에서 주 복제본 장애 조치](#fail-over-the-primary-replica-on-a-read-scale-availability-group) 아래의 절차를 따르세요.
@@ -50,12 +50,12 @@ ms.locfileid: "68014588"
 -   현재 대상 보조 복제본이 주 복제본과 동기화되어 있어야 합니다. 이 보조 복제본의 모든 보조 데이터베이스는 이미 가용성 그룹에 조인되어 있어야 합니다. 또한 해당 주 데이터베이스와 동기화되어야 합니다(즉, 로컬 보조 데이터베이스가 동기화되어야 함). 
   
     > [!TIP] 
-    >  보조 복제본의 장애 조치(Failover) 준비를 확인하려면 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 동적 관리 뷰에서 **is_Failover_ready** 열을 쿼리합니다. 또는 [AlwaysOn 그룹 대시 보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)의 **장애 조치(Failover) 준비** 열을 볼 수 있습니다. 
+    >  보조 복제본의 장애 조치(Failover) 준비를 확인하려면 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 동적 관리 뷰에서 **is_failover_ready** 열을 쿼리합니다. 또는 [AlwaysOn 그룹 대시 보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)의 **장애 조치(Failover) 준비** 열을 볼 수 있습니다. 
 -   이 태스크는 대상 보조 복제본에서만 지원됩니다. 대상 보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 
   
 ###  <a name="Security"></a> 보안 
   
-####  <a name="Permissions"></a> 사용 권한 
+####  <a name="Permissions"></a> 권한 
  가용성 그룹에서는 ALTER AVAILABILITY GROUP 권한이 필요합니다. CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한도 필요합니다. 
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용 
@@ -116,7 +116,7 @@ ms.locfileid: "68014588"
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="see-also"></a>관련 항목: 
+## <a name="see-also"></a>참고 항목 
 
  * [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 

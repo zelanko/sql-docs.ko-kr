@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 235dc20ca94affa5f022bc242aa0ef6726f1542c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594442"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492014"
 ---
 # <a name="develop-applications-using-always-encrypted"></a>Always Encrypted를 사용하여 애플리케이션 개발
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,5 +30,5 @@ ms.locfileid: "73594442"
 - [상시 암호화와 JDBC 드라이버 사용](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 - [상시 암호화와 ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [상시 암호화와 PHP 드라이버 사용](../../../connect/php/using-always-encrypted-php-drivers.md)
-- [.NET Core 및 .NET Framework 애플리케이션에서 Always Encrypted 사용(Microsoft.Data.SqlClient)](https://github.com/dotnet/sqlclient/tree/master/release-notes)
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [.NET Core 및 .NET Framework 애플리케이션에서 Always Encrypted 및 Microsoft .NET Data Provider for SQL Server 사용](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

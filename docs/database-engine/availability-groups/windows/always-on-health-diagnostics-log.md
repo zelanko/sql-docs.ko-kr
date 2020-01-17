@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹에 대한 SQL Server 리소스 DLL 상태 진단 로그
+title: 가용성 그룹에 대한 리소스 DLL 상태 진단 로그
 description: SQL Server 리소스 DLL이 Always On 가용성 그룹의 상태를 모니터링하는 방법을 설명합니다.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a4ff7c777add4fa2228fb6525d24f172533a609
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014716"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822073"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>가용성 그룹에 대한 SQL Server 리소스 DLL 상태 진단 로그
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

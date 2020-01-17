@@ -1,6 +1,6 @@
 ---
-title: 교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 교착 상태 파일 열기, 보기, 인쇄(SSMS)
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,14 +16,15 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bce30e52ab3c79953ae3ccaff1d95def441d8c66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018742"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165760"
 ---
-# <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio)
+# <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 교착 상태 파일 열기, 보기 및 인쇄
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 교착 상태가 생성되면 교착 상태 정보를 캡처하여 파일에 저장할 수 있습니다. 교착 상태 파일을 저장한 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해당 파일을 열어서 보거나 인쇄할 수 있습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68018742"
   
 4. **파일** 메뉴에서 **인쇄**를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [교착 상태 그래프 저장&#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  
   
   

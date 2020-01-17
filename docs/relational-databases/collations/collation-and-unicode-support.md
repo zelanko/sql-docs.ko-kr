@@ -1,7 +1,7 @@
 ---
 title: 데이터 정렬 및 유니코드 지원 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982817"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901949"
 ---
 # <a name="collation-and-unicode-support"></a>데이터 정렬 및 유니코드 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "73982817"
 
 다음 표에서는 이러한 여러 옵션과 관련된 동작을 설명합니다.    
     
-|옵션|설명|    
+|옵션|Description|    
 |------------|-----------------|    
 |대/소문자 구분(\_CS)|대/소문자를 구분합니다. 이 옵션을 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. \_CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|   
 |악센트 구분(\_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 “a”와 “ấ”는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다. \_AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
@@ -463,7 +463,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 > [!NOTE]
 > 유니코드 데이터 형식의 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 최대 65,535자 또는 보조 문자를 사용할 경우 전체 유니코드 범위(1,114,111자)를 나타낼 수 있습니다. 보조 문자를 사용하도록 설정하는 방법에 대한 자세한 내용은 [보조 문자](#Supplementary_Characters)를 참조하세요.
 
-또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 유니코드를 지원하지 않는 기존 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 기존 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)의 동작이 변경되지 않습니다. 자세한 내용은 [UTF-8과 UTF-16 간의 스토리지 차이점](#storage_differences)을 참조하세요.
+또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 유니코드를 지원하지 않는 기존 데이터 형식(**char** 및 **varchar**)이 UTF-8 인코딩을 사용하는 유니코드 데이터 형식이 됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 기존 유니코드 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)의 동작이 변경되지 않으며 계속해서 UCS-2 또는 UTF-16 인코딩을 사용합니다. 자세한 내용은 [UTF-8과 UTF-16 간의 스토리지 차이점](#storage_differences)을 참조하세요.
 
 ### <a name="unicode-considerations"></a>유니코드 고려 사항
 비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 유니코드를 지원하지 않는 컴퓨터는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환의 필요성이 줄어들기 때문에 성능이 향상될 수 있습니다. 유니코드 데이터 정렬은 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 개별적으로 선택해야 합니다.    
@@ -490,8 +490,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     -   BIN 또는 BIN2<sup>2</sup> 이진 데이터 정렬    
     -   SQL\_* 데이터 정렬  
     
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3부터 지원됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0에서는 **UTF8_BIN2** 데이터 정렬이 **Latin1_General_100_BIN2_UTF8**로 바뀌었습니다.        
-<sup>2</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3까지 지원됩니다.    
+<sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3부터 지원됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0에서는 **UTF8_BIN2** 데이터 정렬이 **Latin1_General_100_BIN2_UTF8**로 바뀌었습니다.        
+<sup>2</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3까지 지원됩니다.    
     
 유니코드 데이터 형식 또는 비유니코드 데이터 형식 사용과 관련된 문제점을 평가하려면 작업 시나리오를 테스트하여 사용자 환경에서 나타나는 성능 차이를 측정하세요. 조직 전반의 시스템에 사용되는 데이터 정렬을 표준화하고, 가능한 경우 항상 유니코드 서버와 클라이언트를 배포하는 것이 좋습니다.    
     
@@ -502,11 +502,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
 다음 표에서는 유니코드 서버와 유니코드를 지원하지 않는 서버의 다양한 결합에서 다국어 데이터를 사용하는 방법을 설명합니다.    
     
-|서버|클라이언트|이점 또는 제한 사항|    
+|서버|Client|이점 또는 제한 사항|    
 |------------|------------|-----------------------------|    
-|유니코드|유니코드|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|    
-|유니코드|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 이전 운영 체제를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|    
-|비유니코드|유니코드|다국어 데이터 사용에 적합한 구성이 아닙니다. 유니코드 데이터를 유니코드를 지원하지 않는 서버에 쓸 수 없습니다. 서버의 코드 페이지를 벗어나는 서버로 데이터를 보낼 때 문제가 발생할 수 있습니다.|    
+|Unicode|Unicode|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|    
+|Unicode|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 이전 운영 체제를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|    
+|비유니코드|Unicode|다국어 데이터 사용에 적합한 구성이 아닙니다. 유니코드 데이터를 유니코드를 지원하지 않는 서버에 쓸 수 없습니다. 서버의 코드 페이지를 벗어나는 서버로 데이터를 보낼 때 문제가 발생할 수 있습니다.|    
 |비유니코드|비유니코드|다국어 데이터를 사용할 때 가장 제한이 많은 시나리오입니다. 단일 코드 페이지만 사용할 수 있습니다.|    
     
 ##  <a name="Supplementary_Characters"></a> 보조 문자    
@@ -516,7 +516,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 인코딩하는 BMP 범위(000000~00FFFF)에 유니코드 데이터를 저장하기 위해 **nchar**, **nvarchar** 등의 데이터 형식을 제공합니다. 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 보조 문자(\_SC) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용하여 전체 유니코드 문자 범위(000000~10FFFF)를 나타낼 수 있습니다. 예를 들어 **Latin1_General_100_CI_AS_SC** 또는 일본어 데이터 정렬을 사용하는 경우 **Japanese_Bushu_Kakusu_100_CI_AS_SC**가 여기에 해당합니다. 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 보조 문자(\_SC) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용하여 전체 유니코드 문자 범위(000000~10FFFF)를 나타낼 수 있습니다. 다음은 그 예입니다.  **Latin1_General_100_CI_AS_SC** 또는 일본어 데이터 정렬을 사용하는 경우 **Japanese_Bushu_Kakusu_100_CI_AS_SC**가 여기에 해당합니다. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 새로운 UTF-8 지원 데이터 정렬([\_UTF8](#utf8))을 사용하는 **char** 및 **varchar** 데이터 형식까지 보조 문자 지원을 확장합니다. 이 데이터 형식도 전체 유니코드 문자 범위를 나타낼 수 있습니다.   
 
@@ -605,7 +605,7 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 보�
 
 <sup>1</sup> ‘스토리지 크기(바이트)’는 인코딩된 바이트 길이를 가리키며, 데이터 형식의 디스크 스토리지 크기가 아닙니다.  디스크 스토리지 크기에 대한 자세한 내용은 [nchar 및 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 및 [char 및 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)를 참조하세요.
 
-<sup>2</sup> [보조 문자](#Supplementary_Characters)의 코드 포인트 범위입니다.
+<sup>2</sup>[보조 문자](#Supplementary_Characters)의 코드 포인트 범위입니다.
 
 > [!TIP]   
 > [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. CHAR(10) 열의 예제에서 **Latin1_General_100_CI_AI**와 같은 데이터 정렬을 사용하여 0~127 범위의 ASCII 문자 10자를 저장할 수 있기 때문입니다. 이 범위의 각 문자는 1바이트만 사용합니다.
@@ -622,12 +622,23 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 보�
 
 다른 고려 사항은 [국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)을 참조하세요.
 
+### <a name="converting"></a> UTF-8로 변환
+[CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 또는 [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*은 저장할 수 있는 문자 수가 아니라 스토리지 크기(바이트)를 정의하므로 데이터 잘림을 방지하기 위해 변환해야 하는 데이터 형식 크기를 결정하는 것이 중요합니다. 
+
+예를 들어 180바이트의 일본어 문자를 저장하는 **NVARCHAR(100)** 으로 정의된 열이 있다고 가정합니다. 이 예에서 열 데이터는 현재 문자당 2바이트를 사용하는 UCS-2 또는 UTF-16을 사용하여 인코딩됩니다. 새 데이터 형식은 200바이트만 저장할 수 있지만 일본어 문자는 UTF-8로 인코딩된 경우 3바이트가 필요하기 때문에 열 유형을 **VARCHAR(200)** 으로 변환하면 데이터가 잘릴 수 있습니다. 따라서 데이터 잘림을 통한 데이터 손실을 방지하려면 열을 **VARCHAR(270)** 으로 정의해야 합니다.
+
+따라서 기존 데이터를 UTF-8로 변환하기 전에 열 정의에 대한 예상 바이트 크기를 미리 파악하고 이에 따라 새 데이터 형식 크기를 조정해야 합니다. [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 함수 및 [COLLATE](../../t-sql/statements/collations.md) 문을 사용하여 기존 데이터베이스에서 UTF-8 변환 작업에 대한 올바른 데이터 길이 요구 사항을 결정하는 [데이터 샘플 GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode)에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 또는 SQL Notebook을 참조하세요.
+
+기존 테이블에서 열 데이터 정렬 및 데이터 형식을 변경하려면 [열 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-column-collation.md)에 설명된 방법 중 하나를 사용합니다.
+
+데이터베이스 데이터 정렬을 변경하여 새 개체가 기본적으로 데이터베이스 데이터 정렬을 상속하도록 허용하거나 서버 데이터 정렬을 변경하여 새 데이터베이스가 기본적으로 시스템 데이터 정렬을 상속하도록 허용하려면 이 문서의 [관련 작업](#Related_Tasks) 섹션을 참조하세요. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
-|태스크|항목|    
+|Task|항목|    
 |----------|-----------|    
-|SQL Server 인스턴스의 데이터 정렬을 설정하거나 변경하는 방법을 설명합니다.|[서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|사용자 데이터베이스의 데이터 정렬을 설정하거나 변경하는 방법을 설명합니다.|[데이터베이스 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|SQL Server 인스턴스의 데이터 정렬을 설정하거나 변경하는 방법에 대해 설명합니다. 서버 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다.|[서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|사용자 데이터베이스의 데이터 정렬을 설정하거나 변경하는 방법에 대해 설명합니다. 데이터베이스 데이터 정렬을 변경해도 기존 테이블 열의 데이터 정렬은 변경되지 않습니다.|[데이터베이스 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |데이터베이스 열의 데이터 정렬을 설정하거나 변경하는 방법을 설명합니다.|[열 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |서버, 데이터베이스 또는 열 수준에서 데이터 정렬 정보를 반환하는 방법을 설명합니다.|[데이터 정렬 정보 보기](../../relational-databases/collations/view-collation-information.md)|    
 |특정 언어에서 다른 언어로 이식성이 향상되고 여러 언어를 더욱 쉽게 지원하도록 Transact-SQL 문을 작성하는 방법을 설명합니다.|[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -646,9 +657,9 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 보�
 * [Windows 데이터 정렬 이름(Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
 * [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)(SQL Server에 UTF-8 지원 도입)       
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
 [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     
 [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations(Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations(Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[싱글바이트 및 멀티바이트 문자 집합](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

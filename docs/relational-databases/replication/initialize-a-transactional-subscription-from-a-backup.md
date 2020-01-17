@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 구독을 백업에서 초기화 | Microsoft 문서
-ms.custom: ''
+title: 백업에서 구독 초기화(트랜잭션)
+description: 복제 저장 프로시저를 사용하여 SQL Server의 백업에서 트랜잭션 게시를 초기화하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710299"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320480"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>트랜잭션 구독을 백업에서 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "71710299"
   
     -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 `@property`에 **allow_initialize_from_backup** 값, `@value`에 **true** 값을 지정합니다.  
   
-2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **allow_initialize_from_backup** 에 **true**값을 지정합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **allow_initialize_from_backup** 에 **true**값을 지정합니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
     > [!WARNING]  
     >  구독자 데이터가 누락되는 것을 방지하려면 `@allow_initialize_from_backup = N'true'`에서 **sp_addpublication** 또는 **sp_changepublication**을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하세요.  

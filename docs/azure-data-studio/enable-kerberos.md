@@ -2,20 +2,20 @@
 title: Active Directory 인증 사용(Kerberos)
 titleSuffix: Azure Data Studio
 description: Kerberos에서 Azure Data Studio에 대해 Active Directory 인증을 사용할 수 있도록 하는 방법을 알아봅니다.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959660"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957067"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 
 
@@ -26,7 +26,7 @@ macOS 또는 Linux에서 통합 인증(Windows 인증)을 사용하려면 현재
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
-- Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. Kerberos를 사용하여 인증하도록 SQL Server를 설정하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)를 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. SQL Server SPN 형식에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)를 참조하세요.
+- Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. 자세한 내용은 [서비스 사용자 이름 등록](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)을 참조하세요.
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>SQL Server에 Kerberos 설정이 있는지 확인
@@ -59,7 +59,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-AD 도메인 컨트롤러의 IP 주소가 dns-nameserver로 나열되도록 `/etc/network/interfaces` 파일을 편집합니다. 예를 들어 
+AD 도메인 컨트롤러의 IP 주소가 dns-nameserver로 나열되도록 `/etc/network/interfaces` 파일을 편집합니다. 다음은 그 예입니다. 
 
 ```/etc/network/interfaces
 <...>

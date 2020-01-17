@@ -1,24 +1,30 @@
 ---
-title: SQL Server 2019에서 외부 데이터 가상화 | Microsoft Docs
+title: 외부 데이터 가상화
 description: 이 페이지에서는 관계형 데이터 원본에 대해 외부 테이블 만들기 마법사를 사용하는 단계를 자세히 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710589"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227509"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 
 SQL Server 2019의 주요 시나리오 중 하나는 데이터를 가상화하는 기능입니다. 이 프로세스를 통해 데이터를 원래 위치에 유지할 수 있습니다. SQL Server의 데이터를 *가상화*하여 SQL Server의 다른 테이블처럼 쿼리할 수 있습니다. 이 프로세스는 ETL 프로세스의 필요성을 최소화합니다. 이 프로세스는 PolyBase 커넥터를 사용하여 수행할 수 있습니다. 데이터 가상화에 대한 자세한 내용은 [PolyBase 시작](polybase-guide.md)을 참조하세요.
+
+다음 동영상에서는 데이터 가상화를 소개합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>외부 테이블 마법사 시작
 

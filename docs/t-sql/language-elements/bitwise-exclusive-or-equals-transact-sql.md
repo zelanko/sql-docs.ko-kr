@@ -1,6 +1,8 @@
 ---
-title: ^= (배타적 비트 OR 대입)(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ^= 배타적 비트 OR 대입
+description: 두 개의 정수 값 간에 배타적 비트 OR 연산을 수행하고 값을 연산 결과로 설정합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +23,19 @@ ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6815c1000832d3ab876840b5252d615ff6348a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 814d71913ad58463ad15908e189ae299f2ac7f48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943093"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252179"
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (배타적 비트 OR 대입)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 개의 정수 값 간에 배타적 비트 OR 연산을 수행하고 값을 연산 결과로 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +50,7 @@ expression ^= expression
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자세한 내용은 [^&#40;배타적 비트 OR&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

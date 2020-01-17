@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹에서 주 데이터베이스 제거
+title: 가용성 그룹에서 데이터베이스 제거
 description: T-SQL(Transact-SQL), PowerShell 또는 SQL Server Management Studio를 사용하여 Always On 가용성 그룹에서 주 데이터베이스를 제거하는 단계입니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014393"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822638"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 가용성 그룹에서 주 데이터베이스 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68014393"
 -   이 태스크는 주 복제본에서만 지원됩니다. 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
  
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

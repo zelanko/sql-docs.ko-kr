@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bda4d41d4f2a9c92dca2d41b959ad4c4b32a1c79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594473"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317938"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted 구성 및 사용 
 
@@ -27,7 +27,9 @@ ms.locfileid: "73594473"
 
 ## <a name="set-up-your-environment-to-support-enclaves-and-attestation"></a>Enclave 및 증명을 지원하도록 환경 설정
 자세한 내용은 다음 문서를 참조하세요.
-- [SQL Server에서 Always Encrypted의 호스트 보호자 서비스 설정](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)
+- [호스트 보호 서비스 증명 계획](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]에 대한 호스트 보호 서비스 배포](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [호스트 보호 서비스에 컴퓨터 등록](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted용 키 관리
 자세한 내용은 다음 문서를 참조하세요.
@@ -38,8 +40,8 @@ ms.locfileid: "73594473"
 ## <a name="configure-columns-with-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted를 이용하여 열 구성
 자세한 내용은 다음 문서를 참조하세요.
 - [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성 - 개요](always-encrypted-enclaves-configure-encryption.md)
-- [Transact-SQL을 사용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)
-- [기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용](always-encrypted-enclaves-enable-for-encrypted-columns.md)
+- [Transact-SQL을 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)
+- [기존 암호화된 열에 관해 보안 Enclave를 사용한 Always Encrypted 사용](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 
 > [!NOTE]
 > 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)을 참조하세요.
@@ -51,7 +53,7 @@ ms.locfileid: "73594473"
 
 ## <a name="create-and-use-indexes-on-enclave-enabled-columns"></a>Enclave 사용 열에 인덱스 만들기 및 사용
 자세한 내용은 다음 문서를 참조하세요.
-- [보안 enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)
+- [보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)
 
 ## <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발
 자세한 내용은 다음 문서를 참조하세요.

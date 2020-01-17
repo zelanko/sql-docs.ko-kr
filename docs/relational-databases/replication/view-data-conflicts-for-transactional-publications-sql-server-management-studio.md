@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 게시의 데이터 충돌 확인(SSMS) | Microsoft 문서
-ms.custom: ''
+title: 데이터 충돌 보기(트랜잭션) - SSMS
+description: SSMS(SQL Server Management Studio)를 사용하여 트랜잭션 복제의 데이터 충돌을 살펴봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c00bfe0043aa4732f2352a604e872c01f0898f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115076"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321870"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "68115076"
 6.  복제 충돌 뷰어를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

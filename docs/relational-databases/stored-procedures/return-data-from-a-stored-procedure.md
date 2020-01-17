@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136659"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307988"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   데이터를 프로시저에서 호출 프로그램으로 반환하는 세 가지 방법은 결과 집합, 출력 매개 변수 및 반환 코드입니다. 이 항목은 세 가지 방법에 대한 자세한 정보를 제공합니다.  
   
-  ## <a name="returning-data-using-result-sets"></a>결과 집합을 사용하여 데이터 반환
- 저장 프로시저의 본문에 SELECT 문을 포함하는 경우(SELECT... INTO 또는 INSERT... SELECT 제외) SELECT 문에서 지정한 행을 클라이언트에 직접 전송합니다.  큰 결과 집합의 경우 저장 프로시저 실행은 결과 집합을 클라이언트에 완전히 전송하기 전까지 다음 문을 계속하지 않습니다.  작은 결과 집합의 경우 결과는 클라이언트에 대한 반환에 스풀되고 계속 실행됩니다.  저장 프로시저를 처리하는 동안 이러한 여러 SELECT 문을 실행하는 경우 여러 개의 결과 집합이 클라이언트에 전송됩니다.  이 동작은 중첩된 TSQL 일괄 처리, 중첩된 저장 프로시저 및 최상위 TSQL 일괄 처리에도 적용됩니다.
+## <a name="returning-data-using-result-sets"></a>결과 집합을 사용하여 데이터 반환
+저장 프로시저의 본문에 SELECT 문을 포함하는 경우(SELECT... INTO 또는 INSERT... SELECT 제외) SELECT 문에서 지정한 행을 클라이언트에 직접 전송합니다.  큰 결과 집합의 경우 저장 프로시저 실행은 결과 집합을 클라이언트에 완전히 전송하기 전까지 다음 문을 계속하지 않습니다.  작은 결과 집합의 경우 결과는 클라이언트에 대한 반환에 스풀되고 계속 실행됩니다.  저장 프로시저를 실행하는 동안 여러 SELECT 문을 실행하는 경우 여러 개의 결과 집합이 클라이언트에 전송됩니다.  이 동작은 중첩된 TSQL 일괄 처리, 중첩된 저장 프로시저 및 최상위 TSQL 일괄 처리에도 적용됩니다.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>결과 집합을 사용하여 데이터를 반환하는 예제 

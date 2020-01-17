@@ -1,6 +1,7 @@
 ---
-title: 초기 데이터 동기화 페이지 선택 - Always On 가용성 그룹 마법사 | Microsoft Docs
-ms.custom: ''
+title: 초기 데이터 동기화 페이지 선택(가용성 그룹 마법사)
+description: SSMS(SQL Server Management Studio)의 Always On 가용성 그룹 마법사에 있는 ‘초기 데이터 동기화 선택 페이지’에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235338"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "68014183"
  모든 주 데이터베이스의 데이터베이스 및 로그 백업을 직접 수행하고 보조 복제본을 호스팅하는 모든 서버 인스턴스로 복원하려는 경우에만 이 옵션을 선택합니다. 마법사를 종료한 후 모든 보조 복제본에서 모든 보조 데이터베이스를 조인해야 합니다.  
   
 > [!NOTE]  
->  자세한 내용은 이 항목의 뒷부분에 나오는 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md))에서 공유합니다.  
+>  자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
 ##  <a name="PrepareSecondaryDbs"></a> 수동으로 보조 데이터베이스를 준비하려면  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 마법사와 독립적으로 보조 데이터베이스를 준비하려면 다음 방법 중 하나를 사용합니다.  
@@ -109,7 +110,7 @@ ms.locfileid: "68014183"
   
  필요에 따라 마법사를 실행하기 전에 모든 보조 데이터베이스를 준비할 수 있습니다. 그런 다음 마법사의 **초기 데이터 동기화 지정** 페이지에서 **조인만** 을 선택하여 새 보조 데이터베이스를 가용성 그룹에 자동으로 조인합니다.  
   
-##  <a name="LaunchWiz"></a> 관련 태스크  
+##  <a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

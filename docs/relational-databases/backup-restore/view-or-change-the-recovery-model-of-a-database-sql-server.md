@@ -1,7 +1,7 @@
 ---
-title: 데이터베이스의 복구 모델 보기 또는 변경(SQL Server) | Microsoft 문서
-ms.custom: ''
-ms.date: 05/10/2019
+title: 데이터베이스 복구 모델 설정
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908806"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254049"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "72908806"
   자세한 설명을 확인하려면 [복구 모델](recovery-models-sql-server.md)을 참조하세요.
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 
 -   [전체 복구 모델 또는 대량 로그된 복구 모델](recovery-models-sql-server.md)에서 전환하기 **전에** [트랜잭션 로그를 백업](back-up-a-transaction-log-sql-server.md)합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "72908806"
   
 **참고!** 대량 작업 중에 전체 복구 모델로 전환하면 대량 작업 로깅이 최소 로깅에서 전체 로깅으로 바뀌며 그 반대의 경우도 마찬가지입니다.  
   
-###  <a name="Security"></a> 필수 사용 권한  
+###  <a name="Security"></a> 필요한 권한  
    데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
--   [작업을 사용하지 않거나 사용하도록 설정](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
@@ -145,7 +145,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
 ## <a name="see-also"></a>참고 항목  
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   

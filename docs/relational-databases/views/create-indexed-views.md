@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123505"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325515"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 
@@ -54,22 +54,22 @@ ms.locfileid: "68123505"
 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 상황이 발생할 때마다 **필요한 값** 열에 표시된 값으로 설정되어야 합니다.
 
 - 뷰와 뷰의 후속 인덱스가 생성됩니다.
-- 테이블을 만들 때 뷰에서 참조되는 기본 테이블입니다.
+- 뷰를 만들 때 뷰에서 참조되는 기본 테이블입니다.
 - 인덱싱된 뷰에 참가하는 테이블에서 삽입, 업데이트 또는 삭제 작업이 수행됩니다. 이 요구 사항에는 대량 복사, 복제, 분산 쿼리 등의 작업이 포함됩니다.
 - 쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하여 쿼리 계획을 만듭니다.
 
-|Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|
+|Set 옵션|필수 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|켜기|켜기|켜기|OFF|
+|ANSI_PADDING|켜기|켜기|켜기|OFF|
+|ANSI_WARNINGS<sup>1</sup>|켜기|켜기|켜기|OFF|
+|ARITHABORT|켜기|켜기|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|켜기|켜기|켜기|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|켜기|켜기|켜기|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
-<sup>1</sup> `ANSI_WARNINGS`를 켜기로 설정하면 암시적으로 `ARITHABORT`를 켜기로 설정하게 됩니다.
+<sup>1</sup>`ANSI_WARNINGS`를 켜기로 설정하면 암시적으로 `ARITHABORT`를 켜기로 설정하게 됩니다.
 
 OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유일한 값은 `ARITHABORT` 설정입니다. 모든 DB-Library 값은 **sp_configure** 를 사용하여 서버 수준에서 또는 SET 명령을 사용하여 애플리케이션에서 올바르게 설정해야 합니다.
 
@@ -153,7 +153,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 
 ### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 사용 권한
+#### <a name="Permissions"></a> 권한
 
 데이터베이스에는 **CREATE VIEW** 권한이 필요하고 뷰를 만들 구성표에는 **ALTER** 권한이 필요합니다.
 

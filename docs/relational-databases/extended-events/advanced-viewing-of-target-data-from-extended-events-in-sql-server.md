@@ -1,6 +1,5 @@
 ---
-title: SQL Server 확장 이벤트의 대상 데이터 고급 보기 | Microsoft 문서
-ms.custom: ''
+title: 확장 이벤트의 대상 데이터에 대한 고급 보기
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909422"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255756"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 
@@ -69,7 +69,7 @@ Azure SQL 데이터베이스와 관련된 확장 이벤트에 대한 설명은 �
 
 
 
-## <a name="a-general-options"></a>1\. 일반 옵션
+## <a name="a-general-options"></a>A. 일반 옵션
 
 
 일반적으로 고급 옵션은 다음과 같은 방법으로 액세스됩니다.
@@ -82,7 +82,7 @@ Azure SQL 데이터베이스와 관련된 확장 이벤트에 대한 설명은 �
 
 
 
-## <a name="b-bring-target-data-into-ssms-for-display"></a>2\. 대상 데이터를 표시하기 위해 SSMS로 가져오기
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. 대상 데이터를 표시하기 위해 SSMS로 가져오기
 
 
 SSMS UI에 event_file 대상 데이터를 가져오는 방법에는 여러 가지가 있습니다. event_file 대상을 지정할 때 해당 파일 경로 및 이름을 설정합니다.
@@ -91,7 +91,7 @@ SSMS UI에 event_file 대상 데이터를 가져오는 방법에는 여러 가�
 
 
 - 시스템은 이벤트 세션이 시작될 때마다 새 파일 이름에 큰 정수를 포함하여 세션이 시작되기 이전의 경우와 다른 고유한 파일 이름을 지정합니다.
-  - *예제:* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *예:* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - .XEL 내의 내용은 Notepad.exe를 사용하여 볼 수 있는 일반 텍스트가 아닙니다.
@@ -318,7 +318,7 @@ SSMS 표시 필터는 다음과 같습니다.
 
 ![하나의 노드에 대한 속성 목록이 있는 쿼리 계획](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [XELite: XEL 파일 또는 라이브 SQL 스트림에서 XEvents를 읽을 수 있는 플랫폼 간 라이브러리](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), 2019년 5월에 릴리스됨.
 

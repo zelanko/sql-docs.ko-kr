@@ -1,6 +1,7 @@
 ---
-title: 가용성 데이터베이스 재개(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 데이터베이스 다시 시작
+description: SSMS(SQL Server Management Studio), Transact-SQL(T-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹 내에서 일시 중지된 데이터베이스를 다시 시작하는 단계입니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517951"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822608"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>가용성 데이터베이스 재개(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +36,14 @@ ms.locfileid: "72517951"
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  RESUME 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 재개는 비동기식으로 발생합니다.  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   재개할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.    
 -   가용성 그룹이 온라인 상태여야 합니다.    
 -   주 데이터베이스가 온라인이고 사용 가능한 상태여야 합니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
@@ -93,7 +94,7 @@ ms.locfileid: "72517951"
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 데이터베이스 일시 중지&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: 포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기 | Microsoft 문서
-ms.custom: ''
+title: 포함된 데이터베이스에 대한 포함된 사용자 액세스
+description: 포함된 데이터베이스에 대해 포함된 사용자 액세스를 구성하는 방법 및 기존 로그인/사용자 모델 간의 차이점을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116736"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557898"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116736"
 
  포함된 데이터베이스 사용자 모델에서 master 데이터베이스의 로그인은 존재하지 않습니다. 대신 인증 프로세스가 사용자 데이터베이스에서 일어나며 사용자 데이터베이스에 포함된 데이터베이스 사용자는 master 데이터베이스에 연관된 로그인을 갖지 않습니다. 포함된 데이터베이스 사용자 모델은 Windows 인증 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 지원하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]모두에 사용할 수 있습니다. 포함된 데이터베이스 사용자로 연결하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인증 프로세스를 관리할 책임이 있는 데이터베이스를 알 수 있도록 연결 문자열은 사용자 데이터베이스에 대한 매개 변수를 항상 포함해야 합니다. 포함된 데이터베이스 사용자의 활동은 데이터베이스 인증으로 제한되기 때문에 포함된 데이터베이스 사용자로 연결하는 경우 데이터베이스 사용자 계정은 반드시 사용자가 필요로 하는 각각의 데이터베이스에 독립적으로 생성되어야 합니다. 데이터베이스를 변경하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 새 연결을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 포함된 데이터베이스 사용자는 동일한 사용자가 다른 데이터베이스에 존재하면 데이터베이스를 변경할 수 있습니다.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 포함된 데이터베이스 사용자로 Azure Active Directory ID를 지원합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 Azure Active Directory ID를 포함된 데이터베이스 사용자로 지원합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 경우, 연결 문자열에 데이터베이스 이름이 항상 필요하므로 기존 모델에서 포함된 데이터베이스 사용자 모델로 전환 시 연결 문자열을 변경하지 않아도 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결은 데이터베이스 이름이 (이미 존재하지 않는 경우) 연결 문자열에 반드시 추가되어야 합니다.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68116736"
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽 규칙에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
-- [Azure SQL 데이터베이스 방화벽](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+- [Azure SQL Database 방화벽](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
 - [방법: 방화벽 설정 구성(Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
@@ -74,7 +75,7 @@ ms.locfileid: "68116736"
 |-----------------------|-----------------------------------|  
 |master DB의 컨텍스트에서 암호를 변경하려면:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|사용자 DB의 컨텍스트에서 암호를 변경하려면:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 포함된 데이터베이스 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 설정되어야 합니다. 자세한 내용은 [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)을 참조하세요.  
 - 겹치지 않는 이름을 가진 포함된 데이터베이스 사용자와 로그인은 애플리케이션에서 공존할 수 있습니다.  
@@ -89,5 +90,5 @@ ms.locfileid: "68116736"
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
  [포함된 데이터베이스의 보안 모범 사례](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
+ [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   

@@ -1,6 +1,7 @@
 ---
-title: 논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화 | Microsoft 문서
-ms.custom: ''
+title: 논리적 레코드를 사용하여 관련 행의 변경 내용 그룹화
+description: SQL Server에서 병합 복제를 사용하여 관련 행을 하나의 단위로 변경하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033250"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321507"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "68033250"
   
  다음과 같은 3개의 관련된 테이블을 살펴보십시오.  
   
- ![열 이름만 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-01.gif "Three table logical record, with column names only")  
+ ![열 이름만 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-01.gif "열 이름만 포함하는 3개 테이블 논리적 레코드")  
   
  이 관계의 부모 테이블인 **Customers** 테이블에는 기본 키 열 **CustID**가 있습니다. **Orders** 테이블에는 기본 키 열 **OrderID**가 있으며 **Customers** 테이블의 **CustID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **CustID** 열에 있습니다. 마찬가지로 **OrderItems** 테이블에는 기본 키 열 **OrderItemID**가 있으며 **Orders** 테이블의 **OrderID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **OrderID** 열에 있습니다.  
   
  이 예에서 논리적 레코드는 단일 **CustID** 값에 관련된 **Orders** 테이블의 모든 행 및 **Orders** 테이블의 해당 행과 관련된 **OrderItems** 테이블의 모든 행으로 구성되어 있습니다. 이 다이어그램에서는 Customer2에 대한 논리적 레코드에 있는 3개 테이블의 모든 행을 보여 줍니다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-02.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  아티클 간 논리적 레코드 관계를 정의하려면 [병합 테이블 기사 간의 논리적 레코드 관계 정의](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68033250"
 ### <a name="the-application-of-changes-as-a-unit"></a>변경 내용을 하나의 단위로 적용  
  연결이 끊기는 경우와 같이 병합 프로세스가 중단되는 경우 논리적 레코드를 사용하면 관련 복제된 변경 내용 중 부분적으로 완료된 변경 내용 집합이 롤백됩니다. 예를 들어 구독자가 **OrderID** = 6인 새 주문과 **OrderID** = 6에 대해 **OrderItemID** = 10 및 **OrderItemID** = 11인 두 개의 새 행을 **OrderItems** 테이블에 추가하는 경우를 살펴봅시다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-04.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-04.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  **OrderID** = 6에 대한 **Orders** 행은 완료되었지만 **OrderItems** 10 및 11이 완료되기 전에 복제 프로세스가 중단되고 논리적 레코드가 사용되지 않는 경우 **OrderID** = 6에 대한 **OrderTotal** 값이 **OrderItems** 행에 대한 **OrderAmount** 값의 합계와 일치하지 않게 됩니다. 논리적 레코드가 사용되는 경우에는 관련 **OrderItems** 변경 내용이 복제될 때까지 **OrderID** = 6에 대한 **Orders** 행이 커밋되지 않습니다.  
   
@@ -128,7 +129,7 @@ ms.locfileid: "68033250"
   
      예를 들어 수업 및 학생 데이터를 추적하는 데이터베이스는 다음과 같습니다.  
   
-     ![둘 이상의 부모 테이블이 있는 자식 테이블](../../../relational-databases/replication/merge/media/logical-records-03.gif "Child table with more than one parent table")  
+     ![둘 이상의 부모 테이블이 있는 자식 테이블](../../../relational-databases/replication/merge/media/logical-records-03.gif "둘 이상의 부모 테이블이 있는 자식 테이블")  
   
      **ClassMembers** 의 행이 기본 키 행과 연결되어 있지 않았기 때문에 논리적 레코드를 사용하여 이 관계에 있는 3개의 테이블을 나타낼 수 없습니다. **ClassMembers** 테이블과 **Students** 테이블 간에 논리적 레코드를 만들 수 있듯이 **Classes** 테이블과 **ClassMembers**테이블 간에도 논리적 레코드를 만들 수 있지만 이 3개의 테이블 간에는 논리적 레코드를 만들 수 없습니다.  
   

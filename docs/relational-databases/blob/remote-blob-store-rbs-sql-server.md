@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119448"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258179"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "74119448"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 | RBS 다운로드 위치 |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 기능 팩](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS 다운로드 페이지](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
@@ -71,7 +71,7 @@ ms.locfileid: "74119448"
 ### <a name="credential-store-symmetric-key"></a>자격 증명 저장소 대칭 키  
  공급자가 자격 증명 저장소 내에 저장되는 비밀의 설정 및 사용을 요구하는 경우, RBS는 대칭 키를 사용하여 공급자의 Blob 저장소에 대한 권한을 확보하기 위해 클라이언트가 사용할 수 있는 공급자 비밀을 암호화합니다.  
   
--   RBS 2016은 **AES_128** 대칭 키를 사용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이전 버전과의 호환성을 위한 경우를 제외하고 새로운 **TRIPLE_DES** 키 생성을 허용하지 않습니다. 자세한 내용은 [CREATE SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)를 참조하세요.  
+-   RBS 2016은 **AES_128** 대칭 키를 사용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은 이전 버전과의 호환성을 위한 경우를 제외하고 새로운 **TRIPLE_DES** 키 생성을 허용하지 않습니다. 자세한 내용은 [CREATE SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)를 참조하세요.  
   
 -   RBS 2014 이전 버전은 오래된 **TRIPLE_DES** 대칭 키 알고리즘을 사용하여 암호화된 암호를 유지하는 자격 증명 저장소를 사용합니다. 현재 **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)] 을(를) 사용하는 경우, 이 항목에 포함된 단계에 따라 보다 강력한 암호화 방법으로 키를 회전하도록 보안을 향상시키는 것이 좋습니다.  
   

@@ -1,6 +1,6 @@
 ---
-title: 메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업 | Microsoft 문서
-ms.custom: ''
+title: 메모리 최적화 테이블이 포함된 데이터베이스 백업
+ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951203"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412793"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67951203"
 ## <a name="full-database-backup"></a>전체 데이터베이스 백업  
  디스크 기반 테이블의 백업 방식은 동일하므로, 여기서는 메모리 최적화 지속형 테이블이 포함된 데이터베이스의 백업에 대해 중점적으로 설명합니다. 메모리 최적화 파일 그룹의 검사점 파일 쌍은 다양한 상태에 있을 수 있습니다. 아래의 표에서는 백업되는 파일의 부분에 대해 설명합니다.  
   
-|검사점 파일 쌍 상태|백업|  
+|검사점 파일 쌍 상태|Backup|  
 |--------------------------------|------------|  
 |PRECREATED|파일 메타데이터만|  
 |UNDER CONSTRUCTION|파일 메타데이터만|  

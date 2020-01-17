@@ -1,6 +1,7 @@
 ---
-title: 구성할 서버 선택(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs
-ms.custom: ''
+title: '보안 구성 마법사: 서버 선택'
+descriptoin: Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e97c918af264b2628b77bbd5d31958aea5c5d978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952052"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822315"
 ---
-# <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>구성할 서버 선택(데이터베이스 미러링 보안 구성 마법사)
+# <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>데이터베이스 미러링 구성 마법사: 구성할 서버 선택 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 페이지를 사용하여 지금 구성할 서버 인스턴스를 지정할 수 있습니다. 마법사를 계속하려면 서버 인스턴스를 적어도 하나 이상 선택해야 합니다.  
   

@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305281"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224509"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
@@ -170,7 +170,7 @@ ping contoso.com
 
    다음 표에서는 표시될 수 있는 몇 가지 오류 메시지를 나열하고 해결하는 방법을 제안합니다.
 
-   | 오류 메시지입니다. | 권장 |
+   | 오류 메시지 | 권장 |
    |---|---|
    | `Necessary packages are not installed` | 영역 조인 명령을 다시 실행하기 전에 Linux 배포판의 패키지 관리자를 사용하여 패키지를 설치합니다. |
    | `Insufficient permissions to join the domain` | Linux 머신을 도메인에 조인할 수 있는 권한이 있는지 도메인 관리자에게 확인합니다. |
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server는 SSSD 및 NSS를 사용하여 사용자 계정 및 그룹을 SID(보안 식별자)에 매핑합니다. SSSD가 구성되어 실행 중이어야 SQL Server가 AD 로그인을 성공적으로 만들 수 있습니다. **realmd** 는 일반적으로 도메인 조인을 하는 중인 이 작업을 자동으로 수행하지만 경우에 따라 이 작업을 별도로 수행해야 합니다.
 
-   자세한 내용은 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951)하는 방법과 [SSSD를 사용하도록 NSS를 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)하는 방법을 참조하세요.
+   자세한 내용은 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951)하는 방법과 [SSSD를 사용하도록 NSS를 구성](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)하는 방법을 참조하세요.
 
 1. 이제 도메인에서 사용자에 관한 정보를 수집할 수 있고 해당 사용자로 Kerberos 티켓을 가져올 수 있는지 확인합니다. 다음 예제에서는 이를 위해 **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 및 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 명령을 사용합니다.
 
@@ -210,7 +210,7 @@ ping contoso.com
 SQL Server는 AD 관련 쿼리에 타사 통합자의 코드 또는 라이브러리를 사용하지 않습니다. SQL Server는 항상 이 설치 프로그램에서 직접 openldap library 호출을 사용하여 AD를 쿼리합니다. 타사 통합자는 Linux 호스트를 AD 도메인에 조인하는 데만 사용되며 SQL Server는 이러한 유틸리티와 직접 통신하지 않습니다.
 
 > [!IMPORTANT]
-> **mssql-conf** `network.disablesssd` 구성 옵션 사용에 관한 권장 사항은 [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#additionalconfig)(SQL Server on Linux에서 Active Directory 인증 사용) 문서의 **Additional configuration options**(추가 구성 옵션) 섹션을 참조하세요.
+> **mssql-conf** `network.disablesssd` 구성 옵션 사용에 관한 권장 사항은 [SQL Server on Linux에서 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md#additionalconfig) 문서의 **추가 구성 옵션** 섹션을 참조하세요.
 
 **/etc/krb5.conf**가 올바르게 구성되어 있는지 확인합니다. 타사 Active Directory 공급자 대부분의 경우 이 구성이 자동으로 수행됩니다. 그러나 이후 문제를 방지하기 위해 **/etc/krb5.conf**에서 다음 값을 확인하세요.
 

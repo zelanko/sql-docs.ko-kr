@@ -1,6 +1,7 @@
 ---
-title: 게시 정보, 경고(트랜잭션 게시) | Microsoft 문서
-ms.custom: ''
+title: 경고(트랜잭션 게시 정보)
+description: 트랜잭션 게시 정보 대화 상자의 ‘경고’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6efff6deabc18db61ab8390d912ef6918d42b2e3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769957"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321308"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>게시 정보, 경고(트랜잭션 게시)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,14 +50,14 @@ ms.locfileid: "68769957"
   
     -   나쁨  
   
-    -   심각  
+    -   위험  
   
  경고를 설정할 때는 임계값도 설정해야 합니다. 예를 들어 경고 **대기 시간이 임계값을 초과하는 경우 경고**를 설정하면 게시자에서 커밋 중인 트랜잭션과 구독자에서 커밋 중인 트랜잭션 간에 허용 가능한 시간을 선택해야 합니다.  
   
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
 ## <a name="options"></a>옵션  
- **설정**  
+ **Enabled**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   
  **경고**  

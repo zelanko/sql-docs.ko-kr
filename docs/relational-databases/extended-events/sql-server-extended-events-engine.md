@@ -1,6 +1,5 @@
 ---
-title: SQL Server 확장 이벤트 엔진 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 확장 이벤트 엔진
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242959"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
 
@@ -38,9 +37,9 @@ ms.locfileid: "68009406"
   
  다음 그림은 확장 이벤트 세션을 간략히 요약하여 보여 줍니다. 자세한 내용은 [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요.  
   
- ![자세한 확장 이벤트 아키텍처](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
+ ![자세한 확장 이벤트 아키텍처](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "자세한 확장 이벤트 아키텍처")  
   
- 다음에 유의하세요.  
+ 다음 사항에 유의하세요.  
   
 -   각 Windows 프로세스에는 하나 이상의 모듈(**Win32 프로세스**, **Win32 모듈**)이 있을 수 있습니다. 이를 *바이너리* 또는 *실행 모듈*이라고도 합니다.  
   

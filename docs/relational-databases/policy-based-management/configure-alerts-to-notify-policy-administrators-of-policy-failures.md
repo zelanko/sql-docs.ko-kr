@@ -1,6 +1,7 @@
 ---
-title: 정책 관리자에 정책 실패를 알리도록 경고 구성 | Microsoft 문서
-ms.custom: ''
+title: 관리자에게 정책 실패를 알리도록 경고 구성
+description: SQL Server에서 정책 평가에 실패할 경우 정책 관리자에게 알리도록 경고를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ef46a36296da926f2cb62599b41774b1d29f5ba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1562a1799e442292d61857d4598da69b4c11c70f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109825"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557821"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

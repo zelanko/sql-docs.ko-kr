@@ -1,20 +1,20 @@
 ---
-title: AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
+title: AKS(Azure Kubernetes Services)를 사용하여 SQL Server 컨테이너 배포
 description: 이 자습서에서는 Azure Kubernetes Service의 Kubernetes를 사용하여 SQL Server 고가용성 솔루션을 배포하는 방법을 보여 줍니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653701"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558353"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
@@ -255,7 +255,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
    >[!NOTE]
    >배포를 만든 후에 Pod가 표시될 때까지 몇 분 정도 걸릴 수 있습니다. 이 지연은 클러스터가 Docker 허브에서 [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) 이미지를 끌어오기 때문에 발생합니다. 이미지를 처음 끌어온 후, 해당 이미지가 이미 캐시되어 있는 노드에 배포하는 경우 후속 배포는 더 빨라질 수 있습니다. 
 
-1. 서비스가 실행되고 있는지 확인합니다. 다음 명령을 실행합니다.
+1. 서비스가 실행되고 있는지 확인합니다. 다음 명령 실행:
 
    ```azurecli
    kubectl get services 

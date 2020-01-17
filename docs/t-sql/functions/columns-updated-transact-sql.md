@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721928"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 테이블이나 뷰에서 삽입되거나 업데이트된 열을 나타내는 **varbinary** 비트 패턴을 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거의 본문 내 어디서나 `COLUMNS_UPDATED`를 사용하여 트리거에서 특정 작업을 실행해야 하는지 여부를 테스트합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `COLUMNS_UPDATED`는 여러 열에서 수행되는 UPDATE 또는 INSERT 작업을 테스트하기 위한 것입니다. 한 열에 대한 UPDATE 또는 INSERT를 테스트하려면 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)를 사용하세요.
   
 `COLUMNS_UPDATED`는 왼쪽에서 오른쪽으로 정렬된 하나 이상의 바이트를 반환합니다. 각 바이트의 가장 오른쪽 비트는 최하위 비트입니다. 가장 왼쪽의 바이트에 있는 가장 오른쪽 비트는 테이블의 첫 번째 테이블 열을 나타내며, 왼쪽의 다음 비트는 두 번째 열을 나타내는 방식 등으로 이어집니다. `COLUMNS_UPDATED`는 트리거를 만든 테이블에 8개를 초과하는 열이 있는 경우 가장 왼쪽에 있는 최하위 바이트를 사용하여 여러 바이트를 반환합니다. 명시적 값 또는 암시적(NULL) 값이 삽입된 열이 있으므로 `COLUMNS_UPDATED`는 INSERT 작업의 모든 열에 대해 TRUE를 반환합니다.
@@ -74,7 +74,7 @@ WHERE TABLE_NAME = 'Person';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>1\. COLUMNS_UPDATED를 사용하여 테이블의 첫 번째 8개 열 테스트  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. COLUMNS_UPDATED를 사용하여 테이블의 첫 번째 8개 열 테스트  
 다음 예제에서는 `employeeData` 및 `auditEmployeeData`의 두 테이블을 만듭니다. `employeeData` 테이블에는 중요한 직원 급여 정보가 있으므로 인력 관리 부서의 멤버만 이를 수정할 수 있습니다. 직원의 SSN(사회 보장 번호), 연봉 또는 은행 계좌 번호가 변경되면 감사 레코드가 생성되고 `auditEmployeeData` 감사 테이블에 삽입됩니다.
   
 `COLUMNS_UPDATED()` 함수를 사용하여 중요한 직원 정보가 포함된 열의 변경 내용을 빠르게 테스트할 수 있습니다. `COLUMNS_UPDATED()`를 사용하는 경우 이 방법은 테이블의 처음 8개 열에 대한 변경 내용을 검색하려고 할 때만 작동합니다.
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>2\. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
 처음 8개 이외의 테이블 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에서 정확한 비트를 반환하는지 테스트합니다. 다음 예제에서는 `AdventureWorks2012.Person.Person` 테이블의 `3`, `5` 및 `9` 열에 영향을 주는 업데이트를 테스트합니다.
   
 ```sql
@@ -206,7 +206,7 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [비트 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
 [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)

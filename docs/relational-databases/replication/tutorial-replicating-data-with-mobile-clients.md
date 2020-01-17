@@ -1,6 +1,7 @@
 ---
-title: '자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합) | Microsoft Docs'
-ms.custom: ''
+title: '자습서: 병합 복제 구성'
+description: 이 자습서에서는 SQL Server와 모바일 클라이언트 간에 병합 복제를 구성하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517970"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321857"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "72517970"
 
 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)를 참조하세요.
   
-## <a name="what-you-will-learn"></a>학습 내용  
+## <a name="what-you-will-learn"></a>알아볼 내용  
 이 자습서에서는 병합 복제를 사용하여 중앙 데이터베이스의 데이터를 여러 모바일 사용자에게 게시하여 각 사용자가 고유하게 필터링된 데이터의 하위 집합을 얻을 수 있도록 안내합니다. 
 
 이 자습서에서는 다음 작업 방법을 배웁니다.
@@ -109,22 +110,22 @@ ms.locfileid: "72517970"
   
 10. **테이블 행 필터링** 페이지에서 **Employee(Human Resources)** 를 선택하고 **추가**를 선택한 다음, **선택한 필터 확장을 위해 조인 추가**를 선택합니다.  
   
-    1\. **조인 추가** 대화 상자의 **조인된 테이블**에서 **Sales.SalesOrderHeader**를 선택합니다. **수동으로 조인 문 작성**을 선택하고, 다음과 같이 조인 문을 완성합니다.  
+    a. **조인 추가** 대화 상자의 **조인된 테이블**에서 **Sales.SalesOrderHeader**를 선택합니다. **수동으로 조인 문 작성**을 선택하고, 다음과 같이 조인 문을 완성합니다.  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    2\. **조인 옵션 지정**에서 **고유 키**를 선택한 다음, **확인**을 선택합니다.
+    b. **조인 옵션 지정**에서 **고유 키**를 선택한 다음, **확인**을 선택합니다.
 
     ![필터에 조인을 추가하기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. **테이블 행 필터링** 페이지에서 **SalesOrderHeader**를 선택하고 **추가**를 선택한 다음, **선택한 필터 확장을 위해 조인 추가**를 선택합니다.  
   
-    1\. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.    
-    2\. **작성기를 사용하여 명령문 만들기**를 선택합니다.  
-    c. **미리 보기** 상자에서 조인 문이 다음과 같은지 확인합니다.  
+    a. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.    
+    b. **작성기를 사용하여 명령문 만들기**를 선택합니다.  
+    다. **미리 보기** 상자에서 조인 문이 다음과 같은지 확인합니다.  
   
     ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
@@ -164,14 +165,14 @@ ms.locfileid: "72517970"
   
 2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
   
-   1\. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다. 
+   a. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다. 
   
-   2\. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_merge**를 선택하고 **확인**을 선택합니다. 다시 **확인**을 선택합니다. 
+   b. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_merge**를 선택하고 **확인**을 선택합니다. 다시 **확인**을 선택합니다. 
 
    ![병합 에이전트 로그인 추가를 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-참조 항목:  
+자세한 내용은 다음을 참조하세요.  
 - [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md) 
 - [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)  
@@ -240,14 +241,14 @@ ms.locfileid: "72517970"
   
 2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge** 게시를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
    
-   1\. **데이터 파티션** 페이지를 선택한 다음, **추가**를 선택합니다.   
-   2\. **데이터 파티션 추가** 대화 상자의 **HOST_NAME 값** 상자에 **adventure-works\pamela0**를 입력한 다음, **확인**을 선택합니다.  
-   c. 새로 추가된 파티션을 선택하고 **선택한 스냅샷 지금 생성**을 선택한 다음, **확인**을 선택합니다. 
+   a. **데이터 파티션** 페이지를 선택한 다음, **추가**를 선택합니다.   
+   b. **데이터 파티션 추가** 대화 상자의 **HOST_NAME 값** 상자에 **adventure-works\pamela0**를 입력한 다음, **확인**을 선택합니다.  
+   다. 새로 추가된 파티션을 선택하고 **선택한 스냅샷 지금 생성**을 선택한 다음, **확인**을 선택합니다. 
 
    ![파티션 추가를 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-참조 항목:  
+자세한 내용은 다음을 참조하세요.  
 - [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
 - [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -276,7 +277,7 @@ ms.locfileid: "72517970"
 2. 네트워크 연결이 게시자와 구독자 간에 데이터를 동기화할 수 있는 경우 이 프로시저를 반복합니다.
 3. 복제된 변경 내용을 보려면 다른 서버에 **SalesOrderHeader** 또는 **SalesOrderDetail** 테이블을 쿼리합니다.  
   
-참조 항목:   
+자세한 내용은 다음을 참조하세요.   
 - [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [데이터 동기화](../../relational-databases/replication/synchronize-data.md)  
 - [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

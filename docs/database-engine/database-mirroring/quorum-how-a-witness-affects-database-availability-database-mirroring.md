@@ -1,6 +1,7 @@
 ---
-title: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링) | Microsoft Docs'
-ms.custom: ''
+title: 미러링 모니터가 데이터베이스 가용성에 미치는 영향
+description: 데이터베이스 미러링이 쿼럼 및 데이터베이스 가용성에 미치는 영향에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025414"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822687"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>쿼럼: 미러링 모니터가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68025414"
   
  다음 그림에서는 이러한 유형의 쿼럼을 보여 줍니다.  
   
- ![쿼럼: 전체, 미러링 모니터 서버와 파트너; 두 파트너 모두](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "쿼럼: 전체, 미러링 모니터 서버와 파트너; 두 파트너 모두")  
+ ![쿼럼: 전체, 미러링 모니터와 파트너, 두 파트너](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "쿼럼: 전체, 미러링 모니터와 파트너, 두 파트너")  
   
  현재 주 서버에 쿼럼이 있으면 데이터베이스 소유자가 수동 장애 조치를 수행하지 않는 한 주 서버가 주 서버의 역할을 소유하고 데이터베이스를 계속 제공합니다. 주 서버가 쿼럼을 잃으면 데이터베이스 제공을 중지합니다. 자동 장애 조치는 주 데이터베이스가 쿼럼을 잃어 더 이상 데이터베이스를 제공하지 않는 경우에만 발생할 수 있습니다.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "68025414"
 ### <a name="how-quorum-affects-database-availability"></a>데이터베이스 가용성에 대한 쿼럼의 영향  
  다음 그림에서는 미러링 모니터 서버와 파트너가 협력하여 지정한 시간에 하나의 파트너만 주 역할을 수행하고 현재 주 서버만 해당 데이터베이스를 온라인 상태로 만들 수 있게 하는 방법을 보여 줍니다. 두 시나리오는 모두 전체 쿼럼 및 주 역할의 **Partner_A** 와 미러 역할의 **Partner_B** 로 시작합니다.  
   
- ![미러링 모니터 서버 및 파트너의 협력 방식](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "미러링 모니터 서버 및 파트너의 협력 방식")  
+ ![미러링 모니터 및 파트너의 협력 방식](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "미러링 모니터 및 파트너의 협력 방식")  
   
  시나리오 1은 원래 주 서버(**Partner_A**)에 문제가 발생한 후 미러링 모니터 서버와 미러 서버가 주 서버 **Partner_A**를 더 이상 사용할 수 없음에 동의하고 쿼럼을 형성하는 방법을 보여 줍니다. 그런 다음 미러 서버 **Partner_B** 가 주 역할을 수행합니다. 자동 장애 조치(failover)가 수행되고 **Partner_B**는 해당 데이터베이스 복사본을 온라인 상태로 만듭니다. 그런 다음 **Partner_B** 가 다운되고 해당 데이터베이스는 오프라인 상태가 됩니다. 나중에 이전 주 서버였던 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결되지만 미러링 모니터 서버와 통신할 때 이제 **Partner_B** 가 주 역할을 소유하므로 **Partner_A** 에서 해당 데이터베이스 복사본을 온라인 상태로 만들 수 없습니다. **Partner_B** 는 세션에 다시 참가할 때 데이터베이스를 다시 온라인 상태로 만듭니다.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "68025414"
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [데이터베이스 미러링 중에 발생 가능한 오류](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [미러링 상태&#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

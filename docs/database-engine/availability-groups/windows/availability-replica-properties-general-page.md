@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹에 대한 가용성 복제본 속성(일반 페이지)
+title: 일반 페이지(가용성 복제본 속성)
 description: SQL Server Management Studio의 '가용성 복제본 속성' 페이지의 '일반' 페이지에 있는 다양한 속성에 대한 설명입니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988665"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241736"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 가용성 복제본 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "67988665"
  **동기 커밋**  
  주 복제본은 보조 복제본이 트랜잭션을 디스크에 쓸 때까지 기다렸다가 지정된 트랜잭션을 커밋합니다.  
   
- 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+ 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
  **Failover mode**  
  복제본의 장애 조치(failover) 모드로, 다음 중 하나입니다.  

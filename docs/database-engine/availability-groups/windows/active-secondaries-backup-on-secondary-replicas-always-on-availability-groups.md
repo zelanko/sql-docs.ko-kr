@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹의 보조 복제본으로 지원되는 백업 오프로드
-description: Always On 가용성 그룹의 보조 복제본으로 백업을 오프로딩하는 경우 지원되는 다양한 백업 유형에 대해 알아봅니다.
-ms.custom: seodec18
+title: 보조 가용성 그룹 복제본에 대한 백업 오프로드
+description: Always On 가용성 그룹의 보조 복제본으로 백업을 오프로드하는 경우 지원되는 다양한 백업 유형에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807421"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822417"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>가용성 그룹의 보조 복제본으로 지원되는 백업 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 보조 복제본에서의 백업 작업 수행 지원이 포함됩니다. 백업 작업은 백업 압축과 함께 I/O 및 CPU에 상당한 부담을 줄 수 있습니다. 백업을 동기화되었거나 동기화 중인 보조 복제본으로 오프로드하면 계층 1 작업에 대한 주 복제본을 호스팅하는 서버 인스턴스에서 리소스를 사용할 수 있습니다.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 보조 복제본에서 백업을 수행하기 위한 지원이 포함됩니다. 백업 작업은 백업 압축과 함께 I/O 및 CPU에 상당한 부담을 줄 수 있습니다. 백업을 동기화되었거나 동기화 중인 보조 복제본으로 오프로드하면 계층 1 작업에 대한 주 복제본을 호스팅하는 서버 인스턴스에서 리소스를 사용할 수 있습니다.  
 
 > [!NOTE]  
 >  RESTORE 문은 가용성 그룹의 주 데이터베이스나 보조 데이터베이스에서 허용되지 않습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "72807421"
  
 ##  <a name="SupportedBuTypes"></a> 보조 복제본에서 지원되는 백업 유형  
   
--   **BACKUP DATABASE** 는 보조 복제본에서 실행될 때 데이터베이스, 파일 또는 파일 그룹의 복사 전용 전체 백업만 지원합니다. 복사 전용 백업은 로그 체인에 영향을 미치거나 차등 비트맵을 지우지 않습니다.  
+-   **BACKUP DATABASE**는 보조 복제본에서 실행될 때 데이터베이스, 파일 또는 파일 그룹의 복사 전용 전체 백업만 지원합니다. 복사 전용 백업은 로그 체인에 영향을 미치거나 차등 비트맵을 지우지 않습니다.  
   
 -   차등 백업은 보조 복제본에서 지원되지 않습니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "72807421"
   
 2.  백업을 수행할 후보 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 모든 가용성 데이터베이스에 대한 스크립트 백업 작업을 만듭니다. 자세한 내용은 "후속 작업: [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)의 보조 복제본에 백업을 구성한 후" 섹션을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **보조 복제본에 백업을 구성하려면**  
   
 -   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  

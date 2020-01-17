@@ -1,6 +1,7 @@
 ---
-title: SQL Server용 Red Hat Enterprise Linux 공유 클러스터 구성
-description: SQL Server용 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성하여 고가용성을 구현합니다.
+title: SQL Server on Linux의 RHEL FCI 구성
+description: SQL Server on Linux 고가용성을 위해 RHEL(Red Hat Enterprise Linux) 공유 디스크 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252237"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656630"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server용 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 가이드에서는 Red Hat Enterprise Linux에서 SQL Server용 2노드 공유 디스크 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/) 위에 빌드된 RHEL(Red Hat Enterprise Linux) [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)을 기반으로 합니다. SQL Server 인스턴스는 두 노드 중 하나에서 활성화됩니다.
+이 가이드에서는 Red Hat Enterprise Linux에서 SQL Server의 2노드 공유 디스크 장애 조치 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/) 위에 빌드된 RHEL(Red Hat Enterprise Linux) [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)을 기반으로 합니다. SQL Server 인스턴스는 두 노드 중 하나에서 활성화됩니다.
 
 > [!NOTE] 
 > Red Hat HA 추가 기능 및 설명서에 액세스하려면 구독이 필요합니다. 
@@ -202,7 +203,7 @@ NFS 사용 방법에 대한 자세한 내용은 다음 리소스를 참조하세
 
 * [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)(NFS 서버 및 firewalld | 스택 교환)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)(NFS 볼륨 탑재 | Linux 네트워크 관리자 가이드)
-* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)(NFS 서버 구성 | Red Hat 고객 포털)
+* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)(NFS 서버 구성 | Red Hat 고객 포털)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>공유 스토리지를 가리키도록 데이터베이스 파일 디렉터리 탑재
 

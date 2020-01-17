@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285700"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308000"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -27,13 +27,14 @@ ms.locfileid: "71285700"
 > 여러 서버가 있는 네트워크를 사용하는 경우 서버의 드롭다운 목록을 확장하는 대신 서버 이름을 입력하는 것이 더 쉽습니다. 드롭다운 목록을 클릭하면 사용 가능한 모든 서버를 네트워크에 쿼리하는 데 많은 시간이 걸릴 수 있으며, 원하는 서버가 결과에 포함되지 않을 수도 있습니다.
 
 ## <a name="connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server"></a>.NET Framework Data Provider for SQL Server를 사용하여 SQL Server에 연결 
-마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for SQL Server**를 선택하는 경우 페이지에는 공급자에 대해 그룹화된 옵션 목록이 표시됩니다. 이러한 옵션 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히도 엔터프라이즈 데이터베이스에 연결하려면 일반적으로 몇 가지 정보만 제공해야 합니다. 다른 설정의 기본값을 무시할 수 있습니다.
+마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for SQL Server**를 선택하는 경우 페이지에는 공급자에 대해 그룹화된 옵션 목록이 표시됩니다. 이러한 속성 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히도 엔터프라이즈 데이터베이스에 연결하려면 일반적으로 몇 가지 정보만 제공해야 합니다. 다른 설정의 기본값은 무시할 수 있습니다.
 
 > [!NOTE]
 > 이 데이터 공급자에 대한 연결 옵션은 SQL Server가 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 |필수 정보|.NET Framework Data Provider for SQL Server 속성|
 |---|---|
+|인증|기본적으로 **NotSpecified**를 “통합 보안”으로 지정하거나 다른 인증 모드를 선택합니다. “대화형 Active Directory 인증”은 지원되지 않습니다. |
 |서버 이름|**데이터 원본**|
 |인증(로그인) 정보|**통합 보안** 또는 **사용자 ID**/**암호**<br/>서버에 있는 데이터베이스의 드롭다운 목록을 보려면 먼저 유효한 로그인 정보를 제공해야 합니다.|
 |데이터베이스 이름|**초기 카탈로그**|
@@ -63,7 +64,7 @@ ms.locfileid: "71285700"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
 
 ## <a name="connect-to-sql-server-with-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server를 사용하여 SQL Server에 연결 
-ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버를 사용하여 연결하려면 **.NET Framework Data Provider for ODBC**를 데이터 원본으로 선택합니다. 이 공급자는 ODBC 드라이버 주위의 래퍼 역할을 합니다.
+ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버를 사용하여 연결하려면 **.NET Framework Data Provider for ODBC**를 데이터 원본으로 선택합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.
 
 > [!TIP]
 > **최신 드라이버를 가져오세요**. [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)를 다운로드합니다.
@@ -88,7 +89,7 @@ ODBC 드라이버의 이름입니다. 이름은 드라이버의 다른 버전에
 **Server**  
 SQL Server 이름입니다.
 
-**데이터베이스 백업**  
+**Database**  
 데이터베이스의 이름입니다.  
 
 **Trusted_Connection** 또는 **Uid**/**Pwd**  
@@ -124,7 +125,7 @@ Windows 통합 인증을 사용하여 연결하려면 **Trusted_Connection=Yes**
 ## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
 여기에 나열되지 않은 데이터 공급자를 사용하여 SQL Server에 연결하는 방법에 대한 자세한 내용은 [SQL Server 연결 문자열](https://www.connectionstrings.com/sql-server/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

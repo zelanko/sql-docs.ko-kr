@@ -1,5 +1,6 @@
 ---
-title: 결과 페이지(Always On 가용성 그룹 마법사) | Microsoft Docs
+title: 결과 페이지(Always On 가용성 그룹 마법사)
+description: SQL Server Management Studio GUI의 Always On 가용성 그룹 마법사에 있는 “결과” 페이지의 옵션에 대해 설명합니다.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014244"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235453"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>결과 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +36,12 @@ ms.locfileid: "68014244"
  **결과**  
  완료된 각 단계에 대해 다음 하이퍼링크 텍스트 중 하나를 표시합니다.  
   
-|결과|설명|  
+|결과|Description|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
-|**성공**|유효성 검사 단계가 성공적으로 완료되었음을 나타냅니다.|  
+|**Success**|유효성 검사 단계가 성공적으로 완료되었음을 나타냅니다.|  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

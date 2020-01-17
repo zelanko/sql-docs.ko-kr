@@ -1,6 +1,7 @@
 ---
-title: 구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독) | Microsoft 문서
-ms.custom: ''
+title: 배포자에서 구독자로의 연결 기록
+description: SSMS(SQL Server Management Studio)의 ‘배포자에서 구독자로의 연결 기록’ 탭에 있는 옵션을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 88199fd5a84fbfbc04f4dacf32d5694bb2f9323b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 56ecf351e60237e099b4c498ba56ae1a956d142a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769450"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321700"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68769450"
   
 -   Error  
   
--   완료  
+-   Completed  
   
 -   다시 시도 중  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68769450"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **기간**  
+ **Duration**  
  이 세션에서 배포 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트 세션이 종료된 경우에는 총 세션 시간을 나타냅니다.  
   
  **오류 메시지**  

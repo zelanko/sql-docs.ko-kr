@@ -1,6 +1,6 @@
 ---
-title: 메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원 | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스의 증분 복원 - 메모리 최적화 테이블
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1305f3239f40fa6d699243e0512ce774da5109c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100223"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412581"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
 
@@ -90,7 +90,7 @@ ALTER DATABASE imoltp
 GO  
 ```  
   
-### <a name="backup"></a>백업  
+### <a name="backup"></a>Backup  
  이 샘플에서는 주 파일 그룹과 메모리 최적화 파일 그룹을 백업하는 방법을 보여 줍니다. 주 파일 그룹과 메모리 최적화 파일 그룹을 함께 지정해야 합니다.  
   
 ```sql

@@ -1,6 +1,7 @@
 ---
-title: 역할 전환 중 서비스 중단 예측(데이터베이스 미러링) | Microsoft Docs
-ms.custom: ''
+title: 미러링 장애 조치(failover) 중 서비스 중단 예측
+description: 주 역할에서 보조 역할로 데이터베이스 미러링을 장애 조치(failover)하는 경우 서비스 중단을 예측합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874184"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253574"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "70874184"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>자동 장애 조치 중 서비스 중단 예측  
  다음 그림에서는 오류 검색 및 장애 조치 시간이 **Partner_B**에서 자동 장애 조치를 완료하는 데 필요한 전체 시간에 어떤 영향을 주는지를 보여 줍니다. 장애 조치에는 데이터베이스를 롤포워드할 시간(다시 실행 단계)과 데이터베이스를 온라인 상태로 만들기 위한 약간의 시간이 필요합니다. 커밋되지 않은 모든 트랜잭션이 롤백되는 실행 취소 단계는 새로운 주 데이터베이스가 온라인 상태가 된 다음 수행되고 장애 조치 후에도 계속됩니다. 데이터베이스는 실행 취소 단계 중에 사용할 수 있습니다.  
   
- ![오류 검색 및 장애 조치 시간](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "오류 검색 및 장애 조치 시간")  
+ ![오류 검색 및 장애 조치(failover) 시간](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "오류 검색 및 장애 조치(failover) 시간")  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   

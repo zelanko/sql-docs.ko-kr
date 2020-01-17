@@ -1,6 +1,7 @@
 ---
-title: SQL Server 보조-주 복제본 읽기/쓰기 연결 리디렉션 - Always On 가용성 그룹 | Microsoft Docs
-ms.custom: ''
+title: 주 복제본에 대한 읽기/쓰기 연결 리디렉션
+description: 연결 문자열에 지정된 대상 서버와 관계없이 Always On 가용성 그룹의 주 복제본에 대한 읽기/쓰기 연결을 항상 리디렉션하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014203"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235201"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -34,7 +35,7 @@ ms.locfileid: "68014203"
 
 ## <a name="use-cases"></a>사용 사례
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 예를 들어
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 다음은 그 예입니다.
 
 * SQL Server 가용성 그룹과 통합되는 클러스터 기술은 수신기 유사 기능을 제공하지 않습니다. 
 * 클라우드 또는 다중 서브넷 부동 IP(Pacemaker 포함)의 다중 서브넷 구성(관련된 여러 구성 요소로 인해 구성이 복잡해지고 오류가 발생하기 쉬우며 문제 해결이 어려움)
@@ -47,7 +48,7 @@ ms.locfileid: "68014203"
 * 복제본 사양 `PRIMARY_ROLE`에는 `READ_WRITE_ROUTING_URL`이 포함되어야 합니다.
 * 연결 문자열은 `ApplicationIntent`를 `ReadWrite`로 정의해야 합니다(기본값).
 
-## <a name="set-readwriteroutingurl-option"></a>READ_WRITE_ROUTING_URL 옵션 설정
+## <a name="set-read_write_routing_url-option"></a>READ_WRITE_ROUTING_URL 옵션 설정
 
 읽기/쓰기 연결 리디렉션을 구성하려면 AG를 만들 주 복제본에 대해 `READ_WRITE_ROUTING_URL`을 설정합니다. 
 
@@ -57,24 +58,24 @@ ms.locfileid: "68014203"
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL)이 설정되지 않음(기본값) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL)이 설정되지 않음(기본값) 
 
 기본적으로 읽기/쓰기 복제본 연결 리디렉션은 복제본에 대해 설정되지 않습니다. 보조 복제본이 연결 요청을 처리하는 방식은 보조 복제본이 연결을 허용하도록 설정되어 있는지 여부와 연결 문자열의 `ApplicationIntent` 설정에 따라 좌우됩니다. 다음 표에서는 보조 복제본이 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent`에 따라 연결을 처리하는 방법을 보여 줍니다.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> Default|연결 실패|연결 실패|연결 성공<br/>읽기 성공<br/>쓰기 실패|
+|`ApplicationIntent=ReadWrite`<br/> 기본값|연결 실패|연결 실패|연결 성공<br/>읽기 성공<br/>쓰기 실패|
 |`ApplicationIntent=ReadOnly`|연결 실패|연결 성공|연결 성공
 
 앞의 표는 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전의 SQL Server 버전과 동일한 기본 동작을 보여 줍니다. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 설정 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 설정 
 
 읽기/쓰기 연결 리디렉션을 설정한 후에는 복제본이 연결 요청을 처리하는 방식이 다르게 동작합니다. 연결 동작은 여전히 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent` 설정에 따라 좌우됩니다. 다음 표에서는 `READ_WRITE_ROUTING`이 설정된 보조 복제본이 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent`에 따라 연결을 처리하는 방법을 보여 줍니다.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>Default|연결 실패|연결 실패|연결 경로가 주 복제본으로 지정|
+|`ApplicationIntent=ReadWrite`<br/>기본값|연결 실패|연결 실패|연결 경로가 주 복제본으로 지정|
 |`ApplicationIntent=ReadOnly`|연결 실패|연결 성공|연결 성공
 
 앞의 표에서는 주 복제본에 `READ_WRITE_ROUTING_URL`이 설정되어 있을 때 `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`이면 보조 복제본이 연결을 주 복제본으로 리디렉션하며 연결은 `ReadWrite`를 지정함을 나타냅니다.
@@ -84,7 +85,7 @@ ms.locfileid: "68014203"
 이 예제에서 가용성 그룹에는 다음 3개의 복제본이 있습니다.
 * COMPUTER01의 주 복제본
 * COMPUTER02의 동기 보조 복제본
-* COMPUTER03의 동기 보조 복제본
+* COMPUTER03의 비동기 보조 복제본
 
 다음 그림은 가용성 그룹을 나타냅니다.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  

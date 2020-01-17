@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹 수신기 속성 보기(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 수신기 속성 보기
+description: 'SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹 수신기의 속성을 보는 방법을 설명합니다. '
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013384"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821775"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>가용성 그룹 수신기 속성 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "68013384"
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 모니터링하는 방법은 [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

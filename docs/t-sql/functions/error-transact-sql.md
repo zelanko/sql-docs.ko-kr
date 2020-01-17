@@ -1,5 +1,5 @@
 ---
-title: '@@ERROR (Transact-SQL) | Microsoft Docs'
+title: '@@ERROR(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5260e1204f834b3ccb89703dba94be4dec760d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762879"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   최근에 실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 오류 번호를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68094595"
 ## <a name="return-types"></a>반환 형식  
  integer  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이전 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 오류가 발생하지 않으면 0이 반환됩니다.  
   
  이전 문에 오류가 발생하면 오류 번호가 반환됩니다. 오류가 sys.messages 카탈로그 뷰의 오류 중 하나이면 @@ERROR에 해당 오류에 대한 sys.messages.message_id 열의 값이 포함됩니다. sys.messages에서 @@ERROR 오류 번호와 연결된 텍스트를 볼 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "68094595"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>1\. @@ERROR를 사용하여 특정 오류 검색  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. @@ERROR를 사용하여 특정 오류 검색  
  다음 예에서는 `@@ERROR`를 사용하여 `UPDATE` 문에서 CHECK 제약 조건 위반(오류 #547)을 확인합니다.  
   
 ```sql  
@@ -63,12 +63,14 @@ GO
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
     WHERE BusinessEntityID = 1;  
-IF @@ERROR = 547  
-    PRINT N'A check constraint violation occurred.';  
+IF @@ERROR = 547
+    BEGIN
+    PRINT N'A check constraint violation occurred.';
+    END
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>2\. @@ERROR를 사용하여 조건부로 프로시저 종료  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. @@ERROR를 사용하여 조건부로 프로시저 종료  
  다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `DELETE` 문 뒤의 `@@ERROR`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
 ```sql  

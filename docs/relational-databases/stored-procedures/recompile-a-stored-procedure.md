@@ -1,7 +1,7 @@
 ---
 title: 저장 프로시저 다시 컴파일 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909008"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564787"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "72909008"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  **WITH RECOMPILE** 옵션  
  프로시저 정의를 만들 때 이 옵션을 사용하는 경우 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들고 있는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
- EXECUTE 문에서 이 옵션을 사용하는 경우 프로시저에 대한 EXECUTE 권한이 있어야 합니다. EXECUTE 문 자체에 대한 권한은 필요하지 않지만 EXECUTE 문에서 참조되는 프로시저에 대한 실행 권한이 필요합니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)를 참조하세요.  
+ EXECUTE 문에서 이 옵션을 사용하는 경우 프로시저에 대한 EXECUTE 권한이 있어야 합니다. EXECUTE 문 자체에 대한 권한은 필요하지 않지만 EXECUTE 문에서 참조되는 프로시저에 대한 실행 권한이 필요합니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 참조하세요.  
   
  **RECOMPILE** 쿼리 힌트  
  이 기능은 프로시저를 만들고 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 힌트를 포함할 때 사용됩니다. 따라서 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 있어야 합니다.  
@@ -67,69 +67,52 @@ ms.locfileid: "72909008"
  지정된 프로시저에 대한 ALTER 권한이 있어야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE 옵션을 사용하여 저장 프로시저를 다시 컴파일하려면  
-  
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
-  
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-  
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저 정의를 만듭니다.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-```  
+1. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE 옵션을 사용하여 저장 프로시저를 다시 컴파일하려면  
+1. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저 정의를 만듭니다.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE 옵션을 사용하여 저장 프로시저를 다시 컴파일하려면   
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-  
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 뷰에서 모든 직원(성과 이름 제공됨), 직함 및 부서 이름을 반환하는 간단한 프로시저를 만듭니다.  
-  
-     그런 다음 두 번째 코드 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile을 사용하여 저장 프로시저를 다시 컴파일하려면  
-  
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
-  
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-  
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 뷰에서 모든 직원(성과 이름 제공됨), 직함 및 부서 이름을 반환하는 간단한 프로시저를 만듭니다.  
-  
-     그런 다음 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
+**새 쿼리**를 선택한 후, 다음 코드 예제를 복사하여 쿼리 창에 붙여넣고, **실행**을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile을 사용하여 저장 프로시저를 다시 컴파일하려면  
+
+**새 쿼리**를 선택한 후, 다음 예제를 복사하여 쿼리 창에 붙여넣고, **실행**을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  

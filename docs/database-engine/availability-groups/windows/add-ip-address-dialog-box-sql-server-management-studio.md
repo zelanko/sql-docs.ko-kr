@@ -1,7 +1,7 @@
 ---
-title: "'새 가용성 그룹 수신기' 대화 상자에 'IP 주소 추가'"
+title: '가용성 그룹 마법사: IP 주소 추가'
 description: "SQL Server Management Studio '가용성 그룹 마법사'의 '복제본 지정' 페이지에 있는 'IP 주소 추가' 대화 상자의 옵션을 설명합니다. "
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 48b61a0f85d695f143f04f86387761170293a3b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935028"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822095"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>IP 주소 추가 대화 상자(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "67935028"
  **취소**  
  선택을 취소하고 서브넷에 대한 고정 IP 주소를 추가하지 않고 **새 가용성 그룹 수신기** 대화 상자 또는 **수신기** 탭으로 돌아가려면 클릭합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

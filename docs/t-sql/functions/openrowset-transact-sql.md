@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711075"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542282"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -40,7 +40,7 @@ OLE DB 데이터 원본에서 원격 데이터를 액세스하는 데 필요한 
 
 `OPENROWSET`은 파일의 데이터를 읽어서 행 집합으로 반환할 수 있는 기본 제공 BULK 공급자를 통해 대량 작업을 지원합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -96,7 +96,7 @@ OPENROWSET
 BULK OPENROWSET의 BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 OPENROWSET은 데이터를 대상 테이블에 로드하지 않고 데이터 파일에서 읽을 수 있습니다. 이를 통해 간단한 SELECT 문과 함께 OPENROWSET을 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 BULK 옵션의 인수를 사용하면 데이터 읽기의 시작 및 끝 위치, 오류 처리 방법 및 데이터 해석 방법을 효과적으로 제어할 수 있습니다. 예를 들어 **varbinary**, **varchar** 또는 **nvarchar** 형식의 단일 행 및 단일 열로 된 행 집합으로 데이터 파일을 읽도록 지정할 수 있습니다. 기본 동작에 대한 설명은 그 다음에 나오는 인수 설명을 따릅니다.
 
@@ -108,11 +108,11 @@ BULK 옵션의 인수를 사용하면 데이터 읽기의 시작 및 끝 위치,
 대량 가져오기를 위한 데이터 준비 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.
 
 ‘*data_file*’ 대상 테이블에 복사할 데이터가 있는 데이터 파일의 전체 경로입니다.
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다. 예제는 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 \<bulk_options> BULK 옵션의 인수를 하나 이상 지정합니다.
 
@@ -124,12 +124,12 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 데이터 파일에 있는 데
 > [!NOTE]
 > 데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.
 
-|CODEPAGE 값|설명|
+|CODEPAGE 값|Description|
 |--------------------|-----------------|
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 가장 빠른 옵션입니다.|
-|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **중요** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|
+|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **중요**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|
 
 ERRORFILE =’*file_name*’ 서식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.
 
@@ -198,7 +198,7 @@ FORMATFILE =’*format_file_path*’ 서식 파일의 전체 경로를 지정합
 FIELDQUOTE **=** ‘field_quote’ **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하지 않으면 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 `OPENROWSET`는 지정된 공급자에 대해 명시적으로 **DisallowAdhocAccess** 레지스트리 옵션을 0으로 설정하고 Ad Hoc Distributed Queries 고급 구성 옵션을 설정할 때만 OLE DB 데이터 원본에서 원격 데이터에 액세스하는 데 사용할 수 있습니다. 이러한 옵션을 설정하지 않은 경우 기본적으로 임시 액세스가 허용되지 않습니다.
 
@@ -235,7 +235,7 @@ OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스�
 
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터 대량 가져오기
 
-OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8000바이트를 초과하는 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.
+OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8,000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8,000바이트를 초과하는 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.
 
 > [!NOTE]
 > 자동으로 생성된 서식 파일은 LOB 필드의 길이 또는 최대 길이를 지정하지 않습니다. 그러나 직접 서식 파일을 편집하고 길이 또는 최대 길이를 지정할 수 있습니다.
@@ -256,7 +256,7 @@ SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일�
 
 ## <a name="examples"></a>예
 
-### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>1\. SELECT 및 SQL Server Native Client OLE DB 공급자와 함께 OPENROWSET 사용
+### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. SELECT 및 SQL Server Native Client OLE DB 공급자와 함께 OPENROWSET 사용
 
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 `Seattle1` 원격 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에 액세스합니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. `SELECT` 문은 반환되는 행 집합을 정의하는 데 사용됩니다. 공급자 문자열에는 `Server` 및 `Trusted_Connection` 키워드가 포함됩니다. 이러한 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 인식합니다.
 
@@ -268,7 +268,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;
 ```
 
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>2\. Microsoft OLE DB Provider for Jet 사용
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Microsoft OLE DB Provider for Jet 사용
 
 다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Customers` 데이터베이스의 `Northwind` 테이블에 액세스합니다.
 
@@ -283,7 +283,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. INNER JOIN에서 OPENROWSET 및 다른 테이블 사용
 
@@ -304,7 +304,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 Windows 파일에서 읽기를 지원하지 않습니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. OPENROWSET를 사용하여 varbinary(max) 열에 파일 데이터 대량 삽입
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. OPENROWSET BULK 공급자를 서식 파일과 함께 사용하여 텍스트 파일의 행 검색
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 서식 파일 및 코드 페이지 지정
 
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 Windows 파일에서 읽기를 지원하지 않습니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 서식 파일 없이 CSV 파일의 데이터에 액세스
 
@@ -401,11 +401,11 @@ from openrowset
 > [!IMPORTANT]
 >
 > - ODBC 드라이버는 64비트여야 합니다. Windows에서 [OBDC 데이터 원본](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)의 **드라이버** 탭을 열어 이를 확인합니다. sqlservr.exe의 64비트 버전에서 작동하지 않은 32비트 `Microsoft Text Driver (*.txt, *.csv)`가 있습니다.
-> - Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> - Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9\. Azure Blob 스토리지에 저장된 파일에서 데이터에 액세스
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 다음 예에서는 공유 액세스 서명을 위해 만든 데이터베이스 범위 자격 증명 및 Azure 스토리지 계정의 컨테이너를 가리키는 외부 데이터 원본을 사용합니다.
 
 ```sql
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="additional-examples"></a>추가 예
 
@@ -474,7 +474,6 @@ SELECT * FROM OPENROWSET(
 - [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE&#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY&#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [행 집합 함수&#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

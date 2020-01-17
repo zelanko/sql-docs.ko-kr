@@ -1,6 +1,6 @@
 ---
-title: 메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 연결 | Microsoft 문서
-ms.custom: ''
+title: 메모리 최적화 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
+ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951149"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412756"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ GO
 ###  <a name="bkmk_DeterminePercent"></a> MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 최소값 결정  
  메모리 최적화 테이블에 필요한 메모리를 결정한 후에는 필요한 사용 가능 메모리 비율을 결정하고 해당 값 이상으로 메모리 비율을 설정합니다.  
   
- **예:**    
+ **예제:**    
 이 예에서는 메모리 최적화 테이블 및 인덱스에 16GB의 메모리가 필요하며, 32GB의 메모리를 사용할 수 있게 커밋했다고 가정합니다.  
   
  얼핏 보기에는 MIN_MEMORY_PERCENT와 MAX_MEMORY_PERCENT를 50(16은 32의 50%)으로 설정하면 될 것 같습니다.  그러나 이렇게 설정하면 메모리 최적화 테이블에서 사용할 수 있는 메모리가 부족합니다. 아래 표([메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable))에서 커밋된 메모리가 32GB인 경우 이 중 80%는 메모리 최적화 테이블과 인덱스에 사용할 수 있습니다.  따라서 커밋된 메모리가 아니라 사용 가능한 메모리를 기준으로 최소 및 최대 비율을 계산합니다.  
@@ -211,7 +211,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [리소스 풀 삭제](../../relational-databases/resource-governor/delete-a-resource-pool.md)  

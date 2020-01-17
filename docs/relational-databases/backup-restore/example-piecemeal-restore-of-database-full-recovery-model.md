@@ -1,7 +1,7 @@
 ---
-title: '예: 데이터베이스의 증분 복원(전체 복구 모델) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: '증분 복원: 전체 복구 모델'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67cfffa63fd56f7d514ff749f37f4f0f33610388
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 83ddabdc1e67036ca191d6f4c9e6013037b21738
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278751"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243667"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예: 데이터베이스의 증분 복원(전체 복구 모델)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기가 가능한 모든 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  

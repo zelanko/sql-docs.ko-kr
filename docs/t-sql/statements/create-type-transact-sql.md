@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982723"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901870"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "73982723"
 > [!NOTE]  
 >  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 CLR 통합이 적용되지 않습니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -251,7 +251,7 @@ column_name <data_type>
   
  HASH 인덱스가 만들어졌음을 나타냅니다. 해시 인덱스는 메모리 액세스에 최적화된 테이블에서만 지원됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *assembly_name*에서 참조하는 어셈블리의 클래스는 클래스의 메서드와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 형식을 구현하기 위한 모든 요구 사항을 만족시켜야 합니다. 이러한 요구 사항에 대한 자세한 내용은 [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)를 참조하세요.  
   
  추가적인 고려 사항은 다음과 같습니다.  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **public** 데이터베이스 역할은 **sp_addtype**을 사용하여 만든 사용자 정의 형식과는 달리 CREATE TYPE을 사용하여 만든 형식에 대해서는 자동으로 REFERENCES 권한을 받지 못합니다. 이 권한은 별도로 허가해야 합니다.  
   
- 사용자 정의 테이블 형식에서 *column_name* \<data type>에 사용되는 구조적 사용자 정의 형식은 해당 테이블 유형이 정의된 데이터베이스 스키마 범위의 일부입니다. 데이터베이스 내의 다른 범위에 있는 구조적 사용자 정의 형식에 액세스하려면 두 부분으로 된 이름을 사용하세요.  
+ 사용자 정의 테이블 형식에서 *column_name* \<데이터 형식>에 사용되는 구조적 사용자 정의 형식은 해당 테이블 형식이 정의된 데이터베이스 스키마 범위의 일부입니다. 데이터베이스 내의 다른 범위에 있는 구조적 사용자 정의 형식에 액세스하려면 두 부분으로 된 이름을 사용하세요.  
   
  사용자 정의 테이블 형식에서 계산 열에 대한 기본 키는 PERSISTED 및 NOT NULL이어야 합니다.  
   
@@ -286,20 +286,20 @@ column_name <data_type>
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>1\. varchar 데이터 형식을 기반으로 별칭 유형 만들기  
+### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. varchar 데이터 형식을 기반으로 별칭 유형 만들기  
  다음 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 별칭 유형을 만드는 방법을 보여 줍니다.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>2\. 사용자 정의 형식 만들기  
+### <a name="b-creating-a-user-defined-type"></a>B. 사용자 정의 형식 만들기  
  다음 예에서는 `utf8string` 어셈블리 내의 `utf8string`클래스를 참조하는 `Utf8String` 형식을 만드는 방법을 보여 줍니다. 형식을 만들기 전에 로컬 데이터베이스에 `utf8string` 어셈블리를 등록합니다. CREATE ASSEMBLY의 이진 부분을 올바른 유효한 설명으로 대체합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. 사용자 정의 테이블 형식 만들기  
  다음 예에서는 두 개의 열이 있는 사용자 정의 테이블 형식을 만듭니다. 테이블 반환 매개 변수를 만들고 사용하는 방법은 [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [SQL Server의 사용자 정의 형식 작업](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

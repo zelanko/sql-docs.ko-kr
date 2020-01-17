@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68025928"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558565"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 
@@ -85,7 +85,7 @@ Windows에서 데이터베이스 백업 파일을 만드는 방법에는 여러 
 
 ## <a id="scp"></a> Linux에 백업 파일 복사
 
-1. Bash 세션에서 백업 파일이 포함된 디렉터리로 이동합니다. 예를 들어
+1. Bash 세션에서 백업 파일이 포함된 디렉터리로 이동합니다. 다음은 그 예입니다.
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'

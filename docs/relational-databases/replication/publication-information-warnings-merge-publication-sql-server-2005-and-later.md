@@ -1,6 +1,7 @@
 ---
-title: 게시 정보-경고-병합 게시-SQL Server 2005+ | Microsoft 문서
-ms.custom: ''
+title: 경고(병합 게시 정보)
+description: SQL Server 2005 이상에 있는 SQL Server Management Studio 병합 복제 게시 정보 페이지의 ‘경고’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120287"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321352"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>게시 정보, 경고(병합 게시, SQL Server 2005 이상)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "68120287"
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
 ## <a name="options"></a>옵션  
- **설정**  
+ **Enabled**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   
  **경고**  

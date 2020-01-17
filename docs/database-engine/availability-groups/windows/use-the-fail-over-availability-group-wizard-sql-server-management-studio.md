@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹 장애 조치 마법사 사용(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 장애 조치(failover)
+description: SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치를 수행하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013521"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821939"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68013521"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -105,7 +106,7 @@ ms.locfileid: "68013521"
  **쿼럼 상태**  
  'WSFC' 클러스터 유형의 경우 다음 중 하나의 가용성 복제본 쿼럼 상태를 표시합니다.  
   
-   |값|설명|  
+   |값|Description|  
    |-----------|-----------------|  
    |**일반 쿼럼**|클러스터가 일반 쿼럼으로 시작했습니다.|  
    |**강제 쿼럼**|클러스터가 강제 쿼럼으로 시작했습니다.|  
@@ -127,27 +128,27 @@ ms.locfileid: "68013521"
  **가용성 모드**  
  서버 인스턴스의 가용성 모드를 표시하며 다음 중 하나입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**동기 커밋**|동기-커밋 모드에서는 동기-커밋 주 복제본이 트랜잭션을 커밋하기 전에 동기-커밋 보조 복제본이 로그 확정을 완료했음을 확인할 때까지 기다립니다. 동기-커밋 모드에서는 지정된 보조 데이터베이스가 주 데이터베이스와 동기화되고 나면 커밋된 트랜잭션이 완전히 보호됩니다.|  
 |**비동기 커밋**|비동기-커밋 모드에서는 주 복제본이 비동기-커밋 보조 복제본이 로그를 확정할 때까지 기다리지 않고 트랜잭션을 커밋합니다. 비동기-커밋 모드에서는 보조 데이터베이스의 트랜잭션 대기 시간이 최소화되지만 보조 데이터베이스가 주 데이터베이스보다 뒤쳐질 수 있어 일부 데이터가 손실될 수 있습니다.|  
   
- 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+ 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
  **장애 조치(Failover) 모드**  
  서버 인스턴스의 장애 조치(failover) 모드를 표시하며 다음 중 하나입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**자동**|자동 장애 조치(Failover)를 사용하도록 구성된 보조 복제본은 주 복제본과 동기활 때마다 계획된 수동 장애 조치도 지원합니다.|  
 |**수동**|수동 장애 조치에는 계획된 장애 조치(데이터가 손실되지 않음)와 강제 장애 조치(데이터가 손실될 수 있음)의 두 가지 유형이 있습니다. 가용성 모드 및 동기-커밋 모드의 경우 보조 복제본의 동기화 상태에 따라 지정된 보조 복제본에 대해 이 두 가지 중 하나만 지원됩니다. 지정된 보조 복제본에 현재 지원되는 수동 장애 조치 형태를 확인하려면 이 표에서 **장애 조치(Failover) 준비** 열을 참조하세요.|  
   
- 자세한 내용은 [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+ 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
  **장애 조치(Failover) 준비**  
  보조 복제본의 장애 조치 준비를 표시하며 다음 중 하나입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 손실 없음**|이 보조 복제본이 현재 계획된 장애 조치를 지원합니다. 이 값은 동기-커밋 모드 보조 복제본이 현재 주 복제본과 동기화된 경우에만 표시됩니다.|  
 |**데이터 손실, 경고(** _#_ **)**|이 보조 복제본이 현재 강제 장애 조치(데이터가 손실될 수 있음)를 지원합니다. 이 값은 보조 복제본이 주 복제본과 동기화되지 않은 상태일 때마다 표시됩니다. 가능한 데이터 손실에 대한 자세한 내용을 보려면 데이터 손실 경고 링크를 클릭하세요.|  

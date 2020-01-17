@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 구성 문제 해결(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러링을 구성할 때 발생하는 일반적인 문제
+description: 데이터베이스 미러링 세션을 설정할 때 발생하는 문제를 해결하는 데 도움이 되는 정보를 제공합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049758"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822512"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68049758"
 > [!NOTE]  
 >  [데이터베이스 미러링을 위한 선행 조건](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)을 모두 충족하는지 확인하세요.  
   
-|문제점|요약|  
+|문제|요약|  
 |-----------|-------------|  
 |오류 메시지 1418|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지는 서버 네트워크 주소가 없거나 도달할 수 없음을 나타내며 네트워크 주소 이름을 확인한 후 명령을 다시 실행하도록 제안합니다. |  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  

@@ -1,6 +1,7 @@
 ---
-title: SQL Server에 대한 Red Hat Enterprise Linux 공유 클러스터 작동
-description: SQL Server용 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성하여 고가용성을 구현합니다.
+title: SQL Server on Linux의 RHEL FCI 작동
+description: FCI 수동 장애 조치, 클러스터에 노드 추가 또는 제거와 같은 고가용성을 위해 SQL Server용 RHEL(Red Hat Enterprise Linux) 공유 디스크 FCI(장애 조치 클러스터 인스턴스)를 작동하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032238"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558528"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대한 Red Hat Enterprise Linux 공유 디스크 클러스터 작동
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 작동
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 클러스터 문제를 해결할 때 세 개의 디먼이 함께 작동하여 클러스터 리소스를 관리하는 방법을 이해하는 데 도움이 될 수 있습니다. 
 
-| 데몬 | 설명 
+| 데몬 | Description 
 | ----- | -----
 | Corosync | 클러스터 노드 간에 쿼럼 멤버 자격 및 메시징을 제공합니다.
 | Pacemaker | Corosync의 맨 위에 있으며 리소스에 대한 상태 머신을 제공합니다. 

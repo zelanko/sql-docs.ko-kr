@@ -29,19 +29,19 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef120c0899a14669d8f7f92f42da72d139599aa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982888"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909035"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   이전에 부여하거나 거부한 사용 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -136,11 +136,11 @@ REVOKE
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
  AS *principal*  
- AS principal 절을 사용하여 자신이 아닌 다른 보안 주체가 부여한 권한을 해지하는 것을 나타냅니다. 예를 들어 Mary라는 사용자가 principal_id 12이고 Raul이라는 사용자는 principal 15라고 가정해 보겠습니다. Mary와 Raul 모두 Steven이라는 사용자에게 동일한 권한을 부여합니다. sys.database_permissions 테이블은 사용 권한을 두 번 나타내지만 각각은 다른 grantor_prinicpal_id 값을 갖습니다. Mary는 Raul의 권한 부여를 제거하는 `AS RAUL` 절을 사용하여 권한을 해지할 수 있습니다.
+ AS principal 절을 사용하여 자신이 아닌 다른 보안 주체가 부여한 권한을 해지하는 것을 나타냅니다. 예를 들어 Mary라는 사용자가 principal_id 12이고 Raul이라는 사용자는 principal_id 15라고 가정해 보겠습니다. Mary와 Raul 모두 Steven이라는 사용자에게 동일한 권한을 부여합니다. sys.database_permissions 테이블은 권한을 두 번 나타내지만 각각은 다른 grantor_principal_id 값을 갖습니다. Mary는 Raul의 권한 부여를 제거하는 `AS RAUL` 절을 사용하여 권한을 해지할 수 있습니다.
  
 이 명령문에 AS를 사용한다고 해서 다른 사용자로 가장하는 기능을 의미하는 것은 아닙니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  REVOKE 문의 전체 구문은 복잡합니다. 위의 구문 다이어그램은 구조를 강조하기 위해 단순하게 표현되었습니다. 특정 보안 개체에 대한 사용 권한을 취소하는 완전한 구문은 이 항목 뒷부분의 [보안 개체별 구문](#securable)에 나열되어 있는 항목에서 자세히 설명합니다.  
   
  REVOKE 문을 사용하여 부여된 사용 권한을 제거할 수 있으며 DENY 문을 사용하여 보안 주체가 GRANT를 통해 특정 사용 권한을 얻지 못하도록 막을 수 있습니다.  
@@ -182,7 +182,7 @@ REVOKE
 |큐|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |원격 서비스 바인딩|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |역할|[REVOKE 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|경로|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|라우팅|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |스키마|[REVOKE 스키마 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |검색 속성 목록|[REVOKE 검색 속성 목록 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
 |서버|[REVOKE 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
@@ -191,8 +191,8 @@ REVOKE
 |대칭 키|[REVOKE 대칭 키 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
 |동의어|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |시스템 개체|[REVOKE 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|Table|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|형식|[REVOKE 형식 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|테이블|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Type|[REVOKE 형식 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |사용자|[REVOKE 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |보기|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML 스키마 컬렉션|[REVOKE XML 스키마 컬렉션 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  

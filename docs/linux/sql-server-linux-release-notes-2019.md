@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594544"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822140"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 
@@ -30,7 +30,7 @@ ms.locfileid: "73594544"
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 또는 7.6 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3 또는 SP4 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
-| Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 사항 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
+| Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 자세한 내용은 Linux의 SQL Server에 대한 [시스템 요구 사항](sql-server-linux-setup.md#system)을 검토하세요. SQL Server 2017에 대 한 최신 지원 정책은 [Microsoft SQL Server의 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)을 참조하세요.
@@ -43,14 +43,14 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 다음 표에는 SQL Server 2019 릴리스의 릴리스 기록이 나와 있습니다.
 
-| 릴리스                   | 버전 옵션       | 릴리스 날짜 |
+| 해제                   | 버전       | 릴리스 날짜 |
 |---------------------------|---------------|--------------|
 | [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
 | [릴리스 후보](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> 업데이트 설치 방법
 
-CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 수행할 때 SQL Server 패키지의 최신 CU가 제공됩니다. Docker 컨테이너 이미지가 필요한 경우 [Docker 엔진용 Microsoft SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server/)의 공식 이미지를 참조하세요. 리포지토리 구성에 대한 자세한 내용은 [Linux에서 SQL Server용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
+CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 수행할 때 SQL Server 패키지의 최신 CU가 제공됩니다. Docker 컨테이너 이미지가 필요한 경우 [Docker 엔진용 Microsoft SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server/)의 공식 이미지를 참조하세요. 리포지토리 구성에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
 
 기존 SQL Server 패키지를 업데이트하는 경우에는 각 패키지에 대해 적절한 업데이트 명령을 실행하여 최신 CU를 가져옵니다. 각 패키지의 특정 업데이트 지침은 다음 설치 가이드를 참조하세요.
 
@@ -93,7 +93,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
 다음 섹션에서는 SQL Server 2019(15.x) on Linux의 GA(일반 공급) 릴리스에 관련된 알려진 문제를 설명합니다.
 
-#### <a name="general"></a>일반
+### <a name="general"></a>일반
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 설치된 호스트 이름의 길이는 15자 이하여야 합니다. 
 
@@ -113,7 +113,11 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
     - **해결 방법**: **ALTER LOGIN** 문을 사용하여 **sa** 로그인의 언어를 변경합니다.
 
-#### <a name="databases"></a>데이터베이스
+- OLEDB 공급자는 다음 경고를 기록합니다. `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **해결 방법**: 사용자가 조치할 필요는 없습니다. OLEDB 공급자는 SHA256을 사용하여 서명됩니다. SQL Server 데이터베이스 엔진은 서명된 .dll의 유효성을 올바르게 검사하지 않습니다.
+
+### <a name="databases"></a>데이터베이스
 
 - master 데이터베이스는 mssql 유틸리티를 사용하여 이동할 수 없습니다. 다른 시스템 데이터베이스는 mssql-conf를 통해 이동할 수 있습니다.
 
@@ -143,7 +147,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
 - 현재 사용자 권한 **ADMINISTER BULK OPERATIONS**는 Linux에서 지원되지 않습니다.
 
-#### <a name="networking"></a>네트워킹
+### <a name="networking"></a>네트워킹
 
 다음 조건이 둘 다 충족되는 경우 연결된 서버 또는 가용성 그룹과 같은 sqlservr 프로세스의 아웃바운드 TCP 연결에 관련된 기능이 작동하지 않을 수 있습니다.
 
@@ -170,7 +174,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 - NFS 탑재에 **/var/opt/mssql** 디렉터리만 배치합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 이진 파일 등의 다른 파일은 지원되지 않습니다.
 - NFS 클라이언트가 원격 공유를 탑재할 때 ‘nolock’ 옵션을 사용하는지 확인합니다.
 
-#### <a name="localization"></a>지역화
+### <a name="localization"></a>지역화
 
 - 설치하는 동안 로캘이 영어(en_us)가 아닌 경우 bash 세션/터미널에서 UTF-8 인코딩을 사용해야 합니다. ASCII 인코딩을 사용하는 경우 다음과 유사한 오류가 표시될 수 있습니다.
 
@@ -190,7 +194,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
 - 이 릴리스에서는 Office 문서용 필터를 비롯한 일부 필터를 사용할 수 없습니다. 지원되는 필터 목록은 [Linux에서 SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md#filters)를 참조하세요.
 
-#### <a id="ssis"></a> SSIS(SQL Server Integration Services)
+### <a id="ssis"></a> SSIS(SQL Server Integration Services)
 
 - **mssql-server-is** 패키지는 이 릴리스의 SUSE에서 지원되지 않습니다. 현재 Ubuntu 및 RHEL(Red Hat Enterprise Linux)에서는 지원됩니다.
 
@@ -214,7 +218,7 @@ Linux SSIS에 대한 자세한 내용은 다음 문서를 참조하세요.
 -   [Linux에서 SSIS(SQL Server Integration Services) 설치](sql-server-linux-setup-ssis.md)
 -   [SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SSMS(SQL Server Management Studio)
+### <a id="ssms"></a> SSMS(SQL Server Management Studio)
 
 다음 제한 사항은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에 연결된 Windows의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 적용됩니다.
 

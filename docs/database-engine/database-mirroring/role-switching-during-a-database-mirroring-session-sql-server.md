@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 세션 중 역할 전환(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러링 역할 전환
+description: 데이터베이스 미러링 역할 전환에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025278"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252788"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68025278"
   
  다음 그림에서는 일련의 자동 또는 수동 장애 조치를 수행하는 동안 주 역할과 미러 역할을 전환하는 미러링 파트너 **Partner_A** 와 **Partner_B**를 보여 줍니다.  
   
- ![역할 간에 두 번 전환하는 파트너](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "역할 간에 두 번 전환하는 파트너")  
+ ![역할을 두 번 전환하는 파트너](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "역할을 두 번 전환하는 파트너")  
   
 > [!IMPORTANT]  
 >  역할 전환 후 이전 주 데이터베이스에서 실행하던 작업을 새로운 주 데이터베이스에서 다시 만들어 실행해야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
@@ -45,7 +46,7 @@ ms.locfileid: "68025278"
 > [!NOTE]  
 >  이러한 운영 모드에 대한 자세한 내용은 [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
   
--   **수동 장애 조치(Failover)**  
+-   **수동 장애 조치**  
   
      보안 우선 모드는 수동 장애 조치를 지원합니다. 데이터베이스 소유자는 데이터베이스가 동기화될 때마다 수동 장애 조치를 시작할 수 있습니다.  
   
@@ -66,11 +67,11 @@ ms.locfileid: "68025278"
   
  다음 표에서는 각 운영 모드에서 지원되는 장애 조치 유형을 요약합니다.  
   
-||성능 우선|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
+||고성능|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|자동 장애 조치(automatic failover)|아니오|아니오|예|  
-|수동 장애 조치(manual failover)|아니오|예|예|  
-|강제 서비스|예|예|아니오|  
+|자동 장애 조치(automatic failover)|예|예|yes|  
+|수동 장애 조치(failover)|예|yes|yes|  
+|강제 서비스|yes|yes|예|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68025278"
   
  다음 그림에서는 데이터베이스 서버 인스턴스를 업그레이드하는 동안 데이터베이스 가용성을 유지하기 위해 수동 장애 조치를 사용하는 예를 설명합니다. 업그레이드가 완료되면 관리자는 필요에 따라 원래 서버 인스턴스로 장애 조치를 수행할 수 있습니다. 이는 관리자가 미러링 세션을 중지하고 미러 서버를 다른 곳에서 사용하려는 경우에 유용합니다. 이러한 방법으로 일련의 데이터베이스 서버 인스턴스를 업데이트할 때 단일 서버 인스턴스를 반복적으로 사용할 수 있습니다.  
   
- ![계획된 수동 장애 조치](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "계획된 수동 장애 조치")  
+ ![계획된 수동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "계획된 수동 장애 조치(Failover)")  
   
 ###  <a name="ConditionsForManualFo"></a> 수동 장애 조치에 필요한 조건  
  수동 장애 조치를 수행하려면 트랜잭션 보안이 FULL(보호 우선 모드)로 설정되어야 합니다. 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다.  
@@ -182,7 +183,7 @@ ms.locfileid: "68025278"
   
  다음 그림에서는 자동 장애 조치의 단일 인스턴스를 보여 줍니다.  
   
- ![자동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "자동 장애 조치(Failover)")  
+ ![자동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
   
  처음에는 세션에 전체 쿼럼이 있으며 세 서버가 모두 연결되어 있습니다. **Partner_A** 는 주 서버이고 **Partner_B** 는 미러 서버입니다. 먼저**Partner_A** (또는 **Partner_A**의 주 데이터베이스)를 사용할 수 없게 됩니다. 미러링 모니터 서버와 **Partner_B** 에서 주 서버를 더 이상 사용할 수 없다는 것을 인식하고 세션이 쿼럼을 유지합니다. **Partner_B** 가 주 서버가 되고 해당 데이터베이스 복사본을 새로운 주 데이터베이스로 사용할 수 있도록 만듭니다. 마지막으로 **Partner_A** 가 세션에 다시 연결되고 **Partner_B** 가 주 역할을 담당하고 있음을 확인합니다. 그런 다음**Partner_A** 는 미러 역할을 수행합니다.  
   
@@ -241,7 +242,7 @@ ms.locfileid: "68025278"
 ###  <a name="TypicalCaseFS"></a> 강제 서비스의 일반적인 사례  
  다음 그림에서는 강제 서비스(데이터 손실 가능)의 일반적인 사례를 보여 줍니다.  
   
- ![데이터 손실 가능성이 있는 서비스 강제 적용](../../database-engine/database-mirroring/media/dbm-forced-service.gif "데이터 손실 가능성이 있는 서비스 강제 적용")  
+ ![데이터가 손실될 수 있는 강제 서비스](../../database-engine/database-mirroring/media/dbm-forced-service.gif "데이터가 손실될 수 있는 강제 서비스")  
   
  그림에서 원래 주 서버 **Partner_A**가 미러 서버 **Partner_B**에서 사용할 수 없게 되어 미러 데이터베이스의 연결이 끊깁니다. 클라이언트에서 **Partner_A** 를 사용할 수 없는지 확인한 후 데이터베이스 관리자가 **Partner_B**에 서비스를 강제로 적용하며, 이 경우 데이터가 손실될 수 있습니다. **Partner_B** 가 주 서버가 되고 데이터베이스가 *노출된 상태* (즉, 미러되지 않은 상태)로 실행됩니다. 이때 클라이언트는 **Partner_B**에 다시 연결할 수 있습니다.  
   
@@ -313,7 +314,7 @@ ms.locfileid: "68025278"
   
 ## <a name="see-also"></a>참고 항목  
  [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [데이터베이스 미러링 중에 발생 가능한 오류](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

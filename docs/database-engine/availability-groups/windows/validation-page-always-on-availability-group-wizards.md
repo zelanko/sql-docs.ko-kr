@@ -1,6 +1,7 @@
 ---
-title: 유효성 검사 페이지(Always On 가용성 그룹 마법사) | Microsoft Docs
-ms.custom: ''
+title: '가용성 그룹 마법사: 유효성 검사 페이지'
+description: 이 항목에서는 Always On 가용성 그룹 마법사의 유효성 검사 페이지에 있는 옵션에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013447"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821843"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>유효성 검사 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +38,17 @@ ms.locfileid: "68013447"
  **결과**  
  다음 하이퍼링크 텍스트 중 하나를 표시합니다. 지정된 유효성 검사 단계의 결과에 대한 자세한 내용을 보려면 하이퍼링크를 클릭하십시오.  
   
-|결과|설명|  
+|결과|Description|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
-|**건너뜀**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  
-|**성공**|유효성 검사 단계가 완료되었음을 나타냅니다.|  
+|**생략**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  
+|**Success**|유효성 검사 단계가 완료되었음을 나타냅니다.|  
 |**경고**|가용성 그룹 구성에 대한 잠재적 문제를 나타냅니다.  경고 메시지를 보려면 링크를 클릭합니다.|  
   
  **유효성 검사 다시 실행**  
  유효성 검사 오류에 응답하여 마법사 외부에서 변경할 경우 유효성 검사 단계를 반복하려면 클릭합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: 백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 백업 복원, 복구, 관리
+description: 백업 복원, 복구, 관리를 위한 Transact-SQL RESTORE 문
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082548"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258765"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +40,7 @@ ms.locfileid: "68082548"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|인수를 제거합니다.|설명|  
+|인수를 제거합니다.|Description|  
 |---------------|-----------------|  
 |[RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|BACKUP 명령을 사용하여 수행한 백업으로부터 데이터베이스를 복원 및 복구하는 데 사용되는 RESTORE DATABASE 및 RESTORE LOG Transact-SQL 문에 대해 설명합니다. RESTORE DATABASE는 모든 복구 모델에서 데이터베이스에 사용됩니다. RESTORE LOG는 전체 복구 모델 및 대량 로그 복구 모델에서만 사용됩니다. RESTORE DATABASE를 사용하여 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 수도 있습니다.|  
 |[RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE 문 및 연결된 보조 명령문 세트의 "Syntax" 섹션에 설명된 다음 인수를 문서화합니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.|  

@@ -1,6 +1,7 @@
 ---
-title: 정책 평가 대화 상자, 정책 선택 페이지 | Microsoft 문서
-ms.custom: ''
+title: ‘정책 평가’ 대화 상자의 ‘정책 선택’ 페이지
+description: SSMS(SQL Server Management Studio) 정책 기반 관리에서 ‘정책 평가’ 대화 상자의 ‘정책 선택’ 페이지를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901146"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558218"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 게시 정보, 추적 프로그램 토큰(SQL Server 2005 이상) | Microsoft 문서
-ms.custom: ''
+title: 추적 프로그램 토큰(게시 정보)
+description: SSMS(SQL Server Management Studio) 복제 모니터에 있는 ‘게시 정보’ 페이지의 ‘추적 프로그램 토큰’ 탭에 대한 설명입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 52f23a051de18881ee368bf34e6912abe67c6d2d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770010"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321291"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(SQL Server 2005 이상)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

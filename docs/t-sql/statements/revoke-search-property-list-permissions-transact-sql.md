@@ -1,6 +1,8 @@
 ---
-title: REVOKE 검색 속성 목록 사용 권한(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE 검색 속성 목록 사용 권한
+description: 검색 속성 목록에 대한 사용 권한을 철회합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914260"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255799"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE 검색 속성 목록 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   검색 속성 목록에 대한 사용 권한을 취소합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -99,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST 권한  
  검색 속성 목록은 사용 권한 계층에서 해당 대칭 키의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 검색 속성 목록에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  

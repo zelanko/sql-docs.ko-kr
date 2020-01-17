@@ -1,6 +1,7 @@
 ---
-title: 패싯 속성 대화 상자, 일반 페이지 | Microsoft 문서
-ms.custom: ''
+title: 패싯 속성 대화 상자, 일반 페이지
+description: SSMS(SQL Server Management Studio) 정책 기반 관리에서 ‘패싯 속성’ 대화 상자의 ‘일반 페이지’를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 788240d2c6fef4bd080af3d18a6a41453ecc27a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087280"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557978"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>패싯 속성 대화 상자, 일반 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68087280"
  **적용할 수 있는 대상 유형**  
  이 패싯을 사용하여 구성하거나 평가할 수 있는 대상의 유형을 표시합니다.  
   
- **Properties**  
+ **속성**  
  각 패싯 속성의 이름 및 설명을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

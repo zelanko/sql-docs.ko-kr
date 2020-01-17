@@ -1,5 +1,7 @@
 ---
-title: SQL Server Always On 가용성 그룹 배포 패턴
+title: 가용성 그룹 배포 패턴 - SQL Server on Linux
+description: Linux 서버의 SQL Server Always On 가용성 그룹에 대해 지원되는 배포 구성을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996447"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558478"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성의 고가용성 및 데이터 보호
 
@@ -168,7 +170,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 > [!NOTE]
 > 위 명령을 실행하면 주 복제본이 일시적으로 보조 복제본으로 수준이 내려간 후에 다시 올라갑니다. 리소스를 업데이트하면 모든 복제본이 중지되었다가 다시 시작됩니다. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`의 새 값은 즉시 설정되지 않고, 복제본을 다시 시작한 후에만 설정됩니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Linux의 가용성 그룹](sql-server-linux-availability-group-overview.md)
 

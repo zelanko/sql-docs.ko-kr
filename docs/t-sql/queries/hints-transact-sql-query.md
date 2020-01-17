@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982287"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002338"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,8 @@ ms.locfileid: "73982287"
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ FORCE ORDER
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Hadoop에서 조건에 맞는 식 계산을 강제로 밀어내거나 사용하지 않도록 설정합니다. PolyBase를 사용한 쿼리에만 적용됩니다. Azure Storage로 밀어내지 않습니다.  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION SQL Server 2019 빅 데이터 클러스터에서 외부 테이블을 사용 중인 PolyBase 쿼리의 규모 확장 실행을 적용하거나 사용하지 않도록 설정합니다. 이 힌트는 SQL 빅 데이터 클러스터의 마스터 인스턴스를 사용하는 쿼리를 통해서만 적용됩니다. 규모 확장은 빅 데이터 클러스터의 컴퓨팅 풀에서 발생합니다. 
+
 KEEP PLAN  
 쿼리 최적화 프로그램에서 쿼리에 대한 예상 다시 컴파일 임계값을 완화하도록 합니다. 예상된 다시 컴파일 임계값은 테이블에 다음 문을 실행하여 인덱싱된 열을 예상 수만큼 변경했을 때 쿼리를 자동으로 다시 컴파일하기 시작합니다.
 
@@ -275,7 +278,7 @@ ROBUST PLAN
    일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.     
    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  테이블 변수 지연 컴파일을 사용하지 않도록 설정합니다. 자세한 내용은 [테이블 변수 지연 컴파일](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)을 참조하세요.     
+  테이블 변수 지연 컴파일을 사용하지 않도록 설정합니다. 자세한 내용은 [테이블 변수 지연 컴파일](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)을 참조하세요.     
   **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    다중 문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않도록 설정합니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)을 참조하세요.     
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > 매개 변수와 함께 FORCESEEK를 지정할 경우 매개 변수 없이 FORCESEEK를 지정할 때보다 최적화 프로그램에서 고려할 수 있는 계획 수가 더 제한됩니다. 이로 인해 "계획을 생성할 수 없음" 오류가 많은 사례에서 발생하는 원인이 될 수도 있습니다. 후속 릴리스에서는 더 많은 계획을 고려할 수 있도록 최적화 프로그램이 수정될 것입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  쿼리 힌트는 명령문 내에 SELECT 절이 사용되는 경우를 제외하고 INSERT 문에서 지정할 수 없습니다.  
   
  쿼리 힌트는 하위 쿼리가 아닌 최상위 쿼리에서만 지정할 수 있습니다. 테이블 힌트를 쿼리 힌트로 지정하면 해당 힌트를 최상위 쿼리나 하위 쿼리에 지정할 수 있습니다. 그러나 TABLE HINT 절에서 _exposed\_object\_name_에 대해 지정한 값이 쿼리 또는 하위 쿼리의 표시 이름과 일치해야 합니다.  
@@ -382,7 +385,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-merge-join"></a>1\. MERGE JOIN 사용  
+### <a name="a-using-merge-join"></a>A. MERGE JOIN 사용  
  다음 예에서는 MERGE JOIN이 쿼리에서 조인 작업을 실행하도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -394,7 +397,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>2\. OPTIMIZE FOR 사용  
+### <a name="b-using-optimize-for"></a>B. OPTIMIZE FOR 사용  
  다음 예에서는 쿼리를 최적화할 때 쿼리 최적화 프로그램이 지역 변수 `'Seattle'`에 `@city_name` 값을 사용하고 통계 데이터를 사용하여 지역 변수 `@postal_code`의 값을 결정하도록 지시합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  

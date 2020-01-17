@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹에 대한 Transact-SQL 문 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 Transact-SQL 문
+description: Always On 가용성 그룹 배포, 만들기 및 관리를 지원하는 T-SQL(Transact-SQL) 문을 소개합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b96b5d6921875aab92236475f4f6b66281a31599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013832"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822206"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68013832"
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md)은 데이터베이스 미러링 엔드포인트를 만듭니다(서버 인스턴스에 없는 경우). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
   
- 엔드포인트를 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트를 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트 &40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
+ 엔드포인트를 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트를 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) 은 새 가용성 그룹을 만들고 선택적으로 가용성 그룹 수신기를 만듭니다. 최소한 초기 주 복제본이 될 로컬 서버 인스턴스는 지정해야 합니다. 선택적으로 최대 네 개의 보조 복제본을 지정할 수도 있습니다.  

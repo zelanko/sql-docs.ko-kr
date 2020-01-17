@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532847"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191071"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -169,14 +169,14 @@ WITH ( LANGUAGE = 'R' )
 그 대신에 패키지 콘텐츠를 이진 형식의 변수로 전달할 수 있습니다.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다.
 SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**플랫폼**
+**platform**
 
 라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다. 
 SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
@@ -200,7 +200,7 @@ SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
 패키지의 언어를 지정합니다. 값은 **R**, **Python** 또는 외부 언어의 이름일 수 있습니다([CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md) 참조).
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 R 언어의 경우 패키지를 Windows용 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다. SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.  
@@ -264,7 +264,7 @@ SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으
 > [!NOTE]
 > 이 코드 샘플은 구문만 보여줍니다. `CONTENT =`의 이진 값은 읽기 쉽도록 잘렸으며, 작업 중인 라이브러리를 생성하지 않습니다. 이진 변수의 실제 콘텐츠는 훨씬 더 깁니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY(Transact-SQL)](drop-external-library-transact-sql.md)  

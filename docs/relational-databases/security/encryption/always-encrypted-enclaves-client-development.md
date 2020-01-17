@@ -12,14 +12,14 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e282e7d68c23837c1865f1257ba7e159644d26
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595538"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492009"
 ---
-# <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하여 애플리케이션 개발
+# <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 [Always Encrypted](always-encrypted-database-engine.md)를 확장하여 암호화된 중요한 데이터베이스 열에서 더욱 다양한 애플리케이션 쿼리 기능을 지원합니다. 보안 Enclave 기술을 활용하여 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]의 쿼리 실행기가 암호화된 열에 대한 계산을 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 프로세스 내 보안 Enclave로 위임할 수 있도록 합니다.
@@ -39,7 +39,10 @@ ms.locfileid: "73595538"
 보안 Enclave를 사용한 Always Encrypted를 지원하는 클라이언트 드라이버는 다음과 같습니다.
 - .NET Framework 4.7.2 이상의 .NET Framework Data Provider for SQL Server 
     - 자세한 내용은 [.NET Framework Data Provider for SQL Server와 Always Encrypted 사용](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)을 참조하세요.
-    - 단계별 자습서를 보려면 [자습서: 보안 Enclave를 사용한 Always Encrypted를 사용하여 .NET Framework 애플리케이션 개발](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)을 참조하세요.
+    - 단계별 자습서를 보려면 [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- .NET Framework 4.6 이상 및 .NET Core 2.1 이상의 Microsoft .NET Data Provider for SQL Server. 
+    - 자세한 내용은 [Microsoft .NET Data Provider for SQL Server와 Always Encrypted 사용](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)을 참조하세요.
+    - 단계별 자습서를 보려면 [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET 애플리케이션 개발](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)을 참조하세요.
 - Microsoft ODBC Driver for SQL Server 버전 17.4 이상 
     - 자세한 내용은 [상시 암호화와 ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. 
     - ODBC를 사용하는 데이터베이스 연결에 Enclave 계산을 사용하는 방법에 대한 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) 섹션을 참조하세요.

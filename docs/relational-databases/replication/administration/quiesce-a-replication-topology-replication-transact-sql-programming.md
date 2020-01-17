@@ -1,6 +1,7 @@
 ---
-title: 복제 토폴로지 정지(복제 Transact-SQL 프로그래밍) | Microsoft 문서
-ms.custom: ''
+title: 복제 토폴로지 정지(복제 SP)
+description: 복제 저장 프로시저를 사용하여 SQL Server의 복제 토폴로지를 정지하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8a8154986de367869c4d85d97b2dfa9119adacc6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0ad5d9595419c5d991dd1e33d15e1e7a4d1a8721
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909846"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322016"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

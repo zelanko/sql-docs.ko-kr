@@ -1,6 +1,6 @@
 ---
-title: 계획 지침을 사용하여 쿼리 매개 변수화 동작 지정 | Microsoft 문서
-ms.custom: ''
+title: 계획 지침을 사용하여 쿼리 매개 변수화 동작 설정
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7a6cbd0829105c03dbb453de52d84455faeaef99
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f79996ca171fa6c77daaf4c25bc3c1a8da9420d9
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907447"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165979"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

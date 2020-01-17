@@ -1,7 +1,7 @@
 ---
-title: 가용성 복제본은 가용성 그룹에 대해 정상적인 역할을 수행하지 않습니다.
-description: Always On 가용성 그룹 내에서 복제본이 정상적인 역할을 수행하지 못하는 이유에 대한 가능한 원인을 식별합니다.
-ms.custom: seodec18
+title: 복제본은 가용성 그룹에 대해 정상적인 역할을 수행하지 않습니다.
+description: Always On 가용성 그룹 내에서 가용성 복제본이 정상적인 역할을 수행하지 못하는 이유의 가능한 원인을 파악합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991382"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241770"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>가용성 복제본은 Always On 가용성 그룹에 대해 정상적인 역할을 수행하지 않습니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67991382"
 |**범주**|**심각**|  
 |**패싯**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 복제본의 역할 상태를 확인합니다. 가용성 복제본의 역할이 주 역할이나 보조 역할이 아닌 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "67991382"
 ## <a name="possible-causes"></a>가능한 원인  
  이 가용성 복제본의 역할이 비정상 상태에 있습니다. 복제본에 주 역할 또는 보조 역할이 없습니다.  
   
-## <a name="possible-solution-informationstilltocome"></a>가능한 해결 방법: Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>가능한 해결 방법: Information_still_to_come  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

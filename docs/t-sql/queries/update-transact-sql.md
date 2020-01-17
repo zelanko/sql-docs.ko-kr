@@ -1,7 +1,7 @@
 ---
 title: UPDATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,23 +38,23 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68317101"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687383"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 테이블 또는 뷰의 기존 데이터를 변경합니다. 예제를 보려면 [예제](#UpdateExamples)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```sql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -191,13 +191,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  *expression*은 *column_name*에 복사된 값입니다. *expression*은 *column_name* 형식으로 평가되거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다. *expression*을 NULL로 설정하면 @*Length*가 무시되고 *column_name*의 값이 지정된 @*Offset*에서 잘립니다.  
   
- @*Offset*은 *expression*이 쓰여질 *column_name* 값의 시작 지점입니다. @*Offset*은 0부터 시작하는 서수 위치이고 **bigint**이며 음수가 될 수 없습니다. @*Offset*이 NULL이면 업데이트 작업 시 기존 *column_name* 값 끝에 *expression*이 추가되고 @*Length*는 무시됩니다. @Offset이 *column_name* 값의 길이보다 크면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류를 반환합니다. @*Offset*에 @*Length*를 더한 값이 열의 기본 값 길이를 초과하면 값의 마지막 문자까지 삭제됩니다. @*Offset*에 LEN(*expression*)을 더한 값이 선언된 기본 크기보다 크면 오류가 발생합니다.  
+ @*Offset*은 *expression*이 쓰일 *column_name*에 저장되는 값의 시작점입니다. @*Offset*은 0부터 시작하는 서수 바이트 위치이고 **bigint**이며 음수가 될 수 없습니다. @*Offset*이 NULL이면 업데이트 작업 시 기존 *column_name* 값 끝에 *expression*이 추가되고 @*Length*는 무시됩니다. @*Offset*이 *column_name* 값의 바이트 길이보다 크면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류를 반환합니다. @*Offset*에 @*Length*를 더한 값이 열의 기본 값 길이를 초과하면 값의 마지막 문자까지 삭제됩니다.  
   
  @*Length*는 @*Offset*부터 *expression*으로 대체될 열 섹션의 길이입니다. @*Length*는 **bigint**이며 음수일 수 없습니다. @*Length*가 NULL이면 업데이트 작업 시 @*Offset*부터 *column_name* 값의 끝까지 모든 데이터를 제거합니다.  
   
- 자세한 내용은 설명 부분을 참조하세요.  
+ 자세한 내용은 뒷부분의 [큰 값 데이터 형식 업데이트](#updating-lobs)를 참조하세요.  
   
- **@** *변수*  
+ **@** *variable*  
  *expression*에서 반환된 값으로 설정한 선언된 변수입니다.  
   
  SET **@** _variable_ = *column* = *expression*은 열과 동일한 값으로 변수를 설정합니다. 이것은 변수를 이미 업데이트한 열 값으로 설정하는 SET **@** _variable_ = _column_, _column_ = _expression_과는 다릅니다.  
@@ -242,8 +242,8 @@ GLOBAL
 OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 문을 처리하는 방식을 사용자 지정하기 위한 최적화 프로그램 힌트를 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
- @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
+## <a name="best-practices"></a>모범 사례  
+ `@@ROWCOUNT` 함수를 사용하여 클라이언트 애플리케이션에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
  UPDATE 문에서 변수 이름을 사용하면 영향을 받는 이전 값과 새로운 값을 표시할 수 있지만 이는 UPDATE 문이 단일 레코드에 영향을 줄 경우에만 사용할 수 있는 방법입니다. UPDATE 문이 여러 개의 레코드에 영향을 주는 경우 각각의 레코드에 대한 이전 값 및 새로운 값을 반환하려면 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용합니다.  
   
@@ -277,7 +277,7 @@ SELECT ColA, ColB
 FROM dbo.Table2;  
 ```  
   
- FROM 및 WHERE CURRENT OF 절을 함께 사용할 때도 같은 문제가 발생합니다. 다음 예에서 `Table2` 테이블의 두 행은 `FROM` 문에 있는 `UPDATE` 절의 조건을 충족시킵니다. 하지만 `Table2`의 행을 업데이트하기 위해 `Table1`의 어떤 행을 사용할 것인지는 정의되지 않았습니다.  
+ `FROM` 및 `WHERE CURRENT OF` 절을 함께 사용할 때도 같은 문제가 발생합니다. 다음 예에서 `Table2` 테이블의 두 행은 `FROM` 문에 있는 `UPDATE` 절의 조건을 충족시킵니다. 하지만 `Table2`의 행을 업데이트하기 위해 `Table1`의 어떤 행을 사용할 것인지는 정의되지 않았습니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -329,8 +329,10 @@ GO
 > [!IMPORTANT]
 >  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
-### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
- **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 절을 사용하여 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.WRITE**는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+### <a name="updating-lobs"></a> 큰 값 데이터 형식 업데이트  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 절을 사용하여 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 
+ 
+ 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200바이트(ASCII 문자를 사용하는 경우 200자)만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.WRITE**는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 UPDATE 문이 다음 중 한 가지 동작을 유발할 때 부분 업데이트를 전체 업데이트로 변환합니다.  
 -   분할된 뷰 또는 테이블의 키 열을 변경합니다.  
@@ -338,7 +340,7 @@ GO
   
 **.WRITE** 절을 사용하여 NULL 열을 업데이트하거나 *column_name*의 값을 NULL로 설정할 수 없습니다.  
   
-@*Offset* 및 @*Length*는 **varbinary** 및 **varchar** 데이터 형식의 경우 바이트 단위로 지정되고, **nvarchar** 데이터 형식의 경우 문자 단위로 지정됩니다. 오프셋은 DBCS(더블바이트 문자 집합) 데이터 정렬에 맞게 적절히 계산됩니다.  
+@*Offset* 및 @*Length*는 **varbinary** 및 **varchar** 데이터 형식의 경우 바이트 단위로 지정되고, **nvarchar** 데이터 형식의 경우 바이트 쌍 단위로 지정됩니다. 문자열 데이터 형식 길이에 대한 자세한 내용은 [char 및 varchar(Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 및 [nchar 및 nvarchar(Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)를 참조하세요.
   
 최상의 성능을 위해 8,040바이트의 배수인 청크 크기로 데이터를 삽입 또는 업데이트하는 것이 좋습니다.  
   
@@ -366,7 +368,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 값에서 변경자(mutator) 메서드를 호출하거나 변경자(mutator) 메서드에 의해 생성된 새 값이 Null이면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류가 반환됩니다.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 값에서 변경자(mutator) 메서드를 호출하거나 변경자(mutator) 메서드에 의해 생성된 새 값이 Null이면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류가 반환됩니다.  
   
 -   등록된 속성 또는 사용자 정의 형식의 공용 데이터 멤버 값을 변경합니다. 값을 제공하는 식은 암시적으로 해당 속성 유형으로 변환할 수 있어야 합니다. 다음 예에서는 사용자 정의 형식 `X`의 `Point` 속성 값을 수정합니다.  
   
@@ -391,10 +393,10 @@ GO
 ## <a name="interoperability"></a>상호 운용성  
  수정되고 있는 테이블이 테이블 변수인 경우에만 UPDATE 문이 사용자 정의 함수의 본문에 허용됩니다.  
   
- 테이블에 대한 UPDATE 동작에 INSTEAD OF 트리거가 정의되면 UPDATE 문 대신 트리거가 실행됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UPDATE 및 기타 데이터 수정 문에서 정의된 AFTER 트리거만 지원되었습니다. INSTEAD OF 트리거가 정의되어 있는 뷰를 직접 또는 간접적으로 참조하는 UPDATE 문에는 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ 테이블에 대한 UPDATE 동작에 `INSTEAD OF` 트리거가 정의되면 UPDATE 문 대신 트리거가 실행됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UPDATE 및 기타 데이터 수정 문에서 정의된 AFTER 트리거만 지원되었습니다. `INSTEAD OF` 트리거가 정의된 뷰를 직접 또는 간접적으로 참조하는 UPDATE 문에는 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- INSTEAD OF 트리거가 정의되어 있는 뷰를 직접 또는 간접적으로 참조하는 UPDATE 문에는 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ `INSTEAD OF` 트리거가 정의된 뷰를 직접 또는 간접적으로 참조하는 UPDATE 문에는 FROM 절을 지정할 수 없습니다. `INSTEAD OF` 트리거에 대한 자세한 내용은 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
  CTE(공통 테이블 식)가 UPDATE 문의 대상인 경우 문에서 CTE에 대한 모든 참조가 일치해야 합니다. 예를 들어 FROM 절에서 CTE에 별칭이 지정된 경우 CTE에 대한 다른 모든 참조에서 이 별칭을 사용해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 개체 ID를 사용하여 개체와 해당 별칭 간의 암시적 관계를 인식하는데, CTE는 개체 ID가 없기 때문에 CTE 참조가 분명해야 합니다. 이 관계가 없으면 쿼리 계획에서 예기치 않은 조인 동작과 의도하지 않은 쿼리 결과가 발생할 수 있습니다. 다음 예에서는 CTE가 업데이트 작업의 대상 개체일 때 CTE를 지정하는 올바른 방법과 잘못된 방법을 보여 줍니다.  
   
@@ -427,6 +429,7 @@ GO
 ```  
 
 올바르지 않게 일치된 CTE 참조가 있는 UPDATE 문입니다.  
+
 ```sql  
 USE tempdb;  
 GO  
@@ -463,13 +466,13 @@ ID     Value
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- 대상 테이블에 대한 UPDATE 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 *expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해 SELECT 권한이 요구됩니다.  
+ 대상 테이블에 대한 `UPDATE` 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 *expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해 `SELECT` 권한이 요구됩니다.  
   
- UPDATE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
+ UPDATE 권한은 `sysadmin` 고정 서버 역할, `db_owner` 및 `db_datawriter` 고정 데이터베이스 역할, 테이블 소유자의 멤버에게 기본적으로 부여됩니다. `sysadmin`, `db_owner` 및 `db_securityadmin` 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
   
 ##  <a name="UpdateExamples"></a> 예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|UPDATE|  
 |[업데이트할 행 제한](#LimitingValues)|WHERE • TOP • WITH 공통 테이블 식 • WHERE CURRENT OF|  
@@ -483,10 +486,10 @@ ID     Value
 |[UPDATE 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
 |[다른 문에서 UPDATE 사용](#Other)|저장 프로시저 • TRY…CATCH|  
   
-###  <a name="BasicSyntax"></a> 기본 구문  
+###  <a name="BasicSyntax"></a>기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 UPDATE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-using-a-simple-update-statement"></a>1\. 단순 UPDATE 문 사용  
+#### <a name="a-using-a-simple-update-statement"></a>A. 단순 UPDATE 문 사용  
  다음 예에서는 `Person.Address` 테이블의 모든 행에 대해 단일 열을 업데이트합니다.  
   
 ```sql  
@@ -496,7 +499,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>2\. 여러 열 업데이트  
+#### <a name="b-updating-multiple-columns"></a>B. 여러 열 업데이트  
  다음 예에서는 `Bonus` 테이블의 모든 행에 대해 `CommissionPct`, `SalesQuota` 및 `SalesPerson` 열의 값을 업데이트합니다.  
   
 ```sql  
@@ -907,7 +910,7 @@ WHERE [SerialNumber] = 2;
 ###  <a name="UDTs"></a> 사용자 정의 형식 업데이트  
  다음 예에서는 CLR UDT(사용자 정의 형식) 열의 값을 수정하는 세 가지 방법을 보여 줍니다. 사용자 정의 형식 열에 대한 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
-#### <a name="v-using-a-system-data-type"></a>22. 시스템 데이터 형식 사용  
+#### <a name="v-using-a-system-data-type"></a>V. 시스템 데이터 형식 사용  
  사용자 정의 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 암시적 또는 명시적 변환이 지원되는 경우 해당 형식의 값을 제공하여 UDT를 업데이트할 수 있습니다. 다음 예에서는 문자열에서 명시적 변환을 통해 사용자 정의 형식인 `Point` 열의 값을 업데이트하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -953,7 +956,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z. 쿼리 힌트 지정  
+#### <a name="z-specifying-a-query-hint"></a>Z를 대신하여 테넌트 관리자에게 권한 부여 요청을 보내세요. 쿼리 힌트 지정  
  다음 예에서는 UPDATE 문에 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)`를 지정합니다. 이 힌트는 쿼리가 컴파일되고 최적화될 때 쿼리 최적화 프로그램이 지역 변수에 대해 특정 값을 사용하도록 지시합니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다.  
   
 ```sql  
@@ -1064,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 단순 UPDATE 문 사용  
  다음 예에서는 업데이트할 행을 지정하기 위해 WHERE 절을 사용하지 않았을 때 모든 행이 영향을 받는 방식을 보여 줍니다.  
@@ -1221,5 +1224,6 @@ DROP TABLE CTAS_acs
  [텍스트 및 이미지 함수&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
+ [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [싱글바이트 및 멀티바이트 문자 집합](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
+ 
