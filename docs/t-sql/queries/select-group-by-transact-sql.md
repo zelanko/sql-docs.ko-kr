@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948423"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258287"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67948423"
   
 ## <a name="syntax"></a>구문  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>인수 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -144,12 +154,12 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 Sales 테이블에 포함된 행은 다음과 같습니다.
 
-| Country | Region | Sales |
+| 국가 | 지역 | Sales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| United States | Montana | 100 |
+| 미국 | Montana | 100 |
 
 다음 쿼리에서는 Country 및 Region을 그룹화하고, 값의 각 조합에 대한 집계 합계를 반환합니다.  
  
@@ -160,11 +170,11 @@ GROUP BY Country, Region;
 ```
 Country 및 Region에 대한 값의 조합이 3개이므로 쿼리 결과에는 3개의 행이 있습니다. Canada와 British Columbia에 대한 TotalSales는 두 행의 합계입니다. 
 
-| Country | Region | TotalSales |
+| 국가 | 지역 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| United States | Montana | 100 |
+| 미국 | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
@@ -190,13 +200,13 @@ GROUP BY ROLLUP (Country, Region);
 
 쿼리 결과에는 ROLLUP이 없는 단순 GROUP BY와 동일한 집계가 있습니다. 또한 Country의 각 값에 대한 부분합을 만듭니다. 마지막으로 모든 행에 대한 총합계를 제공합니다. 결과는 다음과 같습니다.
 
-| Country | Region | TotalSales |
+| 국가 | 지역 | TotalSales |
 | :------ | :----- | ---------: |
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | Montana | 100 |
-| United States | NULL | 100 |
+| 미국 | Montana | 100 |
+| 미국 | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
@@ -213,17 +223,17 @@ GROUP BY CUBE (Country, Region);
 
 쿼리 결과에는 (Country, Region), (NULL, Region), (Country, NULL) 및 (NULL, NULL)의 고유 값에 대한 그룹이 있습니다. 결과는 다음과 같습니다.
 
-| Country | Region | TotalSales |
+| 국가 | 지역 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| United States | Montana | 100 |
+| 미국 | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
-| United States | NULL | 100 |
+| 미국 | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -266,7 +276,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 적용 대상: SQL Server 및 Azure SQL Database
 
-참고: 이 구문은 이전 버전과의 호환성을 위해서만 제공됩니다. 이후 버전에서는 제거됩니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 구문을 사용하는 애플리케이션을 수정하세요.
+참고:  이 구문은 이전 버전과의 호환성을 위해서만 제공됩니다. 이후 버전에서는 제거됩니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 구문을 사용하는 애플리케이션을 수정하세요.
 
 WHERE 절의 검색 조건에 맞는지 여부에 관계없이 결과에 모든 그룹을 포함하도록 지정합니다. 검색 조건에 맞지 않는 그룹은 집계에서 NULL을 가집니다. 
 
@@ -274,12 +284,12 @@ GROUP BY ALL:
 - 쿼리에 WHERE 절이 있는 경우 원격 테이블을 액세스하는 쿼리에는 지원되지 않습니다.
 - FILESTREAM 특성이 있는 열에서 실패합니다.
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
 
 DISTRIBUTED_AGG 쿼리 힌트는 집계를 수행하기 전에 MPP(Massively Parallel Processing) 시스템에서 특정 열에 테이블을 다시 배포하도록 합니다. GROUP BY 절에 있는 하나의 열만 DISTRIBUTED_AGG 쿼리 힌트를 가질 수 있습니다. 쿼리가 완료되면 다시 배포된 테이블이 삭제됩니다. 원래 테이블은 변경되지 않습니다.  
 
-참고: DISTRIBUTED_AGG 쿼리 힌트는 이전 버전의 병렬 데이터 웨어하우스와의 호환성을 위해 제공되며, 대부분의 쿼리에 대한 성능이 향상되지 않습니다. 기본적으로 MPP는 집계 성능을 향상시키기 위해 이미 필요에 따라 데이터를 다시 배포합니다. 
+참고:  DISTRIBUTED_AGG 쿼리 힌트는 이전 버전의 병렬 데이터 웨어하우스와의 호환성을 위해 제공되며, 대부분의 쿼리에 대한 성능이 향상되지 않습니다. 기본적으로 MPP는 집계 성능을 향상시키기 위해 이미 필요에 따라 데이터를 다시 배포합니다. 
   
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
@@ -344,7 +354,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 |기능|SQL Server Integration Services|SQL Server 호환성 수준 100 이상|SQL Server 2008 이상(호환성 수준 90).|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 집계|WITH CUBE 또는 WITH ROLLUP에 대해 지원되지 않습니다.|WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE 또는 ROLLUP에 대해 지원됩니다.|호환성 수준 100과 같습니다.|  
-|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(** _arg1_ **,** _...argN_ **)** 또는 **dbo.rollup(** _arg1_ **,** ..._argN_ **)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (** _arg1_ **,** ...argN **)** 또는 **dbo.rollup(** arg1 **,** _...argN_ **)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 다음 오류 메시지가 반환됩니다. "키워드 'cube'&#124;'rollup' 근처의 구문이 잘못되었습니다."<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (** _arg1_ **,** _...argN_) 또는 **dbo.rollup(** _arg1_ **,** _...argN_ **)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(**_arg1_**,**_...argN_**)** 또는 **dbo.rollup(**_arg1_**,**..._argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (**_arg1_**,**...argN **)** 또는 **dbo.rollup(** arg1 **,**_...argN_**)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 다음 오류 메시지가 반환됩니다. "키워드 'cube'&#124;'rollup' 근처의 구문이 잘못되었습니다."<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (**_arg1_**,**_...argN_) 또는 **dbo.rollup(**_arg1_**,**_...argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|지원되지 않음|지원됨|지원됨|  
 |CUBE|지원되지 않음|지원됨|지원되지 않음|  
 |ROLLUP|지원되지 않음|지원됨|지원되지 않음|  
@@ -358,7 +368,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-a-simple-group-by-clause"></a>1\. 단순 GROUP BY 절 사용  
+### <a name="a-use-a-simple-group-by-clause"></a>A. 단순 GROUP BY 절 사용  
  다음 예에서는 `SalesOrderID` 테이블의 각 `SalesOrderDetail`에 대한 합계를 계산합니다. 이 예제에서는 AdventureWorks를 사용합니다.  
   
 ```sql  
@@ -368,7 +378,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>2\. 여러 테이블이 포함된 GROUP BY 절 사용  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. 여러 테이블이 포함된 GROUP BY 절 사용  
  다음 예에서는 `City` 테이블에 조인된 `Address` 테이블에서 각 `EmployeeAddress`에 대한 직원 수를 검색합니다. 이 예제에서는 AdventureWorks를 사용합니다. 
   
 ```sql  
@@ -403,7 +413,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>예: SQL Data Warehouse 및 병렬 데이터 웨어하우스  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>예제: SQL Data Warehouse 및 병렬 데이터 웨어하우스  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 절의 기본적인 사용  
  다음 예제에서는 일별 총 판매액을 모두 찾습니다. 일일 판매의 합계가 모두 포함된 하나의 행이 반환됩니다.  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 힌트의 기본적인 사용  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>F. DISTRIBUTED_AGG 힌트의 기본적인 사용  
  다음 예제에서는 집계를 수행하기 전에 DISTRIBUTED_AGG 쿼리 힌트를 사용하여 어플라이언스가 `CustomerKey` 열에 있는 테이블의 순서를 섞도록 합니다.  
   
 ```sql  
@@ -452,7 +462,7 @@ GROUP BY OrderDateKey, DueDateKey
 ORDER BY OrderDateKey;  
 ```  
   
-### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>9\. HAVING 절과 함께 GROUP BY 절 사용  
+### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>9. HAVING 절과 함께 GROUP BY 절 사용  
  다음 예제에서는 `HAVING` 절을 사용하여 결과 집합에 포함되어야 하는 `GROUP BY` 절에 생성된 그룹을 지정합니다. 2004년 이후의 주문 날짜가 있는 그룹만 결과에 포함됩니다.  
   
 ```sql  
