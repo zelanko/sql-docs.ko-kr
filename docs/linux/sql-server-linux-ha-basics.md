@@ -1,6 +1,7 @@
 ---
-title: Linux 배포의 SQL Server 가용성 기본 사항
-description: ''
+title: Linux 배포의 SQL Server 고가용성
+description: Always On 가용성 그룹, FCI(장애 조치 클러스터 인스턴스), 로그 전달 등 SQL Server on Linux에 사용할 수 있는 다양한 고가용성 옵션을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243593"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656612"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -57,7 +58,7 @@ Windows Server에서 많은 작업을 관리자 권한으로 수행해야 하는
 한 서버에서 다른 서버로 파일을 복사하는 작업은 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 사용하는 사용자가 수행할 수 있어야 합니다. 이 작업은 AG 구성에 매우 중요합니다.
 
 권한 문제와 같은 항목은 Windows 기반 설치뿐 아니라 Linux에도 있을 수 있습니다. 그러나 Windows에서 서버 간에 복사하는 방법에 익숙한 사용자는 Linux에서 복사하는 방법에 익숙하지 않을 수 있습니다. 일반적인 방법은 Secure Copy의 약어인 명령줄 유틸리티 `scp`를 사용하는 것입니다. 내부적으로는 `scp`는 OpenSSH를 사용합니다. SSH는 Secure Shell의 약어입니다. Linux 배포에 따라 OpenSSH 자체가 설치되지 않을 수 있습니다. 그렇지 않으면 OpenSSH가 먼저 설치되어야 합니다. OpenSSH 구성에 대한 자세한 내용은 각 배포에 대한 다음 링크의 정보를 참조하세요.
--   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server(SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **방화벽 설명서:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>가용성을 위한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 패키지 설치

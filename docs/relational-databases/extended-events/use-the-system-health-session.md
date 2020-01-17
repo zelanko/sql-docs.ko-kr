@@ -1,6 +1,5 @@
 ---
-title: system_health 세션 사용 | Microsoft 문서
-ms.custom: ''
+title: system_health 세션 사용
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009355"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246138"
 ---
-# <a name="use-the-systemhealth-session"></a>system_health 세션 사용
+# <a name="use-the-system_health-session"></a>system_health 세션 사용
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 system_health 세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 기본적으로 포함된 확장 이벤트 세션입니다. 이 세션은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시작될 때 자동으로 시작되며 성능에 별다른 영향을 주지 않고 실행됩니다. 이 세션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 
 
 > [!IMPORTANT]
-> 시스템 상태 세션을 중지, 변경 또는 삭제하지 않는 것이 좋습니다.  
+> system_health 세션을 중지, 변경 또는 삭제하지 않는 것이 좋습니다. system_health 세션 설정에 대한 변경 내용은 이후 제품 업데이트로 덮어쓸 수 있습니다.
   
 이 세션에서 수집하는 정보는 다음과 같습니다.  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 이벤트 파일의 세션 데이터를 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 확장 이벤트 사용자 인터페이스를 사용합니다. 자세한 내용은 [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하세요.
   
-## <a name="restoring-the-systemhealth-session"></a>system_health 세션 복원  
+## <a name="restoring-the-system_health-session"></a>system_health 세션 복원  
 system_health 세션을 삭제한 경우 쿼리 편집기에서 **u_tables.sql** 파일을 실행하여 세션을 복원할 수 있습니다. 이 파일은 다음 폴더에 있으며 여기서 **C:** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일을 설치한 드라이브를 나타내며, **MSSQL1x**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 버전을 나타냅니다.  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

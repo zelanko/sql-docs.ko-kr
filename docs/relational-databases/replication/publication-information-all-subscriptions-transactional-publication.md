@@ -1,6 +1,7 @@
 ---
-title: 게시 정보, 모든 구독(트랜잭션 게시) | Microsoft 문서
-ms.custom: ''
+title: 모든 구독(트랜잭션 - SSMS)
+description: SQL Server Management Studio 선택한 트랜잭션 게시의 ‘모든 구독’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b7eaa30c5738cce6b1161ed28930541421a6b6d3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0ffbbd5f2cef23accfde900543fb07b934bb3730
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770046"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321353"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>게시 정보, 모든 구독(트랜잭션 게시)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "68770046"
   
 -   나쁨  
   
--   심각  
+-   위험  
   
  성능 상태가 심각하면 **상태** 열에 **성능 심각** 이 표시됩니다. 성능 등급 정의 방법 및 성능 임계값 설정 방법에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)을 참조하세요.  
   

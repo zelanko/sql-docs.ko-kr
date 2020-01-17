@@ -1,6 +1,7 @@
 ---
-title: 기록 보존 기간 설정(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 기록 보존 기간 설정(SSMS)
+description: SSMS(SQL Server Management Studio)에서 배포 데이터베이스 기록 보존 기간을 설정하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9a33317c8f430a3665c47e94441e8f78c68085c6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a96f4b41a65a341b5f4417692524eb35449ec350
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768377"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321670"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>기록 보존 기간 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

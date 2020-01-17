@@ -1,20 +1,21 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
-description: 이 문서에서는 Linux에서 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 작동하는 방법을 설명합니다.
+title: FCI 수동 장애 조치 - SQL Server on Linux
+description: SQL Server on Linux에서 FCI(장애 조치 클러스터 인스턴스)를 수동으로 장애 조치하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682117"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558548"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -57,13 +58,13 @@ RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 수동 장애 조치�
 ## <a name="manual-failover-sles"></a>수동 장애 조치(failover)(SLES)
 
 
-SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 예를 들어
+SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 다음은 그 예입니다.
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName>은 장애 조치(failover) 클러스터 인스턴스의 리소스 이름입니다. 
+\<FCIResourceName>은 장애 조치 클러스터 인스턴스의 리소스 이름입니다. 
 
 \<NewHostNode>는 새 대상 호스트의 이름입니다. 
 
@@ -77,7 +78,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 - [장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

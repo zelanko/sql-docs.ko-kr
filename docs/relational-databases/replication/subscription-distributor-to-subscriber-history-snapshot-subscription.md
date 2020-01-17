@@ -1,6 +1,7 @@
 ---
-title: 구독, 배포자에서 구독자로의 연결 기록(스냅샷 구독) | Microsoft 문서
-ms.custom: ''
+title: 배포자에서 구독자로의 연결 기록(스냅샷)
+description: SSMS(SQL Server Management Studio) 스냅샷 게시용 복제 모니터의 ‘배포자에서 구독자로의 연결 기록’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768328"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321687"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(스냅샷 구독)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68768328"
   
 -   Error  
   
--   완료  
+-   Completed  
   
 -   다시 시도 중  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68768328"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **기간**  
+ **Duration**  
  이 세션에서 배포 에이전트가 실행된 시간입니다. 에이전트가 현재 실행 중이면 이 시간은 경과된 시간을 나타내고 에이전트 세션이 종료된 경우에는 총 세션 시간을 나타냅니다.  
   
  **오류 메시지**  

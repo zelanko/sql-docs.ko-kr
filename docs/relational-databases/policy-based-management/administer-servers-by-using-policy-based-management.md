@@ -1,6 +1,7 @@
 ---
-title: 정책 기반 관리를 사용하여 서버 관리 | Microsoft 문서
-ms.custom: ''
+title: 정책 기반 관리를 사용하여 서버 관리
+description: 정책 기반 관리를 사용하여 하나 이상의 SQL Server 인스턴스를 관리하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109933"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558688"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "68109933"
      자동화된 정책이 설정되어 있지 않으면 정책 기반 관리가 시스템 성능에 영향을 주지 않습니다.  
   
 ## <a name="terms"></a>용어  
- **정책 기반 관리에 의해 관리되는 대상** [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스, 데이터베이스, 테이블 또는 인덱스와 같이 정책 기반 관리에 의해 관리되는 엔터티입니다. 서버 인스턴스의 모든 대상이 대상 계층을 구성합니다. 대상 집합은 HumanResources 스키마가 소유하는 데이터베이스의 모든 테이블과 같이 대상 필터 집합을 대상 계층에 적용한 결과인 대상 집합입니다.  
+ **정책 기반 관리에 의해 관리되는 대상**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스, 데이터베이스, 테이블 또는 인덱스와 같이 정책 기반 관리에 의해 관리되는 엔터티입니다. 서버 인스턴스의 모든 대상이 대상 계층을 구성합니다. 대상 집합은 HumanResources 스키마가 소유하는 데이터베이스의 모든 테이블과 같이 대상 필터 집합을 대상 계층에 적용한 결과인 대상 집합입니다.  
   
  **정책 기반 관리 패싯** 특정 유형의 관리되는 대상에 대한 동작 또는 특징을 모델링하는 논리적 속성 집합입니다. 속성의 수 및 특징은 기본적으로 패싯에 포함되며 패싯 작성자에 의해서만 추가 또는 제거될 수 있습니다. 대상 유형은 하나 이상의 관리 패싯을 구현할 수 있으며 관리 패싯은 하나 이상의 대상 유형에 의해 구현될 수 있습니다. 일부 패싯 속성은 특정 버전에만 적용될 수 있습니다.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "68109933"
  - [정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  
  - [자습서: Off By Default 정책 만들기 및 적용](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [자습서: 명명 표준 정책 만들기 및 적용](lesson-2-create-and-apply-a-naming-standards-policy.md)

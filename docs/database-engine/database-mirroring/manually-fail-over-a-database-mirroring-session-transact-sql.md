@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 세션 수동 장애 조치(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 수동으로 데이터베이스 미러링을 파트너로 장애 조치(failover)
+description: T-SQL(Transact-SQL)을 사용하여 보조 파트너로 주 데이터베이스 미러링을 수동으로 장애 조치(failover)하기 위한 지침입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041745"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822101"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션 수동 장애 조치(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68041745"
   
 3.  주 서버에서 다음 문을 실행합니다.  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER. 여기서 *database_name* 은 미러된 데이터베이스입니다.  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER, 여기서 *database_name*은 미러된 데이터베이스입니다.  
   
      이렇게 하면 미러 서버가 주 역할로 즉시 전환하기 시작합니다.  
   

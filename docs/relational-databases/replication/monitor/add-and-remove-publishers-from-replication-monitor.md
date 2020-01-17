@@ -1,6 +1,7 @@
 ---
-title: 복제 모니터에서 게시자 추가 및 제거 | Microsoft 문서
-ms.custom: ''
+title: 복제 모니터에 게시자 추가 및 제거(SSMS)
+description: SSMS(SQL Server Management Studio)에서 복제 모니터에 게시자를 추가하고 제거하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770693"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320773"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68770693"
   
 2.  **게시자 추가** 대화 상자에서 **추가**를 클릭한 다음 **Oracle 게시자 추가**를 클릭합니다.  
   
-3.  **서버에 연결** 대화 상자에서 Oracle 게시자와 관련된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력한 다음 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
+3.  **서버에 연결** 대화 상자에서 Oracle 게시자와 연결된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력하고 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 4.  **연결**을 클릭합니다.  
   

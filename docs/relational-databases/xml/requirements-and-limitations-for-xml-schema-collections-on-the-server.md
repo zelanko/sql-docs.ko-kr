@@ -1,6 +1,5 @@
 ---
-title: 서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항 | Microsoft 문서
-ms.custom: ''
+title: 요구 사항 및 제한 사항(XML 스키마 컬렉션) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093192"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257617"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ ms.locfileid: "68093192"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|정규 형식 및 패턴 제한 사항을 설명합니다.|  
+|[정규 형식 및 패턴 제한 사항](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|정규 형식 및 패턴 제한 사항을 설명합니다.|  
 |[와일드카드 구성 요소 및 콘텐츠 유효성 검사](../../relational-databases/xml/wildcard-components-and-content-validation.md)|와일드카드 문자, lax 유효성 검사 및 anyType 요소를 XML 스키마 컬렉션과 함께 사용할 경우 제한 사항을 설명합니다.|  
 |[&#60;xsd:redefine&#62; 요소](../../relational-databases/xml/the-xsd-redefine-element.md)|\<xsd:redefine> 요소 사용에 대한 제한 사항과 해결 방법을 설명합니다.|  
-|[The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)|xs:QName 유형에 대한 제한 사항을 설명합니다.|  
+|[xs:QName 형식](../../relational-databases/xml/the-xs-qname-type.md)|xs:QName 유형에 대한 제한 사항을 설명합니다.|  
 |[&#60;xsd:simpleType&#62; 선언의 값](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|\<xsd:simpleType> 선언에 적용되는 제한 사항을 설명합니다.|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|열거 패싯에 대한 제한 사항을 설명합니다.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|혼합 형식을 단순 내용으로 제한하는 제한 사항을 설명합니다.|  
+|[열거 패싯](../../relational-databases/xml/enumeration-facets.md)|열거 패싯에 대한 제한 사항을 설명합니다.|  
+|[혼합 형식 및 단순 내용](../../relational-databases/xml/mixed-type-and-simple-content.md)|혼합 형식을 단순 내용으로 제한하는 제한 사항을 설명합니다.|  
 |[대형 XML 스키마 컬렉션 및 메모리 부족 상태](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|대형 스키마 컬렉션을 사용할 경우 가끔 발생하는 메모리 부족 상태에 대한 해결 방법을 설명합니다.|  
 |[비결정적 콘텐츠 모델](../../relational-databases/xml/non-deterministic-content-models.md)|비결정적 콘텐츠 모델에 대한 제한 사항을 설명합니다.|  
   

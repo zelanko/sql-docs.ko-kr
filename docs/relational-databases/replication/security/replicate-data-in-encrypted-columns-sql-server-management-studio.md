@@ -1,6 +1,7 @@
 ---
-title: 암호화된 열의 데이터 복제(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 암호화된 열 복제(SSMS)
+description: SSMS(SQL Server Management Studio)를 사용하여 암호화된 열의 데이터를 복제하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,18 +16,18 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907435"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321650"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>암호화된 열의 데이터 복제(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   복제를 사용하여 암호화된 열 데이터를 게시할 수 있습니다. 구독자에서 이 데이터를 해독하고 사용하려면 게시자에서 데이터 암호화에 사용된 키가 구독자에도 있어야 합니다. 복제에서는 암호화 키를 전송하는 보안 메커니즘을 제공하지 않습니다. 구독자에서 직접 암호화 키를 다시 만들어야 합니다. 이 항목에서는 게시자에서 열을 암호화하고 구독자에서 암호화 키를 사용할 수 있게 하는 방법을 보여 줍니다.  
   
- 기본 단계는 다음과 같습니다.  
+ 기본적인 단계는 다음과 같습니다.  
   
 1.  게시자에서 대칭 키를 만듭니다.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "72907435"
   
 4.  [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) 를 실행하여 키를 닫습니다.  
   
-5.  암호화된 열이 있는 테이블을 게시합니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+5.  암호화된 열이 있는 테이블을 게시합니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 6.  게시를 구독합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md) 또는 [밀어넣기 구독 만들기](../../../relational-databases/replication/create-a-push-subscription.md)를 참조하세요.  
   

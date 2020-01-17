@@ -1,6 +1,7 @@
 ---
-title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작 | Microsoft Docs'
-ms.custom: ''
+title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted'
+description: 이 자습서에서는 보안 enclave 환경을 사용하여 기본 Always Encrypted를 만드는 방법, 데이터를 원본 위치에서 암호화하는 방법, SSMS(SQL Server Management Studio)를 사용하여 암호화된 열에 대해 서식 있는 쿼리를 실행하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592341"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557534"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 이 자습서에서는 [보안 Enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)를 시작하는 방법을 설명합니다. 다음이 설명됩니다.
@@ -186,7 +187,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
     쿼리는 다음 결과를 반환해야 합니다.  
 
-    | NAME                           | value | value_in_use |
+    | name                           | 값 | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | 열 암호화 Enclave 형식 | 1     | 1              |
 
@@ -339,7 +340,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 3. Always Encrypted를 사용하지 않는 SSMS 인스턴스에서 동일한 쿼리를 다시 시도하고 발생하는 오류를 확인합니다.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 이 자습서를 완료한 후 다음 자습서 중 하나로 이동할 수 있습니다.
 - [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
@@ -347,5 +348,5 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 ## <a name="see-also"></a>참고 항목
 - [Always Encrypted 서버 구성 옵션에 대한 enclave 유형 구성](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
 - [Enclave 사용 키 프로비전](encryption/always-encrypted-enclaves-provision-keys.md)
-- [Transact-SQL을 사용하여 내부 열 암호화 구성](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](encryption/always-encrypted-enclaves-query-columns.md)
+- [Transact-SQL을 사용하여 바로 열 암호화 구성](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [보안 Enclave를 사용한 Always Encrypted를 사용하여 열 쿼리](encryption/always-encrypted-enclaves-query-columns.md)

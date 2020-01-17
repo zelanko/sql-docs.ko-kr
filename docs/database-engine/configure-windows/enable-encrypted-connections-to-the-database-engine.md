@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708514"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252857"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ TLS, 40비트 또는 128비트에 사용되는 암호화 수준은 애플리케�
 > 40비트 암호화 수준의 사용은 안전하지 않은 것으로 간주됩니다.
 
 > [!WARNING]
-> 자체 서명된 인증서를 사용하여 암호화된 TLS 연결은 강력한 보안을 제공하지 않으며 중재자 공격(man-in-the-middle attack)에 취약합니다. 프로덕션 환경이나 인터넷에 연결된 서버에서는 자체 서명된 인증서를 사용한 TLS에 의존해서는 안 됩니다.
+> 자체 서명된 인증서를 사용하여 암호화된 TLS 연결은 강력한 보안을 제공하지 않으며 중간자 공격(man-in-the-middle)을 받기 쉽습니다. 프로덕션 환경이나 인터넷에 연결된 서버에서는 자체 서명된 인증서를 사용한 TLS에 의존해서는 안 됩니다.
 
 TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 애플리케이션 간에 전송되는 데이터에 관한 보안이 강화됩니다. 그렇지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 클라이언트 애플리케이션 간의 모든 트래픽이 TLS를 사용하여 암호화되는 경우 다음의 추가 처리 작업이 필요합니다.
 -  연결 시에는 별도의 네트워크 왕복이 필요합니다.
 -  애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 전송되는 패킷은 클라이언트 TLS 스택에 의해 암호화되고 서버 TLS 스택에 의해 해독되어야 합니다.
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 애플리케이션으로 전송되는 패킷은 서버 TLS 스택에 의해 암호화되고 클라이언트 TLS 스택에 의해 해독되어야 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
  인증서는 **서버 인증**용으로 발행되어야 합니다. 인증서의 이름은 컴퓨터의 정규화된 도메인 이름(FQDN)이어야 합니다.  
   
  인증서는 사용자 컴퓨터에 로컬로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 인증서를 설치하려면 로컬 관리자 권한이 있는 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 실행해야 합니다.
@@ -82,7 +82,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 
 - 인증서의 **주체** 속성은 CN(일반 이름)이 서버 컴퓨터의 호스트 이름이나 FQDN(정규화된 도메인 이름)과 동일함을 나타내야 합니다. 호스트 이름을 사용하는 경우 인증서에 DNS 접미사를 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 장애 조치 클러스터에서 실행 중일 경우 일반 이름은 가상 서버의 호스트 이름이나 FQDN과 일치해야 하며 인증서는 장애 조치 클러스터의 모든 노드에 프로비저닝되어야 합니다.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 SNAC([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 원시 클라이언트)는 와일드카드 인증서를 지원합니다. SNAC는 더 이상 사용되지 않으며 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 및 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 바뀌었습니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서 및 [KB 258858](http://support.microsoft.com/kb/258858)을 참조하세요.       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 SNAC([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 원시 클라이언트)는 와일드카드 인증서를 지원합니다. SNAC는 더 이상 사용되지 않으며 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 및 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 바뀌었습니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서 및 [KB 258858](https://support.microsoft.com/kb/258858)을 참조하세요.       
   SQL Server 구성 관리자를 사용하여 와일드카드 인증서를 선택할 수 없습니다. 와일드카드 인증서를 사용하려면 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 레지스트리 키를 편집하고 **인증서** 값에 공백 없이 인증서의 지문을 입력해야 합니다.  
 
   > [!WARNING]  
@@ -129,9 +129,9 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 > [!IMPORTANT]
 > SQL Server 서비스 계정에는 SQL Server에서 암호화를 강제하는 데 사용되는 인증서에 대한 읽기 권한이 있어야 합니다. 권한이 없는 서비스 계정의 경우 인증서에 읽기 권한을 추가해야 합니다. 그렇게 하지 않으면 SQL Server 서비스를 다시 시작하지 못할 수 있습니다.
   
-1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_ **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 \<서버 인스턴스>**에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.   
   
-2. _\<인스턴스 이름>_ **에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭합니다.  
+2. \<인스턴스 이름>**에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음, **확인**을 클릭합니다.   
   
 3. **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
@@ -164,4 +164,3 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 ## <a name="see-also"></a>참고 항목
 [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)     
 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[SQL Server 암호화](../../relational-databases/security/encryption/sql-server-encryption.md)

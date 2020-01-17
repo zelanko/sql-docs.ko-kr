@@ -1,6 +1,6 @@
 ---
-title: Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
-ms.date: 04/23/2019
+title: '외부 데이터 액세스: Hadoop - PolyBase'
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83fb16a5c55d1f2f169268be6463d9735ce4e55c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659561"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255437"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -64,7 +64,7 @@ ms.locfileid: "73659561"
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
   
-   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc에서 PolyBase 서비스 중지 및 시작")  
+   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "|::ref1::|")  
   
 ## <a id="pushdown"></a> 푸시다운 계산 사용  
 

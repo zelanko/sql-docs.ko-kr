@@ -1,6 +1,7 @@
 ---
-title: 미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs
-ms.custom: ''
+title: 미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
+description: SSMS(SQL Server Management Studio) GUI 내에서 ‘데이터베이스 미러링 보안 구성’ 마법사의 ‘미러링 모니터 서버 포함’ 페이지에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 166d9d3b1c5f685564bdca16f154413459901cd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1c3de18f4da7d6f55ad0bba5b684e21989b1e0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212619"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253564"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

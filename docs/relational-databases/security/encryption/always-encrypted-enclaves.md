@@ -1,6 +1,7 @@
 ---
-title: 보안 Enclave를 사용한 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 보안 Enclave를 사용한 Always Encrypted
+description: SQL Server에 보안 enclave 기능을 사용하는 Always Encrypted를 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594047"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558048"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -115,7 +116,7 @@ Enclave 사용 열은 Enclave 사용 열 암호화 키로 암호화한 데이터
 
 임의 암호화를 사용하는데 enclave를 지원하지 않는 열에는 인덱스를 만들 수 없습니다.
 
-자세한 내용은 [보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)을 참조하세요. Always Encrypted와 관련된 정보가 아닌, SQL Server 인덱싱의 작동 방식에 대한 일반적인 내용은 [클러스터형 및 비클러스터형 인덱스 소개](../../indexes/clustered-and-nonclustered-indexes-described.md)를 참조하세요.
+자세한 내용은 [보안 Enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)을 참조하세요. Always Encrypted와 관련된 정보가 아닌, SQL Server 인덱싱의 작동 방식에 대한 일반적인 내용은 [클러스터형 및 비클러스터형 인덱스 소개](../../indexes/clustered-and-nonclustered-indexes-described.md)를 참조하세요.
 
 #### <a name="database-recovery"></a>데이터베이스 복구
 
@@ -130,7 +131,7 @@ SQL Server 인스턴스에서 오류가 발생하면 데이터베이스가 불�
 
 결정적 암호화를 사용하는 열의 인덱스는 열의 enclave 사용 여부에 관계없이 암호 텍스트(일반 텍스트 아님)를 기준으로 정렬됩니다.
 
-## <a name="security-considerations"></a>보안 고려 사항
+## <a name="security-considerations"></a>보안 고려사항
 
 다음 보안 고려 사항은 보안 enclave를 사용한 Always Encrypted에 적용됩니다.
 
@@ -180,9 +181,9 @@ bacpac 파일을 사용하여 데이터베이스를 마이그레이션하는 경
 - [자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [보안 Enclave를 사용한 Always Encrypted 구성 및 사용](configure-always-encrypted-enclaves.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [보안 Enclave를 사용한 Always Encrypted 키 관리](always-encrypted-enclaves-manage-keys.md)
-- [보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)
+- [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)
 - [보안 Enclave를 사용한 Always Encrypted를 사용하여 열 쿼리](always-encrypted-enclaves-query-columns.md)
 - [기존 암호화된 열에 관해 보안 Enclave를 사용한 Always Encrypted 사용](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용](always-encrypted-enclaves-create-use-indexes.md)

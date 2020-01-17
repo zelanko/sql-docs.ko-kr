@@ -1,8 +1,8 @@
 ---
-title: '가용성 그룹 속성: 새 가용성 그룹(일반 페이지)'
+title: 일반 페이지(새 가용성 그룹 및 속성 대화 상자)
 titleSuffix: SQL Server
-description: SQL Server Management Studio의 '새 가용성 그룹 ' 마법사의 '일반' 페이지에 있는 다양한 속성에 대한 설명입니다.
-ms.custom: seodec18
+description: SSMS(SQL Server Management Studio)의 ‘새 가용성 그룹’ 및 ‘가용성 그룹 속성’ 대화 상자에 있는 ‘일반’ 페이지의 다양한 속성에 대한 설명입니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934874"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254076"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>가용성 그룹 속성: 새 가용성 그룹(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67934874"
  가용성 그룹의 이름으로, WSFC(Windows Server 장애 조치(failover) 클러스터) 내에서 고유해야 하는 사용자 지정 이름입니다.  
   
 ## <a name="availability-databases"></a>가용성 데이터베이스  
- **Database Name**  
+ **데이터베이스 이름**  
  가용성 그룹에 추가된 데이터베이스의 이름입니다.  
   
  **추가**  

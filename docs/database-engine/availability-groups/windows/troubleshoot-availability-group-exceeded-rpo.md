@@ -1,6 +1,7 @@
 ---
-title: '문제 해결: 가용성 그룹 초과 RPO(SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: 가용성 그룹 초과 RPO
+description: Always On 가용성 그룹이 RPO(복구 지점 목표)를 초과하는 경우 일반적인 문제 및 해결 방법
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013742"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822186"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **물리적 디스크: 모든 카운터**  
   
--   **물리적 디스크: Avg. Disk sec/Transfer**  
+-   **물리적 디스크: 평균 Disk sec/Transfer**  
   
 -   **SQL Server: 데이터베이스 > 로그 플러시 대기 시간**  
   

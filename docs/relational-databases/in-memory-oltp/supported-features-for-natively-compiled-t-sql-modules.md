@@ -1,6 +1,6 @@
 ---
-title: 고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft 문서
-ms.custom: ''
+title: 고유하게 컴파일된 T-SQL 모듈의 기능
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025079"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412524"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025079"
 다음과 같은 쿼리 구문이 지원됩니다.  
 
 CASE 식: CASE는 유효한 식이 허용되는 모든 문 및 절에 사용할 수 있습니다.
-   - **적용 대상:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+   - **적용 대상:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 고유하게 컴파일된 T-SQL 모듈에서 CASE 문이 지원됩니다.
 
 SELECT 절:  
@@ -57,19 +57,19 @@ SELECT 절:
 -   열 및 이름 별칭(AS 또는 = 구문 사용)  
 
 -   스칼라 하위 쿼리
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 스칼라 하위 쿼리가 지원됩니다.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 DISTINCT 연산자가 지원됩니다.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 및 UNION ALL
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 UNION 및 UNION ALL 연산자가 지원됩니다.
 
 -   변수 할당  
@@ -81,11 +81,11 @@ FROM 절:
 -   FROM \<고유하게 컴파일된 인라인 TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN 및 INNER JOIN
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 JOIN이 지원됩니다.
 
 -   하위 쿼리 `[AS] table_alias`. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요. 
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 하위 쿼리가 지원됩니다.
 
 WHERE 절:  
@@ -94,7 +94,7 @@ WHERE 절:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 OR/NOT/IN/EXISTS 연산자가 지원됩니다.
 
 
@@ -191,7 +191,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   비트 연산자 ~, &, | 및 ^  
 
 -   APPLY 연산자
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 ##  <a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
@@ -202,7 +202,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   날짜 함수: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 및 YEAR  
 
 -   문자열 함수: LEN, LTRIM, RTRIM 및 SUBSTRING  
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 TRIM, TRANSLATE, CONCAT_WS 등의 기본 제공 함수도 지원됩니다.  
 
 -   ID 함수: SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Uniqueidentifier 함수: NEWID 및 NEWSEQUENTIALID  
 
 -   JSON 함수  
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 JSON 함수는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 -   오류 함수: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE  

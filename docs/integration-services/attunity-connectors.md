@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031659b2a5578eea2bb786e42267c92862579db7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 255c526a1de285dcf23c10fb97a6f6bb75a9ae2c
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299111"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542241"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Integration Services(SSIS)에 대한 Attunity의 Oracle 및 Teradata용 Microsoft Connectors
 
@@ -24,7 +24,9 @@ ms.locfileid: "71299111"
 > [!NOTE]
 > Oracle 및 Teradata용 Attunity 커넥터는 SQL Server 2017 이하를 지원합니다.
 >
-> SQL Server 2019에서 Oracle 및 Teradata용 최신 커넥터를 다음 위치에서 다운로드할 수 있습니다. [Microsoft Connector for Oracle](data-flow/oracle-connector.md)
+> SQL Server 2019에서 Oracle 및 Teradata용 최신 커넥터를 다음 위치에서 다운로드할 수 있습니다.
+> - [Microsoft Connector for Oracle](data-flow/oracle-connector.md)
+> - [Microsoft Connector for Teradata](data-flow/teradata-connector.md)
 
 SSIS 패키지에서 Oracle 또는 Teradata 간 데이터를 로드할 때 성능을 최적화하는 Attunity의 Integration Services에 대한 커넥터를 다운로드할 수 있습니다.
 

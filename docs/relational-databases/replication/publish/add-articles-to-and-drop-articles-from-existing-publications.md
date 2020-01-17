@@ -1,6 +1,7 @@
 ---
-title: 기존 게시에 대한 아티클 추가 및 삭제 | Microsoft 문서
-ms.custom: ''
+title: 아티클 추가 및 삭제(기존 게시)
+description: SQL Server용 기존 게시에 아티클을 추가하고 삭제하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907797"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321335"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,9 +52,9 @@ ms.locfileid: "72907797"
   
 3.  스냅샷이 생성된 후에 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 복사합니다.  
 
-    -   밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하세요.  
+    -   밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
   
-    -   끌어오기 구독을 동기화하려면 [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하세요.  
+    -   끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
 ## <a name="dropping-articles"></a>아티클 삭제  
  언제든지 아티클을 게시에서 삭제할 수 있지만 다음 동작을 고려해야 합니다.  

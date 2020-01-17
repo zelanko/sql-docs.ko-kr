@@ -1,6 +1,7 @@
 ---
-title: 고급 병합 복제 충돌 감지 및 해결 | Microsoft 문서
-ms.custom: ''
+title: 고급 충돌 검색 및 해결(병합)
+description: 병합 복제에서 충돌을 검색하고 해결하는 고급 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874865"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321608"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +104,7 @@ ms.locfileid: "70874865"
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
   
  적절한 유형의 해결 프로그램을 선택하는 방법에 대한 자세한 내용은 [해결 프로그램 선택](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md)을 참조하세요.  
   

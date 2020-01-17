@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d41432f47d39b887e054e17d7596e0c027bc31b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026057"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165183"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  다음 예제에서는 DL580 G9 서버가 있고 4개의 소켓에서 소켓당 18개의 코어가 있으며 각 소켓은 자체 K 그룹에 있다고 가정합니다. 만들 수 있는 soft-NUMA 구성은 노드당 6개의 코어, 그룹당 3개의 노드, 4개의 그룹과 같습니다.  
   
-|K 그룹이 여러 개인 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서버의 예|형식|값 이름|값 데이터|  
+|K 그룹이 여러 개인 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서버의 예|Type|값 이름|값 데이터|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -132,7 +132,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): SOFTNUMA에 대한 현재 값(0 또는 1)을 표시합니다.  
   
--   [sys.dm_os_sys_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): *softnuma* 및 *softnuma_desc* 열은 현재 구성 값을 표시합니다.  
+-   [sys.dm_os_sys_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): *softnuma_configuration* 및 *softnuma_configuration_desc* 열은 현재 구성 값을 표시합니다.  
   
 > [!NOTE]
 > [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 자동 soft-NUMA에 대한 실행 값을 볼 수 있지만 **sp_configure**를 사용하여 해당 값을 변경할 수는 없습니다. `SET SOFTNUMA` 인수가 포함된 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 문을 사용해야 합니다.  

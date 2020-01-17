@@ -27,19 +27,19 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948090"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564807"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 이는 단순 쿼리에서 파생되며 단일 SELECT, INSERT, UPDATE, DELETE 또는 MERGE 문 실행 범위 내에서 정의됩니다. 이 절은 정의하는 SELECT 문의 일부로 CREATE VIEW 문 내에서도 사용할 수 있습니다. 공통 테이블 식은 자신에 대한 참조를 포함할 수 있으며 이를 재귀 공통 테이블 식이라 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
  *CTE_query_definition*을 두 개 이상 정의하는 경우: UNION ALL, UNION, EXCEPT 또는 INTERSECT 집합 연산자 중 하나로 쿼리 정의를 조인해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>공통 테이블 식 만들기 및 사용 지침  
 다음 지침은 비재귀 공통 테이블 식에 적용됩니다. 재귀 공통 테이블 식에 적용되는 지침은 다음에 나오는 [재귀 공통 테이블 식 정의 및 사용 지침](#guidelines-for-defining-and-using-recursive-common-table-expressions)을 참조하세요.  
@@ -175,7 +175,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-simple-common-table-expression"></a>1\. 간단한 공통 테이블 식 만들기  
+### <a name="a-creating-a-simple-common-table-expression"></a>A. 간단한 공통 테이블 식 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 보여 줍니다.  
   
 ```sql   
@@ -195,7 +195,7 @@ GROUP BY SalesYear, SalesPersonID
 ORDER BY SalesPersonID, SalesYear;  
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>2\. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
  다음 예에서는 판매 담당자의 모든 연도에 대한 평균 판매 주문 수를 보여 줍니다.  
   
 ```sql  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 재귀 공통 테이블 식을 사용하여 두 가지 수준의 재귀 표시  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>재귀 공통 테이블 식을 사용하여 두 가지 수준의 재귀 표시  
  다음 예에서는 관리자와 그들에게 보고하는 직원을 보여 줍니다. 반환되는 수준은 2로 제한됩니다.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 재귀 공통 테이블 식을 사용하여 계층적 목록 표시  
- 다음 예에서는 4번 예를 바탕으로 관리자 및 직원의 이름과 각각의 직함을 추가하는 방법을 보여 줍니다. 관리자와 직원의 계층을 추가로 강조하기 위해 각 수준을 들여쓰기 했습니다.  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>재귀 공통 테이블 식을 사용하여 계층적 목록 표시  
+ 다음 예에서는 관리자 및 직원의 이름과 각각의 직함을 추가합니다. 관리자와 직원의 계층을 추가로 강조하기 위해 각 수준을 들여쓰기 했습니다.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. MAXRECURSION을 사용하여 문 취소  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>MAXRECURSION을 사용하여 문 취소  
  잘못 구성된 재귀 CTE가 무한 루프에 진입하는 것을 방지하는 데 `MAXRECURSION`을 사용할 수 있습니다. 다음 예에서는 의도적으로 무한 루프를 만들고 `MAXRECURSION` 힌트를 사용하여 재귀 수준을 2로 제한하는 방법을 보여 줍니다.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  코딩 오류를 교정한 다음에는 더 이상 MAXRECURSION이 필요하지 않습니다. 다음 예에서는 교정된 코드를 보여 줍니다.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 공통 테이블 식을 사용하여 SELECT 문에서 재귀적 관계를 선택적으로 단계별 진행  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. 공통 테이블 식을 사용하여 SELECT 문에서 재귀적 관계를 선택적으로 단계별 진행  
  다음 예에서는 `ProductAssemblyID = 800`에 대해 자전거를 제작하는 데 필요한 부품과 구성 요소의 계층을 보여 줍니다.  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>9\. UPDATE 문에서 재귀 CTE 사용  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. UPDATE 문에서 재귀 CTE 사용  
  다음 예에서는 제품 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`를 제작하는 데 사용되는 모든 부품의 `PerAssemblyQty` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 여러 앵커 및 재귀 멤버 사용  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. 여러 앵커 및 재귀 멤버 사용  
  다음 예에서는 지정된 인물의 모든 조상을 반환하기 위해 여러 개의 앵커 및 재귀 멤버를 사용하는 방법을 보여 줍니다. 이 예는 재귀 CTE가 반환한 가족 계보를 구성하기 위해 하나의 테이블을 만들고 값을 삽입합니다.  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 재귀 CTE에서 분석 함수 사용  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. 재귀 CTE에서 분석 함수 사용  
  다음 예에서는 CTE의 재귀 부분에서 분석 또는 집계 함수를 사용할 때 발생할 수 있는 문제를 보여 줍니다.  
   
 ```sql  
@@ -578,9 +568,9 @@ Lvl  N
   
  `N`은 CTE 재귀 부분의 각 패스에 대해 1을 반환하는데 그 이유는 해당 재귀 수준에 대한 데이터 하위 집합만 `ROWNUMBER`로 전달되기 때문입니다. 쿼리 재귀 부분이 반복될 때마다 각각 하나의 행만 `ROWNUMBER`로 전달됩니다.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>12. CTAS 문 내에서 공통 테이블 식 사용하기  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. CTAS 문 내에서 공통 테이블 식 사용하기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 테이블을 만듭니다.  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>13. CETAS 문 내에서 공통 테이블 식 사용하기  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>11. CETAS 문 내에서 공통 테이블 식 사용하기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 외부 테이블을 만듭니다.  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>14. 문에서 쉼표로 구분하는 여러 CTE 사용하기  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>12. 문에서 쉼표로 구분하는 여러 CTE 사용하기  
  다음 예에서는 단일 명령문에 두 개의 CTE를 포함하는 방법을 보여줍니다. CTE는 중첩될 수 없습니다(재귀 제외).  
   
 ```sql  

@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 세션에 클라이언트 연결(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러에 클라이언트 연결
+description: Native Client 또는 .NET Framework Provider for SQL Server를 사용하여 데이터베이스 미러에 연결하도록 클라이언트를 구성합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952005"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258878"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +88,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 **Server** 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 해당 이름을 지정하는 것입니다. 예를 들어  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 해당 이름을 지정하는 것입니다. 다음은 그 예입니다.  
   
  `Server=Partner_A;`  
   
- 로 구분하거나 여러  
+ 또는  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -174,7 +175,7 @@ Server=123.34.45.56,4724;
   
  예를 들어 기본 로그인 제한 시간이 15초이면 *LoginTimeout* *= 15*입니다. 이 경우 처음 세 라운드에 할당되는 다시 시도 시간은 다음과 같습니다.  
   
-|반올림|*RetryTime* 계산|시도당 다시 시도 시간|  
+|Round|*RetryTime* 계산|시도당 다시 시도 시간|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0.08 **&#42;** 15 **)**|1.2초|  
 |2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4초|  
@@ -183,7 +184,7 @@ Server=123.34.45.56,4724;
   
  다음 그림에서는 각각 시간 초과되는 연속 연결 시도의 다시 시도 시간을 보여 줍니다.  
   
- ![15초 로그인 시간에 대한 최대 다시 시도 지연](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15초 로그인 시간에 대한 최대 다시 시도 지연")  
+ ![15초 로그인 제한 시간의 최대 다시 시도 지연](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15초 로그인 제한 시간의 최대 다시 시도 지연")  
   
  기본 로그인 제한 시간 동안 처음 세 라운드의 연결 시도에 할당되는 최대 시간은 14.4초입니다. 각 시도에서 할당된 시간을 모두 사용하는 경우 로그인 기간이 시간 초과되기까지 0.6초의 시간만 남습니다. 이 경우 네 번째 라운드는 단축되어 초기 파트너 이름을 사용하여 빨리 연결할 수 있는 최종 시도만 허용합니다. 그러나 특히 이후 라운드에서 연결 시도가 할당된 다시 시도 시간보다 먼저 실패할 수 있습니다. 예를 들어 네트워크 오류가 발생하면 다시 시도 시간이 만료되기 전에 시도가 종료될 수 있습니다. 네트워크 오류로 인해 이전 시도가 실패하면 네 번째 라운드 및 추가 라운드에 더 많은 시간을 사용할 수 있습니다.  
   
@@ -238,7 +239,7 @@ Server=123.34.45.56,4724;
 > [!NOTE]  
 >  애플리케이션에서 구성 변경 내용을 추적하고 연결 문자열을 적절하게 변경할 수 있습니다. 이렇게 하려면 추가 코드가 필요하지만 관리 작업이 줄어듭니다.  
   
-|Configuration|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
+|구성|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |초기 미러링 구성 단계입니다.|Db_1|Partner_B|Partner_A가 초기 파트너 이름으로 캐시됩니다. 클라이언트가 Partner_A에 대한 연결에 성공합니다. 클라이언트는 미러 서버 이름인 Partner_B를 다운로드하고 이를 캐시합니다. 이때 클라이언트가 제공한 장애 조치(failover) 파트너 이름은 무시합니다.|  
 |Partner_A에 하드웨어 오류가 발생하고 장애 조치가 수행됩니다(클라이언트 연결 끊기).|Partner_B|none|Partner_A가 초기 파트너 이름으로 계속 캐시되지만 클라이언트가 제공한 장애 조치(failover) 파트너 이름인 Partner_B를 사용하여 클라이언트는 현재 주 서버에 연결할 수 있습니다.|  

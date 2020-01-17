@@ -1,6 +1,6 @@
 ---
-title: SQL Server에 메모리 내 OLTP 기능 채택 계획 | Microsoft 문서
-ms.custom: ''
+title: '메모리 내 OLTP 채택 계획 '
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021813"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412550"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68021813"
 
 
 
-## <a name="a-adoption-of-in-memory-oltp-features"></a>1\. 메모리 내 OLTP 기능 채택
+## <a name="a-adoption-of-in-memory-oltp-features"></a>A. 메모리 내 OLTP 기능 채택
 
 
 다음 하위 섹션에서는 메모리 내 기능을 채택하고 구현하려는 경우 고려해야 할 요소를 설명합니다. 다음에서 많은 설명 정보를 확인할 수 있습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "68021813"
 
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
@@ -117,7 +117,7 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 
 
-## <a name="b-unsupported-features"></a>2\. 지원되지 않는 기능
+## <a name="b-unsupported-features"></a>B. 지원되지 않는 기능
 
 특정 메모리 내 OLTP 시나리오에서 지원되지 않는 기능은 다음에 설명되어 있습니다.
 

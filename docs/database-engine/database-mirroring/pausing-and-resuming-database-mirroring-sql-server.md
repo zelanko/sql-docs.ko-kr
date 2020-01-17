@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 미러링 일시 중지 및 재개(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 미러링 일시 중지 및 다시 시작
+description: 언제든지 SQL Server 데이터베이스 미러링 세션을 일시 중지하고 나중에 다시 시작하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80a412419c1538c485ff6766bbe68ba5c510779b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996469"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254148"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>데이터베이스 미러링 일시 중지 및 재개(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "67996469"
   
      일시 중지와는 달리 미러링을 제거하면 미러링 세션에 관한 모든 정보가 삭제됩니다. 각 파트너 서버 인스턴스는 데이터베이스의 자체 복사본을 유지합니다. 이전 미러 복사본을 복구하면 이전 주 복사본과 달라져서 세션이 일시 중지된 후 경과한 시간만큼 지연됩니다. 자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링을 일시 중지 또는 재개하려면**  
   
 -   [데이터베이스 미러링 세션 일시 중지 또는 재개&#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
@@ -69,7 +70,7 @@ ms.locfileid: "67996469"
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   

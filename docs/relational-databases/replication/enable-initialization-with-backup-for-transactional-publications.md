@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 게시에 대한 백업으로 초기화 설정 | Microsoft 문서
-ms.custom: ''
+title: 백업으로 초기화 사용(트랜잭션)
+description: SQL Server에서 트랜잭션 게시에 백업으로 초기화를 사용하도록 설정하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1ce1e95ef182ef119dee8ea666ae0955e4ab625
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11670347380a3336068091601e739b28d4d34a39
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128136"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321725"
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>트랜잭션 게시에 대한 백업으로 초기화 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

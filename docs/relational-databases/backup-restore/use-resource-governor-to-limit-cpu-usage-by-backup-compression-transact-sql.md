@@ -1,7 +1,7 @@
 ---
-title: 리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/16/2017
+title: 'CPU 부하 제한: 백업 압축에 Resource Governor 사용'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041304"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245405"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -281,6 +281,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [분류자 사용자 정의 함수 만들기 및 테스트](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 정책 기반 관리 조건의 속성 보기 또는 수정 | Microsoft 문서
+title: 정책 기반 관리 조건의 속성 보기 또는 수정
+description: SSMS(SQL Server Management Studio) 또는 T-SQL(Transact-SQL)을 사용하여 정책 기반 관리 조건의 속성을 보거나 수정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/05/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c904edf49ca2f07e2cb715821f9858ea25302311
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9a628b725222d0e77ed7fcb55b80ec8de153a55
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909810"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558128"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>정책 기반 관리 조건의 속성 보기 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "72909810"
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

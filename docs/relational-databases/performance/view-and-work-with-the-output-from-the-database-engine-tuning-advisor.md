@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업 | Microsoft 문서
-ms.custom: ''
+title: DTA의 출력
+description: DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907037"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165486"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
@@ -183,7 +185,7 @@ ms.locfileid: "72907037"
 7.  6단계와 7단계를 반복하여 쿼리 성능을 필요한 만큼 향상시키는 가상 구성을 만듭니다. 그런 다음 새 구성을 구현할 수 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 [튜닝 권장 구성 구현](#Implement) 을 참조하세요.  
   
 ##  <a name="ReviewEvaluateClone"></a> 튜닝 세션 검토, 평가 및 복제  
- 데이터베이스 엔진 튜닝 관리자에서는 데이터베이스에 대한 작업 영향 분석을 시작할 때마다 새 튜닝 세션을 만듭니다. 데이터베이스 엔진 튜닝 관리자 GUI의 **세션 모니터** 를 사용하여 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 실행된 모든 튜닝 세션을 보거나 다시 로드할 수 있습니다. 기존의 튜닝 세션을 모두 검토할 수 있으면 기존 세션에서 세션을 복제하거나, 기존의 튜닝 권장 구성을 편집한 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 편집된 세션을 평가하거나, 정기적으로 튜닝을 수행하여 데이터베이스의 물리적 디자인을 모니터링하는 등의 작업을 쉽게 수행할 수 있습니다. 예를 들어 월별 일정으로 데이터베이스를 튜닝하도록 결정할 수 있습니다.  
+ 데이터베이스 엔진 튜닝 관리자에서는 데이터베이스에 대한 작업 영향 분석을 시작할 때마다 새 튜닝 세션을 만듭니다. 데이터베이스 엔진 튜닝 관리자 GUI의 **세션 모니터**를 사용하여 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행된 모든 튜닝 세션을 보거나 다시 로드할 수 있습니다. 기존의 튜닝 세션을 모두 검토할 수 있으면 기존 세션에서 세션을 복제하거나, 기존의 튜닝 권장 구성을 편집한 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 편집된 세션을 평가하거나, 정기적으로 튜닝을 수행하여 데이터베이스의 물리적 디자인을 모니터링하는 등의 작업을 쉽게 수행할 수 있습니다. 예를 들어 월별 일정으로 데이터베이스를 튜닝하도록 결정할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 튜닝 세션을 검토하려면 먼저 데이터베이스 엔진 튜닝 관리자를 사용하여 작업을 튜닝하여 서버 인스턴스에 튜닝 세션을 만들어야 합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
@@ -270,7 +272,7 @@ ms.locfileid: "72907037"
  **권장 구성의 대상**에 대한 정의입니다. 권장되는 동작에 대한 스크립트와 함께 SQL 스크립트 미리 보기 대화 상자를 열려면 해당 열을 클릭합니다.  
   
 ##### <a name="index-recommendations"></a>인덱스 권장 구성  
- **Database Name**  
+ **데이터베이스 이름**  
  수정하도록 권장되는 개체가 포함된 데이터베이스입니다.  
   
  **개체 이름**  

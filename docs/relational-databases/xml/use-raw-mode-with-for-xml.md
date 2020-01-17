@@ -1,6 +1,5 @@
 ---
 title: FOR XML에서 RAW 모드 사용 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016153"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245244"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
 
@@ -36,13 +36,13 @@ RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있�
  이진 데이터를 base64 인코딩 형식으로 반환하기 위해 FOR XML 절에서 BINARY BASE64 옵션을 지정해야 합니다. RAW 모드에서 BINARY BASE64 옵션을 지정하지 않고 이진 데이터를 검색하면 오류가 발생합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- 이 섹션에서는 다음과 같은 예를 보여 줍니다.  
+ 이 섹션에는 다음 예제가 포함되어 있습니다.  
   
 -   [예: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [예: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [예: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

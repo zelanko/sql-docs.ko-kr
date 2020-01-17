@@ -1,29 +1,30 @@
 ---
-title: Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류 | Microsoft Docs
-description: Azure Key Vault 구성으로 TDE(투명한 데이터 암호화) 문제를 해결합니다.
+title: Azure Key Vault의 고객 관리형 키와 관련된 일반적인 오류
+description: Azure Key Vault의 고객 관리형 키 및 TDE(투명한 데이터 암호화)와 관련된 일반적인 오류 문제를 해결합니다.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727769"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558470"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-이 문서에서는 [Azure Key Vault에서 고객 관리 키와 함께 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 사용하도록 구성된 데이터베이스에 액세스할 수 없는 Azure Key Vault 키 액세스 문제를 파악하고 해결하는 방법을 설명합니다.
+이 문서에서는 [Azure Key Vault에서 고객 관리 키와 함께 TDE(투명한 데이터 암호화)](/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 사용하도록 구성된 데이터베이스에 액세스할 수 없는 Azure Key Vault 키 액세스 문제를 파악하고 해결하는 방법을 설명합니다.
 
 ## <a name="introduction"></a>소개
 TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경우 데이터베이스를 온라인 상태로 유지하려면 이 TDE 보호기에 지속적으로 액세스할 수 있어야 합니다.  논리 SQL 서버가 Azure Key Vault의 고객 관리 TDE 보호기에 대한 액세스 권한을 잃게 되면 데이터베이스는 적절한 오류 메시지와 함께 모든 연결을 거부하고 Azure Portal에서 해당 상태를 *액세스할 수 없음*으로 변경합니다.
@@ -58,7 +59,7 @@ Key Vault로 TDE를 사용할 때 발생하는 문제는 대부분 다음 구성
 
 ### <a name="missing-server-identity"></a>누락된 서버 ID
 
-**오류 메시지입니다.**
+**오류 메시지**
 
 _401 AzureKeyVaultNoServerIdentity - 서버 ID가 서버에 올바르게 구성되어 있지 않습니다. 지원 담당자에게 문의하세요._
 
@@ -83,7 +84,7 @@ Azure Portal에서 Key Vault로 이동한 다음 **액세스 정책**으로 이�
  1. **새로 추가** 단추를 사용하여 이전 단계에서 만든 서버의 APPID를 추가합니다. 
  1. 다음 키 사용 권한을 할당합니다. Get, 래핑 및 래핑 해제 
 
-자세한 내용은 [Assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)(서버에 Azure AD ID 할당)를 참조하세요.
+자세한 내용은 [Assign an Azure AD identity to your server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server)(서버에 Azure AD ID 할당)를 참조하세요.
 
 > [!IMPORTANT]
 > Key Vault로 TDE의 초기 구성 후에 논리 SQL Server 인스턴스를 새 테넌트로 이동한 경우 Azure AD ID를 구성하는 단계를 반복하여 새 APPID를 만듭니다. 그런 다음 Key Vault에 APPID를 추가하고 키에 올바른 권한을 할당합니다. 
@@ -91,7 +92,7 @@ Azure Portal에서 Key Vault로 이동한 다음 **액세스 정책**으로 이�
 
 ### <a name="missing-key-vault"></a>누락된 Key Vault
 
-**오류 메시지입니다.**
+**오류 메시지**
 
 _503 AzureKeyVaultConnectionFailed - Azure Key Vault에 연결하려는 시도가 실패했으므로 서버에서 작업을 완료할 수 없습니다._
 
@@ -143,7 +144,7 @@ TDE 보호기가 Key Vault에 있는지 확인합니다.
 
 ### <a name="missing-permissions"></a>누락된 권한
 
-**오류 메시지입니다.**
+**오류 메시지**
 
 _401 AzureKeyVaultMissingPermissions - 서버에서 Azure Key Vault에 필요한 사용 권한이 누락되었습니다._
 

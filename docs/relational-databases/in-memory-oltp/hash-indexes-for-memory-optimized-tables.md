@@ -1,6 +1,6 @@
 ---
-title: 메모리 최적화 테이블의 해시 인덱스 문제 해결 | Microsoft Docs
-ms.custom: ''
+title: 메모리 최적화 테이블의 해시 인덱스 문제 해결
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,17 +11,17 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909275"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412663"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-## <a name="prerequisite"></a>사전 요구 사항  
+## <a name="prerequisite"></a>필수 요소  
   
 이 문서를 이해하는 데 중요한 컨텍스트 정보는 다음 항목에서 확인할 수 있습니다.  
   
@@ -113,8 +113,8 @@ ORDER BY [table], [index];
   
 1. 몇 개의 해시 인덱스가 있는 메모리 최적화 테이블을 만듭니다.  
 2. 수천 개의 행으로 테이블을 채웁니다.  
-    1\. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
-    2\. 약 1분 이내에 루프에서 26만 2,144개의 행을 삽입합니다.  
+    a. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
+    b. 약 1분 이내에 루프에서 26만 2,144개의 행을 삽입합니다.  
 3. **sys.dm_db_xtp_hash_index_stats**에서 이전 SELECT를 실행하라는 메시지가 인쇄됩니다.  
 
 ```sql

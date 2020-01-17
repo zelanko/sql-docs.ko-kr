@@ -1,7 +1,8 @@
 ---
-title: Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/05/2017
+title: 관리형 백업 - 고급 옵션 구성
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908974"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242568"
 ---
-# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업용 고급 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   다음 자습서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 옵션 설정 방법을 설명합니다. 이러한 절차는 제공되는 기능에서 필요한 경우에만 필요합니다. 그렇지 않으면 기본 동작에 따라 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 사용할 수 있습니다.  
   
  각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name` 이 NULL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  
   
- 이러한 설정을 지정하면 시스템 저장 프로시저 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하여 데이터베이스 또는 인스턴스에서 Managed Backup을 사용하도록 설정할 수 있습니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
+ 이러한 설정을 지정하면 시스템 저장 프로시저 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하여 데이터베이스 또는 인스턴스에서 Managed Backup을 사용하도록 설정할 수 있습니다. 자세한 내용은 [Microsoft Azure로의 SQL Server 관리형 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
 > [!WARNING]  
 >  항상 고급 옵션 및 사용자 지정 일정 옵션을 구성한 후에 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]와 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하도록 설정해야 합니다. 그렇지 않은 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화하고 이러한 설정을 구성하는 시간 기간 동안에 예기치 않은 백업 작업이 발생할 수 있습니다.  
@@ -93,7 +94,7 @@ ms.locfileid: "72908974"
   
 5.  **백업에서 허용되는 시간 길이 결정:** 백업이 완료되어야 하는 시간의 양을 지정합니다.  
   
-6.  **사용자 지정 백업 일정 설정:** 다음 저장 프로시저는 `MyDB` 데이터베이스에 대한 사용자 지정 일정을 정의합니다. 전체 백업은 `Monday` `17:30`시에 매주 수행됩니다. 로그 백업은 `5` 분마다 수행됩니다. 백업은 두 시간 내에 완료됩니다.  
+6.  **사용자 지정 백업 일정 설정:** 다음 저장 프로시저는 `MyDB` 데이터베이스에 대한 사용자 지정 일정을 정의합니다. 전체 백업은 `Monday``17:30`시에 매주 수행됩니다. 로그 백업은 `5` 분마다 수행됩니다. 백업은 두 시간 내에 완료됩니다.  
   
     ```  
     USE msdb;  
@@ -110,10 +111,10 @@ ms.locfileid: "72908974"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  고급 옵션 및 사용자 지정 일정을 구성한 후 대상 데이터베이스 또는 SQL Server 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화해야 합니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

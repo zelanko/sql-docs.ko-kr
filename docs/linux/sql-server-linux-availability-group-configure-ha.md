@@ -1,8 +1,8 @@
 ---
-title: Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
-titleSuffix: SQL Server
-description: Linux에서 고가용성을 위한 SQL Server Always On AG(가용성 그룹)를 만드는 방법을 알아봅니다.
+title: SQL Server on Linux의 가용성 그룹 구성
+description: Linux에서 고가용성을 위해 SQL Server Always On AG(가용성 그룹)를 만드는 방법을 알아봅니다.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030306"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558401"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
 
@@ -215,7 +215,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 이 문서의 단계를 수행한 경우 아직 클러스터링되지 않은 AG가 있습니다. 다음 단계는 클러스터를 추가하는 것입니다. 이 구성은 읽기 확장/부하 분산 시나리오에 적합하며, 고가용성은 완전하지 않습니다. 고가용성을 지원하려면 AG를 클러스터 리소스로 추가해야 합니다. 자세한 내용은 [다음 단계](#next-steps)를 참조하세요. 
 
-## <a name="notes"></a>참고
+## <a name="notes"></a>메모
 
 >[!IMPORTANT]
 >클러스터를 구성하고 AG를 클러스터 리소스로 추가한 후에는 Transact-SQL을 사용하여 AG 리소스를 장애 조치(failover)할 수 없습니다. Linux의 SQL Server 클러스터 리소스는 WSFC(Windows Server 장애 조치(failover) 클러스터)에 있을 때처럼 운영 체제와 긴밀하게 결합되지 않습니다. SQL Server 서비스는 클러스터의 현재 상태를 인식하지 못합니다. 모든 오케스트레이션이 클러스터 관리 도구를 통해 수행됩니다. RHEL 또는 Ubuntu에서 `pcs`를 사용합니다. SLES에서는 `crm`을 사용합니다. 

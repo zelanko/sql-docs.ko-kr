@@ -16,19 +16,21 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720821"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-문자열 식의 값을 연결하고 그 사이에 구분 기호 값을 추가합니다. 구분 기호는 문자열 끝에 추가되지 않습니다.
+문자열 식의 값을 연결하고 그 사이에 구분 기호 값을 추가합니다. 구분 기호는 문자열 끝에 추가되지 않습니다. 
+
+SQL Server 2017에서 도입되었습니다.
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +71,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 `STRING_AGG`는 행의 모든 식을 하나의 문자열로 연결하는 집계 함수입니다. 식 값은 문자열 형식으로 암시적으로 변환된 다음, 연결됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대한 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하십시오. 
 
@@ -81,7 +83,7 @@ Null 값이 무시되고 해당 구분 기호는 추가되지 않습니다. null
 
 ## <a name="examples"></a>예
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>1\. 새 줄에 구분된 이름 목록 생성
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 새 줄에 구분된 이름 목록 생성
 
 다음 예에서는 단일 결과 셀에서 캐리지 리턴으로 구분된 이름 목록을 만듭니다.
 ```sql
@@ -99,7 +101,7 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>2\. NULL 값 없이 쉼표로 구분된 이름 목록 생성
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 값 없이 쉼표로 구분된 이름 목록 생성
 
 다음 예는 null 값을 '해당 없음'으로 대체하고 하나의 결과 셀에 쉼표로 구분된 이름을 반환합니다.  
 ```sql
@@ -165,7 +167,7 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|도시 |이메일 |
+|도시 |emails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
@@ -183,12 +185,12 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|도시 |이메일 |
+|도시 |emails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  
  [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  

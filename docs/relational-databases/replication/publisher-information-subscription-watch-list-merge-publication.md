@@ -1,6 +1,7 @@
 ---
-title: 게시자 정보, 구독 조사 목록(병합 게시) | Microsoft 문서
-ms.custom: ''
+title: 구독 조사 목록(병합 - SSMS)
+description: SSMS(SQL Server Management Studio) 복제 모니터의 ‘구독 조사 목록’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710794"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320638"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>게시자 정보, 구독 조사 목록(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,10 +103,10 @@ ms.locfileid: "71710794"
  **마지막 동기화**  
  병합 에이전트가 마지막으로 실행된 시간입니다. 마지막 동기화 중에 변경 내용이 처리될 수도 있고 처리되지 않을 수도 있습니다. 동기화가 진행 중이면 백분율로 진행 상황을 표시합니다.  
   
- **기간**  
+ **Duration**  
  마지막 동기화 중에 병합 에이전트가 실행된 시간입니다. 병합 에이전트가 현재 동기화 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 동기화된 경우에는 총 시간을 나타냅니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  구독자와 게시자 간의 연결 유형입니다. 가능한 값은 **LAN**, **전화 접속**및 **인터넷**입니다. **인터넷** 값은 구독에서 웹 동기화를 사용하는 경우에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

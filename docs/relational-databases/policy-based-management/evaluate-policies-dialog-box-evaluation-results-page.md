@@ -1,5 +1,6 @@
 ---
-title: 정책 평가 대화 상자, 평가 결과 페이지 | Microsoft 문서
+title: ‘정책 평가’ 대화 상자의 ‘평가 결과’ 페이지
+description: SSMS(SQL Server Management Studio) 정책 기반 관리에서 ‘정책 평가’ 대화 상자의 ‘평가 결과’ 페이지를 설명합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137796"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558260"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

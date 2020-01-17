@@ -1,6 +1,7 @@
 ---
-title: SQL Server Compact 복제의 보안 고려 사항 | Microsoft 문서
-ms.custom: ''
+title: 보안 고려 사항(Compact 복제)
+description: SQL Server Compact 복제의 몇 가지 보안 고려 사항을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bf29af7da08cbf93565487328de7ab8ec5c6095
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051833"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321660"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 복제의 보안 고려 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

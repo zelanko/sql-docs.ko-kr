@@ -1,7 +1,7 @@
 ---
-title: '백업 및 복원: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: '백업 및 복원: 기능 상호 운용성'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940879"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247448"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다. 이러한 기능에는 파일 복원 및 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링, 증분 복원 및 전체 텍스트 인덱스가 포함됩니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [파일 복원 및 데이터베이스 시작](#FileRestoreAndDbStartup)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67940879"
  이 섹션에서는 여러 개의 파일 그룹이 있는 전체 모델 데이터베이스와 관련된 내용을 다룹니다.  
   
 > [!NOTE]  
->  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 를 사용해야 합니다.  
+>  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]를 사용하세요.  
   
  데이터베이스 미러링은 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 미러링은 데이터베이스 단위로 구현되며 전체 복구 모델을 사용하는 데이터베이스에서만 작동합니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940879"
 >  데이터베이스에서 파일 그룹의 하위 집합 복사본을 배포하려면 복제를 이용하세요. 다른 서버로 복사할 파일 그룹의 개체만 복제해야 합니다. 복제에 대한 자세한 내용은 [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)를 참조하세요.  
   
 ### <a name="creating-the-mirror-database"></a>미러 데이터베이스 만들기  
- 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
+ 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
  지원되는 경우 증분 복원 시퀀스를 사용하여 미러 데이터베이스를 만들 수 있습니다. 그러나 파일 그룹을 모두 복원하기 전까지는 미러링을 시작할 수 없으며 일반적으로 미러 데이터베이스를 가져오기 위한 복원된 로그 백업은 주 데이터베이스에 의해 지정 시간 내에 닫을 수 있습니다. 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "67940879"
 > [!NOTE]  
 >  읽기/쓰기 데이터베이스의 로그 파일은 압축 파일 시스템에 저장할 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981882"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681784"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -114,7 +114,7 @@ WITH
 
 `ODBC`를 외부 데이터 원본에 연결할 때 추가 옵션을 지정합니다.
 
-드라이버의 이름은 최소한으로 필요하지만 설정에도 유용하고 문제 해결에 도움이 되는 `APP='<your_application_name>'` 또는 `ApplicationIntent= ReadOnly|ReadWrite`와 같은 다른 옵션이 있습니다.
+최소한 드라이버 이름이 필요하지만, 설정하면 유용하고 문제 해결에 도움이 되는 `APP='<your_application_name>'`, `ApplicationIntent= ReadOnly|ReadWrite` 등의 다른 옵션도 있습니다.
 
 허용된 [CONNECTION_OPTIONS][connection_options]의 목록은 `ODBC` 제품 설명서를 참조하세요.
 
@@ -138,7 +138,7 @@ WITH
   - 로드해야 하는 파일에 대해 적어도 읽기 권한이 있어야 합니다(예: `srt=o&sp=r`).
   - 유효한 만료 기간을 사용합니다(모든 날짜는 UTC 시간임).
 
-`SHARED ACCESS SIGNATURE` 및 `TYPE` = `BLOB_STORAGE`와 함께 `CREDENTIAL`을 사용하는 예제는 [대량 작업을 실행하고 Azure Blob Storage에서 SQL Database로 데이터를 검색하기 위한 외부 데이터 원본 만들기](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)를 참조하세요.
+`SHARED ACCESS SIGNATURE` 및 `TYPE` = `BLOB_STORAGE`와 함께 `CREDENTIAL`을 사용하는 예제는 [대량 작업을 실행하고 Azure Blob Storage에서 SQL Database로 데이터를 검색하기 위한 외부 데이터 원본 만들기](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)를 참조하세요.
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.
 
@@ -152,7 +152,7 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#e-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
+`TYPE` = `HADOOP`를 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#e-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -199,9 +199,9 @@ SQL Server 빅 데이터 클러스터의 스토리지 또는 데이터 풀에 �
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-sql-server-2016"></a>예: SQL Server(2016+)
+## <a name="examples-sql-server-2016"></a>예제: SQL Server(2016+)
 
-### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>1\. Oracle을 참조하는 SQL 2019에서 외부 데이터 원본 만들기
+### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. Oracle을 참조하는 SQL 2019에서 외부 데이터 원본 만들기
 
 Oracle을 참조하는 외부 데이터 원본을 만들려면 데이터베이스 범위 자격 증명이 있는지 확인합니다. 이 데이터 원본에 대한 계산 푸시 다운을 활성화하거나 비활성화할 수도 있습니다.
 
@@ -229,7 +229,7 @@ WITH
 
 MongoDB와 같은 다른 데이터 원본에 대한 추가 예제는 [MongoDB에서 외부 데이터에 액세스하도록 PolyBase 구성][mongodb_pb]을 참조하세요.
 
-### <a name="b-create-external-data-source-to-reference-hadoop"></a>2\. Hadoop를 참조하는 외부 데이터 원본 만들기
+### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hortonworks 또는 Cloudera Hadoop 클러스터를 참조하는 외부 데이터 원본을 만들려면 머신 이름 또는 Hadoop `Namenode` 및 포트의 IP 주소를 지정합니다. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
-## <a name="examples-bulk-operations"></a>예: 대량 작업
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Polybase 연결을 통해 SQL Server 명명된 인스턴스를 참조하는 외부 데이터 원본 만들기(SQL 2019)
+
+SQL Server 명명된 인스턴스를 참조하는 외부 데이터 원본을 만들려면 CONNECTION_OPTIONS를 사용하여 인스턴스 이름을 지정하면 됩니다. 아래 예제에서 WINSQL2019는 호스트 이름이고 SQL2019는 인스턴스 이름입니다.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+또는 포트를 사용하여 SQL Server 인스턴스에 연결할 수 있습니다.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
+## <a name="examples-bulk-operations"></a>예제: 대량 작업
 
 > [!NOTE]
 > 대량 작업을 위해 외부 데이터 원본을 구성할 때 `LOCATION` URL 끝에 추적 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 배치하지 마세요.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 [BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]을 사용하여 대량 작업에 대한 다음 데이터 원본을 만듭니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.
 
 ```sql
@@ -384,9 +408,9 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>개요: Azure SQL 데이터베이스
+## <a name="overview-azure-sql-database"></a>개요: Azure SQL Database
 
-탄력적 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원본은 연결을 설정하고 이러한 기본 사용 사례를 지원하는 데 사용됩니다.
+탄력적 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원본은 연결을 설정하고 다음과 같은 기본 사용 사례를 지원하는 데 사용됩니다.
 
 - `BULK INSERT` 또는 `OPENROWSET`를 사용한 대량 로드 작업
 - [탄력적 쿼리][remote_eq]로 SQL Database를 사용하여 원격 SQL Database 또는 SQL Data Warehouse 인스턴스 쿼리
@@ -419,8 +443,8 @@ WITH
 | 외부 데이터 원본   | 위치 접두사 | 위치 경로                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | 대량 작업        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| 탄력적 쿼리(분할)  | 필수 아님    | `<shard_map_server_name>.database.windows.net`        |
-| 탄력적 쿼리(원격) | 필수 아님    | `<remote_server_name>.database.windows.net`           |
+| 탄력적 쿼리(분할)  | 필요하지 않음    | `<shard_map_server_name>.database.windows.net`        |
+| 탄력적 쿼리(원격) | 필요하지 않음    | `<remote_server_name>.database.windows.net`           |
 
 위치 경로:
 
@@ -468,13 +492,13 @@ WITH
 | RDBMS             | `LOCATION`을 사용하여 제공된 서버의 원격 데이터베이스 이름 |
 | SHARD_MAP_MANAGER | 분할된 맵 관리자로 작동하는 데이터베이스의 이름      |
 
-`TYPE` = `RDBMS`에서 외부 데이터 원본을 만드는 방법을 보여주는 예제는 [RDBMS 외부 데이터 원본 만들기](#b-create-an-rdbms-external-data-source)를 참조하세요.
+`TYPE` = `RDBMS`인 외부 데이터 원본을 만드는 방법을 보여 주는 예제는 [RDBMS 외부 데이터 원본 만들기](#b-create-an-rdbms-external-data-source)를 참조하세요.
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 `TYPE` 인수가 `SHARD_MAP_MANAGER`로 설정된 경우에만 분할된 맵의 이름을 설정하는 데 사용됩니다.
 
-`TYPE` = `SHARD_MAP_MANAGER`에서 외부 데이터 원본을 만드는 방법을 보여주는 예제는 [분할된 맵 관리자 외부 데이터 원본 만들기](#a-create-a-shard-map-manager-external-data-source)를 참조하세요.
+`TYPE` = `SHARD_MAP_MANAGER`인 외부 데이터 원본을 만드는 방법을 보여 주는 예제는 [분할된 데이터베이스 맵 관리자 외부 데이터 원본 만들기](#a-create-a-shard-map-manager-external-data-source)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -484,9 +508,9 @@ SQL Database의 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
 EXTERNAL DATA SOURCE 개체에 대해 공유 잠금을 적용합니다.  
 
-## <a name="examples"></a>예:
+## <a name="examples"></a>예제:
 
-### <a name="a-create-a-shard-map-manager-external-data-source"></a>1\. 분할된 맵 관리자 외부 데이터 원본 만들기
+### <a name="a-create-a-shard-map-manager-external-data-source"></a>A. 분할된 맵 관리자 외부 데이터 원본 만들기
 
 SHARD_MAP_MANAGER를 참조하는 외부 데이터 원본을 만들려면 가상 머신의 SQL Database 또는 SQL Server 데이터베이스에서 분할된 맵 관리자를 호스트하는 SQL Database 서버 이름을 지정합니다.
 
@@ -513,7 +537,7 @@ WITH
 
 단계별 자습서는 [분할을 위한 탄력적 쿼리 시작(수평 분할)][sharded_eq_tutorial]을 참조하세요.
 
-### <a name="b-create-an-rdbms-external-data-source"></a>2\. RDBMS 외부 데이터 원본 만들기
+### <a name="b-create-an-rdbms-external-data-source"></a>B. RDBMS 외부 데이터 원본 만들기
 
 RDBMS를 참조하는 외부 데이터 원본을 만들려면 SQL Database에 있는 원격 데이터베이스의 SQL Database 서버 이름을 지정합니다.
 
@@ -539,7 +563,7 @@ WITH
 
 RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수직 분할)][remote_eq_tutorial]을 참조하세요.
 
-## <a name="examples-bulk-operations"></a>예: 대량 작업
+## <a name="examples-bulk-operations"></a>예제: 대량 작업
 
 > [!NOTE]
 > 대량 작업을 위해 외부 데이터 원본을 구성할 때 `LOCATION` URL 끝에 추적 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 배치하지 마세요.
@@ -611,7 +635,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL 데이터 웨어하우스
+## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL Data Warehouse
 
 PolyBase에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원본은 연결을 설정하고 다음과 같은 기본 사용 사례를 지원하는 데 사용됩니다. [PolyBase][intro_pb]를 사용하여 데이터 가상화 및 데이터 로드
 
@@ -653,7 +677,7 @@ WITH
 
 위치 설정 시 추가 참고 사항 및 지침:
 
-- 기본 옵션은 Azure Data Lake Storage 2세대 프로비저닝 시 보안 SSL 연결을 사용하는 것입니다. 이 기능을 사용하도록 설정한 경우 보안 SSL 연결을 선택할 때 `abfss`를 사용해야 합니다. `abfss`는 보안되지 않은 SSL 연결에서도 작동합니다. 
+- Azure Data Lake Storage Gen 2를 프로비저닝할 때 기본 옵션은 `enable secure SSL connections`를 사용하는 것입니다. 이 기능을 사용하도록 설정한 경우 보안 SSL 연결을 선택할 때 `abfss`를 사용해야 합니다. `abfss`는 보안되지 않은 SSL 연결에서도 작동합니다. 
 - SQL Data Warehouse 엔진은 개체가 생성될 때 외부 데이터 원본이 존재하는지 확인하지 않습니다. 유효성을 검사하려면 외부 데이터 원본을 사용하여 외부 테이블을 만듭니다.
 - 일관된 쿼리 의미 체계를 보장하기 위해 Hadoop을 쿼리할 때 모든 테이블에 대해 동일한 외부 데이터 원본을 사용합니다.
 - `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
@@ -678,7 +702,7 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#a-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
+`TYPE` = `HADOOP`를 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#a-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -698,9 +722,9 @@ SQL Server 빅 데이터 클러스터의 스토리지 또는 데이터 풀에 �
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples"></a>예:
+## <a name="examples"></a>예제:
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>1\. Azure Blob Storage를 참조하는 외부 데이터 원본 만들기
+### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. Azure Blob Storage를 참조하는 외부 데이터 원본 만들기
 
 이 예제에서 외부 데이터 원본은 `logs`라는 Azure Storage 계정 아래의 `daily`라는 Azure Blob Storage 컨테이너입니다. Azure 스토리지 외부 데이터 원본은 데이터 전송 전용입니다. 조건자 푸시 다운을 지원하지 않습니다.
 
@@ -728,7 +752,7 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>2\. Azure Data Lake Store Gen 1 또는 2를 참조하거나 서비스 주체를 사용하여 외부 데이터 소스를 생성합니다.
+### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. Azure Data Lake Store Gen 1 또는 2를 참조하거나 서비스 주체를 사용하여 외부 데이터 소스를 생성합니다.
 
 Azure Data Lake Store 연결은 ADLS URI 및 Azure Active directory 애플리케이션의 서비스 원칙을 기반으로할 수 있습니다. 이 애플리케이션을 만들기 위한 설명서는 [Active Directory를 사용하여 Data Lake 저장소 인증][azure_ad[]에서 찾을 수 있습니다.
 
@@ -930,7 +954,7 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#d-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
+`TYPE` = `HADOOP`를 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#d-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -978,9 +1002,9 @@ PolyBase는 대부분의 외부 데이터 원본에 대해 프록시 기반 인�
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples"></a>예:
+## <a name="examples"></a>예제:
 
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>1\. Hadoop를 참조하는 외부 데이터 원본 만들기
+### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hortonworks 또는 Cloudera Hadoop 클러스터를 참조하는 외부 데이터 원본을 만들려면 머신 이름 또는 Hadoop `Namenode` 및 포트의 IP 주소를 지정합니다. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
@@ -993,7 +1017,7 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>2\. 푸시 다운이 활성화된 상태에서 Hadoop를 참조하는 외부 데이터 원본 만들기
+### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>B. 푸시 다운이 활성화된 상태에서 Hadoop를 참조하는 외부 데이터 원본 만들기
 
 `RESOURCE_MANAGER_LOCATION` 옵션을 지정하여 PolyBase 쿼리에 대한 Hadoop 계산 푸시 다운을 활성화합니다. 활성화되면 PolyBase는 쿼리 계산을 Hadoop에 푸시해야 하는지 여부를 결정하기 위해 비용 기반 결정을 내립니다.
 

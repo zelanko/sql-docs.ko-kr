@@ -1,6 +1,7 @@
 ---
-title: 병합 구독 유형 및 충돌 해결 우선 순위 지정 | Microsoft 문서
-ms.custom: ''
+title: 유형 및 충돌 해결 우선 순위 지정(병합)
+description: SQL Server 병합 구독에서 사용되는 유형 및 충돌 해결 정책을 지정하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fe64a74b85aca2ff02308c384dce89b9be540a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a988935a1d0a614f1b7b336cc95ed82ce2a36214
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907617"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321740"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>병합 구독 유형 및 충돌 해결 우선 순위 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

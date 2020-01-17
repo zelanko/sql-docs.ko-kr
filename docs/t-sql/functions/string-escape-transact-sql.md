@@ -18,20 +18,20 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906864"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325505"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 결정적 함수입니다.  
+텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 SQL Server 2016에서 도입된 결정 함수입니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ STRING_ESCAPE( text , type )
 |슬래시(/)|\\/|  
 |백스페이스|\b|  
 |용지 공급|\f|  
-|줄 바꿈|\n|  
+|새 줄|\n|  
 |캐리지 리턴|\r|  
 |가로 탭|\t|  
   
@@ -69,11 +69,11 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>1\.  JSON 서식 지정 규칙에 따라 텍스트를 이스케이프합니다
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  JSON 서식 지정 규칙에 따라 텍스트를 이스케이프합니다
 
  다음 쿼리는 JSON 규칙을 사용하여 특수 문자를 이스케이프하며 이스케이프된 텍스트를 반환합니다.  
   
@@ -90,7 +90,7 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>2\. JSON 개체 서식 지정
+### <a name="b-format-json-object"></a>B. JSON 개체 서식 지정
 
  다음 쿼리는 숫자 및 문자열 변수에서 JSON 텍스트를 만들며 변수의 모든 특수 JSON 문자를 이스케이프합니다.  
   

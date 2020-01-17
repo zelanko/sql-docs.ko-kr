@@ -1,6 +1,7 @@
 ---
-title: SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
-ms.date: 04/23/2019
+title: '외부 데이터 액세스: SQL Server - PolyBase'
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fa0a133e7a2c966798c168a74841350702b54295
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907587"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252321"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -46,7 +47,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. 다음 예제에서는 두 가지 작업을 수행합니다.
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. 다음 예제를 참조하세요.
 
    - `SQLServerInstance`라는 외부 데이터 원본을 만듭니다.
    - 외부 데이터 원본(`LOCATION = '<vendor>://<server>[:<port>]'`)을 확인합니다. 예제에서는 SQL Server의 기본 인스턴스를 가리킵니다.

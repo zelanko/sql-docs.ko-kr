@@ -1,7 +1,7 @@
 ---
 title: 자동 시드를 사용하여 가용성 그룹 초기화
-description: 자동 시드를 사용하여 Always On 가용성 그룹의 모든 데이터베이스에 대한 보조 복제본을 자동으로 만듭니다.
-ms.custom: seodec18
+description: 수동으로 백업 및 복원하지 않고도 자동 시드를 사용하여 Always On 가용성 그룹의 모든 데이터베이스에 대한 보조 복제본을 자동으로 만듭니다.
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991584"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254087"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 예를 들어
+주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 다음은 그 예입니다.
 
 ```sql
 SELECT start_time, 
@@ -216,7 +216,7 @@ GO
 
 다음 표에는 자동 시드와 관련된 확장 이벤트가 나열되어 있습니다. 
 
-| 속성 | 설명|
+| 속성 | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  시드 요청 메시지입니다.
 |hadr_physical_seeding_backup_state_change |    물리적 시드 백업 관련 상태 변경입니다.
@@ -237,7 +237,7 @@ GO
 
 **자동 시드 중 모니터링**
 
-현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 예를 들어
+현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 다음은 그 예입니다.
 
 ```sql
 SELECT local_database_name, 

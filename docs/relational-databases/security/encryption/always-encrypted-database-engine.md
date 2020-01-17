@@ -17,17 +17,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593993"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254829"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![항상 암호화](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
   
  상시 암호화는 신용 카드 번호나 주민 등록 번호(예: 미국 사회 보장 번호)와 같이 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 기능입니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 표시하지 않을 수 있습니다. 따라서 Always Encrypted는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다. 온-프레미스 데이터베이스 관리자, 클라우드 데이터베이스 관리자 또는 기타 높은 권한을 가지고 있지만 인증되지 않은 사용자가 암호화된 데이터에 액세스할 수 없도록 함으로써 Always Encrypted는 고객이 직접 제어할 수 없는 중요한 데이터를 안전하게 저장하도록 해줍니다. 이를 통해 조직에서는 데이터를 Azure에 저장하기 위해 암호화하고 온-프레미스 데이터베이스 관리를 타사에 위임할 수 있도록 하거나, 자체 DBA 직원에 대한 보안 정보 사용 허가 요구 사항을 줄일 수 있습니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "73593993"
   > [!NOTE] 
   > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 보안 enclave는 패턴 일치, 기타 비교 연산자 및 내부 암호화를 사용하여 Always Encrypted의 기밀 컴퓨팅 기능을 크게 확장합니다. [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 참조하세요.
 
- 상시 암호화는 암호화를 애플리케이션에 투명하게 만듭니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독합니다. 드라이버는 데이터를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 쿼리 결과에 포함되고 암호화된 데이터베이스 열에 저장된 데이터의 암호를 투명하게 해독합니다.  
+ 상시 암호화는 암호화를 애플리케이션에 투명하게 만듭니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독합니다. 드라이버는 데이터를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 암호화된 데이터베이스 열에 저장되고 쿼리 결과에 포함된 데이터를 투명하게 암호 해독합니다.  
   
  Always Encrypted은 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]부터 모든 버전의 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], 그리고 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 모든 서비스 계층에서 사용할 수 있습니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 이전에는 Always Encrypted가 Enterprise Edition으로 제한되었습니다. 상시 암호화를 포함하는 Channel 9 프레젠테이션은 [상시 암호화를 사용하여 중요한 데이터의 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요.  
 
@@ -68,11 +68,11 @@ ms.locfileid: "73593993"
 
 특정 클라이언트 드라이버와 함께 Always Encrypted를 사용하여 애플리케이션을 개발하는 방법은 [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)을 참조하세요.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
-암호 해독은 클라이언트를 통해 발생합니다. 즉, Always Encrypted를 사용하는 경우 서버 쪽에서만 발생하는 일부 작업이 작동하지 않습니다. 
+암호화 및 암호 해독은 클라이언트 드라이버를 통해 발생합니다. 즉, Always Encrypted를 사용하는 경우 서버 쪽에서만 발생하는 일부 작업이 작동하지 않습니다. 예제에는 UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT를 통해 한 열에서 다른 열로 데이터를 복사하는 작업이 포함됩니다. 
 
-클라이언트에 결과 집합을 반환하지 않고 암호화된 열에서 암호화되지 않은 열로 데이터를 이동하려는 업데이트의 예제는 다음과 같습니다. 
+클라이언트에 결과 집합을 반환하지 않고 암호화된 열에서 암호화되지 않은 열로 데이터를 이동하려는 UPDATE의 예제는 다음과 같습니다. 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -107,12 +107,12 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 
  데이터베이스의 상시 암호화 초기 설정에는 상시 암호화 키 생성, 키 메타데이터 만들기, 선택한 데이터베이스 열의 암호화 속성 구성 및/또는 암호화해야 하는 열에 이미 있을 수 있는 데이터 암호화가 포함됩니다. 이러한 태스크 중 일부는 Transact-SQL에서 지원되지 않으며 클라이언트 쪽 도구를 사용해야 합니다. Always Encrypted 키 및 보호된 중요한 데이터는 일반 텍스트로 서버에 공개되지 않으므로 데이터베이스 엔진이 키 프로비저닝에 참여하여 데이터 암호화 또는 암호 해독 작업을 수행할 수 없습니다. 이러한 태스크를 수행하려면 SQL Server Management Studio 또는 PowerShell을 사용할 수 있습니다. 
 
-|태스크|SSMS|PowerShell|T-SQL|
+|Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니오|
-|데이터베이스에 키 메타데이터 만들기|예|예|예|
-|암호화된 열이 있는 새 테이블 만들기|예|예|예|
-|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니오|
+|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|yes|yes|예|
+|데이터베이스에 키 메타데이터 만들기|yes|yes|yes|
+|암호화된 열이 있는 새 테이블 만들기|yes|yes|yes|
+|선택한 데이터베이스 열에 있는 기존 데이터 암호화|yes|yes|예|
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에 도입된 [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 Trasact-SQL을 사용하여 기존 데이터를 암호화하는 것을 지원합니다. 또한 암호화 작업을 위해 데이터를 데이터 외부로 이동하지 않아도 됩니다.
@@ -166,7 +166,7 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 - 임의 암호화된 열(결정적 암호화된 열도 마찬가지)을 키 열로 사용하여 비클러스터형 인덱스에 대한 키 역할을 하는 열  
 - 임의 암호화된 열(결정적 암호화된 열도 마찬가지)을 키 열로 사용하여 클러스터형 인덱스에 대한 키 역할을 하는 열  
 - 임의 및 결정적 둘 다로 암호화된 열을 포함하는 전체 텍스트 인덱스에 대한 키 역할을 하는 열  
-- 계산 열
+- 계산된 열입니다.
 - 계산된 열에서 참조되는 열(식이 Always Encrypted에 대해 지원되지 않는 작업을 수행하는 경우)  
 - 스파스 열 집합  
 - 통계에서 참조되는 열  
@@ -272,7 +272,7 @@ GO
 - [Always Encrypted 암호화](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 - [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 - [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+- [CREATE TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
 - [column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
 - [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)  
 - [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   

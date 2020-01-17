@@ -1,6 +1,7 @@
 ---
-title: 배포 에이전트 보안(피어 투 피어 복제) | Microsoft 문서
-ms.custom: ''
+title: 배포 에이전트 보안(피어 투 피어)
+description: SQL Server Management Studio 피어 투 피어 복제 토폴로지의 ‘배포 에이전트 보안’ 페이지를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d870649e763cd9baceba45fa80159635558a0bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128377"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321790"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>배포 에이전트 보안(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

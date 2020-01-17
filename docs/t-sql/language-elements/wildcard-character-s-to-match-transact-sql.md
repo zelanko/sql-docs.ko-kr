@@ -1,6 +1,8 @@
 ---
-title: '[ ] (와일드카드 - 일치하는 문자) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: 하나 이상의 문자를 찾는 [] 와일드카드
+description: 와일드카드를 사용하여 하나 이상의 문자를 찾습니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +23,14 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000328"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257040"
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \](와일드카드 - 일치하는 문자)(Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \](와일드카드 - 하나 이상의 문자 일치)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 지정된 범위 또는 대괄호 `[ ]` 사이에 지정한 집합에 포함되는 하나의 문자와 일치됩니다. 와일드카드 문자는 `LIKE` 및 `PATINDEX` 등의 패턴 일치를 포함하는 문자열 비교에 사용할 수 있습니다.  

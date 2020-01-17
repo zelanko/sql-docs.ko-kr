@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252015"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249847"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252015"
 
 데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 지정한 형식으로 데이터베이스 테이블이나 뷰로 가져옵니다.
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -87,9 +87,9 @@ BULK INSERT
 
 *table_name* 데이터를 대량으로 가져올 테이블 또는 뷰의 이름입니다. 모든 열이 동일한 기본 테이블을 참조하는 뷰만 사용할 수 있습니다. 뷰에 데이터를 로드하는 경우의 제한 사항에 대한 자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.
 
-**‘** _data_file_ **‘** 지정한 테이블 또는 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크 또는 Azure Blob Storage(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.
+**‘** _data_file_ **’** 지정한 테이블 또는 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크 또는 Azure Blob Storage(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.
 
-*data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들어
+*data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 다음은 그 예입니다.
 
 ```sql
 BULK INSERT Sales.Orders
@@ -100,9 +100,9 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다. 이 경우 **data_source_name** 옵션을 지정해야 합니다. 예제는 [Azure Blob Storage의 파일에서 데이터 가져오기](#f-importing-data-from-a-file-in-azure-blob-storage)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
-**‘** _data_source_name_ **‘** 
+**‘** _data_source_name_ **’** 
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 및 Azure SQL Database.
 가져올 파일의 Azure Blob Storage 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요. 예제는 [Azure Blob Storage의 파일에서 데이터 가져오기](#f-importing-data-from-a-file-in-azure-blob-storage)를 참조하세요.
 
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [서식 파일](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)의 각 열에 대해 데이터 정렬 이름을 지정하는 것이 좋습니다.
 
-|CODEPAGE 값|설명|
+|CODEPAGE 값|Description|
 |--------------------|-----------------|
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열은 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열은 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않지만, Azure Blob Storage에서 읽을 수 있습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기를 위한 데이터 형식
 
@@ -354,7 +354,7 @@ INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Datab
 
 ## <a name="examples"></a>예
 
-### <a name="a-using-pipes-to-import-data-from-a-file"></a>1\. 파이프를 사용하여 파일에서 데이터 가져오기
+### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. 파이프를 사용하여 파일에서 데이터 가져오기
 
 다음 예에서는 필드 종결자로 파이프(`AdventureWorks2012.Sales.SalesOrderDetail`)를 사용하고 행 종결자로 `|`을 사용하여 지정한 데이터 파일에서 `|\n` 테이블로 주문 세부 정보를 가져옵니다.
 
@@ -369,9 +369,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
-### <a name="b-using-the-fire_triggers-argument"></a>2\. FIRE_TRIGGERS 인수 사용
+### <a name="b-using-the-fire_triggers-argument"></a>B. FIRE_TRIGGERS 인수 사용
 
 다음 예에서는 `FIRE_TRIGGERS` 인수를 지정합니다.
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 행 종결자로 줄 바꿈 사용
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n**은 **\r\n)** 으로 자동으로 바뀝니다.
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="d-specifying-a-code-page"></a>D. 코드 페이지 지정
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. CSV 파일에서 데이터 가져오기
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure Blob Storage의 파일에서 데이터 가져오기
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Azure Blob Storage의 파일에서 데이터 가져오기 및 오류 파일 지정
 
@@ -499,7 +499,7 @@ WITH (
 - [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)
 - [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
 - [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)
-- [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
+- [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
 - [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)
 - [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)

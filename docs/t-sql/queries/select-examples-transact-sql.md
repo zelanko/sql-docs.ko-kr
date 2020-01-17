@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119208"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191083"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하는 예제를 제공합니다.  
   
-## <a name="a-using-select-to-retrieve-rows-and-columns"></a>1\. SELECT를 사용하여 행 및 열 검색  
+## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT를 사용하여 행 및 열 검색  
  다음 예에서는 세 개의 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`Product` 사용)을 반환합니다.  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
@@ -55,7 +55,7 @@ ms.locfileid: "74119208"
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
-## <a name="b-using-select-with-column-headings-and-calculations"></a>2\. SELECT에 열 머리글 및 계산 사용  
+## <a name="b-using-select-with-column-headings-and-calculations"></a>B. SELECT에 열 머리글 및 계산 사용  
  다음 예에서는 `Product` 테이블의 모든 행을 반환합니다. 첫 번째 예에서는 각 제품에 대한 총 판매액과 할인 판매액을 반환합니다. 두 번째 예에서는 각 제품에 대한 총 수익이 계산됩니다.  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  
@@ -81,7 +81,7 @@ ms.locfileid: "74119208"
 ## <a name="e-using-correlated-subqueries"></a>E. 상관 하위 쿼리 사용
 상관 하위 쿼리는 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 이 쿼리는 외부 쿼리에서 선택한 행마다 한 번씩 반복적으로 실행될 수 있습니다.
 
- 다음 예에서는 기능상 동일한 쿼리를 보여 주고 `EXISTS` 키워드와 `IN` 키워드를 사용할 때의 차이점에 대해 설명합니다. 두 예는 모두 제품 모델이 긴 팔 로고 셔츠이고 `ProductModelID`와 `Product` 테이블 간에 `ProductModel`가 일치하는 각 제품 이름의 인스턴스 하나를 검색하는 유효한 하위 쿼리입니다.  
+첫 번째 예에서는 기능상 동일한 쿼리를 보여 주고 `EXISTS` 키워드와 `IN` 키워드를 사용할 때의 차이점에 대해 설명합니다. 두 예는 모두 제품 모델이 긴 팔 로고 셔츠이고 `ProductModelID`와 `Product` 테이블 간에 `ProductModel`가 일치하는 각 제품 이름의 인스턴스 하나를 검색하는 유효한 하위 쿼리입니다.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- 각 제품에 대한 계산에 최소 1500개 이상의 항목을 포함시키려는 경우 `HAVING COUNT(*) > 1500`을 사용하여 `1500`개 미만으로 판매된 항목에 대한 합계를 반환하는 제품은 제외시킬 수 있습니다. 다음 쿼리를 사용합니다.  
+ 각 제품에 대한 계산에 최소 1500개 이상의 항목을 포함시키려는 경우 `HAVING COUNT(*) > 1500`을 사용하여 `1500`개 미만으로 판매된 항목에 대한 합계를 반환하는 제품은 제외시킬 수 있습니다. 쿼리는 다음과 같습니다.  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

@@ -1,7 +1,7 @@
 ---
-title: Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/25/2019
+title: Azure Blob Storage를 사용하여 백업 및 복원
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,39 +10,39 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041373"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251131"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Azure Blob에 백업 그래픽](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
+  ![Azure Blob에 백업 그래픽](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azure Blob에 백업 그래픽")  
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [Microsoft Azure Blob Storage 서비스](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)로 백업하고 반대로 복원하는 방법에 대해 설명합니다. 또한 Microsoft Azure Blob 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 저장할 경우의 이점에 대해서도 간략하게 설명합니다.  
   
  SQL Server에서는 다음과 같은 방식으로 Microsoft Azure Blob Storage 서비스에 백업할 수 있습니다.  
   
--   **Microsoft Azure에 대한 백업 관리:** 디스크와 테이프에 백업하는 데 사용되는 동일한 방법을 사용하여, 이제 URL을 백업 대상으로 지정함으로써 Microsoft Azure 스토리지에 백업할 수 있습니다. 이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서 블록 Blob, 공유 액세스 서명, 스트라이프를 사용하면서 성능과 기능이 더욱 향상되었습니다.  
+-   **Microsoft Azure에 대한 백업 관리:** 디스크와 테이프에 백업하는 데 사용되는 동일한 방법을 사용하여, 이제 URL을 백업 대상으로 지정함으로써 Microsoft Azure 스토리지에 백업할 수 있습니다. 이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서 블록 Blob, 공유 액세스 서명, 스트라이프를 사용하면서 성능과 기능이 더욱 향상되었습니다.  
   
     > [!NOTE]  
     >  SQL Server 2012 SP1 CU2 이전의 SQL Server 버전의 경우 Microsoft Azure 도구의 추가 기능인 SQL Server 백업을 사용하여 Microsoft Azure Storage에 백업을 쉽고 빠르게 만들 수 있습니다. 자세한 내용은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  
   
--   **Azure Blob Storage의 데이터베이스 파일에 대한 파일-스냅샷 백업** : Azure 스냅샷을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업은 Azure Blob Storage 서비스를 사용하여 저장된 데이터베이스 파일에 대해 거의 즉각적인 백업 및 복원을 제공합니다. 이 기능으로 백업 및 복원 정책을 간소화할 수 있으며 특정 시점 복원을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. 이 기능은 SQL Server 2016 이상에서 사용할 수 있습니다.  
+-   **Azure Blob Storage의 데이터베이스 파일에 대한 파일-스냅샷 백업** : Azure 스냅샷을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업은 Azure Blob Storage 서비스를 사용하여 저장된 데이터베이스 파일에 대해 거의 즉각적인 백업 및 복원을 제공합니다. 이 기능으로 백업 및 복원 정책을 간소화할 수 있으며 특정 시점 복원을 지원합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. 이 기능은 SQL Server 2016 이상에서 사용할 수 있습니다.  
   
 -   **SQL Server에서 Microsoft Azure에 대한 백업을 관리하도록 구성:** 백업 전략을 관리하고 단일 데이터베이스나 여러 데이터베이스에 대한 백업을 예약하도록 SQL Server를 구성하거나 인스턴스 수준에서 기본값을 설정합니다. 이 기능을 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 이라고 합니다. 자세한 내용은 [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요. 이 기능은 SQL Server 2014 이상에서 사용할 수 있습니다.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 Microsoft Azure Blob 서비스를 사용할 경우의 이점  
   
--   유연하고 안정적인 무제한 오프사이트 스토리지: Microsoft Azure Blob service에 백업 저장은 편리하고 유연하며 쉽게 액세스할 수 있는 오프사이트 옵션입니다. 기존 스크립트/작업을 수정하는 것처럼 쉽게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 사용할 오프사이트 스토리지를 만들 수 있습니다. 오프사이트 스토리지는 대개 오프사이트 및 프로덕션 데이터베이스 위치 모두에 영향을 줄 수 있는 재해 방지를 위해 프로덕션 데이터베이스 위치로부터 충분히 멀리 있어야 합니다. Blob 스토리지 지리적 복제를 선택하여 전체 지역에 영향을 줄 수 있는 재해 발생에 대비한 추가 보호막을 만듭니다. 또한 언제 어디서나 백업을 사용할 수 있으며 복원을 위해 백업에 쉽게 액세스할 수 있습니다.  
+-   유연하고 안정적인 무제한 오프사이트 스토리지: Microsoft Azure Blob service에 백업 저장은 편리하고 유연하며 쉽게 액세스할 수 있는 오프사이트 옵션입니다. 기존 스크립트/작업을 수정하는 것처럼 쉽게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 사용할 오프사이트 스토리지를 만들 수 있습니다. 오프사이트와 프로덕션 데이터베이스 위치 둘 다에 영향을 줄 수 있는 단일 재해를 방지하려면 오프사이트 스토리지는 일반적으로 프로덕션 데이터베이스 위치와 충분히 멀리 떨어져 있어야 합니다. Blob 스토리지 지리적 복제를 선택하여 전체 지역에 영향을 줄 수 있는 재해 발생에 대비한 추가 보호막을 만듭니다. 또한 언제 어디서나 백업을 사용할 수 있으며 복원을 위해 백업에 쉽게 액세스할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 블록 blob을 사용하면 백업 세트를 스트라이프하여 최대 12.8TB의 백업 파일 크기를 지원할 수 있습니다.  
   
--   백업 보관: Microsoft Azure Blob Storage 서비스는 백업 보관에 자주 사용하는 테이프 옵션보다 더 효율적입니다. 테이프 스토리지를 사용하려면 오프사이트 시설로 물리적 이동과 미디어 보호 조치가 필요합니다. Microsoft Azure Blob Storage에 백업을 저장하면 즉각적이고 견고하며 가용성이 높은 보관이 가능합니다.  
+-   백업 보관: Microsoft Azure Blob Storage 서비스는 백업 보관에 자주 사용하는 테이프 옵션보다 더 효율적입니다. 테이프 스토리지를 사용하려면 미디어를 보호하기 위해 오프사이트 시설 및 수단까지 테이프를 물리적으로 운반해야 할 수 있습니다. Microsoft Azure Blob Storage에 백업을 저장하면 즉각적이고 견고하며 가용성이 높은 보관이 가능합니다.  
   
 -   하드웨어 관리 오버헤드 없음: Microsoft Azure 서비스를 사용하면 하드웨어 관리에 따른 오버헤드가 없습니다. Microsoft Azure 서비스는 하드웨어를 관리하며 하드웨어 오류에 대비한 중복과 보호를 위해 지리적 복제를 제공합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68041373"
   
 ## <a name="see-also"></a>참고 항목  
 
-[URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[URL에 SQL Server 백업 모범 사례 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

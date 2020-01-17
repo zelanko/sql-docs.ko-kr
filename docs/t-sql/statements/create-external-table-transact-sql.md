@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057660"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656640"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -109,7 +109,7 @@ SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 
 
 기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.
 
-DATA_SOURCE = *external_data_source_name* 외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Hadoop 또는 Azure Blob Storage입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용합니다.
+DATA_SOURCE = *external_data_source_name* 외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 HDFS(Hadoop 파일 시스템), Azure Storage blob 컨테이너 또는 Azure Data Lake Store입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용합니다.
 
 FILE_FORMAT = *external_file_format_name* 외부 데이터에 대한 파일 형식 및 압축 방법을 저장하는 외부 파일 형식 개체의 이름을 지정합니다. 외부 파일 형식을 만들려면 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 사용합니다.
 
@@ -140,17 +140,15 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 > [!NOTE]
 > PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
 
-예:
+예제:
 
-이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
+이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어 REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
 
 - PolyBase가 처음 100개 행의 검색을 시도하며, 25개가 실패하고 75개가 성공합니다.
 - 실패한 행의 백분율은 25%로 계산되며, 이는 거부 값 30%보다 작습니다. 결과적으로 PolyBase는 외부 데이터 원본에서 데이터를 계속 검색합니다.
 - PolyBase는 다음 100개 행의 로드를 시도합니다. 이번에는 25개 행이 성공하고 75개 행이 실패합니다.
 - 실패한 행의 백분율은 50%로 다시 계산됩니다. 실패한 행의 이 백분율은 30% 거부 값을 초과했습니다.
 - PolyBase 쿼리는 처음 200개 행의 반환을 시도한 후 거부된 행이 50%여서 실패합니다. PolyBase 쿼리가 거부 임계값이 초과되었음을 감지하기 전에 일치하는 행이 반환되었습니다.
-
-DATA_SOURCE: Hadoop 파일 시스템, Azure Blob Storage 또는 [분할된 데이터베이스 맵 관리자](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)에 저장된 데이터 같은 외부 데이터 원본입니다.
 
 SCHEMA_NAME: SCHEMA_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 스키마의 테이블에 매핑하는 기능을 제공합니다. 이 절을 사용하여 로컬 데이터베이스와 원격 데이터베이스 모두에 존재하는 스키마 사이를 구분합니다.
 
@@ -206,7 +204,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 쿼리 제한 사항:
 
-PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 33k 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
+PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3만 3천 개의 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
 
 테이블 너비 제한 사항:
 
@@ -222,7 +220,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>1\. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
+### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
 
 이 예제에서는 텍스트로 구분된 파일 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource* 및 외부 파일 형식 *myfileformat*을 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
@@ -252,7 +250,7 @@ WITH (
 ;
 ```
 
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>2\. RCFile 형식의 데이터를 사용하여 외부 테이블 만들기
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. RCFile 형식의 데이터를 사용하여 외부 테이블 만들기
 
 이 예제에서는 RCFile 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource_rc* 및 외부 파일 형식 *myfileformat_rc*를 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -578,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>개요: Azure SQL 데이터베이스
+## <a name="overview-azure-sql-database"></a>개요: Azure SQL Database
 
 Azure SQL Database에서 [탄력적 쿼리(미리 보기 상태)](/azure/sql-database/sql-database-elastic-query-overview/)에 대한 외부 테이블을 만듭니다.
 
@@ -621,30 +619,21 @@ column_name <data_type>
 
 분할된 데이터베이스 외부 테이블 옵션
 
-[Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)에 대한 외부 데이터 원본(SQL Server 데이터 원본이 아닌) 및 배포 방법을 지정합니다.
+[탄력적 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)의 외부 데이터 원본(비 SQL Server 데이터 원본) 및 배포 방법을 지정합니다.
 
-DATA_SOURCE: Hadoop 파일 시스템, Azure Blob Storage 또는 [분할된 데이터베이스 맵 관리자](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)에 저장된 데이터 같은 외부 데이터 원본입니다.
+DATA_SOURCE. DATA_SOURCE 절은 외부 테이블에 사용되는 외부 데이터 원본(분할된 데이터베이스 맵)을 정의합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
-SCHEMA_NAME: SCHEMA_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 스키마의 테이블에 매핑하는 기능을 제공합니다. 이 절을 사용하여 로컬 데이터베이스와 원격 데이터베이스 모두에 존재하는 스키마 사이를 구분합니다.
+SCHEMA_NAME 및 OBJECT_NAME. SCHEMA_NAME 및 OBJECT_NAME 절은 외부 테이블 정의를 다른 스키마의 테이블에 매핑합니다. 생략한 경우 원격 개체의 스키마를 “dbo”라 가정하고 그 이름이 정의하는 외부 테이블 이름과 동일하다고 간주합니다. 외부 테이블을 만들려는 데이터베이스에서 이미 원격 테이블의 이름을 가져온 경우에 유용합니다. 수평 확장된 데이터 계층에서 DMV의 카탈로그 뷰 집계를 가져오기 위해 외부 테이블을 정의하는 경우를 예로 들 수 있습니다. 카탈로그 뷰와 DMV는 이미 로컬로 존재하므로 외부 테이블 정의에 그 이름을 사용할 수 없습니다. 대신, 다른 이름을 사용하고 SCHEMA_NAME 및/또는 OBJECT_NAME 절에 카탈로그 뷰 또는 DMV의 이름을 사용합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
-OBJECT_NAME: OBJECT_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 이름을 가진 테이블에 매핑하는 기능을 제공합니다. 이 절을 사용하여 로컬 데이터베이스와 원격 데이터베이스 모두에 존재하는 개체 이름 사이를 구분합니다.
+DISTRIBUTION. DISTRIBUTION 절은 이 테이블에 사용되는 데이터 배포를 지정합니다. 쿼리 프로세서는 가장 효율적인 쿼리 계획을 구성하기 위해 DISTRIBUTION에서 제공하는 정보를 활용합니다.
 
-배포 옵션입니다. 이 인수는 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 인수는 테이블이 분할된 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블을 사용하면 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED**는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN**은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.
+- SHARDED는 데이터가 데이터베이스에 수평 분할되었음을 의미합니다. 데이터 배포의 분할 키는 <sharding_column_name> 매개 변수입니다.
+- REPLICATED는 테이블의 동일한 복사본이 각 데이터베이스에 있음을 의미합니다. 사용자가 데이터베이스 전체에서 복제본이 동일한지 확인해야 합니다.
+- ROUND_ROBIN은 테이블이 애플리케이션 종속 배포 방법을 사용하여 수평 분할되었음을 의미합니다.
 
 ## <a name="permissions"></a>사용 권한
 
-다음과 같은 권한이 필요합니다.
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-참고로 외부 데이터 원본을 만드는 로그인은 Hadoop 또는 Azure Blob Storage에 있는 외부 데이터 원본에 대한 읽기 및 쓰기 권한을 가져야 합니다.
-
-> [!IMPORTANT]
-> ALTER ANY EXTERNAL DATA SOURCE 권한은 보안 주체에 대해 외부 데이터 원본 개체를 만들고 수정하는 권한을 부여하며, 따라서 데이터베이스의 모든 데이터베이스 범위 자격 증명에 액세스하는 권한도 부여합니다. 이 권한은 높은 수준의 권한으로 간주되어야 하므로, 시스템의 신뢰할 수 있는 보안 주체에만 부여되어야 합니다.
+외부 테이블에 대한 액세스 권한이 있는 사용자는 외부 데이터 원본 정의에서 제공한 자격 증명에 따라 자동으로 기본 원격 테이블에 액세스할 수 있습니다. 외부 데이터 원본의 자격 증명을 통해 원치 않는 권한 상승을 방지합니다. 일반 테이블인 것처럼 외부 테이블에 GRANT 또는 REVOKE를 사용합니다. 외부 데이터 원본 및 외부 테이블을 정의한 후 외부 테이블을 통해 전체 T-SQL을 사용할 수 있습니다.
 
 ## <a name="error-handling"></a>오류 처리
 
@@ -674,7 +663,7 @@ SELECT FROM EXTERNAL TABLE과 같은 임시 쿼리 시나리오에서 SQL Databa
 - 외부 테이블 열에 대한 DEFAULT 제약 조건
 - 삭제, 삽입 및 업데이트의 DML(데이터 조작 언어) 작업
 
-쿼리에 정의된 리터럴 조건자만 외부 데이터 원본으로 푸시할 수 있습니다. 이는 연결된 서버 및 쿼리 실행 중에 결정된 조건자를 사용할 수 있는 위치(예: 쿼리 계획에서 중첩된 루프와 함께 사용되는 경우)에 액세스하는 것과 다릅니다. 이로 인해 전체 외부 테이블이 로컬로 복사된 다음, 조인되는 경우가 많습니다.    
+쿼리에 정의된 리터럴 조건자만 외부 데이터 원본으로 푸시할 수 있습니다. 연결된 서버와 달리, 쿼리 계획에서 중첩된 루프와 함께 사용할 경우 쿼리 실행 중에 조건자를 통해 결정된 위치에 액세스합니다. 이로 인해 전체 외부 테이블이 로컬로 복사된 다음, 조인되는 경우가 많습니다.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -690,7 +679,7 @@ SELECT FROM EXTERNAL TABLE과 같은 임시 쿼리 시나리오에서 SQL Databa
 
 외부 테이블을 사용하면 쿼리 계획에서 병렬 처리를 사용할 수 없습니다.
 
-외부 테이블은 원격 쿼리로 구현되며 반환되는 예상 행 수는 일반적으로 1000개이므로 외부 테이블을 필터링하는 데 사용되는 조건자의 유형을 기반으로 하는 다른 규칙이 있습니다. 이러한 값은 외부 테이블의 실제 데이터를 기반으로 하는 추정치가 아니라 규칙 기반 추정치입니다. optimiser는 더 정확한 추정치를 얻기 위해 원격 데이터 원본에 액세스하지 않습니다.
+외부 테이블은 원격 쿼리로 구현되며 반환되는 예상 행 수는 일반적으로 1000개이므로 외부 테이블을 필터링하는 데 사용되는 조건자의 유형을 기반으로 하는 다른 규칙이 있습니다. 외부 테이블의 실제 데이터를 기반으로 하는 추정치가 아니라 규칙 기반 추정치입니다. 최적화 프로그램은 더 정확한 추정치를 얻기 위해 원격 데이터 원본에 액세스하지 않습니다.
 
 ## <a name="locking"></a>잠금
 
@@ -698,7 +687,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-external-table-for-azure-sql-database"></a>1\. Azure SQL Database용 외부 테이블 만들기
+### <a name="a-create-external-table-for-azure-sql-database"></a>A. Azure SQL Database용 외부 테이블 만들기
 
 ```sql
 CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>참고 항목
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Azure SQL Database 탄력적 쿼리 개요](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [확장된 클라우드 데이터베이스에서 보고](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [데이터베이스 간 쿼리 시작(수직 분할)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -723,7 +714,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL 데이터 웨어하우스
+## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL Data Warehouse
 
 Azure SQL Data Warehouse에서 외부 테이블을 사용하여 다음을 수행합니다.
 
@@ -813,9 +804,9 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 > [!NOTE]
 > PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
 
-예:
+예제:
 
-이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
+이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어 REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
 
 - PolyBase가 처음 100개 행의 검색을 시도하며, 25개가 실패하고 75개가 성공합니다.
 - 실패한 행의 백분율은 25%로 계산되며, 이는 거부 값 30%보다 작습니다. 결과적으로 PolyBase는 외부 데이터 원본에서 데이터를 계속 검색합니다.
@@ -878,7 +869,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 쿼리 제한 사항:
 
-PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 33k 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
+PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3만 3천 개의 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
 
 테이블 너비 제한 사항:
 
@@ -890,7 +881,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>1\. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
+### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
 
 ```sql
 
@@ -1038,9 +1029,9 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 > [!NOTE]
 > PolyBase는 실패한 행의 백분율을 일정 간격으로 계산하므로 실패한 행의 실제 백분율은 *reject_value*를 초과할 수 있습니다.
 
-예:
+예제:
 
-이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
+이 예제에서는 REJECT 옵션 세 개가 서로 상호 작용하는 방법을 보여 줍니다. 예를 들어 REJECT_TYPE = percentage, REJECT_VALUE = 30 및 REJECT_SAMPLE_VALUE = 100인 경우 다음과 같은 시나리오가 일어날 수 있습니다.
 
 - PolyBase가 처음 100개 행의 검색을 시도하며, 25개가 실패하고 75개가 성공합니다.
 - 실패한 행의 백분율은 25%로 계산되며, 이는 거부 값 30%보다 작습니다. 결과적으로 PolyBase는 외부 데이터 원본에서 데이터를 계속 검색합니다.
@@ -1096,7 +1087,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 쿼리 제한 사항:
 
-PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 33k 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
+PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3만 3천 개의 파일을 사용할 수 있습니다. 이 최대 개수는 각 HDFS 폴더의 파일과 하위 폴더를 모두 포함합니다. 동시성 수준이 32보다 작은 경우 사용자는 33k보다 많은 파일을 포함하는 HDFS의 폴더에 대해 PolyBase 쿼리를 실행할 수 있습니다. 외부 파일 경로를 짧게 유지하고 HDFS 폴더당 30k 이하의 파일을 사용하는 것이 좋습니다. 너무 많은 파일이 참조되면 JVM(Java Virtual Machine) 메모리 부족 예외가 발생할 수 있습니다.
 
 테이블 너비 제한 사항:
 
@@ -1114,7 +1105,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>1\. Analytics Platform System 데이터로 HDFS 데이터 조인
+### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>A. Analytics Platform System 데이터로 HDFS 데이터 조인
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs
@@ -1123,7 +1114,7 @@ WHERE cs.url = 'www.microsoft.com'
 ;
 ```
 
-### <a name="b-import-row-data-from-hdfs-into-a-distributed-analytics-platform-system-table"></a>2\. HDFS에서 분산된 Analytics Platform System 테이블로 행 데이터 가져오기
+### <a name="b-import-row-data-from-hdfs-into-a-distributed-analytics-platform-system-table"></a>B. HDFS에서 분산된 Analytics Platform System 테이블로 행 데이터 가져오기
 
 ```sql
 CREATE TABLE ClickStream_PDW

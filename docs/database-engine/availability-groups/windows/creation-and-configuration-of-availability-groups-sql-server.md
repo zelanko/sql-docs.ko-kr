@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹 생성 및 구성에 대한 참조
-description: Always On 가용성 그룹을 만들고 구성하는 데 도움이 되는 링크에 대한 참조입니다.
-ms.custom: seodec18
+title: 가용성 그룹 만들기 및 구성(콘텐츠 인덱스)
+description: SQL Server에 대한 Always On 가용성 그룹을 만들고 구성하는 데 도움이 되는 링크의 인덱스입니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 82ea382e8e4703b5dae1bac850da96aa19c35d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6e506e46b7603a3e4c657c7500b482a1e1007f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009986"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245993"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 가용성 그룹 생성 및 구성에 대한 참조
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68009986"
  [Always On 가용성 그룹 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
  서버 인스턴스 구성, 가용성 그룹 만들기, 클라이언트 연결을 위한 가용성 그룹 구성, 가용성 그룹 관리 및 가용성 그룹 모니터링 단계에 대한 정보를 포함합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **다음에 대한 서버 인스턴스를 구성하려면 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
 -   [Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  

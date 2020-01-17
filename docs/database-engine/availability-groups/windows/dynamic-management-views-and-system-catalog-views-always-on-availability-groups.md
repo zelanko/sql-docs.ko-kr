@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹에 대한 동적 관리 뷰 및 시스템 카탈로그 뷰
-description: Always On 가용성 그룹의 상태를 모니터링하고 진단하는 데 도움이 되는 동적 관리 및 카탈로그  뷰 컬력션입니다.
-ms.custom: ag-guide, seodec18
+title: 가용성 그룹에 대한 DMV 및 시스템 카탈로그 뷰
+description: Always On 가용성 그룹의 상태를 모니터링하고 진단하는 데 도움이 되는 동적 관리 및 카탈로그 뷰 컬렉션입니다.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000180"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822336"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

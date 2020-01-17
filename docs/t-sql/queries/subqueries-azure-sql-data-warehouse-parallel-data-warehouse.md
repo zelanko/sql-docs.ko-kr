@@ -1,6 +1,8 @@
 ---
-title: 하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스) | Microsoft Docs
-ms.custom: ''
+title: 하위 쿼리
+description: Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 하위 쿼리
+ms.custom: seo-lt-2019
+titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +12,12 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948269"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244826"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -24,7 +26,7 @@ ms.locfileid: "67948269"
   
  SELECT 문의 경우 [SELECT&#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.  
   
-## <a name="contents"></a>내용  
+## <a name="contents"></a>콘텐츠  
   
 -   [기본 사항](#Basics)  
   
@@ -43,7 +45,7 @@ ms.locfileid: "67948269"
 ##  <a name="Examples"></a> 예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  이 섹션에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 지원되는 하위 쿼리의 예제를 제공합니다.  
   
-### <a name="a-top-and-order-by-in-a-subquery"></a>1\. 하위 쿼리에서 TOP 및 ORDER BY  
+### <a name="a-top-and-order-by-in-a-subquery"></a>A. 하위 쿼리에서 TOP 및 ORDER BY  
   
 ```  
 SELECT * FROM tblA  
@@ -52,7 +54,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>2\. 상호 관련된 하위 쿼리가 있는 HAVING 절  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>B. 상호 관련된 하위 쿼리가 있는 HAVING 절  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   

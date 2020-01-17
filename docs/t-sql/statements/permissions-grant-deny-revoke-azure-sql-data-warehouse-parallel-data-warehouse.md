@@ -1,6 +1,7 @@
 ---
-title: GRANT-DENY-REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨어하우스 | Microsoft Docs
-ms.custom: ''
+title: GRANT-DENY-REVOKE 권한
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095583"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255474"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "74095583"
   
 -   **REVOKE**는 기존의 **GRANT** 또는 **DENY** 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -80,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  부여, 거부 또는 취소할 수있는 하나 이상의 사용 권한.  
   
- ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
+ ON [ \<class_type> :: ] *securable***ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
   
  \< class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER**가 될 수 있습니다. 사용 권한은 **SERVER**_class\_type_에도 부여될 수 있지만, 해당 사용 권한에는 **SERVER**가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE**는 지정되지 않습니다. *class_type*이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT**로 간주됩니다.  
   
@@ -241,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>권한 목록  
  모든 사용 권한은 이 포스터에 그래픽으로 표시됩니다. 이 방법이 사용 권한의 중첩된 계층 구조를 볼 수 있는 가장 쉬운 방법입니다. 예를 들어, **ALTER ON LOGIN** 권한은 자체적으로 부여될 수 있지만, 또한 로그인에 해당 로그인에 대한 **CONTROL** 권한이 부여되거나 또는 로그인에 **ALTER ANY LOGIN** 권한이 부여된다면 포함될 수 있습니다.  
   
- ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
+ ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
   
  이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 **apsdoc\@microsoft.com**에 이메일로 요청합니다.  
   
@@ -264,7 +265,7 @@ REVOKE
   
 ##  <a name="Examples"></a> 예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-granting-a-server-level-permission-to-a-login"></a>1\. 로그인에 서버 수준 사용 권한 부여  
+### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 로그인에 서버 수준 사용 권한 부여  
  다음 두 문은 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  
@@ -275,7 +276,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>2\. 로그인에 서버 수준 사용 권한 부여  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. 로그인에 서버 수준 사용 권한 부여  
  다음 예에서는 서버 보안 주체(다른 로그인)에 하는 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  

@@ -1,6 +1,7 @@
 ---
-title: '자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용 | Microsoft Docs'
-ms.custom: ''
+title: 임의 암호화를 사용하는 enclave 사용 열의 인덱스(자습서)
+description: 이 자습서에서는 SQL Server용 보안 enclave로 Always Encrypted에서 지원되는 임의 암호화를 사용하여 enclave 사용 열에 인덱스를 만들고 사용하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258325"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557773"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

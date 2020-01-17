@@ -1,6 +1,7 @@
 ---
-title: SQL Server 복제 구독 속성 대화 상자 | Microsoft Docs
-ms.custom: ''
+title: 구독 속성 대화 상자
+description: SSMS(SQL Server Management Studio) ‘구독 속성’ 대화 상자를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769456"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321527"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68769456"
  옵션이 읽기 전용으로 표시되면 구독을 만들 때만 해당 옵션을 설정할 수 있습니다. 새 구독 마법사에서 사용할 수 없는 옵션을 설정하려면 저장 프로시저를 사용하여 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 및 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)를 참조하세요.  
   
 > [!NOTE]  
->  - 구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
+>  - 구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
 > - Azure SQL Database 관리형 인스턴스는 스냅샷 및 트랜잭션 복제의 게시자, 배포자 및 구독자일 수 있습니다. Azure SQL 데이터베이스 단일 및 풀링된 데이터베이스만 스냅샷 및 트랜잭션의 복제 푸시 구독자가 될 수 있습니다. 자세한 내용은 [Azure SQL Database를 사용하는 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication)를 참조하세요. 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
@@ -124,7 +125,7 @@ ms.locfileid: "68769456"
  병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용**으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
   
  **웹 동기화**  
- **웹 동기화 사용** 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버에 연결하여 구독을 동기화할지 여부를 결정합니다. 이 옵션은 게시가 웹 동기화용으로 설정되어 있는 경우에만 사용할 수 있습니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)을 참조하세요.  
+ **웹 동기화 사용** 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버에 연결하여 구독을 동기화할지 여부를 결정합니다. 이 옵션은 게시가 웹 동기화용으로 설정되어 있는 경우에만 사용할 수 있습니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)를 참조하세요.  
   
  **웹 동기화 사용** 에 대해 **True**를 선택한 경우 다음을 수행하십시오.  
   

@@ -1,20 +1,21 @@
 ---
 title: ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
+description: SQL Server 가져오기 및 내보내기 마법사에서 사용할 ODBC 연결 문자열을 만들거나 ODBC DSN을 구성하는 방법
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285499"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608032"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -28,7 +29,7 @@ ms.locfileid: "71285499"
 또한 제공해야 하는 필요한 연결 정보를 찾아야 할 수도 있습니다. 이 타사 사이트([연결 문자열 참조](https://www.connectionstrings.com/))에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>원하는 드라이버가 설치되어 있는지 확인
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 한다는 것을 알고 있는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
+1.  시작 메뉴 또는 제어판에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾습니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 한다는 것을 알고 있는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다.
 3.  **드라이버** 탭에서 컴퓨터에 설치된 모든 ODBC 드라이버의 목록을 찾을 수 있습니다. (일부 드라이버의 이름은 여러 언어로 나열될 수 있습니다.)
 
@@ -50,7 +51,7 @@ ms.locfileid: "71285499"
 
 ## <a name="step-2---provide-the-connection-info"></a>2단계 - 연결 정보 제공
 다음 단계는 ODBC 드라이버 및 데이터 원본에 대한 연결 정보를 제공하는 것입니다. 두 가지 옵션이 있습니다.
-1.  이미 존재하거나 [제어판]에서 **ODBC 데이터 원본 관리자** 애플릿으로 작성한 **DSN**(데이터 원본 이름)을 제공합니다. DSN은 ODBC 데이터 원본에 연결하는 데 필요한 설정의 저장된 컬렉션입니다.
+1.  이미 있거나 **ODBC 데이터 원본 관리자** 애플릿으로 만든 **DSN**(데이터 원본 이름)을 입력합니다. DSN은 ODBC 데이터 원본에 연결하는 데 필요한 설정의 저장된 컬렉션입니다.
 
     이미 DSN 이름을 알고 있거나 새 DSN을 만드는 방법을 알고 있으면 이 페이지의 나머지 부분은 건너뛸 수 있습니다. **데이터 원본 선택** 또는 **대상 선택** 페이지의 **Dsn** 필드에서 DSN 이름을 입력한 다음 마법사의 다음 단계를 계속 진행합니다.
 
@@ -66,7 +67,7 @@ ms.locfileid: "71285499"
 
 ## <a name="odbc_dsn"></a> 옵션 1 - DSN 제공
 연결 정보에 DSN(데이터 원본 이름)을 제공하려면 **ODBC 데이터 원본 관리자** 애플릿을 사용하여 기존 DSN의 이름을 찾거나 새 DSN을 만듭니다.
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
+1.  시작 메뉴 또는 제어판에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾습니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다. 애플릿의 모양은 다음과 같습니다.
 
     ![ODBC 관리자 제어판 애플릿](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ ms.locfileid: "71285499"
 ## <a name="odbc_connstring"></a> 옵션 2 - 연결 문자열 제공
 연결 정보를 연결 문자열에 제공하려면 이 항목의 나머지 부분이 필요한 연결 문자열을 가져오는 데 도움이 됩니다.
 
-이 예에서는 Microsoft SQL Server에 연결하는 다음 연결 문자열을 사용합니다.
+이 예에서는 Microsoft SQL Server에 연결하는 다음 연결 문자열을 사용합니다. 사용되는 데이터베이스 예제는 **WideWorldImporters**이며, 로컬 머신의 SQL Server에 연결합니다.
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -111,7 +112,7 @@ ms.locfileid: "71285499"
 ## <a name="get-the-connection-string-with-an-app"></a>앱으로 연결 문자열 가져오기
 사용자 컴퓨터에서 ODBC 드라이버에 대한 연결 문자열을 작성하고 테스트하려면 [제어판]에서 **ODBC 데이터 원본 관리자** 애플릿을 사용할 수 있습니다. 연결에 대한 파일 DSN을 만든 다음, 파일 DSN에서 설정을 복사하여 연결 문자열을 조합합니다. 이 작업에는 여러 단계가 필요하지만, 유효한 연결 문자열이 있는지 확인하는 데 도움이 됩니다.
 
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
+1.  시작 메뉴 또는 제어판에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾습니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다.
 3.  이제 애플릿의 **파일 DSN** 탭으로 이동합니다. **추가**를 클릭합니다.
 
@@ -160,14 +161,14 @@ ms.locfileid: "71285499"
 
     일반적으로 작동하는 연결 문자열을 만드는 데 ODBC 데이터 원본 관리자에서 만든 DSN 설정이 모두 필요하지는 않습니다.  
     -   ODBC 드라이버는 항상 지정해야 합니다.
-    -   SQL Server와 같은 서버 기반 데이터 원본의 경우 일반적으로 서버, 데이터베이스 및 로그인 정보가 필요합니다. 따라서 DSN 샘플에는 TrustServerCertificate, WSID 또는 APP가 필요하지 않습니다.
+    -   SQL Server와 같은 서버 기반 데이터 원본의 경우 일반적으로 서버, 데이터베이스 및 로그인 정보가 필요합니다. 샘플 DSN에는 TrustServerCertificate, WSID 또는 APP가 필요하지 않습니다.
     -   파일 기반 데이터 원본의 경우 적어도 파일 이름과 위치가 필요합니다.
     
 12. 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **ConnectionString** 필드에 이 연결 문자열을 붙여넣습니다. 마법사에서 문자열을 구문 분석하고 계속할 준비가 되었습니다!
 
     ![이후에 ODBC를 사용하여 SQL에 연결](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

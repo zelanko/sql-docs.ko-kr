@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
+title: 가용성 그룹에 대한 클러스터 DTC 서비스
 description: 'Always On 가용성 그룹에 대한 Microsoft DTC(Distributed Transaction Coordinator) 서비스를 클러스터링하는 데 필요한 요구 사항 및 단계에 대해 설명합니다. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 450ea18f977f720b742a9fba28f6d24d01d5373d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988566"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244386"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
 
@@ -26,14 +26,14 @@ ms.locfileid: "67988566"
 
  ## <a name="checklist-preliminary-requirements"></a>검사 목록: 사전 요구 사항
 
-||태스크|참조|  
+||Task|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|모든 노드, 서비스 및 가용성 그룹이 제대로 구성되었는지 확인합니다.|[Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항(SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹 DTC 요구 사항이 충족되었는지 확인합니다.|[Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션(SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>검사 목록: 클러스터형 DTC 리소스 종속성
 
-||태스크|참조|  
+||Task|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공유 스토리지 드라이브입니다.|[공유 스토리지 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M**을 사용하는 것이 좋습니다.|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|고유한 DTC 네트워크 이름 리소스입니다.  이름은 Active Directory에서 클러스터 컴퓨터 개체로 등록됩니다.<br /><br />다음 중 하나라도 해당되는지 확인합니다.<br /><br />•  DTC 네트워크 이름 리소스를 만드는 사용자에게는 DTC 네트워크 이름 리소스가 상주할 OU 또는 컨테이너에 대한 컴퓨터 만들기 개체 권한이 있습니다.<br /><br />•  사용자에게 컴퓨터 만들기 개체 권한이 없는 경우 도메인 관리자에게 DTC 네트워크 이름 리소스에 대한 클러스터 컴퓨터 개체를 미리 준비하라고 요청합니다.|[Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
@@ -45,7 +45,7 @@ ms.locfileid: "67988566"
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>검사 목록: 사후 클러스터형 DTC 리소스 구성
 
-||태스크|참조|  
+||Task|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|클러스터형 DTC 서비스에 대한 네트워크 DTC 액세스를 안전하게 사용하도록 설정합니다.|[MS DTC에 안전하게 네트워크 액세스 사용(영문)](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|로컬 DTC 서비스를 중지하고 사용하지 않도록 설정합니다.|[서비스 시작 방법 구성](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|

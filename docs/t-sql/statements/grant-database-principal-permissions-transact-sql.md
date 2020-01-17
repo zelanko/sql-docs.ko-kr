@@ -1,6 +1,8 @@
 ---
-title: GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT 데이터베이스 보안 주체 사용 권한
+description: 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대한 권한을 부여합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246157"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +40,7 @@ ms.locfileid: "73982241"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대한 사용 권한을 부여합니다.  
   
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -113,7 +115,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 보안 주체 정보는 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다. 데이터베이스 수준의 사용 권한 정보는 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
 ## <a name="database-user-permissions"></a>데이터베이스 사용자 권한  
@@ -167,7 +169,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>1\. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
+### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
  다음 예에서는 사용자 `CONTROL`에게 사용자 `AdventureWorks2012`의 `Wanida`에 대한 `RolandX` 권한을 부여합니다.  
   
 ```  
@@ -175,7 +177,7 @@ GRANT CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>2\. GRANT OPTION을 지정하여 사용자에게 역할에 대한 VIEW DEFINITION 권한 부여  
+### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. GRANT OPTION을 지정하여 사용자에게 역할에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`을 지정하여 데이터베이스 사용자 `AdventureWorks2012`에게 `SammamishParking` 역할 `GRANT OPTION`에 대한 `JinghaoLiu` 권한을 부여합니다.  
   
 ```  

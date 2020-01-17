@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE 파일 및 파일 그룹
+description: Transact-SQL을 사용하여 데이터베이스의 파일 및 파일 그룹을 업데이트합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982844"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244434"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -132,7 +134,7 @@ TO FILEGROUP { *filegroup_name* } 지정된 파일을 추가할 파일 그룹을
 
 ADD LOG FILE 지정된 데이터베이스에 로그 파일을 추가합니다.
 
-REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 논리적 파일 설명을 제거하고 물리적 파일을 삭제합니다. 파일이 비어 있어야 제거할 수 있습니다.
+REMOVE FILE *logical_file_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 논리적 파일 설명을 제거하고 물리적 파일을 삭제합니다. 파일이 비어 있어야 제거할 수 있습니다.
 
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
@@ -141,13 +143,13 @@ REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 
-데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 예를 들어
+데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 다음은 그 예입니다.
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 예를 들어
+데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 다음은 그 예입니다.
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -238,7 +240,7 @@ FILEGROWTH *growth_increment* 파일의 자동 증분을 지정합니다. 파일
 
 FILEGROWTH를 지정하지 않은 경우 기본값은 다음과 같습니다.
 
-|버전 옵션|기본값|
+|버전|기본값|
 |-------------|--------------------|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작|데이터는 64MB입니다. 로그 파일은 64MB입니다.|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작|데이터는 1MB입니다. 로그 파일은 10%입니다.|
@@ -286,7 +288,7 @@ NAME = *new_filegroup_name* 파일 그룹 이름을 *new_filegroup_name*으로 �
 
 AUTOGROW_SINGLE_FILE **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
-파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 기본값입니다.
+파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 이것이 기본값입니다.
 
 AUTOGROW_ALL_FILES
 
@@ -310,7 +312,7 @@ READ_ONLY | READONLY 파일 그룹을 읽기 전용으로 지정합니다. 해�
 - 읽기 전용 데이터베이스에서는 잠금이 발생하지 않습니다. 따라서 쿼리 성능은 더 향상될 수 있습니다.
 
 > [!NOTE]
-> 키워드 `READONLY`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 `READONLY`를 사용하지 않도록 하고 현재 `READONLY`를 사용하는 애플리케이션은 수정하세요. 대신 `READ_ONLY` 를 사용해야 합니다.
+> 키워드 `READONLY`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 `READONLY`를 사용하지 않도록 하고 현재 `READONLY`를 사용하는 애플리케이션은 수정하세요. 대신 `READ_ONLY`를 사용하세요.
 
 READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 파일 그룹의 개체를 업데이트할 수 있습니다. 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 > [!TIP]
 > 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
 
@@ -336,7 +338,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 
 메모리 최적화 파일 그룹에 대해 SIZE 및 FILEGROWTH 매개 변수를 설정할 수 없습니다.
 
-키워드 `READONLY`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 `READONLY`를 사용하지 않도록 하고 현재 READONLY를 사용하는 애플리케이션은 수정하세요. 대신 `READ_ONLY` 를 사용해야 합니다.
+키워드 `READONLY`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 `READONLY`를 사용하지 않도록 하고 현재 READONLY를 사용하는 애플리케이션은 수정하세요. 대신 `READ_ONLY`를 사용하세요.
 
 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.
 
@@ -354,7 +356,7 @@ FILENAME에 새 위치를 지정하여 시스템 또는 사용자 정의 데이�
 
 기본적으로 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 0으로 채워져 초기화됩니다.
 
-- 데이터베이스를 만듭니다.
+- 데이터베이스 만들기
 - 기존 데이터베이스에 파일 추가
 - 기존 파일의 크기 증가
 - 데이터베이스 또는 파일 그룹을 복원합니다.
@@ -685,7 +687,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Azure SQL Database 관리되는 인스턴스의 데이터베이스에 이 문을 사용합니다.
 
@@ -746,7 +748,7 @@ ADD FILE 데이터베이스에 파일을 추가합니다.
 
 TO FILEGROUP { *filegroup_name* } 지정된 파일을 추가할 파일 그룹을 지정합니다. 현재 파일 그룹을 표시하고 어떤 파일 그룹이 현재 기본 파일 그룹인지 표시하려면 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 카탈로그 뷰를 사용하십시오.
 
-REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 논리적 파일 설명을 제거하고 물리적 파일을 삭제합니다. 파일이 비어 있어야 제거할 수 있습니다.
+REMOVE FILE *logical_file_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 논리적 파일 설명을 제거하고 물리적 파일을 삭제합니다. 파일이 비어 있어야 제거할 수 있습니다.
 
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
@@ -819,7 +821,7 @@ NAME = *new_filegroup_name* 파일 그룹 이름을 *new_filegroup_name*으로 �
 
 AUTOGROW_SINGLE_FILE
 
-파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 기본값입니다.
+파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 이것이 기본값입니다.
 
 AUTOGROW_ALL_FILES
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 
 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
 

@@ -1,6 +1,7 @@
 ---
-title: 미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs
-ms.custom: ''
+title: '보안 구성 마법사: 미러 서버 인스턴스'
+description: SQL Server Management Studio ‘데이터베이스 미러링 보안 구성’ 마법사의 ‘미러 서버 인스턴스’ 페이지에 대해 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045633"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822391"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>데이터베이스 미러링 보안 구성 마법사: 미러 서버 인스턴스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 페이지를 사용하여 미러 데이터베이스가 있는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
   

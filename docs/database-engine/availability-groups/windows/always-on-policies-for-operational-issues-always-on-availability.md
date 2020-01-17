@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹의 운영 문제에 대한 정책 기반 관리
+title: '정책 기반 관리: 가용성 그룹'
 description: Always On 가용성 그룹 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 SQL Server에서 가용성 그룹 및 복제본과 데이터베이스의 상태를 볼 수 있습니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991546"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244056"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 가용성 그룹의 운영 문제에 대한 정책 기반 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ ms.locfileid: "67991546"
 ##  <a name="Always OnPBM"></a> 미리 정의된 정책 및 문제  
  다음 표에는 미리 정의된 정책이 요약되어 있습니다.  
   
-|정책 이름|문제점|범주 **&#42;**|패싯|  
+|정책 이름|문제|범주 **&#42;**|패싯|  
 |-----------------|-----------|--------------------|-----------|  
-|WSFC 클러스터 상태|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)입니다.|심각|SQL Server 인스턴스|  
-|가용성 그룹 온라인 상태|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)입니다.|심각|가용성 그룹|  
-|가용성 그룹 자동 장애 조치(Failover) 준비|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)입니다.|심각|가용성 그룹|  
-|가용성 복제본 데이터 동기화 상태|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)입니다.|경고|가용성 그룹|  
-|동기 복제본 데이터 동기화 상태|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 역할 상태|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 연결 상태|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 역할 상태|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)입니다.|심각|가용성 복제본|  
-|가용성 복제본 연결 상태|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)입니다.|심각|가용성 복제본|  
-|가용성 복제본 조인 상태|[가용성 복제본이 조인되어 있지 않습니다](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|경고|가용성 복제본|  
-|가용성 복제본 데이터 동기화 상태|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)입니다.|경고|가용성 복제본|  
-|가용성 데이터베이스 일시 중지 상태|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)입니다.|경고|가용성 데이터베이스|  
-|가용성 데이터베이스 조인 상태|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)입니다.|경고|가용성 데이터베이스|  
-|가용성 데이터베이스 데이터 동기화 상태|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)입니다.|경고|가용성 데이터베이스|  
+|WSFC 클러스터 상태|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)입니다.|위험|SQL Server 인스턴스|  
+|가용성 그룹 온라인 상태|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)입니다.|위험|가용성 그룹|  
+|가용성 그룹 자동 장애 조치(Failover) 준비|[가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|위험|가용성 그룹|  
+|가용성 복제본 데이터 동기화 상태|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)입니다.|Warning|가용성 그룹|  
+|동기 복제본 데이터 동기화 상태|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)입니다.|Warning|가용성 그룹|  
+|가용성 복제본 역할 상태|[일부 가용성 복제본에 정상 상태의 역할이 없음](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Warning|가용성 그룹|  
+|가용성 복제본 연결 상태|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)입니다.|Warning|가용성 그룹|  
+|가용성 복제본 역할 상태|[가용성 복제본에 정상 상태의 역할이 없음](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|위험|가용성 복제본|  
+|가용성 복제본 연결 상태|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)입니다.|위험|가용성 복제본|  
+|가용성 복제본 조인 상태|[가용성 복제본이 조인되어 있지 않습니다](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Warning|가용성 복제본|  
+|가용성 복제본 데이터 동기화 상태|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)입니다.|Warning|가용성 복제본|  
+|가용성 데이터베이스 일시 중지 상태|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)입니다.|Warning|가용성 데이터베이스|  
+|가용성 데이터베이스 조인 상태|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)입니다.|Warning|가용성 데이터베이스|  
+|가용성 데이터베이스 데이터 동기화 상태|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)입니다.|Warning|가용성 데이터베이스|  
   
 > [!IMPORTANT]
 >  **&#42;** Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
@@ -90,7 +90,7 @@ ms.locfileid: "67991546"
   
  자세한 내용은 [Always On 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (SQL Server Always On 팀 블로그)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 정책을 사용하여 가용성 그룹의 상태 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

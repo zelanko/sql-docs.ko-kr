@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM과 기타 SQL Server 기능 간 호환성 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM 호환성 | Microsoft Docs
+description: FILESTREAM과 기타 SQL Server 기능 간 호환성
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245402"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FILESTREAM 데이터는 파일 시스템에 있으므로 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 기능과 함께 FILESTREAM을 사용할 경우 몇 가지 고려 사항, 지침 및 제한 사항에 대해 설명합니다.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085360"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> 복제  
+##  <a name="Replication"></a> Replication  
  게시자에서 FILESTREAM 특성을 사용할 수 있는 **varbinary(max)** 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 **varbinary(max)** 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 복제하는 경우가 아니면 FILESTREAM 특성을 복제하는 것이 좋습니다. FILESTREAM 열이 있는 테이블은 지정된 스키마 옵션에 상관없이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 구독자에 복제할 수 없습니다.  
   
 > [!NOTE]  

@@ -1,6 +1,5 @@
 ---
-title: XSINIL 매개 변수를 사용하여 NULL 값 요소 생성 | Microsoft 문서
-ms.custom: fresh2019may
+title: XSINIL을 사용하여 NULL 값 요소 생성 | Microsoft Docs
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2373da54981ad8d3cc743214c7110bb0d49723bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 168e7e70735cabafaf4fab48d27c46cbe81d1ce1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943148"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257640"
 ---
 # <a name="generate-elements-for-null-values-with-the-xsinil-parameter"></a>XSINIL 매개 변수를 사용하여 NULL 값 요소 생성
 

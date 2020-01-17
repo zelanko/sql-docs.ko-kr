@@ -1,6 +1,7 @@
 ---
-title: 병합 복제 백업 및 복원 전략 | Microsoft 문서
-ms.custom: ''
+title: 백업 및 복원 전략(병합)
+description: 병합 복제에 사용되는 데이터 백업 및 복원 전략
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948744"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321990"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>병합 복제 백업 및 복원 전략
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948744"
   
 -   게시자, 배포자 및 모든 구독자의 **master** 및 **msdb** 시스템 데이터베이스. 이러한 데이터베이스는 각각 그리고 관련 복제 데이터베이스와 동시에 백업되어야 합니다. 예를 들어 게시 데이터베이스를 백업할 때 게시자의 **master** 및 **msdb** 데이터베이스를 동시에 백업합니다. 게시 데이터베이스를 복원한 경우 **master** 및 **msdb** 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스와 일치하는지 확인하십시오.  
   
- 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [업데이트된 백업이 필요한 일반 동작](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
+ 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
   
  아래 자세히 설명된 게시 데이터베이스 백업 및 복원 접근 방법 중 하나를 선택한 다음 배포 데이터베이스 및 구독 데이터베이스에 대해 나열된 권장 사항을 따릅니다.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948744"
 > [!IMPORTANT]  
 >  게시 데이터베이스를 구독 데이터베이스와 동기화하면 게시된 테이블이 백업에서 복원된 게시되지 않은 다른 테이블보다 더 최신 시점으로 복원될 수 있습니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 구독자와 동기화하는 경우에는 구독이 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독이어야 합니다(이전 릴리스에서는 로컬 구독과 전역 구독이라고 함).  
   
  밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
@@ -87,7 +88,7 @@ ms.locfileid: "67948744"
   
  게시 보존 기간을 설정하려면 [구독에 대한 만료 기간 설정](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)을 참조하세요.  
   
- 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>재게시 데이터베이스 백업 및 복원  
  데이터베이스가 게시자에서 데이터를 구독한 다음 같은 데이터를 다른 구독 데이터베이스로 게시하면 이 데이터베이스는 재게시 데이터베이스가 됩니다. 재게시 데이터베이스를 복원하는 경우 이 항목의 "게시 데이터베이스 백업 및 복원"과 "구독 데이터베이스 백업 및 복원"에 설명된 지침을 따르십시오.  

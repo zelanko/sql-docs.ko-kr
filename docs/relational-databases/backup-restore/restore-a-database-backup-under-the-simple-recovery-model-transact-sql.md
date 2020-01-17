@@ -1,7 +1,7 @@
 ---
-title: 단순 복구 모델에서 데이터베이스 백업 복원(Transact-SQL) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: '데이터베이스 복원: 단순 복구 모델(Transact-SQL)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e130868d8df6537bef9c969cfa860b95242f185b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937657"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244234"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>단순 복구 모델에서 데이터베이스 백업 복원(Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 전체 데이터베이스 백업을 복원하는 방법에 대해 설명합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "67937657"
 > [!IMPORTANT]  
 >  이 작업을 수행하려면 복원될 데이터베이스를 현재 사용하고 있는 사람이 전체 데이터베이스 백업을 복원하는 시스템 관리자뿐이어야 합니다.  
   
-## <a name="prerequisites-and-recommendations"></a>필수 구성 요소 및 권장 사항  
+## <a name="prerequisites-and-recommendations"></a>필수 조건 및 권장 사항  
   
 -   암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67937657"
 > [!NOTE]  
 >  새 사용자 데이터베이스는 **모델** 데이터베이스의 호환성 수준을 상속합니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="to-restore-a-full-database-backup"></a>전체 데이터베이스 백업을 복원하려면  
   
@@ -69,7 +70,7 @@ ms.locfileid: "67937657"
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 전체 데이터베이스 백업을 테이프에서 복원합니다.  
   
 ### <a name="example"></a>예제  

@@ -1,6 +1,7 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스 스토리지 iSCSI 구성 - SQL Server on Linux
-description: ''
+title: iSCSI FCI 스토리지 구성 - SQL Server on Linux
+description: SQL Server on Linux용 iSCSI를 사용하여 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032397"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558591"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux
 
@@ -30,7 +31,7 @@ iSCSI는 네트워크를 사용하여 대상으로 알려진 서버에서 서버
 Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구성하면 안 됩니다. 성능 및 가용성을 위해 iSCSI 네트워크는 원본 및 클라이언트 서버 모두에서 일반 네트워크 트래픽에 사용되는 네트워크와 분리되어야 합니다. iSCSI에 사용되는 네트워크는 빨라야 합니다. 네트워크는 일부 프로세서 대역폭을 사용하므로, 일반 서버를 사용하는 경우 이에 따라 계획해야 합니다.
 대상에서 완료되도록 하려면 가장 중요한 작업은 FCI에 참여하는 서버만 액세스할 수 있도록 적절한 권한을 생성되는 디스크에 할당하는 것입니다. linuxnodes1이 생성되는 이름인 Microsoft iSCSI 대상의 예제가 아래에 나와 있으며, 이 경우 노드의 IP 주소가 할당되므로 NewFCIDisk1.vhdx가 노드에 표시됩니다.
 
-![초기자][1]
+![시작자][1]
 
 ### <a name="instructions"></a>Instructions
 
@@ -297,7 +298,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
     chown mssql <FolderName>
     ```
 
-    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예가 나와 있습니다.
+    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예제가 나와 있습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
     chown mssql <FolderName>
     ```
 
-    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예가 나와 있습니다.
+    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예제가 나와 있습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구�
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker>는 FCI에서 사용되지 않을 20단계 출력의 볼륨 그룹 목록입니다. 각 항목을 따옴표로 묶고 쉼표로 구분합니다. 아래에 예가 나와 있습니다.
+    \<ListOfVGsNotUsedByPacemaker>는 FCI에서 사용되지 않을 20단계 출력의 볼륨 그룹 목록입니다. 각 항목을 따옴표로 묶고 쉼표로 구분합니다. 아래에 예제가 나와 있습니다.
 
     ![55-ListOfVGs][11]
  

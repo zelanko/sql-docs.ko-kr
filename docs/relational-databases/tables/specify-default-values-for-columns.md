@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909880"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200494"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블 열에 입력될 기본값을 지정할 수 있습니다. 사용자 인터페이스의 개체 탐색기를 사용하거나 일반 컨트롤을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 제출할 수 있습니다.
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블 열에 입력될 기본값을 지정할 수 있습니다. 사용자 인터페이스의 개체 탐색기를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 제출하여 기본값을 설정할 수 있습니다.
 
 열에 기본값을 할당하지 않은 상태에서 사용자가 열을 비워 두면 다음과 같은 결과가 발생합니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "72909880"
    > [!NOTE]
    > 숫자 기본값을 입력하려면 숫자를 입력합니다. 개체나 함수의 경우 해당 이름을 입력합니다. 영숫자 기본값의 경우 원하는 값을 작은따옴표로 묶어 입력합니다.
 
-4. **파일** 메뉴에서 _테이블 이름_ **저장**을 클릭합니다.
+4. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다. 
 
 ## <a name="TsqlProcedure"></a> Transact-SQL을 사용하여 기본값 지정
 

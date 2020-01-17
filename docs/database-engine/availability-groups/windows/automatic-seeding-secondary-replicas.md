@@ -1,8 +1,7 @@
 ---
-title: 자동 시드를 사용하여 가용성 그룹의 보조 복제본을 초기화합니다.
-description: 자동 시드를 사용하여 SQL 2016 이상의 Always On 가용성 그룹의 일부로 보조 복제본을 초기화합니다.
-services: data-lake-analytics
-ms.custom: seodec18
+title: 보조 복제본에 대한 자동 시드
+description: 자동 시드를 사용하여 SQL 2016 이상의 Always On 가용성 그룹의 일부로 보조 복제본을 초기화하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934921"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254099"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ Transact-SQL 또는 SSMS(SQL Server Management Studio) 버전 17 이상에서 �
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>복제본의 시드 모드 변경
 
-가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 예를 들어
+가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -231,7 +230,7 @@ GO
 
 다음 표에는 자동 시드와 관련된 확장 이벤트가 나열되어 있습니다.
 
-|속성|설명|
+|속성|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|시드 요청 메시지입니다.|
 |hadr_physical_seeding_backup_state_change|물리적 시드 백업 관련 상태 변경입니다.|
@@ -248,7 +247,7 @@ GO
 |hadr_automatic_seeding_failure|자동 시드 작업이 실패할 때 발생합니다.|
 |hadr_automatic_seeding_timeout|자동 시드 작업 시간이 초과할 때 발생합니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [ALTER AVAILABILITY GROUP(Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

@@ -1,6 +1,7 @@
 ---
-title: 복제, 변경 내용 추적 및 변경 데이터 캡처 - 가용성 그룹 | Microsoft Docs
-ms.custom: ''
+title: 복제, 변경 내용 추적 및 변경 데이터 캡처 및 가용성 그룹
+description: SQL Server Always On 가용성 그룹과 함께 사용하는 경우 복제, 변경 내용 추적 및 변경 데이터 캡처의 상호 운용성에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251965"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235388"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.locfileid: "72251965"
   
      대부분의 경우 클라이언트 애플리케이션은 항상 현재 주 복제본에 연결하려고 하지만 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 활용하기 위해 현재 주 복제본만 사용할 수 있는 것은 아닙니다. 가용성 그룹이 읽기 가능한 보조 복제본을 지원하도록 구성된 경우 보조 노드에서도 변경 데이터를 수집할 수 있습니다.  
   
-     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
+     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
      다음 쿼리를 사용하면 읽기 가능한 보조 복제본에 연결하기 위해 읽기 전용 의도가 필요한지 여부를 확인할 수 있습니다.  
   
@@ -177,7 +178,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
     - 또는 가용성 그룹의 모든 보조 복제본 인스턴스에서 데이터베이스를 제거하고, 자동 또는 수동 시드를 사용하여 가용성 그룹 복제본 인스턴스에 추가합니다.
   
 ###  <a name="CT"></a> 변경 내용 추적  
- CT(변경 내용 추적)에 사용되는 데이터베이스는 Always On 가용성 그룹의 일부가 될 수 있습니다. 추가적인 구성은 필요하지 않습니다. 변경 데이터에 액세스하기 위해 CDC TVF(테이블 반환 함수)를 사용하는 변경 추적 클라이언트 애플리케이션은 장애 조치(Failover) 후 주 복제본을 찾는 기능이 필요합니다. 클라이언트 애플리케이션이 가용성 그룹 수신기 이름을 통해 연결할 경우 연결 요청이 항상 현재 주 복제본으로 올바르게 전송됩니다.  
+ CT(변경 내용 추적)에 사용되는 데이터베이스는 Always On 가용성 그룹의 일부가 될 수 있습니다. 추가 구성은 필요하지 않습니다. 변경 데이터에 액세스하기 위해 CDC TVF(테이블 반환 함수)를 사용하는 변경 추적 클라이언트 애플리케이션은 장애 조치(Failover) 후 주 복제본을 찾는 기능이 필요합니다. 클라이언트 애플리케이션이 가용성 그룹 수신기 이름을 통해 연결할 경우 연결 요청이 항상 현재 주 복제본으로 올바르게 전송됩니다.  
   
 > [!NOTE]  
 >  변경 추적 데이터는 항상 주 복제본으로부터 가져와야 합니다. 보조 복제본으로부터 변경 데이터에 액세스하려고 시도하면 다음과 같은 오류가 발생합니다.  
@@ -201,28 +202,28 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   게시자 인스턴스는 Always On 가용성 그룹에 참여하는 데 필요한 모든 사전 요구 사항을 충족합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에서 지원됩니다.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>제한  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원되는 복제 조합은 다음과 같습니다.  
   
 |||||  
 |-|-|-|-|  
 ||**게시자**|**배포자**|**구독자**|  
-|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|예| 
-|**P2P**|아니오|아니오|아니오|  
-|**병합**|예|아니오|아니오|  
-|**스냅샷**|예|아니오|예|
+|**트랜잭션**|yes<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|yes|yes| 
+|**P2P**|예|예|예|  
+|**병합**|yes|예|예|  
+|**스냅샷**|yes|예|yes|
   
  **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   
 ### <a name="considerations"></a>고려 사항  
   
--   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)에서 지원됩니다.  
+-   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   보조 데이터베이스에 대한 구독자 장애 조치(Failover)는 지원되지만 병합 복제 구독자에게는 수동 절차입니다. 절차는 미러링된 구독자 데이터베이스를 장애 조치하는 데 사용되는 방법과 동일합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]참여 시 트랜잭션 복제 구독자는 특수 조작이 필요하지 않습니다. 가용성 그룹에 참여하려면 구독자가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상을 실행해야 합니다.  자세한 내용은 [복제 구독자 및 Always On 가용성 그룹(SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)을 참조하세요.
   
 -   로그인, 작업, 연결된 서버를 포함하여 데이터베이스 외부에 있는 메타데이터 및 개체는 보조 복제본에 전파되지 않습니다. 장애 조치(Failover) 후 새로운 주 데이터베이스에 메타데이터 및 개체가 필요한 경우 이를 수동으로 복사해야 합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **복제**  
   
 -   [Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
@@ -231,7 +232,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **변경 데이터 캡처**  
   
 -   [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   

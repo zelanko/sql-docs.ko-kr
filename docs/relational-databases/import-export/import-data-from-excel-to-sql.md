@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245265"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 
@@ -49,7 +49,7 @@ SQL Server가 설치되어 있지 않거나 SQL Server가 있지만 SQL Server M
 
 SQL Server 가져오기 및 내보내기 마법사의 페이지를 단계별로 실행하여 Excel 파일에서 직접 데이터를 가져옵니다. 필요에 따라 설정을 SSIS(SQL Server Integration Services) 패키지로 저장하여 나중에 사용자 지정하고 다시 사용할 수 있습니다.
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.
 
 2. **데이터베이스**를 확장합니다.
 3. 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.
@@ -264,7 +264,7 @@ Azure Data Factory에 익숙하여 복사 마법사를 실행되지 않게 하�
 
 - [파일 시스템](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 - [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database*](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 Azure Data Factory를 사용해 데이터를 복사하는 방법을 알아보려면 다음 항목을 참조하세요.
 
@@ -275,7 +275,7 @@ Azure Data Factory를 사용해 데이터를 복사하는 방법을 알아보려
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0"이 등록되지 않음
 
-이 오류는 OLEDB 공급자가 설치되지 않아 발생합니다. [Microsoft Access 데이터베이스 엔진 2010 재배포 가능 패키지](https://www.microsoft.com/en-us/download/details.aspx?id=13255)에서 설치합니다. Windows 및 SQL Server가 모두 64비트이면 64비트 버전을 설치해야 합니다.
+이 오류는 OLEDB 공급자가 설치되지 않아 발생합니다. [Microsoft Access 데이터베이스 엔진 2010 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=13255)에서 설치합니다. Windows 및 SQL Server가 모두 64비트이면 64비트 버전을 설치해야 합니다.
 
 오류 전문은 다음과 같습니다.
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>연결된 서버 “(null)”에 대해 OLE DB 공급자 “Microsoft.ACE.OLEDB.12.0”의 인스턴스를 만들 수 없습니다.
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>연결된 서버 “(null)”에 대해 OLE DB 공급자 “Microsoft.ACE.OLEDB.12.0”의 인스턴스를 만들 수 없습니다.
 
 이것은 Microsoft OLEDB가 올바르게 구성되지 않았음을 나타냅니다. 다음 Transact-SQL 코드를 실행하여 이 문제를 해결합니다.
 

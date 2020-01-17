@@ -3,17 +3,17 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/10/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930484"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258404"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -31,7 +31,7 @@ ms.locfileid: "72930484"
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 또는 7.6 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
-| Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 사항 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
+| Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에 대한 [시스템 요구 사항](sql-server-linux-setup.md#system)을 검토하세요. [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 대한 최신 지원 정책은 [Microsoft SQL Server의 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)을 참조하세요.
@@ -44,8 +44,9 @@ ms.locfileid: "72930484"
 
 다음 표에는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 릴리스 기록이 나와 있습니다.
 
-| 릴리스               | 버전 옵션       | 릴리스 날짜 |
+| 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
@@ -79,9 +80,49 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU18"></a> CU18(2019년 12월)
+
+[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU18(누적 업데이트 18) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3257.3입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377) 항목을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3257.3-13 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3257.3-13 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3257.3-13 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="remarks"></a>설명
+
+이제 SQL Server 2017 컨테이너에 아래에서 예제로 설명된 새 태그 지정 패턴이 있습니다.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
+
+  태그에 설명된 조합을 사용하여 컨테이너 이미지를 끌어옵니다.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
+
+    지원되는 최신 Ubuntu 버전의 최신 SQL Server 버전을 끌어옵니다.
+
+**예:**
+
+`mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
+
+Ubuntu 16.04 컨테이너를 기반으로 하는 SQL Server 2017 CU18을 끌어옵니다.
+
+`mcr.microsoft.com/mssql/server:2017-latest`
+
+Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(이 문서를 작성할 당시 CU18)을 끌어옵니다.
+
+> [!NOTE]
+> 이후에는 SQL Server 2017 컨테이너에 다른 태그 지정 패턴을 사용하여 컨테이너를 더 이상 게시하지 않습니다.
+
+
 ## <a id="CU17"></a> CU17(2019년 10월)
 
-이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU17(누적 업데이트 17) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3238.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579) 항목을 참조하세요.
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU17(누적 업데이트 17) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3238.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579) 항목을 참조하세요.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -95,7 +136,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 
 ## <a id="CU16"></a> CU16(2019년 8월)
 
-이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU16(누적 업데이트 16) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3223.3입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218) 항목을 참조하세요.
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU16(누적 업데이트 16) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3223.3입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218) 항목을 참조하세요.
 
 ### <a name="whats-new"></a>What's New
 
@@ -115,7 +156,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 
 ## <a id="CU15"></a> CU15(2019년 5월)
 
-이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU15(누적 업데이트 15) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3162.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951) 항목을 참조하세요.
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU15(누적 업데이트 15) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3162.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951) 항목을 참조하세요.
 
 ### <a name="package-details"></a>패키지 세부 정보
 

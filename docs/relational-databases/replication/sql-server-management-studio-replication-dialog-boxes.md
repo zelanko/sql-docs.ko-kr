@@ -1,6 +1,7 @@
 ---
-title: SQL Server Management Studio 복제 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: SQL Server Management Studio 복제 대화 상자
+description: SQL Server Management Studio 내의 다양한 복제 대화 상자를 설명하는 문서의 참조입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,16 +12,16 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5f932a5729b039436f952aeab8ad78f8d220d22e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 51ad6849489392483dba8db7c3f7688e939d53c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768337"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320047"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 복제 대화 상자
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 다양한 복제 대화 상자에 대한 정보를 다룹니다.  
+  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 다양한 복제 대화 상자를 설명합니다.  
   
 -   [스냅샷 에이전트 보안](../../relational-databases/replication/snapshot-agent-security.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: 배포 데이터베이스에서 복제된 명령 및 정보 보기 | Microsoft 문서
-ms.custom: ''
+title: 배포 데이터베이스에서 복제된 명령 및 정보 보기
+description: SQL Server용 배포 데이터베이스에서 복제된 명령과 기타 복제 관련 정보를 보는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711008"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322221"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>배포 데이터베이스에서 복제된 명령 및 정보 보기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "71711008"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>트랜잭션 복제를 사용하여 게시된 특정 데이터베이스 또는 특정 아티클에서 배포 데이터베이스의 복제된 명령을 보려면  
   
-1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@publication` 및 `@article`을 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
+1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@publication` 및 `@article`를 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
   
 2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)를 실행합니다. (옵션) `@article_id`에 2단계의 아티클 ID를 지정합니다. (옵션) `@publisher_database_id`에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **database_id** 열에서 얻을 수 있습니다.  
   

@@ -1,8 +1,8 @@
 ---
-title: Azure Data Studio에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 모니터링
+title: 인사이트 위젯을 사용하여 서버 및 데이터베이스 모니터링
 titleSuffix: Azure Data Studio
 description: Azure Data Studio의 인사이트 위젯에 대해 알아보기
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959520"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957057"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
 
@@ -27,14 +27,12 @@ ms.locfileid: "67959520"
 
 ![데이터베이스 대시보드](media/insight-widgets/database-dashboard.png)
 
-
 다양한 유형의 인사이트 위젯 만들기를 시작하려면 다음 자습서를 확인하세요.
 
 - [사용자 지정 인사이트 위젯 빌드](tutorial-build-custom-insight-sql-server.md)
 - *기본 제공 인사이트 위젯 사용*
   - [성능 모니터링 인사이트 사용](tutorial-qds-sql-server.md)
   - [테이블 공간 사용량 인사이트 사용](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>SQL 쿼리
 

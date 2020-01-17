@@ -1,6 +1,7 @@
 ---
-title: SQL Server 커넥터 유지 관리 &amp; 문제 해결 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 커넥터 유지 관리 및 문제 해결
+description: SQL Server 커넥터의 유지 관리 지침 및 일반적인 문제 해결 단계를 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148783"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557938"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 커넥터, 부록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 추가 정보는 이 항목에서 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) 및 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)을 참조하세요.  
@@ -169,7 +170,10 @@ ms.locfileid: "70148783"
 **SQL Server 커넥터에서 액세스해야 하는 엔드포인트는 무엇인가요?** 커넥터는 허용 목록에 포함되어야 하는 두 개의 엔드포인트와 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
-  
+
+**HTTP(S) 프록시 서버를 통해 Azure Key Vault에 연결하려면 어떻게 할까요?**
+커넥터는 Internet Explorer의 프록시 구성 설정을 사용합니다. 이러한 설정은 [그룹 정책](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) 또는 레지스트리를 통해 제어할 수 있지만, 시스템 수준 설정이 아니라 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서비스 계정을 대상으로 해야 합니다. 데이터베이스 관리자가 Internet Explorer에서 설정을 보거나 편집하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔진이 아니라 데이터베이스 관리자 계정에만 영향을 줍니다. 서비스 계정을 사용하여 대화형으로 서버에 로그온하는 것은 권장되지 않으며 여러 보안 환경에서 차단됩니다. 구성된 프록시 설정을 변경하는 경우, 커넥터가 키 자격 증명 모음에 처음 연결할 때 설정이 캐시되었기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 변경 내용을 적용할 수 있습니다.
+
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 각 구성 단계에 대해 필요한 최소 권한 수준은 무엇인가요?**  
  sysadmin 고정 서버 역할이 있는 멤버로 구성 단계를 모두 수행할 수는 있지만 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 사용할 권한을 최소화하는 것이 권장됩니다. 다음 목록에서는 각 작업에 대한 최소 권한 수준을 정의합니다.  
   
@@ -202,7 +206,7 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 ##  <a name="AppendixC"></a> 3. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 오류 코드 설명  
  **공급자 오류 코드**  
   
-오류 코드  |기호  |설명    
+오류 코드  |기호  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | 작업이 성공했습니다.    
 1 | scp_err_Failure | 작업이 실패했습니다.    
@@ -211,7 +215,9 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 4 | scp_err_NotFound | EKM 공급자가 지정된 키 또는 알고리즘을 찾을 수 없습니다.    
 5 | scp_err_AuthFailure | EKM 공급자가 인증에 실패했습니다.    
 6 | scp_err_InvalidArgument | 제공된 인수가 잘못되었습니다.    
-7 | scp_err_ProviderError | EKM 공급자에 지정되지 않은 오류가 있으며 SQL 엔진에서 발견했습니다.    
+7 | scp_err_ProviderError | EKM 공급자에 지정되지 않은 오류가 있으며 SQL 엔진에서 발견했습니다.   
+401 | acquireToken | 서버는 요청에 대해 401을 응답했습니다. 클라이언트 ID와 비밀이 올바르고, 자격 증명 문자열이 AAD 클라이언트 ID와 비밀을 하이픈 없이 연결한 값인지 확인합니다.
+404 | getKeyByName | 키 이름을 알 수 없어 서버에서 404로 응답했습니다. 사용자 자격 증명 모음에 키 이름이 있는지 확인하세요.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | 키 이름이 너무 길어 SQL 엔진의 지문에 맞지 않습니다. 키 이름은 26자를 초과할 수 없습니다.    
 2050 | scp_err_PasswordTooShort | AAD 클라이언트 ID 및 암호의 연결인 암호 문자열이 32자 미만입니다.    
 2051 | scp_err_OutOfMemory | SQL 엔진에 메모리가 부족하며 EKM 공급자에 대한 메모리를 할당하지 못했습니다.    
@@ -249,6 +255,8 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 -   Azure 주요 자격 증명 모음 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 비대칭 키를 삭제했을 수 있습니다. 키를 복원하세요.  
   
 -   "라이브러리를 로드할 수 없습니다"라는 오류가 표시되는 경우 실행 중인 SQL Server 버전에 따라 재배포 가능한 Visual Studio C++의 적절한 버전이 설치되어 있는지 확인합니다. 다음 표에서는 Microsoft 다운로드 센터에서 설치할 버전을 지정합니다.   
+
+Windows 이벤트 로그는 SQL Server 커넥터와 관련된 오류도 기록하므로 오류가 실제로 발생하는 이유에 대한 추가 컨텍스트를 제공할 수 있습니다. Windows 애플리케이션 이벤트 로그의 원본은 “Microsoft Azure Key Vault용 SQL Server 커넥터”가 됩니다.
   
 SQL Server 버전  |재배포 가능 설치 링크    
 ---------|--------- 
@@ -287,7 +295,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
  Azure 주요 자격 증명 모음 설명서:  
   
--   [Azure 키 자격 증명 모음이란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [Azure Key Vault란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
 -   [Azure 키 자격 증명 모음 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   

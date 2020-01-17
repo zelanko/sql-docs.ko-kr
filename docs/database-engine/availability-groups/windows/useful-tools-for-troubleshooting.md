@@ -1,6 +1,7 @@
 ---
-title: 문제 해결에 유용한 도구(Always On 가용성 그룹-SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 가용성 그룹 문제 해결 도구(콘텐츠 인덱스)
+description: 가용성 그룹에 관련된 문제를 모니터링하고 해결하는 데 사용할 수 있는 도구를 설명하는 문서에 대한 참조입니다.
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013463"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244727"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>문제 해결에 유용한 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

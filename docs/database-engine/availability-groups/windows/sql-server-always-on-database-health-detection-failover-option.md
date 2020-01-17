@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 상태 검색 장애 조치 옵션 | Microsoft Docs
-ms.custom: ''
+title: 데이터베이스 수준 상태 검색
+description: SQL Server Always On 가용성 그룹에 사용할 수 있는 데이터베이스 수준 상태 검색 기능에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013968"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251259"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 예제 DMV 출력:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -119,13 +120,13 @@ select name, db_failover from sys.availability_groups
 >
 >2016-04-25 12:20:21.17 spid79      데이터베이스 'AutoHa-Sample'의 상태 정보 - 확정된 Lsn: '(34:664:1)'    커밋 LSN: '(34:656:1)'    커밋 시간: 'Apr 25 2016 12:19PM'
 >
->2016-04-25 12:20:21.19 spid15s     복제본 ID가 {c4ad5ea4-8a99-41fa-893e-189154c24b49}인 가용성 복제본 'SQLServer-0'에서 주 데이터베이스 'AutoHa-Sample'에 대해 보조 데이터베이스와 Always On 가용성 그룹의 연결이 종료되었습니다. 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.
+>2016-04-25 12:20:21.19 spid15s     복제본 ID가 {c4ad5ea4-8a99-41fa-893e-189154c24b49}인 가용성 복제본 'SQLServer-0'에서 주 데이터베이스 'AutoHa-Sample'에 대해 보조 데이터베이스와 Always On 가용성 그룹의 연결이 종료되었습니다. 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.
 >
->2016-04-25 12:20:21.21 spid75      Always On: WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 요청에 대한 응답으로 가용성 그룹 'Contoso-ag'의 로컬 복제본을 확인 역할로 전환하기 위해 준비하는 중입니다. 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.
+>2016-04-25 12:20:21.21 spid75      Always On: WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 요청에 대한 응답으로 가용성 그룹 'Contoso-ag'의 로컬 복제본을 확인 역할로 전환하기 위해 준비하는 중입니다. 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.
 >
 >2016-04-25 12:20:21.21 spid75      가용성 그룹 'ag'에서 로컬 가용성 복제본의 상태가 'PRIMARY_NORMAL'에서 'RESOLVING_NORMAL'(으)로 변경되었습니다.  가용성 그룹이 오프라인 상태로 전환되었기 때문에 상태가 변경되었습니다.  연결된 가용성 그룹이 삭제되었거나, 사용자가 WSFC(Windows Server 장애 조치 클러스터링) 관리 콘솔에서 연결된 가용성 그룹을 오프라인으로 전환했거나, 가용성 그룹이 다른 SQL Server 인스턴스로 장애 조치하고 있기 때문에 복제본이 오프라인 상태로 전환되었습니다.  자세한 내용은 SQL Server 오류 로그, WSFC(Windows Server 장애 조치 클러스터링) 관리 콘솔 또는 WSFC 로그를 참조하세요.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>sqlserver.availability_replica_database_fault_reporting 확장 이벤트
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>sqlserver.availability_replica_database_fault_reporting 확장 이벤트
 
 SQL Server 2016에서 정의되기 시작한 새로운 확장 이벤트가 있으며, 이는 데이터베이스 수준 상태 검색으로 트리거됩니다.  이벤트 이름은 **sqlserver.availability_replica_database_fault_reporting**입니다.
 
@@ -151,7 +152,7 @@ SQL Server Management Studio를 사용하여 주 SQL Server에 연결하고, 관
 
 필드에 대한 설명:
 
-|열 데이터 | 설명|
+|열 데이터 | Description|
 |---------|---------|
 |availability_group_id |가용성 그룹의 ID입니다.|
 |availability_group_name |가용성 그룹의 이름입니다.|

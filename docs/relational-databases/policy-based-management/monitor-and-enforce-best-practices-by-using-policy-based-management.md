@@ -1,6 +1,7 @@
 ---
-title: 정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용 | Microsoft 문서
-ms.custom: ''
+title: 정책 기반 관리를 사용하여 모범 사례 모니터링 및 적용
+description: 정책 기반 관리에서는 모범 사례 정책으로 가져와서 인스턴스, 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 정책 파일 세트를 제공합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087093"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557701"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68087093"
 |32비트 SQL Server 2000용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |64비트 SQL Server 2000용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 2005 이상용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|SQL Server 네트워크 패킷 크기|[네트워크 패킷 크기는 8060바이트를 초과할 수 없음](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
+|SQL Server 네트워크 패킷 크기|[네트워크 패킷 크기는 8,060바이트를 초과할 수 없음](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |SQL Server 암호 만료|[SQL Server 로그인 암호 만료](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  
 |SQL Server 암호 정책|[SQL Server 로그인 암호 강도](../../relational-databases/policy-based-management/sql-server-login-password-strength.md)|  
 |사용자 데이터베이스용 대칭 키 암호화|[사용자 데이터베이스의 대칭 키](../../relational-databases/policy-based-management/symmetric-keys-on-user-databases.md)|  

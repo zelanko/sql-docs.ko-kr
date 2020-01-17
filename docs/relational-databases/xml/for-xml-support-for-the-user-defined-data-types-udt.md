@@ -1,6 +1,5 @@
 ---
-title: UDT(사용자 정의 데이터 형식)에 대한 FOR XML 지원 | Microsoft 문서
-ms.custom: ''
+title: UDT(사용자 정의 데이터 형식)에 대한 FOR XML 지원 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2416bdc2b49a88b4306ae46973eab70fc38c0d9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 34764dcdc6b8f0fa91ce4a79ef6dde8cb8eaacc1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943259"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244777"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>사용자 정의 데이터 형식(UDT)에 대한 FOR XML 지원
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 정책 범주에 데이터베이스 구독 또는 구독 취소 | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스에서 정책 범주 구독 또는 구독 취소
+description: SQL Server Management Studio 및 T-SQL(Transact-SQL)을 사용하여 데이터베이스에서 정책 기반 관리의 정책 범주를 구독하거나 구독 취소하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021554"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558235"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스에 정책 범주를 구독하거나 구독 취소하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 정책 범주를 구독하거나 구독 취소하는 방법을 설명합니다.  
   
  **항목 내용**  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68021554"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +73,7 @@ ms.locfileid: "68021554"
      **실행 모드**  
      정책의 실행 모드를 표시합니다.  
   
-     **기록**  
+     **History**  
      로그 파일 뷰어를 열어 정책 기록을 보려면 기록 보기 하이퍼링크를 클릭합니다.  
   
 4.  정책 기반 관리 범주를 구독하려면 **가입** 열 아래의 범주 확인란을 선택합니다. 범주에서 구독을 취소하려면 해당 확인란의 선택을 취소합니다.  

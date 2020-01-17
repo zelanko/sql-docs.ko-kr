@@ -1,6 +1,6 @@
 ---
-title: 쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드 | Microsoft Docs
-ms.custom: ''
+title: 쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163901"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165677"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "71163901"
 
 이 업그레이드에 대한 제어는 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)이 도입된 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]를 통해 더 개선되었으며, 위에 나온 권장되는 워크플로의 마지막 단계를 자동화할 수 있습니다.
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 새로운 [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)의 *SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성 유지* 섹션에 설명된 대로 새로운 **QTA(쿼리 튜닝 길잡이)** 기능은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장되는 워크플로를 안내합니다. 그러나 QTA는 권장 워크플로의 마지막 단계에 나와 있는 대로 이전에 알려진 좋은 계획으로 롤백되지 않습니다. 대신에, QTA는 [쿼리 저장소 **회귀된 쿼리** ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) 보기에 있는 회귀를 추적하고 새롭고 더 나은 계획을 생성할 수 있도록 적용 가능한 최적화 모델 변형의 가능한 순열을 반복합니다.
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 새로운 [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)의 *SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성 유지* 섹션에 설명된 대로 새로운 **QTA(쿼리 튜닝 길잡이)** 기능은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장되는 워크플로를 안내합니다. 그러나 QTA는 권장 워크플로의 마지막 단계에 나와 있는 대로 이전에 알려진 좋은 계획으로 롤백되지 않습니다. 대신에, QTA는 [쿼리 저장소 **회귀된 쿼리**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) 보기에 있는 회귀를 추적하고 새롭고 더 나은 계획을 생성할 수 있도록 적용 가능한 최적화 모델 변형의 가능한 순열을 반복합니다.
 
 > [!IMPORTANT]
 > QTA는 사용자 워크로드를 생성하지 않습니다. 애플리케이션에서 사용되지 않는 환경에서 QTA를 실행하는 경우 대상 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 다른 방법으로 대표 테스트 워크로드를 계속 실행할 수 있는지 확인합니다. 
@@ -89,7 +89,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
         -  QTA 워크플로가 완료된 후 사용자 데이터베이스가 있어야 하는 대상 데이터베이스 호환성 수준을 설정합니다.
         완료되면 **다음**을 클릭합니다.
     
-       ![새 데이터베이스 업그레이드 세션 설치 창](../../relational-databases/performance/media/qta-new-session-setup.png "새 데이터베이스 업그레이드 설치 창")  
+       ![새 데이터베이스 업그레이드 세션 설정 창](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
   
     2.  **설정** 창에서 두 개의 열에는 대상 데이터베이스에 있는 쿼리 저장소의 **현재** 상태가 **권장** 설정과 함께 표시됩니다. 
         -  권장 설정은 기본적으로 선택되어 있지만, 현재 열 위에 있는 라디오 단추를 클릭하면 현재 설정이 수락되며, 현재 쿼리 저장소 구성을 미세 조정할 수도 있습니다. 
@@ -153,7 +153,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
 
         다음 페이지는 데이터베이스 호환성 수준이 성공적으로 업그레이드되었음을 확인합니다.
 
-        ![QTA 2단계 하위 2단계](../../relational-databases/performance/media/qta-step2-substep2.png "QTA 2단계 하위 2단계")
+        ![QTA 2단계 하위 2단계](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
 
     3.  **데이터 수집 관찰**에서는 해당 쿼리 저장소가 최적화 기회를 검색하는 데 사용할 비교 기준을 수집할 수 있도록 대표적인 워크로드 주기를 다시 실행할 것을 사용자에게 요청합니다. 워크로드가 실행되면 **새로 고침** 단추를 사용하여 발견된 경우 회귀된 쿼리의 목록을 계속 업데이트합니다. **표시할 쿼리** 값을 변경하여 표시되는 쿼리의 수를 제한합니다. 목록의 순서는 **메트릭**(기간 또는 CpuTime) 및 **집계**(평균이 기본값)의 영향을 받습니다. 또한 **표시할 쿼리**의 수를 선택합니다. 워크로드가 완료되면 **워크로드 실행 완료**를 선택하고 **다음**을 클릭합니다.
 

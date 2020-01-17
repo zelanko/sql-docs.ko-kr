@@ -1,6 +1,6 @@
 ---
-title: 테이블과 저장 프로시저의 네이티브 컴파일 | Microsoft 문서
-ms.custom: ''
+title: 테이블과 저장 프로시저의 네이티브 컴파일
+ms.custom: seo-dt-2019
 ms.date: 04/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09e1e143f22c36e66670f9c02590e009e939a048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f14ac7835bab80a15d1fffb3bb58bd9cdb4b44b0
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101439"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412628"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -211,6 +211,6 @@ native_sp에 대한 DLL은 t1에 대한 DLL 및 메모리 내 OLTP 스토리지 
 
 ## <a name="see-also"></a>참고 항목
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

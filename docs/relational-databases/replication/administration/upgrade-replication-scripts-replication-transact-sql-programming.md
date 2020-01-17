@@ -1,6 +1,7 @@
 ---
-title: 복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍) | Microsoft 문서
-ms.custom: ''
+title: 복제 스크립트 업그레이드(복제 SP)
+description: 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 복제 토폴로지를 구성하는 데 사용되는 스크립트를 업그레이드하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710369"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320050"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "71710369"
   
 3.  (옵션) 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 실행을 업데이트합니다.  
   
-4.  [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고, `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0**, `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
+4.  [sp_addpublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 다음에 게시 데이터베이스의 게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. `@publication`을 지정하고 `@job_name` 및 `@job_password`에 스냅샷 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우, `@publisher_security_mode`에 **0**, `@publisher_login` 및 `@publisher_password`에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보도 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 5.  (옵션) 새 복제 기능을 구현하는 매개 변수에 대해 기본값이 아닌 값을 설정하려면 [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 실행을 업데이트합니다.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "71710369"
   
     -   끌어오기 구독의 경우 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)의 실행을 업데이트하여 `@job_name` 및 `@job_password`에 구독자에서 배포 에이전트 실행에 사용되는 Windows 자격 증명을 지정합니다. 이 작업은 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행한 후에 수행합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-    -   밀어넣기 구독의 경우 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. `@subscriber`, `@subscriber_db`, `@publication`을 지정하고 `@job_name` 및 `@job_password`에 배포자에서 배포 에이전트 실행에 사용되는 Windows 자격 증명을 지정한 다음, 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행한 후에 수행됩니다. 자세한 내용은 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
+    -   밀어넣기 구독의 경우 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. `@subscriber`, `@subscriber_db`, `@publication`을 지정하고 `@job_name` 및 `@job_password`에 배포자에서 배포 에이전트 실행에 사용되는 Windows 자격 증명을 지정한 다음, 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행한 후에 수행됩니다. 자세한 내용은 [밀어넣기 구독 만들기](../../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>병합 게시를 구성하는 스크립트를 업그레이드하려면  
   
@@ -191,7 +192,7 @@ ms.locfileid: "71710369"
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   
  [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../../../relational-databases/replication/mssql-eng021797.md)   

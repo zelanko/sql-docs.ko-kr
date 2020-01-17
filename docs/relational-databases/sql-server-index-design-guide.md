@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081546"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255929"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "68081546"
 
 -   클러스터형
 -   비클러스터형 인덱스
--   고유
--   필터링됨
+-   고유한
+-   Filtered
 -   columnstore
 -   Hash
 -   메모리 최적화 비클러스터형
@@ -53,9 +53,11 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.
   
 ##  <a name="Basics"></a> 인덱스 디자인 기본 사항  
- 인덱스는 테이블이나 뷰와 관련된 디스크상 또는 메모리 내 구조로서 테이블이나 뷰의 행 검색 속도를 향상시킵니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 디스크상 인덱스의 경우 이러한 키는 SQL Server에서 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 구조(B-트리)에 저장됩니다.  
+ 일반적인 책을 생각해 보세요. 책의 끝에는 책에서 정보를 신속하게 찾는 데 도움이 되는 인덱스가 있습니다. 인덱스는 키워드의 정렬된 목록이며, 각 키워드 옆에는 각 키워드를 찾을 수 있는 페이지를 가리키는 페이지 번호 세트가 있습니다. SQL Server 인덱스도 다르지 않습니다. 값의 정렬된 목록이며, 각 값에는 해당 값이 있는 데이터 [페이지](../relational-databases/pages-and-extents-architecture-guide.md)의 포인터가 있습니다. 인덱스 자체는 페이지에 저장되어 SQL Server의 인덱스 페이지를 구성합니다. 일반적인 책에서 인덱스가 여러 페이지에 걸쳐 있고, “SQL” 등의 단어가 포함된 모든 페이지의 포인터를 찾아야 하는 경우 “SQL” 키워드가 포함된 인덱스 페이지를 찾을 때까지 살펴봐야 합니다. 여기서 모든 책 페이지의 포인터를 따릅니다.  인덱스의 시작 부분에 각 문자를 찾을 수 있는 위치의 사전순 목록이 포함된 단일 페이지를 만들면 이 기능을 더욱 최적화할 수 있습니다. 다음은 그 예입니다.  “A~D - 121페이지”, “E~G - 122페이지” 등입니다. 이 추가 페이지가 있으면 시작 위치를 찾기 위해 인덱스를 살펴보는 단계를 제거할 수 있습니다. 일반적인 책에는 이러한 페이지가 없지만 SQL Server 인덱스에는 있습니다. 이 단일 페이지를 인덱스의 루트 페이지라고 합니다. 루트 페이지는 SQL Server 인덱스에서 사용되는 트리 구조의 시작 페이지입니다. 트리 비유를 따라 실제 데이터의 포인터가 포함된 끝 페이지는 트리의 “리프 페이지”라고 합니다. 
 
- 인덱스는 행과 열이 있는 테이블로 논리적으로 구성된 데이터를 저장하며, *rowstore*<sup>1</sup>라고 하는 행 단위 데이터 형식에 물리적으로 저장되거나 *[columnstore](#columnstore_index)* 라고 하는 열 단위 데이터 형식으로 저장됩니다.  
+ SQL Server 인덱스는 테이블이나 뷰와 연결된 디스크상 또는 메모리 내 구조로, 테이블이나 뷰의 행 검색 속도를 높입니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 디스크상 인덱스에서 이러한 키는 SQL Server가 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 트리 구조(B-트리)에 저장됩니다.  
+
+ 인덱스는 행과 열이 있는 테이블로 논리적으로 구성되는 데이터를 저장하며, *rowstore* <sup>1</sup>라는 행 데이터 서식이나 *[columnstore](#columnstore_index)* 라는 열 데이터 서식으로 물리적으로 저장됩니다.  
     
  데이터베이스에 적합한 인덱스를 선택하는 것은 쿼리 속도와 업데이트 비용 간의 균형을 조정해야 하는 복잡한 작업입니다. 좁은 인덱스나 인덱스 키의 열이 적은 인덱스는 디스크 공간과 유지 관리 오버헤드를 덜 요구합니다. 반대로 넓은 인덱스는 더 많은 쿼리를 처리합니다. 가장 효율적인 인덱스를 찾기 위해 여러 디자인을 시험해 봐야 할 수 있습니다. 데이터베이스 스키마나 애플리케이션에 영향을 주지 않고 인덱스를 추가, 수정 및 삭제할 수 있습니다. 따라서 원하는 대로 여러 인덱스를 시험해 볼 수 있습니다.  
   
@@ -79,7 +81,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 4.  인덱스를 만들거나 유지 관리할 때 성능을 향상시킬 수 있는 인덱스 옵션을 파악합니다. 예를 들어 기존의 큰 테이블에 클러스터형 인덱스를 만들 때 `ONLINE` 인덱스 옵션을 사용하는 것이 좋습니다. ONLINE 옵션을 사용하면 인덱스를 만들거나 새로 작성하는 동안 기본 데이터를 작업할 수 있습니다. 자세한 내용은 [인덱스 옵션 설정](../relational-databases/indexes/set-index-options.md)을 참조하세요.  
   
 5.  인덱스에 가장 적합한 스토리지 위치를 파악합니다. 비클러스터형 인덱스는 기본 테이블과 같은 파일 그룹이나 다른 파일 그룹에 저장할 수 있습니다. 인덱스의 스토리지 위치는 디스크 I/O 성능을 높여 쿼리 성능을 향상시킬 수 있습니다. 예를 들어 테이블 파일 그룹과 다른 디스크에 있는 파일 그룹에 비클러스터형 인덱스를 저장하면 동시에 여러 디스크를 읽을 수 있으므로 성능이 향상될 수 있습니다.  
-     또는 클러스터형 인덱스와 비클러스터형 인덱스가 여러 파일 그룹에 하나의 파티션 구성표를 사용할 수 있습니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하고 관리하는 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블이나 인덱스를 보다 쉽게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요. 분할을 고려할 때 인덱스를 맞춰야 하는지, 즉 본질적으로 테이블과 같은 방식으로 분할해야 하는지 또는 독립적으로 분할해야 하는지 파악합니다.   
+     또는 클러스터형 인덱스와 비클러스터형 인덱스가 여러 파일 그룹에 하나의 파티션 구성표를 사용할 수 있습니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하고 관리하는 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블이나 인덱스를 보다 쉽게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요. 분할을 고려할 때 인덱스를 맞춰야 하는지, 즉 본질적으로 테이블과 같은 방식으로 분할해야 하는지 또는 독립적으로 분할해야 하는지 파악합니다.   
 
 ##  <a name="General_Design"></a> 일반 인덱스 디자인 지침  
  경험이 많은 데이터베이스 관리자는 인덱스를 잘 디자인할 수 있습니다. 그러나 데이터베이스와 작업이 조금만 복잡해져도 이 태스크는 복잡하고 시간이 많이 걸리며 오류가 쉽게 발생할 수 있습니다. 데이터베이스, 쿼리 및 데이터 열의 특성을 이해하면 최적의 인덱스를 디자인할 수 있습니다.  
@@ -219,8 +221,8 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.partitions&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
 |[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
-|[sys.column_store_row_groups&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
-|[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
 |[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
 |[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
@@ -512,7 +514,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      필터링된 인덱스를 만들면 전체 테이블 인덱스가 필요하지 않은 경우 비클러스터형 인덱스의 디스크 스토리지를 줄일 수 있습니다. 스토리지 요구 사항을 크게 증가시키지 않고 전체 테이블 비클러스터형 인덱스를 여러 필터링된 인덱스로 바꿀 수 있습니다.  
   
- 필터링된 인덱스는 쿼리가 SELECT 문에서 참조하는 데이터의 잘 정의된 하위 집합이 열에 포함되는 경우 유용합니다. 예는 다음과 같습니다.  
+ 필터링된 인덱스는 쿼리가 SELECT 문에서 참조하는 데이터의 잘 정의된 하위 집합이 열에 포함되는 경우 유용합니다. 예:  
   
 -   몇 개의 NULL이 아닌 값만 포함하는 스파스 열  
   
@@ -646,7 +648,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>데이터 스토리지는 columnstore 및 rowstore 압축을 사용함
 columnstore 인덱스에 대해 살펴볼 때 데이터 스토리지에 대한 형식을 강조하기 위해 *rowstore* 및 *columnstore* 라는 용어가 사용됩니다. Columnstore 인덱스는 두 가지 유형의 스토리지를 사용합니다.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![클러스터형 Columnstore 인덱스](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 Clustered 인덱스")
 
 - **columnstore** 는 열과 행이 있는 테이블로 논리적으로 구성되고 열 데이터 형식으로 물리적으로 저장되는 데이터입니다.
   
@@ -673,7 +675,7 @@ deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 �
 
 행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트**라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![열 세그먼트](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다.   
 

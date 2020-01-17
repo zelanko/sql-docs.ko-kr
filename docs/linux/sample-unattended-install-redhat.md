@@ -1,21 +1,22 @@
 ---
-title: Red Hat Enterprise Linux에서 SQL Server 무인 설치
+title: SQL Server on RHEL의 무인 설치
 titleSuffix: SQL Server
-description: SQL Server 스크립트 샘플 - Red Hat Enterprise Linux에서 무인 설치
+description: SQL Server 스크립트 샘플 - RHEL(Red Hat Enterprise Linux)의 무인 설치
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910444"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558648"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux를 위한 무인 SQL Server 설치 스크립트
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>샘플: Red Hat Enterprise Linux를 위한 무인 SQL Server 설치 스크립트
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

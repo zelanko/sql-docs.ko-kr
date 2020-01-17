@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982169"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256104"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 지정된 데이터베이스에 대해 지정된 데이터베이스 옵션이나 속성의 현재 설정을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>인수  
-*데이터베이스*  
+*database*  
 `DATABASEPROPERTYEX`에서 명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *database*에는 **nvarchar(128)** 데이터 형식이 있습니다.  
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 `DATABASEPROPERTYEX`에 현재 데이터베이스의 이름을 반환합니다. 다른 데이터베이스 이름을 제공하는 경우 모든 속성에 대해 NULL을 반환합니다.
@@ -52,7 +52,7 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  데이터베이스가 아직 시작되지 않은 경우 `DATABASEPROPERTYEX`가 메타데이터에서 검색하는 대신 직접 데이터베이스 액세스를 통해 이러한 값을 검색할 경우 `DATABASEPROPERTYEX`에서 NULL을 반환합니다. AUTO_CLOSE가 ON으로 설정되어 있거나 오프라인 상태인 데이터베이스는 '시작되지 않은 것'으로 간주됩니다.  
   
-|속성|설명|반환 값|  
+|속성|Description|반환 값|  
 |---|---|---|
 |데이터 정렬|데이터베이스의 기본 데이터 정렬 이름입니다.|데이터 정렬 이름<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ComparisonStyle|데이터 정렬의 Windows 비교 스타일입니다. 다음 스타일 값을 사용하여 완성된 ComparisonStyle 값에 대한 비트맵을 빌드합니다.<br /><br /> 대/소문자 무시: 1<br /><br /> 악센트 무시: 2<br /><br /> 일본어 가나 무시: 65536<br /><br /> 전자/반자 무시: 131072<br /><br /> <br /><br /> 예를 들어 기본값 196609는 대/소문자 무시, 일본어 가나 무시 및 전자/반자 무시 옵션이 결합된 결과입니다.|비교 스타일을 반환합니다.<br /><br /> 모든 이진 데이터 정렬에 대해 0을 반환합니다.<br /><br /> 기본 데이터 형식: **int**|  
@@ -89,13 +89,13 @@ DATABASEPROPERTYEX ( database , property )
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스 복구 모델|FULL: 전체 복구 모델<br /><br /> BULK_LOGGED: 대량 로그 모델<br /><br /> SIMPLE: 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 또는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 데이터베이스 성능 수준을 설명합니다.|다음 중 하나일 수 있습니다.<br /><br /> Null: 데이터베이스가 시작되지 않았습니다.<br /><br /> 공유(Web/Business 버전)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 시스템(master DB용)<br /><br /> 기본 데이터 형식: **nvarchar(32)**|  
+|ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 또는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 데이터베이스 성능 수준을 설명합니다.|다음 중 하나<br /><br /> Null: 데이터베이스가 시작되지 않았습니다.<br /><br /> 공유(Web/Business 버전)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 시스템(master DB용)<br /><br /> 기본 데이터 형식: **nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 서비스 목표 ID입니다.|서비스 목표를 식별하는 **uniqueidentifier**입니다.|  
 |SQLSortOrder|이전 버전의 SQL Server에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정렬 순서 ID입니다.|0: 데이터베이스가 Windows 데이터 정렬을 사용함<br /><br /> >0: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정렬 순서 ID<br /><br /> NULL: 입력이 잘못되었거나 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **tinyint**|  
-|상태|데이터베이스 상태입니다.|ONLINE: 쿼리에서 데이터베이스를 제공합니다.<br /><br /> **참고:** 데이터베이스가 열려 있고 아직 복구되지 않았을 때는 ONLINE 상태가 반환될 수 있습니다. 데이터베이스가 연결을 허용하는지 확인하려면 **DATABASEPROPERTYEX** 속성을 쿼리합니다. 데이터베이스 데이터 정렬이 null이 아닌 값을 반환하면 데이터베이스는 연결을 허용할 수 있습니다. Always On 데이터베이스의 경우 `sys.dm_hadr_database_replica_states`의 database_state 또는 database_state_desc 열을 쿼리합니다.<br /><br /> OFFLINE: 데이터베이스가 명시적으로 오프라인 상태입니다.<br /><br /> RESTORING: 데이터베이스 복원이 시작되었습니다.<br /><br /> RECOVERING: 데이터베이스 복구가 시작되었고 데이터베이스가 아직 쿼리에 대해 준비되지 않았습니다.<br /><br /> SUSPECT: 데이터베이스가 복구되지 않았습니다.<br /><br /> EMERGENCY: 데이터베이스가 응급 읽기 전용 상태입니다. sysadmin 멤버만 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|상태|데이터베이스 상태입니다.|ONLINE: 쿼리에서 데이터베이스를 제공합니다.<br /><br /> **참고:** 데이터베이스가 열려 있고 아직 복구되지 않았을 때는 함수가 ONLINE 상태를 반환할 수 있습니다. ONLINE 데이터베이스가 연결을 허용할 수 있는지 파악하려면 **DATABASEPROPERTYEX**의 데이터 정렬 속성을 쿼리합니다. 데이터베이스 데이터 정렬이 null이 아닌 값을 반환하면 ONLINE 데이터베이스가 연결을 허용할 수 있습니다. Always On 데이터베이스의 경우 `sys.dm_hadr_database_replica_states`의 database_state 또는 database_state_desc 열을 쿼리합니다.<br /><br /> OFFLINE: 데이터베이스가 명시적으로 오프라인 상태입니다.<br /><br /> RESTORING: 데이터베이스 복원이 시작되었습니다.<br /><br /> RECOVERING: 데이터베이스 복구가 시작되었고 데이터베이스가 아직 쿼리에 대해 준비되지 않았습니다.<br /><br /> SUSPECT: 데이터베이스가 복구되지 않았습니다.<br /><br /> EMERGENCY: 데이터베이스가 응급 읽기 전용 상태입니다. sysadmin 멤버만 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |Updateability|데이터 수정 가능 여부를 나타냅니다.|READ_ONLY: 데이터베이스가 데이터 읽기를 지원하지만 데이터 수정은 지원하지 않습니다.<br /><br /> READ_WRITE: 데이터베이스가 데이터 읽기 및 수정을 지원합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |UserAccess|데이터베이스에 액세스할 수 있는 사용자를 나타냅니다.|SINGLE_USER: 한 번에 한 명의 db_owner, dbcreator 또는 sysadmin 사용자만 액세스할 수 있습니다.<br /><br /> RESTRICTED_USER: db_owner, dbcreator 또는 sysadmin 역할의 멤버만 액세스할 수 있습니다.<br /><br /> MULTI_USER: 모든 사용자가 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|버전 옵션|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|버전 번호: 데이터베이스가 열려 있습니다.<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**| 
+|버전|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|버전 번호: 데이터베이스가 열려 있습니다.<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**| 
 
 <br/>   
 
@@ -110,12 +110,12 @@ DATABASEPROPERTYEX ( database , property )
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 권한이 없으면 `OBJECT_ID`와 같은 메타데이터 내보내기 기본 제공 함수에서 NULL을 반환할 수 있습니다. 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DATABASEPROPERTYEX`는 한 번에 하나의 속성 설정만 반환합니다. 여러 속성 설정을 표시하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용하세요.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>1\. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
 이 예에서는 `AdventureWorks` 데이터베이스에 대한 AUTO_SHRINK 데이터베이스 옵션의 상태를 반환합니다.
   
 ```sql
@@ -129,7 +129,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>2\. 데이터베이스의 기본 데이터 정렬 검색  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>B. 데이터베이스의 기본 데이터 정렬 검색  
 이 예에서는 `AdventureWorks` 데이터베이스의 여러 속성을 반환합니다.
   
 ```sql
@@ -148,7 +148,7 @@ Collation                     Edition        ServiceObjective  MaxSizeInBytes
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [데이터베이스 상태](../../relational-databases/databases/database-states.md)  
 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

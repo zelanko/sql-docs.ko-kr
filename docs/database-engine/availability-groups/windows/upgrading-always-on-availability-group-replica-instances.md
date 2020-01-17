@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹 복제본 인스턴스 업그레이드 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 복제본 업그레이드
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910782"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822195"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 ## <a name="rolling-upgrade-process"></a>롤링 업그레이드 프로세스  
  실제로 정확한 프로세스는 AG의 배포 토폴로지 및 각 복제본의 커밋 모드와 같은 요소에 따라 달라집니다. 가장 간단한 시나리오는 다음 단계가 포함된 가장 간단한 형식의 다단계 프로세스로 롤링 업그레이드를 수행하는 것입니다.  
   
- ![HADR 시나리오에서 AG 업그레이드](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "HADR 시나리오에서 AG 업그레이드")  
+ ![HADR 시나리오의 AG 업그레이드](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "HADR 시나리오의 AG 업그레이드")  
   
 1.  모든 동기-커밋 복제본에서 자동 장애 조치(failover)를 제거합니다.  
   
@@ -100,7 +101,7 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 ## <a name="ag-with-one-remote-secondary-replica"></a>원격 보조 복제본 하나가 포함된 AG  
  재해 복구용으로만 AG를 배포한 경우 AG를 비동기-커밋 보조 복제본으로 장애 조치(failover)해야 할 수 있습니다. 다음 그림에서는 이 구성을 보여 줍니다.  
   
- ![DR 시나리오에서 AG 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "DR 시나리오에서 AG 업그레이드")  
+ ![DR 시나리오의 AG 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "DR 시나리오의 AG 업그레이드")  
   
  이 경우 롤링 업그레이드 동안 AG를 비동기-커밋 보조 복제본으로 장애 조치(failover)해야 합니다. 데이터 손실을 방지하려면 AG를 장애 조치(failover)하기 전에 커밋 모드를 동기 커밋으로 변경하고 보조 복제본이 동기화될 때까지 기다리세요. 즉, 롤링 업그레이드 프로세스는 다음과 같습니다.  
   
@@ -127,7 +128,7 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>장애 조치(failover) 클러스터 인스턴스 노드가 포함된 AG  
  AG에 FCI(장애 조치(failover) 클러스터 인스턴스) 노드가 포함된 경우 활성 노드를 업그레이드하기 전에 비활성 노드를 업그레이드해야 합니다. 다음 그림에서는 로컬 고가용성을 위한 FCI 및 원격 재해 복구용 FCI 간 비동기 커밋과 함께 일반적인 AG 시나리오와 업그레이드 시퀀스를 설명합니다.  
   
- ![FCI로 AG 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI로 AG 업그레이드")  
+ ![FCI를 사용하여 AG 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI를 사용하여 AG 업그레이드")  
   
 1.  REMOTE2 업그레이드 또는 업데이트  
   

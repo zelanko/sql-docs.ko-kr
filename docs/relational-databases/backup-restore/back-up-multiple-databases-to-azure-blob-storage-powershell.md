@@ -1,7 +1,8 @@
 ---
-title: Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell | Microsoft 문서
-ms.custom: ''
-ms.date: 05/21/2016
+title: '여러 데이터베이스 백업: Azure Blob Storage'
+titleSuffix: PowerShell
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbfcee4bd7ceafb7d09f9719744e5d1e89776499
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383766"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247464"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell
 
@@ -165,8 +166,8 @@ foreach ($database in $databases) {
     catch { Write-Host $_.Exception.Message } }
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Azure Blob Storage Service로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 
-[URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+[URL에 SQL Server 백업 모범 사례 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

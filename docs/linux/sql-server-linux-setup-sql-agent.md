@@ -1,34 +1,51 @@
 ---
-title: Linux에 SQL Server 에이전트 설치
-description: 이 문서에서는 Linux에 SQL Server 에이전트를 설치하는 방법을 설명합니다.
+title: Linux에서 SQL Server 에이전트 구성
+description: 이 문서에서는 Linux에서 SQL Server 에이전트를 사용하도록 설정하거나 설치하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/20/2018
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032474"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258396"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에 SQL Server 에이전트 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- [SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)는 예약된 SQL Server 작업을 실행합니다. SQL Server 2017 CU4부터 SQL Server 에이전트는 **mssql-server** 패키지에 포함되어 있으며 기본적으로 사용하지 않도록 설정됩니다. 버전 정보와 함께 이 SQL Server 에이전트 릴리스에 지원되는 기능에 대한 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
+이 문서에서는 Linux에서 SQL Server 에이전트를 사용하도록 설정하거나 설치하는 방법을 설명합니다.
 
- SQL Server 에이전트 설치/사용:
-- [2017 CU4 이상 버전의 경우 SQL Server 에이전트 사용](#EnableAgentAfterCU4)
-- [2017 CU3 이하 버전의 경우 SQL Server 에이전트 설치](#InstallAgentBelowCU4)
+[SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)는 예약된 SQL Server 작업을 실행합니다. SQL Server 2017 CU4부터 SQL Server 에이전트는 **mssql-server** 패키지에 포함되어 있으며 기본적으로 사용하지 않도록 설정됩니다. 버전 정보와 함께 이 SQL Server 에이전트 릴리스에 지원되는 기능에 대한 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
 
+## <a name="instructions"></a>Instructions
 
-## <a name="EnableAgentAfterCU4">2017 CU4 이상 버전의 경우 SQL Server 에이전트 사용</a>
+Linux에서 SQL Server 에이전트를 사용하려면 먼저 다음 단계를 수행하여 SQL Server 에이전트를 사용하도록 설정하거나 설치합니다.
 
- SQL Server 에이전트를 사용하도록 설정하려면 다음 단계를 수행합니다.
+1. `/etc/hosts` 파일에 호스트 이름(도메인 포함 및 제외)을 추가합니다. 다음 줄은 호스트 이름 항목 형식의 예를 보여 줍니다.
+
+   ```bash
+   "IP Address" "hostname"
+   "IP Address" "hostname.domain.com"
+   ```
+
+1. 사용 중인 SQL Server 버전에 따라 다음 섹션 중 하나의 지침을 따르세요.
+
+   | 버전 | Instructions |
+   |---|---|
+   | SQL Server 2017 CU4 이상</br>SQL Server 2019 | [SQL Server 에이전트 사용](#EnableAgentAfterCU4) |
+   | SQL Server 2017 CU3 이하 | [SQL Server 에이전트 설치](#InstallAgentBelowCU4) |
+
+## <a id="EnableAgentAfterCU4"></a>SQL Server 에이전트 사용
+
+SQL Server 2019 및 SQL Server 2017 CU4 이상에서는 SQL Server 에이전트를 사용하도록 설정하기만 하면 됩니다. 별도의 패키지를 설치할 필요가 없습니다.
+
+SQL Server 에이전트를 사용하도록 설정하려면 다음 단계를 수행합니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
@@ -38,7 +55,9 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > 에이전트가 설치된 2017 CU3 이하에서 업그레이드하는 경우 SQL Server 에이전트는 자동으로 사용하도록 설정되고 이전 에이전트 패키지가 제거됩니다.  
 
-## <a name="InstallAgentBelowCU4">2017 CU3 이하 버전의 경우 SQL Server 에이전트 설치</a>
+## <a name="InstallAgentBelowCU4"></a>SQL Server 에이전트 설치
+
+SQL Server 2017 CU3 및 이전 버전에서는 SQL Server 에이전트 패키지를 설치해야 합니다.
 
 > [!NOTE]
 > 아래 설치 지침은 SQL Server 버전 2017 CU3 이하에 적용됩니다. SQL Server 에이전트를 설치하기 전에 먼저 [SQL Server를 설치](sql-server-linux-setup.md#platforms)합니다. 이렇게 하면 **mssql-server-polybase** 패키지를 설치할 때 사용하는 키 및 리포지토리가 구성됩니다.

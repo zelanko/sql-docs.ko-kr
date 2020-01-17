@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284826"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491960"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services(SSIS) 설치
 
@@ -133,7 +133,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
   - Microsoft Connector Version 5.0 for Oracle by Attunity 및 Microsoft Connector Version 5.0 for Teradata by Attunity. 이러한 구성 요소를 얻는 방법은 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)를 참조하세요.
 
-## <a name="nest-steps"></a>중첩 단계
+## <a name="next-steps"></a>다음 단계
 
 - [여러 Integration Services 버전을 병렬로 설치](installing-integration-services-versions-side-by-side.md)
 

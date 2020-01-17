@@ -1,6 +1,7 @@
 ---
-title: 병합 동기화 중 비즈니스 논리 실행 | Microsoft 문서
-ms.custom: ''
+title: 병합 동기화의 비즈니스 논리
+description: 병합 복제 동기화에 사용되는 비즈니스 논리의 관리형 어셈블리 코드를 작성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033315"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321492"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>병합 동기화 중 비즈니스 논리 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "68033315"
      이 작업은 특정 데이터 값 또는 작업을 재정의할 필요가 있는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 행의 **status** 열 값을 "deleted"로 설정한 다음 삭제를 수행하는 클라이언트 ID를 추적하는 특수 업데이트로 행 삭제를 변환할 수 있습니다. 이 방법은 감사 또는 워크플로에 유용할 수 있습니다.  
   
 ### <a name="custom-conflict-resolution"></a>사용자 지정 충돌 해결  
- 사용자는 병합 복제에서 제공하는 충돌 감지 및 해결 기능을 사용하여 충돌에 대해 기본 해결 전략을 적용하거나 사용자 지정 해결을 선택할 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다. 비즈니스 논리 처리기는 충돌하는 데이터 변경을 처리하는 중 호출할 수 있으며 다음 두 가지 동작 중 하나를 수행할 수 있습니다.  
+ 사용자는 병합 복제에서 제공하는 충돌 감지 및 해결 기능을 사용하여 충돌에 대해 기본 해결 전략을 적용하거나 사용자 지정 해결을 선택할 수 있습니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요. 비즈니스 논리 처리기는 충돌하는 데이터 변경을 처리하는 중 호출할 수 있으며 다음 두 가지 동작 중 하나를 수행할 수 있습니다.  
   
 -   기본 해결 적용  
   
@@ -94,6 +95,6 @@ ms.locfileid: "68033315"
  [병합 복제](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [병합 복제에 대한 웹 동기화](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

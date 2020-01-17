@@ -1,6 +1,7 @@
 ---
-title: SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서
-ms.custom: ''
+title: Azure Key Vault와 함께 SQL Server 커넥터 암호화 사용
+description: Azure Key Vault를 사용하는 TDE, 백업 암호화, 열 수준 암호화 등의 일반적인 암호화 기능과 함께 SQL Server 커넥터를 사용하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929739"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558518"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "70929739"
  이 항목의 단계를 수행하기 전에 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)항목의 1 ~ 4부를 완료합니다.  
  
 > [!NOTE]  
->  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.  
+>  1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화
 
@@ -195,7 +196,7 @@ Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 �
   
 3.  **데이터베이스 백업**  
   
-     주요 자격 증명 모음에 저장되는 비대칭 키에 암호화를 지정하여 데이터베이스를 백업합니다.
+     Key Vault에 저장된 비대칭 키를 사용하여 암호화를 지정하는 데이터베이스를 백업합니다.
      
      아래 예제에서 데이터베이스가 이미 TDE로 암호화되어 있고 비대칭 키 `CONTOSO_KEY_BACKUP`이 TDE 비대칭 키와 다른 경우 백업은 TDE 비대칭 키 및 `CONTOSO_KEY_BACKUP` 모두를 사용하여 암호화됩니다. 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 백업 암호를 해독하려면 두 키가 모두 필요합니다.
   
@@ -280,7 +281,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>참고 항목  
  [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
- [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault를 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: 새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지 | Microsoft 문서
-ms.custom: ''
+title: ‘새 조건 만들기’ 또는 ‘조건 열기’ 대화 상자의 ‘일반 페이지’
+description: SSMS(SQL Server Management Studio) 정책 기반 관리에서 ‘새 조건 만들기’ 또는 ‘조건 열기’ 대화 상자의 ‘일반 페이지’를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137907"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558142"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68137907"
  **연산자**  
  이 식에 대한 비교 연산자를 선택합니다. 연산자는 =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN과 같습니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
- **Value**  
+ **값**  
  이 식에 대한 값 설정입니다. 허용되는 값은 패싯에 따라 달라집니다. 값은 TRUE/FALSE, 문자열 또는 숫자일 수 있습니다. 문자열 값은 **'AdventureWorks'** 와 같은 단일 따옴표로 묶어야 합니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
 ## <a name="group-clauses"></a>절 그룹화  

@@ -1,6 +1,7 @@
 ---
-title: 스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성 | Microsoft 문서
-ms.custom: ''
+title: 스키마 변경 내용을 위해 사용자 지정 프로시저 다시 생성(트랜잭션)
+description: 트랜잭션 복제의 스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 저장 프로시저를 다시 생성합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e6a71e6591781f61560e4c997963571a49f816e5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710704"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321439"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>트랜잭션 아티클 - 스키마 변경 반영을 위해 다시 생성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

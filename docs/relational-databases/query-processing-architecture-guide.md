@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866081"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ GO
 - 서버 구성 옵션에 따라 결과가 달라지는 식
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>폴딩 가능 식 및 폴딩 가능하지 않은 식의 예
-다음 쿼리를 살펴보십시오.
+다음과 같은 쿼리를 고려해 보세요.
 
 ```sql
 SELECT *
@@ -483,7 +483,7 @@ GO
 
 대부분의 다시 컴파일은 문 정확성이나 잠재적으로 더 빠른 쿼리 실행 계획을 얻는 데 필요합니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 일괄 처리 내의 문이 다시 컴파일을 발생시킬 때마다 저장 프로시저, 트리거, 임시 일괄 처리 또는 준비된 문을 통해 제출되었는지에 관계없이 전체 일괄 처리가 다시 컴파일됩니다. [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 다시 컴파일을 유발하는 일괄 처리 내의 문만 다시 컴파일됩니다. 이 차이 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000이상 릴리스의 재컴파일 횟수는 비교할 수 없습니다. 또한 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 이상 버전에서는 기능 집합이 확장되어 더 많은 다시 컴파일 유형을 제공합니다.
+2005 이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서는 일괄 처리 내의 문이 다시 컴파일을 발생시킬 때마다 저장 프로시저, 트리거, 임시 일괄 처리 또는 준비된 문을 통해 제출되었는지와 관계없이 전체 일괄 처리가 다시 컴파일됩니다. [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 다시 컴파일을 트리거하는 일괄 처리 내의 문만 다시 컴파일됩니다. 또한 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 이상 버전에서는 기능 세트가 확장되어 더 많은 다시 컴파일 유형을 제공합니다.
 
 다시 컴파일을 유발하고 이에 따라 CPU 시간 및 잠금과 관련하여 성능 저하를 일으키는 문의 수는 대개 적으므로 문 수준 다시 컴파일이 성능에 유리합니다. 문 수준 다시 컴파일을 사용하면 다시 컴파일하지 않아도 되는 일괄 처리 내의 다른 문의 경우 이러한 성능 저하가 발생하지 않습니다.
 
@@ -507,7 +507,7 @@ GO
 > `SP:Recompile` 및 `SQL:StmtRecompile`의 *EventSubClass* 열에는 다시 컴파일할 이유를 나타내는 정수 코드가 들어 있습니다. 코드에 대한 설명은 [여기](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)에 있습니다.
 
 > [!NOTE]
-> `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 사항에 따라 계속하여 쿼리가 다시 컴파일됩니다.
+> `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. 2005 이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 내용에 따라 계속하여 쿼리가 다시 컴파일됩니다.
 
 ### <a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
 
@@ -585,7 +585,7 @@ WHERE AddressID = 1 + 2;
 > [!WARNING] 
 > 최종 사용자가 입력한 값을 갖는 매개 변수 또는 매개 변수 표식을 사용하는 것이 데이터 액세스 API 메서드, `EXECUTE` 문 또는 `sp_executesql` 저장 프로시저 중 하나를 사용하여 실행되는 문자열에 값을 연결하는 것보다 안전합니다.
 
-매개 변수를 사용하지 않고 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 실행되면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 내부적으로 해당 문을 매개 변수화하여 기존 실행 계획과 일치할 가능성을 높입니다. 이 프로세스를 단순 매개 변수화라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 프로세스를 자동 매개 변수화라고 했습니다.
+매개 변수를 사용하지 않고 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 실행되면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 내부적으로 해당 문을 매개 변수화하여 기존 실행 계획과 일치할 가능성을 높입니다. 이 프로세스를 단순 매개 변수화라고 합니다. 2005 이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서는 이 프로세스를 자동 매개 변수화라고 했습니다.
 
 다음 문을 고려해 보십시오.
 
@@ -624,7 +624,7 @@ WHERE ProductSubcategoryID = 4;
 * 저장 프로시저, 트리거 또는 사용자 정의 함수의 본문 안에 있는 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이미 이러한 루틴에 대한 쿼리 계획을 재사용하고 있습니다.
 * 클라이언트 쪽 애플리케이션에서 이미 매개 변수화된 준비된 문
 * XQuery 메서드 호출이 포함된 문. 이러한 문에서는 `WHERE` 절과 같이 해당 인수가 일반적으로 매개 변수화되는 컨텍스트에서 메서드가 나타납니다. 해당 인수가 매개 변수화되지 않는 컨텍스트에서 메서드가 나타날 경우에는 문의 나머지 부분이 매개 변수화됩니다.
-* [!INCLUDE[tsql](../includes/tsql-md.md)] 커서 내의 명령문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
+* [!INCLUDE[tsql](../includes/tsql-md.md)] 커서 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
 * 사용되지 않는 쿼리 구문
 * `ANSI_PADDING` 또는 `ANSI_NULLS` 를 `OFF`로 설정한 컨텍스트에서 실행되는 모든 문.
 * 매개 변수화하기에 적합한 리터럴이 2,097개 이상 포함된 문
@@ -924,10 +924,10 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ts
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음, 이 행 집합은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 테이블처럼 참조될 수 있습니다. 
+   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음 이 행 집합은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 테이블처럼 참조될 수 있습니다. 
 
 * 임의 커넥터 이름  
-  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음, 행 집합은 테이블이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
+  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
   
   ```sql
   SELECT *
@@ -940,9 +940,9 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ts
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 관계형 엔진은 OLE DB API(애플리케이션 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 
-연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 연산 세트는 OLE DB 공급자의 기능에 따라 다릅니다.
+연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 연산 집합은 OLE DB 공급자의 기능에 따라 다릅니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임의 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임시 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
 
 분산 쿼리를 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스가 실행 중인 Microsoft Windows 계정의 보안 컨텍스트에서 다른 데이터 원본(예: 파일, Active Directory 같은 비관계형 데이터 원본 등)에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Windows 로그인에서는 적절하게 로그인을 가장하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인에서는 그렇지 못합니다. 이렇게 하면 사용 권한이 없는 다른 데이터 원본에 대한 액세스를 분산 쿼리 사용자에게 허용할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스가 실행 중인 계정에는 사용 권한이 없습니다. `sp_addlinkedsrvlogin` 을 사용하여 연결된 해당 서버에 액세스할 권한이 부여된 특정 로그인을 정의할 수 있습니다. 이 제어는 임의 이름에 대해 사용할 수 없으므로 임의 액세스에 대해 OLE DB 공급자를 활성화할 경우 조심해야 합니다.
 
@@ -983,7 +983,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>쿼리 실행 계획의 분할 정보 표시
 
-분할 테이블과 인덱스에서의 쿼리 실행 계획은 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 계획 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
+분할 테이블과 인덱스에서의 쿼리 실행 계획은 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 플랜 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
 
 이러한 도구를 사용하여 다음 정보를 확인할 수 있습니다.
 
@@ -1111,7 +1111,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 |테이블 파티션 3: A >= 20 및 A < 30   |B=50, B=100, B=150 |
 |테이블 파티션 4: A >= 30  |B=50, B=100, B=150 |
 
-### <a name="best-practices"></a>최선의 구현 방법
+### <a name="best-practices"></a>모범 사례
 
 분할된 대형 테이블과 인덱스에서 많은 양의 데이터에 액세스하는 쿼리의 성능을 향상시키려면 다음과 같은 최선의 구현 방법을 권장합니다.
 

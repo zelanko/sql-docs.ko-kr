@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 충돌 방지 - FILESTREAM 데이터베이스 작업 | Microsoft Docs
+description: FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 22c0c0771c3e4566ba2f3f1cef6e2dd4d921f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b347a140c07436553945555e52d212e4751fcc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018868"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255577"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +28,9 @@ ms.locfileid: "68018868"
   
 |Transact-SQL 문|읽기 권한으로 열림|쓰기 권한으로 열림|  
 |------------------------------|---------------------|----------------------|  
-|CREATE TABLE, CREATE INDEX, DROP TABLE 및 ALTER TABLE과 같은 데이터베이스 메타데이터를 사용하는 DDL 문|허용함|차단되고 시간 초과 오류가 발생합니다.|  
-|UPDATE, DELETE 및 INSERT와 같이 데이터베이스에 저장된 데이터를 사용하는 DML 문|허용함|거부됨|  
-|SELECT|허용함|허용함|  
+|CREATE TABLE, CREATE INDEX, DROP TABLE 및 ALTER TABLE과 같은 데이터베이스 메타데이터를 사용하는 DDL 문|허용됨|차단되고 시간 초과 오류가 발생합니다.|  
+|UPDATE, DELETE 및 INSERT와 같이 데이터베이스에 저장된 데이터를 사용하는 DML 문|허용됨|거부됨|  
+|SELECT|허용됨|허용됨|  
 |COMMIT TRANSACTION|거부됨*|거부됨*|  
 |SAVE TRANSACTION|거부됨*|거부됨*|  
 |ROLLBACK|허용됨*|허용됨*|  
@@ -39,7 +40,7 @@ ms.locfileid: "68018868"
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 FILESTREAM Win32 액세스 권한이 충돌을 발생시키는 방법을 보여 줍니다.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>1\. 쓰기 권한으로 FILESTREAM BLOB 열기  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. 쓰기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 쓰기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -62,7 +63,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>2\. 읽기 권한으로 FILESTREAM BLOB 열기  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. 읽기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 읽기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  

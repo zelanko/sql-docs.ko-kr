@@ -1,6 +1,7 @@
 ---
-title: 복제 구독자 및 Always On 가용성 그룹(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 복제 구독자 및 가용성 그룹(SQL Server)
+description: SQL Server Always On 가용성 그룹을 사용하여 복제 구독자를 구성하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969434"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235567"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>복제 구독자 및 Always On 가용성 그룹(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927208"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546573"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67927208"
 > [!NOTE]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 멤버를 추가 또는 삭제하는 역할을 변경하려면 [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 및 [sp_droprolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)를 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +69,7 @@ ALTER ROLE role_name
   
  변경할 데이터베이스 역할을 지정합니다.  
   
- ADD MEMBER *database_principal*l  
+ ADD MEMBER *database_principal*  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  데이터베이스 보안 주체를 데이터베이스 역할의 멤버 자격에 추가하도록 지정합니다.  
@@ -117,7 +117,7 @@ WITH NAME = *new_name*
   
 ## <a name="examples"></a>예  
   
-### <a name="a-change-the-name-of-a-database-role"></a>1\. 데이터베이스 역할의 이름 변경  
+### <a name="a-change-the-name-of-a-database-role"></a>A. 데이터베이스 역할의 이름 변경  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
@@ -126,7 +126,7 @@ WITH NAME = *new_name*
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>2\. 역할 멤버 추가 또는 제거  
+### <a name="b-add-or-remove-role-members"></a>B. 역할 멤버 추가 또는 제거  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `Sales`라는 데이터베이스 역할을 만듭니다. Barry라는 데이터베이스 사용자를 멤버 자격에 추가한 다음, Barry라는 멤버를 제거하는 방법을 보여줍니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.

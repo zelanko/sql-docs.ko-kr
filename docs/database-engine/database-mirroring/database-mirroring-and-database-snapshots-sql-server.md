@@ -1,5 +1,6 @@
 ---
-title: 데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server) | Microsoft Docs
+title: 데이터베이스 미러링 및 데이터베이스 스냅샷
+description: 데이터베이스 미러링과 함께 데이터베이스 스냅샷을 사용하는 경우의 상호 운용성을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 637cc13f10869fffbd50638169aad983c8b51951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951923"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258807"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "67951923"
  새 데이터베이스 스냅샷은 거의 비어 있지만 시간이 경과하면서 점점 더 많은 데이터베이스 페이지가 처음으로 업데이트됨에 따라 확장됩니다. 데이터베이스의 모든 스냅샷이 이렇게 증분 방식으로 증가하기 때문에 각 데이터베이스 스냅샷에서 일반 데이터베이스만큼 많은 리소스를 사용합니다. 미러 서버와 주 서버의 구성에 따라 미러 데이터베이스에 있는 데이터베이스 스냅샷의 수가 너무 많으면 주 데이터베이스의 성능이 느려질 수 있으므로 몇 개의 최근 스냅샷만 미러 데이터베이스에 보관하는 것이 좋습니다. 대체 스냅샷을 만든 후 들어오는 쿼리를 새 스냅샷으로 리디렉션하고 현재 쿼리가 완료된 후에는 이전 스냅샷을 삭제해야 합니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅샷에 대한 자세한 내용은 [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+>  데이터베이스 스냅샷에 대한 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
  역할이 전환되면 데이터베이스와 해당 스냅샷이 다시 시작되고 일시적으로 사용자와의 연결을 끊습니다. 그런 후 데이터베이스 스냅샷은 자신이 만들어진 서버 인스턴스에서 새로운 주 데이터베이스가 되어 그대로 유지됩니다. 사용자는 장애 조치(Failover) 후에도 스냅샷을 계속 사용할 수 있습니다. 그러나 이렇게 하면 새로운 주 서버에 추가 로드가 발생합니다. 환경에서 성능이 중요한 경우 새 미러 데이터베이스를 사용할 수 있게 되면 스냅샷을 만들어 클라이언트를 새 스냅샷으로 리디렉션하고 이전 미러 데이터베이스에서 모든 데이터베이스 스냅샷을 삭제하는 것이 좋습니다.  
   
@@ -70,17 +71,17 @@ ms.locfileid: "67951923"
   
      이 시점에서 프로그래밍 방식으로 새 클라이언트 연결을 최신 스냅샷으로 지정할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 스냅샷 만들기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용 | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: 업그레이드 후 쿼리 저장소 사용
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982132"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251544"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 

@@ -1,6 +1,7 @@
 ---
-title: SQL Server on Lunux의 Always On 가용성 그룹
-description: ''
+title: SQL Server on Linux의 가용성 그룹
+description: SQL Server on Linux의 Always On 가용성 그룹 특성을 알아봅니다.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794994"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558642"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux의 Always On 가용성 그룹
 
@@ -146,7 +147,7 @@ Pacemaker가 사용되고 수신기와 연결된 IP 주소 리소스가 생성�
 
 ![하이브리드 없음](./media/sql-server-linux-availability-group-overview/image1.png)
 
-분산 AG는 OS 경계에 걸쳐 있을 수도 있습니다. 기본 AG에는 Linux 전용이 되는 외부로 구성된 AG와 같이 구성 방식에 대한 규칙이 적용되지만, 조인되는 AG는 WSFC를 사용하여 구성할 수 있습니다. 다음 예를 살펴 보십시오.
+분산 AG는 OS 경계에 걸쳐 있을 수도 있습니다. 기본 AG에는 Linux 전용이 되는 외부로 구성된 AG와 같이 구성 방식에 대한 규칙이 적용되지만, 조인되는 AG는 WSFC를 사용하여 구성할 수 있습니다. 다음과 같은 예제를 참조하세요.
 
 ![하이브리드 배포 AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

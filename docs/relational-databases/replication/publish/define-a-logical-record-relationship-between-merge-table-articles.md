@@ -1,6 +1,7 @@
 ---
-title: 병합 테이블 아티클 간의 논리적 레코드 관계 정의 | Microsoft 문서
-ms.custom: ''
+title: 병합 테이블 아티클 간의 논리적 레코드 관계 정의
+description: 병합 복제 아티클에 사용되는 관련 테이블 간의 논리적 레코드 관계를 정의하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846607"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321235"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846607"
   
     -   표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용하려면 **\@logical_record_level_conflict_detection** 및 **\@logical_record_level_conflict_resolution**에 **false** 값(기본값)을 지정합니다.  
   
-3.  논리적 레코드를 구성하는 각 아티클에 대해 2단계를 반복합니다. 논리적 레코드의 각 아티클에 대해 동일한 충돌 감지 및 해결 옵션을 사용해야 합니다. 자세한 내용은 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
+3.  논리적 레코드를 구성하는 각 아티클에 대해 2단계를 반복합니다. 논리적 레코드의 각 아티클에 대해 동일한 충돌 감지 및 해결 옵션을 사용해야 합니다. 자세한 내용은 [논리적 레코드에서 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
 4.  게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행합니다. **\@publication**을 지정하고 **\@article**에 관계 구성 아티클 중 하나의 이름을, **\@join_articlename**에 두 번째 아티클의 이름을, **\@filtername**에 관계의 이름을, **\@join_filterclause**에 두 아티클 간 관계를 정의하는 절을, **\@join_unique_key**에 조인 형식을 지정하고 **\@filter_type**에 다음 값 중 하나를 지정합니다.  
   
@@ -171,7 +172,7 @@ ms.locfileid: "70846607"
   
     -   <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>에 대한 게시의 이름  
   
-    -   (옵션) 아티클이 행 필터링된 경우 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성에 대해 행 필터 절을 지정합니다. 이 속성을 사용하여 정적 또는 매개 변수가 있는 행 필터를 지정합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+    -   (옵션) 아티클이 행 필터링된 경우 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성에 대해 행 필터 절을 지정합니다. 이 속성을 사용하여 정적 또는 매개 변수가 있는 행 필터를 지정합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
      자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   

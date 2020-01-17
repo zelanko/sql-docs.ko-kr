@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729879"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401631"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729879"
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 구체화된 뷰용으로 저장된 기본 테이블에 증분 변경 횟수를 표시합니다. 오버헤드 비율은 TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS)로 계산합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 구체화된 뷰의 이름입니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 구체화된 뷰를 기본 테이블의 데이터 변경 내용으로 계속 새로 고치기 위해 데이터 웨어하우스 엔진은 영향을 받는 각 뷰에 추적 행을 추가하여 변경 내용을 반영합니다. 구체화된 뷰에서 선택하면 뷰의 클러스터형 columnstore 인덱스 검색과 증분 변경 내용 적용이 포함됩니다.  사용자가 구체화된 뷰를 다시 빌드할 때까지 추적 행(TOTAL_ROWS-BASE_VIEW_ROWS)은 제거되지 않습니다.  
 
@@ -54,7 +54,7 @@ VIEW DATABASE STATE 권한이 필요합니다.
 
 ## <a name="examples"></a>예  
 
-### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>1\. 이 예제에서는 구체화된 뷰의 오버헤드 비율을 반환합니다.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. 이 예제에서는 구체화된 뷰의 오버헤드 비율을 반환합니다.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -68,7 +68,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 </br>
 
-### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>2\. 이 예제에서는 기본 테이블의 데이터가 변경됨에 따라 구체화된 뷰 오버헤드가 증가하는 방식을 보여 줍니다.
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. 이 예제에서는 기본 테이블의 데이터가 변경됨에 따라 구체화된 뷰 오버헤드가 증가하는 방식을 보여 줍니다.
 
 테이블 만들기
 ```sql
@@ -145,7 +145,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 |--------|--------|--------|--------|  
 |587149137|2|2 |1.00000000000000000 |
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [구체화된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

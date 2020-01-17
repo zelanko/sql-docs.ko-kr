@@ -1,6 +1,7 @@
 ---
-title: 동기화 시 트리거 및 제약 조건의 동작 제어 | Microsoft 문서
-ms.custom: ''
+title: 동기화 시 트리거 및 제약 조건의 동작 제어
+description: SQL Server 복제 게시 동기화 중에 트리거 실행 또는 제약 조건 적용을 방지하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 076a28e4fac4c8c64c44e0df3c10fbc8e075eafb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 816bda09c547345f5d05cd511d51c72135f15029
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768596"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321808"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>동기화 시 트리거 및 제약 조건의 동작 제어
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

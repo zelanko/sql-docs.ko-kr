@@ -1,7 +1,7 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스를 가용성 그룹과 결합
+title: 가용성 그룹을 사용한 장애 조치(failover) 클러스터 인스턴스
 description: SQL Server 장애 조치(failover) 클러스터 인스턴스의 기능과 Always On 가용성 그룹의 기능을 결합하여 고가용성 및 재해 복구 기능을 향상시킵니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988391"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822257"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 
@@ -61,13 +61,13 @@ ms.locfileid: "67988391"
   
 ||FCI 내의 노드|가용성 그룹 내의 복제본|  
 |-|-------------------------|-------------------------------------------|  
-|**WSFC 사용**|예|예|  
+|**WSFC 사용**|yes|yes|  
 |**보호 수준**|인스턴스|데이터베이스|  
-|**스토리지 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 스토리지를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 스토리지 솔루션을 사용합니다. 스토리지 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
+|**스토리지 유형**|공유됨|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 스토리지를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 스토리지 솔루션을 사용합니다. 스토리지 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**스토리지 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
-|**읽기 가능한 보조 복제본**|아니요*|예|  
+|**읽기 가능한 보조 복제본**|아니요*|yes|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  
-|**장애 조치(Failover)가 실행된 리소스**|서버, 인스턴스 및 데이터베이스|데이터베이스만|  
+|**장애 조치(Failover)가 실행된 리소스**|서버, 인스턴스 및 데이터베이스|데이터베이스에만 해당|  
   
  *가용성 그룹의 동기적 보조 복제본은 항상 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 반면 FCI의 보조 노드는 실제로 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 시작하지 않았으며 따라서 읽을 수 없습니다. FCI에서 보조 노드는 리소스 그룹 소유권이 FCI 장애 조치(Failover) 중 보조 노드로 전달된 경우에만 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 시작합니다. 하지만 FCI가 호스팅하는 데이터베이스가 가용성 그룹에 속해 있을 때 활성 FCI 노드에서 로컬 가용성 복제본이 읽기 가능한 보조 복제본으로 실행되는 경우 이 데이터베이스는 읽을 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67988391"
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI에서 가용성 복제본을 호스팅하는 경우의 고려 사항  
   
 > [!IMPORTANT]  
->  SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)에서 가용성 복제본을 호스트하려는 경우 Windows Server 2008 호스트 노드가 FCI에 대한 Always On 필수 구성 요소 및 제한 사항을 충족하는지 확인해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다.  
+>  SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)에서 가용성 복제본을 호스트하려는 경우 Windows Server 2008 호스트 노드가 FCI에 대한 Always On 필수 구성 요소 및 제한 사항을 충족하는지 확인해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스)는 가용성 그룹에 따라 AlwaysOn 자동 장애 조치(failover)를 지원하지 않으므로 FCI에서 호스트하는 모든 가용성 복제본은 수동 장애 조치(failover)에 대해서만 구성될 수 있습니다.  
   

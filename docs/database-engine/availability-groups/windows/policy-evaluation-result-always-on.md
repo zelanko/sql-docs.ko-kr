@@ -1,6 +1,6 @@
 ---
-title: 정책 평가 결과 페이지(Always On 대시보드) | Microsoft Docs
-description: SQL Server Management Studio의 'Always On 대시보드' 내에 있는 '정책 평가 결과 페이지'에 대한 설명입니다.
+title: 정책 평가 결과 페이지(Always On 대시보드)
+description: SSMS(SQL Server Management Studio)의 ‘Always On 대시보드’ 내에 있는 ‘정책 평가 결과 페이지’에 대한 설명입니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014541"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235435"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>정책 평가 결과 페이지(Always On 대시보드)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,18 +29,18 @@ ms.locfileid: "68014541"
  **검색된 문제**  
  검색된 각 문제에 대한 행을 표시합니다. 특정 문제와 연결된 아이콘은 다음과 같이 해당 문제의 심각도를 시각적으로 표시합니다.  
   
-|아이콘|Severity|  
+|아이콘|심각도|  
 |----------|--------------|  
-|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|심각|  
-|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|경고|  
+|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 아이콘: 오류")|위험|  
+|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 아이콘: 경고")|Warning|  
   
  **설명**  
  이 표에서는 선택한 문제에 대한 간략한 설명을 표시합니다.  
   
- **자세한 정보**  
+ **추가 정보**  
  이 링크를 클릭하면 선택한 문제에 대한 도움말 항목이 열립니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

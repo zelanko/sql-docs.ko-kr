@@ -1,5 +1,5 @@
 ---
-title: 사용량 현황 데이터 수집 및 충돌 보고 사용 또는 사용 안 함
+title: 사용량 현황 데이터 수집 및 크래시 보고 사용 또는 사용 안 함
 titleSuffix: Azure Data Studio
 description: 이 문서에서는 사용량 및 충돌 보고 데이터를 수집하여 Microsoft로 보낼지 여부를 제어하는 방법을 설명합니다.
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 71ed86e9ad076a41099eaf4e56fe67a25b5f2c21
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 416c22aa04e289e7959e41924344666e4329ecf1
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958943"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957007"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용 현황 데이터 수집 사용 또는 사용 안 함
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용량 현황 데이터 수집 사용 또는 사용 안 함
 
 ## <a name="how-to-disable-telemetry-reporting"></a>원격 분석 보고를 사용하지 않도록 설정하는 방법
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 사용 현황 데이터를 수집한 후 Microsoft로 보내 제품 및 서비스를 개선합니다. 자세히 알아보려면 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)을 읽어보세요.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 사용량 현황 데이터를 수집한 후 Microsoft로 보내 제품 및 서비스를 개선합니다. 자세히 알아보려면 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)을 읽어보세요.
 
 사용량 현황 데이터를 Microsoft로 보내지 않으려는 경우 *telemetry.enableTelemetry* 설정을 *false*로 지정할 수 있습니다.
 

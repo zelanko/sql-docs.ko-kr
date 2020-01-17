@@ -1,6 +1,5 @@
 ---
-title: 이름이 와일드카드 문자로 지정된 열 | Microsoft 문서
-ms.custom: fresh2019may
+title: 와일드카드 문자를 사용하여 열 지정(SQLXML) | Microsoft Docs
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f49fdac97f1a580a24bc50840ec58fc6efe0d65a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b75c343c675e74f7ce26bb1b1787bfbef99b7623
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113059"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258382"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>이름이 와일드카드 문자로 지정된 열
 

@@ -1,6 +1,7 @@
 ---
-title: 구독, 배포되지 않은 명령(트랜잭션 구독) | Microsoft 문서
-ms.custom: ''
+title: 배포되지 않은 명령(복제 모니터)
+description: SSMS(SQL Server Management Studio) 복제 모니터의 ‘배포되지 않은 명령’ 탭을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 48a5742ab40b9b3f4a210b16939caddaf6fa3ed6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 09271bf91d561e86fdf6525ccd217bb000449044
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769416"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321409"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription"></a>구독, 배포되지 않은 명령(트랜잭션 구독)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 논리적 레코드에서 충돌 감지 및 해결 | Microsoft 문서
-ms.custom: ''
+title: 논리적 레코드에서 충돌 검색 및 해결(병합)
+description: 병합 복제와 함께 논리적 레코드를 사용할 때 가능한 충돌 검색 및 충돌 해결 방법의 다양한 조합을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033324"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321580"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>고급 병합 복제 충돌 - 논리적 레코드에서 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68033324"
   
  **logical_record_level_conflict_detection** 아티클 속성은 TRUE 또는 FALSE로 설정할 수 있습니다. 이 값은 최상위 부모 아티클에 대해서만 설정해야 하며 자식 아티클에서는 무시됩니다. 이 값이 FALSE이면 병합 복제에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서처럼 아티클에 대한 **column_tracking** 속성 값만 기반으로 하여 충돌을 감지합니다. 이 값이 TRUE이면 병합 복제에서는 아티클의 **column_tracking** 속성을 무시하고 논리적 레코드가 변경된 경우 충돌을 감지합니다. 예를 들어 다음과 같은 시나리오를 고려할 수 있습니다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-05.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-05.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  두 명의 사용자가 **Customers**, **Orders**또는 **OrderItems** 테이블에서 Customer2 논리적 레코드에 대한 값을 변경하는 경우 충돌이 감지됩니다. 이 예제에서는 주로 UPDATE 문을 통해 값을 변경한 경우를 다루지만 INSERT 또는 DELETE 문을 통해 변경한 경우에도 충돌이 감지될 수 있습니다.  
   

@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000588"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245296"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 데이터베이스 내에서 자동으로 생성된 고유 이진 숫자를 표시하는 데이터 형식입니다. 일반적으로 **rowversion**은 버전이 표시되는 테이블 행에 대한 메커니즘으로 사용됩니다. 스토리지 크기는 8바이트입니다. **rowversion** 데이터 형식은 증가하는 숫자일 뿐이며 날짜 또는 시간을 보존하지 않습니다. 날짜 또는 시간을 기록하려면 **datetime2** 데이터 형식을 사용합니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 각 데이터베이스에는 데이터베이스 내에 **rowversion** 열을 포함하는 테이블에서 수행되는 각 삽입 또는 업데이트 작업에 따라 증가되는 카운터가 있습니다. 이 카운터는 데이터베이스 rowversion이며 시계와 연동되는 실제 시간이 아닌 데이터베이스 내의 상대적 시간을 추적합니다. 한 테이블은 하나의 **rowversion** 열만 가질 수 있습니다. **rowversion** 열이 있는 행이 수정되거나 삽입될 때마다 증가된 데이터베이스 rowversion 값이 **rowversion** 열에 삽입됩니다. 이런 속성 때문에 **rowversion** 열은 키, 특히 기본 키가 되기 어렵습니다. 행이 업데이트되면 rowversion 값이 변경되고 그렇게 되면 키 값도 변경됩니다. 열이 기본 키에 있는 경우 이전 키 값은 더 이상 유효하지 않으며 이전 값을 참조하는 외래 키도 더 이상 유효하지 않습니다. 테이블이 동적 커서에서 참조되면 업데이트를 할 때마다 커서 안의 행 위치가 변경됩니다. 열이 인덱스 키에 있는 경우 데이터 행을 업데이트할 때마다 인덱스도 업데이트됩니다.  행 값이 변경되지 않더라도 **rowversion** 값은 모든 업데이트 문으로 증가됩니다. (예를 들어 열 값이 5이고 업데이트 문이 값을 5로 설정하면, 변경 사항이 없어도 이 동작이 업데이트로 간주되어 **rowversion**이 증가됩니다.)
   
 **timestamp**는 **rowversion** 데이터 형식의 동의어이며 데이터 형식 동의어의 동작에 따라 달라집니다. DDL 문에서 가능하면 **timestamp** 대신 **rowversion**을 사용하세요. 자세한 내용은 [데이터 형식 동의어&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)를 참조하세요.
@@ -65,7 +65,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 null이 아닌 **rowversion** 열은 기능적으로 **binary(8)** 열과 같습니다. null이 아닌 **rowversion** 열은 기능적으로 **varbinary(8)** 열과 같습니다.
   
-행의 **rowversion** 행을 사용하여 마지막으로 이 행을 읽은 이후 행에 대해 업데이트 문이 실행되었는지 여부를 쉽게 파악할 수 있습니다. 행에 대해 업데이트 문이 실행되면 rowversion 값이 업데이트됩니다. 행에 대해 업데이트 문이 실행되지 않으면 rowversion 값이 이전에 읽은 값과 같습니다. 데이터베이스의 현재 rowversion 값을 반환하려면 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)를 사용합니다.
+행의 **rowversion** 열을 사용하여 마지막으로 행을 읽은 이후 행에 대해 업데이트 문이 실행되었는지 여부를 쉽게 확인할 수 있습니다. 행에 대해 업데이트 문이 실행되면 rowversion 값이 업데이트됩니다. 행에 대해 업데이트 문이 실행되지 않으면 rowversion 값이 이전에 읽은 값과 같습니다. 데이터베이스의 현재 rowversion 값을 반환하려면 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)를 사용합니다.
   
 여러 명의 사용자가 동시에 행을 업데이트할 때 데이터베이스의 무결성을 유지하기 위해 테이블에 **rowversion** 열을 추가할 수 있습니다. 또한 테이블을 다시 쿼리하지 않고도 얼마나 많은 행이 업데이트되었고 어떤 행이 업데이트되었는지 확인할 수 있습니다.
   
@@ -128,7 +128,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

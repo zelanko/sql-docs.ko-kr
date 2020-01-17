@@ -1,6 +1,6 @@
 ---
-title: 옵션(SQL Server Always On, 대시보드 페이지) | Microsoft Docs
-description: SQL Server Always On 대시보드에 있는 '옵션' 페이지에 대한 설명입니다.
+title: SSMS의 가용성 그룹 대시보드
+description: SQL Server Management Studio의 SQL Server Always On 대시보드에 있는 ‘옵션’ 페이지에 대한 설명입니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014638"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822548"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>옵션(SQL Server Always On, 대시보드 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014638"
   
 ## <a name="on-this-page"></a>이 페이지에서  
  **자동 새로 고침 설정**  
- 자동 새로 고침을 사용하려면 클릭합니다. 다음 옵션을 사용할 수 있습니다.  
+ 자동 새로 고침을 사용하려면 클릭합니다. 옵션은 다음과 같습니다.  
   
 -   **새로 고침 간격(초)** 필드에는 대시보드를 새로 고치는 초 수가 표시됩니다. 기본값은 30입니다. 자동 새로 고침을 사용하는 경우 이 필드를 편집하여 새로 고침 간격을 변경할 수 있습니다.  
   

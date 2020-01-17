@@ -1,6 +1,7 @@
 ---
-title: Always On 정책을 사용하여 가용성 그룹 상태 보기 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 상태를 보기 위한 정책
+description: Always On 정책 또는 PowerShell을 사용하여 Always On 가용성 그룹의 작동 상태를 확인합니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013642"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244739"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Always On 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68013642"
   
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> Always On 대시보드 사용  
@@ -85,12 +86,12 @@ ms.locfileid: "68013642"
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Always On 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |**InputObject**|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 컴퓨팅합니다.|  
     |**NoRefresh**|이 매개 변수를 설정한 경우 cmdlet은 **-Path** 또는 **-InputObject** 매개 변수에 지정된 개체를 수동으로 새로 고치지 않습니다.|  
-    |**경로**|사용 중인 cmdlet에 따라 가용성 그룹의 경로, 하나 이상의 가용성 복제본 또는 가용성 데이터베이스의 데이터베이스 복제본 클러스터 상태입니다. 선택적 매개 변수입니다. 지정하지 않으면 이 매개 변수의 값은 기본적으로 현재 작업 위치입니다.|  
+    |**Path**|사용 중인 cmdlet에 따라 가용성 그룹의 경로, 하나 이상의 가용성 복제본 또는 가용성 데이터베이스의 데이터베이스 복제본 클러스터 상태입니다. 선택적 매개 변수입니다. 지정하지 않으면 이 매개 변수의 값은 기본적으로 현재 작업 위치입니다.|  
     |**ShowPolicyDetails**|이 cmdlet에서 수행하는 각 정책 평가의 결과를 표시합니다. cmdlet은 정책 평가당 하나의 개체를 출력하며, 이 개체에는 평가 결과(정책 통과 여부, 정책 이름과 범주 등)를 설명하는 필드가 있습니다.|  
   
      예를 들어 다음 **Test-SqlAvailabilityGroup** 명령은 **-ShowPolicyDetails** 매개 변수를 지정하고 `MyAg`라는 가용성 그룹에서 실행된 각 PBM(정책 기반 관리) 정책에 대해 이 cmdlet에서 수행한 정책 평가 결과를 각각 표시합니다.  

@@ -1,18 +1,19 @@
 ---
-title: Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
-description: 이 문서에서는 Docker의SQL Server 컨테이너에 있는 분산 트랜잭션에 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하는 방법을 설명합니다.
+title: SQL Server on Docker를 사용하는 분산 트랜잭션(MSDTC)
+description: Docker의 SQL Server 컨테이너에 있는 분산 트랜잭션에 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 99c17e04e4352df91ad3c6028b3ec88fc5022c50
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531309"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558407"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
 
@@ -22,7 +23,7 @@ ms.locfileid: "73531309"
 
 SQL Server 컨테이너 이미지는 분산 트랜잭션에 필요한 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용할 수 있습니다. MSDTC에 대한 통신 요구 사항을 이해하려면 [Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요. 이 문서에서는 SQL Server Docker 컨테이너와 관련된 특별한 요구 사항 및 시나리오를 설명합니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 Docker용 컨테이너에서 MSDTC 트랜잭션을 사용하도록 설정하려면 다음 두 가지 새 환경 변수를 설정해야 합니다.
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903138"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721358"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903138"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 인증의 단점  
   
--   Windows용 로그인 및 암호를 갖고 있는 Windows 도메인 사용자도 다른([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 로그인 및 암호를 제공하여 연결해야 합니다. 일반적으로 여러 개의 이름과 암호를 외우는 것은 힘듭니다. 데이터베이스에 연결할 때마다 매번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 입력하려면 번거로울 수 있습니다.  
+-   Windows 로그인 및 암호가 있는 Windows 도메인 사용자도 연결 시 다른([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 로그인 및 암호를 제공해야 합니다. 일반적으로 여러 개의 이름과 암호를 외우는 것은 힘듭니다. 데이터베이스에 연결할 때마다 매번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 입력하려면 번거로울 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 Kerberos 보안 프로토콜을 사용할 수 없습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72903138"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 사용자가 Windows 도메인으로 인증되는 혼합 운영 체제 환경을 지원할 수 있습니다.  
   
--   사용자가 알려지지 않았거나 신뢰할 수 없는 도메인에서 연결할 수 있게 해 줍니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 애플리케이션이 이에 해당합니다.  
+-   사용자가 알 수 없거나 신뢰할 수 없는 도메인에서 연결합니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 애플리케이션이 이에 해당합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 고유한 ID를 만들 수 있는 웹 기반 애플리케이션을 지원할 수 있습니다.  
   

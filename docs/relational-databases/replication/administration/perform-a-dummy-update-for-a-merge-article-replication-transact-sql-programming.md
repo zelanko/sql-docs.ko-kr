@@ -1,6 +1,7 @@
 ---
-title: 병합 아티클에 대해 더미 업데이트 수행(복제 T-SQL 프로그래밍) | Microsoft 문서
-ms.custom: ''
+title: 더미 병합 아티클 업데이트(복제 SP)
+description: Transact-SQL 복제 저장 프로시저를 사용하여 병합 복제에 사용되는 병합 아티클의 더미 업데이트를 수행합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9696e02e91a28420ce66e21226e322ea7845ab4d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05c3a91d647819126261f0637e0de24d0ce3e4fd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710328"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322038"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>병합 아티클에 대해 더미 업데이트 수행(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

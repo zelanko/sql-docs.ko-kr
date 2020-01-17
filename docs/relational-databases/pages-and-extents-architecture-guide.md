@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586774"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325495"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "72586774"
 
 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터 파일에서 사용되는 페이지 유형을 보여 줍니다.
 
-|페이지 유형 | 내용 |
+|페이지 유형 | 콘텐츠 |
 |-------|-------|
-|Data |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
+|data |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
 |인덱스 |인덱스 항목 |
 |텍스트/이미지 |LOB(Large Object) 데이터 유형: (텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터) <br> 데이터 행이 8KB를 초과하는 경우 가변 길이 열: (varchar, nvarchar, varbinary, and sql_variant) |
 |전역 할당 맵, 공유 전역 할당 맵 |익스텐트가 할당되었는지 여부에 대한 정보 |
@@ -54,7 +54,7 @@ ms.locfileid: "72586774"
 > [!NOTE]
 > 로그 파일은 페이지는 포함하지 않으며 일련의 로그 레코드를 포함합니다.
 
-데이터 행은 머리글 바로 다음부터 시작하여 페이지에 차례로 나옵니다. 행 오프셋 테이블은 페이지 끝에서 시작하는데 각 행 오프셋 테이블에는 해당 페이지에 있는 각 행에 대한 항목이 하나씩 있습니다. 각 항목은 해당 행의 첫째 바이트가 페이지 시작 지점에서 얼마나 떨어져 있는지를 기록합니다. 행 오프셋 테이블의 항목 순서는 페이지의 행 순서의 역순입니다.
+데이터 행은 머리글 바로 다음부터 시작하여 페이지에 차례로 나옵니다. 행 오프셋 테이블은 페이지 끝에서 시작하는데 각 행 오프셋 테이블에는 해당 페이지에 있는 각 행에 대한 항목이 하나씩 있습니다. 각 행 오프셋 항목은 행의 첫 번째 바이트가 페이지 시작 지점에서 얼마나 떨어져 있는지를 기록합니다. 따라서 행 오프셋 테이블 함수는 SQL Server가 페이지에서 행을 빠르게 찾는 데 도움이 됩니다. 행 오프셋 테이블의 항목 순서는 페이지의 행 순서의 역순입니다.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -64,11 +64,11 @@ ms.locfileid: "72586774"
 
 이 제한은 varchar, nvarchar, varbinary 또는 sql_variant 열이 있는 테이블에는 제한적으로 적용됩니다. 테이블에 있는 모든 고정 및 변수 열의 전체 행 크기가 8,060바이트 한계를 초과하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 하나 이상의 가변 길이 열을 가장 너비가 넓은 열부터 시작하여 ROW_OVERFLOW_DATA 할당 단위에 있는 페이지로 동적으로 옮깁니다. 
 
-삽입 또는 업데이트 작업으로 행의 전체 크기가 8060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
+삽입 또는 업데이트 작업으로 행의 전체 크기가 8,060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
 
 ##### <a name="row-overflow-considerations"></a>행 오버플로 고려 사항 
 
-행당 8,060바이트를 초과하는 varchar, nvarchar, varbinary, sql_variant 또는 CLR 사용자 정의 형식 열을 결합할 때는 다음 사항을 고려하세요. 
+앞서 설명한 것처럼 행은 여러 페이지에 상주할 수 없으며, 가변 길이 데이터 형식 필드의 결합된 크기가 8,060바이트 한도를 초과할 경우 오버플로가 발생할 수 있습니다. 이 내용을 설명하기 위해 각각 varchar(7000)와 varchar(2000)인 두 열을 사용하여 테이블을 만들 수 있습니다. 개별적으로 두 열은 모두 8,060바이트를 초과하지 않지만, 각 열의 전체 너비를 채울 경우 합계가 8,060바이트를 초과합니다. SQL Server는 varchar(7000) 가변 길이 열을 ROW_OVERFLOW_DATA 할당 단위의 페이지로 동적으로 이동할 수 있습니다. 행당 8,060바이트를 초과하는 varchar, nvarchar, varbinary, sql_variant 또는 CLR 사용자 정의 형식 열을 결합할 때는 다음 사항을 고려하세요.
 -  업데이트 작업에 따라 레코드가 길어지는 경우 큰 레코드는 동적으로 다른 페이지로 이동합니다. 업데이트 작업에 따라 레코드가 짧아지는 경우 해당 레코드는 IN_ROW_DATA 할당 단위에 있는 원래 페이지로 다시 이동할 수도 있습니다. 행 오버플로 데이터가 포함된 큰 레코드에 대한 정렬이나 조인 같은 다른 SELECT 작업을 쿼리 및 수행하면 해당 레코드가 비동기적으로 처리되지 않고 동기적으로 처리되기 때문에 처리 시간이 느려집니다.   
    따라서 여러 varchar, nvarchar, varbinary, sql_variant 또는 CLR 사용자 정의 형식 열이 있는 테이블을 디자인할 때는 오버플로될 가능성이 있는 행의 비율과 이 오버플로 데이터가 자주 쿼리될 가능성이 있는지 고려하십시오. 행 오버플로 데이터가 있는 다수의 행에서 쿼리가 자주 수행될 가능성이 높은 경우에는 일부 열이 다른 테이블로 이동하도록 테이블을 정규화하십시오. 그런 다음 비동기 JOIN 작업에서 이 테이블을 쿼리할 수 있습니다. 
 -  varchar, nvarchar, varbinary, sql_variant 및 CLR 사용자 정의 형식 열의 개별 열 길이에는 여전히 8,000바이트의 제한이 적용되어야 합니다. 이 열이 결합되는 경우에만 테이블의 8,060바이트의 행 제한을 초과할 수 있습니다.
@@ -98,7 +98,7 @@ ms.locfileid: "72586774"
 
 ## <a name="managing-extent-allocations-and-free-space"></a>익스텐트 할당 및 빈 공간 관리 
 
-익스텐트 할당을 관리하고 빈 공간을 추적하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 구조는 비교적 단순합니다. 이 데이터 구조를 사용하면 다음과 같은 이점이 있습니다. 
+익스텐트 할당을 관리하고 빈 공간을 추적하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 구조는 비교적 단순합니다. 다음과 같은 이점이 있습니다. 
 
 * 빈 공간 정보는 빽빽하게 묶여 있으므로 이 정보를 포함하는 페이지의 수는 비교적 적습니다.   
   따라서 할당 정보 검색에 필요한 디스크 읽기 횟수가 줄어들어 속도가 빨라집니다. 더 이상의 읽기가 필요하지 않으므로 할당 페이지가 메모리에 남아 있게 될 확률도 높아집니다. 
@@ -136,7 +136,7 @@ ms.locfileid: "72586774"
 
 개체에 익스텐트가 할당된 후에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 PFS 페이지를 사용하여 익스텐트의 할당된 페이지 또는 빈 페이지를 기록합니다. 이 정보는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 새 페이지를 할당해야 할 때 사용됩니다. 힙 및 텍스트/이미지 페이지에 대해서만 페이지 내의 빈 공간의 양이 관리됩니다. PFS 페이지는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 새로 삽입된 행을 보관할 수 있는 빈 공간이 있는 페이지를 찾아야 할 때 사용됩니다. 인덱스의 경우 새 행을 삽입할 지점이 인덱스 키 값에 의해 설정되므로 페이지의 빈 공간을 추적할 필요가 없습니다.
 
-PFS 페이지는 데이터 파일에서 파일 헤더 페이지 뒤의 첫째 페이지(페이지 ID 1)입니다. 이 페이지 다음에는 GAM 페이지(페이지 ID 2)와 SGAM 페이지(페이지 ID 3)가 있습니다. 첫 번째 PFS 페이지 다음에는 약 8,000페이지의 새 PFS 페이지가 있으며 후속 8,000개 페이지 다음에 추가 PFS 페이지가 나옵니다. 2페이지의 첫 번째 GAM 페이지 다음에 64,000개의 익스텐트가 있는 다른 GAM 페이지가 있고 3페이지의 첫 번째 SGAM 페이지 다음에 64,000개의 익스텐트가 있는 다른 SGAM 페이지가 있으며, 후속 64,000개 익스텐트 간격 후에 추가 GAM 및 SGAM 페이지가 나옵니다. 다음 그림은 익스텐트 할당 및 관리를 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 페이지 순서를 보여 줍니다.
+추적되는 각 추가 범위에 대한 새 PFS, GAM 또는 SGAM 페이지가 데이터 파일에 추가됩니다. 따라서 첫 번째 PFS 페이지 뒤에 8,088페이지의 새 PFS 페이지가 있고, 그다음에는 8,088페이지 간격으로 추가 PFS 페이지가 나옵니다. 즉, 페이지 ID 1이 PFS 페이지이고, 페이지 ID 8088이 PFS 페이지이며, 페이지 ID 16176이 PFS 페이지입니다. 첫 번째 GAM 페이지 뒤에 64,000개 익스텐트의 새 GAM 페이지가 있고, 그다음에 나오는 64,000개 익스텐트를 추적합니다. 64,000개 익스텐트 간격으로 시퀀스가 계속됩니다. 마찬가지로, 첫 번째 SGAM 페이지 뒤에 64,000개 익스텐트의 새 SGAM 페이지가 있고, 그다음에는 64,000개 익스텐트 간격으로 추가 SGAM 페이지가 나옵니다. 다음 그림은 익스텐트 할당 및 관리를 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 페이지 순서를 보여 줍니다.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -172,7 +172,7 @@ IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파�
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 삽입되는 행을 보관하기에 충분한 공간을 가진 기존 익스텐트에서 페이지를 빠르게 찾을 수 없을 때만 할당 단위에 새 익스텐트를 할당합니다. 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 **비례 채우기 할당 알고리즘**을 사용하여 파일 그룹에서 사용할 수 있는 파일의 익스텐트를 할당합니다. 동일한 파일 그룹에 두 개의 파일이 있고 이 중 한 파일이 다른 파일에 비해 2배의 빈 공간을 가지는 경우 빈 공간이 더 많은 파일에서 두 페이지가 할당되고 빈 공간이 적은 다른 파일에서 한 페이지가 할당되는 방식으로 할당이 수행됩니다. 따라서 파일 그룹의 모든 파일이 유사한 공간 비율을 사용하게 됩니다. 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 **비례 채우기 할당 알고리즘**을 사용하여 파일 그룹에서 사용할 수 있는 파일의 익스텐트를 할당합니다. 동일한 파일 그룹에 두 개의 파일이 있고 이 중 한 파일이 다른 파일에 비해 2배의 빈 공간을 가지는 경우 빈 공간이 더 많은 파일에서 두 페이지가 할당되고 빈 공간이 적은 다른 파일에서 한 페이지가 할당되는 방식으로 할당이 수행됩니다. 따라서 파일 그룹의 모든 파일이 유사한 공간 비율을 사용하게 됩니다. 
 
 ## <a name="tracking-modified-extents"></a>수정된 익스텐트 추적 
 

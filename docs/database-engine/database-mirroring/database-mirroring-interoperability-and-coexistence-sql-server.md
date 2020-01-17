@@ -1,6 +1,7 @@
 ---
-title: '데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: '데이터베이스 미러링: 상호 운용성 및 공존성'
+description: SQL Server 데이터베이스 미러링 및 전체 텍스트 카탈로그, 데이터베이스 스냅샷, 로그 전달, 복제, 장애 조치(failover) 클러스터 인스턴스 등의 다른 SQL Server 기능의 상호 운용성 및 공존성에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d116624ddea37922e401244c3c669db0a81aa03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006421"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254165"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

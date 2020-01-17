@@ -1,6 +1,7 @@
 ---
-title: Microsoft 복제 충돌 뷰어(병합 복제) | Microsoft 문서
-ms.custom: ''
+title: 복제 충돌 뷰어(병합)
+description: SQL Server에서 병합 복제에 사용되는 복제 충돌 뷰어를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025813"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321960"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68025813"
   
  복제 충돌 뷰어에서 편집할 수 없는 데이터(예: **rowguid** 데이터)는 회색으로 표시되며 읽기 전용으로 표시됩니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  충돌이 발생한 게시가 포함된 데이터베이스를 선택합니다.  
   
  **게시**  

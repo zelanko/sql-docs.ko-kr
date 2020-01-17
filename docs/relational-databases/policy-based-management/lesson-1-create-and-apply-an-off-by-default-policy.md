@@ -1,6 +1,7 @@
 ---
-title: '1단원: Off By Default 정책 만들기 및 적용 | Microsoft Docs'
-ms.custom: ''
+title: '1단원: 기본적으로 사용 안 함 정책 만들기 및 적용'
+description: SQL Server에서 정책 기반 관리를 위한 기본적으로 사용 안 함 정책을 만들고 적용하는 방법을 설명하는 자습서입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251285"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558008"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>1단원: Off By Default 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

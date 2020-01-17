@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298455"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542180"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298455"
   
 익명 액세스의 경우 Windows 인증 옵션을 선택합니다.  
 
-Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하기 위해 **Microsoft 온라인 서비스** 인증 옵션을 사용할 수 없습니다. 또한 다단계 인증에 대해 구성된 모든 옵션을 사용할 수 없습니다.
+Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하기 위해 **Microsoft 온라인 서비스** 인증 옵션을 사용할 수 없습니다. 또한 다단계 인증에 대해 구성된 모든 옵션을 사용할 수 없습니다. 현재 최신 인증은 지원되지 않습니다. 
   
 ### <a name="specifying-and-securing-credentials"></a>자격 증명 지정 및 보안  
  OData 서비스에 기본 인증이 필요한 경우 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)에서 사용자 이름과 암호를 지정할 수 있습니다. 편집기에 입력한 값은 패키지에서 유지됩니다. 암호 값은 패키지 보호 수준에 따라 암호화됩니다.  
@@ -63,7 +63,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
   
 |||  
 |-|-|  
-|속성|설명|  
+|속성|Description|  
 |Url|서비스 문서에 대한 URL입니다.|  
 |UserName|필요한 경우 인증에 사용할 사용자 이름입니다.|  
 |암호|필요한 경우 인증에 사용할 암호입니다.|  
@@ -77,7 +77,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
  연결 관리자의 이름입니다.  
   
  **서비스 문서 위치**  
- OData 서비스의 URL입니다. 예를 들어 https://services.odata.org/V3/Northwind/Northwind.svc/ 을 참조하십시오.  
+ OData 서비스의 URL입니다. 예: https://services.odata.org/V3/Northwind/Northwind.svc/  
   
  **인증**  
 다음 옵션 중 하나를 선택합니다.

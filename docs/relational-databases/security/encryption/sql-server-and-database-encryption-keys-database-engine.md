@@ -1,6 +1,7 @@
 ---
-title: SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진) | Microsoft 문서
-ms.custom: ''
+title: SQL Server 및 데이터베이스 암호화 키
+description: SQL Server 데이터베이스 엔진이 데이터를 암호화하고 보호하는 데 사용하는 서비스 마스터 키와 데이터베이스 마스터 키를 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111567"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558113"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68111567"
 
 서비스 마스터 키는 이 키를 만든 Windows 서비스 계정이나 서비스 계정 이름 및 암호에 대한 액세스를 갖고 있는 보안 주체만 열 수 있습니다.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.
 
 ### <a name="database-master-key"></a>데이터베이스 마스터 키
   
@@ -67,7 +68,7 @@ ms.locfileid: "68111567"
 >  앞에서 설명한 키에 대한 액세스 권한을 모두 상실한 경우 해당 키로 보안이 설정된 개체, 연결 및 데이터에 대한 액세스 권한을 잃게 됩니다. 여기에 표시된 링크에 설명된 대로 서비스 마스터 키를 복원할 수 있고 원래 암호화한 시스템으로 이동하여 액세스 권한을 복구할 수 있습니다. 액세스 권한을 복구할 수 있는 다른 방법은 없습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [서비스 마스터 키](../../../relational-databases/security/encryption/service-master-key.md)  
  서비스 마스터 키 및 이 키를 사용하는 최상의 방법에 대해 간략하게 설명합니다.  
   
  [확장 가능 키 관리 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -88,7 +89,7 @@ ms.locfileid: "68111567"
   
  [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
- [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [데이터 열 암호화](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   

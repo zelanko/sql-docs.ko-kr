@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2014 Managed Backup 설정을 SQL Server 2016으로 마이그레이션 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 관리형 백업 설정 마이그레이션
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d8945b0e37185f5ec0433a9780aa876d4be526c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cbc0a2fcd020cc1e4b59de6d4fc0a2c3320059
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033756"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258670"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 Managed Backup 설정을 SQL Server 2016으로 마이그레이션
+# <a name="migrate-managed-backup-settings"></a>관리형 백업 설정 마이그레이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 으로 마이그레이션할 때의 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]관련 마이그레이션 고려 사항에 대해 설명합니다.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "68033756"
 -   **에서** 의 새 구성에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] smart_admin [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]프로시저가 지원되지 않습니다. 따라서 새 **managed_backup** 프로시저와 기능을 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

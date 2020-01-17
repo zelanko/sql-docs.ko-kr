@@ -1,6 +1,6 @@
 ---
-title: 연결된 서버
-ms.date: 05/29/2019
+title: 연결된 서버(데이터베이스 엔진) | Microsoft 문서
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094774"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165338"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
 
@@ -56,7 +56,7 @@ ms.locfileid: "74094774"
   
 *OLE DB Provider* 는 특정 데이터 원본과 상호 작용하고 관리하는 DLL입니다. *OLE DB 데이터 원본* 은 OLE DB를 통해 액세스할 수 있는 특정 데이터베이스를 식별합니다. 연결된 서버 정의를 통해 쿼리되는 데이터 원본은 일반적으로 데이터베이스이지만 OLE DB Provider에는 여러 파일 및 파일 형식이 존재합니다. 여기에는 텍스트 파일, 스프레드시트 데이터 및 전체 텍스트 내용의 검색 결과가 포함됩니다.  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider(PROGID: SQLNCLI11)는 공식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 OLE DB 공급자입니다.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(PROGID: SQLNCLI11)는 공식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 OLE DB 공급자입니다.  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 분산 쿼리는 필수 OLE DB 인터페이스를 구현하는 모든 OLE DB Provider에서 실행되도록 디자인되었습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 다른 특정 공급자에 대해서만 테스트되었습니다.  
@@ -64,16 +64,19 @@ ms.locfileid: "74094774"
 ## <a name="linked-server-details"></a>연결된 서버 정보  
  다음 그림은 연결된 서버 구성의 기본 사항을 보여 줍니다.  
   
- ![클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층](../../relational-databases/linked-servers/media/lsvr.gif "클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층")  
+ ![클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 연결된 서버는 일반적으로 분산 쿼리를 처리하는 데 사용됩니다. 클라이언트 애플리케이션이 연결된 서버를 통해 분산 쿼리를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 명령을 구문 분석하고 OLE DB로 요청을 보냅니다. 행 집합 요청은 공급자에 대해 쿼리를 실행하거나 공급자로부터 기본 테이블을 여는 형식일 수 있습니다.  
-  
+
 > [!NOTE]
 > 연결된 서버를 통해 데이터를 반환하는 데이터 원본의 경우 해당 데이터 원본에 대한 OLE DB Provider(DLL)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 같은 서버에 있어야 합니다.  
-  
-> [!IMPORTANT] 
-> OLE DB Provider를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 공급자가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 있어야 합니다. 여기에는 Microsoft 릴리스 공급자 및 모든 타사 공급자가 포함됩니다. 
-  
+ 
+> [!IMPORTANT]
+> OLE DB Provider를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 공급자가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 있어야 합니다. 여기에는 Microsoft 릴리스 공급자 및 모든 타사 공급자가 포함됩니다.
+
+> [!NOTE]
+> 연결된 서버는 완전 위임을 사용할 때 Active Directory 통과 인증을 지원합니다. SQL Server 2017 CU17부터 제한된 위임을 사용하는 통과 인증도 지원되지만 [리소스 기반 제한된 위임](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)은 지원되지 않습니다.
+
 ## <a name="managing-providers"></a>공급자 관리  
 일련의 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 레지스트리에 지정된 OLE DB Provider를 로드하고 사용하는 방법을 제어할 수 있습니다.  
   

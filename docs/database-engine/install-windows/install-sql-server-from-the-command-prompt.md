@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1dae9c92172e857c29e08bb04efc3ca323961fa
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251026"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557784"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -151,7 +151,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 -   /PARAMETER (예: `/INDICATEPROGRESS`)
 -   /PARAMETER=true/false(예: `/SQLSVCINSTANTFILEINIT=True` )
 -   /PARAMETER=1/0 부울 형식인 경우(예: `/TCPENABLED=1`)
--   /PARAMETER="value"(모두 단일 값 매개 변수인 경우). (예: `/PID="PID" /SQLSVCSTARTUPTYP="Automatic"`)
+-   /PARAMETER="value"(모두 단일 값 매개 변수인 경우). (예: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - 경로가 필요한 매개 변수의 경우: `/INSTANCEDIR=c:\Path` 또는 `/INSTANCEDIR="c:\Path"`가 지원됩니다.  
 -   /PARAMETER="value1" "value2" "value3"(모두 다중 값 매개 변수인 경우). (예: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
     - **예외**: `/FEATURES`는 다중 값 매개 변수이지만 해당 형식은 공백 없이 쉼표로 구분되는 `/FEATURES=AS,RS,IS`임 
@@ -171,7 +171,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 ##  <a name="Install"></a> 설치 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 설치 명령줄 스크립트를 개발할 수 있습니다.  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **Install**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|개인정보취급방침을 무시합니다. 이 플래그를 사용하면 [개인정보취급방침](../../sql-server/sql-server-privacy.md)에 동의하는 것입니다.  |  
@@ -182,7 +182,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/UpdateEnabled<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/UpdateSource<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 가져올 위치를 지정합니다. 유효한 값은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 검색하는 경우 “MU”, 유효한 폴더 경로, 상대 경로(예: `.\MyUpdates`) 또는 UNC 공유입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows Server Update Services를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 또는 Windows Update 서비스를 검색합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/CONFIGURATIONFILE<br /><br /> **선택 사항**|사용할 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 을 지정합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ERRORREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/> Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 오류 보고를 지정합니다.<br /><br /> 자세한 내용은 [Microsoft 오류 보고 서비스에 대한 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하십시오.<br /><br /> 지원되는 값:<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ERRORREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서는 영향을 주지 않습니다. <br/><br/> Microsoft로 오류 피드백을 보내는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 SQL Server 2016 이상을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 오류 보고를 지정합니다.<br /><br /> 자세한 내용은 [Microsoft 오류 보고 서비스에 대한 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하십시오.<br /><br /> 지원되는 값:<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/FEATURES<br /><br /> - 또는 -<br /><br /> /ROLE<br /><br /> **필수**|설치할 구성 요소를 지정합니다.<br /><br /> 설치할 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 지정하려면 **/FEATURES**를 선택합니다. 자세한 내용은 [기능 매개 변수](#Feature) 를 참조하세요.<br /><br /> 설치 역할을 지정하려면 **/ROLE**을 선택합니다. 설치 역할은 미리 결정된 구성으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/HELP, ?<br /><br /> **선택 사항**|설치 매개 변수에 대한 사용 옵션을 표시합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INDICATEPROGRESS<br /><br /> **선택 사항**|세부 설치 로그 파일이 콘솔로 전달되도록 지정합니다.|  
@@ -192,9 +192,9 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> **선택 사항**|[InstanceID](#InstanceID)에 대해 기본값이 아닌 다른 값을 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 헤드 노드를 포함하는 PolyBase 스케일 아웃 계산 그룹을 구성할 경우 이 옵션을 사용합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET<br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
@@ -203,7 +203,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server 에이전트 서비스의 [시작](#Accounts) 모드를 지정합니다.<br /><br /> 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값: **Latin1_General_CI_AS**|  
@@ -212,25 +212,25 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 모드를 지정합니다. 유효한 값은 MULTIDIMENSIONAL, POWERPIVOT 또는 TABULAR입니다. **ASSERVERMODE** 는 대/소문자를 구분합니다. 모든 값은 대문자로 표시해야 합니다. 유효한 값에 대한 자세한 내용은 [Analysis Services 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)를 참조하세요.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정을 지정합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **필수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 관리자 자격 증명을 지정합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 임시 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server \<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **선택 사항**|MSOLAP 공급자를 in-process로 실행할 수 있는지 여부를 지정합니다.<br /><br /> 기본값: 1 = 사용|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **SPI_AS_NewFarm의 경우 필수**|팜에서 SharePoint 중앙 관리 서비스 및 기타 필수 서비스를 실행하는 데 사용할 도메인 사용자 계정을 지정합니다.<br /><br /> 이 매개 변수는 /ROLE = SPI_AS_NEWFARM을 통해 설치된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에만 사용됩니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **SPI_AS_NewFarm의 경우 필수**|팜 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **SPI_AS_NewFarm의 경우 필수**|팜 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 팜에 애플리케이션 서버 또는 웹 프런트 엔드 서버를 더 추가하는 데 사용되는 암호를 지정합니다.<br /><br /> 이 매개 변수는 /ROLE = SPI_AS_NEWFARM을 통해 설치된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에만 사용됩니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 중앙 관리 웹 애플리케이션에 연결하는 데 사용되는 포트를 지정합니다.<br /><br /> 이 매개 변수는 /ROLE = SPI_AS_NEWFARM을 통해 설치된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에만 사용됩니다.|  
 |SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server Browser 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **선택 사항**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치에 대해 '다음 계정으로 실행' 자격 증명을 사용하도록 설정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다.<br /><br /> 지원되는 값: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본 설치 설정은 OS(운영 체제) 로캘에 의해 결정됩니다. 설치 도중 서버 수준 데이터 정렬을 변경할 수도 있고, 설치하기 전에 OS 로캘을 변경할 수도 있습니다. 기본 데이터 정렬은 각 특정 로캘에 연결된 사용 가능 버전 중 가장 오래된 버전으로 설정됩니다. 이는 이전 버전과의 호환성을 유지하기 위함이므로 권장되는 데이터 정렬이 아닐 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 활용하려면 Windows 데이터 정렬을 사용하기 위한 기본 설치 설정을 변경하세요. 예를 들어 OS 로캘 **영어(미국)** (코드 페이지 1252)의 경우 설치 중의 기본 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이고 가장 가까운 Windows 데이터 정렬인 **Latin1_General_100_CI_AS_SC**로 변경될 수 있습니다. <br /><br />자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **선택 사항**|현재 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할에 추가합니다. /ADDCURRENTUSERASSQLADMIN 매개 변수는 /Role=ALLFeatures_WithDefaults를 사용하거나 Expression 버전을 설치할 때 사용할 수 있습니다. 자세한 내용은 아래의 /ROLE을 참조하세요.<br /><br /> /ADDCURRENTUSERASSQLADMIN은 원하는 경우 사용할 수 있지만 /ADDCURRENTUSERASSQLADMIN 또는 /SQLSYSADMINACCOUNTS는 반드시 사용해야 합니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우 **True**<br /><br /> 기타 모든 버전의 경우 **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다. |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 /SQLSYSADMINACCOUNTS가 필수 항목입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서 /SQLSYSADMINACCOUNTS는 원하는 경우 사용할 수 있지만 /SQLSYSADMINACCOUNTS 또는 /ADDCURRENTUSERASSQLADMIN은 반드시 사용해야 합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> **참고:** 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
@@ -250,17 +250,17 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
 |SQL Server 네트워크 구성|/NPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 명명된 파이프 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = 명명된 파이프 프로토콜 해제<br /><br /> 1 = 명명된 파이프 프로토콜을 사용하도록 설정|  
 |SQL Server 네트워크 구성|/TCPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 TCP 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = TCP 프로토콜 해제<br /><br /> 1 = TCP 프로토콜을 사용하도록 설정|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다. 지원되는 값:<br /><br /> **SharePointFilesOnlyMode**<br /><br /> **DefaultNativeMode**<br /><br /> **FilesOnlyMode**<br /><br /> <br /><br /> 참고: 설치에 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되는 경우 기본 RSINSTALLMODE는 DefaultNativeMode입니다.<br /><br /> 설치에 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 기본 RSINSTALLMODE는 FilesOnlyMode입니다.<br /><br /> DefaultNativeMode를 선택해도 설치에 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 설치 시 RSINSTALLMODE가 FilesOnlyMode로 자동 변경됩니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다. |  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
-|Python/Machine Learning Services(데이터베이스 내)|/MPYCACHEDIRECTORY|나중에 사용하도록 예약되어 있습니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
+|Python/Machine Learning Services(데이터베이스 내)|/MPYCACHEDIRECTORY|다음에 사용하도록 예약됩니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
 |R/Machine Learning Services(데이터베이스 내)|/MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
 |Java/언어 확장| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **선택 사항** | SQL Server 2019부터 언어 확장을 사용하여 Java를 설치하도록 지정합니다. /SQLJAVADIR 매개 변수 없이 /SQL_INST_JAVA를 제공하면 설치 미디어에서 제공되는 Zulu Open JRE를 설치하려는 것으로 가정합니다. <br /><br /> /SQLJAVADIR의 경로를 제공하면 이미 설치된 JRE 또는 JDK를 사용하려는 것임을 나타냅니다. |
   
@@ -279,7 +279,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>이미지 매개 변수 준비  
  다음 표에 나와 있는 매개 변수를 사용하여 SQL Server 인스턴스를 구성하지 않고 준비하는 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -295,9 +295,9 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEDIR<br /><br /> **선택 사항**|인스턴스 관련 구성 요소에 대해 기본 디렉터리가 아닌 다른 설치 디렉터리를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2(2013년 1월) 이전 버전은 **필수**<br /><br /> 인스턴스 기능은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 **필수**.|준비 중인 인스턴스의 InstanceID를 지정합니다.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE<br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
@@ -312,7 +312,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>이미지 완료 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 준비된 SQL Server 인스턴스를 구성하고 완료하는 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -324,9 +324,9 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2(2013년 1월) 이전 버전은 **필수**<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 **선택**|이미지 준비 단계 중에 지정한 인스턴스 ID를 사용합니다.<br /><br /> 지원되는 값: 준비된 인스턴스의 InstanceID|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2(2013년 1월) 이전 버전은 **필수**<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 **선택**|완료 중인 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.<br /><br /> **참고:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools 또는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services를 설치하는 경우에는 PID가 미리 정의됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다. |  
@@ -334,20 +334,20 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
-|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
+|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |SQL Server 에이전트|/AGTSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server 에이전트 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server Browser 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **선택 사항**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치에 대해 '다음 계정으로 실행' 자격 증명을 사용하도록 설정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다.<br /><br /> 지원되는 값: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고:  이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 데이터 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 4MB, 다른 모든 버전의 경우 8MB.<br/><br/>최소 = (4MB 또는 8MB).<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **선택 사항**|각 tempdb 데이터 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1,024MB의 크기를 허용합니다.<br /><br /> 기본값: 64<br /><br /> 허용 범위: 최소 = 0, 최대 = 1024|  
@@ -359,12 +359,12 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다. |  
 |SQL Server 네트워크 구성|/NPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 명명된 파이프 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = 명명된 파이프 프로토콜 해제<br /><br /> 1 = 명명된 파이프 프로토콜을 사용하도록 설정|  
 |SQL Server 네트워크 구성|/TCPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 TCP 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = TCP 프로토콜 해제<br /><br /> 1 = TCP 프로토콜을 사용하도록 설정|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
@@ -377,7 +377,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> 업그레이드 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 업그레이드 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다. 지원되는 값:<br /><br /> **업그레이드**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 값은 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 다른 버전으로 업그레이드하는 데 사용됩니다. 지원되는 버전 및 버전 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -399,10 +399,10 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |SQL Server Browser 서비스|/BROWSERSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server Browser 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |SQL Server 전체 텍스트|/FTUPGRADEOPTION<br /><br /> **선택 사항**|전체 텍스트 카탈로그 업그레이드 옵션을 지정합니다. 지원되는 값:<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **선택 사항**|이 속성은 2008 R2 버전 이상의 SharePoint 모드 보고서 서버를 업그레이드할 때만 사용됩니다. 이보다 오래된 SharePoint 모드 아키텍처를 사용하는 보고서 서버의 경우 추가 업그레이드 작업이 수행됩니다. 이 아키텍처는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 변경되었습니다. 이 옵션이 명령줄 설치에 포함되지 않은 경우 이전 보고서 서버 인스턴스의 기본 서비스 계정이 사용됩니다. 이 속성이 사용된 경우에는 **/RSUPGRADEPASSWORD** 속성을 사용해서 계정 암호를 제공하십시오.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **선택 사항**|기존 보고서 서버 서비스 계정 암호입니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **선택 사항**|이 속성은 2008 R2 버전 이상의 SharePoint 모드 보고서 서버를 업그레이드할 때만 사용됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 변경된 이전 SharePoint 모드 아키텍처를 사용하는 보고서 서버에서는 추가 업그레이드 작업이 수행됩니다. 이 옵션이 명령줄 설치에 포함되지 않은 경우 이전 보고서 서버 인스턴스의 기본 서비스 계정이 사용됩니다. 이 속성이 사용된 경우에는 **/RSUPGRADEPASSWORD** 속성을 사용해서 계정 암호를 제공하십시오.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **선택 사항**|기존 보고서 서버 서비스 계정 암호입니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/ALLOWUPGRADEFORSSRSSHAREPOINTMODE|SharePoint 공유 서비스 아키텍처를 기반으로 하는 SharePoint 모드 설치를 업그레이드할 때 스위치가 필요합니다. 공유 서비스 이외의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]버전을 업그레이드할 때는 이 스위치가 필요하지 않습니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
@@ -415,16 +415,16 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 복구 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 복구 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|복구 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **Repair**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ENU<br /><br /> **선택 사항**|설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 이 매개 변수를 사용하여 지역화된 운영 체제에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 영어 버전을 설치할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FEATURES<br /><br /> **필수**|복구할 [구성 요소](#Feature) 를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> **필수**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
@@ -439,7 +439,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 시스템 데이터베이스 다시 작성 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하는 명령줄 스크립트를 개발할 수 있습니다. 자세한 내용은 [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)을 참조하세요. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|데이터베이스 다시 작성 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> **필수**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
@@ -447,7 +447,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|서버 수준 데이터 정렬을 새로 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **인스턴스를 설치하는 동안 /SECURITYMODE=SQL을 지정한 경우 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고:  이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> **참고:** 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **선택 사항**|설치 프로그램에서 추가할 tempdb 데이터 파일 수를 지정합니다. 이 값은 코어 수까지 증가할 수 있습니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 1<br /><br /> 8 또는 코어 수 중에서 모든 기타 버전의 경우 낮은 값<br /><br /> **중요:** tempdb에 대한 주 데이터베이스 파일은 여전히 tempdb.mdf입니다. 추가 tempdb 파일은 이름이 tempdb_mssql_#.ndf로 지정됩니다(여기서 #은 설치하는 동안 만들어진 각 추가 tempdb 데이터베이스 파일의 고유 개수를 나타냄). 이 명명 규칙의 목적은 고유한 파일 이름을 지정하는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 제거하면 tempdb_mssql_#.ndf 명명 규칙을 사용하는 파일이 삭제됩니다. 사용자 데이터베이스 파일에 tempdb_mssql_\*.ndf 명명 규칙을 사용하지 마세요.<br /><br /> **경고:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]는 이 매개 변수를 구성하는 데 지원되지 않습니다. 설치 프로그램은 1개의 tempdb 데이터 파일만 설치합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 데이터 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 4MB, 다른 모든 버전의 경우 8MB.<br/><br/>최소 = (4MB 또는 8MB).<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB.|  
@@ -458,7 +458,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> 제거 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 제거 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|제거 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **제거**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIGURATIONFILE<br /><br /> **선택 사항**|사용할 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 을 지정합니다.|  
@@ -509,9 +509,9 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ENU<br /><br /> **선택 사항**|설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 이 매개 변수를 사용하여 지역화된 운영 체제에 SQL Server 영어 버전을 설치할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERGROUP<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(Failover) 클러스터에 사용되는 리소스 그룹의 이름을 지정합니다. 기존 클러스터 그룹의 이름이거나 새 리소스 그룹의 이름일 수 있습니다.<br /><br /> 기본값:<br /><br /> SQL Server(\<InstanceName>)|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/*UpdateEnabled*<br /><br /> **선택 사항**|SQL Server 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 SQL Server 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/*UpdateSource*<br /><br /> **선택 사항**|SQL Server 설치 프로그램이 제품 업데이트를 가져올 위치를 지정합니다. 유효한 값은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 검색하는 경우 “MU”, 유효한 폴더 경로, 상대 경로(예: .\MyUpdates) 또는 UNC 공유입니다. 기본적으로 SQL Server 설치 프로그램은 Windows Server Update Services를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 업데이트 또는 Windows Server 업데이트 서비스를 검색합니다.|  
@@ -531,10 +531,10 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 1 = 사용<br /><br /> 0 = 사용 안 함|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERDISKS<br /><br /> **선택 사항**|공유 디스크 목록이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터 리소스 그룹에 포함되도록 지정합니다.<br /><br /> 기본값: 첫 번째 드라이브가 모든 데이터베이스의 기본 드라이브로 사용됩니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예제를 참조하세요.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **필수**|새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터의 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 식별하는 데 사용됩니다.|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
-|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
+|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값: **Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
@@ -545,15 +545,15 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **선택 사항**|MSOLAP 공급자를 in-process로 실행할 수 있는지 여부를 지정합니다.<br /><br /> 기본값: 1 = 사용|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 모드를 지정합니다. 클러스터 시나리오에서 유효한 값은 MULTIDIMENSIONAL 또는 TABULAR입니다. **ASSERVERMODE** 는 대/소문자를 구분합니다. 모든 값은 대문자로 표시해야 합니다. 유효한 값에 대한 자세한 내용은 테이블 형식 모드에서 Analysis Services 설치를 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다.<br /><br /> 데이터 디렉터리는 공유 클러스터 디스크에 지정되어야 합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다.<br /><br /> 지원되는 값: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 **sysadmin** 역할의 멤버로 프로비전합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고:  이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **선택 사항**|설치 프로그램에서 추가할 tempdb 데이터 파일 수를 지정합니다. 이 값은 코어 수까지 증가할 수 있습니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 1<br /><br /> 8 또는 코어 수 중에서 모든 기타 버전의 경우 낮은 값<br /><br /> **중요:** tempdb에 대한 주 데이터베이스 파일은 여전히 tempdb.mdf입니다. 추가 tempdb 파일은 이름이 tempdb_mssql_#.ndf로 지정됩니다(여기서 #은 설치하는 동안 만들어진 각 추가 tempdb 데이터베이스 파일의 고유 개수를 나타냄). 이 명명 규칙의 목적은 고유한 파일 이름을 지정하는 것입니다. SQL Server 인스턴스를 제거하면 tempdb_mssql_#.ndf 명명 규칙을 사용하는 파일이 삭제됩니다. 사용자 데이터베이스 파일에 tempdb_mssql_\*.ndf 명명 규칙을 사용하지 마세요.<br /><br /> **경고:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]는 이 매개 변수를 구성하는 데 지원되지 않습니다. 설치 프로그램은 1개의 tempdb 데이터 파일만 설치합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 데이터 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = 8MB.<br/><br/>최솟값 = 8MB.<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB.|  
@@ -564,13 +564,13 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
   
  도메인 그룹 대신 서비스 SID를 사용하는 것이 좋습니다. 
@@ -588,7 +588,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>장애 조치 클러스터 준비 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 장애 조치(Failover) 클러스터 준비 명령줄 스크립트를 개발할 수 있습니다. 이것은 클러스터 고급 설치의 첫째 단계이며 여기서 모든 장애 조치(Failover) 클러스터 노드의 장애 조치(Failover) 클러스터 인스턴스를 준비해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|장애 조치(Failover) 클러스터 준비 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -606,9 +606,9 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> **선택 사항**|[InstanceID](#InstanceID)에 대해 기본값이 아닌 다른 값을 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> **필수**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수가 지정되지 않은 경우<br /><br /> Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
@@ -616,21 +616,21 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
-|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
+|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다. |  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정을 지정합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|SQL Server 서비스의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> FILESTREAMLEVEL이 1보다 큰 경우 **필수**입니다.|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **파일만 모드에서 사용 가능**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**| SQL Server 2017부터 더 이상 적용할 수 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
   
  도메인 그룹 대신 서비스 SID를 사용하는 것이 좋습니다. 
@@ -653,7 +653,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>장애 조치 클러스터 완료 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 장애 조치(Failover) 클러스터 완료를 위한 명령줄 스크립트를 개발할 수 있습니다. 이것은 장애 조치(Failover) 클러스터 고급 설치 옵션의 두 번째 단계입니다. 모든 장애 조치(Failover) 클러스터 노드 준비를 실행한 다음, 공유 디스크를 소유하는 노드에서 이 명령을 실행합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|장애 조치(Failover) 클러스터 완료 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ENU<br /><br /> **선택 사항**|설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 이 매개 변수를 사용하여 지역화된 운영 체제에 SQL Server 영어 버전을 설치할 수 있습니다.|  
@@ -669,7 +669,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](https://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 1 = 사용<br /><br /> 0 = 사용 안 함|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERDISKS<br /><br /> **선택 사항**|공유 디스크 목록이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터 리소스 그룹에 포함되도록 지정합니다.<br /><br /> 기본값:<br /><br /> 첫 번째 드라이브가 모든 데이터베이스의 기본 드라이브로 사용됩니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예제를 참조하세요.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **필수**|새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터의 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 식별하는 데 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIRMIPDEPENDENCYCHANGE|다중 서브넷 장애 조치(Failover) 클러스터의 IP 주소 리소스 종속성을 OR로 설정하는 데 대한 동의를 나타냅니다. 자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)를 참조하세요. 지원되는 값:<br /><br /> 0 = False(기본값)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
@@ -682,7 +682,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 임시 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **선택 사항**|MSOLAP 공급자를 in-process로 실행할 수 있는지 여부를 지정합니다.<br /><br /> 기본값: 1 = 사용|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다.<br /><br /> 데이터 디렉터리는 공유 클러스터 디스크에 지정되어야 합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됨<br /><br /> 지원되는 값: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.|  
@@ -690,7 +690,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **파일만 모드에서 사용 가능**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고:  이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **선택 사항**|설치 프로그램에서 추가할 tempdb 데이터 파일 수를 지정합니다. 이 값은 코어 수까지 증가할 수 있습니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 1<br /><br /> 8 또는 코어 수 중에서 모든 기타 버전의 경우 낮은 값입니다.<br /><br /> **중요:** tempdb에 대한 주 데이터베이스 파일은 여전히 tempdb.mdf입니다. 추가 tempdb 파일은 이름이 tempdb_mssql_#.ndf로 지정됩니다(여기서 #은 설치하는 동안 만들어진 각 추가 tempdb 데이터베이스 파일의 고유 개수를 나타냄). 이 명명 규칙의 목적은 고유한 파일 이름을 지정하는 것입니다. SQL Server 인스턴스를 제거하면 tempdb_mssql_#.ndf 명명 규칙을 사용하는 파일이 삭제됩니다. 사용자 데이터베이스 파일에 tempdb_mssql_\*.ndf 명명 규칙을 사용하지 마세요.<br /><br /> **경고:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]는 이 매개 변수를 구성하는 데 지원되지 않습니다. 설치 프로그램은 1개의 tempdb 데이터 파일만 설치합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 데이터 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = 8MB.<br/><br/>최솟값 = 8MB.<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB).|  
@@ -716,7 +716,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>장애 조치 클러스터 업그레이드 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 장애 조치(Failover) 클러스터 업그레이드 명령줄 스크립트를 개발할 수 있습니다. 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) 및 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **업그레이드**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -738,15 +738,15 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |SQL Server Browser 서비스|/BROWSERSVCSTARTUPTYPE<br /><br /> **선택 사항**|SQL Server Browser 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |SQL Server 전체 텍스트|/FTUPGRADEOPTION<br /><br /> **선택 사항**|전체 텍스트 카탈로그 업그레이드 옵션을 지정합니다. 지원되는 값:<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **선택 사항**|이 속성은 2008 R2 버전 이상의 SharePoint 모드 보고서 서버를 업그레이드할 때만 사용됩니다. 이보다 오래된 SharePoint 모드 아키텍처를 사용하는 보고서 서버의 경우 추가 업그레이드 작업이 수행됩니다. 이 아키텍처는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 변경되었습니다. 이 옵션이 명령줄 설치에 포함되지 않은 경우 이전 보고서 서버 인스턴스의 기본 서비스 계정이 사용됩니다. 이 속성이 사용된 경우에는 **/RSUPGRADEPASSWORD** 속성을 사용해서 계정 암호를 제공하십시오.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **선택 사항**|이 속성은 2008 R2 버전 이상의 SharePoint 모드 보고서 서버를 업그레이드할 때만 사용됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 변경된 이전 SharePoint 모드 아키텍처를 사용하는 보고서 서버에서는 추가 업그레이드 작업이 수행됩니다. 이 옵션이 명령줄 설치에 포함되지 않은 경우 이전 보고서 서버 인스턴스의 기본 서비스 계정이 사용됩니다. 이 속성이 사용된 경우에는 **/RSUPGRADEPASSWORD** 속성을 사용해서 계정 암호를 제공하십시오.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **선택 사항**|기존 보고서 서버 서비스 계정 암호입니다.|  
   
 ####  <a name="AddNode"></a> 노드 추가 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 노드 추가 명령줄 스크립트를 개발할 수 있습니다. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|AddNode 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
@@ -758,25 +758,25 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INDICATEPROGRESS<br /><br /> **선택 사항**|세부 설치 로그 파일이 콘솔로 전달되도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> **필수**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **선택 사항**|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
-|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET <br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE <br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택 사항**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예제를 참조하세요.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **필수**|다중 서브넷 장애 조치(Failover) 클러스터의 IP 주소 리소스 종속성을 OR로 설정하는 데 대한 동의를 나타냅니다. 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요. 지원되는 값:<br /><br /> 0 = False(기본값)<br /><br /> 1 = True|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
-|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
+|SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정을 지정합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|SQL Server 서비스의 시작 계정을 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **파일만 모드에서 사용 가능**| SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
   
 ##### <a name="additional-notes"></a>참고 사항:  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 클러스터를 인식하는 유일한 구성 요소입니다. 기타 기능은 클러스터를 인식하지 않으므로 장애 조치(Failover)에서 가용성이 높지 않습니다. 
@@ -791,7 +791,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>노드 제거 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 노드 제거 명령줄 스크립트를 개발할 수 있습니다. 장애 조치(Failover) 클러스터를 제거하려면 각 장애 조치(Failover) 클러스터 노드에서 RemoveNode를 실행해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|설명|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|RemoveNode 워크플로를 나타내는 데 필요합니다.<br /><br /> 지원되는 값: **RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIGURATIONFILE<br /><br /> **선택 사항**|사용할 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 을 지정합니다.|  
@@ -833,7 +833,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 기능 매개 변수  
  특정 기능을 설치하려면 /FEATURES 매개 변수를 사용하여 다음 표에 나와 있는 부모 기능 또는 기능 값을 지정하십시오. SQL Server 버전에서 지원되는 기능 목록은 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 
   
-|부모 기능 매개 변수|기능 매개 변수|설명|  
+|부모 기능 매개 변수|기능 매개 변수|Description|  
 |:---|:---|:---|  
 |SQL||[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, Fulltext 및 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 설치합니다.|  
 ||SQLEngine|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]만 설치합니다.|  
@@ -864,7 +864,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||DREPLAY_CTLR|Distributed Replay Controller 설치|  
 ||DREPLAY_CLT|Distributed Replay 클라이언트 설치|  
 ||SNAC_SDK|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Native Client용 SDK 설치|  
-||SDK|소프트웨어 개발 키트를 설치합니다.|  
+||SDK)|소프트웨어 개발 키트를 설치합니다.|  
 ||LocalDB**|프로그램 개발자를 대상으로 하는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 의 실행 모드인 LocalDB를 설치합니다.|  
 
 *SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])은 이제 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 관리자와 별도인 독립 실행형 설치 관리자에 제공됩니다. 자세한 내용은 [SQL Server Management Studio 설치](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
@@ -873,7 +873,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>기능 매개 변수 예:  
   
-|매개 변수 및 값|설명| 
+|매개 변수 및 값|Description| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|복제 및 전체 텍스트 없이 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 설치합니다.|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 전체 텍스트를 설치합니다.|  
@@ -886,7 +886,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  AllFeatures_WithDefaults 역할은 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 기본 동작으로, 사용자에게 표시되는 대화 상자 수를 줄입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]이외의 SQL Server 버전을 설치할 때는 이 역할을 명령줄에서 지정할 수 있습니다. 
   
-|역할|설명|설치합니다...|  
+|역할|Description|설치합니다...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|기존 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜 또는 독립 실행형 서버에 명명된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치합니다.|메모리 내 데이터 스토리지 및 처리를 위해 미리 구성된[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 계산 엔진<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]용 설치 관리자 프로그램<br /><br /> SQL Server 온라인 설명서|  
 |SPI_AS_NewFarm|구성되지 않은 새 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜 또는 독립 실행형 서버에 명명된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 설치합니다. SQL Server 설치 프로그램은 기능 역할 설치 중에 팜을 구성합니다.|메모리 내 데이터 스토리지 및 처리를 위해 미리 구성된[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 계산 엔진<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지<br /><br /> SQL Server 온라인 설명서<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 구성 도구<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

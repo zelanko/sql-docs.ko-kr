@@ -1,6 +1,7 @@
 ---
-title: 새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지 | Microsoft 문서
-ms.custom: ''
+title: ‘새 정책 만들기’ 또는 ‘정책 열기’ 대화 상자의 ‘설명’ 페이지
+description: SQL Server 정책 기반 관리에서 ‘새 정책 만들기’ 또는 ‘정책 열기’ 대화 상자의 ‘설명’ 페이지를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95b4eaeb42f2f7a15de22b58a1e7c42a0893a1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940500"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558278"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

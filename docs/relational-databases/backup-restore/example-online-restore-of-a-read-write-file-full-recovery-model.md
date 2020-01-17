@@ -1,7 +1,7 @@
 ---
-title: '예: 읽기-쓰기 파일의 온라인 복원(전체 복구 모델) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: '온라인 복원: 읽기/쓰기 파일(전체 복구 모델)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5193d8e84cc3277d8c0031ab4a8f3c4f31845090
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 6c01161349b33bc151fac3c7faadf77ac14f9302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341853"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243687"
 ---
-# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>예: 읽기/쓰기 파일의 온라인 복원(전체 복구 모델)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>예제: 읽기/쓰기 파일의 온라인 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 여러 개의 파일 또는 파일 그룹이 있는 전체 복구 모델에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  

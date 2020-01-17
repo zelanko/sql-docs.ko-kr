@@ -1,6 +1,7 @@
 ---
-title: '자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션) | Microsoft Docs'
-ms.custom: ''
+title: '자습서: 트랜잭션 복제 구성'
+description: 이 자습서에서는 완전히 연결된 두 SQL Server 간에 트랜잭션 복제를 구성하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907711"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321930"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "72907711"
 
 이 자습서에서는 계속 연결되는 서버에 대해 트랜잭션 복제 토폴로지를 구성하는 방법을 보여줍니다. 트랜잭션 복제가 작동하는 방법에 대한 자세한 내용은 [트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)를 참조하세요. 
   
-## <a name="what-you-will-learn"></a>학습 내용  
+## <a name="what-you-will-learn"></a>알아볼 내용  
 이 자습서에서는 트랜잭션 복제를 사용하여 한 데이터베이스의 데이터를 다른 데이터베이스에 게시하는 방법을 보여 줍니다.  
 
 이 자습서에서는 다음 작업 방법을 배웁니다.
@@ -144,8 +145,8 @@ ms.locfileid: "72907711"
   
 2. **로컬 게시** 폴더에서 **AdvWorksProductTrans**를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  **게시 속성** 대화 상자가 표시됩니다.    
   
-   1\. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다.  
-   2\. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_distribution**을 선택한 다음, **확인**을 선택합니다.
+   a. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다.  
+   b. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_distribution**을 선택한 다음, **확인**을 선택합니다.
    
    ![로그인을 게시 액세스 목록에 추가하기 위한 선택 항목](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -191,9 +192,9 @@ ms.locfileid: "72907711"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구독자에 연결합니다. **보안**을 확장하고, **로그인**을 마우스 오른쪽 단추로 클릭한 다음, **새 로그인**을 선택합니다.     
   
-   1\. **일반** 페이지의 **로그인 이름**에서 **검색**을 선택하고 <*Subscriber_Machine_Name*> **\repl_distribution**에 대한 로그인을 추가합니다.
+   a. **일반** 페이지의 **로그인 이름**에서 **검색**을 선택하고 <*Subscriber_Machine_Name*> **\repl_distribution**에 대한 로그인을 추가합니다.
 
-   2\. **사용자 매핑** 페이지에서 **ProductReplica** 데이터베이스에 대한 로그인 **db_owner** 멤버 자격을 부여합니다. 
+   b. **사용자 매핑** 페이지에서 **ProductReplica** 데이터베이스에 대한 로그인 **db_owner** 멤버 자격을 부여합니다. 
 
    ![구독자에서 로그인을 구성하기 위한 선택 항목](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -209,7 +210,7 @@ ms.locfileid: "72907711"
    ![“동기화 상태 보기” 대화 상자를 열기 위한 선택 항목](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. **AdvWorksProductTrans**에 해당 구독이 표시되지 않으면 F5 키를 선택하여 목록을 새로 고칩니다.  
   
-참조 항목:  
+자세한 내용은 다음을 참조하세요.  
 - [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)  
 - [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
@@ -223,14 +224,14 @@ ms.locfileid: "72907711"
 
 2. 왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자 인스턴스를 확장한 다음, **AdvWorksProductTrans** 게시를 선택합니다.  
   
-   1\. **추적 프로그램 토큰** 탭을 선택합니다.  
-   2\. **추적 프로그램 삽입**을 선택합니다.    
-   c. 다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
+   a. **추적 프로그램 토큰** 탭을 선택합니다.  
+   b. **추적 프로그램 삽입**을 선택합니다.    
+   다. 다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
 
    ![추적 프로그램 토큰에 대한 정보](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-참조 항목: 
+자세한 내용은 다음을 참조하세요. 
 - [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [트랜잭션 복제 에이전트를 사용하여 오류 찾기](troubleshoot-tran-repl-errors.md)
 

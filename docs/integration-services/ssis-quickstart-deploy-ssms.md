@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281673"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947119"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포
 
@@ -30,7 +30,7 @@ SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL �
 
 Azure SQL Database에 대한 배포를 위해 이 아티클에서 설명한 유효성 검사에는 SSDT(SQL Server Data Tools) 버전 17.4 이상이 필요합니다. SSDT의 최신 버전을 얻으려면 [SQL Server Data Tools(SSDT) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
 
-Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
+Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
@@ -38,7 +38,7 @@ Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 �
 
 -   Windows의 SQL Server
 
--   Azure SQL Database Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+-   Azure SQL Database. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 이 빠른 시작의 정보를 사용하여 SQL Server on Linux에 SSIS 패키지를 배포할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
@@ -46,12 +46,12 @@ Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 �
 
 Azure SQL Database에 프로젝트를 배포하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 
-## <a name="wizard_auth"></a> 배포 마법사의 인증 방법
+## <a name="authentication-methods-for-deployment"></a>배포를 위한 인증 방법
 
 배포 마법사를 사용하여 SQL Server에 배포하는 경우 Windows 인증을 사용해야 합니다. SQL Server 인증을 사용할 수 없습니다.
 
@@ -65,11 +65,11 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 
 2. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안된 값 | 추가 정보 | 
+   | 설정       | 제안 값 | 추가 정보 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
+   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수입니다. |
    | **서버 이름** | 정규화된 서버 이름 | Azure SQL Database 서버에 연결하는 경우 이름은 `<server_name>.database.windows.net` 형식입니다. |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | SQL Server 인증을 사용하여 SQL Server나 Azure SQL Database에 연결할 수 있습니다. 이 아티클에서 [배포 마법사의 인증 방법](#wizard_auth)을 참조하세요. |
+   | **인증** | SQL Server 인증 | SQL Server 인증을 사용하여 SQL Server나 Azure SQL Database에 연결할 수 있습니다. 이 문서에서 [배포 시 인증 방법](#authentication-methods-for-deployment)을 참조하세요. |
    | **로그인** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
 
@@ -94,7 +94,7 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
   
 3.  **대상 선택** 페이지에서 프로젝트의 대상을 선택합니다.
     -   정규화된 서버 이름을 입력합니다. 대상 서버가 Azure SQL Database 서버인 경우 이름은 `<server_name>.database.windows.net` 형식입니다.
-    -   인증 정보를 입력한 다음, **연결**을 선택합니다. 이 아티클에서 [배포 마법사의 인증 방법](#wizard_auth)을 참조하세요.
+    -   인증 정보를 입력한 다음, **연결**을 선택합니다. 이 문서에서 [배포 시 인증 방법](#authentication-methods-for-deployment)을 참조하세요.
     -   그런 다음 **찾아보기**를 선택하여 SSISDB에서 대상 폴더를 선택합니다.
     -   그런 다음, **다음**을 선택하여 **검토** 페이지를 엽니다. (**연결**을 선택하면 **다음** 단추가 활성화됩니다.)
   

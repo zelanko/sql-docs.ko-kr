@@ -1,6 +1,5 @@
 ---
-title: '예: ELEMENTS 지시어를 사용하여 XSINIL 지정 | Microsoft Docs'
-ms.custom: ''
+title: ELEMENTS 지시문을 사용하여 XSINIL 지정 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b93c7b9acfc5a3e197709cf71ec0c7923fe7d91c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 98b28f2115634c8dd173adb22e76ec6a92cd8928
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943488"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254124"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>예: ELEMENTS 지시어를 사용하여 XSINIL 지정
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>예제: ELEMENTS 지시어를 사용하여 XSINIL 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   다음 쿼리는 `ELEMENTS` 지시어를 지정하여 쿼리 결과로부터 요소 중심 XML을 생성합니다.  
   

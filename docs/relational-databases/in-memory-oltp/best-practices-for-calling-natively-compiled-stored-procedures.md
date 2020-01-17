@@ -1,22 +1,22 @@
 ---
-title: 고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법 | Microsoft 문서
-ms.custom: ''
+title: 모범 사례- 고유하게 컴파일된 저장 프로시저
+ms.custom: seo-dt-2019
 ms.date: 03/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
+ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b78fe54f7643421328f6d6a2ec61544db725488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae3789c3f6afce4a54bede57d8fe3b805b94ff5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951154"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412783"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67951154"
   
  고유하게 컴파일된 저장 프로시저를 사용하는 경우의 성능 이점은 행 수와 프로시저에서 처리하는 논리의 양이 많을수록 커집니다. 예를 들어 고유하게 컴파일된 저장 프로시저는 다음 중 하나 이상을 사용하는 경우 성능이 향상됩니다.  
   
--   집계  
+-   집계.  
   
 -   중첩 루프 조인  
   

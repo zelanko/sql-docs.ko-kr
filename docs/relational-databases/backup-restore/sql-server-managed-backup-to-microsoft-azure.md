@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft 문서
+title: Microsoft Azure로의 SQL Server 관리형 백업 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041359"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245425"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob Storage에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 스토리지에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 의 프로시저 및 기본 동작이 변경되었습니다. 자세한 내용은 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)을 참조하세요.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 의 프로시저 및 기본 동작이 변경되었습니다. 자세한 내용은 [SQL Server 2016으로 SQL Server 2014 관리형 백업 설정 마이그레이션](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)을 참조하세요.  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure 가상 컴퓨터에서 실행되는 SQL Server 인스턴스에 사용하는 것이 좋습니다.  
@@ -34,10 +34,10 @@ ms.locfileid: "68041359"
   
  또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob Storage 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
-##  <a name="Prereqs"></a> 필수 구성 요소  
+##  <a name="Prereqs"></a> 필수 조건  
  Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
   
-|사전 요구 사항|설명|  
+|필수 요소|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure 계정**|[무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 Azure를 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.|  
 |**Azure Storage 계정**|백업은 Azure 스토리지 계정에 연결된 Azure Blob 스토리지에 저장됩니다. 스토리지 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68041359"
   
 |||  
 |-|-|  
-|시스템 개체|설명|  
+|시스템 개체|Description|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 만든 모든 백업에 대한 메타데이터, 백업 기록을 저장합니다.|  
 |[managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]를 사용합니다.|  
 |[managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 설정(예: 암호화)을 구성합니다.|  
@@ -109,7 +109,7 @@ ms.locfileid: "68041359"
  10개 이상의 전체 데이터베이스 백업이 동시에 예약된 경우 확장 이벤트의 디버그 채널을 통해 경고가 발생합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 백업이 필요한 나머지 데이터베이스의 우선 순위 큐를 관리합니다.  
 
 > [!NOTE]
-> 프록시 서버에서 SQL Server Managed Backup이 지원되지 않습니다.
+> 프록시 서버에서는 SQL Server 관리형 백업이 지원되지 않습니다.
 >
   
 ##  <a name="support_limits"></a> 지원 가능성  
@@ -123,14 +123,14 @@ ms.locfileid: "68041359"
   
 -   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 스토리지 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 블록 Blob에 백업 기능을 사용합니다. 블록 Blob의 최대 크기는 200GB입니다. 그러나 스트라이프를 활용하여 개별 백업의 최대 크기를 최대 12TB가 될 수 있습니다. 백업 요구 사항이 이 크기를 초과하는 경우 압축을 사용해 보고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 백업 파일 크기를 테스트하세요. 로컬 디스크에 백업하거나 **BACKUP TO URL** Transact-SQL 문을 사용하여 Microsoft Azure Storage에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 블록 Blob에 백업 기능을 사용합니다. 블록 Blob의 최대 크기는 200GB입니다. 그러나 스트라이프를 활용하여 개별 백업의 최대 크기를 최대 12TB가 될 수 있습니다. 백업 요구 사항이 이 크기를 초과하는 경우 압축을 사용해 보고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 백업 파일 크기를 테스트하세요. 로컬 디스크에 백업하거나 **BACKUP TO URL** Transact-SQL 문을 사용하여 Microsoft Azure Storage에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성한 경우 일부 제한 사항이 있을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-- [Microsoft Azure에 대한 SQL Server Managed Backup 설정](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Microsoft Azure에 대한 SQL Server Managed Backup 해제](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [Microsoft Azure로의 SQL Server 관리형 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Microsoft Azure로의 SQL Server 관리형 백업용 고급 옵션 구성](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Microsoft Azure로의 SQL Server 관리형 백업 사용 안 함](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [시스템 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

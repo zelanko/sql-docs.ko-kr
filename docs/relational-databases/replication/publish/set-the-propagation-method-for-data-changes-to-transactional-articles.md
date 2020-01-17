@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정 | Microsoft 문서
-ms.custom: ''
+title: 아티클 변경 내용의 전파 방법 설정(트랜잭션)
+description: SSMS(SQL Server Management Studio) 또는 T-SQL(Transact-SQL)을 사용하여 트랜잭션 복제에 트랜잭션 아티클 데이터 변경 내용의 전파 방법을 설정하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 446855f89b924cb41462df67d02926f3b7b1ebe9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904986"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321196"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "72904986"
   
      [Transact-SQL](#TsqlProcedure)  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -162,6 +163,6 @@ ms.locfileid: "72904986"
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

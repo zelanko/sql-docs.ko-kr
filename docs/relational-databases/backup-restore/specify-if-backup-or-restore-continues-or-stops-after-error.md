@@ -1,7 +1,7 @@
 ---
-title: 오류 발생 후 백업 또는 복원을 계속할지 중지할지 지정 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/17/2017
+title: 오류 발생 후 백업 또는 복원 설정
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e40636bc4f76e6963c0c766c36392515f7c200da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68216178"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251167"
 ---
-# <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>오류 발생 후 백업 또는 복원을 계속할지 중지할지 지정
+# <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>오류 발생 후 계속 또는 중지하도록 백업 또는 복원 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류 발생 후 백업 또는 복원 작업을 계속할지 중지할지를 지정하는 방법에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "68216178"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  BACKUP  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   

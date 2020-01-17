@@ -1,7 +1,7 @@
 ---
-title: 가용성 그룹의 가용성 모드 간 차이점
+title: 가용성 그룹의 가용성 모드
 description: Always On 가용성 그룹에 대한 다양한 가용성 모드에 대한 설명입니다.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934840"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241775"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 가용성 그룹의 가용성 모드 간 차이점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ ms.locfileid: "67934840"
   
  다음 그림에서는 5개의 가용성 복제본이 있는 가용성 그룹을 보여 줍니다. 주 복제본 및 하나의 보조 복제본이 자동 장애 조치를 사용하여 동기-커밋 모드에 대해 구성됩니다. 또한 다른 보조 복제본이 계획된 수동 장애 조치만 사용하여 동기-커밋 모드에 대해 구성되고, 두 개의 보조 복제본이 비동기-커밋 모드에 대해 구성됩니다(강제 수동 장애 조치만 지원함, 일반적으로 *강제 장애 조치 작업*이라고 함).  
   
- ![복제본의 가용성 및 장애 조치 모드](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "복제본의 가용성 및 장애 조치 모드")  
+ ![복제본의 가용성 및 장애 조치(Failover) 모드](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "복제본의 가용성 및 장애 조치(Failover) 모드")  
   
  두 가용성 복제본 간의 동기화와 장애 조치(failover) 동작은 두 복제본의 가용성 모드에 따라 다릅니다. 예를 들어 발생할 동기 커밋의 경우 동기 커밋에 대해 현재 주 복제본 및 보조 복제본을 모두 구성해야 합니다. 이와 마찬가지로 발생할 자동 장애 조치(Failover)의 경우 자동 장애 조치(Failover)에 대해 두 복제본을 모두 구성해야 합니다. 따라서 위에서 그림에 표시된 배포 시나리오 동작은 다음 표로 요약될 수 있으며 이 표에서는 각 잠재 주 복제본과 함께 동작을 설명합니다.  
   
 |현재 주 복제본|자동 장애 조치(Failover) 대상|동기-커밋 모드 다음에 대한 동작|비동기-커밋 모드 다음에 대한 동작|자동 장애 조치(Failover) 가능 여부|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 및 03|04|예|  
-|02|01|01 및 03|04|예|  
-|03||01 및 02|04|아니오|  
-|04|||01, 02 및 03|아니오|  
+|01|02|02 및 03|04|yes|  
+|02|01|01 및 03|04|yes|  
+|03||01 및 02|04|예|  
+|04|||01, 02 및 03|예|  
   
  일반적으로 노드 04는 비동기 커밋 복제본으로서 재해 복구 사이트에 배포됩니다. 노드 04에 대한 장애 조치(Failover)를 수행한 후 노드 01, 02, 03은 비동기 커밋 모드로 유지된다는 점에서 두 사이트 간의 긴 네트워크 지연 시간으로 인해 가용성 그룹의 잠재적 성능이 저하되는 것을 방지할 수 있습니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "67934840"
 
 보조 복제본의 다시 실행 대기 시간을 조사하는 방법에 대한 자세한 내용은 [보조 복제본에 반영되지 않은 기본 변경 내용 문제 해결](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)을 참조하세요.
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **가용성 모드와 장애 조치(failover) 모드를 변경하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -178,6 +178,6 @@ ms.locfileid: "67934840"
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [장애 조치 및 장애 조치 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
- [SQL Server의 WSFC&#40;Windows Server 장애 조치(Failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

@@ -1,9 +1,8 @@
 ---
 title: DELETE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,19 +25,20 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983236"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548278"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테이블 또는 뷰에서 하나 이상의 행을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -119,7 +120,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  테이블 변수는 해당 범위 내에서 DELETE 문의 테이블 원본으로도 사용될 수 있습니다.  
   
- *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
+ *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -166,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 최적화 프로그램 힌트를 사용하여 문을 처리하는 방법을 사용자 지정한다는 것을 나타내는 키워드입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  테이블의 모든 행을 삭제하려면 TRUNCATE TABLE을 사용합니다. TRUNCATE TABLE은 DELETE보다 더 빠르고 시스템 및 트랜잭션 로그 리소스를 더 적게 사용합니다. TRUNCATE TABLE은 테이블이 복제에 참여할 수 없는 등의 제한 사항이 있습니다. 자세한 내용은 [TRUNCATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)을 참조하세요.  
   
  @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삭제된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
@@ -218,7 +219,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="examples"></a>예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|Delete|  
 |[삭제되는 행 제한](#LimitRows)|WHERE • FROM • 커서 •|  
@@ -228,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 DELETE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>1\. WHERE 절 없이 DELETE 사용  
+#### <a name="a-using-delete-with-no-where-clause"></a>A. WHERE 절 없이 DELETE 사용  
  다음 예에서는 삭제되는 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `SalesPersonQuotaHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 모든 행을 삭제합니다.  
   
 ```sql
@@ -239,8 +240,8 @@ GO
 ###  <a name="LimitRows"></a>삭제되는 행 제한  
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2\. WHERE 절을 사용하여 행 집합 삭제  
- 다음 예에서는 `ProductCostHistory` 열의 값이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 을 초과하는 모든 행을 `StandardCost` 데이터베이스의 `1000.00`테이블에서 삭제합니다.  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 절을 사용하여 행 집합 삭제  
+ 다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 커서를 사용하여 삭제할 행 확인  
- 다음 예에서는 `EmployeePayHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용하여 `my_cursor`. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 다음 예에서는 `complex_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -430,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>11. 테이블에서 행을 삭제합니다.  
  다음 예에서는 삭제될 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `Table1` 테이블에서 모든 행을 삭제합니다.  
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>15. WHERE 절을 사용하여 삭제
+
+이 쿼리는 FROM 절을 사용하지 않고 WHERE 절을 사용하여 삭제하는 방법을 보여 줍니다.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

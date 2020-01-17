@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
+ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916027"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75493580"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "72916027"
   
  실제로 여러 이유로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
   
-|log_reuse_wait 값|log_reuse_wait_desc 값|설명|  
+|log_reuse_wait 값|log_reuse_wait_desc 값|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|현재 다시 사용 가능한 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)이 하나 이상 있습니다.|  
 |1|CHECKPOINT|마지막 로그 잘림이나 로그 헤더가 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)을 넘어서 이동되지 않았기 때문에 검사점이 발생하지 않습니다. 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.|  
@@ -111,7 +111,7 @@ ms.locfileid: "72916027"
 |3|ACTIVE_BACKUP_OR_RESTORE|데이터 백업이나 복원이 진행되고 있습니다(모든 복구 모델).<br /><br /> 데이터 백업으로 인해 로그 잘림이 발생하지 않을 경우 해당 백업 작업을 취소하면 즉시 문제를 해결할 수 있습니다.|  
 |4|ACTIVE_TRANSACTION|트랜잭션이 활성 상태입니다(모든 복구 모델).<br /><br /> 로그 백업 시작 시 장기 실행 트랜잭션이 있을 수 있습니다. 이 경우 공간을 확보하려면 다른 로그 백업이 필요할 수 있습니다. 트랜잭션 로그가 일반적으로 각 자동 검사점에서 잘리는 단순 복구 모델을 비롯한 모든 복구 모델에서 장기 실행 트랜잭션은 로그 잘림이 수행되지 않도록 합니다.<br /><br /> 트랜잭션이 지연되었습니다. *지연된 트랜잭션* 은 사실상 일부 사용할 수 없는 리소스로 인해 롤백이 차단된 활성 트랜잭션입니다. 지연된 트랜잭션의 원인 및 이러한 트랜잭션을 지연된 상태에서 벗어나게 하는 방법에 대한 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)을 참조하십시오.<br /> <br /> 장기 실행 트랜잭션은 tempdb의 트랜잭션 로그를 채울 수도 있습니다. Tempdb는 정렬을 위한 작업 테이블, 해싱을 위한 작업 파일, 커서 작업 테이블 및 행 버전 관리 등 내부 개체에 대한 사용자 트랜잭션에 의해 암시적으로 사용됩니다. 사용자 트랜잭션에 데이터 읽기(`SELECT` 쿼리)만 포함되는 경우에도 내부 개체가 만들어져 사용자 트랜잭션 하에서 사용될 수 있습니다. 그런 다음 tempdb 트랜잭션 로그를 채울 수 있습니다.|  
 |5|DATABASE_MIRRORING|데이터베이스 미러링이 일시 중지되거나 성능 우선 모드에서는 미러 데이터베이스가 주 데이터베이스보다 훨씬 않습니다(전체 복구 모델에만 해당).<br /><br /> 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
-|6|REPLICATION|트랜잭션 복제 중에 게시와 관련된 트랜잭션이 배포 데이터베이스로 배달되지 않습니다(전체 복구 모델에만 해당).<br /><br /> 트랜잭션 복제에 대한 자세한 내용은 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)를 참조하십시오.|  
+|6|복제|트랜잭션 복제 중에 게시와 관련된 트랜잭션이 배포 데이터베이스로 배달되지 않습니다(전체 복구 모델에만 해당).<br /><br /> 트랜잭션 복제에 대한 자세한 내용은 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)를 참조하십시오.|  
 |7|DATABASE_SNAPSHOT_CREATION|데이터베이스 스냅샷이 생성되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |8|LOG_SCAN|로그 검색이 수행되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.|  
@@ -120,6 +120,7 @@ ms.locfileid: "72916027"
 |12|-|내부용으로만 사용할 수 있습니다.|  
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 [로그 시퀀스 번호(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
+|16|XTP_CHECKPOINT|메모리 내 OLTP 검사점을 수행해야 합니다. 메모리 최적화 테이블의 경우 마지막 검사점 이후 트랜잭션 로그 파일이 1.5GB보다 커질 때 자동 검사점이 수행됩니다(디스크 기반 테이블과 메모리 최적화 테이블 모두 포함).<br /> 자세한 내용은 [메모리 최적화 테이블의 검사점 작업](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) 및 [메모리 내 최적화 테이블의 로깅 및 검사점 프로세스](https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/) )를 참조하세요.
   
 ##  <a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
 *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 [복구 모델](../backup-restore/recovery-models-sql-server.md) 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
@@ -175,10 +176,10 @@ ms.locfileid: "72916027"
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)   
-[대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+[대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
 [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   

@@ -1,6 +1,7 @@
 ---
-title: 환경 변수를 사용하여 SQL Server 설정 구성
+title: SQL Server on Linux의 환경 변수 구성
 description: 이 문서에서는 환경 변수를 사용하여 Linux에서 특정 SQL Server 2017 설정을 구성하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531318"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558376"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
 
@@ -43,7 +44,7 @@ ms.locfileid: "73531318"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 환경 변수 | 설명 |
+| 환경 변수 | Description |
 |-----|-----|
 | **ACCEPT_EULA** | [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성합니다. |
@@ -67,7 +68,7 @@ ms.locfileid: "73531318"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 환경 변수 | 설명 |
+| 환경 변수 | Description |
 |-----|-----|
 | **ACCEPT_EULA** | [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성합니다. |

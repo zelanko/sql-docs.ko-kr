@@ -1,6 +1,7 @@
 ---
-title: '자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자) | Microsoft Docs'
-ms.custom: ''
+title: '자습서: 복제 준비'
+description: 이 자습서에서는 Windows 계정을 만들고, 스냅샷 폴더를 준비하고, 배포를 구성하여 복제를 위해 게시자, 배포자, 구독자를 준비하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653828"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320450"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "69653828"
 > [!NOTE]  
 > 서버 간 데이터를 안전하게 복제하려면 [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)의 모든 권장 사항을 구현해야 합니다.  
   
-## <a name="what-you-will-learn"></a>학습 내용  
+## <a name="what-you-will-learn"></a>알아볼 내용  
 이 자습서에서는 최소의 권한을 사용하여 안전하게 복제를 실행할 수 있도록 서버를 준비하는 방법을 설명합니다.  
 
 이 자습서에서는 다음 작업 방법을 배웁니다.
@@ -116,9 +117,9 @@ ms.locfileid: "69653828"
   
 3. 이 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-   1\. **repldata 속성** 대화 상자의 **공유** 탭에서 **고급 공유**를 선택합니다.  
+   a. **repldata 속성** 대화 상자의 **공유** 탭에서 **고급 공유**를 선택합니다.  
   
-   2\. **고급 공유** 대화 상자에서 **이 폴더 공유**를 선택한 다음, **권한**을 선택합니다.  
+   b. **고급 공유** 대화 상자에서 **이 폴더 공유**를 선택한 다음, **권한**을 선택합니다.  
 
    ![Repldata 폴더를 공유하기 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -188,7 +189,7 @@ ms.locfileid: "69653828"
 
    ![서버를 자체 배포자로 작동하게 하는 옵션](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **에이전트 시작** 페이지에서 **예를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작**되도록 구성합니다. **다음**을 선택합니다.  
+4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **에이전트 시작** 페이지에서 **예, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 구성합니다.** 를 선택합니다. **다음**을 선택합니다.  
 
      
 5. **스냅샷 폴더** 상자에 \\\\<*Publisher_Machine_Name*> **\repldata** 경로를 입력한 후, **다음**을 선택합니다. 이 경로는 공유 속성을 구성한 후 repldata 속성 폴더의 **네트워크 경로**에서 이전의 본 것과 일치해야 합니다. 
@@ -235,7 +236,7 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
    ![개체 탐색기에서 4개 계정 모두 보기](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
   
-참조 항목:
+자세한 내용은 다음을 참조하세요.
 - [배포 구성](../../relational-databases/replication/configure-distribution.md) 
 - [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)  
 

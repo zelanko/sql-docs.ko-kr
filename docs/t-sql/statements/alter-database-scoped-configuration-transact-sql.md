@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: 개별 데이터베이스 수준에서 여러 데이터베이스 구성 설정을 사용하도록 설정합니다.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240698"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258132"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -52,7 +54,7 @@ ms.locfileid: "73240698"
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 실제 실행 계획의 수집을 활성화하거나 비활성화합니다.
 - 일시 중지된 다시 시작 가능 인덱스 작업이 SQL Server 엔진에서 자동으로 중단되기 전에 일시 중지되는 시간(분)을 지정합니다.
 
-![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -96,7 +98,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > [!IMPORTANT]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 일부 옵션 이름이 변경되었습니다.      
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF`가 `INTERLEAVED_EXECUTION_TVF`로 변경됨
-> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`이 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`으로 변경됨
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`가 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`로 변경됨
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
 
 ## <a name="arguments"></a>인수
@@ -120,7 +122,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 
 > [!NOTE]
-> **max degree of parallelism (MAXDOP)** 제한은 [작업](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)별로 설정됩니다. [요청](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)별 또는 쿼리 제한별로 수행되지 않습니다. 즉, 병렬 쿼리 실행 중에 단일 요청은 [스케줄러](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)에 할당되는 여러 작업을 생성할 수 있습니다. 자세한 내용은 [스레드 및 작업 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요. 
+> **MAXDOP(최대 병렬 처리 수준)** 제한은 [태스크](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)별로 설정됩니다. [요청](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)별 또는 쿼리 제한별로 수행되지 않습니다. 즉, 병렬 쿼리 실행 중에 단일 요청은 [스케줄러](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)에 할당되는 여러 작업을 생성할 수 있습니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요. 
 
 인스턴스 수준에서 이 옵션을 설정하려면 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
@@ -128,9 +130,9 @@ MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세�
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 서버 수준의 **max degree of parallelism** 구성은 항상 0으로 설정됩니다. 현재 문서에 설명된 대로 각 데이터베이스에 대해 MAXDOP를 구성할 수 있습니다. MAXDOP를 최적으로 구성하는 방법에 대한 권장 사항은 [추가 리소스](#additional-resources) 섹션을 참조하세요.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.    
-> 서버 수준에서 이를 수행하려면 **max degree of parallelism (MAXDOP)** [서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 사용합니다.     
-> 작업 수준에서 이 작업을 수행하려면 **MAX_DOP** [리소스 관리자(Resource Governor) 작업 그룹 구성 옵션](../../t-sql/statements/create-workload-group-transact-sql.md)을 사용합니다.    
+> 쿼리 수준에서 이 작업을 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.    
+> 서버 수준에서 이 작업을 수행하려면 **MAXDOP(최대 병렬 처리 수준)** [서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 사용합니다.     
+> 워크로드 수준에서 이 작업을 수행하려면 **MAX_DOP** [Resource Governor 워크로드 그룹 구성 옵션](../../t-sql/statements/create-workload-group-transact-sql.md)을 사용합니다.    
 
 PRIMARY
 
@@ -141,8 +143,8 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 데이터베이스의 호환성 수준에 관계없이 SQL Server 2012 및 이전 버전에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 설정할 수 있습니다. 기본값은 **OFF**이며, 데이터베이스의 호환성 수준에 따라 쿼리 최적화 프로그램 카디널리티 추정 모델을 설정합니다. LEGACY_CARDINALITY_ESTIMATION을 **ON**으로 설정하는 것은 [추적 플래그 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하는 것과 동일합니다.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하기 위해 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 추가합니다.
+> 쿼리 수준에서 이 작업을 수행하려면 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면 추적 플래그를 사용하는 대신 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 추가합니다.
 
 PRIMARY
 
@@ -153,8 +155,8 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 [매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 사용하거나 사용하지 않도록 설정합니다. 기본값은 ON입니다. PARAMETER_SNIFFING를 OFF로 설정하는 것은 [추적 플래그 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하는 것과 동일합니다.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하기 위해 **OPTIMIZE FOR UNKNOWN** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 사용할 수도 있습니다.
+> 쿼리 수준에서 이 작업을 수행하려면 **OPTIMIZE FOR UNKNOWN** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하기 위해 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 사용할 수도 있습니다.
 
 PRIMARY
 
@@ -165,7 +167,7 @@ PRIMARY
 데이터베이스의 호환성 수준에 관계없이 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **OFF**이며 가장 높은 호환성 수준이 특정 버전(RTM 이후)에 대해 도입된 후에 릴리스된 쿼리 최적화 프로그램 핫픽스를 비활성화합니다. 이 값을 **ON**으로 설정하면 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 활성화하는 것과 동일합니다.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하기 위해 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
+> 쿼리 수준에서 이 작업을 수행하려면 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 USE HINT [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 추가합니다.
 
 PRIMARY
@@ -365,7 +367,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 이 옵션의 현재 값은 [database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에 표시됩니다.
 
-## <a name="Permissions"></a> 사용 권한
+## <a name="Permissions"></a> 권한
 
 데이터베이스에 `ALTER ANY DATABASE SCOPE CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
 
@@ -383,7 +385,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 일부 옵션 이름이 변경되었습니다.      
 -  `DISABLE_INTERLEAVED_EXECUTION_TVF`가 `INTERLEAVED_EXECUTION_TVF`로 변경됨
--  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`이 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`으로 변경됨
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`가 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`로 변경됨
 -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
@@ -430,7 +432,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION의 사용을 보여 줍니다.
 
-### <a name="a-grant-permission"></a>1\. 사용 권한 부여
+### <a name="a-grant-permission"></a>A. 사용 권한 부여
 
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 Joe에게 부여합니다.
 
@@ -438,7 +440,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
-### <a name="b-set-maxdop"></a>2\. MAXDOP 설정
+### <a name="b-set-maxdop"></a>B. MAXDOP 설정
 
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 MAXDOP = 1을 설정하고 보조 데이터베이스에 대해 MAXDOP = 4를 설정합니다.
 
@@ -596,7 +598,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ## <a name="more-information"></a>자세한 정보   
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [SQL Server의 "max degree of parallelism" 구성 옵션에 대한 권장 사항 및 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [SQL Server의 "최대 병렬 처리 수준" 구성 옵션에 대한 권장 사항 및 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
  [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
  [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    

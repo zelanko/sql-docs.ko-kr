@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298224"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546529"
 ---
 # <a name="odata-source"></a>OData 원본
 
@@ -41,13 +41,15 @@ SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(
 
 OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 -   Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online
--   SharePoint 목록 SharePoint 서버의 모든 목록을 보려면 URL https://\<server>/_vti_bin/ListData.svc를 사용합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](https://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.
+-   SharePoint 목록 SharePoint 서버의 모든 목록을 보려면 URL `https://<server>/_vti_bin/ListData.svc`를 사용합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](https://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.
 
 ## <a name="supported-data-types"></a>지원되는 데이터 형식
 
 OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string 및 TimeSpan을 지원합니다.
 
 데이터 원본에 있는 열의 데이터 형식을 검색하려면 `https://<OData feed endpoint>/$metadata` 페이지를 확인입니다.
+
+**Decimal** 데이터 형식의 전체 자릿수와 소수 자릿수는 원본 메타데이터에서 결정됩니다. 원본 메타데이터에서 **전체 자릿수** 및 **소수 자릿수** 속성을 지정하지 않는 경우 데이터가 잘릴 수 있습니다.
 
 > [!IMPORTANT]
 > OData 원본 구성 요소는 SharePoint 목록에서 다중 선택 항목과 같은 복합 형식을 지원하지 않습니다.
@@ -83,7 +85,7 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
  **컬렉션 또는 리소스 경로 사용**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |컬렉션|컬렉션 이름을 사용하여 OData 원본에서 데이터를 검색합니다.|  
 |리소스 경로|리소스 경로를 사용하여 OData 원본에서 데이터를 검색합니다.|  
@@ -105,7 +107,7 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>컬렉션 또는 리소스 경로 사용 = 리소스 경로  
  **Resource path**  
- 리소스 경로를 입력합니다. 예를 들어 Employees  
+ 리소스 경로를 입력합니다. 다음은 그 예입니다.  Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  

@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹이 포함된 Reporting Services(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹이 포함된 Reporting Services
+description: Always On 가용성 그룹을 사용하여 SSRS(SQL Server Reporting Services)를 구성하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252115"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243616"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "68252115"
   
 -   **SharePoint 모드:** SharePoint 서버에 이미 게시된 보고서에 대한 문서 라이브러리 내에서 SharePoint 구성 페이지를 사용합니다.  
   
--   **보고서 디자인:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep또는ts. 이 항목의 '보고서 디자인' 섹션 또는 추가 정보를 참조하세요.  
+-   **보고서 디자인:** 새 보고서를 만들 때 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]를 사용합니다. 이 항목의 '보고서 디자인' 섹션 또는 추가 정보를 참조하세요.  
   
  **추가 리소스:**  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252115"
 ##  <a name="bkmk_reportdesign"></a> 보고서 디자인 및 가용성 그룹  
  [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 에서 보고서를 디자인하거나 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서 프로젝트를 디자인할 때 사용자는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 제공되는 새로운 연결 속성을 포함하도록 보고서 데이터 원본 연결 문자열을 구성할 수 있습니다. 새 연결 속성에 대한 지원은 사용자가 보고서를 미리 보는 위치에 따라 달라집니다.  
   
--   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 및 support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
+-   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 .NET Framework 4.0을 사용하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
 -   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
   

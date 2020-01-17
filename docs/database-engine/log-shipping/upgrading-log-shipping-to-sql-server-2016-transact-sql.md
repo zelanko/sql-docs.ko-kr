@@ -1,6 +1,7 @@
 ---
-title: SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 2016 이상으로 로그 전달 업그레이드
+description: 이전 버전에서 SQL Server 2016 이상으로 업그레이드할 때 로그 전달 재해 복구 솔루션을 유지하는 적절한 순서를 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227141"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258574"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "71227141"
   
 -   [주 인스턴스 업그레이드](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용 중인 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
@@ -87,7 +88,7 @@ ms.locfileid: "71227141"
 >  또한 로그 전달은 [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)에 대한 옵션, 그리고 선택적으로 [주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경&#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)을 지원합니다. 그러나 로그 전달이 더 이상 고가용성 솔루션으로 구성되는 경우는 거의 없으므로(최신 옵션이 훨씬 더 강력함), 시스템 데이터베이스 개체가 동기화되지 않기 때문에 장애 조치는 일반적으로 가동 중지 시간을 최소화하지 않으며 클라이언트가 승격된 보조 인스턴스를 쉽게 찾아 연결하기는 어려울 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   

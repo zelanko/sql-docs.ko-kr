@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105954"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257585"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio에 대한 PowerShell 편집기 지원
 
@@ -67,7 +67,7 @@ PowerShell Core는 [GitHub](https://github.com/powershell/powershell)의 오픈 
 MacOS 또는 Linux 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [Linux에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [MacOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [macOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>예제 스크립트
 
@@ -173,7 +173,7 @@ Mode Name
 -    localhost\SQL2017
 ```
 
-데이터베이스 또는 데이터베이스 내의 개체와 관련된 많은 작업에 `Get-SqlDatabase` cmdlet을 사용할 수 있습니다.  `-ServerInstance` 및 `-Database` 매개 변수의 값을 제공하는 경우 해당 데이터베이스 개체만 검색됩니다.  그러나 `-ServerInstance` 매개 변수만 지정하면 해당 인스턴스에 있는 모든 데이터베이스의 전체 목록이 반환됩니다.
+데이터베이스 또는 데이터베이스 내의 개체를 사용하는 많은 작업에서 `Get-SqlDatabase` cmdlet을 사용할 수 있습니다.  `-ServerInstance` 및 `-Database` 매개 변수의 값을 제공하는 경우 해당 데이터베이스 개체만 검색됩니다.  그러나 `-ServerInstance` 매개 변수만 지정하면 해당 인스턴스에 있는 모든 데이터베이스의 전체 목록이 반환됩니다.
 
 다음은 예상 출력을 보여 주는 샘플입니다.
 
@@ -255,16 +255,15 @@ PowerShell 확장에 문제가 발생하는 경우 [문제 해결 설명서](htt
 - [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
-## <a name="license"></a>라이선스
+## <a name="license"></a>License
 
 이 확장은 [MIT 라이선스에 따라 사용이 허가](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)됩니다. 이 프로젝트의 릴리스에 포함되는 타사 이진 파일에 대한 자세한 내용은 [타사 알림](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) 파일을 참조하세요.
 
 ## <a name="code-of-conductconduct-md"></a>[준수 사항][conduct-md]
 
 이 프로젝트는 [Microsoft 오픈 소스 준수 사항][conduct-code]을 채택했습니다.
-자세한 내용은 [준수 사항 FAQ][conduct-FAQ]를 참조하고, 추가 질문이나 의견이 있는 경우에는 [opencode@microsoft.com ][conduct-email]으로 문의하세요.
+자세한 내용은 [준수 사항 FAQ][conduct-FAQ]를 참조하고, 추가 질문이나 의견이 있는 경우에는 [opencode@microsoft.com][conduct-email]으로 문의하세요.
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md
