@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: a0fdd3c8be7e9cbe128d01736e465ae95a120d0f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258416"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75883992"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure SQL Database 관리되는 인스턴스 대시보드(미리 보기)
 

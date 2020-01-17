@@ -9,17 +9,55 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 11/04/2019
-ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.date: 12/26/2019
+ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
+ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532533"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75521733"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="december-2019-hotfix"></a>2019년 12월(핫픽스)
+
+2019년 12월 26일 &nbsp; / &nbsp; 버전: 1.14.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 버그 수정 #8747 OE 확장 실패 | [#8747](https://github.com/microsoft/azuredatastudio/issues/8747)  |
+| &nbsp; | &nbsp; |
+
+## <a name="december-2019"></a>2019년 12월
+
+2019년 12월 19일 &nbsp; / &nbsp; 버전: 1.14.0 
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 현재 활성 연결만 나열하도록 Notebooks의 연결에 연결 드롭다운 변경됨 | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
+| BDC에 연결할 때 SSL 확인 오류를 무시할 수 있도록 bigdatacluster.ignoreSslVerification 설정 추가됨 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| 오프라인 쿼리 편집기의 기본 언어 버전 변경 허용 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
+| 빅 데이터 클러스터/SQL 2019 기능의 GA 상태 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
+
+## <a name="november-2019-hotfix"></a>2019년 11월(핫픽스)
+
+2019년 11월 15일 &nbsp; / &nbsp; 버전: 1.13.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 버그 수정 #8210 복사/붙여넣기 결과의 순서가 잘못됨 |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="november-2019"></a>2019년 11월
 
@@ -29,8 +67,8 @@ ms.locfileid: "73532533"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| 새로운 SQL Server 2019 지원 | &bull; &nbsp; BDC 배포 마법사를 사용한 SQL Server 2019 빅 데이터 클러스터 배포 <br/>&bull; &nbsp; 컨트롤러 대시보드를 사용한 클러스터 상태 관리 <br/>&bull; &nbsp; 보안 ACL 대화 상자를 사용하여 HDFS 액세스 제어 목록 관리 <br/> &bull; &nbsp; HDFS 계층화 대화 상자를 사용하여 탑재 추가 <br/> &bull; &nbsp; 기본 제공 Jupyter Book인 SQL Server 2019 가이드를 사용하여 문제 해결 <br/> &bull; &nbsp; SQL vNext 확장 데이터 가상화 확장으로 이름이 변경됨 <br/> &bull; &nbsp; 외부 테이블 마법사에서 Teradata 및 Mongo 지원 추가|
-| 새로운 Notebook 기능 | &bull; &nbsp; Powershell Notebook 발표 &bull; &nbsp; 축소 가능 코드 셀 발표 <br/>&bull; &nbsp; Notebook의 성능 향상 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)에서 확인할 수 있음 |
+| 새로운 SQL Server 2019 지원 | &bull; &nbsp; BDC 배포 마법사를 사용하여 SQL Server 2019 빅 데이터 클러스터 배포 <br/>&bull; &nbsp; 컨트롤러 대시보드를 사용하여 클러스터 상태 관리 <br/>&bull; &nbsp; 보안 ACL 대화 상자를 사용하여 HDFS 액세스 제어 목록 관리 <br/> &bull; &nbsp; HDFS 계층화 대화 상자를 사용하여 탑재 추가 <br/> &bull; &nbsp; 기본 제공 Jupyter Book인 SQL Server 2019 가이드를 사용하여 문제 해결 <br/> &bull; &nbsp; SQL vNext 확장 데이터 가상화 확장으로 이름 변경됨 <br/> &bull; &nbsp; 외부 테이블 마법사에 Teradata 및 Mongo 지원 추가됨|
+| 새로운 Notebook 기능 | &bull; &nbsp; Powershell Notebooks 발표 <br/> &bull; &nbsp; 접을 수 있는 코드 셀 발표 <br/>&bull; &nbsp; Notebooks의 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)에서 확인할 수 있음 |
 | Jupyter Book 발표  | Jupyter Book는 목차에 구성된 전자 필기장 및 markdown 파일의 컬렉션입니다. |
 | 새 SQL Server 배포 마법사  | 이제 다음과 같은 배포에 대한 지원이 포함됩니다. <br/> &bull; &nbsp; Windows의 SQL Server 2019 <br/> &bull; &nbsp; Windows의 SQL Server 2017 <br/> &bull; &nbsp; Docker의 SQL Server 2019 <br/> &bull; &nbsp; Docker의 SQL Server 2017 |
 | 스키마 비교 확장 GA 발표| &bull; &nbsp; SQLCMD 모드 <br/> &bull; &nbsp; 지역화 지원 <br/> &bull; &nbsp; 접근성 수정 <br/> &bull; &nbsp; 보안 버그  |
@@ -76,7 +114,7 @@ ms.locfileid: "73532533"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
-- 전자 필기장
+- Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
 ## <a name="september-2019"></a>2019년 9월
@@ -89,13 +127,13 @@ ms.locfileid: "73532533"
 | :----- | :------ |
 | SQLCMD 모드 사용 | 이제 쿼리 편집기는 쿼리를 SQLCMD 스크립트로 작성 및 편집하기 위한 SQLCMD 모드 토글을 지원합니다. |
 | 커뮤니티 확장: Query Editor Boost | Query Editor Boost는 쿼리를 자주 작성하는 사용자를 위해 Azure Data Studio 쿼리 편집기를 개선하는 데 초점을 맞춘 오픈 소스 확장입니다. &bull; &nbsp; 현재 쿼리를 코드 조각으로 저장 <br/>&bull; &nbsp; Ctrl+U를 사용하여 데이터베이스 전환 <br/> &bull; &nbsp; 템플릿의 새 쿼리 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/dzsquared/query-editor-boost)에서 확인할 수 있음 |
-| Notebook 기능 개선 | &bull; &nbsp; 더 Notebook 파일 지원을 위한 성능 향상 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)에서 확인할 수 있음 |
+| Notebook 기능 개선 | &bull; &nbsp; 더 큰 Notebook 파일을 지원하기 위한 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)에서 확인할 수 있음 |
 | Visual Studio Code 8월 릴리스 병합 1.38 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_38)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
-- 전자 필기장
+- Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
 
@@ -108,8 +146,8 @@ ms.locfileid: "73532533"
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | SandDance 1.3.1 확장의 릴리스 | &bull; &nbsp; 스마트 차트 검색 <br/>&bull; &nbsp; 3D 시각화 <br/> &bull; &nbsp; 데이터 필터링 |
-| Notebook 기능 개선 | &bull; &nbsp; 인라인으로 코드 또는 텍스트 셀 추가 <br/>&bull; &nbsp; SQL 결과 표를 마우스 오른쪽 단추로 클릭하여 결과를 CSV, JSON 등으로 저장하는 기능을 추가했습니다. <br/> &bull; &nbsp; JSON을 더 빠르게 로드할 수 있게 Notebook 로드 성능이 개선되었습니다. <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)에서 확인할 수 있음 |
-| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간이 단축되었습니다. <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때의 버그를 수정했습니다. <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기가 커졌습니다. | 
+| Notebook 기능 개선 | &bull; &nbsp; 인라인으로 코드 또는 텍스트 셀 추가 <br/>&bull; &nbsp; SQL 결과 표를 마우스 오른쪽 단추로 클릭하여 결과를 CSV, JSON 등으로 저장하는 기능 추가됨 <br/> &bull; &nbsp; JSON을 더 빠르게 로드할 수 있도록 Notebook 로드 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)에서 확인할 수 있음 |
+| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간 단축됨 <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때 발생하는 버그 수정됨 <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기 커짐 | 
 | Dacpac 확장이 이제 AAD를 지원합니다. | 
 | Visual Studio Code 7월 릴리스 병합 1.37 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_37)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
@@ -124,9 +162,9 @@ ms.locfileid: "73532533"
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | SentryOne Plan Explorer 확장 릴리스 | Microsoft의 소중한 파트너인 SentryOne은 [Azure Data Studio용 SentryOne Plan Explorer 확장](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)을 제공할 예정입니다. <br> 이 확장은 쿼리 성능에 영향을 주는 가장 고비용 연산자를 빠르게 식별할 수 있도록 지원하는 최적화된 레이아웃 알고리즘과 간단한 색 구분을 통해 Azure Data Studio에서 실행되는 쿼리에 향상된 계획 다이어그램을 제공하는 무료 확장입니다. 이 확장에 대한 자세한 내용을 보려면 [여기](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)에서 SentryOne 블로그 게시물을 확인하세요. |
-| 스키마 비교를 위한 새로운 기능 | &bull; &nbsp; 스키마 비교 파일 지원(.SCMP) <br/>&bull; &nbsp; 스키마 비교 취소 지원 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)에서 확인할 수 있습니다.|
-| Notebook 기능 개선 | &bull; &nbsp; 플롯 Python 지원 <br/>&bull; &nbsp; 브라우저에서 Notebook 열기 <br/> &bull; &nbsp; Python 패키지 관리 대화 상자 <br/> &bull; &nbsp; 성능 및 Markdown 기능 개선 <br/> &bull; &nbsp; 바로 가기 키 업데이트 <br/>  &bull; &nbsp; 버그 수정 및 사소한 기능은 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+)에서 확인할 수 있음 |
-| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 관리 대시보드 내의 서비스 엔드포인트 테이블에 클러스터의 모든 핵심 서비스가 나열됨 <br/> &bull; &nbsp; 클러스터 상태 Notebook에 모든 서비스 및 Pod에서 클러스터 상태를 쿼리하고 관련 문제를 해결하는 방법이 표시됨| 
+| 스키마 비교를 위한 새로운 기능 | &bull; &nbsp; 스키마 비교 파일 지원(.SCMP) <br/>&bull; &nbsp; 스키마 비교 취소 지원 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)에서 확인할 수 있음|
+| Notebook 기능 개선 | &bull; &nbsp; 플롯 Python 지원 <br/>&bull; &nbsp; 브라우저에서 Notebook 열기 <br/> &bull; &nbsp; Python 패키지 관리 대화 상자 <br/> &bull; &nbsp; 성능 및 Markdown 개선 <br/> &bull; &nbsp; 바로 가기 키 업데이트 <br/>  &bull; &nbsp; 버그 수정 및 사소한 기능은 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+)에서 확인할 수 있음 |
+| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 클러스터의 모든 핵심 서비스를 나열하는 서비스 엔드포인트 테이블이 관리 대시보드에 포함됨 <br/> &bull; &nbsp; 클러스터 상태 Notebook에 모든 서비스 및 Pod에서 클러스터 상태를 쿼리하고 관련 문제를 해결할 수 있는 방법이 표시됨| 
 | 업데이트된 언어 팩 사용 가능| 이제 확장 관리자 마켓플레이스에서 10개의 언어 팩을 사용할 수 있습니다. 간단히, 확장 마켓플레이스를 사용하여 특정 언어를 검색하고 설치합니다. 선택한 언어를 설치하면 Azure Data Studio에서 새 언어로 다시 시작하라는 메시지가 표시됩니다. |
 | SQL Server Profiler 업데이트 | SQL Server 프로필 확장이 다음을 비롯한 새로운 기능을 포함하도록 업데이트되었습니다. <br/> &bull; &nbsp; 데이터베이스 이름을 기준으로 필터링 <br/> &bull; &nbsp; 복사 및 붙여넣기 지원 <br/> &bull; &nbsp; 필터 저장/로드 <br/>SQL Server Profiler 확장 개선 사항의 전체 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)에서 확인할 수 있습니다.  |
 | Visual Studio Code 5월 릴리스 병합 1.35 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_35)에서 확인할 수 있습니다. |
@@ -144,9 +182,9 @@ ms.locfileid: "73532533"
 | :----- | :------ |
 | CMS(중앙 관리 서버) 확장 릴리스 | 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 SQL Server 인스턴스 목록을 저장합니다. 사용자는 고유한 기존 CMS 서버에 연결하고 서버 추가 및 제거와 같은 서버 관리 작업을 수행할 수 있습니다. 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers)를 참조하세요. |
 | Windows용 데이터베이스 관리 도구 확장 릴리스 | 이 확장은 Azure Data Studio를 통해 SQL Server Management Studio에서 가장 많이 사용되는 두 가지 환경을 시작합니다. 사용자는 여러 가지 개체(예: 데이터베이스, 테이블, 열, 뷰 등)를 마우스 오른쪽 단추로 클릭하고 속성을 선택하여 해당 개체의 SSMS 속성 대화 상자를 볼 수 있습니다. 또한 사용자는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 스크립트 생성을 선택하여 잘 알려진 SSMS 스크립트 생성 마법사를 시작할 수 있습니다. 
-| 스키마 비교 기능 개선 | &bull; &nbsp; 제외/포함 옵션이 추가됨 <br/>&bull; &nbsp; 스크립트 생성을 실행하면 생성된 스크립트가 열림 <br/>&bull; &nbsp; 이중 스크롤 막대가 제거됨  <br/>&bull; &nbsp; 서식 및 레이아웃 향상 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)에서 확인할 수 있습니다.|
+| 스키마 비교 기능 개선 | &bull; &nbsp; 제외/포함 옵션 추가됨 <br/>&bull; &nbsp; 스크립트 생성 시 생성된 스크립트 열림 <br/>&bull; &nbsp; 이중 스크롤 막대 제거됨  <br/>&bull; &nbsp; 서식 및 레이아웃 개선 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)에서 확인할 수 있음|
 | 메시지 섹션이 고유한 탭으로 이동됨 | 사용자가 SQL 쿼리를 실행하면 결과 및 메시지가 누적된 패널에 표시되었습니다. 이제 SSMS와 같이 한 패널의 개별 탭으로 표시됩니다. |
-| SQL Notebook 기능 개선 | &bull; &nbsp; 이제 사용자가 Notebook에서 고유한 Python 3 또는 Anaconda 설치를 사용하도록 선택할 수 있음 <br/>&bull; &nbsp; 여러 가지 안정성 + 맞춤/완료 수정 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)에서 확인할 수 있음|
+| SQL Notebook 기능 개선 | &bull; &nbsp; 이제 사용자가 Notebook에서 고유한 Python 3 또는 Anaconda 설치를 사용하도록 선택할 수 있음 <br/>&bull; &nbsp; 여러 가지 안정성 + 맞춤/마침 수정 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)에서 확인할 수 있음|
 | Visual Studio Code 4월 릴리스 병합 1.34 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_34)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
@@ -158,7 +196,7 @@ ms.locfileid: "73532533"
     - 일부 개체에 속성 대화 상자가 없습니다.
     - 대화 상자를 시작하는 데 시간이 오래 걸립니다.
     - 일부 연결 형식(예: AAD)으로 서버를 시작할 때 오류가 발생합니다.
-- 전자 필기장
+- Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) 사용자가 시스템 Python을 Notebook에 사용할 수 있습니다.
 - 스키마 비교
     - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) 스키마 비교 작업에 아무 동작도 수행하지 않는 기본 취소 상황에 맞는 메뉴가 표시됩니다.
@@ -173,8 +211,8 @@ ms.locfileid: "73532533"
 | :----- | :------ |
 | 스키마 비교 확장 릴리스 | 스키마 비교는 SSDT(SQL Server Data Tools)의 잘 알려진 기능이며, 주 사용 사례는 데이터베이스와 .dacpac 파일 간의 차이점을 비교 및 시각화하고 동일하게 만드는 작업을 실행하는 것입니다. |
 | 작업 뷰가 출력 창으로 이동됨 | 이제 출력 창의 작업 뷰에서 백업, 복원 및 스키마 비교와 같은 장기 실행 작업의 상태를 볼 수 있습니다.
-| 시작 페이지가 추가됨 | &bull; &nbsp; 새 쿼리, 새 파일, 새 Notebook과 같은 일반적인 작업 링크 <br/>&bull; &nbsp; 설명서 및 GitHub 링크 |
-| SQL Notebook 기능 개선 | &bull; &nbsp; 노트 및 테이블 지원 향상을 비롯한 Markdown 렌더링 기능 향상 <br/>&bull; &nbsp; 도구 모음의 유용성 향상 <br/>&bull; &nbsp; 신뢰할 수 있는 Notebook의 Markdown 링크를 사용하기 위해 더 이상 Cmd/Ctrl+클릭할 필요 없이 직접 클릭할 수 있음 <br/>&bull; &nbsp; Notebook을 닫은 후 Jupyter 프로세스를 정리하고 여러 Notebook을 동시에 시작할 때 오류를 줄이는 기능 향상 <br/>&bull; &nbsp; 동일한 데이터베이스에 대해 두 개의 Notebook을 실행하는 경우 오류가 발생하지 않도록 SQL Notebook 연결 향상 <br/>&bull; &nbsp; 도구 모음에서 셀 실행 단추를 클릭할 때 현재 실행되는 셀로 자동 스크롤되도록 Notebook 기능 향상 <br/>&bull; &nbsp; 일반적인 안정성 및 성능 향상 |
+| 시작 페이지가 추가됨 | &bull; &nbsp; 새 쿼리, 새 파일, 새 Notebook과 같은 일반적인 작업 링크 <br/>&bull; &nbsp; 문서 및 GitHub 링크 |
+| SQL Notebook 기능 개선 | &bull; &nbsp; 노트 및 테이블 지원 향상을 비롯한 Markdown 렌더링 개선 <br/>&bull; &nbsp; 도구 모음의 유용성 개선 <br/>&bull; &nbsp; 신뢰할 수 있는 Notebook의 Markdown 링크를 더 이상 Cmd/Ctrl+클릭할 필요 없이 직접 클릭할 수 있음 <br/>&bull; &nbsp; Notebook을 닫은 후 Jupyter 프로세스를 정리하고 여러 Notebook을 동시에 시작할 때 오류를 줄이는 기능 개선 <br/>&bull; &nbsp; 동일한 데이터베이스에 대해 2개의 Notebook을 실행할 때 오류가 발생하지 않도록 SQL Notebook 연결 개선 <br/>&bull; &nbsp; 도구 모음에서 셀 실행 단추를 클릭할 때 현재 실행 중인 셀로 자동 스크롤되도록 Notebook 개선 <br/>&bull; &nbsp; 일반적인 안정성 및 성능 개선 |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -188,7 +226,7 @@ ms.locfileid: "73532533"
 | :----- | :------ |
 | **서버** 탭의 이름이 **연결**로 바뀜 | |
 | Azure Resource Explorer가 연결 아래의 Azure 뷰렛으로 이동됨 | 이제 사용자가 연결 뷰에서 Azure 뷰렛을 통해 Azure SQL 인스턴스를 보고, 펼쳐서 각 서버 또는 데이터베이스 아래의 개체를 볼 수 있습니다.|
-| SQL Notebook 기능 개선 | &bull; &nbsp; 모든 셀의 출력을 지우는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 모든 셀을 실행하는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 연결 대상 드롭다운에서 서버 이름(설정된 경우) 대신 연결 이름이 표시되도록 수정됨 <br/>&bull; &nbsp; 상대 이미지 경로를 사용하는 경우 Markdown의 이미지가 렌더링되지 않는 문제가 해결됨 <br/>&bull; &nbsp; 두 번 클릭하여 열 크기를 자동으로 조정하는 기능이 추가되어 Notebook 그리드 기능이 향상되고 마우스 휠 지원이 향상됨 <br/>&bull; &nbsp; Notebook을 통해 python을 설치할 때 오류 처리 및 python 설치 복원력이 향상됨 <br/>&bull; &nbsp; Notebook 셀을 선택할 때 “모두 선택” 기능이 향상됨 <br/>&bull; &nbsp; Notebook을 닫을 때 개체 탐색기 연결에 영향을 주지 않도록 Notebook 연결이 향상됨 <br/>&bull; &nbsp; Notebook의 연결이 끊겼으며 셀 실행을 위해 다시 연결해야 하는 경우 사용자에게 메시지를 표시하도록 Notebook 환경이 향상됨<br/>&bull; &nbsp; ADS를 다시 시작할 때 저장하지 않은 Notebook이 ADS에서 리하이드레이션되도록 지원이 향상됨 |
+| SQL Notebook 기능 개선 | &bull; &nbsp; 모든 셀의 출력을 지우는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 모든 셀을 실행하는 단추가 도구 모음에 추가됨 <br/>&bull; &nbsp; 연결 대상 드롭다운에 서버 이름(설정된 경우) 대신 연결 이름이 표시되도록 수정됨 <br/>&bull; &nbsp; 상대 이미지 경로를 사용할 때 Markdown의 이미지가 렌더링되지 않는 문제가 해결됨 <br/>&bull; &nbsp; 두 번 클릭하여 열 크기를 자동으로 조정하는 기능을 추가하여 Notebook 그리드 기능 개선 및 마우스 휠 지원 개선 <br/>&bull; &nbsp; Notebook을 통해 python을 설치할 때 오류 처리 및 python 설치 복원력 개선 <br/>&bull; &nbsp; Notebook 셀을 선택할 때 “모두 선택” 기능 개선 <br/>&bull; &nbsp; Notebook을 닫을 때 개체 탐색기 연결에 영향을 주지 않도록 Notebook 연결 개선 <br/>&bull; &nbsp; Notebook 연결이 끊겼으며 셀 실행을 위해 연결해야 하는 경우 사용자에게 메시지를 표시하도록 Notebook 환경 개선<br/>&bull; &nbsp; ADS를 다시 시작할 때 저장하지 않은 Notebook이 ADS에서 리하이드레이션되도록 지원 개선 |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -200,7 +238,7 @@ ms.locfileid: "73532533"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| 1\.5.1에서 발견된 몇 가지 문제가 해결됨 | [GitHub의 3월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/28)를 참조하세요.<br/> <br/>&bull; &nbsp; 사용자가 대시보드의 “Notebook 열기” 작업을 통해 열린 노트북을 닫을 수 없는 문제가 해결됨 <br/>&bull; &nbsp; 저장 후에 Notebook JSON에 불필요한 }가 표시되는 문제가 해결됨 <br/>&bull; &nbsp; Notebook 그리드가 테마 변경에 응답하지 않는 문제가 해결됨 <br/>&bull; &nbsp; 전체 Notebook 경로가 탭 헤더에 표시되는 문제가 해결됨. 이제 파일 이름만 표시됩니다. |
+| 1\.5.1에서 발견된 몇 가지 문제가 해결됨 | [GitHub의 3월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/28)를 참조하세요.<br/> <br/>&bull; &nbsp; 사용자가 대시보드의 “Notebook 열기” 작업을 통해 열린 Notebook을 닫을 수 없는 문제가 해결됨 <br/>&bull; &nbsp; 저장 후에 Notebook JSON에 불필요한 }가 표시되는 문제가 해결됨 <br/>&bull; &nbsp; Notebook 그리드가 테마 변경에 응답하지 않는 문제가 해결됨 <br/>&bull; &nbsp; 전체 Notebook 경로가 탭 머리글에 표시되는 문제가 해결됨. 이제 파일 이름만 표시됩니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019년 3월
@@ -211,7 +249,7 @@ ms.locfileid: "73532533"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| [Azure Data Studio용 PostgreSQL 확장](postgres-extension.md)이 추가됨 | 지원되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; 쿼리 편집기 <br/>&bull; &nbsp; 차트 작성 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; 데이터 편집 <br/>&bull; &nbsp; Notebook |
+| [Azure Data Studio용 PostgreSQL 확장](postgres-extension.md)이 추가됨 | 지원되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; 쿼리 편집기 <br/>&bull; &nbsp; 차트 작성 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; 데이터 편집 <br/>&bull; &nbsp; Notebooks |
 | SQL Notebook이 추가됨 | 기본 제공 Notebook 뷰어에 SQL 커널 지원을 추가했습니다. <br/>&bull; &nbsp; T-SQL 지원 <br/>&bull; &nbsp; PGSQL 지원 |
 | PowerShell 확장이 추가됨  | VS Code에서 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) 환경을 가져옵니다.  |
 | SQL Server dacpac 확장이 추가됨  | SQL Server 가져오기 확장의 데이터 계층 애플리케이션 마법사를 제거하고 새 확장으로 대체합니다.  |
@@ -242,10 +280,10 @@ ms.locfileid: "73532533"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음을 포함합니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
+| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음 내용이 포함됩니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
 | Profiler 확장에 확장 이벤트 필터링 지원이 추가됨 | &nbsp; |
 | T-SQL 결과를 XML로 저장할 수 있는 XML로 저장 기능이 추가됨 | &nbsp; |
-| 데이터 계층 애플리케이션 마법사 개선 사항이 추가됨 | &bull; &nbsp; 스크립트 생성 단추가 추가됨<br/>&bull; &nbsp; 배포 중에 데이터가 손실될 수 있다는 경고를 표시하는 뷰가 추가됨 |
+| 데이터 계층 애플리케이션 마법사 개선 사항이 추가됨 | &bull; &nbsp; 스크립트 생성 단추 추가됨<br/>&bull; &nbsp; 배포 중에 데이터가 손실될 수 있다는 경고를 표시하는 뷰 추가됨 |
 | SQL Server 2019 미리 보기 확장 업데이트 | [데이터 가상화 확장](data-virtualization-extension.md?view=sql-server-ver15)을 참조하세요. |
 | 장기 실행 쿼리에 대해 결과 스트리밍이 기본적으로 사용됨 | &nbsp; |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)를 참조하세요. |
@@ -499,9 +537,9 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | :----- | :------ |
 | 확장 관리자에서 사용할 수 있는 Redgate SQL Search 확장 발표 | &nbsp; |
 | 10개 언어로 커뮤니티 지역화 제공 | 독일어, 스페인어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어, 러시아어, 중국어 간체 및 중국어 번체 |
-| 원격 분석 수집 변경 | &bull; &nbsp; 원격 분석 수집이 감소됨<br/>&bull; &nbsp; 옵트아웃(opt out) 환경이 향상됨<br/>&bull; &nbsp; 제품 내 링크를 통해 개인정보처리방침으로 연결됨 |
+| 원격 분석 수집 변경 | &bull; &nbsp; 원격 분석 수집 감소됨<br/>&bull; &nbsp; 옵트아웃(opt out) 환경 개선<br/>&bull; &nbsp; 개인정보처리방침의 제품 내 링크 |
 | 확장 관리자의 마켓플레이스 환경이 향상됨 | 커뮤니티 확장을 보다 쉽게 검색할 수 있습니다. |
-| SQL 에이전트 확장 | &bull; &nbsp; 작업<br/>&bull; &nbsp; 작업 기록 뷰 기능 개선 |
+| SQL 에이전트 확장 | &bull; &nbsp; 작업<br/>&bull; &nbsp; 작업 기록 뷰 개선 |
 | whoisactive 및 서버 보고서 확장 업데이트 | &nbsp; |
 | 대시보드 속성 관리의 스크롤 기능이 향상됨 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -526,7 +564,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | SQL 에이전트 미리 보기 확장 기능 개선: | &nbsp; |
-| &nbsp; &nbsp; &nbsp; 향상된 파일 지원 | &bull; &nbsp; 큰 파일<br/>&bull; &nbsp; 관리자 권한으로 보호된 파일을 저장하기 위한 보호된 파일<br/>&bull; &nbsp; SQL Operations Studio에서 256M보다 큰 파일 저장 |
+| &nbsp; &nbsp; &nbsp; 파일 지원 개선 | &bull; &nbsp; 큰 파일<br/>&bull; &nbsp; 관리자 권한으로 보호된 파일을 저장하기 위한 보호된 파일<br/>&bull; &nbsp; SQL Operations Studio에서 \>256M보다 큰 파일 저장 |
 | &nbsp; &nbsp; &nbsp; 통합 터미널 분할 | 동시에 여러 개의 열린 터미널에서 작업합니다. |
 | &nbsp; &nbsp; &nbsp; 더 빨라진 설치 및 시작 시간 | 디스크에 있는 파일 수의 설치 공간을 줄였습니다. |
 | &nbsp; | &nbsp; |
@@ -560,7 +598,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | :----- | :------ |
 | [새 알림 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) | SQL Operations Studio 알림을 쉽게 관리하고 검토합니다. |
 | [통합 터미널 분할](https://code.visualstudio.com/updates/v1_21#_split-terminals) | 한 번에 여러 개의 열린 터미널에서 작업합니다. |
-| [보호된 큰 파일 저장](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) | SQL Operations Studio에서 관리자 권한으로 보호된 256M보다 큰 파일을 저장합니다. |
+| [보호된 큰 파일 저장](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) | SQL Operations Studio에서 관리자 권한으로 보호된 \>256M보다 큰 파일을 저장합니다. |
 | [향상된 큰 파일 지원](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) | 큰 파일을 위해 텍스트 버퍼 최적화가 지원됩니다. |
 | [향상된 설정 검색 기능](https://code.visualstudio.com/updates/v1_20#_settings-search) | 자연어 검색을 사용하여 적절한 설정을 쉽게 찾습니다. |
 | [전역 코드 조각](https://code.visualstudio.com/updates/v1_20#_global-snippets) | 모든 파일 형식에서 사용할 수 있는 코드 조각을 만듭니다. |
@@ -668,7 +706,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 - [!INCLUDE[name-sos](../includes/name-sos-short.md)] 최초 릴리스
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 시작하려면 다음 빠른 시작 중 하나를 참조하세요.
 
