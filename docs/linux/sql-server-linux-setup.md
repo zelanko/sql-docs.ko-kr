@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593663"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884014"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 설치 지침
 
@@ -25,9 +25,9 @@ ms.locfileid: "73593663"
 
 기타 배포 시나리오는 다음을 참조하세요.
 
-- [창](../database-engine/install-windows/install-sql-server.md)
+- [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Docker 컨테이너](../linux/sql-server-linux-configure-docker.md)
-- [Kubernetes-빅 데이터 클러스터](../big-data-cluster/deploy-get-started.md)
+- [Kubernetes - 빅 데이터 클러스터](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > 이 가이드에서는 몇 가지 배포 시나리오를 설명합니다. 단계별 설치 지침만 보려면 다음 빠른 시작 중 하나로 이동합니다.
@@ -59,7 +59,7 @@ SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server)
 
 | 플랫폼 | 지원되는 버전 | 가져오기
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 다운로드](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 가져오기](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 다운로드](http://releases.ubuntu.com/xenial/)
 | **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)

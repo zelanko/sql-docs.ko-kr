@@ -18,12 +18,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769868"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542067"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68769868"
   
 -   외래 키를 추가할 때 참조되는 구독자에 있는 모든 개체의 이름 및 소유자는 게시자에 있는 해당 개체의 이름 및 소유자와 같아야 합니다.  
   
--   명시적인 인덱스 추가, 삭제 및 변경은 지원되지 않습니다. PRIMARY KEY 제약 조건과 같이 제약 조건에 대해 암시적으로 생성된 인덱스는 지원됩니다.  
+-   명시적으로 인덱스를 추가, 삭제 또는 변경하는 작업은 복제되지 않으며 명시적 인덱스를 포함하는 모든 변경 내용은 개별적으로 각 복제본 집합에서 실행해야 합니다. PRIMARY KEY 제약 조건과 같이 제약 조건에 대해 암시적으로 생성된 인덱스는 지원됩니다.  
   
 -   복제에서 관리하는 ID 열은 변경 또는 삭제할 수 없습니다. ID 열 자동 관리에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68769868"
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
--   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들어  
+-   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 다음은 그 예입니다.  
   
     -   트랜잭션 게시 아티클에서 기본 키에 사용되는 열은 복제에 사용되므로 삭제할 수 없습니다.  
   

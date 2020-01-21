@@ -1,6 +1,7 @@
 ---
-title: 복제된 테이블의 차이점 비교(복제 프로그래밍) | Microsoft 문서
-ms.custom: ''
+title: 복제된 테이블 간 차이점 비교(복제 SP)
+description: 복제 저장 프로시저를 사용하여 게시자와 구독자에 있는 복제된 테이블의 차이를 비교할 수 있습니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,14 +17,14 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770807"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322140"
 ---
-# <a name="compare-replicated-tables-for-differences-replication-programming"></a>복제된 테이블의 차이점 비교(복제 프로그래밍)
+# <a name="compare-differences-between-replicated-tables-replication-programming"></a>복제된 테이블 간 차이점 비교(복제 프로그래밍)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   아티클 유효성 검사는 게시자 및 구독자에서 테이블 아티클의 게시된 데이터가 일치하지 않는지 여부를 확인하는 데 사용됩니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요. 그러나 유효성 검사를 통해서는 성공 또는 실패 정보만 반환되고 원본 테이블과 대상 테이블의 차이점에 대한 정보는 제공되지 않습니다. **tablediff** 명령 프롬프트 유틸리티는 두 테이블 간의 세부 차이점 정보를 반환하며 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 생성하여 구독이 게시자의 데이터와 일치하게 할 수도 있습니다.  
   

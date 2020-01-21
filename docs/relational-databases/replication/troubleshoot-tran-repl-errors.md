@@ -1,6 +1,7 @@
 ---
-title: '문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 | Microsoft Docs'
-ms.custom: ''
+title: 트랜잭션 복제 관련 오류 찾기
+description: 트랜잭션 복제를 사용하여 오류를 찾고 식별하는 방법과 복제 관련 문제를 해결하기 위한 문제 해결 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907286"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321942"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +57,19 @@ ms.locfileid: "72907286"
 
 1. 스냅샷 에이전트의 상태를 봅니다.
 
-    1\. 개체 탐색기에서 **복제** 아래에서 **로컬 게시** 노드를 확장합니다.
+    a. 개체 탐색기에서 **복제** 아래에서 **로컬 게시** 노드를 확장합니다.
 
-    2\. 해당 게시 **AdvWorksProductTrans** > **스냅샷 에이전트 상태 보기**를 마우스 오른쪽 단추로 클릭합니다. 
+    b. 해당 게시 **AdvWorksProductTrans** > **스냅샷 에이전트 상태 보기**를 마우스 오른쪽 단추로 클릭합니다. 
 
     ![바로 가기 메뉴의 “스냅샷 에이전트 상태 보기” 명령](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. 스냅샷 에이전트 상태에 오류가 보고되면 스냅샷 에이전트 작업 기록에서 자세한 내용을 확인할 수 있습니다.
 
-    1\. 개체 탐색기에서 **SQL Server 에이전트**를 확장하고 작업 활동 모니터를 엽니다. 
+    a. 개체 탐색기에서 **SQL Server 에이전트**를 확장하고 작업 활동 모니터를 엽니다. 
 
-    2\. **범주**로 정렬하고 **REPL-스냅샷** 범주로 스냅샷 에이전트를 식별합니다.
+    b. **범주**로 정렬하고 **REPL-스냅샷** 범주로 스냅샷 에이전트를 식별합니다.
 
-    c. 스냅샷 에이전트를 오른쪽 단추로 클릭한 다음, **기록 보기**를 선택합니다. 
+    다. 스냅샷 에이전트를 오른쪽 단추로 클릭한 다음, **기록 보기**를 선택합니다. 
 
    ![스냅샷 에이전트 기록을 열기 위한 선택](media/troubleshooting-tran-repl-errors/snapshot-agent-history.png)
     
@@ -114,11 +115,11 @@ ms.locfileid: "72907286"
 
 6. 오류는 일반적으로 게시자 데이터베이스의 소유자가 올바로 설정되어 있지 않은 경우에 발생합니다. 이는 데이터베이스가 복원되는 경우 발생할 수 있습니다. 이를 확인하려면
 
-    1\. 개체 탐색기에서 **데이터베이스**를 확장합니다.
+    a. 개체 탐색기에서 **데이터베이스**를 확장합니다.
 
-    2\. **AdventureWorks2012** > **속성**을 마우스 오른쪽 단추로 클릭합니다. 
+    b. **AdventureWorks2012** > **속성**을 마우스 오른쪽 단추로 클릭합니다. 
 
-    c. **파일** 페이지 아래에 소유자가 있는지 확인합니다. 이 박스가 비어 있는 경우 문제의 가능한 원인은 다음과 같습니다. 
+    다. **파일** 페이지 아래에 소유자가 있는지 확인합니다. 이 박스가 비어 있는 경우 문제의 가능한 원인은 다음과 같습니다. 
 
    !["소유자" 상자가 비어 있는 데이터베이스 속성의 "파일" 페이지](media/troubleshooting-tran-repl-errors/db-properties.png)
 
@@ -133,11 +134,11 @@ ms.locfileid: "72907286"
 
 8. 로그 판독기 에이전트를 다시 시작해야 할 수 있습니다.
 
-    1\. 개체 탐색기에서 **SQL Server 에이전트** 노드를 확장하고 작업 활동 모니터를 엽니다.
+    a. 개체 탐색기에서 **SQL Server 에이전트** 노드를 확장하고 작업 활동 모니터를 엽니다.
 
-    2\. **범주**로 정렬하고 **'REPL-LogReader'** 범주로 로그 판독기 에이전트를 확인합니다. 
+    b. **범주**로 정렬하고 **'REPL-LogReader'** 범주로 로그 판독기 에이전트를 확인합니다. 
 
-    c. **로그 판독기 에이전트** 작업을 마우스 오른쪽 단추로 클릭하고 **작업 시작 단계**를 선택합니다. 
+    다. **로그 판독기 에이전트** 작업을 마우스 오른쪽 단추로 클릭하고 **작업 시작 단계**를 선택합니다. 
 
     ![로그 판독기 에이전트를 다시 시작하도록 선택](media/troubleshooting-tran-repl-errors/start-job-at-step.png)
 
@@ -163,11 +164,11 @@ ms.locfileid: "72907286"
 
 3. 이 오류는 배포 에이전트가 다시 시도 중이라는 것을 나타냅니다. 자세한 정보를 찾으려면 배포 에이전트에 대한 작업 기록을 확인합니다. 
 
-    1\. 개체 탐색기에서 **SQL Server 에이전트** > **작업 활동 모니터**를 확장합니다. 
+    a. 개체 탐색기에서 **SQL Server 에이전트** > **작업 활동 모니터**를 확장합니다. 
     
-    2\. **범주**별로 작업을 정렬합니다. 
+    b. **범주**별로 작업을 정렬합니다. 
 
-    c. **REPL-Distribution** 범주를 사용하여 배포 에이전트를 확인합니다. 에이전트를 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 선택합니다.
+    다. **REPL-Distribution** 범주를 사용하여 배포 에이전트를 확인합니다. 에이전트를 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 선택합니다.
 
     ![배포 에이전트 기록 보기에 대한 선택](media/troubleshooting-tran-repl-errors/view-dist-agent-history.png)
 
@@ -180,11 +181,11 @@ ms.locfileid: "72907286"
 
 6. 이 오류는 배포 에이전트에서 사용한 암호가 잘못되었음을 나타냅니다. 이를 확인하려면
 
-    1\. 개체 탐색기에서 **복제** 노드를 확장합니다.
+    a. 개체 탐색기에서 **복제** 노드를 확장합니다.
     
-    2\. 구독 > **속성**을 마우스 오른쪽 단추로 클릭합니다.
+    b. 구독 > **속성**을 마우스 오른쪽 단추로 클릭합니다.
     
-    c. **에이전트 프로세스 계정** 옆에 있는 줄임표(...)를 선택하고 암호를 수정합니다.
+    다. **에이전트 프로세스 계정** 옆에 있는 줄임표(...)를 선택하고 암호를 수정합니다.
 
     ![배포 에이전트에 대한 암호를 수정하기 위한 선택](media/troubleshooting-tran-repl-errors/dist-agent-pw-change.png)
 
@@ -257,7 +258,7 @@ ms.locfileid: "72907286"
 자세한 내용은 [복제 에이전트에 대한 자세한 정보 로깅 사용하도록 설정](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)을 참조합니다. 
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 <br>[트랜잭션 복제 개요](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[복제 자습서](../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk 블로그](https://blogs.msdn.microsoft.com/repltalk)

@@ -1,6 +1,7 @@
 ---
-title: 복제 에이전트 시작 및 중지(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 복제 에이전트 시작 및 중지(SSMS)
+description: SQL Server Management Studio 및 복제 모니터에서 복제 에이전트를 시작 및 중지하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770699"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321635"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 복제 모니터에 있는 **작업** 폴더 및 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터에 있는 **작업** 폴더와 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
   
 -   스냅샷 에이전트 - 모든 게시에서 사용  
   
@@ -70,6 +71,6 @@ ms.locfileid: "68770699"
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [복제 에이전트 개요](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

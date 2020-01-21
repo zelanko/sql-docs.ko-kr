@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982153"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952444"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "73982153"
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -149,7 +149,8 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 
 **\<file_and_filegroup_options>::=** 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
+
 데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.
 
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
@@ -219,7 +220,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 
 ## <a name="examples"></a>예
 
-### <a name="a-changing-the-name-of-a-database"></a>1\. 데이터베이스의 이름 변경
+### <a name="a-changing-the-name-of-a-database"></a>A. 데이터베이스의 이름 변경
 
 다음 예에서는 `AdventureWorks2012` 데이터베이스의 이름을 `Northwind`로 변경합니다.
 
@@ -231,7 +232,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>2\. 데이터베이스 데이터 정렬 변경
+### <a name="b-changing-the-collation-of-a-database"></a>B. 데이터베이스 데이터 정렬 변경
 
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.
 
@@ -272,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />단일 데이터베이스/탄력적 풀 \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -404,24 +405,24 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) 데이터베이스
 |100MB|√|√|√|√|√|
 |250MB|√|√|√|√|√|
 |500MB|√|√|√|√|√|
-|1GB|√|√|√|√|√|
+|1 GB|√|√|√|√|√|
 |2GB|√ (D)|√|√|√|√|
-|5GB|해당 사항 없음|√|√|√|√|
-|10GB|해당 사항 없음|√|√|√|√|
-|20GB|해당 사항 없음|√|√|√|√|
-|30GB|해당 사항 없음|√|√|√|√|
-|40GB|해당 사항 없음|√|√|√|√|
-|50GB|해당 사항 없음|√|√|√|√|
-|100GB|해당 사항 없음|√|√|√|√|
-|150GB|해당 사항 없음|√|√|√|√|
-|200GB|해당 사항 없음|√|√|√|√|
-|250GB|해당 사항 없음|√ (D)|√ (D)|√|√|
-|300GB|해당 사항 없음|√|√|√|√|
-|400GB|해당 사항 없음|√|√|√|√|
-|500GB|해당 사항 없음|√|√|√ (D)|√|
-|750GB|해당 사항 없음|√|√|√|√|
-|1024GB|해당 사항 없음|√|√|√|√ (D)|
-|1024GB에서 최대 4096GB(256 GB*로 증분)|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|
+|5GB|해당 없음|√|√|√|√|
+|10 GB|해당 없음|√|√|√|√|
+|20GB|해당 없음|√|√|√|√|
+|30GB|해당 없음|√|√|√|√|
+|40GB|해당 없음|√|√|√|√|
+|50GB|해당 없음|√|√|√|√|
+|100GB|해당 없음|√|√|√|√|
+|150GB|해당 없음|√|√|√|√|
+|200GB|해당 없음|√|√|√|√|
+|250GB|해당 없음|√ (D)|√ (D)|√|√|
+|300GB|해당 없음|√|√|√|√|
+|400GB|해당 없음|√|√|√|√|
+|500GB|해당 없음|√|√|√ (D)|√|
+|750GB|해당 없음|√|√|√|√|
+|1024GB|해당 없음|√|√|√|√ (D)|
+|1024GB에서 최대 4096GB(256 GB*로 증분)|해당 없음|해당 없음|해당 없음|해당 없음|√|
 
 \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 유럽 서부, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
@@ -501,7 +502,6 @@ DTU 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층�
 |:----- | -------: |
 |최대 데이터 크기(GB)|4096|
 
-
 vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본값은 32GB입니다. vCore 모델에 대한 리소스 제한에 관한 자세한 내용은 [vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
@@ -522,11 +522,9 @@ SERVICE_OBJECTIVE
 
   - 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`입니다.
 
-
 - **서버리스 데이터베이스인 경우**
 
   - 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`입니다.
-
 
 - **하이퍼스케일 서비스 계층의 단일 데이터베이스인 경우**
 
@@ -585,7 +583,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 지역 복제 파트너 자격에서 보조 데�
 > [!IMPORTANT]
 > `FORCE_FAILOVER_ALLOW_DATA_LOSS` 명령을 실행하는 사용자는 주 서버와 보조 서버 모두에서 `dbmanager` 역할에 속해야 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
@@ -606,7 +604,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 지역 복제 파트너 자격에서 보조 데�
 
 ## <a name="examples"></a>예
 
-### <a name="a-check-the-edition-options-and-change-them"></a>1\. 버전 옵션 확인 및 변경
+### <a name="a-check-the-edition-options-and-change-them"></a>A. 버전 옵션 확인 및 변경
 
 db1 데이터베이스의 버전과 최대 크기를 설정합니다.
 
@@ -618,7 +616,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>2\. 다른 탄력적 풀에 데이터베이스 이동
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. 다른 탄력적 풀에 데이터베이스 이동
 
 기존 데이터베이스를 pool1이라는 풀로 이동합니다.
 
@@ -670,7 +668,7 @@ ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -692,12 +690,12 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>개요: Azure SQL Database 관리되는 인스턴스
+## <a name="overview-azure-sql-database-managed-instance"></a>개요: Azure SQL Database Managed Instance
 
 Azure SQL Database 관리되는 인스턴스에서 이 문을 사용하여 데이터베이스 옵션을 설정합니다.
 
@@ -758,7 +756,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
@@ -792,7 +790,7 @@ ALTER DATABASE WideWorldImporters
   ADD FILE (NAME = 'data_17')
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -813,14 +811,14 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL 데이터 웨어하우스
+## <a name="overview-azure-synapse-analytics"></a>개요: Azure Synapse Analytics
 
-Azure SQL Data Warehouse에서 'ALTER DATABASE'는 데이터베이스의 이름, 최대 크기 또는 서비스 목표를 수정합니다.
+Azure Synapse에서 'ALTER DATABASE'는 데이터베이스의 이름, 최대 크기 또는 서비스 목표를 수정합니다.
 
 ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.
 
@@ -868,7 +866,7 @@ MAXSIZE 기본값은 245,760GB(240TB)입니다.
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다. columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
 
-SERVICE_OBJECTIVE 성능 수준을 지정합니다. SQL Data Warehouse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
+SERVICE_OBJECTIVE 성능 수준을 지정합니다. Azure Synapse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -883,7 +881,10 @@ SERVICE_OBJECTIVE 성능 수준을 지정합니다. SQL Data Warehouse의 서비
 
 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.
 
-SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
+SQL Analytics의 COMPATIBILITY_LEVEL은 기본적으로 130으로 설정되며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
+
+> [!NOTE]
+> COMPATIBILITY_LEVEL은 프로비전된 리소스(풀)에만 적용됩니다.
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
@@ -899,14 +900,14 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 
 이러한 예제를 실행하기 전에 변경하는 데이터베이스가 현재 데이터베이스가 아닌지 확인합니다. 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.
 
-### <a name="a-change-the-name-of-the-database"></a>1\. 데이터베이스의 이름을 변경합니다.
+### <a name="a-change-the-name-of-the-database"></a>A. 데이터베이스의 이름을 변경합니다.
 
 ```sql
 ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>2\. 데이터베이스의 최대 크기를 변경합니다.
+### <a name="b-change-max-size-for-the-database"></a>B. 데이터베이스의 최대 크기를 변경합니다.
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -926,15 +927,15 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## <a name="see-also"></a>참고 항목
 
-- [CREATE DATABASE(Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [CREATE DATABASE(Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [Azure Synapse Analytics 참조 문서 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1076,7 +1077,7 @@ TDE를 구현하는 모든 단계를 보여주는 포괄적인 예제는 [TDE(�
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### <a name="a-altering-the-autogrow-setting"></a>1\. AUTOGROW 설정 변경
+### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 설정 변경
 
 데이터베이스에 대해 AUTOGROW를 ON으로 설정합니다 `CustomerSales`.
 
@@ -1085,7 +1086,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2\. 복제된 테이블에 대해 최대 스토리지 변경
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 복제된 테이블에 대해 최대 스토리지 변경
 
 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 컴퓨팅 노드당 스토리지 용량 한도입니다.
 

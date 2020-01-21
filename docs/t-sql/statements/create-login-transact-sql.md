@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,16 +27,16 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df02e167ae5014564357d42d7cbbf06a5937845a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983199"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952347"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
-SQL Server, SQL Database, SQL Data Warehouse 또는 Analytics Platform System 데이터베이스에 대한 로그인을 만듭니다. 특정 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제는 다음 탭 중 하나를 클릭합니다.
+SQL Server, SQL Database, Azure Synapse Analytics 또는 Analytics Platform System 데이터베이스에 대한 로그인을 만듭니다. 특정 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제는 다음 탭 중 하나를 클릭합니다.
 
 CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 내에서 실행되고 트랜잭션이 롤백된 다음, 로그인 생성이 롤백됩니다. 트랜잭션 내에서 실행하는 경우 트랜잭션이 커밋될 때까지 생성된 로그인을 사용할 수 없습니다.
 
@@ -50,7 +50,7 @@ CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 �
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -124,7 +124,7 @@ CERTIFICATE *certname* 이 로그인과 연결될 인증서의 이름을 지정�
 
 ASYMMETRIC KEY *asym_key_name* 이 로그인과 연결될 비대칭 키의 이름을 지정합니다. 이 키는 master 데이터베이스에 이미 있어야 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
 - SQL Server 로그인을 만들 때만 암호를 미리 해시할 수 있습니다.
@@ -150,14 +150,14 @@ ASYMMETRIC KEY *asym_key_name* 이 로그인과 연결될 비대칭 키의 이�
 
 로그인을 만든 후 해당 로그인으로 SQL Server에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
-- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
+- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [사용자 만들기](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
 - [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md)을 사용하여 사용자 정의 서버 역할을 만듭니다. **ALTER SERVER ROLE** ... **ADD MEMBER**를 사용하여 사용자 정의 서버 역할에 새 로그인을 추가합니다. 자세한 내용은 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 - **sp_addsrvrolemember**를 사용하여 고정 서버 역할에 로그인을 추가합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md) 및 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-login-with-a-password"></a>1\. 암호로 로그인 만들기
+### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다.
 
@@ -166,7 +166,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>2\. 변경해야 하는 암호로 로그인 만들기
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. 변경해야 하는 암호로 로그인 만들기
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다. `MUST_CHANGE` 옵션을 사용하는 경우 사용자는 서버에 처음 연결할 때 이 암호를 변경해야 합니다.
 
@@ -258,7 +258,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -278,7 +278,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>인수
 
-*login_name* 만들 로그인 이름을 지정합니다. Azure SQL Database 단일 데이터베이스/탄력적 풀은 SQL 로그인만 지원합니다.
+*login_name* 만들 로그인 이름을 지정합니다. Azure SQL Database 단일 데이터베이스/탄력적 풀은 SQL 로그인만 지원합니다. Azure Active Directory 사용자용 계정을 만들려면 [CREATE USER](create-user-transact-sql.md) 문을 사용합니다.
 
 PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 
@@ -286,7 +286,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
 - 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
@@ -323,14 +323,14 @@ SQL Database 로그인에 대한 자세한 내용은 [Azure SQL Database에서 �
 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
-- 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
+- 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [사용자 만들기](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
 - 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-login-with-a-password"></a>1\. 암호로 로그인 만들기
+### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다.
 
@@ -339,7 +339,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>2\. SID에서 로그인 만들기
+### <a name="b-creating-a-login-from-a-sid"></a>B. SID에서 로그인 만들기
 
 다음 예제에서는 우선 SQL Server 인증 로그인을 만들고 로그인의 SID를 결정합니다.
 
@@ -378,11 +378,11 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />관리되는 인스턴스 \*_**|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="syntax"></a>구문
 
@@ -399,7 +399,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 ## <a name="arguments"></a>인수
 
-*login_name* **FROM EXTERNAL PROVIDER** 절과 함께 사용될 때 로그인은 Azure AD(Active Directory) 사용자, 그룹 또는 애플리케이션인 Azure AD 보안 주체를 지정합니다. 그렇지 않으면 로그인은 생성된 SQL 로그인의 이름을 나타냅니다.
+*login_name***FROM EXTERNAL PROVIDER** 절과 함께 사용될 때 로그인은 Azure AD(Active Directory) 사용자, 그룹 또는 애플리케이션인 Azure AD 보안 주체를 지정합니다. 그렇지 않으면 로그인은 생성된 SQL 로그인의 이름을 나타냅니다.
 
 FROM EXTERNAL PROVIDER </br>
 Azure AD 인증을 위한 로그인임을 지정합니다.
@@ -410,7 +410,7 @@ PASSWORD **=** '*password*' 만들 SQL 로그인의 암호를 지정합니다. �
 
 SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용됩니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
 - Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다(**FROM EXTERNAL PROVIDER**).
@@ -429,18 +429,18 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `securityadmin` 또는 `sysadmin` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 
-기본적으로 마스터에 새로 생성된 Azure AD 로그인에 부여된 표준 권한은 다음과 같습니다. **SQL 연결** 및 **모든 데이터베이스 보기**.
+기본적으로 마스터에 새로 생성된 Azure AD 로그인에 부여된 표준 권한은 다음과 같습니다. **CONNECT SQL** 및 **VIEW ANY DATABASE**가 부여됩니다.
 
 ### <a name="sql-database-managed-instance-logins"></a>SQL Database 관리되는 인스턴스 로그인
 
 - 서버의 **ALTER ANY LOGIN** 권한이나 고정 서버 역할 `securityadmin` 또는 `sysadmin` 중 하나의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 해당 역할 중 하나의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 create 명령을 실행할 수 있습니다.
-- 로그인이 SQL 보안 주체인 경우 `sysadmin` 역할의 일부인 로그인만 create 명령을 사용하여 Azure AD 계정에 대한 로그인을 만들 수 있습니다.
+- 로그인이 SQL 보안 주체인 경우 `sysadmin` 역할에 포함된 로그인만 create 명령을 사용하여 Azure AD 계정에 대한 로그인을 만들 수 있습니다.
 - Azure SQL 관리되는 인스턴스에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 
 > [!NOTE]
-> 관리되는 인스턴스 기능에 대한 Azure AD 관리자가 만든 후 변경되었습니다. 자세한 내용은 [MI에 대한 새로운 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
+> 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 로그인을 만든 후 해당 로그인으로 SQL Database 관리되는 인스턴스에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
@@ -453,15 +453,15 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 ## <a name="limitations"></a>제한 사항
 
 - 데이터베이스 소유자로 Azure AD 그룹에 매핑된 Azure AD 로그인을 설정할 수 없습니다.
-- [EXECUTE AS](execute-as-transact-sql.md) 절과 같이 다른 Azure AD 보안 주체를 사용하는 Azure AD 서버 수준 보안 주체의 가장이 지원됩니다.
+- [EXECUTE AS](execute-as-transact-sql.md) 절과 같이, 다른 Azure AD 보안 주체를 사용하여 Azure AD 서버 수준 보안 주체를 가장할 수 있습니다.
 - `sysadmin` 역할의 일부인 SQL 서버 수준 보안 주체(로그인)만 Azure AD 보안 주체를 대상으로 다음 작업을 실행할 수 있습니다.
-  - 사용자로 실행
-  - 로그인으로 실행
+  - EXECUTE AS USER
+  - EXECUTE AS LOGIN
 - 다른 Azure AD 디렉터리에서 가져온 외부(게스트) 사용자를 관리되는 인스턴스의 Azure AD 관리자로 직접 구성할 수 없습니다. 대신 외부 사용자를 Azure AD 보안 사용 그룹에 조인하고 해당 그룹을 인스턴스 관리자로 구성합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-login-with-a-password"></a>1\. 암호로 로그인 만들기
+### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다.
 
@@ -470,7 +470,7 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
  GO
  ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>2\. SID에서 로그인 만들기
+### <a name="b-creating-a-login-from-a-sid"></a>B. SID에서 로그인 만들기
 
  다음 예제에서는 우선 SQL Server 인증 로그인을 만들고 로그인의 SID를 결정합니다.
 
@@ -554,16 +554,16 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System(PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>구문
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
 
@@ -574,15 +574,15 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>인수
 
-*login_name* 만들 로그인 이름을 지정합니다. Azure SQL Database는 SQL 로그인만 지원합니다.
+*login_name* 만들 로그인 이름을 지정합니다. Azure Synapse의 SQL Analytics는 SQL 로그인만 지원합니다. Azure Active Directory 사용자용 계정을 만들려면 [CREATE USER](create-user-transact-sql.md) 문을 사용합니다.
 
 PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name*을 포함할 수 없습니다.
 
- SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Data Warehouse의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
+ SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Analytics의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
 - 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
@@ -594,15 +594,15 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 **CREATE LOGIN** 문은 일괄 처리의 유일한 명령문이어야 합니다.
 
-**sqlcmd**와 같이 SQL Data Warehouse에 연결하는 몇 가지 방법에서는 *\<login>* @ *\<server>* 표기법을 사용하여 SQL Data Warehouse 서버 이름을 연결 문자열의 로그인 이름에 추가해야 합니다. 예를 들어 로그인이 `login1`이고 SQL Data Warehouse 서버의 정규화된 이름이 `servername.database.windows.net`인 경우 연결 문자열의 *username* 매개 변수는 `login1@servername`이어야 합니다. *username* 매개 변수의 총 길이는 128문자이므로 *login_name*은 127문자에서 서버 이름의 길이를 뺀 길이로 제한됩니다. 이 예에서는 `login_name`이 10자이므로 `servername`에는 117자까지만 사용할 수 있습니다.
+**sqlcmd**와 같은 도구를 사용하여 Azure Synapse에 연결하는 경우 *\<로그인>* @ *\<서버>* 표기법을 사용하여 연결 문자열의 로그인 이름에 SQL Analytics 서버 이름을 추가해야 합니다. 예를 들어 로그인이 `login1`이고 SQL Analytics 서버의 정규화된 이름이 `servername.database.windows.net`인 경우 연결 문자열의 *username* 매개 변수는 `login1@servername`이어야 합니다. *username* 매개 변수의 총 길이는 128문자이므로 *login_name*은 127문자에서 서버 이름의 길이를 뺀 길이로 제한됩니다. 이 예에서는 `login_name`이 10자이므로 `servername`에는 117자까지만 사용할 수 있습니다.
 
-SQL Data Warehouse에서 로그인을 만들려면 master 데이터베이스에 연결해야 합니다.
+로그인을 만들려면 마스터 데이터베이스에 연결해야 합니다.
 
 SQL Server 규칙을 사용하여 \<loginname>@\<servername> 형식의 SQL Server 인증 로그인을 만들 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버가 **myazureserver**이고 로그인이 **myemail@live.com** 인 경우 로그인을 **myemail@live.com@myazureserver** 로 제공해야 합니다.
 
-SQL Data Warehouse에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다.
+연결 및 서버 수준 방화벽 규칙을 인증하는 데 필요한 로그인 데이터는 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다.
 
-SQL Data Warehouse 로그인에 대한 자세한 내용은 [Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
+로그인에 대한 자세한 내용은 [데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -610,9 +610,9 @@ SQL Data Warehouse 로그인에 대한 자세한 내용은 [Azure SQL Database�
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 
-로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
+로그인을 만든 후 해당 로그인으로 Azure Synapse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
-- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
+- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [사용자 만들기](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
 - 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 
@@ -620,7 +620,7 @@ SQL Data Warehouse 로그인에 대한 자세한 내용은 [Azure SQL Database�
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-login-with-a-password"></a>1\. 암호로 로그인 만들기
+### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다.
 
@@ -629,7 +629,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>2\. SID에서 로그인 만들기
+### <a name="b-creating-a-login-from-a-sid"></a>B. SID에서 로그인 만들기
 
  다음 예제에서는 우선 SQL Server 인증 로그인을 만들고 로그인의 SID를 결정합니다.
 
@@ -668,7 +668,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_**
 
 &nbsp;
 
@@ -712,7 +712,7 @@ Windows 정책에 따라 강력한 암호가 필요한 경우에는 암호에 �
 
 WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 암호는 대소문자를 구분합니다.
 - MUST_CHANGE를 지정한 경우에는 CHECK_EXPIRATION  및 CHECK_POLICY를 ON으로 설정해야 합니다. 그렇지 않으면 문이 실패합니다.
@@ -732,9 +732,9 @@ WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 
-로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
+로그인을 만든 후 해당 로그인으로 Azure Synapse Analytics에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
-- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
+- 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [사용자 만들기](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
 - [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md)을 사용하여 사용자 정의 서버 역할을 만듭니다. **ALTER SERVER ROLE** ... **ADD MEMBER**를 사용하여 사용자 정의 서버 역할에 새 로그인을 추가합니다. 자세한 내용은 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 - **sp_addsrvrolemember**를 사용하여 고정 서버 역할에 로그인을 추가합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md) 및 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.

@@ -46,19 +46,19 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517931"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924961"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   인덱스를 사용하지 않도록 설정, 다시 빌드 또는 다시 구성하거나 인덱스에 대한 옵션을 설정하여 기존 테이블 또는 뷰 인덱스(rowstore, columnstore, 또는 XML)를 수정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -315,7 +315,7 @@ PAD_INDEX  =  {  ON  |  OFF  }
 
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  FILLFACTOR로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다. FILLFACTOR를 지정함과 동시에 PAD_INDEX를 ON으로 설정하지 않으면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)에 저장된 채우기 비율 값이 사용됩니다.  
   
  OFF 또는 *fillfactor*를 지정되지 않음  
@@ -342,7 +342,7 @@ FILLFACTOR = *fillfactor*
   
  **tempdb**에 정렬 결과를 저장할지 여부를 지정합니다. Azure SQL Database 하이퍼스케일을 제외하고 기본값은 OFF입니다. 하이퍼스케일의 모든 인덱스 다시 작성 작업의 경우, 다시 시작 가능한 인덱스 다시 작성을 사용하지 않는 한 지정된 옵션에 관계없이 SORT_IN_TEMPDB는 항상 ON입니다.  
   
- ON  
+ 켜기  
  인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. **tempdb**가 사용자 데이터베이스와는 다른 디스크 집합에 있으면 인덱스를 만드는 데 필요한 시간이 줄어들 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
   
  OFF  
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  IGNORE_DUP_KEY **=** { ON | OFF }  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.  
   
  OFF  
@@ -370,7 +370,7 @@ FILLFACTOR = *fillfactor*
  STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  이전 통계가 자동으로 다시 계산되지 않습니다.  
   
  OFF  
@@ -403,9 +403,9 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
  XML 인덱스 또는 공간 인덱스의 경우 `ONLINE = OFF`만 지원되며 ONLINE을 ON으로 설정하면 오류가 발생합니다.  
   
 > [!IMPORTANT]
-> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
+> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
- ON  
+ 켜기  
  인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 따라서 기본 테이블 및 인덱스를 계속 쿼리 또는 업데이트할 수 있습니다. 작업이 시작될 때 아주 짧은 기간 동안 S(공유) 잠금이 원본 개체에서 유지됩니다. 작업이 끝날 때 짧은 기간 동안 비클러스터형 인덱스가 생성되는 경우에는 원본에 대해 S(공유) 잠금이 유지되고, 온라인 상태에서 클러스터형 인덱스가 생성 또는 삭제될 때나 클러스터형 또는 비클러스터형 인덱스가 다시 작성될 때는 SCH-M(스키마 수정) 잠금이 획득됩니다. 로컬 임시 테이블에서 인덱스를 생성하는 경우에는 ONLINE을 ON으로 설정할 수 없습니다.  
   
  OFF  
@@ -425,7 +425,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 
 RESUMABLE **=** { ON | **OFF**}
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
  온라인 인덱스 작업이 다시 시작될 수 있는지 여부를 지정합니다.
 
@@ -433,9 +433,9 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF 인덱스 작업이 다시 시작될 수 없습니다.
 
-MAX_DURATION **=** *time* [**MINUTES**는] **RESUMABLE = ON** 상태에서만 사용됩니다(**ONLINE = ON** 필요).
+MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사용됩니다(**ONLINE = ON** 필요).
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값). 
 
@@ -451,7 +451,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -463,7 +463,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 CREATE INDEX 페이지의 [순차 키](./create-index-transact-sql.md#sequential-keys) 섹션을 참조하세요.
 
@@ -515,7 +515,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
  COMPRESSION_DELAY 사용 시기에 관한 권장 사항은 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
  DATA_COMPRESSION  
- 지정된 인덱스, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.  
+ 지정된 인덱스, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 옵션은 다음과 같습니다.  
   
  없음  
  인덱스 또는 지정된 파티션이 압축되지 않습니다. columnstore 인덱스에는 적용되지 않습니다.  
@@ -568,7 +568,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  ONLINE **=** { ON  | **OFF** } \<single_partition_rebuild_index_option에 적용>  
  기본 테이블의 인덱스 또는 인덱스 파티션을 온라인 또는 오프라인으로 다시 작성할 수 있는지 여부를 지정합니다. **REBUILD**가 온라인(**ON**)으로 수행될 경우, 인덱스 작업 중에 이 테이블의 데이터를 쿼리 및 데이터 수정을 위해 사용할 수 있습니다.  기본값은 **OFF**입니다.  
   
- ON  
+ 켜기  
  인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 인덱스 다시 작성을 시작할 때 테이블에 대한 S-잠금이 필요하고 온라인 인덱스 다시 작성을 종료할 때 테이블에 대한 Sch-M 잠금이 필요합니다. 두 잠금 모두 짧은 메타데이터 잠금이지만 특히 Sch-M 잠금은 모든 차단 트랜잭션이 완료될 때까지 기다려야 합니다. 대기 시간 동안 Sch-M 잠금은 동일 테이블에 액세스할 때 이 잠금 뒤에서 기다리는 다른 모든 트랜잭션을 차단합니다.  
   
 > [!NOTE]
@@ -616,23 +616,23 @@ MAX_DURATION은 **RESUMABLE=ON** 상태에서만 사용됨
 
 WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사용됩니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  일시 중지 후 온라인 인덱스 다시 작성을 다시 시작하려면 이 테이블에 대한 작업이 차단되기를 기다려야 합니다. **WAIT_AT_LOW_PRIORITY**는 온라인 인덱스 작성 작업이 대기하는 동안 다른 작업을 진행할 수 있도록 온라인 인덱스 재작성 작업이 우선 순위가 낮은 잠금을 대기함을 나타냅니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 WAIT_AT_LOW_PRIORITY(MAX_DURATION = 0분, ABORT_AFTER_WAIT = NONE)와 동일합니다. 자세한 내용은 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)를 참조하세요. 
 
 일시 중지
  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
 다시 시작 가능한 온라인 인덱스 다시 작성 작업을 일시 중지합니다.
 
 중단
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
 다시 시작한 것으로 선언된 실행 중이거나 일시 중지된 인덱스 작업을 중단합니다. 다시 시작할 수 있는 인덱스 다시 작성 작업을 종료하려면 **중단** 명령을 명시적으로 실행해야 합니다. 다시 시작할 수 있는 인덱스 작업이 실패하거나 일시 중지해도 실행이 종료되지 않으며, 그 대신 작업이 무한한 일시 중지 상태로 남아 있습니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 인덱스를 다시 분할하거나 다른 파일 그룹으로 이동하는 데는 ALTER INDEX를 사용할 수 없습니다. 이 문을 사용하여 열 추가 또는 삭제, 열 순서 변경과 같은 인덱스 정의를 수정할 수 없습니다. 이러한 작업을 수행하려면 DROP_EXISTING 절에 CREATE INDEX를 사용하세요.  
   
 옵션을 명시적으로 지정하지 않으면 현재 설정이 적용됩니다. 예를 들어, REBUILD 절에 FILLFACTOR 설정을 지정하지 않으면 다시 작성하는 동안 시스템 카탈로그에 저장된 채우기 비율 값이 사용됩니다. 현재 인덱스 옵션 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  
@@ -667,7 +667,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 `ALTER INDEX REBUILD` 문 또는 `CREATE INDEX WITH DROP_EXISTING` 문을 사용하여 인덱스를 사용하도록 설정합니다. ONLINE 옵션이 ON으로 설정되어 있으면 비활성화된 클러스터형 인덱스를 다시 작성할 수 없습니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.  
   
 ## <a name="setting-options"></a>옵션 설정  
-지정된 인덱스를 다시 빌드하거나 다시 구성하지 않고 해당 인덱스에 `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY` `IGNORE_DUP_KEY` 및 `STATISTICS_NORECOMPUTE` 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
+지정된 인덱스를 다시 빌드하거나 다시 구성하지 않고 해당 인덱스에 `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY``IGNORE_DUP_KEY` 및 `STATISTICS_NORECOMPUTE` 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
   
 ### <a name="row-and-page-locks-options"></a>행 및 페이지 잠금 옵션  
 `ALLOW_ROW_LOCKS = ON`이고 `ALLOW_PAGE_LOCK = ON`이면 인덱스에 액세스할 때 행 수준, 페이지 수준 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  
@@ -697,7 +697,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 
 ### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 온라인 인덱스 다시 작성은 RESUMABLE=ON 옵션을 사용하여 다시 시작 가능한 것으로 지정됩니다. 
 -  RESUMABLE 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 RESUMABLE=ON 절을 명시적으로 지정해야 합니다.
@@ -775,10 +775,10 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;  
 ```
 
-## <a name="examples-columnstore-indexes"></a>예: columnstore 인덱스  
+## <a name="examples-columnstore-indexes"></a>예제: Columnstore 인덱스  
  이 예제는 columnstore 인덱스에는 적용되지 않습니다.  
   
-### <a name="a-reorganize-demo"></a>1\. REORGANIZE 데모  
+### <a name="a-reorganize-demo"></a>A. REORGANIZE 데모  
  이 예제에서는 ALTER INDEX REORGANIZE 명령의 작동 원리를 보여줍니다.  복수의 rowgroup이 있는 테이블을 만든 다음, REORGANIZE가 rowgroup을 병합하는 방법을 보여줍니다.  
   
 ```sql  
@@ -856,7 +856,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>2\. 닫힌(CLOSED) 델타 rowgroup을 columnstore으로 압축  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. 닫힌(CLOSED) 델타 rowgroup을 columnstore으로 압축  
  이 예제에서는 REORGANIZE 옵션을 사용하여 각 닫힌(CLOSED) 델타 rowgroup을 압축된 rowgroup으로 columnstore으로 압축합니다.   이 작업은 필수는 아니지만 튜플 이동기가 닫힌(CLOSED) rowgroup을 충분히 빠르게 압축하지 않는 경우에 유용합니다.  
   
 ```sql  
@@ -869,7 +869,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 모든 열린(OPEN) 및 닫힌(CLOSED) 델타 rowgroup을 columnstore으로 압축  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 명령은 각 열린(OPEN) 및 닫힌(CLOSED) 델타 rowgroup을 압축된 rowgroup으로 columnstore로 압축합니다. 이렇게 하면 deltastore가 비워지고 모든 행이 columnstore로 압축되도록 강제 적용합니다. 이러한 작업은 행을 하나 이상의 델타 행 그룹에 저장하므로 이 기능은 많은 삽입 작업을 수행한 후 특히 유용합니다.  
   
@@ -938,7 +938,7 @@ SELECT * FROM sys.column_store_row_groups;
  SELECT 문 결과는 행 그룹이 COMPRESSED임을 보여 주며 행 그룹의 열 세그먼트가 이제 압축되고 columnstore에 저장됨을 의미합니다.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. 오프라인으로 클러스터형 columnstore의 파티션 다시 작성  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)  
  
  대규모 클러스터형 columnstore 인덱스의 파티션을 다시 작성하려면 파티션 옵션과 함께 ALTER INDEX REBUILD를 사용합니다. 이 예제에서는 파티션 12를 다시 작성합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 REBUILD를 REORGANIZE로 대체할 것을 권장합니다.  
   
@@ -982,16 +982,16 @@ WITH (DATA_COMPRESSION = COLUMNSTORE);
 GO  
 ```  
   
-## <a name="examples-rowstore-indexes"></a>예: Rowstore 인덱스  
+## <a name="examples-rowstore-indexes"></a>예제: Rowstore 인덱스  
   
-### <a name="a-rebuilding-an-index"></a>1\. 인덱스 다시 작성  
+### <a name="a-rebuilding-an-index"></a>A. 인덱스 다시 작성  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 단일 인덱스를 다시 작성합니다.  
   
 ```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>2\. 테이블의 모든 인덱스 다시 작성 및 옵션 지정  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. 테이블의 모든 인덱스 다시 작성 및 옵션 지정  
  다음 예에서는 ALL 키워드를 지정합니다. 그러면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.Product 테이블과 연결된 모든 인덱스를 다시 작성합니다. 3개의 옵션이 지정됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -1112,7 +1112,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 온라인으로 다시 시작 가능한 인덱스 다시 작성
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
  다음 예제에서는 온라인 다시 시작 가능한 인덱스 다시 작성을 사용하는 방법을 보여줍니다. 
 

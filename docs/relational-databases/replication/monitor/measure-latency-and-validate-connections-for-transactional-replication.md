@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사 | Microsoft 문서
-ms.custom: ''
+title: 대기 시간 측정 및 연결 유효성 검사(트랜잭션)
+description: SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 RMO(복제 관리 개체)에서 복제 모니터를 사용하여 SQL Server의 트랜잭션 게시에 대한 대기 시간을 측정하고 연결의 유효성을 검사하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711020"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321858"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "71711020"
 ###  <a name="Restrictions"></a> 제한 사항  
  또한 추적 프로그램 토큰은 모든 작업을 중지하고 모든 노드가 처리 중인 변경 내용을 모두 받았는지 확인하므로 시스템을 중지시킬 때 유용할 수 있습니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
- 추적 프로그램 토큰을 사용하려면 다음과 같이 특정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전을 사용해야 합니다.  
+ 추적 토큰을 사용하려면 다음과 같이 특정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 사용해야 합니다.  
   
 -   배포자는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전이어야 합니다.  
   

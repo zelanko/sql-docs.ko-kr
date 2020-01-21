@@ -1,7 +1,7 @@
 ---
 title: 파워 쿼리 원본 | Microsoft Docs
 description: SQL Server Integration Services 데이터 흐름에서 파워 쿼리 원본을 구성하는 방법 알아보기
-ms.date: 02/12/2019
+ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
@@ -16,23 +16,21 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034397"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501924"
 ---
 # <a name="power-query-source-preview"></a>파워 쿼리 원본(미리 보기)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-
 이 문서에서는 SSIS(SQL Server Integration Services) 데이터 흐름에서 파워 쿼리 원본의 속성을 구성하는 방법에 대해 설명합니다. 파워 쿼리는 Excel/Power BI Desktop을 사용하여 다양한 데이터 원본에 연결하고 데이터를 변환할 수 있는 기술입니다. 자세한 내용은 [파워 쿼리 - 개요 및 학습](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d) 문서를 참조하세요. 파워 쿼리에서 생성된 스크립트를 복사하여 SSIS 데이터 흐름의 파워 쿼리 원본에 붙여넣어 스크립트를 구성할 수 있습니다.
   
 > [!NOTE]
-> 현재 미리 보기 릴리스의 경우 피드백을 빠르게 수집하고 기능을 빈번하게 개선할 수 있도록 파워 쿼리 원본은 ADF(Azure Data Factory)의 Azure-SSIS IR(통합 런타임) 및 SSDT(SQL Server Data Tools)에서만 사용할 수 있습니다. [여기](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)에서 파워 쿼리 원본을 지원하는 최신 SSDT를 다운로드할 수 있습니다. Azure-SSIS IR을 프로비전하려면 [ADF에서 SSIS 프로비전](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 문서를 참조하세요.
+> 현재 미리 보기 릴리스의 경우 파워 쿼리 원본은 ADF(Azure Data Factory)의 SQL Server 2017/2019 및 Azure-SSIS IR(Integration Runtime)에서만 사용할 수 있습니다. SQL Server 2017/2019용 최신 파워 쿼리 원본은 [여기](https://www.microsoft.com/download/details.aspx?id=100619)에서 다운로드하여 설치할 수 있습니다. Azure-SSIS IR용 파워 쿼리 원본이 미리 설치되어 있습니다. Azure-SSIS IR을 프로비전하려면 [ADF에서 SSIS 프로비전](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 문서를 참조하세요.
 
 ## <a name="configure-the-power-query-source"></a>파워 쿼리 원본 구성
 
@@ -84,7 +82,7 @@ SSDT에서 파워 쿼리 원본을 사용하여 데이터 흐름을 디자인할
 
 ### <a name="current-limitations"></a>현재 제한 사항
 
--   Oracle ADO.NET 드라이버를 Azure-SSIS IR에 설치할 수 없어 현재는 **Oracle** 데이터 원본을 사용할 수 없으므로, 대신 Oracle ODBC 드라이버를 설치하고 현재는 **ODBC** 데이터 원본을 사용하여 Oracle에 연결합니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서의 **ORACLE STANDARD ODBC** 예제를 참조하세요.
+-   현재 Azure-SSIS IR에서는 Oracle ADO.NET 드라이버를 설치할 수 없어 **Oracle** 데이터 원본을 사용할 수 없으므로, 지금은 Oracle ODBC 드라이버를 대신 설치하고 **ODBC** 데이터 원본을 사용하여 Oracle에 연결하세요. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서의 **ORACLE STANDARD ODBC** 예제를 참조하세요.
 
 -   사용자 지정 설정으로 AZURE-SSIS IR에서 **웹** 데이터 원본을 사용할 수 없으므로, 지금은 사용자 지정 설정 없이 AZURE-SSIS IR에서 해당 데이터 원본을 사용하세요.
 

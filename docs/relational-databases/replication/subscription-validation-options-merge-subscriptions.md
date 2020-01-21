@@ -1,6 +1,7 @@
 ---
-title: 구독 유효성 검사 옵션(병합 구독) | Microsoft 문서
-ms.custom: ''
+title: 구독 유효성 검사 옵션(병합)
+description: SSMS(SQL Server Management Studio) ‘구독 유효성 검사 옵션’ 대화 상자를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e3c49cf0da50879d533fc78dff60253e753ec87b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2b21aaec23bfadee55217b7de411aec31c4bf9ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769438"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322186"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>구독 유효성 검사 옵션(병합 구독)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

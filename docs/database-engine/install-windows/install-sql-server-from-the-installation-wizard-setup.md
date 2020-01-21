@@ -1,7 +1,7 @@
 ---
-title: 설치 마법사에서 SQL Server 2016 설치(설치 프로그램) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: 그래픽 사용자 인터페이스를 사용하여 설치
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962369"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259019"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962369"
 
 이 문서에서는 설치 마법사를 통해 SQL Server를 설치하는 방법을 설명합니다. [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 및 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]에 적용됩니다.
 
-이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. 설치 마법사는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 설치하려면 [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)를 참조하세요.  
+이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. 설치 마법사는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 설치하려면 [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)를 참조하세요.  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법은 다음을 참조하세요.  
 
@@ -149,7 +149,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
      **데이터베이스 엔진 구성 - 데이터 디렉터리** 페이지를 사용하여 기본값이 아닌 설치 디렉터리를 지정할 수 있습니다. 기본 디렉터리에 설치하려면 **다음**을 선택합니다.  
   
     > [!IMPORTANT]  
-    > 기본값이 아닌 설치 디렉터리를 지정하는 경우, 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 고유한지 확인합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
+    > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리 페이지](../../sql-server/install/instance-configuration.md#datadir)를 참조하세요.
 
@@ -175,7 +175,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 INSTANCEDIR과 SQLUSERDBDIR에 대해 동일한 디렉터리 경로를 지정하면, 권한 누락으로 인해 SQL Server 에이전트 및 전체 텍스트 검색이 시작되지 않습니다.  
     >  
-    > 기본값이 아닌 설치 디렉터리를 지정하는 경우, 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 고유한지 확인합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
+    > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
 
     자세한 내용은 [Analysis Services 구성 - 데이터 디렉터리 페이지](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page)를 참조하세요.  
 
@@ -312,7 +312,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
      **데이터베이스 엔진 구성 - 데이터 디렉터리** 페이지를 사용하여 기본값이 아닌 설치 디렉터리를 지정할 수 있습니다. 기본 디렉터리에 설치하려면 **다음**을 선택합니다.  
   
     > [!IMPORTANT]  
-    > 기본값이 아닌 설치 디렉터리를 지정하는 경우, 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 고유한지 확인합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
+    > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리 페이지](../../sql-server/install/instance-configuration.md#datadir)를 참조하세요.
 
@@ -351,7 +351,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 INSTANCEDIR과 SQLUSERDBDIR에 대해 동일한 디렉터리 경로를 지정하면, 권한 누락으로 인해 SQL Server 에이전트 및 전체 텍스트 검색이 시작되지 않습니다.  
     >  
-    > 기본값이 아닌 설치 디렉터리를 지정하는 경우, 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 고유한지 확인합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
+    > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
 
     자세한 내용은 [Analysis Services 구성 - 데이터 디렉터리 페이지](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page)를 참조하세요.  
 
@@ -402,7 +402,7 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 자세한 내용은 [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
   
 * [SQL Server 설치 유효성 검사](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
 * [실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

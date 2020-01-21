@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정 | Microsoft 문서
-ms.custom: ''
+title: 변경 내용을 전파하는 방법 지정(트랜잭션)
+description: SQL Server에서 트랜잭션 게시를 위해 변경 내용이 전파되는 방법을 지정하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769338"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321393"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "68769338"
 ## <a name="default-and-custom-stored-procedures"></a>기본 저장 프로시저 및 사용자 지정 저장 프로시저  
  복제 시 각 테이블 아티클에 대해 기본적으로 생성되는 3가지 프로시저는 다음과 같습니다.  
   
--   **sp_MSins_\<** *tablename* **>** 은 삽입을 처리합니다.  
+-   **sp_MSins_\<** *tablename* **>** - 삽입을 처리합니다.  
   
--   **sp_MSupd_\<** *tablename* **>** 은 업데이트를 처리합니다.  
+-   **sp_MSupd_\<** *tablename* **>** - 업데이트를 처리합니다.  
   
--   **sp_MSdel_\<** *tablename* **>** 은 삭제를 처리합니다.  
+-   **sp_MSdel_\<** *tablename* **>** - 삭제를 처리합니다.  
   
  프로시저에서 사용하는 **\<** _tablename_ **>** 은 아티클을 게시에 추가하는 방법과 구독 데이터베이스에 소유자는 다르지만 이름이 같은 테이블이 포함되어 있는지 여부에 따라 다릅니다.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68769338"
   
 -   게시된 테이블에 대해 스키마 변경을 적용하면 사용자 지정 프로시저를 다시 생성해야 합니다. 자세한 내용은 [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)을 참조하세요.  
   
--   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 예를 들어  
+-   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 다음은 그 예입니다.  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

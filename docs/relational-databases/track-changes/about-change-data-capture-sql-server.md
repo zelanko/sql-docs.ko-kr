@@ -1,10 +1,10 @@
 ---
 title: 변경 데이터 캡처 정보
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095324"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952454"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> CDC는 이제 Linux의 SQL Server 2017(CU18부터) 및 Linux의 SQL Server 2019에 대해 지원됩니다.
+
   변경 데이터 캡처는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용되는 삽입, 업데이트 및 삭제 작업을 기록합니다. 이로 인해 변경 세부 정보가 쉽게 사용할 수 있는 관계형 형식으로 제공됩니다. 대상 환경에 변경 내용을 적용하는 데 필요한 열 정보 및 메타데이터가 수정된 행에 대해 캡처되고 추적된 원본 테이블의 열 구조를 반영하는 변경 테이블에 저장됩니다. 소비자가 변경 데이터에 체계적으로 액세스할 수 있도록 테이블 반환 함수가 제공됩니다.  
   
  이 기술의 대상이 될 수 있는 좋은 데이터 소비자 예로 ETL(추출, 변환 및 로드) 애플리케이션을 들 수 있습니다. ETL 애플리케이션은 증분식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 테이블의 변경 데이터를 데이터 웨어하우스 또는 데이터 마트로 로드합니다. 데이터 웨어하우스 내에서 원본 테이블의 표현은 해당 원본 테이블의 변경 내용을 반영해야 하지만 원본 복제본을 새로 고치는 엔드투엔드 기술은 적합하지 않습니다. 대신 소비자가 다른 종류의 데이터 대상 표현에 적용할 수 있도록 구조화된 안정적인 변경 데이터 스트림이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처는 이러한 기술을 제공합니다.  
@@ -30,7 +34,7 @@ ms.locfileid: "74095324"
 ## <a name="change-data-capture-data-flow"></a>변경 데이터 캡처 데이터 흐름  
  다음 그림에서는 변경 데이터 캡처의 주요 데이터 흐름을 보여 줍니다.  
   
- ![변경 데이터 캡처 데이터 흐름](../../relational-databases/track-changes/media/cdcdataflow.gif "변경 데이터 캡처 데이터 흐름")  
+ ![변경 데이터 캡처 데이터 흐름](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  변경 데이터 캡처에 대한 변경 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그입니다. 추적된 원본 테이블에 삽입, 업데이트 및 삭제가 적용되면 이러한 변경을 설명하는 항목이 로그에 추가됩니다. 로그는 캡처 프로세스에 대한 입력으로 사용됩니다. 이 프로세스는 로그를 읽고 변경에 대한 정보를 추적된 테이블의 관련 변경 테이블에 추가합니다. 지정된 범위에서 변경 테이블에 나타나는 변경을 열거하여 해당 정보를 필터링된 결과 집합의 형태로 반환하는 함수가 제공됩니다. 필터링된 결과 집합은 일반적으로 일부 외부 환경의 원본 표현을 업데이트하는 애플리케이션 프로세스에서 사용됩니다.  
   

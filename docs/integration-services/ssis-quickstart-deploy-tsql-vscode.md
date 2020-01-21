@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281543"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947175"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
 
@@ -27,7 +27,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 최신 버전의 Visual Studio Code를 설치하고 `mssql` 확장을 로드했는지 확인합니다. 이러한 도구를 다운로드하려면 다음 페이지를 참조하세요.
--   [Visual Studio 코드 다운로드](https://code.visualstudio.com/Download)
+-   [Visual Studio Code 다운로드](https://code.visualstudio.com/Download)
 -   [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>지원 플랫폼
@@ -50,6 +50,10 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
  
 3. 열리는 **언어 모드 선택** 드롭다운 메뉴에서 **SQL**을 선택하거나 입력한 다음 **Enter** 키를 눌러 언어 모드를 SQL로 설정합니다. 
 
+## <a name="supported-authentication-method"></a>지원되는 인증 방법
+
+[배포를 위한 인증 방법](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)을 참조하세요.
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS 카탈로그 데이터베이스에 연결
 
 Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정합니다.
@@ -62,12 +66,12 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 4. 프롬프트에 따라 새 연결 프로필에 대한 연결 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다. 
 
-   | 설정       | 제안된 값 | 추가 정보 |
+   | 설정       | 제안 값 | 추가 정보 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 |  |
    | **데이터베이스 이름** | **SSISDB** | 연결할 데이터베이스의 이름입니다. |
    | **인증** | SQL 로그인 | |
-   | **User name** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
+   | **사용자 이름** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 'Yes'를 선택합니다. |
    | **이 프로필의 이름을 입력합니다.** | 프로필 이름(예: **mySSISServer**) | 저장된 프로필 이름은 후속 로그인에서 연결 속도를 높입니다. | 

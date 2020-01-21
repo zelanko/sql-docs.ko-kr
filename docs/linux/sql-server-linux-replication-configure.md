@@ -1,6 +1,7 @@
 ---
-title: Linux의 SQL Server 복제 구성
+title: 복제 구성(SSMS)
 description: 이 문서에서는 Linux에서 SQL Server 복제를 구성하는 방법을 설명합니다.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,19 +10,20 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67895931"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952494"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux의 SQL Server 복제 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 Linux의 SQL Server 인스턴스에 SQL Server 복제를 도입했습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 LSQL Server on Linux 인스턴스에 SQL Server 복제를 도입했습니다.
 
 복제에 대한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)를 참조하세요.
 
@@ -97,4 +99,4 @@ SSMS(SQL Server Management Studio) 또는 Transact-SQL 저장 프로시저를 �
 
 [개념: Linux의 SQL Server 복제](sql-server-linux-replication.md)
 
-[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

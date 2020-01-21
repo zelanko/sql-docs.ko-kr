@@ -1,6 +1,5 @@
 ---
-title: SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN | Microsoft 문서
-ms.custom: ''
+title: 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903445"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242895"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-이 문서에서는 Microsoft SQL Server 및 Azure SQL 데이터베이스 클라우드 서비스의 확장 이벤트와 관련된 두 가지 시스템 뷰 집합에 대해 설명합니다. 문서 내용은 다음과 같습니다.
+이 문서에서는 SQL Server 및 Azure SQL Database의 확장 이벤트와 관련된 두 가지 시스템 뷰 집합에 대해 설명합니다. 문서 내용은 다음과 같습니다.
 
 - 다양한 시스템 뷰를 조인(JOIN)하는 방법
 - 시스템 뷰에서 특정 종류의 정보를 선택(SELECT)하는 방법
@@ -34,7 +34,7 @@ ms.locfileid: "67903445"
 
 
 
-## <a name="a-foundational-information"></a>1\. 기본 정보
+## <a name="a-foundational-information"></a>A. 기본 정보
 
 
 확장 이벤트에 대한 다음 두 가지 시스템 뷰 집합이 있습니다.
@@ -55,7 +55,7 @@ ms.locfileid: "67903445"
 
 - 실행 중인 이벤트 세션의 *현재 활동* 에 대한 정보를 저장합니다. 그러나 이러한 DMV에는 세션의 정의에 대한 정보가 거의 없습니다.
     - 모든 이벤트 세션이 현재 중지된 경우에도 *sys.dm_xe_packages* 뷰에서 SELECT를 실행하면 다양한 패키지가 서버 시작 시 활성 메모리에 로드되기 때문에 여전히 행이 반환됩니다.
-    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns* 도 여전히 행을 반환합니다.
+    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns*도 여전히 행을 반환합니다.
 
 
 - 확장 이벤트 DMV에 대한 이름 접두사는 다음과 같습니다.
@@ -74,7 +74,7 @@ ms.locfileid: "67903445"
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>2\. 카탈로그 뷰
+## <a name="b-catalog-views"></a>B. 카탈로그 뷰
 
 
 이 섹션에서는 동일하게 정의된 이벤트 세션에 대한 세 가지 기술적 관점을 일치 및 상호 연결합니다. 세션이 정의되었으며 SQL Server Management Studio(SSMS.exe)의 **개체 탐색기** 에 표시되지만 세션이 현재 실행되고 있지 않습니다.
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 및 이벤트 필드
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 및 이벤트 필드
 
 
 다음 SELECT는 *sys.dm_xe_map_values*라는 까다로운 뷰에 대한 JOIN을 포함합니다.
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 target_data 열을 XML로 캐스팅하는 DMV SELECT
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 target_data 열을 XML로 캐스팅하는 DMV SELECT
 
 
 이 DMV SELECT는 활성 이벤트 세션의 대상에서 데이터 행을 반환합니다. 데이터는 XML로 캐스팅되어 SSMS에서 표시하기 쉽도록 반환된 셀을 클릭 가능하게 합니다.
@@ -854,7 +854,7 @@ XML-Cast 셀을 클릭하면 다음과 같은 멋진 표시가 나타납니다.
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 디스크 드라이브에서 event_file 데이터를 검색하기 위해 함수에서 SELECT
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 디스크 드라이브에서 event_file 데이터를 검색하기 위해 함수에서 SELECT
 
 
 이벤트 세션이 일부 데이터를 수집하고 나중에 중지되었다고 가정합니다. 세션이 event_file 대상을 사용하도록 정의된 경우에도 *sys.fn_xe_target_read_file*함수를 호출하여 데이터를 검색할 수 있습니다.

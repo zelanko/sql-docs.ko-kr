@@ -4,18 +4,18 @@ description: Docker에서 SQL Server 2017 및 2019 컨테이너 이미지를 사
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: a184a6e19154d0e8534fe843cf65c1afc9d2f547
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721565"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776408"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
@@ -56,20 +56,17 @@ SQL Server 2017 및 SQL Server 2019용 Docker 컨테이너 이미지를 끌어�
 
 ## <a id="rhel"></a> RHEL 기반 컨테이너 이미지 실행
 
-SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. 모든 docker 명령에서 컨테이너 리포지토리를 **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04**에서 **mcr.microsoft.com/mssql/rhel/server:2019-RC1**로 변경합니다.
+SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. 모든 docker 명령에서 컨테이너 리포지토리를 **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04**에서 **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**로 변경합니다.
 
-예를 들어 다음 명령은 RHEL을 사용하는 최신 SQL Server 2019 컨테이너를 끌어옵니다.
+예를 들어 다음 명령은 RHEL을 사용하는 SQL Server 2019 컨테이너의 누적 업데이트 1을 끌어옵니다.
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
-
-> [!NOTE]
-> SQL Server 2019의 GA 릴리스부터 최신 RHEL 컨테이너 이미지는 여전히 RC1 버전입니다. 이 버전은 프로덕션 용도로 사용되지 않습니다. 새 RHEL 컨테이너 이미지를 사용할 수 있게 되 면 이 문서가 업데이트됩니다.
 
 ::: moniker-end
 

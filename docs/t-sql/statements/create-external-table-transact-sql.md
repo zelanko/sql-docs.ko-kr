@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2020
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75656640"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952383"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75656640"
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />분석](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -187,7 +187,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-외부 테이블의 데이터는 SQL Server 내에 없으므로 PolyBase의 제어를 받지 않으며 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
+외부 테이블의 데이터가 SQL Server의 직접 관리 제어에 없으므로, 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
 
 각각 서로 다른 외부 데이터 원본을 참조하는 여러 개의 외부 테이블을 만들 수 있습니다. 서로 다른 Hadoop 데이터 원본에 대해 동시에 쿼리를 실행하는 경우 각 Hadoop 원본은 동일한 'hadoop 연결' 서버 구성 설정을 사용해야 합니다. 예를 들어 Cloudera Hadoop 클러스터 및 Hortonworks Hadoop 클러스터는 서로 다른 구성 설정을 사용하므로 이들에 대해 하나의 쿼리를 동시에 실행할 수 없습니다. 구성 설정 및 지원되는 결합에 대해서는 [PolyBase 연결 구성](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.
 
@@ -389,7 +389,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
+    WITH (
     LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
@@ -431,14 +431,14 @@ WITH
    CREATE DATABASE SCOPED CREDENTIAL credential_name
    WITH IDENTITY = 'username', Secret = 'password';
 
-   /* 
+   /*
    * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    * CONNECTION_OPTIONS: Specify driver location
    * CREDENTIAL: the database scoped credential, created above.
    */
    CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
+   WITH (
      LOCATION = 'oracle://<server address>[:<port>]',
      -- PUSHDOWN = ON | OFF,
      CREDENTIAL = credential_name)
@@ -484,7 +484,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
+    WITH (
     LOCATION = teradata://<server address>[:<port>],
    -- PUSHDOWN = ON | OFF,
     CREDENTIAL =credential_name
@@ -571,7 +571,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[Azure Synapse<br />분석](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -666,15 +666,15 @@ SELECT FROM EXTERNAL TABLE과 같은 임시 쿼리 시나리오에서 SQL Databa
 쿼리에 정의된 리터럴 조건자만 외부 데이터 원본으로 푸시할 수 있습니다. 연결된 서버와 달리, 쿼리 계획에서 중첩된 루프와 함께 사용할 경우 쿼리 실행 중에 조건자를 통해 결정된 위치에 액세스합니다. 이로 인해 전체 외부 테이블이 로컬로 복사된 다음, 조인되는 경우가 많습니다.
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ Assuming External.Orders is an external table and Customer is a local table.
   \\ This query  will copy the whole of the external locally as the predicate needed
   \\ to filter isn't known at compile time. Its only known during execution of the query
   
-  SELECT Orders.OrderId, Orders.OrderTotal 
+  SELECT Orders.OrderId, Orders.OrderTotal
     FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId 
-                          FROM Customer 
-                         WHERE CustomerName = 'MyCompany')
+   WHERE CustomerId in (SELECT TOP 1 CustomerId
+                          FROM Customer
+                          WHERE CustomerName = 'MyCompany')
 ```
 
 외부 테이블을 사용하면 쿼리 계획에서 병렬 처리를 사용할 수 없습니다.
@@ -709,18 +709,18 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />분석 \*_** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL Data Warehouse
+## <a name="overview-azure-synapse-analytics"></a>개요: Azure Synapse Analytics
 
-Azure SQL Data Warehouse에서 외부 테이블을 사용하여 다음을 수행합니다.
+외부 테이블을 사용하여 다음을 수행합니다.
 
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 Hadoop 또는 Azure Blob Storage 데이터를 쿼리합니다.
-- Hadoop 또는 Azure Blob Storage의 데이터를 가져와서 Azure SQL Data Warehouse에 저장합니다.
-- Azure Data Lake Store의 데이터를 가져와서 Azure SQL Data Warehouse에 저장합니다.
+- Hadoop 또는 Azure Blob 스토리지에서 데이터를 가져오고 저장합니다.
+- Azure Data Lake Store에서 데이터를 가져오고 저장합니다.
 
 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)도 참조하세요.  
 
@@ -754,7 +754,7 @@ column_name <data_type>
 
 ## <a name="arguments"></a>인수
 
-*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL Data Warehouse는 Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 SQL Data Warehouse에 저장되지 않습니다.
+*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우, Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 해당합니다. 외부 테이블을 만들 때 실제 데이터가 이동하거나 저장되지 않습니다.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
@@ -852,7 +852,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-외부 테이블의 데이터는 SQL Data Warehouse의 제어하에 있으므로 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
+외부 테이블의 데이터가 Azure Synapse의 직접 관리 제어에 없으므로, 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
 
 각각 서로 다른 외부 데이터 원본을 참조하는 여러 개의 외부 테이블을 만들 수 있습니다.
 
@@ -898,7 +898,7 @@ WITH (TYPE = HADOOP,
 CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
-    FORMAT_TYPE = DELIMITEDTEXT 
+    FORMAT_TYPE = DELIMITEDTEXT
     , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
        , STRING_DELIMITER = ''
       , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
@@ -930,14 +930,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />분석](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1070,7 +1070,7 @@ PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-외부 테이블의 데이터는 어플라이언스와 떨어져 있기 때문에 PolyBase의 제어를 받지 않으며 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
+외부 테이블의 데이터가 해당 기기의 직접 관리 제어에 없으므로, 언제든지 외부 프로세스에 의해 변경 또는 제거될 수 있습니다. 따라서 외부 테이블에 대한 쿼리 결과는 결정적인 것으로 보증되지 않습니다. 즉, 외부 테이블에 대해 실행할 때마다 같은 쿼리가 서로 다른 결과를 반환할 수 있습니다. 마찬가지로 외부 데이터를 이동하거나 제거하면 쿼리가 실패할 수 있습니다.
 
 각각 서로 다른 외부 데이터 원본을 참조하는 여러 개의 외부 테이블을 만들 수 있습니다. 서로 다른 Hadoop 데이터 원본에 대해 동시에 쿼리를 실행하는 경우 각 Hadoop 원본은 동일한 'hadoop 연결' 서버 구성 설정을 사용해야 합니다. 예를 들어 Cloudera Hadoop 클러스터 및 Hortonworks Hadoop 클러스터는 서로 다른 구성 설정을 사용하므로 이들에 대해 하나의 쿼리를 동시에 실행할 수 없습니다. 구성 설정 및 지원되는 결합에 대해서는 [PolyBase 연결 구성](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.
 
@@ -1093,7 +1093,7 @@ PolyBase는 32개의 동시 PolyBase 쿼리를 실행할 때 폴더당 최대 3�
 
 SQL Server 2016의 PolyBase에는 테이블 정의에 의해 유효한 단일 행의 최대 크기를 기반으로 32KB의 행 너비 한도가 적용됩니다. 열 스키마의 합계가 32KB보다 큰 경우 PolyBase는 데이터를 쿼리할 수 없습니다.
 
-SQL Data Warehouse에서 이 제한 사항은 1MB로 증가되었습니다.
+Azure Synapse Analytics에서는 이 제한이 1MB로 증가했습니다.
 
 ## <a name="locking"></a>잠금
 
@@ -1138,6 +1138,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

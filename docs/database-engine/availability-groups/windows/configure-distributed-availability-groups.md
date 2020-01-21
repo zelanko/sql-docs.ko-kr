@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002068"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952491"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 엔드포인트와 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>전달자에 대한 자동 시드 취소
-두 가용성 그룹이 동기화되기 전에 전달자의 초기화를 취소해야 하는 경우 전달자의 SEEDING_MODE 매개 변수를 MANUAL로 설정하여 분산 가용성 그룹을 ALTER하고 즉시 시드를 취소합니다. 전역 기본에서 명령을 실행합니다. 
+
+어떤 이유로든, 두 가용성 그룹이 동기화되기 _전에_ 전달자의 초기화를 취소해야 하는 경우 전달자의 SEEDING_MODE 매개 변수를 MANUAL로 설정하여 분산 가용성 그룹을 ALTER하고 즉시 시드를 취소합니다. 전역 기본에서 명령을 실행합니다. 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

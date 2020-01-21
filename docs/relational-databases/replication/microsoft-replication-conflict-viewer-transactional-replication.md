@@ -1,6 +1,7 @@
 ---
-title: Microsoft 복제 충돌 뷰어(트랜잭션 복제) | Microsoft 문서
-ms.custom: ''
+title: 복제 충돌 뷰어(피어 투 피어)
+description: 복제 충돌 뷰어에 대해 알아보고 이 뷰어를 통해 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제의 충돌을 보는 방법을 배웁니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770578"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321528"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 복제 충돌 뷰어(트랜잭션 복제)
+# <a name="replication-conflict-viewer-transactional-replication"></a>복제 충돌 뷰어(트랜잭션 복제)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   복제 충돌 뷰어에서는 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제에서 동기화 중 발생한 충돌을 볼 수 있습니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68770578"
   
  아래쪽 섹션에서 충돌 데이터는**충돌 시 적용되는 내용** 및 **충돌 시 변경 내용 무시**중 해당하는 열에 표시됩니다. 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  충돌이 발생한 게시가 포함된 데이터베이스를 선택합니다.  
   
  **게시**  

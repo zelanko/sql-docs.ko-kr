@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165593"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831853"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 

@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b09ea4349a710bad0ed228e6f16637878047e9bc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982208"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924916"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -97,7 +97,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 - [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)
 - [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -302,7 +302,7 @@ _partition_scheme_name_ 또는 _filegroup_이 지정되지 않고 테이블이 �
 
 ON _filegroup_name_      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상).
 
 주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.
 
@@ -319,7 +319,7 @@ ON **"** default **"**
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상).
 
 클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.
 
@@ -361,7 +361,7 @@ PAD_INDEX = { ON | **OFF** }
 
 인덱스 패딩을 지정합니다. 기본값은 OFF입니다.
 
-ON      
+켜기      
 *fillfactor*로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.
 
 OFF 또는 _fillfactor_를 지정되지 않음      
@@ -390,7 +390,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 **tempdb**에 임시 정렬 결과를 저장할지 여부를 지정합니다. Azure SQL Database 하이퍼스케일을 제외하고 기본값은 OFF입니다. 하이퍼스케일의 모든 인덱스 작성 작업에서는, 다시 시작 가능한 인덱스 재작성을 사용하지 않을 경우 지정된 옵션에 관계없이 SORT_IN_TEMPDB가 항상 ON입니다.
 
-ON      
+켜기      
 인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 집합에 **tempdb**가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.
 
 OFF      
@@ -403,7 +403,7 @@ OFF
 IGNORE_DUP_KEY = { ON | **OFF** }      
 삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md)를 실행하는 경우에는 이 옵션이 아무런 영향을 미치지 않습니다. 기본값은 OFF입니다.
 
-ON      
+켜기      
 중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.
 
 OFF      
@@ -418,7 +418,7 @@ IGNORE_DUP_KEY를 보려면 [sys.indexes](../../relational-databases/system-cata
 STATISTICS_NORECOMPUTE = { ON | **OFF**}      
 배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.
 
-ON      
+켜기      
 이전 통계가 자동으로 다시 계산되지 않습니다.
 
 OFF      
@@ -450,7 +450,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 DROP_EXISTING = { ON | **OFF** }      
 수정된 열 사양을 사용하여 기존 클러스터형 또는 비클러스터형 인덱스를 삭제하고 다시 만들며 인덱스 이름을 동일하게 유지하는 옵션입니다. 기본값은 OFF입니다.
 
-ON      
+켜기      
 기존 인덱스를 삭제하고 다시 만들도록 지정하며, 이름은 *index_name* 매개 변수와 같아야 합니다.
 
 OFF      
@@ -471,9 +471,9 @@ ONLINE = { ON | **OFF** }
 인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.
 
 > [!IMPORTANT]
-> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
+> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
 
-ON      
+켜기      
 인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 따라서 기본 테이블 및 인덱스에 대한 쿼리나 업데이트를 처리할 수 있습니다. 작업이 시작되면 아주 짧은 기간 동안 S(공유) 잠금이 원본 개체에 유지됩니다. 작업이 끝나면 짧은 기간 동안 비클러스터형 인덱스가 생성되는 경우에는 원본에 대해 S(공유) 잠금이 획득되고, 온라인 상태에서 클러스터형 인덱스가 생성 또는 삭제될 때와 클러스터형 또는 비클러스터형 인덱스가 다시 작성될 때는 SCH-M(스키마 수정) 잠금이 획득됩니다. 로컬 임시 테이블에서 인덱스를 생성하는 경우에는 ONLINE을 ON으로 설정할 수 없습니다.
 
 OFF      
@@ -495,11 +495,11 @@ OFF
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  온라인 인덱스 작업이 다시 시작될 수 있는지 여부를 지정합니다.
 
- ON      
+ 켜기      
 인덱스 작업이 다시 시작될 수 있습니다.
 
  OFF      
@@ -507,7 +507,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사용됩니다(**ONLINE = ON** 필요).   
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값).
 
@@ -522,7 +522,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
 
 행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.
 
-ON      
+켜기      
 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.
 
 OFF      
@@ -533,14 +533,14 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
 
 페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.
 
-ON      
+켜기      
 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.
 
 OFF      
 페이지 잠금이 사용되지 않습니다.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 [순차 키](#sequential-keys) 섹션을 참조하세요.
 
@@ -566,7 +566,7 @@ MAXDOP = *max_degree_of_parallelism*
 > 병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 
 DATA_COMPRESSION      
-지정된 인덱스, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.
+지정된 인덱스, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 옵션은 다음과 같습니다.
 
 없음      
 인덱스 또는 지정된 파티션이 압축되지 않습니다.
@@ -603,7 +603,7 @@ REBUILD WITH
 );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 CREATE INDEX 문은 다른 쿼리와 마찬가지로 최적화됩니다. I/O 작업을 줄이기 위해 쿼리 프로세서에서 테이블 검색을 수행하는 대신 다른 인덱스를 검색하도록 선택할 수도 있습니다. 정렬 작업을 제거해야 하는 경우도 있습니다. 다중 프로세서 컴퓨터에서 CREATE INDEX는 다른 쿼리에서 수행하는 것과 같은 방법으로 더 많은 프로세서를 사용하여 인덱스 만들기와 관련된 스캔 및 정렬 작업을 수행할 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.
 
 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정된 경우 인덱스 생성 작업은 최소로 기록될 수 있습니다.
@@ -652,15 +652,15 @@ CREATE INDEX 문은 다른 쿼리와 마찬가지로 최적화됩니다. I/O 작
 - INSERT, UPDATE, DELETE 또는 MERGE 작업으로 필터링된 인덱스의 데이터를 수정합니다.
 - 필터링된 인덱스는 쿼리 최적화 프로그램이 쿼리 계획을 작성할 때 사용됩니다.
 
-    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|
+    |Set 옵션|필수 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-    |ANSI_NULLS|ON|ON|ON|OFF|
-    |ANSI_PADDING|ON|ON|ON|OFF|
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|
-    |ARITHABORT|ON|ON|OFF|OFF|
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+    |ANSI_NULLS|켜기|켜기|켜기|OFF|
+    |ANSI_PADDING|켜기|켜기|켜기|OFF|
+    |ANSI_WARNINGS*|켜기|켜기|켜기|OFF|
+    |ARITHABORT|켜기|켜기|OFF|OFF|
+    |CONCAT_NULL_YIELDS_NULL|켜기|켜기|켜기|OFF|
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+    |QUOTED_IDENTIFIER|켜기|켜기|켜기|OFF|
   
      * 데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다. 데이터베이스 호환성 수준이 80 이하로 설정된 경우에는 명시적으로 ARITHABORT 옵션을 ON으로 설정해야 합니다.
 
@@ -794,7 +794,7 @@ DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭
 `ALLOW_ROW_LOCKS = OFF` 및 `ALLOW_PAGE_LOCK = OFF`인 경우 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.
 
 ## <a name="sequential-keys"></a>순차 키
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 마지막 페이지 삽입 경합은 다수의 동시 스레드가 순차 키를 사용하여 인덱스에 행을 삽입하려고 할 때 발생하는 일반적인 성능 문제입니다. ID 열이나 기본적으로 현재 날짜/시간으로 설정되는 날짜와 같이 항상 증가(또는 감소)하는 값이 선행 키 열에 포함되는 경우 인덱스가 순차적이라고 간주됩니다. 삽입되는 키가 순차적이므로 모든 새 행이 인덱스 구조의 끝, 즉 동일한 페이지에 삽입됩니다. 이 경우 메모리에서 페이지 경합이 발생하며, 여러 스레드가 해당 페이지의 PAGELATCH_EX를 대기하는 상황을 통해 확인할 수 있습니다.
 
@@ -835,9 +835,9 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션을 켜면 데이터베이스 엔진
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 파일 그룹 및 파일 스트림 옵션을 지원하지 않습니다.
 
-## <a name="examples-all-versions-uses-the-adventureworks-database"></a>예: 모든 버전. AdventureWorks 데이터베이스를 사용합니다.
+## <a name="examples-all-versions-uses-the-adventureworks-database"></a>예제: 모든 버전. AdventureWorks 데이터베이스를 사용합니다.
 
-### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>1\. 간단한 비클러스터형 rowstore 인덱스 만들기
+### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 간단한 비클러스터형 rowstore 인덱스 만들기
 다음 예제에서는 `Purchasing.ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
 
 ```sql
@@ -846,7 +846,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>2\. 간단한 비클러스터형 rowstore 복합 인덱스 만들기
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. 간단한 비클러스터형 rowstore 복합 인덱스 만들기
 다음 예제에서는 `Sales.SalesPerson` 테이블의 `SalesQuota` 및 `SalesYTD` 열에 비클러스터형 복합 인덱스를 만듭니다.
 
 ```sql
@@ -871,7 +871,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC
   WITH (DROP_EXISTING = ON);
 ```
 
-## <a name="examples-sql-server-azure-sql-database"></a>예: SQL Server, Azure SQL Database
+## <a name="examples-sql-server-azure-sql-database"></a>예제: SQL Server, Azure SQL Database
 
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 고유한 비클러스터형 인덱스 만들기
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Name` 테이블의 `Production.UnitMeasure` 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.
@@ -1125,7 +1125,7 @@ ALTER INDEX test_idx1 ON test_table ABORT;
 ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="n-basic-syntax"></a>14. 기본 구문
 다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단       

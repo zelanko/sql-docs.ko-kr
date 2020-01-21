@@ -1,7 +1,7 @@
 ---
 title: 메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581397e01991ef1fb23b8c4bbfa9de879bc39ac3
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494107"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401650"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>메모리 내 OLTP 및 메모리 최적화
 
@@ -47,18 +47,18 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에서는 다음 항목을 다룹니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|메모리 내 OLTP 살펴보기|
 |[개요 및 사용 시나리오](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|메모리 내 OLTP의 정의와 성능 이점을 보여 주는 시나리오에 대한 개요입니다.|
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 최적화 테이블의 사용 지침에 대해 설명합니다.|  
 |[메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|메모리 최적화 테이블을 만들고 사용하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
-|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|  
+|[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|  
 |[메모리 액세스에 최적화된 테이블 변수](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|기존의 테이블 변수 대신 메모리 최적화 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
 |[메모리 액세스에 최적화된 테이블의 인덱스](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|메모리 최적화 인덱스를 소개합니다.|  
 |[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|  
 |[메모리 내 OLTP의 메모리 관리](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
-|[메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 최적화 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
+|[메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 최적화 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
 |[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|메모리 최적화 테이블의 백업, 복원 및 복구를 논의합니다.|  
 |[메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]지원을 논의합니다.|  
 |[메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 가용성 그룹 및 장애 조치(failover) 클러스터링을 논의합니다.|  
@@ -86,16 +86,16 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
 
 ## <a name="anchorname-17minute-video"></a>인덱싱된 17분 분량의 비디오
 
-- _비디오 제목:_ **SQL Server 2016의 메모리 내 OLTP**
-- _게시 날짜:_ 2019-03-10
-- _길이:_ 17:32
-- _호스팅 담당자:_ Jos de Bruijn, SQL Server 선임 프로그램 관리자
+- _비디오 제목:_ &nbsp; **SQL Server 2016의 메모리 내 OLTP**
+- _게시 날짜:_ &nbsp; 2019-03-10, `YouTube.com`.
+- _길이:_ &nbsp; 17:32 &nbsp; &nbsp;(비디오 링크는 다음 [**인덱스**](#anchorname-index-17minute-video) 참조)
+- _호스팅 담당자:_ &nbsp; Jos de Bruijn, SQL Server 선임 프로그램 관리자
 
 ### <a name="demo-can-be-downloaded"></a>데모 다운로드 가능
 
-시간이 08:09로 표시되면 비디오에서 데모를 두 번 실행합니다. 비디오에 사용된 실행 가능한 성능 데모는 다음 링크에서 다운로드할 수 있습니다.
+시간이 08:09로 표시되면 비디오에서 데모를 두 번 실행합니다. 비디오에 사용된 실행 가능한 성능 데모의 소스 코드는 다음 링크에서 다운로드할 수 있습니다.
 
-- [메모리 내 OLTP 성능 데모 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [메모리 내 OLTP 성능 데모 v1.0, 소스 코드](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
 비디오에 표시되는 일반적인 단계는 다음과 같습니다.
 
@@ -103,7 +103,7 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
 2. 그 다음 SQL Server Management Studio(SSMS.exe)에서 몇 번의 클릭으로 생성하여 채울 수 있는 메모리 최적화 테이블 버전을 확인할 수 있습니다.
 3. 그런 다음 메모리 최적화 테이블을 사용하여 데모를 다시 실행합니다. 속도가 크게 향상되었음을 확인할 수 있습니다.
 
-### <a name="index-to-each-section-in-the-video"></a>비디오의 각 섹션에 대한 인덱스
+### <a name="anchorname-index-17minute-video"></a>비디오의 각 섹션에 대한 인덱스
 
 | 시간 표시 링크 | 섹션 제목 |
 | :------------- | :------------ |
@@ -133,7 +133,7 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
 | <br/>G.&nbsp; [16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>최종 설명. (17:32에서 종료) |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 기능](../../relational-databases/database-features.md)  
   
   

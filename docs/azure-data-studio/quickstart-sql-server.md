@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810808"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884057"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리
 
@@ -43,11 +43,11 @@ SQL Server에 대한 액세스 권한이 없는 경우 다음 링크에서 해�
 
 3. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.   다음과 같이 필드를 채웁니다.
 
-- **서버 이름:** -여기에 서버 이름을 입력합니다. 예를 들어 localhost를 입력합니다.
+- **서버 이름:** 여기에 서버 이름을 입력합니다. 예를 들어 localhost를 입력합니다.
 - **인증 유형:** SQL 로그인
 - **사용자 이름:** SQL Server의 사용자 이름
 - **암호:** SQL Server의 암호
-- **데이터베이스 이름:** 이 필드는 비워 둠
+- **데이터베이스 이름:** \<기본값\>
 - **서버 그룹:** \<기본값\>
 
    ![새 연결 화면](media/quickstart-sql-server/new-connection-screen.png)

@@ -1,7 +1,7 @@
 ---
 title: OUTPUT 절(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901869"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952434"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67901869"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  MERGE 문에만 사용할 수 있습니다. 각 행에 대해 세 개의 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다. 이 열은 해당 행에서 수행한 동작에 따라 ‘INSERT’, ‘UPDATE’ 또는 ‘DELETE’ 중 하나를 각 행의 값으로 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
@@ -211,7 +211,7 @@ DELETE Sales.ShoppingCartItem
   
 -   \<dml_table_source> 절에서 SELECT 및 WHERE 절에는 하위 쿼리, 집계 함수, 순위 함수, 전체 텍스트 조건자, 데이터 액세스를 수행하는 사용자 정의 함수 또는 TEXTPTR 함수가 포함될 수 없습니다.  
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>병렬 처리
  결과를 클라이언트에 반환하는 OUTPUT 절은 항상 직렬 계획을 사용합니다.
 
 호환성 수준 130 이상으로 설정된 데이터베이스의 컨텍스트에서 INSERT...SELECT 작업이 SELECT 문에 WITH(TABLOCK) 힌트를 사용하고 OUTPUT...INTO를 사용하여 임시 테이블 또는 사용자 테이블에 삽입하는 경우, INSERT...SELECT의 목표 테이블은 하위 트리 비용에 따라 병렬 처리에 적합합니다.  OUTPUT INTO 절에서 참조되는 목표 테이블은 병렬 처리에 적합하지 않습니다. 
@@ -313,7 +313,7 @@ DROP TABLE dbo.table1;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-output-into-with-a-simple-insert-statement"></a>1\. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
+### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
  다음 예제에서는 `ScrapReason` 테이블에 행을 삽입하고, `OUTPUT` 절을 사용하여 명령문의 결과를 `@MyTableVar``table` 변수에 반환합니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  
   
 ```  
@@ -336,7 +336,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>2\. DELETE 문과 함께 OUTPUT 사용  
+### <a name="b-using-output-with-a-delete-statement"></a>B. DELETE 문과 함께 OUTPUT 사용  
  다음 예에서는 `ShoppingCartItem` 테이블의 모든 행을 삭제합니다. `OUTPUT deleted.*` 절은 `DELETE` 문의 결과로 삭제된 행의 모든 열을 호출하는 애플리케이션에 반환하도록 지정합니다. 이어지는 `SELECT` 문은 `ShoppingCartItem` 테이블의 삭제 작업 결과를 확인합니다.  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

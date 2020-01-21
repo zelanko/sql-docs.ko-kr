@@ -1,6 +1,8 @@
 ---
-title: SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트 | Microsoft 문서
-ms.custom: ''
+title: 계획 지침 작성 및 테스트
+titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 계획 지침을 작성하고 테스트합니다.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305081"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165933"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Server Core에 SQL Server 2016 설치 | Microsoft Docs
+title: Server Core에 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6054c8a7f7fc4c9c6580d2d84f438d376b4bd61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991084"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325465"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
@@ -31,43 +31,43 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 제외한 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 제외한 모든 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
 |Windows  Installer  4.5|Server Core 설치와 함께 제공됩니다.|  
 |Windows PowerShell|Server Core 설치와 함께 제공됩니다.|  
 |Java Runtime |PolyBase를 사용하려면 적절한 Java Runtime을 설치해야 합니다. 자세한 내용은 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.|
   
 ##  <a name="BK_SupportedFeatures"></a> 지원되는 기능  
- 다음 표를 사용하여 Server Core 설치 시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 기능을 찾습니다.  
+ 다음 표를 사용하여 Server Core 설치 시 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 기능을 찾습니다.  
   
 |기능|지원됨|추가 정보|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|예||  
-|전체 텍스트 검색|예||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|예||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|예||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|아니오||  
-|SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|아니오||  
-|클라이언트 도구 연결|예||  
-|Integration Services 서버|예||  
-|클라이언트 도구 이전 버전과의 호환성|아니오||  
-|클라이언트 도구 SDK|아니오||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니오||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|yes||  
+|전체 텍스트 검색|yes||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|yes||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|yes||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|예||  
+|SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|예||  
+|클라이언트 도구 연결|yes||  
+|Integration Services 서버|yes||  
+|클라이언트 도구 이전 버전과의 호환성|예||  
+|클라이언트 도구 SDK|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|예||  
 |관리 도구 -  기본|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
 |관리 도구 - 전체|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
-|Distributed  Replay  Controller|아니오||  
+|Distributed  Replay  Controller|예||  
 |Distributed  Replay  Client|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
-|SQL  클라이언트 연결 SDK|예||  
-|Microsoft  Sync  Framework|예|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=221788)(https://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니오||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니오||  
+|SQL  클라이언트 연결 SDK|yes||  
+|Microsoft  Sync  Framework|yes|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=221788)(https://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|예||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|예||  
   
 ## <a name="supported-scenarios"></a>지원되는 시나리오  
- 다음 표에서는 Server Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치하는 데 지원되는 시나리오 매트릭스를 보여 줍니다.  
+ 다음 표에서는 Server Core에 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]을 설치하는 데 지원되는 시나리오 매트릭스를 보여 줍니다.  
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64비트 버전 |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64비트 버전 |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어|모든 언어|  
 |OS 언어/로캘에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어(조합)|JPN(일본어) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER(독일어) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS(중국어-중국) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA(아라비아어 (SA)) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA(태국) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK(터키어) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT(포르투갈어 포르투갈) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG(영어) Windows에서 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows  버전|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -76,7 +76,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
  Server Core 설치 시 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 로 업그레이드는 지원됩니다.  
   
 ## <a name="install"></a>설치  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 명령 프롬프트에서 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
@@ -89,7 +89,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 ### <a name="feature-parameters"></a>기능 매개 변수  
   
-|기능 매개 변수|설명|  
+|기능 매개 변수|Description|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |복제|[!INCLUDE[ssDE](../../includes/ssde-md.md)]과 함께 복제 구성 요소를 설치합니다.|  
@@ -102,7 +102,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
  기능 매개 변수에 대한 다음과 같은 사용 예를 참조하십시오.  
   
-|매개 변수 및 값|설명|  
+|매개 변수 및 값|Description|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 전체 텍스트를 설치합니다.|  
@@ -112,7 +112,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
   
 ### <a name="installation-options"></a>설치 옵션  
- 설치 프로그램에서는 Server  Core  운영 체제에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 설치할 때 다음과 같은 설치 옵션이 지원됩니다.  
+ 설치 프로그램에서는 Server  Core  운영 체제에 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 를 설치할 때 다음과 같은 설치 옵션이 지원됩니다.  
   
 1.  **명령줄에서 설치**  
   
@@ -186,7 +186,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
     -   모든 지원 기능 설치  
   
-        다음 예에서는 Server  Core에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 모든 지원되는 기능을 설치하는 방법을 보여 줍니다.  
+        다음 예에서는 Server  Core에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 의 모든 지원되는 기능을 설치하는 방법을 보여 줍니다.  
   
         ```  
         ; SQL Server Configuration File  
@@ -259,7 +259,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
          DefaultSetup.ini 파일이 없는 경우 파일을 생성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 미디어의 루트 레벨에서 \x86 및 \x64 폴더에 복사합니다.  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 액세스 구성  
- 아래 설명된 작업을 수행하여 Server Core에서 실행하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스의 원격 액세스를 구성합니다.  
+ 아래 설명된 작업을 수행하여 Server Core에서 실행하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 인스턴스의 원격 액세스를 구성합니다.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 인스턴스에서 원격 연결 설정: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -285,7 +285,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
  Windows 방화벽에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 관련 예외를 만들려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)에 지정된 단계를 참조하세요.  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하십시오.  
+ TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하세요.  
   
 1.  서버에서 작업 관리자를 시작합니다.  
   
@@ -306,9 +306,9 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-## <a name="uninstall"></a>Uninstall
+## <a name="uninstall"></a>제거
 
- Server Core를 실행하는 컴퓨터에 로그인하면 관리자 명령 프롬프트를 사용하는 제한된 데스크톱 환경이 제공됩니다. 이 명령 프롬프트를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 제거를 시작할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스를 제거하려면 /Q  매개 변수를 사용하는 완전 자동 모드 또는 /QS  매개 변수를 사용하는 단순 자동 모드로 명령 프롬프트에서 제거를 시작합니다. /QS  매개 변수는 UI를 통해 진행률을 표시하지만 입력은 허용하지 않습니다. /Q는 사용자 인터페이스 없이 자동 모드로 실행됩니다.  
+ Server Core를 실행하는 컴퓨터에 로그인하면 관리자 명령 프롬프트를 사용하는 제한된 데스크톱 환경이 제공됩니다. 이 명령 프롬프트를 사용하여 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]의 제거를 시작할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면 /Q  매개 변수를 사용하는 완전 자동 모드 또는 /QS  매개 변수를 사용하는 단순 자동 모드로 명령 프롬프트에서 제거를 시작합니다. /QS  매개 변수는 UI를 통해 진행률을 표시하지만 입력은 허용하지 않습니다. /Q는 사용자 인터페이스 없이 자동 모드로 실행됩니다.  
   
  기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면:  
   
@@ -326,7 +326,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 2.  **애플리케이션** 탭에서 **새 작업**을 클릭합니다.  
 3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)   

@@ -1,7 +1,7 @@
 ---
-title: Server Core 설치 시 SQL Server 구성 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2017
+title: Server Core 설치 구성
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7532ac16dedea90f9eac9de81b7a3c9753746ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054214"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251593"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
@@ -57,7 +57,7 @@ Server Core 설치를 원격으로 구성하고 관리하는 방법에 대한 �
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다.  
   
-최신 버전의 적용 가능한 업데이트를 찾으면 설치 프로그램이 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
+설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
   
 주 제품 설치에 최신 제품 업데이트를 포함하려면 UpdateEnabled 및 UpdateSource 매개 변수를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 제품 업데이트를 사용하려면 다음 예제를 참조하십시오.  
   
@@ -68,7 +68,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ###  <a name="bkmk_alreadyInstall"></a> 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 용 업데이트 설치.  
 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]인스턴스가 설치된 경우 GDR(General Distribution Release) 및 SP(서비스 팩)를 포함한 최신 보안 업데이트와 중요 업데이트를 적용하는 것이 좋습니다. 개별 누적 업데이트와 보안 업데이트는 "필요할 때" 사례별로 채택해야 합니다. 업데이트를 확인하여 필요하면 적용합니다.  
   
-명령 프롬프트에서 <package_name>을 해당 업데이트 패키지 이름으로 바꾸어 업데이트를 적용합니다.  
+명령 프롬프트에서 <package_name>을 해당하는 업데이트 패키지 이름으로 바꾸어 업데이트를 적용합니다.  
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 모든 구성 요소의 단일 인스턴스를 업데이트합니다. InstanceName 매개 변수 또는 InstanceID 매개 변수를 사용하여 인스턴스를 지정할 수 있습니다.  
   
@@ -175,7 +175,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Windows 방화벽에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 관련 예외를 만들려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)에 지정된 단계를 참조하세요.  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 인스턴스에서 TCP/IP 사용: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하십시오.  
+ TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하세요.  
   
 1.  Windows Server Core를 실행하는 컴퓨터에서 **작업 관리자**를 시작합니다.  
   
@@ -196,7 +196,7 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러  
+##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler  
  원격 컴퓨터에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 시작하고 파일 메뉴에서 새 추적을 선택하면 Server Core 시스템에 있는 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정할 수 있는 서버에 연결 대화 상자가 표시됩니다. 자세한 내용은 [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)을 참조하세요.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]실행에 필요한 권한에 대한 자세한 내용은 [SQL Server Profiler 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하세요.  

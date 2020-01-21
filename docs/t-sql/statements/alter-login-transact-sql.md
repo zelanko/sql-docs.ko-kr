@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982089"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871138"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정의 속성을 변경합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="click-a-product"></a>제품을 클릭하세요.
 
@@ -45,7 +45,7 @@ ms.locfileid: "73982089"
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -119,7 +119,7 @@ CHECK_EXPIRATION = { ON | **OFF** } [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 CHECK_POLICY **=** { **ON** | OFF } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터의 Windows 암호 정책을 이 로그인에 적용하도록 지정합니다. 기본값은 ON입니다.
 
-CREDENTIAL = *credential_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요. 자격 증명은 sa 로그인으로 매핑할 수 없습니다.
+CREDENTIAL = *credential_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요. 자격 증명은 sa 로그인으로 매핑할 수 없습니다.
 
 NO CREDENTIAL 서버 자격 증명에 대한 로그인의 기존 매핑을 모두 제거합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.
 
@@ -129,7 +129,7 @@ ADD CREDENTIAL EKM(확장 가능 키 관리) 공급자 자격 증명을 로그�
 
 DROP CREDENTIAL EKM(확장 가능 키 관리) 공급자 자격 증명을 로그인에서 제거합니다. 자세한 내용은 [EKM(확장 가능 키 관리)](../.. /relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 CHECK_POLICY를 ON으로 설정하면 HASHED 인수를 사용할 수 없습니다.
 
@@ -174,7 +174,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 ## <a name="examples"></a>예
 
-### <a name="a-enabling-a-disabled-login"></a>1\. 비활성화된 로그인 활성화
+### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
 다음 예에서는 `Mary5` 로그인을 활성화합니다.
 
@@ -182,7 +182,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>2\. 로그인 암호 변경
+### <a name="b-changing-the-password-of-a-login"></a>B. 로그인 암호 변경
 
 다음 예에서는 `Mary5` 로그인의 암호를 강력한 암호로 변경합니다.
 
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>구문
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -314,7 +314,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** [!INCLUDE[ssNoVersion](../../includes/ss
 
 NAME = *login_name* 이름을 바꿀 로그인의 새 이름입니다. Windows 로그인인 경우 새 이름에 해당하는 Windows 보안 주체의 SID가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로그인에 연결된 SID와 일치해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 새 이름에는 백슬래시(\\)를 사용할 수 없습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다.
 
@@ -335,7 +335,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
-### <a name="a-enabling-a-disabled-login"></a>1\. 비활성화된 로그인 활성화
+### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
 다음 예에서는 `Mary5` 로그인을 활성화합니다.
 
@@ -343,7 +343,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>2\. 로그인 암호 변경
+### <a name="b-changing-the-password-of-a-login"></a>B. 로그인 암호 변경
 
 다음 예에서는 `Mary5` 로그인의 암호를 강력한 암호로 변경합니다.
 
@@ -424,11 +424,11 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />관리되는 인스턴스 \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="syntax"></a>구문
 
@@ -469,7 +469,7 @@ ALTER LOGIN login_name
 ```
 
 > [!NOTE]
-> 관리되는 인스턴스 기능에 대한 Azure AD 관리자가 만든 후 변경되었습니다. 자세한 내용은 [MI에 대한 새로운 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
+> 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -522,7 +522,7 @@ CHECK_EXPIRATION = { ON | **OFF** } [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 CHECK_POLICY **=** { **ON** | OFF } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터의 Windows 암호 정책을 이 로그인에 적용하도록 지정합니다. 기본값은 ON입니다.
 
-CREDENTIAL = *credential_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요. 자격 증명은 sa 로그인으로 매핑할 수 없습니다.
+CREDENTIAL = *credential_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요. 자격 증명은 sa 로그인으로 매핑할 수 없습니다.
 
 NO CREDENTIAL 서버 자격 증명에 대한 로그인의 기존 매핑을 모두 제거합니다. 자세한 내용은 [자격 증명](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.
 
@@ -532,7 +532,7 @@ ADD CREDENTIAL EKM(확장 가능 키 관리) 공급자 자격 증명을 로그�
 
 DROP CREDENTIAL EKM(확장 가능 키 관리) 공급자 자격 증명을 로그인에서 제거합니다. 자세한 내용은 [EKM(확장 가능 키 관리)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)을 참조하세요.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 CHECK_POLICY를 ON으로 설정하면 HASHED 인수를 사용할 수 없습니다.
 
@@ -579,7 +579,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
-### <a name="a-enabling-a-disabled-login"></a>1\. 비활성화된 로그인 활성화
+### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
 다음 예에서는 `Mary5` 로그인을 활성화합니다.
 
@@ -587,7 +587,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>2\. 로그인 암호 변경
+### <a name="b-changing-the-password-of-a-login"></a>B. 로그인 암호 변경
 
 다음 예에서는 `Mary5` 로그인의 암호를 강력한 암호로 변경합니다.
 
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System(PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>구문
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -721,7 +721,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** [!INCLUDE[ssNoVersion](../../includes/ss
 
 NAME = *login_name* 이름을 바꿀 로그인의 새 이름입니다. Windows 로그인인 경우 새 이름에 해당하는 Windows 보안 주체의 SID가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로그인에 연결된 SID와 일치해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 새 이름에는 백슬래시(\\)를 사용할 수 없습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 적용하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다.
 
@@ -742,7 +742,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
-### <a name="a-enabling-a-disabled-login"></a>1\. 비활성화된 로그인 활성화
+### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
 다음 예에서는 `Mary5` 로그인을 활성화합니다.
 
@@ -750,7 +750,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>2\. 로그인 암호 변경
+### <a name="b-changing-the-password-of-a-login"></a>B. 로그인 암호 변경
 
 다음 예에서는 `Mary5` 로그인의 암호를 강력한 암호로 변경합니다.
 
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_**
 
 &nbsp;
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF } [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 UNLOCK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에만 적용됩니다. 잠긴 로그인을 잠금 해제하도록 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 CHECK_POLICY를 ON으로 설정하면 HASHED 인수를 사용할 수 없습니다.
 
@@ -931,7 +931,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
-### <a name="a-enabling-a-disabled-login"></a>1\. 비활성화된 로그인 활성화
+### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
 다음 예에서는 `Mary5` 로그인을 활성화합니다.
 
@@ -939,7 +939,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>2\. 로그인 암호 변경
+### <a name="b-changing-the-password-of-a-login"></a>B. 로그인 암호 변경
 
 다음 예에서는 `Mary5` 로그인의 암호를 강력한 암호로 변경합니다.
 

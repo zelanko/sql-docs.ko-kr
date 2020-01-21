@@ -22,20 +22,20 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982868"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871123"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 변경하고, 프라이빗 키를 제거하거나 존재하지 않은 경우 프라이빗 키를 가져옵니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 인증서의 가용성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -100,7 +100,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프라이빗 키는 *certificate_name*으로 지정한 퍼블릭 키와 일치해야 합니다.  
   
  파일에 있는 암호가 Null 암호로 보호되는 경우에는 DECRYPTION BY PASSWORD 절을 생략할 수 있습니다.  
@@ -123,7 +123,7 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-removing-the-private-key-of-a-certificate"></a>1\. 인증서의 프라이빗 키 제거  
+### <a name="a-removing-the-private-key-of-a-certificate"></a>A. 인증서의 프라이빗 키 제거  
   
 ```  
 ALTER CERTIFICATE Shipping04   
@@ -131,7 +131,7 @@ ALTER CERTIFICATE Shipping04
 GO  
 ```  
   
-### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>2\. 프라이빗 키를 암호화하는 데 사용된 암호 변경  
+### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>B. 프라이빗 키를 암호화하는 데 사용된 암호 변경  
   
 ```  
 ALTER CERTIFICATE Shipping11   

@@ -1,6 +1,7 @@
 ---
-title: 데이터베이스 복제 설정(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 복제 설정(SSMS)
+description: SSMS(SQL Server Management Studio) 또는 T-SQL(Transact-SQL)을 사용하여 데이터베이스를 복제할 수 있도록 설정하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52640a104af0030d0ebf51162e0efbda80d56a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ebf22f15693114e5586ac35e95d7e93cdeeee766
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768135"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321770"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>데이터베이스 복제 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

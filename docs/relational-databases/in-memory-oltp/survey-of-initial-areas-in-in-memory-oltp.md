@@ -1,6 +1,6 @@
 ---
-title: '빠른 설문 조사 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs'
-ms.custom: ''
+title: 더 빠른 T-SQL 성능을 위한 메모리 내 OLTP
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412497"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 
@@ -122,7 +122,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 메모리 내 OLTP의 주요 기능을 살펴보겠습니다.  
   
   
-#### <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블  
+#### <a name="memory-optimized-tables"></a>메모리 최적화 테이블  
   
 CREATE TABLE 문에서 T-SQL 키워드 MEMORY_OPTIMIZED는 디스크가 아니라 활성 메모리에 있도록 테이블을 만드는 방법입니다.  
   
@@ -403,7 +403,7 @@ PRINT @mesg;
 - [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**큰 테이블 분할:** 많은 활성 메모리에 대한 요구를 충족하는 한 가지 방법은 큰 테이블을 *최근 핫* 데이터 행을 저장하는 메모리 내 부분과, *콜드 레거시* 행(예: 전체가 배송되어 완료된 판매 주문)을 저장하는 디스크 부분으로 분할하는 것입니다. 이 분할은 디자인 및 구현 단계에서 수동으로 처리됩니다. 다음을 참조하십시오.  
+**큰 테이블 분할:** 많은 활성 메모리에 대한 요구를 충족하는 한 가지 방법은 큰 테이블을 *최근 핫* 데이터 행을 저장하는 메모리 내 부분과, *콜드 레거시* 행(예: 전체가 배송되어 완료된 판매 주문)을 저장하는 디스크 부분으로 분할하는 것입니다. 이 분할은 디자인 및 구현 단계에서 수동으로 처리됩니다. 다음을 참조하세요.  
   
 - [애플리케이션 수준 분할](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -424,9 +424,9 @@ PRINT @mesg;
 - [메모리 액세스에 최적화된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)
 - [메모리 액세스에 최적화된 테이블의 비클러스터형 인덱스](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
-계획 중인 메모리 최적화 테이블 및 인덱스에 대해 활성 메모리가 충분한지 확인할 계획을 세워야 합니다. 다음을 참조하십시오.  
+계획 중인 메모리 최적화 테이블 및 인덱스에 대해 활성 메모리가 충분한지 확인할 계획을 세워야 합니다. 다음을 참조하세요.  
   
-- [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+- [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
 DURABILITY = SCHEMA_ONLY를 사용하여 메모리 최적화 테이블을 선언할 수 있습니다.  
   
@@ -434,7 +434,7 @@ DURABILITY = SCHEMA_ONLY를 사용하여 메모리 최적화 테이블을 선언
 - 데이터베이스가 다시 온라인 상태가 되면 메모리 최적화 테이블은 데이터가 없는 활성 메모리로 다시 로드됩니다.  
 - 수천 개의 행이 관련된 경우 SCHEMA_ONLY 테이블이 tempdb의 [#temporary 테이블](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 보다 더 효율적일 수 있습니다.  
   
-테이블 변수를 메모리 최적화 변수로 선언할 수도 있습니다. 다음을 참조하십시오.  
+테이블 변수를 메모리 최적화 변수로 선언할 수도 있습니다. 다음을 참조하세요.  
   
 - [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -475,7 +475,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션 지원   
 - [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - 메모리 최적화 테이블에서 사용하는 스토리지는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
-- [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
+- [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 메모리 최적화 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  
 - [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - 메모리 최적화 테이블 및 기본 프로시저에 지원되거나 지원되지 않는 T-SQL 및 데이터 형식  

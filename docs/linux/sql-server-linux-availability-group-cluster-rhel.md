@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558499"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884032"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대해 RHEL 클러스터 구성
 
@@ -163,7 +163,10 @@ Pacemaker 클러스터 속성에 대한 자세한 내용은 [Pacemaker Clusters 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> **RHEL 8**의 가용성과 함께, 생성 구문이 변경되었습니다. **RHEL 8**을 사용하는 경우 용어 `master`가 `promotable`로 변경되었습니다. 위의 명령 대신 다음의 생성 명령을 사용합니다. `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ Pacemaker 클러스터에서 제약 조건을 사용하여 클러스터의 결�
 
 주 복제본과 가상 IP 리소스가 동일한 호스트에서 실행되는지 확인하려면 점수가 INFINITY인 공동 배치 제약 조건을 정의합니다. 공동 배치 제약 조건을 추가하려면 한 노드에서 다음 명령을 실행합니다.
 
+### <a name="rhel-7"></a>RHEL 7
+
+RHEL 7에서 `ag_cluster` 리소스를 만들 때 리소스를 `ag_cluster-master`로 만듭니다. RHEL 7의 다음 명령을 사용합니다.
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+RHEL 8에서 `ag_cluster` 리소스를 만들 때 리소스를 `ag_cluster-clone`로 만듭니다. RHEL 8의 다음 명령 형식을 사용합니다.
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>정렬 제약 조건 추가
@@ -209,8 +224,16 @@ IP 주소가 일시적으로 장애 조치(failover) 이전 보조 복제본이 
 
 정렬 제약 조건을 추가하려면 한 노드에서 다음 명령을 실행합니다.
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

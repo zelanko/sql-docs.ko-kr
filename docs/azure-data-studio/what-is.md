@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241752"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952408"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
@@ -33,7 +33,7 @@ Azure Data Studio와 데이터 공급자의 소스 코드는 GitHub에서 소프
 
 ## <a name="smart-sql-code-snippets"></a>스마트 SQL 코드 조각
 
-SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, 사용자, 로그인, 역할 등을 만드는 적절한 SQL 구문을 생성하고 기존 데이터베이스 개체를 업데이트합니다. 스마트 코드 조각을 사용하여 개발 또는 테스트 목적으로 데이터베이스 복사본을 빠르게 만들고 CREATE 및 INSERT 스크립트를 생성 및 실행할 수 있습니다.
+SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, 사용자, 로그인, 역할을 만드는 적절한 SQL 구문을 생성하고 기존 데이터베이스 개체를 업데이트합니다. 스마트 코드 조각을 사용하여 개발 또는 테스트 목적으로 데이터베이스 복사본을 빠르게 만들고 CREATE 및 INSERT 스크립트를 생성 및 실행할 수 있습니다.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 사용자 지정 SQL 코드 조각을 만드는 기능도 제공합니다. 자세한 내용은 [코드 조각 만들기 및 사용](code-snippets.md)을 참조하세요.
 
@@ -51,7 +51,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 
 ## <a name="extensibility-and-extension-authoring"></a>확장성 및 확장 작성
 
-기본 설치의 기능을 확장하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 환경을 향상합니다. [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 확장 작성 지원뿐만 아니라 데이터 관리 작업을 위한 확장성 지점도 제공합니다.
+기본 설치의 기능을 확장하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 환경을 향상합니다. [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 데이터 관리 작업을 위한 확장성 지점과 확장 작성 지원을 제공합니다.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 확장성에 대한 자세한 내용은 [확장성](extensibility.md)을 참조하세요.
 확장 작성에 대한 자세한 내용은 [확장 작성](extension-authoring.md)을 참조하세요.
@@ -96,7 +96,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |어둡게 모드|yes||
 |Azure Resource Explorer|미리 보기||
 |스크립트 생성 마법사||yes|
-|DACPAC 가져오기\내보내기||yes|
+|DACPAC 가져오기/내보내기||yes|
 |개체 속성||yes|
 |테이블 디자이너||yes|
 
@@ -131,9 +131,9 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|외부 테이블 만들기 마법사|미리 보기||
-|HDFS 통합|미리 보기||
-|Notebooks|미리 보기||
+|외부 테이블 만들기 마법사|yes||
+|HDFS 통합|yes||
+|Notebooks|yes||
 
 ### <a name="database-administration"></a>데이터베이스 관리
 
@@ -147,7 +147,7 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |Always On||yes|
 |Always Encrypted||yes|
 |데이터 복사 마법사||yes|
-|데이터 튜닝 관리자||yes|
+|Database Engine Tuning Advisor||yes|
 |오류 로그 뷰어||yes|
 |유지 관리 계획||yes|
 |다중 서버 쿼리||yes|

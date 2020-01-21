@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74550214"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884001"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,9 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
+>[!NOTE]
+> 현재 ESCAPE 및 STRING_ESCAPE는 Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다.
+
 ## <a name="arguments"></a>인수  
  *match_expression*  
  문자 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  

@@ -1,6 +1,7 @@
 ---
-title: .NET Framework Data Provider for SQL Server와 Always Encrypted 사용 | Microsoft Docs
-ms.custom: ''
+title: .NET Framework 데이터 공급자와 Always Encrypted
+description: SQL Server용 Always Encrypted 기능을 사용하여 .NET 애플리케이션을 개발하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594456"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558082"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>.NET Framework Data Provider for SQL Server와 Always Encrypted 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ Enclave 계산 및 Enclave 증명에서 클라이언트 드라이버 역할에 �
 2. 애플리케이션 구성(예: web.config 또는 app.config)을 업데이트하여 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 인스턴스와 함께 구성된 Enclave 형식([Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md) 참조) 사이의 매핑을 정의합니다. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 증명을 위해 VBS Enclave 및 호스트 보호 서비스를 지원합니다. 따라서 VBS Enclave 형식을 NuGet 패키지의 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider 클래스에 매핑해야 합니다. 
 3. 연결 문자열의 Enclave 증명 URL 키워드를 증명 엔드포인트로 설정하여 애플리케이션에서 데이터베이스로 연결하는 데 Enclave 계산을 사용하도록 설정합니다. 키워드 값은 사용자 환경에 구성된 HGS 서버의 증명 엔드포인트로 설정되어야 합니다. 
 
-단계별 자습서를 보려면 [자습서: 보안 Enclave를 사용한 Always Encrypted를 사용하여 .NET Framework 애플리케이션 개발](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)을 참조하세요.
+단계별 자습서를 보려면 [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
@@ -108,7 +109,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 ### <a name="inserting-data-example"></a>데이터 예제 삽입
 
-이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음에 유의하세요.
+이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음 사항에 유의하세요.
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. .NET Framework Data Provider for SQL Server에서는 암호화된 열을 대상으로 하는 *paramSSN* 및 *paramBirthdate* 매개 변수를 자동으로 검색하고 암호화합니다. 이렇게 하면 애플리케이션에 투명하게 암호화할 수 있습니다. 
 - 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 개체로 전달됩니다. **SqlParameter**를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 .NET Framework Data Provider for SQL Server에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 - SSN 열을 대상으로 하는 매개 변수의 데이터 형식은 ANSI(비 유니코드) 문자열이며 char/varchar SQL Server 데이터 형식에 매핑됩니다. 매개 변수 형식이 유니코드 문자열(String)로 설정되어 nchar/nvarchar에 매핑되는 경우 Always Encrypted가 암호화된 nchar/nvarchar 값을 암호화된 char/varchar 값으로 변환하는 것을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [SQL Server 데이터 형식 매핑](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 을 참조하세요.
@@ -160,7 +161,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 ### <a name="retrieving-plaintext-data-example"></a>일반 텍스트 데이터 검색 예제
 
-다음 예제에서는 암호화된 값을 기준으로 데이터를 필터링하고 암호화된 열에서 일반 텍스트 데이터를 검색하는 방법을 보여 줍니다. 다음에 유의하세요.
+다음 예제에서는 암호화된 값을 기준으로 데이터를 필터링하고 암호화된 열에서 일반 텍스트 데이터를 검색하는 방법을 보여 줍니다. 다음 사항에 유의하세요.
 - SSN 열에서 필터링하기 위해 WHERE 절에 사용된 값을 SqlParameter를 사용하여 전달해야 합니다. 그러므로 .NET Framework Data Provider for SQL Server는 데이터베이스로 전달하기 전에 이 값을 투명하게 암호화할 수 있습니다.
 - .NET Framework Data Provider for SQL Server가 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄되는 모든 값은 일반 텍스트입니다.
 
@@ -198,7 +199,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 상시 암호화를 사용하지 않는 경우에도 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없으면 암호화된 열에서 데이터를 검색할 수 있습니다.
 
-다음 예제에서는 암호화된 열에서 암호화된 이진 데이터를 검색하는 방법을 보여 줍니다. 다음에 유의하세요.
+다음 예제에서는 암호화된 열에서 암호화된 이진 데이터를 검색하는 방법을 보여 줍니다. 다음 사항에 유의하세요.
 
 - 연결 문자열에서는 상시 암호화를 사용하지 않으므로 쿼리에서 SSN 및 BirthDate의 암호화된 값을 바이트 배열로 반환합니다(프로그램에서 값을 문자열로 변환).
 - 암호화된 열을 대상으로 하는 매개 변수가 없으면 상시 암호화를 사용하지 않고 암호화된 열에서 데이터를 검색하는 쿼리에 매개 변수가 있을 수 있습니다. 위의 쿼리는 LastName을 기준으로 필터링되며 데이터베이스에서 암호화되지 않습니다. 쿼리가 SSN 또는 BirthDate를 기준으로 필터링되면 쿼리가 실패합니다.
@@ -294,7 +295,7 @@ cmd.ExecuteNonQuery();
 .NET Framework Data Provider for SQL Server에는 다음 열 마스터 키 저장소 공급자가 기본 제공되며 특정 공급자 이름이 미리 등록되어 있습니다(공급자 조회에 사용).
 
 
-| 클래스 | 설명 | 공급자 (조회) 이름 |
+| 클래스 | Description | 공급자 (조회) 이름 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 클래스| Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다. |[Microsoft CNG (Cryptography Next Generation) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다.  | MSSQL_CNG_STORE|
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>SqlBulkCopy를 사용하여 암호화된 데이터 복사
 
-SqlBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한 테이블에서 암호화되어 저장된 데이터를 다른 테이블에 복사할 수 있습니다. 이렇게 하려면 다음을 수행합니다.
+SqlBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한 테이블에서 암호화되어 저장된 데이터를 다른 테이블에 복사할 수 있습니다. 이러한 작업을 하려면 다음을 수행합니다.
 
 - 대상 테이블의 암호화 구성이 원본 테이블의 구성과 일치하는지 확인합니다. 특히 두 테이블에 동일한 암호화 열이 있고 동일한 암호화 형식 및 암호화 키를 사용하여 열이 암호화되어야 합니다. 참고: 대상 열 중 하나가 해당 원본 열과 다르게 암호화된 경우 복사 작업 후 대상 테이블의 데이터 암호를 해독할 수 없습니다. 데이터가 손상됩니다.
 - 상시 암호화를 사용하지 않고 원본 테이블과 대상 테이블에 대한 데이터베이스 연결을 구성합니다. 
@@ -564,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|속성|설명|도입된 .NET 버전
+|속성|Description|도입된 .NET 버전
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 인증서 저장소에 대한 키 저장소 공급자입니다.|  4.6
 |[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft CNG (Cryptography Next Generation) API에 대한 키 저장소 공급자입니다.|  4.6.1
@@ -584,7 +585,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>참고 항목
 
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database 자습서: Always Encrypted로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

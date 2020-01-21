@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294458"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687200"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 연결 관리자
 
@@ -65,5 +65,8 @@ Azure Storage 연결 관리자를 사용하여 SQL Server Integration Services(S
 > [!NOTE]
 >  기존 패키지에서 관리 ID 인증을 구성하는 가장 좋은 방법은 [최신 SSIS 디자이너](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)로 SSIS 프로젝트를 한 번 이상 다시 빌드하는 것입니다. SSIS 프로젝트의 모든 Azure Storage 연결 관리자에 새 연결 관리자 속성 `ConnectUsingManagedIdentity`가 자동으로 추가되도록 SSIS 프로젝트를 Azure SSIS 통합 런타임에 다시 배포합니다. 또 다른 방법은 런타임에 속성 경로 **\Package.Connections[{연결 관리자의 이름}].Properties[ConnectUsingManagedIdentity]** 에 속성 재정의를 직접 사용하는 것입니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="secure-network-traffic-to-your-storage-account"></a>스토리지 계정에 대한 네트워크 트래픽 보안
+Azure Data Factory는 이제 Azure 스토리지에 대한 [신뢰할 수 있는 Microsoft 서비스](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)입니다. 관리 ID 인증을 사용하는 경우 [선택한 네트워크에 대한 액세스를 제한](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)하여 스톡리지 계정을 보호하면서도 데이터 팩터리가 스토리지 계정에 액세스할 수 있게 허용할 수 있습니다. 지침은 [예외 관리](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions)를 참조하세요.
+
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)

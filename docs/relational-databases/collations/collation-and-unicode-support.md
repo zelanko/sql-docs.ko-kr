@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901949"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831811"
 ---
 # <a name="collation-and-unicode-support"></a>데이터 정렬 및 유니코드 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 제공되는 UTF-8 데이터 정렬을 사용하고 일부 유니코드 문자의 검색 및 정렬을 향상하려면(Windows 데이터 정렬만 해당), UTF-8 인코딩 지원 데이터 정렬(\_UTF8)을 선택해야 합니다.
  
 -   UTF8 플래그는 다음에 적용할 수 있습니다.    
-    -   버전 90 데이터 정렬 
-        > [!NOTE]
-        > 보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS) 인식 데이터 정렬이 이 버전에 이미 있는 경우에만
-    -   버전 100 데이터 정렬    
-    -   버전 140 데이터 정렬   
+    -   보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS) 인식을 이미 지원하는 언어적 데이터 정렬
     -   BIN2<sup>1</sup> 이진 데이터 정렬
     
 -   UTF8 플래그는 다음에 적용할 수 없습니다.    
-    -   보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS)을 지원하지 않는 버전 90 데이터 정렬    
-    -   BIN 또는 BIN2<sup>2</sup> 이진 데이터 정렬    
+    -   보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS) 인식을 지원하지 않는 언어적 데이터 정렬
+    -   BIN 또는 BIN2<sup>2</sup> 이진 데이터 정렬
     -   SQL\_* 데이터 정렬  
     
 <sup>1</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3부터 지원됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0에서는 **UTF8_BIN2** 데이터 정렬이 **Latin1_General_100_BIN2_UTF8**로 바뀌었습니다.        
@@ -528,8 +524,6 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 -   데이터 정렬 버전 90 이상에서 정렬 및 비교 연산에 보조 문자를 사용할 수 있습니다.    
 -   버전 100 데이터 정렬은 모두 보조 문자를 사용한 언어적 정렬을 지원합니다.    
 -   데이터베이스 개체 이름 등의 메타데이터에는 보조 문자를 사용할 수 없습니다.    
--   보조 문자(\_SC)와 함께 데이터 정렬을 사용하는 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 사용할 수 없습니다. 복제용으로 생성되는 시스템 테이블 및 저장 프로시저 중 일부가 보조 문자를 지원하지 않는 레거시 **ntext** 데이터 형식을 사용하기 때문입니다.  
-
 -   SC 플래그는 다음에 적용할 수 있습니다.    
     -   버전 90 데이터 정렬    
     -   버전 100 데이터 정렬    

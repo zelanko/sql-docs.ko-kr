@@ -1,6 +1,6 @@
 ---
-title: 메모리 내 OLTP에 대한 SQL Server Management Studio 지원 | Microsoft 문서
-ms.custom: ''
+title: 메모리 내 OLTP에 대한 SSMS 지원
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907455"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412534"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "72907455"
   
     -   스크립팅  
   
-    -   태스크  
+    -   작업  
   
     -   보고서  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72907455"
   
         -   데이터 가져오기 및 내보내기. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사 하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용합니다. 대상 테이블이 대상 데이터베이스에 존재하지 않는 메모리 최적화 테이블인 경우:  
   
-            1.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사**의 **테이블 복사 또는 쿼리 지정** 화면에서 **하나 이상의 테이블 또는 뷰에서 데이터 복사**를 선택합니다. 그런 후 **다음**을 클릭합니다.  
+            1.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사**의 **테이블 복사 또는 쿼리 지정** 화면에서 **하나 이상의 테이블 또는 뷰에서 데이터 복사**를 선택합니다. 그런 후 **Next** 를 클릭합니다.  
   
             2.  **매핑 편집**을 클릭합니다. 그런 다음 **대상 테이블 만들기** 를 선택하고 **SQL 편집**을 클릭합니다. 대상 데이터베이스에서 메모리 최적화 테이블을 만드는 CREATE TABLE 구문을 입력합니다. **확인** 을 클릭하고 마법사의 나머지 단계를 완료합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS)에 대한 Azure 기능 팩 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659584"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329955"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -52,7 +52,7 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 
     -   [Azure 구독 연결 관리자](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
--   태스크
+-   작업
 
     -   [Azure Blob 다운로드 작업](../integration-services/control-flow/azure-blob-download-task.md)
 
@@ -100,7 +100,7 @@ TLS 1.2를 사용하려면 다음 두 개의 레지스트리 키 아래에 데�
 
 ## <a name="dependency-on-java"></a>Java에 대한 종속성
 
-Java는 Azure Data Lake Store/플랫 파일 커넥터와 함께 ORC/Parquet 파일 형식을 사용해야 합니다.  
+Java는 Azure Data Lake Store/유연한 파일 커넥터에 ORC/Parquet 파일 형식을 사용해야 합니다.  
 Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치해야 합니다.
 다음과 같은 Java 빌드가 테스트되었습니다.
 
@@ -119,6 +119,13 @@ Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치�
 7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
 8. **확인**을 선택하여 **환경 변수** 대화 상자를 닫습니다.
 9. **확인**을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
+
+> [!TIP]
+> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space**"라는 오류가 발생하는 경우 환경 변수 *`_JAVA_OPTIONS`* 를 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다.
+>
+>![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
+>
+> 예: 변수 *`_JAVA_OPTIONS`* 를 *`-Xms256m -Xmx16g`* 값으로 설정합니다. 플래그 Xms는 JVM(Java Virtual Machine)의 초기 메모리 할당 풀을 지정하고, Xmx는 최대 메모리 할당 풀을 지정합니다. 즉, JVM은 *`Xms`* 의 메모리 양으로 시작하고 최대 *`Xmx`* 의 메모리 양을 사용할 수 있음을 의미합니다. 기본값은 최소 64MB, 최대 1G입니다.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에서 Zulu OpenJDK 설정
 
@@ -139,6 +146,13 @@ zulu8.33.0.1-jdk8.0.192-win_x64.zip
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Parquet 형식을 사용하고 "Java를 호출할 때 오류가 발생했습니다. 메시지: **java.lang.OutOfMemoryError:Java heap space**"라는 오류가 발생하는 경우 *`main.cmd`* 명령을 추가하여 JVM의 최소/최대 힙 크기를 조정할 수 있습니다. 예제:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> 플래그 Xms는 JVM(Java Virtual Machine)의 초기 메모리 할당 풀을 지정하고, Xmx는 최대 메모리 할당 풀을 지정합니다. 즉, JVM은 *`Xms`* 의 메모리 양으로 시작하고 최대 *`Xmx`* 의 메모리 양을 사용할 수 있음을 의미합니다. 기본값은 최소 64MB, 최대 1G입니다.
 
 **install_openjdk.ps1**
 

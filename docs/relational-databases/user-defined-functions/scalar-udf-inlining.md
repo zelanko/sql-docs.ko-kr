@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 스칼라 UDF 인라인 처리 | Microsoft Docs
 description: 스칼라 UDF 인라인 처리 기능은 SQL Server(SQL Server 2019부터) 및 Azure SQL Database에서 스칼라 UDF를 호출하는 쿼리의 성능 향상을 위한 것입니다.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926046"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831776"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -154,6 +154,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - UDF는 사용자 정의 형식을 참조하지 않습니다.
 - UDF에 추가되는 서명은 없습니다.
 - UDF는 파티션 함수가 아닙니다.
+- UDF에는 CTE(공용 테이블 식)에 대한 참조가 포함되지 않습니다.
 
 <sup>1</sup> `SELECT`(변수 누적/집계 있음, 예: `SELECT @val += col1 FROM table1`)는 인라인 처리에 지원되지 않습니다.
 
@@ -188,7 +189,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - 특정 Xevent는 내보냅니다.
 
 ## <a name="enabling-scalar-udf-inlining"></a>스칼라 UDF 인라인 처리 사용
-데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 예를 들어  
+데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 다음은 그 예입니다.  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -209,7 +210,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 예를 들어
+ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -223,7 +224,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 `USE HINT` 쿼리 힌트는 데이터베이스 범위 구성 또는 호환성 수준 설정보다 우선합니다.
 
 `CREATE FUNCTION` 또는 `ALTER FUNCTION` 문에서 INLINE 절을 사용하는 특정 UDF에서는 스칼라 UDF 인라인 처리를 사용하지 않도록 설정할 수 있습니다.
-예를 들어
+다음은 그 예입니다.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

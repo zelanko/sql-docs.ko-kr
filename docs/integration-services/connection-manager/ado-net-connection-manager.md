@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294486"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687274"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
 
@@ -92,54 +92,40 @@ ms.locfileid: "71294486"
 
 Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
 
-1. Azure AD에 그룹을 만듭니다. 관리 ID를 그룹의 멤버로 만듭니다.
-    
-   1. [Azure Portal에서 데이터 팩터리 관리 ID를 찾습니다](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). 데이터 팩터리의 **속성**으로 이동합니다. **관리 ID 개체 ID**를 복사합니다.
-    
-   1. [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) 모듈을 설치합니다. `Connect-AzureAD` 명령을 사용하여 로그인합니다. 다음 명령을 실행하여 그룹을 만들고 관리 ID를 멤버로 추가합니다.
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. 아직 수행하지 않은 경우 Azure Portal에서 Azure SQL Server에 대해 [Azure Active Directory 관리자를 프로비전](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 3단계 및 4단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
+1. 아직 수행하지 않은 경우 Azure Portal에서 Azure SQL Server에 대해 [Azure Active Directory 관리자를 프로비전](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 2 및 3단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
 
-1. Azure AD 그룹에 대해 [포함된 데이터베이스 사용자를 만듭니다](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities). ALTER ANY USER 이상의 사용 권한을 가진 Azure AD ID를 통해 SSMS와 같은 도구를 사용하여 데이터를 복사하려는 데이터베이스에 연결합니다. 다음 T-SQL을 실행합니다. 
+1. 데이터 팩토리 관리 ID용 [포함된 데이터베이스 사용자를 만듭니다](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities). ALTER ANY USER 이상의 사용 권한을 가진 Azure AD ID를 통해 SSMS와 같은 도구를 사용하여 데이터를 복사하려는 데이터베이스에 연결합니다. 다음 T-SQL을 실행합니다. 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 Azure AD에 필요한 권한을 부여합니다. 해당 역할에 대해서는 [데이터베이스 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)을 참조하세요. 예를 들어 다음 코드를 실행합니다.
+1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 데이터 팩터리 관리 ID에 필요한 권한을 부여합니다. 해당 역할에 대해서는 [데이터베이스 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)을 참조하세요. 다음 코드를 실행합니다. 자세한 옵션은 [이 문서](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)를 참조하세요.
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Azure SQL Database Managed Instance에 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
     
-1. 아직 수행하지 않은 경우 Azure Portal에서 관리되는 인스턴스에 대해 [Azure Active Directory 관리자를 프로비전](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 2단계~5단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
+1. 아직 수행하지 않은 경우 Azure Portal에서 관리되는 인스턴스에 대해 [Azure Active Directory 관리자를 프로비전](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 2~4단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
 
-1. [Azure Portal에서 데이터 팩터리 관리 ID를 찾습니다](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). 데이터 팩터리의 **속성**으로 이동합니다. **관리 ID 애플리케이션 ID**(**관리 ID 개체 ID**가 아닌)를 복사합니다.
+1. 데이터 팩터리 관리 ID용 [로그인을 만듭니다](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current). SSMS(SQL Server Management Studio)에서 SQL Server 계정 **sysadmin**을 사용하여 관리되는 인스턴스에 연결합니다. **마스터** 데이터베이스에서 다음 T-SQL을 실행합니다.
 
-1. 데이터 팩터리 관리 ID를 이진 형식으로 변환합니다. SQL 또는 Active Directory 관리자 계정을 통해 SSMS와 같은 도구를 사용하여 관리되는 인스턴스의 **마스터** 데이터베이스에 연결합니다. **마스터** 데이터베이스에 대해 다음 T-SQL을 실행하여 관리 ID 애플리케이션 ID를 이진 형식으로 가져옵니다.
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Azure SQL Database Managed Instance에서 데이터 팩터리 관리 ID를 사용자로 추가합니다. **마스터** 데이터베이스에 대해 다음 T-SQL을 실행합니다.
-    
+1. 데이터 팩토리 관리 ID용 [포함된 데이터베이스 사용자를 만듭니다](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities). 데이터를 복사할 데이터베이스에 연결하고 다음 T-SQL을 실행합니다. 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 데이터 팩터리 관리 ID에 필요한 사용 권한을 부여합니다. 해당 역할에 대해서는 [데이터베이스 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)을 참조하세요. 데이터를 복사할 데이터베이스에 대해 다음 T-SQL을 실행합니다.
+1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 데이터 팩터리 관리 ID에 필요한 권한을 부여합니다. 다음 코드를 실행합니다. 자세한 옵션은 [이 문서](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current)를 참조하세요.
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 끝으로 ADO.NET 연결 관리자에 대해 관리 ID 인증을 구성합니다. 다음은 이 작업을 수행하는 옵션입니다.
@@ -155,7 +141,7 @@ Azure SQL Database Managed Instance에 관리 ID 인증을 사용하려면 아�
 > [!NOTE]
 >  기존 패키지에서 관리 ID 인증을 구성하는 가장 좋은 방법은 [최신 SSIS 디자이너](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)로 SSIS 프로젝트를 한 번 이상 다시 빌드하는 것입니다. SSIS 프로젝트의 모든 ADO.NET 연결 관리자에 새 연결 관리자 속성 `ConnectUsingManagedIdentity`가 자동으로 추가되도록 SSIS 프로젝트를 Azure SSIS 통합 런타임에 다시 배포합니다. 또 다른 방법은 런타임에 속성 경로 **\Package.Connections[{연결 관리자의 이름}].Properties[ConnectUsingManagedIdentity]** 에 속성 재정의를 직접 사용하는 것입니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

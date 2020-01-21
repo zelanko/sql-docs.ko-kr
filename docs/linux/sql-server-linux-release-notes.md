@@ -3,17 +3,17 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/09/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258404"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952517"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -93,6 +93,11 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 | Red Hat RPM 패키지 | 14.0.3257.3-13 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 패키지 | 14.0.3257.3-13 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3257.3-13 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="added-support"></a>지원 추가
+
+- CDC(변경 데이터 캡처)는 CU18부터 Linux의 SQL Server 2017에서 지원됩니다.
+- 트랜잭션 복제는 CU18부터 Linux의 SQL Server 2017에서 지원됩니다.
 
 ### <a name="remarks"></a>설명
 

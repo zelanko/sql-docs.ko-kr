@@ -1,6 +1,7 @@
 ---
-title: 트랜잭션 복제에서 저장 프로시저 실행 게시 | Microsoft 문서
-ms.custom: ''
+title: 저장 프로시저 실행 게시(트랜잭션)
+description: 게시자에서 실행되고 트랜잭션 게시의 게시된 테이블에 영향을 미치는 저장 프로시저를 저장 프로시저 실행 아티클로 포함하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ad8e489d753587912eb7369316c1413bd1eaf1c9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710729"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321414"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 복제 모니터를 사용하여 정보 보기 및 태스크 수행 | Microsoft Docs
-ms.custom: ''
+title: 정보 보기 및 작업 수행(복제 모니터)
+description: SSMS(SQL Server Management Studio)에서 복제 모니터를 사용하여 정보를 확인하고 다양한 작업을 수행하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1a71ef96c559857e739b074915b219c38f036ff3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766896"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322217"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>복제 모니터를 사용하여 정보 보기 및 태스크 수행
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68766896"
 ### <a name="view-information"></a>보기 정보
 복제 모니터는 선택한 게시자에 대한 정보를 표시하는 다음 탭을 제공합니다.   
 -   **게시** - 선택한 게시자에 있는 모든 게시 정보가 표시됩니다.   
--   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독에 대한 정보가 표시됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다.    
+-   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독에 대한 정보가 표시됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다.    
 -   **에이전트** 탭 - 모든 복제 유형에 사용되는 에이전트 및 작업에 대한 세부 정보가 표시됩니다. 이 탭에서는 각 에이전트 및 작업을 시작하고 중지할 수 있습니다. 각 탭의 옵션에 대한 자세한 내용을 보려면 오른쪽 창에서 해당 탭을 클릭한 다음 메뉴 모음에서 **도움말** 을 클릭합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 ### <a name="perform-tasks"></a>작업 수행
@@ -84,7 +85,7 @@ ms.locfileid: "68766896"
 ### <a name="view-information"></a>보기 정보
   복제 모니터는 구독에 대한 정보가 들어 있는 다음 탭을 제공합니다.    
 -   **모든 구독** - 선택한 게시에 대한 모든 구독 정보가 표시됩니다.   
--   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독에 대한 정보가 표시됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다. 각 탭의 옵션에 대한 자세한 내용을 보려면 오른쪽 창에서 해당 탭을 클릭한 다음 메뉴 모음에서 **도움말** 을 클릭합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
+-   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독에 대한 정보가 표시됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다. 각 탭의 옵션에 대한 자세한 내용을 보려면 오른쪽 창에서 해당 탭을 클릭한 다음 메뉴 모음에서 **도움말** 을 클릭합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 ### <a name="perform-tasks"></a>작업 수행
   
@@ -127,7 +128,7 @@ ms.locfileid: "68766896"
 ### <a name="view-information"></a>보기 정보
 -   **모든 구독** - 선택한 게시에 대한 모든 구독 정보가 표시됩니다.  
   
--   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시하기 위한 것입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다. 각 탭의 옵션에 대한 자세한 내용을 보려면 오른쪽 창에서 해당 탭을 클릭한 다음 메뉴 모음에서 **도움말** 을 클릭합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
+-   **구독 감시 목록** - 오류, 경고 또는 성능이 가장 낮은 선택된 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시하기 위한 것입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 배포자의 경우 이 탭이 표시되지 않습니다. 각 탭의 옵션에 대한 자세한 내용을 보려면 오른쪽 창에서 해당 탭을 클릭한 다음 메뉴 모음에서 **도움말** 을 클릭합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 ### <a name="perform-tasks"></a>작업 수행
   

@@ -1,6 +1,5 @@
 ---
-title: XEvents 개요 - SQL Server | Microsoft Docs
-ms.custom: ''
+title: XEvents 개요 - SQL Server
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313700"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234596"
 ---
 # <a name="extended-events-overview"></a>확장 이벤트 개요
 
@@ -42,7 +41,7 @@ ms.locfileid: "72313700"
   
  다음 표는 확장 이벤트의 개념에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server 확장 이벤트 패키지](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|개체를 포함하는 확장 이벤트 패키지에 대해 설명합니다. 이러한 개체는 확장 이벤트 세션이 실행 중일 때 데이터를 가져오고 처리하는 데 사용됩니다.|  
 |[SQL Server 확장 이벤트 대상](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  

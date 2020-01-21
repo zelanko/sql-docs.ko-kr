@@ -1,6 +1,7 @@
 ---
-title: Linux에서 SQL Server 복제 구성
-description: 이 자습서에서는 Linux에서 SQL Server 스냅샷 복제를 구성하는 방법을 보여 줍니다.
+title: '자습서: 복제 구성(T-SQL)'
+description: 이 자습서에서는 T-SQL을 사용하여 Linux에서 SQL Server 스냅샷 복제를 구성하는 방법을 보여 줍니다.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,13 +9,14 @@ ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: acc3f556371c52d02789a03813a28606435d86cd
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001986"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952509"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL을 사용하여 복제 구성
 

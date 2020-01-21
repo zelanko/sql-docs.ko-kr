@@ -1,6 +1,7 @@
 ---
-title: 복제 관리자를 위한 질문과 대답 | Microsoft 문서
-ms.custom: ''
+title: 복제 관리자 질문과 대답
+description: SQL Server의 복제 관리자와 관련된 질문과 대답 목록입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041201"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322036"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "72041201"
 -   배포 에이전트나 병합 에이전트가 일정대로 또는 요청 시 실행되도록 구성된 경우 해당 에이전트가 실행될 때 사용 가능한 스냅샷이 없으면 아직 사용할 수 있는 스냅샷이 없다는 메시지와 함께 에이전트가 종료됩니다. 이 경우 스냅샷 에이전트가 완료된 다음 에이전트를 다시 실행하여 스냅샷을 적용해야 합니다. 에이전트 실행에 대한 자세한 내용은 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md), [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
 ### <a name="should-i-script-my-replication-configuration"></a>복제 구성을 스크립팅해야 합니까?  
- 예 복제 구성 스크립팅은 복제 토폴로지에 대한 모든 재해 복구 계획의 핵심입니다. 스크립링에 대한 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하십시오.  
+ 예. 복제 구성 스크립팅은 복제 토폴로지에 대한 모든 재해 복구 계획의 핵심입니다. 스크립링에 대한 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하십시오.  
   
 ### <a name="what-recovery-model-is-required-on-a-replicated-database"></a>복제된 데이터베이스에는 어떤 복구 모델이 필요합니까?  
  복제는 단순 복구 모델, 대량 로그 복구 모델, 전체 복구 모델 중 어느 모델을 사용해도 제대로 작동합니다. 병합 복제는 메타데이터 테이블에 정보를 저장하여 변경 내용을 추적합니다. 트랜잭션 복제는 트랜잭션 로그를 표시하여 변경 내용을 추적하지만 이렇게 표시하는 프로세스는 복구 모델의 영향을 받지 않습니다.  
@@ -88,7 +89,7 @@ ms.locfileid: "72041201"
  예. 하지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md) 항목에서 "둘 이상의 게시에 테이블 게시" 섹션을 참조하세요.  
   
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>여러 게시에서 동일한 배포 데이터베이스를 사용할 수 있습니까?  
- 예 동일한 배포 데이터베이스를 사용할 수 있는 게시의 수나 유형에 대한 제한은 없습니다. 지정된 게시자의 모든 게시는 동일한 배포자와 배포 데이터베이스를 사용해야 합니다.  
+ 예. 동일한 배포 데이터베이스를 사용할 수 있는 게시의 수나 유형에 대한 제한은 없습니다. 지정된 게시자의 모든 게시는 동일한 배포자와 배포 데이터베이스를 사용해야 합니다.  
   
  여러 게시가 있는 경우 여러 배포 데이터베이스 사이를 이동하는 데이터가 단일 게시의 데이터가 되도록 배포자에서 각 배포 데이터베이스를 구성할 수 있습니다. **배포자 속성** 대화 상자나 [sp_adddistributiondb&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)를 사용하여 배포 데이터베이스를 추가합니다. 이러한 대화 상자에 액세스하는 방법은 [배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "72041201"
  모든 유형의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 시 VPN을 통해 데이터를 복제할 수 있지만 병합 복제를 사용할 경우 웹 동기화를 고려해야 합니다.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>연결이 끊어진 경우 복제를 재개할 수 있습니까?  
- 예 연결이 끊어지면 중단된 시점에서부터 복제 처리가 재개됩니다. 불안정한 네트워크에서 병합 복제를 사용하는 경우 관련 변경 내용이 한 단위로 처리되는 논리적 레코드를 사용해 보십시오. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
+ 예. 연결이 끊어지면 중단된 시점에서부터 복제 처리가 재개됩니다. 불안정한 네트워크에서 병합 복제를 사용하는 경우 관련 변경 내용이 한 단위로 처리되는 논리적 레코드를 사용해 보십시오. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>느린 대역폭 연결을 통해서도 복제를 수행할 수 있습니까? 복제 작업에서 압축을 사용합니까?  
  예. 느린 대역폭 연결을 통해서도 복제를 수행할 수 있습니다. TCP/IP를 통한 연결의 경우 복제는 프로토콜에서 제공하는 압축을 사용하지만 추가 압축은 제공하지 않습니다. HTTPS를 통한 웹 동기화 연결의 경우 복제는 프로토콜에서 제공하는 압축과 변경 내용을 복제하는 데 사용되는 XML 파일의 추가 압축도 사용합니다.  
@@ -119,7 +120,7 @@ ms.locfileid: "72041201"
  아니요. SSIS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 *스키마*는 다음 두 가지 의미를 갖습니다.  
   
 -   `CREATE TABLE` 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "72041201"
  트랜잭션 복제의 경우 다른 삽입처럼 대량 삽입도 추적되어 복제됩니다. 병합 복제의 경우 변경 내용 추적 메타데이터를 적절하게 업데이트해야 합니다.  
   
 ### <a name="are-there-any-replication-considerations-for-backup-and-restore"></a>백업 및 복원에 대한 복제 고려 사항이 있습니까?  
- 예 복제에 관련된 데이터베이스에 대해 특별히 고려해야 할 사항이 많이 있습니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
+ 예. 복제에 관련된 데이터베이스에 대해 특별히 고려해야 할 사항이 많이 있습니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>복제가 트랜잭션 로그의 크기에 영향을 미칩니까?  
  병합 복제 및 스냅샷 복제는 트랜잭션 로그 크기에 영향을 주지 않지만 트랜잭션 복제는 영향을 줄 수 있습니다. 데이터베이스에 하나 이상의 트랜잭션 게시를 포함하는 경우 로그는 게시와 관련된 모든 트랜잭션이 배포 데이터베이스에 배달될 때까지 잘리지 않습니다. 로그 판독기 에이전트가 일정에 따라 실행되는 경우 트랜잭션 로그가 너무 방대해지면 일정 실행 간격을 좁히거나 일정이 연속 모드에서 실행되도록 설정하십시오. 연속 모드에서 실행되도록 설정(기본값)한 경우 로그 판독기 에이전트가 실행되고 있는지 확인하십시오. 로그 판독기 에이전트 상태에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
@@ -226,10 +227,10 @@ ms.locfileid: "72041201"
 ## <a name="replication-and-other-database-features"></a>복제 및 기타 데이터베이스 기능  
   
 ### <a name="does-replication-work-in-conjunction-with-log-shipping-and-database-mirroring"></a>복제가 로그 전달 및 데이터베이스 미러링과 함께 작동합니까?  
- 예 자세한 내용은 [로그 전달 및 복제&#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 및 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)를 참조하세요.  
+ 예. 자세한 내용은 [로그 전달 및 복제&#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 및 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)를 참조하세요.  
   
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>복제가 클러스터링과 함께 작동합니까?  
- 예 모든 데이터가 클러스터의 한 디스크 세트에 저장되므로 특별히 고려해야 할 사항은 없습니다.  
+ 예. 모든 데이터가 클러스터의 한 디스크 세트에 저장되므로 특별히 고려해야 할 사항은 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   

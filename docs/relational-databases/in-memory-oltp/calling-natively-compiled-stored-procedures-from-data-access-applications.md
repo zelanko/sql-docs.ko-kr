@@ -1,6 +1,6 @@
 ---
-title: 데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서
-ms.custom: ''
+title: 고유하게 컴파일된 저장 프로시저 - 데이터 액세스 애플리케이션
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951083"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412772"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
 
@@ -48,7 +48,7 @@ ms.locfileid: "67951083"
 
 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.
 
-*한 번 호출:* 저장 프로시저를 한 번 호출하는 가장 효율적인 방법은 **SQLExecDirect** 및 ODBC CALL 절을 사용하여 직접 RPC 호출을 실행하는 것입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** 문을 사용하지 마세요. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.
+*한 번 호출:* 저장 프로시저를 한 번 호출하는 가장 효율적인 방법은 **SQLExecDirect** 및 ODBC CALL 절을 사용하여 직접 RPC 호출을 실행하는 것입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 문을 사용하지 마세요. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.
 
 *여러 번 호출:* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.
 

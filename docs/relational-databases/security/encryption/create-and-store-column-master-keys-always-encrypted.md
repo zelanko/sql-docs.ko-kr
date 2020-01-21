@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted용 열 마스터 키 만들기 및 저장 | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted용 열 마스터 키 만들기 및 저장
+description: 키 저장소를 선택하고 SQL Server Always Encrypted용 열 마스터 키를 만드는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594432"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557841"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted용 열 마스터 키 만들기 및 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -220,10 +221,10 @@ HSM에 대한 설명서를 참조하세요.
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>애플리케이션 및 사용자가 CNG 키를 사용할 수 있도록 설정
 컴퓨터에서 CSP를 구성하고 애플리케이션 및 사용자에게 HSM 액세스 권한을 부여하는 방법은 HSM 및 CSP 설명서를 참조하세요.
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 - [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
-- [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
+- [PowerShell을 사용하여 Always Encrypted 키 프로비저닝](configure-always-encrypted-keys-using-powershell.md)
   
 ## <a name="see-also"></a>참고 항목 
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

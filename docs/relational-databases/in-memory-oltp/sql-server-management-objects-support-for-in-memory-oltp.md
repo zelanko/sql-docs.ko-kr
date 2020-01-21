@@ -1,7 +1,7 @@
 ---
-title: 메모리 내 OLTP에 대한 SQL Server 관리 개체 지원 | Microsoft 문서
+title: SQL Server 관리 개체 지원 - 메모리 내 OLTP
 description: 메모리 내 OLTP를 지원하는 SMO(SQL Server 관리 개체) 항목을 설명합니다.
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a49c0a75a67e524475a8a1db7c4905c6490c85fc
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022484"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412541"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 - [메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)
 - [SMO 개요](../server-management-objects-smo/overview-smo.md)

@@ -3,16 +3,16 @@ title: SQL Server 2019 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2019에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.openlocfilehash: 136c1d9ab7f8f361972520432dd0c2b293be5a36
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74822140"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776579"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 
@@ -27,7 +27,7 @@ ms.locfileid: "74822140"
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5 또는 7.6 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 또는 8 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3 또는 SP4 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
@@ -45,7 +45,8 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 해제                   | 버전       | 릴리스 날짜 |
 |---------------------------|---------------|--------------|
-| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
+| [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [릴리스 후보](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> 업데이트 설치 방법
@@ -60,6 +61,23 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 - [Linux에서 SQL Server 2019 Machine Learning Services R 및 Python 지원 설치](sql-server-linux-setup-machine-learning.md)
 - [PolyBase 패키지 설치](../relational-databases/polybase/polybase-linux-setup.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu1"></a> CU1(2020년 1월)
+
+이것은 SQL Server 2019(15.x)의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 <https://support.microsoft.com/en-us/help/4527376>을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+> [!NOTE]
+> CU1부터 Red Hat의 오프라인 패키지 설치 링크는 RHEL 8 패키지를 가리킵니다. RHEL 7 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>를 참조하세요.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 15.0.4003.23-3 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
+| SLES RPM 패키지 | 15.0.4003.23-3 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
+| Ubuntu 16.04 Debian 패키지 | 15.0.4003.23-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4003.23-3_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4003.23-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4003.23-3_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4003.23-3_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4003.23-3_amd64.deb)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4003.23-3_amd64.deb)|
 
 ## <a id="ga"></a> GA(2019년 11월)
 
@@ -119,7 +137,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
 ### <a name="databases"></a>데이터베이스
 
-- master 데이터베이스는 mssql 유틸리티를 사용하여 이동할 수 없습니다. 다른 시스템 데이터베이스는 mssql-conf를 통해 이동할 수 있습니다.
+- master 데이터베이스는 mssql-conf 유틸리티를 사용하여 이동할 수 없습니다. 다른 시스템 데이터베이스는 mssql-conf를 통해 이동할 수 있습니다.
 
 - Windows의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 백업된 데이터베이스를 복원할 때 Transact-SQL 문에서 **WITH MOVE** 절을 사용해야 합니다.
 
