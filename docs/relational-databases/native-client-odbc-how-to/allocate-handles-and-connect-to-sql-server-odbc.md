@@ -1,5 +1,5 @@
 ---
-title: 핸들을 할당 하 고 SQL Server (ODBC)에 연결 | Microsoft Docs
+title: 핸들을 할당 하 고 SQL Server에 연결 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc7cad1d720489db4044bbd34c6516035305365
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce294636c4d01a143b640126832bc6cca31ece14
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090817"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782073"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>핸들을 할당하고 SQL Server에 연결하려면  
@@ -33,21 +32,21 @@ ms.locfileid: "68090817"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
   
-3.  호출 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
+3.  [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 를 SQL_HANDLE_ENV **HandleType** 로 호출 하 여 ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
-4.  호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 사용 하 여 **특성** SQL_ATTR_ODBC_VERSION으로 설정 하 고 **ValuePtr** 응용 프로그램은 ODBC 3.x 형식 함수를 사용 하 여 나타내려면 SQL_OV_ODBC3으로 설정 호출합니다.  
+4.  SQL_ATTR_ODBC_VERSION으로 설정 된 **특성**을 사용 하 여 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)을 호출 하 고, SQL_OV_ODBC3으로 설정된 **ValuePtr** 응용 프로그램에서 ODBC 3. x 형식의 함수 호출을 사용 하도록 지정 합니다.  
   
-5.  필요에 따라 호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) 환경 옵션을 가져오려고 합니다.  
+5.  필요에 따라 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 를 호출 하 여 다른 환경 옵션을 설정 하거나 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) 를 호출 하 여 환경 옵션을 가져옵니다.  
   
-6.  호출 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_DBC 연결 핸들을 할당 합니다.  
+6.  [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 를 SQL_HANDLE_DBC **HandleType** 로 호출 하 여 연결 핸들을 할당 합니다.  
   
-7.  필요에 따라 호출할 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 가져오려고 합니다.  
+7.  필요에 따라 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 연결 옵션을 설정 하거나 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 를 호출 하 여 연결 옵션을 가져옵니다.  
   
-8.  기존 데이터 원본에 연결 하는 데 SQLConnect 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+8.  기존 데이터 원본을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결 하려면 SQLConnect를 호출 합니다.  
   
      또는  
   
-     호출 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 연결 문자열에 연결 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 를 호출 하 여 연결 문자열을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결 합니다.  
   
      최소 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자열은 다음 두 가지 형태 중 하나입니다.  
   
@@ -56,27 +55,27 @@ ms.locfileid: "68090817"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     연결 문자열, 불완전 한 경우 **SQLDriverConnect** 필요한 정보를 확인할 수 있습니다. 지정 된 값으로 제어 합니다 *DriverCompletion* 매개 변수입니다.  
+     연결 문자열이 완전 하지 않은 경우 **SQLDriverConnect** 는 필요한 정보를 묻는 메시지를 표시할 수 있습니다. *Drivercompletion* 매개 변수에 지정 된 값으로 제어 됩니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
-     호출 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 연결 문자열을 작성 하 고 연결할는 반복적인 방식으로 여러 번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 를 반복적으로 여러 번 호출 하 여 연결 문자열을 작성 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결 합니다.  
   
-9. 필요에 따라 호출할 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 드라이버 특성과 동작을 가져오려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.  
+9. 필요에 따라 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 대 한 드라이버 특성 및 동작을 가져옵니다.  
   
 10. 문을 할당하고 사용합니다.  
   
-11. 호출에서 연결을 끊으려면 SQLDisconnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 핸들를 새 연결에 사용할 수 있도록 합니다.  
+11. SQLDisconnect를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결을 끊고 연결 핸들을 새 연결에 사용할 수 있도록 설정 합니다.  
   
-12. 호출 [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 사용 하 여를 **HandleType** SQL_HANDLE_DBC 하 여 연결 핸들입니다.  
+12. **HandleType** of SQL_HANDLE_DBC로 [sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 연결 핸들을 해제 합니다.  
   
-13. 호출 **SQLFreeHandle** 사용 하 여를 **HandleType** SQL_HANDLE_ENV 환경 핸들입니다.  
+13. **HandleType** of SQL_HANDLE_ENV로 **sqlfreehandle** 을 호출 하 여 환경 핸들을 해제 합니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에 대 한 호출을 보여 줍니다 **SQLDriverConnect** 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 있습니다. 불완전 한 연결 문자열을 전달 하 여 **SQLDriverConnect**, ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 발생 합니다.  
+ 이 예에서는 기존 ODBC 데이터 원본을 요구 하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결 하기 위해 **SQLDriverConnect** 를 호출 하는 방법을 보여 줍니다. **SQLDriverConnect**에 불완전 한 연결 문자열을 전달 하면 ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 표시 합니다.  
   
 ```  
 #define MAXBUFLEN   255  
