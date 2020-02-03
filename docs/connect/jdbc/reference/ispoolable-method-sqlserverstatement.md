@@ -11,10 +11,10 @@ ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 225584f3c60f0494af987581574d8f4205e04e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977510"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>isPoolable 메서드(SQLServerStatement)
@@ -29,13 +29,13 @@ ms.locfileid: "67977510"
 public boolean isPoolable() throws SQLException  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  사용자가 제공한 문 풀에 문을 추가할 수 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)은 개체의 풀링 가능한 동작을 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  

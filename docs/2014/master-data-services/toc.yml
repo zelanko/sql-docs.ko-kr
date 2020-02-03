@@ -146,7 +146,7 @@
       href: staging-process-errors-master-data-services.md
     - name: 가져오기 상태
       href: import-statuses-master-data-services.md
-- name: 멤버
+- name: 구성원
   href: members-master-data-services.md
   items:
     - name: 리프 멤버 만들기
@@ -201,12 +201,12 @@
       href: add-attributes-to-a-change-tracking-group-master-data-services.md
     - name: 특성 값 변경 기반 동작 시작
       href: initiate-actions-based-on-attribute-value-changes-master-data-services.md
-- name: 알림
+- name: 공지
   href: notifications-master-data-services.md
   items:
     - name: 전자 메일 알림 구성
       href: configure-email-notifications-master-data-services.md
-- name: 의
+- name: 트랜잭션
   href: transactions-master-data-services.md
   items:
     - name: 트랜잭션 되돌리기

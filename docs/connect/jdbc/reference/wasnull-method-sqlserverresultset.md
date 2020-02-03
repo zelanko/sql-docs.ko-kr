@@ -16,10 +16,10 @@ ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31d3ead452f9f24509382c53e778205f0994769c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68002430"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull 메서드(SQLServerResultSet)
@@ -34,13 +34,13 @@ ms.locfileid: "68002430"
 public boolean wasNull()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  마지막으로 읽은 값이 null이었으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 wasNull 메서드는 java.sql.ResultSet 인터페이스의 wasNull 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

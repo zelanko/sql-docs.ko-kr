@@ -94,17 +94,17 @@
       href: invalid-characters-and-escape-rules.md
     - name: FOR XML에서 RAW 모드 사용
       href: use-raw-mode-with-for-xml.md
-    - name: '예: 제품 모델 정보를 XML로 검색'
+    - name: '예제: 제품 모델 정보를 XML로 검색'
       href: example-retrieving-product-model-information-as-xml.md
-    - name: '예: ELEMENTS 지시어를 사용하여 XSINIL 지정'
+    - name: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정'
       href: example-specifying-xsinil-with-the-elements-directive.md
     - name: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: '예: 이진 데이터 검색'
+    - name: '예제: 이진 데이터 검색'
       href: example-retrieving-binary-data.md
-    - name: '예: <row> 요소 이름 바꾸기'
+    - name: '예제: <row> 요소 이름 바꾸기'
       href: example-renaming-the-row-element.md
-    - name: '예: FOR XML로 생성된 XML에 대한 루트 요소 지정'
+    - name: '예제: FOR XML로 생성된 XML에 대한 루트 요소 지정'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
     - name: '예: XMLType 열 쿼리'
       href: example-querying-xmltype-columns.md
@@ -114,27 +114,27 @@
       href: use-the-binary-base64-option.md
     - name: 반환된 XML 모양 지정에서 AUTO 모드 추론
       href: auto-mode-heuristics-in-shaping-returned-xml.md
-    - name: '예: AUTO 모드 사용'
+    - name: '예제: AUTO 모드 사용'
       href: examples-using-auto-mode.md
     - name: FOR XML에서 EXPLICIT 모드 사용
       href: use-explicit-mode-with-for-xml.md
-    - name: '예: 직원 정보 검색'
+    - name: '예제: 직원 정보 검색'
       href: example-retrieving-employee-information.md
-    - name: '예: ELEMENT 지시어 지정'
+    - name: '예제: ELEMENT 지시어 지정'
       href: example-specifying-the-element-directive.md
-    - name: '예: ELEMENTXSINIL 지시어 지정'
+    - name: '예제: ELEMENTXSINIL 지시어 지정'
       href: example-specifying-the-elementxsinil-directive.md
     - name: '예: EXPLICIT 모드를 사용하여 형제 생성'
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: '예: ID 및 IDREF 지시어 지정'
+    - name: '예제: ID 및 IDREF 지시어 지정'
       href: example-specifying-the-id-and-idref-directives.md
-    - name: '예: ID 및 IDREFS 지시어 지정'
+    - name: '예제: ID 및 IDREFS 지시어 지정'
       href: example-specifying-the-id-and-idrefs-directives.md
-    - name: '예: HIDE 지시어 지정'
+    - name: '예제: HIDE 지시어 지정'
       href: example-specifying-the-hide-directive.md
-    - name: '예: ELEMENT 지시어 및 엔터티 인코딩 지정'
+    - name: '예제: ELEMENT 지시어 및 엔터티 인코딩 지정'
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: '예: CDATA 지시어 지정'
+    - name: '예제: CDATA 지시어 지정'
       href: example-specifying-the-cdata-directive.md
     - name: '예: XMLTEXT 지시어 지정'
       href: example-specifying-the-xmltext-directive.md
@@ -154,7 +154,7 @@
       href: columns-that-contain-a-null-value-by-default.md
     - name: PATH 모드에서의 네임스페이스 지원
       href: namespace-support-in-path-mode.md
-    - name: '예: PATH 모드 사용'
+    - name: '예제: PATH 모드 사용'
       href: examples-using-path-mode.md
     - name: FOR XML 쿼리의 TYPE 지시어
       href: type-directive-in-for-xml-queries.md
@@ -191,7 +191,7 @@
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: '예: OPENXML 사용'
+    - name: '예제: OPENXML 사용'
       href: examples-using-openxml.md
     - name: OPENXML에 메타 속성 지정
       href: specify-metaproperties-in-openxml.md

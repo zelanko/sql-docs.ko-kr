@@ -24,7 +24,7 @@
           items:
             - name: SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드
               href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-    - name: Configuration
+    - name: 구성
       items:
         - name: 장애 조치(Failover) 클러스터 인스턴스의 이름 바꾸기
           href: install/rename-a-sql-server-failover-cluster-instance.md
@@ -52,7 +52,7 @@
           href: troubleshoot-orphaned-users-sql-server.md
 - name: 개념
   items:
-    - name: Configuration
+    - name: 구성
       items:
         - name: WSFC 쿼럼 모드 및 투표 구성
           href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md

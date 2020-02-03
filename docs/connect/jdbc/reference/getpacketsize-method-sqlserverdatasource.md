@@ -16,10 +16,10 @@ ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8f2cf03eb2eeaa3bb742a1f0d665c360e0d5f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981042"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 메서드(SQLServerDataSource)
@@ -34,10 +34,10 @@ ms.locfileid: "67981042"
 public int getPacketSize()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  현재 네트워크 패킷 크기가 들어 있는 **int** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  packetSize 속성이 설정되어 있지 않으면 getPacketSize 메서드는 기본값인 8000을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  

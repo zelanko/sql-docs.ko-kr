@@ -10,7 +10,7 @@
           tocHref: /sql/2014-toc/
           topicHref: /sql/2014-toc/books-online-for-sql-server-2014
           items:
-            - name: 시작
+            - name: 시작하기
               tocHref: /sql/getting-started/
               topicHref: /sql/getting-started/getting-started-sql-server-2014
             - name: 데이터베이스 엔진
@@ -100,10 +100,10 @@
                 - name: Distributed Replay
                   tocHref: /sql/tools/distributed-replay/
                   topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
-                - name: 데이터 컬렉션
+                - name: 데이터 수집
                   tocHref: /sql/relational-databases/data-collection/
                   topicHref: /sql/relational-databases/data-collection/data-collection
-                - name: 성능 모니터
+                - name: 성능 모니터링
                   tocHref: /sql/relational-databases/performance-monitor/
                   topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
                 - name: 장애 조치(failover) 클러스터
@@ -269,7 +269,7 @@
                 - name: 데이터 계층 애플리케이션
                   tocHref: /sql/relational-databases/data-tier-applications/
                   topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
-                - name: Backup 및 Restore 메서드
+                - name: Backup 및 복원
                   tocHref: /sql/relational-databases/backup-restore/
                   topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
                 - name: 대량 가져오기 및 내보내기
@@ -378,7 +378,7 @@
                 - name: 보고서 서버 웹 서비스
                   tocHref: /sql/reporting-services/report-server-web-service/
                   topicHref: /sql/reporting-services/report-server-web-service/report-server-web-service
-                - name: 확장 프로그램
+                - name: 확장
                   tocHref: /sql/reporting-services/extensions/
                   topicHref: /sql/reporting-services/extensions/reporting-services-extensions
                 - name: 사용자 지정 보고서 항목

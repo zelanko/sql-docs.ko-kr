@@ -16,10 +16,10 @@ ms.assetid: 4df1bfdb-eea3-4a00-a99f-750a69795ab3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfd69fa5cbc14af7667c7a7fc00694433a37f951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974490"
 ---
 # <a name="setdatabasename-method-sqlserverdatasource"></a>setDatabaseName 메서드(SQLServerDataSource)

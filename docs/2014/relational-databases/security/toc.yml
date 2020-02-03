@@ -78,7 +78,7 @@
           href: sql-server-certificates-and-asymmetric-keys.md
     - name: 인증 액세스
       items:
-        - name: 보안 주체
+        - name: Principals
           href: authentication-access/principals-database-engine.md
         - name: 서버 수준 역할
           href: authentication-access/server-level-roles.md

@@ -17,13 +17,13 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014831"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 서버에 대한 정보를 반환합니다. 이 함수를 호출하기 전에 연결을 설정해야 합니다.  
@@ -38,14 +38,14 @@ sqlsrv_server_info( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 클라이언트 및 서버를 연결하는 연결 리소스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 다음 키를 사용하는 결합형 배열입니다.  
   
-|Key|설명|  
+|키|Description|  
 |-------|---------------|  
 |CurrentDatabase|현재 대상이 되는 데이터베이스입니다.|  
 |SQLServerVersion|SQL Server의 버전입니다.|  
-|SQLServerName|서버의 이름입니다.|  
+|SQLServerName|서버 이름|  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 명령줄에서 예제가 실행될 때 서버 정보를 콘솔에 씁니다.  

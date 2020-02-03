@@ -3,7 +3,7 @@
   items:
     - name: 공간 데이터 형식 개요
       href: spatial-data-types-overview.md
-    - name: 점
+    - name: Point
       href: point.md
     - name: LineString
       href: linestring.md
@@ -11,7 +11,7 @@
       href: circularstring.md
     - name: CompoundCurve
       href: compoundcurve.md
-    - name: 다각형
+    - name: Polygon
       href: polygon.md
     - name: CurvePolygon
       href: curvepolygon.md

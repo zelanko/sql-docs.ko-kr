@@ -22,7 +22,7 @@
       href: modified-features-contained-database.md
     - name: 포함된 데이터베이스 데이터 정렬
       href: contained-database-collations.md
-    - name: Security Best Practices with Contained Databases
+    - name: 포함된 데이터베이스의 보안 모범 사례
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md

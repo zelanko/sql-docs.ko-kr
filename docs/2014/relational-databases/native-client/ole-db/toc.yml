@@ -170,7 +170,7 @@
   href: large-clr-user-defined-types-ole-db.md
 - name: FILESTREAM 지원(OLE DB)
   href: filestream-support-ole-db.md
-- name: 의
+- name: 트랜잭션
   href: ../../native-client-ole-db-transactions/transactions.md
   items:
     - name: 로컬 트랜잭션 지원

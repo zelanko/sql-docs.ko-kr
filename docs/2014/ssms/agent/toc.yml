@@ -103,7 +103,7 @@
         - name: 작업 실행
           href: run-jobs.md
           items:
-            - name: Start a Job
+            - name: 작업 시작
               href: start-a-job.md
             - name: Stop a Job
               href: stop-a-job.md
@@ -146,7 +146,7 @@
     - name: 이벤트 모니터링 및 응답
       href: monitor-and-respond-to-events.md
       items:
-        - name: ','
+        - name: 경고
           href: alerts.md
           items:
             - name: WMI 이벤트 경고 만들기
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: 운영자 속성 및 새 운영자(일반 페이지)
       href: operator-properties-new-operator-general-page.md
-    - name: '연산자 속성: 새 연산자(알림 페이지)'
+    - name: '운영자 속성: 새 운영자(알림 페이지)'
       href: operator-properties-new-operator-notifications-page.md
     - name: 운영자 속성(기록 페이지)
       href: operator-properties-history-page.md

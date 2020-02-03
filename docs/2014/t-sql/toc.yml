@@ -32,5 +32,5 @@
       items:
         - name: 데이터베이스 개체 삭제
           href: lesson-3-deleting-database-objects.md
-    - name: '요약: Transact-SQL 쓰기'
+    - name: '요약: Transact-SQL 작성'
       href: ../tutorials/summary-writing-transact-sql.md

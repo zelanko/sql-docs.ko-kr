@@ -82,7 +82,7 @@
     - name: PDW 사용 권한
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: 사용 권한 부여
+        - name: 권한 부여
           href: ../analytics-platform-system/grant-permissions.md
     - name: 오류 메시지
       href: ../analytics-platform-system/error-messages.md
@@ -104,7 +104,7 @@
           href: ../analytics-platform-system/reserved-database-names.md
         - name: tempdb 데이터베이스
           href: ../analytics-platform-system/tempdb-database.md
-        - name: master 데이터베이스(master database)
+        - name: master 데이터베이스
           href: ../analytics-platform-system/master-database.md
     - name: 사용자 세션
       href: ../analytics-platform-system/user-sessions.md
@@ -115,7 +115,7 @@
           href: ../analytics-platform-system/workload-management-tasks.md
 - name: 보안
   items:
-    - name: Transparent Data Encryption
+    - name: 투명한 데이터 암호화
       href: ../analytics-platform-system/transparent-data-encryption.md
     - name: 인증서 프로비전
       href: ../analytics-platform-system/provision-certificate.md

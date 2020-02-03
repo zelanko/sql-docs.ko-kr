@@ -59,7 +59,7 @@
           href: generate-and-run-the-supplemental-logging-script.md
         - name: 미러 테이블 및 CDC 캡처 인스턴스 생성
           href: generate-mirror-tables-and-cdc-capture-instances.md
-        - name: 마침
+        - name: Finish
           href: finish.md
         - name: 인스턴스 속성 편집
           href: edit-instance-properties.md
@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: CDC 인스턴스 관리 방법
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: CDC 인스턴스 속성을 편집하는 방법
           href: how-to-edit-the-cdc-instance-properties.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Oracle CDC Service 만들기 및 편집
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Oracle CDC Service 관리
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: CDC를 위한 SQL Server 준비
           href: prepare-sql-server-for-cdc.md

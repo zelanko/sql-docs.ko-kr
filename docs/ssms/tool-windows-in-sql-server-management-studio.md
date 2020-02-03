@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 도구 창 | Microsoft 문서
-ms.custom: ''
+title: SQL Server Management Studio 도구 창
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266714"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243888"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 도구 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68266714"
 |[템플릿 탐색기](../ssms/template/template-explorer.md)|기존 템플릿에 기초하여 쿼리를 만듭니다. 특정 시나리오에 맞게 사용자 지정 쿼리를 만들거나 기존 템플릿을 변경할 수 있습니다. 이 도구는 **보기** 메뉴에서 액세스합니다.|  
 |[동적 도움말](../ssms/user-assistance-in-sql-server-management-studio.md)|구성 요소를 클릭하거나 코드를 입력할 때 연관된 도움말 항목의 목록을 표시합니다.|  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 도구는 함께 작동합니다. 예를 들어 다음을 수행할 수 있습니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 도구는 함께 작동합니다. 예를 들어, 다음을 수행할 수 있습니다.  
   
 -   개체 탐색기로 서버를 등록합니다.  
   

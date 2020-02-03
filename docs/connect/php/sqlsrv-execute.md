@@ -18,13 +18,13 @@ ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992747"
 ---
-# <a name="sqlsrvexecute"></a>sqlsrv_execute
+# <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이전에 준비된 문을 실행합니다. 실행할 문을 준비하는 것에 대한 자세한 내용은 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 를 참조하세요.  
@@ -42,7 +42,7 @@ sqlsrv_execute( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행될 문을 지정하는 리소스입니다. 문 리소스를 만드는 방법에 대한 자세한 내용은 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)를 참조하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 부울 값: 문이 성공적으로 실행되면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

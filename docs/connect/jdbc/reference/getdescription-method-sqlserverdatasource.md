@@ -16,10 +16,10 @@ ms.assetid: dce7aa3a-9a2f-4a45-8191-e37949e2202f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23cfb3abcb0dfa59b5cade8b53678157a0cef099
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983617"
 ---
 # <a name="getdescription-method-sqlserverdatasource"></a>getDescription 메서드(SQLServerDataSource)
@@ -34,7 +34,7 @@ ms.locfileid: "67983617"
 public java.lang.String getDescription()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  데이터 원본 설명이 들어 있는 **String**이며, 값이 설정되어 있지 않은 경우 null입니다.  
   
 ## <a name="see-also"></a>참고 항목  

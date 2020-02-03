@@ -16,10 +16,10 @@ ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f355974fb2d3710f50f052dc5a800c48e60a3b35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955681"
 ---
 # <a name="clearwarnings-method-sqlserverstatement"></a>clearWarnings 메서드(SQLServerStatement)
@@ -37,7 +37,7 @@ public final void clearWarnings()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 clearWarnings 메서드는 java.sql.Statement 인터페이스의 clearWarnings 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

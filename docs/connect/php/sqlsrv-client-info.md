@@ -17,13 +17,13 @@ ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992834"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 연결 및 클라이언트 스택에 대한 정보를 반환합니다.  
@@ -38,12 +38,12 @@ sqlsrv_client_info( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 클라이언트가 연결된 연결 리소스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 아래 표에 설명된 키가 있는 결합형 배열이거나 연결 리소스가 null인 경우 **false** 입니다.  
   
 **SQL Server 버전 3.2 및 3.1용 PHP**:  
   
-|Key|설명|  
+|키|Description|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL(ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 버전(xx.yy)|  
@@ -52,7 +52,7 @@ sqlsrv_client_info( resource $conn)
   
 **SQL Server 3.0 및 2.0 버전용 PHP**:  
   
-|Key|설명|  
+|키|Description|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
 |DriverODBCVer|ODBC 버전(xx.yy)|  

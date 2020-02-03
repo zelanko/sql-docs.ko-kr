@@ -1,0 +1,139 @@
+- name: Sybase
+  href: sql-server-migration-assistant-for-sybase-sybasetosql.md
+- name: SSMA 설치
+  href: installing-ssma-for-sybase-sybasetosql.md
+- name: Sybase용 SSMA 시작
+  href: getting-started-with-ssma-for-sybase-sybasetosql.md
+- name: Sybase용 SSMA 콘솔 시작
+  href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
+- name: 법적 고지 사항
+  href: legal-notice-ssma-for-sybase.md
+- name: SSMA의 새로운 기능
+  href: what-s-new-in-ssma-for-sybase-sybasetosql.md
+- name: Sybase용 SSMA 클라이언트 설치
+  href: installing-ssma-for-sybase-client-sybasetosql.md
+- name: SSMA의 새로운 GUI 기능
+  href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
+- name: 새 프로젝트
+  href: new-project-sybasetosql.md
+- name: 테스트 사례 초기화
+  href: initializing-test-cases-sybasetosql.md
+- name: 샘플 콘솔 스크립트 파일 작업
+  href: working-with-the-sample-console-script-files-sybasetosql.md
+- name: Sybase ASE 데이터베이스를 Azure SQL DB로 마이그레이션
+  href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
+- name: 변환을 위해 Sybase ASE 데이터베이스 개체 평가
+  href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
+- name: SSMA 콘솔 실행
+  href: executing-the-ssma-console-sybasetosql.md
+- name: 스크립트 파일 만들기
+  href: creating-script-files-sybasetosql.md
+- name: 전역 설정
+  href: global-settings-dialogs-sybasetosql.md
+- name: SQL Server에 연결
+  href: connecting-to-sql-server-sybasetosql.md
+- name: 고급 개체 선택 영역
+  href: advanced-object-selection-sybasetosql.md
+- name: 프로젝트 설정(GUI)
+  href: project-settings-gui-sybasetosql.md
+- name: 테스트 사례 보고서 보기
+  href: viewing-test-case-reports-sybasetosql.md
+- name: Sybase용 SSMA 콘솔 작업
+  href: working-with-ssma-for-sybase-console-sybasetosql.md
+- name: 테스트 리포지토리 사용
+  href: using-test-repositories-sybasetosql.md
+- name: 데이터 마이그레이션 보고서
+  href: data-migration-report-sybasetosql.md
+- name: 테스트 사례 만들기
+  href: creating-test-cases-sybasetosql.md
+- name: 메타데이터 저장
+  href: save-metadata-sybasetosql.md
+- name: 평가 보고서
+  href: assessment-report-sybasetosql.md
+- name: Sybase용 SSMA 구성 요소 제거
+  href: removing-ssma-for-sybase-components-sybasetosql.md
+- name: Sybase ASE에 연결
+  href: connecting-to-sybase-ase-sybasetosql.md
+- name: 영향을 받는 개체 선택 및 구성
+  href: selecting-and-configuring-affected-objects-sybasetosql.md
+- name: Azure SQL DB에 연결
+  href: connecting-to-azure-sql-db-sybasetosql.md
+- name: 암호 관리
+  href: managing-passwords-sybasetosql.md
+- name: 프로젝트 옵션 설정
+  href: setting-project-options-sybasetosql.md
+- name: Azure SQL DB에 연결
+  href: connect-to-azure-sql-db-sybasetosql.md
+- name: 데이터 마이그레이션 설정
+  href: data-migration-settings-sybasetosql.md
+- name: 테스트 사례 준비 완료
+  href: finishing-test-case-preparation-sybasetosql.md
+- name: 테스트할 개체 선택 및 구성
+  href: selecting-and-configuring-objects-to-test-sybasetosql.md
+- name: 문제 해결
+  href: troubleshooting-sybasetosql.md
+- name: Sybase ASE 및 SQL Server 데이터 형식 매핑
+  href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
+- name: SQL Server에 SSMA 구성 요소 설치
+  href: installing-ssma-components-on-sql-server-sybasetosql.md
+- name: Sybase ASE 데이터를 Azure SQL DB로 마이그레이션
+  href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
+- name: Sybase에 연결
+  href: connect-to-sybase-sybasetosql.md
+- name: 형식 매핑 편집
+  href: edit-type-mapping-sybasetosql.md
+- name: Sybase ASE 데이터베이스 개체 변환
+  href: converting-sybase-ase-database-objects-sybasetosql.md
+- name: 변환된 데이터베이스 개체를 SQL Server로 로드
+  href: loading-converted-database-objects-into-sql-server-sybasetosql.md
+- name: 마이그레이션된 데이터베이스 개체 테스트
+  href: testing-migrated-database-objects-sybasetosql.md
+- name: 호출 순서 사용자 지정
+  href: customizing-calls-order-sybasetosql.md
+- name: 사용자 인터페이스 참조
+  href: user-interface-reference-sybasetosql.md
+- name: 변수 값 파일 만들기
+  href: creating-variable-value-files-sybasetosql.md
+- name: 서버 연결 파일 만들기
+  href: creating-the-server-connection-files-sybasetosql.md
+- name: SSMA 콘솔의 명령줄 옵션
+  href: command-line-options-in-ssma-console-sybasetosql.md
+- name: SQL Server에 연결
+  href: connect-to-sql-server-sybasetosql.md
+- name: 바로 가기 키
+  href: shortcut-keys-sybase-to-sql.md
+- name: Sybase ASE 스키마를 SQL Server 스키마에 매핑
+  href: mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
+- name: 백업 관리
+  href: managing-backups-sybasetosql.md
+- name: 메뉴 명령 및 기타 바로 가기 키
+  href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
+- name: 테스트 사례 실행
+  href: running-test-cases-sybasetosql.md
+- name: 보고서 생성
+  href: generating-reports-sybasetosql.md
+- name: SSMA 프로젝트 작업
+  href: working-with-ssma-projects-sybasetosql.md
+- name: 부록 - 1
+  href: appendix-1-sybasetosql.md
+- name: 프로젝트 설정
+  items:
+    - name: 변환
+      href: project-settings-conversion-sybasetosql.md
+    - name: Type-Mapping
+      href: project-settings-type-mapping-sybasetosql.md
+    - name: 동기화
+      href: project-settings-synchronization-sybasetosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-sybasetosql.md
+    - name: (마이그레이션
+      href: project-settings-migration-sybasetosql.md
+- name: 글로벌 설정
+  href: global-settings-output-window-sybasetosql.md
+  items:
+    - name: 편집기
+      href: global-settings-editor-sybasetosql.md
+    - name: 로깅
+      href: global-settings-logging-sybasetosql.md
+    - name: 테스터
+      href: global-settings-tester-sybasetosql.md

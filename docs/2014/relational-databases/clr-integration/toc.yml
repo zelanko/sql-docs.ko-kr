@@ -102,7 +102,7 @@
     - name: 컨텍스트 연결
       href: data-access/context-connection.md
       items:
-        - name: 일반 연결 및 컨텍스트 연결
+        - name: 일반 연결과 컨텍스트 연결 비교
           href: data-access/context-connections-vs-regular-connections.md
         - name: 일반 연결 및 컨텍스트 연결에 대한 제한 사항
           href: data-access/context-connections-and-regular-connections-restrictions.md

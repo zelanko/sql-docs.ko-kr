@@ -16,10 +16,10 @@ ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978674"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation 메서드(SQLServerConnection)
@@ -34,7 +34,7 @@ ms.locfileid: "67978674"
 public int getTransactionIsolation()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 격리 수준 중 하나가 포함된 **int** 값입니다.  
   
  TRANSACTION_NONE  
@@ -52,7 +52,7 @@ public int getTransactionIsolation()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTransactionIsolation 메서드는 java.sql.Connection 인터페이스의 getTransactionIsolation 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,6 +1,6 @@
 ---
-title: 공간 데이터 결과 창 | Microsoft 문서
-ms.custom: ''
+title: 공간 데이터 결과 창
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20cc4b1c97e7153fc93d810fba18742a0bb2e24b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267716"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253608"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "68267716"
  쿼리로 점만 반환된 경우 이 옵션을 사용할 수 없습니다.  
   
  **투영 선택**  
- Equirectangular, Mercator, Robinson 또는 Bonne 투영 모드 중 하나로 지리 데이터를 표시합니다.  
+ 등장방형(Equirectangular), 메르카토르(Mercator), 로빈슨(Robinson) 또는 본느(Bonne) 투영 모드 중 하나로 지리 데이터를 표시합니다.  
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   
- **확대/축소**  
+ **Zoom**  
  맵 표시를 지수 배율로 조정합니다.  
   
  **눈금선 표시**  

@@ -1,6 +1,6 @@
 ---
-title: 솔루션 삭제 | Microsoft 문서
-ms.custom: ''
+title: 솔루션 삭제
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a34a082d63e2d89d130e715e3f3a152adfdee102
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1edd4563386ad88e5f7df1fecb42f9e13537ad87
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258407"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251914"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

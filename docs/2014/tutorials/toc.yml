@@ -8,7 +8,7 @@
     - name: 기본 데이터 마이닝 자습서
       href: basic-data-mining-tutorial.md
       items:
-        - name: '1단원: Analysis Services Database 준비'
+        - name: '1단원: Analysis Services 데이터베이스 준비'
           href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
           items:
             - name: Analysis Services 프로젝트 만들기
@@ -17,7 +17,7 @@
               href: creating-a-data-source-basic-data-mining-tutorial.md
             - name: 데이터 원본 뷰 만들기
               href: creating-a-data-source-view-basic-data-mining-tutorial.md
-        - name: '2단원: 타겟 메일링 구조 빌드'
+        - name: '2단원: 대상 메일 구조 구축'
           href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
           items:
             - name: 타겟 메일링 마이닝 모델 구조 만들기
@@ -64,7 +64,7 @@
           items:
             - name: 솔루션 및 데이터 원본 만들기
               href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: '2단원: 예측 시나리오 빌드'
+        - name: '2단원: 예측 시나리오 구축'
           href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: 예측할 데이터 원본 뷰 추가
@@ -90,7 +90,7 @@
                   href: time-series-predictions-replacement-data-intermediate-data-mining.md
             - name: 예측 모델에 대한 예측 비교
               href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
-        - name: '3단원: 시장 바구니 시나리오 빌드'
+        - name: '3단원: 시장 바구니 시나리오 구축'
           href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: 중첩 테이블이 있는 데이터 원본 뷰 추가
@@ -105,7 +105,7 @@
               href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
             - name: 연결 예측
               href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: '4단원: 시퀀스 클러스터링 시나리오 빌드'
+        - name: '4단원: 시퀀스 클러스터링 시나리오 구축'
           href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
           items:
             - name: 시퀀스 클러스터링 마이닝 모델 구조 만들기
@@ -118,7 +118,7 @@
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: 시퀀스 클러스터링 모델에서 예측 만들기
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: '5단원: 신경망 및 로지스틱 회귀 모델 빌드'
+        - name: '5단원: 신경망 및 로지스틱 회귀 모델 작성'
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md
           items:
             - name: 콜 센터 데이터의 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
@@ -185,18 +185,18 @@
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
         - name: '4단원: 보고서에 테이블 추가'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: '5단원: 보고서 서식 지정'
+        - name: 'Lesson 5: Formatting a Report'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: '6단원: 그룹화 및 합계 추가'
+        - name: 'Lesson 6: Adding Grouping and Totals'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: 데이터 기반 구독 만들기(SSRS 자습서)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
         - name: '1단원: 샘플 구독자 데이터베이스 만들기'
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: '2단원: 보고서 데이터 원본 속성 수정'
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: '3단원: 데이터 기반 구독 정의'
+        - name: 'Lesson 3: Defining a Data-Driven Subscription'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -217,16 +217,16 @@
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: '8단원: 데이터 필터 만들기'
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: '9단원: 애플리케이션 빌드 및 실행'
+        - name: 'Lesson 9: Build and Run the Application'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 'Visual Basic 또는 Visual C#을 사용하여 보고서 서버 웹 서비스에 액세스(SSRS 자습서)'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
       items:
-        - name: '1단원: Web Service 클라이언트 프로젝트 만들기'
+        - name: '1단원: 웹 서비스 클라이언트 프로젝트 만들기'
           href: lesson-1-creating-the-web-service-client-project.md
         - name: '2단원: 웹 참조 추가'
           href: lesson-2-adding-a-web-reference.md
-        - name: '3단원: Web Service에 액세스'
+        - name: '3단원: 웹 서비스에 액세스'
           href: lesson-3-accessing-the-web-service.md
         - name: '4단원: 애플리케이션 실행(VB/VC#)'
           href: lesson-4-running-the-application-vb-vcsharp.md
@@ -264,13 +264,13 @@
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
         - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)'
+        - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
         - name: '자습서: 보고서에 KPI 추가'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: '자습서: 맵 보고서'
+        - name: '자습서: 지도 보고서'
           href: ../reporting-services/tutorial-map-report-report-builder.md
         - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
@@ -293,7 +293,7 @@
               href: task-2-adding-domain-values-manually.md
             - name: '태스크 3: Excel 파일에서 도메인 값 가져오기'
               href: task-3-importing-domain-values-from-an-excel-file.md
-            - name: '태스크 4: 도메인 규칙 설정'
+            - name: '작업 4: 도메인 규칙 설정'
               href: task-4-setting-domain-rules.md
             - name: '태스크 5: 용어 기반 관계 설정'
               href: task-5-setting-term-based-relationships.md
@@ -316,7 +316,7 @@
           items:
             - name: '태스크 1: 데이터 품질 프로젝트 만들기'
               href: task-1-creating-a-data-quality-project.md
-            - name: '태스크 2: Excel 열을 DQS 도메인으로 매핑'
+            - name: '태스크 2: Excel 열을 DQS 도메인에 매핑'
               href: task-2-mapping-excel-columns-to-dqs-domains.md
             - name: '태스크 3: 공급자 기술 자료에 대한 데이터 정리'
               href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
@@ -335,7 +335,7 @@
               href: task-2-testing-and-publishing-the-matching-policy.md
             - name: '태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행'
               href: task-3-creating-and-running-a-data-quality-project-for-matching.md
-            - name: '태스크 4: 일치 작업의 결과를 Excel 파일로 내보내기'
+            - name: '작업 4: 일치 작업의 결과를 Excel 파일로 내보내기'
               href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
         - name: '4단원: MDS에 공급자 데이터 저장'
           href: lesson-4-storing-supplier-data-in-mds.md
@@ -346,7 +346,7 @@
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
             - name: '태스크 3: 마스터 데이터 관리자에서 데이터 확인'
               href: task-3-verifying-the-data-in-master-data-manager.md
-            - name: '태스크 4(선택 사항): 새 데이터 세트 결합, 일치 및 게시'
+            - name: '태스크 4(선택 사항): 새 데이터 집합 결합, 일치 및 게시'
               href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
             - name: '태스크 5: Excel에서 도메인 기반 특성 만들기'
               href: task-5-creating-a-domain-based-attribute-from-excel.md
@@ -361,23 +361,23 @@
         - name: '5단원: SSIS를 사용하여 정리 및 일치 자동화'
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
-            - name: '태스크 1(필수 구성 요소): MDS에서 공급자 데이터 제거'
+            - name: '태스크 1(필수): MDS에서 공급자 데이터 제거'
               href: task-1-prerequisite-removing-supplier-data-in-mds.md
             - name: '태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기'
               href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
             - name: '태스크 3(선택 사항): 구독 뷰 검토'
               href: task-3-optional-reviewing-the-subscription-views.md
-            - name: '태스크 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기'
+            - name: '작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기'
               href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
-            - name: '태스크 5: Data Flow Task 추가'
+            - name: '태스크 5: 데이터 흐름 태스크 추가'
               href: task-5-adding-data-flow-task.md
-            - name: '태스크 6: Data Flow에 Excel 원본 추가'
+            - name: '태스크 6: 데이터 흐름에 Excel 원본 추가'
               href: task-6-adding-excel-source-to-the-data-flow.md
-            - name: '태스크 7: Data Flow에 DQS 정리 변환 추가'
+            - name: '태스크 7: 데이터 흐름에 DQS 정리 변환 추가'
               href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: '태스크 8: 분할 정리 출력에 조건부 분할 변환 추가'
+            - name: '태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할'
               href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
-            - name: '태스크 9: Union All 변환을 추가하여 수정 및 수정된 레코드 결합'
+            - name: '태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합'
               href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
             - name: '태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별'
               href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
@@ -387,9 +387,9 @@
               href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
             - name: '태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기'
               href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: '태스크 14: Control Flow에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행'
+            - name: '태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행'
               href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
-            - name: '태스크 15: SSIS 프로젝트 빌드 및 실행'
+            - name: '태스크 15: SSIS 프로젝트 작성 및 실행'
               href: task-15-building-and-running-the-ssis-project.md
             - name: '태스크 16: 마스터 데이터 관리자에서 확인'
               href: task-16-verifying-with-master-data-manager.md

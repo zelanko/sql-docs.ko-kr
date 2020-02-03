@@ -9,10 +9,10 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194378"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>매개 변수가 있는 드릴스루(RDLC) 보고서 만들기 - ReportViewer
@@ -25,7 +25,7 @@ ms.locfileid: "63194378"
   
 Visual Studio 2015 및 ASP.NET 웹 애플리케이션을 사용하여 ReportViewer 컨트롤이 있는 ASP.NET 웹 페이지를 만듭니다. 컨트롤은 사용자가 만드는 보고서를 보도록 구성됩니다. 이 연습에서는 Microsoft Visual C#에서 애플리케이션을 만듭니다.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
 [1단원: 새 웹 사이트 만들기](../reporting-services/lesson-1-create-a-new-web-site.md)  
 [2단원: 상위 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
 [3단원: 보고서 마법사를 사용하여 상위 보고서 디자인](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
@@ -34,7 +34,7 @@ Visual Studio 2015 및 ASP.NET 웹 애플리케이션을 사용하여 ReportView
 [6단원: 애플리케이션에 ReportViewer 컨트롤 추가](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [7단원: 상위 보고서에 드릴스루 작업 추가](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [8단원: 데이터 필터 만들기](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[9단원: 애플리케이션 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>참고 항목  
 [Reporting Services&#40;SSRS&#41; 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)  

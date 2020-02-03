@@ -41,7 +41,7 @@
       href: ../../native-client-odbc-queries/executing-statements/direct-execution.md
     - name: 준비된 실행
       href: ../../native-client-odbc-queries/executing-statements/prepared-execution.md
-    - name: 절차
+    - name: 프로시저
       href: ../../native-client-odbc-queries/executing-statements/procedures.md
     - name: 문의 일괄 처리
       href: ../../native-client-odbc-queries/executing-statements/batches-of-statements.md

@@ -23,7 +23,7 @@
           href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
 - name: 방법
   items:
-    - name: Configuration
+    - name: 구성
       href: creation-and-configuration-of-availability-groups-sql-server.md
       items:
         - name: AlwaysOn 가용성 그룹 활성화 및 비활성화
@@ -111,7 +111,7 @@
           href: view-availability-group-listener-properties-sql-server.md
 - name: 개념
   items:
-    - name: Configuration
+    - name: 구성
       items:
         - name: 장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹
           href: failover-clustering-and-always-on-availability-groups-sql-server.md
@@ -221,7 +221,7 @@
       items:
         - name: 가용성 복제본 속성(일반 페이지)
           href: availability-replica-properties-general-page.md
-        - name: '가용성 그룹 속성: 새 가용성 그룹(백업 기본 설정 페이지)'
+        - name: 'Availability Group Properties: New Availability Group (Backup Preferences Page)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: 가용성 그룹 마법사
       items:

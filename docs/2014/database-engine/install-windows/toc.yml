@@ -222,7 +222,7 @@
       items:
         - name: '검사 목록: Reporting Services, Power View 및 SharePoint용 PowerPivot'
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: '검사 목록: PowerPivot 서버를 SharePoint 2010 팜에 추가하여 확장'
+        - name: '검삭 목록: PowerPivot 서버를 SharePoint 2010 팜에 추가하여 확장'
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
         - name: '검사 목록: 기존 SharePoint 팜에 Reporting Services 설치'
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md

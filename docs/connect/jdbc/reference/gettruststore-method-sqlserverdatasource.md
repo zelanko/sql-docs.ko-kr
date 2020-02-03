@@ -16,10 +16,10 @@ ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978525"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore 메서드(SQLServerDataSource)
@@ -34,10 +34,10 @@ ms.locfileid: "67978525"
 public java.lang.String getTrustStore()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  인증서 trustStore 파일의 경로(파일 이름 포함) 또는 값이 설정되지 않은 경우 null이 포함되어 있는 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  trustStore 속성이 설정되어 있지 않으면 [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) 메서드는 null을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  

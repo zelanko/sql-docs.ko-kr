@@ -1,6 +1,6 @@
 ---
-title: Microsoft Azure Storage에 연결 | Microsoft 문서
-ms.custom: ''
+title: Microsoft Azure Storage에 연결
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155677"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245020"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Azure 계정에 대해 다음 정보를 지정한 후 **다음**을 클릭하여
    >
    >  HTTP 헤더 중 하나에 대한 값 형식이 올바르지 않습니다. (Microsoft.SqlServer.StorageClient).
    >
-   >  원격 서버에서 다음과 같은 오류를 반환했습니다. (400) 잘못된 요청. (System)
+   >  원격 서버에서 오류를 반환했습니다. (400) 잘못된 요청. (System)
 
 2.  **계정 키** - 지정한 스토리지 계정의 계정 키를 지정합니다.  
   

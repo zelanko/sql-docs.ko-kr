@@ -188,7 +188,7 @@
 - name: Progress Report 이벤트 범주
   href: progress-report-event-category.md
   items:
-    - name: '진행률 보고서: Online Index Operation 이벤트 클래스'
+    - name: 'Progress Report: Online Index Operation 이벤트 클래스'
       href: progress-report-online-index-operation-event-class.md
 - name: Query Notifications 이벤트 범주
   href: query-notifications-event-category.md

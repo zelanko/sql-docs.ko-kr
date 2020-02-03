@@ -214,7 +214,7 @@
       href: specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
     - name: 계기 창에 표시기 및 계기 포함
       href: include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
-- name: 맵
+- name: 지도
   href: maps-report-builder-and-ssrs.md
   items:
     - name: 지도 보고서 계획
@@ -233,7 +233,7 @@
       href: change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
     - name: 지도에 사용자 지정 위치 추가
       href: add-custom-locations-to-a-map-report-builder-and-ssrs.md
-    - name: '보고서 문제 해결: 맵 보고서'
+    - name: '보고서 문제 해결: 지도 보고서'
       href: troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 지도 F1 도움말
       href: ../map-f1-help.md
