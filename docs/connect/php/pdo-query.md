@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936203"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -34,20 +34,20 @@ PDOStatement PDO::query ($statement[, $fetch_style);
   
 *$fetch_style*: 쿼리를 수행하는 방법에 대한 선택적 지침입니다. 자세한 내용은 설명 섹션을 참조하세요.PDO::query의 $ $*fetch_style*은 PDO::fetch의 $*fetch_style*로 재정의할 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 호출이 성공하면 PDO::query에서 PDOStatement 개체를 반환합니다. 호출이 실패하면 PDO::ATTR_ERRMODE의 설정에 따라 PDO::query에서 PDOException 개체를 발생시키거나 false를 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
 PDOException입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO::query를 사용하여 실행하는 쿼리는 PDO::SQLSRV_ATTR_DIRECT_QUERY의 설정에 따라 준비된 문을 실행하거나 직접 실행할 수 있습니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT은 또한 PDO::exec의 동작에 영향을 줍니다. 자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)를 참조하세요.  
   
 $*fetch_style*에 대해 다음 옵션을 지정할 수 있습니다.  
   
-|style|설명|  
+|Style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|지정된 열의 데이터에 대한 쿼리입니다. 테이블의 첫 번째 열은 0입니다.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  

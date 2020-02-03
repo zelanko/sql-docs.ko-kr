@@ -149,11 +149,11 @@
           href: ../mdx/divide-mdx-operator-reference.md
         - name: ^ (거듭제곱)(MDX)
           href: ../mdx/power-mdx.md
-        - name: / /(주석)
+        - name: //(주석)
           href: ../mdx/comment-mdx.md
         - name: //(주석)
           href: ../mdx/comment-mdx-double-slash.md
-        - name: 으로 디코딩된 문자입니다. (Range)
+        - name: ': (Range)'
           href: ../mdx/range-mdx.md
         - name: + (추가)"
           href: ../mdx/add-mdx.md

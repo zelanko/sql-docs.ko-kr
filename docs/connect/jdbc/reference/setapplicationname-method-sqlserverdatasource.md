@@ -16,10 +16,10 @@ ms.assetid: 24d6e48d-53c4-4da2-a6de-1cdff463c9cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f0f91762dd168f4136a4a476b47dfe36b749e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975559"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>setApplicationName 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setApplicationName(java.lang.String applicationName)
   
  애플리케이션 이름이 포함된 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  애플리케이션 이름은 다양한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로파일링 및 로깅 도구에서 특정 애플리케이션을 식별하는 데 사용됩니다. 애플리케이션 이름이 설정되어 있지 않으면 getApplicationName 메서드는 지역화되지 않은 문자열인 “[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]”를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  

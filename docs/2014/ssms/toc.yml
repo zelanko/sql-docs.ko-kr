@@ -281,7 +281,7 @@
           href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
         - name: '요약: 기본 탐색'
           href: tutorials/lesson-1-9-summary-basic-navigation.md
-    - name: '2단원: Transact-SQL 쓰기'
+    - name: '2단원: Transact-SQL 작성'
       href: tutorials/lesson-2-writing-transact-sql.md
       items:
         - name: 쿼리 편집기와 연결

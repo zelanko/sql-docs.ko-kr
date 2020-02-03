@@ -37,7 +37,7 @@
       href: how-to-view-an-upgrade-advisor-report.md
     - name: '방법: 보고서 필터링'
       href: how-to-filter-reports.md
-    - name: '방법: Export Reports'
+    - name: '방법: 보고서 내보내기'
       href: how-to-export-reports.md
 - name: 사용자 인터페이스 참조
   href: upgrade-advisor-user-interface-reference.md
@@ -335,7 +335,7 @@
       href: failover-cluster-report.md
     - name: 기능 검토
       href: feature-review.md
-    - name: 설치 규칙
+    - name: Next
       href: installation-rules.md
     - name: 기능 규칙
       href: feature-rules.md
@@ -349,7 +349,7 @@
       href: full-text-search-upgrade-options.md
     - name: 완료 - 설치
       href: complete-installation.md
-    - name: 필수 구성 요소 설치
+    - name: 설치 필수 구성 요소
       href: installation-prerequisites.md
     - name: 설치 진행률
       href: installation-progress.md

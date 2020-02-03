@@ -7,7 +7,7 @@
 - name: 메모리 내 OLTP 코드 예제
   href: in-memory-oltp-code-samples.md
   items:
-    - name: '데모: 메모리 내 OLTP의 성능 향상'
+    - name: '데모: 메모리 내 OLTP 성능 향상'
       href: demonstration-performance-improvement-of-in-memory-oltp.md
     - name: 메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
       href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md

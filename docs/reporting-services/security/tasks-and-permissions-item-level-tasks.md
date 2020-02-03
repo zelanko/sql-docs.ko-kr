@@ -11,10 +11,10 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570273"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>작업 및 사용 권한 - 항목 수준의 작업
@@ -28,7 +28,7 @@ ms.locfileid: "65570273"
   
  공유 데이터 세트는 보고서와 동일한 사용 권한 집합을 사용합니다. 보고서 파트는 리소스와 동일한 사용 권한 집합을 사용합니다.  
   
-|태스크|적용 항목|사용 권한|  
+|Task|적용 항목|사용 권한|  
 |----------|---------------------|-----------------|  
 |보고서 사용|보고서|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
 |보고서 사용|공유 데이터 세트|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  

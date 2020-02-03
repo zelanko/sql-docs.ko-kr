@@ -11,10 +11,10 @@ ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993263"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
@@ -29,10 +29,10 @@ PHP를 설치하는 동안 PDO 드라이버의 배열을 반환합니다.
 array PDO::getAvailableDrivers ();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 PDO 드라이버의 목록을 사용하는 배열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 인스턴스를 만드는 데 PDO 드라이버의 이름이 PDO::__construct로 사용됩니다.  
   
 PDO::getAvailableDrivers는 PHP 드라이버에서 구현될 필요가 없습니다. 이 메서드에 대한 자세한 내용은 PHP 설명서를 참조하세요.  

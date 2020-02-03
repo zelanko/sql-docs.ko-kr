@@ -199,7 +199,7 @@
               href: ../dmx/double-slash-comment-dmx.md
             - name: '--(주석)'
               href: ../dmx/comment-dmx-summary.md
-            - name: / /(주석)
+            - name: //(주석)
               href: ../dmx/slash-star-comment-dmx.md
     - name: DMX 구문 표기 규칙
       href: data-mining-extensions-dmx-syntax-conventions.md

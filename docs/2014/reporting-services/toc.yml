@@ -251,7 +251,7 @@
       href: search-a-report-using-url-access.md
     - name: URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링
       href: render-a-report-history-snapshot-using-url-access.md
-- name: 확장 프로그램
+- name: 확장
   href: extensions-ssrs.md
   items:
     - name: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정

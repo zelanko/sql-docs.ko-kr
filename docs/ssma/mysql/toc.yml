@@ -1,0 +1,123 @@
+- name: mySQL
+  href: sql-server-migration-assistant-for-mysql-mysqltosql.md
+- name: SSMA 설치
+  href: installing-ssma-for-mysql-mysqltosql.md
+- name: MySQL용 SSMA 시작
+  href: getting-started-with-ssma-for-mysql-mysqltosql.md
+- name: 법적 고지 사항
+  href: legal-notice-mysqltosql.md
+- name: 변환 설정
+  href: conversion-settings-mysqltosql.md
+- name: MySQL용 SSMA 클라이언트 설치
+  href: installing-ssma-for-mysql-client-mysqltosql.md
+- name: SSMA 콘솔 실행
+  href: executing-the-ssma-console-mysqltosql.md
+- name: 서버 연결 파일 만들기
+  href: creating-the-server-connection-files-mysqltosql.md
+- name: SQL 모드
+  href: sql-modes-mysqltosql.md
+- name: SQL Server에 연결
+  href: connect-to-sql-server-mysqltosql.md
+- name: Azure SQL DB에 연결
+  href: connecting-to-azure-sql-db-mysqltosql.md
+- name: 스크립트 파일 만들기
+  href: creating-script-files-mysqltosql.md
+- name: 변환된 데이터베이스 개체를 SQL Server로 로드
+  href: loading-converted-database-objects-into-sql-server-mysqltosql.md
+- name: MySQL 데이터베이스 변환
+  href: converting-mysql-databases-mysqltosql.md
+- name: SQL Server로 마이그레이션 - Azure SQL DB
+  href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
+- name: SSMA 콘솔의 명령줄 옵션
+  href: command-line-options-in-ssma-console-mysqltosql.md
+- name: SSMA 프로젝트 작업
+  href: working-with-ssma-projects-mysqltosql.md
+- name: 데이터 마이그레이션 설정
+  href: data-migration-settings-mysqltosql.md
+- name: 메타데이터 저장
+  href: save-metadata-mysqltosql.md
+- name: 메뉴 명령 및 기타 바로 가기 키
+  href: menu-commands-and-other-shortcut-keys-mysqltosql.md
+- name: 문제 해결
+  href: troubleshooting-mysqltosql.md
+- name: MySQL에 연결
+  href: connect-to-mysql-mysqltosql.md
+- name: MySQL용 SSMA 구성 요소 제거
+  href: removing-the-ssma-for-mysql-components-mysqltosql.md
+- name: Azure SQL DB에 연결
+  href: connect-to-azure-sql-db-mysqltosql.md
+- name: MySQL 데이터베이스를 Azure SQL DB로 마이그레이션
+  href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
+- name: 샘플 콘솔 스크립트 파일 작업
+  href: working-with-the-sample-console-script-files-mysqltosql.md
+- name: 새 프로젝트
+  href: new-project-ssma-mysqltosql.md
+- name: SQL Server에 SSMA 구성 요소 설치
+  href: installing-ssma-components-on-sql-server-mysqltosql.md
+- name: MySQL 데이터베이스를 SQL Server 스키마에 매핑
+  href: mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
+- name: 데이터베이스에서 새로 고침
+  href: refresh-from-database-mysqltosql.md
+- name: 바로 가기 키
+  href: shortcut-keys-mysqltosql.md
+- name: 평가 보고서
+  href: assessment-report-mysqltosql.md
+- name: 데이터 마이그레이션 보고서
+  href: data-migration-report-mysqltosql.md
+- name: 암호 관리
+  href: managing-passwords-mysqltosql.md
+- name: 고급 개체 선택 영역
+  href: advanced-object-selection-mysqltosql.md
+- name: 사용자 인터페이스 참조
+  href: user-interface-reference-mysqltosql.md
+- name: 부록 - 1
+  href: appendix-1-mysqltosql.md
+- name: 변환을 위해 MySQL 데이터베이스 평가
+  href: assessing-mysql-databases-for-conversion-mysqltosql.md
+- name: MySQL용 SSMA 콘솔 작업
+  href: working-with-ssma-for-mysql-console-mysqltosql.md
+- name: MySQL용 SSMA 콘솔 시작
+  href: getting-started-with-ssma-for-mysql-console-mysqltosql.md
+- name: MySQL 및 SQL Server 문자 세트 매핑
+  href: mapping-mysql-and-sql-server-character-set-mysqltosql.md
+- name: 변수 값 파일 만들기
+  href: creating-variable-value-files-mysqltosql.md
+- name: 보고서 생성
+  href: generating-reports-mysqltosql.md
+- name: 형식 매핑 편집
+  href: edit-type-mapping-mysqltosql.md
+- name: MySQL 및 SQL Server 데이터 형식 매핑
+  href: mapping-mysql-and-sql-server-data-types-mysqltosql.md
+- name: MySQL용 SSMA의 새로운 기능
+  href: what-s-new-in-ssma-for-mysql-mysqltosql.md
+- name: MySQL용 SSMA의 새로운 GUI 기능
+  href: new-gui-features-in-ssma-for-mysql-mysqltosql.md
+- name: 프로젝트 옵션 설정
+  href: setting-project-options-mysqltosql.md
+- name: MySQL에 연결
+  href: connecting-to-mysql-mysqltosql.md
+- name: SQL Server에 연결
+  href: connecting-to-sql-server-mysqltosql.md
+- name: 프로젝트 설정
+  items:
+    - name: GUI
+      href: project-settings-gui-mysqltosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-mysqltosql.md
+    - name: Type-Mapping
+      href: project-settings-type-mapping-mysqltosql.md
+    - name: 마이그레이션
+      href: project-settings-migration-mysqltosql.md
+    - name: 동기화
+      href: project-settings-synchronization-mysqltosql.md
+    - name: 변환
+      href: project-settings-conversion-mysqltosql.md
+- name: 글로벌 설정
+  href: global-settings-output-window-mysqltosql.md
+  items:
+    - name: 대화 상자
+      href: global-settings-dialogs-mysqltosql.md
+    - name: 로깅
+      href: global-settings-logging-mysqltosql.md
+    - name: 편집기
+      href: global-settings-editor-mysqltosql.md
