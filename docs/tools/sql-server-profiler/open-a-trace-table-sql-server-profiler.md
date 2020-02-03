@@ -1,27 +1,28 @@
 ---
-title: 추적 테이블 열기 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적 테이블 열기
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03e7d69d4011caf60d733ab6f0bb17b680fcb4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: b3779c75b0cc90bc10a208cf592a080ff067b5b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911668"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307141"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>추적 테이블 열기(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 테이블을 여는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 테이블을 여는 방법에 대해 설명합니다.  
   
 ### <a name="to-open-a-trace-table"></a>추적 테이블을 열려면  
   
@@ -36,6 +37,6 @@ ms.locfileid: "67911668"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
  [추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

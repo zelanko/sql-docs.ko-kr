@@ -1,23 +1,24 @@
 ---
-title: '방법: 쿼리를 사용하여 기존 테이블 편집 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 쿼리를 사용하여 기존 테이블 편집
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929603"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241410"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>방법: 쿼리를 사용하여 기존 테이블 편집
+
 Transact\-SQL 쿼리를 작성하여 테이블 또는 테이블 데이터의 정의를 편집할 수 있습니다. 테이블의 데이터를 보거나 비주얼 환경에서 입력하려면 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md)에 설명된 대로 데이터 편집기를 사용합니다.  
   
 > [!WARNING]  
@@ -31,7 +32,7 @@ Transact\-SQL 쿼리를 작성하여 테이블 또는 테이블 데이터의 정
   
 3.  **Address** 열에 대한 **Null 허용** 상자를 선택합니다. 스크립트 창의 해당 코드가 즉시 `NULL`로 변경됩니다.  
   
-4.  [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 항목에 따라 데이터베이스를 업데이트합니다.  
+4.  [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 항목의 단계에 따라 데이터베이스를 업데이트합니다.  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Transact\-SQL 쿼리를 사용하여 새 테이블에 데이터를 채우려면  
   

@@ -1,10 +1,9 @@
 ---
-title: 다이어그램 속성 표시(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 다이어그램 속성 표시
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d65dedfb6d2d1f3a2002c358a9ec7c65d0d54d5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 77600f569cb76d2b71720f200113c1a3ca010deb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266859"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255059"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>다이어그램 속성 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

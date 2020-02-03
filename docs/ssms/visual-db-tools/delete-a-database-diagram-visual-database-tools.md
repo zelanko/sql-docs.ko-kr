@@ -1,10 +1,9 @@
 ---
-title: 데이터베이스 다이어그램 삭제(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 다이어그램 삭제
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3eda893debd455b00a433657d57c5dc2a0e11a08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5ebe7109bd97f4e06b708436bbcbe90e690ca1c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263859"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244179"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 삭제(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

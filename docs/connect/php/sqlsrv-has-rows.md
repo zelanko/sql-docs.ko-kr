@@ -14,13 +14,13 @@ ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85b04a8b693e5ea2283ce215973c8149080d0036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992677"
 ---
-# <a name="sqlsrvhasrows"></a>sqlsrv_has_rows
+# <a name="sqlsrv_has_rows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 결과 집합에 하나 이상의 행이 있는지 여부를 나타냅니다.  
@@ -35,7 +35,7 @@ sqlsrv_has_rows( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 결과 집합에 행이 있는 경우 반환 값은 **true**입니다. 행이 없거나 함수 호출이 실패하는 경우 반환 값은 **false**입니다.  
   
 ## <a name="example"></a>예제  

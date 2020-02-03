@@ -1,23 +1,24 @@
 ---
-title: SQL Server 단위 테스트 디자이너의 바로 가기 키 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 디자이너의 바로 가기 키
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: eab27b8ece9e15fddf9f397533d1a272fcd617b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037225"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246406"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 단위 테스트 디자이너의 바로 가기 키
+
 다음 바로 가기 키를 사용하여 SQL Server 단위 테스트 디자이너 내에서 탐색할 수 있습니다.  
   
 |||  

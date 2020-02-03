@@ -1,6 +1,6 @@
 ---
-title: SQL Server 속성(FILESTREAM 탭) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 속성(FILESTREAM 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e62d47432ee897fc53007ad39aaaafba191964f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2b6606424a2e3f8e2d0191b012a81b7af430657a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023938"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306779"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 속성(FILESTREAM 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  
+  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  

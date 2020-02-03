@@ -16,10 +16,10 @@ ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 796a31238a8340b5604797bbb8e38e7ebd1b4237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998729"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>updateObject 메서드(int, java.lang.Object)
@@ -47,7 +47,7 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 updateObject 메서드는 java.sql.ResultSet 인터페이스의 updateObject 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

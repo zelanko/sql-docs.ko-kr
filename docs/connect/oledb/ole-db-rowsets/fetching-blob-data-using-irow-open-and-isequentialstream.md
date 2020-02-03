@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7af4888a77dc96145082f1378713f020b16f56a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015388"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출

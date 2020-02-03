@@ -1,10 +1,9 @@
 ---
-title: 변경 스크립트 저장 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 변경 스크립트 저장 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d258f93f5b6ada2199e7375d73ae870244268815
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: f45d48eb6c0904dcd4c77471a100006b30a06c2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267804"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255148"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>변경 스크립트 저장 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

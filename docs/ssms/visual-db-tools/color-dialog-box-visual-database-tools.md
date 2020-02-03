@@ -1,10 +1,9 @@
 ---
-title: 색 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 색 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae0c136b1561aa93ff6f83f0bb0f7c7c69a8744
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0a2d44934958703a0cadbf01ac975b7a60ab4da6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262555"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241257"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "68262555"
 명도 막대  
 슬라이드를 끌어 색의 명도 또는 상대적 밝은/어두운 정도를 변경합니다. 해당 숫자 값이 **명도**에 나타납니다.  
   
-**색**  
+**Color**  
 현재 선택한 색을 표시합니다.  
   
-**색상**  
+**Hue**  
 선택한 색의 색상 값입니다.  
   
 **채도**  

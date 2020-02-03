@@ -1,10 +1,9 @@
 ---
-title: 다이어그램 창에 열 이름 표시(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 다이어그램 창에 열 이름 표시
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 672157677f280f908f97467a9ced245f484e2c70
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 23f64d0a64c2e881267775e2046b5a99ef0e1329
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256425"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255068"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>다이어그램 창에 열 이름 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

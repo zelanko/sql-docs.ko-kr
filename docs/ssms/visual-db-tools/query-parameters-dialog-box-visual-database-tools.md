@@ -1,10 +1,9 @@
 ---
-title: 쿼리 매개 변수 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 매개 변수 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bea7f04d7a0275b035879dabcb1da8b3952c849
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 05e99d2fc2365ab39b68ad6211889047a1564113
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266297"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255373"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>쿼리 매개 변수 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68266297"
 **이름**  
 실행할 쿼리에 대해 정의된 매개 변수를 나열합니다. 쿼리에 명명된 매개 변수가 포함된 경우 목록에 이름이 표시됩니다. 쿼리에 명명되지 않은 매개 변수가 포함된 경우 쿼리의 각 매개 변수에 대해 자동으로 지정된 매개 변수 이름이 나열됩니다.  
   
-**Value**  
+**값**  
 **이름**아래에 나열된 각 매개 변수에 대한 값을 입력합니다. 가장 최근에 사용한 값이 기본 매개 변수 값으로 표시됩니다.  
   
 ## <a name="example"></a>예제  

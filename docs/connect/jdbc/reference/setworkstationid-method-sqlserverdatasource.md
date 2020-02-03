@@ -16,10 +16,10 @@ ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972027"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setWorkstationID(java.lang.String workstationID)
   
  클라이언트 컴퓨터 이름이 포함된 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  workstationID는 클라이언트 컴퓨터 또는 워크스테이션의 이름입니다. workstationID 속성이 설정되지 않으면 기본값은 InetAddress.getLocalHost().getHostName() 메서드를 호출하여 생성됩니다. getHostName이 빈 값을 반환하면 getHostAddress().toString() 메서드가 호출됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

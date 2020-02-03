@@ -1,6 +1,6 @@
 ---
-title: 옵션(디자이너 - 유지 관리 계획 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(디자이너 - 유지 관리 계획 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2694df1a0d4e6753b313627af870d10846617957
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262765"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245755"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>옵션(디자이너 - 유지 관리 계획 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

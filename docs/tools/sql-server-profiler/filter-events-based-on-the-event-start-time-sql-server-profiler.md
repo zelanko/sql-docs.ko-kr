@@ -1,30 +1,28 @@
 ---
-title: 이벤트 시작 시간을 기준으로 이벤트 필터링(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 이벤트 시작 시간을 기준으로 이벤트 필터링
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event start times [SQL Server]
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1e0dddb26a2ea89635f995c5d1c270d1454b3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: afdf2b5058e03e4539c46faa30fae1f7a2d6c98a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307241"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>이벤트 시작 시간을 기준으로 이벤트 필터링(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 시작 시간을 기준으로 추적 이벤트를 필터링하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 시작 시간을 기준으로 추적 이벤트를 필터링하는 방법에 대해 설명합니다.  
   
 ### <a name="to-filter-an-event-based-on-the-event-start-time"></a>이벤트 시작 시간을 기준으로 이벤트를 필터링하려면  
   
@@ -46,6 +44,6 @@ ms.locfileid: "67930009"
 6.  **보다 큼** 또는 **보다 작음**을 확장한 다음 비교 연산자 아래 나타나는 필드에 **datetime** 값을 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

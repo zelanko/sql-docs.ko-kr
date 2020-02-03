@@ -1,10 +1,7 @@
 ---
-title: 등록된 서버에서 연결 끊기(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 등록된 서버에서 연결 끊기
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,25 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a829bebd0f7831d04d040ad1bd5fa6c0bc4be48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 1a2e2721dcdeffd55cc166fc94230c9a29768664
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264772"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246544"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>등록된 서버에서 연결 끊기(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버에 대한 개체 탐색기의 연결을 끊는 방법에 대해 설명합니다. 개체 탐색기의 연결을 끊어도 SQL 편집기 같은 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소의 연결은 끊어지지 않습니다.  
-  
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-disconnect-from-a-registered-server"></a>등록된 서버로부터 연결을 끊으려면  
-  
--   개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **연결 끊기** 를 클릭하거나 개체 탐색기 도구 모음에서 **연결 끊기** 아이콘을 클릭합니다.  
-  
-  
+
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버에 대한 개체 탐색기의 연결을 끊는 방법에 대해 설명합니다. 개체 탐색기의 연결을 끊어도 SQL 편집기 같은 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소의 연결은 끊어지지 않습니다.  
+
+## <a name="SSMSProcedure"></a>
+
+### <a name="to-disconnect-from-a-registered-server"></a>등록된 서버로부터 연결을 끊으려면
+
+- 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **연결 끊기** 를 클릭하거나 개체 탐색기 도구 모음에서 **연결 끊기** 아이콘을 클릭합니다.

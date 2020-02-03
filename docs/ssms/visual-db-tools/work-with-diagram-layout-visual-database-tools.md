@@ -1,10 +1,9 @@
 ---
-title: 다이어그램 레이아웃 작업(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 다이어그램 레이아웃 작업
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 785d823f822e2c350c899bbed3a0e12e53c6edda
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c857e3113f2af09aa51edce03ecf8453c272a097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246197"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>다이어그램 레이아웃 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

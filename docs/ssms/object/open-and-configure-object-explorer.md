@@ -1,6 +1,6 @@
 ---
-title: 개체 탐색기 열기 및 구성 | Microsoft 문서
-ms.custom: ''
+title: 개체 탐색기 열기 및 구성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264047"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257131"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "68264047"
 [개체 탐색기](../../ssms/object/object-explorer.md)  
 [개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [개체 탐색기를 사용하여 개체 관리](../../ssms/object/manage-objects-by-using-object-explorer.md)  
-[개체 탐색기 세부 정보 창](../../ssms/object/object-explorer-details-pane.md)  
+[개체 탐색기 정보 창](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
   

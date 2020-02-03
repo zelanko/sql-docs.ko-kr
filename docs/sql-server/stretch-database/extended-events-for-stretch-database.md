@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844578"
 ---
 # <a name="extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트
@@ -81,5 +81,5 @@ stretch_table_validation_error|사용자가 늘이기를 사용하도록 설정�
 stretch_unprovision_table_start|늘이기 테이블 프로비전 해제 시작을 보고합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

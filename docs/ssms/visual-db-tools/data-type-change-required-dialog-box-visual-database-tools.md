@@ -1,10 +1,9 @@
 ---
-title: 데이터 형식 변경 필요 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 데이터 형식 변경 필요 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6b91de4bdb0e637f4ec7bc2833de4a52e322fef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 061beab81a7b338438866256d63f88151c6769e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263910"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242784"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>데이터 형식 변경 필요 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,6 @@ ms.locfileid: "68263910"
 **예**  
 목록에 표시된 관련 열의 데이터 형식 속성을 변경하여 기존의 관계를 유지합니다.  
   
-**아니오**  
+**아니요**  
 데이터 형식 변경을 취소하고 방금 변경한 열에 대한 이전의 데이터 형식을 복원합니다.  
   

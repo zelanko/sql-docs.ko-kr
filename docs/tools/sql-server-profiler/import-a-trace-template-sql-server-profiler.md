@@ -1,29 +1,28 @@
 ---
-title: 추적 템플릿 가져오기 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적 템플릿 가져오기
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03a029abbf9468bbf2164be9e6a09644a2363428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 309edccd7793e2dbf17105b4bf8f31e976994742
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074948"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307190"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>추적 템플릿 가져오기(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 템플릿 파일(.tdf)을 가져오는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 템플릿 파일(.tdf)을 가져오는 방법에 대해 설명합니다.  
   
 ### <a name="to-import-a-trace-template"></a>추적 템플릿을 가져오려면  
   
@@ -40,6 +39,6 @@ ms.locfileid: "68074948"
  [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [추적 템플릿 내보내기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

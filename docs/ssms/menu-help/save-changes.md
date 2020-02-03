@@ -1,6 +1,6 @@
 ---
-title: 변경 내용 저장 | Microsoft 문서
-ms.custom: ''
+title: 변경 내용 저장
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79540a380854965621bb58658e12f88c17cb00d5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1e9d57005557b16e83b12a7ef668414b07ed191e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256906"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240636"
 ---
 # <a name="save-changes"></a>변경 내용 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

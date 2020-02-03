@@ -1,10 +1,9 @@
 ---
-title: 새 데이터베이스 다이어그램 만들기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 새 데이터베이스 다이어그램 만들기
+ms.custom: seo-lt-2019
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeddc490049cd1b6a746d11b43f58df665b655ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254397"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>새 데이터베이스 다이어그램 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

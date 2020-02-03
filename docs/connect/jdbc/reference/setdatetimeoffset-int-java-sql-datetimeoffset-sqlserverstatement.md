@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974536"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset)(SQLServerStatement)
@@ -41,16 +41,16 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DateTimeOffset 형식은 "YYYY-MM-DD HH-MM-SS[.nnnnnnn] [+][-] HH:MM"입니다. 다음 표를 참조하십시오.  
   
-|SQL 형식|Insert|  
+|SQL 형식|삽입|  
 |--------------|------------|  
-|DATETIME|"YYYY-MM-DD hh:mm:ss[.nnn]"만 삽입 가능|  
+|Datetime|"YYYY-MM-DD hh:mm:ss[.nnn]"만 삽입 가능|  
 |smalldatetime|"YYYY-MM-DD hh:mm:ss"만 삽입 가능|  
 |Time|"hh:mm:ss[.nnnnnnn]"만 삽입 가능|  
-|date|"YYYY-MM-DD"만 삽입 가능|  
-|datetime2|"YYYY-MM-DD hh:mm:ss[.nnnnnnn]"만 삽입 가능|  
+|Date|"YYYY-MM-DD"만 삽입 가능|  
+|DateTime2|"YYYY-MM-DD hh:mm:ss[.nnnnnnn]"만 삽입 가능|  
   
 ## <a name="see-also"></a>참고 항목  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   

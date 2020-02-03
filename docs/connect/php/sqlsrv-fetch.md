@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015019"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 결과 집합의 다음 행을 읽기에 사용할 수 있습니다. [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)를 사용하여 행의 필드를 읽습니다.  
@@ -60,7 +60,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 *offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 결과 집합의 다음 행을 성공적으로 검색하면 **true** 가 반환됩니다. 결과 집합에 더 이상 결과가 없으면 **null** 이 반환됩니다. 오류가 발생한 경우 **false** 가 반환됩니다.  
   
 ## <a name="example"></a>예제  

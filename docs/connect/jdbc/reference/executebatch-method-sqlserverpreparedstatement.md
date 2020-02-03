@@ -16,10 +16,10 @@ ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 463106c14a63feddb68998affff8131933e81dfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954895"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 메서드 (SQLServerPreparedStatement)
@@ -34,7 +34,7 @@ ms.locfileid: "67954895"
 public int[] executeBatch()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  업데이트 횟수가 들어 있는 정수 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -42,7 +42,7 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 executeBatch 메서드는 java.sql.Statement 인터페이스의 executeBatch 메서드에 의해 지정됩니다.  
     
  이 메서드는 [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)를 재정의합니다.  

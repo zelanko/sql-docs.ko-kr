@@ -16,10 +16,10 @@ ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 521f44a5a9e33903177d05ae6d2a49d023db013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978557"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType 메서드(SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67978557"
 public int getType()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 값 중 하나에 해당되는 현재 커서 유형을 나타내는 **int**입니다.  
   
  ResultSet.TYPE_FORWARD_ONLY  
@@ -46,7 +46,7 @@ public int getType()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getType 메서드는 java.sql.ResultSet 인터페이스의 getType 메서드에 의해 지정됩니다.  
   
  이 메서드는 실제 커서 유형을 결정하는 데 사용할 수 있습니다. 애플리케이션에서 TYPE_FORWARD_ONLY를 선택하거나 기본 커서 유형을 사용한 경우에는 TYPE_FORWARD_ONLY가 반환됩니다.  

@@ -1,6 +1,6 @@
 ---
-title: 솔루션에서 항목 이동 | Microsoft 문서
-ms.custom: ''
+title: 솔루션에서 항목 이동
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a23aea0f4040ca957d1a3866fdf1d63eaf220085
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 256e2ff3dc5b1cde4dd2e5dc5e065f01b073eb33
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262825"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251845"
 ---
 # <a name="move-items-in-a-solution"></a>솔루션에서 항목 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

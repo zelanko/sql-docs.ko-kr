@@ -18,13 +18,13 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76d3841e637a101361fd72ccef5263a802a176b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014946"
 ---
-# <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
+# <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 매개 변수 스트림에서 서버로 데이터를 보냅니다. **sqlsrv_send_stream_data**에 대한 각 호출에서 최대 8킬로바이트(8K)의 데이터를 전송합니다.  
@@ -42,7 +42,7 @@ sqlsrv_send_stream_data( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문에 해당하는 문 리소스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 부울: 보낼 데이터가 더 있는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

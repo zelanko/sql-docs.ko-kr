@@ -1,6 +1,6 @@
 ---
-title: SQL Server 에이전트 &lt;server&gt;(SQL Server 구성 관리자) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 에이전트 &lt;server&gt;(SQL Server 구성 관리자)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bf919133ff04baba1410bfd9e31e53c3534a3763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8a704a1d4fc532b31819c965b1231d9bbb75d89e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024196"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307125"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server 에이전트 &lt;server&gt;(SQL Server 구성 관리자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

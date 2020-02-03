@@ -1,6 +1,6 @@
 ---
-title: 솔루션 및 프로젝트 항목의 이름 바꾸기 | Microsoft 문서
-ms.custom: ''
+title: 솔루션 및 프로젝트 항목의 이름 바꾸기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 028ab587298879bc3bbb8be444e8d5094921fab2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03f10d193373eff22c913598d3a67f281e1faa3d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264725"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241453"
 ---
 # <a name="rename-solutions-and-project-items"></a>솔루션 및 프로젝트 항목의 이름 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

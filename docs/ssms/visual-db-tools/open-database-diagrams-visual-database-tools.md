@@ -1,10 +1,9 @@
 ---
-title: 데이터베이스 다이어그램 열기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 다이어그램 열기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d183f673a2cd00200c90dd81e7f407ee84170bc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6a12c3172b029c21ec0145d2dd872dc958c8b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251445"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 열기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68263338"
   
 2.  열려는 데이터베이스 다이어그램의 이름을 두 번 클릭합니다.  
   
-    -또는-  
+    또는  
   
     열려는 데이터베이스 다이어그램의 이름을 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 다이어그램 디자인**을 선택합니다.  
   

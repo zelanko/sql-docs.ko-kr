@@ -16,10 +16,10 @@ ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 704b292eb50f5a900cb26f8c6958b0d2c6e618c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955953"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>afterLast 메서드(SQLServerResultSet)
@@ -37,7 +37,7 @@ public void afterLast()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 afterLast 메서드는 java.sql.ResultSet 인터페이스의 afterLast 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

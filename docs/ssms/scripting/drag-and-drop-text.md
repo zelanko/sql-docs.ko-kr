@@ -1,6 +1,6 @@
 ---
-title: 텍스트 끌어다 놓기 | Microsoft 문서
-ms.custom: ''
+title: 텍스트 끌어다 놓기
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0edc2a04551b94be1ea50546f6a6d692cc6da543
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 13211d07b1846dd89826e1e1854f76b6c6cd16af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263490"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253927"
 ---
 # <a name="drag-and-drop-text"></a>텍스트 끌어다 놓기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

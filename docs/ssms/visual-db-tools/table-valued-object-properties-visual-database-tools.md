@@ -1,10 +1,9 @@
 ---
-title: 테이블 반환 개체 속성(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블 반환 개체 속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edcdd09314c3695be45f04e16fa797795f77f776
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2d47d5e77e341863ae2d7af9ad078183964282f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261596"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256159"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>테이블 반환 개체 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

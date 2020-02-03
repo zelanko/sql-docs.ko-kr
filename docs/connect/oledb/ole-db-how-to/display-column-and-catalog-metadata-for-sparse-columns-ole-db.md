@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874627"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)

@@ -1,27 +1,28 @@
 ---
-title: 추적 정의 기본값 설정(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 추적 정의 기본값 설정
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307416"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>추적 정의 기본값 설정(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  추적 정의 기본값은 각 공급자나 서버에 사용되는 기본 추적 템플릿입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 기본 추적 템플릿을 설정할 수 있습니다.  
+
+추적 정의 기본값은 각 공급자나 서버에 사용되는 기본 추적 템플릿입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 기본 추적 템플릿을 설정할 수 있습니다.  
   
 ### <a name="to-set-trace-definition-defaults"></a>추적 정의 기본값 설정  
   
@@ -39,6 +40,6 @@ ms.locfileid: "68104166"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler 템플릿](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

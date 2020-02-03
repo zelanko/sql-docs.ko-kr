@@ -1,29 +1,28 @@
 ---
-title: 추적 템플릿 내보내기 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적 템플릿 내보내기
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60218ad4bd1d50c95764f0191bb42860b1e06107
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930029"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307278"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>추적 템플릿 내보내기(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 템플릿을 내보내어 템플릿 파일(.tdf)로 저장하는 방법에 대해 설명합니다. 추적 템플릿을 내보내서 파일로 저장할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 다른 인스턴스로 템플릿을 사용할 수 있습니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 템플릿을 내보내어 템플릿 파일(.tdf)로 저장하는 방법에 대해 설명합니다. 추적 템플릿을 내보내서 파일로 저장할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 다른 인스턴스로 템플릿을 사용할 수 있습니다.  
   
 ### <a name="to-export-a-trace-template"></a>추적 템플릿을 내보내려면  
   
@@ -40,6 +39,6 @@ ms.locfileid: "67930029"
  [추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

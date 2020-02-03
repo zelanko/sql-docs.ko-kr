@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658831"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 및 SQL Server 지원되는 데이터 형식
@@ -23,33 +23,33 @@ ms.locfileid: "73658831"
 
 현재 입력/출력 데이터 집합 및 입력/출력 매개 변수에 대해 지원되는 SQL 및 Java 데이터 형식은 다음과 같습니다.
 
-| SQL 데이터 형식        | Java 데이터 형식 | 설명 | |
+| SQL 데이터 형식        | Java 데이터 형식 | 주석 | |
 | ------------- |-------------|-|-|
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| 정수 | int      | | |
-| Real | FLOAT      | | |
+| Int | int      | | |
+| Real | float      | | |
 | Bigint | long      | | |
-| FLOAT | double      | | |
+| float | double      | | |
 | nchar(n) | String      | | |
 | nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
 | nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
-| UNIQUEIDENTIFIER | String | | |
+| uniqueidentifier | String | | |
 | char(n) | String | UTF8 문자열만 지원됨 | |
 | varchar(n) | String | UTF8 문자열만 지원됨 | |
 | varchar(max) | String | UTF8 문자열만 지원됨 | |
-| 날짜 | java.sql.date  | | |
-| NUMERIC | java.math.BigDecimal  | | |
-| Decimal | java.math.BigDecimal  | | |
+| date | java.sql.date  | | |
+| numeric | java.math.BigDecimal  | | |
+| decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
-| SMALLMONEY | java.math.BigDecimal  | | |
+| smallmoney | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
-| Datetime2 | java.sql.timestamp  | | |
+| Datetime | java.sql.timestamp  | | |
+| datetime2 | java.sql.timestamp  | | |
 
 
 ## <a name="next-steps"></a>다음 단계

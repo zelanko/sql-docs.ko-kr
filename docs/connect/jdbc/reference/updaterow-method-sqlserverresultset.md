@@ -16,10 +16,10 @@ ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e33da1c8873bdc2d69c93d533860d9b9f5e227d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998344"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow 메서드(SQLServerResultSet)
@@ -37,7 +37,7 @@ public void updateRow()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 updateRow 메서드는 java.sql.ResultSet 인터페이스의 updateRow 메서드에 의해 지정됩니다.  
   
  커서가 삽입 행에 있는 경우에는 이 메서드를 호출할 수 없습니다.  

@@ -16,10 +16,10 @@ ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974189"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>setInt 메서드(SQLServerCallableStatement)
@@ -47,7 +47,7 @@ public void setInt(java.lang.String sCol,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setInt 메서드는 java.sql.CallableStatement 인터페이스의 setInt 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL 코드 조각 추가 | Microsoft 문서
-ms.custom: ''
+title: Transact-SQL 코드 조각 추가
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256876"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246468"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68256876"
 ## <a name="registering-the-code-snippet"></a>코드 조각 등록  
  코드 조각 파일을 만든 후에는 코드 조각 관리자를 사용하여 코드 조각을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 등록합니다. 여러 코드 조각이 들어 있는 폴더를 추가하거나 개별 코드 조각을 **내 코드 조각** 폴더로 가져올 수 있습니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="adding-a-snippet-folder"></a>코드 조각 폴더 추가  
   

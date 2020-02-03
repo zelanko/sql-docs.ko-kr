@@ -16,10 +16,10 @@ ms.assetid: 70920828-eda0-4064-be9f-c1e460db8f00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 344ae0104f527739bf3a954ed9138252d7efb58e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972935"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>setServerName 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setServerName(java.lang.String serverName)
   
  서버 이름을 포함하는 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 이름은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행 중인 대상 컴퓨터의 호스트 이름입니다. serverName 속성이 설정되어 있지 않으면 [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)은 기본값인 null을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
