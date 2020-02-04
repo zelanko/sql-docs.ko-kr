@@ -16,10 +16,10 @@ ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 079663faa466b171df35481ee69374194c015acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978386"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream 메서드(SQLServerResultSet)
@@ -32,7 +32,7 @@ ms.locfileid: "67978386"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getUnicodeStream 메서드(int)](../../../connect/jdbc/reference/getunicodestream-method-int.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 유니코드 문자의 스트림으로 검색합니다.|  
 |[getUnicodeStream 메서드(java.lang.String)](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 이름의 값을 유니코드 문자의 스트림으로 검색합니다.|  

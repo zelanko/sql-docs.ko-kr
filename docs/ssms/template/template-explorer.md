@@ -1,5 +1,5 @@
 ---
-title: 템플릿 탐색기 | Microsoft 문서
+title: Template Explorer
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,14 +17,14 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247187"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
@@ -45,7 +45,7 @@ ms.locfileid: "70988084"
 ## <a name="related-tasks"></a>관련 작업  
 템플릿을 시작하려면 다음 항목을 사용하십시오.  
   
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |-------------------|-------------|  
 |템플릿의 코드를 코드 편집기 창에 통합하는 방법에 대해 설명합니다.|[템플릿 열기](../../ssms/template/open-a-template.md)|  
 |코드 편집기에서 템플릿을 연 후 템플릿 매개 변수 값을 바꾸는 방법에 대해 설명합니다.|[템플릿 매개 변수 바꾸기](../../ssms/template/replace-template-parameters.md)|  

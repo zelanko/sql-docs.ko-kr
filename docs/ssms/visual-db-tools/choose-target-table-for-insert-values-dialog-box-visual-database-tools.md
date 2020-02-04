@@ -1,10 +1,9 @@
 ---
-title: 값 삽입의 대상 테이블 선택 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: 값 삽입의 대상 테이블 선택 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bce90ddd0f84a389770fcd3b98f17151ffad1b35
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 83d6eb87f7a51a916d2d90e21692e0d7fc899252
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263665"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255541"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

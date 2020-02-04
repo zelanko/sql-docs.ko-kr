@@ -16,10 +16,10 @@ ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e06642390b060164d0e7fba3a8584200e5bc4dd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981135"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject 메서드(java.lang.String)
@@ -39,13 +39,13 @@ public java.lang.Object getObject(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **Object** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getObject 메서드는 java.sql.CallableStatement 인터페이스의 getObject 메서드에 의해 지정됩니다.  
   
  이 메서드는 지정된 열의 값을 Java 개체로 반환합니다. Java 개체의 형식은 열의 SQL 형식에 해당하는 기본 Java 개체 형식으로서, JDBC 사양에 지정된 기본 제공 형식에 대한 매핑을 따릅니다. 값이 SQL NULL이면 드라이버에서는 Java null을 반환합니다.  

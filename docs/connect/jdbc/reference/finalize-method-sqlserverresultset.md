@@ -16,10 +16,10 @@ ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7afb8728b92ac7460173950bf42e38f968e056af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954579"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 메서드(SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67954579"
 public void finalize()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  애플리케이션에서 결과 집합을 닫지 않는 경우 결과 집합을 닫습니다. 이 메서드는 단지 JDBC 사양을 따르기 위한 것입니다. JVM(Java Virtual Machine)에서는 언제 파이널라이저가 실행될 수 있는지를 보장하지 않으므로 결과 집합을 명시적으로 닫지 않은 애플리케이션은 동일한 연결을 사용하며 행 잠금의 경우와 같이 공용 서버 리소스에서 차단된 다른 문에서 교착 상태가 될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

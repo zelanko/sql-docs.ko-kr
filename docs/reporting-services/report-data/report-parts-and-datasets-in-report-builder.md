@@ -9,10 +9,10 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571192"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 세트

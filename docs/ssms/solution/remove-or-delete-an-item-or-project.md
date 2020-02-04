@@ -1,6 +1,6 @@
 ---
-title: 항목이나 프로젝트 제거 또는 삭제 | Microsoft 문서
-ms.custom: ''
+title: 항목이나 프로젝트 제거 또는 삭제
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a19a4bf8c91eb118af246a0e0bc0b3458833af7c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 299b99a06666b42e45d63d920370aac30444bf65
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265358"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242828"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>항목이나 프로젝트 제거 또는 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

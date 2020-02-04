@@ -9,10 +9,10 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed869c3aa283dbede50b37e74b7c8c4ee5580bc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579154"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)

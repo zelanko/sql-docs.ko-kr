@@ -16,10 +16,10 @@ ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d6d978861f8f321d5c4aaaa3580b2e05a8c6310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999016"
 ---
 # <a name="updatelong-method-sqlserverresultset"></a>updateLong 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67999016"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[updateLong(int, long)](../../../connect/jdbc/reference/updatelong-method-int-long.md)|열 인덱스가 지정된 경우 지정된 열을 **long** 값으로 업데이트합니다.|  
 |[updateLong(java.lang.String, long)](../../../connect/jdbc/reference/updatelong-method-java-lang-string-long.md)|열 이름이 지정된 경우 지정된 열을 **long** 값으로 업데이트합니다.|  

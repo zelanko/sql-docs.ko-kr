@@ -11,10 +11,10 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571411"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
@@ -35,10 +35,10 @@ ms.locfileid: "65571411"
 >  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  
- **Folder**  
+ **폴더**  
  보고서의 경로를 지정합니다.  
   
- **보고서**  
+ **Report**  
  일정을 사용하는 보고서의 이름을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  

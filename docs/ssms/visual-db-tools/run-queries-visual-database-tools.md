@@ -1,10 +1,9 @@
 ---
-title: 쿼리 실행(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 실행
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28eaf23631d9f9331ede00394485d1cdc41b9fbd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3880beb6f4927c28fe6edd686b26804d3826cf16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255651"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255170"
 ---
 # <a name="run-queries-visual-database-tools"></a>쿼리 실행(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68255651"
   
 2.  쿼리 창에서 아무 곳이나 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **SQL 실행** 을 선택합니다.  
   
-    -또는-  
+    또는  
   
     Ctrl+R을 누릅니다.  
   

@@ -1,10 +1,9 @@
 ---
-title: 결과 업데이트 규칙(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 결과 업데이트 규칙
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bef3b9612b68c253fed032fe63d5d67e61816dff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255672"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255157"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>결과 업데이트 규칙(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68255672"
 |totals 또는 aggregate 함수를 포함하는 하위 쿼리를 기반으로 하는 쿼리|아니요.|  
 |중복 행을 제외하기 위해 DISTINCT 키워드를 포함하는 쿼리|아니요.|  
 |FROM 절에 테이블을 반환하는 사용자 정의 함수 및 여러 개의 select 문이 들어 있는 사용자 정의 함수를 포함하는 쿼리|아니요.|  
-|FROM 절에 인라인 사용자 정의 함수를 포함하는 쿼리|예|  
+|FROM 절에 인라인 사용자 정의 함수를 포함하는 쿼리|예.|  
   
 또한 쿼리 결과의 특정 열을 업데이트할 수 없는 경우도 있습니다. 다음은 결과 창에서 업데이트할 수 없는 특정 열 형식을 요약한 것입니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62759642"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 사용자 지정 맵
@@ -48,8 +48,8 @@ SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 
   
 대부분의 기존 셰이프 파일은 웹의 Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data)와 같은 사이트에서 다운로드할 수 있습니다.  
 
-## <a name="see-also"></a>관련 항목:  
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+## <a name="see-also"></a>참고 항목  
+- [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

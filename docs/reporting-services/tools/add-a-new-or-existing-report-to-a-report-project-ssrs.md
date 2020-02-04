@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576796"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576796"
   
 1.  솔루션 탐색기에서 보고서 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 보고서 추가**를 클릭합니다. **보고서 마법사** 대화 상자가 열립니다.  
   
-     마법사는 데이터 원본을 만들고, 쿼리를 사용하여 데이터 세트를 만들고, 그룹을 정의하고, 레이아웃을 지정하고, 보고서를 만드는 단계를 안내합니다. 이 단계는 다음과 같습니다.  
+     마법사는 데이터 원본을 만들고, 쿼리를 사용하여 데이터 세트를 만들고, 그룹을 정의하고, 레이아웃을 지정하고, 보고서를 만드는 단계를 안내합니다. 단계는 다음과 같습니다.  
   
     -   **데이터 원본 선택.** 보고서를 만드는 첫 번째 단계로 데이터 원본을 정의합니다. 보고서 마법사는 보고서 프로젝트의 전체 공유 데이터 원본 목록뿐만 아니라 새 데이터 원본을 만드는 옵션도 제공합니다.  
   

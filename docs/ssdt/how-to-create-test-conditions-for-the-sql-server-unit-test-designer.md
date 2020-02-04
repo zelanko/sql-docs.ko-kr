@@ -1,23 +1,24 @@
 ---
-title: '방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911796"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241476"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
+
 확장 가능한 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스를 사용하여 새 테스트 조건을 만들 수 있습니다. 예를 들어 결과 집합의 열 또는 값 수를 확인하는 새 테스트 조건을 만들 수 있습니다.  
   
 ## <a name="to-create-a-test-condition"></a>테스트 조건을 만들려면  
@@ -175,7 +176,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)는 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)을 확장하는 클래스에 추가되어야 합니다. 이 특성을 사용하면 해당 클래스가 SQL Server Data Tools에서 검색되어 SQL Server 단위 테스트 디자인 및 실행 중에 사용됩니다. 이 특성에는 다음 두 개의 매개 변수가 사용됩니다.  
   
-|특성 매개 변수|위치|설명|  
+|특성 매개 변수|위치|Description|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|"테스트 조건" 콤보 상자의 문자열을 식별합니다. 이 이름은 고유해야 합니다. 두 조건의 표시 이름이 동일한 경우 첫 번째로 발견된 조건이 사용자에게 표시되고 Visual Studio 오류 관리자에 경고가 표시됩니다.|  
 |ImplementingType|2|이 매개 변수는 해당 확장을 고유하게 식별하는 데 사용됩니다. 특성을 추가하려는 형식과 일치하도록 이 매개 변수를 변경해야 합니다. 이 예제에서는 **ResultSetColumnCountCondition** 유형을 사용하므로 **typeof(ResultSetColumnCountCondition)** 를 사용합니다. 유형이 **NewTestCondition**인 경우에는 **typeof(NewTestCondition)** 를 사용합니다.|  

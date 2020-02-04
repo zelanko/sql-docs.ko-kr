@@ -16,10 +16,10 @@ ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955585"
 ---
 # <a name="close-method-sqlserverresultset"></a>close 메서드(SQLServerResultSet)
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 close 메서드는 java.sql.ResultSet 인터페이스의 close 메서드에 의해 지정됩니다.  
   
  SQLServerResultSet 개체는 해당 개체를 생성한 SQLServerStatement 개체가 닫히거나, 다시 실행되거나, 여러 결과의 시퀀스에서 다음 결과를 검색하는 데 사용될 때 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 자동으로 닫힙니다. SQLServerResultSet 개체는 가비지가 수집되는 경우에도 자동으로 닫힙니다.  

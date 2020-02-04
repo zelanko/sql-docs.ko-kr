@@ -1,21 +1,23 @@
 ---
-title: 데이터베이스 참조 추가 대화 상자 | Microsoft Docs
+title: 데이터베이스 참조 추가 대화 상자
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984702"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256139"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
+
 이 항목에서는 **데이터베이스 참조 추가** 대화 상자에서 수행할 수 있는 절차에 대해 설명합니다.  
   
 데이터베이스 참조를 통해 다음을 수행할 수 있습니다.  
@@ -28,7 +30,8 @@ ms.locfileid: "67984702"
   
 현재 솔루션의 데이터베이스 프로젝트 또는 DACPAC에 대한 데이터베이스 참조를 만들 수 있습니다. 프로젝트에 데이터베이스 참조를 추가하면 프로젝트 종속성 및 빌드 순서가 변경됩니다.  
   
-## <a name="selecting-the-database-to-reference"></a>참조에 대한 데이터베이스 선택  
+## <a name="selecting-the-database-to-reference"></a>참조에 대한 데이터베이스 선택
+
 동일한 솔루션의 다른 데이터베이스 프로젝트, 시스템 데이터베이스 또는 DACPAC를 참조할 수 있습니다.  
   
 솔루션에 둘 이상의 데이터베이스 프로젝트가 있는 경우 **현재 솔루션의 데이터베이스 프로젝트**가 활성화됩니다. 솔루션의 다른 데이터베이스를 참조할 수 있습니다.  
@@ -37,7 +40,8 @@ ms.locfileid: "67984702"
   
 **데이터 계층 애플리케이션(.dacpac)** 을 선택하여 DACPAC의 데이터베이스를 참조하고 DACPAC 파일이 있는 디렉터리로 이동합니다.  
   
-## <a name="selecting-the-databases-relative-location"></a>데이터베이스의 상대적 위치 선택  
+## <a name="selecting-the-databases-relative-location"></a>데이터베이스의 상대적 위치 선택
+
 참조할 데이터베이스를 선택한 후 데이터베이스 개체의 참조 중인 프로젝트에 상대적인 예상 위치를 지정할 수 있습니다.  
   
 다음 위치 중 하나에서 개체에 대한 참조를 확인할 수 있습니다.  
@@ -59,7 +63,8 @@ ms.locfileid: "67984702"
 > [!IMPORTANT]  
 > 상황에 따라 기존 데이터베이스 참조와 동일한 이름을 가진 데이터베이스 참조를 만들 수 있습니다. 동일한 이름을 가진 두 데이터베이스 참조가 있는 경우 예기치 못한 동작이 발생할 수 있습니다. 이 경우 두 데이터베이스 참조를 삭제하십시오.  
   
-## <a name="common-procedures"></a>일반적인 절차  
+## <a name="common-procedures"></a>일반적인 절차
+
 일반적인 절차는 다음과 같습니다.  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>동일한 서버에 데이터베이스에 대한 참조를 만들려면  
@@ -112,6 +117,6 @@ ms.locfileid: "67984702"
   
 3.  **고급 게시 설정** 대화 상자에서 **고급 배포 옵션** 목록에 **복합 개체 포함**이 선택되어 있는지 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
-[프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>참고 항목
+
+[프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md)

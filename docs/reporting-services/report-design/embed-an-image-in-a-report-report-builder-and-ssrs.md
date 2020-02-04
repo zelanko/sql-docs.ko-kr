@@ -12,10 +12,10 @@ ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8da5d6851b9cf042d1b04e72b9c58257f9f9f509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579323"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>보고서에 이미지 포함(보고서 작성기 및 SSRS)

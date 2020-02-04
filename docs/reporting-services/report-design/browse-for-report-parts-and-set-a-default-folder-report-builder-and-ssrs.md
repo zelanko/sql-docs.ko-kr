@@ -9,10 +9,10 @@ ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2eef96c7bde16746a91fe53f94adb19bbadadf2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581823"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65581823"
   
     -   서버 폴더  
   
-    -   형식  
+    -   Type  
   
      예를 들어 이미지를 찾으려면 **조건 추가**를 클릭하고 **유형**을 클릭합니다. 드롭다운 상자에서 **이미지** 확인란을 선택하고 ENTER 키를 누르고 검색 돋보기 단추를 클릭합니다.  
   

@@ -18,10 +18,10 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2802da2b5b227f3cdb4e4ea3bfa59ca15f5d8d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576086"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65576086"
   
 -   잘못된 형식 문자열을 지정하면 형식 지정된 텍스트는 형식 지정을 무시하는 리터럴 문자열로 해석됩니다.  
   
--   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)를 클릭합니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
+-   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
   
 -   **범주** 에서 **통화** 를 선택하고 **값 표시 단위**를 선택한 경우 재무 형식을 사용하여 숫자를 표시하는 단위로 **천**, **백만**또는 **10억** 을 선택할 수 있습니다. 예를 들어 필드 값이 1,789,905,394인 경우 값 표시 단위로 **10억** 을 선택하고 소수 자릿수를 두 자리로 지정하면 보고서에는 1.78이 값으로 표시됩니다.  
   

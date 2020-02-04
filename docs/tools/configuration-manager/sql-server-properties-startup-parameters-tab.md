@@ -1,6 +1,6 @@
 ---
-title: SQL Server 속성 (시작 매개 변수 탭) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 속성(시작 매개 변수 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023907"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306770"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68023907"
  master 데이터베이스를 이동하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "시스템 데이터베이스 이동" 항목을 참조하십시오.  
   
 ## <a name="optional-parameters"></a>선택적 매개 변수  
- 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T*trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[tsql](../../includes/tsql-md.md)])" 항목을 참조하세요.  
+ 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T*trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" 항목을 참조하세요.  
   
 > [!CAUTION]  
 >  인터넷에서 문서화되지 않은 추가 시작 매개 변수 및 추적 플래그를 참조할 수 있습니다. 문서화되지 않은 시작 매개 변수 및 추적 플래그를 만들어 특수한 문제를 해결하거나 테스트하는 데 필요한 특정 조건을 강제 적용할 수 있습니다. 문서화되지 않은 시작 매개 변수를 사용하면 예기치 못한 결과가 발생할 수 있습니다. 문서화되지 않은 매개 변수는 Microsoft 고객 지원 서비스에서 안내하는 경우에만 사용하십시오.  
@@ -71,7 +71,7 @@ ms.locfileid: "68023907"
 > [!CAUTION]  
 >  일부 선택 매개 변수는 서버 동작을 변경하고 성능에 영향을 줄 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 페이지는 레지스트리에서 관련 항목을 변경할 수 있는 사용자만 사용해야 합니다. 해당되는 사용자는 다음과 같습니다.  
   
 -   로컬 Administrators 그룹의 멤버  

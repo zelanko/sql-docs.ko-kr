@@ -1,6 +1,6 @@
 ---
-title: Windows 애플리케이션 로그 보기 | Microsoft Docs
-ms.custom: ''
+title: Windows 애플리케이션 로그 보기
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c6d652545fcdc44ea46fbc417b1f0de7956cd83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b70753626c65af4f8c125d33e12c4ce2ebbd1f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106065"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306639"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows 애플리케이션 로그 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68106065"
   
  이벤트 뷰어로 볼 수 있는 로그에는 세 가지가 있습니다.  
   
-|Windows 로그 유형|설명|  
+|Windows 로그 유형|Description|  
 |----------------------|-----------------|  
 |시스템 로그|Windows 운영 체제 구성 요소에서 로그한 이벤트를 기록합니다. 예를 들어 시작할 때 드라이버나 다른 시스템 구성 요소 로드를 실패했으면 시스템 로그에 기록됩니다.|  
 |보안 로그|실패한 로그인 시도와 같은 보안 이벤트를 기록합니다. 이것은 보안 시스템의 변경 내용을 추적하고 일어날 수도 있는 보안 침해를 식별할 때 유용합니다. 예를 들어 시스템 로그온 시도는 사용자 관리자의 감사 설정에 따라 보안 로그에 기록됩니다.<br /><br /> 보안 로그를 보려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.|  

@@ -13,10 +13,10 @@ ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993683"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원
@@ -26,17 +26,17 @@ ms.locfileid: "67993683"
   
 다음 SQL Server 데이터 형식은 SQLSRV 드라이버를 사용하여 스트림으로 검색할 수 있습니다.  
   
--   BINARY  
+-   binary  
   
 -   char  
   
--   image  
+-   이미지  
   
--   NCHAR  
+-   nchar  
   
 -   ntext  
   
--   NVARCHAR  
+-   nvarchar  
   
 -   text  
   

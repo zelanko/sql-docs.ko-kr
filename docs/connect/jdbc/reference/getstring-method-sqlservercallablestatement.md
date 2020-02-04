@@ -16,10 +16,10 @@ ms.assetid: 8e88614b-e1a9-4119-8db0-d1b8de9e7cda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a303136f34af84290907fd8aa24457d239b0417
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979425"
 ---
 # <a name="getstring-method-sqlservercallablestatement"></a>getString 메서드(SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67979425"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getString(int)](../../../connect/jdbc/reference/getstring-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 **문자열**로 검색합니다.|  
 |[getString(java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 **문자열**로 검색합니다.|  

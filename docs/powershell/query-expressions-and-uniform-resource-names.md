@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049115"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
@@ -53,7 +53,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 ```  
   
 ## <a name="arguments"></a>인수  
- *개체*  
+ *Object*  
  식 문자열의 Object 노드에서 나타내는 개체 유형을 지정합니다. 각 개체는 이러한 SMO 개체 모델 네임스페이스의 컬렉션 클래스를 나타냅니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
   
  \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
+ *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 \@Database**클래스 속성인**IsAnsiNull**에** IsAnsiNull을 지정합니다.  
   
  \@*BooleanPropertyName*=true()  
  지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
@@ -110,7 +110,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(\@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
@@ -126,14 +126,14 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enumerating-objects-using-false"></a>1\. false()를 사용하여 개체 열거  
+### <a name="a-enumerating-objects-using-false"></a>A. false()를 사용하여 개체 열거  
  이 쿼리 식은 **MyComputer** 의 기본 인스턴스에서 **AutoClose**특성이 false로 설정된 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>2\. contains를 사용하여 개체 열거  
+### <a name="b-enumerating-objects-using-contains"></a>B. contains를 사용하여 개체 열거  
  이 쿼리 식은 대/소문자를 구분하지 않고 이름에 'm' 문자가 있는 데이터베이스를 모두 열거합니다.  
   
 ```  
@@ -161,7 +161,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. is_null을 사용하여 개체 열거  
+### <a name="f-enumerating-objects-using-is_null"></a>F. is_null을 사용하여 개체 열거  
  이 쿼리 식은 마지막 수정 날짜 속성에 대한 NULL이 없는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 테이블을 모두 열거합니다.  
   
 ```  

@@ -1,29 +1,28 @@
 ---
-title: 추적 중 값 또는 데이터 열 찾기(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적 중 값 또는 데이터 열 찾기
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- searching while trace running
-- traces [SQL Server], running
-- traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 515853eedcee1659a344845405663ad3c7e1c5dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: e78150643556a418226cff36e9aaa2a3fa3f555c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307203"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>추적 중 값 또는 데이터 열 찾기(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 실행 중에 추적 출력에서 특정 값이나 데이터 열을 검색하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 실행 중에 추적 출력에서 특정 값이나 데이터 열을 검색하는 방법에 대해 설명합니다.  
   
 ### <a name="to-find-a-value-or-data-column-while-running-a-trace"></a>추적 실행 중에 값 또는 데이터 열을 찾으려면  
   

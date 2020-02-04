@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000444"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
@@ -57,7 +57,7 @@ EXECUTE sp_execute_external_script
 
 설치하는 동안 Python 기능을 선택하면 다음 Python 패키지가 SQL Server Machine Learning Services와 함께 설치됩니다.
 
-| 패키지 | 버전 옵션 |  설명 |
+| 패키지 | 버전 |  Description |
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Python에서 기계 학습 알고리즘을 추가합니다. |

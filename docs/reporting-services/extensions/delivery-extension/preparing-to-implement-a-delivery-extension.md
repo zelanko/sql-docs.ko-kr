@@ -12,10 +12,10 @@ ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193719"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
@@ -35,7 +35,7 @@ ms.locfileid: "63193719"
   
  다음 표에서는 배달 확장 프로그램에 대해 사용할 수 있는 인터페이스 및 클래스를 설명합니다.  
   
-|인터페이스 또는 클래스|설명|  
+|인터페이스 또는 클래스|Description|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 확장 프로그램을 나타냅니다.|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 배달 확장 프로그램을 나타냅니다.|  

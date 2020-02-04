@@ -14,10 +14,10 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570555"
 ---
 # <a name="secure-folders"></a>보안 폴더
@@ -42,7 +42,7 @@ ms.locfileid: "65570555"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   
- [공유 데이터 원본 항목 보안 설정](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [공유 데이터 원본 항목 보안](../../reporting-services/security/secure-shared-data-source-items.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

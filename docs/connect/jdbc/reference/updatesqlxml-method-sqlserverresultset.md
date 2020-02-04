@@ -11,10 +11,10 @@ ms.assetid: abe8ff37-72e5-4ec1-a226-6b68dbf2c1b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac6e2d368e39bc5a40cc40f7509fbf0b715e4f94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998261"
 ---
 # <a name="updatesqlxml-method-sqlserverresultset"></a>updateSQLXML 메서드(SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67998261"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[updateSQLXML 메서드 &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  
 |[updateSQLXML 메서드 &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  

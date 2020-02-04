@@ -1,28 +1,28 @@
 ---
-title: 추적에서 스크립트 추출(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 추적에서 스크립트 추출
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- scripts [SQL Server], traces
-- extracting script from trace [SQL Server]
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c2ee53261681cbcebd023bef75b98124a24d383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4abc9c52bd7fb969ed655d7e056597e14e25038f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223691"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307288"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>추적에서 스크립트 추출(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하여 추적 파일이나 테이블에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이벤트를 추출하고 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]스크립트 파일로 저장하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하여 추적 파일이나 테이블에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이벤트를 추출하고 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]스크립트 파일로 저장하는 방법에 대해 설명합니다.  
   
 ### <a name="to-extract-a-transact-sql-script-from-a-trace-file-or-table"></a>추적 파일이나 테이블에서 Transact-SQL 스크립트를 추출하려면  
   
@@ -33,6 +33,6 @@ ms.locfileid: "68223691"
 3.  **다른 이름으로 저장** 대화 상자에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 파일의 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

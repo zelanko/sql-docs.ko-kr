@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577406"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>보고서 작성기 함수 - LookupSet 함수
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>반환 값  
  **VariantArray**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **LookupSet**을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 **LookupSet**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
   
  **LookupSet** 은 다음을 수행합니다.  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  일 대 일 관계의 이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)을 사용합니다. 값 집합에 대한 **Lookup**을 호출하려면 [Multilookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)를 사용합니다.  
   
- 다음과 같은 제한 사항이 있습니다.  
+ 다음 제한 사항이 적용됩니다.  
   
 -   **LookupSet** 은 모든 필터 식이 적용된 후 평가됩니다.  
   

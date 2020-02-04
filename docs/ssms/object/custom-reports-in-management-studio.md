@@ -1,6 +1,6 @@
 ---
-title: Management Studio의 사용자 지정 보고서 | Microsoft 문서
-ms.custom: ''
+title: Management Studio의 사용자 지정 보고서
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2fd6eb4e5c3c6b50f7fd96a0dd5ff51034d305
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259511"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257232"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

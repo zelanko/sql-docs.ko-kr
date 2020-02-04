@@ -13,10 +13,10 @@ ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 219fc1883f395e56f1fd73af32e95ea066df28b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62992214"
 ---
 # <a name="preventing-invalid-requests"></a>잘못된 요청 방지

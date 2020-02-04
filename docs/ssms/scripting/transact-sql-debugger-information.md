@@ -1,10 +1,8 @@
 ---
-title: Transact-SQL 디버거 정보 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL 디버거 정보
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253552"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253037"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 디버거 - 정보
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>디버거 창  
- 디버거 모드에서 디버거가 주 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 창 아래쪽에 두 개의 창을 엽니다. 디버거는 이 두 창에 해당 정보를 모두 표시합니다. 각 디버거 창에는 창에 표시되는 정보 집합을 제어하기 위해 선택할 수 있는 탭이 있습니다. 왼쪽 디버거 창에는 **지역**, **조사식1**, **조사식2**, **조사식3**및 **조사식4** 탭이 있습니다. 오른쪽 디버거 창에는 **호출 스택**, **스레드**, **중단점**, **명령 창**및 **출력** 탭이 있습니다.  
+
+디버거 모드에서 디버거가 주 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 창 아래쪽에 두 개의 창을 엽니다. 디버거는 이 두 창에 해당 정보를 모두 표시합니다. 각 디버거 창에는 창에 표시되는 정보 집합을 제어하기 위해 선택할 수 있는 탭이 있습니다. 왼쪽 디버거 창에는 **지역**, **조사식1**, **조사식2**, **조사식3**및 **조사식4** 탭이 있습니다. 오른쪽 디버거 창에는 **호출 스택**, **스레드**, **중단점**, **명령 창**및 **출력** 탭이 있습니다.  
   
 > [!NOTE]  
 >  앞의 설명은 디버거 창의 기본 위치에 적용됩니다. 탭을 끌어 창 사이를 이동하거나 탭의 도킹을 해제하여 원하는 위치에 배치할 수 있는 새 창을 만들 수 있습니다.  
@@ -41,11 +47,11 @@ ms.locfileid: "68253552"
 -   **디버그** 도구 모음에서 **중단점**을 클릭한 다음 원하는 창을 선택합니다.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 식  
- 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **지역, 조사식1**, **조사식2**, **조사식3** 및 **조사식4**에 표시할 수 있습니다.  
+ 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **로컬, 조사식1**, **조사식2**, **조사식3**및 **조사식4**에 표시할 수 있습니다.  
   
  **지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 변수에 대한 정보가 표시됩니다. **지역** 창에 나열된 식 집합은 디버거가 코드의 서로 다른 부분에서 실행할 때 변경됩니다.  
   
- **간략한 조사식** 및 네 개의 **조사식** 창에 있는 식은 변수의 식별자만 나열합니다. 변수에 숫자를 추가하는 등 단일 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식 또는 단일 값으로 계산되는 SELECT 문을 지정할 수 있습니다. 이러한 충돌이 발생합니다.  
+ **간략한 조사식** 및 네 개의 **조사식** 창에 있는 식은 변수의 식별자만 나열합니다. 변수에 숫자를 추가하는 등 단일 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식 또는 단일 값으로 계산되는 SELECT 문을 지정할 수 있습니다. 다음은 이러한 템플릿의 예입니다.  
   
 -   @IntegerCounter와 같은 변수 이름입니다.  
   

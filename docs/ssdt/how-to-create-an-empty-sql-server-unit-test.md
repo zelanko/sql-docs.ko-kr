@@ -1,25 +1,26 @@
 ---
-title: '방법: 빈 SQL Server 단위 테스트 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 빈 SQL Server 단위 테스트 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241507"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>방법: 빈 SQL Server 단위 테스트 만들기
+
 데이터베이스 개체에 대한 변경 내용이 기존 기능을 중단하지 않는지 확인하기 위해서는 데이터베이스 프로젝트에 단위 테스트를 포함합니다. 다음 절차에서는 데이터베이스 개체에 대한 SQL Server 단위 테스트를 만드는 방법에 대해 설명합니다. SQL Server Data Tools에는 데이터베이스 함수, 트리거 및 저장 프로시저에 대한 추가 지원 기능이 포함되어 있습니다. 자세한 내용은 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)를 참조하세요.  
   
 첫 번째 절차를 사용하여 SQL Server 단위 테스트를 만들 때는 테스트 프로젝트가 없을 경우 자동으로 만들어집니다. 테스트 프로젝트가 이미 있으면 이러한 프로젝트 중 하나에 새 테스트를 추가하거나 새 테스트 프로젝트를 만들도록 선택할 수 있습니다. 테스트 프로젝트에 대한 자세한 내용은 [방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)를 참조하세요.  

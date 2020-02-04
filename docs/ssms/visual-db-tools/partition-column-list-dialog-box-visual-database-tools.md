@@ -1,10 +1,9 @@
 ---
-title: 분할 열 목록 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 파티션 열 목록 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94adf704a08abf36b38b371aed95cb49439758fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 60e5156a92e51df58f8bcf6af05510d11d4ee3d0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255414"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263236"
 데이터 형식  
 분할 구성표에 정의된 열의 데이터 형식을 표시합니다.  
   
-Column  
+열  
 분할 함수를 적용할 열을 선택하는 데 사용할 수 있는 드롭다운 목록을 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

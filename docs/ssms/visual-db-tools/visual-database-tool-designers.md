@@ -1,10 +1,9 @@
 ---
-title: Visual Database Tools 디자이너 | Microsoft 문서
-ms.custom: ''
+title: Visual Database Tools 디자이너
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02e08bcdc7050a9f7332f7f55226951aed49bf26
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 183ea6523015835a49e3b9d6c5f3db8786d15551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246255"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools 디자이너
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

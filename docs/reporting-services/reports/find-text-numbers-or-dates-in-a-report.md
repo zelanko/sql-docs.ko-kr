@@ -11,10 +11,10 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576412"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>보고서에서 텍스트, 숫자 또는 날짜 찾기

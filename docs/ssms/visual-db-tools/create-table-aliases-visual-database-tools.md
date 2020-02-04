@@ -1,10 +1,9 @@
 ---
-title: 테이블 별칭 만들기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블 별칭 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 691f6280414dafd12839a8d55b13299b6b1ece56
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264268"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254235"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>테이블 별칭 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68264268"
   
 -   자체 조인 등과 같이 동일한 테이블의 여러 인스턴스를 사용하여 작업할 때 특정 인스턴스를 지정해야 하는 경우  
   
-예를 들어, 테이블 이름 `employee_information`에 대한 별칭 `"e"`를 만든 다음 쿼리의 나머지 부분 전반에 걸쳐 테이블을 `"e"`로 지칭할 수 있습니다.  
+예를 들어, 테이블 이름 `"e"`에 대한 별칭 `employee_information`를 만든 다음 쿼리의 나머지 부분 전반에 걸쳐 테이블을 `"e"`로 지칭할 수 있습니다.  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>테이블이나 테이블 반환 개체에 대한 별칭을 만들려면  
   

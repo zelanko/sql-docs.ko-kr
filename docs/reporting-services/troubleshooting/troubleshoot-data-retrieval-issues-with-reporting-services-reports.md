@@ -9,10 +9,10 @@ ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574424"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결

@@ -22,10 +22,10 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576335"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
@@ -55,12 +55,12 @@ ms.locfileid: "65576335"
   
 |식에서의 지원 여부|ReportItems 집계|데이터 세트 집계(범위는 데이터 세트의 이름이어야 함)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|보고서 본문에 있는 입력란|예|아니오|  
-|&PageNumber|예|아니오|  
-|&TotalPages|예|아니오|  
-|집계 함수|예 예:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예 예:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|페이지에 있는 항목의 필드 컬렉션|간접적임. 예:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예 예:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|데이터 바인딩된 이미지|간접적임. 예: `=ReportItems!TXT_Photo.Value`|예 예:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|보고서 본문에 있는 입력란|yes|예|  
+|&PageNumber|yes|예|  
+|&TotalPages|yes|예|  
+|집계 함수|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|페이지에 있는 항목의 필드 컬렉션|간접적임. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|데이터 바인딩된 이미지|간접적임. 예를 들어 `=ReportItems!TXT_Photo.Value`|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  이 항목의 다음 섹션에서는 머리글 및 바닥글에 일반적으로 사용하는 변수 데이터를 가져오는 미리 만들어 놓은 식을 보여 줍니다. Excel 렌더링 확장 프로그램에서 머리글 및 바닥글을 처리하는 방법에 대한 섹션도 있습니다. 식에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   

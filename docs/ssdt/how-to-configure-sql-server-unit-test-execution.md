@@ -1,23 +1,24 @@
 ---
-title: '방법: SQL Server 단위 테스트 실행 구성 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 실행 구성
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911841"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241574"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>방법: SQL Server 단위 테스트 실행 구성
+
 테스트 프로젝트를 구성하여 SQL Server 단위 테스트가 실행되는 방법의 여러 측면을 제어하는 몇 가지 설정을 지정할 수 있습니다. 이러한 구성 설정은 테스트 프로젝트의 app.config 파일에 저장됩니다. 이 파일을 직접 편집하는 경우 테스트 구성 대화 상자에 새 값이 나타납니다.  
   
 솔루션에는 여러 테스트 프로젝트가 포함될 수 있습니다. 각 테스트 프로젝트는 하나의 app.config 파일(즉, 하나의 구성 설정 집합)을 포함합니다. 따라서 솔루션에는 서로 다르게 실행되도록 구성된 여러 단위 테스트 집합(각 테스트 프로젝트별로 하나의 집합)이 포함될 수 있습니다.  

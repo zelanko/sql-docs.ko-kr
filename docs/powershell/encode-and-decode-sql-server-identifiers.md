@@ -10,10 +10,10 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 21e642feba6a2726aa4d5615f6ae508fa33c1694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67934659"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
@@ -36,7 +36,7 @@ Windows PowerShell 경로 이름에 지원되지 않는 문자는 "%" 문자 뒤
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**문자**|\ |/|으로 디코딩된 문자입니다.|%|\<|>|*|?|[|]|&#124;|  
+|**문자**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**16진수 인코딩**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> 식별자 인코딩  

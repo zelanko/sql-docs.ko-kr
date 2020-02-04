@@ -9,10 +9,10 @@ ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eebf7f66e968ec2c7c3d0dcca168eb79fbbc3797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575597"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)

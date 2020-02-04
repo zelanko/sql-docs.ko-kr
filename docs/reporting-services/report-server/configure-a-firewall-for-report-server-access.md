@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593743"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
@@ -64,7 +64,7 @@ ms.locfileid: "73593743"
   
 14. **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
   
-15. **마침**을 클릭합니다.  
+15. **Finish**를 클릭합니다.  
   
 16. 컴퓨터를 다시 시작합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73593743"
   
  다른 컴퓨터에서 웹 포털을 시작하여 포트가 제대로 열리는지 확인할 수도 있습니다. 자세한 내용은 [보고서 서버 웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   

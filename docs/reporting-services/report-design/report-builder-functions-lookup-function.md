@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579578"
 ---
 # <a name="report-builder-functions---lookup-function"></a>보고서 작성기 함수 - Lookup 함수
@@ -44,7 +44,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>반환 값  
  **Variant**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Lookup**을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 **Lookup**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
   
  **Lookup** 은 다음을 수행합니다.  
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  일 대 다 관계가 있는 경우 단일 이름 또는 키 필드에 대해 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)를 사용합니다. 값 집합에 대한 **Lookup**을 호출하려면 [Multilookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)를 사용합니다.  
   
- 다음과 같은 제한 사항이 있습니다.  
+ 다음 제한 사항이 적용됩니다.  
   
 -   **Lookup** 은 모든 필터 식이 적용된 후 평가됩니다.  
   

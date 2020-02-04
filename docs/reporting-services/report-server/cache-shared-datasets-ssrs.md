@@ -9,10 +9,10 @@ ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175593"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 세트 캐시(SSRS)
@@ -93,7 +93,7 @@ ms.locfileid: "66175593"
   
  공유 데이터 세트에 대한 캐시 새로 고침 계획을 업데이트해도 이미 처리된 보고서에는 영향을 주지 않습니다. 캐시 새로 고침 계획을 업데이트하는 경우 나중에 해당 공유 데이터 세트를 참조하는 보고서를 실행하는 경우에만 영향이 있습니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
   
  [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   

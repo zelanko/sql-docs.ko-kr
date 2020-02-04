@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992904"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색
@@ -32,7 +32,7 @@ ms.locfileid: "67992904"
   
 3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용하여 행에서 필드를 검색합니다. 함수 호출에서 세 번째 매개 변수로 **SQLSRV_PHPTYPE_STREAM(<encoding>)** 을 사용하여 데이터를 스트림으로 검색하도록 지정합니다. 다음 표에서는 인코딩과 해당 설명을 지정하는 데 사용되는 상수를 나열합니다.  
   
-    |SQLSRV 상수|설명|  
+    |SQLSRV 상수|Description|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|데이터는 인코딩 또는 변환을 수행하지 않은 원시 바이트 스트림으로 서버에서 반환됩니다.|  
     |SQLSRV_ENC_CHAR|데이터는 시스템에 설정된 Windows 로캘의 코드 페이지에 지정된 8비트 문자로 반환됩니다. 모든 멀티바이트 문자 또는 이 코드 페이지에 매핑되지 않는 문자는 싱글바이트 물음표(?) 문자로 대체됩니다.|  
@@ -42,10 +42,10 @@ ms.locfileid: "67992904"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|스트림으로 검색할 수 있는 SQL Server 데이터 유형을 나열합니다.|  
-|[방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|스트림으로 문자 데이터를 검색하는 방법을 보여 줍니다.|  
+|[방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 검색](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|스트림으로 문자 데이터를 검색하는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|스트림으로 이진 데이터를 검색하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고 항목  

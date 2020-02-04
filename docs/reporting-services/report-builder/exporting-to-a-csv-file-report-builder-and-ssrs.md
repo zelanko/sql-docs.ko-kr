@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581205"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "65581205"
   
 -   사용자 지정 보고서 항목  
   
--   선  
+-   꺾은선형  
   
--   image  
+-   이미지  
   
 -   직사각형  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65581205"
 |항목|렌더링 동작|  
 |----------|------------------------|  
 |입력란|입력란의 내용을 렌더링합니다. 기본 모드에서는 항목의 서식 속성에 따라 항목의 서식이 지정됩니다. 규격 모드에서는 서식이 디바이스 정보 설정에 의해 변경될 수 있습니다. CSV 렌더링 모드에 대한 자세한 정보는 다음을 참조하십시오.|  
-|Table|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
+|테이블|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
 |행렬|행렬을 확장하고 최하위 수준에서 각 행과 열에 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다.|  
 |목록|목록의 각 정보 행이나 인스턴스에 대해 레코드를 렌더링합니다.|  
 |하위 보고서|내용의 각 인스턴스에 대해 부모 항목이 반복됩니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "65581205"
   
 -   피어 데이터 영역은 공통 데이터 영역 또는 동적 상위 항목을 공유하는 데이터 영역 또는 동적 그룹입니다. 피어 데이터는 결합된 트리의 분기에 의해 식별됩니다.  
   
- 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)MIME 형식을 반환합니다.  
+ 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
   
 ##  <a name="RenderingModes"></a> 렌더러 모드  
@@ -107,7 +107,7 @@ ms.locfileid: "65581205"
   
 -   중첩된 데이터 영역은 동일한 데이터 블록에 대각선 방향으로 렌더링됩니다.  
   
-#### <a name="formatting"></a>서식  
+#### <a name="formatting"></a>서식 지정  
  숫자 값은 지정된 서식 상태로 렌더링됩니다. Excel은 통화, 백분율, 날짜 등 서식이 지정된 숫자 값을 인식하여 CSV 파일을 가져올 때 각 셀에 적절하게 서식을 지정합니다.  
   
 ### <a name="compliant-mode"></a>규격 모드  
@@ -116,7 +116,7 @@ ms.locfileid: "65581205"
 #### <a name="data-regions"></a>데이터 영역  
  파일의 첫 번째 행에만 열 머리글이 들어 있으며 각 행에는 동일한 개수의 열이 있습니다.  
   
-#### <a name="formatting"></a>서식  
+#### <a name="formatting"></a>서식 지정  
  값에는 서식이 지정되지 않습니다.  
   
 ##  <a name="Interactivity"></a> 상호 작용  

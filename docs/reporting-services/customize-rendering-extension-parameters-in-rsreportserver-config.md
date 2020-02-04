@@ -16,10 +16,10 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571586"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
@@ -127,7 +127,7 @@ ms.locfileid: "65571586"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RSReportServer 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 구성 파일](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV 디바이스 정보 설정](../reporting-services/csv-device-information-settings.md)   
  [Excel 디바이스 정보 설정](../reporting-services/excel-device-information-settings.md)   

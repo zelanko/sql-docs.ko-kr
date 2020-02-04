@@ -16,10 +16,10 @@ ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996950"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996950"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[updateBoolean(int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|열 인덱스가 지정된 경우 지정된 열을 **부울** 값으로 업데이트합니다.|  
 |[updateBoolean(java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|열 이름이 지정된 경우 지정된 열을 **부울** 값으로 업데이트합니다.|  

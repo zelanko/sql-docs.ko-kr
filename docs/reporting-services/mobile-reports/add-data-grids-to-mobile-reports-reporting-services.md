@@ -9,10 +9,10 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280446"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>모바일 보고서에 데이터 표 추가 | Reporting Services
@@ -76,7 +76,7 @@ ms.locfileid: "63280446"
    * **대상 조회** 는 **차트 시각화에 대한 참조 데이터**에 있는 데이터 테이블의 필드입니다. 각 행에 있는 차트의 데이터는 이 두 개 필드에 조인됩니다.   
    * **차트 데이터 필드** 를 통해 각 행에서 차트의 y축 값 또는 계열로 사용할 **차트 시각화를 위한 참조 데이터** 데이터 테이블의 메트릭이 결정됩니다.  
 
-## <a name="see-also"></a>관련 항목: 
+## <a name="see-also"></a>참고 항목 
 * [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 탐색기](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

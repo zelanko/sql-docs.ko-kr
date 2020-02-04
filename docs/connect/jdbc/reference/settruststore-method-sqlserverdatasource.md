@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972187"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  인증서 trustStore 파일의 경로(파일 이름 포함)가 들어 있는 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  trustStore 속성이 지정되어 있지 않거나 null로 설정되어 있으면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 트러스트 관리자 팩터리의 조회 규칙에 따라 사용할 인증서 저장소를 결정합니다. 기본 SunX509 TrustManagerFactory에서는 다음 위치의 순서에 따라 트러스트 자료를 찾으려고 합니다.  
   
 -   1. "javax.net.ssl.trustStore" JVM(Java Virtual Machine) 시스템 속성에 지정된 파일  

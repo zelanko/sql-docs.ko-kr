@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593799"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)

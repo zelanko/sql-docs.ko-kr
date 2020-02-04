@@ -9,10 +9,10 @@ ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316449"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
@@ -64,7 +64,7 @@ SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 �
   
    보고서를 서버에 저장하려면 SQL Server Reporting Services 보고서 서버 액세스 권한이 있어야 합니다.  
      
-   ### <a name="see-also"></a>관련 항목:  
+   ### <a name="see-also"></a>참고 항목  
      
 -   [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

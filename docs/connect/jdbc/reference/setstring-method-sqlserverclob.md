@@ -16,10 +16,10 @@ ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972653"
 ---
 # <a name="setstring-method-sqlserverclob"></a>setString 메서드(SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67972653"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[setString(long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|지정된 String을 CLOB의 지정된 위치부터 씁니다.|  
 |[setString(long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|지정된 오프셋 및 길이에 따라 CLOB의 지정된 위치부터 지정된 문자열을 씁니다.|  

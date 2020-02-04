@@ -13,10 +13,10 @@ ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582043"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제

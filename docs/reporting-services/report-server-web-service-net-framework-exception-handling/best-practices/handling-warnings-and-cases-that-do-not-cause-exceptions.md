@@ -12,10 +12,10 @@ ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5939d2ea37a36af991ce6dd8edab33036ed24b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63162300"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>예외를 발생하지 않는 경고 및 사례 처리

@@ -1,10 +1,7 @@
 ---
-title: 여러 서버에 대해 동시에 문 실행 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
+title: 여러 서버에 대해 동시에 문 실행
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,23 +11,29 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abf087363c4e4cc17356882322643b6fae0da553
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/18/2016
+ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260575"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246555"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>여러 서버에 대해 동시에 문 실행
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 로컬 서버 그룹 또는 중앙 관리 서버와 하나 이상의 서버 그룹 및 그룹 내의 하나 이상의 등록된 서버를 만든 다음 전체 그룹을 쿼리하여 여러 서버를 동시에 쿼리하는 방법에 대해 설명합니다. 
-  
+
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 로컬 서버 그룹 또는 중앙 관리 서버와 하나 이상의 서버 그룹 및 그룹 내의 하나 이상의 등록된 서버를 만든 다음 전체 그룹을 쿼리하여 여러 서버를 동시에 쿼리하는 방법에 대해 설명합니다. 
+
 쿼리에서 반환되는 결과는 단일 결과 창으로 결합되거나 별도의 결과 창에 반환될 수 있습니다. 결과 집합에는 각 서버에 대한 쿼리에서 사용하는 서버 이름 및 로그인에 대한 추가 열이 포함되어 있습니다. 중앙 관리 서버와 하위 서버는 Windows 인증을 사용해서만 등록할 수 있습니다. Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로컬 서버 그룹의 서버를 등록할 수 있습니다.  
   
 > **참고!** 다음 절차를 실행하기 전에 중앙 관리 서버 및 서버 그룹을 만듭니다. 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)를 참조하세요.  
 
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  중앙 관리 서버에서 유지 관리하는 연결은 Windows 인증을 사용하여 사용자 컨텍스트에서 실행되기 때문에 등록된 서버에 대한 유효 사용 권한이 달라질 수 있습니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 인스턴스에서는 sysadmin 고정 서버 역할의 멤버이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 인스턴스에서는 제한된 사용 권한을 가질 수 있습니다.  
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>여러 구성 대상에 대해 동시에 문 실행  

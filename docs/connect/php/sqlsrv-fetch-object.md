@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992743"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PHP 개체로 데이터의 다음 행을 검색합니다.  
@@ -61,12 +61,12 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 결과 집합 필드 이름에 해당하는 속성을 가진 PHP 개체입니다. 속성 값은 해당 결과 집합 필드 값으로 채워집니다. 선택적 *$className* 매개 변수로 지정된 클래스가 존재하지 않거나 지정된 문과 연결된 활성 결과 집합이 없는 경우 **false** 가 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다.  
   
 반환된 개체의 값 데이터 형식이 기본 PHP 데이터 형식이 됩니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 클래스 이름이 선택적 *$className* 매개 변수로 지정된 경우 이 클래스 형식의 개체가 인스턴스화됩니다. 클래스에 이름이 결과 집합의 필드 이름과 일치하는 속성이 있는 경우 해당 결과 집합 값이 속성에 적용됩니다. 결과 집합 필드 이름이 클래스 속성과 일치하지 않는 경우 결과 집합 필드 이름을 사용하는 속성이 개체에 추가되고 결과 집합 값이 속성에 적용됩니다.  
   
 다음 규칙은 *$className* 매개 변수로 클래스를 지정할 때 적용됩니다.  

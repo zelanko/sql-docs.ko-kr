@@ -9,10 +9,10 @@ ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280556"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
@@ -81,7 +81,7 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
 
 계기에 표시된 숫자의 형식(예: 통화, 백분율, 시간 또는 일반)을 결정합니다. 모바일 보고서의 각 요소에 대해 숫자 형식을 설정합니다.
   
-### <a name="see-also"></a>관련 항목: 
+### <a name="see-also"></a>참고 항목 
 
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
 * [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

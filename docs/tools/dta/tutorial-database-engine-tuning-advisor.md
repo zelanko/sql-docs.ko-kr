@@ -1,10 +1,7 @@
 ---
-title: '자습서: 데이터베이스 엔진 튜닝 관리자 | Microsoft 문서'
-ms.custom: ''
-ms.date: 03/01/2017
+title: '자습서: 데이터베이스 엔진 튜닝 관리자'
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,21 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab03ee7997014308e6753f463119a3a9adc8c963
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105842"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304700"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 데이터베이스 엔진 튜닝 관리자 자습서를 시작합니다. 사용자가 지정한 데이터베이스에서 쿼리를 처리하는 방법을 검사한 다음 인덱스, 인덱싱된 뷰 및 분할과 같은 데이터베이스 구조를 수정하여 쿼리 처리 성능을 높일 수 있는 방법을 권장합니다.  
   
 데이터베이스 엔진 튜닝 관리자는 GUI(그래픽 사용자 인터페이스)와 **dta** 명령 프롬프트 유틸리티의 두 가지 사용자 인터페이스를 제공합니다. GUI를 사용하면 튜닝 세션의 결과를 빠르게 볼 수 있고 **dta** 유틸리티를 사용하면 데이터베이스 엔진 튜닝 관리자 기능을 스크립트에 쉽게 통합하여 튜닝을 자동화할 수 있습니다. 또한 데이터베이스 엔진 튜닝 관리자는 XML 입력을 받아들일 수 있고 자세히 튜닝 프로세스를 제어할 수 있습니다.  

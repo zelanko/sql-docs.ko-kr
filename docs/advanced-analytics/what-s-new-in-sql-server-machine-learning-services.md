@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707435"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
@@ -59,7 +59,7 @@ R의 새로운 기능으로 [**패키지 관리**](r/install-additional-r-packag
 
 ### <a name="r-libraries"></a>R 라이브러리
 
-| 패키지 | 설명 |
+| 패키지 | Description |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 이 릴리스에서는 MicrosoftML이 기본 R 설치에 포함되어 있으므로, 이전 SQL Server 2016 R Services와는 달리 업그레이드 단계가 필요 없습니다. MicrosoftML은 원격 컴퓨팅 컨텍스트에서 크기를 조정하거나 실행할 수 있는 최신 기계 학습 알고리즘 및 데이터 변환을 제공합니다. 알고리즘으로는 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀, 로지스틱 회귀 등이 있습니다.  |
 
@@ -75,7 +75,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여
 
 ### <a name="python-libraries"></a>Python 라이브러리
 
-| 패키지 | 설명 |
+| 패키지 | Description |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR과 동일한 Python 명령입니다. 모두 병렬화 가능하고 원격 컴퓨팅 컨텍스트에서 실행 가능한 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트에 대한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 컴퓨팅 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자는 원격 SQL Server에서 Python 코드를 실행하여 데이터를 이동하지 않고도 데이터를 검색하거나 모델을 만들 수 있습니다. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 패키지와 동일한 Python 명령입니다. |
@@ -98,7 +98,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여
 
 전체 기능 공지는 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)을 참조하세요.
 
-| 릴리스 |기능 업데이트 |
+| 해제 |기능 업데이트 |
 |---------|----------------|
 | CU 추가 | [**실시간 채점**](real-time-scoring.md)은 네이티브 C++ 라이브러리를 사용하여 최적의 이진 형식으로 저장된 모델을 읽은 다음, R 런타임을 호출할 필요 없이 예측을 생성합니다. 따라서 채점 작업이 훨씬 빨라집니다. 실시간 채점을 사용하면 R 코드에서 저장 프로시저를 실행하거나 실시간 채점을 수행할 수 있습니다. 인스턴스가 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]의 최신 릴리스로 업그레이드된 경우에는 SQL Server 2016에도 실시간 채점을 사용할 수 있습니다. |
 | 초기 릴리스 | [**데이터베이스 내 분석을 위한 R 통합**](r/sql-server-r-services.md) <br/><br/> T-SQL에서 R 함수를 호출하거나 그 반대로 호출하기 위한 R 패키지입니다. RevoScaleR 함수는 데이터를 구성 요소 부분으로 청크하고, 분산 처리를 조정 및 관리하고, 결과를 집계하여 규모에 따라 R 분석을 제공합니다. SQL Server 2016 R Services(데이터베이스 내)에서 RevoScaleR 엔진은 데이터베이스 엔진 인스턴스와 통합되어 데이터와 분석을 동일한 처리 컨텍스트로 가져옵니다. <br/><br/>[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 통해 T-SQL과 R 통합. 이 저장 프로시저를 사용하여 모든 R 코드를 호출할 수 있습니다. 이 보안 인프라는 간단한 저장 프로시저를 사용하여 애플리케이션에서 호출할 수 있는 R 모델 및 스크립트의 엔터프라이즈급 배포를 지원합니다. SQL에서 R 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 성능을 추가로 향상할 수 있습니다. <br/><br/>T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여 이전에 필수 이진 형식으로 저장된 미리 학습된 모델에 대한 [네이티브 채점](sql-native-scoring.md)을 수행할 수 있습니다.|
@@ -110,7 +110,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여
 
 SQL Server 2019는 데이터베이스 엔진 인스턴스를 사용하여 기계 학습 패키지를 설치할 때 R 및 Python에 Linux를 사용할 수 있도록 지원이 추가되었습니다. 자세한 내용은 [Linux에 SQL Server Machine Learning Services 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
 
-Linux에서는 SQL Server 2017이 R 또는 Python과 통합되지 않지만, Linux에서 실행되는 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)를 통해 해당 기능을 사용할 수 있으므로 Linux에서 [네이티브 채점](sql-native-scoring.md)을 사용할 수 있습니다. 네이티브 채점을 사용하면 R 런타임을 호출하지 않고 또는 심지어 R 런타임 없이, 미리 학습된 모델에서 고성능 채점이 가능합니다.
+Linux에서는 SQL Server 2017이 R 또는 Python과 통합되지 않지만, Linux에서 실행되는 T-SQL [PREDICT](sql-native-scoring.md)를 통해 해당 기능을 사용할 수 있으므로 Linux에서 [네이티브 채점](../t-sql/queries/predict-transact-sql.md)을 사용할 수 있습니다. 네이티브 채점을 사용하면 R 런타임을 호출하지 않고 또는 심지어 R 런타임 없이, 미리 학습된 모델에서 고성능 채점이 가능합니다.
 ::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>

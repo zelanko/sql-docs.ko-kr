@@ -1,6 +1,6 @@
 ---
-title: 프로젝트에 새 항목 추가 | Microsoft 문서
-ms.custom: ''
+title: 프로젝트에 새 항목 추가
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd21f37a8ec75d1d82afd3f487931a1a6563f33b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 759d05b5817d88d170972267224f77a8e52e2d45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252764"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251996"
 ---
 # <a name="add-new-items-to-a-project"></a>프로젝트에 새 항목 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 새 항목은 쿼리나 연결이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 다음과 같은 두 가지 프로젝트 형식이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 항목이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다.  
+프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 새 항목은 쿼리나 연결이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트의 두 가지 프로젝트 형식이 있습니다. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 항목이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다.  
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 솔루션 내에서 여러 프로젝트를 만듭니다.  
   

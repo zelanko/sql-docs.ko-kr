@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727750"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio에서 사용자 지정 보고서를 사용하여 Python 및 R 스크립트 실행 모니터링
@@ -65,10 +65,10 @@ SQL Server Management Studio의 보고서에 대한 자세한 내용은 [Managem
 
 [GitHub의 SSMS 사용자 지정 보고서 리포지토리](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)에는 다음 보고서가 포함되어 있습니다.
 
-| 보고서 | 설명 |
+| 보고서 | Description |
 |-|-|
 | Active Sessions | 현재 SQL 인스턴스에 현재 연결되어 있고 Python 또는 R 스크립트를 실행 중인 사용자입니다. |
-| Configuration | Machine Learning Services의 설치 설정 및 Python 또는 R 런타임의 속성입니다. |
+| 구성 | Machine Learning Services의 설치 설정 및 Python 또는 R 런타임의 속성입니다. |
 | 인스턴스 구성 | Machine Learning Services를 구성합니다. |
 | 실행 통계 | Machine Learning Services의 실행 통계입니다. 예를 들어 총 외부 스크립트 실행 수와 병렬 실행 수를 가져올 수 있습니다. |
 | 확장 이벤트 | 외부 스크립트 실행에 대한 자세한 인사이트를 가져오는 데 사용할 수 있는 확장 이벤트입니다. |

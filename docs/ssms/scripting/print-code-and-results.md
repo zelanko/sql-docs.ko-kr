@@ -1,6 +1,6 @@
 ---
-title: 코드 및 결과 인쇄 | Microsoft 문서
-ms.custom: ''
+title: 코드 및 결과 인쇄
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,12 +15,12 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 405e1d686bda5dc8894d21dbc3314b2b4ef51c51
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9e8ec48a47caf9f5512c282b86e81ef1bc1dbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253721"
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,10 +16,10 @@ ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979437"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 메서드(java.lang.String)
@@ -39,13 +39,13 @@ public java.lang.String getString(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **문자열** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getString 메서드는 java.sql.CallableStatement 인터페이스의 getString 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 모든 열은 문자열로 반환될 수 있습니다. 즉, 모든 숫자 기반 및 문자 기반 형식의 문자열 표현과 binary, varbinary, varbinary(max), image, timestamp 및 uniqueidentifier 같은 이진 열의 16진수 문자 표현이 반환될 수 있습니다.  

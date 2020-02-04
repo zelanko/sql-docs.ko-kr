@@ -9,10 +9,10 @@ ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280714"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
@@ -76,7 +76,7 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
 
 숨겨진 항목은 더 밝은 색으로 표시됩니다.
     
-### <a name="see-also"></a>관련 항목:  
+### <a name="see-also"></a>참고 항목  
  
 * [Reporting Services 모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 

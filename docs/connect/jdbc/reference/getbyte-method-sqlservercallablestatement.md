@@ -16,10 +16,10 @@ ms.assetid: 4454c22a-5e6d-4edb-9ead-d623a174ce59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4762b10d5a465682a5ab6324e9f0992a81dd4d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953428"
 ---
 # <a name="getbyte-method-sqlservercallablestatement"></a>getByte 메서드(SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953428"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getByte(int)](../../../connect/jdbc/reference/getbyte-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 **byte** 값으로 검색합니다.|  
 |[getByte(java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **byte** 값으로 검색합니다.|  

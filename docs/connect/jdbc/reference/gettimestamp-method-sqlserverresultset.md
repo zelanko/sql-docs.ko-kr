@@ -16,10 +16,10 @@ ms.assetid: 418d4db1-dfc2-47be-be76-8476265e1740
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23cb604edeefd35218ed736c27c2c92bbe9d1eab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978661"
 ---
 # <a name="gettimestamp-method-sqlserverresultset"></a>getTimestamp 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67978661"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getTimestamp(int)](../../../connect/jdbc/reference/gettimestamp-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 검색합니다.|  
 |[getTimestamp(int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Calendar 개체를 사용하여 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 검색합니다.|  

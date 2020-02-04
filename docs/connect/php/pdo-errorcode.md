@@ -11,10 +11,10 @@ ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9846867cfc6bd50568440c5c66711457754af50c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993277"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
@@ -29,10 +29,10 @@ PDO::errorCode는 데이터베이스 핸들에서 가장 최근 작업의 SQLSTA
 mixed PDO::errorCode();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 PDO::errorCode는 5자의 SQLSTATE를 문자열로 반환하거나 데이터베이스 핸들에 대한 작업이 없는 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO_SQLSRV 드라이버의 PDO::errorCode는 일부 성공적인 작업에 대해 경고를 반환합니다. 예를 들어 연결이 성공하면 PDO::errorCode는 SQL_SUCCESS_WITH_INFO를 나타내는 "01000"을 반환합니다.  
   
 PDO::errorCode는 데이터베이스 연결에서 직접 수행한 작업에 대한 오류 코드만 검색합니다. PDO::prepare 또는 PDO::query를 통해 PDOStatement 인스턴스를 만들고 명령문 개체에서 오류가 생성되는 경우 PDO::errorCode는 해당 오류를 검색하지 않습니다. 특정 문 개체에서 수행한 작업에 대한 오류 코드를 반환하려면 PDOStatement::errorCode를 호출해야 합니다.  
@@ -40,7 +40,7 @@ PDO::errorCode는 데이터베이스 연결에서 직접 수행한 작업에 대
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  
-이 예제에서는 열 이름의 철자가 잘못되어(`City`가 아닌 `Cityx`) 오류가 발생하므로 보고됩니다.  
+이 예제에서는 열 이름의 철자가 잘못되어(`Cityx`가 아닌 `City`) 오류가 발생하므로 보고됩니다.  
   
 ```  
 <?php  

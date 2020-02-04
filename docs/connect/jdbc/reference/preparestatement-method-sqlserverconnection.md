@@ -16,10 +16,10 @@ ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 744e76a5a41305df909ef29df6c1a1719751064e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976089"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement 메서드(SQLServerConnection)
@@ -29,13 +29,13 @@ ms.locfileid: "67976089"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[prepareStatement(java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
 |[prepareStatement(java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만들며, 자동 생성 키를 검색할 수 있습니다.|  
 |[prepareStatement(java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만들며, 특정 배열로 지정된 자동 생성 키를 검색할 수 있습니다.|  
-|[prepareStatement(java.lang.String, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int.md)|지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
-|[prepareStatement(java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|지정된 형식, 동시성 및 유지 기능을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
+|[prepareStatement(java.lang.String, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int.md)|지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 만듭니다.|  
+|[prepareStatement(java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|지정된 형식, 동시성 및 유지 기능을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 만듭니다.|  
 |[prepareStatement(java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
   
 ## <a name="see-also"></a>참고 항목  

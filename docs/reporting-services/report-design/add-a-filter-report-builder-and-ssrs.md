@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574833"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>필터 추가(보고서 작성기 및 SSRS)

@@ -1,10 +1,9 @@
 ---
-title: 테이블에 있는 모든 행의 값 요약 또는 집계 | Microsoft 문서
-ms.custom: ''
+title: 테이블에 있는 모든 행의 값 요약 또는 집계
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cfcb42df5c29fc0477e0a8575c6cfe299d3883b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0405898284fd40caf39743f901a70a7c60a75023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263187"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254919"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ FROM titles
   
     쿼리 및 뷰 디자이너에서 요약 대상 열에 대한 열 별칭이 자동으로 할당됩니다. 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
-4.  **그룹화 방법** 표 형태 열에서 **Sum**, **Avg**, **Min**, **Max**, **Count** 등과 같은 적절한 집계 함수를 선택합니다. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
+4.  표 형태의 **그룹화 방법** 열에서 **Sum**, **Avg**, **Min**, **Max**, **Count** 등 적절한 집계 함수를 선택합니다. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
   
     쿼리 및 뷰 디자이너에서 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 에 있는 문의 열 이름이 사용자가 지정한 집계 함수로 바뀝니다. 예를 들어, SQL 문은 다음과 같은 형식입니다.  
   

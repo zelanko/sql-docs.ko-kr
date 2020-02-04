@@ -1,10 +1,9 @@
 ---
-title: ORDER BY를 사용하여 정렬(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: ORDER BY로 정렬
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d14acc5485bb3037f769784ee4daf012a5944e2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7bdc069c09322b15141d9a8cc6bf00b4926aad06
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263598"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254984"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>ORDER BY를 사용하여 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

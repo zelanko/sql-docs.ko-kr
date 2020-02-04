@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 28d2bdcf08e73fb6477fecf1d2cac76430e7d55e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874650"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)

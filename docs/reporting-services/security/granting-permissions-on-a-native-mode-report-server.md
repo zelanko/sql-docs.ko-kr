@@ -21,10 +21,10 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175637"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 사용 권한 부여
@@ -63,12 +63,12 @@ ms.locfileid: "66175637"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>사용 권한 관리에 사용되는 태스크 및 도구  
  다음 도구를 사용하여 역할 정의 및 할당을 관리할 수 있습니다.  
   
-|도구|태스크|  
+|도구|작업|  
 |----------|-----------|  
 |Management Studio - 역할 정의를 확인, 수정, 작성 및 삭제하는 데 사용됩니다.|[역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |웹 포털 - 사용자 및 그룹을 역할에 할당하는 데 사용됩니다.|[보고서 서버에 사용자 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [역할 할당 수정 또는 삭제](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -11,15 +11,15 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2688432d81793cf4b4388283910e35811650ef0c
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119261"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253031"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 디버거 - 출력 창
 

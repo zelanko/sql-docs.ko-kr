@@ -1,23 +1,24 @@
 ---
-title: '방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 쿼리를 사용하여 새 데이터베이스 개체 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897194"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241485"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기
+
 스크립트를 사용하여 뷰, 저장 프로시저, 함수, 트리거, 사용자 정의 형식을 만들거나 편집하려면 Transact\-SQL 편집기를 사용합니다. Transact\-SQL 편집기는 IntelliSense 및 기타 언어 지원을 제공합니다. 자세한 내용은 [Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)을 참조하세요.  
   
 Transact\-SQL 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용하여 연결된 데이터베이스 또는 프로젝트의 데이터베이스 엔터티를 열 때 호출됩니다. SQL Server 개체 탐색기의 **새 쿼리** 상황에 맞는 메뉴를 사용하거나 데이터베이스 프로젝트에 새 스크립트 개체를 추가하는 경우에도 이 편집기가 자동으로 열립니다. 데이터베이스에 연결되어 있지 않지만 데이터베이스에 쿼리를 실행하려면 **SQL** 메뉴에서 **Transact-SQL 편집기**를 선택하고 **새 쿼리 연결** 대화 상자를 사용하여 데이터베이스에 연결하고 Transact\-SQL 편집기를 시작할 수 있습니다.  
@@ -41,7 +42,7 @@ Transact\-SQL 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용�
     );  
     ```  
   
-3.  Transact\-SQL 편집기 도구 모음의 **쿼리 실행** 단추를 클릭하여 이 쿼리를 실행합니다.  
+3.  Transact**SQL 편집기 도구 모음의** 쿼리 실행\- 단추를 클릭하여 이 쿼리를 실행합니다.  
   
 4.  **SQL Server 개체 탐색기**에서 **Trade** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다. 새 **Fruits** 테이블이 데이터베이스에 추가되었는지 확인합니다.  
   
@@ -72,7 +73,7 @@ Transact\-SQL 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용�
     END  
     ```  
   
-    이 함수는 `Products` 테이블에서 `SupplierId`가 지정된 매개 변수와 같은 행을 모두 반환합니다. Transact\-SQL 편집기 도구 모음의 **쿼리 실행** 단추를 클릭하여 이 쿼리를 실행합니다.  
+    이 함수는 `Products` 테이블에서 `SupplierId`가 지정된 매개 변수와 같은 행을 모두 반환합니다. Transact**SQL 편집기 도구 모음의** 쿼리 실행\- 단추를 클릭하여 이 쿼리를 실행합니다.  
   
 2.  SQL Server 개체 탐색기의 **Trade** 노드에서 **프로그래밍 기능** 및 **함수** 노드를 확장합니다. **테이블 반환 함수** 아래에서 방금 만든 새 함수를 볼 수 있습니다.  
   

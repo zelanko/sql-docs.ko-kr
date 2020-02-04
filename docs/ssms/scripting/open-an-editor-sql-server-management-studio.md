@@ -1,6 +1,6 @@
 ---
-title: 편집기 열기(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 편집기 열기(SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,18 +10,18 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253783"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기( [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 편집용), DMX 및 MDX 편집기(해당 언어를 통한 스크립트 편집용) 및 XML/A 편집기(XML/A 스크립트 또는 XML 파일 편집용)의 네 가지 편집기를 지원합니다. 텍스트 파일은 어떠한 편집기로도 편집할 수 있습니다.  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  

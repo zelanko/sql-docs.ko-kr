@@ -9,10 +9,10 @@ ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 098250b23287f64a0b52b61b87eb6998169ae7ee
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593733"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)

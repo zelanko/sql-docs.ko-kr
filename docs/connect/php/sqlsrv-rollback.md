@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014965"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 연결에서 현재 트랜잭션을 롤백하고 자동 커밋 모드에 대한 연결을 반환합니다. 현재 트랜잭션은 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 호출 후 및 **sqlsrv_rollback** 또는 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)호출 전에 실행된 지정된 연결에 대한 모든 문을 포함합니다.  
@@ -45,7 +45,7 @@ sqlsrv_rollback( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 트랜잭션이 활성화된 연결입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 부울 값: 트랜잭션이 성공적으로 롤백되면 **true** 이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

@@ -1,36 +1,42 @@
 ---
-title: 중단점 필터 지정 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 중단점 필터 지정
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23cead258b38f8b580d1331f69b7aa70483f41ce
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 070a7ab77a025c2949888582947c805f13710198
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267696"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253634"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 애플리케이션을 디버깅할 때 사용됩니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 애플리케이션을 디버깅할 때 사용됩니다.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> 필터 고려 사항  
- 중단점 필터는 일반적으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 사용되지 않는데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저는 병렬 애플리케이션이 아니기 때문입니다.  
+##  <a name="BKMK_ActionConsiderations"></a> 필터 고려 사항
+
+중단점 필터는 일반적으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 사용되지 않는데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저는 병렬 애플리케이션이 아니기 때문입니다.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>중단점 필터를 지정하려면  
   
 1.  편집기 창에서 중단점 문자 모양을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **필터** 를 클릭합니다.  
   
-     -또는-  
+     또는  
   
      **중단점** 창에서 중단점 문자 모양을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **필터** 를 클릭합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 간략한 조사식 대화 상자
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -11,15 +12,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119252"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253022"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 디버거 - 간략한 조사식 대화 상자
 
@@ -47,7 +48,7 @@ ms.locfileid: "74119252"
   
     -   @IntegerCounter + 1 또는 FirstName + LastName과 같이 하나 이상의 변수, 매개 변수 또는 시스템 함수에 연산자를 적용하여 빌드한 식  
   
-    -   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1과 같이 단일 값을 반환하는 Transact-SQL 문  
+    -   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 등의 단일 값을 반환하는 Transact-SQL 문입니다.  
   
 2.  **다시 계산**을 클릭합니다.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "74119252"
  **이름**  
  조사 중인 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식입니다.  
   
- **Value**  
+ **값**  
  현재 식에 할당된 값을 표시합니다. 현재 식에 값이 없으면 빈 상태로 표시됩니다.  
   
  식의 길이가 **값** 열의 너비보다 큰 경우 해당 식의 **값** 셀 위로 포인터를 움직이면 도구 설명에 전체 값이 표시됩니다.  

@@ -9,10 +9,10 @@ ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63141251"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서의 사용자 지정 지도 추가
@@ -45,7 +45,7 @@ ms.locfileid: "63141251"
   
 사용자 지정 지도에서 실제 데이터를 표시하는 것은 기본 제공 지도에서 데이터를 표시하는 것과 같습니다. [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md) 에 나와 있는 단계에 따라 데이터를 표시합니다.  
   
-### <a name="see-also"></a>관련 항목:  
+### <a name="see-also"></a>참고 항목  
 - [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   

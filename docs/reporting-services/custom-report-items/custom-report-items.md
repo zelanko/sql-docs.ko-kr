@@ -13,10 +13,10 @@ ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee4b1e82ec3671cdc978c9af889d201ec430ed87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194148"
 ---
 # <a name="custom-report-items"></a>사용자 지정 보고서 항목

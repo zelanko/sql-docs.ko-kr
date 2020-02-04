@@ -9,10 +9,10 @@ ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578453"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)

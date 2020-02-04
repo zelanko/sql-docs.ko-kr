@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028890"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 엔드투엔드 연습
@@ -22,7 +22,7 @@ ms.locfileid: "69028890"
 
 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 모바일 보고서를 만듭니다. 다양한 온-프레미스 데이터 원본에 연결하거나 Excel 통합 문서를 업로드하여 모바일 보고서를 만듭니다. 그런 다음 보고서를 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 저장하고 브라우저 또는 Power BI 모바일 앱에서 확인합니다.  
   
-이 문서에서는 다음 작업을 안내합니다.   
+이 문서에서는 다음을 안내합니다.   
   
 - AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 세트 만들기.  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에서 Reporting Services 모바일 보고서 만들기  
@@ -301,7 +301,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 KPI와 모바일 보고서는 Reporting Services 웹 포털에 있는 것과 동일한 폴더에 표시됩니다.   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  
 -  iOS 및 Android 디바이스용 [Power BI 모바일 앱의 온-프레미스 보고서 서버 보고서 모바일 및 KPI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) 보기
 -  [Windows 10 디바이스용 Power BI 모바일 앱의 온-프레미스 보고서 서버 보고서 모바일 및 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) 보기    

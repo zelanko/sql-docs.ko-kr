@@ -9,10 +9,10 @@ ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3a3e94111a11380b86ec3127d7a1c9641f20b44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570820"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>로그 눈금 간격 지정(보고서 작성기 및 SSRS)

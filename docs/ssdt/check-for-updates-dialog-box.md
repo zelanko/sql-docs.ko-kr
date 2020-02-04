@@ -1,25 +1,24 @@
 ---
-title: 업데이트 확인 대화 상자 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 업데이트 확인 대화 상자
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.checkforupdates.dialog
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 777a98412ba6a9b18d825d16e8a4b4e911d6d92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b3b4a201b18230271848d289d68827aa36b0d6ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132107"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245545"
 ---
 # <a name="check-for-updates-dialog-box"></a>업데이트 확인 대화 상자
+
 SQL Server Data Tools의 2012년 11월 릴리스부터는 **SQL** 메뉴 아래에 **업데이트 확인** 메뉴 옵션이 표시됩니다.  
   
 **업데이트 확인** 대화 상자에는 컴퓨터에 설치되어 있는 SQL Server Data Tools 버전과 릴리스 버전이 표시됩니다. 릴리스 버전이 설치된 버전보다 최신 버전인 경우 **업데이트**가 표시됩니다. **업데이트** 단추를 클릭하여 사용 가능한 업데이트에 대한 설명을 참조하세요. 업데이트를 선택하면 최신 SQL Server Data Tools 버전을 컴퓨터에 설치합니다.  

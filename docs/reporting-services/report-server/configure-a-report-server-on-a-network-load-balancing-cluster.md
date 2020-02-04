@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329277"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244397"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329277"
 
  배포를 설치하고 구성하려면 다음 지침을 따르십시오.  
   
-|단계|설명|자세한 정보|  
+|단계|Description|자세한 정보|  
 |----------|-----------------|----------------------|  
 |1|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[기본 모드 보고서 서버 스케일 아웃 배포 구성](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
@@ -56,21 +56,21 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 제공하는 자동 생성 기능을 사용하여 유효성 검사 키와 설명 키를 생성합니다. 어떤 방법을 사용하든 스케일 아웃 배포의 각 보고서 서버 인스턴스에 대한 Web.config 파일에 붙여넣을 수 있는 단일 <`MachineKey`> 항목을 만들어야 합니다.  
+1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 제공하는 자동 생성 기능을 사용하여 유효성 검사 키와 설명 키를 생성합니다. 어떤 방법을 사용하든 스케일 아웃 배포의 각 보고서 서버 인스턴스에 대한 Web.config 파일에 붙여넣을 수 있는 단일 <`machineKey`> 항목을 만들어야 합니다.  
   
     다음 예에서는 확보해야 하는 값을 보여 줍니다. 구성 파일에 이 예를 복사하지 마십시오. 올바른 키 값이 아닙니다.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`MachineKey`> 요소를 <`system.web`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
+2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`system.web`> 요소를 <`machineKey`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
   
 3. 파일을 저장합니다.  
   
 4. 스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
   
-5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`system.web`> 섹션에 동일한 <`MachineKey`> 요소가 포함되어 있는지 확인합니다.  
+5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`machineKey`> 섹션에 동일한 <`system.web`> 요소가 포함되어 있는지 확인합니다.  
 
 ::: moniker-end
 
@@ -144,5 +144,5 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
 
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [기본 모드 보고서 서버 스케일 아웃 배포 구성&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

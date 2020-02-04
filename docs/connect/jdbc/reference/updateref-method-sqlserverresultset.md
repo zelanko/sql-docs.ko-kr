@@ -16,10 +16,10 @@ ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6146fb97d700cd7908bcd56648cf00593a824f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998381"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>updateRef 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998381"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[updateRef(int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|열 인덱스가 지정된 경우 지정된 열을 java.sql.Ref 값으로 업데이트합니다.|  
 |[updateRef(java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|열 이름이 지정된 경우 지정된 열을 java.sql.Ref 값으로 업데이트합니다.|  

@@ -1,6 +1,6 @@
 ---
-title: 쿼리 편집기에서 코드 색상 지정 | Microsoft 문서
-ms.custom: ''
+title: 쿼리 편집기에서 코드 색상 지정
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a562e65b84abc7c952abe992ee2a63c9b0fa22d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 71801d025b8b761adbcd80b8b3a10be92cd5c5ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256678"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254017"
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "68256678"
   
 ## <a name="default-code-colors"></a>기본 코드 색  
   
-|색|범주|  
+|색|Category|  
 |-----------|--------------|  
 |빨강|SQL 문자열|  
-|진한 녹색|설명|  
+|진한 녹색|주석|  
 |은색 배경에 검정|SQLCMD 명령|  
 |자홍|시스템 함수|  
 |녹색|시스템 테이블, 뷰 또는 테이블 반환 함수와 시스템 스키마 sys 및 INFORMATION_SCHEMA|  

@@ -12,10 +12,10 @@ ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193692"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
@@ -26,7 +26,7 @@ ms.locfileid: "63193692"
   
  다음 표에서는 렌더링 확장 프로그램에 대한 **Extension** 요소의 특성을 설명합니다.  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**이름**|확장 프로그램의 고유한 이름입니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extensions** 요소 내 모든 항목에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  

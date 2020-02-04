@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037864"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
@@ -30,15 +30,15 @@ ms.locfileid: "67037864"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>보고서 작성기의 바로 가기 키  
   
-|설명|키 조합|  
+|Description|키 조합|  
 |-----------------|---------------------|  
-|보고서 작성기 메뉴를 엽니다.|Alt+F|  
-|보고서를 만듭니다.|Ctrl+N|  
-|보고서를 엽니다.|Ctrl+O|  
+|보고서 작성기 메뉴를 엽니다.|ALT + F|  
+|보고서를 만듭니다.|CTRL+N|  
+|보고서를 엽니다.|CTRL+O|  
 |보고서를 저장합니다.|Ctrl+S, Alt+S|  
 |리본, 디자인 화면, 그룹화 창, 속성 창, 데이터 창과 같은 보고서 작성기의 영역 간에 이동합니다.|F6 , Shift+F6|  
 |리본으로 이동합니다.|Alt|  
-|리본의 홈 탭으로 이동합니다.|Alt+H|  
+|리본의 홈 탭으로 이동합니다.|ALT + H|  
 |리본의 삽입 탭으로 이동합니다.|Alt+I|  
 |리본의 보기 탭으로 이동합니다.|Alt+V|  
 |그룹화 창과 디자인 화면 간의 선과 같이 영역 간의 분할선을 활성화합니다.|Tab|  
@@ -57,7 +57,7 @@ ms.locfileid: "67037864"
 |복사|Ctrl+C, Alt+H+C|  
 |잘라내기|Ctrl+X, Alt+H+X|  
 |붙여넣기|Ctrl+V, Alt+H+V|  
-|모두 선택|Ctrl+A|  
+|모두 선택|CTRL+A|  
 |실행 취소|Ctrl+Z, Alt+Z|  
 |다시 실행|Ctrl+Y, Alt+Y|  
 |확대|Ctrl+더하기 기호(+)|  

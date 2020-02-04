@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014845"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>데이터 업데이트(Microsoft Drivers for PHP for SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68014845"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)|매개 변수가 있는 쿼리를 수행하는 방법을 설명합니다.|  
 |[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)|서버에 데이터를 스트림하는 방법을 설명합니다.|  
@@ -41,5 +41,5 @@ ms.locfileid: "68014845"
 ## <a name="see-also"></a>참고 항목  
 [예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
   

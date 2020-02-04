@@ -1,23 +1,24 @@
 ---
-title: SQL Server 단위 테스트에서 Transact-SQL 어설션 사용 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140958"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243508"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
+
 SQL Server 단위 테스트에서는 Transact\-SQL 테스트 스크립트가 실행되어 결과를 반환합니다. 결과가 결과 집합으로 반환되는 경우도 있습니다. 테스트 조건을 사용하면 결과의 유효성을 검사할 수 있습니다. 예를 들어 테스트 조건을 사용하여 특정 결과 집합에서 반환되는 행 수를 확인하거나 특정 테스트가 실행되는 데 걸린 시간을 확인할 수 있습니다. 테스트 조건에 대한 자세한 내용은 [SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)을 참조하세요.  
   
 테스트 조건을 사용하는 대신 Transact\-SQL 스크립트에서 Transact\-SQL 어설션, 즉 THROW 또는 RAISERROR 문을 사용할 수도 있습니다. 특정 환경에서는 테스트 조건 대신 Transact\-SQL 어설션을 사용해야 할 수 있습니다.  
@@ -46,7 +47,7 @@ SQL Server 단위 테스트 메서드를 예상된 예외로 표시하려면 다
 [ExpectedSqlException(MessageNumber=nnnnn, Severity=x, MatchFirstError=false, State=y)]  
 ```  
   
-각 항목이 나타내는 의미는 다음과 같습니다.  
+위치:  
   
 -   *nnnnn* 은 예상 메시지 수(예: 14025)입니다.  
   

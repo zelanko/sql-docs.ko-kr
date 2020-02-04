@@ -9,14 +9,14 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576304"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>보고서 작성기 제작 환경(SSRS)
-  보고서 작성기 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 은(는) Visual Studio 외부에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들기 위한 독립 실행형 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
+  보고서 작성기 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 은(는) Visual Studio 외부에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들기 위한 독립 실행형 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 보고서 작성기를 다운로드할 수 있습니다.  
   
  Microsoft 다운로드 센터의[Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 입니다.  
   

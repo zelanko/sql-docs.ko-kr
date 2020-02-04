@@ -1,10 +1,9 @@
 ---
-title: 여러 열에 대해 테이블 조인(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 여러 열에서 테이블 조인
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef9ddbdc8d59335ccf4dd639a57339ee6e5572aa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 52884c4fb103f57e999d7a63d770181cf8cc8999
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265335"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224638"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>여러 열에 대해 테이블 조인(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

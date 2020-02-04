@@ -1,27 +1,28 @@
 ---
-title: 전역 추적 옵션 설정 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 전역 추적 옵션 설정
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307947"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 특정 인스턴트로 생성되는 모든 추적에 적용되는 옵션을 설정하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 특정 인스턴트로 생성되는 모든 추적에 적용되는 옵션을 설정하는 방법에 대해 설명합니다.  
   
 ### <a name="to-set-global-trace-options"></a>전역 추적 옵션을 설정하려면  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68104182"
   
     -   **기본 재생 스레드 수** 는 재생 중 사용할 프로세서 스레드 수를 제어합니다. 스레드 수가 높을수록 재생이 더 빨리 완료되지만 재생 시 서버 성능이 저하됩니다. **4**로 설정하는 것이 좋습니다. 다음 표에서는 사용 가능한 옵션을 나열합니다.  
   
-        |값|설명|  
+        |값|Description|  
         |-----------|-----------------|  
         |**2**|최소값. 두 스레드를 사용하여 재생합니다.|  
         |**4**|기본값.|  
@@ -53,7 +54,7 @@ ms.locfileid: "68104182"
   
     -   **기본 상태 모니터 대기 간격(초)** 은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|설명|  
+        |값|Description|  
         |-----------|-----------------|  
         |**0**|최소값. **0** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 절대로 중지하지 않음을 의미합니다.|  
         |**3600**|기본값. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
@@ -61,7 +62,7 @@ ms.locfileid: "68104182"
   
     -   **기본 상태 모니터 폴링 간격(초)** 은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|설명|  
+        |값|Description|  
         |-----------|-----------------|  
         |**1**|최소값. **1** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 초당 하나만 폴링함을 의미합니다.|  
         |**60**|기본값. 차단 프로세스를 _분당 하나만 폴링합니다.|  
@@ -69,6 +70,6 @@ ms.locfileid: "68104182"
   
 ## <a name="see-also"></a>참고 항목  
  [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

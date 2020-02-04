@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580013"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
@@ -117,7 +117,7 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라
   
 10. Reporting Services 구성 관리자의 **보고서 서버 상태** 페이지에서 **중지** 를 클릭한 다음 **시작** 을 클릭하여 보고서 서버를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

@@ -10,10 +10,10 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7a2725586a094aed0cb7d933553bc3fc389adfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67912210"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
@@ -42,7 +42,7 @@ SQL Server 에이전트에서 사용하는 모듈에 대한 변경 사항은 없
   
 -   파일 시스템 경로와 유사한 간단한 탐색 메커니즘을 제공하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자. 드라이브가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델과 연결되고 노드가 개체 모델 클래스를 기반으로 하는 파일 시스템 경로와 비슷한 경로를 작성할 수 있습니다. 그런 다음 명령 프롬프트 창에서 폴더를 탐색하는 것과 비슷한 방법으로 **cd** 및 **dir** 과 같은 친숙한 명령을 사용하여 경로를 탐색할 수 있습니다. **ren** 또는 **del**과 같은 다른 명령을 사용하여 경로의 노드에 동작을 수행할 수 있습니다.  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 XQuery 문이 포함된 **sqlcmd** 스크립트 실행과 같은 동작을 지원하는 cmdlet 집합.  
+-   **또는 XQuery 문이 포함된**sqlcmd[!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 실행과 같은 동작을 지원하는 cmdlet 집합.  
   
   
 ## <a name="sql-server-versions"></a>SQL Server 버전  

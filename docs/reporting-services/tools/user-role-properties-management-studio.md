@@ -11,10 +11,10 @@ ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575772"
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "65575772"
  **설명**  
  역할 정의에 대한 설명을 표시합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 설명은 이 페이지에만 표시됩니다. 보고서 관리자에서 이 설명은 사용자가 역할 할당에 역할을 사용할지 여부를 지정하는 데 도움을 줍니다.  
   
- **태스크**  
+ **Task**  
  이 역할 정의에 대해 선택할 수 있는 모든 항목 수준의 태스크를 나열합니다. 미리 정의된 태스크 목록에서 항목을 추가 또는 제거하여 사용자가 이 역할을 통해 지정된 항목에 액세스하는 방법을 정의할 수 있습니다. 새 태스크를 만들거나 기존 작업을 수정할 수 없습니다. 역할 정의의 태스크 목록은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에만 표시됩니다.  
   
  **태스크 설명**  

@@ -1,6 +1,6 @@
 ---
-title: 사용자 지정(명령 페이지) | Microsoft 문서
-ms.custom: ''
+title: 사용자 지정(명령 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd07b342977603f6983c4d9389ac1c6b7934629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259427"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255697"
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68259427"
 **범주**  
 **명령** 목록 상자에 표시되는 명령 집합을 지정합니다. 명령의 범주는 현재 환경이 지원하는 도구와 디자이너에서 제공하는 메뉴 제목에 따라 결정됩니다. 이 제목 목록은 동적이며 도구와 디자이너 및 해당 도구와 디자이너에 적용된 사용자 지정에 따라 범주 및 메뉴 제목의 순서가 바뀝니다. 따라서 디자이너에 따라 서로 다른 메뉴의 이름이 같을 수도 있기 때문에 같은 제목이 두 번 표시되더라도 제공하는 명령 집합은 다를 수 있습니다.  
   
-**도구**  
+**명령**  
 선택한 범주를 기준으로 명령과 명령 이미지를 표시합니다. 명령을 도구 모음으로 끌어 사용자 지정할 수 있습니다.  
   
 **선택 사항 수정**  

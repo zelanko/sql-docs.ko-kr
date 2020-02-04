@@ -9,17 +9,17 @@ ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86d73f2ab16bdb7ee801e333f3a75c96a2a1c360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578186"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>보조 축에 데이터 표시(보고서 작성기 및 SSRS)
 
 차트는 기본 및 보조라는 두 가지 축 유형이 있습니다. 보조 축은 공통 범주를 공유하는 두 개의 개별 데이터 범위를 사용하여 두 개의 값 집합을 비교할 때 유용합니다.  
   
- 예를 들어 2008년에 대한 수익과 세금을 계산하는 차트가 있다고 가정해 보세요. 이 경우 2008년이라는 기간은 두 값 집합에 대한 공통 요소입니다. 하지만 두 계열을 동일한 y축에 표시할 경우 y축 눈금은 데이터 세트의 가장 큰 값에 최적화되기 때문에 제대로 된 비교를 할 수 없습니다. 수익을 기본 축에 표시하고 세금을 보조 축에 표시하면 고유한 값 눈금이 있는 y축에 각 계열을 표시할 수 있습니다. 계열은 여전히 공통 x축을 공유합니다.  
+ 예를 들어 2008년에 대한 수익과 세금을 계산하는 차트가 있다고 가정해 보십시오. 이 경우 2008년이라는 기간은 두 값 집합에 대한 공통 요소입니다. 하지만 두 계열을 동일한 y축에 표시할 경우 y축 눈금은 데이터 세트의 가장 큰 값에 최적화되기 때문에 제대로 된 비교를 할 수 없습니다. 수익을 기본 축에 표시하고 세금을 보조 축에 표시하면 고유한 값 눈금이 있는 y축에 각 계열을 표시할 수 있습니다. 계열은 여전히 공통 x축을 공유합니다.  
   
  비교할 계열이 3개 이상인 경우에는 차트의 여러 계열을 비교 및 표시하기 위한 다른 방법을 고려해야 합니다. 자세한 내용은 [차트의 여러 계열](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   

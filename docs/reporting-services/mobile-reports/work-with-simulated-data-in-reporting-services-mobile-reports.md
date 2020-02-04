@@ -9,10 +9,10 @@ ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62474872"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
@@ -40,7 +40,7 @@ ms.locfileid: "62474872"
   
 >**참고**: 시뮬레이션 데이터는 모바일 보고서와 함께 serialize되지 않고 런타임에 즉시 생성되므로 전체 모바일 보고서의 크기에 추가되지 않습니다.  
   
-### <a name="see-also"></a>관련 항목:  
+### <a name="see-also"></a>참고 항목  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
 -  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  

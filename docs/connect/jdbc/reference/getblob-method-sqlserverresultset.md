@@ -16,10 +16,10 @@ ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953732"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>getBlob 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67953732"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getBlob(int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 Blob 개체로 검색합니다.|  
 |[getBlob(java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 이름의 값을 Java 프로그래밍 언어의 Blob 개체로 검색합니다.|  

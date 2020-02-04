@@ -16,10 +16,10 @@ ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e88522dcea0371db8341fc129f23c90a7620d342
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953244"
 ---
 # <a name="getcharacterstream-method-sqlservercallablestatement"></a>getCharacterStream 메서드(SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953244"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getCharacterStream&#40;int&#41;](../../../connect/jdbc/reference/getcharacterstream-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 검색하여 java.io.Reader 개체로 반환합니다.|  
 |[getCharacterStream&#40;java.lang.String&#41;](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 검색하여 java.io.Reader 개체로 반환합니다.|  

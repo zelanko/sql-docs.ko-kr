@@ -14,10 +14,10 @@ ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2bdcd1df91408f33c25ad0a8eefa4c9ef2ee771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580311"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580311"
   
 ## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   

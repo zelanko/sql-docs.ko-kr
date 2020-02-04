@@ -9,10 +9,10 @@ ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580233"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS)

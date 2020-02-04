@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049122"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
@@ -30,7 +30,7 @@ Windows PowerShell은 cmdlet을 구현하여 PowerShell 공급자가 지원하�
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
   
-|cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|설명|  
+|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|현재 노드를 가져옵니다.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|현재 노드를 변경합니다.|  

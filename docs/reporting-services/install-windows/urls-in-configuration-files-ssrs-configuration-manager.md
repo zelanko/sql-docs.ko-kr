@@ -10,10 +10,10 @@ ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593931"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>구성 파일의 URL(SSRS 구성 관리자)
@@ -50,7 +50,7 @@ ms.locfileid: "73593931"
   
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일에 지정할 수 있는 모든 URL을 요약하여 보여 줍니다.  
   
-|설정|사용|설명|  
+|설정|사용|Description|  
 |-------------|-----------|-----------------|  
 |**ReportServerUrl**|(선택 사항) 이 요소는 사용자가 직접 추가하지 않는 한 RSReportServer.config 파일에 포함되지 않습니다.<br /><br /> 다음 시나리오 중 하나를 구성하는 경우에만 이 요소를 설정합니다.<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가 다른 컴퓨터 또는 같은 컴퓨터의 다른 인스턴스에서 실행되는 보고서 서버 웹 서비스에 대한 웹 프런트 엔드 액세스를 제공하는 경우<br /><br /> 보고서 서버에 대한 여러 URL이 있고, [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가 특정 URL을 사용하도록 하려는 경우<br /><br /> 모든 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 연결에서 사용하도록 할 특정 보고서 서버 URL이 있는 경우<br /><br /> 예를 들어 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가 로컬 연결을 통해 보고서 서버에 연결하도록 하면서 네트워크의 모든 컴퓨터에 대해 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 액세스를 활성화할 수 있습니다. 이 경우 **ReportServerUrl**을 "`https://localhost/reportserver`"로 구성할 수 있습니다.|이 값은 보고서 서버 웹 서비스에 대한 URL을 지정합니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 애플리케이션은 시작할 때 이 값을 읽습니다. 이 값을 설정하면 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 는 URL에 지정된 보고서 서버에 연결됩니다.<br /><br /> 기본적으로 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]와 동일한 보고서 서버 인스턴스 내에서 실행되는 보고서 서버 웹 서비스에 대한 웹 프런트 엔드 액세스를 제공합니다. 다른 인스턴스에 속하거나 다른 컴퓨터의 인스턴스에서 실행되는 보고서 서버 웹 서비스에서 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 를 사용하려면 이 URL을 설정하여 외부 보고서 서버 웹 서비스에 연결하도록 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 지시하면 됩니다.<br /><br /> 연결하려는 보고서 서버에 SSL(Secure Sockets Layer) 인증서가 설치된 경우 **ReportServerUrl** 값은 해당 인증서에 등록된 서버의 이름이어야 합니다. "기본 연결이 닫혔습니다. SSL/TLS 보안 채널에 대한 트러스트 관계를 설정할 수 없습니다." 오류가 발생하면 **ReportServerUrl** 을 SSL 인증서가 발급된 서버의 정규화된 도메인 이름으로 설정합니다. 예를 들어 인증서가 **https:\//adventure-works.com.onlinesales**에 등록된 경우 보고서 서버 URL은 **https:\//adventure-works.com.onlinesales/reportserver**가 됩니다.|  
 |**ReportServerExternalUrl**|(선택 사항) 이 요소는 사용자가 직접 추가하지 않는 한 RSReportServer.config 파일에 포함되지 않습니다.<br /><br /> SharePoint 2.0 웹 파트를 사용 중이고, 사용자가 보고서를 검색하여 새 브라우저 창에서 열 수 있도록 하려는 경우에만 이 요소를 설정합니다.<br /><br /> \<**ReportServerUrl**> 요소 아래에 \<**ReportServerExternalUrl**>을 추가한 다음 별도의 브라우저 창에서 액세스할 때 보고서 서버 인스턴스로 확인되는 정규화된 보고서 서버 이름으로 설정합니다. \<**ReportServerUrl**>을 삭제하지 마세요.<br /><br /> 다음 예에서는 구문을 보여 줍니다.<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|이 값은 SharePoint 2.0 웹 파트에서 사용됩니다.<br /><br /> 이전 릴리스에서는 인터넷 연결 보고서 서버에 보고서 작성기를 배포하기 위해 이 값을 설정하는 것이 권장되었습니다. 이는 테스트되지 않은 배포 시나리오입니다. 보고서 작성기에 대한 인터넷 액세스를 지원하기 위해 과거에 이 설정을 사용했다면 대체 전략을 고려해야 합니다.|  

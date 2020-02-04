@@ -1,6 +1,6 @@
 ---
-title: WMI를 구성하여 SQL Server 도구에 서버 상태 표시 | Microsoft 문서
-ms.custom: ''
+title: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f8aee4e47fa655a95130860a517a3ffb3dff9304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a1f627bb21d273ccc54746d2103b036f2f0224b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255564"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -18,13 +18,13 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992878"
 ---
-# <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
+# <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 연결에서 트랜잭션을 시작합니다. 현재 트랜잭션은 **sqlsrv_begin_transaction** 호출 후 및 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 또는 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)호출 전에 실행된 지정된 연결에 대한 모든 문을 포함합니다.  
@@ -45,7 +45,7 @@ sqlsrv_begin_transaction( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 트랜잭션과 관련된 연결입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 부울 값: 트랜잭션이 성공적으로 시작하면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

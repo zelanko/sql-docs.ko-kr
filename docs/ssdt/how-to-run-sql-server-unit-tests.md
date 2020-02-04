@@ -1,23 +1,24 @@
 ---
-title: '방법: SQL Server 단위 테스트 실행 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 실행
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244277"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트 실행
+
 다양한 창 및 명령 프롬프트 창을 사용하는 등 여러 방법 중 하나로 SQL Server 단위 테스트를 실행할 수 있습니다.  
   
 > [!NOTE]  

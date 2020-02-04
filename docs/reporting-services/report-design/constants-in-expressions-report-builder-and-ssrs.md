@@ -9,10 +9,10 @@ ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52b3fd24cf36aebeb87e41885b9e992fca1338a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581595"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>식의 상수(보고서 작성기 및 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65581595"
 ## <a name="literal-text"></a>리터럴 텍스트  
  식에서 리터럴 텍스트는 큰따옴표로 묶인 텍스트입니다. 텍스트가 식의 일부가 아닌 경우에는 큰따옴표를 사용하지 않고 입력란에 직접 입력할 수도 있습니다. 입력란 값이 등호(=)로 시작하지 않으면 해당 텍스트는 리터럴 텍스트로 처리됩니다. 다음 표에서는 식에 사용되는 몇 가지 리터럴 텍스트의 예를 보여 줍니다.  
   
-|상수|표시 텍스트|식 텍스트|  
+|지속적임|표시 텍스트|식 텍스트|  
 |--------------|------------------|---------------------|  
 |Report run at:|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Adventure Works Cycles|Adventure Works Cycles|Adventure Works Cycles|  
@@ -33,7 +33,7 @@ ms.locfileid: "65581595"
 ## <a name="rdl-constants"></a>RDL 상수  
  식에서 RDL(Report Definition Language)로 정의된 상수를 사용할 수 있습니다. **식** 대화 상자에서는 열거 형식이라고도 하는 특정 유효 값만 허용하는 보고서 속성에 대한 식을 만들 경우 상수가 표시됩니다. 다음 표에서는 두 가지 예를 보여 줍니다.  
   
-|속성|설명|값|  
+|속성|Description|값|  
 |--------------|-----------------|------------|  
 |TextAlign|입력란의 텍스트 정렬을 위한 유효한 값|General, Left, Center, Right|  
 |BorderStyle|보고서에 추가된 선에 대한 유효한 값|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
@@ -46,7 +46,7 @@ ms.locfileid: "65581595"
 ## <a name="clr-constants"></a>CLR 상수  
  식에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 정의된 상수를 사용할 수 있습니다. 다음 표에서는 시스템 정의 색의 예를 보여 줍니다.  
   
-|상수|설명|  
+|지속적임|Description|  
 |--------------|-----------------|  
 |MistyRose|배경색을 기반으로 하는 보고서 속성에 대한 식을 만드는 경우 이름으로 색을 지정할 수 있습니다. 유효한 이름은 **식** 대화 상자에 나열됩니다.|  
   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844538"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database)

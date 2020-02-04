@@ -9,10 +9,10 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512647"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>5단원: 보고서 마법사를 사용하여 자식 보고서 디자인

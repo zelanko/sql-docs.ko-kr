@@ -1,10 +1,7 @@
 ---
-title: 서버 폴링 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 서버 등록
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,22 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d5b3993fb1c350e4aa89159ca8dd8135546b178b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266208"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256267"
 ---
 # <a name="register-servers"></a>서버 등록
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 서버를 등록하면 나중에 연결하기 위한 서버 연결 정보를 저장할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 서버를 등록하는 방법은 3가지가 있습니다.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 서버를 등록하면 나중에 연결하기 위한 서버 연결 정보를 저장할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 서버를 등록하는 방법은 3가지가 있습니다.  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로컬 인스턴스는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 설치한 후 처음 시작할 때 자동으로 등록됩니다.  
   

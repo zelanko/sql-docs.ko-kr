@@ -16,10 +16,10 @@ ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954944"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute 메서드(SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954944"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[execute()](../../../connect/jdbc/reference/execute-method.md)|이 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체에서 모든 종류의 SQL 문을 실행합니다.|  
 |[execute(java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행합니다.|  

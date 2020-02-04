@@ -1,11 +1,7 @@
 ---
-title: 프로젝트 기반 오프라인 데이터베이스 개발 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 프로젝트 기반 오프라인 데이터베이스 개발
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.general
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59bff166871160525504e65a52648c97518a7ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 395465b9f07c9927a2a0ed1a277cde9f9e37f587
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243744"
 ---
 # <a name="project-oriented-offline-database-development"></a>프로젝트 기반 오프라인 데이터베이스 개발
+
 이 섹션에서는 데이터베이스 프로젝트를 작성, 빌드, 디버깅 및 게시하는 데 사용할 수 있는 SSDT(SQL Server Data Tools)의 기능에 대해 설명합니다.  
   
 SSDT를 사용하여 서버 인스턴스에 연결하지 않고도 오프라인 데이터베이스 프로젝트를 만들고 프로젝트의 개체 정의(스크립트로 표시됨)를 추가, 수정 또는 삭제하여 스키마 변경을 구현할 수 있습니다. 이러한 작업은 모두 테이블 디자이너나 Transact\-SQL 편집기를 사용하여 수행할 수 있습니다. 동일한 프로젝트에서 Transact\-SQL 및 CLR 개체를 작성하고 디버그할 수도 있습니다. 스키마 비교를 사용하면 프로젝트를 프로덕션 데이터베이스와 동기화 상태로 유지하고, 비교를 위해 개발 주기의 각 단계에서 프로젝트의 스냅샷을 만들 수 있습니다. 팀 기반 환경에서 데이터베이스 프로젝트 작업을 수행하는 동안 모든 파일에 대해 버전 제어를 사용할 수 있습니다. 데이터베이스 프로젝트를 개발, 테스트 및 디버깅한 후 권한이 있는 사용자에게 프로젝트를 전달하여 프로덕션 환경에 게시하도록 할 수 있습니다.  
@@ -30,7 +31,7 @@ SSDT를 사용하여 서버 인스턴스에 연결하지 않고도 오프라인 
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[데이터베이스 프로젝트로 가져오기](../ssdt/import-into-a-database-project.md)|라이브 데이터베이스, .dacpac 또는 스크립트에서 개체 가져오기에 대해 설명합니다.|  
 |[데이터베이스 참조 추가 대화 상자](../ssdt/add-database-reference-dialog-box.md)|데이터베이스 참조를 추가하기 위한 다양한 방법에 대해 설명합니다.|  
@@ -49,6 +50,6 @@ SSDT를 사용하여 서버 인스턴스에 연결하지 않고도 오프라인 
 |[방법: Visual Studio 2010 데이터베이스 프로젝트를 SQL Server 데이터베이스 프로젝트로 변환 및 다른 플랫폼으로 대상 변경](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Visual Studio 2010에서 만든 기존의 SQL Server 데이터베이스, CLR 개체 및 데이터 계층 애플리케이션 프로젝트를 SQL Server Data Tools 데이터베이스 프로젝트로 변환할 수 있습니다.|  
 |[방법: 배포 전 또는 배포 후 스크립트 지정](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|데이터베이스를 배포하기 전이나 후에 실행하려는 스크립트를 사용하는 방법에 대해 설명합니다.|  
   
-## <a name="related-sections"></a>관련 섹션  
-[테이블 및 관계 관리, 오류 해결](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## <a name="related-sections"></a>관련 섹션
+
+[테이블 및 관계 관리, 오류 해결](../ssdt/manage-tables-relationships-and-fix-errors.md)

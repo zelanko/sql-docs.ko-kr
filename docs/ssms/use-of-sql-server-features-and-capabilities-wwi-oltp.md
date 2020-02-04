@@ -1,6 +1,6 @@
 ---
-title: 외부 도구에 대한 인수 | Microsoft 문서
-ms.custom: ''
+title: Arguments for External Tools
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267059"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252229"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68267059"
   
 다음 표에서는 외부 도구에 대한 인수를 나열합니다.  
   
-|속성|인수|설명|  
+|속성|인수|Description|  
 |--------|------------|---------------|  
 |**항목 경로**|$(ItemPath)|현재 원본의 전체 파일 이름(드라이브 + 경로 + 파일 이름으로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  
 |**항목 디렉터리**|$(ItemDir)|현재 원본의 디렉터리(드라이브 + 경로로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  

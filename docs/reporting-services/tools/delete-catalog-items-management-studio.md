@@ -11,10 +11,10 @@ ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573943"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)

@@ -18,13 +18,13 @@ ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992854"
 ---
-# <a name="sqlsrvcommit"></a>sqlsrv_commit
+# <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 연결에서 현재 트랜잭션을 커밋하고 자동 커밋 모드에 대한 연결을 반환합니다. 현재 트랜잭션은 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 호출 후 및 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 또는 **sqlsrv_commit**호출 전에 실행된 지정된 연결에 대한 모든 문을 포함합니다.  
@@ -45,7 +45,7 @@ sqlsrv_commit( resource $conn )
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 트랜잭션이 활성화된 연결입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 부울 값: 트랜잭션이 성공적으로 커밋되면 **true** 이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

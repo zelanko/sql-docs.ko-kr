@@ -1,25 +1,26 @@
 ---
-title: '방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034987"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244255"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
+
 SQL Server Data Tools 파워 버퍼 기술을 사용하면 편집한 모든 내용을 현재 세션에 저장하여 변경 내용을 연결된 데이터베이스에 손쉽게 적용할 수 있습니다. Transact\-SQL 편집기나 테이블 디자이너의 [파워 버퍼] 창에서 수행한 편집 작업으로 인해 발생한 오류는 **오류 목록** 창에 즉시 표시되므로 식별된 오류에 따라 더욱 세부적으로 문제를 해결할 수 있습니다. 변경 내용을 데이터베이스에 적용할 준비가 될 때까지 보류 중인 변경 내용을 확인할 수 있습니다. 업데이트하는 동안 SSDT에서는 사용자가 편집한 내용에 따라 ALTER 스크립트를 자동으로 만들고 잠재적인 문제를 알려 줍니다. 그러면 열려 있는 모든 파워 버퍼 창에서 누적된 모든 변경 내용을 동일한 데이터베이스에 적용하거나, ALTER 스크립트를 저장했다가 나중에 배포할 수 있습니다.  
   
 SSDT는 Visual Studio 외부에서 데이터베이스 스키마에 대해 변경한 내용도 인식합니다. 예를 들어 SQL Server Management Studio에서 기존 데이터베이스에 새 테이블을 추가한 경우 데이터베이스를 수동으로 새로 고치지 않아도 Visual Studio의 SQL Server 개체 탐색기에 변경 내용이 즉시 표시됩니다. 이 드리프트 검색 기능을 통해 SQL Server 개체 탐색기에서 항상 데이터베이스의 최신 스키마 정의를 볼 수 있습니다. 편집을 위해 테이블 디자이너나 Transact\-SQL 편집기에 열려 있는 데이터베이스 개체는 Visual Studio 외부의 변경 내용을 표시하기 위해 새로 고쳐지지 않습니다.  
@@ -36,12 +37,12 @@ SSDT는 Visual Studio 외부에서 데이터베이스 스키마에 대해 변경
   
 4.  지금까지의 변경 내용에 만족하면 **데이터베이스 업데이트 미리 보기** 대화 상자의 **데이터베이스 업데이트** 단추를 클릭합니다. 그러면 배포 스크립트가 자동으로 실행되고 누적된 변경 내용이 데이터베이스에 적용됩니다.  
   
-5.  업데이트 전에 배포 스크립트를 확인하거나 일부 내용을 변경하려면 **데이터베이스 업데이트 미리 보기** 대화 상자의 **스크립트 생성** 단추를 클릭합니다. 그러면 생성된 스크립트가 새 Transact\-SQL 편집기 창에서 열립니다. Transact\-SQL 편집기 도구 모음의 **쿼리 실행** 단추를 클릭하여 이 쿼리를 실행할 수 있습니다. 이 작업은 4단계에서 **데이터베이스 업데이트** 단추를 클릭할 때 수행되는 작업과 비슷합니다.  
+5.  업데이트 전에 배포 스크립트를 확인하거나 일부 내용을 변경하려면 **데이터베이스 업데이트 미리 보기** 대화 상자의 **스크립트 생성** 단추를 클릭합니다. 그러면 생성된 스크립트가 새 Transact\-SQL 편집기 창에서 열립니다. Transact**SQL 편집기 도구 모음의** 쿼리 실행\- 단추를 클릭하여 이 쿼리를 실행할 수 있습니다. 이 작업은 4단계에서 **데이터베이스 업데이트** 단추를 클릭할 때 수행되는 작업과 비슷합니다.  
   
     > [!WARNING]  
     > 배포 스크립트를 변경하여 실행하는 경우 해당 변경 내용은 열려 있는 데이터베이스 엔터티에 표시되지 않습니다. 예를 들어 배포 스크립트에서 `Customers` 테이블의 열 이름을 바꾼 후 이 스크립트를 실행하여 데이터베이스를 업데이트하는 경우 `Customers` 테이블이 테이블 디자이너에 열려 있으면 **데이터베이스 업데이트** 단추를 클릭해도 열 이름이 계속 이전 이름으로 표시됩니다. 이 경우 변경 내용을 로컬에서 스크립트로 저장하지 말고 테이블 디자이너를 수동으로 닫아야 합니다. **SQL Server 개체 탐색기**에서 테이블을 다시 열면 데이터베이스가 배포 스크립트에서 변경한 내용으로 실제로 업데이트되어 있습니다.  
   
-6.  Transact\-SQL 편집기의 **출력** 창이나 **메시지** 창(배포 스크립트를 직접 실행하는 경우)에서 업데이트가 성공했음을 나타내는 다음 메시지가 표시되는지 확인합니다.  
+6.  Transact**SQL 편집기의** 출력\- 창이나 **메시지** 창(배포 스크립트를 직접 실행하는 경우)에서 업데이트가 성공했음을 나타내는 다음 메시지가 표시되는지 확인합니다.  
   
 **[dbo].[Customers] 만들기...[dbo].[Products] 만들기...[dbo].[Suppliers] 만들기...FK_Products_SupplierId 만들기...FK_Products_CustomerId 만들기...CK_Products_ShelfLife 만들기... 데이터베이스의 트랜잭트 부분을 업데이트했습니다. 새로 만든 제약 조건에 대해 기존 데이터를 검사하는 중입니다. 업데이트가 완료되었습니다.**  
   

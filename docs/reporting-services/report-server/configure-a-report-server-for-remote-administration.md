@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580421"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>원격 관리를 위한 보고서 서버 구성
@@ -41,7 +41,7 @@ ms.locfileid: "65580421"
   
  자세한 내용은 MSDN에 있는 Platform SDK 설명서에서 [Windows 방화벽을 통한 연결](https://go.microsoft.com/fwlink/?LinkId=63615) 을 참조하십시오.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
  원격 보고서 서버 구성을 활성화하는 태스크는 다음과 같습니다.  
   
 -   Windows 방화벽에서 포트를 설정하여 보고서 서버와 SQL Server 데이터베이스 엔진 인스턴스에서 사용하는 포트에 대한 요청을 허용합니다.  [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 및 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하십시오.  
@@ -60,7 +60,7 @@ ms.locfileid: "65580421"
   
 1.  **시작**을 클릭하고 **프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 **프로토콜**을 클릭합니다.  
+2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 **인스턴스에 대한**프로토콜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 클릭합니다.  
   
 3.  세부 정보 창에서 TCP/IP 및 명명된 파이프 프로토콜을 설정한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "65580421"
   
 1.  원격 관리를 활성화할 컴퓨터에 로컬 관리자로 로그온합니다.  
   
-2.  관리 권한으로 명령 프롬프트를 엽니다.  
+2.  관리자 권한으로 명령 프롬프트를 엽니다.  
   
-3.  다음 명령을 실행합니다.  
+3.  다음 명령 실행:  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  

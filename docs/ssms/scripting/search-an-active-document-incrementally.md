@@ -1,6 +1,6 @@
 ---
-title: 활성 문서에서 입력하는 순서대로 검색 | Microsoft 문서
-ms.custom: ''
+title: 활성 문서에서 입력하는 순서대로 검색
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac382ee5c57cbecdcbc183e2c246fd8ac5ed28b5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cff144b4d08f543a6745798419b33ef1357bc99c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264218"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253701"
 ---
 # <a name="search-an-active-document-incrementally"></a>활성 문서에서 입력하는 순서대로 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

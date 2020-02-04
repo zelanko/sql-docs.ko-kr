@@ -1,6 +1,6 @@
 ---
-title: 옵션(SQL Server 개체 탐색기 - 스크립팅 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844525"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251081"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73844525"
   
 -   이 페이지에서는 **SQL Server 스크립트 생성 마법사**에 대한 스크립팅 옵션의 기본값도 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **편집** 및 **수정** 명령은 동일한 옵션 설정에 대해 **<object> 스크립팅** 명령과 다른 결과를 생성할 수 있습니다. **편집** 및 **수정** 명령은 쿼리 편집기 세션 중에 현재 데이터베이스의 개체를 수정하기 위해 디자인되었고, **<object> 스크립팅** 명령은 나중에 개체를 만드는 데 사용할 수 있도록 스크립트를 생성하기 위해 디자인되었습니다.  
   
 ## <a name="options"></a>옵션  
@@ -152,6 +152,6 @@ FOREIGN KEY 제약 조건에 대한 테이블 참조에 스키마 이름을 추�
 **서버 버전에 대한 스크립트**  
 생성된 스크립트는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 대상이 됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 새 기능은 이전 버전에 대해 스크립팅될 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 생성된 일부 스크립트는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버 또는 이전의 [데이터베이스 호환성 수준 설정](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)이 있는 데이터베이스에서 실행할 수 없습니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [스크립트 생성(SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015005"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 문의 다음 결과(결과 집합, 행 개수 또는 출력 매개 변수)를 활성화합니다.  
@@ -43,7 +43,7 @@ sqlsrv_next_result( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 다음 결과가 활성화된 실행된 문입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 다음 결과가 성공적으로 활성화되면 부울 값 **true** 가 반환됩니다. 다음 결과가 활성화될 때 오류가 발생한 경우 **false** 가 반환됩니다. 더 이상 결과가 없는 경우 **null** 이 반환됩니다.  
   
 ## <a name="example"></a>예제  
@@ -185,7 +185,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 배치 쿼리 또는 저장 프로시저에서 반환된 첫 번째(또는 유일한) 결과는 **sqlsrv_next_result**를 호출하지 않아도 활성화됩니다.  
   
-예제는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스의 *Purchasing.ProductReview* 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+예제는 *AdventureWorks* 데이터베이스의 [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  

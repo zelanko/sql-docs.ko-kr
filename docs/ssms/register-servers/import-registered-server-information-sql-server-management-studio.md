@@ -1,10 +1,7 @@
 ---
-title: 등록된 서버 정보 가져오기(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 등록된 서버 정보 가져오기
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ccbcc8465f713d23922fc10dfe483bb3cfbb774
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d65ed04166e8b3d10559c46c2f17301e9646a484
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267114"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256291"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 가져오기(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 저장된 등록된 서버 정보를 가져오는 방법에 대해 설명합니다. 등록된 서버 파일을 내보냈다가 다시 가져오면 등록된 서버에 있는 동일한 서버로 여러 컴퓨터를 쉽게 구성할 수 있습니다. 이 작업은 여러 곳에 위치한 컴퓨터에서 다수의 서버를 관리할 때나 경험이 적은 사용자를 위해 기본 연결 설정을 구성하려는 경우에 유용합니다.  
+
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 저장된 등록된 서버 정보를 가져오는 방법에 대해 설명합니다. 등록된 서버 파일을 내보냈다가 다시 가져오면 등록된 서버에 있는 동일한 서버로 여러 컴퓨터를 쉽게 구성할 수 있습니다. 이 작업은 여러 곳에 위치한 컴퓨터에서 다수의 서버를 관리할 때나 경험이 적은 사용자를 위해 기본 연결 설정을 구성하려는 경우에 유용합니다.  
   
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 등록된 서버 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 수는 없습니다.  

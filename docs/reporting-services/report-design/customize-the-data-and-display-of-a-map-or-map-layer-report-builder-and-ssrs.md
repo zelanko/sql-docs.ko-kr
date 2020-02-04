@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572340"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
@@ -132,7 +132,7 @@ ms.locfileid: "65572340"
   
 -   드릴스루 동작  
   
--   표시 옵션  
+-   옵션을 표시합니다.  
   
  지도 요소의 표시 옵션은 계층, 지도 요소, 지도 요소에 대한 규칙 및 포함된 지도 요소의 무시 옵션에 따른 우선 순위를 따릅니다.  
   

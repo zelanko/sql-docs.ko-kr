@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1dcd2c6194c14aefc0a94d4fcf30c289d7f9f891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988685"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기

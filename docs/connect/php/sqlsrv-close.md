@@ -17,13 +17,13 @@ ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935817"
 ---
-# <a name="sqlsrvclose"></a>sqlsrv_close
+# <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 연결을 닫고 연결된 리소스를 해제합니다.  
@@ -38,7 +38,7 @@ sqlsrv_close( resource $conn )
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 닫히는 연결입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  

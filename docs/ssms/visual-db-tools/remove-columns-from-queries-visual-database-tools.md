@@ -1,10 +1,9 @@
 ---
-title: 쿼리에서 열 제거(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리에서 열 제거
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54f99801992ba804861d6712edaadae24720c8bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e548479b98b6495ed61582a5a6fcef8b8878154a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266230"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255274"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>쿼리에서 열 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68266230"
   
 -   **조건 창**에서 제거하려는 열이 포함된 표 형태 행을 선택한 다음 Delete 키를 누릅니다.  
   
-    -또는-  
+    또는  
   
 -   [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 열에 대한 모든 참조를 제거합니다.  
   

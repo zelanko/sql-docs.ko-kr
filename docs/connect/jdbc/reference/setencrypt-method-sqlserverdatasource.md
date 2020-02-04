@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974292"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 메서드(SQLServerDataSource)
@@ -37,9 +37,9 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>매개 변수  
  *encrypt*  
   
- 클라이언트와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 SSL(Secure Sockets Layer) 암호화가 사용되면 **true**이고, 그렇지 않으면 **false**입니다.  
+ 클라이언트와 **간에 SSL(Secure Sockets Layer) 암호화가 사용되면**true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  encrypt 속성이 **true**로 설정되어 있으면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 서버에 인증서가 설치되어 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 클라이언트와 서버 간에 전송되는 모든 데이터에 대해 SSL 암호화를 사용하도록 지정합니다. 기본 값은 **false**입니다.  
   
  JDBC 드라이버에서는 SSL 핸드셰이크를 설정하려고 할 때 해당 드라이버가 실행 중인 JVM(Java Virtual Machine)을 검색합니다.  

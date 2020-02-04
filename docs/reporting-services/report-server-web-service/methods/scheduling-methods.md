@@ -14,16 +14,16 @@ ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284430"
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  
   
-|메서드|작업|  
+|방법|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|항목에 대한 캐시 새로 고침 계획을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|새 공유 일정을 만듭니다.|  

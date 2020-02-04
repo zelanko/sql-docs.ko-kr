@@ -1,10 +1,9 @@
 ---
-title: 테이블의 행 계산(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블의 행 개수
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21f0b7becfae6c2656fd9a5f416decd32787e165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 208705b0070ba60359f6fa0b6d543cdcf6ec55d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266966"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254379"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68266966"
   
 3.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 **&#42; (모든 열)** 을 선택합니다.  
   
-    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
+    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
 4.  쿼리를 실행합니다.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68266966"
   
 3.  테이블이나 테이블 구조 개체를 나타내는 사각형에서 **&#42;(모든 열)** 을 선택합니다.  
   
-    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
+    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
 4.  검색하려는 데이터 열을 추가한 다음 **출력** 열의 확인란 선택을 취소합니다.  
   

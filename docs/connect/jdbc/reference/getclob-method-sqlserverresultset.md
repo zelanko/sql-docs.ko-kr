@@ -16,10 +16,10 @@ ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09adf678236a636cfe0fbdfa581c094be1e7e619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953000"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>getClob 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67953000"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getClob(int)](../../../connect/jdbc/reference/getclob-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 Clob 개체로 검색합니다.|  
 |[getClob(java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 이름의 값을 Java 프로그래밍 언어의 Clob 개체로 검색합니다.|  

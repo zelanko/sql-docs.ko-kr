@@ -1,6 +1,6 @@
 ---
-title: 검색 폴더 선택 대화 상자(Visual Studio) | Microsoft 문서
-ms.custom: ''
+title: 검색 폴더 선택 대화 상자(Visual Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfe3339bfe2b965c46e2abd212a09b50021814ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265018"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253294"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68265018"
 **적용**  
 **선택한 폴더** 목록에 있는 검색 폴더 집합을 명명된 폴더 집합으로 저장합니다. 이렇게 하면 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 이 폴더 집합을 선택할 수 있습니다. 이 옵션은 검색 폴더 선택 대화 상자를 닫지 않습니다.  
   
-**삭제**  
+**Delete**  
 선택한 폴더 집합을 **폴더 집합** 필드 및 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 제거합니다.  
   
 **사용 가능한 폴더**  

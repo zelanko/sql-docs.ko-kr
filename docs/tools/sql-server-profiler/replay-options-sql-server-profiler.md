@@ -1,30 +1,28 @@
 ---
-title: 재생 옵션 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 재생 옵션
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031441"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307491"
 ---
 # <a name="replay-options-sql-server-profiler"></a>재생 옵션(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  캡처된 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생하기 전에 **재생 구성** 대화 상자에서 재생 옵션을 지정할 수 있습니다. 이 대화 상자를 열려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적 파일이나 테이블을 연 다음 **재생** 메뉴에서 **시작**을 클릭합니다. 추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하십시오.  
+
+캡처된 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생하기 전에 **재생 구성** 대화 상자에서 재생 옵션을 지정할 수 있습니다. 이 대화 상자를 열려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적 파일이나 테이블을 연 다음 **재생** 메뉴에서 **시작**을 클릭합니다. 추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하십시오.  
   
  이 항목에서는 **재생 구성** 대화 상자에서 지정할 수 있는 옵션에 대해 설명합니다.  
   
@@ -51,14 +49,14 @@ ms.locfileid: "68031441"
  성능을 최적화하고 디버깅할 수 없도록 합니다. 이벤트는 특정 서버 프로세스 ID(SPID)에 기록된 순서로 재생되지만 SPID의 순서는 보장되지 않습니다.  
   
  **재생 결과 표시**  
- 재생 결과를 표시합니다. 이 옵션이 기본 옵션입니다. 재생 중인 추적의 용량이 클 경우에는 이 옵션을 해제하여 디스크 공간을 절약할 수 있습니다.  
+ 재생 결과를 표시합니다. 기본 옵션입니다. 재생 중인 추적의 용량이 클 경우에는 이 옵션을 해제하여 디스크 공간을 절약할 수 있습니다.  
   
 > [!NOTE]  
 >  최고의 재생 성능을 위해 여러 스레드를 사용하여 이벤트를 재생하고 재생 결과는 표시하지 않도록 선택하는 것이 좋습니다.  
   
 ## <a name="advanced-replay-options"></a>고급 재생 옵션  
  **시스템 SPID 재생**  
- 모든 SPID를 재생합니다. 이 옵션이 기본 옵션입니다.  
+ 모든 SPID를 재생합니다. 기본 옵션입니다.  
   
  **한 SPID만 재생**  
  목록에서 선택한 SPID 번호만 재생합니다.  
@@ -80,7 +78,7 @@ ms.locfileid: "68031441"
   
 ## <a name="see-also"></a>참고 항목  
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
- [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [재생 요구 사항](../../tools/sql-server-profiler/replay-requirements.md)   
  [추적 재생에 대한 고려 사항&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

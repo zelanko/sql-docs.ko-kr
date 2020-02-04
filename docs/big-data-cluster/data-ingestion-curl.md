@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706630"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>curl을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 HDFS에 데이터 로드
@@ -22,7 +22,7 @@ ms.locfileid: "73706630"
 
 이 문서에서는 **curl**을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS로 데이터를 로드하는 방법을 설명합니다.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
@@ -43,7 +43,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-예를 들어
+다음은 그 예입니다.
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>디렉터리 만들기
 
-`hdfs:///` 아래에 **test** 디렉터리를 만들려면 다음 명령을 사용합니다.
+**아래에**test`hdfs:///` 디렉터리를 만들려면 다음 명령을 사용합니다.
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'

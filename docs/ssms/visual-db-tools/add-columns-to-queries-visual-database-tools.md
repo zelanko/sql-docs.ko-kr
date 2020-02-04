@@ -1,10 +1,7 @@
 ---
-title: 쿼리에 열 추가(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 쿼리에 열 추가
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68c09e7162103cd027657beb81482803a1589a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b6638a8b5a749c833d2d50ca0dc6fba78d61038c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264657"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244194"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>쿼리에 열 추가(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 쿼리에서 열을 사용하려면 쿼리에 열을 추가해야 합니다. 열을 추가하여 쿼리 출력에 표시하거나, 정렬에 사용하거나, 열의 내용을 검색하거나, 해당 내용을 요약할 수 있습니다. 쿼리를 실행할 때 쿼리에 사용되는 열 중 어떠한 열을 결과 창에 포함할지 지정할 수 있습니다. 자세한 내용은 [쿼리 결과에서 열 제거&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)를 참조하세요.  
   
@@ -35,7 +37,7 @@ ms.locfileid: "68264657"
   
 -   **다이어그램 창**에서 포함하려는 열 옆에 있는 확인란을 선택합니다.  
   
-    -또는-  
+    또는  
   
 -   **조건 창**의 표에서 비어 있는 첫째 행으로 이동하여 **열** 열의 필드를 클릭한 다음 드롭다운 목록에서 열 이름을 선택합니다.  
   

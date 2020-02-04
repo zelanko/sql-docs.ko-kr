@@ -9,10 +9,10 @@ ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 365128fe0fd67f1b270481f827eef6871acccb5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573748"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>차트 문제 해결(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65573748"
 
 ## <a name="need-more-help"></a>도움이 더 필요하세요?  
    
-  다음을 사용해 보세요.  
+  다음을 시도해 보세요.  
  * Stack Overflow의 [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services)  
  * [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)에서 문제 또는 제안 기록  
   

@@ -1,5 +1,5 @@
 ---
-title: 확장 프로그램
+title: 확장
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262894"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services) 확장
@@ -66,15 +66,15 @@ ms.locfileid: "68262894"
   
 - **XML 렌더링 확장 프로그램** XML 렌더링 확장 프로그램은 보고서를 XML 파일로 렌더링합니다. 이렇게 렌더링된 XML 파일은 다른 프로그램에서 읽거나 저장할 수 있습니다. XSLT 변환을 사용하여 보고서를 다른 애플리케이션에서 사용할 수 있는 다른 XML 스키마로 변환할 수도 있습니다. XML 렌더링 확장 프로그램에서 생성한 XML은 UTF-8로 인코딩됩니다. 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
-- **이미지 렌더링 확장 프로그램** 이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 이 확장 프로그램으로 보고서를 BMP, EMF, GIF, JPEG, PNG, TIFF 및 WMF 형식으로 렌더링할 수 있습니다. 기본적으로 이미지는 TIFF 형식으로 렌더링됩니다. 이 형식은 Windows 사진 및 팩스 뷰어와 같은 운영 체제의 기본 이미지 뷰어로 표시할 수 있습니다. 이미지를 뷰어에서 프린터로 보낼 수 있습니다. 이미지 렌더링 확장 프로그램을 사용하여 보고서를 렌더링하면 보고서가 모든 클라이언트에 동일하게 나타납니다. 보고서를 HTML로 보는 경우 사용자의 브라우저 버전, 브라우저 설정 및 사용 가능한 글꼴에 따라 보고서 모양이 달라질 수 있습니다. 이미지 렌더링 확장 프로그램은 서버에서 보고서를 렌더링하므로 모든 사용자에게 이미지가 동일하게 표시됩니다. 보고서가 서버에서 렌더링되므로 보고서에 사용된 모든 글꼴이 서버에 설치되어 있어야 합니다. 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
+- **이미지 렌더링 확장 프로그램** 이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 이 확장 프로그램으로 보고서를 BMP, EMF, GIF, JPEG, PNG, TIFF 및 WMF 형식으로 렌더링할 수 있습니다. 기본적으로 이미지는 TIFF 형식으로 렌더링됩니다. 이 형식은 Windows 사진 및 팩스 뷰어와 같은 운영 체제의 기본 이미지 뷰어로 표시할 수 있습니다. 이미지를 뷰어에서 프린터로 보낼 수 있습니다. 이미지 렌더링 확장 프로그램을 사용하여 보고서를 렌더링하면 보고서가 모든 클라이언트에 동일하게 나타납니다. 예를 들어 보고서를 HTML로 보면 사용자의 브라우저 버전, 브라우저 설정 및 사용 가능한 글꼴에 따라 보고서 모양이 달라질 수 있습니다. 이미지 렌더링 확장 프로그램은 서버에서 보고서를 렌더링하므로 모든 사용자에게 이미지가 동일하게 표시됩니다. 보고서가 서버에서 렌더링되므로 보고서에 사용된 모든 글꼴이 서버에 설치되어 있어야 합니다. 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
 - **PDF 렌더링 확장 프로그램** PDF 렌더링 확장 프로그램은 보고서를 Adobe Acrobat 6.0 이상에서 열어 볼 수 있는 PDF 파일로 렌더링합니다. 자세한 내용은 [PDF 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
-- **Word 렌더링 확장 프로그램**   [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 이상 버전과 호환되는 Word 문서로 렌더링합니다. 자세한 내용은 [Microsoft Word로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
+- **Word 렌더링 확장 프로그램**[!INCLUDE[msCoName](../includes/msconame-md.md)] Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 이상 버전과 호환되는 Word 문서로 렌더링합니다. 자세한 내용은 [Microsoft Word로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
 ## <a name="report-processing-extensions"></a>보고서 처리 확장 프로그램
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 포함되어 있지 않은 보고서 항목에 대한 사용자 지정 보고서 처리를 제공하도록 보고서 처리 확장 프로그램을 추가할 수 있습니다. 기본적으로 보고서 서버는 표, 차트, 행렬, 목록, 입력란, 이미지 및 기타 보고서 항목을 모두 처리할 수 있습니다. 보고서 실행 중에 사용자 지정 처리를 필요로 하는 보고서에 특수 기능을 추가하려면(예: 보고서에 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint 맵 포함) 이러한 작업을 수행하는 보고서 처리 확장 프로그램을 만들 수 있습니다.  
   
 ## <a name="delivery-extensions"></a>배달 확장 프로그램
- 백그라운드 처리 애플리케이션에서는 배달 확장 프로그램을 사용하여 보고서를 여러 위치에 배치합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 SMTP(Simple Mail Transport Protocol)를 통해 보고서 자체 또는 보고서 URL 링크가 들어 있는 전자 메일 메시지를 보냅니다. URL 링크 또는 보고서가 없는 간단한 알림은 호출기, 전화 또는 기타 디바이스로 보낼 수 있습니다. 파일 공유 배달 확장 프로그램은 네트워크의 공유 폴더에 보고서를 저장합니다. 사용자가 만든 파일의 위치, 렌더링 형식, 파일 이름 및 덮어쓰기 옵션을 지정할 수 있습니다. 파일 공유 배달은 렌더링한 보고서의 보관 및 대용량의 보고서 작업을 위한 전략의 일환으로 사용할 수 있습니다. 배달 확장 프로그램은 구독과 함께 사용됩니다. 구독을 만들 때 사용자는 사용할 수 있는 배달 확장 프로그램을 선택하여 보고서 배달 방법을 결정할 수 있습니다.
+ 백그라운드 처리 애플리케이션에서는 배달 확장 프로그램을 사용하여 보고서를 여러 위치에 배치합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 SMTP(Simple Mail Transport Protocol)를 통해 보고서 자체 또는 보고서 URL 링크가 들어 있는 전자 메일 메시지를 보냅니다. URL 링크 또는 보고서가 없는 간단한 알림은 호출기, 전화 또는 기타 디바이스로 보낼 수 있습니다. 파일 공유 배달 확장 프로그램은 네트워크의 공유 폴더에 보고서를 저장합니다. 사용자가 만든 파일의 위치, 렌더링 형식, 파일 이름 및 덮어쓰기 옵션을 지정할 수 있습니다. 파일 공유 배달은 렌더링한 보고서의 보관 및 대용량의 보고서 작업을 위한 전략의 일환으로 사용할 수 있습니다. 배달 확장 프로그램은 구독과 함께 사용됩니다. 구독을 만들 때 사용자는 사용할 수 있는 배달 확장 프로그램을 선택하여 보고서 배달 방법을 결정할 수 있습니다.

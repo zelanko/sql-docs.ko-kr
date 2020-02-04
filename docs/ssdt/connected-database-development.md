@@ -1,25 +1,24 @@
 ---
-title: 연결된 데이터베이스 개발 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 연결된 데이터베이스 개발
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984602"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256128"
 ---
 # <a name="connected-database-development"></a>연결된 데이터베이스 개발
+
 이 섹션에서는 SQL Server Data Tools에서 연결된 데이터베이스를 디자인하고 쿼리하는 용도로 제공되는 기능에 대해 설명합니다.  
   
 이제 개발자는 Visual Studio의 SQL Server 개체 탐색기를 사용하여 SQL Server 2008 또는 Microsoft SQL Server 2012와 같은 내부 데이터베이스 서버나 SQL Azure의 외부 데이터베이스 서버에서 데이터베이스 개체를 만들고 편집하고 탐색할 수 있습니다. 또한 손쉽게 기존 프로덕션 데이터베이스를 테스트 인스턴스에 복제하고, 이 인스턴스에서 추가 개발 작업을 수행한 다음, 변경 내용을 다시 프로덕션 데이터베이스에 게시할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "67984602"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[방법: 데이터베이스에 연결 및 기존 개체 찾아보기](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|데이터베이스에 연결하고 해당 엔터티를 찾습니다.|  
 |[방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기](../ssdt/how-to-create-database-objects-using-table-designer.md)|새 테이블 디자이너를 사용하여 테이블을 디자인하고 테이블 관계를 관리합니다.|  
@@ -42,6 +41,6 @@ ms.locfileid: "67984602"
 |[방법: 기존 데이터베이스 복제](../ssdt/how-to-clone-an-existing-database.md)|프로덕션 데이터베이스에서 개발 데이터베이스를 만듭니다.|  
 |[.dacpac 파일 추출, 게시 및 등록](../ssdt/extract-publish-and-register-dacpac-files.md)|.dacpac 파일을 추출하고 게시하는 방법을 보여 줍니다.|  
   
-## <a name="related-sections"></a>관련 섹션  
-[테이블 및 관계 관리, 오류 해결](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## <a name="related-sections"></a>관련 섹션
+
+[테이블 및 관계 관리, 오류 해결](../ssdt/manage-tables-relationships-and-fix-errors.md)

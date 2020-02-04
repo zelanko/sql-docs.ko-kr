@@ -16,10 +16,10 @@ ms.assetid: 7c176547-daae-405e-8fbe-3cdab87ab5e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df48c23fb4bab06bba93d96931ebd7d520d3054f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980510"
 ---
 # <a name="getref-method-sqlserverresultset"></a>getRef 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67980510"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getRef(int)](../../../connect/jdbc/reference/getref-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 Ref 개체로 검색합니다.|  
 |[getRef(java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 이름의 값을 Java 프로그래밍 언어의 Ref 개체로 검색합니다.|  

@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500228"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
@@ -21,7 +21,7 @@ ms.locfileid: "66500228"
 ## <a name="about-spns"></a>SPN 정보  
  SPN은 Kerberos 인증을 사용하는 네트워크에서 고유한 서비스 식별자로 서비스 클래스, 호스트 이름 및 때로는 포트로 구성됩니다. HTTP SPN은 포트가 필요 없습니다. Kerberos 인증을 사용하는 네트워크에서 서버에 대한 SPN은 기본 제공 컴퓨터 계정(예: NetworkService 또는 LocalSystem) 또는 사용자 계정에서 등록되어야 합니다. 기본 제공 계정에 대해서는 SPN이 자동으로 등록됩니다. 그러나 도메인 사용자 계정에서 서비스를 실행할 경우 사용할 계정에 대한 SPN을 수동으로 등록해야 합니다.  
   
- SPN을 만들려면 **SetSPN** 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
+ SPN을 만들려면 **SetSPN** 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은  
   
 -   [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)(https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
@@ -58,7 +58,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     예를 들어 `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+     예: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  명령을 실행합니다.  
   

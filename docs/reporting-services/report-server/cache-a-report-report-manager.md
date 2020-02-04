@@ -15,16 +15,16 @@ ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574846"
 ---
 # <a name="cache-a-report-report-manager"></a>보고서 캐시(보고서 관리자)
   성능을 향상시키는 한 가지 방법은 보고서의 캐싱 속성을 구성하는 것입니다. 보고서가 캐시되면 렌더링된 보고서의 복사본이 짧은 시간 동안 저장됩니다. 보고서를 요청하는 첫 번째 사용자는 모든 처리가 완료될 때까지 기다려야 보고서를 볼 수 있습니다. 캐싱 기간 내에 보고서를 요청하는 이후 사용자는 처리가 이미 발생했기 때문에 보고서를 바로 볼 수 있습니다.  
   
- 캐시할 수 있는 보고서 유형은 제한되어 있습니다. 예를 들어 사용자 ID에 따라 보고서 출력이 달라지는 경우 또는 보고서를 요청하는 사용자의 보안 토큰을 사용하여 데이터가 검색되는 경우 보고서를 캐시할 수 없습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)를 참조하세요.  
+ 캐시할 수 있는 보고서 유형은 제한되어 있습니다. 예를 들어 사용자 ID에 따라 보고서 출력이 달라지는 경우 또는 보고서를 요청하는 사용자의 보안 토큰을 사용하여 데이터가 검색되는 경우 보고서를 캐시할 수 없습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>캐시된 보고서의 만료를 예약하려면  
   

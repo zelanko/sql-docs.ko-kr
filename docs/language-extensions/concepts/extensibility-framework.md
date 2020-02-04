@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658878"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 확장성 아키텍처
@@ -54,23 +54,23 @@ The following diagram visually describes opportunities and benefits of the exten
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 스크립트 실행을 담당하는 외부 프로세스의 수명, 리소스 및 보안 경계를 관리하는 서비스입니다. 이는 전체 텍스트 인덱싱 및 쿼리 서비스가 전체 텍스트 쿼리를 처리하기 위해 별도의 호스트를 시작하는 방식과 비슷합니다. 실행 패드 서비스는 Microsoft에서 게시하거나 성능 및 리소스 관리 요구 사항을 충족시키는 것으로 Microsoft에서 인증한 신뢰할 수 있는 시작 관리자만 시작할 수 있습니다.
 
-| 신뢰할 수 있는 시작 관리자 | 확장명 | SQL Server 버전 |
+| 신뢰할 수 있는 시작 관리자 | 내선 번호 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll for Java | Java 확장 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 사용하는 **SQLRUserGroup**에서 실행됩니다.
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 **AppContainers**를 사용하는 [SQLRUserGroup](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)에서 실행됩니다.
 
 SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 인스턴스에 대해 별도의 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스가 생성됩니다. 각 데이터베이스 엔진 인스턴스마다 하나의 실행 패드 서비스가 있으므로, 외부 스크립트를 지원하는 여러 인스턴스가 있는 경우 각 인스턴스에 대한 실행 패드 서비스가 제공됩니다. 데이터베이스 엔진 인스턴스는 생성된 실행 패드 서비스에 바인딩됩니다. 저장 프로시저 또는 T-SQL에서 외부 스크립트를 호출할 때마다 SQL Server 서비스가 동일한 인스턴스에 대해 만들어진 실행 패드 서비스를 호출합니다.
 
-지원되는 특정 언어로 작업을 실행하기 위해 실행 패드는 풀에서 보안 작업자 계정을 가져오고 외부 런타임을 관리하는 위성 프로세스를 시작합니다. 각 위성 프로세스는 실행 패드의 사용자 계정을 상속하고 스크립트 실행 기간 동안 해당 작업자 계정을 사용합니다. 스크립트가 병렬 프로세스를 사용하는 경우 동일한 단일 작업자 계정에서 만들어집니다.
+지원되는 특정 언어로 작업을 실행하기 위해 실행 패드는 풀에서 보안 작업자 계정을 가져오고 외부 런타임을 관리하는 위성 프로세스를 시작합니다. 각 위성 프로세스는 실행 패드의 사용자 계정을 상속하고 스크립트 실행 기간 동안 해당 작업자 계정을 사용합니다. 스크립트에서 병렬 프로세스를 사용하는 경우 동일한 단일 작업자 계정에서 만들어집니다.
 
-## <a name="communication-channels-between-components"></a>구성 요소 간의 통신 채널
+## <a name="communication-channels-between-components"></a>구성 요소 간 통신 채널
 
 이 섹션에서는 구성 요소 및 데이터 플랫폼 간의 통신 프로토콜에 대해 설명합니다.
 
 + **TCP/IP**
 
-  기본적으로 SQL Server와 SQL Satellite 간의 내부 통신은 TCP/IP를 사용합니다.
+  SQL Server와 SQL Satellite 간의 내부 통신에서는 기본적으로 TCP/IP를 사용합니다.
 
 + **ODBC**
 
@@ -86,7 +86,7 @@ SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 �
 
 + **기타 프로토콜**
 
-  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 blob을 통해 전송됩니다.
+  "청크"로 작업하거나 데이터를 원격 클라이언트에 다시 전송해야 하는 프로세스도 [XDF 파일 형식](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)을 사용할 수 있습니다. 실제 데이터는 인코딩된 Blob을 통해 전송됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

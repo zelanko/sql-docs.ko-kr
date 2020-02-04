@@ -20,10 +20,10 @@ ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128884"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>디바이스 정보 설정을 렌더링 확장 프로그램에 전달

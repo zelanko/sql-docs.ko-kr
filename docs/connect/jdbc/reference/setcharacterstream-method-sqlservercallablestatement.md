@@ -11,10 +11,10 @@ ms.assetid: 3b4c3234-09f6-44fa-9757-0a20ca90e13e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6cac17e028a8d17f26b593b61b0fdf0440ea8dce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974661"
 ---
 # <a name="setcharacterstream-method-sqlservercallablestatement"></a>setCharacterStream 메서드(SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974661"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[setCharacterStream 메서드(java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)|지정된 매개 변수를 지정된 java.io.Reader 개체로 설정합니다.|  
 |[setCharacterStream 메서드(java.lang.String, java.io.Reader, int)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|지정된 매개 변수를 지정된 문자 길이의 지정된 java.io.Reader 개체로 설정합니다.|  

@@ -1,11 +1,7 @@
 ---
-title: '방법: 개체 삭제 및 종속성 해결 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 개체 삭제 및 종속성 해결
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026616"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241434"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>방법: 개체 삭제 및 종속성 해결
+
 **SQL Server 개체 탐색기**에서 개체의 이름을 바꾸거나 개체를 삭제하면 SQL Server Data Tools에서는 모든 종속성 개체를 자동으로 검색하고, 필요한 경우 종속성 개체의 이름을 바꾸거나 삭제할 ALTER 스크립트를 준비합니다.  
   
 > [!WARNING]  
@@ -46,13 +47,13 @@ ms.locfileid: "68026616"
     > [!WARNING]  
     > 뷰 또는 저장 프로시저에서 사용하는 테이블에 대한 참조와 같은 스크립트 기반 종속성은 SSDT에서 자동으로 업데이트되지 않습니다. 이름을 바꾼 후 **오류 목록** 창을 사용하여 다른 모든 종속성 개체를 찾고 수동으로 수정할 수 있습니다.  
   
-5.  이전 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계에 따라 변경 내용을 적용합니다.  
+5.  이전 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계에 따라 변경을 적용합니다.  
   
 6.  다시 **SQL Server 개체 탐색기**에서 **Customers** 테이블을 마우스 오른쪽 단추로 클릭하고 **데이터 보기**를 선택합니다. 이름 바꾸기 작업 후에도 테이블 데이터가 그대로 유지되는지 확인합니다.  
   
 7.  **Products** 테이블을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. 외래 키 참조가 바뀐 이름을 반영하여 자동으로 `REFERENCES [dbo].[Customers] ([Id])`로 업데이트되었는지 확인합니다.  
   
-### <a name="to-delete-a-table"></a>테이블을 삭제하려면  
+### <a name="to-delete-a-table"></a>테이블 삭제  
   
 1.  **SQL Server 개체 탐색기**에서 **Customers** 테이블을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   

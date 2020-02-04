@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531935"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>SQL Server 컨트롤러 대시보드의 빅 데이터 클러스터 관리
@@ -22,7 +22,7 @@ ms.locfileid: "73531935"
 
 **azdata** 및 클러스터 상태 Notebook 외에도 SQL Server 빅 데이터 클러스터의 상태를 보는 또 다른 방법이 있습니다. 이제 **연결** 뷰렛을 통해 SQL Server 빅 데이터 클러스터 컨트롤러를 추가할 수 있습니다. 이렇게 하면 대시보드를 추가하여 클러스터 상태를 볼 수 있습니다.
 
-![대시보드](media/manage-with-controller-dashboard/controller-dashboard.png)
+![dashboard](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## <a name="prerequisites"></a>사전 요구 사항
 
 Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
@@ -78,6 +78,6 @@ Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
 1. 비정상 구성 요소를 발견했다면 도구 모음에서 **문제 해결**을 클릭하여 문제를 진단하는 데 도움이 되는 Notebook이 포함된 Jupyter Book을 시작할 수 있습니다.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 컨트롤러에 대한 자세한 내용은 [컨트롤러 설명서](concept-controller.md)를 참조하세요.

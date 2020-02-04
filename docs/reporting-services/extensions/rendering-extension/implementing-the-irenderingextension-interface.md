@@ -12,10 +12,10 @@ ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193590"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
@@ -40,7 +40,7 @@ ms.locfileid: "63193590"
   
 -   디바이스 설정을 포함하는 *deviceInfo* 매개 변수. 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
--   렌더링하는 클라이언트에 대한 정보가 들어 있는 <xref:System.Collections.Specialized.NameValueCollection> 사전 개체를 포함하는 *clientCapabilities* 매개 변수.  
+-   렌더링하는 클라이언트에 대한 정보가 들어 있는 *사전 개체를 포함하는*clientCapabilities<xref:System.Collections.Specialized.NameValueCollection> 매개 변수.  
   
 -   렌더링 결과에 대한 정보가 들어 있는 *RenderProperties*.  
   
@@ -70,7 +70,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> 메서드는 보고서에서 특정 스트림을 렌더링합니다. 모든 스트림은 최초 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 호출 중에 만들어지지만, 이 스트림이 처음에 클라이언트에 반환되지는 않습니다. 이 메서드는 보조 스트림(예: HTML 렌더링의 이미지) 또는 다중 페이지 렌더링 확장 프로그램의 추가 페이지(예: 이미지/EMF)에 사용됩니다.  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource 메서드  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드는 보고서의 전체 렌더링을 실행하지 않고 정보를 검색합니다. 보고서에서 보고서 자체가 렌더링되지 않아도 되는 정보가 필요할 때가 있습니다. 예를 들어 렌더링 확장 프로그램과 연결된 아이콘이 필요한 경우 단일 태그 **\<Icon>** 을 포함하는 *deviceInfo* 매개 변수를 사용합니다. 이러한 경우 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 사용할 수 있습니다.  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드는 보고서의 전체 렌더링을 실행하지 않고 정보를 검색합니다. 보고서에서 보고서 자체가 렌더링되지 않아도 되는 정보가 필요할 때가 있습니다. 예를 들어 렌더링 확장 프로그램과 연결된 아이콘이 필요한 경우 단일 태그  Icon>**을 포함하는 \<deviceInfo** 매개 변수를 사용합니다. 이러한 경우 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [렌더링 확장 프로그램 구현](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

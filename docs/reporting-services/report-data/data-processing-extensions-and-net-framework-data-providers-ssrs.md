@@ -16,10 +16,10 @@ ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 424dbb31ab96153dbf959c304456d8d1b2e4abd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573110"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS)

@@ -14,10 +14,10 @@ ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b55265887b8d824e5e7d90d0fb2108efcf75fdb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570605"
 ---
 # <a name="securable-items"></a>보안 개체 항목

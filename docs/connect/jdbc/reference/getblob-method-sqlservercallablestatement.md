@@ -16,10 +16,10 @@ ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953581"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob 메서드(SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953581"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getBlob(int)](../../../connect/jdbc/reference/getblob-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 JDBC BLOB 매개 변수의 값을 Java 프로그래밍 언어의 Blob 개체로 검색합니다.|  
 |[getBlob(java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 JDBC BLOB 매개 변수의 값을 Java 프로그래밍 언어의 Blob 개체로 검색합니다.|  

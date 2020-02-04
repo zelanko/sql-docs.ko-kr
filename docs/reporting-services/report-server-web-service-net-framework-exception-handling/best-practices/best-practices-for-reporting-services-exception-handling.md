@@ -11,10 +11,10 @@ ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6e59ea3edb968182091b1b6496d47e9adb4d4be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63151112"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 예외 처리를 위한 최상의 방법
@@ -30,7 +30,7 @@ ms.locfileid: "63151112"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[잘못된 요청 방지](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|잘못된 요청이 보고서 서버에 전송되지 않도록 하기 위한 기술에 대해 설명합니다.|  
 |[Try 및 Catch 블록 사용](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|try/catch 블록으로 애플리케이션의 안정성을 향상시킬 수 있는 방법을 설명합니다.|  

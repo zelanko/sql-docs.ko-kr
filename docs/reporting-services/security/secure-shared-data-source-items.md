@@ -13,10 +13,10 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570577"
 ---
 # <a name="secure-shared-data-source-items"></a>공유 데이터 원본 항목 보안 설정

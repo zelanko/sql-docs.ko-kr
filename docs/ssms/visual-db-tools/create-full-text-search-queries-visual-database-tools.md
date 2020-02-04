@@ -1,10 +1,9 @@
 ---
-title: 전체 텍스트 검색 쿼리 만들기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 전체 텍스트 검색 쿼리 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2134b04c87d6bbc3ca400ebf307dae4a1f0eab36
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: eb7029f81e784df63a283a4ef12766d5deb97d37
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264929"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254354"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>전체 텍스트 검색 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

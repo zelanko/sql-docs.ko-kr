@@ -1,6 +1,6 @@
 ---
-title: 옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262749"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245707"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "68262749"
   
     열 이름을 표시합니다.  
   
--   **키**  
+-   **Key**  
   
     테이블 머리글과 기본 키 열을 표시합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68262749"
   
     테이블 이름이 있는 테이블 머리글만 표시합니다.  
   
--   **사용자 지정**  
+-   **Custom**  
   
     표시할 열을 선택할 수 있습니다.  
   

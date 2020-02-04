@@ -17,13 +17,13 @@ ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6f062d1237cfc92c5697fa005b3f78268aa48f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992721"
 ---
-# <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
+# <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 지정된 문과 연결된 모든 리소스를 해제합니다. 이 문은 이 함수를 호출한 후에는 다시 사용할 수 없습니다.  
@@ -38,7 +38,7 @@ sqlsrv_free_stmt( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 닫을 문입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  

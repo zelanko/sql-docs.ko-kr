@@ -1,10 +1,9 @@
 ---
-title: 수동으로 자체 조인 만들기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 수동으로 자체 조인 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ef290600a71b502df47dc873ef68c941ee833bd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254249"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

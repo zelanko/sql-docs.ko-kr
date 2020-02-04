@@ -1,6 +1,6 @@
 ---
-title: 인수 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: 인수 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4573c603ad2fed4071a7903c20bd82aec3c78096
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 804cec4cbfe25f92b6b244b25b25a4498a09f1fa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267347"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245036"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68267347"
 **인수** 대화 상자에 지정된 인수의 값을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+[외부 도구에 대한 인수](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [외부 도구 대화 상자](../ssms/external-tools-dialog-box.md)  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  
   

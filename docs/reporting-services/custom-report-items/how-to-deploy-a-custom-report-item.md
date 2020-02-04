@@ -11,10 +11,10 @@ ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194129"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>방법: 사용자 지정 보고서 항목 배포
@@ -22,7 +22,7 @@ ms.locfileid: "63194129"
   
 ### <a name="to-deploy-a-custom-report-item"></a>사용자 지정 보고서 항목을 배포하려면  
   
-1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. **ReportItemName** 항목은 **CustomReportItemDesigner** 클래스의 **CustomReportItemAttribute** 특성과 일치해야 합니다. 예를 들어  
+1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. **ReportItemName** 항목은 **CustomReportItemDesigner** 클래스의 **CustomReportItemAttribute** 특성과 일치해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "63194129"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config 파일을 편집하여 사용자 지정 보고서 항목 런타임 구성 요소를 등록합니다. 예를 들어  
+2.  Rsreportserver.config 파일을 편집하여 사용자 지정 보고서 항목 런타임 구성 요소를 등록합니다. 다음은 그 예입니다.  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "63194129"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config 파일을 편집하여 사용자 지정 보고서 항목에 적절한 권한을 부여하는 **CodeGroup**을 추가합니다. 예를 들어  
+3.  Rsssrvpolicy.config 파일을 편집하여 사용자 지정 보고서 항목에 적절한 권한을 부여하는 **CodeGroup**을 추가합니다. 다음은 그 예입니다.  
   
     ```  
     <CodeGroup   

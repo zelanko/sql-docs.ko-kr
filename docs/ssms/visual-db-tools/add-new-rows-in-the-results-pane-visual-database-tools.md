@@ -1,10 +1,7 @@
 ---
-title: 결과 창에서 새 행 추가(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 결과 창에서 행 새로 추가
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,21 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 844acf7ff29557e67edab6a4851216a119542cd4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: fed22c3c4922f74cb3462db4ac6617e6ee7a7c5f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263436"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253427"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 새 행 추가(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 데이터를 직접 입력하거나 메모장 또는 Excel 같은 다른 프로그램에서 복사하여 붙여넣는 방식으로 새 데이터를 추가할 수 있습니다. 붙여넣을 행은 행이 들어갈 테이블과 열 수 및 형식이 똑같아야 합니다. 결과 창에 여러 행을 한 번에 붙여넣을 수 있습니다.  
   
 데이터를 입력하는 방법에 대한 자세한 내용은 [결과 업데이트 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)을 참조하세요.  

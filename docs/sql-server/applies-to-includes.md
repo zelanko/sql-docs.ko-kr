@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067579"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server에 버전 관리 및 적용 대상 파일이 포함되어 있는 경우
 
-이 문서의 참조는 Markdown에 포함된 파일을 사용하여 개별 문서의 실제 텍스트를 변경하지 않고도 쉽게 수정할 수 있습니다. SQL 콘텐츠 세계에는 다음 세 가지 형식의 포함 파일이 있습니다. SQL 버전, 적용 대상 및 참조 텍스트. **SQL Server 버전** 포함 파일은 SQL Server 2016 또는 2017과 같이 논의 중인 SQL 버전을 나타내는 데 사용됩니다. **적용 대상** 포함 파일은 Linux 또는 Azure SQL Database의 SQL Server와 같이 문서가 적용되는 SQL 제품 및 서비스를 나타냅니다. **참조 텍스트**  포함 파일은 다른 두 범주에 속하지 않습니다(예: 고객이 SQL Server에 대한 도움말을 보기 위해 사용할 수 있는 링크 목록인 “도움말 보기” Include).
+이 문서의 참조는 Markdown에 포함된 파일을 사용하여 개별 문서의 실제 텍스트를 변경하지 않고도 쉽게 수정할 수 있습니다. SQL 콘텐츠 영역에는 세 가지 유형(SQL 버전, 적용 대상, 참조 텍스트)의 포함 파일이 있습니다. **SQL Server 버전** 포함 파일은 SQL Server 2016 또는 2017과 같이 논의 중인 SQL 버전을 나타내는 데 사용됩니다. **적용 대상** 포함 파일은 Linux 또는 Azure SQL Database의 SQL Server와 같이 문서가 적용되는 SQL 제품 및 서비스를 나타냅니다. **참조 텍스트**  포함 파일은 다른 두 범주에 속하지 않습니다(예: 고객이 SQL Server에 대한 도움말을 보기 위해 사용할 수 있는 링크 목록인 “도움말 보기” Include).
 
 이 문서에서는 처음 두 가지 유형의 포함 파일에 대한 참조 지점으로만 사용됩니다. [sql-docs 리포지토리](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)에서 포함 파일의 전체 목록을 찾아볼 수 있습니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "68067579"
 
 SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포함해야 합니다. 이처럼, 이름이 변경되는 경우 모든 단일 문서에서 값을 수동으로 업데이트하는 대신 포함 파일이 업데이트됩니다. 이러한 포함 파일은 제품 이름의 자리 표시자로 사용되지만 모든 SQL 문서에서 일관되게 사용되지는 않습니다. SQL Server vNext는 아직 버전 번호가 없는 SQL의 향후 릴리스를 가리키며, 위 내용에 대해 예외입니다.  
 
-|SQL 버전| 파일 이름| Markdown 예제 |텍스트 모드|
+|SQL 버전| 파일 이름| Markdown 예제 |텍스트|
 | :------------  | :-------------| :----------| :-------------------|
 | SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL 2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | SQL Server 2000(8.x) |
@@ -44,7 +44,7 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 
 이러한 적용 대상 포함 파일에는 SQL Server 버전이 생략됩니다.
 
-| 파일 이름| Markdown 예제 |image|
+| 파일 이름| Markdown 예제 |이미지|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 
 이러한 적용 대상 포함 파일에는 문서가 적용되는 SQL 버전을 지정합니다.
 
-| 파일 이름| Markdown 예제 |image|
+| 파일 이름| Markdown 예제 |이미지|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 
 이러한 적용 대상 포함 파일은 Analysis Services 설명서와 함께 사용됩니다.
 
-| 파일 이름| Markdown 예제 |image|
+| 파일 이름| Markdown 예제 |이미지|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 
 이러한 적용 대상 포함 파일은 Reporting Services 설명서와 함께 사용됩니다.
 
-| 파일 이름| Markdown 예제 |image|
+| 파일 이름| Markdown 예제 |이미지|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

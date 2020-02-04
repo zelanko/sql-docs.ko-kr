@@ -1,6 +1,6 @@
 ---
-title: 코드 및 텍스트 이동 | Microsoft 문서
-ms.custom: ''
+title: 코드 및 텍스트 이동
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4171d67bafa5b2f692a0a1a0b7e87dc9ed9b8525
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258188"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253749"
 ---
 # <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

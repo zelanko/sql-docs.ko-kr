@@ -10,10 +10,10 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951691"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
@@ -35,7 +35,7 @@ SMO 어셈블리를 직접 로드해야 할 수 있는 두 가지 경우가 있�
   
 -   공급자 또는 cmdlet을 사용하지 않는 C# 또는 Visual Basic과 같은 다른 언어에서 SMO 코드를 이식하려는 경우  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>예: SQL Server Management Objects 로드  
+## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server 관리 개체 로드  
  다음 코드는 SMO 어셈블리를 로드합니다.  
   
 ```  

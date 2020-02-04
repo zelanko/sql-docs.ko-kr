@@ -1,29 +1,28 @@
 ---
-title: 추적에 표시된 열 구성(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적에 표시된 열 구성
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- organizing trace columns displayed [SQL Server]
-- arranging trace columns displayed
-- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba356e951abc0fd63b28a7247e8319d860c99ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911721"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307558"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
+
+추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   
  **열 구성** 을 사용하여 선택한 데이터 열을 기준으로 추적 이벤트를 그룹화하거나 그룹화한 후 집계할 수 있습니다.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "67911721"
 |Duration|StartTime|EventClass|ClientProcessID|  
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
-|0|12/12/2006 5:39:23 PM|Audit Login|648|  
+|0|12/12/2006 5:39:23 PM|로그인 감사|648|  
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   

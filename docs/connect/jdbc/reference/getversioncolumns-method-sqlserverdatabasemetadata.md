@@ -16,10 +16,10 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978160"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 메서드(SQLServerDatabaseMetaData)
@@ -49,18 +49,18 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  테이블 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getVersionColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getVersionColumns 메서드에 의해 지정됩니다.  
   
  getVersionColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |COLUMN_NAME|**String**|열 이름입니다.|  

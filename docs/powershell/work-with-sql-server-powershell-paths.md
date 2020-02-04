@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68121347"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업

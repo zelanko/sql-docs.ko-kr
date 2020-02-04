@@ -1,11 +1,7 @@
 ---
-title: '방법: 두 데이터베이스의 데이터 비교 및 동기화 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 두 데이터베이스의 데이터 비교 및 동기화
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241577"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
+
 두 데이터베이스에 포함된 데이터를 비교할 수 있습니다. 비교하는 데이터베이스는 각각 ‘원본’ 및 ‘대상’이라고 합니다.    
   
 > [!NOTE]  
@@ -61,7 +62,7 @@ ms.locfileid: "67929471"
   
 4.  두 개 이상의 키가 있으면, **비교 키** 열을 사용해서 데이터 비교 기준으로 사용할 키를 지정할 수 있습니다. 예를 들어 기본 키 열 또는 다른(고유하게 식별 가능한) 키 열을 기준으로 비교를 수행할지를 지정할 수 있습니다.  
   
-5.  **마침**을 클릭합니다.  
+5.  **Finish**를 클릭합니다.  
   
     비교가 시작됩니다.  
   

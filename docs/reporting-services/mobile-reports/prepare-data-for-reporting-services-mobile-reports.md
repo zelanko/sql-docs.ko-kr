@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499932"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
@@ -38,7 +38,7 @@ ms.locfileid: "62499932"
 ## <a name="preparing-filter-data"></a>필터 데이터 준비 ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서 날짜/시간 필드 및 키 필드 모두를 기반으로 데이터를 필터링할 수 있습니다. 키 필드는 숫자일 수 있지만 대부분의 경우 ID 또는 문자열 값입니다. 선택 목록 등 탐색기 요소와 함께 사용할 필터 필드를 준비하려면 필터 키가 데이터 테이블에서 단일 열이어야 합니다. 이런 방식으로 필터 열의 값에 따라 테이블 행을 그룹화할 수 있습니다. 서로 다른 필터 키 또는 필터 조건을 포함하는 여러 열에 대해 모바일 보고서에서 여러 필터 탐색기를 계층적 또는 개별적으로 함께 사용할 수 있습니다.  
   
-| 산업  | Country   | Region    |  
+| 산업  | 국가   | 지역    |  
 | ------------- | ------------- | ------------- |  
 | 은행     | 아프가니스탄   | 아시아      |  
 | 상용 및 전문 서비스 | 아프가니스탄 | 아시아 |  
@@ -81,7 +81,7 @@ ms.locfileid: "62499932"
 | 기술 하드웨어 및 장비   | 정보 기술 |  
 | 원격 통신 서비스 |정보 기술 |  
   
-### <a name="see-also"></a>관련 항목:  
+### <a name="see-also"></a>참고 항목  
 - [Reporting Services 모바일 보고서에 대한 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)

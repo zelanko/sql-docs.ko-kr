@@ -13,10 +13,10 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577524"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
@@ -34,11 +34,11 @@ ms.locfileid: "65577524"
   
 4.  프로젝트의 공유 데이터 원본을 게시하고 이전에 게시된 공유 데이터 원본을 덮어쓰려면 **OverwriteDataSources** 를 **True**로 설정합니다.  
   
-5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. 예를 들어 `https://TestServer/TestSite/Documents/DataSources`를 참조하세요.  
+5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. `https://TestServer/TestSite/Documents/DataSources`)을 입력합니다.  
   
      값을 지정하지 않으면 **TargetReportFolder** 값이 사용됩니다.  
   
-6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. 예를 들어 `https://TestServer/TestSite/Documents/Reports`를 참조하세요.  
+6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. `https://TestServer/TestSite/Documents/Reports`)을 입력합니다.  
   
 7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. `https://servername`, `https://servername/site` 또는 `https://servername/site/subsite`).  
   

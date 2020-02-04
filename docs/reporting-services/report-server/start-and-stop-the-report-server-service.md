@@ -14,10 +14,10 @@ ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66270195"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
@@ -44,7 +44,7 @@ ms.locfileid: "66270195"
   
 - 여러 인스턴스를 실행하고 있거나 보고서 서버를 명명된 인스턴스로 실행하는 경우 괄호 안의 인스턴스 이름이 중지 또는 다시 시작하려는 보고서 서버 인스턴스에 해당하는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

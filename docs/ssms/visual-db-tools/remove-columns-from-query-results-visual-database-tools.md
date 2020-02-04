@@ -1,10 +1,9 @@
 ---
-title: 쿼리 결과에서 열 제거(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 결과에서 열 제거
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b957fc9e20499b88e6fc116749ac49e20b7b31fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d6de3eef6b6903786a0edf3230f5500032d8cd89
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266217"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255221"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68266217"
   
 -   **조건 창**에서 제거하려는 데이터 열의 **출력** 열에 있는 확인란을 선택 취소합니다. **출력** 열을 다시 선택하면 쿼리 결과에 열을 다시 추가할 수 있습니다.  
   
-    -또는-  
+    또는  
   
 -   [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 출력 목록에서 열을 제거합니다.  
   

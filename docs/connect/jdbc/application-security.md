@@ -11,10 +11,10 @@ ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028510"
 ---
 # <a name="application-security"></a>애플리케이션 보안
@@ -63,7 +63,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
   
  SSL 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. SSL을 사용하는 방법에 대한 자세한 내용은 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

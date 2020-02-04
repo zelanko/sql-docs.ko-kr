@@ -1,5 +1,5 @@
 ---
-title: 개체 탐색기 | Microsoft 문서
+title: 개체 탐색기
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -24,14 +24,14 @@ ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988144"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257146"
 ---
 # <a name="object-explorer"></a>개체 탐색기
 
@@ -43,7 +43,7 @@ ms.locfileid: "70988144"
   
 ## <a name="object-explorer-tasks"></a>개체 탐색기 태스크  
   
-|설명|항목|  
+|Description|항목|  
 |---------------|---------|  
 |개체 탐색기를 열고 탐색기의 동작을 정의하는 옵션을 구성하는 방법에 대해 설명합니다.|[개체 탐색기 열기 및 구성](../../ssms/object/open-and-configure-object-explorer.md)|  
 |개체 탐색기를 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]인스턴스에 연결하는 방법에 대해 설명합니다.|[개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

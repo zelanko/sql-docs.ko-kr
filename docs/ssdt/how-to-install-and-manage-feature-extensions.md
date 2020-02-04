@@ -1,23 +1,24 @@
 ---
-title: '방법: 기능 확장 설치 및 관리 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: 기능 확장 설치 및 관리
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929599"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241400"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>방법: 기능 확장 설치 및 관리
+
 데이터베이스 코드를 분석하기 위한 규칙, 데이터베이스 단위 테스트의 조건 및 빌드/배포 참가자를 추가하여 SQL Server Data Tools가 포함된 Visual Studio 버전에서 제공하는 기능을 늘릴 수 있습니다. 그러나 사용자가 확장을 만들었든지 다른 사람이 만든 확장을 설치하려는 것이든지 관계없이 기능 확장을 사용하려면 먼저 이를 설치해야 합니다.  
   
 확장을 설치할 위치는 확장 유형 및 확장을 사용하려는 위치에 따라 다릅니다. 최신 버전의 Visual Studio에서 일부 구성 요소의 설치 위치가 SQL Server 설치 디렉터리에서 Visual Studio 디렉터리 내부로 이동했습니다. 이 설정을 사용하면 서로 다른 버전의 소프트웨어를 더욱 쉽게 함께 실행할 수 있지만 서로 다른 버전의 SQL Server Data Tools에서 명령줄로부터 확장을 사용하려는 경우 여러 위치에 확장을 설치해야 할 수 있습니다.  

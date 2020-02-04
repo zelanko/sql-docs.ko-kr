@@ -1,11 +1,7 @@
 ---
-title: .dacpac 파일 추출, 게시 및 등록 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: .dacpac 파일 추출, 게시 및 등록
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154806"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241645"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac 파일 추출, 게시 및 등록
+
 이 항목에서는 SQL Server 개체 탐색기에서 연결된 데이터베이스를 마우스 오른쪽 단추로 클릭하여 수행할 수 있는 네 가지 절차에 대해 설명합니다.  
   
 -   데이터 계층 애플리케이션 게시  

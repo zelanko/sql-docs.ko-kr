@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979227"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 메서드(SQLServerDatabaseMetaData)
@@ -49,18 +49,18 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
   
  테이블 이름 패턴이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTablePrivileges 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTablePrivileges 메서드에 의해 지정됩니다.  
   
  getTablePrivileges 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|카탈로그 이름입니다.|  
 |TABLE_SCHEM|**String**|테이블 스키마 이름입니다.|  

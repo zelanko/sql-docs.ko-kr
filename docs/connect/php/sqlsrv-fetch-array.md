@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015027"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 데이터의 다음 행을 숫자로 인덱싱된 배열, 결합형 배열 또는 둘 다로 검색합니다.  
@@ -41,7 +41,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [선택 사항]: 미리 정의된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|데이터의 다음 행이 숫자형 배열로 반환됩니다.|  
 |SQLSRV_FETCH_ASSOC|데이터의 다음 행이 결합형 배열로 반환됩니다. 배열 키는 결과 집합의 열 이름입니다.|  
@@ -60,12 +60,12 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 데이터 행이 검색되는 경우 **배열** 이 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다. 오류가 발생하면 **false** 가 반환됩니다.  
   
 *$fetchType* 매개 변수의 값을 기반으로, 반환된 **배열** 은 숫자로 인덱싱된 **배열**, 결합형 **배열**또는 둘 다일 수 있습니다. 기본적으로 숫자 키와 결합형 키가 둘 다 있는 **배열** 이 반환됩니다. 반환된 배열에 있는 값의 데이터 형식은 기본 PHP 데이터 형식입니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 이름이 없는 열이 반환되면 배열 요소에 대한 결합형 키는 빈 문자열("")입니다. 예를 들어 값을 데이터베이스 테이블에 삽입하고 서버 생성 기본 키를 검색하는 다음 Transact-SQL 문을 고려해 보겠습니다.  
   
 ```
@@ -187,5 +187,5 @@ sqlsrv_close( $conn);
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
   

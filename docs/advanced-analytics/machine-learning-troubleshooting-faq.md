@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c9be3a8dff314f6645029fb54803ad30dc04db27
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727572"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server의 기계 학습 문제 해결
@@ -44,7 +44,7 @@ SQL Server를 사용하여 기계 학습을 설정하지 않았거나 기능을 
 + [명령 프롬프트 설정](install/sql-ml-component-commandline-install.md)
 + [오프라인 설치(인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>구성
 
 다음 문서에는 기본값에 대한 정보와 인스턴스의 기계 학습 구성을 사용자 지정하는 방법이 포함되어 있습니다.
 

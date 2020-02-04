@@ -1,6 +1,6 @@
 ---
-title: 개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용 | Microsoft 문서
-ms.custom: ''
+title: 개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3bc3c116f8082b17f392d04ae14e0895762fc37
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262075"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257606"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "68262075"
   
 |매개 변수 이름|데이터 형식|  
 |------------------|-------------|  
-|**ObjectName**|**문자열**|  
+|**ObjectName**|**String**|  
 |**ObjectTypeName**|**String**|  
 |**필터링됨**|**Boolean**|  
-|**ServerName**|**String**|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**String**|  
 |**FontName**|**String**|  
 |**DatabaseName**|**String**|  
   

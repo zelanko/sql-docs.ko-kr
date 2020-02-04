@@ -16,10 +16,10 @@ ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 621bffb87631912faa262811cc8a8460ec677cb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978729"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>getTimestamp 메서드(SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978729"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getTimestamp(int)](../../../connect/jdbc/reference/gettimestamp-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 반환합니다.|  
 |[getTimestamp(int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar.md)|매개 변수 인덱스가 지정된 경우 Calendar 개체를 사용하여 지정된 매개 변수의 값을 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 검색합니다.|  

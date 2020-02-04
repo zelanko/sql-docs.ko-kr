@@ -1,6 +1,6 @@
 ---
-title: 대화형으로 문서 검색 | Microsoft 문서
-ms.custom: ''
+title: 대화형으로 문서 검색
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -14,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e8e90d8ca45afd827ca44a4fa87ced24184505
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264189"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253658"
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68264189"
   
 5.  **바꾸기**를 클릭하고 마지막 파일의 마지막 항목이 바뀔 때까지 계속해서 **바꾸기** 를 클릭합니다. 바꾸지 않을 항목을 건너뛰려면 **다음 찾기** 를 클릭합니다.  
   
-     -또는-  
+     또는  
   
      **모두 바꾸기** 를 선택하여 일치하는 모든 항목을 바꿉니다. 바뀐 항목의 총 개수가 표시되는 메시지 상자가 나타납니다.  
   

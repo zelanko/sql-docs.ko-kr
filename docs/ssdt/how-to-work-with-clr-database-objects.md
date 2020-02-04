@@ -1,32 +1,33 @@
 ---
-title: '방법: CLR 데이터베이스 개체 작업 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: CLR 데이터베이스 개체 작업
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8ea668f0672a40e8af6fbb81bbce469652eeb54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f8aa504554cc973e5babbfe3c8512f59932fa147
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119886"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226725"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>방법: CLR 데이터베이스 개체 작업
+
 Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](https://msdn.microsoft.com/library/k2e1fb36.aspx)을 참조하세요.  
   
 SQL Server Data Tools를 사용하는 CLR 데이터베이스 개체를 만들려면 데이터베이스 프로젝트를 만든 후 이 프로젝트에 CLR 데이터베이스 개체를 추가합니다. 이전 버전의 Visual Studio와 달리 별도의 CLR 프로젝트를 만든 후 데이터베이스 프로젝트에서 해당 프로젝트에 대한 참조를 추가할 필요가 없습니다. 데이터베이스 프로젝트를 빌드하고 게시하면 프로젝트의 CLR 개체가 동시에 자동으로 게시됩니다. 게시된 CLR 개체는 다른 데이터베이스 개체와 마찬가지 방식으로 호출하고 실행할 수 있습니다.  
   
 CLR 및 CLR 빌드 속성 페이지에는 프로젝트에서 CLR 데이터베이스 개체를 사용하기 위한 여러 설정이 포함되어 있습니다. 특히 CLR 속성 페이지에는 CLR 어셈블리에 대한 사용 권한을 설정할 수 있는 권한 수준 설정이 있습니다. 또한 이 페이지에는 프로젝트에 추가된 CLR 데이터베이스 개체에 대한 DDL을 생성할지 여부를 제어하는 "DDL 생성" 설정도 있습니다. CLR 빌드 속성 페이지에는 프로젝트에서 CLR 코드의 컴파일을 구성하기 위해 설정할 수 있는 모든 컴파일러 옵션이 포함되어 있습니다. 이러한 속성 페이지는 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 액세스할 수 있습니다.  
   
-CLR 데이터베이스 개체 디버깅을 사용하도록 설정하려면 **SQL Server 개체 탐색기**를 엽니다. 디버그하려는 CLR 데이터베이스 아티팩트를 포함한 서버를 마우스 오른쪽 단추로 클릭하고 **SQL/CLR 디버깅 허용**을 선택합니다. 경고와 함께 다음과 같은 메시지 상자가 표시됩니다. "디버깅하는 동안 이 서버의 모든 관리되는 스레드가 중지됩니다. 이 서버에서 SQL/CLR 디버깅을 사용하도록 설정하시겠습니까?" CLR 데이터베이스 개체를 디버깅할 때 실행을 중단하면 서버의 모든 스레드가 중단되어 다른 사용자에게 영향을 미치게 됩니다. 따라서 프로덕션 서버에서 CLR 데이터베이스 개체 애플리케이션을 디버깅하면 안 됩니다. 또한 디버깅을 시작한 후에는 **SQL Server 개체 탐색기**에서 설정을 변경할 수 없습니다. **SQL Server 개체 탐색기**의 변경 내용은 다음에 디버깅 세션을 시작할 때까지 적용되지 않습니다.  
+CLR 데이터베이스 개체 디버깅을 사용하도록 설정하려면 **SQL Server 개체 탐색기**를 엽니다. 디버그하려는 CLR 데이터베이스 아티팩트를 포함한 서버를 마우스 오른쪽 단추로 클릭하고 **SQL/CLR 디버깅 허용**을 선택합니다. 다음 경고와 함께 메시지 상자가 나타납니다. "디버깅하는 동안 서버의 모든 관리되는 스레드가 중지됩니다. 이 서버에서 SQL/CLR 디버깅을 사용하도록 설정하시겠습니까?" CLR 데이터베이스 개체를 디버깅할 때 실행을 중단하면 서버의 모든 스레드가 중단되어 다른 사용자에게 영향을 미치게 됩니다. 따라서 프로덕션 서버에서 CLR 데이터베이스 개체 애플리케이션을 디버깅하면 안 됩니다. 또한 디버깅을 시작한 후에는 **SQL Server 개체 탐색기**에서 설정을 변경할 수 없습니다. **SQL Server 개체 탐색기**의 변경 내용은 다음에 디버깅 세션을 시작할 때까지 적용되지 않습니다.  
   
 CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세한 내용은 [CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](https://msdn.microsoft.com/library/ms131046.aspx)을 참조하세요.  
   
@@ -96,7 +97,7 @@ CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세
   
 3.  Suppliers 테이블을 마우스 오른쪽 단추로 클릭하고 **데이터 보기**를 선택합니다.  
   
-4.  **id** 및 **name**에 각각 **5** 및 **Contoso**를 입력하고 **Address** 필드를 빈 상태로 둔 다음, **phone**에 **425 3122 1222**를 입력합니다. Tab 키로 **phone** 필드 외부로 이동하면 **phone** 필드에 입력한 내용이 미리 정의된 전화 번호 패턴을 따르는지 확인하는 기존 CHECK 제약 조건과 `INSERT` 문이 충돌한다는 메시지가 나타납니다.  
+4.  **id** 및 **name**에 각각 **5** 및 **Contoso**를 입력하고 **Address** 필드를 빈 상태로 둔 다음, **phone**에 **425 3122 1222**를 입력합니다. Tab 키로 **phone** 필드 외부로 이동하면 `INSERT`phone**필드에 입력한 내용이 미리 정의된 전화 번호 패턴을 따르는지 확인하는 기존 CHECK 제약 조건과** 문이 충돌한다는 메시지가 나타납니다.  
   
 5.  입력 내용을 **425 312 1222**로 변경하고 Tab 키를 눌러 이동합니다. 이번에는 입력이 허용됩니다.  
   

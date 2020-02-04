@@ -14,16 +14,16 @@ ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128809"
 ---
 # <a name="using-secure-web-service-methods"></a>보안 웹 서비스 메서드 사용
   특정 보고서 서버 웹 서비스 메서드를 호출할 때 보안 연결이 필요할 수 있습니다. 보안 연결이 필요한 메서드는 RSReportServer.config 파일의 **SecureConnectionLevel** 설정에서 결정됩니다. 이 설정의 값은 0 이상의 유효 범위를 가진 정수 값입니다. 다음 표에서는 이러한 값에 대해 설명합니다.  
   
-|Level|설명|  
+|Level|Description|  
 |-----------|-----------------|  
 |**0**|안전하지 않습니다. Reporting Services SOAP API에 대해 이루어지는 호출에 보안 연결이 필요하지 않습니다.|  
 |**0**보다 큼|보안. Reporting Services SOAP API에 대해 이루어지는 모든 호출에 보안 연결이 필요합니다.|  

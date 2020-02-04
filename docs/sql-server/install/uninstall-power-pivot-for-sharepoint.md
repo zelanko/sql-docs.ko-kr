@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952732"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
@@ -34,13 +34,13 @@ ms.locfileid: "71952732"
   
 -   [3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거](#bkmk_uninstall)  
   
--   [4단계: SharePoint용 파워 피벗 추가 기능 제거](#bkmk_addin)  
+-   [4단계: SharePoint용 Power Pivot 추가 기능 제거](#bkmk_addin)  
   
 -   [5단계: 제거 확인](#verify)  
   
 -   [6단계: 제거 후 검사 목록](#bkmk_post)  
   
-##  <a name="prereq"></a> 사전 요구 사항  
+##  <a name="prereq"></a> 필수 조건  
   
 -   팜의 기능과 솔루션을 제거하려면 SharePoint 팜 관리자 또는 서비스 애플리케이션 관리자여야 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "71952732"
   
 -   SharePoint 관리 서비스가 실행되고 있는지 확인합니다.  
   
-1.  **구성 도구를 실행합니다.** 구성 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]가 로컬 서버에 설치되어 있을 때만 나열됩니다. **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 클릭한 후에 다음 중 하나를 클릭합니다.  
+1.  **구성 도구 실행:** 구성 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 가 로컬 서버에 설치되어 있을 때만 나열됩니다. **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭하고 **구성 도구**를 클릭한 후 다음 중 하나를 클릭합니다.  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71952732"
   
 6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다.  
   
-7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
+7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
   
 8.  계속하려면 **예** 를 클릭합니다.  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  기존 배포에서 **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+3.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
 4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId**의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(Shell의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID를 복사합니다).  
   
@@ -147,7 +147,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      설치 프로그램에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
-##  <a name="bkmk_addin"></a> 4단계: SharePoint용 파워 피벗 추가 기능 제거  
+##  <a name="bkmk_addin"></a> 4단계: SharePoint용 Power Pivot 추가 기능 제거  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)를 참조하세요.  
   
 ##  <a name="verify"></a> 5단계: 제거 확인  

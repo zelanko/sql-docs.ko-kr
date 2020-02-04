@@ -1,10 +1,8 @@
 ---
-title: 중단점 동작 지정 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 중단점 동작 지정
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -12,24 +10,32 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209a5cd5d80529a71c545a11d8b59b46248bc96
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267729"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253646"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> 동작 고려 사항  
- 중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. **디버거에서** 적중될 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 주로 출력 메시지를 지정하여 대신 디버거 **출력** 창에 정보를 출력하는 데 사용됩니다.  
+##  <a name="BKMK_ActionConsiderations"></a> 동작 고려 사항
+
+중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. **디버거에서** 적중될 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 주로 출력 메시지를 지정하여 대신 디버거 **출력** 창에 정보를 출력하는 데 사용됩니다.  
   
- 출력 메시지는 디버깅 중인 **의 정보가 포함된 식을 포함하는 텍스트 문자열로** 메시지 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 옵션에 지정합니다. 식은 다음과 같습니다.  
+출력 메시지는 디버깅 중인 **의 정보가 포함된 식을 포함하는 텍스트 문자열로** 메시지 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 옵션에 지정합니다. 식은 다음과 같습니다.  
   
--   중괄호({})에 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
+-   중괄호([!INCLUDE[tsql](../../includes/tsql-md.md)])에 포함된 {} 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
   
 -   다음 키워드 중 하나:  
   
@@ -51,7 +57,7 @@ ms.locfileid: "68267729"
   
 1.  편집기 창에서 중단점 문자 모양을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **적중될 때** 를 클릭합니다.  
   
-     -또는-  
+     또는  
   
      **중단점** 창에서 중단점 문자 모양을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **적중될 때** 를 클릭합니다.  
   

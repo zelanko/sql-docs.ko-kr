@@ -15,10 +15,10 @@ ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63026009"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
@@ -30,10 +30,10 @@ ms.locfileid: "63026009"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[일괄 처리 메서드](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)|<xref:ReportService2005.BatchHeader>를 사용하여 여러 작업을 단일 트랜잭션으로 일괄 처리하는 방법을 설명합니다.|  
-|[실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|**SessionHeader**를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 세션 상태를 관리하는 방법을 설명합니다.|  
+|[실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SessionHeader**를 사용하여** 에서 세션 상태를 관리하는 방법을 설명합니다.|  
 |[GetProperties 메서드에 대한 항목 네임스페이스 설정](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|<xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드 및 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 항목의 경로나 ID를 기반으로 속성을 검색하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

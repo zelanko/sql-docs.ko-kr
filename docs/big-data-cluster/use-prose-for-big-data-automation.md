@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67957682"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE Code Accelerator를 사용한 데이터 랭글링
@@ -45,7 +45,7 @@ Code Accelerator 메서드의 일반적인 개요를 보려면 [설명서](https
 
 PROSE Code Accelerator는 데이터 파일의 구조를 분석하고 파일을 로드하는 코드를 자동으로 생성하여 이 문제를 해결합니다. 대부분의 경우 생성된 코드는 데이터를 올바르게 구문 분석합니다. 일부 경우에는 요구 사항에 맞게 코드를 조정해야 할 수 있습니다.
 
-다음 예를 살펴 보십시오.
+다음과 같은 예제를 참조하세요.
 
  ```python
 import prose.codeaccelerator as cx
@@ -116,7 +116,7 @@ builder.learn().code()
 |   |속성                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |Unknown        |
+| 1 |Naiara Moravcikova        |알 수 없음        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
 | 4 |Maya de Villiers          |19-Mar-60      |

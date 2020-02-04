@@ -11,10 +11,10 @@ ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982950"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 메서드(SQLServerDatabaseMetaData)
@@ -44,13 +44,13 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  함수의 이름입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getFunctions 메서드에 의해 지정됩니다.  
   
  이 메서드는 지정된 스키마 및 함수 이름과 일치하는 시스템 및 사용자 함수만 반환합니다.  
@@ -60,7 +60,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  각 함수 설명에는 다음과 같은 열이 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|함수가 있는 데이터베이스의 이름입니다.|  
 |FUNCTION_SCHEM|**String**|함수가 있는 스키마의 이름입니다.|  

@@ -16,10 +16,10 @@ ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffbc28bd432e310e23427a46946abd9a47036bc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983474"
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>getDouble 메서드(SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67983474"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getDouble(int)](../../../connect/jdbc/reference/getdouble-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 **double**로 검색합니다.|  
 |[getDouble(java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 이름의 값을 Java 프로그래밍 언어의 **double**로 검색합니다.|  

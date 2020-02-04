@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727684"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
@@ -64,7 +64,7 @@ Linux에서 SQL은 **실행 패드** 서비스를 사용하여 각 사용자에 
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 전체 텍스트 인덱싱 및 쿼리 서비스에서 전체 텍스트 쿼리를 처리하기 위해 별도의 호스트를 시작하는 것과 비슷한 방식으로 외부 스크립트를 관리하고 실행하는 서비스입니다. 실행 패드 서비스는 Microsoft에서 게시하거나 Microsoft에서 성능 및 리소스 관리 요구 사항을 충족시키는 것으로 인증한 신뢰할 수 있는 시작 관리자만 시작할 수 있습니다.
 
-| 신뢰할 수 있는 시작 관리자 | 확장명 | SQL Server 버전 |
+| 신뢰할 수 있는 시작 관리자 | 내선 번호 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
 | Windows용 R 언어에 대한 RLauncher.dll | [R 확장](extension-r.md) | SQL Server 2016 이상 |
 | Windows용 Python 3.5에 대한 Pythonlauncher.dll | [Python 확장](extension-python.md) | SQL Server 2017 이상 |

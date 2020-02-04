@@ -1,10 +1,9 @@
 ---
-title: OR에 우선 순위가 있는 조건 조합(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: OR에 우선 순위가 있는 경우 조건 결합
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13b64b2310f3ac29855dc4356fb842f86ef25dbc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 781d6819519b35153564b4032fce867875fb8d1c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262497"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257111"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -9,10 +9,10 @@ ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308177"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Power BI Mobile에 액세스할 수 있도록 보고서 서버 활성화
@@ -47,11 +47,11 @@ SSL 사용에 대한 자세한 내용은 [기본 모드 보고서 서버에서 S
   
 Windows 방화벽 구성 방법에 대한 자세한 내용은 [보고서 서버에 액세스할 수 있도록 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   
-[보고서 서버에서 기본 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
-[보고서 서버에 액세스할 수 있도록 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+[보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
   
   

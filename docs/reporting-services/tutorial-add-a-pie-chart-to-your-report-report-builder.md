@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041269"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
@@ -89,7 +89,7 @@ ms.locfileid: "63041269"
   
 3.  **다음** 을 클릭하여 미리 보기를 확인합니다.  
   
-5.  **마침**을 클릭합니다.  
+5.  **Finish**를 클릭합니다.  
   
     디자인 화면에 차트가 추가됩니다. 원형 차트의 실제 값은 표시되지 않고 차트 모양을 파악할 수 있도록 제품 1, 제품 2 등이 표시됩니다.  
     
@@ -211,7 +211,7 @@ ms.locfileid: "63041269"
   
 보고서가 보고서 서버에 저장됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 보고서에 원형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

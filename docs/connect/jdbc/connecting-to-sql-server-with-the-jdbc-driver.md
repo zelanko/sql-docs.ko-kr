@@ -11,10 +11,10 @@ ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028186"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC 드라이버로 SQL Server에 연결
@@ -32,7 +32,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 데 사용할 연결 URL을 형성하는 방법을 설명합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 명명된 인스턴스에 연결하는 방법에 대해 설명합니다.|  
 |[연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)|다양한 연결 속성과 이러한 속성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결할 때 사용하는 방법을 설명합니다.|  
@@ -44,7 +44,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 애플리케이션을 위한 Java 구현을 설명합니다.|  
 |[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure에서 데이터베이스의 연결 문제를 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

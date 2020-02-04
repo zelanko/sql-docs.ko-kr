@@ -12,10 +12,10 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580474"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>보고서 기록에서 스냅샷 만들기, 수정 및 삭제
@@ -61,7 +61,7 @@ ms.locfileid: "65580474"
  [보고서 기록 만들기&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

@@ -1,10 +1,7 @@
 ---
-title: 데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 데이터베이스 다이어그램에서 테이블 작업
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,27 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246187"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 테이블 디자이너나 데이터베이스 다이어그램 디자이너에서 데이터베이스 테이블을 만들고 수정할 수 있습니다.  
   
 > [!NOTE]  
 > 테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>섹션 내용
+
 [다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [다이어그램에 관련 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -44,7 +47,8 @@ ms.locfileid: "68262485"
   
 [반사 관계 그리기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>참조  
-[테이블 추가 대화 상자&#40;데이터베이스 디자이너&#41;&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## <a name="related-sections"></a>관련 섹션  
+## <a name="reference"></a>참조
+
+[테이블 추가 대화 상자&#40;데이터베이스 디자이너&#41;&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## <a name="related-sections"></a>관련 섹션

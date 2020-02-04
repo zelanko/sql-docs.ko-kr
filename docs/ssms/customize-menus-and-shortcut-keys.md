@@ -1,6 +1,6 @@
 ---
-title: 메뉴 및 바로 가기 키 사용자 지정 | Microsoft 문서
-ms.custom: ''
+title: 메뉴 및 바로 가기 키 사용자 지정
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532877"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243919"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 
@@ -129,7 +129,7 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
   
 5.  바로 가기 메뉴의 **이름** 상자로 이동한 다음 도구 모음 단추의 이름과 함께 키보드 액셀러레이터로 사용할 문자의 앞에 앰퍼샌드(&)를 입력합니다.  
   
-6.  **Enter** 키를 누릅니다.  
+6.  **Enter**키를 누릅니다.  
   
 7.  **사용자 지정** 대화 상자에서 **닫기**를 클릭합니다.  
   

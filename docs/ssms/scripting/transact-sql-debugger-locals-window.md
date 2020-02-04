@@ -1,30 +1,36 @@
 ---
-title: 지역 창 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 지역 창
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cac6d8c5a231d51f89661baf57bec2fd0d9471fd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253519"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253047"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL 디버거 - 지역 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 식에 대한 정보가 표시됩니다. 범위는 **호출 스택** 창에서 선택한 현재 호출 스택 프레임으로 설정됩니다. 지역 식을 표시하려면 디버그 모드여야 합니다.  
-  
-## <a name="task-list"></a>작업 목록  
- **지역 창에 액세스하려면**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+**지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 식에 대한 정보가 표시됩니다. 범위는 **호출 스택** 창에서 선택한 현재 호출 스택 프레임으로 설정됩니다. 지역 식을 표시하려면 디버그 모드여야 합니다.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>작업 목록
+
+**지역 창에 액세스하려면**
   
 -   **디버그** 메뉴에서 **창**을 선택한 다음 **지역**을 클릭합니다.  
   
@@ -36,7 +42,7 @@ ms.locfileid: "68253519"
  **이름**  
  지역 식의 이름입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 변수, 매개 변수 및 @@ 기호로 시작하는 시스템 함수를 표시합니다.  
   
- **Value**  
+ **값**  
  현재 지역 식에 할당된 값을 표시합니다. 식에 할당된 값이 없으면 이 열은 비어 있습니다.  
   
  식의 길이가 **값** 열의 너비보다 큰 경우 해당 식의 **값** 셀 위로 포인터를 움직이면 도구 설명에 전체 값이 표시됩니다.  

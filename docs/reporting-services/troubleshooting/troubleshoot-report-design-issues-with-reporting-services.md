@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573849"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결

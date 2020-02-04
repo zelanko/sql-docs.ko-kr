@@ -1,10 +1,9 @@
 ---
-title: 출력 열 다시 정렬(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 출력 열 다시 정렬
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea54ee09a6e2c03548779e591aed5d260b54d49
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 33739ef70de87ece117d57a9091dda83d60138fb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255891"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255186"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>출력 열 다시 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68255891"
   
 2.  행 선택기 단추를 가리키고 행을 새 위치에 끌어 옵니다.  
   
-    -또는-  
+    또는  
   
     [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 열 이름의 순서를 편집합니다.  
   

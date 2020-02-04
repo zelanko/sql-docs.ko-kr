@@ -1,6 +1,6 @@
 ---
-title: 스크립트 생성(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 스크립트 생성(SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265454"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253864"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68265454"
 SQL Server Management Studio(SSMS)를 사용하여 다양한 개체를 스크립팅하는 방법에 대한 자세한 자습서는 [자습서: SSMS에서 스크립팅](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)을 참조하세요.
 
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  
   
 ###  <a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사  

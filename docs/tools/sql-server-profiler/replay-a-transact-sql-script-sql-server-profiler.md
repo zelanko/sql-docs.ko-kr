@@ -1,29 +1,28 @@
 ---
-title: Transact-SQL 스크립트 재생(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL 스크립트 재생
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- scripts [SQL Server], traces
-- replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62ca5b9038a8c5cfd7590ed2754691266a691c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: df6664f31f092c6c773614c2a363e66a0b925259
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906090"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307471"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Transact-SQL 스크립트 재생(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  성능 문제에 대해 가능한 해결 방법을 테스트하는 경우 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 재생하고 변경 전후의 성능을 비교합니다.  
+
+성능 문제에 대해 가능한 해결 방법을 테스트하는 경우 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 재생하고 변경 전후의 성능을 비교합니다.  
   
 ### <a name="to-replay-a-transact-sql-script"></a>Transact-SQL 스크립트를 재생하려면  
   
@@ -37,6 +36,6 @@ ms.locfileid: "67906090"
   
 ## <a name="see-also"></a>참고 항목  
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

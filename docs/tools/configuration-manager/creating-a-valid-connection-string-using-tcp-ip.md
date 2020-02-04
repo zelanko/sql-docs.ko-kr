@@ -1,6 +1,6 @@
 ---
-title: TCP/IP를 사용하여 유효한 연결 문자열 만들기 | Microsoft Docs
-ms.custom: ''
+title: TCP/IP를 사용하여 유효한 연결 문자열 만들기
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5df60cd2dcab666f06625cd2988717ed14a40552
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1d257a0b1f6a6022ff5816ce6fab7378f05f89e9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010148"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306472"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP를 사용하여 유효한 연결 문자열 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

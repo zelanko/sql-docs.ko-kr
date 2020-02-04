@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2da5cbf0fd3fbc5b8fe1105261fff98625d590e5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727318"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
@@ -30,7 +30,7 @@ ms.locfileid: "73727318"
 
 OLAP은 온라인 분석 처리의 약어입니다. OLAP 솔루션은 시간에 따라 중요한 비즈니스 데이터를 캡처하고 저장하는 데 광범위하게 사용됩니다. OLAP 데이터는 다양한 도구, 대시보드 및 시각화에서 비즈니스 분석에 사용됩니다. 자세한 내용은 [온라인 분석 처리](https://en.wikipedia.org/wiki/Online_analytical_processing)를 참조하세요.
 
-Microsoft는 _큐브_ 또는 _테이블 형식 모델_의 형태로 OLAP 데이터를 디자인, 배포 및 쿼리할 수 있는 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services)를 제공합니다. 큐브는 다차원 데이터베이스입니다. _차원_은 데이터의 패싯 또는 R의 요소와 비슷합니다. 차원을 사용하여 요약 또는 분석할 데이터의 특정 하위 세트를 식별할 수 있습니다. 예를 들어 시간은 중요한 차원이므로, 대부분의 OLAP 솔루션은 데이터를 분리하고 요약할 때 사용할 수 있도록 기본적으로 정의된 여러 달력을 포함하고 있습니다. 
+Microsoft는 [큐브](https://docs.microsoft.com/sql/analysis-services/analysis-services) 또는 _테이블 형식 모델_의 형태로 OLAP 데이터를 디자인, 배포 및 쿼리할 수 있는 _Analysis Services_를 제공합니다. 큐브는 다차원 데이터베이스입니다. _차원_은 데이터의 패싯 또는 R의 요소와 비슷합니다. 차원을 사용하여 요약 또는 분석할 데이터의 특정 하위 세트를 식별할 수 있습니다. 예를 들어 시간은 중요한 차원이므로, 대부분의 OLAP 솔루션은 데이터를 분리하고 요약할 때 사용할 수 있도록 기본적으로 정의된 여러 달력을 포함하고 있습니다. 
 
 성능상의 이유로, OLAP 데이터베이스가 요약(또는 _집계_)을 미리 계산한 다음, 더 빠른 검색을 위해 요약을 저장하는 경우가 종종 있습니다. 요약은 숫자 데이터에 적용할 수 있는 수식을 나타내는 *측정값*를 기반으로 합니다. 차원을 사용하여 데이터의 하위 세트를 정의한 다음, 해당 데이터를 대상으로 측정값을 컴퓨팅합니다. 예를 들어 측정값을 사용하여 여러 분기 동안 판매된 특정 제품 라인의 총 매출에서 세금을 제한 금액을 컴퓨팅하고, 특정 공급업체의 평균 배송 비용, 올해 초부터 현재까지 지급된 누적 임금 등을 보고할 수 있습니다.
 
@@ -66,7 +66,7 @@ Multidimensional Expression의 약어인 MDX는 큐브를 쿼리하는 데 사�
 
 + **잘 구성된(Well-Formed) MDX를 복사하여 붙여넣습니다.** 수동으로 MDX 쿼리를 만들어서 붙여넣습니다. 이 옵션은 다시 사용하려는 기존 MDX 쿼리가 있는 경우 또는 작성하려는 쿼리가 너무 복잡하여 **olapR**에서 처리할 수 없는 경우에 가장 적합합니다.
 
-    SSMS 또는 Excel 같은 클라이언트 유틸리티를 사용하여 MDX를 빌드한 후에는 쿼리 문자열을 저장합니다. 이 MDX 문자열을 **olapR** 패키지의 *SSAS 쿼리 처리기*에 인수로 제공합니다. 공급자는 이 쿼리를 지정된 Analysis Services 서버로 보내고, 그 결과를 다시 R에 전달합니다. 
+    SSMS 또는 Excel 같은 클라이언트 유틸리티를 사용하여 MDX를 빌드한 후에는 쿼리 문자열을 저장합니다. 이 MDX 문자열을 *olapR* 패키지의 **SSAS 쿼리 처리기**에 인수로 제공합니다. 공급자는 이 쿼리를 지정된 Analysis Services 서버로 보내고, 그 결과를 다시 R에 전달합니다. 
 
 MDX 쿼리를 작성하거나 기존 MDX 쿼리를 실행하는 방법에 대한 예는 [R을 사용하여 MDX 쿼리를 만드는 방법](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)을 참조하세요.
 

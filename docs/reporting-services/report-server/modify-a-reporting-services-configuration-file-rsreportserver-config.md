@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581124"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services 구성 파일 수정(RSreportserver.config)
@@ -23,7 +23,7 @@ ms.locfileid: "65581124"
 > [!IMPORTANT]
 >  구성 파일을 수정할 때는 주의해야 합니다. 내부용으로 예약된 설정을 수정할 경우 설치가 불가능할 수도 있습니다. 일반적으로 특정 문제를 해결하려는 경우 외에는 구성 설정을 수정하지 않는 것이 좋습니다. 변경해도 문제가 없는 설정에 대한 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 또는 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요. 구성 파일에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 제품 설명서를 참조하세요.  
   
- 항목 내용  
+ 이 항목의 내용:  
   
 -   [구성 값 읽기 및 사용](#bkmk_read_values)  
   

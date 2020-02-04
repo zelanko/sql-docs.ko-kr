@@ -16,10 +16,10 @@ ms.assetid: a15ee185-f433-4915-9c75-5ebd90c758fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 702abdf51c74ff3c6170a09c481f00f9d266fac7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952720"
 ---
 # <a name="getconnection-method-sqlserverdatasource"></a>getConnection 메서드(SQLServerDataSource)
@@ -29,7 +29,7 @@ ms.locfileid: "67952720"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getConnection()](../../../connect/jdbc/reference/getconnection-method.md)|이 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체가 나타내는 데이터 원본과의 연결을 설정합니다.|  
 |[getConnection(java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getconnection-method-java-lang-string-java-lang-string.md)|지정된 사용자 이름 및 암호를 사용하여 이 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체가 나타내는 데이터 원본과의 연결을 설정합니다.|  

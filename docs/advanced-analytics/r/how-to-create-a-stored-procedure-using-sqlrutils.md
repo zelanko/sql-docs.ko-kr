@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727463"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils를 사용하여 저장 프로시저 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "73727463"
 
 함수의 다른 모든 입력 매개 변수뿐만 아니라 데이터 프레임 내의 개체는 다음과 같은 R 데이터 형식이어야 합니다.
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - 논리
@@ -43,7 +43,7 @@ ms.locfileid: "73727463"
 
 입력 형식이 위 형식 중 하나가 아닌 경우 직렬화하고 *raw*로 함수에 전달해야 합니다. 이 경우 입력을 역직렬화하는 코드도 함수에 있어야 합니다.
 
-### <a name="outputs"></a>출력
+### <a name="outputs"></a>outputs
 
 함수는 다음 중 하나를 출력할 수 있습니다.
 
@@ -66,7 +66,7 @@ R 코드가 정리되고 단일 함수로 호출될 수 있으면 **sqlrutils** 
 
 각 함수를 호출하는 경우 나중에 `StoredProcedure`에 인수로 전달하여 전체 저장 프로시저를 만들 수 있도록 R 개체가 만들어집니다.
 
-### <a name="outputs"></a>출력
+### <a name="outputs"></a>outputs
 
 **sqlrutils**는 목록과 같은 R 개체를 SQL Server에 필요한 데이터 프레임으로 변환하기 위한 여러 함수를 제공합니다.
 함수가 데이터 프레임을 목록에 먼저 래핑하지 않고 직접 출력하는 경우 이 단계를 건너뛸 수 있습니다.
@@ -119,9 +119,9 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 R을 사용하여 저장 프로시저를 등록하거나, T-SQL에서 CREATE PROCEDURE 문을 실행할 수 있습니다.
 
 - T-SQL 사용.  T-SQL이 더 편한 경우 SQL Server Management Studio(또는 SQL DDL 명령을 실행할 수 있는 다른 클라이언트)를 열고 `StoredProcedure` 함수에서 준비된 코드를 사용하여 CREATE PROCEDURE 문을 실행합니다.
-- R 사용. R 환경에서는 **sqlrutils**의 `registerStoredProcedure` 함수를 사용하여 저장 프로시저를 데이터베이스에 등록할 수 있습니다.
+- R 사용. R 환경에서는 `registerStoredProcedure`sqlrutils**의**  함수를 사용하여 저장 프로시저를 데이터베이스에 등록할 수 있습니다.
 
-  예를 들어 다음 R 호출을 수행하여 *sqlConnStr*에 정의된 데이터베이스와 인스턴스에 저장 프로시저 **sp_rsample**을 등록할 수 있습니다.
+  예를 들어 다음 R 호출을 수행하여 **sqlConnStr**에 정의된 데이터베이스와 인스턴스에 저장 프로시저 *sp_rsample*을 등록할 수 있습니다.
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)

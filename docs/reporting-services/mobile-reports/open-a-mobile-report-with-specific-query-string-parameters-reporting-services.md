@@ -9,10 +9,10 @@ ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62500011"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>특정 쿼리 문자열 매개 변수가 있는 모바일 보고서 열기 | Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "62500011"
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 
-    예를 들어
+    다음은 그 예입니다.
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
@@ -39,7 +39,7 @@ ms.locfileid: "62500011"
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 
-    예를 들어
+    다음은 그 예입니다.
     
       `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.@category=Clothing` 
 
@@ -48,7 +48,7 @@ ms.locfileid: "62500011"
 
     ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
-### <a name="see-also"></a>관련 항목:
+### <a name="see-also"></a>참고 항목
 
 [모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 

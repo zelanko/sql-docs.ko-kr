@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843746"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별
@@ -59,13 +59,13 @@ Stretch Database Advisor는 이전의 SQL Server 2016 업그레이드 관리자 
 ## <a name="next-step"></a>다음 단계  
  스트레치 데이터베이스를 사용하도록 설정합니다.  
   
--   **데이터베이스**에서 스트레치 데이터베이스를 사용하도록 설정하려면 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)을 참조하세요.  
+-   **데이터베이스**에서 Stretch Database를 사용하도록 설정하려면 [데이터베이스에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)을 참조하세요.  
   
--   다른 **테이블**에서 스트레치 데이터베이스를 사용하도록 설정하려면 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)을 참조하세요. 
+-   스트레치가 데이터베이스에 이미 설정된 경우 다른 **테이블**에 Stretch Database를 사용하도록 설정하려면 [테이블에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)을 참조하세요. 
   
 ## <a name="see-also"></a>참고 항목  
  [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [테이블에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

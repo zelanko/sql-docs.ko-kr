@@ -15,10 +15,10 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570642"
 ---
 # <a name="role-assignments---modify-or-delete"></a>역할 할당 - 수정 또는 삭제
@@ -59,7 +59,7 @@ ms.locfileid: "65570642"
 
 6. 역할 할당을 삭제하려면 사용자 또는 그룹 이름 옆의 확인란을 선택하고 **삭제**를 선택합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [역할 할당](../../reporting-services/security/role-assignments.md)  

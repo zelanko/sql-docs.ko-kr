@@ -19,10 +19,10 @@ ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f2f37cc56a0d485abc89909e4d02a076b4474c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67912228"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell의 SQL Server 식별자
@@ -57,7 +57,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |태스크 설명|아티클|  
 |----------------------|-----------|  
 |인스턴스가 실행 중인 컴퓨터 이름을 포함하여 인스턴스 이름을 지정하는 방법에 대해 설명합니다.|[SQL Server PowerShell 공급자에 인스턴스 지정](specify-instances-in-the-sql-server-powershell-provider.md)|  
-|Windows PowerShell 경로에서 지원되지 않는 구분 식별자의 문자에 대한 16진수 인코딩을 지정하는 방법에 대해 설명합니다. 또한 16진수 문자를 해독하는 방법에 대해 설명합니다.|[SQL Server 식별자 인코딩 및 디코딩](encode-and-decode-sql-server-identifiers.md)|  
+|Windows PowerShell 경로에서 지원되지 않는 구분 식별자의 문자에 대한 16진수 인코딩을 지정하는 방법에 대해 설명합니다. 또한 16진수 문자를 해독하는 방법에 대해 설명합니다.|[SQL Server 식별자 인코드 및 디코드](encode-and-decode-sql-server-identifiers.md)|  
 |PowerShell 경로에서 지원되지 않는 문자에 대해 Windows PowerShell 이스케이프 문자를 사용하는 방법에 대해 설명합니다.|[SQL Server 식별자 이스케이프](escape-sql-server-identifiers.md)|  
   
 ## <a name="see-also"></a>참고 항목  

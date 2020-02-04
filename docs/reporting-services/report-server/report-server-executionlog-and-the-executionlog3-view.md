@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619695"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
@@ -28,7 +28,7 @@ ms.locfileid: "65619695"
   
  보고서 실행 로그는 기본적으로 이름이 **ReportServer**로 지정되는 보고서 서버 데이터베이스에 저장됩니다. SQL 뷰는 실행 로그 정보를 제공합니다. 최신 릴리스에는 "2"번과 "3"번 뷰가 추가되었으며, 이러한 뷰에는 새로운 필드 또는 이전 릴리스보다 친숙한 이름의 필드가 포함됩니다. 이전 뷰도 제품에 그대로 유지되므로 이러한 뷰를 사용하는 사용자 지정 애플리케이션에는 영향을 주지 않습니다. 이전 뷰에 대한 종속성이 없는 경우(예: ExecutionLog) 최신 뷰인 ExecutionLog**3**를 사용하는 것이 좋습니다.  
   
- 항목 내용  
+ 이 항목의 내용:  
   
 -   [SharePoint 모드 보고서 서버에 대한 구성 설정](#bkmk_sharepoint)  
   
@@ -106,16 +106,16 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름 사용자 환경에 보고서 서버가 두 개 이상 포함된 경우 InstanceName 배포를 분석하여 네트워크 부하 분산 장치가 예상한 대로 보고서 서버 간에 요청을 분배하는지 모니터링 및 확인할 수 있습니다.|  
 |ItemPath|보고서 또는 보고서 항목이 저장된 위치의 경로|  
 |UserName|사용자 식별자|  
 |ExecutionID|요청과 연결된 내부 식별자입니다. 동일한 사용자 세션에 대한 요청은 같은 실행 ID를 공유합니다.|  
-|RequestType|가능한 값은 다음과 같습니다.<br /><br /> 대화형<br /><br /> 구독<br /><br /> <br /><br /> RequestType=Subscription으로 필터링되고 TimeStart로 정렬된 로그 데이터를 분석하면 구독 사용량이 많은 기간을 확인할 수 있으며, 그에 따라 보고서 구독 중 일부를 다른 시간으로 수정해야 할 수 있습니다.|  
+|RequestType|가능한 값은 다음과 같습니다.<br /><br /> 대화형<br /><br /> Subscription<br /><br /> <br /><br /> RequestType=Subscription으로 필터링되고 TimeStart로 정렬된 로그 데이터를 분석하면 구독 사용량이 많은 기간을 확인할 수 있으며, 그에 따라 보고서 구독 중 일부를 다른 시간으로 수정해야 할 수 있습니다.|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
-|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> 렌더링<br /><br /> 정렬<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
 |TimeEnd||  
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|------------------------------------------------------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportPath|보고서의 경로 구조입니다. 루트 폴더에 "test"로 저장된 repost에는 "/test"의 ReportPath가 있습니다.<br /><br /> "samples" 폴더에 저장된 "test"라는 보고서에는 "/Samples/test/"의 ReportPath가 있습니다.|  
@@ -349,7 +349,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportID|보고서 식별자|  

@@ -9,10 +9,10 @@ ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 368b17a6ffe7355569a9d60509a9a2db61931fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576436"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>데이터 영역 렌더링(보고서 작성기 및 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65576436"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>테이블릭스 데이터 영역  
- 테이블, 행렬 및 목록을 만드는 데 사용할 수 있는 테이블릭스 데이터 영역은 열과 행으로 이루어진 표로 렌더링됩니다. 행과 열이 교차하는 지점이 셀입니다. 보고서를 렌더링할 때 이 셀에는 데이터를 비롯하여 이미지, 사각형, 입력란, 하위 보고서 등과 같은 다른 보고서 항목이 포함될 수 있습니다. 테이블릭스 데이터 영역은 가로 및/또는 세로로 크기를 늘릴 수 있습니다. 또한 해당 내용을 기준으로 모퉁이 셀, 데이터 영역 머리글 셀 및 데이터 영역 본문 셀의 크기를 늘릴 수도 있습니다. 데이터 영역이 여러 페이지에 걸쳐 있는 경우 데이터 영역과 함께 반복하여 표시하도록 설정된 보고서 항목은 데이터 영역이 표시되는 각 페이지에 렌더링됩니다. 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)을 참조하세요.  
+ 테이블, 행렬 및 목록을 만드는 데 사용할 수 있는 테이블릭스 데이터 영역은 열과 행으로 이루어진 표로 렌더링됩니다. 행과 열이 교차하는 지점이 셀입니다. 보고서를 렌더링할 때 이 셀에는 데이터를 비롯하여 이미지, 사각형, 입력란, 하위 보고서 등과 같은 다른 보고서 항목이 포함될 수 있습니다. 테이블릭스 데이터 영역은 가로 및/또는 세로로 크기를 늘릴 수 있습니다. 또한 해당 내용을 기준으로 모퉁이 셀, 데이터 영역 머리글 셀 및 데이터 영역 본문 셀의 크기를 늘릴 수도 있습니다. 데이터 영역이 여러 페이지에 걸쳐 있는 경우 데이터 영역과 함께 반복하여 표시하도록 설정된 보고서 항목은 데이터 영역이 표시되는 각 페이지에 렌더링됩니다. 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="right-to-left"></a>오른쪽에서 왼쪽  
  오른쪽에서 왼쪽으로 표시하도록 설정된 테이블릭스 데이터 영역은 이를 왼쪽에서 오른쪽으로 렌더링했을 때의 데이터 영역 이미지를 거울에 비춰 뒤집은 것과 같은 구조로 렌더링됩니다. 이 경우 데이터 영역의 모퉁이가 오른쪽 위 모퉁이에 표시됩니다. 보고서에 동적 열이 있으면 그 확장 방향이 왼쪽을 향합니다. 오른쪽에서 왼쪽 설정은 데이터 영역에 있는 데이터의 순서에는 영향을 주지 않습니다. 단지 열을 배치하는 순서가 바뀔 뿐입니다.  

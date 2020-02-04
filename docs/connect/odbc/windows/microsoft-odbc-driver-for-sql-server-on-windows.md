@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989432"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
@@ -26,14 +26,14 @@ Microsoft ODBC Driver for SQL Server를 사용하여 새 애플리케이션을 �
 
 ## <a name="summary"></a>요약
 
-| 버전 옵션       | 지원되는 기능      |
+| 버전       | 지원되는 기능      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API에 대한 Always Encrypted 지원</li><li>새 연결 문자열 속성 UseFMTONLY는 임시 테이블이 필요한 특별한 경우 드라이버에서 구형 메타데이터를 사용하게 합니다.</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD 인증</li><li>AlwaysOn AG(가용성 그룹)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>IDN(다국어 도메인 이름)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>드라이버 인식 연결 풀링</li><li>연결 복원력</li><li>비동기 실행(폴링 메서드)</li></ul> |    
 
-## <a name="documentation"></a>설명서  
+## <a name="documentation"></a>문서화  
 이 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문서에는 다음이 포함되어 있습니다.  
   
 -   [Windows 기반 SQL Server에 대한 ODBC 릴리스 정보](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  

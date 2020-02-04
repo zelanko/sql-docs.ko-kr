@@ -1,6 +1,6 @@
 ---
-title: 파일 확장명을 코드 편집기에 연결 | Microsoft 문서
-ms.custom: ''
+title: 파일 확장명을 코드 편집기에 연결
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,16 +15,18 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7848fc1d7793e3685f465741c296e190e7901695
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1e8b9084ff83c16c57241f737ccc40665ee2414b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246463"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  파일 확장명을 특정 코드 편집기에 연결하면 Windows 탐색기에서 파일을 두 번 클릭하여 해당 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 파일을 열 수 있습니다. .sql 및 .mdx와 같이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 많이 사용되는 확장명은 설치 중에 연결됩니다. 새 파일 확장명은 파일 시스템에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 연결해야 합니다. 이 기능을 사용하여 다른 편집기로 만든 파일을 열거나 .sql 파일의 백업인 .bak 파일과 같이 이름이 바뀐 파일을 열 수 있습니다.  
+
+파일 확장명을 특정 코드 편집기에 연결하면 Windows 탐색기에서 파일을 두 번 클릭하여 해당 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 파일을 열 수 있습니다. .sql 및 .mdx와 같이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 많이 사용되는 확장명은 설치 중에 연결됩니다. 새 파일 확장명은 파일 시스템에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 연결해야 합니다. 이 기능을 사용하여 다른 편집기로 만든 파일을 열거나 .sql 파일의 백업인 .bak 파일과 같이 이름이 바뀐 파일을 열 수 있습니다.  
   
  이 과정은 두 단계로 구성됩니다. 먼저 확장명을 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]와 연결한 다음 해당 확장명을 특정 코드 편집기에 연결합니다.  
   

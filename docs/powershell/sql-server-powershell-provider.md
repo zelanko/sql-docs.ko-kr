@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
 ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68731122"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -44,7 +44,7 @@ Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공
   
  각 Windows PowerShell 공급자는 하나 이상의 드라이브를 구현합니다. 각 드라이브는 관련 개체 계층 구조의 루트 노드를 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SQLSERVER: 드라이브를 구현합니다. 또한 공급자는 SQLSERVER: 드라이브에 대한 기본 폴더 집합을 정의합니다. 각 폴더 및 해당 하위 폴더는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델을 사용하여 액세스할 수 있는 개체 집합을 나타냅니다. 이러한 주 폴더 중 하나로 시작하는 경로의 하위 폴더에 포커스를 설정하면 관련 개체 모델의 메서드를 사용하여 이러한 노드가 나타내는 개체에 대해 동작을 수행할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 공급자가 구현하는 Windows PowerShell 폴더는 다음 표에 나열되어 있습니다.  
   
-|Folder|SQL Server 개체 모델 네임스페이스|개체|  
+|폴더|SQL Server 개체 모델 네임스페이스|개체|  
 |------------|---------------------------------------|-------------|  
 |`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|테이블, 뷰 및 저장 프로시저와 같은 데이터베이스 개체입니다.|  
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  

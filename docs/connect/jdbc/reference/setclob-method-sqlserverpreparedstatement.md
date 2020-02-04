@@ -11,10 +11,10 @@ ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd21b8bcd3876186e76d0dcee10e900a0dccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974803"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>setClob 메서드(SQLServerPreparedStatement)
@@ -24,13 +24,13 @@ ms.locfileid: "67974803"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[setClob 메서드&#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|지정된 매개 변수를 java.sql.Clob 개체로 설정합니다.|  
 |[setClob 메서드&#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|지정된 매개 변수를 지정된 java.sql.Clob 개체로 설정합니다.|  
 |[setClob 메서드(int, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|지정된 매개 변수를 지정된 문자 길이의 java.sql.Clob 개체로 설정합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 드라이버 동작은 없습니다. 자세한 내용은 JSE 6 API 사양을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

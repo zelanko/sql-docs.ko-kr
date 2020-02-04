@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573866"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services 보고서의 처리 문제 해결

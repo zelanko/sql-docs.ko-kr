@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578449"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
@@ -119,7 +119,7 @@ ms.locfileid: "65578449"
   
  다음 표에는 사용할 수 있는 여러 형식의 예가 나와 있습니다.  
   
-|키워드 및 형식|설명|범례에 텍스트로 나타나는 항목의 예|  
+|키워드 및 형식|Description|범례에 텍스트로 나타나는 항목의 예|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|합계 값의 통화를 소수 자릿수 없이 표시합니다.|$400|  
 |`#FROMVALUE {C2}`|합계 값의 통화를 소수점 두 자리까지 표시합니다.|$400.55|  

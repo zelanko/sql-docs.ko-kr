@@ -1,11 +1,7 @@
 ---
-title: '방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897172"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241500"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
+
 **SQL Server 개체 탐색기**의 새 **SQL Server** 노드는 시각적으로 SSMS와 매우 비슷할 뿐만 아니라 SSMS와 비슷하게 동작하는 상황에 맞는 메뉴를 사용하여 새 개체를 만들 수도 있습니다.  
   
 예를 들어 **데이터베이스** 노드 아래에 새 데이터베이스를 만들 수 있습니다. 마찬가지로 특정 데이터베이스를 선택하고 새 테이블 디자이너를 사용하여 즉시 테이블 정의와 관련 프로그래밍 개체를 만들거나 편집할 수 있습니다. 테이블 디자이너에서 이 테이블을 정의하는 스크립트를 직접 편집할 수 있는 스크립트 창으로 전환할 수도 있습니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "67897172"
 5.  다른 새 열을 추가합니다. **이름** 필드에 **Address**를 입력하고 **데이터 형식**에 **nvarchar(MAX)** 을 입력한 후 **Null 허용** 필드의 선택을 취소합니다.  
   
     > [!WARNING]  
-    > 연결된 데이터베이스의 개체를 편집하는 경우에는 변경 내용을 로컬 드라이브에 저장하지 마십시오. 데이터베이스의 변경 내용을 올바르게 저장하려면 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계를 따릅니다.  
+    > 연결된 데이터베이스의 개체를 편집하는 경우에는 변경 내용을 로컬 드라이브에 저장하지 마십시오. 데이터베이스의 변경 내용을 올바르게 저장하려면 다음에 나오는 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계를 따릅니다.  
   
 6.  위의 단계를 반복하여 **Customer**라는 다른 테이블을 만듭니다. 이번에는 열 표를 사용하여 Customer 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Customer]`가 되도록 스크립트를 변경해야 합니다.  
   

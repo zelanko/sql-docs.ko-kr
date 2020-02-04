@@ -1,23 +1,24 @@
 ---
-title: '방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035121"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241357"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
+
 SQL Server Data Tools에는 애플리케이션에 바로 삽입할 수 있는 코드 조각으로 구성된 코드 라이브러리가 포함되어 있습니다. 각 코드 조각은 함수, 테이블, 트리거, 인덱스, 뷰, 사용자 정의 데이터 형식 등을 만드는 것과 같은 완전한 스크립팅 작업을 수행합니다. 마우스 클릭 몇 번만으로도 소스 코드에 코드 조각을 삽입할 수 있습니다. 이러한 코드 조각은 입력에 소비되는 시간을 줄여 생산성을 높여 줍니다.  
   
 적절한 코드 조각을 찾아보기 위해 필요한 경우 선택 가능한 코드 조각의 범주화된 목록을 제공하는 코드 조각 선택기를 사용할 수 있습니다. 코드에 코드 조각을 추가한 후에는 변수 이름을 보다 적절한 이름으로 바꾸거나 코드 조각을 저장 프로시저의 실제 논리에 배치하는 등의 사용자 지정 작업이 필요한 부분이 있을 수 있습니다. 이를 쉽게 구별하기 위해 삽입된 조각 코드에는 하나 이상의 대체 지점이 강조 표시됩니다. 마우스 포인터를 대체 지점 위에 놓으면 코드 변경 방법을 설명하는 도구 설명이 나타납니다.  

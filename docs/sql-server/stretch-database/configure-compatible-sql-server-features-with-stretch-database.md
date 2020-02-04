@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844565"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database와 호환 가능한 SQL Server 기능 구성

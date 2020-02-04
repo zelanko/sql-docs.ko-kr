@@ -1,6 +1,6 @@
 ---
-title: 개체 탐색기 세부 정보 창 | Microsoft 문서
-ms.custom: ''
+title: 개체 탐색기 세부 정보 창
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264076"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257148"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68264076"
 |**앞으로**|**뒤로** 작업을 선택한 후 다음 화면으로 이동합니다.|  
 |**위로**|부모 개체 또는 폴더로 이동합니다.|  
 |**동기화**|개체 탐색기의 포커스를 개체 탐색기 정보에서 선택한 개체로 설정합니다.|  
-|**Assert**|사용 가능한 경우 구성 가능한 개체 하위 집합을 표시합니다.|  
+|**Filter**|사용 가능한 경우 구성 가능한 개체 하위 집합을 표시합니다.|  
 |**새로 고침**|개체 탐색기 정보의 화면 표시를 새로 고칩니다.|  
 |**검색**|특정 데이터베이스 개체를 찾기 위한 검색 단어를 입력할 영역을 제공합니다.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68264076"
 ### <a name="sorting"></a>정렬  
 열 머리글을 한 번 클릭하면 해당 열을 기준으로 정렬됩니다. 동일한 머리글을 다시 클릭하면 해당 열을 기준으로 역순으로 정렬됩니다. 각 사용자가 선택한 정렬 설정은 다른 개체 및 폴더에서도 그대로 유지되며 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 다시 시작해도 그대로 유지됩니다.  
   
-### <a name="filtering"></a>필터링  
+### <a name="filtering"></a>Filtering  
 개체 탐색기 정보에 표시되는 특정 개체 목록은 개체 탐색기 정보 도구 모음의 **필터** 아이콘을 사용하여 필터링할 수 있습니다. 필터링이 가능하면 아이콘이 활성화됩니다.  
   
 ### <a name="details-pane"></a>정보 창  
@@ -88,7 +88,7 @@ ms.locfileid: "68264076"
 ## <a name="sql-server-object-search"></a>SQL Server 개체 검색  
 와일드카드  
   
--   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드카드로 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
+-   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
   
 검색 범위  
   

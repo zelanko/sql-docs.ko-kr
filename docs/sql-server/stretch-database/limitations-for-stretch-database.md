@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843791"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database에 대한 제한 사항
@@ -54,12 +54,12 @@ ms.locfileid: "73843791"
   
 -   복제되었거나 변경 추적 또는 변경 데이터 캡처를 사용 중인 테이블  
   
--   메모리 액세스에 최적화된 테이블  
+-   메모리 최적화 테이블  
   
 ### <a name="data-types"></a>데이터 형식  
 -   text, ntext 및 image  
   
--   TIMESTAMP  
+-   timestamp  
   
 -   sql_variant  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73843791"
   
 -   geometry, geography, hierarchyid 및 CLR 사용자 정의 형식을 포함하는 CLR 데이터 형식  
   
- ### <a name="column-types"></a>열 유형  
+ ### <a name="column-types"></a>열 형식  
  -   COLUMN_SET  
   
 -   계산 열  
@@ -88,7 +88,7 @@ ms.locfileid: "73843791"
   
 ## <a name="see-also"></a>참고 항목  
  [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [데이터베이스에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [테이블에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

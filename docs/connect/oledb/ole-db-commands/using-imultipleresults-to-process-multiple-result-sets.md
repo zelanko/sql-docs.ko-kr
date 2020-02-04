@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d2d98ca3a16967d409e4acea1459f70bfc467cf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016037"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>IMultipleResults를 사용하여 여러 결과 집합 처리
@@ -55,6 +55,6 @@ COMPUTE
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 사용할 때 명령을 실행하면 커서가 생성됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 커서 생성에 대한 성공이나 실패를 반환하므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 왕복은 명령 실행 결과가 반환되면 완료됩니다. **GetNextRows**를 호출할 때마다 왕복이 수행됩니다. 따라서 여러 활성 명령 개체가 존재할 수 있으며, 이러한 각각의 개체가 서버 커서에서 인출한 결과 행 집합을 처리할 수 있습니다. 자세한 내용은 [행 집합 및 SQL Server 커서](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../oledb/ole-db-commands/commands.md)  
+ [명령](../../oledb/ole-db-commands/commands.md)  
   
   

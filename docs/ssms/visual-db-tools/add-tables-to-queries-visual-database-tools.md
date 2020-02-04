@@ -1,10 +1,7 @@
 ---
-title: 쿼리에 테이블 추가(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 쿼리에 테이블 추가
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3be181b428645226cf6e3d675fbab06b9bf4ca11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 3f333e275441f211457e14800cae14d19bd83b2a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263708"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245365"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 쿼리를 만들 때는 뷰와 특정 사용자 정의 함수 같은 테이블 구조의 다른 개체나 테이블에서 데이터를 검색합니다. 쿼리에서 이러한 개체를 사용하여 작업하려면 필요한 개체를 **다이어그램 창**에 추가합니다.  
   

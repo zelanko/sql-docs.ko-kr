@@ -16,10 +16,10 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980466"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 메서드(SQLServerDataSource)
@@ -34,15 +34,15 @@ ms.locfileid: "67980466"
 public javax.naming.Reference getReference()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  참조 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getReference 메서드는 javax.naming.Referenceable 인터페이스의 getReference 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0 이전에는 SQLServerDataSource 개체에 대해 SQLServerDataSource.setTrustStorePassword가 호출된 경우 SQLServerDataSource.getReference에서 반환되는 개체에 암호가 제공되었으므로 이 개체를 사용하여 추가 연결을 만들 수 있었습니다. JDBC 드라이버 3.0에서는 SQLServerDataSource.getReference에서 반환되는 개체에 암호를 설정해야 이 개체를 사용하여 연결을 만들 수 있습니다.  
   
- 또한 데이터 원본 속성을 바인딩하기 전에 SQLServerDataSource.setTrustStorePassword를 설정할 경우, 연결을 가져오기 전에 SQLServerDataSource.setTrustStorePassword를 호출해야 합니다. 예:  
+ 또한 데이터 원본 속성을 바인딩하기 전에 SQLServerDataSource.setTrustStorePassword를 설정할 경우, 연결을 가져오기 전에 SQLServerDataSource.setTrustStorePassword를 호출해야 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 ctx = new InitialContext(System.getProperties());  

@@ -1,10 +1,9 @@
 ---
-title: 쿼리 열기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 열기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c3eec4d1a1d1923163c38af1e59a568715fb1109
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3150cbb25941158c32673d35c1e03203688f2d0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251441"
 ---
 # <a name="open-queries-visual-database-tools"></a>쿼리 열기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

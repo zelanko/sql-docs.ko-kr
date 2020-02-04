@@ -9,10 +9,10 @@ ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581803"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션 - DataSources 및 데이터 세트 참조(보고서 작성기)
@@ -26,7 +26,7 @@ ms.locfileid: "65581803"
   
 |**변수**|**형식**|**설명**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|**DataSourceReference**|**String**|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`입니다.|  
 |**형식**|**String**|데이터 원본의 데이터 공급자 유형입니다. `SQL`)을 입력합니다.|  
   
 ## <a name="datasets"></a>DataSets  
