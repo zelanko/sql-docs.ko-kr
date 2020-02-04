@@ -105,7 +105,7 @@ ms.locfileid: "71296484"
  다음 예제에서는 **ScriptMain** 클래스에서 대상 구성 요소를 만드는 데 필요한 코드를 보여 줍니다.  
   
 > [!NOTE]
->  이 예제에서는 **AdventureWorks** 샘플 데이터베이스의 **Person.Address** 테이블을 사용하고, 이 테이블의 첫 번째 및 네 번째 열인 **int*AddressID*** 및 **nvarchar(30)City**를 데이터 흐름을 통해 전달합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이 예제에서는 **AdventureWorks** 샘플 데이터베이스의 **Person.Address** 테이블을 사용하고, 이 테이블의 첫 번째 및 네 번째 열인 **intAddressID** 및 **nvarchar(30)City**를 데이터 흐름을 통해 전달합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 대상 예  
  이 예제에서는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 데이터 흐름의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하는 대상 구성 요소를 보여 줍니다.  
