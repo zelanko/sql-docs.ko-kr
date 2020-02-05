@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098999"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68098999"
 
   지정한 전체 자릿수를 사용하여 지정한 시간에 대한 **time** 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>반환 형식  
  **time(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  TIMEROMPARTS는 완전히 초기화된 시간 값을 반환합니다. 인수가 유효하지 않으면 오류가 발생합니다. 매개 변수에 Null이 포함되어 있으면 Null이 반환됩니다. 그러나 *precision* 인수가 Null일 경우에는 오류가 발생합니다.  
   
  *fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision*이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision*이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision*의 값이 0이면 *fractions*의 값도 0이어야 합니다. 그렇지 않으면 오류가 발생합니다.  
@@ -66,7 +66,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>1\. 소수 단위 초를 사용하지 않는 간단한 예  
+### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 소수 단위 초를 사용하지 않는 간단한 예  
   
 ```  
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
@@ -82,7 +82,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>2\. 소수 단위 초를 사용하는 예  
+### <a name="b-example-with-fractions-of-a-second"></a>B. 소수 단위 초를 사용하는 예  
  다음 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
   
 1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  

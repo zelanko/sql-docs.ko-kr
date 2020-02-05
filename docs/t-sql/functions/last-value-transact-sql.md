@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109187"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE(Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 정렬된 값 집합의 마지막 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-lastvalue-over-partitions"></a>1. 파티션에 LAST_VALUE 사용  
+### <a name="a-using-last_value-over-partitions"></a>A. 파티션에 LAST_VALUE 사용  
  다음 예에서는 지정된 급여(Rate)에 대해 각 부서에서 마지막으로 입사한 직원의 고용 날짜를 반환합니다. PARTITION BY 절은 직원을 부서별로 분할하며 LAST_VALUE 함수는 각 파티션에 개별적으로 적용됩니다. OVER 절에 지정된 ORDER BY 절은 LAST_VALUE 함수가 각 파티션의 행에 적용되는 논리적 순서를 결정합니다.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>2. 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 사용  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 사용  
  다음 예에서는 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 함수를 사용하여 지정된 직원들의 해당 연도 현재 분기 및 첫 분기와 마지막 분기의 분기별 판매 할당량 값의 차이를 각각 표시합니다. FIRST_VALUE  함수는 해당 연도의 첫 분기의 판매 할당량 값을 반환하고 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromFirstQuarter라는 파생 열에 반환됩니다. 해당 연도의 첫 번째 분기인 경우 DifferenceFromFirstQuarter 열의 값은 0입니다. LAST_VALUE 함수는 해당 연도의 마지막 분기에 대한 판매 할당량 값을 반환하고, 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromLastQuarter라는 파생 열에 반환됩니다. 연도의 마지막 분기의 경우 DifferenceFromLastQuarter  열의 값은 0입니다.  
   
  아래와 같이 이 예제에서는 DifferenceFromLastQuarter 열에 0이 아닌 값이 반환되도록 하기 위해서는 "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" 절이 필요합니다. 기본 범위는 "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW"입니다. 이 예에서는 기본 범위를 사용하여(또는 범위를 포함하지 않아 기본값이 사용되도록 함)  DifferenceFromLastQuarter  열에 0이 반환됩니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  

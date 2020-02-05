@@ -1,20 +1,21 @@
 ---
-title: azdata를 사용하여 애플리케이션 배포
-titleSuffix: SQL Server big data clusters
+title: Deploy applications with azdata
+titleSuffix: SQL Server Big Data Clusters
 description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 Python 또는 R 스크립트를 애플리케이션으로 배포합니다.'
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706695"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253153"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 앱을 배포하는 방법
 
@@ -41,11 +42,11 @@ ms.locfileid: "73706695"
 - [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
 - [azdata 명령줄 유틸리티](deploy-install-azdata.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>기능
 
 SQL Server 2019에서 애플리케이션을 만들고, 삭제, 설명, 초기화, 나열, 실행 및 업데이트할 수 있습니다. 다음 표에서는 **azdata**와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
 
-|Command |설명 |
+|명령 |Description |
 |:---|:---|
 |`azdata login` | SQL Server 빅 데이터 클러스터에 로그인합니다. |
 |`azdata app create` | 애플리케이션을 만듭니다. |
@@ -91,7 +92,7 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>앱 만들기
 
-애플리케이션을 만들려면 `app create` 명령과 함께 `azdata`를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
+애플리케이션을 만들려면 `azdata` 명령과 함께 `app create`를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
 
 다음 구문을 사용하여 빅 데이터 클러스터에 새 앱을 만듭니다.
 
@@ -105,7 +106,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. `spec.yaml` 파일에 대한 자세한 내용은 [애플리케이션 배포 페이지](concept-application-deployment.md)를 참조하세요.
+이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. [ 파일에 대한 자세한 내용은 ](concept-application-deployment.md)애플리케이션 배포 페이지`spec.yaml`를 참조하세요.
 
 이 샘플 앱을 배포하려면 `addpy`라는 디렉터리에 다음 파일을 만듭니다.
 
@@ -295,4 +296,4 @@ azdata app delete --name add-app --version v1
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 고유한 애플리케이션에 통합하는 방법을 살펴봅니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요. [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)를 참조하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란?](big-data-cluster-overview.md)을 참조하세요.

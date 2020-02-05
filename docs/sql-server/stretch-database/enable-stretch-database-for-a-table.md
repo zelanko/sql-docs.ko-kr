@@ -12,25 +12,25 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843814"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Stretch Database에 테이블을 구성하려면 SQL Server Management Studio에서 테이블에 대해 **늘이기 | 활성화**를 선택하여 **스트레치에 테이블 사용** 마법사를 엽니다. 또한, Transact-SQL을 사용하여 기존 테이블에서 스트레치 데이터베이스를 사용하거나 활성화된 스트레치 데이터베이스로 새 테이블을 만들 수 있습니다.  
+  Stretch Database에 테이블을 구성하려면 SQL Server Management Studio에서 테이블에 대해 **늘이기 | 활성화**를 선택하여 **스트레치에 테이블 사용** 마법사를 엽니다. 또한 Transact-SQL을 사용하여 기존 테이블에 대해 Stretch Database를 사용하도록 설정하거나 Stretch Database를 사용하여 새 테이블을 만들 수도 있습니다.  
   
 -   콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션할 수 있습니다.  
   
 -   테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 함수를 지정하여 마이그레이션할 행을 선택할 수 있습니다.    
  
- **필수 구성 요소**. 테이블에서 **늘이기 | 활성화** 를 선택하고 데이터베이스에서 스트레치 데이터베이스를 활성화하지 않은 경우에는, 마법사가 스트레치 데이터베이스에서 데이터베이스를 먼저 구성합니다. 이 문서의 단계 대신 [Stretch에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)의 단계를 따르세요.  
+ **필수 구성 요소**. 테이블에서 **늘이기 | 활성화**를 선택하고 데이터베이스에서 Stretch Database를 활성화하지 않은 경우에는, 마법사가 Stretch Database에서 데이터베이스를 먼저 구성합니다. 이 문서의 단계 대신 [Stretch에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)의 단계를 따르세요.  
   
- **사용 권한**. 데이터베이스 또는 테이블에 대해 스트레치 데이터베이스를 사용하도록 설정하려면 db_owner 권한이 필요합니다. 또한, 테이블에서 Stretch Database를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
+ **사용 권한**. 데이터베이스 또는 테이블에 대해 스트레치 데이터베이스를 사용하도록 설정하려면 db_owner 권한이 필요합니다. 테이블에서 Stretch Database를 사용하도록 설정하려면 테이블에 대한 ALTER 권한이 있어야 합니다.  
 
  > [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다.
@@ -62,7 +62,7 @@ ms.locfileid: "73843814"
  결과를 검토합니다.  
   
 ##  <a name="EnableTSQLTable"></a> Transact-SQL을 사용하여 테이블에서 스트레치 데이터베이스 활성화  
- 또한, Transact-SQL을 사용하여 기존 테이블에서 스트레치 데이터베이스를 사용하거나 활성화된 스트레치 데이터베이스로 새 테이블을 만들 수 있습니다.  
+ 또한 Transact-SQL을 사용하여 기존 테이블에 대해 Stretch Database를 사용하도록 설정하거나 Stretch Database를 사용하여 새 테이블을 만들 수도 있습니다.  
   
 ### <a name="options"></a>옵션  
  CREATE TABLE 또는 ALTER TABLE을 실행하여 테이블에서 스트레치 데이터베이스를 사용하는 경우 다음 옵션을 사용합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "73843814"
   
 -   `MIGRATION_STATE = OUTBOUND` 을(를) 지정하여 즉시 마이그레이션을 시작하거나  `MIGRATION_STATE = PAUSED` 을(를) 지정하여 데이터 마이그레이션의 시작을 연기합니다.  
   
-### <a name="enable-stretch-database-for-an-existing-table"></a>기존 테이블에서 스트레치 데이터베이스 활성화  
+### <a name="enable-stretch-database-for-an-existing-table"></a>기존 테이블에 대해 Stretch Database를 사용하도록 설정  
  스트레치 데이터베이스용으로 기존 데이터베이스를 구성하려면 ALTER TABLE 명령을 실행합니다.  
   
  전체 테이블을 마이그레이션하고 즉시 마이그레이션을 시작하는 예제는 다음과 같습니다.  

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769434"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287072"
 ---
 # <a name="subscription-synchronization-history"></a>구독, 동기화 기록
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68769434"
   
 -   Error  
   
--   완료  
+-   Completed  
   
 -   다시 시도 중  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769434"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **기간**  
+ **Duration**  
  세션에서 병합 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **업로드된 명령**  
@@ -60,7 +60,7 @@ ms.locfileid: "68769434"
  **오류 메시지**  
  세션이 오류로 인해 종료된 경우 이 필드는 병합 에이전트에서 기록한 마지막 오류 메시지를 표시합니다. 세션이 오류 없이 종료된 경우에는 필드가 비어 있습니다.  
   
- **아티클**  
+ **문서**  
  게시에 있는 각 아티클의 이름입니다. 다음은 전체 게시의 처리 단계입니다.  
   
 -   **초기화**. 병합 에이전트를 시작한다는 의미이며 스냅샷 적용과 관련된 구독 초기화와는 다릅니다.  
@@ -76,13 +76,13 @@ ms.locfileid: "68769434"
  **총 %**  
  선택한 세션에서 각 단계가 차지하는 처리 시간 비율입니다.  
   
- **기간**  
+ **Duration**  
  각 처리 단계에서 소요된 시간입니다. 병합 에이전트가 현재 세션에 대해 실행 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **Inserts**  
  선택한 세션의 이 단계에서 삽입된 행 수입니다.  
   
- **Updates**  
+ **업데이트**  
  선택한 세션의 이 단계에서 업데이트된 행 수입니다.  
   
  **Deletes**  

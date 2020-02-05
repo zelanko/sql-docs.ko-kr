@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109717"
 ---
 # <a name="databases"></a>데이터베이스
@@ -54,7 +54,7 @@ ms.locfileid: "68109717"
 |[데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
 |[데이터베이스 메일의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)|[사용자 정의 데이터 형식 별칭 만들기](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)|[데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
+|[데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)|[데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../../relational-databases/indexes/indexes.md)  

@@ -14,10 +14,10 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558142"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지
@@ -41,7 +41,7 @@ ms.locfileid: "75558142"
  이 식에 대한 비교 연산자를 선택합니다. 연산자는 =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN과 같습니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
  **값**  
- 이 식에 대한 값 설정입니다. 허용되는 값은 패싯에 따라 달라집니다. 값은 TRUE/FALSE, 문자열 또는 숫자일 수 있습니다. 문자열 값은 **'AdventureWorks'** 와 같은 단일 따옴표로 묶어야 합니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
+ 이 식에 대한 값 설정입니다. 허용되는 값은 패싯에 따라 달라집니다. 값은 TRUE/FALSE, 문자열 또는 숫자일 수 있습니다. 문자열 값은 작은따옴표로 묶어야 합니다(예: **'AdventureWorks'** ). 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
 ## <a name="group-clauses"></a>절 그룹화  
  절을 그룹화하여 나머지 쿼리와 분리된 하나의 단위로 해당 절을 실행할 수 있습니다. 이는 수식이나 논리 문에서 식을 괄호로 묶는 것과 같습니다. 절 그룹화는 복잡한 쿼리를 작성할 때 유용합니다.  

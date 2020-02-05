@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982413"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73982413"
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리 보기로 제공](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,13 +71,13 @@ WITH NO_INFOMSGS
   
 |열 이름|정의|  
 |---|---|
-|**Database Name**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
+|**데이터베이스 이름**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
 |**Log Size (MB)**|로그에 할당된 현재 크기입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부 헤더 정보용으로 적은 양의 디스크 공간을 예약하므로 이 값은 원래 로그 공간을 위해 할당된 크기보다 작습니다.|  
 |**Log Space Used (%)**|현재 트랜잭션 로그 정보를 저장하는 데 사용 중인 로그 파일의 비율입니다.|  
 |**상태**|로그 파일의 상태이며 항상 0입니다.|  
   
 ## <a name="Remarks"></a> 주의  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 `DBCC SQLPERF(LOGSPACE)` 대신에 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 [ 대신에 ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
  
 트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.
   
@@ -88,7 +88,7 @@ WITH NO_INFOMSGS
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-log-space-information-for-all-databases"></a>1\. 모든 데이터베이스에 대한 로그 공간 정보 표시  
+### <a name="a-displaying-log-space-information-for-all-databases"></a>A. 모든 데이터베이스에 대한 로그 공간 정보 표시  
 다음 예에서는 `LOGSPACE` 인스턴스에 포함된 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정보를 표시합니다.
   
 ```sql  
@@ -108,7 +108,7 @@ msdb           3.99219      17.0132            0
 AdventureWorks 19.554688    17.748701          0  
 ```  
   
-### <a name="b-resetting-wait-statistics"></a>2\. 대기 통계 다시 설정  
+### <a name="b-resetting-wait-statistics"></a>B. 대기 통계 다시 설정  
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 대기 통계를 다시 설정합니다.
   
 ```sql  
@@ -120,7 +120,7 @@ DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);
 [sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
 [sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

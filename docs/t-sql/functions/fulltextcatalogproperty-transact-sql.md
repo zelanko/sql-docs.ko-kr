@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940217"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940217"
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 텍스트 카탈로그 속성에 대한 정보를 반환합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ _catalog\_name_
 _property_  
 전체 텍스트 카탈로그 속성의 이름이 포함된 식입니다. 다음은 속성과 반환되는 정보에 대한 설명입니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|악센트 구분 설정입니다.<br /><br /> 0 = 악센트 구분 안 함<br /><br /> 1 = 악센트 구분|  
 |**IndexSize**|전체 텍스트 카탈로그의 논리 크기(MB)입니다. 의미 키 구 및 문서 유사 인덱스의 크기를 포함합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.|  
@@ -71,7 +71,7 @@ _property_
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자는 보안 개체의 메타데이터만 볼 수 있습니다. 이 보안 개체는 사용자가 소유하거나 사용 권한을 부여받은 보안 개체입니다. 사용자가 개체에 대한 권한이 없으면 FULLTEXTCATALOGPROPERTY와 같은 메타데이터를 내보내는 기본 제공 함수가 NULL을 반환할 수 있습니다. 자세한 내용은 [sp_help_fulltext_catalogs&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 FULLTEXTCATALOGPROPERTY('_catalog\_name_','**IndexSize**')는 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)와 같이 상태가 4또는 6인 조각만 찾습니다. 이러한 조각은 논리적 인덱스의 일부입니다. **IndexSize** 속성은 논리적 인덱스 크기만 반환합니다. 
 
 그러나 인덱스를 병합하는 동안 실제 인덱스 크기는 논리적 크기의 두 배일 수 있습니다. 병합하는 동안 전체 텍스트 인덱스가 사용하는 실제 크기를 찾으려면 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하십시오. 이 프로시저는 전체 텍스트 인덱스와 연결된 모든 조각을 찾습니다. 

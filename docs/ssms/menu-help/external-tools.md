@@ -1,6 +1,6 @@
 ---
-title: 외부 도구 | Microsoft 문서
-ms.custom: ''
+title: 외부 도구
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262812"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257720"
 ---
 # <a name="external-tools"></a>외부 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68262812"
 **Delete**  
 **메뉴 내용** 목록과 **도구** 메뉴에서 도구나 명령을 제거합니다.  
   
-**Title**  
+**제목**  
 **도구** 메뉴의 **외부 도구** 하위 메뉴에 나타날 도구 또는 명령의 이름입니다. 이름의 특정 문자를 도구의 액셀러레이터 키로 사용하려면 해당 문자 앞에 앰퍼샌드를 넣습니다. 예를 들어 `&Spy++` 는 **도구** 메뉴에 **Spy++** 와 같이 표시됩니다.  
   
-**Command**  
+**명령**  
 실행할 .exe, .com, .pif, .bat, .cmd 또는 기타 파일의 경로를 지정합니다. `.bat`출력 창 사용 `.com`확인란을 선택하면 출력 창에 **,** 및 기타 파일의 출력이 표시됩니다.  
   
 **인수**  

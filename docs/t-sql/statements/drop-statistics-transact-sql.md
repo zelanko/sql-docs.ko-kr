@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca0183f72823073d36181c63273972928ab7aee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929163"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67929163"
 
   현재 데이터베이스에서 지정한 테이블 내에 있는 여러 컬렉션에 대한 통계를 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  삭제할 통계 그룹의 이름입니다. 통계 이름은 식별자에 대한 규칙을 따라야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  통계를 삭제할 때는 주의하세요. 통계를 삭제하면 쿼리 최적화 프로그램이 선택한 실행 계획에 영향을 줄 수 있습니다.  
   
  인덱스에 대한 통계는 DROP STATISTICS를 사용하여 삭제할 수 없으며 인덱스가 존재하는 한 통계도 유지됩니다.  
@@ -72,7 +72,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-statistics-from-a-table"></a>1\. 테이블에서 통계 삭제  
+### <a name="a-dropping-statistics-from-a-table"></a>A. 테이블에서 통계 삭제  
  다음 예에서는 두 테이블의 통계 그룹(컬렉션)을 삭제하는 방법을 보여 줍니다. `VendorCredit` 테이블의 `Vendor` 통계 그룹(컬렉션)과 `CustomerTotal` 테이블의 `SalesOrderHeader` 통계(컬렉션)가 삭제됩니다.  
   
 ```  
@@ -90,9 +90,9 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-dropping-statistics-from-a-table"></a>2\. 테이블에서 통계 삭제  
+### <a name="b-dropping-statistics-from-a-table"></a>B. 테이블에서 통계 삭제  
  다음 예에서는 `CustomerStats1` 테이블에서 통계 `Customer`를 삭제합니다.  
   
 ```  

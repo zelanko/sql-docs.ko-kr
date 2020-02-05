@@ -16,10 +16,10 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974154"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt 메서드(SQLServerPreparedStatement)
@@ -47,7 +47,7 @@ public final void setInt(int n,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setInt 메서드는 java.sql.PreparedStatement 인터페이스의 setInt 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

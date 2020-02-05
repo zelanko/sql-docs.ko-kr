@@ -1,11 +1,7 @@
 ---
-title: '방법: 프로젝트의 스냅샷 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 프로젝트의 스냅샷 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897202"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241528"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>방법: 프로젝트의 스냅샷 만들기
+
 **데이터 계층 애플리케이션** 파일은 데이터베이스 스키마를 만들 때의 읽기 전용 표현을 제공합니다. 이 파일은 기본적으로 데이터베이스 스키마로 처리되며, 이 스키마의 스키마 개체를 다시 프로젝트로 가져올 수 있습니다. 또한 스냅샷을 데이터베이스 또는 프로젝트의 스키마와 비교하고, 스냅샷에 정의된 스키마를 반영하도록 데이터베이스나 프로젝트를 업데이트할 수도 있습니다.  
   
 원본 데이터베이스 프로젝트에서 사용자 오류가 발생할 경우 스냅샷을 생성했을 때의 상태로 원본 프로젝트를 되돌릴 수 있습니다. 기본적인 목적을 위해 다양한 개발 단계에서 스냅샷을 설정할 수도 있습니다.  

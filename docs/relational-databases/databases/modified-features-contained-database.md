@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067337"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
@@ -46,13 +46,13 @@ ms.locfileid: "68067337"
  임시 테이블은 사용자 정의 형식, XML 스키마 컬렉션 또는 사용자 정의 함수를 참조할 수 없습니다.  
   
 ## <a name="collation"></a>데이터 정렬  
- 포함되지 않은 데이터베이스 모델에는 세 가지의 개별적인 데이터 정렬 유형인 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬이 있습니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) 을 참조하십시오.  
+ 포함되지 않은 데이터베이스 모델에는 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬이라는 별도의 세 가지 데이터 정렬이 있습니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) 을 참조하십시오.  
   
 ## <a name="user-options"></a>사용자 옵션  
  포함된 데이터베이스를 사용하도록 설정할 경우 [인스턴스에 대해](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 0으로 설정해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Contained Databases](../../relational-databases/databases/contained-databases.md)  
+ [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)   
+ [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
   
   

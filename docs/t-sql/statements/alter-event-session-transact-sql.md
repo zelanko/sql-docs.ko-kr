@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065657"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065657"
 
   이벤트 세션을 시작 또는 중지하거나 이벤트 세션 구성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -122,9 +122,9 @@ ON SERVER
 |*event_session_name*|기존 이벤트 세션의 이름입니다.|  
 |STATE = START &#124; STOP|이벤트 세션을 시작 또는 중지합니다. 이 인수는 ALTER EVENT SESSION이 이벤트 세션 개체에 적용되는 경우에만 사용할 수 있습니다.|  
 |ADD EVENT \<event_specifier>|\<event_specifier>로 식별되는 이벤트를 이벤트 세션과 연결합니다.|
-|[*event_module_guid*]*.event_package_name.event_name*|이벤트 패키지에 있는 이벤트의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *event_name*은 이벤트 개체입니다.<br /><br /> 이벤트는 sys.dm_xe_objects 뷰에 object_type 'event'로 표시됩니다.|  
+|[*event_module_guid*] *.event_package_name.event_name*|이벤트 패키지에 있는 이벤트의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *event_name*은 이벤트 개체입니다.<br /><br /> 이벤트는 sys.dm_xe_objects 뷰에 object_type 'event'로 표시됩니다.|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|이벤트의 사용자 지정 가능한 특성을 지정합니다. 사용자 지정 가능한 특성은 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *event_name*으로 표시됩니다.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *action_name*은 동작 개체입니다.<br /><br /> 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *action_name*은 동작 개체입니다.<br /><br /> 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.|  
 |WHERE \<predicate_expression>|이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. \<predicate_expression>이 true일 경우 이벤트가 세션에 대한 동작과 대상에 의해 추가로 처리됩니다. \<predicate_expression>이 false일 경우 세션에 대한 동작과 대상에 의해 이벤트가 처리되기 전에 세션을 통해 이벤트가 삭제됩니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.|
 |*event_field_name*|조건자 원본을 식별하는 이벤트 필드의 이름입니다.|  
 |[event_module_guid].event_package_name.predicate_source_name|전역 조건자 원본의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 조건자 개체가 포함된 패키지입니다.<br />-   *predicate_source_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_source'로 정의됩니다.|  
@@ -141,7 +141,7 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|인과 관계를 추적할지 여부를 지정합니다. 이를 ON으로 설정하면 인과 관계에 따라 다른 서버 연결에 있는 관련 이벤트의 상호 연결이 허용됩니다.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 해당 이벤트 세션을 자동으로 시작할지 여부를 지정합니다.<br /><br /> STARTUP_STATE = ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지했다가 다시 시작한 경우에만 이벤트 세션이 시작됩니다.<br /><br /> ON= 시작 시 이벤트 세션이 시작됩니다.<br /><br /> **OFF** = 시작 시 이벤트 세션이 시작되지 않습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `ADD` 및 `DROP` 인수는 같은 명령문에 동시에 사용할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  

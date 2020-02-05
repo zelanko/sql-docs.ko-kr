@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929246"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67929246"
   
  사용자 정의 서버 역할은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 새로운 기능입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  서버에서 삭제할 사용자 정의 서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보안 개체를 소유한 사용자 정의 서버 역할을 서버에서 삭제할 수 없습니다. 보안 개체를 소유한 사용자 정의 서버 역할을 삭제하려면 먼저 해당 보안 개체의 소유권을 이전하거나 삭제해야 합니다.  
   
  멤버가 있는 사용자 정의 서버 역할은 삭제할 수 없습니다. 멤버가 있는 사용자 정의 서버 역할을 삭제하려면 먼저 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 사용하여 역할의 멤버를 제거해야 합니다.  
@@ -59,7 +59,7 @@ DROP SERVER ROLE role_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-to-drop-a-server-role"></a>1\. 서버 역할 삭제  
+### <a name="a-to-drop-a-server-role"></a>A. 서버 역할 삭제  
  다음 예에서는 서버 역할 `purchasing`을 삭제합니다.  
   
 ```  
@@ -67,8 +67,8 @@ DROP SERVER ROLE purchasing;
 GO  
 ```  
   
-### <a name="b-to-view-role-membership"></a>2\. 역할 멤버 자격 보기  
- 역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버**) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
+### <a name="b-to-view-role-membership"></a>B. 역할 멤버 자격 보기  
+ 역할 멤버 자격을 보려면 **에서** 서버 역할(멤버[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

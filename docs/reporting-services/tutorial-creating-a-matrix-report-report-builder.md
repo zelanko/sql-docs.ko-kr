@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294723"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
@@ -131,7 +131,7 @@ ms.locfileid: "63294723"
   
 11. **다음**을 클릭합니다.  
   
-13. **마침**을 클릭합니다.  
+13. **Finish**를 클릭합니다.  
   
     디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
@@ -352,7 +352,7 @@ ms.locfileid: "63294723"
   
 지역 이름이 아래에서 위쪽으로 세로로 표시됩니다. Territory 행 그룹의 높이는 지역 이름의 길이에 따라 달라집니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 이것으로 행렬 보고서를 만드는 자습서를 마칩니다. 행렬에 대한 자세한 내용은 다음을 참조하세요. 
 -    [테이블, 행렬 및 목록](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [행렬 만들기](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e6db876f54d28594786e585ba9f907c59f645c93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 14221eb76ed4c7ec587e493163caa299aa243967
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768783"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288202"
 ---
 # <a name="distributor-and-publisher-information-script"></a>배포자 및 게시자 정보 스크립트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68768783"
   
 -   사용자의 게시 데이터베이스 이름을 사용할 수 있도록 `use AdventureWorks2012` 줄을 변경합니다.  
   
--   `exec sp_helparticle @publication='<PublicationName>'` 줄에서 주석(`--`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
+-   `--` 줄에서 주석(`exec sp_helparticle @publication='<PublicationName>'`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

@@ -12,19 +12,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109378"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ JSON_MODIFY ( expression , path , newValue )
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
 
-*path*의 형식이 유효하지 않으면 **JSON_MODIFY**가 오류를 반환합니다.  
+**path**의 형식이 유효하지 않으면 *JSON_MODIFY*가 오류를 반환합니다.  
   
  *newValue*  
  *path*로 지정된 속성의 새 값입니다.  
@@ -69,11 +69,11 @@ JSON_MODIFY ( expression , path , newValue )
   
 JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모든 특수 문자를 이스케이프합니다. FOR JSON, JSON_QUERY 또는 JSON_MODIFY에 의해 생성된 JSON 형식이 올바르다면 텍스트 값은 이스케이프되지 않습니다.  
   
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
  올바른 형식의 JSON 텍스트로 *expression*의 업데이트된 값을 반환합니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  JSON_MODIFY 함수를 사용하여 기존 속성의 값을 업데이트하거나, 새 키:값 쌍을 삽입하거나, 모드와 제공된 값의 조합을 기반으로 키를 삭제할 수 있습니다.  
   
@@ -81,10 +81,10 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
 |기존 값|경로가 존재|lax 모드|strict 모드|  
 |--------------------|-----------------|--------------|-----------------|  
-|NOT NULL|예|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
-|NOT NULL|아니오|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `$.user` 또는 `$.user.settings` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `theme`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
-|NULL|예|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
-|NULL|아니오|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
+|NOT NULL|yes|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
+|NOT NULL|예|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `theme` 또는 `$.user` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `$.user.settings`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
+|NULL|yes|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
+|NULL|예|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
   
  lax 모드에서 JSON_MODIFY는 새 키:값 쌍을 만들려고 시도하지만 일부 경우에는 실패할 수 있습니다.  
   

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121637"
 ---
 # <a name="--subtraction-transact-sql"></a>-(빼기)(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121637"
 
   두 숫자를 빼는 빼기 산술 연산자입니다. 날짜에서 일 수를 뺄 수도 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,14 +44,14 @@ expression - expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 숫자 데이터 형식 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나로 된 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. **날짜**, **시간**, **datetime2** 또는 **datetimeoffset** 데이터 형식을 함께 사용할 수 없습니다.  
+ 숫자 데이터 형식 범주에서 [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 모든 데이터 형식 중 하나로 된 유효한 **식**입니다. **날짜**, **시간**, **datetime2** 또는 **datetimeoffset** 데이터 형식을 함께 사용할 수 없습니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-subtraction-in-a-select-statement"></a>1\. SELECT 문에서 빼기 사용  
+### <a name="a-using-subtraction-in-a-select-statement"></a>A. SELECT 문에서 빼기 사용  
  다음 예에서는 세율이 가장 높은 시/도와 세율이 가장 낮은 시/도 간의 세율 차를 계산합니다.  
   
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -67,7 +67,7 @@ GO
   
  계산 순서를 변경하려면 괄호를 사용합니다. 괄호 안의 계산부터 먼저 수행됩니다. 괄호가 중첩되면 가장 안쪽에 있는 계산이 우선적으로 처리됩니다.  
   
-### <a name="b-using-date-subtraction"></a>2\. 날짜 빼기 사용  
+### <a name="b-using-date-subtraction"></a>B. 날짜 빼기 사용  
  다음 예에서는 `datetime` 날짜에서 일 수를 뺍니다.  
   
  적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -90,9 +90,9 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C: SELECT 문에서 빼기 사용  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. SELECT 문에서 빼기 사용  
  다음 예는 `dimEmployee` 테이블에서 기본 급여가 가장 높은 직원과 세율이 가장 낮은 직원 간의 기본 급여 차이를 계산합니다.  
   
 ```  

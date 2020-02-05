@@ -14,10 +14,10 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc5c349835acb6211fb3d46c0bad37d377760063
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288834"
 ---
 # <a name="-multiply-ssis-expression"></a>*(곱하기)(SSIS 식)
@@ -42,7 +42,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929693"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
@@ -138,7 +138,7 @@ ms.locfileid: "70929693"
 
 다음은 인덱스에서 성능 비효율을 방지하는 방법의 예제입니다.
 
-`CustomerId`에 기본 키가 있는 `Customers` 테이블과 `CustomerCategoryID` 열의 인덱스를 고려합니다. 일반적으로 많은 고객이 특정 범주에 속합니다. 이로 인해 인덱스의 주어진 키 안에 CustomerCategoryID에 대해 여러 중복된 값이 있게 됩니다.
+`Customers`에 기본 키가 있는 `CustomerId` 테이블과 `CustomerCategoryID` 열의 인덱스를 고려합니다. 일반적으로 많은 고객이 특정 범주에 속합니다. 이로 인해 인덱스의 주어진 키 안에 CustomerCategoryID에 대해 여러 중복된 값이 있게 됩니다.
 
 이 시나리오에서는 `(CustomerCategoryID, CustomerId)`에서 비클러스터형 인덱스를 사용하는 것이 모범 사례입니다. 이 인덱스는 `CustomerCategoryID`를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있지만, 인덱스 키는 중복을 포함하지 않습니다. 따라서 CustomerCategoryID 값 중복이나 인덱스의 추가 열에 따른 인덱스 유지 관리에서의 비효율이 발생하지 않습니다.
 
@@ -215,13 +215,13 @@ WHERE col1 = 'dn';
   
 다음 표에서 다른 인덱스 유형에서 지원 되는 모든 작업을 나열 합니다. *예*는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 *아니요*는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다. 
   
-| 연산 | 메모리 액세스에 최적화됨, <br/> 해시 | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
+| 작업(Operation) | 메모리 액세스에 최적화됨, <br/> hash | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
-| 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니오 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 예 |  
-| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 예 | 예 |  
-| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 아니오 | 예 |  
+| 색인 검색은 모든 테이블 행을 검색합니다. | yes | yes | yes |  
+| 같음 조건자(=)에서 인덱스 검색 | yes <br/> (전체 키는 필수) | yes  | yes |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 예 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | yes |  
+| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 예 | yes | yes |  
+| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 예 | 예 | yes |  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> 메모리 최적화 비클러스터형 인덱스의 경우 인덱스 검색을 수행하는 데 전체 키가 필요하지 않습니다.  

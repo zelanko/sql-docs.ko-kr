@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531624"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에서 sparklyr를 사용합니다.
@@ -80,9 +80,9 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>분산 R 계산
 
-sparklyr의 기능 중 하나는 [spark_apply](https://spark.rstudio.com/reference/spark_apply/)를 사용하여 [R 계산을 분산](https://spark.rstudio.com/guides/distributed-r/)하는 것입니다.
+sparklyr의 기능 중 하나는 [spark_apply](https://spark.rstudio.com/guides/distributed-r/)를 사용하여 [R 계산을 분산](https://spark.rstudio.com/reference/spark_apply/)하는 것입니다.
 
-빅 데이터 클러스터는 Livy 연결을 사용하므로 **spark_apply**를 호출할 때 `packages = FALSE`를 설정해야 합니다. 자세한 내용은 분산 R 계산에 대한 sparklyr 설명서에서 [Livy 섹션](https://spark.rstudio.com/guides/distributed-r/#livy)을 참조하세요. 이렇게 설정하면 **spark_apply**로 전달한 R 코드에서 Spark 클러스터에 이미 설치한 R 패키지만 사용할 수 있습니다. 다음 예제에서 이 기능을 보여 줍니다.
+빅 데이터 클러스터는 Livy 연결을 사용하므로 `packages = FALSE`spark_apply**를 호출할 때** 를 설정해야 합니다. 자세한 내용은 분산 R 계산에 대한 sparklyr 설명서에서 [Livy 섹션](https://spark.rstudio.com/guides/distributed-r/#livy)을 참조하세요. 이렇게 설정하면 **spark_apply**로 전달한 R 코드에서 Spark 클러스터에 이미 설치한 R 패키지만 사용할 수 있습니다. 다음 예제에서 이 기능을 보여 줍니다.
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)

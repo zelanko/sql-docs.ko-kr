@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026228"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026228"
 
   기존 리소스 관리자 작업 그룹 구성을 변경하고 선택적으로 리소스 관리자 리소스 풀에 할당합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,10 +71,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT = ‘value’      
+ REQUEST_MAX_MEMORY_GRANT_PERCENT = ‘value’       
  단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. *값*은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기와 관련된 백분율입니다.  
 
-‘값’은 최대 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지의 정수이며, 부동 소수점 수는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작합니다.  기본값은 25입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+‘값’은 최대 *까지의 정수이며, 부동 소수점 수는* 로 시작합니다.[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)][!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 기본값은 25입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
   
 > [!NOTE]  
 > 지정된 양은 쿼리 실행 부여 메모리만 참조합니다.  
@@ -93,7 +93,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 > 두 경우 모두 서버에 실제 메모리가 부족하면 시간 초과 오류 8645가 발생할 수 있습니다.  
   
- REQUEST_MAX_CPU_TIME_SEC = ‘value’        
+ REQUEST_MAX_CPU_TIME_SEC = ‘value’         
  요청이 사용할 수 있는 최대 CPU 시간(초)을 지정합니다. *value*는 0 또는 양의 정수여야 합니다. *value*의 기본 설정인 0은 무제한을 의미합니다.  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *value*는 양의 정수여야 합니다. *value*의 기본 설정인 0은 쿼리 비용에 따른 내부 계산을 사용하여 최대 시간을 결정합니다.  
   
- MAX_DOP = ‘value’        
+ MAX_DOP = ‘value’         
  병렬 요청의 최대 DOP(병렬 처리 수준)를 지정합니다. *value*는 0 또는 1~255 범위의 양의 정수여야 합니다. *value*가 0이면 서버는 최대 병렬 처리 수준을 선택합니다. 이 값은 기본값이며 권장 설정입니다.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DOP가 구성된 후에는 부여 메모리가 부족할 때만 낮아질 수 있습니다. 작업 그룹 재구성은 부여 메모리 큐에서 대기하는 동안 표시되지 않습니다.  
   
- GROUP_MAX_REQUESTS = ‘value’       
+ GROUP_MAX_REQUESTS = ‘value’        
  작업 그룹에서 실행할 수 있는 최대 동시 요청 수를 지정합니다. *value*는 0 또는 양의 정수여야 합니다. *value*의 기본 설정인 0은 무제한 요청을 허용합니다. 최대 동시 요청에 도달한 경우 해당 그룹의 사용자가 로그인할 수 있지만 지정된 값 아래로 동시 요청 수가 떨어질 때까지 사용자가 대기 상태에 배치됩니다.  
   
  USING { *pool_name* | "**default**" }      
@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > "default" 옵션은 대/소문자를 구분합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER WORKLOAD GROUP은 기본 그룹에서 허용됩니다.  
   
  작업 그룹 구성의 변경 내용은 ALTER RESOURCE GOVERNOR RECONFIGURE가 실행된 후에 적용됩니다. 설정에 영향을 주는 계획을 변경할 경우 *pool_name*이 작업 그룹이 연결된 Resource Governor 리소스 풀의 이름인 DBCC FREEPROCCACHE(*pool_name*)를 실행 한 후 새 설정이 이전에 캐시된 계획에 적용됩니다.  
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
- REQUEST_MEMORY_GRANT_PERCENT: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 인덱스를 만들 때 향상된 성능을 위해 처음에 부여된 메모리보다 많은 작업 영역 메모리를 사용할 수 있습니다. 이 특수 처리는 이후 버전의 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 리소스 풀 및 작업 그룹 설정에 따라 제한됩니다.  
+ REQUEST_MEMORY_GRANT_PERCENT: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 인덱스 생성은 향상된 성능을 위해 초기에 부여된 메모리보다 많은 작업 메모리를 사용할 수 있습니다. 이 특수 처리는 이후 버전의 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 리소스 풀 및 작업 그룹 설정에 따라 제한됩니다.  
   
  **분할된 테이블에서 인덱스 생성**  
   

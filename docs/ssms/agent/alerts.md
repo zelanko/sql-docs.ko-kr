@@ -1,10 +1,7 @@
 ---
-title: 경고 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 경고
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383791"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252693"
 ---
-# <a name="alerts"></a>,
+# <a name="alerts"></a>경고
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -71,7 +73,7 @@ ms.locfileid: "70383791"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 심각도에 이르는 오류가 발생하면 에이전트에서 경고를 표시합니다. 예를 들어 Transact-SQL 문의 구문 오류에 응답하도록 심각도 15를 지정할 수 있습니다.  
   
--   **데이터베이스 백업**  
+-   **Database**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 특정 데이터베이스에 이벤트가 발생할 때만 경고를 발생시킵니다. 이 옵션은 오류 번호 또는 심각도와 함께 적용됩니다. 예를 들어 프로덕션에 사용되는 데이터베이스와 보고에 사용되는 데이터베이스가 하나씩 인스턴스에 있는 경우 프로덕션 데이터베이스의 구문 오류에만 응답하도록 경고를 정의할 수 있습니다.  
   
@@ -82,7 +84,7 @@ ms.locfileid: "70383791"
 ## <a name="selecting-a-performance-condition"></a>성능 조건 선택  
 특정 성능 조건에 응답하여 경고가 발생하도록 지정할 수 있습니다. 이 경우 모니터링할 성능 카운터, 경고에 대한 임계값 및 경고가 발생할 경우 표시해야 하는 카운터 동작을 지정합니다. 성능 조건을 설정하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 경고 **의** 에이전트 **일반** 페이지 또는 **경고 속성** 대화 상자에서 다음 항목을 정의해야 합니다.  
   
--   **개체**  
+-   **Object**  
   
     개체는 모니터링할 성능의 영역입니다.  
   
@@ -110,7 +112,7 @@ ms.locfileid: "70383791"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 이벤트에 대해 쿼리하도록 제공되는 WMI 네임스페이스에 WMI 클라이언트로 등록됩니다.  
   
--   **Query**  
+-   **쿼리**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 제공된 WQL(Windows Management Instrumentation Query Language) 문을 사용하여 특정 이벤트를 식별할 수 있습니다.  
   

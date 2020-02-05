@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293857"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
@@ -114,7 +114,7 @@ ms.locfileid: "71293857"
  **LoginsToTransfer**  
  원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**AllLogins**|원본 서버의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 대상 서버로 복사됩니다.|  
 |**SelectedLogins**|**LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
@@ -131,11 +131,11 @@ ms.locfileid: "71293857"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 로그인이 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
-|**Skip**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
+|**skip**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
   
  **CopySids**  
  로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  

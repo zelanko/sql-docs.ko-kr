@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121776"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable(Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   지역 변수를 식의 값으로 설정합니다.  
   
- 변수 할당에는 SELECT @*local_variable* 대신 [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)을 사용하는 것이 좋습니다.  
+ 변수 할당에는 SELECT @[local_variable@local_variable 대신 ](../../t-sql/language-elements/set-local-variable-transact-sql.md)SET  을 사용하는 것이 좋습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 오른쪽의 값을 왼쪽의 변수에 할당합니다.  
   
 복합 할당 연산자:  
-  |적용한 후 |action |   
+  |operator |action |   
   |-----|-----|  
   | = | 이어지는 식을 변수에 지정합니다. |  
   | += | 더하기 및 할당 |   
@@ -71,7 +71,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
  *expression*  
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 여기에는 스칼라 하위 쿼리가 포함됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SELECT @*local_variable*은 일반적으로 변수에 하나의 값을 반환하는 데 사용됩니다. 그러나 *expression*이 열의 이름인 경우 여러 값을 반환할 수 있습니다. SELECT 문에서 둘 이상의 값을 반환하면 반환된 값 중 마지막 값이 변수에 할당됩니다.  
   
  SELECT 문에서 행을 반환하지 않으면 변수는 현재 값을 그대로 유지합니다. *expression*이 값을 반환하지 않는 스칼라 하위 쿼리일 경우에는 변수가 NULL로 설정됩니다.  
@@ -83,7 +83,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>1\. SELECT @local_variable을 사용하여 단일 값 반환  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. SELECT @local_variable을 사용하여 단일 값 반환  
  다음 예에서는 `@var1` 변수에 `Generic Name` 값이 할당됩니다. `Store`에 지정된 값이 테이블에 없기 때문에 `CustomerID` 테이블에 대한 쿼리에서 행을 반환하지 않습니다. 따라서 변수는 `Generic Name` 값을 유지합니다.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>2\. SELECT @local_variable을 사용하여 null 반환  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. SELECT @local_variable을 사용하여 null 반환  
  다음 예에서는 `@var1`에 값을 할당하기 위해 하위 쿼리가 사용됩니다. `CustomerID`에 대해 요청한 값이 없기 때문에 하위 쿼리에서 값을 반환하지 않고 변수가 `NULL`로 설정됩니다.  
   
 ```sql  

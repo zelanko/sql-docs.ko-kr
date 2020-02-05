@@ -1,10 +1,7 @@
 ---
-title: IntelliSense에서 지원되는 Transact-SQL 구문 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/16/2017
+title: IntelliSense에서 지원되는 Transact-SQL 구문
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,13 +11,16 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253262"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252985"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "68253262"
   
 |Transact-SQL 문|지원되는 구문|예외|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|없음|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|없음|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|없음|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|없음|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|없음|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|없음|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|없음|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|없음|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|None|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|None|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|None|  
+|[선언 @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|None|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|None|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|None|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|없음|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|None|  
   
 ## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "68253262"
   
     -   스칼라 함수 및 스칼라 식  
   
-    -   지역 변수  
+    -   로컬 변수  
   
     -   CTE(공통 테이블 식)  
   

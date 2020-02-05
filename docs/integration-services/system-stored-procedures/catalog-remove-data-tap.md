@@ -11,10 +11,10 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296825"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  catalog.add_data_tap 저장 프로시저를 사용하여 만든 데이터 탭의 고유 식별자입니다. *data_tap_id*는 **bigint**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  패키지에 이름이 같은 데이터 흐름 태스크가 두 개 이상 포함되어 있는 경우 주어진 이름을 가진 첫 번째 데이터 흐름 태스크에 데이터 탭이 추가됩니다.  
   
 ## <a name="return-codes"></a>반환 코드  
@@ -45,10 +45,10 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ None  
   
-## <a name="remarks"></a>Remarks  
- 데이터 탭을 제거하려면 실행 인스턴스가 생성됨 상태여야 합니다([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 보기의 **status** 열 값이 1).  
+## <a name="remarks"></a>설명  
+ 데이터 탭을 제거하려면 실행 인스턴스가 생성됨 상태여야 합니다(**catalog.operations&#40;SSISDB 데이터베이스&#41;** 보기의 [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 열 값이 1).  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

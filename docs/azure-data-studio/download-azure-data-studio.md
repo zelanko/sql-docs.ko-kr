@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727030"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516495"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -43,12 +43,12 @@ ms.locfileid: "75727030"
 
 **사용자 설치 관리자**(권장)
 
-1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘사용자’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2113530)를 다운로드하여 실행합니다. 
+1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘사용자’ 설치 관리자*를 다운로드하여 실행합니다.* ](https://go.microsoft.com/fwlink/?linkid=2113530)
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 **시스템 설치 관리자**
 
-1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘시스템’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2113628)를 다운로드하여 실행합니다. 
+1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘시스템’ 설치 관리자*를 다운로드하여 실행합니다.* ](https://go.microsoft.com/fwlink/?linkid=2113628)
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 **zip 파일**
@@ -57,13 +57,11 @@ ms.locfileid: "75727030"
 2. 다운로드한 파일로 이동하여 압축을 풉니다.
 3. `\azuredatastudio-windows\azuredatastudio.exe`을 실행합니다.
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>macOS용 Azure Data Studio 다운로드
 
 1. [macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2113528)를 다운로드합니다.
 2. zip의 내용을 펼치려면 두 번 클릭합니다.
 3. ‘실행 패드’에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용할 수 있게 하려면 ‘Azure Data Studio.app’을 ‘애플리케이션’ 폴더로 끌어옵니다.   
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux용 Azure Data Studio 다운로드
 
@@ -146,10 +144,12 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 - Windows Server 2008 R2(64비트)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 |             |           |            |
 
 ## <a name="check-for-updates"></a>업데이트 확인
+
 최신 업데이트를 확인하려면 창의 왼쪽 아래에 있는 기어 아이콘을 클릭한 다음, **업데이트 확인**을 클릭합니다.
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
@@ -173,9 +174,8 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 ## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio에서 업그레이드
 
 여전히 SQL Operations Studio를 사용 중인 경우 Azure Data Studio로 업그레이드해야 합니다. SQL Operations Studio는 Azure Data Studio의 미리 보기 이름 및 미리 보기 버전이었습니다. 2018년 9월에 [이름을 Azure Data Studio로 변경](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/)하여 GA(일반 공급) 버전을 릴리스했습니다. SQL Operations Studio는 더 이상 업데이트되거나 지원되지 않으므로 모든 SQL Operations Studio 사용자는 최신 버전의 Azure Data Studio를 다운로드하여 최신 기능, 보안 업데이트 및 수정 프로그램을 사용하시기 바랍니다.
- 
-이전 미리 보기에서 최신 Azure Data Studio로 업그레이드하는 경우 현재 설정과 확장이 손실됩니다. 설정을 이동하려면 다음 ‘사용자 설정 이동’ 섹션의 지침을 따르세요. 
 
+이전 미리 보기에서 최신 Azure Data Studio로 업그레이드하는 경우 현재 설정과 확장이 손실됩니다. 설정을 이동하려면 다음 ‘사용자 설정 이동’ 섹션의 지침을 따르세요. 
 
 ## <a name="move-user-settings"></a>사용자 설정 이동
 
@@ -203,6 +203,7 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 ## <a name="next-steps"></a>다음 단계
 
 시작하려면 다음 빠른 시작 중 하나를 참조하세요.
+
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure Data Warehouse 연결 및 쿼리](quickstart-sql-dw.md)

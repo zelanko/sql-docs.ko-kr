@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770790"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288280"
 ---
 # <a name="replication-agent-profiles"></a>복제 에이전트 프로필
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68770790"
 ## <a name="snapshot-agent-profiles"></a>스냅샷 에이전트 프로필  
  다음 표에서는 스냅샷 에이전트에 대한 기본 프로필에서 정의되는 매개 변수를 보여 줍니다. 이러한 매개 변수에 대한 자세한 내용은 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)를 참조하십시오.  
   
-||기본|  
+||기본값|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +56,7 @@ ms.locfileid: "68770790"
 ## <a name="log-reader-agent-profiles"></a>로그 판독기 에이전트 프로필  
  다음 표에서는 로그 판독기 에이전트 프로필에서 정의되는 매개 변수를 보여 줍니다. 표의 각 열은 명명된 프로필을 나타냅니다. 이러한 매개 변수에 대한 자세한 내용은 [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)를 참조하십시오.  
   
-||기본|자세한 기록|  
+||기본값|자세한 기록|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +68,7 @@ ms.locfileid: "68770790"
 ## <a name="distribution-agent-profiles"></a>배포 에이전트 프로필  
  다음 표에서는 배포 에이전트 프로필에서 정의되는 매개 변수를 보여 줍니다. 표의 각 열은 명명된 프로필을 나타냅니다. 이러한 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)를 참조하십시오.  
   
-||기본|자세한 기록|Windows 동기화 관리자|데이터 일관성 오류 발생 시 계속|OLEDB 스트리밍에 대한 배포 프로필|  
+||기본값|자세한 기록|Windows 동기화 관리자|데이터 일관성 오류 발생 시 계속|OLEDB 스트리밍에 대한 배포 프로필|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -89,7 +89,7 @@ ms.locfileid: "68770790"
 ## <a name="merge-agent-profiles"></a>병합 에이전트 프로필  
  다음 표에서는 병합 에이전트 프로필에서 정의되는 매개 변수를 보여 줍니다. 표의 각 열은 명명된 프로필을 나타냅니다. 이러한 매개 변수에 대한 자세한 내용은 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)를 참조하십시오.  
   
-||기본|자세한 기록|Windows 동기화 관리자|행 개수 유효성 검사|행 개수 및 체크섬의 유효성 검사|느린 연결|고용량 서버 간|  
+||기본값|자세한 기록|Windows 동기화 관리자|행 개수 유효성 검사|행 개수 및 체크섬의 유효성 검사|느린 연결|고용량 서버 간|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +120,7 @@ ms.locfileid: "68770790"
 ## <a name="queue-reader-agent-profiles"></a>큐 판독기 에이전트 프로필  
  다음 표에서는 큐 판독기 에이전트에 대한 기본 프로필에서 정의되는 매개 변수를 보여 줍니다. 이러한 매개 변수에 대한 자세한 내용은 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)를 참조하십시오.  
   
-||기본|  
+||기본값|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  

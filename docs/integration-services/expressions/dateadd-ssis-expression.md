@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290174"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
@@ -48,7 +48,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다. 날짜 부분 이름은 대/소문자를 구분하지 않습니다.  
   
 |날짜 부분|약어|  
@@ -57,12 +57,12 @@ DATEADD(datepart, number, date)
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|일|dd, d|  
 |Week|wk, ww|  
-|Weekday|dw, w|  
+|요일|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|둘째|ss, s|  
+|초|ss, s|  
 |Millisecond|Ms|  
   
  식을 구문 분석할 때 *number* 인수를 사용할 수 있어야 합니다. 인수는 상수 또는 변수일 수 있습니다. 식을 구문 분석할 때 값을 알 수 없으므로 열 값을 사용할 수 없습니다.  

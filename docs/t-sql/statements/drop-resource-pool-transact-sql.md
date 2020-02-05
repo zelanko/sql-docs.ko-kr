@@ -18,10 +18,10 @@ ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ab6a901d2c1eafc2469f0e1307e5d2db71186fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043868"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68043868"
 
   사용자 정의 리소스 관리자 리소스 풀을 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  기존 사용자 정의 리소스 풀의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  작업 그룹이 들어 있으면 해당 리소스 풀을 삭제할 수 없습니다.  
   
  리소스 관리자 기본 풀 또는 내부 풀을 삭제할 수 없습니다.  

@@ -16,19 +16,19 @@ ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4f3c26ca45da6cba3a86324e970117cde9fcc4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971995"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 생성자(SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체 및 **byte** 배열이 지정된 경우 [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) 클래스의 새 인스턴스를 초기화합니다.  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverblob-class.md) 개체 및 [byte](../../../connect/jdbc/reference/sqlserverconnection-class.md) 배열이 지정된 경우 **SQLServerBlob** 클래스의 새 인스턴스를 초기화합니다.  
   
 > [!NOTE]  
->  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) 메서드를 사용합니다.  
+>  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) 클래스의 [createBlob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   

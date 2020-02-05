@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151960"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70151960"
 
   캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,14 +49,14 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style*은 *CONVERT* 함수의 **style** 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
  허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **TRY_CONVERT** 함수는 전달된 값을 사용하여 지정된 *data_type*으로 변환을 시도합니다. 캐스팅에 성공하면 **TRY_CONVERT**는 지정된 *data_type*으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CONVERT**가 실패합니다.  
   
  **TRY_CONVERT**는 호환성 수준 110 이상의 예약 키워드입니다.  
@@ -65,7 +65,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-try_convert-returns-null"></a>1\. TRY_CONVERT가 Null 반환  
+### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT가 Null 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CONVERT가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -105,7 +105,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-try_convert-fails-with-an-error"></a>2\. TRY_CONVERT가 오류와 함께 실패  
+### <a name="b-try_convert-fails-with-an-error"></a>B. TRY_CONVERT가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CONVERT가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  

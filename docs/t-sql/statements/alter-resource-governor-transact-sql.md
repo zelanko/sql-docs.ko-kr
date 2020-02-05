@@ -21,10 +21,10 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982019"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982019"
   
 -   디스크 볼륨당 최대 I/O 작업을 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -98,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 여러 가지 값을 설정해 보고 IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     또는 SQLIO(사용되지 않음)와 같은 보정 도구를 사용하여 스토리지 하위 시스템의 최댓값을 식별하는 것이 좋습니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대한 자세한 내용은 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자 트랜잭션 내에서는 ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE 및 ALTER RESOURCE GOVERNOR RESET STATISTICS를 사용할 수 없습니다.  
   
  RECONFIGURE 매개 변수는 Resource Governor 구문의 일부이며 별도의 DLL 문인 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)와 혼동해서는 안 됩니다.  
@@ -110,14 +110,14 @@ ALTER RESOURCE GOVERNOR
   
 ## <a name="examples"></a>예  
   
-### <a name="a-starting-the-resource-governor"></a>1\. 리소스 관리자 시작  
+### <a name="a-starting-the-resource-governor"></a>A. 리소스 관리자 시작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 처음 설치하면 리소스 관리자를 사용할 수 없습니다. 다음 예에서는 리소스 관리자를 시작합니다. 이 문이 실행된 후에 리소스 관리자가 실행되면 미리 정의된 작업 그룹과 리소스 풀을 사용할 수 있습니다.  
   
 ```  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
-### <a name="b-assigning-new-sessions-to-the-default-group"></a>2\. 기본 그룹에 새 세션 할당  
+### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. 기본 그룹에 새 세션 할당  
  다음 예에서는 리소스 관리자 구성에서 기존 분류자 함수를 제거하여 기본 작업 그룹에 모든 새 세션을 할당합니다. 분류자 함수로 지정된 함수가 없으면 모든 새 세션이 기본 작업 그룹에 할당됩니다. 이 변경 내용은 새 세션에만 적용되고 기존 세션에는 적용되지 않습니다.  
   
 ```  

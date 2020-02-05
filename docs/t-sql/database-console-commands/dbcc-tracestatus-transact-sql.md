@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211242"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211242"
 
 추적 플래그의 상태를 표시합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합에 표시되는 정보를 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |---|---|
 |**TraceFlag**|추적 플래그의 이름입니다.|  
 |**상태**|전역 또는 세션에 대한 추적 플래그의 설정 상태가 ON인지 아니면 OFF인지 여부를 나타냅니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -70,7 +70,7 @@ WITH NO_INFOMSGS
   
 DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호의 열 머리글은 상태를 확인할 추적 플래그가 전역 추적 플래그인지 또는 세션 추적 플래그인지 여부에 따라 **Global Trace Flag** 또는 **Session Trace Flag**가 됩니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다.
   
 ## <a name="permissions"></a>사용 권한  

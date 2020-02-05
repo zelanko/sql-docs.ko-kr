@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073158"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68073158"
 
 지정한 데이터베이스에 있는 데이터 및 로그 파일의 크기를 축소합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합의 열을 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 데이터베이스 ID입니다.|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 파일 ID 번호|  
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 축소되지 않은 파일의 행은 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 >[!NOTE]
 > 현재 Azure SQL Data Warehouse는 DBCC SHRINKDATABASE를 지원하지 않습니다. i/o 집약적인 작업이고 데이터 웨어하우스를 오프라인으로 사용할 수 있으므로 이 명령을 실행하지 않는 것이 좋습니다. 또한 이 명령을 실행한 후에 데이터 웨어하우스 스냅샷에 대한 비용 관련 사항이 발생합니다. 
@@ -116,7 +116,7 @@ DBCC SHRINKDATABASE는 파일 단위로 데이터 파일을 축소하지만 로�
   
 두 개의 로그 파일, 데이터 파일 및 **mydb**라는 데이터베이스가 있다고 가정합니다. 데이터 파일과 로그 파일은 각각 10MB이고 데이터 파일에는 6MB의 데이터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 각 파일의 대상 크기를 계산합니다. 이 값은 파일을 축소할 크기입니다. DBCC SHRINKDATABASE에 _대상\_백분율_을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 축소 후 파일에 _대상\_백분율_ 만큼의 여유 공간이 남도록 대상 크기를 계산합니다. 
 
-예를 들어 **mydb**를 축소하기 위해 _대상\_백분율_을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
+예를 들어 _mydb\_를 축소하기 위해_ 대상**백분율**을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
   
 **mydb**의 데이터 파일에 7MB의 데이터가 있다고 가정합니다. _대상\_백분율_을 30으로 지정하면 여유 공간이 30%만 남도록 이 데이터 파일이 축소됩니다. 그러나 _대상\_백분율_을 40으로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 현재 데이터가 차지하는 용량보다 작은 크기로 파일을 축소할 수 없으므로 데이터 파일을 축소하지 않습니다. 
 
@@ -128,7 +128,7 @@ DBCC SHRINKDATABASE는 즉시 각 물리적 로그 파일을 대상 크기로 �
   
 로그 파일은 가상 로그 파일 경계까지만 축소할 수 있습니다. 따라서 로그 파일을 가상 로그 파일 크기보다 작은 크기로 축소하는 것이 불가능할 수 있습니다. 사용되지 않더라도 불가능할 수 있습니다. 로그 파일이 생성되거나 확장될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 동적으로 가상 로그 파일의 크기가 선택됩니다.
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
 데이터베이스를 축소할 때는 다음을 고려하세요.
 -   축소 작업은 작업 후에 가장 효과적입니다. 이 작업은 테이블 잘라내기 또는 테이블 삭제 작업과 같은 사용되지 않는 공간을 만듭니다.  
 -   대부분의 데이터베이스에는 정기적인 일상 작업에 사용 가능한 일정 여유 공간이 필요합니다. 데이터베이스가 반복적으로 축소되고 데이터베이스 크기가 다시 커질 수 있습니다. 이러한 증가는 축소 공간이 기본 작업에 필수임을 나타냅니다. 이러한 경우 데이터베이스를 반복해서 축소하는 것은 불필요한 작업입니다.  
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-이 오류는 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
+이 오류는 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 **sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 동적 관리 뷰의 **transaction_sequence_num** 또는 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
   
 문제를 해결하려면 다음 태스크 중 하나를 수행하십시오.
 -   축소 작업을 차단하는 트랜잭션을 종료합니다.  
@@ -156,7 +156,7 @@ timestamp 15 or with timestamps older than 109 to finish.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>1. 데이터베이스 축소 및 여유 공간의 백분율 지정  
+### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. 데이터베이스 축소 및 여유 공간의 백분율 지정  
 다음 예제에서는 `UserDB` 사용자 데이터베이스의 데이터 및 로그 파일 크기를 줄여서 데이터베이스에 10%의 여유 공간을 허용합니다.  
   
 ```sql  
@@ -164,14 +164,14 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>2. 데이터베이스 자름  
+### <a name="b-truncating-a-database"></a>B. 데이터베이스 자름  
 다음 예제에서는 `AdventureWorks` 샘플 데이터베이스의 데이터 및 로그 파일을 마지막으로 할당된 익스텐트까지 축소합니다.  
   
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

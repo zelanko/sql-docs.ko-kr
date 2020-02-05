@@ -16,10 +16,10 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564806"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
@@ -97,7 +97,7 @@ SELECT select_list INTO table_variable;
 ## <a name="limitations-and-restrictions"></a>제한 사항
 **테이블** 변수에는 배포 통계가 없습니다. 이 변수는 다시 컴파일을 트리거하지 않습니다. 대부분의 경우 최적화 프로그램은 테이블 변수에 행이 없다는 가정 하에 쿼리 계획을 빌드합니다. 이러한 이유로, 많은 수의 행(100개 이상)을 예상하는 경우 테이블 변수를 사용할 때 주의해야 합니다. 이러한 경우 임시 테이블이 좋은 해결책일 수 있습니다. 테이블 변수를 다른 테이블에 조인하는 쿼리의 경우 RECOMPILE 힌트를 사용하세요. 그러면 최적화 프로그램이 테이블 변수에 올바른 카디널리티를 사용합니다.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 최적화 프로그램의 비용 기반 추론 모델에서는 **테이블** 변수가 지원되지 않습니다. 따라서 효율적인 쿼리 계획을 얻기 위해 비용 기반 선택이 필요한 경우에는 이 변수를 사용하면 안 됩니다. 비용 기반 선택이 필요한 경우에는 임시 테이블이 적절합니다. 이 계획에는 일반적으로 조인, 병렬 처리 결정 및 인덱스 선택 사항 선택을 사용하는 쿼리가 포함됩니다.
+**최적화 프로그램의 비용 기반 추론 모델에서는**테이블[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변수가 지원되지 않습니다. 따라서 효율적인 쿼리 계획을 얻기 위해 비용 기반 선택이 필요한 경우에는 이 변수를 사용하면 안 됩니다. 비용 기반 선택이 필요한 경우에는 임시 테이블이 적절합니다. 이 계획에는 일반적으로 조인, 병렬 처리 결정 및 인덱스 선택 사항 선택을 사용하는 쿼리가 포함됩니다.
   
 **테이블** 변수를 수정하는 쿼리는 병렬 쿼리 실행 계획을 생성하지 않습니다. 큰 **테이블** 변수나 복잡한 쿼리의 **테이블** 변수를 수정하면 성능에 영향을 줄 수 있습니다. **테이블** 변수가 수정되는 경우에는 임시 테이블을 대신 사용하는 것이 좋습니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. 수정하지 않고 **테이블** 변수를 읽는 쿼리는 병렬 처리할 수 있습니다.
 
@@ -118,7 +118,7 @@ SELECT select_list INTO table_variable;
 ## <a name="examples"></a>예  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 테이블 형식의 변수 선언  
-다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `Employee` 테이블의 `ModifiedDate` 열 값과 다릅니다. 이 차이는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문에 나타납니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.
+다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `ModifiedDate` 테이블의 `Employee` 열 값과 다릅니다. 이 차이는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문에 나타납니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.
   
 ```sql
 USE AdventureWorks2012;  
