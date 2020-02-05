@@ -22,10 +22,10 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109256"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68109256"
 
   현재 사용 중인 언어의 로컬 언어 식별자(ID)를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68109256"
 ## <a name="return-types"></a>반환 형식  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  언어 ID를 포함한 언어 설정에 대한 정보를 보려면 매개 변수를 지정하지 않고 **sp_helplanguage**를 실행하세요.  
   
 ## <a name="examples"></a>예  

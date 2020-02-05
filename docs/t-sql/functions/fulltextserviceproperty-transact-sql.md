@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940259"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERT(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67940259"
 
   전체 텍스트 엔진의 속성과 관련된 정보를 반환합니다. 이 속성은 **sp_fulltext_service**를 사용하여 설정하고 검색할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  전체 텍스트 서비스 수준 속성의 이름이 포함된 식입니다. 다음은 속성과 반환되는 정보에 대한 설명입니다.  
   
 > [!NOTE]
->  이후 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **ConnectTimeout**, **DataTimeout** 및 **ResourceUsage** 속성이 제거됩니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 애플리케이션은 수정하십시오.  
+>  이후 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **ConnectTimeout**, **DataTimeout**, **ResourceUsage**과 같은 속성이 제거됩니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 애플리케이션은 수정하십시오.  
   
 |속성|값|  
 |--------------|-----------|  
