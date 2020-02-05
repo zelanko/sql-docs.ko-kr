@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68823117"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
@@ -30,7 +30,7 @@ ms.locfileid: "68823117"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-명령을 실행하면 SQL Server에서 암호를 입력하라는 메시지가 표시됩니다. 암호를 입력하면 셸에서 백업 진행 결과를 반환합니다. 예를 들어
+명령을 실행하면 SQL Server에서 암호를 입력하라는 메시지가 표시됩니다. 암호를 입력하면 셸에서 백업 진행 결과를 반환합니다. 다음은 그 예입니다.
 
 ```
 Password:
@@ -107,9 +107,9 @@ SQL Server가 데이터베이스 백업을 완료합니다.
 
 1. SQL Server가 데이터베이스를 복원합니다. 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 * [전체 데이터베이스 백업 만들기(SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [트랜잭션 로그 백업(SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP(Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [URL에 대한 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [URL에 SQL Server Backup](../relational-databases/backup-restore/sql-server-backup-to-url.md)

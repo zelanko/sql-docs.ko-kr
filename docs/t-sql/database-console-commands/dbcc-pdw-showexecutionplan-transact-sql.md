@@ -13,16 +13,16 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809843"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-특정 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 컴퓨팅 노드 또는 제어 노드에서 실행되는 쿼리에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 계획을 표시합니다. 이를 사용하여 쿼리가 컴퓨팅 노드 및 제어 노드에서 실행되는 동안 쿼리 성능 문제를 해결합니다.
+특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 컴퓨팅 노드 또는 제어 노드에서 실행되는 쿼리에 대한 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 실행 계획을 표시합니다. 이를 사용하여 쿼리가 컴퓨팅 노드 및 제어 노드에서 실행되는 동안 쿼리 성능 문제를 해결합니다.
   
 컴퓨팅 노드에서 실행되는 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리에 대한 쿼리 성능 문제를 인식한 후에는 성능을 향상시키기 위한 여러 가지 방법이 있습니다. 컴퓨팅 노드에서 쿼리 성능을 향상시키는 가능한 방법에는 여러 열 통계를 만들거나 비클러스터형 인덱스를 만들거나 쿼리 힌트를 사용하는 것이 포함됩니다.
   
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>1\. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스에서 실행되는 경우 distribution_id를 선택하도록 위 쿼리를 수정합니다.  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>2\. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
  너무 오래 실행되는 쿼리는 DMS 쿼리 계획 작업 또는 SQL 쿼리 계획 작업을 실행 중입니다.  
   
 쿼리가 DMS 쿼리 계획 작업을 실행 중인 경우 다음 쿼리를 사용하여 완료되지 않은 단계에 대한 노드 ID 및 세션 ID의 목록을 검색할 수 있습니다.
@@ -95,6 +95,6 @@ order by request_id, [dms_step_index], [distribution_id];
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED&#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

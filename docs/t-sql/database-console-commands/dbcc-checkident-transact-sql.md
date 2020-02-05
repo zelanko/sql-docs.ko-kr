@@ -30,10 +30,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798365"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
@@ -85,14 +85,14 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  현재 ID 값의 구체적인 수정 사항은 매개 변수 지정에 따라 달라집니다.  
   
 |DBCC CHECKIDENT 명령|ID 수정 사항|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT(*table_name*, NORESEED)|현재 ID 값을 다시 설정하지 않습니다. DBCC CHECKIDENT는 ID 열의 현재 ID 값과 현재 최대값을 반환합니다. 두 값이 같지 않으면 ID 값을 다시 설정하여 잠재적 오류를 방지하고 값이 간격 없이 순서대로 지정되도록 해야 합니다.|  
-|DBCC CHECKIDENT(*table_name*)<br /><br /> 로 구분하거나 여러<br /><br /> DBCC CHECKIDENT( *table_name*, RESEED )|테이블의 현재 ID 값이 ID 열에 저장된 최대 ID 값보다 작을 경우 ID 열의 최대값을 사용하여 다시 설정됩니다. 뒷부분에 나오는 '예외' 섹션을 참조하십시오.|  
+|DBCC CHECKIDENT(*table_name*)<br /><br /> 또는<br /><br /> DBCC CHECKIDENT( *table_name*, RESEED )|테이블의 현재 ID 값이 ID 열에 저장된 최대 ID 값보다 작을 경우 ID 열의 최대값을 사용하여 다시 설정됩니다. 뒷부분에 나오는 '예외' 섹션을 참조하십시오.|  
 |DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다. 테이블에 행이 있거나 DELETE 문을 사용하여 모든 행을 제거한 경우 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 트랜잭션이 행을 삽입하고 나중에 롤백되는 경우 삽입된 다음 행은 행이 삭제된 것처럼 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> \- ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> \- PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
   
 ## <a name="exceptions"></a>예외
@@ -101,7 +101,7 @@ DBCC CHECKIDENT
   
 |조건|다시 설정 방법|  
 |---------------|-------------------|  
-|현재 ID 값이 테이블의 최대값보다 큰 경우|DBCC CHECKIDENT(*table_name*, NORESEED)를 실행하여 열의 현재 최댓값을 확인합니다. 그런 다음, DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*) 명령에서 해당 값을 *new_reseed_value*로 지정합니다.<br /><br /> -또는-<br /><br /> *new_reseed_value*를 매우 낮은 값으로 설정하여 DBCC CHECKIDENT(*table-name*, RESEED,*new_reseed_value*)를 실행한 다음, DBCC CHECKIDENT(*table_name*, RESEED)를 실행하여 값을 수정합니다.|  
+|현재 ID 값이 테이블의 최대값보다 큰 경우|DBCC CHECKIDENT(*table_name*, NORESEED)를 실행하여 열의 현재 최댓값을 확인합니다. 그런 다음, DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*) 명령에서 해당 값을 *new_reseed_value*로 지정합니다.<br /><br /> 또는<br /><br /> *new_reseed_value*를 매우 낮은 값으로 설정하여 DBCC CHECKIDENT(*table-name*, RESEED,*new_reseed_value*)를 실행한 다음, DBCC CHECKIDENT(*table_name*, RESEED)를 실행하여 값을 수정합니다.|  
 |모든 행이 테이블에서 삭제되는 경우|*new_reseed_value*를 새 시작 값으로 설정하여 DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*)를 실행합니다.|  
   
 ## <a name="changing-the-seed-value"></a>초기값 변경
@@ -134,7 +134,7 @@ Azure SQL Data Warehouse에는 **db_owner** 권한이 필요합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>1\. 필요에 따라 현재 ID 값 다시 설정  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. 필요에 따라 현재 ID 값 다시 설정  
  다음 예제에서는 필요에 따라 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 지정된 테이블의 현재 ID 값을 다시 설정합니다.  
   
 ```sql
@@ -144,7 +144,7 @@ DBCC CHECKIDENT ('Person.AddressType');
 GO  
 ```  
   
-### <a name="b-reporting-the-current-identity-value"></a>2\. 현재 ID 값 보고
+### <a name="b-reporting-the-current-identity-value"></a>B. 현재 ID 값 보고
 
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 지정된 테이블의 현재 ID 값을 보고하고, ID 값이 잘못되었더라도 그 값을 수정하지 않습니다.  
   
@@ -167,7 +167,7 @@ GO
 
 ### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 빈 테이블에 ID 값 다시 설정
 
- 다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLog` 테이블의 `ErrorLogID` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
+ 다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLogID` 테이블의 `ErrorLog` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
   
 ```sql
 USE AdventureWorks2012;  

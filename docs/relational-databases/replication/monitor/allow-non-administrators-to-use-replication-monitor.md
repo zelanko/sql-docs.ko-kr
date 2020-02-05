@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ee5905259958b1b396b1b9c2726ca3a74b24a7d6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f0451d8fcd55cc3d33616452109a5e5ff95081e0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320627"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287748"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>비관리자의 복제 모니터 사용 허용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,14 +76,14 @@ ms.locfileid: "75320627"
   
 1.  배포 데이터베이스의 배포자에서 [sp_helpuser&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)를 실행합니다. 사용자가 결과 집합의 **UserName**에 나열되어 있지 않은 경우 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 문을 사용하여 사용자에게 배포 데이터베이스에 대한 액세스 권한을 부여해야 합니다.  
   
-2.  배포 데이터베이스의 배포자에서 `@rolename` 매개 변수에 **replmonitor** 값을 지정하고 [sp_helprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)를 실행합니다. 사용자가 결과 집합의 **MemberName** 에 나열되어 있지 않으면 해당 사용자는 이미 이 역할에 속해 있는 것입니다.  
+2.  배포 데이터베이스의 배포자에서 [ 매개 변수에 ](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)replmonitor**값을 지정하고**sp_helprolemember&#40;Transact-SQL&#41;`@rolename`를 실행합니다. 사용자가 결과 집합의 **MemberName** 에 나열되어 있지 않으면 해당 사용자는 이미 이 역할에 속해 있는 것입니다.  
   
-3.  사용자가 **replmonitor** 역할에 속해 있지 않으면 배포 데이터베이스의 배포자에서 [sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)를 실행합니다. `@rolename`에 **replmonitor** 값, `@membername`에 추가할 데이터베이스 사용자 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 로그인의 이름을 지정합니다.  
+3.  사용자가 **replmonitor** 역할에 속해 있지 않으면 배포 데이터베이스의 배포자에서 [sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)를 실행합니다. **에** replmonitor`@rolename` 값, [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에 추가할 데이터베이스 사용자 또는 `@membername` Windows 로그인의 이름을 지정합니다.  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>replmonitor 고정 데이터베이스 역할에서 사용자를 제거하려면  
   
-1.  사용자가 **replmonitor** 역할에 속해 있는지 확인하려면 배포 데이터베이스의 배포자에서 `@rolename`에 **replmonitor** 값을 지정하고 [sp_helprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)를 실행합니다. 사용자가 결과 집합의 **MemberName** 에 나열되어 있지 않으면 해당 사용자는 현재 이 역할에 속해 있지 않은 것입니다.  
+1.  사용자가 **replmonitor** 역할에 속해 있는지 확인하려면 배포 데이터베이스의 배포자에서 [에 ](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)replmonitor**값을 지정하고**sp_helprolemember&#40;Transact-SQL&#41;`@rolename`를 실행합니다. 사용자가 결과 집합의 **MemberName** 에 나열되어 있지 않으면 해당 사용자는 현재 이 역할에 속해 있지 않은 것입니다.  
   
-2.  사용자가 **replmonitor** 역할에 속해 있으면 배포 데이터베이스의 배포자에서 [sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)를 실행합니다. `@rolename`에 **replmonitor** 값, `@membername`에 제거할 데이터베이스 사용자 또는 Windows 로그인의 이름을 지정합니다. 
+2.  사용자가 **replmonitor** 역할에 속해 있으면 배포 데이터베이스의 배포자에서 [sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)를 실행합니다. **에** replmonitor`@rolename` 값, `@membername`에 제거할 데이터베이스 사용자 또는 Windows 로그인의 이름을 지정합니다. 
   
   

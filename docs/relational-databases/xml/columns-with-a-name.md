@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113050"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함하는 열 이름이 '\@'로 시작하므로 **EmpID** 특성이 `row` 요소에 추가됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 `row` 요소 아래에 `EmpName` 자식을 포함하고 `EmpName` 자식은 `First`, `Middle` 및 `Last` 요소 자식을 갖습니다.  
+ PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함하는 열 이름이 '\@'로 시작하므로 **EmpID** 특성이 `row` 요소에 추가됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 `EmpName` 요소 아래에 `row` 자식을 포함하고 `EmpName` 자식은 `First`, `Middle` 및 `Last` 요소 자식을 갖습니다.  
   
 ```xml
 <row EmpID="1">  

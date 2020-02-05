@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 0fb96d94ae330fdf55d82625ed71217ba71e50ff
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847404"
 ---
 # <a name="iclientvirtualdevicecompletecommand-vdi"></a>IClientVirtualDevice::CompleteCommand (VDI)
@@ -43,9 +43,9 @@ HRESULT IClientVirtualDevice::CompleteCommand (
 
 *dwlPosition* GetPosition 명령에만 해당하는 응답입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 완료가 올바르게 표시되었습니다. |
 | VD_E_INVALID | pCmd가 활성 명령이 아닙니다. |

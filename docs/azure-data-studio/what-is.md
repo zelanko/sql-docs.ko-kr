@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952408"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956492"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
@@ -95,9 +95,9 @@ SQL 코드 조각은 데이터베이스, 테이블, 뷰, 저장 프로시저, �
 |테마|yes||
 |어둡게 모드|yes||
 |Azure Resource Explorer|미리 보기||
-|스크립트 생성 마법사||yes|
+|스크립트 생성 마법사||미리 보기|
 |DACPAC 가져오기/내보내기||yes|
-|개체 속성||yes|
+|개체 속성||미리 보기|
 |테이블 디자이너||yes|
 
 ### <a name="query-editor"></a>쿼리 편집기

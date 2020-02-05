@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 35cd84e1ffbdc3251565d99d05b2a9aef7ab66f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770045"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>새 구독 마법사(UI 참조)
@@ -26,7 +26,7 @@ ms.locfileid: "68770045"
   
 -   [&#60;AgentName&#62; 에이전트 위치](../../relational-databases/replication/agentname-agent-location.md)  
   
--   [구독자](../../relational-databases/replication/subscribers.md)  
+-   [게시자 속성](../../relational-databases/replication/subscribers.md)  
   
 -   [SQL Server 이외 구독자 추가](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   

@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: e46c70ad39a0f711a81b4ce87450da06ce07c083
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729893"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE(Transact-SQL)
@@ -38,7 +38,7 @@ DBCC DROPRESULTSETCACHE
 
 DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 - 이 명령은 모든 쿼리에 대한 결과 집합 캐시를 비웁니다.  
 
@@ -46,7 +46,7 @@ DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.
 
 - 결과 집합 캐싱을 사용하도록 설정된 데이터베이스를 일시 중지하면 캐시된 결과가 삭제되지 않습니다.  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [결과 집합 캐싱을 사용한 성능 조정](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

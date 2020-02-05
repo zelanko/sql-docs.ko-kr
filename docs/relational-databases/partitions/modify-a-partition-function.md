@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907352"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
@@ -44,7 +44,7 @@ ms.locfileid: "72907352"
   
 -   ALTER PARTITION FUNCTION은 한 파티션을 둘로 분할하거나 두 파티션을 하나로 병합하는 데만 사용할 수 있습니다. 10개의 파티션을 5개로 줄이는 것과 같이 테이블이나 인덱스가 분할되는 방식을 변경하려면 다음 옵션 중 하나를 사용합니다.  
   
-    -   원하는 파티션 함수가 있는 분할된 테이블을 새로 만든 다음 INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파티션 관리 마법사**를 사용하여 이전 테이블의 데이터를 새 테이블에 삽입합니다.  
+    -   원하는 파티션 함수가 있는 분할된 테이블을 새로 만든 다음 INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 **의** 파티션 관리 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이전 테이블의 데이터를 새 테이블에 삽입합니다.  
   
     -   힙에 분할된 클러스터형 인덱스를 만듭니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72907352"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  

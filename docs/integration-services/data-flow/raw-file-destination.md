@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292184"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -59,7 +59,7 @@ ms.locfileid: "71292184"
   
  다음 표에서는 WriteOption 속성에서 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |추가|기존 파일에 데이터를 추가합니다. 추가된 데이터의 메타데이터가 해당 파일 형식과 일치해야 합니다.|  
 |항상 만들기|항상 새 파일을 만듭니다.|  

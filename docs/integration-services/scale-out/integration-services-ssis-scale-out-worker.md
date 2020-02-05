@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082067"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
@@ -28,10 +28,10 @@ Scale Out 작업자는 Scale Out 작업자 서비스를 실행하여 Scale Out �
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out 작업자 서비스 구성
 Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 파일을 사용하여 구성합니다. 구성 파일을 업데이트한 후에는 서비스를 다시 시작해야 합니다.
 
-|Configuration  |설명  |기본값|
+|구성  |Description  |기본값|
 |---------|---------|---------|
 |DisplayName|규모 확장 작업자의 표시 이름입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|컴퓨터 이름|
-|설명|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|비어 있음|
+|Description|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|Empty|
 |MasterEndpoint|규모 확장 마스터에 연결하는 엔드포인트입니다.|규모 확장 작업자 설치 중에 설정된 엔드포인트|
 |MasterHttpsCertThumbprint|규모 확장 마스터를 인증하는 데 사용되는 클라이언트 SSL 인증서의 지문입니다.|규모 확장 작업자 설치 중에 지정된 클라이언트 인증서의 지문|
 |WorkerHttpsCertThumbprint|규모 확장 작업자를 인증하는 데 사용되는 규모 확장 마스터에 대한 인증서의 지문입니다.|규모 확장 작업자 설치 중에 자동으로 생성되고 설치되는 인증서의 지문|
@@ -44,11 +44,11 @@ Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\
 |TaskRequestMinMemory|규모 확장 작업자가 작업을 요청할 수 있는 메모리의 하한(MB)입니다.|100.0|
 |MaxTaskCount|규모 확장 작업자가 보유할 수 있는 최대 작업 수입니다.|10|
 |LeaseInterval|규모 확장 작업자가 보유하고 있는 작업의 임대 간격입니다.|00:01:00|
-|TasksRootFolder|작업 로그의 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음|
+|TasksRootFolder|작업 로그의 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|Empty|
 |TaskLogLevel|규모 확장 작업자의 작업 로그 수준입니다. (자세한 정보 표시 0x01, 정보 0x02, 경고 0x04, 오류 0x08, 진행률 0x10, CriticalError 0x20, 감사 0x40)|126(정보, 경고, 오류, 진행률, CriticalError, 감사)|
 |TaskLogSegment|작업 로그 파일의 시간 범위입니다.|00:00:00|
 |TaskLogEnabled|작업 로그를 사용할 수 있는지 여부를 지정합니다.|true|
-|ExecutionLogCacheFolder|패키지 실행 로그 캐시에 사용되는 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음|
+|ExecutionLogCacheFolder|패키지 실행 로그 캐시에 사용되는 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|Empty|
 |ExecutionLogMaxBufferLogCount|메모리에 있는 하나의 실행 로그 버퍼에서 캐시된 최대 실행 로그 수입니다.|10000|
 |ExecutionLogMaxInMemoryBufferCount|실행 로그에 대한 메모리의 최대 실행 로그 버퍼 수입니다.|10|
 |ExecutionLogRetryCount|실행 로깅이 실패할 경우 다시 시도 횟수입니다.|3|
@@ -59,7 +59,7 @@ Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\
 ## <a name="view-the-scale-out-worker-log"></a>Scale Out 작업자 로그 보기
 Scale Out 작업자 서비스의 로그 파일은 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` 폴더에 있습니다.
 
-각 개별 작업의 로그 위치는 `TasksRootFolder`의 `WorkerSettings.config` 파일에 구성됩니다. 값을 지정하지 않으면 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 폴더에 로그가 있습니다. 
+각 개별 작업의 로그 위치는 `WorkerSettings.config`의 `TasksRootFolder` 파일에 구성됩니다. 값을 지정하지 않으면 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 폴더에 로그가 있습니다. 
 
 *[account]* 매개 변수는 Scale Out 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 `SSISScaleOutWorker140`입니다.
 

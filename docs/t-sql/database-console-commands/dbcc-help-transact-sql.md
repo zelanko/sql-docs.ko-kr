@@ -19,10 +19,10 @@ ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251388"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72251388"
 
 지정한 DBCC 명령의 구문 정보를 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ DBCC HELP는 지정한 DBCC 명령의 구문을 보여 주는 결과 집합을 �
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-using-dbcc-help-with-a-variable"></a>1\. DBCC HELP에 변수를 지정  
+### <a name="a-using-dbcc-help-with-a-variable"></a>A. DBCC HELP에 변수를 지정  
 다음 예에서는 DBCC `CHECKDB`의 구문 정보를 반환합니다.
   
 ```sql  
@@ -66,7 +66,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>2\. DBCC HELP에 옵션 ?를 옵션  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. DBCC HELP에 옵션 ?를 옵션  
 다음 예에서는 도움말을 볼 수 있는 모든 DBCC 문을 반환합니다.
   
 ```sql  

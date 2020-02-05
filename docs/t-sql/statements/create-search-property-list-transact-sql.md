@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117277"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117277"
 
   새로운 검색 속성 목록을 만듭니다. 검색 속성 목록은 전체 텍스트 인덱스에 포함할 하나 이상의 검색 속성을 지정하는 데 사용됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 소유자를 변경할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]  
 >  일반적으로 속성 목록에 대한 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
@@ -87,7 +87,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  현재 데이터베이스에서 CREATE FULLTEXT CATALOG 권한이 필요하고 원본 속성 목록을 복사하는 데이터베이스에 대한 REFERENCES 권한이 필요합니다.  
   
 > [!NOTE]  
@@ -95,8 +95,8 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>1\. 빈 속성 목록을 만들고 인덱스와 연결  
- 다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `AdventureWorks` 데이터베이스에 있는 `Production.Document` 테이블의 전체 텍스트 인덱스와 연결합니다.  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 빈 속성 목록을 만들고 인덱스와 연결  
+ 다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `Production.Document` 데이터베이스에 있는 `AdventureWorks` 테이블의 전체 텍스트 인덱스와 연결합니다.  
   
 > [!NOTE]  
 >  이 검색 속성 목록에 미리 정의되고 잘 알려진 검색 속성을 여러 개 추가하는 예에 대해서는 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)을 참조하세요. 목록에 검색 속성을 추가한 후에는 데이터베이스 관리자가 다른 ALTER FULLTEXT INDEX 문을 START FULL POPULATION 절과 함께 사용해야 합니다.  
@@ -111,7 +111,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO   
 ```  
   
-### <a name="b-creating-a-property-list-from-an-existing-one"></a>2\. 기존 속성 목록을 사용하여 속성 목록 만들기  
+### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 기존 속성 목록을 사용하여 속성 목록 만들기  
  다음 예에서는 예 1에서 만든 목록 `JobCandidateProperties`로 새 검색 속성 목록 `DocumentPropertyList`를 만듭니다. 기존 목록은 `AdventureWorks2012` 데이터베이스에서 전체 텍스트 인덱스와 연결되어 있습니다. 그런 다음 이 예에서는 ALTER FULLTEXT INDEX 문을 사용하여 새 속성 목록을 `HumanResources.JobCandidate` 데이터베이스에 있는 `AdventureWorks2012` 테이블의 전체 텍스트 인덱스와 연결합니다. 이 ALTER FULLTEXT INDEX 문이 전체 채우기를 시작합니다. 전체 채우기는 SET SEARCH PROPERTY LIST 절의 기본 동작입니다.  
   
 ```  

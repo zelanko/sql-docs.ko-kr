@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2df5c3df512c60c38caeb2f2d0240a3cf2daa6e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0ba452caea108e24e86bffc0e89bfbc85dd2ed3e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768722"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285902"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68768722"
   
  실행 파일을 사용하면 다음과 같은 복제 에이전트 인스턴스를 실행할 수 있습니다.  
   
--   [복제 배포 에이전트](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [복제 로그 판독기 에이전트](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

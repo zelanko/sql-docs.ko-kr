@@ -14,10 +14,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 5b83e6f6eefce1cf56b71e7d433dca19cb4575d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109425"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 함수(Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "68109425"
 
 JSON 텍스트에 대한 유효성 검사 또는 변경을 수행하거나 간단한 값이나 복잡한 값을 추출하려면 이 섹션의 페이지에 설명된 함수를 사용합니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|문자열에 유효한 JSON이 포함되어 있는지 테스트합니다.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 문자열에서 스칼라 값을 추출합니다.|  

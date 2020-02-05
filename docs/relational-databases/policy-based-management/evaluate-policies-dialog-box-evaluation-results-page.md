@@ -14,10 +14,10 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558260"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지
@@ -25,22 +25,22 @@ ms.locfileid: "75558260"
   이 대화 상자를 사용하여 정책 평가 결과를 보고 정책을 준수하지 않는 대상 집합에 정책 기반 관리 정책을 적용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **결과: 정책**  
+ **Results: Policy**  
  평가할 정책의 이름입니다. 이 부분은 읽기 전용입니다.  
   
- **결과: 메시지**  
+ **Results: Message**  
  오류가 발생한 경우 관련 정보에 대한 링크입니다.  
   
- **대상 정보: 서버**  
+ **Target details: Server**  
  정책을 준수하는지 평가할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스입니다.  
   
- **대상 정보: 대상**  
+ **Target details: Target**  
  정책을 준수하는지 평가할 대상입니다.  
   
- **대상 정보: 세부 정보**  
+ **Target details: Details**  
  정책 평가에 대한 세부 정보를 보여 주는 **결과 자세히 보기** 대화 상자에 대한 링크입니다.  
   
- **대상 정보: 메시지**  
+ **Target details: Message**  
  오류가 발생한 경우 관련 정보에 대한 링크입니다.  
   
 ## <a name="see-also"></a>참고 항목  

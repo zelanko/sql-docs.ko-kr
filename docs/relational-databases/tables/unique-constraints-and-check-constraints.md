@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017663"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
@@ -32,7 +32,7 @@ ms.locfileid: "68017663"
   
  [CHECK 제약 조건](#Check)  
   
- [관련 태스크](#Tasks)  
+ [관련 작업](#Tasks)  
   
 ##  <a name="Unique"></a> UNIQUE 제약 조건  
  제약 조건은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 사용자에게 적용하는 규칙입니다. 예를 들어 UNIQUE 제약 조건을 사용하면 기본 키에 참여하고 있지 않은 특정 열에 중복 값이 입력되지 않도록 할 수 있습니다. UNIQUE 제약 조건과 PRIMARY KEY 제약 조건이 모두 고유성을 강제 적용하지만 기본 키가 아닌 열 또는 열 조합에 대해 고유성을 강제 적용하려면 PRIMARY KEY 제약 조건 대신 UNIQUE 제약 조건을 사용하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "68017663"
   
  열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA** 인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
   
- CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 어떤 값이 유효한지 결정하는 방법은 서로 다릅니다. FOREIGN KEY 제약 조건은 다른 테이블로부터 유효한 값의 목록을 가져오는 반면 CHECK 제약 조건은 논리 식으로부터 유효한 값을 결정합니다.  
+ CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 어떤 값이 유효한지 결정하는 방법은 서로 다릅니다. FOREIGN KEY 제약 조건은 다른 테이블로부터 유효한 값을 가져오는 반면 CHECK 제약 조건은 논리 식으로부터 유효한 값을 결정합니다.  
   
 > [!CAUTION]  
 >  제약 조건에 암시적 또는 명시적 데이터 형식 변환이 포함된 경우 특정 작업이 실패할 수 있습니다. 예를 들어 파티션 전환의 원본인 테이블에 정의된 이러한 제약 조건으로 인해 ALTER TABLE...SWITCH 작업이 실패할 수 있습니다. 제약 조건 정의에서 데이터 형식을 변환하지 마세요.  
@@ -87,12 +87,12 @@ DELETE CheckTbl WHERE col1 = 10;
   
  `DELETE` 제약 조건에서 `CHECK` 테이블에 행이 적어도 `CheckTbl` 개 이상 있어야 한다고 지정해도 `1` 문이 성공합니다.  
   
-##  <a name="Tasks"></a> 관련 태스크  
+##  <a name="Tasks"></a> 관련 작업  
   
 > [!NOTE]  
 >  테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |UNIQUE 제약 조건을 만드는 방법에 대해 설명합니다.|[UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)|  
 |UNIQUE 제약 조건을 수정하는 방법에 대해 설명합니다.|[UNIQUE 제약 조건 수정](../../relational-databases/tables/modify-unique-constraints.md)|  

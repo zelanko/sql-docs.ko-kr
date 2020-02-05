@@ -12,10 +12,10 @@ ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305034"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
@@ -43,7 +43,7 @@ SELECT @mycol;
   
 USE AdventureWorks2012;  
   
-GO  
+이동  
   
 DECLARE @mycol nvarchar(20);  
   
@@ -54,11 +54,11 @@ EXECUTE ('SELECT @mycol FROM Production.Product;');
 ## <a name="user-action"></a>사용자 동작  
 SQL 스크립트에서 변수를 사용하기 전에 해당 변수를 선언했는지 확인하십시오.  
   
-EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 예를 들어  
+EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 다음은 그 예입니다.  
   
 USE AdventureWorks2012;  
   
-GO  
+이동  
   
 DECLARE @mycol nvarchar(20) ;  
   

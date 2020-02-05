@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ab8f39970447b670dde3f5a653de4642a9d890e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ac57d8427196b432f133f83f2e26be1ede88543f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766868"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287827"
 ---
-# <a name="mssqleng003165"></a>MSSQL_ENG003165
+# <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>메시지 정보  
@@ -44,7 +44,7 @@ ms.locfileid: "68766868"
  이 오류의 원인은 복원된 데이터베이스와 복제 메타데이터 **msdb**, **master**또는 배포 데이터베이스가 포함된 하나 이상의 시스템 데이터베이스의 상태가 일치하지 않기 때문일 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 이 문제를 해결하려면 다음을 수행하십시오.  
+ 이 문제를 해결하려면:  
   
 1.  예를 들면 `ALTER DATABASE AdventureWorks SET ONLINE`과 같이 ALTER DATABASE를 실행하여 데이터베이스를 온라인 상태로 만듭니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요. 복제 설정을 유지하려면 2단계로 이동하고, 그렇지 않은 경우에는 3단계로 이동합니다.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059842"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
@@ -53,13 +53,13 @@ TRIM ( string )
 
 양쪽에서 공백 문자 `char(32)` 또는 기타 지정되지 않은 문자가 제거되는 문자열 인수 형식의 문자 식을 반환합니다. 입력 문자열이 `NULL`인 경우 `NULL`을 반환합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 기본적으로 `TRIM` 함수는 문자열의 시작과 끝에서 공백 문자를 제거합니다. 이 동작은 `LTRIM(RTRIM(@string))`과 동일합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>1\.  문자열의 양쪽에서 공백 문자를 제거합니다.
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  문자열의 양쪽에서 공백 문자를 제거합니다.
 
 다음 예에서는 단어 `test`의 앞과 뒤에서 공백을 제거합니다.
 
@@ -73,7 +73,7 @@ SELECT TRIM( '     test    ') AS Result;
 test
 ```
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>2\.  문자열의 양쪽에서 지정된 문자를 제거합니다.
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  문자열의 양쪽에서 지정된 문자를 제거합니다.
 
 다음 예제에서는 단어 `#`의 앞과 `test`의 뒤에서 후행 마침표와 공백을 제거합니다.
 

@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072385"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072385"
 
   **sp_configure** 시스템 저장 프로시저로 변경한 구성 옵션의 현재 구성 값(**sp_configure** 결과 집합의 **sp_configure** 열)을 업데이트합니다. 구성 옵션에 따라 현재 실행 중인 값을 업데이트하려면 서버를 중지하고 다시 시작해야 하기 때문에 RECONFIGURE에서는 변경된 구성 값에 대해 현재 실행 중인 값(**sp_configure** 결과 집합의 **sp_configure** 열)을 항상 업데이트하지는 않습니다.    
     
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>구문    
     
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  거의 모든 구성 옵션은 WITH OVERRIDE 옵션을 사용하여 재구성할 수 있지만 일부 치명적인 오류는 여전히 방지됩니다. 예를 들어 **min server memory** 구성 옵션은 **max server memory** 구성 옵션에서 지정한 값보다 큰 값으로 구성할 수 있습니다.
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
  **sp_configure**에서는 각 구성 옵션에 대해 설명한 유효한 범위를 벗어난 새 구성 옵션 값을 허용하지 않습니다.    
     
  명시적 또는 암시적 트랜잭션에서는 RECONFIGURE가 허용되지 않습니다. 여러 개의 옵션을 동시에 다시 구성하는 경우 다시 구성 작업 중 하나가 실패하면 다시 구성 작업이 하나도 적용되지 않습니다.    

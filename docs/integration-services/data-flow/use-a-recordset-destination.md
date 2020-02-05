@@ -13,10 +13,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290986"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
@@ -26,7 +26,7 @@ ms.locfileid: "71290986"
 
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **데이터 형식의** 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
   
- 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 다음은 몇 가지 예입니다.  
+ 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 예를 들어 다음과 같은 노래를 선택할 수 있다.  
   
 -   메일 보내기 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어를 사용하여 레코드 집합의 각 행에 대해 사용자 지정 전자 메일 메시지를 보낼 수 있습니다.  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 84f684484423090430ff8e3fe09051b1e19fd2a6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769366"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287015"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68769366"
   
  스냅샷 게시는 동기화가 발생할 때마다 구독자에서 스키마를 완전히 새로 고치므로 모든 스키마 변경 내용이 구독자에 적용됩니다. 트랜잭션 복제 및 병합 복제 또한 가장 일반적인 스키마 변경을 지원합니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
- 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
   
  끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   

@@ -13,10 +13,10 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021716"
 ---
 # <a name="server-public-permissions"></a>서버 public 사용 권한

@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294868"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
@@ -64,7 +64,7 @@ ms.locfileid: "71294868"
  **매개 변수**  
  매개 변수 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  매개 변수 값을 나열합니다.  
   
  **연결 관리자** 탭에는 프로젝트 또는 패키지의 유효성 검사를 위해 사용하는 연결 관리자 속성이 나열됩니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "71294868"
  **속성 이름**  
  연결 관리자 속성 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  연결 관리자 속성에 할당된 값을 나열합니다.  
   
   

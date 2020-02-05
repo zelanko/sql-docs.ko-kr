@@ -18,10 +18,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14fa2d0602f0c358cd400e0734e567e853a6db85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286821"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
@@ -34,16 +34,16 @@ ms.locfileid: "71286821"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 예에서는 직원의 전자 메일 주소가 들어 있는 `email` 변수의 값에 따라 Active Directory에서 직원의 이름, 직함 및 전화 번호를 검색합니다. 패키지의 선행 제약 조건에서는 검색된 정보를 사용하여 직원의 직함에 따라 낮은 우선 순위의 전자 메일 메시지를 보낼지 높은 우선 순위의 페이지를 보낼지와 같은 사항을 결정합니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  `email`, `name` 및 `title`이라는 세 개의 문자열 변수를 만듭니다. `email` 변수 값으로 올바른 회사 전자 메일 주소를 입력합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `email` 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `email`ReadOnlyVariables**속성에** 변수를 추가합니다.  
   
-3.  **ReadWriteVariables** 속성에 `name` 및 `title` 변수를 추가합니다.  
+3.  `name`ReadWriteVariables`title` 속성에 **및** 변수를 추가합니다.  
   
 4.  스크립트 프로젝트에서 **System.DirectoryServices** 네임스페이스에 대한 참조를 추가합니다.  
   

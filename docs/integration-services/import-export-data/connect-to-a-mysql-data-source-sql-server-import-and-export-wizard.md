@@ -10,10 +10,10 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285689"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -38,7 +38,7 @@ ms.locfileid: "71285689"
 |필수 정보|.Net Framework Data Provider for MySQL 속성|
 |---|---|
 |서버 이름|**Server**|
-|데이터베이스 이름|**데이터베이스 백업**|
+|데이터베이스 이름|**Database**|
 |인증(로그인) 정보|**사용자 ID** 및 **암호**|
 
 목록의 **ConnectionString** 필드에 연결 문자열을 입력할 필요가 없습니다. MySQL 서버 이름(**Server**) 및 로그인 정보에 대한 개별 값을 입력하면 마법사는 개별 속성과 값에서 연결 문자열을 어셈블합니다. 
@@ -70,7 +70,7 @@ ODBC 드라이버의 이름입니다.
 **Server**  
 MySQL 서버의 이름입니다. 
 
-**데이터베이스 백업**  
+**Database**  
 MySQL 데이터베이스의 이름입니다.
 
 **UID** 및 **PWD**   
@@ -99,7 +99,7 @@ MySQL 데이터베이스의 이름입니다.
 ## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
 여기에 나열되지 않은 데이터 공급자를 사용하여 MySQL에 연결하는 방법에 대한 내용은 [MySQL 연결 문자열](https://www.connectionstrings.com/mysql/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

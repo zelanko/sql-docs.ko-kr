@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101897"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68101897"
 >[!NOTE]
 >DBCC FREEPROCCACHE는 고유하게 컴파일된 저장 프로시저에 대한 실행 통계를 지우지 않습니다. 프로시저 캐시는 고유하게 컴파일된 저장 프로시저에 대한 정보를 포함하지 않습니다. 프로시저 실행에서 수집된 모든 실행 통계는 실행 통계 DMV([sys.dm_exec_procedure_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 및 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md))에 표시됩니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
 SQL Server용 구문:
@@ -88,7 +88,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`를 사용하여 범위에 있는 데이터베이스의 프로시저(계획) 캐시를 지웁니다.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 계획 캐시를 신중하게 지우려면 DBCC FREEPROCCACHE를 사용합니다. 프로시저(계획) 캐시를 지우면 모든 계획이 제거되고, 이전에 캐시된 계획을 다시 사용하지 않고 들어오는 쿼리를 실행하면 새 계획이 컴파일됩니다. 
 
 이로 인해 새 컴파일 횟수가 증가함에 따라 쿼리 성능이 갑자기 일시적으로 저하될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
@@ -112,7 +112,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>결과 집합  
-WITH NO_INFOMSGS 절을 지정하지 않으면 DBCC FREEPROCCACHE는 다음 메시지를 반환합니다. “DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
+WITH NO_INFOMSGS 절이 지정되지 않으면 DBCC FREEPROCCACHE에서 "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
 ## <a name="permissions"></a>사용 권한  
 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -137,7 +137,7 @@ DBCC FREEPROCCACHE가 실행되면 새 행이 sys.pdw_exec_requests 시스템 �
 
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>1\. 계획 캐시에서 쿼리 계획 만들기  
+### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 계획 캐시에서 쿼리 계획 만들기  
 다음 예에서는 쿼리 계획 핸들을 지정하여 계획 캐시에서 계획 지침을 삭제합니다. 예제 쿼리가 계획 캐시에 놓이도록 쿼리가 먼저 실행됩니다. `sys.dm_exec_cached_plans` 및 `sys.dm_exec_sql_text` 동적 관리 뷰를 쿼리하여 쿼리에 대한 계획 핸들을 반환합니다. 
 
 그러면 계획 캐시에서 해당 계획만 제거하도록 결과 집합의 계획 핸들 값이 `DBCC FREEPROCACHE` 문에 삽입됩니다.
@@ -170,7 +170,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>2\. 계획 캐시에서 모든 계획 삭제  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. 계획 캐시에서 모든 계획 삭제  
 다음 예에서는 계획 캐시에서 모든 요소를 삭제합니다. WITH `NO_INFOMSGS`절은 정보 메시지가 표시되지 않도록 지정됩니다.
   
 ```sql  
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 기본 구문 예제  
 다음 예제에서는 컴퓨팅 노드에서 기존 쿼리 계획 캐시를 모두 제거합니다. 컨텍스트가 UserDbSales로 설정되어 있지만 모든 데이터베이스에 대한 컴퓨팅 노드 쿼리 계획 캐시가 제거됩니다. WITH NO_INFOMSGS 절은 정보 메시지가 결과에 표시되지 않도록 합니다.  

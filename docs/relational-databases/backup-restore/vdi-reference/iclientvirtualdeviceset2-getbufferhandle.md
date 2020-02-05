@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847334"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -37,15 +37,15 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 
 *pBufferHandle* 버퍼의 고유 식별자가 반환됩니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_PROTOCOL | 가상 디바이스 세트가 현재 열려 있지 않습니다. |
 | VD_E_INVALID | pBuffer가 유효한 주소가 아닙니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 GetBufferHandle 함수를 호출하는 프로세스는 데이터 전송이 완료될 때 IClientVirtualDevice2::CompleteCommand를 호출해야 합니다.
 

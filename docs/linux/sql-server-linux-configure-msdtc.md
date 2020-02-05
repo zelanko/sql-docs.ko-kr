@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995872"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법
@@ -29,7 +29,7 @@ SQL Server 내에 MSDTC 및 RPC 엔드포인트 매퍼 기능을 도입하여 SQ
 
 MSDTC는 mssql-conf 유틸리티의 두 가지 구성 매개 변수를 사용합니다.
 
-| mssql-conf 설정 | 설명 |
+| mssql-conf 설정 | Description |
 |---|---|
 | **network.rpcport** | RPC 엔드포인트 매퍼 프로세스가 바인딩되는 TCP 포트입니다. |
 | **distributedtransaction.servertcpport** | MSDTC 서버가 수신 대기하는 포트입니다. 이 포트를 설정하지 않으면 MSDTC 서비스는 서비스를 다시 시작할 때 사용 후 삭제되는 임의 포트를 사용하며, MSDTC 서비스가 계속 통신할 수 있도록 방화벽 예외를 다시 구성해야 합니다. |
@@ -150,7 +150,7 @@ Ubuntu 및 SLES는 **firewalld** 서비스를 사용하지 않으므로 **iptabl
 
 ### <a name="port-routing-in-rhel"></a>RHEL의 포트 라우팅
 
-Red Hat Enterprise Linux와 같이 **firewalld** 서비스를 사용하는 배포에서는 서버에서 포트 열기 및 내부 포트 전달에 동일한 서비스를 사용할 수 있습니다. 예를 들어 Red Hat Enterprise Linux에서는 **firewalld** 서비스를 사용하여(`-add-forward-port` 또는 비슷한 옵션과 함께 **firewall-cmd** 구성 유틸리티를 통해) iptables를 사용하지 않고 영구적 포트 전달 규칙을 만들고 관리해야 합니다.
+Red Hat Enterprise Linux와 같이 **firewalld** 서비스를 사용하는 배포에서는 서버에서 포트 열기 및 내부 포트 전달에 동일한 서비스를 사용할 수 있습니다. 예를 들어 Red Hat Enterprise Linux에서는 **firewalld** 서비스를 사용하여(**또는 비슷한 옵션과 함께**firewall-cmd`-add-forward-port` 구성 유틸리티를 통해) iptables를 사용하지 않고 영구적 포트 전달 규칙을 만들고 관리해야 합니다.
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 SQL Server on Linux용 MSDTC는 기본적으로 RPC 통신에 대한 인증을 사용하지 않습니다. 그러나 호스트 머신이 AD(Active Directory) 도메인에 가입되어 있으면 다음 **mssql-conf** 설정을 통해 인증된 RPC 통신을 사용하도록 MSDTC를 구성할 수 있습니다.
 
-| 설정 | 설명 |
+| 설정 | Description |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 분산 트랜잭션에 대한 보안 전용 RPC 호출을 구성합니다. 기본값은 0입니다. |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 분산 트랜잭션에 대한 보안 전용 RPC 호출을 구성합니다. 기본값은 0입니다. |

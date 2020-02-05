@@ -17,10 +17,10 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293464"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 대상을 사용하여 데이터 대량 로드
@@ -58,7 +58,7 @@ ms.locfileid: "71293464"
     > [!NOTE]  
     >  대상은 같은 이름의 열로 자동으로 매핑됩니다.  
   
-9. **고급**을 클릭하고 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건** 및 **트리거 실행**과 같은 대량 로드 옵션을 설정합니다.  
+9. **고급** 을 클릭하고 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**및 **트리거 실행**과 같은 대량 로드 옵션을 설정합니다.  
   
      선택적으로 삽입할 첫 번째와 마지막 입력 행, 삽입 작업이 중지되기 전에 발생할 수 있는 최대 오류 개수 및 삽입이 정렬될 열을 지정합니다.  
   

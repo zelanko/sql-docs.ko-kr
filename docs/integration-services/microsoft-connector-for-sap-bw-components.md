@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295865"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 구성 요소
@@ -37,13 +37,13 @@ ms.locfileid: "71295865"
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW 연결 관리자](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  SAP BW 연결 관리자에 대해 설명합니다. 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템에 연결합니다.  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [SAP BW 원본](../integration-services/data-flow/sap-bw-source.md)  
  SAP Netweaver BW 시스템에서 데이터를 추출할 수 있도록 해 주는 SAP BW 원본에 대해 설명합니다.  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [SAP BW 대상](../integration-services/data-flow/sap-bw-destination.md)  
  SAP Netweaver BW 시스템에서 데이터를 로드할 수 있도록 해 주는 SAP BW 대상에 대해 설명합니다.  
   
   

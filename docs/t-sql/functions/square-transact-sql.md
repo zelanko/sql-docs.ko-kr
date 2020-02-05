@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ef602ecc617f9811b5c40abd1e512a6109fc8ec
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249796"
 ---
 # <a name="square-transact-sql"></a>SQUARE(Transact-SQL)
@@ -41,7 +41,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환되는 형식의 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `containers` 테이블의 `volume` 열에 각 값의 제곱을 반환합니다.  
+ 다음 예에서는 `volume` 테이블의 `containers` 열에 각 값의 제곱을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  

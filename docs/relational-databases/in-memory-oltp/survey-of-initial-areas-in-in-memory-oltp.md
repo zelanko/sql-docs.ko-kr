@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412497"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
@@ -59,7 +59,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
   
 나중에 메모리 내 OLTP의 성능 향상 데모를 제공하는 다음 문서를 참조하는 것이 좋습니다.  
   
-- [데모: 메모리 내 OLTP의 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
 - [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
   
   
@@ -98,7 +98,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 5. [실시간 운영 분석: 필터링된 NCCI(비클러스터형 columnstore 인덱스)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
 6. [실시간 운영 분석: NCCI(비클러스터형 Columnstore 인덱스)의 압축 지연 옵션](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
 7. [실시간 운영 분석: NCCI의 압축 지연 옵션 및 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [실시간 운영 분석: 메모리 최적화 테이블 및 Columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+8. [실시간 운영 분석: 메모리 액세스에 최적화된 테이블 및 Columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>Columnstore 인덱스를 조각 모음합니다.
 
@@ -108,7 +108,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 #### <a name="bulk-importation-of-data"></a>데이터 대량 가져오기
 
 1. [클러스터형 열 저장소: 대량 로드](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 - 최소 로깅](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+2. [클러스터형 Columnstore 인덱스: 데이터 로드 최적화 – 최소 로깅](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
 3. [클러스터형 columnstore 인덱스: 데이터 로드 최적화 – 병렬로 대량 가져오기](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
@@ -214,7 +214,7 @@ Azure SQL Database에서는 이러한 FILEGROUP을 만들 수 없으며, 만들 
 
 다음 샘플 T-SQL 스크립트는 메모리 내 OLTP에 데이터베이스를 사용하고 모든 권장 설정을 구성합니다. 이는 SQL Server와 Azure SQL Database 둘 다에서 작동합니다([enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)).
 
-MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부 SQL Server 기능만 지원됩니다. 제한 사항에 대한 자세한 내용은 다음을 참조하세요. [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)
+MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부 SQL Server 기능만 지원됩니다. 제한 사항에 대한 자세한 내용은 [메모리 내 OLTP에 대한 지원되지 않는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -362,7 +362,7 @@ PRINT @mesg;
 **이중 특성:** 메모리 최적화 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
   
   
-**잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 대한 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
+**잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
   
   
 **행 버전:** 잠금 대신 메모리 최적화 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  
@@ -493,9 +493,9 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 ## <a name="related-links"></a>관련 링크  
   
-- 초기 아티클: [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- 초기 문서: [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
-- [데모: 메모리 내 OLTP의 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
 - [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  

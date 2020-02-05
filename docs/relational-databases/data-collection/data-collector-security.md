@@ -14,10 +14,10 @@ ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140737"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
@@ -53,7 +53,7 @@ ms.locfileid: "68140737"
 > [!IMPORTANT]  
 >  db_ssisadmin 및 dc_admin 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 db_ssisadmin 및 dc_admin 역할에 sysadmin 멤버만 추가합니다.  
   
-### <a name="dcadmin-role"></a>dc_admin 역할  
+### <a name="dc_admin-role"></a>dc_admin 역할  
  **dc_admin** 역할에 할당된 사용자는 서버 인스턴스의 데이터 수집기 구성에 대한 모든 관리자 권한(만들기, 읽기, 업데이트 및 삭제)을 갖습니다. 이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
   
 -   수집기 수준 속성 설정  
@@ -73,7 +73,7 @@ ms.locfileid: "68140737"
   
 -   **dc_operator**. **dc_admin** 의 멤버는 **dc_operator**에 부여된 사용 권한을 상속받습니다.  
   
-### <a name="dcoperator-role"></a>dc_operator 역할  
+### <a name="dc_operator-role"></a>dc_operator 역할  
  **dc_operator** 역할의 멤버는 읽기 및 업데이트 권한을 갖습니다. 이 역할은 컬렉션 집합 실행 및 구성과 관련된 작업 태스크를 지원합니다. 이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
   
 -   컬렉션 집합 시작 또는 중지  
@@ -94,7 +94,7 @@ ms.locfileid: "68140737"
   
  자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
   
-### <a name="dcproxy-role"></a>dc_proxy 역할  
+### <a name="dc_proxy-role"></a>dc_proxy 역할  
  **dc_proxy** 역할의 멤버는 데이터 수집기 컬렉션 집합 및 수집기 수준 속성에 대한 읽기 권한을 갖습니다. 이 역할의 멤버는 자신이 소유하는 작업을 실행할 수 있으며 기존 프록시 계정으로 실행되는 작업 단계를 만들 수도 있습니다.  
   
  이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "68140737"
   
  **sysadmin** 고정 서버 역할의 멤버인 사용자는 데이터 수집기 뷰에 대한 모든 액세스 권한을 가집니다. 하지만 다른 작업을 수행하기 위한 데이터베이스 역할에 명시적으로 추가되어야 합니다.  
   
-### <a name="mdwadmin-role"></a>mdw_admin 역할  
+### <a name="mdw_admin-role"></a>mdw_admin 역할  
  **mdw_admin** 역할의 멤버는 관리 데이터 웨어하우스에 대한 읽기, 쓰기, 업데이트 및 삭제 권한을 갖습니다.  
   
  이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
@@ -138,10 +138,10 @@ ms.locfileid: "68140737"
   
 -   관리 데이터 웨어하우스에 대한 보관 또는 정리와 같은 유지 관리 작업 실행  
   
-### <a name="mdwwriter-role"></a>mdw_writer 역할  
+### <a name="mdw_writer-role"></a>mdw_writer 역할  
  **mdw_writer** 역할의 멤버는 관리 데이터 웨어하우스에 데이터를 업로드하고 쓸 수 있습니다. 관리 데이터 웨어하우스에 데이터를 저장하는 모든 데이터 수집기는 이 역할의 멤버여야 합니다.  
   
-### <a name="mdwreader-role"></a>mdw_reader 역할  
+### <a name="mdw_reader-role"></a>mdw_reader 역할  
  **mdw_reader** 역할의 멤버는 관리 데이터 웨어하우스에 대한 읽기 권한을 갖습니다. 이 역할은 기록 데이터에 대한 액세스를 제공하여 문제 해결을 지원하기 위한 것이므로 이 역할의 멤버는 관리 데이터 웨어하우스 스키마의 다른 요소를 볼 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

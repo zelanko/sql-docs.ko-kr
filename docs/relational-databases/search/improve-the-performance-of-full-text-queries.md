@@ -11,10 +11,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0b08e445cf22760f41da3e21e086c20fc927f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021160"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
@@ -49,7 +49,7 @@ ms.locfileid: "68021160"
 -   선택적 관계 조건을 포함하는 애플리케이션의 경우 선택적 관계 조건자와 비선택적 전체 텍스트 조건자를 사용하는 쿼리는 쿼리 최적화 프로그램을 사용하도록 작성되었을 때 최상의 성능을 발휘할 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램이 효과적인 쿼리 계획을 생성하기 위해 조건자나 범위 축소 중 어느 것을 이용할지 결정할 수 있습니다. 이러한 방식은 관계형 데이터를 전체 텍스트 데이터로 인덱싱하는 것보다 간단하고 효율적일 때가 많습니다.  
   
 ## <a name="related-resources"></a>관련 리소스  
- [SQL Server 2008 전체 텍스트 검색: 내부 구조 및 향상 기능](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>참고 항목  
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

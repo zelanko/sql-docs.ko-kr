@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119847"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
@@ -27,7 +27,7 @@ ms.locfileid: "68119847"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 예: 폴란드어로 Month 이름
+## <a name="set-language-example-month-name-in-polish"></a>언어 설정 예제: 폴란드어에서 월 이름
 
 - `SET LANGUAGE Polish;`
 
@@ -119,12 +119,12 @@ YMD-Interpretation--?--NotGuaranteed
 
 위의 코드 예제에서 마지막 예제에는 **ymd** 형식과 입력 문자열 간에 불일치가 있습니다. 입력 문자열의 세 번째 노드는 날이 되기에 너무 큰 숫자 값을 나타냅니다. Microsoft는 이러한 불일치에서 출력 값을 보장하지 않습니다.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT는 날짜 형식의 _결정적_ 제어에 대한 명시적 코드를 제공합니다.
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT는 날짜 형식의 _결정적_ 제어에 대한 명시적 코드를 제공합니다.
 
 CAST 및 CONVERT 설명서 문서는 날짜 변환을 _결정적으로_ 제어하는 데 CONVERT 함수와 함께 사용할 수 있는 명시적 코드를 나열합니다. 해당 문서는 매달 가장 높은 페이지뷰 중 하나를 차지합니다.
 
 - [CAST 및 CONVERT(Transact-SQL): 날짜 및 시간 스타일](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST 및 CONVERT(Transact-SQL): 일부 datetime 변환은 비결정적임](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST 및 CONVERT(Transact-SQL): 일부 날짜/시간 변환은 비결정적임](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -134,7 +134,7 @@ SQL Server 2000에서는 호환성 수준이 80이었습니다. 80 이하의 수
 
 SQL Server 2005 및 90의 호환성 수준부터 암시적 데이터 변환은 비결정적이 되었습니다. 날짜 변환은 SET LANGUAGE 및 수준 90으로 시작하는 SET DATEFORMAT에 따라 달라지게 되었습니다.
 
-#### <a name="unicode"></a>유니코드
+#### <a name="unicode"></a>Unicode
 
 <!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
@@ -142,7 +142,7 @@ SQL Server 2005 및 90의 호환성 수준부터 암시적 데이터 변환은 �
 
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [세션 언어 설정](../../relational-databases/collations/set-a-session-language.md)
 - [날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

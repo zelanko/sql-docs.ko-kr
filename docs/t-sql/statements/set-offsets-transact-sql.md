@@ -23,10 +23,10 @@ ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 93c00a24ee8b5436b3f3b1869c9ea41b633560b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008927"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68008927"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM 및 EXECUTE를 포함한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 쉼표로 구분한 목록입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET OFFSETS 옵션은 DB-Library 애플리케이션에서만 사용됩니다.  
   
  SET OFFSETS 옵션은 구문 분석 시 설정되며, 실행 시 또는 런타임에는 설정되지 않습니다. 구문 분석 시에 설정되면 코드 실행이 실제로 해당 지점에 이르렀는지에 관계없이 SET 문이 일괄 처리나 저장 프로시저에 있으면 이 설정이 적용되고 문이 실행되기 전에 SET 문이 적용됩니다. 예를 들어, 실행 중 도달한 적이 없는 IF...ELSE 문 블록에 SET 문이 있어도, IF...ELSE 문 블록이 구문 분석되기 때문에 SET 문이 적용됩니다.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e6a71e6591781f61560e4c997963571a49f816e5
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e20f38a055fba642795ed0c0d40d07cbff442a9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321439"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287002"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>트랜잭션 아티클 - 스키마 변경 반영을 위해 다시 생성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "75321439"
   
     1.  [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하는 경우 `@schema_option` 0x02비트를 **true**로 설정해야 합니다.  
   
-    2.  `@type` 매개 변수에 ‘insert’, ‘update’ 또는 ‘delete’ 값, `@value` 매개 변수에 사용자 지정 스크립팅 프로시저의 이름을 지정하고 [sp_register_custom_scripting&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)을 실행합니다.  
+    2.  [ 매개 변수에 ‘insert’, ‘update’ 또는 ‘delete’ 값, ](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 매개 변수에 사용자 지정 스크립팅 프로시저의 이름을 지정하고 `@type`sp_register_custom_scripting&#40;Transact-SQL&#41;`@value`을 실행합니다.  
   
      다음에 스키마를 변경하면 복제는 이 저장 프로시저를 호출하여 사용자가 새로 정의한 사용자 지정 저장 프로시저에 대한 정의를 스크립팅한 다음 프로시저를 각 구독자로 전파합니다.  
   

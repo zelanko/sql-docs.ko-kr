@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285431"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -27,7 +27,7 @@ ms.locfileid: "71285431"
 > Oracle 데이터베이스에 연결하기 위한 자세한 요구 사항 및 필수 구성 요소는 이 Microsoft 문서에서 다루지 않습니다. 이 문서에서는 여러분의 컴퓨터에 Oracle 클라이언트 소프트웨어가 설치되어 있고 대상 Oracle 데이터베이스에 연결할 수 있다고 가정합니다. 자세한 내용은 Oracle 데이터베이스 관리자에게 문의하거나 Oracle 설명서를 참조하세요.
 
 ## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle을 사용하여 Oracle에 연결
-마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for Oracle**을 선택하면 페이지에 공급자에 대한 옵션의 그룹화된 목록이 표시됩니다. 이들 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히 두세 가지 정보만 제공하면 됩니다. 다른 설정의 기본값은 무시할 수 있습니다.
+마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for Oracle**을 선택하면 페이지에 공급자에 대한 옵션의 그룹화된 목록이 표시됩니다. 이러한 속성 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히 두세 가지 정보만 제공하면 됩니다. 다른 설정의 기본값은 무시할 수 있습니다.
 
 > [!NOTE]
 > 이 데이터 공급자에 대한 연결 옵션은 Oracle이 원본이건 또는 대상이건 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
@@ -86,14 +86,14 @@ Oracle 서버의 이름입니다.
 
 `SELECT host_name FROM v$instance`
 
-로 구분하거나 여러
+또는
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
 ## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
 여기에 나열되지 않은 데이터 공급자를 사용하여 Oracle에 연결하는 방법에 대한 내용은 [Oracle 연결 문자열](https://www.connectionstrings.com/oracle/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

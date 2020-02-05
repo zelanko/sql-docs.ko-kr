@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041780"
 ---
 # <a name="database-mirroring-system-object-reference"></a>데이터베이스 미러링 시스템 개체 참조
@@ -21,14 +21,14 @@ ms.locfileid: "68041780"
   
 ## <a name="system-catalog-views"></a>시스템 카탈로그 뷰
 
-| 시스템 카탈로그 뷰 | 설명|
+| 시스템 카탈로그 뷰 | Description|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | 서버가 데이터베이스 미러링 파트너 역할을 하는 각 모니터 역할에 대한 행을 포함합니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 
-| 시스템 동적 관리 뷰 | 설명|
+| 시스템 동적 관리 뷰 | Description|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | 서버 인스턴스의 미러된 데이터베이스에 대한 각 자동 페이지 복구 시도당 하나의 행을 반환합니다.  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | 데이터베이스 미러링에 설정된 각 연결에 대해 하나의 행을 반환합니다. |
@@ -36,7 +36,7 @@ ms.locfileid: "68041780"
 
 ## <a name="system-tables"></a>시스템 테이블
 
-| 시스템 테이블 | 설명|
+| 시스템 테이블 | Description|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | 데이터베이스 미러링 유지 관리 플랜에 대한 정보를 반환합니다. |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | 데이터베이스 미러링 유지 관리 플랜 기록에 대한 정보를 반환합니다. |

@@ -24,10 +24,10 @@ ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102197"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68102197"
 
   지정한 데이터베이스 내의 카탈로그 일관성을 검사합니다. 데이터베이스는 온라인 상태여야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,10 +56,10 @@ DBCC CHECKCATALOG
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC CATALOG 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
   
-|State|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
@@ -68,7 +68,7 @@ DBCC CATALOG 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |4|어설션 또는 액세스 위반이 감지되었습니다.|  
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
-DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요.
+DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요.
 스냅샷을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  

@@ -16,10 +16,10 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831776"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
@@ -34,11 +34,11 @@ ms.locfileid: "75831776"
 ## <a name="performance-of-scalar-udfs"></a>스칼라 UDF 성능
 스칼라 UDF의 성능이 저하되는 이유는 일반적으로 다음과 같습니다.
 
-- **반복 호출:** UDF가 튜플 정규화마다 한 번씩 반복적인 방식으로 호출됩니다. 이렇게 하면 함수 호출로 인해 반복적인 컨텍스트 전환에 따른 추가 비용이 발생합니다. 특히 해당 정의에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행하는 UDF에는 심각한 영향이 있습니다.
+- **반복적인 호출:** UDF가 튜플 정규화마다 한 번씩 반복적인 방식으로 호출됩니다. 이렇게 하면 함수 호출로 인해 반복적인 컨텍스트 전환에 따른 추가 비용이 발생합니다. 특히 해당 정의에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행하는 UDF에는 심각한 영향이 있습니다.
 
 - **비용 부족:** 최적화 중에는 관계형 연산자에만 비용을 지불하고 스칼라 연산자는 지불하지 않습니다. 스칼라 UDF 도입 이전에는 보통 다른 스칼라 연산자가 더 저렴했고 비용이 필요하지 않았습니다. 스칼라 작업에 소규모 CPU 비용만 추가되면 충분했습니다. 실제 비용이 큰데 적게 표시되는 시나리오가 있습니다.
 
-- **실행 해석:** UDF는 명령문 단위로 실행되는 명령문 일괄 처리로 평가됩니다. 각 문 자체가 컴파일되며 컴파일된 계획은 캐시됩니다. 이 캐싱 전략에서는 다시 컴파일하지 않고 각각의 문이 격리 실행되므로 시간을 상당 수준 절약할 수 있습니다. 교차 문 최적화는 수행되지 않습니다.
+- **실행 해석:** UDF는 문 단위로 실행되는 문 일괄 처리로 평가됩니다. 각 문 자체가 컴파일되며 컴파일된 계획은 캐시됩니다. 이 캐싱 전략에서는 다시 컴파일하지 않고 각각의 문이 격리 실행되므로 시간을 상당 수준 절약할 수 있습니다. 교차 문 최적화는 수행되지 않습니다.
 
 - **직렬 실행:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UDF를 호출하는 쿼리 내부 병렬 처리가 허용되지 않습니다. 
 
@@ -137,12 +137,12 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 <a name="requirements"></a> 다음 조건을 모두 만족하는 스칼라 T-SQL UDF를 인라인 처리할 수 있습니다.
 
 - UDF는 다음 구문을 사용하여 작성됩니다.
-    - `DECLARE`, `SET`: 변수 선언 및 할당.
-    - `SELECT`: 단일/다중 변수 할당이 있는 SQL 쿼리<sup>1</sup>.
-    - `IF`/`ELSE`: 임의 수준의 중첩이 있는 분기.
-    - `RETURN`: 단일 또는 여러 return 문.
-    - `UDF`: 중첩/재귀 함수 호출<sup>2</sup>.
-    - 기타: 관계형 연산(예: `EXISTS`, `ISNULL`).
+    - `DECLARE``SET`: 변수 선언 및 할당
+    - `SELECT`: 단일/다중 변수 할당이 있는 SQL 쿼리<sup>1</sup>
+    - `IF`/`ELSE`: 임의 수준의 중첩이 있는 분기
+    - `RETURN`: 단일 또는 여러 반환 문
+    - `UDF`: 중첩/재귀 함수 호출<sup>2</sup>
+    - 기타: 관계형 연산(예: `EXISTS`, `ISNULL`)
 - UDF는 시간 종속적이거나(예: `GETDATE()`) 부작용이 있는<sup>3</sup>(예: `NEWSEQUENTIALID()`) 내장 함수를 호출하지 않습니다.
 - UDF는 `EXECUTE AS CALLER` 절을 사용합니다(`EXECUTE AS` 절을 지정하지 않은 경우 기본 동작).
 - UDF는 테이블 변수나 테이블 값 매개 변수를 참조하지 않습니다.

@@ -11,10 +11,10 @@ ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155447"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure에 저장된 백업에서 복원

@@ -11,10 +11,10 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13c40349ea5d46ecf1264ae5c7b7aee341d6d8f2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295845"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
@@ -46,7 +46,7 @@ ms.locfileid: "71295845"
   
  SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](https://go.microsoft.com/fwlink/?LinkId=301897)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   
-## <a name="documentation"></a>설명서  
+## <a name="documentation"></a>문서화  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW의 이 도움말 파일에는 다음 항목과 섹션이 포함되어 있습니다.  
   
  [Microsoft Connector for SAP BW 설치](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  

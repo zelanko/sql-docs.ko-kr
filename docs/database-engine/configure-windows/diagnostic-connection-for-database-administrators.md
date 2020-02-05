@@ -21,10 +21,10 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983043"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
@@ -42,9 +42,9 @@ ms.locfileid: "73983043"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:** 을 **sqlcmd -S admin:<*instance_name*>** 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 **admin:\<*instance_name*>** 에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
+ DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:** 을 **sqlcmd -S admin:<*instance_name*>** 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin: **\<instance_name  >에 연결하여**  쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  
   
 -   연결에 사용할 수 있는 리소스를 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 하나의 DAC만 허용됩니다. DAC 연결이 이미 활성화된 경우 DAC를 통해 연결하려는 모든 새 요청은 17810 오류가 발생하면서 거부됩니다.  

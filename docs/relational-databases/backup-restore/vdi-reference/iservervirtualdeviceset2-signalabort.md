@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: b61a972d7b379ff40440124c875d8d49a7af1835
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847174"
 ---
 # <a name="iservervirtualdeviceset2signalabort-vdi"></a>IServerVirtualDeviceSet2::SignalAbort (VDI)
@@ -28,11 +28,11 @@ ms.locfileid: "70847174"
 HRESULT IServerVirtualDeviceSet2::SignalAbort ();
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. NOERROR 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 언제든지 서버는 BACKUP 또는 RESTORE 작업을 중단하도록 선택할 수 있습니다.
 

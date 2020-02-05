@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064658"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG(Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "73064658"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 전체 텍스트 카탈로그가 가상 개체이며 어떠한 파일 그룹에도 속하지 않습니다. 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -79,7 +79,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  전체 텍스트 인덱싱에 대해 카탈로그의 악센트 구분 여부를 지정합니다. 이 속성이 변경되면 인덱스를 다시 만들어야 합니다. 기본값은 데이터베이스 데이터 정렬에 지정된 악센트 구분을 사용하는 것입니다. 데이터베이스 데이터 정렬을 표시하려면 **sys.databases** 카탈로그 뷰를 사용합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 **catalog_name**에 대해 *accentsensitivity* 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
   
  AS DEFAULT  
  카탈로그를 기본 카탈로그로 지정합니다. 전체 텍스트 카탈로그를 명시적으로 지정하지 않고 전체 텍스트 인덱스를 만든 경우 기본 카탈로그가 사용됩니다. 이미 AS DEFAULT로 표시된 기존의 전체 텍스트 카탈로그가 있을 경우 새 카탈로그를 AS DEFAULT로 설정하면 이 카탈로그가 기본 전체 텍스트 카탈로그가 됩니다.  
@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  또한 *owner_name*에는 지정한 전체 텍스트 카탈로그에 대한 TAKE OWNERSHIP 권한이 있어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 카탈로그 ID는 00005부터 시작하고 카탈로그를 새로 만들 때마다 1씩 증가합니다.  
   
 ## <a name="permissions"></a>사용 권한  

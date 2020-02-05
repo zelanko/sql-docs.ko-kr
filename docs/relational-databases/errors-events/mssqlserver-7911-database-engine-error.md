@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: 01f86c0d100ef176cbd94e955d5919c031a9ac95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951352"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -37,5 +37,5 @@ ms.locfileid: "67951352"
 이 메시지는 IAM(Index Allocation Map) 페이지의 단일 페이지 슬롯 배열에서 페이지 할당이 취소되었음을 나타내는 REPAIR의 정보 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+None  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 85f631d55d93701738edca23f127ad4e0b212e34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089640"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
@@ -25,7 +25,7 @@ ms.locfileid: "68089640"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 해당 기능이 제거된다는 것을 나타냅니다.|  
 |[Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 해당 기능이 제거된다는 것을 나타냅니다.|  

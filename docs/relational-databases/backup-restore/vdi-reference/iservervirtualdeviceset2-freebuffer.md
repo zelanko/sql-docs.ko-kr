@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2829f849ce8cd220fdabc75a0d2059c5da0c80fd
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847264"
 ---
 # <a name="iservervirtualdeviceset2freebuffer-vdi"></a>IServerVirtualDeviceSet2::FreeBuffer (VDI)
@@ -37,9 +37,9 @@ HRESULT IServerVirtualDeviceSet2::FreeBuffer (
 
 *dwsize* 버퍼의 크기(바이트)입니다. 클라이언트에서 요청한 접두사 영역은 여기에 포함되지 않습니다. 이러한 영역은 서버에서 숨겨지고 버퍼 주소가 반환되기 전에 사용할 수 있는 공간이 제공됩니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 버퍼가 반환됩니다. |
 | VD_E_INVALID | 매개 변수가 잘못되었습니다. |

@@ -8,10 +8,10 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
 ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70963584"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
@@ -68,7 +68,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 3. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 업데이트합니다.
 
-   다음 스크립트에서는 `ag1` 가용성 그룹에서 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 가용성 그룹의 이름으로 바꿉니다.
+   다음 스크립트에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 가용성 그룹에서 `ag1`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 가용성 그룹의 이름으로 바꿉니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 

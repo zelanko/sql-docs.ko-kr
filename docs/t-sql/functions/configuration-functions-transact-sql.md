@@ -18,10 +18,10 @@ ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5db26c5c4efa1398cf5a958279cb75d84cb3bb13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086162"
 ---
 # <a name="configuration-functions-transact-sql"></a>구성 함수(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68086162"
   
 모든 구성 함수는 결정적으로 작동합니다. 즉, 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않습니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [함수&#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

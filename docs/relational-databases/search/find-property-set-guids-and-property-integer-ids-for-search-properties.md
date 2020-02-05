@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056526"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
@@ -40,12 +40,12 @@ ms.locfileid: "74056526"
 ##  <a name="wellknown"></a> 널리 사용되고 잘 알려진 Microsoft 속성에 대한 정보 찾기  
  Microsoft에서는 여러 컨텍스트에서 사용할 수 있도록 수백 개의 문서 속성을 정의하지만 각 파일 형식에서는 사용 가능한 속성 중 일부만 사용합니다. 자주 사용되는 Windows 속성 중에는 작은 일반 속성 집합이 있습니다. 다음 표에서는 잘 알려진 일반 속성의 몇 가지 예를 보여 줍니다. 이 표에는 잘 알려진 이름, Windows 정식 이름(Microsoft에서 게시한 속성 설명에 포함됨), 속성 집합 GUID, 속성 정수 식별자 및 간단한 설명이 들어 있습니다.  
   
-|잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|설명|  
+|잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|지정된 항목의 작성자입니다.|  
-|Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
-|형식|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
-|Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
+|태그들|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
+|Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
+|제목|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
  파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
   

@@ -12,10 +12,10 @@ ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305892"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -30,7 +30,7 @@ ms.locfileid: "72305892"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INVALID_STMT|  
-|메시지 텍스트|**\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 구문 오류가 있거나 계획 지침으로 사용하기에 적합하지 않아 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. 올바른 단일 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 안에 있는 문의 올바른 시작 위치를 지정하십시오. 올바른 시작 위치를 가져오려면 sys.dm_exec_query_stats 동적 관리 함수의 statement_start_offset 열을 쿼리하십시오.|  
+|메시지 텍스트|\***stmt\@ 또는** **statement_start_offset\@으로 지정된 문에 구문 오류가 있거나 계획 지침으로 사용하기에 적합하지 않아 계획 지침 ‘%.** ls’을(를) 만들 수 없습니다. 올바른 단일 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 안에 있는 문의 올바른 시작 위치를 지정하십시오. 올바른 시작 위치를 가져오려면 sys.dm_exec_query_stats 동적 관리 함수의 statement_start_offset 열을 쿼리하십시오.|  
   
 ## <a name="explanation"></a>설명  
 **\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 구문 오류가 있거나 계획 지침으로 사용하기에 적합하지 않습니다.  

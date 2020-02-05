@@ -14,10 +14,10 @@ ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6478c1b0f1e453fd10f18a403a00f471309f6f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986690"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server, Cursor Manager Total 개체
@@ -26,7 +26,7 @@ ms.locfileid: "67986690"
   
  다음 표에서는 SQL Server **Cursor Manager Total** 카운터에 대해 설명합니다.  
   
-|Cursor Manager Total 카운터|설명|  
+|Cursor Manager Total 카운터|Description|  
 |-----------------------------------|-----------------|  
 |**Async population count**|비동기식으로 채워진 커서의 수입니다.|  
 |**Cursor conversion rate**|초당 커서 변환 횟수입니다.|  

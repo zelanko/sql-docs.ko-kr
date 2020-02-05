@@ -14,10 +14,10 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557701"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
@@ -51,7 +51,7 @@ ms.locfileid: "75557701"
 |32비트 SQL Server 2000용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |64비트 SQL Server 2000용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 2005 이상용 SQL Server 최대 작업자 스레드 수|[최대 작업자 스레드 수 설정 검사](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|SQL Server 네트워크 패킷 크기|[네트워크 패킷 크기는 8,060바이트를 초과할 수 없음](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
+|SQL Server 네트워크 패킷 크기|[네트워크 패킷 크기는 8060바이트를 초과할 수 없음](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |SQL Server 암호 만료|[SQL Server 로그인 암호 만료](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  
 |SQL Server 암호 정책|[SQL Server 로그인 암호 강도](../../relational-databases/policy-based-management/sql-server-login-password-strength.md)|  
 |사용자 데이터베이스용 대칭 키 암호화|[사용자 데이터베이스의 대칭 키](../../relational-databases/policy-based-management/symmetric-keys-on-user-databases.md)|  

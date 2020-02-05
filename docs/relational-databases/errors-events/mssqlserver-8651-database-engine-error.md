@@ -12,10 +12,10 @@ ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 01573bcf745efcdc1f4865ac9157c71ef65cb9bf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907698"
 ---
 # <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
@@ -75,7 +75,7 @@ ms.locfileid: "72907698"
 ## <a name="see-also"></a>참고 항목  
 [DBCC FREESYSTEMCACHE&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)  
 [DBCC FREESESSIONCACHE&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
-[DBCC FREEPROCCACHE&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
+[DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [서버 구성 옵션&#40;SQL Server&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
 [SQL Server, Buffer Manager 개체](~/relational-databases/performance-monitor/sql-server-buffer-manager-object.md)  
 [SQL Server, Memory Manager 개체](~/relational-databases/performance-monitor/sql-server-memory-manager-object.md)  

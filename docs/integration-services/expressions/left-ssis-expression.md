@@ -11,10 +11,10 @@ ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c35024df0f34f1a66a64bc587aa928cb0daf4475
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289389"
 ---
 # <a name="left-ssis-expression"></a>LEFT(SSIS 식)
@@ -41,7 +41,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *number* 가 *character_expression*의 길이보다 큰 경우 함수는 *character_expression*을 반환합니다.  
   
  *number* 가 0이면 함수는 길이가 0인 문자열을 반환합니다.  

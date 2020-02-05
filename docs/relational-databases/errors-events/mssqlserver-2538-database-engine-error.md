@@ -12,13 +12,13 @@ ms.assetid: 0a0f7d79-f1ba-4749-8804-fb660cca3492
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 942195ea546c43d6d41230020f793935ca614d6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103627"
 ---
-# <a name="mssqlserver2538"></a>MSSQLSERVER_2538
+# <a name="mssqlserver_2538"></a>MSSQLSERVER_2538
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "68103627"
 이 정보는 DBCC CHECKALLOC 명령에 대한 출력의 일부로, 지정된 데이터베이스에 대해 할당된 익스텐트, 사용된 페이지 및 예약된 페이지를 파일별로 요약하여 보여 줍니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+None  
   

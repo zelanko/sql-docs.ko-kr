@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271909"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271909"
 
 문자열 식에 적용될 때 데이터베이스 또는 테이블 열의 데이터 정렬 또는 데이터 정렬 캐스트 작업을 정의합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 데이터베이스를 만들 때 지정하지 않으면 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬이 할당됩니다. 테이블 열을 만들 때 지정하지 않으면 열에 데이터베이스의 기본 데이터 정렬이 할당됩니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** COLLATE 절이 현재 데이터베이스의 데이터 정렬을 상속하도록 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 COLLATE 절은 여러 수준에서 지정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.
 
@@ -103,7 +103,7 @@ FROM fn_helpcollations();
 
 ## <a name="examples"></a>예
 
-### <a name="a-specifying-collation-during-a-select"></a>1\. SELECT 중 데이터 정렬 지정
+### <a name="a-specifying-collation-during-a-select"></a>A. SELECT 중 데이터 정렬 지정
 
 다음 예에서는 간단한 테이블을 만든 후 행 4개를 삽입합니다. 그런 다음 테이블에서 데이터를 선택할 때 두 데이터 정렬을 적용하여 `Chiapas`가 서로 다르게 정렬되는 방식을 보여 줍니다.
 
@@ -148,7 +148,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>2\. 추가 예
+### <a name="b-additional-examples"></a>B. 추가 예
 
 **COLLATE**를 사용하는 추가 예는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정** 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **V. 열 데이터 정렬 변경**을 참조하세요.
 
@@ -160,5 +160,5 @@ Chiapas
 - [상수](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [선언 @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [테이블 데이터 형식](../../t-sql/data-types/table-transact-sql.md)

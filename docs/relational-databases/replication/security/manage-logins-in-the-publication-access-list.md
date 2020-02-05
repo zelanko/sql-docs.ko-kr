@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710786"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287313"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71710786"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -42,16 +42,16 @@ ms.locfileid: "71710786"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   PAL에 로그인을 추가하려면 먼저 게시 데이터베이스의 데이터베이스 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 연결해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<게시>** 대화 상자의 **게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-manage-logins-in-the-pal"></a>PAL에서 로그인을 관리하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
+1.  **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
   
     > [!NOTE]  
     >  원격 배포자를 사용할 경우 PAL의 계정을 게시자와 배포자에서 모두 사용할 수 있어야 합니다. 이 계정은 두 서버 모두에 정의된 도메인 계정이나 로컬 계정이어야 합니다. 또한 두 로그인과 연결된 암호는 같아야 합니다.  

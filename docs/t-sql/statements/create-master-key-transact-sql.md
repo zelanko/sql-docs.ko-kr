@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816844"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "71816844"
 
 master 데이터베이스에서 데이터베이스 마스터 키를 만듭니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +50,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*' 데이터베이스의 마스터 키를 암호화하는 데 사용되는 암호입니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. *암호*는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 선택 사항입니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스 마스터 키는 데이터베이스에 있는 인증서와 비대칭 키의 프라이빗 키를 보호하는 데 사용되는 대칭 키입니다. 마스터 키는 생성 시에 AES_256 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서는 Triple DES 알고리즘이 사용됩니다. 마스터 키의 자동 암호 해독을 설정하기 위해 키 복사본이 서비스 마스터 키를 사용하여 암호화되고 해당 데이터베이스 및 master에 모두 저장됩니다. 일반적으로 master에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. 이 기본값은 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)의 DROP ENCRYPTION BY SERVICE MASTER KEY 옵션을 사용하여 변경할 수 있습니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 문과 암호를 사용하여 열어야 합니다.
 

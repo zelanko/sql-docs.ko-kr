@@ -17,10 +17,10 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: af10da0db8cff17e6cf06c155a85713a3fae50eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294015"
 ---
 # <a name="rebuild-index-task"></a>인덱스 다시 작성 태스크
@@ -45,7 +45,7 @@ ms.locfileid: "71294015"
 -   ONLINE = ON을 설정하여 다시 인덱싱하는 동안 기본 테이블에 대한 쿼리 또는 업데이트가 진행될 수 있도록 테이블을 잠그지 않을 수 있습니다.  
   
     > [!NOTE]  
-    >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+    >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 -   병렬 계획 실행에 사용되는 프로세서 수를 제한할 MAXDOP 값을 지정합니다.  
   

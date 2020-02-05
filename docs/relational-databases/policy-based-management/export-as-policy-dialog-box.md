@@ -13,10 +13,10 @@ ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087380"
 ---
 # <a name="export-as-policy-dialog-box"></a>정책으로 내보내기 대화 상자

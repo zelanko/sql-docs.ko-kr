@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295588"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -57,7 +57,7 @@ catalog.cleanup_server_log
   
 -   SSISDB 데이터베이스가 단일 사용자 모드가 아닙니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQL Server 2012 서비스 팩 2에는 SERVER_OPERATION_ENCRYPTION_LEVEL 속성이 **internal.catalog_properties** 테이블에 추가되었습니다. 이 속성에는 두 가지 가능한 값이 있습니다.  
   
 -   **PER_EXECUTION(1)** – 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키는 각 실행에 대해 만들어집니다. 각 실행에 대해 인증서/키가 생성되기 때문에 프로덕션 환경에서 성능 문제(교착 상태, 유지 관리 작업 실패 등)가 발생할 수 있습니다. 하지만 이 설정은 다른 값(2)보다 높은 수준의 보안을 제공합니다.  
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      범위 또는 수준(실행 및 프로젝트) 및 삭제할 키 수를 지정할 수 있습니다. 삭제할 기본 일괄 처리 크기는 1000입니다. 수준을 2로 설정하면 연결된 프로젝트가 삭제된 경우에만 키와 인증서가 삭제됩니다.  
   
- 자세한 내용은 다음 기술 자료 문서를 참조하세요. [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)  
+ 자세한 내용은 [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)에서 다음 기술 문서를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제는 cleanup_server_log 저장 프로시저를 호출합니다.  

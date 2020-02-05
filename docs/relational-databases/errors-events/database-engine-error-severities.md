@@ -16,10 +16,10 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844328"
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
@@ -29,7 +29,7 @@ ms.locfileid: "73844328"
 ## <a name="levels-of-severity"></a>심각도  
  다음 표에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 발생하는 오류의 심각도를 나열하고 그 내용을 설명합니다.  
   
-|심각도|설명|  
+|심각도 수준|Description|  
 |--------------------|-----------------|  
 |0-9|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 심각도가 0 ~ 9인 경우 시스템 오류를 발생시키지 않습니다.|  
 |10|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 호환성을 위해 오류 정보를 호출 애플리케이션으로 반환하기 전에 심각도 10을 심각도 0으로 변환합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "73844328"
 ## <a name="user-defined-error-message-severity"></a>사용자 정의 오류 메시지 심각도  
  **sp_addmessage** 를 사용하여 심각도가 1부터 25까지의 사용자 정의 오류 메시지를 **sys.messages** 카탈로그 뷰에 추가할 수 있습니다. 이 사용자 정의 오류 메시지는 RAISERROR에서 사용될 수 있습니다. 자세한 내용은 [sp_addmessage&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)을 참조하세요.  
   
- RAISERROR는 심각도가 1부터 25까지의 사용자 정의 오류 메시지를 생성하는 데 사용될 수 있습니다. RAISERROR는 **sys.messages** 카탈로그 뷰에 저장된 사용자 정의 오류 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 오류 발생 시 **sys.messages**의 사용자 정의 오류 메시지를 사용하면 RAISERROR에서 지정한 심각도가 **sys.messages**에 지정된 심각도 대신 사용됩니다. 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하세요.  
+ RAISERROR는 심각도가 1부터 25까지의 사용자 정의 오류 메시지를 생성하는 데 사용될 수 있습니다. RAISERROR는 **sys.messages** 카탈로그 뷰에 저장된 사용자 정의 오류 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 오류 발생 시 **sys.messages** 의 사용자 정의 오류 메시지를 사용하면 RAISERROR에서 지정한 심각도가 **sys.messages**에 지정된 심각도 대신 사용됩니다. 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하세요.  
   
 ## <a name="error-severity-and-trycatch"></a>오류 심각도 및 TRY...CATCH  
  TRY...CATCH 구문은 데이터베이스 연결이 종료되지 않는 심각도가 10 이상인 모든 실행 오류를 catch합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "73844328"
   
  연결이 종료되면 실행이 중단되기 때문에 일반적으로 심각도가 20부터 25까지이며 데이터베이스 연결을 종료하는 오류는 CATCH 블록에서 처리되지 않습니다.  
   
- 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)에서 발견된 문제의 유형을 나타냅니다.  
+ 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
 ## <a name="retrieving-error-severity"></a>오류 심각도 검색  
  ERROR_SEVERITY 시스템 함수를 사용하여 TRY...CATCH 구문의 CATCH 블록 실행으로 이어지는 오류 심각도를 검색할 수 있습니다. CATCH 블록의 범위를 벗어나 호출한 경우 ERROR_SEVERITY는 NULL을 반환합니다. 자세한 내용은 [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)를 참조하세요.  

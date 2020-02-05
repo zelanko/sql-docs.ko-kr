@@ -14,17 +14,17 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987068"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, Broker - DBM Transport 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Broker / DBM Transport 카운터|설명|  
+|SQL Server Broker / DBM Transport 카운터|Description|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|이 카운터는 현재 실행 중인 전송 수신 작업에서 읽을 바이트 수를 보고합니다.|  
 |**Current Bytes for Send I/O**|이 카운터는 현재 네트워크로 전송 중인 메시지 조각의 바이트 수를 보고합니다.|  
@@ -42,9 +42,9 @@ ms.locfileid: "67987068"
 |**Message Fragment Receives/sec**|이 카운터는 초당 네트워크를 통해 받은 메시지 조각의 수를 보고합니다.|   
 |**Message Fragment Sends/sec**|이 카운터는 초당 네트워크로 보낸 모든 우선 순위의 메시지 조각의 수를 보고합니다.|  
 |**Msg Fragment Recv Size Avg**|이 카운터는 네트워크를 통해 받은 메시지 조각의 평균 크기를 보고합니다.|  
-|**Msg Fragment Recv Size Avg Base**|내부용으로만 사용할 수 있습니다.| 
+|**Msg Fragment Recv Size Avg Base**|내부 전용입니다.| 
 |**Msg Fragment Send Size Avg**|이 카운터는 네트워크로 보낸 메시지 조각의 평균 크기를 보고합니다.|  
-|**Msg Fragment Send Size Avg Base**|내부용으로만 사용할 수 있습니다.|
+|**Msg Fragment Send Size Avg Base**|내부 전용입니다.|
 |**Open Connection Count**|이 카운터는 현재 Service Broker에서 연 네트워크 연결 수를 보고합니다.|  
 |**Pending Bytes for Recv I/O**|이 카운터는 네트워크에서 받았지만 아직 큐에 저장되지 않았거나 삭제되지 않은 메시지 조각에 포함된 바이트 수를 보고합니다.|  
 |**Pending Bytes for Send I/O**|이 카운터는 네트워크로 보낼 준비가 된 메시지 조각의 총 바이트 수를 보고합니다.|  
@@ -53,14 +53,14 @@ ms.locfileid: "67987068"
 |**Receive I/O bytes/sec**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 받은 초당 바이트 수를 보고합니다.|  
 |**Receive I/O Bytes Total**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 받은 총 바이트 수를 보고합니다.|  
 |**Receive I/O Len Avg**|이 카운터는 전송 수신 작업의 평균 바이트 수를 보고합니다.|  
-|**Receive I/O Len Avg Base**|내부용으로만 사용할 수 있습니다.|
+|**Receive I/O Len Avg Base**|내부 전용입니다.|
 |**Receive I/Os/sec**|이 카운터는 Service Broker/DBM 전송 계층에서 완료한 초당 전송 수신 I/O 작업의 수를 보고합니다. 전송 수신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
 |**Recv I/O Buffer Copies bytes/sec**|전송 수신 I/O 작업이 메모리에서 버퍼 조각을 이동한 속도입니다.|
 |**Recv I/O Buffer Copies Count**|전송 수신 I/O 작업이 메모리에서 버퍼 조각을 이동한 횟수입니다.| 
 |**Send I/O bytes/sec**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 보낸 초당 바이트 수를 보고합니다.|   
 |**Send I/O Bytes Total**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 보내 총 바이트 수를 보고합니다.| 
 |**Send I/O Len Avg**|이 카운터는 각 전송 송신 작업의 평균 크기를 바이트로 보고합니다. 전송 송신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
-|**Send I/O Len Avg Base**|내부용으로만 사용할 수 있습니다.|
+|**Send I/O Len Avg Base**|내부 전용입니다.|
 |**Send I/Os/sec**|이 카운터는 완료된 초당 전송 송신 I/O 작업의 수를 보고합니다. 전송 송신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

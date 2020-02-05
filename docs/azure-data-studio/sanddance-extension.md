@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212329"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>Azure Data Studio SandDance(미리 보기)
@@ -27,7 +27,7 @@ SandDance는 이해하기 쉬운 보기를 사용하여 데이터에 관한 인�
 SandDance는 데이터베이스의 행과 화면의 표시 간에 일대일 매핑을 적용하는 단위 시각화를 사용합니다.
 보기 간의 원활한 애니메이션 전환을 통해 컨텍스트를 유지하면서 데이터를 조작할 수 있습니다.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 ### <a name="view-csv-or-tsv-files"></a>.csv 또는 . tsv 파일 보기
 여기에는 SQL Server 2019 빅 데이터 클러스터의 HDFS에 있는 파일 또는 로컬 파일이 포함됩니다.
@@ -52,5 +52,5 @@ SQL 쿼리 창에서 시작하여 결과 표를 가져오는 쿼리를 실행합
 
 azdata-sanddance의 초기 릴리
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 자세히 알아보려면 [GitHub 리포지토리를 참조](https://github.com/Microsoft/SandDance)하세요.

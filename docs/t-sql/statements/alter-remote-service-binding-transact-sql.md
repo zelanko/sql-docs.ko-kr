@@ -20,10 +20,10 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927224"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67927224"
 
   원격 서비스 바인딩에 연결된 사용자를 변경하거나 바인딩에 대한 익명 인증 설정을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. ANONYMOUS = ON인 경우 익명 인증이 사용되며 로컬 사용자의 자격 증명이 원격 서비스로 전송되지 않습니다. ANONYMOUS = OFF인 경우 사용자 자격 증명이 전송됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스 로그인에 대한 인증서와 일치해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

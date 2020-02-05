@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096076"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
@@ -23,7 +23,7 @@ ms.locfileid: "74096076"
 SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 쿼리의 성능을 향상하려면 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 최적화 테이블에 JSON 문서를 저장할 수 있습니다. 메모리 최적화 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
 
 ## <a name="store-json-in-memory-optimized-tables"></a>메모리 최적화 테이블에 JSON 저장
-다음 예제에서는 `Tags`와 `Data`라는 두 개의 JSON 열이 있는 메모리 최적화 `Product` 테이블을 보여 줍니다.
+다음 예제에서는 `Product`와 `Tags`라는 두 개의 JSON 열이 있는 메모리 최적화 `Data` 테이블을 보여 줍니다.
 
 ```sql
 CREATE SCHEMA xtp;
@@ -49,7 +49,7 @@ SQL Server 및 Azure SQL Database에서 사용할 수 있는 기능을 통해 �
 ## <a name="validate"></a> JSON 열의 유효성 검사
 SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다. 고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 최적화 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
 
-다음 예에서는 JSON 열 `Tags`가 있는 `Product` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
+다음 예제에서는 JSON 열 `Product`가 있는 `Tags` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;

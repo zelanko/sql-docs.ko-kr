@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321980"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
@@ -73,7 +73,7 @@ ms.locfileid: "75321980"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+ **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스 하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

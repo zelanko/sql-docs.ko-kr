@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986719"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, 카탈로그 메타데이터 개체
@@ -26,12 +26,12 @@ ms.locfileid: "67986719"
 다음 표에서는 SQL Server **Catalog Metadata** 성능 개체에 대해 설명합니다.
 
 
-|**SQL Server 카탈로그 메타데이터 카운터**|설명|  
+|**SQL Server 카탈로그 메타데이터 카운터**|Description|  
 |-------------|-----------------|  
 |**Cache Entries Count**|카탈로그 메타데이터 캐시의 항목 수입니다.|
 |**Cache Entries Pinned Count**|고정된 카탈로그 메타데이터 캐시 항목의 수입니다.|
 |**Cache Hit Ratio**|카탈로그 메타데이터 캐시 적중 횟수와 조회 간 비율입니다.|
-|**Cache Hit Ratio**|내부용으로만 사용할 수 있습니다.|
+|**Cache Hit Ratio**|내부 전용입니다.|
 
 데이터베이스별로 카운터 인스턴스는 한 개입니다.
 

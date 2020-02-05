@@ -20,10 +20,10 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024764"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>차트, 경고, 로그 및 보고서 만들기
@@ -49,7 +49,7 @@ ms.locfileid: "68024764"
   
  차트는 이벤트가 발생할 때 모니터링하는 것과 같이 로컬 또는 원격 컴퓨터를 단기에 걸쳐 실시간으로 모니터링할 때 유용합니다.  
   
-## <a name="alerts"></a>,  
+## <a name="alerts"></a>경고  
  경고를 사용하면 시스템 모니터는 특정 이벤트를 추적해 이 이벤트에 대해 사용자가 요청한 대로 알려 줍니다. 경고 로그를 사용하면 선택된 카운터의 현재 성능 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]개체의 인스턴스를 모니터링할 수 있습니다. 카운터가 지정된 값을 넘어 가면 로그에 이벤트가 발생한 날짜와 시간이 기록됩니다. 이벤트는 네트워크 경고도 생성할 수 있습니다. 특정 프로그램을 이벤트가 처음 발생할 때 실행되도록 하거나 이벤트가 발생할 때마다 실행되도록 할 수도 있습니다. 예를 들어 경고 기능을 사용하면 모든 시스템 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 디스크 공간이 부족하다는 네트워크 메시지를 보낼 수 있습니다.  
   
 ## <a name="logs"></a>로그  

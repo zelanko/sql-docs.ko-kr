@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816671"
 ---
 # <a name="sql-writer-service"></a>SQL 기록기 서비스
@@ -34,7 +34,7 @@ ms.locfileid: "71816671"
   
  SQL 기록기 서비스는 자동으로 설치되며 VSS(볼륨 섀도 복사본 서비스) 애플리케이션이 백업 또는 복원을 요청할 때 실행되어야 합니다. 서비스를 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 애플릿을 사용합니다. SQL 기록기 서비스는 모든 운영 체제에 설치됩니다.  
   
-## <a name="purpose"></a>용도  
+## <a name="purpose"></a>목적  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 실행 중에 데이터 파일을 잠그고 이 파일에 독점적으로 액세스합니다. SQL 기록기 서비스가 실행 중이 아니면 Windows에서 실행 중인 백업 프로그램이 데이터 파일에 액세스할 수 없으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 사용하여 백업을 수행해야 합니다.  
   
  SQL 기록기 서비스를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 동안에도 Windows 백업 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일을 복사할 수 있습니다.  
@@ -76,6 +76,6 @@ ms.locfileid: "71816671"
   
 -   페이지 복원  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 SQL 기록기 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진과 별도의 서비스이며 여러 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공유되고 동일한 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스에서 공유됩니다.  SQL 기록기 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 패키지의 일부로 제공되며 제공될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진과 동일한 버전 번호가 표시됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스가 서버에 설치되거나 기존 인스턴스가 업그레이드될 때 인스턴스의 버전 번호가 현재 서버에 있는 SQL 기록기 서비스의 버전 번호보다 높게 업그레이드되거나 설치되는 경우, 해당 파일은 설치 패키지의 파일로 대체됩니다.  SQL 기록기 서비스가 서비스 팩 또는 누적 업데이트로 업데이트되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 RTM 버전이 설치되는 경우, 설치에 더 높은 주 버전 번호가 있다면 최신 버전의 SQL 기록기 서비스가 이전 버전을 대체할 수 있습니다.  예를 들어 SQL 기록기 서비스는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2에서 업데이트되었습니다.  해당 인스턴스를 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM으로 업그레이드하면 업데이트된 SQL 기록기 서비스가 이전 버전으로 대체됩니다.  이 경우 최신 버전의 SQL 기록기 서비스를 받으려면 최신 CU를 새 인스턴스에 적용해야 합니다.
 

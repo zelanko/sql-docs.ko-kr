@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3767bec1807b68df3eb3f82287a5c871d653a286
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892981"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY(Transact-SQL)  
@@ -45,7 +45,7 @@ DROP EXTERNAL LANGUAGE <language_name>
 
 정보 메시지는 명령문이 성공한 경우 반환됩니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 외부 언어를 삭제하기 전에 지정된 언어에 대한 모든 외부 라이브러리를 삭제해야 합니다.
 
@@ -65,7 +65,7 @@ GO
 DROP EXTERNAL LANGUAGE Java;
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [CREATE EXTERNAL LANGUAGE(Transact-SQL)](create-external-language-transact-sql.md)  
 [ALTER EXTERNAL LANGUAGE(Transact-SQL)](alter-external-language-transact-sql.md)  

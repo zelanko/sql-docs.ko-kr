@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095822"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
@@ -55,11 +55,11 @@ FROM OPENJSON(@json);
   
 **결과**
   
-|Key|value|유형|  
+|key|값|type|  
 |---------|-----------|----------|  
-|NAME|John|1|  
-|성|Doe|1|  
-|나이|45|2|  
+|name|John|1|  
+|surname|Doe|1|  
+|age|45|2|  
 |기술|["SQL","C#","MVC"]|4|
 
 ### <a name="more-info-about-openjson-with-the-default-schema"></a>기본 스키마를 사용하는 OPENJSON에 대한 추가 정보
@@ -116,7 +116,7 @@ WITH (
   
 **결과**
   
-|Number|date|Customer|수량|  
+|Number|Date|Customer|수량|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
@@ -125,7 +125,7 @@ WITH (
   
 -   **OPENJSON** 은 출력 테이블에 JSON 배열의 각 요소에 대한 새 행을 생성합니다. JSON 배열의 두 요소는 반환된 테이블에서 두 개의 행으로 변환됩니다.  
   
--   `colName type json_path` 구문을 사용하여 지정된 각 열에 대해 **OPENJSON**은 지정된 경로의 각 배열 요소에 있는 값을 지정된 형식으로 변환합니다. 이 예제에서는 `$.Order.Date` 경로의 각 요소에서 `Date` 열의 값을 가져와 datetime 값으로 변환합니다.  
+-   `colName type json_path` 구문을 사용하여 지정된 각 열에 대해 **OPENJSON**은 지정된 경로의 각 배열 요소에 있는 값을 지정된 형식으로 변환합니다. 이 예제에서는 `Date` 경로의 각 요소에서 `$.Order.Date` 열의 값을 가져와 datetime 값으로 변환합니다.  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>명시적 스키마를 사용하는 OPENJSON에 대한 추가 정보
 

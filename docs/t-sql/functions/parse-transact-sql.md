@@ -18,10 +18,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892507"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68892507"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요청한 데이터 형식으로 변환된 식 결과를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,15 +47,15 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  결과에 대해 요청된 데이터 형식을 나타내는 리터럴 값입니다.  
   
- *culture*  
- *string_value*의 형식을 지정하는 데 사용되는 culture을 식별하는 선택적 문자열입니다.  
+ *문화권*  
+ *string_value*의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
   
  *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  
   
 ## <a name="return-types"></a>반환 형식  
  요청한 데이터 형식으로 변환된 식 결과를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  PARSE에 인수로 전달된 Null 값은 두 가지 방법으로 처리됩니다.  
   
 1.  Null 상수를 전달하는 경우 오류가 발생합니다. Null 값은 culture를 인식하는 방법으로 다른 데이터 형식으로 구문 분석될 수 없습니다.  
@@ -72,32 +72,32 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  *data_type* 매개 변수의 값은 다음 표에 나온 형식 및 스타일로 제한됩니다. 허용되는 패턴을 쉽게 알 수 있도록 스타일 정보가 나와 있습니다. 스타일에 대한 자세한 내용은 **System.Globalization.NumberStyles** 및 **DateTimeStyles** 열거형에 대한 .NET Framework 설명서를 참조하십시오.  
   
-|범주|형식|.NET Framework 형식|사용되는 스타일|  
+|Category|Type|.NET Framework 형식|사용되는 스타일|  
 |--------------|----------|-------------------------|-----------------|  
-|숫자|BIGINT|Int64|NumberStyles.Number|  
+|숫자|bigint|Int64|NumberStyles.Number|  
 |숫자|int|Int32|NumberStyles.Number|  
-|숫자|SMALLINT|Int16|NumberStyles.Number|  
-|숫자|TINYINT|Byte|NumberStyles.Number|  
-|숫자|Decimal|Decimal|NumberStyles.Number|  
-|숫자|NUMERIC|Decimal|NumberStyles.Number|  
-|숫자|FLOAT|Double|NumberStyles.Float|  
-|숫자|REAL|단일|NumberStyles.Float|  
-|숫자|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|숫자|smallint|Int16|NumberStyles.Number|  
+|숫자|tinyint|Byte|NumberStyles.Number|  
+|숫자|decimal|Decimal|NumberStyles.Number|  
+|숫자|numeric|Decimal|NumberStyles.Number|  
+|숫자|float|Double|NumberStyles.Float|  
+|숫자|real|Single|NumberStyles.Float|  
+|숫자|smallmoney|Decimal|NumberStyles.Currency|  
 |숫자|money|Decimal|NumberStyles.Currency|  
-|날짜 및 시간|날짜|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|Time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|Datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |날짜 및 시간|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|Datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |날짜 및 시간|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **culture 매개 변수에 대한 자세한 정보**  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어와 .NET Framework culture 간 매핑을 보여 줍니다.  
   
-|전체 이름|별칭|LCID|해당 culture|  
+|전체 이름|Alias|LCID|해당 culture|  
 |---------------|-----------|----------|----------------------|  
-|us_english|영어|1033|en-US|  
+|us_english|영어|1033|ko-KR|  
 |Deutsch|독일어|1031|de-DE|  
 |Français|프랑스어|1036|fr-FR|  
 |日本語|일본어|1041|ja-JP|  
@@ -125,7 +125,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |latviešu|라트비아어|1062|lv-LV|  
 |lietuvių|리투아니아어|1063|lt-LT|  
 |Português(브라질)|브라질어|1046|pt-BR|  
-|繁體中文|중국어(번체)|1028|zh-TW|  
+|繁體中文|중국어 번체|1028|zh-TW|  
 |한국어|한국어|1042|Ko-KR|  
 |简体中文|중국어(간체)|2052|zh-CN|  
 |아랍어|아랍어|1025|ar-SA|  
@@ -133,7 +133,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-parse-into-datetime2"></a>1\. Datetime2로 구문 분석  
+### <a name="a-parse-into-datetime2"></a>A. Datetime2로 구문 분석  
   
 ```  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
@@ -149,7 +149,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-parse-with-currency-symbol"></a>2\. 통화 기호를 포함하는 PARSE  
+### <a name="b-parse-with-currency-symbol"></a>B. 통화 기호를 포함하는 PARSE  
   
 ```  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  

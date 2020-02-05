@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042457"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains(geography 데이터 형식)
@@ -35,14 +35,14 @@ ms.locfileid: "68042457"
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- `STContains()`가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
+ **가 호출되는 인스턴스와 비교할 다른** geography`STContains()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공간적으로 **geography** 인스턴스 호출이 인스턴스가 메서드에 전달된 **geography** 인스턴스를 포함할 경우 1을 반환하고, 그렇지 않으면 0을 반환합니다. 두 **geography** 인스턴스의 SRID가 같지 않을 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d74d1907b0f96275658c716a7a08061f0eec8995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999567"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 이벤트 클래스
@@ -28,15 +28,15 @@ ms.locfileid: "67999567"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>CPU Threshold Exceeded 데이터 열  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|**int**|CPU 사용량(밀리초)입니다.|18|예|  
-|EventClass|**int**|214|27|아니오|  
-|EventSubClass|**int**|CPU 제한 위반입니다.|21|예|  
-|GroupID|**int**|위반이 발생한 그룹 ID입니다.|66|예|  
-|OwnerID|**int**|위반을 발생시킨 프로세스의 SPID입니다.|58|예|  
-|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|예|  
-|StartTime|**datetime**|이 이벤트가 발생한 시간입니다.|14|예|  
+|CPU|**int**|CPU 사용량(밀리초)입니다.|18|yes|  
+|EventClass|**int**|214|27|예|  
+|EventSubClass|**int**|CPU 제한 위반입니다.|21|yes|  
+|GroupID|**int**|위반이 발생한 그룹 ID입니다.|66|yes|  
+|OwnerID|**int**|위반을 발생시킨 프로세스의 SPID입니다.|58|yes|  
+|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|yes|  
+|StartTime|**datetime**|이 이벤트가 발생한 시간입니다.|14|yes|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

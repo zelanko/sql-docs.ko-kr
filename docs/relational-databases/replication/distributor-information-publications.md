@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768588"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284102"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68768588"
   병합 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)을 참조하세요.  
 
 ### <a name="snapshot-replication"></a>스냅샷 복제 
-  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
+  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅샷 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
 
 ## <a name="agents"></a>에이전트
 **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "68768588"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -126,7 +126,7 @@ ms.locfileid: "68768588"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  

@@ -12,13 +12,13 @@ ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f137d859fa6f6233e14bc34c6bf50797a4360a98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123287"
 ---
-# <a name="mssqlserver41333"></a>MSSQLSERVER_41333
+# <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "68123287"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|메시지 텍스트|다음 트랜잭션은 스냅샷 격리에서 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저에 액세스해야 합니다. RepeatableRead 트랜잭션, 직렬화 가능 트랜잭션, RepeatableRead 또는 직렬화 가능 격리에서 메모리 액세스에 최적화되지 않은 테이블에 액세스하는 트랜잭션.|  
+|메시지 텍스트|RepeatableRead 트랜잭션, Serializable 트랜잭션 및 RepeatableRead 또는 Serializable 격리 상태에서 메모리에 최적화되지 않은 테이블에 액세스하는 트랜잭션은 스냅샷 격리 하에 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 액세스해야 합니다.|  
   
 ## <a name="explanation"></a>설명  
 디스크 기반 트랜잭션과 XTP 트랜잭션 간에는 높은 격리 수준의 사용자에 대한 제한 사항이 있습니다.  

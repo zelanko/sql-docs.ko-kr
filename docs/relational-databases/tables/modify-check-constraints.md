@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907271"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
@@ -44,7 +44,7 @@ ms.locfileid: "72907271"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +72,7 @@ ms.locfileid: "72907271"
   
 5.  **닫기**를 클릭합니다.  
   
-6.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+6.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  

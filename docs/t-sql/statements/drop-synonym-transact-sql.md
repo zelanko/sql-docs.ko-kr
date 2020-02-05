@@ -22,10 +22,10 @@ ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072135"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072135"
 
   지정한 스키마에서 동의어를 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  삭제할 동의어의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  동의어에 대한 참조는 스키마 바운드가 아니므로 언제든 동의어를 삭제할 수 있습니다. 삭제한 동의어에 대한 참조는 런타임에만 발견할 수 있습니다.  
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  

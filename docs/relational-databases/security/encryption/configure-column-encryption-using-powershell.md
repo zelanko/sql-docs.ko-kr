@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc6f86a091f96f3d38bc4db7a5d5d2fde5462dce
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594383"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell로 Always Encrypted를 사용하여 열 암호화 구성
@@ -26,7 +26,7 @@ ms.locfileid: "73594383"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 enclave로 구성된 경우 데이터를 데이터베이스 외부로 이동하지 않고 내부에서 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. PowerShell은 내부 암호화를 지원하지 않습니다.
+> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 Enclave로 구성된 경우 데이터베이스 외부로 데이터를 이동하지 않고도 바로 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. PowerShell은 내부 암호화를 지원하지 않습니다.
 
 ::: moniker-end
 SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내용은 [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
@@ -57,17 +57,17 @@ SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내�
 온라인 접근 방식 사용:
 - 애플리케이션에 대한 데이터베이스의 가동 중지 시간/사용 불가를 최소화합니다.
 
-## <a name="security-considerations"></a>보안 고려 사항
+## <a name="security-considerations"></a>보안 고려사항
 
 데이터베이스 열에 대한 암호화를 구성하는 데 사용되는 **Set-SqlColumnEncryption** cmdlet은 상시 암호화 키와 데이터베이스 열에 저장된 데이터를 둘 다 처리합니다. 따라서 보안 컴퓨터에서 cmdlet을 실행하는 것이 중요합니다. 데이터베이스가 SQL Server에 있는 경우 SQL Server 인스턴스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 cmdlet을 실행합니다. 상시 암호화의 주요 목표는 데이터베이스 시스템이 손상된 경우에도 암호화된 중요한 데이터를 안전하게 보호하는 것이므로 SQL Server 컴퓨터에서 키 및/또는 중요한 데이터를 처리하는 PowerShell 스크립트를 실행하면 기능의 이점이 감소하거나 무효화될 수 있습니다.
 
-태스크  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스   
+Task  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스   
 ---|---|---|---
-1단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니오 | 아니오
-2단계. 서버 및 데이터베이스에 연결 | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니오 | 예
-3단계. 열 마스터 키(순환할 열 암호화 키 보호)가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 예 | 아니오
-4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 아니오 | 아니오
-5단계. 이전 단계에서 만든 SqlColumnMasterKeySettings 개체 배열에 지정된 원하는 암호화 구성을 설정합니다. 열에 지정된 대상 설정과 현재 암호화 구성에 따라 열이 암호화, 다시 암호화 또는 암호 해독됩니다.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션에서 전체 작업이나 일부 작업 중에 테이블에 액세스할 수 없게 됩니다. | 예 | 예
+1단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 예 | 예
+2단계. 서버 및 데이터베이스에 연결 | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 예 | yes
+3단계. 열 마스터 키(순환할 열 암호화 키 보호)가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | yes | 예
+4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 예 | 예
+5단계. 이전 단계에서 만든 SqlColumnMasterKeySettings 개체 배열에 지정된 원하는 암호화 구성을 설정합니다. 열에 지정된 대상 설정과 현재 암호화 구성에 따라 열이 암호화, 다시 암호화 또는 암호 해독됩니다.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션에서 전체 작업이나 일부 작업 중에 테이블에 액세스할 수 없게 됩니다. | yes | yes
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>오프라인 접근 방식을 사용한 열 암호화 - 예제
 
@@ -146,11 +146,11 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목  
- - [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md) 
  - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)

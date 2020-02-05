@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558376"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 사용하여 SQL Server 설정 구성
@@ -46,7 +46,7 @@ ms.locfileid: "75558376"
 
 | 환경 변수 | Description |
 |-----|-----|
-| **ACCEPT_EULA** | [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
+| **ACCEPT_EULA** | **최종 사용자 사용권 계약** 수락을 확인하기 위해 [ACCEPT_EULA](https://go.microsoft.com/fwlink/?LinkId=746388) 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성합니다. |
 | **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정하는 경우 #####-#####-#####-#####-##### 형식이어야 합니다. 여기서 '#'은 숫자 또는 문자입니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정합니다. 예를 들어 1036은 프랑스어입니다. |
@@ -70,7 +70,7 @@ ms.locfileid: "75558376"
 
 | 환경 변수 | Description |
 |-----|-----|
-| **ACCEPT_EULA** | [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
+| **ACCEPT_EULA** | **최종 사용자 사용권 계약** 수락을 확인하기 위해 [ACCEPT_EULA](https://go.microsoft.com/fwlink/?LinkId=746388) 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성합니다. |
 | **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정하는 경우 #####-#####-#####-#####-##### 형식이어야 합니다. 여기서 '#'은 숫자 또는 문자입니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정합니다. 예를 들어 1036은 프랑스어입니다. |

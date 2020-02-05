@@ -11,10 +11,10 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096892"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
@@ -115,7 +115,7 @@ ms.locfileid: "68096892"
   
  네이티브 XML 스토리지는 구조 범위가 포함된 XML 문서가 있거나 관계형 구조로 매핑하기 어려운 여러 스키마 또는 복잡한 스키마에 해당하는 XML 문서가 있는 경우에 유용합니다.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: XML 데이터 형식을 사용하여 XML 데이터 모델링  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
  각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 따라서 \<section>은 재귀적 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
   
  XML 문서에 적합한 스토리지 모델은 **xml** 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  

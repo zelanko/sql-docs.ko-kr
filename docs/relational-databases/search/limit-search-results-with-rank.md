@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132282"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
@@ -38,7 +38,7 @@ ms.locfileid: "68132282"
   
 ##  <a name="examples"></a> 순위를 사용하여 검색 결과를 제한하는 예  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>예제 A: 상위 3개의 일치하는 항목만 검색  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>예 A: 상위 3개의 일치하는 항목만 검색  
  다음 예제에서는 CONTAINSTABLE을 사용하여 상위 3개의 일치하는 항목만 반환합니다.  
   
 ```  
@@ -69,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>예제 B: 상위 10개의 일치하는 항목 검색  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>예 B: 상위 10개의 일치하는 항목 검색  
  다음 예에서는 CONTAINSTABLE을 사용하여 `Description` 열에 "light"나 "lightweight"라는 단어와 근접한 "aluminum"이라는 단어가 포함된 상위 5개 제품에 대한 설명을 반환합니다.  
   
 ```  

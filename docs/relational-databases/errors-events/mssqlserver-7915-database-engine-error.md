@@ -12,13 +12,13 @@ ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f58c6d1767666d1965bbfa99d9d257e0ed90022b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125527"
 ---
-# <a name="mssqlserver7915"></a>MSSQLSERVER_7915
+# <a name="mssqlserver_7915"></a>MSSQLSERVER_7915
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "68125527"
 REPAIR에서 전송한 이 정보 메시지는 지정된 IAM(Index Allocation Map) 체인이 패치되어 다시 작성될 수 있음을 나타냅니다. 패치 작업은 IAM 체인의 새 헤드를 할당하거나 체인에서 잘못된 페이지를 제거할 때 필요할 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+None  
   

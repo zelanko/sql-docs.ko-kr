@@ -16,10 +16,10 @@ ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081432"
 ---
 # <a name="backup-timeline"></a>백업 시간대
@@ -33,7 +33,7 @@ ms.locfileid: "68081432"
   
  **특정 날짜 및 시간** 을 사용하여 선택한 날짜와 시간에서 복원을 중지할 수 있습니다. 시간대에는 선택한 날짜 및 시간을 기준으로 24시간 이내에 수행된 백업 작업이 표시됩니다.  
   
- **날짜**  
+ **Date**  
  날짜를 입력하거나 드롭다운 목록에서 선택합니다.  
   
  **Time**  

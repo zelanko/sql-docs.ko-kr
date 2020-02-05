@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296301"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -54,7 +54,7 @@ Access 파일의 경로와 파일 이름을 지정합니다. 예를 들어 로�
  **찾아보기**  
  **열기** 대화 상자를 사용하여 데이터베이스 파일을 찾습니다.  
   
- **User name**  
+ **사용자 이름**  
 작업 그룹 정보 파일이 데이터베이스에 연결되는 경우 유효한 사용자 이름을 제공합니다.  
   
  **암호**  
@@ -72,13 +72,13 @@ Access 파일의 경로와 파일 이름을 지정합니다. 예를 들어 로�
 > 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 ## <a name="officeDownloads"></a> Access에 연결하는 데 필요한 파일 가져오기  
-Excel 및 Access를 포함하여 Microsoft Office 데이터 원본용 연결 구성 요소가 아직 설치되지 않은 경우 해당 구성 요소를 다운로드해야 할 수 있습니다. Access 및 Excel 파일 모두에 대한 연결 구성 요소의 최신 버전을 다음에서 다운로드합니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920).
+Excel 및 Access를 포함하여 Microsoft Office 데이터 원본용 연결 구성 요소가 아직 설치되지 않은 경우 해당 구성 요소를 다운로드해야 할 수 있습니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 구성 요소](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Access 및 Excel 파일용 연결 구성 요소를 다운로드합니다.
   
 최신 버전의 구성 요소는 이전 버전의 Access에서 만든 파일을 열 수 있습니다.
 
-컴퓨터에 32비트 버전의 Office가 있는 경우 32비트 버전의 구성 요소를 설치해야 하며, 패키지도 32비트 모드에서 실행해야 합니다.
+컴퓨터에 32비트 버전의 Office가 설치되어 있으면 32비트 버전 구성 요소를 설치해야 하며 패키지도 32비트 모드에서 실행해야 합니다.
 
-Office 365 구독이 있는 경우 Microsoft Access 2016 런타임이 아닌 Access 데이터베이스 엔진 2016 재배포 가능 패키지를 다운로드해야 합니다. 설치 관리자를 실행하는 경우 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없다는 오류 메시지가 표시될 수 있습니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어
+Office 365 구독이 있는 경우 Microsoft Access 2016 런타임이 아닌 Access 데이터베이스 엔진 2016 재배포 가능 패키지를 다운로드해야 합니다. 설치 관리자를 실행하는 경우 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없다는 오류 메시지가 표시될 수 있습니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 다음은 그 예입니다.
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -101,7 +101,7 @@ Access 데이터베이스가 암호로 보호되지만 작업 그룹 정보 파�
 
 기존 기본 키가 ID 열, 자동 번호 열에 있는 경우 기존 기본 키 값을 유지하려면 일반적으로 이 옵션을 선택해야 합니다. 그러지 않으면 대상 ID 열은 일반적으로 새 값을 할당합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

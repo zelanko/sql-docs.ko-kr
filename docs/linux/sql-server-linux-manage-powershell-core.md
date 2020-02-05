@@ -9,10 +9,10 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028719"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용하여 SQL Server on Linux 관리
@@ -271,5 +271,5 @@ SELECT Name
 - Read-SqlXEvent
 - Convert-UrnToPath
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847514"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -40,16 +40,16 @@ void callbackFunction ( VDS_Command *pCmd);
 
 이 콜백은 클라이언트가 명령이 완료되었음을 나타내는 경우 완료 에이전트에 의해 수행됩니다. SQL Server는 pCmd의 completionContext 필드를 설정합니다. 이는 콜백 함수에 컨텍스트를 제공하기 위한 것입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 명령이 클라이언트 큐에 성공적으로 대기되었습니다. |
 | VD_E_QUEUE_FULL | 디바이스 큐가 꽉 찼습니다. |
 | VD_E_IO_ERROR | 디바이스가 IO-ERROR 상태에 있습니다. |
 | VD_E_PROTOCOL | 디바이스가 활성화되지 않았습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 명령을 보내려고 시도하는 동안 오류가 발생하면 콜백 함수가 호출되고 명령 버퍼의 completionCode가 다음과 같이 설정됩니다.
 

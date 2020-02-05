@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096824"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
@@ -38,7 +38,7 @@ ms.locfileid: "68096824"
   
  XML 스키마 컬렉션은 데이터베이스에 있는 테이블과 같은 메타데이터 엔터티입니다. 스키마 컬렉션은 생성, 수정 및 삭제할 수 있습니다. [CREATE XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 문에 지정된 스키마는 새로 만든 XML 스키마 컬렉션 개체에 자동으로 가져와집니다. [ALTER XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 문을 사용하여 추가 스키마 또는 스키마 구성 요소를 데이터베이스에 있는 기존 컬렉션 개체로 가져올 수 있습니다.  
   
- [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 스토리지를 최적화합니다.  
+ [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 스토리지를 최적화합니다.  
   
  쿼리 프로세싱 엔진은 또한 유형 검사 및 쿼리와 데이터 수정 최적화를 위해 스키마를 사용합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68096824"
  또한 XML 스키마 컬렉션을 사용하여 XML 변수, 매개 변수 및 열을 형식화할 수 있습니다.  
   
 ##  <a name="ddl"></a> 스키마 컬렉션 관리 DDL  
- 데이터베이스에서 XML 스키마 컬렉션을 만들고 이를 **xml** 유형의 변수 및 열과 연결할 수 있습니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음 DDL 문을 제공합니다.  
+ 데이터베이스에서 XML 스키마 컬렉션을 만들고 이를 **xml** 유형의 변수 및 열과 연결할 수 있습니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
   
 -   [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)은 데이터베이스에 스키마 구성 요소를 가져옵니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68096824"
   
 -   MODELGROUP  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 -   **SomeAttribute** 는 ATTRIBUTE 구성 요소입니다.  
   

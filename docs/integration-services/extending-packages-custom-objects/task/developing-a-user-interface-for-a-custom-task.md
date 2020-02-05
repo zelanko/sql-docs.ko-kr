@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286952"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
@@ -37,7 +37,7 @@ ms.locfileid: "71286952"
   
  태스크의 사용자 지정 사용자 인터페이스를 개발할 때는 두 개의 중요한 클래스를 사용합니다. 다음 표에서는 이러한 클래스에 대해 설명합니다.  
   
-|클래스|설명|  
+|클래스|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|관리되는 태스크를 식별하고, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 개체를 표시하고 개체와 상호 작용하는 방식을 제어하기 위해 해당 속성을 통해 디자인 타임 정보를 제공하는 특성입니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|태스크에서 해당 태스크를 사용자 지정 사용자 인터페이스와 연결하는 데 사용되는 인터페이스입니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71286952"
   
  다음 표에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성의 속성에 대해 설명합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|제어 흐름 도구 상자에 태스크 이름을 표시합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>에서 상속된 태스크 설명입니다. 이 속성은 도구 설명에 표시됩니다.|  

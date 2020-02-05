@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121562"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68121562"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Visual C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 언어의 예외 처리와 유사한 방식으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 오류 처리를 구현합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 그룹을 TRY 블록으로 묶을 수 있으며 TRY 블록 내에서 오류가 발생하는 경우 CATCH 블록으로 묶은 또 다른 문의 그룹으로 제어가 전달됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  일괄 처리나 BEGIN...END 블록으로 묶은 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  TRY...CATCH 구문은 심각도가 10을 넘으며 데이터베이스 연결을 닫지 않는 모든 실행 오류를 catch합니다.  
   
  TRY 블록 다음에는 곧바로 연결된 CATCH 블록이 이어져야 합니다. END TRY와 BEGIN CATCH 문 사이에 다른 문을 포함시키면 구문 오류가 발생합니다.  
@@ -133,7 +133,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 함수는 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 안의 `CATCH` 블록에서도 작동합니다.  
+ ERROR\_\* 함수는 `CATCH`고유하게 컴파일된 저장 프로시저[ 안의 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 블록에서도 작동합니다.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 구문의 영향을 받지 않는 오류  
  TRY...CATCH 구문은 다음과 같은 조건을 트래핑하지 않습니다.  
@@ -207,7 +207,7 @@ END CATCH;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-trycatch"></a>1\. TRY...CATCH 사용  
+### <a name="a-using-trycatch"></a>A. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  
@@ -227,7 +227,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>2\. 트랜잭션에서 TRY...CATCH 사용  
+### <a name="b-using-trycatch-in-a-transaction"></a>B. 트랜잭션에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내에서 `TRY...CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
   
 ```sql  
@@ -323,7 +323,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  

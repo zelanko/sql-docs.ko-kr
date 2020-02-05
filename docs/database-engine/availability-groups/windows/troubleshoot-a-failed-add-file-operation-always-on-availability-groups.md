@@ -14,10 +14,10 @@ ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251223"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>실패한 파일 추가 작업 문제 해결(Always On 가용성 그룹)

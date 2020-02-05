@@ -1,5 +1,5 @@
 ---
-title: '예: 이진 데이터 검색 | Microsoft Docs'
+title: '예제: 이진 데이터 검색 | Microsoft 문서'
 ms.custom: ''
 ms.date: 09/23/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71199462"
 ---
-# <a name="example-retrieving-binary-data"></a>예: 이진 데이터 검색
+# <a name="example-retrieving-binary-data"></a>예제: 이진 데이터 검색
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 

@@ -22,10 +22,10 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682057"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
@@ -51,7 +51,7 @@ UNION, EXCEPT 또는 INTERSECT를 사용하여 데이터 형식은 같지만 길
   
 피연산자 식은 전체 자릿수 p1과 소수 자릿수 s1을 가진 식 e1, 전체 자릿수 p2와 소수 자릿수 s2를 가진 식 e2로 표시합니다. **10진수**가 아닌 모든 식의 전체 자릿수와 소수 자릿수는 해당 식의 데이터 형식에 대해 정의된 전체 자릿수와 소수 자릿수입니다. 함수 max(a,b)는 "a" 또는 "b"의 더 큰 값을 사용합니다. 마찬가지로 min(a,b)은 "a" 또는 "b"의 더 작은 값을 사용합니다.
   
-|연산|결과 전체 자릿수|결과 소수 자릿수 *|  
+|작업(Operation)|결과 전체 자릿수|결과 소수 자릿수 *|  
 |---|---|---|
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
@@ -65,12 +65,12 @@ UNION, EXCEPT 또는 INTERSECT를 사용하여 데이터 형식은 같지만 길
 더하기 및 빼기 연산에서 10진수의 정수 부분을 저장할 `max(p1 - s1, p2 - s2)` 장소가 필요합니다. `max(p1 - s1, p2 - s2) < min(38, precision) - scale`을 저장할 공간이 충분하지 않으면 소수 자릿수는 정수 부분에 충분한 공간을 제공하도록 줄어듭니다. 결과 소수 자릿수는 `MIN(precision, 38) - max(p1 - s1, p2 - s2)`이므로 소수 부분은 결과 소수 자릿수에 맞게 반올림될 수 있습니다.
 
 곱하기 및 나누기 연산에서 결과의 정수 부분을 저장하기 위해 `precision - scale` 장소가 필요합니다. 다음 규칙을 사용하여 소수 자릿수를 줄일 수 있습니다.
-1.  정수 부분이 32보다 작으면 결과적인 소수 자릿수가 `38 - (precision-scale)`보다 클 수 없으므로 `min(scale, 38 - (precision-scale))`로 줄어듭니다. 이 경우 결과가 반올림 될 수도 있습니다.
+1.  정수 부분이 32보다 작으면 결과적인 소수 자릿수가 `min(scale, 38 - (precision-scale))`보다 클 수 없으므로 `38 - (precision-scale)`로 줄어듭니다. 이 경우 결과가 반올림 될 수도 있습니다.
 1. 6보다 작고 정수 부분이 32보다 큰 경우 소수 자릿수는 변경되지 않습니다. 이 경우 10진수(38, 소수 자릿수)에 맞지 않아 오버플로 오류가 발생할 수 있습니다. 
 1. 6보다 크고 정수 부분이 32보다 큰 경우 소수 자릿수는 6으로 설정됩니다. 이 경우 정수 부분과 소수 자릿수 모두 줄어들 수도 있고 결과 형식은 10진수(38,6)입니다. 정수 부분이 32 자릿수에 맞지 않으면 결과가 소수점 이하 6 자리로 반올림되거나 오버플로 오류가 발생합니다.
 
 ## <a name="examples"></a>예
-다음 표현식은 결과가 `decimal(38,17)`에 맞을 수 있으므로 결과 `0.00000090000000000`을 반올림하지 않고 반환합니다.
+다음 표현식은 결과가 `0.00000090000000000`에 맞을 수 있으므로 결과 `decimal(38,17)`을 반올림하지 않고 반환합니다.
 ```sql
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
@@ -84,7 +84,7 @@ select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10
 이 경우 전체 자릿수는 61이고 소수 자릿수는 20입니다.
 소수 자릿수는 6보다 크고 정수 부분은(`precision-scale = 41`)은 32보다 큽니다. 이 경우는 곱하기 규칙에서 case(3)이고 결과 형식은 `decimal(38,6)`입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

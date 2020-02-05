@@ -12,13 +12,13 @@ ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b523cd8519bbbb6affce403ca14695a4c18a603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027944"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "68027944"
 서버에 메모리가 부족합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-작업을 다시 시도하십시오. 오류가 다시 발생하면 제품 지원 공급자에게 문의하십시오.  
+작업을 다시 시도하세요. 오류가 다시 발생하면 제품 지원 공급자에게 문의하십시오.  
   

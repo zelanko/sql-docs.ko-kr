@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70958333"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
@@ -33,7 +33,7 @@ temporal 테이블 관련 작업을 수행할 때는 다음 사항을 고려해�
 - 구성 분할은 현재 테이블에서 기록 테이블로 자동 복제를 수행하지 않기 때문에 현재 테이블이 분할된 경우 기록 테이블은 기본 파일 그룹에 생성됩니다.
 - 임시 및 기록 테이블은 **FILETABLE** 이 될 수 없고 **FILESTREAM** 을 제외한 지원되는 모든 데이터 형식의 열을 포함할 수 있습니다. 그 이유는 **FILETABLE** 및 **FILESTREAM** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서의 데이터 조작을 허용하여 시스템 버전 관리가 보장되지 않기 때문입니다.
 - 노드 또는 에지 테이블을 temporal 테이블로 만들거나 변경할 수 없습니다.
-- **(n)varchar(max)**, **varbinary(max)**, **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 스토리지 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.
+- **(n)varchar(max)** , **varbinary(max)** , **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 스토리지 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.
 - 기록 테이블은 현재 테이블과 동일한 데이터베이스에 만들어야 합니다. **Linked Server** 에서의 임시 쿼리는 지원되지 않습니다.
 - 기록 테이블은 제약 조건(기본 키, 외래 키, 테이블 또는 열 제약 조건)을 가질 수 없습니다.
 - 인덱싱된 뷰는 임시 쿼리를 기반으로 사용할 수 없습니다( **FOR SYSTEM_TIME** 절을 사용하는 쿼리).
@@ -49,7 +49,7 @@ temporal 테이블 관련 작업을 수행할 때는 다음 사항을 고려해�
 - DML 논리 무효화를 방지하기 위해**INSTEAD OF** 트리거가 현재 또는 기록 테이블에서 허용되지 않습니다. **AFTER** 트리거는 현재 테이블에서만 허용됩니다. DML 논리 무효화를 방지하기 위해 기록 테이블에서 차단됩니다.
 - 복제 기술은 다음과 같이 제한적으로 사용됩니다.
 
-  - **Always On:** 완벽하게 지원
+  - **항상 사용 가능:** 모두 지원
   - **변경 데이터 캡처 및 변경 데이터 추적:** 현재 테이블에서만 지원
   - **스냅샷 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다. 각 구독자가 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.
   - **병합 복제:** temporal 테이블에서 지원되지 않습니다.

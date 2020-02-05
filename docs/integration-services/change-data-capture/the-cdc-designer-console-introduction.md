@@ -11,10 +11,10 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9c07061634c39d6a5d1b7a2a0b698b27d90c68c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294532"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
@@ -33,7 +33,7 @@ ms.locfileid: "71294532"
  CDC Designer 콘솔은 다음과 같은 Windows 환경에서 실행될 수 있습니다.  
   
 -   Windows 8 및 8.1  
--   Windows 10  
+-   윈도우 10  
 -   Windows Server 2012 및 2012 R2
 -   Windows Server 2016
 

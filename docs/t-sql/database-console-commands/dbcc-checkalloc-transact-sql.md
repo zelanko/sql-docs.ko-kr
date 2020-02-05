@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056352"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74056352"
 
 지정된 데이터베이스에 대한 디스크 공간 할당 구조의 일관성을 검사합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -82,7 +82,7 @@ DBCC CHECKALLOC
  해당 사항 없음  
  REPAIR 옵션은 최후의 수단으로만 사용하십시오. 오류를 복구하려면 백업에서 복원하는 것이 좋습니다. 복구 작업이 수행될 경우 테이블 자체나 테이블 간에 존재할 수 있는 제약 조건이 고려되지 않습니다. 지정된 테이블이 하나 이상의 제약 조건에 관련되면 복구 작업 후에 DBCC CHECKCONSTRAINTS를 실행하는 것이 좋습니다. REPAIR를 사용해야 하는 경우 복구 옵션 없이 DBCC CHECKDB를 실행하여 사용할 복구 수준을 확인합니다. REPAIR_ALLOW_DATA_LOSS 수준을 사용하는 경우 이 옵션으로 DBCC CHECKDB를 실행하기 전에 데이터베이스를 백업하는 것이 좋습니다.
 
- 의 모든 멘션을  
+ WITH  
  지정할 옵션을 설정합니다.
 
  ALL_ERRORMSGS  
@@ -97,7 +97,7 @@ DBCC CHECKALLOC
  ESTIMATEONLY  
  다른 모든 옵션이 지정되면 DBCC CHECKALLOC 실행에 필요한 tempdb 공간의 예상 크기를 표시합니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC CHECKALLOC은 페이지가 속한 페이지 유형이나 개체 유형과 관계없이 데이터베이스에 있는 모든 페이지의 할당을 검사합니다. 또한 이러한 페이지와 페이지 간 관계를 추적하는 데 사용되는 다양한 내부 구조의 유효성을 검사합니다.
 NO_INFOMSGS가 지정되지 않은 경우 DBCC CHECKALLOC은 데이터베이스의 모든 개체에 대한 공간 사용률 정보를 수집합니다. 이 정보는 발견된 오류와 함께 출력됩니다.
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC은 내부 데이터베이스 스냅샷을 사용하여 이러한
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해  
 DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
   
-|State|설명|  
+|시스템 상태|Description|  
 |---|---|  
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
@@ -123,7 +123,7 @@ DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ss
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
 ## <a name="error-reporting"></a>오류 보고  
-DBCC CHECKALLOC 명령에서 손상 오류가 검색될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn*.txt)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
+DBCC CHECKALLOC 명령에서 손상 오류가 검색될 때마다  *LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
 덤프 파일에는 DBCC CHECKALLOC 명령의 결과 및 추가 진단 출력이 포함됩니다. 이 파일에는 제한된 DACL(임의 액세스 제어 목록)이 있습니다. 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 sysadmin 역할의 멤버로 제한됩니다. 기본적으로 sysadmin 역할에는 Windows BUILTIN\Administrators 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
   
 ## <a name="resolving-errors"></a>오류 해결  
@@ -133,7 +133,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 DBCC CHECKALLOC이 반환하는 정보에 대해 설명합니다.
   
-|항목|설명|  
+|항목|Description|  
 |---|---|  
 |FirstIAM|내부적으로만 사용됩니다.|  
 |Root|내부적으로만 사용됩니다.|  
@@ -143,7 +143,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
   
 또한 DBCC CHECKALLOC은 각 파일의 인덱스와 파티션에 대한 할당 요약을 보고합니다. 이 요약에서는 데이터 배포에 대해 설명합니다.
   
-|항목|설명|  
+|항목|Description|  
 |---|---|  
 |Reserved pages|인덱스에 할당된 페이지 및 할당된 익스텐트에서 사용되지 않은 페이지입니다.|  
 |Used pages|할당되었으며 인덱스에서 사용하고 있는 페이지입니다.|  

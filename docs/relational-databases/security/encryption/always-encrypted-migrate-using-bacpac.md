@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f2f44a6cf1172b779160d4ee17e584c7a7b2452
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595808"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Always Encrypted를 사용하여 데이터베이스 내보내기 및 가져오기 
@@ -43,11 +43,11 @@ BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터�
 
 내보내기 및 가져오기 작업 중에 데이터가 암호화된 상태로 유지되므로 암호화된 열에 구성된 열 마스터 키에 대한 액세스 권한이 필요하지 않습니다.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted를 사용하여 데이터베이스 백업 및 복원](always-encrypted-migrate-using-backup-restore.md)
-- [SQL Server 가져오기 및 내보내기 마법사로 Always Encrypted를 사용하여 열 간에 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
+- [SQL Server 가져오기 및 내보내기 마법사에서 Always Encrypted를 사용하여 열에서 또는 열로 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
 - [Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드](migrate-sensitive-data-protected-by-always-encrypted.md)

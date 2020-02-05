@@ -14,10 +14,10 @@ ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042684"
 ---
 # <a name="modify-xml-indexes"></a>XML 인덱스 수정
@@ -30,7 +30,7 @@ ms.locfileid: "68042684"
   
 -   ALTER INDEX ALL이 지정되면 비-XML 인덱스 및 XML 인덱스 모두에 적용됩니다. 인덱싱 옵션은 두 가지 인덱스 유형에 모두 유효하지 않도록 지정할 수 있습니다. 이 경우 전체 문이 실패합니다.  
   
-## <a name="example-modifying-an-xml-index"></a>예: XML 인덱스 수정  
+## <a name="example-modifying-an-xml-index"></a>예제: XML 인덱스 수정  
  다음 예에서는 XML 인덱스가 생성되고 `ALLOW_ROW_LOCKS` 옵션을 `OFF`로 설정하여 수정됩니다. `ALLOW_ROW_LOCKS` 가 `OFF`일 때는 행이 잠기지 않고 페이지 수준 및 테이블 수준의 잠금을 사용하여 지정된 인덱스에 대한 액세스가 설정됩니다.  
   
 ```  
@@ -51,7 +51,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>예: XML 인덱스 사용 및 사용 안 함  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>예제: XML 인덱스 활성화 및 비활성화  
  기본적으로 XML 인덱스는 활성화됩니다. XML 인덱스가 비활성화되어 있는 경우 XML 열에 대해 실행되는 쿼리에서는 해당 XML 인덱스를 사용할 수 없습니다. XML 인덱스를 활성화하려면 `ALTER INDEX` 옵션과 함께 `REBUILD` 를 사용합니다.  
   
 ```  

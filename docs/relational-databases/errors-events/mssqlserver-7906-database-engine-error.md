@@ -12,13 +12,13 @@ ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951435"
 ---
-# <a name="mssqlserver7906"></a>MSSQLSERVER_7906
+# <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "67951435"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이 잘못된 Filestream 파일입니다.|  
+|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이(가) 잘못된 Filestream 파일입니다.|  
   
 ## <a name="explanation"></a>설명  
 Filestream 데이터 공간 바로 아래에는 'filestream.hdr'과 같은 일부 특수한 파일을 제외한 다른 파일이 있을 수 없습니다.  

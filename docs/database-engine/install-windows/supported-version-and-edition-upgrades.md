@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934867"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
@@ -54,7 +54,7 @@ ms.locfileid: "67934867"
 
 -   RC1 또는 SQL Server 2016 이전 버전을 RC3 이상 버전으로 업그레이드하는 경우, 업그레이드하기 전에 PolyBase를 제거한 다음 업그레이드한 후에 다시 설치해야 합니다.
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>이전 버전에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>이전 버전에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]로 업그레이드  
  
 SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있습니다.
  
@@ -104,7 +104,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
 
  \* Microsoft는 특별히 TAP(기술 채택 프로그램)에 참여하는 고객들을 위해 릴리스 후보 소프트웨어에서의 업그레이드를 지원합니다. 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원  
 이 섹션에서는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]지원에 대해 설명합니다. [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서는 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스(mdf/ldf 파일)를 데이터베이스 엔진의 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 인스턴스에 연결합니다.  

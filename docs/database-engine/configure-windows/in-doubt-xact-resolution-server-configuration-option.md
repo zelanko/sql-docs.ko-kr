@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998050"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 서버 구성 옵션
@@ -28,7 +28,7 @@ ms.locfileid: "67998050"
   
  다음 표에서는 미결 트랜잭션을 해결하기 위한 가능한 결과 값 목록을 보여 줍니다.  
   
-|결과 값|설명|  
+|결과 값|Description|  
 |-------------------|-----------------|  
 |0|가정 없음. MS DTC가 미결 트랜잭션을 해결할 수 없으면 복구에 실패합니다.|  
 |1|커밋 가정. 모든 MS DTC 미결 트랜잭션을 커밋된 것으로 가정합니다.|  

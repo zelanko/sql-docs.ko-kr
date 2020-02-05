@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847484"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -46,15 +46,15 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 
 *dwTimeout* 주 클라이언트가 제공할 버퍼 영역의 선언을 완료할 때까지 대기하는 시간(밀리초)입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 가상 디바이스 세트가 구성 가능 상태입니다. |
 | VD_E_ABORT | SignalAbort가 호출되었습니다. |
 | VD_E_PROTOCOL | 가상 디바이스 세트가 연결됨 상태가 아닙니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 이 함수가 호출된 후에는 가상 디바이스 세트가 구성 가능 상태로 전환되며 이 상태에서 버퍼 레이아웃이 결정됩니다.
 기본 구성이 설정되면(매개 변수별로) 가상 디바이스 세트의 수명 동안 이러한 값이 고정된 상태로 유지됩니다. 가상 디바이스 세트에 대한 맞춤 속성은 데이터 버퍼의 맞춤을 제어하는 데 사용됩니다. 이 값은 버퍼 단위로 재정의될 수 있는 최소 맞춤 값을 설정합니다.

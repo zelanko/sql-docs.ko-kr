@@ -12,10 +12,10 @@ ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006080"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
@@ -30,7 +30,7 @@ ms.locfileid: "72006080"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|메시지 텍스트|**\@hints**에 지정된 힌트를 **\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 적용할 수 없어서 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
+|메시지 텍스트|\***hints\@에 지정된 힌트를** **stmt\@ 또는** **statement_start_offset\@으로 지정된 문에 적용할 수 없어서 계획 지침 '%.** ls'을(를) 만들 수 없습니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
   
 ## <a name="explanation"></a>설명  
 **\@hints**에 지정된 힌트를 **\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 적용할 수 없습니다.  

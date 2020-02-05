@@ -12,13 +12,13 @@ ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120589"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -63,7 +63,7 @@ ms.locfileid: "68120589"
   
     별칭을 사용하는 경우 문의 다른 위치에서 테이블 이름을 사용할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 부분으로 구성된 식별자가 테이블 이름을 접두사로 사용하는 열을 참조하는지 또는 열 이름을 접두사로 사용하는 CLR UDT(사용자 정의 데이터 형식)의 속성을 참조하는지 확인할 수 없습니다. 이는 열 이름의 접두사로 테이블 이름이 사용되는 것과 같은 방법으로 UDT 열의 속성이 열 이름과 속성 이름 사이에 마침표 구분 기호(.)를 사용하여 참조되기 때문입니다. 다음 예에서는 두 개의 테이블 `a` 및 `b`를 만듭니다. `b` 테이블에는 CLR UDT `dbo.myudt2`를 데이터 형식으로 사용하는 `a` 열이 포함되어 있습니다. SELECT 문에는 여러 부분으로 구성된 식별자 `a.c2`가 포함되어 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 부분으로 구성된 식별자가 테이블 이름을 접두사로 사용하는 열을 참조하는지 또는 열 이름을 접두사로 사용하는 CLR UDT(사용자 정의 데이터 형식)의 속성을 참조하는지 확인할 수 없습니다. 이는 열 이름의 접두사로 테이블 이름이 사용되는 것과 같은 방법으로 UDT 열의 속성이 열 이름과 속성 이름 사이에 마침표 구분 기호(.)를 사용하여 참조되기 때문입니다. 다음 예에서는 두 개의 테이블 `a` 및 `b`를 만듭니다. `b` 테이블에는 CLR UDT `a`를 데이터 형식으로 사용하는 `dbo.myudt2` 열이 포함되어 있습니다. SELECT 문에는 여러 부분으로 구성된 식별자 `a.c2`가 포함되어 있습니다.  
   
     ```  
     CREATE TABLE a (c2 int);   
@@ -79,7 +79,7 @@ ms.locfileid: "68120589"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    UDT `myudt2`에 `c2`라는 속성이 없다고 가정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `a.c2` 식별자가 `a` 테이블의 `c2` 열을 참조하는지 또는 `b` 테이블의 `a` 열과 `c2` 속성을 참조하는지 확인할 수 없습니다.  
+    UDT `myudt2`에 `c2`라는 속성이 없다고 가정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `a.c2` 식별자가 `c2` 테이블의 `a` 열을 참조하는지 또는 `a` 테이블의 `c2` 열과 `b` 속성을 참조하는지 확인할 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68120589"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    로 구분하거나 여러  
+    또는  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

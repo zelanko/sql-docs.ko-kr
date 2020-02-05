@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101011"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>공간 형식 - geometry(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68101011"
 
   평면 공간 데이터 형식인 **geometry**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 이 데이터 형식은 유클리드(평면) 좌표 시스템의 데이터를 나타냅니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **geometry** 공간 데이터 형식에 대해 메서드 집합을 지원합니다. 이러한 메서드에는 OGC(Open Geospatial Consortium) 표준 및 해당 표준에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장의 집합으로 정의된 **geometry**의 메서드가 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **geometry** 공간 데이터 형식에 대해 메서드 집합을 지원합니다. 이러한 메서드에는 OGC(Open Geospatial Consortium) 표준 및 해당 표준에 대한 **확장의 집합으로 정의된**geometry[!INCLUDE[msCoName](../../includes/msconame-md.md)]의 메서드가 포함됩니다.  
  
  기하 도형 메서드의 허용 오차는 1.0e-7 * 익스텐트와 같을 수 있습니다. 익스텐트는 **geometry** 개체의 점 사이의 최대 근사 거리를 나타냅니다.
   
@@ -38,7 +38,7 @@ ms.locfileid: "68101011"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-how-to-add-and-query-geometry-data"></a>1\. geometry 데이터를 추가하고 쿼리하는 방법 보기  
+### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. geometry 데이터를 추가하고 쿼리하는 방법 보기  
  다음 두 예에서는 geometry 데이터를 추가하고 쿼리하는 방법을 보여 줍니다. 첫 번째 예에서는 ID 열과 `geometry` 열 `GeomCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geometry` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geometry`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
 ```sql 
@@ -60,7 +60,7 @@ VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 
 GO  
 ```  
   
-### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>2\. 두 geometry 인스턴스의 교차점 반환  
+### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>B. 두 geometry 인스턴스의 교차점 반환  
  두 번째 예에서는 `STIntersection()` 메서드를 사용하여 앞서 삽입한 두 `geometry` 인스턴스가 교차하는 지점을 반환합니다.  
   
 ```sql  

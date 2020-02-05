@@ -15,10 +15,10 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6b946110049321c50427e33fbca05876ec6384
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297343"
 ---
 # <a name="trim-ssis-expression"></a>TRIM(SSIS 식)
@@ -45,7 +45,7 @@ TRIM(character_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 TRIM 결과도 Null입니다.  
   
  TRIM은 DT_WSTR 데이터 형식에서만 실행됩니다. 문자열 리터럴이나 DT_STR 데이터 형식의 데이터 열인 *character_expression* 인수는 TRIM이 연산을 수행하기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  

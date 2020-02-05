@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121703"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121703"
 
   SQL Server를 즉시 중지합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  (선택 사항) 모든 데이터베이스에서 검사점을 수행하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 사용자 프로세스를 종료한 후 종료됩니다. 서버를 다시 시작하면 완료되지 않은 트랜잭션에 대해 롤백 작업이 수행됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  WITHNOWAIT 옵션을 사용하지 않으면 SHUTDOWN은 다음을 수행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다.  
   
 1.  **sysadmin** 및 **serveradmin** 고정 서버 역할의 멤버를 제외하고 로그인을 비활성화합니다.  

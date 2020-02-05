@@ -25,10 +25,10 @@ helpviewer_keywords:
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e659ae78b81cb6888e749bd40546efe16b4c542d
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72261331"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE(Transact-SQL)
@@ -54,7 +54,7 @@ CURRENT_TIMEZONE ( )
 
 **varchar**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 `CURRENT_TIMEZONE`은 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   
@@ -69,6 +69,6 @@ SELECT CURRENT_TIMEZONE();
 */
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Database Managed Instance 표준 시간대](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)

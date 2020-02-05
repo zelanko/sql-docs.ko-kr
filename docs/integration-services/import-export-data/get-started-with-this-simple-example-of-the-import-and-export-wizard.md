@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285212"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사의 간단한 예제 시작
@@ -24,7 +24,7 @@ ms.locfileid: "71285212"
 Excel 스프레드시트에서 SQL Server 데이터베이스로 데이터를 가져오는 일반적인 시나리오를 살펴봄으로써 SQL Server 가져오기 및 내보내기 마법사에서 기대할 수 있는 작업을 알아봅니다. 다른 원본과 대상을 사용하려는 경우에도 이 항목에서는 마법사를 실행하는 방법에 대해 알아야 할 사항을 대부분 보여 줍니다.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>필수 구성 요소 - 컴퓨터에 마법사가 설치되어 있습니까?
-마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
+마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>이 예의 Excel 원본 데이터
 WizardWalkthrough.xlsx Excel 통합 문서의 WizardWalkthrough 워크시트에 복사할 원본 데이터(2개 열의 작은 테이블)는 다음과 같습니다.
@@ -153,12 +153,12 @@ SQL Server Management Studio에서 마법사가 SQL Server에 만든 새 대상 
 
 ![SQL Server에 복사된 데이터 2](../../integration-services/import-export-data/media/data-copied-to-sql-server-2.jpg)
 
-## <a name="learn-more"></a>자세히 알아보기  
+## <a name="learn-more"></a>자세한 정보  
 마법사의 작동 방식에 대해 자세히 알아봅니다.
 -   **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
 -   **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 
--   **데이터 원본 및 대상에 연결하는 방법에 대해 자세히 알아보기** - 데이터에 연결하는 방법에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 주로 사용되는 각 데이터 원본에 대한 개별 설명서 페이지도 있습니다.
+-   **데이터 원본 및 대상에 연결하는 방법에 대해 자세히 알아보기.** 데이터에 연결하는 방법에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 주로 사용되는 각 데이터 원본에 대한 개별 설명서 페이지도 있습니다.
 
 -   **Excel에서 데이터를 로드하는 방법을 자세히 알아봅니다.** Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대해 알아보려면 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132250"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **IndexSize** 속성을 쿼리합니다.  
+ **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **ItemCount** 속성을 쿼리합니다.  
+ **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
@@ -122,7 +122,7 @@ GO
 ##  <a name="SemanticIndexing"></a> 의미 체계 인덱싱의 단계  
  의미 체계 검색에서는 의미 체계 검색을 사용하도록 설정된 각 열에 대해 다음 두 종류의 데이터를 인덱싱합니다.  
   
-1.  **키 구**  
+1.  **핵심 구**  
   
 2.  **문서 유사성**  
   
@@ -133,7 +133,7 @@ GO
 2.  **단계 2**: 그런 다음 의미 체계 문서 유사성 인덱스가 채워집니다. 이 인덱스는 이전 단계에서 채워진 두 인덱스에 따라 달라집니다.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 문제점: 의미 체계 인덱스가 채워지지 않음  
+##  <a name="ProblemNotPopulated"></a> 문제: 의미 체계 인덱스가 채워지지 않음  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>연결된 전체 텍스트 인덱스가 채워졌습니까?  
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
   

@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278099"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72278099"
 
   성공적인 암시적 트랜잭션이나 명시적 트랜잭션의 끝을 표시합니다. @@TRANCOUNT가 1이면 COMMIT TRANSACTION은 트랜잭션 시작 이후에 모든 데이터 수정 내용을 영구적인 데이터베이스 부분으로 만들고, 트랜잭션의 리소스를 해제하고, @@TRANCOUNT를 0으로 감소시킵니다. @@TRANCOUNT가 1보다 크면 COMMIT TRANSACTION은 @@TRANCOUNT를 1씩 감소시키고 트랜잭션은 활성 상태로 유지됩니다.  
   
- ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +76,7 @@ COMMIT [ TRAN | TRANSACTION ]
 
  이 트랜잭션이 지연된 영속성으로 커밋되도록 요청하는 옵션입니다. 데이터베이스가 `DELAYED_DURABILITY = DISABLED` 또는 `DELAYED_DURABILITY = FORCED`를 사용하여 변경된 경우 요청이 무시됩니다. 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래머는 트랜잭션에서 참조되는 모든 데이터가 논리적으로 정확할 때만 COMMIT TRANSACTION을 실행해야 합니다.  
   
  커밋된 트랜잭션이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션일 경우 COMMIT TRANSACTION은 MS DTC가 2단계 커밋 프로토콜을 사용하여 트랜잭션에 포함된 모든 서버를 커밋하도록 트리거합니다. 로컬 트랜잭션이 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일한 인스턴스에서 둘 이상의 데이터베이스와 관련되어 있을 경우 인스턴스는 내부적으로 2단계 커밋을 사용하여 트랜잭션에 포함된 모든 데이터베이스를 커밋할 수 있습니다.  
@@ -94,7 +94,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-committing-a-transaction"></a>1\. 트랜잭션 커밋  
+### <a name="a-committing-a-transaction"></a>A. 트랜잭션 커밋  
 **적용 대상:** SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스   
 
 다음 예에서는 작업 후보를 삭제합니다. AdventureWorks를 사용합니다. 
@@ -106,7 +106,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>2\. 중첩된 트랜잭션 커밋  
+### <a name="b-committing-a-nested-transaction"></a>B. 중첩된 트랜잭션 커밋  
 **적용 대상:** SQL Server 및 Azure SQL Database    
 
 다음 예에서는 테이블을 만들고 3단계로 중첩된 트랜잭션을 생성한 다음 중첩된 트랜잭션을 커밋합니다. 각 `COMMIT TRANSACTION` 문에는 *transaction_name* 매개 변수가 있지만, `COMMIT TRANSACTION` 및 `BEGIN TRANSACTION` 문 사이에는 아무 관계가 없습니다. *transaction_name* 매개 변수는 프로그래머가 올바른 수의 커밋이 `@@TRANCOUNT`에서 0까지 감소하여 외부 트랜잭션을 커밋하도록 코딩되었는지 확인하는 데 도움이 됩니다. 

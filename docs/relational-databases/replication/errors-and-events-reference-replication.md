@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 813607ed006fb38120fd4a6f565fb9d6280f10b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768499"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286420"
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68768499"
 |[MSSQL_ENG014160](../../relational-databases/replication/mssql-eng014160.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 이 게시에 대해 하나 이상의 구독이 만료되었습니다.|  
 |[MSSQL_ENG014161](../../relational-databases/replication/mssql-eng014161.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 로그 판독기와 배포 에이전트가 실행 중이고 대기 시간 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014162](../../relational-databases/replication/mssql-eng014162.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
-|[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
+|[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|사용자 '%.*ls'이(가) 로그인하지 못했습니다.%.\*ls|  
@@ -78,7 +78,7 @@ ms.locfileid: "68768499"
 |MSSQL_ENG021642. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|유형이 다른 게시자에는 연결된 서버가 필요합니다. 이름이 '%s'인 연결된 서버가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오.|  
 |MSSQL_ENG021663. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|원본 테이블 [%s].[%s]에 대해 올바른 기본 키를 찾을 수 없습니다.|  
 |MSSQL_ENG021684. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|Oracle 게시자 '%s'의 관리자 로그인과 연관된 사용 권한이 충분하지 않습니다.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|‘%s’은(는) '머신\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s'은(는) '컴퓨터\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|계속하려면 먼저 '%s'을(를) 통해 '%s' 에이전트 작업을 추가해야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|'%2'에서 '%1'을(를) 실행할 수 없습니다.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|병합 프로세스에서 '%1'의 생성 기록을 변경할 수 없습니다. 문제를 해결하려면 자세한 기록 로깅으로 동기화를 다시 시작하고 기록할 출력 파일을 지정하십시오.|  

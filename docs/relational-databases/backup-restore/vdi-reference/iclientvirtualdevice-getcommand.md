@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847594"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -37,16 +37,16 @@ HRESULT IClientVirtualDevice::GetCommand (
 
 *dwTimeOut* 대기할 시간(밀리초)입니다. 무기한 대기하려면 INFINTE를 사용합니다. 명령을 폴링하려면 0을 사용합니다. 현재 사용할 수 있는 명령이 없으면 VD_E_TIMEOUT이 반환됩니다. 시간 초과가 발생하면 클라이언트는 다음 작업을 결정합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 명령을 가져왔습니다. |
 | VD_E_CLOSE | 서버에서 디바이스를 닫았습니다. |
 | VD_E_TIMEOUT | 사용할 수 있는 명령이 없으며 시간 제한이 만료되었습니다. |
 | VD_E_ABORT | 클라이언트 또는 서버가 SignalAbort를 사용하여 강제로 종료했습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 VD_E_CLOSE가 반환될 때 SQL Server가 디바이스를 닫았습니다. 정상적인 종료의 일부입니다. 모든 디바이스가 닫힌 후 클라이언트는 IClientVirtualDeviceSet2::Close를 호출하여 가상 디바이스 세트를 닫습니다.
 

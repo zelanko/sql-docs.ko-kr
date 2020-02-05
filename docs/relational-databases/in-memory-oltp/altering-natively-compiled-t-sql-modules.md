@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983005"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
@@ -23,7 +23,7 @@ ms.locfileid: "73983005"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 `ALTER` 문을 사용하여 고유하게 컴파일된 저장 프로시저와 스칼라 UDF, 트리거 등 고유하게 컴파일된 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에 대해 `ALTER` 작업을 수행할 수 있습니다.  
   
-고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에 대해 `ALTER`를 실행하면 새 정의를 사용하여 모듈이 다시 컴파일됩니다. 다시 컴파일이 진행되는 동안에는 이전 버전의 모듈을 계속 실행할 수 있습니다. 컴파일이 완료되면 모듈 실행이 종료되고 새 버전의 모듈이 설치됩니다. 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈을 변경하는 경우 다음 옵션을 수정할 수 있습니다.  
+고유하게 컴파일된 `ALTER` 모듈에 대해 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 실행하면 새 정의를 사용하여 모듈이 다시 컴파일됩니다. 다시 컴파일이 진행되는 동안에는 이전 버전의 모듈을 계속 실행할 수 있습니다. 컴파일이 완료되면 모듈 실행이 종료되고 새 버전의 모듈이 설치됩니다. 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈을 변경하는 경우 다음 옵션을 수정할 수 있습니다.  
   
 -   매개 변수  
 -   EXECUTE AS  
@@ -38,7 +38,7 @@ ms.locfileid: "73983005"
   
 `ALTER PROCEDURE` 기능과 구문에 대한 자세한 내용은 [ALTER PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)를 참조하세요.  
   
-고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에서 [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)을 실행할 수 있으며 다음 실행 시 모듈이 다시 컴파일됩니다.  
+고유하게 컴파일된 [ 모듈에서 ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)sp_recompile[!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행할 수 있으며 다음 실행 시 모듈이 다시 컴파일됩니다.  
   
 ## <a name="example"></a>예제  
 다음 예에서는 메모리 최적화 테이블(T1)과 T1의 모든 열을 선택하는 고유하게 컴파일된 저장 프로시저(usp_1)를 만듭니다. 그런 다음, `EXECUTE AS` 절을 제거하고, `LANGUAGE`를 변경하고, T1에서 하나의 열(C1)만 선택하도록 usp_1을 변경합니다.  

@@ -13,10 +13,10 @@ ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000759"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
@@ -45,7 +45,7 @@ ms.locfileid: "68000759"
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>1. XML 스키마 컬렉션을 만드는 권한 취소  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML 스키마 컬렉션을 만드는 권한 취소  
  이 예에서는 로그인 계정과 예제 데이터베이스를 만듭니다. 또한 데이터베이스에 관계형 스키마를 추가합니다. 초기에 로그인 계정에는 관계형 스키마에 대한 ALTER 권한과 XML 스키마 컬렉션을 만들기 위한 다른 필수 권한이 부여됩니다. 이 예에서는 데이터베이스에 있는 관계형 스키마 중 하나에 대한 ALTER 권한을 취소합니다. 이렇게 하면 로그인 계정이 XML 스키마 컬렉션을 만들 수 없습니다.  
   
 ```  

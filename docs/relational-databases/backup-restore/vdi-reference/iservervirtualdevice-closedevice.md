@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c73649e2a4301e94f8e68504222cc0122061f25f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847434"
 ---
 # <a name="iservervirtualdeviceclosedevice-vdi"></a>IServerVirtualDevice::CloseDevice (VDI)
@@ -28,14 +28,14 @@ ms.locfileid: "70847434"
 HRESULT IServerVirtualDevice::CloseDevice ();
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | VD_E_CLOSE | 디바이스가 이미 닫혀 있습니다. |
 | VD_E_ABORT | 인터페이스가 중단 상태에 있습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 SignalAbort를 사용하여 비정상적인 종료를 적용한 후에는 CloseDevice가 필요하지 않습니다. SignalAbort를 사용한 후 CloseDevice가 호출되면 아무 동작도 수행되지 않습니다.
 

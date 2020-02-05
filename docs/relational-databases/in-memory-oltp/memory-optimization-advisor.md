@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050195"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
@@ -53,7 +53,7 @@ ms.locfileid: "68050195"
   
  조치 가능한 경고는 왼쪽 열에 노란색 삼각형이 표시됩니다. 조치 가능한 경고가 있는 경우 마이그레이션을 종료하고 경고를 해결한 후 프로세스를 다시 시작해야 합니다. 경고를 해결하지 않을 경우 마이그레이션한 테이블에서 오류가 발생할 수 있습니다.  
   
- **보고서 생성** 을 클릭하여 HTML 경고 보고서를 생성합니다. 계속 진행하려면 **다음** 을 클릭합니다.  
+ **보고서 생성** 을 클릭하여 HTML 경고 보고서를 생성합니다. **다음** 을 클릭하여 진행합니다.  
   
 ### <a name="review-optimization-options"></a>최적화 옵션 검토  
  다음 화면에서는 메모리 내 OLTP로의 마이그레이션에 대한 옵션을 수정할 수 있습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "68050195"
 > [!WARNING]  
 >  비영구 테이블과 관련된 데이터 손실 위험에 대해 잘 알고 있는 경우에만 이 옵션을 선택하십시오.  
   
- 계속하려면 **다음** 을 클릭합니다.  
+ **다음**을 클릭하여 계속합니다.  
   
 ### <a name="review-primary-key-conversion"></a>기본 키 변환 검토  
  다음 화면은 **기본 키 변환 검토**화면입니다. 메모리 최적화 관리자는 테이블에 하나 이상의 기본 키가 있는지 확인하고 기본 키 메타데이터를 기준으로 열 목록을 채웁니다. 기본 키가 없는 경우 메모리 최적화 영구 테이블로 마이그레이션하려면 기본 키를 만들어야 합니다.  

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558566"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux의 사용량 및 진단 데이터 수집 구성
@@ -61,7 +61,7 @@ docker에서 사용량 및 진단 데이터 수집을 사용하지 않도록 설
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 호스트 디렉터리에 `[telemetry]` 및 `customerfeedback = false` 줄이 포함된 `mssql.conf` 파일을 추가합니다.
+1. 호스트 디렉터리에 `mssql.conf` 및 `[telemetry]` 줄이 포함된 `customerfeedback = false` 파일을 추가합니다.
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -85,7 +85,7 @@ docker에서 사용량 및 진단 데이터 수집을 사용하지 않도록 설
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 호스트 디렉터리에 `[telemetry]` 및 `customerfeedback = false` 줄이 포함된 `mssql.conf` 파일을 추가합니다.
+1. 호스트 디렉터리에 `mssql.conf` 및 `[telemetry]` 줄이 포함된 `customerfeedback = false` 파일을 추가합니다.
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -154,7 +154,7 @@ docker에서 로컬 감사를 사용하도록 설정하려면 Docker를 통해 [
    sudo mkdir <host directory>/audit
    ```
 
-1. 호스트 디렉터리에 `[telemetry]` 및 `userrequestedlocalauditdirectory = <host directory>/audit` 줄이 포함된 `mssql.conf` 파일을 추가합니다.
+1. 호스트 디렉터리에 `mssql.conf` 및 `[telemetry]` 줄이 포함된 `userrequestedlocalauditdirectory = <host directory>/audit` 파일을 추가합니다.
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -184,7 +184,7 @@ docker에서 로컬 감사를 사용하도록 설정하려면 Docker를 통해 [
    sudo mkdir <host directory>/audit
    ```
 
-1. 호스트 디렉터리에 `[telemetry]` 및 `userrequestedlocalauditdirectory = <host directory>/audit` 줄이 포함된 `mssql.conf` 파일을 추가합니다.
+1. 호스트 디렉터리에 `mssql.conf` 및 `[telemetry]` 줄이 포함된 `userrequestedlocalauditdirectory = <host directory>/audit` 파일을 추가합니다.
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

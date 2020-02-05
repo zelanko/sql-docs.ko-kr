@@ -12,10 +12,10 @@ ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558278"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
@@ -35,7 +35,7 @@ ms.locfileid: "75558278"
  **추가 도움말 하이퍼링크: 주소**  
  사용자가 **결과 자세히 보기** 페이지에 나타나는 하이퍼링크 텍스트를 클릭하면 열리는 웹 페이지의 하이퍼링크를 입력합니다.  
   
- **추가 도움말 하이퍼링크: 링크 테스트**  
+ **추가 도움말 하이퍼링크: 텍스트 링크**  
  하이퍼링크를 열어 링크의 유효성을 테스트하려면 클릭합니다.  
   
  **만든 날짜**  

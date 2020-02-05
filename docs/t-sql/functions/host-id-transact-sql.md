@@ -21,10 +21,10 @@ ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843729"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843729"
 
   워크스테이션 ID 번호를 반환합니다. 워크스테이션 ID 번호는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 클라이언트 컴퓨터에 있는 애플리케이션의 PID(프로세스 ID)입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ HOST_ID ()
 ## <a name="return-types"></a>반환 형식  
  **char(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시스템 함수의 매개 변수가 선택 사항이면 현재 데이터베이스, 호스트 컴퓨터, 서버 사용자 또는 데이터베이스 사용자를 가정합니다. 기본 제공 함수 다음에는 항상 괄호가 와야 합니다.  
   
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다.  

@@ -18,10 +18,10 @@ ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c4c798c431b2eb71354dd803bd5701df0b6f9cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120663"
 ---
 # <a name="z-geography-data-type"></a>Z(geography 데이터 형식)
@@ -39,9 +39,9 @@ ms.locfileid: "68120663"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 유형: **SqlDouble**  
+ CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geography** 인스턴스가 지점이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  

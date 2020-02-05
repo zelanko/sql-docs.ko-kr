@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b9cdb3ce08f32c6b73ae1558ed2a9b3b8bf34871
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089397"
 ---
 # <a name="full-text-event-category"></a>Full Text 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "68089397"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted 이벤트 클래스](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|전체 텍스트 탐색 중 예외가 발생했음을 나타냅니다.|  
 |[FT:Crawl Started 이벤트 클래스](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|전체 텍스트 탐색이 시작되었음을 나타냅니다.|  

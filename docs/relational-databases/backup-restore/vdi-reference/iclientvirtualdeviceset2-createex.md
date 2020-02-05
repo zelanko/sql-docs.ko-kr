@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847354"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
@@ -40,15 +40,15 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 
 *pCfg* 가상 디바이스 세트의 구성입니다. 자세한 내용은 구성을 참조하세요.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_NOTSUPPORTED | 구성에 있는 하나 이상의 필드가 잘못되었거나 지원되지 않습니다. |
 | VD_E_PROTOCOL | 가상 디바이스 세트가 생성되었습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 CreateEx 메서드는 BACKUP 또는 RESTORE 작업당 한 번만 호출해야 합니다. Close 메서드를 호출한 후 클라이언트는 인터페이스를 다시 사용하여 다른 가상 디바이스 세트를 만들 수 있습니다.
 

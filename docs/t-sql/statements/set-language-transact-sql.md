@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928932"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67928932"
   세션에 대한 언어 환경을 지정합니다. 세션 언어는 **datetime** 형식과 시스템 메시지를 결정합니다.  
   
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)에 저장된 언어의 이름입니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정하려면 **N'** _language_ **'** 를 사용합니다. 변수로 지정할 경우 변수는 **sysname**이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET LANGUAGE 옵션은 실행 시나 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
  SET LANGUAGE는 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)을 암시적으로 설정합니다.  

@@ -15,10 +15,10 @@ ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120691"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin(geography 데이터 형식)
@@ -35,14 +35,14 @@ ms.locfileid: "68120691"
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- `STWithin()`가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
+ **가 호출되는 인스턴스와 비교할 다른** geography`STWithin()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  

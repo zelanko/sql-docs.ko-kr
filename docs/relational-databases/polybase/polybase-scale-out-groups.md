@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
-ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75623236"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
@@ -28,7 +28,7 @@ PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또�
   
 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.
   
-![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
+![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 스케일 아웃 그룹")  
   
 ## <a name="head-node"></a>헤드 노드  
 
@@ -47,7 +47,7 @@ PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또�
 > [!NOTE]
 >  이 방식은 Hadoop을 통한 스케일 아웃 읽기와 다릅니다. 
 
-![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
+![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 스케일 아웃 그룹")
   
 ## <a name="distributed-query-processing"></a>분산형 쿼리 처리  
 

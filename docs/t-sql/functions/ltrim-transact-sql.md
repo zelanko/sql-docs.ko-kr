@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f3e52b291c9a91e1135d41ab6843ef97f53d17d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130381"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68130381"
 
   선행 공백을 제거한 문자 식을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ LTRIM ( character_expression )
   
 ## <a name="examples"></a>예  
 
-### <a name="a-simple-example"></a>1\. 간단한 예   
+### <a name="a-simple-example"></a>A. 간단한 예   
 
  다음 예에서는 LTRIM을 사용하여 문자 변수에서 선행 공백을 제거하는 방법을 보여 줍니다.  
   

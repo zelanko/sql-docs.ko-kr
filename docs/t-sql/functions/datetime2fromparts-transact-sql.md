@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119133"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119133"
 
 이 함수는 지정된 날짜 및 시간 인수에 대한 **datetime2** 값을 반환합니다. 반환된 값에는 전체 자릿수 인수에서 지정한 전체 자릿수가 있습니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -61,12 +61,12 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 소수 자릿수 초 값을 지정하는 정수 식입니다.
   
 *전체 자릿수*  
-`DATETIME2FROMPARTS`에서 반환하는 **datetime2** 값의 전체 자릿수를 지정하는 정수 식입니다.
+**에서 반환하는** datetime2`DATETIME2FROMPARTS` 값의 전체 자릿수를 지정하는 정수 식입니다.
   
 ## <a name="return-types"></a>반환 형식
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DATETIME2FROMPARTS`는 완전히 초기화된 **datetime2** 값을 반환합니다. `DATETIME2FROMPARTS`는 적어도 하나 이상의 필수 인수에 잘못된 값이 있는 경우 오류를 발생시킵니다. `DATETIME2FROMPARTS`는 적어도 하나 이상의 필수 인수에 null 값이 있는 경우 null을 반환합니다. 그러나 *전체 자릿수* 인수에 null 값이 있는 경우 `DATETIME2FROMPARTS`에서 오류를 발생시킵니다.
 
 *fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision*의 값이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision*이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision*의 값이 0이면 *fractions*의 값도 0이어야 합니다. 그렇지 않으면 `DATETIME2FROMPARTS`가 오류를 발생시킵니다.
@@ -75,7 +75,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## <a name="examples"></a>예  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>1\. 소수 단위 초를 사용하지 않는 예  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. 소수 단위 초를 사용하지 않는 예  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -91,7 +91,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>2\. 소수 단위 초를 사용하는 예  
+### <a name="b-example-with-fractions-of-a-second"></a>B. 소수 단위 초를 사용하는 예  
 이 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.
   
 1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
@@ -126,7 +126,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
   
   

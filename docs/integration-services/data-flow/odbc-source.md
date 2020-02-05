@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298164"
 ---
 # <a name="odbc-source"></a>ODBC 원본
@@ -64,7 +64,7 @@ ms.locfileid: "71298164"
   
  **FetchMethod** 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)을 참조하십시오.  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>병렬 처리  
  동일한 컴퓨터 또는 서로 다른 컴퓨터에서 동일한 테이블 또는 서로 다른 테이블에 대해 병렬로 실행될 수 있는 ODBC 원본 구성 요소의 수에는 제한이 없습니다(일반적인 전역 세션 제한 제외).  
   
  그러나 이용 중인 ODBC 공급자의 제한으로 인해 공급자를 통한 동시 연결 수가 제한될 수 있습니다. 이러한 제한으로 인해 ODBC 원본에 대해 지원 가능한 병렬 인스턴스 수가 제한됩니다. SSIS 개발자는 이용 중인 모든 ODBC 공급자의 제한을 이해하고 SSIS 패키지를 작성할 때 해당 제한을 고려해야 합니다.  
@@ -101,16 +101,16 @@ ms.locfileid: "71298164"
   
 ### <a name="options"></a>옵션  
   
-#### <a name="connection-manager"></a>ODBC 원본 편집기  
+#### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-#### <a name="new"></a>단추를 사용하여 새  
+#### <a name="new"></a>새로 만들기  
  **새로 만들기**를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
  원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 이름|ODBC 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다. 이 옵션을 선택할 경우 다음 목록에서 값을 선택합니다.|  
 ||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블 또는 뷰를 선택하거나 테이블을 식별할 수 있는 정규식을 입력합니다.|  
@@ -165,7 +165,7 @@ ms.locfileid: "71298164"
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  
   
-#### <a name="column"></a>Column  
+#### <a name="column"></a>열  
  사용되지 않습니다.  
   
 #### <a name="error"></a>Error  
@@ -174,7 +174,7 @@ ms.locfileid: "71298164"
 #### <a name="truncation"></a>잘림  
  ODBC 원본에서 흐름의 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  사용되지 않습니다.  
   
 #### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  
@@ -187,7 +187,7 @@ ms.locfileid: "71298164"
  다음 옵션을 사용하여 ODBC 원본에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
   
 #### <a name="fail-component"></a>구성 요소 실패  
- 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 이것이 기본 동작입니다.  
+ 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 기본 동작입니다.  
   
 #### <a name="ignore-failure"></a>오류 무시  
  오류 또는 잘림이 무시됩니다.  

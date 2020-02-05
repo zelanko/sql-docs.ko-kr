@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262316"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68262316"
 
 쿼리 최적화 프로그램과 관련된 성능 문제를 조사하기 위해 DBCC CLONEDATABASE를 사용하여 데이터베이스의 스키마 전용 클론을 생성합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -88,7 +88,7 @@ Service broker 관련 시스템 카탈로그에 복제가 포함되어야 하는
 BACKUP_CLONEDB  
 복제 데이터베이스의 백업을 만들고 확인합니다.  VERIFY_CLONEDB와 함께 사용하는 경우 백업을 수행하기 전에 복제 데이터베이스가 확인됩니다.  이 옵션은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8부터 지원됩니다.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 DBCC CLONEDATABASE에 의해 다음 유효성 검사가 수행됩니다. 유효성 검사 중 하나라도 실패할 경우 명령이 실패합니다.
 - 원본 데이터베이스는 사용자 데이터베이스여야 합니다. 시스템 데이터베이스(master, model, msdb, tempdb, 배포 데이터베이스 등)의 복제는 허용되지 않습니다.
 - 원본 데이터베이스는 온라인 상태이거나 읽을 수 있어야 합니다.
@@ -153,7 +153,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 - 전체 텍스트([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2부터)
 - FUNCTION
 - INDEX
-- Login
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
@@ -177,7 +177,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- User
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  
@@ -211,7 +211,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>1\. 스키마, 통계 및 쿼리 저장소를 포함하는 데이터베이스의 클론 만들기 
+### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. 스키마, 통계 및 쿼리 저장소를 포함하는 데이터베이스의 클론 만들기 
 다음 예에서는 스키마, 통계 및 쿼리 저장소 데이터를 포함하는 AdventureWorks 데이터베이스의 클론을 만듭니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상 버전).
 
 ```sql  
@@ -219,7 +219,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>2\. 통계가 없는 데이터베이스의 스키마 전용 클론 만들기 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. 통계가 없는 데이터베이스의 스키마 전용 클론 만들기 
 다음 예에서는 통계를 포함하지 않는 AdventureWorks 데이터베이스의 클론을 만듭니다([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 이상 버전).
 
 ```sql  

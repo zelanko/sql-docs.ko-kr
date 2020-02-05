@@ -14,10 +14,10 @@ ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aaad5af180ff1275dc6e95bb1cc5687487a22fb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115674"
 ---
 # <a name="maintenance-plan-servers"></a>유지 관리 계획(서버)

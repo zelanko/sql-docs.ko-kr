@@ -11,10 +11,10 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294785"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service를 만들고 편집하는 방법
@@ -66,6 +66,6 @@ ms.locfileid: "71294785"
   
 ## <a name="see-also"></a>참고 항목  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Oracle CDC Service 만들기 및 편집](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

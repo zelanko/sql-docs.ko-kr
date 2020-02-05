@@ -15,17 +15,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056198"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 쿼리는 전체 텍스트 검색 *동의어 사전*을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. 각 동의어 사전은 특정 언어에 대한 동의어 집합을 정의합니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다.
 
-동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 `FORMSOF THESAURUS` 절을 지정하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리에 대해 수행됩니다.
+동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 [ 절을 지정하는 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 및 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 쿼리에 대해 수행됩니다.
   
 전체 텍스트 검색 동의어 사전은 XML 텍스트 파일입니다.
   
@@ -115,7 +115,7 @@ ms.locfileid: "74056198"
 </XML>  
 ```
 
-### <a name="expansion"></a> 확장 집합의 XML 구조  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  각 확장 집합은 `<expansion>` 요소로 묶입니다. 이 요소 내에서 `<sub>` 요소에 하나 이상의 대체 단어를 지정합니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056198"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> 교체 집합의 XML 구조  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 각 교체 집합은 `<replacement>` 요소로 묶입니다. 이 요소 내에서 동의어당 하나씩 1개 이상의 패턴을 `<pat>` 요소에 지정하고, 0개 이상의 대체 단어를 `<sub>` 요소에 지정할 수 있습니다. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "74056198"
 </replacement>  
 ```  
   
-및  
+and  
   
 ```xml  
 <replacement>  

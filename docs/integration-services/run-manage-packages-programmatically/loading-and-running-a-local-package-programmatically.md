@@ -21,10 +21,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295761"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
@@ -32,7 +32,7 @@ ms.locfileid: "71295761"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]패키지 실행[에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 ](../packages/run-integration-services-ssis-packages.md) 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
   
  이 항목에서는 다음과 같은 주제를 다룹니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71295761"
   
 -   프로그래밍 방식으로 패키지 실행  
   
- 이 항목에서 패키지를 로드하고 실행하는 데 사용되는 모든 메서드에는 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 패키지를 로드하고 실행하는 데 사용되는 모든 메서드에는 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후 <xref:Microsoft.SqlServer.Dts.Runtime>using**또는**Imports**문을 사용하여** 네임스페이스를 가져옵니다.  
   
 ## <a name="loading-a-package-programmatically"></a>프로그래밍 방식으로 패키지 로드  
  로컬 컴퓨터에서 프로그래밍 방식으로 패키지를 로드하려면 패키지가 로컬 위치에 저장되어 있든 원격 위치에 저장되어 있든 관계없이 다음 메서드 중 하나를 호출합니다.  
@@ -68,11 +68,11 @@ ms.locfileid: "71295761"
 4.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 애플리케이션은 다음 예와 같습니다.  
   
     > [!NOTE]  
-    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 메서드를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
+    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
   
 5.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 콘솔 창에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -140,7 +140,7 @@ namespace RunFromClientAppCS
   
 3.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 발생한 오류와 함께 콘솔 창에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  

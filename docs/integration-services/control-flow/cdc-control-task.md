@@ -14,10 +14,10 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294256"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
@@ -33,7 +33,7 @@ ms.locfileid: "71294256"
   
  다음 작업은 초기 로드와 변경 처리의 동기화를 처리합니다.  
   
-|연산|설명|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |ResetCdcState|이 작업은 현재 CDC 컨텍스트에 연결된 영구 CDC 상태를 다시 설정하는 데 사용됩니다. 이 작업을 실행하면 LSN 타임스탬프 `sys.fn_cdc_get_max_lsn` 테이블의 현재 최대 LSN이 다음 처리 범위의 시작 부분이 됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.|  
 |MarkInitialLoadStart|이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 사용됩니다. 이 작업을 수행하려면 `sys.fn_cdc_get_max_lsn`을 호출하기 위해 원본 데이터베이스에 대한 연결이 필요합니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkInitialLoadStart를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
@@ -42,10 +42,10 @@ ms.locfileid: "71294256"
   
  처리 범위를 관리하는 데에는 다음과 같은 작업이 사용됩니다.  
   
-|연산|설명|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|이 작업은 CDC 원본 데이터 흐름을 사용하는 데이터 흐름을 호출하기 전에 사용됩니다. 이 작업은 호출될 때 CDC 원본 데이터 흐름에서 읽는 LSN의 범위를 설정합니다. 범위는 데이터 흐름을 처리하는 동안 CDC 원본에서 사용되는 SSIS 패키지 변수에 저장됩니다.<br /><br /> 저장된 상태에 대한 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.|  
-|MarkProcessedRange|으로 디코딩된 문자입니다. 이 작업은 각 CDC 실행 후(CDC 데이터 흐름이 성공적으로 완료된 후) CDC 실행 중에 완전히 처리된 마지막 LSN을 기록하기 위해 실행됩니다. 다음에 GetProcessingRange를 실행하면 이 위치가 처리 범위의 시작 부분이 됩니다.|  
+|MarkProcessedRange|: 이 작업은 각 CDC 실행 후(CDC 데이터 흐름이 성공적으로 완료된 후) CDC 실행 중에 완전히 처리된 마지막 LSN을 기록하기 위해 실행됩니다. 다음에 GetProcessingRange를 실행하면 이 위치가 처리 범위의 시작 부분이 됩니다.|  
   
 ## <a name="handling-cdc-state-persistency"></a>CDC 상태 지속성 처리  
  CDC 제어 태스크는 활성화 간에 영구 상태를 유지합니다. CDC 상태에 저장되는 정보는 CDC 패키지의 처리 범위를 결정 및 유지하고 오류 상태를 검색하는 데 사용됩니다. 영구 상태는 문자열로 저장됩니다. 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.  

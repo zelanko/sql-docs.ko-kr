@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295779"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
@@ -57,7 +57,7 @@ ms.locfileid: "71295779"
   
  다음 표에서는 검사점을 구현하기 위해 설정하는 패키지 속성을 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |CheckpointFileName|검사점 파일의 이름을 지정합니다.|  
 |CheckpointUsage|검사점 사용 여부를 지정합니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "71295779"
 ### <a name="checkpoint-usage"></a>검사점 사용  
  CheckpointUsage 속성은 다음 값으로 설정할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**안 함**|검사점 파일을 사용하지 않고 패키지가 패키지 워크플로의 처음부터 시작되도록 지정합니다.|  
 |**항상**|검사점 파일을 항상 사용하고 패키지가 이전의 실행 오류 지점부터 다시 시작하도록 지정합니다. 검사점 파일을 찾을 수 없는 경우 패키지는 실패합니다.|  

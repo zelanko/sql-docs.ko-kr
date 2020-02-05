@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930304"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
@@ -38,14 +38,14 @@ ms.locfileid: "67930304"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  빈 **geometry** 인스턴스 변수에 대해 빈 **GeometryCollection** 인스턴스를 반환하고 초기화되지 않은 **geometry** 변수에 대해 **NULL**을 반환합니다.  
   
  메서드가 반환하는 다각형 근사값은 메서드 호출에 사용하는 **geometry** 인스턴스에 따라 다릅니다.  
   
 -   **CircularString** 또는 **CompoundCurve** 인스턴스에 대해 **LineString** 인스턴스를 반환합니다.  
   
--   **CurvePolygon** 인스턴스에 대해 **다각형** 인스턴스를 반환합니다.  
+-   **CurvePolygon** 인스턴스에 대해 **Polygon** 인스턴스를 반환합니다.  
   
 -   해당 인스턴스가 **CircularString**, **CompoundCurve**, 또는 **CurvePolygon** 인스턴스가 아닌 경우 **geometry** 인스턴스 복사본을 반환합니다. 예를 들어 `STCurveToLine` 메서드는 **점** 인스턴스인 **geometry** 인스턴스에 대해 **점** 인스턴스를 반환합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67930304"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>1. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
+### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
  다음 예제에서는 첫 번째 **SELECT** 문이 초기화되지 않은 **geometry** 인스턴스를 사용하여 `STCurveToLine` 메서드를 호출하고 두 번째 **SELECT** 문이 빈 **geometry** 인스턴스를 사용합니다. 따라서 메서드는 첫 번째 문에 **NULL**을 반환하고 두 번째 문에 **GeometryCollection** 컬렉션을 반환합니다.  
   
 ```
@@ -64,7 +64,7 @@ ms.locfileid: "67930304"
  SELECT @g.STGeometryType();
  ```  
   
-### <a name="b-using-a-linestring-instance"></a>2. LineString 인스턴스 사용  
+### <a name="b-using-a-linestring-instance"></a>B. LineString 인스턴스 사용  
  다음 예의 **SELECT** 문은 **LineString** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **LineString** 인스턴스를 반환합니다.  
   
 ```

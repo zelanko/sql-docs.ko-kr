@@ -12,10 +12,10 @@ ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cbce2b5273b73213fda328490081c785e8ccf13d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304777"
 ---
 # <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
@@ -30,7 +30,7 @@ ms.locfileid: "72304777"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INVALID_PARAMS|  
-|메시지 텍스트|**\@params**에 지정된 값이 잘못되었으므로 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
+|메시지 텍스트|\***params\@에 지정된 값이 잘못되었으므로 계획 지침 ‘%.** ls’을(를) 만들 수 없습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
 **\@params**에 대해 지정된 값이 잘못되었습니다.  

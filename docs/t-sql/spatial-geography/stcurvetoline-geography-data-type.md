@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042393"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine(geography 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68042393"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **CircularString** 또는 **CompoundCurve** 인스턴스에 대해 **LineString** 인스턴스를 반환합니다.  
   
  **CurvePolygon** 인스턴스에 대해 **Polygon** 인스턴스를 반환합니다.  

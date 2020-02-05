@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d3968c5c8f04cba8581dfdd44ac847f7010de994
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595628"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted용 키 관리
@@ -34,7 +34,7 @@ ms.locfileid: "73595628"
 - [Enclave 사용 키 프로비전](always-encrypted-enclaves-provision-keys.md)
 - [Enclave 사용 키 순환](always-encrypted-enclaves-rotate-keys.md)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Enclave 사용 키 프로비전](always-encrypted-enclaves-provision-keys.md)
 
 ## <a name="see-also"></a>참고 항목  

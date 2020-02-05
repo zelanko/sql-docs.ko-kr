@@ -17,10 +17,10 @@ ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a6e5a0072db244835238c1b8623c667f03e653ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127340"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString(geometry 데이터 형식)
@@ -40,7 +40,7 @@ ms.locfileid: "68127340"
   
  CLR 반환 형식: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 Null 인스턴스가 호출되면 문자열 "Null"을 반환합니다.  
   
  Null이 아닌 인스턴스에서 이 메서드는 `AsTextZM().`을 사용하는 것과 동일합니다.  

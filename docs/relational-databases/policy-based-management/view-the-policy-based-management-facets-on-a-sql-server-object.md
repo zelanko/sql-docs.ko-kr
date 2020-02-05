@@ -14,10 +14,10 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558120"
 ---
 # <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server 개체의 정책 기반 관리 패싯 보기

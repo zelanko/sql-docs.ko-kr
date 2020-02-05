@@ -14,10 +14,10 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137430"
 ---
 # <a name="non-deterministic-content-models"></a>비결정적 콘텐츠 모델
@@ -26,7 +26,7 @@ ms.locfileid: "68137430"
   
  그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1부터 비결정적 콘텐츠 모델은 발생빈도 제약 조건이 0 또는 1이거나 해제된 경우 허용됩니다.  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>예: 비결정적 콘텐츠 모델이 거부됨  
+## <a name="example-non-deterministic-content-model-rejected"></a>예제: 비결정적 콘텐츠 모델이 거부됨  
  다음 예에서는 비결정적 콘텐츠 모델이 있는 XML 스키마를 만들려고 시도합니다. `<root>` 요소에 `<a>` 요소가 두 개 포함된 하나의 시퀀스가 있는지 또는 `<root>` 요소에 각각 `<a>` 요소가 하나씩 포함된 두 개의 시퀀스가 있는지가 명확하지 않기 때문에 이 코드는 실패합니다.  
   
 ```  
@@ -60,7 +60,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>예: 비결정적 콘텐츠 모델이 허용됨  
+## <a name="example-non-deterministic-content-model-accepted"></a>예제: 비결정적 콘텐츠 모델이 허용됨  
  다음 스키마는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에서 거부됩니다.  
   
 ```  

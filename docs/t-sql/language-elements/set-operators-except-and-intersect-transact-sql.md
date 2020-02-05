@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121769"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>집합 연산자 - EXCEPT 및 INTERSECT(Transact-SQL)
@@ -45,7 +45,7 @@ EXCEPT 또는 INTERSECT를 사용하는 두 쿼리의 결과 집합을 결합하
   
 -   데이터 형식이 호환되어야 합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +69,7 @@ EXCEPT 연산자의 왼쪽에 있는 쿼리에서 고유한 값을 반환합니�
 INTERSECT  
 INTERSECT 연산자의 왼쪽과 오른쪽에 있는 두 쿼리에 의해 반환된 고유한 값을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 비교 가능한 열의 데이터 형식은 EXCEPT 또는 INTERSECT 연산자의 왼쪽과 오른쪽에 있는 쿼리에서 반환됩니다. 해당 데이터 형식은 서로 다른 데이터 정렬이 있는 문자 데이터 형식을 포함할 수 있습니다. 비교가 수행될 때 [데이터 정렬 선행](../../t-sql/statements/collation-precedence-transact-sql.md) 규칙에 따라 필요한 비교가 수행됩니다. 이 변환을 실행할 수 없으면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 오류를 반환합니다.  
   
 DISTINCT 행을 확인하기 위해 열 값을 비교할 때 두 NULL 값은 동일한 것으로 간주됩니다.  
@@ -148,7 +148,7 @@ FROM Production.Product ;
 --Result: 0 Rows (work orders without products)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 다음 예제에서는 `INTERSECT` 및 `EXCEPT` 연산자의 사용 방법을 보여 줍니다. 첫 번째 쿼리는 해당 결과를 `FactInternetSales` 및 `INTERSECT`와 비교하기 위해 `EXCEPT` 테이블의 모든 값을 반환합니다.  
   
 ```  

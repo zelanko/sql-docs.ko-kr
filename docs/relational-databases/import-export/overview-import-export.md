@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055938"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761867"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74055938"
 `BULK INSERT` 또는 `OPENROWSET(BULK...)` 명령을 사용하여 데이터를 가져올 수 있습니다. 일반적으로 SSMS(SQL Server Management Studio)에서 이러한 명령을 실행합니다. 자세한 내용은 [BULK INSERT 또는 OPENROWSET(BULK...)을 사용하여 데이터 대량 가져오기](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.
 
 ### <a name="use-bcp-from-the-command-prompt"></a>명령 프롬프트에서 BCP 사용
-BCP 명령줄 유틸리티를 사용하여 데이터를 가져오고 내보낼 수 있습니다. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.
+BCP 명령줄 유틸리티를 사용하여 데이터를 가져오고 내보낼 수 있습니다. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조하세요.
 
 ### <a name="use-the-import-flat-file-wizard"></a>플랫 파일 가져오기 마법사 사용
 가져오기 및 내보내기 마법사와 기타 도구에서 사용 가능한 모든 구성 옵션이 필요하지 않은 경우 SSMS(SQL Server Management Studio)의 **플랫 파일 가져오기 마법사**를 사용하여 텍스트 파일을 SQL Server로 가져올 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.

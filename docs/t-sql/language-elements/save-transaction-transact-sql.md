@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121807"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68121807"
 
   트랜잭션 내에서 저장점을 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
  ## <a name="syntax"></a>구문  
   
@@ -49,12 +49,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>인수  
  *savepoint_name*  
- 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *savepoint_name*은 항상 대/소문자를 구분합니다.  
+ 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
   
  @*savepoint_variable*  
  유효한 저장점 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다. 변수에 32자 이상 전달할 수 있지만 전달된 문자의 처음부터 32자까지만 사용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자가 트랜잭션 내에서 저장점 또는 표식을 설정할 수 있습니다. 저장점은 트랜잭션의 일부가 조건에 따라 취소될 경우에 트랜잭션이 되돌아갈 수 있는 위치를 정의합니다. 트랜잭션이 저장점으로 롤백되면 완료될 때까지 계속 실행되거나(필요할 경우 더 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 COMMIT TRANSACTION 문 사용) 트랜잭션을 시작 부분으로 롤백하여 모두 함께 취소되어야 합니다. 전체 트랜잭션을 취소하려면 ROLLBACK TRANSACTION *transaction_name* 형식을 사용합니다. 트랜잭션의 모든 문이나 프로시저의 실행이 취소됩니다.  
   
  중복된 저장점 이름을 트랜잭션에서 사용할 수 있지만 저장점 이름을 지정하는 ROLLBACK TRANSACTION 문은 해당 이름을 사용하는 최신 SAVE TRANSACTION으로만 트랜잭션을 롤백합니다.  

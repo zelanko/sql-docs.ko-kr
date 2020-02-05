@@ -13,10 +13,10 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294582"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
@@ -49,7 +49,7 @@ ms.locfileid: "71294582"
   
 ### <a name="to-run-the-scripts-manually"></a>스크립트를 수동으로 실행하려면  
   
-1.  **복사** 를 클릭하여 스크립트를 클립보드에 붙여넣습니다. SQL* Plus를 열고 Oracle 원본 데이터베이스가 들어 있는 디렉터리로 이동합니다. 스크립트를 SQL\*Plus에 붙여넣어서 실행합니다.  
+1.  **복사** 를 클릭하여 스크립트를 클립보드에 붙여 넣습니다. SQL* Plus를 열고 Oracle 원본 데이터베이스가 들어 있는 디렉터리로 이동합니다. 스크립트를 SQL\*Plus에 붙여넣어서 실행합니다.  
   
 ### <a name="to-save-the-supplemental-logging-script-in-a-text-file"></a>텍스트 파일에 보완 로깅 스크립트를 저장하려면  
   
@@ -59,6 +59,6 @@ ms.locfileid: "71294582"
   
 ## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [스크립트 실행을 위한 Oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

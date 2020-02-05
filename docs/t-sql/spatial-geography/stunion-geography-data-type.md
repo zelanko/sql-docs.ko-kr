@@ -18,10 +18,10 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120756"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion(geography 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "68120756"
 ## <a name="exceptions"></a>예외  
  인스턴스에 대척점 끝이 있을 경우 메서드는 **ArgumentException**을 throw합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 반구보다 큰 공간 인스턴스를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에서 반환될 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "68120756"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-union-of-two-polygons"></a>1\. 두 Polygon의 통합 계산  
+### <a name="a-computing-the-union-of-two-polygons"></a>A. 두 Polygon의 통합 계산  
  다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 컴퓨팅합니다.  
   
 ```  
@@ -70,7 +70,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-producing-a-fullglobe-result"></a>2\. FullGlobe 결과 생성  
+### <a name="b-producing-a-fullglobe-result"></a>B. FullGlobe 결과 생성  
  다음 예에서는 `FullGlobe`이 두 개의 `STUnion()` 인스턴스를 조합할 때 `Polygon`를 생성합니다.  
   
 ```

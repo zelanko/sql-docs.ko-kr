@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095771"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
@@ -39,19 +39,19 @@ ms.locfileid: "74095771"
   > [!NOTE]
   > Managed Instance의 SQL 에이전트는 항상 데이터베이스 메일을 사용하도록 구성되므로 Managed Instance에는 이 내용이 적용되지 않습니다. Managed Instance에서 데이터베이스 메일에 SQL 에이전트를 바인딩하려면 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 이라는 프로필이 있어야 합니다. 
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   [데이터베이스 메일을 활성화합니다](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [에이전트 서비스 계정이 사용할](../../relational-databases/database-mail/create-a-database-mail-account.md) 데이터베이스 메일 계정을 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [에이전트 서비스 계정에서 사용할](../../relational-databases/database-mail/create-a-database-mail-profile.md) 데이터베이스 메일 프로필을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.
+-   [에이전트 서비스 계정에서 사용할](../../relational-databases/database-mail/create-a-database-mail-profile.md) 데이터베이스 메일 프로필을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.
   
 -   프로필을 **msdb** 데이터베이스의 기본 프로필로 설정합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  프로필 계정을 만들고 저장 프로시저를 실행하는 사용자는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

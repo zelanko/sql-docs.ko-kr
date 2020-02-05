@@ -14,10 +14,10 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908751"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
@@ -192,7 +192,7 @@ GO
  FileTable이 보유한 대부분의 잠금은 애플리케이션에서 연 파일에 해당합니다.  
   
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
- 동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
+ 동적 관리 뷰 **sys.dm_tran_locks&#40;Transact-SQL&#41;** 의 [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 필드와 **sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;** 의 [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
   
 ```sql  
 SELECT opened_file_name  

@@ -14,10 +14,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296231"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>여러 Integration Services 버전을 병렬로 설치
@@ -36,8 +36,8 @@ ms.locfileid: "71296231"
 |SQL Server의 대상 버전|SSIS 패키지용 개발 환경|  
 |----------------------------------|-----------------------------------------------|  
 |2016|Visual Studio 2015용 SQL Server Data Tools|  
-|2014|Visual Studio 2015용 SQL Server Data Tools<br /><br /> 로 구분하거나 여러<br /><br /> SQL Server Data Tools - Visual Studio 2013용 Business Intelligence|  
-|2012|Visual Studio 2015용 SQL Server Data Tools<br /><br /> 로 구분하거나 여러<br /><br /> SQL Server Data Tools - Visual Studio 2012용 Business Intelligence|  
+|2014|Visual Studio 2015용 SQL Server Data Tools<br /><br /> 또는<br /><br /> SQL Server Data Tools - Visual Studio 2013용 Business Intelligence|  
+|2012|Visual Studio 2015용 SQL Server Data Tools<br /><br /> 또는<br /><br /> SQL Server Data Tools - Visual Studio 2012용 Business Intelligence|  
 |2008|SQL Server 2008의 Business Intelligence Development Studio|  
   
  기존 프로젝트에 추가하는 기존 패키지는 프로젝트의 대상 형식으로 변환됩니다.  

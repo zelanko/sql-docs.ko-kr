@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847384"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
@@ -28,15 +28,15 @@ ms.locfileid: "70847384"
 HRESULT IClientVirtualDeviceSet2::Close ();
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 가상 디바이스 세트가 성공적으로 닫힌 경우 반환됩니다. |
 | VD_E_PROTOCOL | 가상 디바이스 세트가 열리지 않았으므로 아무 작업도 수행되지 않았습니다. |
 | VD_E_OPEN | 디바이스가 열려 있었습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 Close 호출은 가상 디바이스 세트에서 사용되는 모든 리소스를 해제해야 하는 클라이언트에 의한 선언입니다. 클라이언트는 Close를 호출하기 전에 데이터 버퍼 및 가상 디바이스와 관련된 모든 작업이 종료되었는지 확인해야 합니다. OpenDevice에서 반환된 모든 가상 디바이스 인터페이스는 Close로 무효화됩니다.
 

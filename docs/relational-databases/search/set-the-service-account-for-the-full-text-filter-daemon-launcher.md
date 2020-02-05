@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055945"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
@@ -46,7 +46,7 @@ SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoV
 ##  <a name="error"></a> SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않은 경우 문제 해결  
  SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않으면 다음과 같은 가능성 있는 원인을 검토합니다.  
   
-### <a name="permissions-issues"></a>사용 권한 문제
+### <a name="permissions-issues"></a>권한 이슈
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 있는 권한이 없습니다.  
 
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 사용 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 관리, 쿼리 및 시작하기 위한 기본 사용 권한이 부여됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 후 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹 사용 권한이 제거된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없으며 전체 텍스트 검색이 비활성화됩니다.     

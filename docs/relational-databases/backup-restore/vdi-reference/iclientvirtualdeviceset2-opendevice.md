@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847574"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -38,9 +38,9 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 
 *ppVirtualDevice* 함수가 성공하면 가상 디바이스에 대한 인터페이스 포인터가 반환됩니다. 이 인터페이스는 GetCommand 및 CompleteCommand에 사용됩니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_ABORT | 중단이 요청되었습니다. |
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | 세트가 초기화 상태가 아니거나 이 특정 디바이스가 이미 열려 있습니다. |
 | VD_E_INVALID | 디바이스 이름이 잘못되었습니다. 세트를 구성하는 것으로 알려진 이름 중 하나가 아닙니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 VD_E_OPEN가 문제없이 반환될 수 있습니다. 클라이언트는 이 코드가 반환될 때까지 루프를 통해 OpenDevice를 호출할 수 있습니다.
 두 개 이상의 디바이스(예: n개 디바이스)가 구성된 경우 가상 디바이스 세트는 n개의 고유한 디바이스 인터페이스를 반환합니다. 첫 번째 디바이스는 가상 디바이스 세트와 이름이 같습니다. 다른 디바이스는 BACKUP/RESTORE 문의 VIRTUAL_DEVICE 절에 지정된 대로 이름이 지정됩니다.

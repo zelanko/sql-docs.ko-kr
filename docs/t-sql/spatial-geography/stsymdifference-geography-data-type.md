@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120769"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference(geography 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "68120769"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 반구보다 큰 공간 인스턴스를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에서 얻을 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "68120769"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>1\. 두 Polygon 사이의 대칭 차이 계산  
+### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. 두 Polygon 사이의 대칭 차이 계산  
  다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 컴퓨팅합니다.  
   
 ```  
@@ -65,7 +65,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STSymDifference(@h).ToString();  
 ```  
   
-### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>2\. FullGlobe와의 대칭 차이 계산  
+### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>B. FullGlobe와의 대칭 차이 계산  
  다음 예에서는 `Polygon`와 `FullGlobe`의 대칭 차이를 비교합니다.  
   
 ```

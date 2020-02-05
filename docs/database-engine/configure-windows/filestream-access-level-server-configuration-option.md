@@ -14,10 +14,10 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8335f821e2bd4026c17b0054e047125a0afd0177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011697"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 서버 구성 옵션
@@ -36,6 +36,6 @@ ms.locfileid: "68011697"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 구성 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
- [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
+ [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

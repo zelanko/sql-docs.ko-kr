@@ -12,13 +12,13 @@ ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 676d7845afebb9385419b7d2eed2fcdca69ed85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122933"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "68122933"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|메시지 텍스트|[응급] USER_NAME이(가) 실행한 DBCC DBCC_COMMAND_DETAILS이(가) 오류 상태 ERROR_STATE(으)로 인해 비정상적으로 종료되었습니다. 경과된 시간: HOURS 시간 MINUTES 분 SECONDS 초|  
+|메시지 텍스트|[응급] USER_NAME이(가) 실행한 DBCC DBCC_COMMAND_DETAILS이(가) 오류 상태 ERROR_STATE(으)로 인해 비정상적으로 종료되었습니다. 경과 시간: HOURS시간 MINUTES분 SECONDS초.|  
   
 ## <a name="explanation"></a>설명  
 이는 명령이 실행되는 동안 예기치 않게 종료되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 인쇄되는 DBCC 요약 메시지입니다. 메시지에 보고되는 오류 상태는 예기치 않은 종료 유형을 정의합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68122933"
 ## <a name="user-action"></a>사용자 동작  
 다음 표에서는 특정 오류 상태에 적합한 사용자 동작을 설명합니다.  
   
-|오류 상태|사용자 동작|  
+|오류 상태|사용자 조치|  
 |---------------|---------------|  
 |상태 1|백업에서 복원합니다.|  
 |상태 2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS(고객 서비스 지원 센터)에 문의합니다.|  

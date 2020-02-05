@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981920"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "73981920"
   
 KILL은 정상적인 연결을 종료합니다. 이 경우 내부적으로는 지정한 세션 ID와 연결된 트랜잭션이 중지됩니다. 경우에 따라 MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 사용되고 있을 수 있습니다. MS DTC가 사용되고 있으면 이 문을 사용하여 분리되거나 미결인 분산 트랜잭션을 종료할 수도 있습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -87,7 +87,7 @@ KILL _UOW_를 사용하여 분리된 분산 트랜잭션을 종료합니다. 이
 WITH STATUSONLY  
 이전 KILL 문으로 인해 롤백되고 있는 지정한 _session ID_ 또는 _UOW_에 대한 진행률 보고서를 생성합니다. KILL WITH STATUSONLY는 _session ID_ 또는 _UOW_를 종료하거나 롤백하지 않습니다. 이 명령은 롤백의 현재 진행률만 표시합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 KILL은 일반적으로 잠금으로 다른 중요한 프로세스를 차단하는 프로세스를 종료하는 데 사용됩니다. 필요한 시스템 리소스를 사용하는 쿼리를 실행하는 프로세스를 중지하는 데도 사용할 수 있습니다. 시스템 프로세스와 확장 저장 프로시저를 실행하는 프로세스는 종료될 수 없습니다.  
   
 특히 중요한 프로세스가 실행 중일 때는 KILL을 신중하게 사용하세요. 자신의 프로세스를 종료할 수는 없으며 다음 프로세스도 종료하면 안 됩니다.  
@@ -129,7 +129,7 @@ KILL _session ID_|_UOW_ WITH STATUSONLY 문이 실행되기 전에 세션 ID 또
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-kill-to-stop-a-session"></a>1\. KILL을 사용하여 세션 종료  
+### <a name="a-using-kill-to-stop-a-session"></a>A. KILL을 사용하여 세션 종료  
  다음 예에서는 세션 ID `53`을 종료하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -137,7 +137,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>2\. KILL 세션 ID WITH STATUSONLY를 사용하여 진행률 보고서 가져오기  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. KILL 세션 ID WITH STATUSONLY를 사용하여 진행률 보고서 가져오기  
 다음 예에서는 특정 세션 ID에 대한 롤백 진행 상황을 표시합니다.  
   
 ```sql  
@@ -150,7 +150,7 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-stop-an-orphaned-distributed-transaction"></a>C. KILL을 사용하여 분리된 분산 트랜잭션 종료  
-다음 예에서는 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`의 *UOW*를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
+다음 예에서는 *의* UOW`D5499C66-E398-45CA-BF7E-DC9C194B48CF`를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  

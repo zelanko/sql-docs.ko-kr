@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822195"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
@@ -28,15 +28,15 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 ## <a name="prerequisites"></a>사전 요구 사항  
 시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
-- [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용 중인 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
+- [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
   
-- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 에디션 업그레이드에 대한 검토 및 환경에 설치된 기타 구성 요소를 기반으로 적합한 업그레이드 방법 및 단계를 선택합니다.  
+- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 버전 업그레이드에 대한 검토와 사용자 환경에 설치된 기타 구성 요소를 바탕으로 적절한 업그레이드 방법 및 단계를 선택합니다.  
   
 - [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
-- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치를 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
+- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
 
-- [변경 데이터 캡처 또는 복제가 AG 데이터베이스에 사용되는지 확인](#special-steps-for-change-data-capture-or-replication): CDC(변경 데이터 캡처)를 위해 AG의 데이터베이스가 활성화되어 있는 경우, 다음 [지침](#special-steps-for-change-data-capture-or-replication)을 완료합니다.
+- [AG 데이터베이스에 변경 데이터 캡처 또는 복제가 사용되고 있는지 확인](#special-steps-for-change-data-capture-or-replication): AG의 데이터베이스에 CDC(변경 데이터 캡처)가 활성화된 경우 이러한 [지침](#special-steps-for-change-data-capture-or-replication)을 완수하세요.
 
 >[!NOTE]  
 >동일한 AG의 SQL Server 인스턴스 혼합 버전은 롤링 업그레이드 외부에서 지원되지 않으며, 업그레이드가 신속하게 이루어져야 하므로 장기간 해당 상태로 있어서는 안됩니다. SQL Server 2016을 업그레이드하기 위한 다른 옵션은 분산 가용성 그룹을 사용하는 것입니다.

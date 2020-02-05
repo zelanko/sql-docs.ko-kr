@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637952"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
@@ -80,7 +80,7 @@ ms.locfileid: "73637952"
  디스크에 대한 페이징이 발생하는 수준까지 버퍼 크기를 늘리지 마십시오. 디스크에 대한 페이징은 최적화되지 않은 버퍼 크기 이상으로 성능을 저하시킵니다. 페이징의 발생 여부를 확인하려면 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)의 성능 스냅인에서 "Buffers spooled" 성능 카운터를 모니터링합니다.  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>패키지에 대해 병렬 실행 구성  
- 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 **MaxConcurrentExecutables**와 **EngineThreads**라는 두 속성을 사용합니다.  
+ 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 **MaxConcurrentExecutables** 와 **EngineThreads**라는 두 속성을 사용합니다.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 속성  
  **MaxConcurrentExecutables** 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "73637952"
 ## <a name="configuring-individual-data-flow-components"></a>개별 데이터 흐름 구성 요소 구성  
  성능 향상을 위해 개별 데이터 흐름 구성 요소를 구성하려면 몇 가지 일반적인 지침을 따라야 합니다. 데이터 흐름 구성 요소의 각 유형(원본, 변환 및 대상)과 관련된 지침도 있습니다.  
   
-### <a name="general-guidelines"></a>일반적인 지침  
+### <a name="general-guidelines"></a>일반 지침  
  데이터 흐름 구성 요소와 상관없이 성능 향상을 위해서는 쿼리를 최적화하고 불필요한 정렬을 사용하지 않는다는 두 가지 일반적인 지침을 따라야 합니다.  
   
 #### <a name="optimize-queries"></a>쿼리 최적화  
@@ -151,9 +151,9 @@ ms.locfileid: "73637952"
   
  일반적으로 느린 변경 차원 변환에서 가장 느린 구성 요소는 한 번에 하나의 행에 대해 UPDATE를 수행하는 OLE DB 명령 변환입니다. 따라서 느린 변경 차원 변환의 성능을 향상시키는 가장 효과적인 방법은 OLE DB 명령 변환을 바꾸는 것입니다. 업데이트할 모든 행을 준비 테이블에 저장하는 대상 구성 요소로 이러한 변환을 바꿀 수 있습니다. 그런 다음 모든 행에 대해 동시에 단일 집합 기반 Transact-SQL UPDATE를 수행하는 SQL 실행 태스크를 추가할 수 있습니다.  
   
- 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://www.microsoft.com/download/details.aspx?id=14582)의 “고유 차원 시나리오” 섹션을 참조하세요.  
+ 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://www.microsoft.com/download/details.aspx?id=14582)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
   
-### <a name="destinations"></a>대상  
+### <a name="destinations"></a>Destinations  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
   
 #### <a name="sql-server-destination"></a>SQL Server 대상  
@@ -174,11 +174,11 @@ ms.locfileid: "73637952"
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   technet.microsoft.com의 기술 문서 - [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com의 기술 문서 - [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   _SQLCAT의 BI 및 분석 가이드_의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
+-   [SQLCAT의 BI 및 분석 가이드](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)의 기술 문서 - _동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가_
   
 -   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=220816)  
   

@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981793"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
@@ -37,16 +37,16 @@ ms.locfileid: "73981793"
 - 예기치 않은 오류, 데이터베이스 장애 조치(failover) 또는 **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요.
 
 > [!NOTE]  
-> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
 
 다음 표는 온라인으로 수행할 수 있는 인덱스 작업, 이러한 온라인 작업에서 제외되는 인덱스 및 다시 시작 가능한 인덱스 제한을 보여 줍니다. 추가 제한 사항도 포함됩니다.  
 
 | 온라인 인덱스 작업 | 제외되는 인덱스 | 기타 제한 사항 |  
 |----------------------------|----------------------|------------------------|  
-|ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
+|ALTER INDEX REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
 |CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스||  
 |CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 임시 테이블의 인덱스<br /><br /> XML 인덱스||  
-|DROP  INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
+|DROP INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
 |ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)|로컬 임시 테이블의 인덱스<br /><br /> 클러스터형 인덱스|한 번에 하나의 하위 절만 허용됩니다. 예를 들어 동일한 ALTER  TABLE  문에서 PRIMARY  KEY  또는 UNIQUE  제약 조건을 추가하거나 삭제할 수 없습니다.|  
 |ALTER TABLE DROP CONSTRAINT(PRIMARY KEY 또는 UNIQUE)|클러스터형 인덱스||  
   
@@ -128,7 +128,7 @@ ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 online 및 resumable 구문을 각각 �
 > [!NOTE]
 > ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 XML 인덱스 작업에 적용되지 않습니다.
 
-## <a name="related-content"></a>관련 내용
+## <a name="related-content"></a>관련 콘텐츠
 
 - [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  

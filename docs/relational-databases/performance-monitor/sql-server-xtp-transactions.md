@@ -11,10 +11,10 @@ ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006988"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 트랜잭션
@@ -24,7 +24,7 @@ ms.locfileid: "68006988"
   
  이 표에서는 **SQL Server XTP 트랜잭션** 카운터에 대해 설명합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Cascading aborts/sec**|커밋 종속성 롤백으로 인해 롤백되는 초당 트랜잭션 수입니다(평균).|  
 |**Commit dependencies taken/sec**|트랜잭션에 의해 사용되는 초당 커밋 종속성 수입니다(평균).|  

@@ -11,10 +11,10 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915209"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 관리자
@@ -24,7 +24,7 @@ SQL Server XTP IO 관리자 성능 개체에는 메모리 내 OLTP IO 속도 관
 
 이 표에서는 **SQL Server XTP IO 관리자** 카운터에 대해 설명합니다.
 
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Insufficient Credits Waits/sec**|속도 개체에서 크레딧 부족으로 인한 대기하는 초당 크레딧 수입니다.|
 |**Io Issued/sec**|플러시 스레드에 의해 실행되는 초당 Io 횟수입니다.|

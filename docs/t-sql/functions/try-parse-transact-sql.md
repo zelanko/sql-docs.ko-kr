@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70152048"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70152048"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요청한 데이터 형식으로 변환된 식 결과를 반환하거나 캐스팅에 실패한 경우 null을 반환합니다. TRY_PARSE는 문자열에서 날짜/시간 및 숫자 형식으로 변환하는 경우에만 사용하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  결과에 대해 요청된 데이터 형식을 나타내는 리터럴입니다.  
   
- *culture*  
+ *문화권*  
  *string_value*의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
   
  *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  
@@ -56,7 +56,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>반환 형식  
  요청한 데이터 형식으로 변환된 식 결과를 반환하거나 캐스팅에 실패한 경우 Null을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  TRY_PARSE는 문자열에서 날짜/시간 및 숫자 형식으로 변환하는 경우에만 사용하세요. 일반 형식 변환의 경우 이전처럼 CAST나 CONVERT를 사용합니다. 문자열 값을 구문 분석할 경우 성능에 영향을 주게 됩니다.  
   
  TRY_PARSE는 .NET Framework CLR(공용 언어 런타임)이 설치되어 있어야 사용할 수 있습니다.  
@@ -67,32 +67,32 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  *data_type* 매개 변수의 값은 다음 표에 나온 형식 및 스타일로 제한됩니다. 허용되는 패턴을 쉽게 알 수 있도록 스타일 정보가 나와 있습니다. 스타일에 대한 자세한 내용은 **System.Globalization.NumberStyles** 및 **DateTimeStyles** 열거형에 대한 .NET Framework 설명서를 참조하십시오.  
   
-|범주|형식|.NET 형식|사용되는 스타일|  
+|Category|Type|.NET 형식|사용되는 스타일|  
 |--------------|----------|---------------|-----------------|  
-|숫자|BIGINT|Int64|NumberStyles.Number|  
+|숫자|bigint|Int64|NumberStyles.Number|  
 |숫자|int|Int32|NumberStyles.Number|  
-|숫자|SMALLINT|Int16|NumberStyles.Number|  
-|숫자|TINYINT|Byte|NumberStyles.Number|  
-|숫자|Decimal|Decimal|NumberStyles.Number|  
-|숫자|NUMERIC|Decimal|NumberStyles.Number|  
-|숫자|FLOAT|Double|NumberStyles.Float|  
-|숫자|REAL|단일|NumberStyles.Float|  
-|숫자|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|숫자|smallint|Int16|NumberStyles.Number|  
+|숫자|tinyint|Byte|NumberStyles.Number|  
+|숫자|decimal|Decimal|NumberStyles.Number|  
+|숫자|numeric|Decimal|NumberStyles.Number|  
+|숫자|float|Double|NumberStyles.Float|  
+|숫자|real|Single|NumberStyles.Float|  
+|숫자|smallmoney|Decimal|NumberStyles.Currency|  
 |숫자|money|Decimal|NumberStyles.Currency|  
-|날짜 및 시간|날짜|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|Time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|Datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |날짜 및 시간|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|날짜 및 시간|Datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|날짜 및 시간|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |날짜 및 시간|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **culture 매개 변수에 대한 자세한 정보**  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어와 .NET Framework culture 간 매핑을 보여 줍니다.  
   
-|전체 이름|별칭|LCID|해당 culture|  
+|전체 이름|Alias|LCID|해당 culture|  
 |---------------|-----------|----------|----------------------|  
-|us_english|영어|1033|en-US|  
+|us_english|영어|1033|ko-KR|  
 |Deutsch|독일어|1031|de-DE|  
 |Français|프랑스어|1036|fr-FR|  
 |日本語|일본어|1041|ja-JP|  
@@ -120,7 +120,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |latviešu|라트비아어|1062|lv-LV|  
 |lietuvių|리투아니아어|1063|lt-LT|  
 |Português(브라질)|브라질어|1046|pt-BR|  
-|繁體中文|중국어(번체)|1028|zh-TW|  
+|繁體中文|중국어 번체|1028|zh-TW|  
 |한국어|한국어|1042|Ko-KR|  
 |简体中文|중국어(간체)|2052|zh-CN|  
 |아랍어|아랍어|1025|ar-SA|  
@@ -128,7 +128,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example-of-try_parse"></a>1\. TRY_PARSE의 간단한 예  
+### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE의 간단한 예  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -144,7 +144,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-try_parse"></a>2\. TRY_PARSE를 사용하여 Null 검색  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. TRY_PARSE를 사용하여 Null 검색  
   
 ```  
 SELECT  

@@ -15,10 +15,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a94926a2876c5cac52560872dc9fc59e50ba6ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072874"
 ---
 # <a name="improve-access-to-trace-data"></a>추적 데이터에 대한 액세스 향상
@@ -43,6 +43,6 @@ ms.locfileid: "68072874"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

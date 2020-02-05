@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278281"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
@@ -107,14 +107,14 @@ ms.locfileid: "72278281"
   
 -   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
- 이러한 두 기능은 SQL Server Management Studio, Azure Portal 및 DACFx API와 같은 데이터베이스 관리 도구에서 지원됩니다.  
+ SQL Server Management Studio, Azure 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서는 이 두 기능이 모두 지원됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **CREATE DATABASE** 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **DROP DATABASE** 권한이 할당되어 있어야 합니다.  
   
 ## <a name="data-tier-application-tasks"></a>데이터 계층 애플리케이션 태스크  
   
-|태스크|항목 링크|  
+|Task|항목 링크|  
 |----------------------|-----------|  
 |DAC 패키지 파일을 사용하여 새 DAC 인스턴스를 만드는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)|  
 |새 DAC 패키지 파일을 사용하여 인스턴스를 새 DAC 버전으로 업그레이드하는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
@@ -128,7 +128,7 @@ ms.locfileid: "72278281"
 |패키지를 프로덕션 서버에 배포하기 전에 데이터베이스 관리자가 DAC에서 수행하는 작업을 검토할 수 있도록 DAC 패키지 내용을 폴더에 넣는 방법에 대해 설명합니다.|[DAC 패키지 압축 풀기](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용하여 데이터베이스 배포](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 개체 및 버전에 대한 DAC 지원](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

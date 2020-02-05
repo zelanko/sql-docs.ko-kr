@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892892"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
@@ -27,7 +27,7 @@ ms.locfileid: "68892892"
   
  처리 및 쿼리는 읽기 전용 작업입니다. 이러한 작업을 읽기 가능한 보조 복제본으로 오프로드하면 성능을 향상시킬 수 있습니다. 이 시나리오를 위해 추가적인 구성이 필요합니다. 이 항목의 검사 목록을 따라 모든 단계를 수행하십시오.  
   
-##  <a name="bkmk_prereq"></a> 사전 요구 사항  
+##  <a name="bkmk_prereq"></a> 필수 조건  
  모든 복제본에 대한 SQL Server 로그인이 있어야 합니다. 가용성 그룹, 수신기 및 데이터베이스를 구성하려면 **sysadmin** 이어야 하지만, 사용자인 경우 **db_datareader** 권한만 있으면 Analysis Services 클라이언트에서 데이터베이스에 액세스할 수 있습니다.  
   
  TDS(Tabular Data Stream) 프로토콜 버전 7.4 이상을 지원하는 데이터 공급자(예: SQL Server Native Client 11.0 또는 .NET Framework 4.02의 SQL Server용 공급자)를 사용하십시오.  
@@ -59,7 +59,7 @@ ms.locfileid: "68892892"
   
     -   **읽을 수 있는 보조** 드롭 목록에서 **읽기 전용만**을 선택합니다.  
   
-    -   **주 역할의 연결** 드롭 목록에서 **모든 연결 허용**을 선택합니다. 기본값입니다.  
+    -   **주 역할의 연결** 드롭 목록에서 **모든 연결 허용**을 선택합니다. 이것이 기본값입니다.  
   
     -   필요에 따라 **가용성 모드** 드롭 목록에서 **동기 커밋**을 선택합니다. 이 단계는 필수는 아니지만 이 설정을 하면 주 복제본과 보조 복제본 사이에 데이터 패리티를 보장해 줍니다.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "68892892"
 ##  <a name="bkmk_whathappens"></a> 장애 조치 발생 후의 상황  
  장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 오류: OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
+ 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
   
  이 오류는 잠시 기다렸다가 다시 시도하면 해결됩니다. 가용성 그룹이 읽기 가능한 보조 복제본에 대해 올바로 구성된 경우 처리를 재시도하면 새 보조 복제본에서 처리가 재개됩니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68892892"
 ##  <a name="bkmk_writeback"></a> Always On 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
- 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 다음과 같은 오류가 발생합니다. 오류가 발생합니다. 오류가 발생합니다.  
+ 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 "외부 데이터 원본에서 데이터를 검색할 수 없습니다." 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "68892892"
   
 ## <a name="see-also"></a>참고 항목  
  [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On 가용성 그룹을 통한 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [차원 쓰기 저장(writeback) 설정](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  

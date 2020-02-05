@@ -24,10 +24,10 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294940"
 ---
 # <a name="enabling-logging-programmatically"></a>프로그래밍 방식으로 로깅 설정
@@ -40,17 +40,17 @@ ms.locfileid: "71294940"
  컨테이너에서 사용할 수 있는 로그 공급자에는 여러 유형이 있습니다. 따라서 여러 형식으로 로그 정보를 만들고 저장할 수 있는 유연성이 있습니다. 컨테이너 개체를 로깅에 참여시키는 과정은 먼저 로깅을 활성화한 후 로그 공급자를 선택하는 두 단계로 이루어집니다. 컨테이너의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 속성은 로깅되는 이벤트를 지정하고 로그 공급자를 선택하는 데 사용됩니다.  
   
 ## <a name="enabling-logging"></a>로깅 설정  
- 로깅을 수행할 수 있는 각 컨테이너에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 속성은 컨테이너의 이벤트 정보를 이벤트 로그에 기록할지 여부를 결정합니다. 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 구조의 값을 할당받으며 기본적으로 컨테이너의 부모에서 상속됩니다. 컨테이너가 패키지라서 부모가 없는 경우 이 속성은 기본값이 **Disabled**인 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>을 사용합니다.  
+ 로깅을 수행할 수 있는 각 컨테이너에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 속성은 컨테이너의 이벤트 정보를 이벤트 로그에 기록할지 여부를 결정합니다. 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 구조의 값을 할당받으며 기본적으로 컨테이너의 부모에서 상속됩니다. 컨테이너가 패키지라서 부모가 없는 경우 이 속성은 기본값이 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>Disabled**인** 을 사용합니다.  
   
 ### <a name="selecting-a-log-provider"></a>로그 공급자 선택  
  <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 속성이 **Enabled**로 설정되면 컨테이너의 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 컬렉션에 로그 공급자가 추가되면서 프로세스가 완료됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 컬렉션은 <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> 개체에서 사용할 수 있으며 컨테이너에 대해 선택된 로그 공급자를 포함합니다. <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> 메서드는 공급자를 만들어 컬렉션에 추가하기 위해 호출됩니다. 그런 다음 이 메서드는 컬렉션에 추가된 로그 공급자를 반환합니다. 각 공급자에는 해당 공급자에 고유한 구성 설정이 있으며 이러한 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 속성을 사용하여 설정됩니다.  
   
  다음 표에는 사용할 수 있는 로그 공급자, 해당 설명 및 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 정보가 나열되어 있습니다.  
   
-|공급자|설명|ConfigString 속성|  
+|공급자|Description|ConfigString 속성|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러에서 캡처하고 볼 수 있는 SQL 추적을 생성합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.|구성이 필요하지 않습니다.|  
-|SQL Server|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 **sysssislog** 테이블에 이벤트 로그 항목을 기록합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자를 사용하려면 데이터베이스에 대한 연결과 대상 데이터베이스 이름이 지정되어 있어야 합니다.|  
+|SQL Server|**데이터베이스의**sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 이벤트 로그 항목을 기록합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자를 사용하려면 데이터베이스에 대한 연결과 대상 데이터베이스 이름이 지정되어 있어야 합니다.|  
 |텍스트 파일|이벤트 로그 항목을 CSV(쉼표로 구분된 값) 형식으로 ASCII 텍스트 파일에 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .log입니다.|파일 연결 관리자의 이름입니다.|  
 |Windows 이벤트 로그|로컬 컴퓨터의 애플리케이션 로그에 있는 표준 Windows 이벤트 로그에 로깅합니다.|구성이 필요하지 않습니다.|  
 |XML 파일|이벤트 로그 항목을 XML 형식의 파일에 씁니다. 이 공급자의 기본 파일 이름 확장명은 .xml입니다.|파일 연결 관리자의 이름입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "71294940"
   
  다음 코드에서는 패키지에 로깅 기능을 사용하도록 설정하고, <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 컬렉션에 텍스트 파일에 대한 로그 공급자를 추가하고, 로깅 출력에 포함할 이벤트 목록을 지정합니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
   
 ```csharp  
 using System;  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558565"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
@@ -91,7 +91,7 @@ Windows에서 데이터베이스 백업 파일을 만드는 방법에는 여러 
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. **scp** 명령을 사용하여 파일을 대상 Linux 머신으로 전송합니다. 다음 예제에서는 IP 주소가 *192.0.2.9*인 Linux 서버에 있는 *user1*의 홈 디렉터리로 **YourDB.bak**를 전송합니다.
+1. **scp** 명령을 사용하여 파일을 대상 Linux 머신으로 전송합니다. 다음 예제에서는 IP 주소가 **192.0.2.9**인 Linux 서버에 있는 *user1*의 홈 디렉터리로 *YourDB.bak*를 전송합니다.
 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
@@ -170,7 +170,7 @@ Windows에서 데이터베이스 백업 파일을 만드는 방법에는 여러 
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   이 경우에는 데이터베이스에 보조 파일이 포함되어 있습니다. `RESTORE DATABASE`의 `MOVE` 절에 이 파일을 지정하지 않으면 복원 프로시저에서 원래 서버와 동일한 경로에 파일을 만듭니다. 
+   이 경우에는 데이터베이스에 보조 파일이 포함되어 있습니다. `MOVE`의 `RESTORE DATABASE` 절에 이 파일을 지정하지 않으면 복원 프로시저에서 원래 서버와 동일한 경로에 파일을 만듭니다. 
 
    다음 명령을 실행하여 백업에 포함된 모든 파일을 나열할 수 있습니다.
    ```sql

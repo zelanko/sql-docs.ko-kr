@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846717"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "70846717"
 > [!NOTE]   
 >  표준 Transact-SQL 문은 [CREATE TABLE(Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -122,7 +122,7 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. filegroup을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. "default"를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 partition_scheme 또는 filegroup과는 다르게 partition_scheme을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 임시 테이블을 노드 또는 에지 테이블로 만드는 것은 지원되지 않습니다.  
 
 노드 또는 에지 테이블을 임시 테이블로 만드는 것은 지원되지 않습니다.
@@ -136,7 +136,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
  
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-node-table"></a>1. `NODE` 테이블 만들기
+### <a name="a-create-a-node-table"></a>A. `NODE` 테이블 만들기
  다음 예에서는 `NODE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```
@@ -147,7 +147,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>2. `EDGE` 테이블 만들기
+### <a name="b-create-an-edge-table"></a>B. `EDGE` 테이블 만들기
 다음 예에서는 `EDGE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```

@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595518"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성 
@@ -44,7 +44,7 @@ SQL Server Management Studio 또는 사용자 지정 애플리케이션에서 [A
 > [!NOTE]
 > 현재 [Always Encrypted 마법사](always-encrypted-wizard.md) 및 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet은 바로 암호화를 지원하지 않으며, 구성이 위의 조건을 충족하는 경우에도 항상 암호화 작업에 대한 데이터를 다운로드합니다. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Transact-SQL을 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)(보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용)
-- [보안 Enclave를 사용한 Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-enclaves-client-development.md)
+- [보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발](always-encrypted-enclaves-client-development.md)

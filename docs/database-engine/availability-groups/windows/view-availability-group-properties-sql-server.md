@@ -13,10 +13,10 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821816"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>가용성 그룹 속성 보기(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74821816"
   
 3.  속성을 보려는 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 선택합니다.  
   
-4.  **가용성 그룹 속성** 대화 상자에서 **일반** 및 **백업 기본 설정** 페이지를 사용하여 선택한 가용성 그룹의 속성을 보고 필요한 경우 변경합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹 &#40;일반 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) 및 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
+4.  **가용성 그룹 속성** 대화 상자에서 **일반** 및 **백업 기본 설정** 페이지를 사용하여 선택한 가용성 그룹의 속성을 보고 필요한 경우 변경합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹&#40;일반 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) 및 [가용성 그룹 속성: 새 가용성 그룹&#40;백업 참조 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
   
      **사용 권한** 페이지를 사용하여 가용성 그룹과 연결된 현재 로그인, 역할 및 명시적 권한을 확인할 수 있습니다. 자세한 내용은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)을 참조하세요.  
   

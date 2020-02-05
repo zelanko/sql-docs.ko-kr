@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768365"
 ---
 # <a name="subscribe-to-publications"></a>게시 구독
@@ -38,7 +38,7 @@ ms.locfileid: "68768365"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|구독|특징|사용 시기|  
+|Subscription|특징|사용 시기|  
 |------------------|---------------------|--------------|  
 |밀어넣기 구독|밀어넣기 구독의 경우 게시자는 구독자의 요청 없이 변경 내용을 구독자로 전파합니다. 변경 내용은 요청 시나 계속적으로 또는 일정에 따라 구독자로 전달됩니다. 배포 에이전트 또는 병합 에이전트는 배포자에서 실행됩니다.|데이터가 일반적으로 계속 또는 정기적으로 자주 동기화되는 경우<br /><br /> 게시가 실시간에 가까운 데이터 이동을 요구하는 경우<br /><br /> 배포자에서 프로세서 오버헤드가 증가해도 성능에 영향을 주지 않는 경우<br /><br /> 스냅샷과 트랜잭션 복제에 가장 많이 사용되는 경우|  
 |끌어오기 구독|끌어오기 구독의 경우 구독자는 게시자의 변경 내용을 요청합니다. 끌어오기 구독을 사용하면 구독자에 있는 사용자가 데이터 변경 내용의 동기화 시기를 지정할 수 있습니다. 배포 에이전트 또는 병합 에이전트는 구독자에서 실행됩니다.|데이터는 일반적으로 계속 동기화되지 않고 요청 시 또는 일정에 따라 동기화되는 경우<br /><br /> 게시에 많은 구독자가 있으며 배포자에서 모든 에이전트를 실행하는 데 너무 많은 리소스가 필요한 경우<br /><br /> 구독자가 자치적이거나, 연결이 끊어졌거나 이동 중인 경우. 구독자는 언제 연결하여 변경 내용을 동기화할 것인지를 결정합니다.<br /><br /> 병합 복제에 가장 많이 사용되는 경우|  

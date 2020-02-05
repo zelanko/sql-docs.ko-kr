@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b66307976381ceb8085f72e553e010ee60e2974
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710829"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287566"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71710829"
   
  복제는 초기 동기화 중에 개체를 구독자에 복사합니다. 파티션 구성표에서 PRIMARY 파일 그룹 이외의 파일 그룹을 사용하는 경우 초기 동기화 전에 이러한 파일 그룹이 구독자에 있어야 합니다.  
   
- 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 문의 복제를 지원하지 않습니다. 연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
+ 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원하지 않습니다. ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 문을 지원하지 않습니다. 연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
   
 ## <a name="replication-support-for-partition-switching"></a>파티션 전환을 위한 복제 지원  
  테이블 분할의 주요 이점 중 하나는 파티션 간에 데이터의 하위 집합을 빠르고 효율적으로 이동할 수 있다는 것입니다. 데이터는 SWITCH PARTITION 문을 사용하여 이동합니다. 기본적으로 복제를 사용할 수 있도록 테이블을 설정하면 다음과 같은 이유로 SWITCH PARTITION 작업이 차단됩니다.  

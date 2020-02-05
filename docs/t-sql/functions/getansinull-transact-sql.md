@@ -21,10 +21,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843724"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL(Transact-SQL)
@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 데이터베이스의 Null 허용 여부가 Null 값을 허용하는 경우 GETANSINULL은 1을 반환합니다. 이 반환 값을 사용하려면 열 또는 데이터 형식 Null 허용 여부가 명시적으로 정의되지 않아야 합니다. ANSI NULL 기본값은 1입니다. 
   
  ANSI NULL 기본 동작을 활성화하려면 다음 조건 중 하나를 설정해야 합니다.  

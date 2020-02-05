@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e129ce11414f27c5502279b392f88204b502bd32
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095413"
 ---
 # <a name="manage-change-tracking-sql-server"></a>변경 내용 추적 관리(SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "74095413"
 ## <a name="understanding-change-tracking-overhead"></a>변경 내용 추적 오버헤드 이해  
  테이블에 변경 내용 추적이 설정되면 일부 관리 작업에 영향을 줄 수 있습니다. 다음 표에서는 작업 및 고려해야 하는 영향에 대해 설명합니다.  
   
-|연산|변경 내용 추적이 설정된 경우|  
+|작업(Operation)|변경 내용 추적이 설정된 경우|  
 |---------------|-------------------------------------|  
 |DROP TABLE|삭제된 테이블에 대한 모든 변경 내용 추적 정보가 제거됩니다.|  
 |ALTER TABLE DROP CONSTRAINT|PRIMARY KEY 제약 조건을 삭제하려는 시도가 실패합니다. 변경 내용 추적을 해제해야 PRIMARY KEY 제약 조건을 삭제할 수 있습니다.|  

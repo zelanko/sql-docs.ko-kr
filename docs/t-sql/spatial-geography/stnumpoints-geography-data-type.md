@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120896"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints(geography 데이터 형식)
@@ -41,12 +41,12 @@ ms.locfileid: "68120896"
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 설명에 있는 점을 셉니다. 중복 점도 개수에 포함되지만 세그먼트 사이의 연결 점은 한 번만 셉니다. 이 인스턴스가 컬렉션인 경우 이 메서드는 컬렉션에 있는 점의 총 개수를 반환합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>1\. LineString에 있는 점의 총 개수 검색  
+### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>A. LineString에 있는 점의 총 개수 검색  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STNumPoints()`를 사용하여 인스턴스의 설명에 사용된 점의 수를 확인합니다.  
   
 ```  
@@ -55,7 +55,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STNumPoints();  
 ```  
   
-### <a name="b-retrieving-the-total-number-of-points-in-a-geometrycollection"></a>2\. GeometryCollection에 있는 점의 총 개수 검색  
+### <a name="b-retrieving-the-total-number-of-points-in-a-geometrycollection"></a>B. GeometryCollection에 있는 점의 총 개수 검색  
  다음 예에서는 `GeometryCollection`에 있는 모든 요소에 대해 점의 합계를 반환합니다.  
   
 ```  

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982928"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982928"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 입력의 MD2, MD4, MD5, SHA, SHA1 또는 SHA2 해시를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,23 +53,23 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 '*input*'  
 해시할 문자 또는 이진 문자열로 계산되는 식을 지정합니다.  
   
- 출력은 MD2, MD4 및 MD5의 경우 128비트(16바이트), SHA 및 SHA1의 경우 160비트(20바이트), SHA2_256의 경우 256비트(32바이트) 그리고 SHA2_512의 경우 512비트(64바이트) 알고리즘 표준을 준수합니다.  
+ 출력은 알고리즘 표준을 준수하며, MD2, MD4 및 MD5의 경우 128비트(16바이트), SHA 및 SHA1의 경우 160비트(20바이트) 그리고 SHA2_256의 경우 256비트(32바이트), SHA2_512의 경우 512비트(64바이트)입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이하 버전에 허용되는 입력 값은 8000바이트로 제한됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **varbinary**(최대 8000바이트)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 해시 값을 계산하는 다른 방법으로 `CHECKSUM` 또는 `BINARY_CHECKSUM`을 사용하는 것이 좋습니다.
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 사용되지 않습니다. 대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다.
 
 ## <a name="examples"></a>예  
 ### <a name="return-the-hash-of-a-variable"></a>변수의 해시 반환  
- 다음 예에서는 변수 `@HashThis`에 저장된 **nvarchar** 데이터의 `SHA2_256` 해시를 반환합니다.  
+ 다음 예에서는 변수 `SHA2_256`에 저장된 **nvarchar** 데이터의 `@HashThis` 해시를 반환합니다.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

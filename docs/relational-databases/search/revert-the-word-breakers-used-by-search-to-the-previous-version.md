@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055192"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기(SQL Server 검색)
@@ -39,9 +39,9 @@ ms.locfileid: "74055192"
   
 |현재 파일|이전 파일|영향 받는 언어 수|파일 작업|레지스트리 항목 작업|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|이전 버전의 NaturalLanguage6.dll을 가져와서 설치합니다. 그러면 현재 버전의 파일을 덮어씁니다.|별도의 작업이 필요 없습니다.<br /><br /> 레지스트리 키와 값은 이 릴리스에서 변경되지 않았습니다.|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|이전 버전의 NaturalLanguage6.dll을 가져와서 설치합니다. 그러면 현재 버전의 파일을 덮어씁니다.|아무 조치도 취할 필요가 없습니다.<br /><br /> 레지스트리 키와 값은 이 릴리스에서 변경되지 않았습니다.|  
 |(기타 파일 이름)|NaturalLanguage6.dll|5|이전 버전의 NaturalLanguage6.dll을 가져와서 설치합니다. 그러면 현재 버전의 파일을 덮어씁니다.|레지스트리 항목 집합을 변경하여 이전 버전의 구성 요소를 지정합니다.|  
-|(기타 파일 이름)|(기타 파일 이름)|6|별도의 작업이 필요 없습니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사합니다.|레지스트리 항목 집합을 변경하여 이전 버전의 구성 요소를 지정합니다.|  
+|(기타 파일 이름)|(기타 파일 이름)|6|아무 조치도 취할 필요가 없습니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사합니다.|레지스트리 항목 집합을 변경하여 이전 버전의 구성 요소를 지정합니다.|  
   
 > [!WARNING]  
 >  NaturalLanguage6.dll 파일의 현재 버전을 다른 버전으로 교체하면 이 파일을 사용하는 모든 언어의 동작이 영향을 받습니다.  
@@ -78,9 +78,9 @@ ms.locfileid: "74055192"
 |말라얄람어|mal|1100|  
 |마라티어|mar|1102|  
 |말레이어|msl|1086|  
-|중립|중립|0000|  
+|무감정|무감정|0000|  
 |노르웨이어(복말)|nor|1044|  
-|펀잡어|pan|1094|  
+|펀잡어|팬|1094|  
 |포르투갈어(브라질)|ptb|1046|  
 |포르투갈어|ptg|2070|  
 |루마니아어|rom|1048|  
@@ -214,8 +214,8 @@ ms.locfileid: "74055192"
 |---------------|------------------|-------------|  
 |이전 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|없음|  
-|현재 파일 이름|MSWB7.dll|없음|  
+|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|현재 파일 이름|MSWB7.dll|None|  
   
  **독일어(deu), LCID 1031**  
   
@@ -232,8 +232,8 @@ ms.locfileid: "74055192"
 |---------------|------------------|-------------|  
 |이전 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|없음|  
-|현재 파일 이름|MsWb70011.dll|없음|  
+|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|현재 파일 이름|MsWb70011.dll|None|  
   
  **네덜란드어(nld), LCID 1043**  
   
@@ -261,7 +261,7 @@ ms.locfileid: "74055192"
 |언어|약어<br />레지스트리에<br />사용된|LCID|  
 |--------------|---------------------------------------|----------|  
 |중국어(간체)|chs|2052|  
-|중국어(번체)|cht|1028|  
+|중국어 번체|cht|1028|  
 |태국어|tha|1054|  
 |중국어 번체|zh-hk|3076|  
 |중국어 번체|zh-mo|5124|  
@@ -348,8 +348,8 @@ ms.locfileid: "74055192"
 |---------------|------------------|-------------|  
 |이전 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |이전 파일 이름|Thawbrkr.dll|Thawbrkr.dll|  
-|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|없음|  
-|현재 파일 이름|MsWb7001e.dll|없음|  
+|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|현재 파일 이름|MsWb7001e.dll|None|  
   
  **중국어 번체(zh-hk), LCID 3076**  
   

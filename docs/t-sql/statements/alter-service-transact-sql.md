@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745294"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70745294"
 
   기존 서비스를 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  이 서비스에서 제공하는 계약 집합에서 삭제할 계약을 지정합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 계약을 사용하는 이 서비스와의 기존 대화에 대해 오류 메시지를 보냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER SERVICE 문이 서비스에서 계약을 삭제하면 이 서비스는 더 이상 해당 계약을 사용하는 대화의 대상이 될 수 없습니다. 따라서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 해당 계약에 관한 새로운 대화를 이 서비스에 허용하지 않습니다. 계약을 사용하는 기존 대화는 영향을 받지 않습니다.  
   
  서비스에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
@@ -70,7 +70,7 @@ ALTER SERVICE service_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-queue-for-a-service"></a>1\. 서비스 큐 변경  
+### <a name="a-changing-the-queue-for-a-service"></a>A. 서비스 큐 변경  
  다음 예에서는 `//Adventure-Works.com/Expenses` 큐를 사용하도록 `NewQueue` 서비스를 변경합니다.  
   
 ```  
@@ -78,7 +78,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
     ON QUEUE NewQueue ;  
 ```  
   
-### <a name="b-adding-a-new-contract-to-the-service"></a>2\. 서비스에 새 계약 추가  
+### <a name="b-adding-a-new-contract-to-the-service"></a>B. 서비스에 새 계약 추가  
  다음 예에서는 `//Adventure-Works.com/Expenses` 계약에 관한 대화를 허용하도록 `//Adventure-Works.com/Expenses` 서비스를 변경합니다.  
   
 ```  

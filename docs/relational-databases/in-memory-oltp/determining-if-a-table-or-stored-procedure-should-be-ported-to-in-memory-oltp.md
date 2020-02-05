@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412702"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
@@ -39,7 +39,7 @@ ms.locfileid: "74412702"
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치 시 **관리 도구-기본** 또는 **관리 도구-고급**을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때 SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
+ 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 **을 설치 시** 관리 도구-기본**또는**관리 도구-고급[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때 SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
   
 ## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  

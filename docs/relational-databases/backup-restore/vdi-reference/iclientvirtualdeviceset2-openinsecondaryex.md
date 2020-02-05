@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847564"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -37,15 +37,15 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 
 *lpSetName* 세트를 식별합니다. 이 이름은 대/소문자를 구분하며 IClientVirtualDeviceSet2::Create를 호출할 때 기본 클라이언트에서 사용하는 이름과 일치해야 합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_PROTOCOL | 가상 디바이스 세트가 열려 있거나 가상 디바이스 세트가 보조 클라이언트의 열기 요청을 수락할 준비가 되지 않았습니다. |
 | VD_E_ABORT | 작업이 중단되고 있습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 다중 프로세스 모델을 사용하는 경우 기본 클라이언트는 보조 클라이언트의 정상적인 종료와 비정상적인 종료를 탐지해야 합니다.
 

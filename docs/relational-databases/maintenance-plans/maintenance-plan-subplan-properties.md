@@ -14,10 +14,10 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115656"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>유지 관리 계획(하위 계획 속성)
@@ -35,6 +35,6 @@ ms.locfileid: "68115656"
  하위 계획 태스크를 실행할 시기를 지정하려면 일정 아이콘을 클릭하고 기존 하위 계획 일정을 제거하려면 빨간색 x가 있는 일정 아이콘을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

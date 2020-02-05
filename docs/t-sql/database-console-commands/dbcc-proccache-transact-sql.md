@@ -22,10 +22,10 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116457"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68116457"
 
 프로시저 캐시에 대한 정보를 테이블 형식으로 표시합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -42,13 +42,13 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>인수  
- 의 모든 멘션을  
+ WITH  
  옵션을 지정할 수 있습니다.  
   
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 프로시저 캐시는 일괄 처리 실행 속도를 높이기 위해 컴파일된 계획 및 실행 계획을 캐시하는 데 사용합니다. 프로시저 캐시 내의 항목은 일괄 처리 수준으로 제어됩니다. 프로시저 캐시는 다음과 같은 항목을 포함합니다.
 -   컴파일된 계획  
 -   실행 계획  
@@ -58,7 +58,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합의 열에 대해 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**num proc buffs**|프로시저 캐시의 모든 항목에 사용되는 총 페이지 수입니다.|  
 |**num proc buffs used**|현재 사용 중인 모든 항목에 사용되는 총 페이지 수입니다.|  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770507"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286335"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>메시지 정보  
@@ -31,7 +31,7 @@ ms.locfileid: "68770507"
 |이벤트 ID|2601|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|심볼 이름|해당 사항 없음|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|고유 인덱스가 '%.\*ls'인 개체 '%.*ls'에 중복 키 행을 삽입할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
@@ -43,7 +43,7 @@ ms.locfileid: "68770507"
   
 -   ID 열이 있는 테이블이 사용되지만 해당 열이 적절히 관리되지 않습니다.  
   
--   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 중에도 발생할 수 있습니다. 발생하는 오류는 “고유 인덱스가 ‘ucl1SycContents’인 개체 ‘MSmerge_contents’에 중복 키 행을 삽입할 수 없습니다.”와 비슷합니다.  
+-   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 동안에도 발생할 수 있습니다. 발생하는 오류는 "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  필요한 동작은 오류 발생 원인에 따라 다릅니다.  

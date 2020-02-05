@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745470"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "70745470"
 
   새 메시지 유형을 만듭니다. 메시지 유형은 메시지의 이름과 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 해당 이름을 가진 메시지에서 수행하는 유효성 검사를 정의합니다. 대화의 양 측면에 동일한 메시지 유형을 정의해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -77,7 +77,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  메시지 본문에 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되도록 지정합니다. *schema_collection_name*은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 들어오는 메시지의 유효성을 검사합니다. 메시지에 지정된 유효성 검사 유형을 준수하지 않는 메시지 본문이 있으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 잘못된 메시지를 삭제하고 메시지를 보낸 서비스로 오류 메시지를 반환합니다.  
   
  대화의 양 측면에 동일한 메시지 유형 이름을 정의해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 양 측면에서 같은 유효성 검사를 사용하도록 요구하지는 않지만 일반적으로 문제 해결에 도움을 주기 위해 대화의 양 측면에서 메시지 유형에 대해 동일한 유효성 검사를 지정합니다.  
@@ -93,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>1. 올바른 형식의 XML을 포함하는 메시지 유형 만들기  
+### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 올바른 형식의 XML을 포함하는 메시지 유형 만들기  
  다음 예에서는 올바른 형식의 XML을 포함하는 새로운 메시지 유형을 만듭니다.  
   
 ```  
@@ -102,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>2. XML 유형을 포함하는 메시지 유형 만들기  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. XML 유형을 포함하는 메시지 유형 만들기  
  다음 예에서는 XML로 인코딩된 경비 보고서에 대한 메시지 유형을 만듭니다. 이 예에서는 간단한 경비 보고서에 대한 스키마를 보유하는 XML 스키마 컬렉션을 만듭니다. 그런 다음 스키마에 대해 메시지의 유효성을 검사하는 새로운 메시지 유형을 만듭니다.  
   
 ```  

@@ -22,10 +22,10 @@ ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8d0f9c50b5d89926f370f9059a1cbce6c246e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141161"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68141161"
   하나의 대칭 키를 닫거나 현재 세션에서 열려 있는 모든 대칭 키를 닫습니다.  
   
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  닫을 대칭 키의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  열린 대칭 키는 보안 컨텍스트가 아니라 세션에 바인딩됩니다. 열린 키는 명시적으로 닫히거나 세션이 종료될 때까지 계속 사용할 수 있습니다. CLOSE ALL SYMMETRIC KEYS는 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 문을 사용하여 현재 세션에서 열려 있는 모든 데이터베이스 마스터 키를 닫습니다.  열린 키에 대한 정보는 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -54,7 +54,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-closing-a-symmetric-key"></a>1\. 하나의 대칭 키 닫기  
+### <a name="a-closing-a-symmetric-key"></a>A. 하나의 대칭 키 닫기  
  다음 예에서는 대칭 키 `ShippingSymKey04`를 닫습니다.  
   
 ```  
@@ -62,7 +62,7 @@ CLOSE SYMMETRIC KEY ShippingSymKey04;
 GO  
 ```  
   
-### <a name="b-closing-all-symmetric-keys"></a>2\. 모든 대칭 키 닫기  
+### <a name="b-closing-all-symmetric-keys"></a>B. 모든 대칭 키 닫기  
  다음 예에서는 현재 세션에서 열려 있는 모든 대칭 키를 닫고 명시적으로 연 데이터베이스 마스터 키도 닫습니다.  
   
 ```  

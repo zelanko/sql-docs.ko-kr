@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995693"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
@@ -26,23 +26,23 @@ ms.locfileid: "67995693"
   
  각 활성 리소스 풀은 리소스 관리자 리소스 풀 이름과 동일한 인스턴스 이름으로 SQLServer:Resource Pool Stats 성능 개체의 인스턴스를 생성합니다. 다음 표에서는 이 인스턴스에서 지원하는 카운터에 대해 설명합니다.  
   
-|카운터 이름|설명|  
+|카운터 이름|Description|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|현재 부여된 메모리의 총 양(KB)입니다. 이 정보는 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)에 사용할 수도 있습니다.| 
 |**Active memory grants count**|현재 총 메모리 부여 수입니다. 이 정보는 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)에 사용할 수도 있습니다.|  
 |**Avg Disk Read IO (ms)**|디스크에서 읽기 작업의 평균 시간(밀리초)입니다.|  
-|**Avg Disk Read IO (ms) Base**|내부용으로만 사용할 수 있습니다.|
+|**Avg Disk Read IO (ms) Base**|내부 전용입니다.|
 |**Avg Disk Write IO (ms)**|디스크에 쓰기 작업의 평균 시간(밀리초)입니다.|  
-|**Avg Disk Write IO (ms) Base**|내부용으로만 사용할 수 있습니다.|
+|**Avg Disk Write IO (ms) Base**|내부 전용입니다.|
 |**Cache memory target (KB)**|캐시를 위한 현재 메모리 브로커 대상(KB)입니다.|  
 |**Compile memory target (KB)**|쿼리 컴파일을 위한 현재 메모리 브로커 대상(KB)입니다.|  
 |**CPU control effect %**|리소스 관리자가 리소스 풀에 미치는 효과로, (CPU 사용량 %)/(리소스 관리자가 없을 경우의 CPU 사용량 %)로 계산합니다.|  
 |**CPU delayed %**|지정된 성능 개체 인스턴스의 모든 요청에 대해 배포된 시스템 CPU이며 총 활성 시간 비율로 나타냅니다.|
-|**CPU delayed % base**|내부용으로만 사용할 수 있습니다.|
+|**CPU delayed % base**|내부 전용입니다.|
 |**CPU effective %**|지정된 성능 개체 인스턴스의 모든 요청에 사용된 시스템 CPU 사용량이며 총 활성 시간 비율로 나타냅니다.|
-|**CPU effective % base**|내부용으로만 사용할 수 있습니다.|
+|**CPU effective % base**|내부 전용입니다.|
 |**CPU usage %**|이 풀에 속한 모든 작업 그룹의 모든 요청에 의한 CPU 대역폭 사용량으로, 컴퓨터를 기준으로 측정되고 시스템에 있는 모든 CPU를 기준으로 평균화됩니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 사용할 수 있는 CPU 양이 변경되면 그에 따라 변경됩니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 전달되는 CPU를 기준으로는 평균화되지 않습니다.|  
-|**CPU usage % base**|내부용으로만 사용할 수 있습니다.|
+|**CPU usage % base**|내부 전용입니다.|
 |**CPU usage target %**|리소스 풀 구성 설정과 시스템 로드를 기반으로 한 리소스 풀에 대한 CPU 사용량 %의 대상 값입니다.|  
 |**CPU violated %**|CPU 예약과 유효 일정 비율 간의 차이입니다.|
 |**Disk Read Bytes/sec**|마지막 1초 동안 디스크에서 읽은 바이트 수입니다.|  

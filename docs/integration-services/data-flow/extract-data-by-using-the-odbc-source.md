@@ -11,10 +11,10 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292666"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
@@ -40,7 +40,7 @@ ms.locfileid: "71292666"
   
          이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.  
   
-    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기**를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
+    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기** 를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
   
 6.  **미리 보기** 를 클릭하면 ODBC 원본에 의해 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   

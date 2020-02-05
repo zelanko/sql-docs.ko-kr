@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078035"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>FOR XML 쿼리 결과 쿼리  
  FOR XML 쿼리가 XML을 반환하므로 FOR XML 쿼리에서 반환한 XML 결과에 **query()** , **value()** 등의 **xml**유형 메서드를 적용할 수 있습니다.  
   
- 다음 쿼리에서는 **xml** 데이터 형식의 `query()` 메서드를 사용하여 `FOR XML` 쿼리 결과를 쿼리합니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)를 참조하세요.  
+ 다음 쿼리에서는 `query()` xml **데이터 형식의** 메서드를 사용하여 `FOR XML` 쿼리 결과를 쿼리합니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)를 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 내부 `SELECT ... FOR XML` 쿼리는 외부 `SELECT`가 `query()` 메서드를 **xml** 유형에 적용하는 **xml** 유형 결과를 반환합니다. 지정된 `TYPE` 지시어에 유의하십시오.  
+ 내부 `SELECT ... FOR XML` 쿼리는 외부 **가** 메서드를 `SELECT` xml `query()` 유형에 적용하는 **xml** 유형 결과를 반환합니다. 지정된 `TYPE` 지시어에 유의하십시오.  
   
  다음은 결과입니다.  
   
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 다음 쿼리에서는 **xml** 데이터 형식의 `value()` 메서드를 사용하여 `SELECT...FOR XML` 쿼리가 반환한 XML 결과에서 값을 검색합니다. 자세한 내용은 [value&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/value-method-xml-data-type.md)를 참조하세요.  
+ 다음 쿼리에서는 `value()` xml **데이터 형식의** 메서드를 사용하여 `SELECT...FOR XML` 쿼리가 반환한 XML 결과에서 값을 검색합니다. 자세한 내용은 [value&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/value-method-xml-data-type.md)를 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +124,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- `value()` 메서드의 XQuery 경로 식이 `BusinessEntityID`가 `1`인 고객 연락처의 첫 번째 전화 번호를 검색합니다.  
+ `value()` 메서드의 XQuery 경로 식이 `BusinessEntityID` 가 `1`인 고객 연락처의 첫 번째 전화 번호를 검색합니다.  
   
 > [!NOTE]  
 >  TYPE 지시어를 지정하지 않으면 FOR XML 쿼리 결과가 **nvarchar(max)** 형식으로 반환됩니다.  

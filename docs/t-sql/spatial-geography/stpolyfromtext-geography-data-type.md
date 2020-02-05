@@ -18,10 +18,10 @@ ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00d5f282b209c4e705fc07e056f7014c0eaf47bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120805"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText(geography 데이터 형식)
@@ -48,9 +48,9 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
- OGC 형식: **다각형**  
+ OGC 형식: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

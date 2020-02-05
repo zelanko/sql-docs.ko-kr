@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325465"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
@@ -31,7 +31,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 제외한 모든 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]를 제외한 모든 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
 |Windows  Installer  4.5|Server Core 설치와 함께 제공됩니다.|  
 |Windows PowerShell|Server Core 설치와 함께 제공됩니다.|  
 |Java Runtime |PolyBase를 사용하려면 적절한 Java Runtime을 설치해야 합니다. 자세한 내용은 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.|

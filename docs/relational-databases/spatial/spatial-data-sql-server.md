@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278145"
 ---
 # <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  공간 데이터는 기하학적 개체의 물리적 위치와 모양에 대한 정보를 표시합니다. 이러한 개체는 위치나 지역, 도로 또는 호수와 같은 좀 더 복잡한 개체를 가리킬 수 있습니다.  
+  공간 데이터는 기하학적 개체의 물리적 위치 및 모양 정보를 나타냅니다. 이러한 개체는 지점 위치이거나 국가, 도로 또는 호수와 같은 더 복잡한 개체일 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **geometry** 데이터 형식 및 **geography** 데이터 형식의 두 가지 공간 데이터 형식을 지원합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72278145"
   
  두 가지 데이터 형식 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
-##  <a name="reltasks"></a> 관련 태스크  
+##  <a name="reltasks"></a> 관련 작업  
  [geometry 인스턴스 만들기, 구성 및 쿼리](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  geometry 데이터 형식의 인스턴스를 사용하는 방법에 대해 설명합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72278145"
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)  
  공간 데이터 형식을 소개합니다.  
   
--   [점](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72278145"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [다각형](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

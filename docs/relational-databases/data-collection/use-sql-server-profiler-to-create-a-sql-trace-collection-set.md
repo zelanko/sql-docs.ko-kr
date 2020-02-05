@@ -12,10 +12,10 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056454"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler를 사용하여 SQL 추적 컬렉션 집합 만들기
@@ -38,7 +38,7 @@ ms.locfileid: "74056454"
   
 2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
   
-3.  이 시나리오에서는 기간 값을 밀리초로 표시(기본 설정)하도록 구성되어 있는지 확인합니다. 이렇게 하려면 다음 단계를 수행합니다.  
+3.  이 시나리오에서는 기간 값을 밀리초로 표시(기본 설정)하도록 구성되어 있는지 확인합니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74056454"
   
 4.  **실행** 을 클릭하여 쿼리를 실행하고 컬렉션 집합을 만듭니다.  
   
-5.  개체 탐색기에서 컬렉션 집합이 만들어졌는지 확인합니다. 이렇게 하려면 다음 단계를 수행합니다.  
+5.  개체 탐색기에서 컬렉션 집합이 만들어졌는지 확인합니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  **관리**를 마우스 오른쪽 단추로 클릭한 다음 **새로 고침**을 클릭합니다.  
   

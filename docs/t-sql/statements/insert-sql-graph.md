@@ -18,21 +18,21 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071168"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `node` 또는 `edge` 테이블에 새 행을 하나 이상 추가합니다. 
+`node`의 `edge` 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 새 행을 하나 이상 추가합니다. 
 
 > [!NOTE]   
 >  표준 Transact-SQL 문의 경우 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.
   
-![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>노드 테이블 구문에 INSERT 
 노드 테이블에 삽입하는 구문은 일반 테이블과 동일합니다. 
@@ -116,7 +116,7 @@ INTO
 사용자는 에지에 삽입하는 동안 `$from_id` 및 `$to_id`에 대한 값을 제공해야 합니다. 값을 제공하지 않거나 NULL을 이러한 열에 삽입하는 경우 오류가 반환됩니다. 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 노드에 삽입은 관계형 테이블에 삽입과 동일합니다. $node_id 열의 값은 자동으로 생성됩니다.
 
 에지 테이블에 삽입하는 동안 사용자는 `$from_id` 및 `$to_id` 열에 대한 값을 제공해야 합니다.   
@@ -136,7 +136,7 @@ OPENROWSET 함수에 BULK 옵션을 사용하여 INSERT를 실행하려면 **sys
 
 ## <a name="examples"></a>예  
   
-#### <a name="a--insert-into-node-table"></a>1\.  노드 테이블에 삽입  
+#### <a name="a--insert-into-node-table"></a>A.  노드 테이블에 삽입  
 다음 예제에서는 Person 노드 테이블을 만들고 두 개의 행을 해당 테이블에 삽입합니다.
 
 ```sql
@@ -148,7 +148,7 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### <a name="b--insert-into-edge-table"></a>2\.  에지 테이블에 삽입  
+#### <a name="b--insert-into-edge-table"></a>B.  에지 테이블에 삽입  
 다음 예에서는 친구 에지 테이블을 만든 후 에지를 테이블에 삽입합니다.
 
 ```sql
@@ -163,6 +163,6 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
   
 ## <a name="see-also"></a>참고 항목  
 [INSERT TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[SQL Server 2017의 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)  
+[SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

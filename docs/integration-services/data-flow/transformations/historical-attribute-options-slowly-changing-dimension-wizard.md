@@ -13,10 +13,10 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297912"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>기록 특성 옵션(느린 변경 차원 마법사)
@@ -32,7 +32,7 @@ ms.locfileid: "71297912"
  **단일 열을 사용하여 현재 및 만료 레코드 표시**  
  단일 열을 사용하여 기록 특성의 상태를 기록하도록 선택한 경우 다음 옵션을 사용할 수 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**현재 레코드 표시 열**|현재 레코드를 표시할 열을 선택합니다.|  
 |**현재 값**|**True** 또는 **현재** 를 사용하여 현재 레코드인지 여부를 표시할 수 있습니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "71297912"
  **시작 및 종료 날짜를 사용하여 현재 및 만료 레코드 식별**  
  이 옵션의 차원 테이블에는 날짜 열이 포함되어 있어야 합니다. 시작 및 종료 날짜별로 기록 특성을 표시하도록 선택한 경우 다음 옵션을 사용할 수 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**시작 날짜 열**|시작 날짜를 포함할 차원 테이블의 열을 선택합니다.|  
 |**종료 날짜 열**|종료 날짜를 포함할 차원 테이블의 열을 선택합니다.|  

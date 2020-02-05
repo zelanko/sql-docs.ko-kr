@@ -14,10 +14,10 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a50fd15830d3509cd086ad4b62938658e1866494
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297673"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING(SSIS 식)
@@ -41,7 +41,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  함수에 전달된 숫자 식의 데이터 형식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 CEILING 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  

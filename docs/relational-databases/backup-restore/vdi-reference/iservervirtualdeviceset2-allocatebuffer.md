@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 8c28009fae8b52264b541ca3eb4281ab9abccf63
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847494"
 ---
 # <a name="iservervirtualdeviceset2allocatebuffer-vdi"></a>IServerVirtualDeviceSet2::AllocateBuffer (VDI)
@@ -40,9 +40,9 @@ HRESULT IServerVirtualDeviceSet2::AllocateBuffer (
 
 *dwAlignment* 버퍼의 맞춤 경계를 지정합니다. 예를 들어, 4096 값을 설정하면 버퍼가 4096바이트 경계에 맞춰집니다. 즉, 반환되는 주소에서는 낮은 순서 12비트가 0으로 설정됩니다. 이 매개 변수는 2의 거듭제곱이어야 합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 버퍼가 반환됩니다. |
 | VD_E_MEMORY | 메모리 부족 상태가 발생했습니다. |

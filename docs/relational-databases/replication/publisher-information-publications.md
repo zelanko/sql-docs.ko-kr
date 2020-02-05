@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0590a339b6357bdc102420c4c68d4a92fc0519c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5c7af0d388deef7b0f8249de759b688c4f49124d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764079"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287502"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68764079"
  상태 값 **성능 심각** 은 트랜잭션 구독과 병합 구독에 적용되며 트랜잭션 구독의 경우 임계값이 설정된 경우에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **게시**  
- 각 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  
+ *PublicationDatabaseName: PublicationName*형식의 각 게시의 이름입니다.  
   
  **구독**  
  각 게시에 대한 구독 수입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "68764079"
   
 -   나쁨  
   
--   심각  
+-   위험  
   
  성능 등급 정의 방법 및 성능 임계값 설정 방법은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)을 참조하세요.  
   

@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011953"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>기본 SQL Server 네트워크 프로토콜 구성
@@ -33,14 +33,14 @@ ms.locfileid: "68011953"
 
 |버전 | 새로 설치 또는 이전 설치 | 공유 메모리 | TCP/IP | 명명된 파이프|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
-|Standard | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
-|Web | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
-|Developer | 새로 설치 | 설정 | 사용 안 함 | 네트워크 연결 사용 안 함|
-|Evaluation | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
-|SQL Server Express | 새로 설치 | 설정 | 사용 안 함 | 네트워크 연결 사용 안 함|
+|Enterprise | 새 설치 | 사용 | 사용 | 네트워크 연결 사용 안 함|
+|Standard | 새 설치 | 사용 | 사용 | 네트워크 연결 사용 안 함|
+|웹 | 새 설치 | 사용 | 사용 | 네트워크 연결 사용 안 함|
+|Developer | 새 설치 | 사용 | 사용 안 함 | 네트워크 연결 사용 안 함|
+|평가 | 새 설치 | 사용 | 사용 | 네트워크 연결 사용 안 함|
+|SQL Server Express | 새 설치 | 사용 | 사용 안 함 | 네트워크 연결 사용 안 함|
 |모든 버전 | 이전 설치가 있지만 업그레이드 중이 아님 | 새로 설치와 같음 | 새로 설치와 같음 | 새로 설치와 같음|
-|모든 버전 | 업그레이드 | 설정 | 이전 설치의 설정이 유지됨 | 이전 설치의 설정이 유지됨|
+|모든 버전 | 업그레이드 | 사용 | 이전 설치의 설정이 유지됨 | 이전 설치의 설정이 유지됨|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ ms.locfileid: "68011953"
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 브라우저 설정
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 브라우저 설정
 
 설정 중에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 서비스가 자동으로 시작되도록 구성할 수 있습니다. 기본적으로 다음 조건에서만 자동으로 시작됩니다.
 

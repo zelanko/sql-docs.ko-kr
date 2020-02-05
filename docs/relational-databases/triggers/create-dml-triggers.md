@@ -20,22 +20,22 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905541"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거를 만드는 방법에 대해 설명합니다.  
   
-##  <a name="Top"></a> 시작하기 전 주의 사항  
+##  <a name="Top"></a> 시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  DML 트리거 생성과 관련한 제한 사항 목록은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  트리거를 생성할 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="Procedures"></a> DML 트리거를 만드는 방법  
@@ -61,8 +61,8 @@ ms.locfileid: "72905541"
     |---------------|-----------|  
     |작성자|*Your name*|  
     |만든 날짜|*Today's date*|  
-    |설명|공급업체의 새 PO를 삽입하기 전에 공급업체의 신용 등급을 확인합니다.|  
-    |Schema_Name|Purchasing|  
+    |Description|공급업체의 새 PO를 삽입하기 전에 공급업체의 신용 등급을 확인합니다.|  
+    |Schema_Name|구매|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|목록에서 UPDATE 및 DELETE를 제거합니다.|  
@@ -99,7 +99,7 @@ ms.locfileid: "72905541"
   
 10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
 
- [시작하기 전 주의 사항](#Top)  
+ [시작하기 전에](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

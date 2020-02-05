@@ -25,10 +25,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252190"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "72252190"
 
   다음에 받을 메시지에 대한 대화 그룹 식별자를 반환하고 해당 메시지를 포함하는 대화에 대한 대화 그룹을 잠급니다. 대화 그룹 식별자는 메시지 자체를 받기 전에 대화 상태 정보를 검색하는 데 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -74,10 +74,10 @@ ms.locfileid: "72252190"
  TIMEOUT *제한 시간*  
  메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout*이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *\@conversation_group_id* 변수를 NULL로 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은  **문 종결자인 세미콜론(** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72252190"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>1\. 무한 대기하여 대화 그룹 가져오기  
+### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 무한 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 명령은 메시지를 사용할 수 있게 될 때까지 대기합니다.  
   
 ```  
@@ -112,7 +112,7 @@ WAITFOR (
 ) ;  
 ```  
   
-### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>2\. 1분간 대기하여 대화 그룹 가져오기  
+### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. 1분간 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 1분 이내에 사용 가능한 메시지가 없으면 GET CONVERSATION GROUP이 `@conversation_group_id` 값을 그대로 반환합니다.  
   
 ```  

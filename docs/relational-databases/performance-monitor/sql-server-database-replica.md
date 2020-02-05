@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093645"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
@@ -27,7 +27,7 @@ ms.locfileid: "68093645"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Replica** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터를 포함합니다. 이 개체는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서만 유효합니다.  
   
-|카운터 이름|설명|표시 대상...|  
+|카운터 이름|Description|표시 대상...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|마지막 1초 동안 보조 데이터베이스에 대해 보조 복제본에서 받은 FILESTREAM 데이터의 양입니다.|보조 복제본|  
 |**Log Apply Pending Queue**|데이터베이스 복제본에 적용되기를 기다리고 있는 로그 블록 수입니다.|보조 복제본|

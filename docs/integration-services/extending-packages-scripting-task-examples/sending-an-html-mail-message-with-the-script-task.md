@@ -17,10 +17,10 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286742"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
@@ -33,14 +33,14 @@ ms.locfileid: "71286742"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 예에서는 **System.Net.Mail** 네임스페이스를 사용하여 HTML 메일 메시지를 구성하고 보냅니다. 스크립트는 패키지 변수에서 전자 메일의 받는 사람, 보내는 사람, 제목 및 본문을 가져오고 이를 사용하여 새 **MailMessage**를 만든 다음 해당 **IsBodyHtml** 속성을 **True**로 설정합니다. 그런 다음 다른 패키지 변수에서 SMTP 서버 이름을 가져오고 **System.Net.Mail.SmtpClient**의 인스턴스를 초기화한 다음 **Send** 메서드를 호출하여 HTML 메시지를 보냅니다. 이 예제에서는 다른 스크립트에서 다시 사용할 수 있도록 메시지 보내기 기능을 서브루틴에 캡슐화합니다.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하지 않도록 구성하려면  
   
 1.  `HtmlEmailTo`, `HtmlEmailFrom` 및 `HtmlEmailSubject`라는 문자열 변수를 만들고 이 변수에 올바른 테스트 메시지에 대한 적절한 값을 할당합니다.  
   
-2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 예를 들어  
+2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 다음은 그 예입니다.  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -60,7 +60,7 @@ ms.locfileid: "71286742"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하도록 구성하려면  
   
-1.  **ReadOnlyVariables** 목록에서 `HtmlEmailServer` 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
+1.  `HtmlEmailServer`ReadOnlyVariables**목록에서** 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
   
 2.  서버 이름을 가져오는 다음 코드 줄을  
   

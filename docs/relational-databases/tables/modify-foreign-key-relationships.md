@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139597"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
@@ -56,7 +56,7 @@ ms.locfileid: "68139597"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -111,7 +111,7 @@ ms.locfileid: "68139597"
      **테이블 디자이너 범주**  
      확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사** 와 **복제에 적용**에 대한 정보를 표시합니다.  
   
-     **Enforce For Replication**  
+     **복제에 적용**  
      복제 에이전트가 이 테이블에서 삽입, 업데이트 또는 삭제를 수행할 때 제약 조건을 적용할지 여부를 나타냅니다.  
   
      **외래 키 제약 조건 적용**  
@@ -142,7 +142,7 @@ ms.locfileid: "68139597"
   
     -   **기본값 설정** 테이블의 모든 외래 키 열에 기본값이 정의되어 있으면 열에 정의된 기본값으로 값을 설정합니다.  
   
-4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  

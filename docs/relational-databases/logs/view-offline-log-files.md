@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908553"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
@@ -29,7 +29,7 @@ ms.locfileid: "72908553"
 > [!NOTE]  
 >  이 방법을 사용하여 온라인 상태인 인스턴스에 연결할 수도 있지만 몇 가지 이유로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 통해서는 연결할 수 없습니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  오프라인 로그 파일에 연결하려면 오프라인 로그 파일을 보는 데 사용하는 컴퓨터와 보려는 로그 파일이 있는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 설치해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 두 컴퓨터에 설치된 경우 각 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 인스턴스의 오프라인 파일을 볼 수 있습니다.  
   
  등록된 서버를 사용하는 경우 연결할 인스턴스는 **로컬 서버 그룹** 또는 **중앙 관리 서버**에 등록되어야 합니다. 인스턴스는 자체적으로 등록될 수도 있고 서버 그룹의 멤버로 등록될 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록된 서버에 추가하는 방법은 다음 항목을 참조하십시오.  
@@ -46,7 +46,7 @@ ms.locfileid: "72908553"
   
 -   [SqlErrorLogFile 클래스](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (이 항목에서는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그 파일에 대한 정보를 검색하는 방법을 보여 줍니다.)  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> 권한  
  오프라인 로그 파일에 연결하려면 로컬 컴퓨터와 원격 컴퓨터 모두에서 다음과 같은 사용 권한이 있어야 합니다.  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 네임스페이스에 대한 읽기 권한. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다. 자세한 내용은 이 섹션 뒷부분의 "WMI 사용 권한을 확인하려면" 절차를 참조하십시오.  
@@ -61,7 +61,7 @@ ms.locfileid: "72908553"
   
 1.  WMI 컨트롤 스냅인을 엽니다. WMI 컨트롤 스냅인을 열려면 운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   **시작**을 클릭하고 **검색 시작** 상자에 **wmimgmt.msc** 를 입력한 다음 ENTER 키를 누릅니다.  
+    -   **시작**을 클릭하고 **검색 시작** 상자에 **wmimgmt.msc**를 입력한 다음 Enter 키를 누릅니다.  
   
     -   **시작**, **실행**을 차례로 클릭하고 **wmimgmt.msc**를 입력한 다음 ENTER 키를 누릅니다.  
   

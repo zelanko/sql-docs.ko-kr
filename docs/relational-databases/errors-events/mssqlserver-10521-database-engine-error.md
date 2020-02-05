@@ -12,10 +12,10 @@ ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305857"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -30,7 +30,7 @@ ms.locfileid: "72305857"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_PARAM_NEEDED|  
-|메시지 텍스트|**\@type**이 ‘%ls’(으)로 지정되었고 매개 변수 ‘%ls’이(가) NULL이므로 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
+|메시지 텍스트|\***type\@이 ‘%ls’(으)로 지정되었고 매개 변수 ‘%ls’이(가) NULL이므로 계획 지침 ‘%.** ls’을(를) 만들 수 없습니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
   
 ## <a name="explanation"></a>설명  
 **\@type**에 지정된 유형에서 지정된 매개 변수에 NULL이 아닌 값이 필요하지만 NULL 값이 지정되었습니다.  

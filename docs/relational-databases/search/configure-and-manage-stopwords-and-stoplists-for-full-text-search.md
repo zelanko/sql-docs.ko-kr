@@ -19,10 +19,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056145"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
@@ -97,7 +97,7 @@ ms.locfileid: "74056145"
   
 5.  [전체 텍스트 중지 목록 속성](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 대화 상자에서 다음을 수행합니다.  
   
-    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제** 또는 **중지 목록 지우기** 동작 중 하나를 선택합니다.  
+    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제**또는 **중지 목록 지우기**동작 중 하나를 선택합니다.  
   
     2.  선택한 동작에 대해 **중지 단어** 입력란이 활성화되면 단일 중지 단어를 입력합니다. 이 중지 단어는 고유해야 합니다. 즉, 선택한 언어의 이 중지 목록에 이미 있는 중지 단어는 입력할 수 없습니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74056145"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|및|4|  
+|to|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

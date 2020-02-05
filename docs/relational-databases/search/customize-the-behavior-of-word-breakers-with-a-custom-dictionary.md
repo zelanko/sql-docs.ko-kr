@@ -12,10 +12,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 806d2f7aa35fc3299f22dbd1c3423834aaa8936f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056242"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>사용자 지정 사전을 사용하여 단어 분리기의 동작 사용자 지정(SQL Server 검색)

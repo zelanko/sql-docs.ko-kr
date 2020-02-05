@@ -18,10 +18,10 @@ ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120914"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries(geography 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68120914"
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스가 **MultiPoint**, **MultiLineString**, **MultiPolygon** 또는 **GeometryCollection** 인스턴스가 아닌 경우 1을 반환하고, **geography** 인스턴스가 비어 있으면 0을 반환합니다.  
   
 ## <a name="examples"></a>예  

@@ -24,18 +24,18 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928969"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT(Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 명시적 값을 테이블의 ID 열에 삽입할 수 있도록 합니다.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  ID 열이 있는 테이블의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  언제든지 세션에서 한 테이블의 IDENTITY_INSERT 속성만 ON으로 설정할 수 있습니다. 한 테이블에 이 속성이 ON으로 설정되어 있는데 다른 테이블에 대해 SET IDENTITY_INSERT ON 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SET IDENTITY_INSERT가 이미 ON으로 설정되어 있음을 알리고 ON으로 설정된 테이블을 보고하는 오류 메시지를 반환합니다.  
   
  테이블의 현재 ID 값보다 큰 값을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 새로 삽입한 값을 현재 ID 값으로 사용합니다.  

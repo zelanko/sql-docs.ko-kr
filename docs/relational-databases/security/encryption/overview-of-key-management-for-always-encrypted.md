@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594104"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
@@ -58,7 +58,7 @@ ms.locfileid: "73594104"
 ## <a name="managing-keys-with-role-separation"></a>역할 구분을 사용하여 키 관리
 상시 암호화 키가 역할 구분을 사용하여 관리되는 경우 조직 내의 서로 다른 사용자가 보안 관리자 및 DBA 역할을 맡습니다. 역할 구분을 사용하는 키 관리 프로세스에서는 DBA가 키 또는 실제 키를 포함하는 키 저장소에 액세스할 수 없고, 보안 관리자가 중요한 데이터를 포함하는 데이터베이스에 액세스할 수 없습니다. 역할 구분을 사용하는 키 관리는 조직의 DBA가 중요한 데이터에 액세스할 수 없도록 하려는 경우에 권장됩니다. 
 
-**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로, 데이터베이스 시스템을 호스팅하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 작업을 수행하면 안 됩니다. 
+**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로 데이터베이스 시스템을 호스트하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 해당 태스크를 수행하면 안 됩니다. 
 
 ## <a name="managing-keys-without-role-separation"></a>역할 구분을 사용하지 않고 키 관리
 상시 암호화 키가 역할 구분을 사용하지 않고 관리되는 경우 한 사람이 보안 관리자 및 DBA 역할을 모두 맡을 수 있으므로 해당 사용자가 키/키 저장소와 키 메타데이터를 둘 다 액세스하고 관리할 수 있어야 합니다. 역할 구분을 사용하지 않는 키 관리는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다.
@@ -71,9 +71,9 @@ ms.locfileid: "73594104"
 
 - **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있습니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
     - [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
-    - [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-ssms.md)
+    - [SQL Server Management Studio를 사용하여 Always Encrypted 키 회전](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell** – 역할 구분을 사용 및 사용하지 않는 상태로 Always Encrypted 키를 관리하기 위한 cmdlet이 포함됩니다. 참조 항목:
+- **SQL Server PowerShell** – 역할 구분을 사용 및 사용하지 않는 상태로 Always Encrypted 키를 관리하기 위한 cmdlet이 포함됩니다. 자세한 내용은 다음을 참조하세요.
     - [PowerShell을 사용하여 Always Encrypted 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [PowerShell을 사용하여 Always Encrypted 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,14 +92,14 @@ ms.locfileid: "73594104"
 - 데이터베이스를 호스트하는 컴퓨터에서 열 마스터 키 또는 열 암호화 키를 생성하지 않습니다. 대신, 키 관리에만 사용되거나 키에 액세스해야 하는 애플리케이션을 호스트하는 컴퓨터인 별도 컴퓨터에서 키를 생성합니다. 즉, Always Encrypted 키를 프로비전하거나 유지 관리하는 데 사용되는 컴퓨터에 공격자가 액세스할 경우 짧은 시간 동안만 키가 도구의 메모리에 표시되는 경우에도 공격자는 키를 얻을 수 있기 때문에 **데이터베이스를 호스팅하는 컴퓨터에서 키를 생성하는 데 사용되는 도구를 실행하면 안 됩니다**.
 - 키 관리 프로세스에서 열 마스터 키 또는 열 암호화 키가 실수로 공개되지 않도록 하려면 키 관리 프로세스를 정의 및 구현하기 전에 잠재적인 악의적 사용자와 보안 위협을 확인하는 것이 중요합니다. 예를 들어 DBA가 중요한 데이터에 액세스할 수 없게 하려는 경우 DBA는 키 생성을 담당할 수 없습니다. 그러나 메타데이터에는 일반 텍스트 키가 포함되지 않으므로 DBA가 데이터베이스의 키 메타데이터를 *관리할 수 있습니다* .
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)
-- [Always Encrypted용 열 마스터 키 만들기 및 저장](create-and-store-column-master-keys-always-encrypted.md)
+- [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](create-and-store-column-master-keys-always-encrypted.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-ssms.md)
-- [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
+- [PowerShell을 사용하여 Always Encrypted 키 프로비저닝](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>참고 항목
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

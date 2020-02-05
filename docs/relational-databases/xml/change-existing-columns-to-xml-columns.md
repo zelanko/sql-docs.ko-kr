@@ -13,10 +13,10 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 605911ebe60c7467db2792737426cc98ce67b52d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113129"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>기존 열을 XML 열로 변경
@@ -35,7 +35,7 @@ ALTER TABLE T
   ALTER COLUMN Col2 xml;
 ```  
   
-`xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 예를 들어  
+`xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 다음은 그 예입니다.  
   
 ```sql
 CREATE TABLE T (Col1 int primary key, Col2 xml);

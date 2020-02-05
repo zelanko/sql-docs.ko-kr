@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095715"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
@@ -45,7 +45,7 @@ ms.locfileid: "74095715"
   
 이 자습서를 사용하려면 시스템에 다음 항목이 설치되어야 합니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 설치한 사용자를 위해 작성되었습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 설치하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 설치하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

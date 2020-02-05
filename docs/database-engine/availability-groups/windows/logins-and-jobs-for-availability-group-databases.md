@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822238"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스를 사용하여 작업에 대한 로그인 관리
@@ -31,7 +31,7 @@ ms.locfileid: "74822238"
   
      가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스는 다른 테이프 드라이브 문자 등으로 다르게 구성될 수 있습니다. 각 가용성 복제본에 대한 작업 시 이러한 모든 차이점을 감안해야 합니다.  
   
-     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
 -   **로그인**  
   

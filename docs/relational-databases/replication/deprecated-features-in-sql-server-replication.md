@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 039f8dcdf408d269684b513bf01539692b38444d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9f414d0ac6fc35e8ad65cedad2b04f88eb3b3553
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768628"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284987"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 복제에서 사용되지 않는 기능
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68768628"
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|기능|설명|  
+|기능|Description|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에 대한 복제를 지원하지 않습니다.|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.|  

@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072200"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
@@ -50,10 +50,10 @@ ms.locfileid: "68072200"
   
 |격리 수준|지원됨|보장됨|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|아니오|보장되지 않음|  
-|READ COMMITTED|예|예|  
-|REPEATABLE READ|아니오|아니오|  
-|SNAPSHOT ISOLATION|아니오|아니오|  
-|SERIALIZABLE|아니오|아니오|  
+|READ UNCOMMITTED|예|보장되지 않음|  
+|READ COMMITTED|yes|yes|  
+|REPEATABLE READ|예|예|  
+|SNAPSHOT ISOLATION|예|예|  
+|직렬화 가능|예|예|  
   
   

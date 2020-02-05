@@ -17,10 +17,10 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291251"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
@@ -59,7 +59,7 @@ ms.locfileid: "71291251"
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [UNION ALL 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](../../../integration-services/data-flow/integration-services-paths.md)   
  [데이터 흐름 태스크](../../../integration-services/control-flow/data-flow-task.md)  

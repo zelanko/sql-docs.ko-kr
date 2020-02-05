@@ -14,10 +14,10 @@ ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113298"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
@@ -28,7 +28,7 @@ ms.locfileid: "68113298"
   
 **시작** 메뉴에서 **실행**을 가리킨 다음 **실행** 대화 상자에 **perfmon**을 입력하고 **확인**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시스템 모니터 실행](../../relational-databases/performance-monitor/run-system-monitor.md)  
   
   

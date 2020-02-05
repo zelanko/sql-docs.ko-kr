@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262788"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
@@ -57,7 +57,7 @@ ms.locfileid: "68262788"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe** 를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]명령 프롬프트에서 SQL Server 2016 설치[의 "](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68262788"
   
     -   msdb.sysdtslog90 시스템 테이블에서 msdb.sysssislog 시스템 테이블로 로그 데이터를 이동합니다.  
   
--   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
+-   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts\*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
   
 -   패키지에 대한 액세스를 제어하기 위해 세 가지 새로운 고정 데이터베이스 수준 역할인 db_ssisadmin, db_ssisltduser 및 db_ssisoperator를 만듭니다. db_dtsadmin, db_dtsltduser 및 db_dtsoperator의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 역할은 제거되지 않고 해당하는 새 역할의 멤버가 됩니다.  
   
