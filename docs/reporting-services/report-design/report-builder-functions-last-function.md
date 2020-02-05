@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579533"
 ---
 # <a name="report-builder-functions---last-function"></a>보고서 작성기 함수 - Last 함수
@@ -38,7 +38,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>반환 형식  
  식 유형에 따라 결정됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Last** 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 마지막 값을 반환합니다.  
   
  **Last** 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  

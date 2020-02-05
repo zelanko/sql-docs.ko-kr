@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043922"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68043922"
 
   데이터베이스에서 역할을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ DROP ROLE role_name
  *role_name*  
  데이터베이스에서 삭제할 역할을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보안 개체를 소유한 역할은 데이터베이스에서 삭제할 수 없습니다. 보안 개체를 소유한 데이터베이스 역할을 삭제하려면 먼저 해당 보안 개체의 소유권을 이전하거나 데이터베이스에서 해당 보안 개체를 삭제해야 합니다. 멤버가 있는 역할은 데이터베이스에서 삭제할 수 없습니다. 멤버가 있는 역할을 삭제하려면 먼저 해당 역할의 멤버를 제거해야 합니다.  
   
  데이터베이스 역할에서 멤버를 제거하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다.  
@@ -78,7 +78,7 @@ DROP ROLE role_name
  데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 `purchasing` 데이터베이스 역할을 삭제합니다.  
+ 다음 예에서는 `purchasing` 데이터베이스에서 `AdventureWorks2012` 데이터베이스 역할을 삭제합니다.  
   
 ```  
 DROP ROLE purchasing;  

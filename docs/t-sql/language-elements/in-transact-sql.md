@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075058"
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075058"
 
   지정된 값과 일치하는 값이 하위 쿼리 또는 목록 내에 있는지 확인합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  IN 또는 NOT IN을 사용한 *test_expression*과 비교하여 *subquery* 또는 *expression*에서 반환되는 Null 값은 UNKNOWN을 반환합니다. IN 또는 NOT IN과 함께 Null 값을 사용하면 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  IN 절에서 괄호 안에 너무 많은 값(콤마로 구분된 수천 개의 값)을 명시적으로 포함하면 리소스가 소비되고 오류 8623 또는 8632가 반환됩니다. 이 문제를 해결하려면 IN 목록의 항목을 테이블에 저장하고, IN 절 내에서 SELECT 하위 쿼리를 사용합니다.  
   
  오류 8623:  
@@ -79,7 +79,7 @@ test_expression [ NOT ] IN
   
 ## <a name="examples"></a>예  
   
-### <a name="a-comparing-or-and-in"></a>1\. OR와 IN 비교  
+### <a name="a-comparing-or-and-in"></a>A. OR와 IN 비교  
  다음 예에서는 디자인 엔지니어, 툴 엔지니어 또는 마케팅 지원 담당 직원들의 이름 목록을 선택합니다.  
   
 ```  
@@ -125,7 +125,7 @@ Mary        Dempsey     Marketing Assistant
 (8 row(s) affected)  
 ```  
   
-### <a name="b-using-in-with-a-subquery"></a>2\. 하위 쿼리와 함께 IN 사용  
+### <a name="b-using-in-with-a-subquery"></a>B. 하위 쿼리와 함께 IN 사용  
  다음 예에서는 `SalesPerson` 테이블에서 연간 판매 할당량이 $250,000 이상인 모든 직원들의 ID를 찾은 다음 `Employee` 테이블에서 `EmployeeID`가 `SELECT` 하위 쿼리의 결과와 일치하는 모든 직원들의 이름을 선택합니다.  
   
 ```  
@@ -171,10 +171,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN 및 NOT IN 사용  
- 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `FactInternetSales` 테이블에서 찾습니다.  
+ 다음 예제에서는 `FactInternetSales` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `FactInternetSalesReason` 테이블에서 찾습니다.  
+ 다음 예제에서는 `FactInternetSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -195,7 +195,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ```  
   
 ### <a name="e-using-in-with-an-expression-list"></a>E. 식 목록과 함께 IN 사용  
- 다음 예제에서는 이름이 `Mike` 또는 `Michael`인 직원을 위한 `DimEmployee` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
+ 다음 예제에서는 이름이 `DimEmployee` 또는 `Mike`인 직원을 위한 `Michael` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -212,7 +212,7 @@ WHERE FirstName IN ('Mike', 'Michael');
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [ALL&#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [SOME &#124; ANY&#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   

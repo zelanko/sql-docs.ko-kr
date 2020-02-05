@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254099"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
@@ -103,11 +103,11 @@ WITH (
  GO
 ```
 
-`CREATE AVAILABILITY GROUP` 문에서 주 복제본에 대해 `SEEDING_MODE`를 설정하는 경우 주 복제본에 이미 데이터베이스의 주 읽기/쓰기 복사본이 있으므로 아무런 영향을 주지 않습니다. `SEEDING_MODE`는 다른 복제본이 주 복제본이 되고 데이터베이스가 추가된 경우에만 적용됩니다. 시드 모드는 나중에 변경할 수 있습니다([복제본의 시드 모드 변경](#change-the-seeding-mode-of-a-replica) 참조).
+`SEEDING_MODE` 문에서 주 복제본에 대해 `CREATE AVAILABILITY GROUP`를 설정하는 경우 주 복제본에 이미 데이터베이스의 주 읽기/쓰기 복사본이 있으므로 아무런 영향을 주지 않습니다. `SEEDING_MODE`는 다른 복제본이 주 복제본이 되고 데이터베이스가 추가된 경우에만 적용됩니다. 시드 모드는 나중에 변경할 수 있습니다([복제본의 시드 모드 변경](#change-the-seeding-mode-of-a-replica) 참조).
 
 보조 복제본이 되는 인스턴스에서 인스턴스가 조인되면 다음 메시지가 SQL Server 로그에 추가됩니다.
 
->가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `AUTOMATIC`의 `SEEDING_MODE`가 있습니다. `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
+>가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `SEEDING_MODE`의 `AUTOMATIC`가 있습니다. `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
 
 ### <a name = "grantCreate"></a> 보조 복제본에서 가용성 그룹에 데이터베이스 만들기 권한 부여
 

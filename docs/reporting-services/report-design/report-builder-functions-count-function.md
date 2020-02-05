@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579715"
 ---
 # <a name="report-builder-functions---count-function"></a>보고서 작성기 함수 - Count 함수
@@ -41,7 +41,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>반환 형식  
  **Integer**를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
  *Expression* 에는 다음 예외와 조건이 있는 중첩 집계 함수에 대한 호출이 포함될 수 있습니다.  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  예제  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 코드 예에서는 기본 범위 및 부모 그룹 범위에 대해 Null이 아닌 `Size` 값의 수를 계산하는 식을 보여 줍니다. `GroupbySubcategory`자식 그룹에 속하는 행의 셀에 식이 추가됩니다. 부모 그룹은 `GroupbyCategory`입니다. 식은 `GroupbySubcategory` (기본 범위)에 대한 결과를 표시한 후 `GroupbyCategory` (부모 그룹 범위)에 대한 결과를 표시합니다.  
   
 > [!NOTE]  

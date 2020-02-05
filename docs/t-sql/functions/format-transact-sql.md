@@ -19,19 +19,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155803"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-지정된 형식 및 선택적 문화권으로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
+지정된 형식 및 선택적 culture로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
   
  *format* 인수는 유효한 .NET Framework 형식 문자열을 표준 형식 문자열(예: "C" 또는 "D") 또는 날짜 및 숫자 값에 대한 사용자 지정 문자 패턴(예: "MMMM DD, yyyy (dddd)")으로 포함해야 합니다. 복합 서식 지정은 지원되지 않습니다. 이러한 형식 지정 패턴에 대한 자세한 설명은 .NET Framework 설명서에서 일반적인 문자열 서식 지정, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식을 참조하세요. 시작할 때 유용한 항목은 "[형식 지정](https://go.microsoft.com/fwlink/?LinkId=211776)"입니다.  
   
- *culture*  
+ *문화권*  
  culture를 지정하는 선택적 **nvarchar** 인수입니다.  
   
  *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*에 지정할 수 있는 culture는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 인수로 지원하는 모든 culture를 지정할 수 있습니다. *culture* 인수가 유효하지 않을 경우 FORMAT은 오류를 발생시킵니다.  
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  반환 값의 길이는 *format*에 의해 결정됩니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  FORMAT은 *valid*가 아닌 *culture* 이외의 다른 오류에 대해 NULL을 반환합니다. 예를 들어 *format*에 지정된 값이 유효하지 않으면 NULL이 반환됩니다.  
 
@@ -74,28 +74,28 @@ FORMAT ( value, format [, culture ] )
   
  다음 표에서는 *value* 인수에 사용할 수 있는 데이터 형식과 함께 .NET Framework 매핑에서 이에 해당하는 데이터 형식을 보여 줍니다.  
   
-|범주|형식|.NET 형식|  
+|Category|Type|.NET 형식|  
 |--------------|----------|---------------|  
-|숫자|BIGINT|Int64|  
+|숫자|bigint|Int64|  
 |숫자|int|Int32|  
-|숫자|SMALLINT|Int16|  
-|숫자|TINYINT|Byte|  
-|숫자|Decimal|SqlDecimal|  
-|숫자|NUMERIC|SqlDecimal|  
-|숫자|FLOAT|Double|  
-|숫자|REAL|단일|  
-|숫자|SMALLMONEY|Decimal|  
+|숫자|smallint|Int16|  
+|숫자|tinyint|Byte|  
+|숫자|decimal|SqlDecimal|  
+|숫자|numeric|SqlDecimal|  
+|숫자|float|Double|  
+|숫자|real|Single|  
+|숫자|smallmoney|Decimal|  
 |숫자|money|Decimal|  
-|날짜 및 시간|날짜|DateTime|  
-|날짜 및 시간|Time|TimeSpan|  
-|날짜 및 시간|DATETIME|DateTime|  
+|날짜 및 시간|date|DateTime|  
+|날짜 및 시간|time|TimeSpan|  
+|날짜 및 시간|Datetime|DateTime|  
 |날짜 및 시간|smalldatetime|DateTime|  
-|날짜 및 시간|Datetime2|DateTime|  
+|날짜 및 시간|datetime2|DateTime|  
 |날짜 및 시간|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-format-example"></a>1\. 간단한 FORMAT 예
+### <a name="a-simple-format-example"></a>A. 간단한 FORMAT 예
 
  다음 예에서는 다양한 culture에 따라 형식이 지정된 간단한 날짜를 반환합니다.  
   
@@ -128,7 +128,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>2\. 사용자 지정 서식 문자열이 포함된 FORMAT
+### <a name="b-format-with-custom-formatting-strings"></a>B. 사용자 지정 서식 문자열이 포함된 FORMAT
 
  다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예는 현재 날짜가 2012년 9월 27일인 경우를 가정합니다. 이러한 서식과 다른 사용자 지정 서식에 대한 자세한 내용은 [사용자 지정 숫자 형식 문자열](https://msdn.microsoft.com/library/0c899ak8.aspx)을 참조하세요.  
   
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 숫자 유형이 있는 FORMAT
 
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 **Sales.CurrencyRate** 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](https://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
+ 다음 예에서는 **데이터베이스의**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](https://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

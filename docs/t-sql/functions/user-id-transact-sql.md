@@ -23,13 +23,13 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1b8b1b0b5a9254382490272bd92405f52ed90a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927602"
 ---
-# <a name="userid-transact-sql"></a>USER_ID(Transact-SQL)
+# <a name="user_id-transact-sql"></a>USER_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 사용자의 ID를 반환합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "67927602"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md)를 사용하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ USER_ID ( [ 'user' ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *사용자*를 생략하면 현재 사용자가 대신 사용됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS를 호출한 후 USER_ID를 호출하면 가장된 컨텍스트의 ID가 반환됩니다.  
   
  특정 데이터베이스 사용자에 매핑되지 않은 Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하면 USER_ID가 0(public의 ID)을 반환합니다. 이러한 보안 주체가 스키마를 지정하지 않고 개체를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 Windows 보안 주체에 매핑되는 암시적 사용자와 스키마를 생성합니다. 이렇게 생성된 사용자는 데이터베이스 연결에 사용할 수 없습니다. 암시적 사용자에 매핑되는 Windows 보안 주체로 USER_ID를 호출하면 암시적 사용자의 ID가 반환됩니다.  

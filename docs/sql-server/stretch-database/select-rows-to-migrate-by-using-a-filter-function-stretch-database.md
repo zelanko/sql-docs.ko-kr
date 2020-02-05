@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844545"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
@@ -40,7 +40,7 @@ ms.locfileid: "73844545"
  함수를 추가하기 위한 ALTER TABLE 구문은 이 문서의 뒷부분에 설명되어 있습니다.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>필터 함수에 대한 기본 요구 사항  
- 스트레치 데이터베이스 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
+ Stretch Database 필터 조건자에 필요한 인라인 테이블 값 함수는 다음 예제와 같습니다.  
   
 ```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
@@ -51,7 +51,7 @@ RETURN  SELECT 1 AS is_eligible
         WHERE <predicate>  
 ```  
   
- 이 함수의 매개 변수는 테이블의 열에 대한 식별자여야 합니다.  
+ 함수의 매개 변수는 테이블의 열에 대한 식별자이어야 합니다.  
   
  스키마 바인딩은 필터 함수에 사용되는 열이 삭제되거나 변경되는 것을 방지하는 데 필요합니다.  
   
@@ -65,7 +65,7 @@ RETURN  SELECT 1 AS is_eligible
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
- 각 조건은 하나의 기본 조건 또는 OR 논리 연산자로 조인된 여러 기본 조건으로 구성될 수 있습니다.  
+ 그러면 각 조건은 하나의 기본 조건 또는 OR 논리 연산자로 결합된 여러 기본 조건으로 구성할 수 있습니다.  
   
 ```  
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
@@ -108,7 +108,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   IN 연산자를 사용하여 함수 매개 변수를 상수 값 목록과 비교할 수 있습니다.  
   
-     다음은 *shipment_status`IN (N'Completed', N'Returned', N'Cancelled')` 열의 값이* 인지 확인하는 예제입니다.  
+     다음은 *shipment_status* 열의 값이 `IN (N'Completed', N'Returned', N'Cancelled')`인지 확인하는 예제입니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
@@ -136,7 +136,7 @@ RETURN  SELECT 1 AS is_eligible
 ```  
   
 ### <a name="constant-expressions"></a>상수 식  
- 필터 함수에 사용하는 상수는 함수를 정의할 때 계산될 수 있는 모든 명확한 식일 수 있습니다. 상수 식은 다음을 포함할 수 있습니다.  
+ 필터 함수에 사용하는 상수는 함수를 정의할 때 계산될 수 있는 모든 명확한 식일 수 있습니다. 상수 식에는 다음을 포함할 수 있습니다.  
   
 -   리터럴. `N'abc', 123`)을 입력합니다.  
   
@@ -152,7 +152,7 @@ RETURN  SELECT 1 AS is_eligible
  하위 쿼리 또는 명확하지 않은 함수(예: RAND() 또는 GETDATE())를 사용할 수 없습니다.  
   
 ## <a name="add-a-filter-function-to-a-table"></a>테이블에 필터 함수 추가  
- **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어  
+ **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 다음은 그 예입니다.  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -259,7 +259,7 @@ GO
   
 -   함수는 명확해야 합니다. 따라서 시간이 지남에 따라 슬라이딩 윈도우를 자동으로 다시 계산하는 함수를 만들 수 없습니다.  
   
--   함수에서 스키마 바인딩을 사용합니다. 따라서 단순히 **ALTER FUNCTION** 을 호출하여 슬라이딩 윈도우를 이동하는 방식으로 함수를 매일 “바로” 업데이트할 수 없습니다.  
+-   함수에서 스키마 바인딩을 사용해야 합니다. 따라서 단순히 **ALTER FUNCTION** 을 호출하여 슬라이딩 윈도우를 이동하는 방식으로 함수를 매일 “바로” 업데이트할 수 없습니다.  
   
  다음 예제와 같이 **systemEndTime** 열에 2016년 1월 1일 이전 값이 포함된 행을 마이그레이션하는 필터 함수로 시작합니다.  
   
@@ -288,7 +288,7 @@ SET (
   
 ```  
   
- 슬라이딩 윈도우를 업데이트하려는 경우 다음을 수행합니다.  
+ 슬라이딩 윈도우를 업데이트하려는 경우에 다음을 수행합니다.  
   
 1.  새 슬라이딩 윈도우를 지정하는 새 함수를 만듭니다. 다음 예제에서는 2016년 1월 1일 대신 2016년 1월 2일 이전 날짜를 선택합니다.  
   
@@ -368,7 +368,7 @@ COMMIT ;
   
     ```  
   
--   다음 예제에서는 BETWEEN 및 NOT BETWEEN 연산자를 사용합니다. BETWEEN과 NOT BETWEEN을 동등한 AND와 OR 식으로 대체한 후 결과 함수가 여기에 설명된 규칙을 준수하기 때문에 이렇게 사용하는 것은 올바릅니다.  
+-   다음 예제는 BETWEEN 및 NOT BETWEEN 연산자를 사용한 것입니다. BETWEEN과 NOT BETWEEN을 동등한 AND와 OR 식으로 대체한 후 결과 함수가 여기에 설명된 규칙을 준수하기 때문에 이렇게 사용하는 것은 올바릅니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     위 함수는 BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 다음 함수와 동일합니다.  
+     BETWEEN과 NOT BETWEEN 연산자를 동등한 AND와 OR 식으로 대체하고 나면 선행 함수는 다음 함수와 동등하게 됩니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   다음 함수는 함수를 정의할 때 대수 연산자 또는 기본 제공 함수를 사용하는 식이 상수로 계산되어야 하기 때문에 유효하지 않습니다. 대수 식 또는 함수 호출에는 열 참조를 포함할 수 없습니다.  
+-   다음 함수는 함수를 정의할 때 대수 연산자 또는 기본 제공 함수를 사용하는 식이 상수로 계산되어야 하기 때문에 유효하지 않습니다. 대수 식 또는 함수 호출에 열 참조를 포함시킬 수 없습니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -484,7 +484,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>스트레치 데이터베이스에서 필터 함수를 적용하는 방법  
- 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
+ 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 다음은 그 예입니다.  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +493,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  함수에서 행에 대해 비어 있지 않은 결과가 반환되는 경우 해당 행은 마이그레이션에 적합합니다.  
   
 ## <a name="replacePredicate"></a>기존 필터 함수 바꾸기  
- **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 예를 들어  
+ **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 다음은 그 예입니다.  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -514,7 +514,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   `<, <=, >, >=`  비교의 일부인 상수 값만 함수를 덜 제한적으로 만드는 방식으로 변경할 수 있습니다.  
   
-### <a name="example-of-a-valid-replacement"></a>유효한 바꾸기의 예제  
+### <a name="example-of-a-valid-replacement"></a>올바른 대체의 예제  
  다음 함수를 현재 필터 함수라고 가정합니다.  
   
 ```sql  
@@ -588,7 +588,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>테이블에서 필터 함수 제거  
- 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어  
+ 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 다음은 그 예입니다.  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

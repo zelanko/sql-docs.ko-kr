@@ -1,29 +1,28 @@
 ---
-title: 서버 연결 후 자동으로 추적 시작(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 서버 연결 후 자동으로 추적 시작
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- automatic trace start
-- traces [SQL Server], starting
-- starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cda5aeb04517b0879a8139432f58bdbc08fe553
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059718"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307811"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>서버 연결 후 자동으로 추적 시작(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]인스턴스에 연결한 후 추적을 자동으로 시작하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]인스턴스에 연결한 후 추적을 자동으로 시작하는 방법에 대해 설명합니다.  
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 서버에 연결한 후 추적을 자동으로 시작하려면  
   
@@ -35,6 +34,6 @@ ms.locfileid: "68059718"
 >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 추적 속성을 편집하려면 먼저 이 옵션을 선택 취소해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577180"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>보고서 작성기 함수 - RunningValue 함수
@@ -36,12 +36,12 @@ RunningValue(expression, function, scope)
  (**Enum**) 식에 적용할 집계 함수의 이름입니다(예: **Sum**). 이 함수는 **RunningValue**, **RowNumber**또는 **Aggregate**일 수 없습니다.  
   
  *범위*  
- (**String**) 집계를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름인 문자열 상수 또는 null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
+ (**String**) 집계를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름인 문자열 상수 또는 null(**의** Nothing[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  반환 형식은 *function* 매개 변수에 지정된 집계 함수에 의해 결정됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **RunningValue** 값은 범위의 각 새로운 인스턴스에 대해 0으로 다시 설정됩니다. 그룹이 지정되어 있는 경우 그룹 식이 변경되면 실행 값이 다시 설정됩니다. 데이터 영역이 지정되어 있는 경우 데이터 영역의 새 인스턴스 각각에 대해 실행 값이 다시 설정됩니다. 데이터 세트가 지정되어 있으면 전체 데이터 세트에서 실행 값이 다시 설정되지 않습니다.  
   
  **RunningValue** 는 필터 또는 정렬 식에 사용할 수 없습니다.  

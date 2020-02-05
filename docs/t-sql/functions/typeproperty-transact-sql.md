@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098630"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68098630"
 
   데이터 형식에 관한 정보를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,12 +47,12 @@ TYPEPROPERTY (type , property)
  *property*  
  데이터 형식에 대해 반환할 정보의 유형입니다. *property*는 다음 값 중 하나일 수 있습니다.  
   
-|속성|설명|반환 값|  
+|속성|Description|반환 값|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|데이터 형식이 Null 값을 허용합니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
+|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 반드시 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
 |**정밀도**|데이터 형식의 전체 자릿수입니다.|자릿수 또는 문자 수입니다.<br /><br /> -1 = **xml** 또는 큰 값 데이터 형식<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**소수 자릿수**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric**이 아니거나 데이터 형식을 찾지 못함.|  
+|**규모**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric**이 아니거나 데이터 형식을 찾지 못함.|  
 |**UsesAnsiTrim**|데이터 형식을 만들 때 ANSI 패딩 설정을 ON으로 설정했습니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾을 수 없거나 이진 또는 문자열 데이터 형식이 아님.|  
   
 ## <a name="return-types"></a>반환 형식  
@@ -65,7 +65,7 @@ TYPEPROPERTY (type , property)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-identifying-the-owner-of-a-data-type"></a>1\. 데이터 형식의 소유자 확인  
+### <a name="a-identifying-the-owner-of-a-data-type"></a>A. 데이터 형식의 소유자 확인  
  다음 예에서는 데이터 형식의 소유자를 반환합니다.  
   
 ```  
@@ -73,7 +73,7 @@ SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id,
 FROM sys.types;  
 ```  
   
-### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>2\. tinyint 데이터 형식의 전체 자릿수 반환  
+### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>B. tinyint 데이터 형식의 전체 자릿수 반환  
  다음 예제에서는 `tinyint` 데이터 형식의 자릿수 또는 전체 자릿수를 반환합니다.  
   
 ```  

@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281615"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
@@ -27,7 +27,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 최신 버전의 Visual Studio Code를 설치하고 `mssql` 확장을 로드했는지 확인합니다. 이러한 도구를 다운로드하려면 다음 페이지를 참조하세요.
--   [Visual Studio 코드 다운로드](https://code.visualstudio.com/Download)
+-   [Visual Studio Code 다운로드](https://code.visualstudio.com/Download)
 -   [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>지원 플랫폼
@@ -36,7 +36,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 
 -   Windows의 SQL Server
 
--   Azure SQL Database Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+-   Azure SQL Database. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 이 빠른 시작의 정보를 사용하여 Linux에서 SSIS 패키지를 실행할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
@@ -54,7 +54,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 
 Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
@@ -74,12 +74,12 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
 
 4. 프롬프트에 따라 새 연결 프로필에 대한 연결 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다. 
 
-   | 설정       | 제안된 값 | 추가 정보 |
+   | 설정       | 제안 값 | 추가 정보 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 | Azure SQL Database 서버에 연결하는 경우 이름은 `<server_name>.database.windows.net` 형식입니다. |
    | **데이터베이스 이름** | **SSISDB** | 연결할 데이터베이스의 이름입니다. |
    | **인증** | SQL 로그인 | SQL Server 인증을 사용하여 SQL Server나 Azure SQL Database에 연결할 수 있습니다. Azure SQL Database 서버에 연결하는 경우 Windows 인증을 사용할 수 없습니다. |
-   | **User name** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
+   | **사용자 이름** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 'Yes'를 선택합니다. |
    | **이 프로필의 이름을 입력합니다.** | 프로필 이름(예: **mySSISServer**) | 저장된 프로필 이름은 후속 로그인에서 연결 속도를 높입니다. | 

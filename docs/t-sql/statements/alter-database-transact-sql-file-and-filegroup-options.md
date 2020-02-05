@@ -45,10 +45,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244434"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
@@ -319,7 +319,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 > [!NOTE]
 > 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.
 > [!TIP]
-> 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
+> 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 **함수의**Updateability`DATABASEPROPERTYEX` 속성을 검사하여 결정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -398,7 +398,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가
 
-다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
+다음 예에서는 `Test1FG1` 데이터베이스에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
 
 ```sql
 USE master
@@ -847,7 +847,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 > [!NOTE]
 > 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.
 
-이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
+이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 **함수의**Updateability`DATABASEPROPERTYEX` 속성을 검사하여 결정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -879,7 +879,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가
 
-다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
+다음 예에서는 `Test1FG1` 데이터베이스에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
 
 ```sql
 USE master

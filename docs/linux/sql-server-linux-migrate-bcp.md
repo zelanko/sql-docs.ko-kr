@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127317"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>bcp를 사용하여 SQL Server on Linux로 데이터 대량 복사
@@ -94,7 +94,7 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 - `-t`: 필드 종결자를 지정합니다. 데이터 파일에서 레코드의 필드 종결자로 `comma`를 사용하고 있습니다.
 
 > [!NOTE]
-> 이 예제에서는 사용자 지정 행 종결자를 지정하지 않습니다. 앞에서 `cat` 명령을 사용하여 데이터 파일을 만들 때 텍스트 데이터 파일의 행이 `newline`으로 올바르게 종결되었습니다.
+> 이 예제에서는 사용자 지정 행 종결자를 지정하지 않습니다. 앞에서 `newline` 명령을 사용하여 데이터 파일을 만들 때 텍스트 데이터 파일의 행이 `cat`으로 올바르게 종결되었습니다.
 
 터미널 창에서 다음 명령을 실행하면 데이터를 성공적으로 가져왔는지 확인할 수 있습니다. 필요한 경우, 명령을 실행하기 전에 `username` 및 `<your_password>`를 바꾸어야 합니다.
 ```bash 
@@ -134,7 +134,7 @@ cat ~/test_export.txt
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [bcp 유틸리티](../tools/bcp-utility.md)
 - [bcp 사용 시 데이터 형식의 호환성](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [BULK INSERT를 사용하여 대량 데이터 가져오기](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)

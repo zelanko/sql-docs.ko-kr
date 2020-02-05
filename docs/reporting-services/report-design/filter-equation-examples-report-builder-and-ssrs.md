@@ -11,10 +11,10 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579062"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>필터 수식 예(보고서 작성기 및 SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "65579062"
 ## <a name="filter-examples"></a>필터 예  
  다음 표에서는 다양한 데이터 형식 및 연산자를 사용하는 필터 수식의 예를 보여 줍니다. 비교 범위는 필터가 정의된 보고서 항목에 따라 결정됩니다. 예를 들어 데이터 세트에 대해 정의된 필터의 경우 **TOP % 10**은 데이터 세트의 상위 10% 값이며 그룹에 대해 정의된 필터의 경우 **TOP % 10**은 그룹의 상위 10% 값입니다.  
   
-|간단한 식|데이터 형식|연산자|값|설명|  
+|간단한 식|데이터 형식|연산자|값|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|7보다 큰 데이터 값을 포함합니다.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|상위 10개 데이터 값을 포함합니다.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|데이터 값의 상위 20%를 포함합니다.|  
+|`[SUM(Quantity)]`|**정수**|**>**|`7`|7보다 큰 데이터 값을 포함합니다.|  
+|`[SUM(Quantity)]`|**정수**|**TOP N**|`10`|상위 10개 데이터 값을 포함합니다.|  
+|`[SUM(Quantity)]`|**정수**|**TOP %**|`20`|데이터 값의 상위 20%를 포함합니다.|  
 |`[Sales]`|**텍스트**|**>**|`=CDec(100)`|$100보다 큰 System.Decimal 형식(SQL "money" 데이터 형식)의 모든 값을 포함합니다.|  
 |`[OrderDate]`|**DateTime**|**>**|`2008-01-01`|2008년 1월 1일부터 현재 날짜까지의 모든 날짜를 포함합니다.|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|2008년 1월 1일부터 2008년 2월 1일까지의 날짜를 포함합니다.|  

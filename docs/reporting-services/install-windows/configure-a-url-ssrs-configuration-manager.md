@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594114"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
@@ -54,7 +54,7 @@ ms.locfileid: "73594114"
   
 3.  가상 디렉터리를 지정합니다. 가상 디렉터리 이름으로 요청을 수신할 애플리케이션을 식별할 수 있습니다. IP 주소와 포트는 여러 애플리케이션에서 공유할 수 있으므로 가상 디렉터리 이름이 요청을 수신할 애플리케이션을 지정합니다.  
   
-     요청이 원하는 대상에 도달하게 하려면 이 값이 고유해야 합니다. 이 값은 필수 사항입니다. 대/소문자를 구분하지 않습니다. 가상 디렉터리 이름과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션의 인스턴스는 일 대 일 대응됩니다. 같은 애플리케이션 인스턴스에 대한 URL을 여러 개 만든 경우 이 애플리케이션 인스턴스에 대해 정의한 모든 URL에 같은 가상 디렉터리 이름을 사용해야 합니다.  
+     요청이 원하는 대상에 도달하게 하려면 이 값이 고유해야 합니다. 이 값은 필수입니다. 대/소문자를 구분하지 않습니다. 가상 디렉터리 이름과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션의 인스턴스는 일 대 일 대응됩니다. 같은 애플리케이션 인스턴스에 대한 URL을 여러 개 만든 경우 이 애플리케이션 인스턴스에 대해 정의한 모든 URL에 같은 가상 디렉터리 이름을 사용해야 합니다.  
   
      보고서 서버 웹 서비스의 기본 가상 디렉터리 이름은 **ReportServer**입니다.  
   
