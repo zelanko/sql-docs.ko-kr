@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107141"
 ---
 # <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
@@ -90,7 +90,7 @@ ms.locfileid: "68107141"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -130,7 +130,7 @@ ms.locfileid: "68107141"
  인덱스가 생성된 테이블 또는 뷰의 이름을 표시합니다.  
   
  **인덱스 유형**  
- 인덱스 유형을 표시합니다. 인덱스 유형에는 **클러스터형**, **비클러스터형**, **공간** 또는 **XML**이 있습니다.  
+ 인덱스의 유형( **클러스터형**, **비클러스터형**, **공간**또는 **XML**)을 표시합니다.  
   
  **상태**  
  비활성화 작업의 상태를 표시합니다. 실행 후에 표시될 수 있는 값은 다음과 같습니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "68107141"
   
      인덱스 비활성화가 시작되었지만 아직 완료되지 않았습니다.  
   
--   **성공**  
+-   **Success**  
   
      비활성화 작업이 성공적으로 완료되었습니다.  
   

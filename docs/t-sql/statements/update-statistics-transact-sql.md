@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982561"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971457"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73982561"
   
 통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 애플리케이션에 따라 달라집니다. `UPDATE STATISTICS`은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -111,7 +111,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  대부분의 워크로드에서 전체 검사가 필요하지 않으며 기본 샘플링이 적당합니다.  
 그러나 매우 폭 넓은 데이터 배포에 민감한 특정 워크로드의 경우 샘플 크기를 증가시켜야 할 수 있으며 심지어 전체 검사가 필요할 수도 있습니다.  
-자세한 내용은 [CSS SQL 에스컬레이션 서비스 블로그](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)를 참조하세요.  
+자세한 내용은 [CSS SQL 에스컬레이션 서비스 블로그](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)를 참조하세요.  
   
  RESAMPLE  
  가장 최근의 샘플링 주기를 사용하여 각 통계를 업데이트합니다.  
@@ -166,7 +166,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ### <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS를 사용하는 경우  
  `UPDATE STATISTICS`를 사용하는 경우에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
@@ -234,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-update-all-statistics-on-a-table"></a>1\. 테이블에 대한 모든 통계 업데이트  
+### <a name="a-update-all-statistics-on-a-table"></a>A. 테이블에 대한 모든 통계 업데이트  
  다음 예제에서는 `SalesOrderDetail` 테이블에서 모든 인덱스에 대한 통계를 업데이트합니다.  
   
 ```sql  
@@ -244,7 +244,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>2\. 인덱스에 대한 통계 업데이트  
+### <a name="b-update-the-statistics-for-an-index"></a>B. 인덱스에 대한 통계 업데이트  
  다음 예에서는 `AK_SalesOrderDetail_rowguid` 테이블의 `SalesOrderDetail` 인덱스에 대한 통계를 업데이트합니다.  
   
 ```sql  
@@ -279,17 +279,17 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 테이블에 대한 모든 통계 업데이트  
- 다음 예제에서는 `Customer` 테이블에서 `CustomerStats1` 통계를 업데이트합니다.  
+ 다음 예제에서는 `CustomerStats1` 테이블에서 `Customer` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 전체 검사를 사용하여 통계 업데이트  
- 다음 예제에서는 `Customer` 테이블의 모든 행 검사를 기반으로 `CustomerStats1` 통계를 업데이트합니다.  
+ 다음 예제에서는 `CustomerStats1` 테이블의 모든 행 검사를 기반으로 `Customer` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

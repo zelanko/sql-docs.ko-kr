@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769728"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287494"
 ---
 # <a name="publisher-information-agents"></a>게시자 정보, 에이전트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68769728"
   
 -   실행 중  
   
--   완료  
+-   Completed  
   
  **게시**  
  에이전트와 연결된 게시의 이름입니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "68769728"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -112,7 +112,7 @@ ms.locfileid: "68769728"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -151,7 +151,7 @@ ms.locfileid: "68769728"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -190,7 +190,7 @@ ms.locfileid: "68769728"
  **마지막 시작 시간**  
  마지막으로 작업이 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  작업이 실행된 시간입니다. 이 시간은 작업이 현재 실행되고 있는 경우에는 경과된 시간을 나타내고 작업이 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
