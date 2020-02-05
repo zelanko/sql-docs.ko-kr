@@ -1,10 +1,7 @@
 ---
-title: TestServer 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TestServer 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 7d861ec513297bf5c9abe6bf3654731008960c3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105930"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307038"
 ---
 # <a name="testserver-element-dta"></a>TestServer 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정합니다.  
+
+프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105930"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  

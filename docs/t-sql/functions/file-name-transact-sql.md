@@ -26,18 +26,18 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071489"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME(Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 이 함수는 지정한 파일 ID 번호에 해당하는 논리적 파일 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,11 +52,11 @@ FILE_NAME ( file_id )
 ## <a name="return-types"></a>반환 형식  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
-이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  
+이 예에서는 `file_ID 1` 데이터베이스에서 `file_ID` 및 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 대한 파일 이름을 반환합니다.  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

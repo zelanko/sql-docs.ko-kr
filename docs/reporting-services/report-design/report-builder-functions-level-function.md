@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579495"
 ---
 # <a name="report-builder-functions---level-function"></a>보고서 작성기 함수 - Level 함수
@@ -35,7 +35,7 @@ Level(scope)
 ## <a name="return-type"></a>반환 형식  
  **Integer**를 반환합니다. *scope* 가 데이터 세트 또는 데이터 영역을 지정하거나 비재귀 그룹화( **Parent** 요소 없는 그룹화)를 지정하면 **Level**은 0을 반환합니다. *scope* 를 생략하면 현재 범위의 수준이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Level** 함수에서 반환되는 값은 0에서 시작합니다. 즉, 계층의 첫 수준은 0입니다.  
   
  **Level** 함수는 직원 목록과 같은 재귀 계층에서 들여쓰기를 제공하는 데 사용할 수 있습니다.  

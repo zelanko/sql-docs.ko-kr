@@ -14,10 +14,10 @@ ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6bb017bdd22b98c255f5b40b680f9e7aa5ef31f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288260"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING(SSIS 식)
@@ -47,7 +47,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SUBSTRING은 1부터 시작하는 인덱스를 사용합니다. *position* 이 1이면 부분 문자열은 *character_expression*의 첫 번째 문자로 시작합니다.  
   
  SUBSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다. 문자열 리터럴이나 DT_STR 데이터 형식의 데이터 열인 *character_expression* 인수는 SUBSTRING이 연산을 수행하기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  

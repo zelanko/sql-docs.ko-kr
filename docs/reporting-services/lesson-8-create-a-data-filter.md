@@ -9,10 +9,10 @@ ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512395"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기

@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050823"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 개체 사용 권한(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050823"
   
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,11 +62,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  ALL을 부여하더라도 일부 가능한 사용 권한은 부여되지 않습니다. ALL을 부여하는 것은 지정된 개체에 적용할 수 있는 모든 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 사용 권한을 부여하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
-- 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
-- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
-- 저장 프로시저 사용 권한: EXECUTE  
-- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
-- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+- 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
+- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- 저장 프로시저 사용 권한: EXECUTE.  
+- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -112,10 +112,10 @@ PRIVILEGES
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어, 테이블에 대한 ALTER 사용 권한과 함수에 대한 REFERENCE 사용 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
   
  개체에 대한 정보는 다양한 카탈로그 뷰에 표시됩니다. 자세한 내용은 [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)을 참조하세요.  
   
@@ -154,7 +154,7 @@ PRIVILEGES
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-select-permission-on-a-table"></a>1\. 테이블에 대한 SELECT 사용 권한 부여  
+### <a name="a-granting-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 사용 권한 부여  
  다음 예에서는 사용자 `SELECT`에게 `RosaQdM` 데이터베이스의 `Person.Address` 테이블에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  
   
 ```  
@@ -162,7 +162,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 사용 권한 부여  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. 저장 프로시저에 대한 EXECUTE 사용 권한 부여  
  다음 예에서는 `EXECUTE`이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 사용 권한을 부여합니다.  
   
 ```  

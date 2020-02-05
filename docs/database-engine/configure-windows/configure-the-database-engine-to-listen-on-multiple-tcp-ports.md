@@ -19,10 +19,10 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012723"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
@@ -75,9 +75,9 @@ ms.locfileid: "68012723"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
   
-1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 _<instance_name>_ **에 대한 프로토콜**을 클릭합니다.  
+1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 **<instance_name>** _에 대한 프로토콜_을 클릭합니다.  
   
-2.  _<instance_name>_ **에 대한 프로토콜**을 확장한 다음 **TCP/IP**를 클릭합니다.  
+2.  **<instance_name>** _에 대한 프로토콜_을 확장한 다음 **TCP/IP**를 클릭합니다.  
   
 3.  오른쪽 창에서 설정하려는 해제된 각 IP 주소를 마우스 오른쪽 단추로 클릭한 다음 **설정**을 클릭합니다.  
   

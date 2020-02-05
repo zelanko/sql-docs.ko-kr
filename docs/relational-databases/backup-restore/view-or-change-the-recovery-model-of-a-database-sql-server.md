@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254049"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
@@ -38,7 +38,7 @@ ms.locfileid: "75254049"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 
--   [전체 복구 모델 또는 대량 로그된 복구 모델](recovery-models-sql-server.md)에서 전환하기 **전에** [트랜잭션 로그를 백업](back-up-a-transaction-log-sql-server.md)합니다.  
+-   [전체 복구 모델 또는 대량 로그된 복구 모델](back-up-a-transaction-log-sql-server.md)에서 전환하기 **전에** [트랜잭션 로그를 백업](recovery-models-sql-server.md)합니다.  
   
 -   대량 로그 모델에서는 지정 시간 복구를 사용할 수 없습니다. 트랜잭션 로그 복원이 필요한 대량 로그된 복구 모델에서 트랜잭션을 실행하면 데이터가 손실될 수 있습니다. 재해 복구 시나리오에서 데이터 복구 기능을 최대화하기 위해 다음 조건에서만 대량 로그된 복구 모델로 전환합니다.  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>권장 사항: 복구 모델을 변경한 후  
+##  <a name="FollowUp"></a> 권장 사항: 복구 모델을 변경한 후  
   
 -   **전체 및 대량 로그 복구 모델 간에 전환한 후**  
   
@@ -116,7 +116,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   전체 복구 모델이나 대량 로그 복구 모델로 전환한 후 즉시 전체 또는 차등 데이터베이스 백업을 수행하여 로그 체인을 시작합니다.  
   
-        >**참고:** 전체 로그 복구 모델이나 대량 로그 복구 모델로의 전환은 첫 번째 데이터 백업 후에만 적용됩니다.  
+        >**참고:** 전체 로그 복구 모델이나 대량 로그된 복구 모델로의 전환은 첫 번째 데이터 백업 후에만 적용됩니다.  
   
     -   정기적인 로그 백업을 예약하고 해당 일정에 따라 복원 계획을 업데이트합니다.  
   

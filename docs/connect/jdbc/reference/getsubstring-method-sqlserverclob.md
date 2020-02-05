@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979329"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 메서드(SQLServerClob)
@@ -44,13 +44,13 @@ public java.lang.String getSubString(long pos,
   
  복사할 연속된 문자의 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  CLOB에서 지정된 부분 문자열인 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getSubString 메서드 java.sql.Clob 인터페이스의 getSubString 메서드에 의해 지정됩니다.  
   
  null 또는 길이가 0인 CLOB에서 0개의 문자를 가져오려고 하면 빈 문자열이 반환됩니다. 길이가 0인 CLOB에서 위치 1이 아닌 다른 위치에 있는 임의 길이의 문자를 가져오려고 하면 위치 예외가 발생합니다.  

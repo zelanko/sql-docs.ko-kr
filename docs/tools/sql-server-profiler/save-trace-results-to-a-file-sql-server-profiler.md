@@ -1,28 +1,28 @@
 ---
-title: 추적 결과를 파일에 저장(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 파일에 추적 결과 저장
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 264443f7c994b598446385876500c28c42737bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: dc77ef698496e79e56d818ab00a63f38e0ad7c38
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928798"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307453"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>추적 결과를 파일에 저장(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 파일에 저장하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 파일에 저장하는 방법에 대해 설명합니다.  
   
 ### <a name="to-save-trace-results-to-a-file"></a>파일에 추적 결과를 저장하려면  
   
@@ -56,6 +56,6 @@ ms.locfileid: "67928798"
         >  **서버에서 추적 데이터 처리**가 선택되지 않은 경우 이벤트 기록으로 인해 성능이 크게 저하되면 서버는 이벤트를 기록하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

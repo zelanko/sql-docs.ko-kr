@@ -10,10 +10,10 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 252162be51d79224ac786ff44ae2620f4f189f81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68046748"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
@@ -61,7 +61,7 @@ Windows Server 또는 Windows 도구에 대한 자세한 내용은 Windows 설�
   
 -   [확장 이벤트](../../relational-databases/extended-events/extended-events.md)
 -   [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
--   [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+-   [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
 -   [Distributed Replay Utility](../../tools/distributed-replay/sql-server-distributed-replay.md)  
 -   [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md)  
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 실행 계획  
@@ -74,7 +74,7 @@ Windows Server 또는 Windows 도구에 대한 자세한 내용은 Windows 설�
 > [!IMPORTANT]
 > SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
 
 > [!NOTE]
 > Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.

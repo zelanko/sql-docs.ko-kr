@@ -15,10 +15,10 @@ ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321970"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램

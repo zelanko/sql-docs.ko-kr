@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901937"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67901937"
 
   지정된 식이 NULL인지 여부를 확인합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ expression IS [ NOT ] NULL
   
  *expression*의 값이 NULL인 경우에는 IS NOT NULL이 FALSE를 반환하고 그렇지 않은 경우에는 TRUE를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  식이 NULL인지 확인하려면 = 또는 != 등의 비교 연산자 대신 IS NULL 또는 IS NOT NULL을 사용합니다. 비교 연산자는 두 인수 중 하나 또는 둘 다 NULL인 경우에 UNKNOWN을 반환합니다.  
   
 ## <a name="examples"></a>예  
@@ -83,7 +83,7 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 중간 이니셜이 있는 모든 직원의 전체 이름을 반환합니다.  
   
 ```  

@@ -1,10 +1,9 @@
 ---
-title: 열 속성(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 열 속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +15,18 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262560"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241268"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
+There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
 > 이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "68262560"
 **이름**  
 열의 이름을 표시합니다.  
   
-**데이터베이스 백업**  
+**Database**  
 선택한 열에 대한 데이터 원본의 이름을 표시합니다. OLE DB에만 적용됩니다.  
   
 **기타 범주**  
@@ -72,7 +73,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 **정밀도**  
 숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
-**소수 자릿수**  
+**규모**  
 숫자 데이터 형식에 대해 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 값은 전체 자릿수보다 작거나 같아야 합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
 ## <a name="column-properties-tab"></a>열 속성 탭  
@@ -102,10 +103,10 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 **길이**  
 문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다. 이 속성은 문자 기반 데이터 형식에 대해서만 사용할 수 있습니다.  
   
-**전체 자릿수**  
+**정밀도**  
 숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다. 이 속성은 숫자 데이터 형식에만 사용할 수 있습니다.  
   
-**소수 자릿수**  
+**규모**  
 숫자 데이터 형식에 대해 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 값은 전체 자릿수보다 작거나 같아야 합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다. 이 속성은 숫자 데이터 형식에만 사용할 수 있습니다.  
   
 **테이블 디자이너 범주**  

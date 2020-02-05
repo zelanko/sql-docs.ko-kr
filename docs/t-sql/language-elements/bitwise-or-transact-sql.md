@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942951"
 ---
 # <a name="-bitwise-or-transact-sql"></a>|(비트 OR)(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67942951"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 이진 식으로 변환되는 두 개의 지정된 정수 값 간에 비트 논리 OR 연산을 수행합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ expression | expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 정수 데이터 형식 범주나 **bit**, **binary** 또는 **varbinary** 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 비트 연산에서 이진 숫자로 취급됩니다.  
+ 정수 데이터 형식 범주나 [bit](../../t-sql/language-elements/expressions-transact-sql.md), **binary** 또는 **varbinary** 데이터 형식의 유효한 **식**입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
   
 > [!NOTE]  
 >  비트 연산에서는 하나의 *expression*만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
@@ -53,7 +53,7 @@ expression | expression
 ## <a name="result-types"></a>결과 형식  
  입력 값이 **int**이면 **int**를, 입력 값이 **smallint**이면 **smallint**를, 입력 값이 **tinyint**이면 **tinyint**를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  비트 | 연산자는 양쪽 식에 해당 비트를 취하면서 두 식 간에 비트 논리 OR를 수행합니다. 결과의 비트는 입력 식의 두 비트(확인 중인 현재 비트) 중 하나 또는 둘 모두의 값이 1이면 1로 설정됩니다. 입력 식에 값이 1인 비트가 없으면 결과의 비트는 0으로 설정됩니다.  
   
  왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 예제에서는 **smallint**_식_이 **int**로 변환됩니다.  

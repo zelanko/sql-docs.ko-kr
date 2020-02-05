@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997920"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997920"
 
   PolyBase Hadoop 및 Azure Blob 스토리지 연결을 위한 전역 구성 설정을 표시하거나 변경합니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,25 +58,25 @@ RECONFIGURE
   
 -   옵션 0: Hadoop 연결 사용 안 함  
   
--   옵션 1: Windows Server의 Hortonworks HDP 1.3  
+-   옵션 1: Windows Server에서 Hortonworks HDP 1.3  
   
 -   옵션 1: Azure Blob 스토리지(WASB[S])  
   
--   옵션 2: Linux의 Hortonworks HDP 1.3  
+-   옵션 2: Linux에서 Hortonworks HDP 1.3  
   
 -   옵션 3: Linux에서 Cloudera CDH 4.3  
   
--   옵션 4: Windows Server의 Hortonworks HDP 2.0  
+-   옵션 4: Windows Server에서 Hortonworks HDP 2.0  
   
 -   옵션 4: Azure Blob 스토리지(WASB[S])  
   
--   옵션 5: Linux의 Hortonworks HDP 2.0  
+-   옵션 5: Linux에서 Hortonworks HDP 2.0  
   
--   옵션 6: Linux의 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
+-   옵션 6: Linux에서 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
   
--   옵션 7: Linux의 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
+-   옵션 7: Linux에서 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
   
--   옵션 7: Windows Server의 Hortonworks 2.1, 2.2 및 2.3  
+-   옵션 7: Windows Server에서 Hortonworks 2.1, 2.2 및 2.3  
   
 -   옵션 7: Azure Blob 스토리지(WASB[S])  
   
@@ -91,7 +91,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> 결과 집합  
  매개 변수 없이 실행한 경우 **sp_configure** 는 다섯 개의 열이 있는 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
@@ -113,7 +113,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>예  
   
-### <a name="a-list-all-available-configuration-settings"></a>1\. 모든 사용 가능한 구성 설정 나열  
+### <a name="a-list-all-available-configuration-settings"></a>A. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  
   
 ```  
@@ -122,7 +122,7 @@ EXEC sp_configure;
   
  결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **config_value** 는 재구성이 완료되면 SQL 또는 PolyBase에서 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
-### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>2\. 특정 구성 이름에 대한 구성 설정 나열  
+### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>B. 특정 구성 이름에 대한 구성 설정 나열  
   
 ```  
 EXEC sp_configure @configname='hadoop connectivity';  
@@ -142,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  

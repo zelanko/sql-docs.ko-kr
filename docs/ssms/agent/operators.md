@@ -1,10 +1,9 @@
 ---
-title: 운영자 | Microsoft 문서
-ms.custom: ''
+title: 연산자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260076"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247628"
 ---
 # <a name="operators"></a>연산자
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "68260076"
   
         운영자가 모두 호출기 공급자를 공유하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호출기-전자 메일 시스템에서 요청하는 특수한 전자 메일의 서식을 지정할 수 있습니다. 특수한 서식은 접두사 또는 접미사이며 전자 메일의 다음 항목에 포함될 수 있습니다.  
   
-        **제목:**  
+        **주체**:  
   
         **참조**:  
   
@@ -123,7 +124,7 @@ ms.locfileid: "68260076"
   
 |||  
 |-|-|  
-|**태스크**|**항목**|  
+|**작업**|**항목**|  
 |운영자 만들기 관련 태스크|[운영자 만들기](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |알림 할당 관련 태스크|[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification(Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

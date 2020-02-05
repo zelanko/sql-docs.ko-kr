@@ -16,10 +16,10 @@ ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082379"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 어셈블리 권한(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68082379"
 
   어셈블리에 대한 사용 권한을 취소합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  사용 권한을 취소할 어셈블리를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
- 사용 권한을 취소할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 사용 권한을 취소할 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
  AS *revoking_principal*  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -97,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어셈블리는 사용 권한 계층에서 부모 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 어셈블리에서 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한이 함께 나열되어 있습니다.  
   
 |어셈블리 사용 권한|어셈블리 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  

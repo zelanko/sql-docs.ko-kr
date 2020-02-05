@@ -13,10 +13,10 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82ec2ddf98780a7230ccc123e3de152ad643669a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296965"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>스크립트 구성 요소에서 데이터 원본에 연결
@@ -54,7 +54,7 @@ ms.locfileid: "71296965"
 > [!IMPORTANT]  
 >  스크립트 구성 요소에서 관리 코드를 작성하는 경우 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드는 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽고 **System.Data.OleDb** 네임스페이스에서 OLEDB **connection**의 연결 문자열을 사용하여 코드에서 직접 데이터 원본에 연결할 수 있습니다.  
 >   
->  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 ADO.NET 연결 관리자를 사용합니다. ADO.NET 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 .NET Framework Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드는 관리되지 않는 개체 대신 **System.Data.OleDb.OleDbConnection**을 반환합니다. ADO.NET 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 **연결 관리자** 대화 상자의 **모두** 페이지에서 Microsoft OLE DB Provider for Jet를 선택하고 Excel 통합 문서를 지정한 다음 **확장 속성** 값으로 `Excel 8.0`(Excel 97 이상의 경우)을 입력합니다.  
+>  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 ADO.NET 연결 관리자를 사용합니다. ADO.NET 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 .NET Framework Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드는 관리되지 않는 개체 대신 **System.Data.OleDb.OleDbConnection**을 반환합니다. ADO.NET 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 `Excel 8.0`연결 관리자**대화 상자의**모두**페이지에서 Microsoft OLE DB Provider for Jet를 선택하고 Excel 통합 문서를 지정한 다음**확장 속성**값으로**(Excel 97 이상의 경우)을 입력합니다.  
   
  스크립트 구성 요소에 연결 관리자를 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 원본 만들기](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 대상 만들기](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)를 참조하세요.  
   

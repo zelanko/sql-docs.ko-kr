@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fd10c7bac52e72f9740d9570d006d6df8cc92f07
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4fbadfe38611789e3a03d717d8411aed298ac6d2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770468"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287798"
 ---
-# <a name="mssqleng014151"></a>MSSQL_ENG014151
+# <a name="mssql_eng014151"></a>MSSQL_ENG014151
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>메시지 정보  
@@ -53,9 +53,9 @@ ms.locfileid: "68770468"
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

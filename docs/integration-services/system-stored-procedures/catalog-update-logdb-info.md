@@ -11,13 +11,13 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a1717afb32a5763c6fc73a86151b041069b467c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038605"
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info(SSISDB 데이터베이스)
+# <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -43,7 +43,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
 
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

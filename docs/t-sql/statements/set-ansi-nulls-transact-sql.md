@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929174"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67929174"
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 ON으로 설정되고 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>구문
 
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 ANSI_NULLS 옵션이 ON인 경우, WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 null 값이 있어도 0행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 이외의 값이 있어도 0행을 반환합니다.  
   
 ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 값이 있는 행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 열에 Null 이외의 값이 있는 행을 반환합니다. 또한 WHERE *column_name* <> *XYZ_value*를 사용하는 SELECT 문은 *XYZ_value*가 아니고 NULL이 아닌 모든 행을 반환합니다.  

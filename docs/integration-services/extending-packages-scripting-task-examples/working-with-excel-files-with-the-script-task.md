@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286570"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
@@ -80,7 +80,7 @@ ms.locfileid: "71286570"
   
     -   **ExcelFile**을 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFile** 변수를 선택합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71286570"
   
     -   **ExcelFileExists**를 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **…** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFileExists** 변수를 선택합니다.  
   
@@ -150,7 +150,7 @@ public class ScriptMain
   
     -   **ExcelTable** 및 **ExcelFile**을 쉼표로 구분하여 입력합니다 **.**  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTable** 및 **ExcelFile** 변수를 선택합니다.  
   
@@ -158,7 +158,7 @@ public class ScriptMain
   
     -   **ExcelTableExists**를 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTableExists** 변수를 선택합니다.  
   
@@ -257,7 +257,7 @@ public class ScriptMain
   
     -   **ExcelFolder**를 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
     -   **ExcelFiles**를 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
   
@@ -332,7 +332,7 @@ public class ScriptMain
   
     -   **ExcelFile**을 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
   
@@ -340,7 +340,7 @@ public class ScriptMain
   
     -   **ExcelTables**를 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
   
@@ -445,7 +445,7 @@ public class ScriptMain
   
     -   각 변수의 이름을 쉼표로 구분하여 입력합니다.  
   
-         -또는-  
+         또는  
   
     -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
   

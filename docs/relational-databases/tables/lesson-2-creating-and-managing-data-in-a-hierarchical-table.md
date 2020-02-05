@@ -1,5 +1,5 @@
 ---
-title: '2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft Docs'
+title: '2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031637"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>2단원: 계층적 테이블의 데이터 만들기 및 관리
@@ -30,7 +30,7 @@ ms.locfileid: "68031637"
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 - [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.   
+SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다.   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>hierarchyid 데이터 형식을 사용하여 테이블 만들기
 다음 예에서는 직원 데이터와 보고 계층을 포함하는 EmployeeOrg라는 테이블을 만듭니다. 이 예제에서는 AdventureWorks2017 데이터베이스에 테이블을 만들지만 이는 선택 사항입니다. 예를 간단히 유지하기 위해 테이블에는 다음 5개 열만 포함합니다.  

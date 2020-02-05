@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109370"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY(Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109370"
   
  JSON 문자열에서 개체 또는 배열 대신 스칼라 값을 추출하려면 [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)를 참조하세요. **JSON_VALUE**와 **JSON_QUERY**의 차이점에 대한 정보는, [JSON_VALUE 및 JSON_QUERY 비교](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,11 +69,11 @@ JSON 경로는 구문 분석을 위해 lax 또는 strict 모드를 지정할 수
   
 - strict 모드에서 **JSON_QUERY**는 오류를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 ### <a name="lax-mode-and-strict-mode"></a>lax 모드와 strict 모드
 
- 다음 JSON 텍스트를 고려해 보세요.  
+ 다음 JSON 텍스트를 살펴보십시오.  
   
 ```json  
 {
@@ -102,11 +102,11 @@ JSON 경로는 구문 분석을 위해 lax 또는 strict 모드를 지정할 수
 |$.info.type[0]|NULL|Error|배열이 아닙니다.|  
 |$.info.none|NULL|Error|속성이 없습니다.|  
 
-### <a name="using-jsonquery-with-for-json"></a>FOR JSON과 함께 JSON_QUERY 사용
+### <a name="using-json_query-with-for-json"></a>FOR JSON과 함께 JSON_QUERY 사용
 
 **JSON_QUERY**는 유효한 JSON 조각을 반환합니다. 결과적으로 **FOR JSON**은 **JSON_QUERY** 반환 값의 특수 문자를 이스케이프하지 않습니다.
 
-FOR JSON을 사용하여 결과를 반환하고 이미 JSON 형식인 데이터(열 또는 식의 결과)를 포함하는 경우 *path* 매개 변수 없이 **JSON_QUERY**로 JSON 데이터를 래핑하세요.
+FOR JSON을 사용하여 결과를 반환하고 이미 JSON 형식인 데이터(열 또는 식의 결과)를 포함하는 경우 **path** 매개 변수 없이 *JSON_QUERY*로 JSON 데이터를 래핑하세요.
 
 ## <a name="examples"></a>예  
   
@@ -132,7 +132,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

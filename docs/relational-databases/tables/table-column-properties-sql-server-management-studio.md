@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016237"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "68016237"
  **길이**  
  문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다. 이 속성은 문자 기반 데이터 형식에 대해서만 사용할 수 있습니다.  
   
- **소수 자릿수**  
+ **규모**  
  현재 열의 값의 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
  **정밀도**  

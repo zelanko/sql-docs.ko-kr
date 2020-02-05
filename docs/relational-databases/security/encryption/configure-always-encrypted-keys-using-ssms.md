@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595758"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비저닝
@@ -94,7 +94,7 @@ Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 키 저장소에 액세스하고 열 마스터 키를 사용하려면 키 저장소 또는/및 키에 대한 사용 권한이 필요할 수 있습니다.
 - **인증서 저장소 - 로컬 컴퓨터** - 열 마스터 키로 사용되는 인증서에 대한 읽기 권한이 있거나 컴퓨터의 관리자여야 합니다.
 - **Azure Key Vault** – 열 마스터 키를 포함하는 자격 증명 모음에 대한 *get*, *unwrapKey*, *wrapKey*, *sign* 및 *verify* 권한이 필요합니다.
-- **CNG(키 저장소 공급 깅업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
+- **CNG(키 저장소 공급 기업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 - **CAPI(암호화 서비스 공급 기업)** – 저장소 및 CSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 
 자세한 내용은 [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
@@ -103,7 +103,7 @@ Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 
 [Always Encrypted 마법사](../../../relational-databases/security/encryption/always-encrypted-wizard.md)는 선택한 데이터베이스 열을 암호화, 암호 해독 및 다시 암호화하는 도구입니다. 마법사는 이미 구성된 키를 사용할 수 있을 뿐 아니라 새 열 마스터 키와 새 열 암호화를 생성할 수도 있습니다. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)
 - [DAC 패키지로 Always Encrypted를 사용하여 열 암호화 구성](configure-always-encrypted-using-dacpac.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 키 회전](rotate-always-encrypted-keys-using-ssms.md)
@@ -111,7 +111,7 @@ Enclave를 사용하도록 설정된 열 마스터 키를 구성 중인 경우 S
 - [SQL Server 가져오기 및 내보내기 마법사에서 Always Encrypted를 사용하여 열에서 또는 열로 데이터 마이그레이션](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>참고 항목
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](configure-always-encrypted-using-sql-server-management-studio.md)

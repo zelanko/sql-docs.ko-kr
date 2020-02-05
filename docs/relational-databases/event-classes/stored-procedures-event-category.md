@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043305"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "68043305"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[RPC:Completed 이벤트 클래스](../../relational-databases/event-classes/rpc-completed-event-class.md)|RPC(원격 프로시저 호출)가 완료되었음을 나타냅니다.|  
 |[PreConnect:Completed 이벤트 클래스](../../relational-databases/event-classes/preconnect-completed-event-class.md)|리소스 관리자의 분류자 함수가 실행을 완료하는 때를 나타냅니다.|  

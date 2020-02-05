@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294219"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
@@ -76,7 +76,7 @@ ms.locfileid: "71294219"
  데이터 프로필 뷰어를 사용하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요. 데이터 프로필 뷰어에서 분석하는 프로필 출력을 만드는 데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요.  
   
 ### <a name="static-options"></a>정적 옵션  
- **파일**  
+ **열기**  
  데이터 프로파일링 태스크의 출력을 포함하는 저장된 파일을 찾아보려면 클릭합니다.  
   
  **프로필** 창  
@@ -114,10 +114,10 @@ ms.locfileid: "71294219"
  **길이**  
  프로파일링된 열에서 찾은 열 길이를 표시합니다.  
   
- **개수**  
+ **Count**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행 수를 표시합니다.  
   
- **백분율**  
+ **Percentage**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행의 비율을 표시합니다.  
   
 #### <a name="profile-type--column-null-ratio-profile"></a>프로필 유형 = 열 Null 비율 프로필  
@@ -139,10 +139,10 @@ ms.locfileid: "71294219"
  테이블 또는 뷰의 행 수를 표시합니다.  
   
 ##### <a name="pattern-distribution-pane"></a>패턴 분포 창  
- **Pattern**  
+ **패턴**  
  프로파일링된 열에 대해 계산된 패턴을 표시합니다.  
   
- **백분율**  
+ **Percentage**  
  값이 **패턴** 열에 표시된 패턴과 일치하는 행의 비율을 표시합니다.  
   
 #### <a name="profile-type--column-statistics-profile"></a>프로필 유형 = 열 통계 프로필  
@@ -151,7 +151,7 @@ ms.locfileid: "71294219"
  **최소**  
  프로파일링된 열에서 찾은 최소값을 표시합니다.  
   
- **최대값**  
+ **최댓값**  
  프로파일링된 열에서 찾은 최대값을 표시합니다.  
   
  **평균값**  
@@ -170,13 +170,13 @@ ms.locfileid: "71294219"
  테이블 또는 뷰의 행 수를 표시합니다.  
   
 ##### <a name="detailed-value-distribution-pane"></a>세부 값 분포 창  
- **Value**  
+ **값**  
  프로파일링된 열에서 찾은 고유 값을 표시합니다.  
   
  **Count**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행 수를 표시합니다.  
   
- **백분율**  
+ **Percentage**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행의 비율을 표시합니다.  
   
 #### <a name="profile-type--candidate-key-profile"></a>프로필 유형 = 후보 키 프로필  

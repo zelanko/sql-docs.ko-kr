@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123581"
 ---
 # <a name="execute-user-defined-functions"></a>사용자 정의 함수 실행
@@ -26,10 +26,10 @@ ms.locfileid: "68123581"
   Transact-SQL을 사용하여 사용자 정의 함수 실행
   
 
-> **참고:** 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수](user-defined-functions.md) 및 [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 항목을 참고하세요. 
+> **참고:** 사용자 정의 함수에 대한 자세한 내용은  [사용자 정의 함수](user-defined-functions.md) 및 [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 항목을 참고하세요. 
   
  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  Transact-SQL에서 *value* 또는 @*parameter_name*=*value*를 사용하여 매개 변수를 제공할 수 있습니다. 를 사용하여 제공할 수 있습니다. 매개 변수는 트랜잭션의 일부가 아니므로 나중에 롤백되는 트랜잭션에서 매개 변수가 변경된 경우 해당 매개 변수의 값은 이전 값으로 되돌아가지 않습니다. 호출자에게 반환되는 값은 항상 모듈이 반환되는 시점의 값입니다.  

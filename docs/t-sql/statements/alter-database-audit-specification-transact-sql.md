@@ -20,10 +20,10 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065890"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065890"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 변경합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  감사에서 이 감사 사양에 대한 레코드를 수집하거나 수집하지 못하도록 설정합니다. 감사 사양 상태 변경은 사용자 트랜잭션 외부에서 수행해야 하며 ON에서 OFF로 전환되는 경우 동일한 문에 다른 변경 사항이 있어서는 안 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 감사 사양은 지정된 데이터베이스에 있는 비보안 개체입니다. 데이터베이스 감사 사양을 변경하려면 감사 사양의 상태를 OFF 옵션으로 설정해야 합니다. 감사 사양에 STATE=OFF 외의 옵션이 설정되었을 때 이 ALTER DATABASE AUDIT SPECIFICATION 실행되면 오류 메시지가 표시됩니다. 자세한 내용은 [tempdb Database](../../relational-databases/databases/tempdb-database.md)을(를) 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -92,7 +92,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  만들어진 데이터베이스 감사 사양은 CONTROL SERVER, ALTER ANY DATABASE AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 해당 감사에 대한 명시적 액세스 권한이 있는 보안 주체가 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `HIPAA_Audit_DB_Specification`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 `SELECT` 사용자의 `dbo` 문을 감사하는 `HIPAA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
+ 다음 예에서는 `HIPAA_Audit_DB_Specification`라는 `SELECT` Audit에 대해 `dbo` 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 감사하는 `HIPAA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
   
 ```  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  

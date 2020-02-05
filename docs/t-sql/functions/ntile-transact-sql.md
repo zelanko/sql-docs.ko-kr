@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914899"
 ---
 # <a name="ntile-transact-sql"></a>NTILE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914899"
 
   정렬된 파티션의 행을 지정된 수의 그룹으로 분산시킵니다. 그룹에는 1부터 시작하는 번호가 매겨집니다. NTILE은 각 행에서 해당 행이 속한 그룹 번호를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,14 +54,14 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  파티션의 행 수를 *integer_expression*으로 나눌 수 없는 경우 멤버 수 하나의 차이가 있는 두 가지 크기의 그룹이 생성됩니다. OVER 절이 지정한 순서에서 큰 그룹이 작은 그룹 앞에 옵니다. 예를 들어 행의 총 수가 53개이고 그룹 수가 5개이면 처음 3개 그룹은 11개의 행을 포함하고 나머지 두 개 그룹은 10개의 행을 포함합니다. 반면에 행의 총 수를 그룹 수로 나눌 수 있으면 각 그룹에 행이 똑같이 분산됩니다. 예를 들어 행의 총 수가 50개이고 그룹이 5개 있으면 각 그룹이 10개의 행을 포함합니다.  
   
  NTILE은 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dividing-rows-into-groups"></a>1\. 행을 그룹으로 나누기  
+### <a name="a-dividing-rows-into-groups"></a>A. 행을 그룹으로 나누기  
  다음 예에서는 연간 누계 매출을 기준으로 행을 네 개의 직원 그룹으로 나눕니다. 총 행 수를 그룹 수로 나눌 수 없으므로 처음 두 그룹에는 네 개의 행이 포함되고 나머지 그룹에는 각각 세 개의 행이 포함됩니다.  
   
 ```  
@@ -105,7 +105,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 (14 row(s) affected)  
 ```  
   
-### <a name="b-dividing-the-result-set-by-using-partition-by"></a>2\. PARTITION BY를 사용하여 결과 집합 나누기  
+### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. PARTITION BY를 사용하여 결과 집합 나누기  
  다음 예에서는 예 1의 코드에 `PARTITION BY` 인수를 추가합니다. 행은 먼저 `PostalCode`로 분할된 다음 각 `PostalCode` 내에 4개 그룹으로 나누어집니다. 또한 이 예에서는 변수 `@NTILE_Var`을 선언하고 이 변수를 사용하여 *integer_expression* 매개 변수의 값을 지정합니다.  
   
 ```  
@@ -150,7 +150,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 행을 그룹으로 나누기  
  다음 예에서는 NTILE 함수를 사용하여 2003년에 할당된 판매 할당량을 기반으로 영업 담당자 집합을 4개의 그룹으로 나눕니다. 행의 총 수를 그룹 수로 나눌 수 없으므로 첫 번째 그룹에는 5개의 행이 있고 나머지 그룹에는 각각 4개의 행이 있습니다.  

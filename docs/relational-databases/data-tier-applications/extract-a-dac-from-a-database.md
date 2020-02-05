@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134788"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
@@ -31,13 +31,13 @@ ms.locfileid: "68134788"
   **데이터 계층 애플리케이션 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 애플리케이션) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
   
  
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스에서는 **msdb** (**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 등록된 DAC를 참조하지 않습니다. 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)을 참조하세요.  
   
 ##  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 데이터베이스에서 DAC를 추출할 수 있습니다. DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 추출할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  DAC를 추출하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 추출하려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 추출하는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 도 DAC를 추출할 수 있습니다.  
   
 ##  <a name="UsingDACExtractWizard"></a> 데이터 계층 애플리케이션 추출 마법사 사용  
@@ -160,7 +160,7 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [의](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

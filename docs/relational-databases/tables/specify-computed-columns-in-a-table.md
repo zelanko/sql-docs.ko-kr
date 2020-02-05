@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082561"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
@@ -49,7 +49,7 @@ ms.locfileid: "68082561"
 
 ### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 사용 권한
+#### <a name="Permissions"></a> 권한
 
 테이블에 대한 ALTER 사용 권한이 필요합니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "68082561"
 
 5. **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.
 
-6. **파일** 메뉴에서 _테이블 이름_ **저장**을 클릭합니다.
+6. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다. 
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면
 

@@ -1,5 +1,5 @@
 ---
-title: '@@SERVERNAME (Transact-SQL) | Microsoft Docs'
+title: '@@SERVERNAME(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 09a7e9d6199b3227b51cb67a0687c2b812bd21d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031582"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68031582"
 ## <a name="return-types"></a>반환 형식  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 설치 중에 서버 이름을 컴퓨터 이름으로 설정합니다. 서버 이름을 변경하려면 **sp_addserver**를 사용한 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 다시 시작합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스가 설치되어 있는 경우 로컬 서버 이름이 설치 후 변경되지 않으면 @@SERVERNAME은 다음 로컬 서버 이름 정보를 반환합니다.  

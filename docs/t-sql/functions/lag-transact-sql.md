@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cf79a93edcdd8eda031d98a641d0164cc68f9da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109272"
 ---
 # <a name="lag-transact-sql"></a>LAG(Transact-SQL)
@@ -61,7 +61,7 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="examples"></a>예  
   
-### <a name="a-compare-values-between-years"></a>1\. 연도 간 값 비교  
+### <a name="a-compare-values-between-years"></a>A. 연도 간 값 비교  
  다음 예에서는 LAG 함수를 사용하여 특정 직원의 전년도 대비 판매 할당량 차이를 반환합니다. 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql   
@@ -87,7 +87,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
   
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>2\. 파티션 내의 값 비교  
+### <a name="b-compare-values-within-partitions"></a>B. 파티션 내의 값 비교  
  다음 예에서는 LAG 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 나누기 위해 PARTITION BY 절이 지정되었습니다. LAG 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에서 ORDER BY 절은 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql   
@@ -139,7 +139,7 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-compare-values-between-quarters"></a>D: 분기별 값 비교  
  다음 예에서는 LAG 함수를 보여 줍니다. 다음 쿼리에서는 LAG 함수를 사용하여 특정 직원의 이전 분기 대비 판매 할당량 차이를 반환합니다. 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  

@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117627"
 ---
 # <a name="sum-transact-sql"></a>SUM(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117627"
 
   식의 모든 값 또는 DISTINCT 값의 합계를 반환합니다. SUM은 숫자 열에서만 사용할 수 있습니다. Null 값은 무시됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,12 +75,12 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |**money** 및 **smallmoney** 범주|**money**|  
 |**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SUM은 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sum-to-return-summary-data"></a>1\. SUM을 사용하여 요약 데이터 반환  
+### <a name="a-using-sum-to-return-summary-data"></a>A. SUM을 사용하여 요약 데이터 반환  
  다음 예에서는 SUM 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 요약 데이터를 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -106,8 +106,8 @@ White           19.00                 6.7926
 (3 row(s) affected)
  ```  
   
-### <a name="b-using-the-over-clause"></a>2\. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Sales.SalesPerson` 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
+### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
+ 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 `Sales.SalesPerson` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   
@@ -178,7 +178,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-a-simple-sum-example"></a>C. 간단한 SUM 예  
  다음 예는 2003년 판매된 각 제품의 총 수를 반환합니다.  

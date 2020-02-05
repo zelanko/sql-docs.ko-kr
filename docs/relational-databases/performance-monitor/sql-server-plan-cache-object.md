@@ -14,10 +14,10 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130854"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
@@ -26,17 +26,17 @@ ms.locfileid: "68130854"
   
  다음 표에서는 **SQLServer:Plan Cache**카운터에 대해 설명합니다.  
   
-|SQL Server Plan Cache 카운터|설명|  
+|SQL Server Plan Cache 카운터|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
-|**Cache Hit Ratio**|내부용으로만 사용할 수 있습니다.| 
+|**Cache Hit Ratio**|내부 전용입니다.| 
 |**Cache Object Counts**|캐시에 있는 캐시 개체 수입니다.|  
 |**Cache Pages**|캐시 개체에 의해 사용되는 8KB 페이지 수입니다.|  
 |**Cache Objects in use**|사용 중인 캐시 개체의 수입니다.|  
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Plan Cache 인스턴스|설명|  
+|Plan Cache 인스턴스|Description|  
 |-------------------------|-----------------|  
 |**_Total**|모든 유형의 캐시 인스턴스에 대한 정보입니다.|  
 |**Sql Plans**|자동으로 매개 변수가 있는 쿼리를 포함하여 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 생성되는 쿼리 계획이거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **또는** sp_cursorprepare **를 사용하여 준비된**문으로 생성되는 쿼리 계획입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나중에 실행되는 경우 다시 사용하기 위해 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 계획을 캐시합니다. 사용자가 매개 변수가 있는 쿼리(명시적으로 준비하지 않은 경우 포함)도 Prepared SQL Plans로 모니터링됩니다.|  

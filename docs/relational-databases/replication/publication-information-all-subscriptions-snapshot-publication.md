@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 37f5359dfa1fe4f127012256c724cb208768fd34
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 469bcee14742682050e0c2726615f6942f18635b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321370"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286647"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>게시 정보, 모든 구독(스냅샷 게시)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "75321370"
  **곧 만료됨/만료됨** 상태 값은 임계값을 설정한 경우에만 표시됩니다. 임계값 설정에 대한 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로, 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
+ 각 구독의 이름으로 *SubscriberName: SubscriptionDatabaseName*형식입니다.  
   
  **마지막 동기화**  
  배포 에이전트가 마지막으로 실행된 시간입니다. 동기화가 진행 중인 경우 **진행 중** 이 표시됩니다.  

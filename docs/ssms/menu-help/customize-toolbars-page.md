@@ -1,6 +1,6 @@
 ---
-title: 사용자 지정(도구 모음 페이지) | Microsoft 문서
-ms.custom: ''
+title: 사용자 지정(도구 모음 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09926451f7dc8f2e9ef8a6fd355b86eb9230bfd8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264021"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242186"
 ---
 # <a name="customize-toolbars-page"></a>사용자 지정(도구 모음 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "68264021"
 **새로 만들기**  
 사용자 지정 도구 모음을 만들고 해당 이름을 지정할 수 있는 **새 도구 모음** 대화 상자를 표시합니다.  
   
-**Rename**  
+**이름 바꾸기**  
 사용자 지정 도구 모음의 이름을 변경할 수만 있는 **도구 모음 이름 바꾸기** 대화 상자를 표시합니다.  
   
 **Delete**  
 **도구 모음** 목록에서 선택한 사용자 지정 도구 모음을 삭제합니다.  
   
-**다시 설정**  
+**재설정**  
 **도구 모음** 목록에서 선택한 미리 정의된 도구 모음의 변경 내용을 제거하고 원래 상태로 다시 설정합니다. 기본 제공 도구 모음을 선택한 경우에만 사용할 수 있습니다.  
   
 **큰 아이콘**  

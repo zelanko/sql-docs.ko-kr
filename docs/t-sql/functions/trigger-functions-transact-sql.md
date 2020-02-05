@@ -13,10 +13,10 @@ ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: eeb1d9072874b24cf73c93eb3113417c66ee4f0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098819"
 ---
 # <a name="trigger-functions-transact-sql"></a>트리거 함수(Transact-SQL)

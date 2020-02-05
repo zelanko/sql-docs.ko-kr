@@ -16,10 +16,10 @@ ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972646"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 메서드(SQLServerCallableStatement)
@@ -47,7 +47,7 @@ public void setString(java.lang.String sCol,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setString 메서드는 java.sql.CallableStatement 인터페이스의 setString 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서 대상 형식이 이진 파일임을 인식할 수 있는 경우에만 문자열에서 이진 파일로의 변환이 수행됩니다. JDBC 드라이버에서 기본 형식을 인식할 수 없는 경우에 **문자열** 리터럴을 전달하고 서버에서 변환을 수행할 수 없는 경우 서버 오류를 반환합니다.  

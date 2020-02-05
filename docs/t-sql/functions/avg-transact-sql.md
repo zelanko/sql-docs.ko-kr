@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040229"
 ---
 # <a name="avg-transact-sql"></a>AVG(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68040229"
 
 이 기능은 그룹에 속한 값의 평균을 반환합니다. Null 값을 무시합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ DISTINCT
 값이 중복될 경우 횟수에 관계 없이 무시하고 각 값의 하나의 고유한 인스턴스에 대해서만 AVG를 작동하도록 지정합니다.
   
 *expression*  
-**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
+[bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
@@ -69,7 +69,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**
 |**money** 및 **smallmoney** 범주|**money**|  
 |**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *expression*이 별칭 데이터 형식이면 반환 형식도 별칭 데이터 형식입니다. 하지만 별칭 데이터 형식의 기본 데이터 형식이 승격되면(예: **tinyint**에서 **int**로) 반환 값은 별칭 데이터 형식이 아닌 승격된 데이터 형식입니다.
   
 AVG ()는 값 집합의 합계를 Null이 아닌 값의 개수로 나눠 이러한 값에 대한 평균을 계산합니다. 합계가 반환 값의 데이터 형식에 대한 최대값을 초과할 경우 AVG는 오류를 반환합니다.
@@ -78,7 +78,7 @@ AVG는 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>1\. SUM 함수와 AVG 함수를 사용한 계산  
+### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. SUM 함수와 AVG 함수를 사용한 계산  
 이 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 부사장들이 이용한 평균 휴가 시간과 병가 시간의 합계를 계산합니다. 각 집계 함수는 검색된 모든 행에 대해 단일 요약 값을 계산합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
   
 ```sql
@@ -98,7 +98,7 @@ Average vacation hours       Total sick leave hours
 (1 row(s) affected)
 ```
   
-### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>2\. GROUP BY 절과 함께 SUM 함수 및 AVG 함수 사용  
+### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. GROUP BY 절과 함께 SUM 함수 및 AVG 함수 사용  
 집계 함수를 `GROUP BY` 절과 함께 사용하면 전체 테이블을 포함하는 단일 값이 아니라 각 그룹을 포함하는 단일 값을 생성합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 각각의 판매 분야에 대한 요약 값을 계산합니다. 각 분야의 영업 사원이 받은 평균 보너스와 분야별 연간 판매량 합계를 요약하여 나열합니다.
   
 ```sql
@@ -146,7 +146,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. DISTINCT 없이 AVG 사용  
-DISTINCT를 지정하지 않고 `AVG` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Product` 테이블에서 중복 값을 포함한 모든 제품의 평균 가격을 찾습니다.
+DISTINCT를 지정하지 않고 `AVG` 함수를 사용하여 `Product` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 중복 값을 포함한 모든 제품의 평균 가격을 찾습니다.
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -163,7 +163,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. OVER 절 사용  
-다음 예에서는 AVG 함수에 OVER 절을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesPerson` 테이블에서 각 지역에 대한 연간 매출의 이동 평균을 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, AVG 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 평균 매출이 계산된 다음 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.
+다음 예에서는 AVG 함수에 OVER 절을 사용하여 `Sales.SalesPerson` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 지역에 대한 연간 매출의 이동 평균을 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, AVG 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 평균 매출이 계산된 다음 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
@@ -233,7 +233,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   

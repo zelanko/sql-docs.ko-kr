@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822408"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
@@ -130,7 +130,7 @@ ms.locfileid: "74822408"
  이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [Always On 대시보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰를 사용하면 됩니다.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> 메모리 최적화 테이블이 포함된 데이터베이스의 데이터 대기 시간  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)을 참조하세요). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 최적화 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx) 참조). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 최적화 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> 읽기 전용 작업의 영향  
  읽기 전용 액세스를 사용하도록 보조 복제본을 구성하면 특히 디스크 기반 테이블의 읽기 전용 작업이 I/O를 매우 많이 사용하는 경우 보조 데이터베이스의 읽기 전용 작업은 다시 실행 스레드의 CPU 및 I/O(디스크 기반 테이블의 경우)와 같은 시스템 리소스를 소비합니다. 모든 행이 메모리 내에 상주하기 때문에 메모리 액세스에 최적화된 테이블에 액세스할 때 IO의 영향이 없습니다.  

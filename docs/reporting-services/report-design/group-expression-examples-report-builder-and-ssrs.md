@@ -14,10 +14,10 @@ ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580262"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>그룹 식 예(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65580262"
 ## <a name="examples-of-group-expressions"></a>그룹 식 예  
  다음 표에서는 그룹을 정의하는 데 사용할 수 있는 그룹 식의 예를 보여 줍니다.  
   
-|설명|식|  
+|Description|식|  
 |-----------------|----------------|  
 |`Region` 필드를 기준으로 그룹화합니다.|`=Fields!Region.Value`|  
 |성 및 이름을 기준으로 그룹화합니다.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

@@ -1,6 +1,6 @@
 ---
-title: 스크립트 생성 및 게시 마법사 | Microsoft 문서
-ms.custom: ''
+title: 스크립트 생성 및 게시 마법사
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123007"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253899"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "70123007"
 
 
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  원본 및 대상 데이터베이스는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상을 실행하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 있을 수 있습니다.  
   
 ###  <a name="PubHostSvc"></a> 호스티드 서비스에 게시  
@@ -66,7 +66,7 @@ ms.locfileid: "70123007"
   
  데이터베이스를 웹 호스팅 서비스에 게시하려면 마법사의 **스크립팅 옵션 설정** 페이지에서 **웹 서비스에 게시** 옵션을 선택합니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  데이터베이스를 게시하려면 최소한 원본 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요하고, 호스팅 공급자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스 스크립트를 게시하려면 최소한 대상 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
  또한 마법사를 사용하여 게시하려면 해당 호스팅 공급자 계정에 액세스하기 위한 사용자 이름과 암호를 제공해야 합니다. 원본 데이터베이스를 게시하려면 먼저 호스팅 공급자에서 대상 데이트베이스를 만들어야 합니다. 게시하면 기존 데이터베이스의 개체를 덮어씁니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "70123007"
   
 -   **USE DATABASE 스크립팅** - 스크립트에 **USE DATABASE** 문을 추가합니다. 올바른 데이터베이스에서 데이터베이스 개체를 만들려면 **USE DATABASE** 문을 포함해야 합니다. 다른 데이터베이스에서 스크립트가 사용되어야 할 경우에는 **False** 를 선택하여 **USE DATABASE** 문을 생략합니다. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)를 참조하세요.  
   
--   **스크립팅할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마만**입니다.  
+-   **스크립팅할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만**또는 둘 다 선택할 수 있습니다. 기본값은 **스키마만**입니다.  
   
  **테이블/뷰 옵션** - 다음 옵션은 테이블 또는 뷰에 대한 스크립트에만 적용됩니다.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "70123007"
   
 11. **스크립트 바인딩** - 게시하기 위해 공급자에 보내는 스크립트에 기본 개체 및 규칙 개체에 대한 바인딩을 포함합니다. 기본값은 **True**입니다. 자세한 내용은 [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 및 [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)을 참조하세요.  
   
-12. **게시할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마 및 데이터**입니다.  
+12. **게시할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만**또는 둘 다 선택할 수 있습니다. 기본값은 **스키마 및 데이터**입니다.  
   
  **게시 옵션** - 웹 호스트 공급 기업에 게시하는 경우 트랜잭션을 사용할지 여부를 지정합니다.  
   
@@ -347,8 +347,8 @@ ms.locfileid: "70123007"
 
 1. **도구** 를 클릭한 다음 **옵션**을 클릭합니다.  
 2. **일반 스크립팅 옵션** 설정에서 다음을 수행합니다.  
-    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL Database**  
-    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL Data Warehouse Edition**  
+    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
+    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
 3. **확인**을 클릭합니다.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>기본 스크립팅 옵션이 아닌 경우 SQL 데이터 웨어하우스에 대한 스크립트를 생성하는 방법  
@@ -359,8 +359,8 @@ ms.locfileid: "70123007"
 2. **스크립트 생성...** 을 선택합니다.  
 3. 스크립팅하려는 개체를 선택합니다.  
 4. **스크립팅 옵션**에서 **고급**을 클릭합니다. **일반** 설정에서 다음을 수행합니다.  
-    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL Database**  
-    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL Data Warehouse Edition**  
+    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
+    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
 5. **스크립트 저장 또는 게시** 를 클릭한 다음 **마침**을 클릭합니다.  
 
 4단계에서 설정한 옵션은 저장되지 않습니다. 이러한 옵션을 저장하려면 **SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법**의 지침을 따릅니다.  

@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893079"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
@@ -27,7 +27,7 @@ ms.locfileid: "68893079"
  
 ## <a name="current-tutorials"></a>현재 자습서  
   
-|기술|설명|  
+|기술|Description|  
 |--------------|---------------|  
 |[Analysis Services 자습서&#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
 |[데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)|데이터베이스 엔진 인스턴스에 연결한 다음 Transact-SQL 문을 작성하고 실행하는 방법에 대해 알아봅니다.|  

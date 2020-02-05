@@ -1,6 +1,6 @@
 ---
-title: sqlcmd 유틸리티 시작 | Microsoft 문서
-ms.custom: ''
+title: sqlcmd 유틸리티 시작
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfc32e9ec7b4c56faf11c8cc675ae5ab2096416d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267656"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243467"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 유틸리티 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68267656"
   
 3.  Enter 키를 누릅니다.  
   
-     이제 트러스트된 연결을 사용하여 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 연결되었습니다.  
+     이제 트러스트된 연결을 사용하여 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결되었습니다.  
   
      **1>** 은 줄 번호를 지정하는 **sqlcmd** 프롬프트입니다. Enter 키를 누를 때마다 번호가 1씩 증가합니다.  
   

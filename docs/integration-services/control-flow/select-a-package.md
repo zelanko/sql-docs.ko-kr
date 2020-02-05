@@ -15,10 +15,10 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293958"
 ---
 # <a name="select-a-package"></a>패키지 선택
@@ -32,7 +32,7 @@ ms.locfileid: "71293958"
  **위치**  
  패키지의 위치를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|위치를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 설정합니다. 이 값을 선택하면 동적 옵션 **서버**, **Windows 인증 사용**, **SQL Server 인증 사용**, **사용자 이름**및 **암호**가 표시됩니다.|  
 |DTSX 파일|위치를 DTSX 파일로 설정합니다. 이 값을 선택하면 동적 옵션 **파일 이름**이 표시됩니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "71293958"
  **SQL Server 인증 사용**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 클릭합니다.  
   
- **User name**  
+ **사용자 이름**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 서버에 로그온할 때 사용할 사용자 이름을 입력합니다.  
   
  **암호**  

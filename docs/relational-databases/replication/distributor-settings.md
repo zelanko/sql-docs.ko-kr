@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a3d96db530d62f4105e36f2be68887ee67c942cf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 506ae386a49a8a1485dc1e062ba58d264a7b7921
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770640"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284113"
 ---
 # <a name="distributor-settings"></a>배포자 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68770640"
  **복제 모니터가 시작될 때 자동으로 연결**  
  복제 모니터에서 배포자에 연결하고 상태 정보를 검색하도록 하려면 선택합니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  **서버에 연결** 대화 상자를 표시하려면 클릭합니다. 이 대화 상자를 통해 복제 모니터에서 배포자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있습니다.  
   
  **이 배포자 및 해당 게시의 상태를 자동으로 새로 고침**  

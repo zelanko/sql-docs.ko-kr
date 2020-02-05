@@ -12,10 +12,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831822"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대한 Active Directory 인증
@@ -39,7 +39,7 @@ AD 인증에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증에
 
 Active Directory 인증을 사용하려면 네트워크에 AD 도메인 컨트롤러(Windows)가 있어야 합니다.
 
-AD 인증을 구성하는 방법에 대한 자세한 내용은 [자습서: Linux에서 SQL Server와 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md)을 참조하세요. 다음 목록에서는 자습서의 각 섹션에 대한 링크를 포함하는 요약을 제공합니다.
+The details for how to configure AD authentication are provided in the tutorial, [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md). 다음 목록에서는 자습서의 각 섹션에 대한 링크를 포함하는 요약을 제공합니다.
 
 1. [SQL Server 호스트를 Active Directory 도메인 가입](sql-server-linux-active-directory-join-domain.md)
 1. [SQL Server의 AD 사용자를 만들고 ServicePrincipalName 설정](sql-server-linux-active-directory-authentication.md#createuser)
@@ -55,4 +55,4 @@ AD 인증을 구성하는 방법에 대한 자세한 내용은 [자습서: Linux
 
 ## <a name="next-steps"></a>다음 단계
 
-Linux의 SQL Server에 대한 Active Directory 인증 구현 방법과 관련된 자세한 내용은 [자습서: Linux에서 SQL Server와 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md)을 참조하세요.
+For more information on how to implement Active Directory authentication for SQL Server on Linux, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).

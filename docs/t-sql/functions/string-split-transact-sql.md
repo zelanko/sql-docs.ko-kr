@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906828"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +37,7 @@ STRING_SPLIT에는 130 이상의 호환성 수준이 필요합니다. 130 미만
 
 데이터베이스의 호환성 수준을 변경하려면 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 참조합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
 
@@ -48,16 +48,16 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>인수
 
  *string*  
- 모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 모든 문자 형식(예: [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md), **varchar**, **nchar** 또는 **char**)의 **식**입니다.  
   
  *separator*  
- 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)** , **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md), **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 
 부분 문자열인 행의 단일 열 테이블을 반환합니다. 열의 이름은 **value**입니다. 입력 조각이 **nvarchar** 또는 **nchar**인 경우 **nvarchar**를 반환합니다. 그렇지 않으면 **varchar**를 반환합니다. 반환 형식의 길이는 문자열 인수의 길이와 동일합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 **STRING_SPLIT**는 부분 문자열을 구분 기호로 분리한 문자열을 입력하고 구분 기호로 사용될 문자 하나를 입력합니다. STRING_SPLIT는 부분 문자열이 포함된 행의 단일 열 테이블을 출력합니다. 출력 열의 이름은 **value**입니다.
 
@@ -73,7 +73,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 실제 실행에서 앞의 SELECT 문은 다음과 같은 결과 테이블을 반환했습니다.  
   
-|value|  
+|값|  
 | :-- |  
 |Lorem|  
 |ipsum|  
@@ -84,7 +84,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 ## <a name="examples"></a>예  
   
-### <a name="a-split-comma-separated-value-string"></a>1\. CSV(쉼표로 구분된 값) 문자열 분할
+### <a name="a-split-comma-separated-value-string"></a>A. CSV(쉼표로 구분된 값) 문자열 분할
 
 쉼표로 구분된 값 목록을 구문 분석하고 비어 있지 않은 토큰을 모두 반환합니다.  
 
@@ -98,11 +98,11 @@ WHERE RTRIM(value) <> '';
 
 구분 기호 사이에 아무 것도 없을 경우 STRING_SPLIT은 빈 문자열을 반환합니다. RTRIM(value) <> ''조건은 빈 토큰을 제거합니다.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>2\. 열에서 CSV(쉼표로 구분된 값) 문자열 분할
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. 열에서 CSV(쉼표로 구분된 값) 문자열 분할
 
 제품 테이블에는 다음 예제와 같이 쉼표로 구분된 태그 목록이 포함된 열이 있습니다.  
   
-|ProductId|속성|Tags|  
+|ProductId|속성|태그들|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|속성|value|  
+|ProductId|속성|값|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|도로|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  

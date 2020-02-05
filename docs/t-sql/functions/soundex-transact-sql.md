@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907077"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67907077"
 
   두 문자열의 유사성을 평가하기 위한 4자의 SOUNDEX 코드를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SOUNDEX는 문자열을 말할 때 어떻게 들리는지에 따라 영숫자 문자열을 4자의 코드로 변환합니다. 코드의 첫 번째 문자는 *character_expression*의 첫 번째 문자이며 대문자로 변환됩니다. 코드의 두 번째부터 네 번째 문자까지의 문자는 식의 문자를 나타내는 숫자입니다. 문자 A, E, I, O, U, H, W 및 Y는 문자열의 첫 문자가 아닌 경우 무시됩니다. 4자로 된 코드를 생성하기 위해 필요한 경우 끝에 0이 추가됩니다. SOUNDEX 코드에 대한 자세한 내용은 [Soundex 인덱싱 시스템](https://www.archives.gov/research/census/soundex.html)을 참조하세요.  
   
  다른 문자열의 SOUNDEX 코드는 문자열을 말할 때 얼마나 비슷한지 확인하기 위해 비교할 수 있습니다. DIFFERENCE 함수는 두 개의 문자열에서 SOUNDEX를 수행하고 이러한 문자열에 대해 SOUNDEX 코드가 얼마나 유사한지 나타내는 정수를 반환합니다.  

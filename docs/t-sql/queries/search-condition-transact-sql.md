@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027653"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027653"
 
   검색 조건은 논리 연산자 AND, OR 및 NOT을 사용하여 하나 이상의 조건자를 결합한 것입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -200,12 +200,12 @@ ms.locfileid: "68027653"
  EXISTS  
  하위 쿼리와 함께 사용되어 하위 쿼리에서 반환한 행의 존재 여부를 검사합니다. 자세한 내용은 [EXISTS&#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  논리 연산자의 우선 순위는 NOT(가장 높음), AND, OR 순입니다. 검색 조건에 괄호를 사용하면 이 순서를 무시할 수 있습니다. 논리 연산자의 계산 순서는 쿼리 최적화 프로그램에서 선택한 내용에 따라 달라질 수 있습니다. 논리 연산자에서 논리 값을 조작하는 방법에 대한 자세한 내용은 [AND&#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR&#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) 및 [NOT&#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-where-with-like-and-escape-syntax"></a>1\. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
+### <a name="a-using-where-with-like-and-escape-syntax"></a>A. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
  다음 예제에서는 `LargePhotoFileName` 열에 `green_` 문자가 있는 행을 검색하고, _이 와일드카드 문자이므로 `ESCAPE` 옵션을 사용합니다. `ESCAPE` 옵션을 지정하지 않으면 쿼리에서 `green` 단어 뒤에 _ 문자가 아닌 임의의 단일 문자가 포함된 설명 값을 검색합니다.  
   
 ```  
@@ -216,7 +216,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>2\. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
  다음 예에서는 `WHERE` 절을 사용하여 미국(`US`) 이외의 국가에서 `Pa`으로 시작하는 시에 있는 모든 기업의 우편 주소를 검색합니다.  
   
 ```  
@@ -229,7 +229,7 @@ WHERE CountryRegionCode NOT IN ('US')
 AND City LIKE N'Pa%' ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-where-with-like"></a>C. LIKE가 포함된 WHERE 사용  
  다음 예제에서는 `LastName` 열에 `and` 문자가 있는 행을 검색합니다.  

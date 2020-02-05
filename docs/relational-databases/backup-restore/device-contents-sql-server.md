@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068488"
 ---
 # <a name="device-contents-sql-server"></a>디바이스 내용(SQL Server)
@@ -54,13 +54,13 @@ ms.locfileid: "68068488"
  **백업 세트**  
  미디어에 포함된 백업 세트에 대한 정보를 표시합니다. 백업 세트는 백업 디바이스 집합의 미디어 간에 해당 내용이 분산되는 성공적인 백업 작업의 결과입니다.  
   
-|머리글|값|  
+|헤더|값|  
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
-|**형식**|수행된 백업 유형: 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
-|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<blank>* (트랜잭션 로그의 경우)일 수 있습니다.|  
+|**형식**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
+|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<비어 있음>* (트랜잭션 로그의 경우)이 될 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
-|**데이터베이스 백업**|백업한 데이터베이스 이름입니다.|  
+|**Database**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
 |**Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
 |**크기**|백업 세트의 크기를 바이트 단위로 표시한 것입니다.|  

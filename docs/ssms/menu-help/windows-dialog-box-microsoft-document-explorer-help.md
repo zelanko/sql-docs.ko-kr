@@ -1,6 +1,6 @@
 ---
-title: 창 대화 상자(Microsoft Document Explorer 도움말) | Microsoft 문서
-ms.custom: ''
+title: 창 대화 상자(Microsoft Document Explorer 도움말)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93f9f21bd681abdd95ca326e44ee4911f2e365ed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3b909491eb6228225fe9e54390842e26e590d8dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263409"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240567"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "68263409"
 **이름**  
 현재 선택한 활성 항목과 함께 문서 및 도구 창의 이름을 표시합니다.  
   
-**경로**  
+**Path**  
 문서의 전체 경로를 표시합니다. 창에는 대개 경로가 없습니다.  
   
-**Activate**  
+**활성화**  
 선택한 문서 또는 도구 창을 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Document Explorer의 활성 항목으로 만듭니다.  
   
 **저장**  

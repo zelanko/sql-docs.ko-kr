@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070268"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070268"
 
 서버 역할의 멤버 자격을 변경하거나 사용자 정의 서버 역할의 이름을 변경합니다. 고정 서버 역할은 이름을 바꿀 수 없습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ DROP MEMBER *server_principal*
 WITH NAME **=** _new_server_role_name_  
 사용자 정의 서버 역할의 새로운 이름을 지정합니다. 이 이름은 아직 서버에 없는 이름이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 사용자 정의 서버 역할의 이름을 변경하더라도 역할의 ID 번호, 소유자 또는 사용 권한은 변경되지 않습니다.  
   
 역할 멤버쉽을 변경하는 경우 `ALTER SERVER ROLE`은 sp_addsrvrolemember 및 sp_dropsrvrolemember를 대체합니다. 이러한 저장 프로시저는 더 이상 사용되지 않습니다.  
@@ -95,7 +95,7 @@ WITH NAME **=** _new_server_role_name_
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-name-of-a-server-role"></a>1\. 서버 역할의 이름 변경  
+### <a name="a-changing-the-name-of-a-server-role"></a>A. 서버 역할의 이름 변경  
 다음 예에서는 `Product`라는 서버 역할을 만든 다음 서버 역할 이름을 `Production`으로 변경합니다.  
   
 ```  
@@ -104,7 +104,7 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>2\. 서버 역할에 도메인 계정 추가  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. 서버 역할에 도메인 계정 추가  
 다음 예에서는 `adventure-works\roberto0`이라는 도메인 계정을 `Production`이라는 사용자 정의 서버 역할에 추가합니다.  
   
 ```  
@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 서버 역할에 SQL Server 로그인 추가  
-다음 예에서는 `Ted`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
+다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `Ted` 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 역할 멤버 자격 보기  
-역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버)** 페이지를 사용하거나 다음 쿼리를 실행합니다.  
+역할 멤버 자격을 보려면 **에서** 서버 역할(멤버)[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059879"
 ---
 # <a name="log10-transact-sql"></a>LOG10(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059879"
 
   지정된 **float** 식의 상용 로그를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,17 +43,17 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LOG10과 POWER 함수는 서로 역함수 관계에 있습니다. 예를 들어 10 ^ LOG10(*n*) = *n*입니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>1\. 변수에 대한 상용 로그 계산  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. 변수에 대한 상용 로그 계산  
  다음 예에서는 지정된 변수의 `LOG10`을 계산하는 방법을 보여 줍니다.  
   
 ```  
@@ -71,7 +71,7 @@ The LOG10 of the variable is: 2.16189
 (1 row(s) affected)  
 ```  
   
-### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>2\. 상용 로그를 지정된 거듭제곱으로 올린 결과 계산  
+### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>B. 상용 로그를 지정된 거듭제곱으로 올린 결과 계산  
  다음 예에서는 상용 로그를 지정된 거듭제곱으로 올린 결과를 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -87,9 +87,9 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: 값에 대한 기본 10 로그 계산.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>3\. 값에 대한 기본 10 로그 계산  
  다음 예에서는 지정된 값의 `LOG10`을 계산하는 방법을 보여 줍니다.  
   
 ```  

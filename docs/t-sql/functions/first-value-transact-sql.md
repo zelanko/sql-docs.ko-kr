@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071380"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE(Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 정렬된 값 집합의 첫 번째 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>1\. 쿼리 결과 집합에 FIRST_VALUE 사용  
+### <a name="a-using-first_value-over-a-query-result-set"></a>A. 쿼리 결과 집합에 FIRST_VALUE 사용  
  다음 예에서는 FIRST_VALUE를 사용하여 지정된 제품 범주에서 가격이 가장 저렴한 제품의 이름을 반환합니다.  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>2\. 파티션에 FIRST_VALUE 사용  
+### <a name="b-using-first_value-over-partitions"></a>B. 파티션에 FIRST_VALUE 사용  
  다음 예에서는 FIRST_VALUE를 사용하여 직함이 같은 다른 직원과 비교해 휴가 일 수가 가장 적은 직원을 반환합니다. PARTITION BY 절은 직원을 직함별로 분할하며 FIRST_VALUE 함수는 각 파티션에 개별적으로 적용됩니다. OVER 절에 지정된 ORDER BY 절은 FIRST_VALUE 함수가 각 파티션의 행에 적용되는 논리적 순서를 결정합니다. ROWS UNBOUNDED PRECEDING 절은 창 시작점을 각 파티션의 첫 번째 행으로 지정합니다.  
   
 ```  

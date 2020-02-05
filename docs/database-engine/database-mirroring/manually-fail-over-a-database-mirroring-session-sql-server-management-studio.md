@@ -15,10 +15,10 @@ ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041753"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>데이터베이스 미러링 세션 수동 장애 조치(failover)(SQL Server Management Studio)
@@ -27,7 +27,7 @@ ms.locfileid: "68041753"
   
  수동 장애 조치 중에는 장애 조치가 발생하는 데이터베이스에 대해 주 서버와 미러 서버 역할이 바뀝니다. 미러 데이터베이스는 주 데이터베이스가 되고 주 데이터베이스는 미러 데이터베이스가 됩니다. 예를 들어, 다음 표에서는 수동 장애 조치가 두 개의 미러링 파트너인 `SQLDBENGINE0_1` 및 `SQLDBENGINE0_2`의 역할을 바꾸는 방법을 보여 줍니다.  
   
-|서버|장애 조치 이전|장애 조치 이후|  
+|서버|장애 조치(failover) 전|장애 조치(failover) 후|  
 |------------|---------------------|--------------------|  
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  

@@ -22,13 +22,13 @@ ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024273"
 ---
-# <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
+# <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   인덱스 키에 대한 정보를 반환합니다. XML 인덱스에 대해서는 NULL을 반환합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "68024273"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)를 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *property*  
  정보를 반환할 속성의 이름입니다. *property*는 문자열이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**ColumnId**|인덱스의 *key_ID*위치에 있는 열 ID입니다.|  
 |**IsDescending**|인덱스 열이 저장되는 순서<br /><br /> 1 = 내림차순 0 = 오름차순|  

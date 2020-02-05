@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284489"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
@@ -64,7 +64,7 @@ ms.locfileid: "71284489"
  자세한 내용은 [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)을 참조하세요.  
   
 ## <a name="sql-in-files"></a>파일 내의 SQL  
- SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)을 참조하세요.  
+ SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)를 참조하세요.  
   
 ## <a name="sql-in-variables"></a>변수 내의 SQL  
  SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
@@ -94,7 +94,7 @@ ms.locfileid: "71284489"
  **도구 모음**  
  도구 모음을 사용하여 데이터 세트를 관리하고, 표시할 창을 선택하고, 쿼리 함수를 제어할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**다이어그램 창 표시/숨기기**|**다이어그램** 창을 표시하거나 숨깁니다.|  
 |**표 형태 창 표시/숨기기**|**표 형태** 창을 표시하거나 숨깁니다.|  
@@ -111,7 +111,7 @@ ms.locfileid: "71284489"
  **쿼리 정의**  
  쿼리 정의에서는 쿼리를 정의 및 테스트할 수 있는 도구 모음 및 창을 사용할 수 있습니다.  
   
-|창|설명|  
+|창|Description|  
 |----------|-----------------|  
 |**다이어그램** 창|쿼리를 다이어그램에 표시합니다. 다이어그램은 쿼리에 포함된 테이블과 이러한 테이블의 조인 방법을 보여 줍니다. 쿼리 출력에 열을 추가하거나 제거하려면 테이블에서 해당 열의 옆에 있는 확인란을 선택하거나 선택을 취소합니다.<br /><br /> 쿼리에 테이블을 추가하면 쿼리 작성기에서 테이블의 키에 따라 테이블을 기반으로 테이블 간의 조인을 만듭니다. 조인을 추가하려면 한 테이블의 필드를 다른 테이블의 필드로 끌어 놓습니다. 조인을 관리하려면 해당 조인을 마우스 오른쪽 단추로 클릭한 다음 메뉴 옵션을 선택합니다.<br /><br /> **다이어그램** 창을 마우스 오른쪽 단추로 클릭하여 테이블을 추가 또는 제거하고, 모든 테이블을 선택하고, 창을 표시하거나 숨길 수 있습니다.|  
 |**표 형태** 창|쿼리를 표에 표시합니다. 이 창을 사용하여 쿼리에서 열을 추가 및 제거하고 각 열의 설정을 변경할 수 있습니다.|  

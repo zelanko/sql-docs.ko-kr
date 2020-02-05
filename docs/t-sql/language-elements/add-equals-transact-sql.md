@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c916cf14a27e55e49ce3298627280306f6352fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927403"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+=(더하기 대입)(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67927403"
 
   두 숫자를 더하고 값을 연산 결과로 설정합니다. 예를 들어 @x 변수가 35일 경우 @x += 2는 원래 값 @x에서 2를 더하고 @x를 새 값(37)으로 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,12 +43,12 @@ expression += expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 숫자 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 숫자 범주에서 [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 **expression**입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자세한 내용은 [+&#40;더하기&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056144"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML 트리거 삭제 또는 해제
@@ -54,7 +54,7 @@ ms.locfileid: "68056144"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  DML 트리거를 삭제하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
  DML 트리거를 비활성화하거나 활성화하려면 사용자에게 트리거가 만들어진 테이블 또는 뷰에 대한 ALTER 권한이 있어야 합니다.  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321527"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
@@ -65,7 +65,7 @@ ms.locfileid: "75321527"
   
 ## <a name="publisher-options-for-merge-subscriptions"></a>병합 구독에 대한 게시자 옵션  
  **파티션 정의(HOST_NAME)**  
- 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **SUSER_SNAME()** 또는 **HOST_NAME()** 중 하나의 시스템 함수(필터가 두 함수를 모두 참조하는 경우에는 둘 다)를 계산하여 구독자가 받아야 하는 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **SUSER_SNAME()** 또는 **HOST_NAME()** 이라는 두 시스템 함수 중 하나(또는 필터가 두 함수를 참조하는 경우 둘 다)를 평가하여 구독자가 수신할 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독 유형** 및 **우선 순위**  
  구독이 클라이언트 구독인지 서버 구독인지를 표시합니다. 구독을 만든 후에는 구독 유형을 변경할 수 없습니다. 서버 구독은 데이터를 다른 구독자에 다시 게시할 수 있으며 충돌 해결을 위한 우선 순위를 할당 받을 수 있습니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "75321527"
   
 ## <a name="options-for-merge-subscriptions"></a>병합 구독에 대한 옵션  
  **파티션 정의(HOST_NAME)**  
- 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **SUSER_SNAME()** 또는 **HOST_NAME()** 중 하나의 시스템 함수(필터가 두 함수를 모두 참조하는 경우에는 둘 다)를 계산하여 구독자가 받아야 하는 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **SUSER_SNAME()** 또는 **HOST_NAME()** 이라는 두 시스템 함수 중 하나(또는 필터가 두 함수를 참조하는 경우 둘 다)를 평가하여 구독자가 수신할 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독 유형** 및 **우선 순위**  
  구독이 클라이언트 구독인지 서버 구독인지를 표시합니다. 구독을 만든 후에는 구독 유형을 변경할 수 없습니다. 서버 구독은 데이터를 다른 구독자에 다시 게시할 수 있으며 충돌 해결을 위한 우선 순위를 할당 받을 수 있습니다.  

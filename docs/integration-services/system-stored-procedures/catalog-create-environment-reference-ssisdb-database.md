@@ -11,10 +11,10 @@ ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e66d14c0a80317738296cd16a5bbbca44b79c8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281053"
 ---
 # <a name="catalogcreate_environment_reference-ssisdb-database"></a>catalog.create_environment_reference(SSISDB 데이터베이스)
@@ -60,7 +60,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -80,9 +80,9 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
--   절대 참조는 *reference_location* 매개 변수에서 `A` 문자를 사용하여 지정했지만 폴더 이름이 *environment_folder_name* 매개 변수로 지정되지 않은 경우  
+-   절대 참조는 `A`reference_location*매개 변수에서* 문자를 사용하여 지정했지만 폴더 이름이 *environment_folder_name* 매개 변수로 지정되지 않은 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로젝트에는 상대 환경 참조 또는 절대 환경 참조가 있을 수 있습니다. 상대 참조는 환경을 이름으로 참조하며 환경이 프로젝트와 같은 폴더에 있어야 합니다. 절대 참조는 환경을 이름과 폴더로 참조하며 프로젝트와 다른 폴더에 있는 환경을 참조할 수도 있습니다. 하나의 프로젝트에서 여러 환경을 참조할 수 있습니다.  
   
   

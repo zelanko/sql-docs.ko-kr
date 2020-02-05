@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906675"
 ---
 # <a name="modify-user-defined-functions"></a>사용자 정의 함수 수정
@@ -49,7 +49,7 @@ ms.locfileid: "72906675"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  함수 또는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +72,7 @@ ms.locfileid: "72906675"
   
 5.  쿼리 창에서 ALTER FUNCTION 문을 필요에 따라 변경합니다.  
   
-6.  **파일** 메뉴에서 _function_name_ **저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **function_name**_저장_을 클릭합니다.  
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

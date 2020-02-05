@@ -16,10 +16,10 @@ ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972294"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation 메서드(SQLServerConnection)
@@ -52,7 +52,7 @@ public void setTransactionIsolation(int level)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setTransactionIsolation 메서드는 java.sql.Connection 인터페이스의 setTransactionIsolation 메서드에 의해 지정됩니다.  
   
  트랜잭션 중간에 이 메서드를 호출하면 트랜잭션이 커밋되지 않습니다.  

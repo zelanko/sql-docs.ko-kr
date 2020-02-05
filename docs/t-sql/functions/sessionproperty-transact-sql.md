@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022203"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68022203"
 
   세션의 SET 옵션 설정을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *옵션*  
  이 세션에 대한 현재 옵션 설정입니다. *옵션*은 다음 값 중 하나일 수 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |ANSI_NULLS|null 값에 같음(=) 및 같지 않음(<>)의 ISO 동작을 적용할 수 있는지 여부를 지정합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|열에서 열에 정의된 크기보다 더 작은 값을 저장하는 방식과 문자 및 이진 데이터에 후행 공백이 있는 값을 저장하는 방식을 제어합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -58,7 +58,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET 옵션은 서버 수준, 데이터베이스 수준 및 사용자 지정 옵션을 결합하여 구성됩니다.  
   
 ## <a name="examples"></a>예  

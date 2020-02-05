@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099992"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099992"
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 연결하여 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 잠금 및 행 버전 관리 기능을 제어합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>구문
 
@@ -115,7 +115,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 > [!NOTE]  
 >  스냅샷 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 문 시작 시가 아니라 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
   
- SERIALIZABLE  
+ 직렬화 가능  
  다음을 지정합니다.  
   
 -   문은 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 읽을 수 없습니다.  
@@ -126,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  범위 잠금은 트랜잭션에서 실행된 각 문의 검색 조건과 일치하는 키 값의 범위에 적용됩니다. 따라서 다른 트랜잭션은 현재 트랜잭션에서 실행한 문에 한정되는 행을 업데이트하거나 삽입할 수 없습니다. 즉, 트랜잭션의 문이 다시 실행되면 동일한 행 집합을 읽게 됩니다. 범위 잠금은 트랜잭션이 완료될 때까지 유지됩니다. 범위 잠금은 전체 키 범위를 잠그고 트랜잭션이 완료될 때까지 해당 잠금을 보유하므로 격리 수준 중에서 가장 제한적입니다. 동시성이 더 낮기 때문에 필요할 때만 이 옵션을 사용하도록 하세요. 이 옵션은 트랜잭션의 모든 SELECT 문의 모든 테이블에 HOLDLOCK을 설정하는 것과 같습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  격리 수준 옵션은 한 번에 하나만 설정할 수 있으며 명시적으로 변경할 때까지는 해당 연결에 대한 설정이 그대로 유지됩니다. 문의 FROM 절에 있는 테이블 힌트가 테이블에 대해 다른 잠금 동작이나 버전 관리 동작을 지정하지 않는 한 트랜잭션 내에서 수행되는 모든 읽기 작업은 지정한 격리 수준의 규칙에 따라 수행됩니다.  
   
  트랜잭션 격리 수준은 읽기 작업 시 획득되는 잠금 유형을 정의합니다. 일반적으로 READ COMMITTED 또는 REPEATABLE READ에 대해 획득된 공유 잠금은 행 잠금입니다. 그러나 읽기 작업에서 페이지나 테이블의 많은 행을 참조하는 경우 이 행 잠금은 페이지 또는 테이블 잠금으로 에스컬레이션될 수 있습니다. 트랜잭션에서 행을 읽은 후 수정하면 트랜잭션은 해당 행을 보호하기 위해 배타적 잠금을 획득합니다. 이러한 배타적 잠금은 트랜잭션이 완료될 때까지 유지됩니다. 예를 들어 REPEATABLE READ 트랜잭션이 행에 공유 잠금을 설정한 다음 해당 행을 수정하면 공유 행 잠금은 배타적 행 잠금으로 변환됩니다.  

@@ -13,10 +13,10 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030823"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
@@ -48,13 +48,13 @@ ms.locfileid: "68030823"
 ### <a name="log-shipping-with-transactional-replication"></a>트랜잭션 복제의 로그 전달  
  트랜잭션 복제의 경우 로그 전달의 동작은 **sync with backup** 옵션에 따라 달라집니다. 이 옵션은 게시 데이터베이스 및 배포 데이터베이스에 설정될 수 있으며, 게시자의 로드 전달의 경우에는 게시 데이터베이스의 설정만 관련이 있습니다.  
   
- 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 애플리케이션에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을 참조하세요.  
+ 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 애플리케이션에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을 참조하세요.  
   
  **sync with backup 옵션으로 트랜잭션 게시 및 로그 전달을 구성하려면**  
   
 1.  게시 데이터베이스에 sync with backup 옵션이 설정되어 있지 않으면 `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`를 실행합니다. 자세한 내용은 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 참조하세요.  
   
-2.  게시 데이터베이스에 대한 로그 전달을 구성합니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)을 참조하세요.  
+2.  게시 데이터베이스에 대한 로그 전달을 구성합니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)에서 도입되었습니다.  
   
 3.  게시자에서 오류가 발생하면 RESTORE LOG의 KEEP_REPLICATION 옵션을 사용하여 데이터베이스의 마지막 로그를 보조 서버로 복원합니다. 이렇게 하면 데이터베이스에 대한 모든 복제 설정이 유지됩니다. 자세한 내용은 [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) 및 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68030823"
   
  **sync with backup 옵션을 사용하지 않고 트랜잭션 게시 및 로그 전달을 구성하려면**  
   
-1.  게시 데이터베이스에 대한 로그 전달을 구성합니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)을 참조하세요.  
+1.  게시 데이터베이스에 대한 로그 전달을 구성합니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)에서 도입되었습니다.  
   
 2.  게시자에서 오류가 발생하면 RESTORE LOG의 KEEP_REPLICATION 옵션을 사용하여 데이터베이스의 마지막 로그를 보조 서버로 복원합니다. 이렇게 하면 데이터베이스에 대한 모든 복제 설정이 유지됩니다. 자세한 내용은 [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) 및 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68030823"
   
     -   게시가 필터링되지 않은 경우 최신 구독자와 동기화하여 게시 데이터베이스를 최신 상태로 만들 수 있습니다.  
   
-    -   게시가 필터링된 경우 게시 데이터베이스를 최신 상태로 만들 수 없을 수도 있습니다. 각 구독이 동부, 서부, 남부 및 북부 중 한 지역에 대한 고객 데이터만 수신하도록 분할된 테이블을 고려해 봅니다. 각 데이터 파티션에 대해 최소 하나의 구독자가 있는 경우 각 파티션에 대해 구독자와 동기화하면 게시 데이터베이스가 최신 상태가 됩니다. 그러나 예를 들어 서부 파티션의 데이터가 구독자에 복제되지 않은 경우에는 게시자에서 이 데이터를 최신 상태로 만들 수 없습니다. 이 경우에는 게시자 및 구독자의 데이터가 일치하도록 모든 구독을 다시 초기화하는 것이 좋습니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
+    -   게시가 필터링된 경우 게시 데이터베이스를 최신 상태로 만들 수 없을 수도 있습니다. 각 구독이 동부, 서부, 남부 및 북부 중 한 지역에 대한 고객 데이터만 수신하도록 분할된 테이블을 고려해 봅시다. 각 데이터 파티션에 대해 최소 하나의 구독자가 있는 경우 각 파티션에 대해 구독자와 동기화하면 게시 데이터베이스가 최신 상태가 됩니다. 그러나 예를 들어 서부 파티션의 데이터가 구독자에 복제되지 않은 경우에는 게시자에서 이 데이터를 최신 상태로 만들 수 없습니다. 이 경우에는 게시자 및 구독자의 데이터가 일치하도록 모든 구독을 다시 초기화하는 것이 좋습니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다. 자세한 내용은 [데이터 동기화](../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
   

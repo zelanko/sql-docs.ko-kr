@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68047993"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
@@ -74,7 +74,7 @@ ms.locfileid: "68047993"
      인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 **New-SqlHadrEndpoint** PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT(TRANSACT-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요. 서버 인스턴스에서 인증서 인증을 사용하도록 설정하는 방법은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용(TRANSACT-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
