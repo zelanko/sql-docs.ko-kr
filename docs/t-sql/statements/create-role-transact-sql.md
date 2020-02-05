@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064625"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73064625"
 
   현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  새 역할을 소유할 데이터베이스 사용자나 역할입니다. 사용자를 지정하지 않으면 CREATE ROLE을 실행하는 사용자가 역할을 소유합니다. 역할의 소유자 또는 소유 역할의 멤버는 역할의 멤버를 추가하거나 제거할 수 있습니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  역할은 데이터베이스 수준 보안 개체입니다. 역할을 만든 후 GRANT, DENY 및 REVOKE를 사용하여 역할의 데이터베이스 수준 사용 권한을 구성합니다. 데이터베이스 역할에 멤버를 추가하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다. 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
  데이터베이스 역할은 sys.database_role_members 및 sys.database_principals 카탈로그 뷰에 표시됩니다.  
@@ -76,7 +76,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ## <a name="examples"></a>예  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.   
 
-### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>1\. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
+### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `buyers` 사용자가 소유하는 `BenMiller` 데이터베이스 역할을 만듭니다.  
   
 ```sql  
@@ -84,7 +84,7 @@ CREATE ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>2\. 고정 데이터베이스 역할이 소유하는 데이터베이스 역할 만들기  
+### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. 고정 데이터베이스 역할이 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `auditors` 고정 데이터베이스 역할이 소유하는 `db_securityadmin` 데이터베이스 역할을 만듭니다.  
   
 ```sql  

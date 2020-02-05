@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982944"
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982944"
 
   지정한 테이블 ID, 인덱스 또는 통계 이름, 속성 이름에 대해 명명된 인덱스 또는 통계 속성 값을 반환합니다. XML 인덱스에 대해서는 NULL을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  달리 언급하지 않는 한 *property*가 유효한 속성 이름이 아니거나, *object_ID*가 유효한 개체 ID가 아니거나, *object_ID*가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
   
-|속성|설명|값|  
+|속성|Description|값|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|인덱스의 깊이입니다.|인덱스 수준의 수입니다.<br /><br /> NULL = XML 인덱스이거나 입력이 잘못되었습니다.|  
 |**IndexFillFactor**|인덱스를 만들거나 최근에 다시 만들 때 사용한 채우기 비율 값입니다.|채우기 비율|  
@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEXPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 `PK_Employee_BusinessEntityID` 인덱스에 대한 **IsClustered**, **IndexDepth** 및 **IndexFillFactor** 속성 값을 반환합니다.  
+ 다음 예에서는 **데이터베이스에 있는** 테이블의 **인덱스에 대한**IsClustered **,** IndexDepth`PK_Employee_BusinessEntityID` 및 `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성 값을 반환합니다.  
   
 ```  
 SELECT   
@@ -103,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예는 `FactResellerSales` 테이블의 색인 중 하나의 속성을 검사합니다.  
   
 ```  

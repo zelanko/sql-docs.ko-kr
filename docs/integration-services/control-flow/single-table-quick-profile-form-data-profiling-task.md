@@ -15,10 +15,10 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fefb8e6c4cd29804f28cb2813fe20aba7c70427c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293913"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
@@ -31,7 +31,7 @@ ms.locfileid: "71293913"
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자를 선택합니다.  
   
  **테이블 또는 뷰**  
@@ -40,7 +40,7 @@ ms.locfileid: "71293913"
  **컴퓨팅**  
  컴퓨팅할 프로필을 선택합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**열 Null 비율 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 Null 비율 프로필을 컴퓨팅합니다.<br /><br /> 이 프로필은 선택한 열에 있는 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)을 참조하세요.|  
 |**열 통계 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 컴퓨팅합니다.<br /><br /> 이 프로필은 숫자 열의 최소값, 최대값, 평균, 표준 편차 및 **datetime** 열의 최소값, 최대값과 같은 통계를 보고합니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 통계 프로필 요청&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)을 참조하세요.|  

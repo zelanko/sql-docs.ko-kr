@@ -18,10 +18,10 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065528"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 인증서 권한(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065528"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증서에 대한 사용 권한을 부여합니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ GRANT permission  [ ,...n ]
  사용 권한을 부여할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
- 사용 권한을 부여할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 사용 권한을 부여할 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
 -   데이터베이스 역할  
@@ -63,7 +63,7 @@ GRANT OPTION
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.  
   
 AS *granting_principal*  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
 -   데이터베이스 역할  
@@ -74,7 +74,7 @@ AS *granting_principal*
 -   비대칭 키에 매핑된 데이터베이스 사용자  
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인증서는 사용 권한 계층에서 부모 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 인증서에 대해 부여할 수 있는 가장 제한적인 사용 권한이 해당 사용 권한을 암시적으로 포함하는 보다 일반적인 사용 권한과 함께 정리되어 있습니다.  
   
 |인증서 권한|인증서 권한에 포함된 권한|데이터베이스 사용 권한에 포함된 사용 권한|  

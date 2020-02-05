@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126833"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
@@ -45,7 +45,7 @@ ms.locfileid: "68126833"
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server에서 인증서 사용  
  인증서를 사용하면 데이터베이스 미러링에서 패키지 및 기타 개체를 서명하도록 안전하게 연결할 수 있으며 데이터 또는 연결을 암호화할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인증서에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|인증서를 만들기 위한 명령에 대해 설명합니다.|  
 |[디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|인증서를 사용하여 소프트웨어 패키지를 서명하는 방법에 대한 정보가 표시됩니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68126833"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server에서 비대칭 키 사용  
  비대칭 키는 데이터에 보안을 설정하거나 일반 텍스트를 서명하는 데 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 비대칭 키에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|비대칭 키를 만들기 위한 명령에 대해 설명합니다.|  
 |[SIGNBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|개체를 서명하는 옵션을 표시합니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68126833"
   
 |||  
 |-|-|  
-|도구|용도|  
+|도구|목적|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|인증서를 만듭니다.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|대칭 키에 대한 강력한 이름을 만듭니다.|  
   

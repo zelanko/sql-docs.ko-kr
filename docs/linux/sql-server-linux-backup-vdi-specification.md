@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810974"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux VDI 클라이언트 SDK 사양
@@ -65,7 +65,7 @@ Linux에서 POSIX 기본 형식은 기본 형식을 만드는 사용자 및 해�
 - 함수 구문
 - 매개 변수 목록
 - 반환 값
-- Remarks
+- 설명
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -217,7 +217,7 @@ Linux에서 POSIX 기본 형식은 기본 형식을 만드는 사용자 및 해�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |없음 | 해당 사항 없음
+| |None | 해당 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -237,7 +237,7 @@ Linux에서 POSIX 기본 형식은 기본 형식을 만드는 사용자 및 해�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |없음 |해당 사항 없음
+| |None |해당 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |

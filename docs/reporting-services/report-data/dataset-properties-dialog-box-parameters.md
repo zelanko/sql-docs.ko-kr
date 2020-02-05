@@ -13,10 +13,10 @@ ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 66e0d56cbff57a6100ab8c61436ba6bcddf15382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573173"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 세트 속성 대화 상자, 매개 변수

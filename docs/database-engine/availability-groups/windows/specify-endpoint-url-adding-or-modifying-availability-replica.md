@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251281"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정

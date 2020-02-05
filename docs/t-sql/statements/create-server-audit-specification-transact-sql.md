@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88afe7ebedac531c4d6acdb60c579cb335c98980
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 6060fdf1819750e0ec0faa00d0e82ab8f76fa52c
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745412"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004654"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 서버 감사 사양 개체를 만듭니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  감사에서 이 감사 사양에 대한 레코드를 수집하거나 수집하지 못하도록 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  감사가 있어야 이에 대한 서버 감사 사양을 만들 수 있습니다. 서버 감사 사양을 처음 만들 때는 사용할 수 없는 상태입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -72,12 +72,13 @@ FOR SERVER AUDIT audit_name
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    ADD (FAILED_LOGIN_GROUP);  
+    ADD (FAILED_LOGIN_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   
  감사를 만드는 방법에 대한 전체 예에 대해서는 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조하십시오.  
-  
+   
 ## <a name="see-also"></a>참고 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

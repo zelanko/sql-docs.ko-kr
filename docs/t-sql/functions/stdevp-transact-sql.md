@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906910"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906910"
 
   지정한 식에 있는 모든 값의 모집단에 대한 통계적 표준 편차를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STDEVP가 SELECT 문의 모든 항목에서 사용되는 경우 결과 집합의 각 값이 계산에 포함됩니다. STDEVP와 함께 사용할 수 있는 것은 숫자 열뿐입니다. Null 값은 무시됩니다.  
   
  STDEVP는 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP 사용  
- 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
+ 다음은 `SalesPerson` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -77,10 +77,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP 사용  
- 다음 예에서는 `dbo.FactSalesQuota` 테이블의 판매 할당량 값의 `STDEVP`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
+ 다음 예에서는 `STDEVP` 테이블의 판매 할당량 값의 `dbo.FactSalesQuota`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
   
 ```  
 -- Uses AdventureWorks  

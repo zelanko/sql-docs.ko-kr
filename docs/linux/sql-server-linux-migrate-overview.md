@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129347"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>SQL Server on Linux로 데이터베이스 및 정형 데이터 마이그레이션 
@@ -32,7 +32,7 @@ Windows의 SQL Server 데이터베이스를 SQL Server on Linux로 마이그레�
 
 - [Windows에서 Linux로 SQL Server 데이터베이스 복원](sql-server-linux-migrate-restore-database.md).
 
-데이터베이스를 BACPAC 파일(데이터베이스 스키마 및 데이터가 포함된 압축 파일)로 내보낼 수도 있습니다. BACPAC 파일이 있는 경우 이 파일을 Linux 머신으로 전송한 후 SQL Server으로 가져올 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.
+데이터베이스를 BACPAC 파일(데이터베이스 스키마 및 데이터가 포함된 압축 파일)로 내보낼 수도 있습니다. BACPAC 파일이 있는 경우 이 파일을 Linux 머신으로 전송한 후 SQL Server으로 가져올 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.
 
 - [SSMS 또는 SqlPackage.exe를 사용하여 데이터베이스 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
 

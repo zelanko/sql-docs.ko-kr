@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083979"
 ---
 # <a name="open-log-file-viewer"></a>로그 파일 뷰어 열기
@@ -25,7 +25,7 @@ ms.locfileid: "68083979"
   
 -   감사 컬렉션  
   
--   데이터 컬렉션  
+-   데이터 수집  
   
 -   데이터베이스 메일  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68083979"
   
  로그 파일 뷰어는 보려는 정보에 따라 여러 방법으로 열 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> 권한  
  온라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 securityadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  오프라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임스페이스 및 로그 파일이 저장된 폴더 모두에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [오프라인 로그 파일 보기](../../relational-databases/logs/view-offline-log-files.md)항목의 보안 섹션을 참조하세요.  

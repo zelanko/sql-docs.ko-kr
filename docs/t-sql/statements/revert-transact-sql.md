@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252179"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72252179"
 
   실행 컨텍스트를 마지막 EXECUTE AS 문의 호출자로 다시 전환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *\@varbinary_variable*은 **varbinary(100)** 입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  REVERT는 저장 프로시저 또는 사용자 정의 함수 같은 모듈 내에서 지정하거나 독립 실행형 문으로 지정할 수 있습니다. 모듈 내에서 지정하면 REVERT는 모듈에 정의된 EXECUTE AS 문에만 적용할 수 있습니다. 예를 들어 다음 저장 프로시저는 `EXECUTE AS` 문과 `REVERT` 문을 차례로 실행합니다.  
   
 ```  
@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- `usp_myproc` 내에 정의된 문`REVERT`은 모듈 내에 설정된 실행 컨텍스트를 전환하지만 모듈 외부에 설정된 실행 컨텍스트에는 영향을 주지 않습니다. 즉, 세션에 설정된 실행 컨텍스트가 `login1`로 유지됩니다.  
+ `REVERT` 내에 정의된 문`usp_myproc`은 모듈 내에 설정된 실행 컨텍스트를 전환하지만 모듈 외부에 설정된 실행 컨텍스트에는 영향을 주지 않습니다. 즉, 세션에 설정된 실행 컨텍스트가 `login1`로 유지됩니다.  
   
  독립 실행형 문으로 지정하면 REVERT는 일괄 처리나 세션 내에 정의된 EXECUTE AS 문에 적용됩니다. 해당 EXECUTE AS 문에 WITH NO REVERT 절이 있으면 REVERT가 아무런 영향을 주지 않습니다. 이 경우 실행 컨텍스트는 세션이 삭제될 때까지 계속 적용됩니다.  
   
@@ -86,7 +86,7 @@ EXECUTE dbo.usp_myproc;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-execute-as-and-revert-to-switch-context"></a>1\. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
+### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 REVERT 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. REVERT 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  
   
 ```  
@@ -130,7 +130,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>2\. WITH COOKIE 절 사용  
+### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  

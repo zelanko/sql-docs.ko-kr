@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251230"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
@@ -45,7 +45,7 @@ SQL Server 2017은 가용성 그룹의 데이터베이스에 대한 분산 트�
 - [DTC 개발자 가이드(영문)](https://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC 프로그래머 참조(영문)](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 이전 버전: 같은 SQL Server 인스턴스 내의 데이터베이스 간 트랜잭션 지원  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 이전 버전: 동일한 SQL Server 인스턴스 내의 데이터베이스 간 트랜잭션 지원  
 
 SQL Server 2016 SP1 이전 버전에서는 가용성 그룹에 대해 동일한 SQL Server 인스턴스 내의 데이터베이스 간 트랜잭션이 지원되지 않습니다. 데이터베이스 간 트랜잭션의 두 데이터베이스 중 하나가 가용성 그룹에 위치한 경우 같은 SQL Server 인스턴스에서 호스트할 수는 없습니다. 해당 데이터베이스가 같은 가용성 그룹에 속하는 경우에도 이 제한 사항이 적용됩니다.  
   
@@ -91,6 +91,6 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
 >  이 아티클에서 승인되지 않은 방식으로 DTC에서 데이터베이스 미러링 또는 가용성 그룹을 사용하는 것은 지원되지 않습니다.  DTC와 관련이 없는 제품 측면이 지원되지 않는 것은 아니지만, 분산 트랜잭션을 부적절하게 사용하는 경우 발생하는 문제는 지원되지 않습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982975"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259421"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   트리거를 비활성화합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  트리거를 만들면 기본적으로 설정됩니다. 트리거를 비활성화하면 트리거는 삭제되지 않고 현재 데이터베이스의 개체로 남아 있습니다. 그러나 해당 트리거가 프로그래밍된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 경우에도 트리거는 실행되지 않습니다. [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md)를 사용하여 트리거를 다시 활성화할 수 있습니다. 테이블에 정의된 DML 트리거는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 비활성화되거나 활성화될 수도 있습니다.  
   
  **ALTER TRIGGER** 문을 사용하여 트리거를 변경하면 해당 트리거를 사용할 수 있습니다.  
@@ -84,15 +84,15 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>예  
 다음 샘플은 AdventureWorks2012 데이터베이스에서 설명됩니다.
   
-### <a name="a-disabling-a-dml-trigger-on-a-table"></a>1\. 테이블에 대한 DML 트리거 비활성화  
- 다음 예에서는 `uAddress` 테이블에 만들어진 `Address` 트리거를 비활성화합니다.  
+### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. 테이블에 대한 DML 트리거 비활성화  
+ 다음 예에서는 `uAddress` 테이블에 만들어진 `Person` 트리거를 비활성화합니다.  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
   
-### <a name="b-disabling-a-ddl-trigger"></a>2\. DDL 트리거 비활성화  
+### <a name="b-disabling-a-ddl-trigger"></a>B. DDL 트리거 비활성화  
  다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 후 비활성화합니다.  
   
 ```sql  

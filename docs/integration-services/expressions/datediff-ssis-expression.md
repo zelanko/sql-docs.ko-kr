@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297661"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
@@ -47,21 +47,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다.  
   
-|datepart|약어|  
+|날짜 부분|약어|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|일|dd, d|  
 |Week|wk, ww|  
-|Weekday|dw, w|  
+|요일|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|둘째|ss, s|  
+|초|ss, s|  
 |Millisecond|Ms|  
   
  인수가 Null이면 DATEDIFF 결과도 Null입니다.  

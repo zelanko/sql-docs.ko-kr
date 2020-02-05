@@ -21,10 +21,10 @@ ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594301"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594301"
 
   데이터베이스에서 열 암호화 키를 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  데이터베이스에서 삭제될 열 암호화 키의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스의 모든 열을 암호화 하는 데 사용되는 경우 열 암호화 키는 삭제할 수 없습니다. 열 암호화 키를 사용하여 모든 열을 먼저 삭제해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -53,7 +53,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-column-encryption-key"></a>1\. 열 암호화 키 제거  
+### <a name="a-dropping-a-column-encryption-key"></a>A. 열 암호화 키 제거  
  다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 삭제합니다.  
   
 ```  
@@ -68,6 +68,6 @@ GO
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Always Encrypted를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [보안 enclave를 사용한 Always Encrypted용 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

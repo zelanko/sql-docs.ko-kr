@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983232"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 데이터베이스 사용 권한(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983232"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스에 대한 사용 권한을 거부합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* 데이터베이스에 대해 거부할 수 있는 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.
 
-ALL 이 옵션은 모든 가능한 권한을 거부하지 않습니다. ALL을 거부하는 것은 다음 사용 권한을 거부하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.
+ALL 이 옵션은 모든 가능한 권한을 거부하지 않습니다. ALL을 거부하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 거부하는 것과 같습니다.
 
 PRIVILEGES ISO 준수를 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.
 
@@ -85,13 +85,13 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 
 *Database_user_with_no_login* 해당하는 서버 수준 보안 주체가 없는 데이터베이스 사용자를 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스는 사용 권한 계층에서 해당 데이터베이스의 부모인 서버에 포함된 보안 개체입니다. 다음 표에는 데이터베이스에 대해 거부할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.
 
 |데이터베이스 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|서버 사용 권한에 포함된 사용 권한|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**적용 대상:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]을 참조하세요.|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**적용 대상:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -177,7 +177,7 @@ AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스�
 
 ## <a name="examples"></a>예
 
-### <a name="a-denying-permission-to-create-certificates"></a>1\. 인증서를 만들기 위한 사용 권한 거부
+### <a name="a-denying-permission-to-create-certificates"></a>A. 인증서를 만들기 위한 사용 권한 거부
 
 다음 예에서는 사용자 `CREATE CERTIFICATE`에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `MelanieK` 사용 권한을 거부합니다.
 
@@ -187,7 +187,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>2\. 애플리케이션 역할에 대한 REFERENCES 사용 권한 거부
+### <a name="b-denying-references-permission-to-an-application-role"></a>B. 애플리케이션 역할에 대한 REFERENCES 사용 권한 거부
 
 다음 예에서는 `REFERENCES` 애플리케이션 역할에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `AuditMonitor` 사용 권한을 거부합니다.
 
@@ -201,7 +201,7 @@ GO
 
 ### <a name="c-denying-view-definition-with-cascade"></a>C. CASCADE를 지정하여 VIEW DEFINITION 거부
 
-다음 예에서는 사용자 `CarmineEs` 및 `CarmineEs`가 `VIEW DEFINITION` 권한을 부여한 모든 보안 주체에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `VIEW DEFINITION` 권한을 거부합니다.
+다음 예에서는 사용자 `VIEW DEFINITION` 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]가 `CarmineEs` 권한을 부여한 모든 보안 주체에 대해 `CarmineEs` 데이터베이스의 `VIEW DEFINITION` 권한을 거부합니다.
 
 ```sql
 USE AdventureWorks2012;

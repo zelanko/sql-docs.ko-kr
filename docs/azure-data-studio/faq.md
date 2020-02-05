@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959544"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
@@ -56,7 +56,7 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Azure Data Studio와 SQL Server Management Studio는 어떤 경우에 사용해야 하나요?
 
-Azure Data Studio를 사용하는 경우: 
+*Azure Data Studio를 사용하는 경우:*
 
 - 쿼리 편집 또는 실행에 대부분의 시간을 보내고 있습니다.
 - 결과 세트를 빠르게 차트로 만들고 시각화하는 기능이 필요합니다.
@@ -65,7 +65,7 @@ Azure Data Studio를 사용하는 경우:
 - 심층 관리 또는 플랫폼 관련 구성을 수행할 필요가 없습니다.
 - macOS 또는 Linux에서 실행해야 합니다.
 
-SQL Server Management Studio를 사용하는 경우: 
+*SQL Server Management Studio를 사용하는 경우:*
 
 - 데이터베이스 관리 작업에 대부분의 시간을 보내고 있습니다.
 - 복잡한 관리 또는 플랫폼 구성을 수행하고 있습니다.
@@ -82,49 +82,49 @@ SQL Server Management Studio를 사용하는 경우:
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 로그인|예|예|
-|대시보드|예| |
-|확장 프로그램|예| |
-|통합 터미널|예||
-|개체 탐색기|예|예|
-|개체 스크립팅|예|예|
-|프로젝트 시스템|예||
-|테이블에서 선택|예|예|
-|원본 코드 제어|예||
-|작업창|예||
-|테마|예||
-|어둡게 모드|예||
+|Azure 로그인|yes|yes|
+|대시보드|yes| |
+|확장|yes| |
+|통합 터미널|yes||
+|개체 탐색기|yes|yes|
+|개체 스크립팅|yes|yes|
+|프로젝트 시스템|yes||
+|테이블에서 선택|yes|yes|
+|원본 코드 제어|yes||
+|작업창|yes||
+|테마|yes||
+|어둡게 모드|yes||
 |Azure Resource Explorer|미리 보기||
-|스크립트 생성 마법사||예
-|DACPAC 가져오기\내보내기||예|
-|개체 속성||예|
-|테이블 디자이너||예|
+|스크립트 생성 마법사||yes
+|DACPAC 가져오기\내보내기||yes|
+|개체 속성||yes|
+|테이블 디자이너||yes|
 
 ### <a name="query-editor"></a>쿼리 편집기
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|차트 뷰어|예||
-|CSV, JSON, XLSX로 결과 내보내기|예||
-|IntelliSense|예|예|
-|코드 조각|예|예|
-|플랜 표시|미리 보기|예|
-|클라이언트 통계||예|
-|활성 쿼리 통계||예|
-|쿼리 옵션||예|
-|파일로 결과 저장||예|
-|텍스트로 결과 표시||예|
-|공간 뷰어||예|
-|SQLCMD||예|
-|T-SQL 디버거||예|
+|차트 뷰어|yes||
+|CSV, JSON, XLSX로 결과 내보내기|yes||
+|IntelliSense|yes|yes|
+|코드 조각|yes|yes|
+|플랜 표시|미리 보기|yes|
+|클라이언트 통계||yes|
+|활성 쿼리 통계||yes|
+|쿼리 옵션||yes|
+|파일로 결과 저장||yes|
+|텍스트로 결과 표시||yes|
+|공간 뷰어||yes|
+|SQLCMD||yes|
+|T-SQL 디버거||yes|
 
 ### <a name="operating-system-support"></a>운영 체제 지원
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|예|예|
-|macOS|예||
-|Linux|예||
+|Windows|yes|yes|
+|macOS|yes||
+|Linux|yes||
 
 ### <a name="data-engineering"></a>데이터 엔지니어링
 
@@ -132,35 +132,35 @@ SQL Server Management Studio를 사용하는 경우:
 |:---|:---|:---|
 |외부 데이터 마법사|미리 보기||
 |HDFS 통합|미리 보기||
-|전자 필기장|미리 보기||
+|Notebooks|미리 보기||
 
 ### <a name="database-administration"></a>데이터베이스 관리
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|백업/복원|예|예|
-|플랫 파일 가져오기|미리 보기|예|
-|SQL 에이전트|미리 보기|예|
-|SQL 프로파일러|미리 보기|예|
-|Always On||예|
-|항상 암호화||예|
-|데이터 복사 마법사||예|
-|데이터 튜닝 관리자||예|
-|데이터베이스 다이어그램||예|
-|오류 로그 뷰어||예|
-|유지 관리 계획||예|
-|다중 서버 쿼리||예|
-|정책 기반 관리||예|
-|PolyBase||예|
-|쿼리 저장소||예|
-|등록된 서버||예|
-|복제||예|
-|보안 관리||예|
-|Service Broker||예|
-|SQL 메일||예|
-|Template Explorer||예|
-|취약성 평가||예|
-|XEvent 관리||예|
+|백업/복원|yes|yes|
+|플랫 파일 가져오기|미리 보기|yes|
+|SQL 에이전트|미리 보기|yes|
+|SQL 프로파일러|미리 보기|yes|
+|Always On||yes|
+|Always Encrypted||yes|
+|데이터 복사 마법사||yes|
+|데이터 튜닝 관리자||yes|
+|데이터베이스 다이어그램||yes|
+|오류 로그 뷰어||yes|
+|유지 관리 계획||yes|
+|다중 서버 쿼리||yes|
+|정책 기반 관리||yes|
+|PolyBase||yes|
+|쿼리 저장소||yes|
+|등록된 서버||yes|
+|복제||yes|
+|보안 관리||yes|
+|Service Broker||yes|
+|SQL 메일||yes|
+|Template Explorer||yes|
+|취약성 평가||yes|
+|XEvent 관리||yes|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio에 SSMS/SSDT 기능이 없습니다. 추가하시겠습니까?
@@ -185,7 +185,7 @@ SQL PowerShell은 현재 PowerShell 갤러리에서 사용 가능하며, Windows
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio는 Azure SQL Data Warehouse와 연결되나요?
 
-예 Azure SQL Data Warehouse에 대한 Azure Data Studio 지원은 현재 Azure SQL Database Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
+예. Azure SQL Data Warehouse에 대한 Azure Data Studio 지원은 현재 Azure SQL Database Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>새 버전의 SQL Server에서 Azure Data Studio가 중요한 이유는 무엇인가요?
 

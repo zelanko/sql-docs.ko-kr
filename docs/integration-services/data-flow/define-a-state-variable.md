@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292934"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
@@ -30,7 +30,7 @@ ms.locfileid: "71292934"
   
  다음 표에서는 CDC 상태 변수 값의 구성 요소를 자세히 설명합니다.  
   
-|구성 요소|설명|  
+|구성 요소|Description|  
 |---------------|-----------------|  
 |**\<상태 이름 >**|현재 CDC 상태의 이름입니다.|  
 |**CS**|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "71292934"
   
  다음 표에는 가능한 CDC 상태 값에 대한 설명이 나와 있습니다.  
   
-|State|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 **MarkInitialLoadStart** 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "71292934"
 |TFEND(Trickle-Feed 업데이트 종료)|일반 CDC 실행에 대해 예상되는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되었으며 새 처리 범위를 사용한 새 실행을 시작할 수 있음을 나타냅니다.|  
 |TFSTART|이 상태는 CDC 제어 태스크에 대한 **GetProcessingRange** 작업 호출 이후에 trickle feed 업데이트 패키지를 처음 실행하는 것이 아닌 두 번째 실행부터 발생하는 상태입니다.<br /><br /> 이 상태는 일반 CDC 실행이 시작되었지만 종료되지 않았거나 아직 확실하게 종료되지 않았음을 나타냅니다(**MarkProcessedRange**).|  
 |TFREDO(Trickle-Feed 업데이트 다시 처리)|이 상태는 TFSTART 실행 후 **GetProcessingRange** 에서 발생하는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되지 않았음을 나타냅니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
-|ERROR|CDC 그룹이 ERROR 상태에 있습니다.|  
+|오류|CDC 그룹이 ERROR 상태에 있습니다.|  
   
  다음은 CDC 상태 변수 값의 예입니다.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "71292934"
   
 ## <a name="see-also"></a>참고 항목  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC 제어 태스크 편집기](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

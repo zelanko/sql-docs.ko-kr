@@ -11,13 +11,13 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d9373bcb994614a1726801c6cd8c85a9bc46bced
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038569"
 ---
-# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
+# <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -40,7 +40,7 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
 
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
