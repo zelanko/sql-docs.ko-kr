@@ -14,10 +14,10 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281967"
 ---
 # <a name="managing-running-packages-programmatically"></a>프로그래밍 방식으로 실행 중인 패키지 관리
@@ -29,7 +29,7 @@ ms.locfileid: "71281967"
   
  패키지 모니터링에 대한 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](../../integration-services/service/package-management-ssis-service.md)를 참조하세요.  
   
- 이 항목에서 설명하는 모든 방법은 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 설명하는 모든 방법은 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후 <xref:Microsoft.SqlServer.Dts.Runtime>using**또는**Imports**문을 사용하여** 네임스페이스를 가져옵니다.  
   
 > [!IMPORTANT]  
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 ".", localhost 또는 로컬 서버의 서버 이름만 지원합니다. "(local)"은 사용할 수 없습니다.  

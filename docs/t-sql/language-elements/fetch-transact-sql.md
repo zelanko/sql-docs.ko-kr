@@ -24,10 +24,10 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974399"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71974399"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서에서 특정 행을 검색합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ FETCH
  *n* 또는 \@*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  RELATIVE { *n*| \@*nvar*}  
- *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 \@*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. `FETCH RELATIVE`n*또는*\@nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록* 가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  GLOBAL  
  *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
@@ -82,7 +82,7 @@ FETCH
  INTO \@*variable_name*[ ,...*n*]  
  인출하는 열에서 지역 변수로 데이터를 가져가도록 허용합니다. 목록의 각 변수는 왼쪽에서 오른쪽 순으로 커서 결과 집합의 해당 열과 연관됩니다. 각 변수의 데이터 형식은 반드시 해당 결과 집합 열의 데이터 형식과 일치하거나 암시적 변환이 지원되어야 합니다. 변수의 개수는 커서 선택 목록의 열 수와 일치해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `SCROLL` 옵션이 ISO 스타일 `DECLARE CURSOR` 문에서 지정되지 않은 경우 `NEXT`가 유일하게 지원되는 `FETCH` 옵션입니다. `SCROLL`이 ISO 스타일 `DECLARE CURSOR` 문에서 지정되는 경우 모든 `FETCH` 옵션이 지원됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 커서 확장을 사용하는 경우에는 다음 규칙이 적용됩니다.  
@@ -91,7 +91,7 @@ FETCH
   
 -   `DYNAMIC`, `FORWARD_ONLY` 또는 `FAST_FORWARD`를 지정하지 않고 `KEYSET`, `STATIC` 또는 `SCROLL` 중 하나를 지정하는 경우 모든 `FETCH` 옵션이 지원됩니다.  
   
--   `DYNAMIC SCROLL` 커서는 `ABSOLUTE`를 제외한 모든 `FETCH` 옵션을 지원합니다.  
+-   `DYNAMIC SCROLL` 커서는 `FETCH`를 제외한 모든 `ABSOLUTE` 옵션을 지원합니다.  
   
  `@@FETCH_STATUS` 함수는 마지막 `FETCH` 문의 상태를 보고합니다. sp_describe_cursor에 의해 반환되는 커서의 fetch_status 열에도 동일한 정보가 기록됩니다. 해당 데이터에 대해 어떠한 작업을 수행하려고 시도하기 전에 반드시 이 상태 정보를 사용하여 `FETCH` 문에서 반환되는 데이터의 유효성을 확인해야 합니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.  
   
@@ -100,7 +100,7 @@ FETCH
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-fetch-in-a-simple-cursor"></a>1\. 단순 커서에서 FETCH 사용  
+### <a name="a-using-fetch-in-a-simple-cursor"></a>A. 단순 커서에서 FETCH 사용  
  다음 예에서는 `Person.Person` 테이블에 있는 행에 대해 성이 `B`로 시작하는 단순 커서를 선언하고 `FETCH NEXT`를 사용하여 한 행씩 진행하는 방법을 보여 줍니다. `FETCH` 문은 `DECLARE CURSOR`에 지정된 열에 대한 값을 단일 행 결과 집합으로 반환합니다.  
   
 ```sql  
@@ -128,7 +128,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-### <a name="b-using-fetch-to-store-values-in-variables"></a>2\. FETCH를 사용하여 변수에 값 저장  
+### <a name="b-using-fetch-to-store-values-in-variables"></a>B. FETCH를 사용하여 변수에 값 저장  
  다음 예는 `FETCH` 문의 출력이 클라이언트에게 직접 반환되지 않고 지역 변수에 저장된다는 점 외에는 예 1과 유사합니다. `PRINT` 문은 변수를 한 문자열로 결합하여 클라이언트에 반환합니다.  
   
 ```sql  

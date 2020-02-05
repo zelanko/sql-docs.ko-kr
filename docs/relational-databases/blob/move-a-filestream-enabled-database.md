@@ -13,10 +13,10 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091531"
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 이동

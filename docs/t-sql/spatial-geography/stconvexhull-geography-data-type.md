@@ -15,10 +15,10 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042474"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull(geography 데이터 형식)
@@ -38,8 +38,8 @@ ms.locfileid: "68042474"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- 봉투 각도가 90보다 큰 **geography** 인스턴스에 대해 `FullGlobe` 개체를 반환합니다.  
+## <a name="remarks"></a>설명  
+ 봉투 각도가 90보다 큰 `FullGlobe`geography**인스턴스에 대해** 개체를 반환합니다.  
   
  빈 **geography** 인스턴스에 대해 빈 **geography** 컬렉션을 반환합니다.  
   
@@ -47,15 +47,15 @@ ms.locfileid: "68042474"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>1\. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
- 다음 예에서는 초기화되지 않은 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
+### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
+ 다음 예에서는 초기화되지 않은 `STConvexHull()`geography**인스턴스에**을 사용합니다.  
   
 ```
  DECLARE @g geography;  
  SELECT @g.STConvexHull();
  ```  
   
-### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>2\. 빈 geography 인스턴스에 STConvexHull 사용  
+### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>B. 빈 geography 인스턴스에 STConvexHull 사용  
  다음 예에서는 빈 `STConvexHull()` 인스턴스에 `Polygon`을 사용합니다.  
   
 ```
@@ -73,7 +73,7 @@ ms.locfileid: "68042474"
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
- 다음 예에서는 봉투 각도가 90도보다 큰 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
+ 다음 예에서는 봉투 각도가 90도보다 큰 `STConvexHull()`geography**인스턴스에**을 사용합니다.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

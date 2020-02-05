@@ -14,10 +14,10 @@ ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039125"
 ---
 # <a name="use-xml-in-computed-columns"></a>계산 열에 XML 사용
@@ -86,7 +86,7 @@ FROM T
   
 ### <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[계산 열을 사용하여 자주 사용되는 XML 값 승격](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|속성 테이블 및 계산 열이 있는 속성 승격을 사용하는 방법을 설명합니다.|  
   

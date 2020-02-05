@@ -11,10 +11,10 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292125"
 ---
 # <a name="request-log"></a>요청 로그
@@ -52,13 +52,13 @@ ms.locfileid: "71292125"
  **형식**  
  기록된 이벤트의 유형을 표시합니다. 다음 표에서는 가능한 이벤트 유형을 나열합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |S|성공 메시지입니다.|  
-|E|오류 메시지입니다.|  
+|E|오류 메시지|  
 |W|경고 메시지입니다.|  
 |I|정보 메시지.|  
-|변수를 잠그기 위한|작업이 중단되었습니다.|  
+|A|작업이 중단되었습니다.|  
   
  **메시지**  
  기록된 이벤트와 관련된 메시지 텍스트를 표시합니다.  

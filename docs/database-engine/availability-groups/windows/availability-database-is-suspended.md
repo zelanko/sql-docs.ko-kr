@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934919"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>가용성 그룹에 대해 가용성 데이터베이스가 일시 중단됩니다.
@@ -33,7 +33,7 @@ ms.locfileid: "67934919"
 |**범주**|**경고**|  
 |**패싯**|가용성 데이터베이스|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 보조 데이터베이스("보조 데이터베이스 복제본"이라고도 함)의 데이터 이동 상태를 확인합니다. 데이터 이동이 일시 중지되는 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

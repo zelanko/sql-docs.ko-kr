@@ -18,10 +18,10 @@ ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950058"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "67950058"
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 도형이 점이거나 인스턴스가 비어 있으면 0을 반환합니다.  
   
  모든 **Polygon** 인스턴스는 닫혀 있다고 간주됩니다.  

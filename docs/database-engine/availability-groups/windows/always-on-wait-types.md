@@ -11,10 +11,10 @@ ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934964"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>가용성 그룹과 연결된 대기 식별

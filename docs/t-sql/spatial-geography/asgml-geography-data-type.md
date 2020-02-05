@@ -20,10 +20,10 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066608"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml(geography 데이터 형식)
@@ -31,7 +31,7 @@ ms.locfileid: "68066608"
 
   **geography** 인스턴스의 GML(Geography Markup Language) 표현을 반환합니다.  
   
- Geography Markup Language에 대한 자세한 내용은 Open Geospatial Consortium 사양: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
+ Geography Markup Language에 대한 자세한 내용은 Open Geospatial Consortium 사양: [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68066608"
   
  CLR 반환 형식: **SqlXml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString` 인스턴스를 만들고 `AsGML()`을 사용하여 인스턴스의 GML 설명을 반환합니다.  

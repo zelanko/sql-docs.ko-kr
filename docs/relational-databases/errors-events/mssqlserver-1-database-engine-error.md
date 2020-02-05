@@ -14,13 +14,13 @@ ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1993d5ec94abc206cabd7c12841c3fdbe15a7cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928088"
 ---
-# <a name="mssqlserver-1"></a>MSSQLSERVER_-1
+# <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  

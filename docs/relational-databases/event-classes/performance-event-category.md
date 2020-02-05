@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 42eb4676454f71bbc7b1dd1def4ec5de3d0b3867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050407"
 ---
 # <a name="performance-event-category"></a>Performance 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "68050407"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Auto Stats 이벤트 클래스](../../relational-databases/event-classes/auto-stats-event-class.md)|인덱스 및 열 통계가 자동으로 업데이트되었음을 나타냅니다.|  
 |[Degree of Parallelism&#40;7.0 Insert&#41; 이벤트 클래스](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 직렬 또는 병렬 계획을 사용하여 SELECT, INSERT, UPDATE 또는 DELETE 문을 실행했음을 나타냅니다. 또한 작업에 사용된 CPU 수도 보고합니다.|  

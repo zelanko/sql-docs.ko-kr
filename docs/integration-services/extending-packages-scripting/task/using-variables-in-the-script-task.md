@@ -21,10 +21,10 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c01695891e1d41fed5e1e5c293a18f74462a4151
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285983"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
@@ -34,12 +34,12 @@ ms.locfileid: "71285983"
 
   스크립트 태스크에서는 변수를 통해 패키지의 다른 개체와 데이터를 교환할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)을 참조하세요.  
   
- 스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 사용하여 패키지의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 개체를 읽고 씁니다.  
+ 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**개체의** 속성을 사용하여 패키지의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 개체를 읽고 씁니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 **개체** 형식을 사용합니다. 스크립트 태스크에는 **Option Strict**가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
   
- **스크립트 태스크 편집기**의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 **Value** 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
+ <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>스크립트 태스크 편집기<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>의 **및** 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**개체의** 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 **Value** 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 메서드를 사용하여 코드에서 변수를 사용하기 전에 해당 변수가 있는지 여부를 확인할 수 있습니다.  
   

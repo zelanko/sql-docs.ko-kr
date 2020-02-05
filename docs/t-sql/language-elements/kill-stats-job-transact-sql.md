@@ -23,10 +23,10 @@ ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b0dd587240a56dcdfab4d618255ee838491054af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122286"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68122286"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 비동기 통계 업데이트 작업을 종료합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ KILL STATS JOB job_id
  *job_id*  
  작업의 sys.dm_exec_background_job_queue 동적 관리 뷰에 의해 반환된 job_id 필드입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  job_id는 KILL 문의 다른 형식에 사용되는 session_id 또는 작업 단위와 관련이 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  

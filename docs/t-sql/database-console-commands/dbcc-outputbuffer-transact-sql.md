@@ -22,10 +22,10 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039088"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68039088"
 
 지정된 *session_id*의 현재 출력 버퍼를 16진수와 ASCII 형식으로 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
 ```sql
@@ -55,13 +55,13 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- 의 모든 멘션을  
+ WITH  
  옵션을 지정할 수 있습니다.  
   
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC OUTPUTBUFFER는 지정된 클라이언트(*session_id*)로 보낸 결과를 표시합니다. 출력 스트림이 포함되지 않은 프로세스의 경우 오류 메시지가 반환됩니다.
   
 DBCC OUTPUTBUFFER가 표시한 결과를 반환하는 실행된 문을 표시하려면 DBCC INPUTBUFFER를 실행합니다.

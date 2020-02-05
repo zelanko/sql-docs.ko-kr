@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075896"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
@@ -23,7 +23,7 @@ ms.locfileid: "68075896"
 
   이 문서에서는 다음 항목의 메모리 내 OLTP 기능에 대해 지원되지 않는 데이터 형식을 소개합니다.  
   
--   메모리 액세스에 최적화된 테이블  
+-   메모리 최적화 테이블  
   
 -   고유하게 컴파일된 T-SQL 모듈  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68075896"
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>LOB 및 기타 행 외부 열 식별
 
-SQL Server 2016부터는 메모리 최적화 테이블이 [행 외부 열을 지원](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)하여, 단일 테이블 행이 8060바이트보다 클 수 있습니다. 다음 Transact-SQL SELECT 문은 메모리 최적화 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
+SQL Server 2016부터는 메모리 최적화 테이블이 [행 외부 열을 지원](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)하여, 단일 테이블 행이 8060바이트보다 클 수 있습니다. 다음 Transact-SQL SELECT 문은 메모리 최적화 테이블에 대한 모든 행 외부 열을 보고합니다. 다음 사항에 유의하세요.
 
 - 모든 인덱스 키 열은 행에 저장됩니다.
   - 이제 메모리 최적화 테이블에서 고유하지 않은 인덱스 키에 NULLable 열을 포함할 수 있습니다.
@@ -88,6 +88,6 @@ SELECT
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [메모리 최적화 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   

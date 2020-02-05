@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283324"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
@@ -85,11 +85,11 @@ ms.locfileid: "71283324"
   
     대상 컴퓨터의 환경 변수 값이 개발 컴퓨터의 환경 변수 값과 다르므로 패키지 유효성 검사 페이지에 여러 경고가 표시됩니다. 다음 4개의 경고를 예상해야 합니다.  
   
-    -   구성 파일: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   
-    -   구성 파일: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   

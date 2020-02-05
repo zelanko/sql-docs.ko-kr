@@ -13,10 +13,10 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947021"
 ---
 # <a name="database-properties-query-store-page"></a>데이터베이스 속성(쿼리 저장소 페이지)
@@ -64,7 +64,7 @@ ms.locfileid: "67947021"
   
  오른쪽 차트에는 현재 사용된 쿼리 저장소 할당량 부분이 표시됩니다. 왼쪽 차트에는 할당량이 표시되지 않습니다. 할당량이 데이터베이스의 현재 크기를 초과할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  쿼리 저장소 기능을 통해 DBA는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 이 쿼리 저장소 데이터베이스 속성 페이지를 사용하거나 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다. 쿼리 저장소는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 대화 상자를 사용하여 정보를 표시합니다. 쿼리 저장소에 대한 자세한 내용은 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

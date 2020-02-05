@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244386"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
@@ -69,4 +69,4 @@ ms.locfileid: "75244386"
 
 [가용성 그룹의 SQL Server 2016 DTC 지원(영문)](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성(영문)](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

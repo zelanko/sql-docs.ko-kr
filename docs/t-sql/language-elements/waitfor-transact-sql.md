@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086110"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68086110"
 
   지정된 시간 또는 시간 간격이 경과하거나 지정된 명령문이 하나 이상의 행을 수정 또는 반환할 때까지 일괄 처리, 저장 프로시저 또는 트랜잭션의 실행을 차단합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  TIMEOUT이 있는 WAITFOR는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지에만 적용됩니다. 자세한 내용은 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) 및 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  WAITFOR 문을 실행하는 동안 트랜잭션이 실행되며 같은 트랜잭션에서 다른 요청을 실행할 수 없습니다.  
   
  실제 시간 지연은 *time_to_pass*, *time_to_execute* 또는 *timeout*에 지정된 시간과 다를 수 있으며 서버의 작업 수준에 따라 달라집니다. 시간 카운터는 WAITFOR 문 스레드가 예약될 때 시작합니다. 서버가 사용 중이면 스레드가 즉시 예약되지 않을 수도 있으므로 시간 지연이 지정된 시간보다 길어질 수 있습니다.  
@@ -106,7 +106,7 @@ WAITFOR
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-waitfor-time"></a>1\. WAITFOR TIME 사용  
+### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME 사용  
  다음 예에서는 msdb 데이터베이스에서 `sp_update_job` 저장 프로시저를 오후 10시 20분에 실행합니다. (`22:20`).  
   
 ```  
@@ -119,7 +119,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-waitfor-delay"></a>2\. WAITFOR DELAY 사용  
+### <a name="b-using-waitfor-delay"></a>B. WAITFOR DELAY 사용  
  다음 예에서는 2시간 지연 후에 저장 프로시저를 실행합니다.  
   
 ```  

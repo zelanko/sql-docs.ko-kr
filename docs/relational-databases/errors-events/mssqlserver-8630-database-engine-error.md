@@ -12,13 +12,13 @@ ms.assetid: 45a9d084-b5ad-435b-ac19-5f4352515817
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7497dc60af7dc2be1653997ef8bfdd9b8ea62f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944733"
 ---
-# <a name="mssqlserver8630"></a>MSSQLSERVER_8630
+# <a name="mssqlserver_8630"></a>MSSQLSERVER_8630
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "67944733"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|EXECUTION_ERR|  
-|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 오류가 발생했습니다.|  
+|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 예기치 않은 오류가 발생했습니다.|  
   
 ## <a name="explanation"></a>설명  
 내부 쿼리 처리 오류입니다.  

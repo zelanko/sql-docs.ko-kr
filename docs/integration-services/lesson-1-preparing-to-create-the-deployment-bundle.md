@@ -11,10 +11,10 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6587c8c0e56e824b1a2ae73c5067949f3c4a223a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296075"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>1단원: 배포 번들 작성 준비
@@ -30,7 +30,7 @@ ms.locfileid: "71296075"
   
 구성을 추가한 후에 ETL 패키지 작성을 위한 [!INCLUDE[ssIS](../includes/ssis-md.md)] 그래픽 도구인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 디자이너에서 패키지를 열고 배포에서 해결해야 하는 문제를 더 잘 이해할 수 있도록 패키지 및 패키지 요소의 속성과 패키지 구성을 검사해야 합니다. 예를 들어 패키지 중 하나가 텍스트 파일에서 데이터를 추출하므로 배포된 패키지를 성공적으로 실행하려면 데이터 파일의 위치를 업데이트해야 합니다.  
   
-**이 단원에 소요되는 예상 시간:** : 1시간  
+**이 단원에 소요되는 예상 시간:** 1시간  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  

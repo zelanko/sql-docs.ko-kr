@@ -18,10 +18,10 @@ ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aeaa48534b2a46e5ace697624e425a93afda0d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044627"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint(geometry 데이터 형식)
@@ -43,7 +43,7 @@ ms.locfileid: "68044627"
   
  OGC(Open Geospatial Consortium) 형식: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `STEndPoint()`는 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)(x.NumPoints())과 동일합니다.  
   
  이 메서드는 비어 있는 **geometry** 인스턴스에서 호출되면 Null을 반환합니다.  

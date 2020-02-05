@@ -12,13 +12,13 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6e18eff965ac406ffd764bbe01bd9bb1aff41437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076710"
 ---
-# <a name="mssqlserver17084"></a>MSSQLSERVER_17084
+# <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,7 +36,7 @@ ms.locfileid: "68076710"
 BEGIN ATOMIC 문의 WITH 절이 옵션 값을 지정하지 않았습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-**ATOMIC** 블록에는 **WITH** 옵션 **TRANSACTION ISOLATION LEVEL** 및 **LANGUAGE**에 대한 값이 필요합니다. 예를 들면 다음과 같습니다.  
+**ATOMIC** 블록에는 **WITH** 옵션 **TRANSACTION ISOLATION LEVEL** 및 **LANGUAGE**에 대한 값이 필요합니다. 예::  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

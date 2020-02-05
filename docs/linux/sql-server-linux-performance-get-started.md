@@ -9,17 +9,17 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896158"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux의 SQL Server 성능 기능 연습
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server를 처음 사용하는 Linux 사용자인 경우 다음 작업에서 몇 가지 성능 기능을 안내합니다. 이러한 기능은 Linux에만 고유하게 적용되거나 관련되지 않지만 추가로 조사할 영역에 대한 아이디어를 줍니다. 각 예제에서는 해당 영역의 심층 설명서에 대한 링크가 제공됩니다.
+SQL Server를 처음 사용하는 Linux 사용자인 경우 다음 작업에서 몇 가지 성능 기능을 안내합니다. 이 보안 작업은 Linux에 고유하거나 특정하지 않으며 추가로 조사할 영역에 대한 아이디어를 제공하는 데 도움이 됩니다. 각 예제에서는 해당 영역의 심층 설명서에 대한 링크가 제공됩니다.
 
 > [!NOTE]
 > 다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. 이 샘플 데이터베이스를 구하여 설치하는 방법에 대한 지침은 [Windows에서 Linux로 SQL Server 데이터베이스 복원](sql-server-linux-migrate-restore-database.md)을 참조하세요.

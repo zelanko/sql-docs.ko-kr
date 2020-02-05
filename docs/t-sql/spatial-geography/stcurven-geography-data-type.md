@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042455"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "68042455"
 ## <a name="exceptions"></a>예외  
  n < 1인 경우, **ArgumentOutOfRangeException**이 throw 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 조건에서는 **NULL**이 반환됩니다.  
   
 -   **geography** 인스턴스가 선언되었지만 인스턴스화되지 않았습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68042455"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stcurven-on-a-circularstring"></a>1\. CircularString에 STCurveN() 사용  
+### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString에 STCurveN() 사용  
  다음 예제에서는 **CircularString** 인스턴스에 두 번째 곡선을 반환합니다.  
   
 ```
@@ -73,7 +73,7 @@ ms.locfileid: "68042455"
   
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
-### <a name="b-using-stcurven-on-a-compoundcurve"></a>2\. CompoundCurve에 STCurveN() 사용  
+### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. CompoundCurve에 STCurveN() 사용  
  다음 예제에서는 **CompoundCurve** 인스턴스에서 두 번째 곡선을 반환합니다.  
   
 ```

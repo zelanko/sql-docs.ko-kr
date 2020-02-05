@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927421"
 ---
 # <a name="xact_state-transact-sql"></a>XACT_STATE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927421"
 
   현재 실행 중인 요청의 사용자 트랜잭션 상태를 보고하는 스칼라 함수입니다. XACT_STATE는 요청에 활성 사용자 트랜잭션이 있는지 여부 및 트랜잭션이 커밋될 수 있는지 여부를 나타냅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ XACT_STATE()
 ## <a name="return-type"></a>반환 형식  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  XACT_STATE는 다음 값을 반환합니다.  
   
 |반환 값|의미|  

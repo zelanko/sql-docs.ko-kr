@@ -18,10 +18,10 @@ ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894914"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple(geometry 데이터 형식)
@@ -41,7 +41,7 @@ OGC(Open Geospatial Consortium)에 의해 정의된 대로 **geometry** 인스�
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geometry** 인스턴스를 단순하게 만들려면 다음의 모든 요구 사항을 충족해야 합니다.  
   
 -   인스턴스의 각 도형은 엔드포인트를 제외하고 자체 교차해서는 안 됩니다.  

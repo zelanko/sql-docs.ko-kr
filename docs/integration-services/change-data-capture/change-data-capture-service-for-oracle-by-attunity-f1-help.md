@@ -11,10 +11,10 @@ ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f765d232ed9b913cc502525bed4632088be1dc1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298875"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
@@ -28,7 +28,7 @@ ms.locfileid: "71298875"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL 서버에 연결](../../integration-services/change-data-capture/connection-to-sql-server.md)  
+-   [SQL Server에 연결](../../integration-services/change-data-capture/connection-to-sql-server.md)  
   
 -   [삭제를 위해 SQL Server에 연결](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   

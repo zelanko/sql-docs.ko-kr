@@ -12,16 +12,16 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930312"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-현재 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스에 대한 *어플라이언스에서* 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
+현재 *데이터베이스에 대한*어플라이언스에서[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,7 +50,7 @@ ALTER SERVER STATE 권한이 필요합니다.
 DBCC SHRINKLOG는 데이터베이스에 대한 메타데이터에 저장된 로그 크기를 변경하지 않습니다. 메타데이터는 CREATE DATABASE 또는 ALTER DATABASE 문에 지정된 LOG_SIZE 매개 변수를 계속 포함합니다.
   
 ## <a name="examples"></a>예 
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>1\. CREATE DATABASE로 지정된 원래 크기로 트랜잭션 로그를 축소합니다.  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. CREATE DATABASE로 지정된 원래 크기로 트랜잭션 로그를 축소합니다.  
 트랜잭션 로그에 대해 주소 데이터베이스를 만들 때 주소 데이터베이스를 100MB로 설정했다고 가정합니다. 즉, 주소에 대한 CREATE DATABASE 문이 LOG_SIZE = 100MB입니다. 이제, 로그가 150MB로 증가했으며 다시 100MB로 축소하려고 합니다.
   
 다음 명령문들은 각각 주소 데이터베이스에 대한 트랜잭션 로그를 100MB의 기본 크기로 축소하려고 합니다. 로그를 100MB로 축소하여 데이터가 손실될 경우, DBCC SHRINKLOG는 데이터 손실 없이 로그를 100MB 이하의 가능한 가장 작은 크기로 축소합니다.

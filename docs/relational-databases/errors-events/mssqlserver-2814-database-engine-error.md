@@ -12,13 +12,13 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001968"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -37,7 +37,7 @@ ms.locfileid: "68001968"
   
 다음 표에서는 재컴파일의 이유를 나열합니다.  
   
-|이유 코드|설명|  
+|이유 코드|Description|  
 |---------------|---------------|  
 |1|스키마가 변경됨|  
 |2|통계가 변경됨|  
@@ -53,7 +53,7 @@ ms.locfileid: "68001968"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 경우 **database_name** 및 **object_name** 열은 NULL입니다.  
+1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 **문의 경우**database_name**및**object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 열은 NULL입니다.  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

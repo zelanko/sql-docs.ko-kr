@@ -13,10 +13,10 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 716e82df7167c5ccb8a79119bceac05304ad870e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298863"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle CDC Designer F1 도움말 참조

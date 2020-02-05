@@ -19,18 +19,18 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930739"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geography** 인스턴스를 생성합니다.
+GML(Geography Markup Language)의 **하위 집합에 표현이 지정된 경우**geography[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 생성합니다.
   
-GML에 대한 자세한 내용은 다음 Open Geospatial Consortium Specifications를 참조하세요. [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
+GML에 대한 자세한 내용은 [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
   
 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.
   
@@ -53,7 +53,7 @@ GeomFromGml ( GML_input, SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
  이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  

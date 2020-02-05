@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001640"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST(Transact-SQL)
@@ -71,7 +71,7 @@ SELECT name FROM sys.registered_search_property_lists;
  *property_name*  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. *property_name*은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. *property_name*의 최대 길이는 256자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 **System.Author**나 **System.Contact.HomeAddress**와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다.  
   
- 개발자는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자에 있는 속성을 식별하기 위해 *property_name*에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+ 개발자는 *CONTAINS* 조건자에 있는 속성을 식별하기 위해 [property_name](../../t-sql/queries/contains-transact-sql.md)에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
  현재 데이터베이스의 검색 속성 목록에 현재 존재하는 속성의 이름을 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  *list_name*으로 지정된 속성 목록에서 지정된 속성을 삭제합니다. 속성을 삭제하면 속성의 등록이 취소되므로 더 이상 검색할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 인덱스마다 검색 속성 목록이 하나만 있을 수 있습니다.  
   
  지정된 검색 속성에 대해 쿼리를 사용하려면 해당 속성을 전체 텍스트 인덱스의 검색 속성 목록에 추가하고 인덱스를 다시 채워야 합니다.  
@@ -169,12 +169,12 @@ GO
   
 -   [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  속성 목록에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-property"></a>1. 속성 추가  
+### <a name="a-adding-a-property"></a>A. 속성 추가  
  다음 예제에서는 `Title`, `Author` 및 `Tags`와 같은 여러 속성을 `DocumentPropertyList`라는 속성 목록에 추가합니다.  
   
 > [!NOTE]  
@@ -201,7 +201,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 > [!NOTE]  
 >  제공된 검색 속성 목록을 속성 범위 쿼리에 사용하려면 먼저 이 목록을 전체 텍스트 인덱스와 연결해야 합니다. 이렇게 하려면 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하고 SET SEARCH PROPERTY LIST 절을 지정하세요.  
   
-### <a name="b-dropping-a-property"></a>2. 속성 삭제  
+### <a name="b-dropping-a-property"></a>B. 속성 삭제  
  다음 예에서는 `Comments` 속성 목록에서 `DocumentPropertyList` 속성을 삭제합니다.  
   
 ```  

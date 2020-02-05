@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211432"
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211432"
 
 하나 이상의 기존 대화를 사용하여 메시지를 보냅니다.  
   
-![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ MESSAGE TYPE *message_type_name*
 *message_body_expression*  
 메시지 본문을 나타내는 식을 제공합니다. *message_body_expression*은 선택 사항입니다. 하지만 *message_body_expression*이 있으면 해당 식은 **varbinary(max)** 로 변환될 수 있는 유형이어야 합니다. 식은 NULL일 수 없습니다. 이 절이 생략된 경우에는 메시지 본문이 비어 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  SEND 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 세미콜론(;)으로 종료되어야 합니다.  
@@ -146,7 +146,7 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
   
 ## <a name="see-also"></a>참고 항목  
 [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
-[END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+[END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
 [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   

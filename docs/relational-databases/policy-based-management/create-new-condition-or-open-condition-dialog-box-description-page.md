@@ -14,10 +14,10 @@ ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 34223d46b9c66f28f1dad82bda0125c06d0e08ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940518"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지

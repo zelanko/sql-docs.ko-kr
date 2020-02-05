@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991053"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server 복제 설치
@@ -44,7 +44,7 @@ ms.locfileid: "67991053"
   
 - [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md)   
  [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)  

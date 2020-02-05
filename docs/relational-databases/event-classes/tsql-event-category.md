@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af5cd09c9c00c0b250f1b51c72ce642be01dc9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996081"
 ---
 # <a name="tsql-event-category"></a>TSQL 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "67996081"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Exec Prepared SQL 이벤트 클래스](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|SqlClient, ODBC, OLE DB 또는 DB-Library가 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행했음을 나타냅니다.|  
 |[Prepare SQL 이벤트 클래스](../../relational-databases/event-classes/prepare-sql-event-class.md)|SqlClient, ODBC, OLE DB 또는 DB-Library가 사용할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 준비했음을 나타냅니다.|  

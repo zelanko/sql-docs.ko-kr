@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091051"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
@@ -42,7 +42,7 @@ ms.locfileid: "68091051"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  다음 사용 권한을 통해 ALTER PARTITION SCHEME을 실행할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  

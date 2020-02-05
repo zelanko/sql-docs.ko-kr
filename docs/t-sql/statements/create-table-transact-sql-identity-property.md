@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938939"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE(Transact-SQL) IDENTITY (Property)
@@ -36,7 +36,7 @@ ms.locfileid: "67938939"
 > [!NOTE]  
 >  IDENTITY 속성은 열의 행 ID 속성을 표시하는 SQL-DMO **Identity** 속성과 다릅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ID 열은 키 값을 생성하는 데 사용할 수 있습니다. 열에 있는 IDENTITY 속성은 다음 사항을 보장합니다.  
   
 -   각각의 새 값은 현재 시드 및 증가를 기준으로 생성됩니다.  
@@ -77,11 +77,11 @@ IDENTITY [ (seed , increment) ]
   
  ID 열은 테이블당 하나만 만들 수 있습니다.  
   
- 메모리 최적화 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 시드 또는 증가를 1 이외의 값으로 설정하면 다음과 같은 오류가 발생합니다. 1 이외의 시드 및 증가 사용은 메모리 최적화 테이블에서 지원되지 않습니다.  
+ 메모리 최적화 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 시드 또는 증분 값을 1이 아닌 값으로 설정하면 다음 오류가 발생합니다. 1 이외의 시드 및 증분 값 사용은 메모리 최적화 테이블에서는 지원되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-identity-property-with-create-table"></a>1\. CREATE TABLE에 IDENTITY 속성 사용  
+### <a name="a-using-the-identity-property-with-create-table"></a>A. CREATE TABLE에 IDENTITY 속성 사용  
  다음 예에서는 자동으로 ID를 증가시키는 `IDENTITY` 속성을 사용하여 새 테이블을 만듭니다.  
   
 ```  
@@ -109,7 +109,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>2\. 일반 구문을 사용하여 ID 값 간의 간격 찾기  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. 일반 구문을 사용하여 ID 값 간의 간격 찾기  
  다음 예에서는 데이터가 제거되었을 때 ID 값에서 간격을 찾기 위한 일반 구문을 보여 줍니다.  
   
 > [!NOTE]  

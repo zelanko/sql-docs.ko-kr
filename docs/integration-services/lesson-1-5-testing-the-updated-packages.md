@@ -11,10 +11,10 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296105"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>1-5단원 - 업데이트된 패키지 테스트

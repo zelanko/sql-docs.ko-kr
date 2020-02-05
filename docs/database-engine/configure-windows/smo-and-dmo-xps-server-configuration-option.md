@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026053"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs 서버 구성 옵션
@@ -29,9 +29,9 @@ ms.locfileid: "68026053"
 |값|의미|  
 |-----------|-------------|  
 |0|SMO XP를 사용할 수 없습니다.|  
-|1|SMO XP를 사용할 수 있습니다. 기본값입니다.|  
+|1|SMO XP를 사용할 수 있습니다. 이것이 기본값입니다.|  
   
- 이 설정은 즉시 적용됩니다.  
+ 설정은 즉시 적용됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 SMO 확장 저장 프로시저를 사용하도록 설정합니다.  

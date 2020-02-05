@@ -13,10 +13,10 @@ ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e54fc003f2bb61a5e94f521ddb1a0221261610e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291427"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>고정 및 변경 특성 옵션(느린 변경 차원 마법사)

@@ -14,10 +14,10 @@ ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87b14058e49f6cd22d60e4e4b48f2a0868f8f45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968329"
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 있는 데이터베이스 스냅샷(SQL Server)
@@ -39,6 +39,6 @@ ms.locfileid: "67968329"
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

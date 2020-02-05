@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898601"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
@@ -94,7 +94,7 @@ ms.locfileid: "67898601"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -123,11 +123,11 @@ ms.locfileid: "67898601"
   
 11. 표의 **(일반)** 에서 **고유 여부** 를 선택한 다음 목록에서 **예** 를 선택합니다.  
   
-12. 선택 사항: 주 그리드의 **테이블 디자이너**에서 **중복 키 무시** 를 선택한 다음, 목록에서 **예** 를 선택합니다. 고유 인덱스에 중복 키를 만드는 데이터를 추가하려는 시도를 무시하려는 경우 이와 같이 선택합니다.  
+12. 선택 사항: 주 표의 **테이블 디자이너**에서 **중복 키 무시** 를 선택한 다음 목록에서 **예** 를 선택합니다. 고유 인덱스에 중복 키를 만드는 데이터를 추가하려는 시도를 무시하려는 경우 이와 같이 선택합니다.  
   
 13. **닫기**를 클릭합니다.  
   
-14. **파일** 메뉴에서 _table\_name_ **저장**을 클릭합니다.  
+14. **파일** 메뉴에서 **table**name _\_저장_을 클릭합니다.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 고유 인덱스 만들기  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67898601"
   
 7.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
-8.  _table\_name_**에서 열 선택** 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+8.  **table**name _\_에서 열 선택_ 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 9. **확인**을 클릭합니다.  
   

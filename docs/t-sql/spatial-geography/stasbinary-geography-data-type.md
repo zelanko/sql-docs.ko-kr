@@ -18,10 +18,10 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042539"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary(geography 데이터 형식)
@@ -43,7 +43,7 @@ ms.locfileid: "68042539"
   
  CLR 반환 형식: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geography** 인스턴스의 OGC 형식은 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)을 호출하여 확인할 수 있습니다.  
   
 ## <a name="examples"></a>예  

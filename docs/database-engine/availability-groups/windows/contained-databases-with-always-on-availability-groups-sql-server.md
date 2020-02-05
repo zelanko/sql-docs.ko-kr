@@ -14,10 +14,10 @@ ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26e92d38188b02c5a2ce0025cc2d33fccc5c6728
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988418"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Always On 가용성 그룹에 포함된 데이터베이스 사용 
@@ -25,11 +25,11 @@ ms.locfileid: "67988418"
 
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 포함된 데이터베이스를 사용하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   포함된 데이터베이스를 가용성 그룹에 추가하기 전에 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 **contained database authentication** 서버 옵션이 **1** 로 설정되어 있는지 확인합니다. 자세한 내용은 [contained database authentication 서버 구성 옵션](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md) 및 [서버 구성 옵션&#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)에서 포함된 데이터베이스를 사용하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [서버 구성 옵션&#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

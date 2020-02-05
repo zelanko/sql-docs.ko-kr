@@ -18,10 +18,10 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816689"
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
@@ -50,21 +50,21 @@ ms.locfileid: "71816689"
   
 1.  원본 구조의 크기를 확인합니다.  
   
-     힙: 1백만*200바이트~200MB  
+     힙: 1백만 * 200바이트 = 200MB  
   
-     비클러스터형 인덱스 A: 1백만*50바이트/80%~63MB  
+     비클러스터형 인덱스 A: 1백만 * 50바이트/80% = 63MB  
   
-     비클러스터형 인덱스 B: 1백만*80바이트/80%~100MB  
+     비클러스터형 인덱스 B: 1백만 * 80바이트/80% = 100MB  
   
      기존 구조의 전체 크기: 363MB  
   
 2.  대상 인덱스 구조의 크기를 확인합니다. 새 클러스터형 키 길이가 uniqueifier를 포함하여 24바이트인 것으로 가정합니다. 비클러스터형 인덱스 모두의 행 표시기(8바이트 길이)가 이 클러스터형 키로 대체됩니다.  
   
-     클러스터형 인덱스: 1백만*200바이트/80%~250MB  
+     클러스터형 인덱스: 1백만 * 200바이트/80% = 250MB  
   
-     비클러스터형 인덱스 A: 1백만*(50–8+24)바이트/80%~83MB  
+     비클러스터형 인덱스 A: 1백만 * (50 – 8 + 24)바이트/80% = 83MB  
   
-     비클러스터형 인덱스 B: 1백만*(80–8+24)바이트/80%~120MB  
+     비클러스터형 인덱스 B: 1백만 * (80 – 8 + 24)바이트/80% = 120MB  
   
      새 구조의 전체 크기: 453MB  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71816689"
 |---------------------|---------------------------------------------------------------------------|  
 |SORT_IN_TEMPDB = ON인 경우 오프라인 인덱스 작업|작업 중 전체 공간: 1018MB<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -<br />                    **tempdb**: 202MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
 |SORT_IN_TEMPDB = OFF인 경우 오프라인 인덱스 작업|작업 중 전체 공간: 816MB<br /><br /> -기존 테이블 및 인덱스: 363MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
-|SORT_IN_TEMPDB = ON인 경우 온라인 인덱스 작업|작업 중 전체 공간: 1058MB<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -<br />                    **tempdb**(매핑 인덱스 포함): 242MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
+|SORT_IN_TEMPDB = ON인 경우 온라인 인덱스 작업|작업 중 전체 공간: 1058MB<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -<br />                    **tempdb** (매핑 인덱스 포함): 242MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
 |SORT_IN_TEMPDB = OFF인 경우 온라인 인덱스 작업|작업 중 전체 공간: 856MB<br /><br /> -기존 테이블 및 인덱스: 363MB*<br /><br /> -임시 매핑 인덱스: 40MB\*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
   
  *이 공간은 인덱스 작업이 커밋된 후 할당 취소됩니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "71816689"
  이 예에서는 동시 사용자 업데이트 및 삭제 작업으로 인해 만들어진 버전 레코드용으로 **tempdb** 에서 추가로 필요한 임시 디스크 공간을 고려하지 않았습니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [인덱스 작업에 필요한 트랜잭션 로그 디스크 공간](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

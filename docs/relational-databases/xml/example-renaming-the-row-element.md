@@ -1,5 +1,5 @@
 ---
-title: '예: &lt;행&gt; 요소 이름 바꾸기 | Microsoft Docs'
+title: '예제: &lt;row&gt; 요소 이름 바꾸기 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006808"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>예: &lt;행&gt; 요소 이름 바꾸기
+# <a name="example-renaming-the-ltrowgt-element"></a>예제: &lt;row&gt; 요소 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   결과 집합의 각 행에 대해 RAW 모드는 `<row>`요소를 생성합니다. 이 쿼리에 표시된 것과 같이 RAW 모드에 선택적 인수를 지정하여 선택적으로 이 요소에 다른 이름을 지정할 수 있습니다. 이 쿼리는 행 집합의 각 행에 대해 <`ProductModel`> 요소를 반환합니다.  
   

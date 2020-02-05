@@ -11,10 +11,10 @@ ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114035"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 스토리지
@@ -24,7 +24,7 @@ ms.locfileid: "68114035"
   
  이 표에서는 **SQL Server XTP 스토리지** 카운터에 대해 설명합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Checkpoints Closed**|온라인 에이전트에 의해 닫힌 검사점 수입니다.|  
 |**Checkpoints Completed**|오프라인 검사점 스레드에서 처리된 검사점 수입니다.|  

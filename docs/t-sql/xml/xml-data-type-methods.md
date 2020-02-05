@@ -15,10 +15,10 @@ ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948049"
 ---
 # <a name="xml-data-type-methods"></a>xml 데이터 형식 메서드
@@ -28,7 +28,7 @@ ms.locfileid: "67948049"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)|query() 메서드를 사용하여 XML 인스턴스에 대해 쿼리하는 방법에 대해 설명합니다.|  
 |[value&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/value-method-xml-data-type.md)|value() 메서드를 사용하여 XML 인스턴스에서 SQL 형식의 값을 검색하는 방법에 대해 설명합니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "67948049"
 |[XML 데이터 내 관계형 데이터 바인딩](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 내에 XML이 아닌 데이터를 바인딩하는 방법에 대해 설명합니다.|  
 |[xml 데이터 형식 메서드를 사용하기 위한 지침](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** 데이터 형식 메서드 사용에 대한 지침을 설명합니다.|  
   
- 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 예를 들어  
+ 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT XmlCol.query(' ... ')  

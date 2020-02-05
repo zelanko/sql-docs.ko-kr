@@ -1,5 +1,5 @@
 ---
-title: '예: HIDE 지시어 지정 | Microsoft Docs'
+title: '예제: HIDE 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ee3e41d5792683dd73520bbeacb35fdc91d83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006705"
 ---
-# <a name="example-specifying-the-hide-directive"></a>예: HIDE 지시어 지정
+# <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   

@@ -16,10 +16,10 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321249"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
@@ -49,11 +49,11 @@ ms.locfileid: "75321249"
 -   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
+ **게시 속성 -** Publication> **대화 상자의 \<데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성 -** 게시> **대화 상자의 \<데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
   
 2.  **데이터 파티션 추가** 대화 상자에서 만들려는 파티션에 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   

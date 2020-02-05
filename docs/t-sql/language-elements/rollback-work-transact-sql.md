@@ -23,10 +23,10 @@ ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072349"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072349"
   사용자가 지정한 트랜잭션을 시작 부분으로 롤백합니다.  
   
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ROLLBACK TRANSACTION이 사용자 정의 트랜잭션 이름을 허용하는 것을 제외하면 이 문은 ROLLBACK TRANSACTION과 동일한 기능을 수행합니다. ROLLBACK 구문은 선택적으로 지정할 수 있는 WORK 키워드와 함께 ISO와 호환됩니다.  
   
  트랜잭션을 중첩할 경우 ROLLBACK WORK는 항상 가장 바깥쪽 BEGIN TRANSACTION 문으로 롤백하고 @@TRANCOUNT 시스템 함수를 0으로 감소시킵니다.  

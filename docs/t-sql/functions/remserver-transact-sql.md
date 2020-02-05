@@ -20,10 +20,10 @@ ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0bc401b25b2822b7322c856ed3b2de0e670656b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944509"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67944509"
   
  원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서버의 이름이 로그인 레코드에 나타날 때 이 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67944509"
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  @@REMSERVER에서 저장 프로시저는 프로시저가 실행되는 데이터베이스 서버의 이름을 확인할 수 있습니다.  
   
 ## <a name="examples"></a>예  

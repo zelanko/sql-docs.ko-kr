@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532415"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 확장

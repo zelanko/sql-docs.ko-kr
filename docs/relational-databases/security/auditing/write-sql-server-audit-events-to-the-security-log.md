@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095098"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
@@ -48,7 +48,7 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
 ##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  

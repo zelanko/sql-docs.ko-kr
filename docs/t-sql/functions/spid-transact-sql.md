@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f46f8c23723bd467e649fd90c2f30741eb6bc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907042"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67907042"
 
   현재 사용자 프로세스의 세션 ID를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67907042"
 ## <a name="return-types"></a>반환 형식  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  @@SPID을 사용하여 **sp_who**의 출력에서 현재 사용자 프로세스를 식별할 수 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -65,7 +65,7 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 현재 사용자 프로세스의 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 세션 ID, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  
   
 ```  

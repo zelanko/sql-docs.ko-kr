@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847184"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
@@ -40,16 +40,16 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 
 *dwcount* 지정된 크기와 맞춤을 갖는 'AllocateBuffer'에서 요청하는 버퍼 수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_ABORT | 중단이 요청되었습니다. |
 | VD_E_PROTOCOL | 이 세트는 버퍼 할당이 선언될 수 있는 상태가 아닙니다(상태 전환 행렬 참조). |
 | VD_E_MEMORY | 요청된 메모리를 가져올 수 없습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 이 메서드는 AllocateBuffer를 사용하여 버퍼를 할당하기 전에 사용해야 합니다. 지정된 크기와 맞춤이 지정된 버퍼 세트가 RequestBuffers를 사용하여 요청된 다음, AllocateBuffer를 사용하여 개별 버퍼가 할당됩니다.
 

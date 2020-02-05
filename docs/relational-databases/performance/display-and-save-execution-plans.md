@@ -19,17 +19,17 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11c33865990bd67e62436de3106282f873e5d0fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946832"
 ---
 # <a name="display-and-save-execution-plans"></a>실행 계획 표시 및 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 이 섹션에서는 실행 계획을 표시하는 방법과 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실행 계획을 XML 형식의 파일로 저장하는 방법에 대해 설명합니다.  
   
-실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 또는 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 문으로 생성되는 테이블 형식이 아닌 아이콘으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 유용합니다.  
+실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SET SHOWPLAN_ALL[ 또는 ](../../t-sql/statements/set-showplan-all-transact-sql.md)SET SHOWPLAN_TEXT[ 문으로 생성되는 테이블 형식이 아닌 아이콘으로 ](../../t-sql/statements/set-showplan-text-transact-sql.md) 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 유용합니다.  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서는 하나의 실행 계획만 생성하지만 **예상** 실행 계획과 **실제** 실행 계획이라는 개념이 있습니다.
 -  [예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)은 컴파일 시간에 쿼리 최적화 프로그램에서 생성된 실행 계획을 반환합니다. 예상 실행 계획을 생성해도 실제로 쿼리 또는 일괄 처리를 실행하지 않기 때문에 실제 리소스 사용량 메트릭이나 런타임 경고와 같은 런타임 정보가 이 계획에 포함되지 않습니다. 

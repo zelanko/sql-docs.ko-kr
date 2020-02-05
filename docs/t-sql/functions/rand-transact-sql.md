@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948440"
 ---
 # <a name="rand-transact-sql"></a>RAND(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67948440"
 
   0부터 1까지의 배타적 의사 난수 **float** 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ RAND ( [ seed ] )
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  동일한 초기값으로 RAND()를 반복 호출하면 동일한 결과를 반환합니다.  
   
  한 연결에 대해 지정된 초기값을 사용해 RAND()를 호출하면 모든 후속 RAND() 호출은 최초 RAND() 호출을 바탕으로 한 결과를 생성합니다. 예를 들어 다음 쿼리는 항상 동일한 순서의 숫자를 반환합니다.  

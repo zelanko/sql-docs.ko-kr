@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048092"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>데이터베이스 미러링 설정(SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "68048092"
   
     3.  전체 또는 차등 데이터베이스 백업 이후 수행된 모든 로그 백업을 복원합니다.  
   
-     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 참조하세요.  
+     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
     > [!IMPORTANT]  
     >  주 데이터베이스의 백업을 수행한 다음 가능한 빨리 남은 설정 단계를 완료하십시오. 파트너에서 미러링을 시작할 수 있으려면 먼저 원래 데이터베이스에서 현재 로그 백업을 만든 다음 후속 미러 데이터베이스로 복원해야 합니다.  
@@ -93,9 +93,9 @@ ms.locfileid: "68048092"
         >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 > [!NOTE]  
->  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 예는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
+>  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
 >   
->  인증서 기반 보안을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 예는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
+>  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
   
   
 ##  <a name="InThisSection"></a> 섹션 내용  
@@ -111,16 +111,16 @@ ms.locfileid: "68048092"
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
  데이터베이스 미러링을 설정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계에 대해 설명합니다.  
   
- [예: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Windows 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
- [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  인증서 기반 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
  [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  로컬 서버 인스턴스가 아닌 다른 계정을 사용하는 원격 서버 인스턴스의 로그인을 만드는 방법에 대해 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **SQL Server Management Studio**  
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
@@ -145,7 +145,7 @@ ms.locfileid: "68048092"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [미러된 인스턴스 업그레이드](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
+-   [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

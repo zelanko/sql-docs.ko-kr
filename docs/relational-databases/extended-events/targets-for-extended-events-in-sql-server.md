@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75501987"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
@@ -37,7 +37,7 @@ ms.locfileid: "75501987"
 ### <a name="prerequisites"></a>사전 요구 사항
 
 
-- [빠른 시작에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다. SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)를 참조하세요.
+- [빠른 시작: SQL Server에서 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다.
 
 
 - 자주 업데이트되는 유틸리티 SQL Server Management Studio(SSMS.exe)의 최신 버전이 설치되어 있어야 합니다. 자세한 내용은 다음을 참조하세요.

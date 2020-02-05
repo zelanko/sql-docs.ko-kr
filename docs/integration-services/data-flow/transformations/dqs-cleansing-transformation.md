@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291475"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
@@ -47,7 +47,7 @@ ms.locfileid: "71291475"
   
 ## <a name="related-tasks"></a>관련 작업  
   
--   [데이터 품질 클라이언트에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Data Quality Client에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
 -   [도메인으로 정리 프로젝트 값 가져오기](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
@@ -145,7 +145,7 @@ ms.locfileid: "71291475"
  데이터 수정 이유를 포함할지 여부를 나타냅니다.  
   
  **추가된 데이터**  
- 기존 참조 데이터 공급자에서 받은 추가 데이터를 출력할지 여부를 나타냅니다. 자세한 내용은 [Reference Data Services in DQS](../../../data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+ 기존 참조 데이터 공급자에서 받은 추가 데이터를 출력할지 여부를 나타냅니다. 자세한 내용은 [Reference Data Services in DQS](../../../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
  **추가된 데이터 스키마**  
  데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)을 참조하세요.  

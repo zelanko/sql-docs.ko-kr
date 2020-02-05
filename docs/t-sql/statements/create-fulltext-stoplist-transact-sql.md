@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064650"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73064650"
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST 및 DROP FULLTEXT STOPLIST는 호환성 수준이 100인 경우에만 지원됩니다. 호환성 수준이 80 및 90인 경우에는 이러한 문이 지원되지 않습니다. 하지만 모든 호환성 수준에서 시스템 중지 목록은 새로운 전체 텍스트 인덱스와 자동으로 연결됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  중지 목록을 소유하는 데이터베이스 보안 주체의 이름을 지정합니다. *owner_name*은 현재 사용자가 멤버로 속한 보안 주체의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name*에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  중지 목록의 생성자는 해당 소유자입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -83,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-new-full-text-stoplist"></a>1\. 새로운 전체 텍스트 중지 목록 작성  
+### <a name="a-creating-a-new-full-text-stoplist"></a>A. 새로운 전체 텍스트 중지 목록 작성  
  다음 예에서는 `myStoplist`라는 새로운 전체 텍스트 중지 목록을 만듭니다.  
   
 ```sql  
@@ -91,7 +91,7 @@ CREATE FULLTEXT STOPLIST myStoplist;
 GO  
 ```  
   
-### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>2\. 기존 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
+### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. 기존 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
  다음 예에서는 기존 AdventureWorks 중지 목록 `myStoplist2`를 복사하여 새로운 전체 텍스트 중지 목록 `Customers.otherStoplist`를 만듭니다.  
   
 ```sql  

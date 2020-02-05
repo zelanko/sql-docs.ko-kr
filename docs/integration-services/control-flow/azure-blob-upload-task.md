@@ -14,10 +14,10 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e903de279e4373e234dab18401465edd997e7407
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298430"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 업로드 태스크
@@ -37,8 +37,8 @@ SSIS 패키지는 **Azure Blob 업로드 태스크**를 통해 Azure Blob Storag
 |---|---|  
 |AzureStorageConnection|기존 Azure Storage 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure Storage 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|  
 |BlobContainer|blob으로 업로드된 파일을 포함하는 blob 컨테이너의 이름을 지정합니다.|  
-|BlobDirectory|업로드한 파일이 블록 blob으로 저장되는 blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다. 이미 있는 Blob은 업로드한 Blob으로 바뀝니다.|  
+|BlobDirectory|업로드한 파일이 블록 blob으로 저장되는 blob 디렉터리를 지정합니다. blob 디렉터리는 가상 계층 구조입니다. 이미 있는 Blob은 업로드한 Blob으로 바뀝니다.|  
 |LocalDirectory|업로드할 파일이 포함된 로컬 디렉터리를 지정합니다.|  
 |SearchRecursively|하위 디렉터리 안에서 재귀적으로 검색할 것인지 여부를 지정합니다.|  
-|FileName|이름 필터를 지정하여 지정된 이름 패턴의 파일을 선택합니다. 예를 들어 `MySheet*.xls\*`는 `MySheet001.xls` 및 `MySheetABC.xlsx`와 같은 파일을 포함합니다.|  
+|FileName|지정된 이름 패턴의 파일을 선택할 이름 필터를 지정합니다. 예를 들어 `MySheet*.xls\*`는 `MySheet001.xls` 및 `MySheetABC.xlsx`와 같은 파일을 포함합니다.|  
 |TimeRangeFrom/TimeRangeTo|시간 범위 필터를 지정합니다. **TimeRangeFrom**에서 **TimeRangeTo** 사이에 수정된 파일이 포함됩니다.|  

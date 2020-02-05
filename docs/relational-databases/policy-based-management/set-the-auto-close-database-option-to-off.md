@@ -13,13 +13,13 @@ ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021700"
 ---
-# <a name="set-the-autoclose-database-option-to-off"></a>AUTO_CLOSE 데이터베이스 옵션을 OFF로 설정
+# <a name="set-the-auto_close-database-option-to-off"></a>AUTO_CLOSE 데이터베이스 옵션을 OFF로 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 규칙은 AUTO_CLOSE 옵션이 OFF로 설정되었는지 검사합니다. AUTO_CLOSE가 ON으로 설정된 경우 각 연결 이후에 데이터베이스를 열고 닫는 데 따르는 오버헤드가 증가하여 자주 액세스되는 데이터베이스에서 성능 저하가 발생할 수 있습니다. AUTO_CLOSE는 또한 각 연결 이후에 프로시저 캐시를 플러시합니다.  
   

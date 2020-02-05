@@ -18,10 +18,10 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066447"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate(geography 데이터 형식)
@@ -43,18 +43,18 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  결과 경계 개체가 반구보다 크면 **FullGlobe** 개체가 반환됩니다. 이 메서드는 정확하지 않습니다.  
   
  메서드가 입력에 다른 SRID가 있을 경우 **null**을 반환합니다. [공간 참조 식별자 &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
   
- 메서드가 **null** 입력을 무시합니다.  
+ 이 메서드는 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 한 도시 안의 **geography** 위치 지점 집합에서 `EnvelopeAggregate`를 수행합니다.  
+ 다음 예에서는 한 도시 안의 `EnvelopeAggregate`geography**위치 지점 집합에서**를 수행합니다.  
   
  ```
  USE AdventureWorks2012  

@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924983"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
@@ -173,9 +173,9 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작하세요. [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development].
+- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. [패키지 개발용 문제 해결 도구][Troubleshooting Tools for Package Development]에서 시작할 수 있습니다.
 
-- SSIS 프로젝트와 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법에 대해 알아보세요. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
+- SSIS 프로젝트와 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법에 대해 알아보세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages]에서 시작할 수 있습니다.
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

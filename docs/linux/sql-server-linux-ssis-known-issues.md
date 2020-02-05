@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032235"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux SSIS의 제한 사항 및 알려진 문제
@@ -53,7 +53,7 @@ Linux에서 지원되는 기본 제공 Integration Services 구성 요소는 다
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>제한적으로 지원되는 제어 흐름 작업
 
-| 태스크 | 제한 사항 |
+| Task | 제한 사항 |
 |------------|---|
 | 프로세스 실행 태스크 | In Process 모드만 지원합니다. |
 | 파일 시스템 태스크 | *디렉터리 이동* 및 *파일 특성 설정* 작업은 지원되지 않습니다. |
@@ -120,7 +120,7 @@ SQL Server 유지 관리 계획에서 일반적으로 다양한 SSIS 작업을 �
 - 피벗
 - 행 개수
 - 느린 변경 차원
-- Sort
+- 정렬
 - 용어 조회
 - Union All
 - 피벗 해제

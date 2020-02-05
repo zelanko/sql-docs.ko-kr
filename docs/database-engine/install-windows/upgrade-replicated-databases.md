@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008458"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
@@ -36,7 +36,7 @@ ms.locfileid: "72008458"
     - 병합 게시에 대한 구독자는 버전 수명 주기 지원 주기에 따라 지원되는 게시자 버전과 같거나 낮은 모든 버전이 될 수 있습니다.  
  
 SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다. SQL Server는 일반적으로 다음 두 가지 업그레이드 경로를 제공합니다.
-- 함께 실행: 병렬 환경을 배포하고 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
+- 병렬 업그레이드: 병렬 환경을 배포하고, 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
 - 현재 위치 업그레이드: SQL Server 설치 미디어를 통해 SQL Server 비트를 바꾸고 데이터베이스 개체를 업그레이드하여 기존 SQL Server 설치를 업그레이드하도록 허용합니다. Always On 가용성 그룹 또는 장애 조치 클러스터 인스턴스를 실행하는 환경의 경우 현재 위치 업그레이드는 [롤링 업그레이드](choose-a-database-engine-upgrade-method.md#rolling-upgrade)와 결합되어 가동 중지 시간을 최소화합니다. 
 
 복제 토폴로지를 병렬로 업그레이드하기 위해 채택된 일반적인 방법은 전체 토폴로지의 이동과 달리 일부 게시자-구독자 쌍을 새 병렬 새 환경으로 이동하는 것입니다. 이러한 단계별 방법은 가동 중지 시간을 제어하고 복제를 사용하는 비즈니스에 미치는 영향을 어느 정도 최소화할 수 있습니다.  
@@ -88,7 +88,7 @@ SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다.
 ## <a name="steps-to-upgrade-a-replication-topology"></a>복제 토폴로지를 업그레이드하는 단계
 다음 단계에서는 복제 토폴로지의 서버를 업그레이드하는 순서를 간략하게 설명합니다. 트랜잭션 복제 또는 병합 복제 중 어느 것을 실행하든 동일한 단계가 적용됩니다. 그러나 이러한 단계는 피어 투 피어 복제, 큐 대기 업데이트 구독 또는 즉시 업데이트 구독에는 적용되지 않습니다. 
 
-### <a name="in-place-upgrade"></a>내부 업그레이드 
+### <a name="in-place-upgrade"></a>전체 업그레이드 
 1. 배포자를 업그레이드합니다. 
 2. 게시자와 구독자를 업그레이드합니다. 순서에 관계없이 업그레이드할 수 있습니다. 
 

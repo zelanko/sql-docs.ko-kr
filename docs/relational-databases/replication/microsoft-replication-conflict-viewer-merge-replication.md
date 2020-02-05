@@ -14,10 +14,10 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321960"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
@@ -73,7 +73,7 @@ ms.locfileid: "75321960"
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
  **열 정보 표시** ( **…** )  
- 뷰에서 **데이터 이름**, **열 이름**, **데이터 형식** 및 **열 값**과 같은 열 정보를 보려면 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
+ 열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  
  충돌 해결 프로그램에서 적용되는 내용으로 결정한 행을 유지하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  

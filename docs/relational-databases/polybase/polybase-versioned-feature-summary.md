@@ -10,10 +10,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710451"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
@@ -29,16 +29,16 @@ ms.locfileid: "71710451"
 ||||||
 |-|-|-|-|-|   
 |**기능**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL 데이터 웨어하우스**|**병렬 데이터 웨어하우스**| 
-|다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|예|아니오|아니오|예|
-|Hadoop에서 데이터 가져오기|예|아니오|아니오|예|
-|Hadoop으로 데이터 내보내기  |예|아니오|아니오| 예|
-|Azure HDInsight 쿼리, Azure HDInsight에서 가져오기, Azure HDInsight로 내보내기 |아니오|아니오|아니오|아니오
-|Hadoop으로 쿼리 계산 푸시다운|예|아니오|아니오|예|  
-|Azure Blob 스토리지에서 데이터 가져오기|예|아니오|예|예| 
-|Azure Blob 스토리지로 데이터 내보내기|예|아니오|예|예|  
-|Azure Data Lake Store에서 데이터 가져오기|아니오|아니오|예|아니오|    
-|Azure Data Lake Store에서 데이터 내보내기|아니오|아니오|예|아니오|
-|Microsoft BI 도구에서 PolyBase 쿼리 실행|예|아니오|예|예|   
+|다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|예|예|yes|
+|Hadoop에서 데이터 가져오기|yes|예|예|yes|
+|Hadoop으로 데이터 내보내기  |yes|예|예| yes|
+|Azure HDInsight 쿼리, Azure HDInsight에서 가져오기, Azure HDInsight로 내보내기 |예|예|예|예
+|Hadoop으로 쿼리 계산 푸시다운|yes|예|예|yes|  
+|Azure Blob 스토리지에서 데이터 가져오기|yes|예|yes|yes| 
+|Azure Blob 스토리지로 데이터 내보내기|yes|예|yes|yes|  
+|Azure Data Lake Store에서 데이터 가져오기|예|예|yes|예|    
+|Azure Data Lake Store에서 데이터 내보내기|예|예|yes|예|
+|Microsoft BI 도구에서 PolyBase 쿼리 실행|yes|예|yes|yes|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 연산자가 지원하는 푸시 다운 계산
 
@@ -47,12 +47,12 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 Hadoop 클러스터로 푸시
 ||||
 |-|-|-| 
 |**연산자 유형**|**Hadoop으로 푸시 가능**|**Blob 스토리지로 푸시 가능**|
-|열 프로젝션|예|아니오|
-|조건자|예|아니오|
-|집계|부분|아니오|
-|외부 테이블 간 조인|아니오|아니오|
-|외부 테이블과 로컬 테이블 간 조인|아니오|아니오|
-|정렬|아니오|아니오|
+|열 프로젝션|yes|예|
+|조건자|yes|예|
+|집계|부분|예|
+|외부 테이블 간 조인|예|예|
+|외부 테이블과 로컬 테이블 간 조인|예|예|
+|정렬|예|예|
 
 부분 집계는 데이터가 SQL Server에 도달한 후에 최종 집계가 이루어져야 함을 의미합니다. 하지만 집계의 일부는 Hadoop에서 발생합니다. 이 방법은 대규모 병렬 처리 시스템에서 집계를 계산하는 데 사용됩니다.  
 

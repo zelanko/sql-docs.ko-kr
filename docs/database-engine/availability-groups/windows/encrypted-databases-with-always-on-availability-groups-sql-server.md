@@ -15,10 +15,10 @@ ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b5e86fe6a4f37e4ac21afb3a9aa72d80d48f3544
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000190"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 암호화된 데이터베이스 추가
@@ -43,7 +43,7 @@ ms.locfileid: "68000190"
   
     5.  보조 데이터베이스에서 이 로그 백업을 복원합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62297d0a947b77288db843f0c16bd0799c90bca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298660"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
@@ -32,7 +32,7 @@ ms.locfileid: "71298660"
   
 -   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름 지정에 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
   
      지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>`형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다.  
   

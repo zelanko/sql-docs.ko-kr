@@ -13,10 +13,10 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296683"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>저장 프로시저(Integration Services 카탈로그)

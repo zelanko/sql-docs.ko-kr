@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297633"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
@@ -45,7 +45,7 @@ ms.locfileid: "71297633"
   
  [유지 관리 계획 태스크](#MaintenancePlanTasks)  
   
- [공용 속성](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
 ##  <a name="Package"></a> 패키지  
  다음 표에서는 열거자의 값을 사용하여 설정한 패키지 속성에 해당하는 숫자 값 및 이름을 보여 줍니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "71297633"
   
 |DTSPackageType의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|기본값|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -73,11 +73,11 @@ ms.locfileid: "71297633"
   
 |DTSPriorityClass의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|기본값|0|  
 |AboveNormal|1|  
-|보통|2|  
+|정상|2|  
 |BelowNormal|3|  
-|Idle|4|  
+|유휴 상태|4|  
   
  **ProtectionLevel** 속성 - **DTSProtectionLevel** 열거 값을 사용하여 설정합니다.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "71297633"
   
  **Value** 속성 - **DTSExecResult** 열거 값을 사용하여 설정합니다.  
   
-|이름|숫자 값|  
+|친숙한 이름|숫자 값|  
 |-------------------|-------------------|  
-|성공|0|  
+|Success|0|  
 |실패|1|  
 |Completion|2|  
 |취소됨|3|  
@@ -134,7 +134,7 @@ ms.locfileid: "71297633"
   
 |EnumerationType의 이름|숫자 값|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|탐색기|0|  
 |노드|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,7 +143,7 @@ ms.locfileid: "71297633"
   
 |InnerElementType의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|탐색기|0|  
 |노드|1|  
 |NodeText|2|  
   
@@ -207,10 +207,10 @@ ms.locfileid: "71297633"
   
 |DTSFileSystemAttributes의 이름|숫자 값|  
 |----------------------------------------------|-------------------|  
-|보통|0|  
-|Archive|1|  
+|정상|0|  
+|보관|1|  
 |숨김|2|  
-|읽기 전용|4|  
+|ReadOnly|4|  
 |시스템|8|  
   
 ### <a name="ftp-task"></a>FTP 태스크  
@@ -218,8 +218,8 @@ ms.locfileid: "71297633"
   
 |DTSFTPOp의 이름|숫자 값|  
 |-------------------------------|-------------------|  
-|Send|0|  
-|Receive|1|  
+|보내기|0|  
+|수신|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -267,7 +267,7 @@ ms.locfileid: "71297633"
 |MailPriority의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
 |높음|1|  
-|보통|3|  
+|정상|3|  
 |낮음|5|  
   
 ### <a name="transfer-database-task"></a>데이터베이스 전송 태스크  
@@ -276,7 +276,7 @@ ms.locfileid: "71297633"
 |TransferAction의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
 |복사|0|  
-|자세히 보기|1|  
+|이동|1|  
   
  **Method** 속성 - **TransferMethod** 열거 값을 사용하여 설정합니다.  
   
@@ -334,7 +334,7 @@ ms.locfileid: "71297633"
   
 |ExistingData의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
-|바꾸기|0|  
+|Replace|0|  
 |추가|1|  
   
 ### <a name="web-service-task"></a>웹 서비스 태스크  
@@ -425,7 +425,7 @@ ms.locfileid: "71297633"
 |XPATH|2|  
 |병합|3|  
 |Diff|4|  
-|Patch|5|  
+|패치|5|  
   
  **SourceType**, **SecondOperandType** 및 **XPathSourceType** 속성 - **DTSXMLSourceType** 열거 값을 사용하여 설정합니다.  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297633"
   
 |DTSXMLXPathOperation의 이름|숫자 값|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|평가|0|  
 |값|1|  
 |NodeList|2|  
   
@@ -461,7 +461,7 @@ ms.locfileid: "71297633"
   
 |DTSXMLDiffOptions의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|없음|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,25 +491,25 @@ ms.locfileid: "71297633"
   
 |DatabaseSelection의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|없음|0|  
-|All|1|  
+|None|0|  
+|모두|1|  
 |시스템|2|  
 |사용자|3|  
-|Specific|4|  
+|특정|4|  
   
  **TableSelectionType** 속성 - **TableSelection** 열거 값을 사용하여 설정합니다.  
   
 |TableSelection의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
-|없음|0|  
-|All|1|  
-|Specific|2|  
+|None|0|  
+|모두|1|  
+|특정|2|  
   
  **ObjectTypeSelection** 속성 - **ObjectType** 열거 값을 사용하여 설정합니다.  
   
 |ObjectType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
-|Table|0|  
+|테이블|0|  
 |보기|1|  
 |TableView|2|  
   
@@ -519,7 +519,7 @@ ms.locfileid: "71297633"
 |DestinationType의 이름|숫자 값|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|수동|1|  
+|설명서|1|  
   
  **ExistingBackupsAction** 속성 - **ActionForExistingBackups** 열거 값을 사용하여 설정합니다.  
   
@@ -534,7 +534,7 @@ ms.locfileid: "71297633"
 |-------------------------------------|-------------------|  
 |데이터베이스|0|  
 |파일|1|  
-|Log|2|  
+|로그|2|  
   
  **BackupDevice** 속성 - SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거 값을 사용하여 설정합니다.  
   
@@ -558,7 +558,7 @@ ms.locfileid: "71297633"
   
 |TimeUnitType의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|일|0|  
 |Week|1|  
 |Month|2|  
 |Year|3|  
@@ -568,9 +568,9 @@ ms.locfileid: "71297633"
   
 |StatisticsTarget의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
-|Column|1|  
+|열|1|  
 |인덱스|2|  
-|All|3|  
+|모두|3|  
   
 ##  <a name="CommonProperties"></a> 공용 속성  
  패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너에서는 다음 열거를 사용하여 지정된 속성을 설정할 수 있습니다.  
@@ -579,8 +579,8 @@ ms.locfileid: "71297633"
   
 |DTSForcedExecResult의 이름|숫자 값|  
 |------------------------------------------|-------------------|  
-|없음|-1|  
-|성공|0|  
+|None|-1|  
+|Success|0|  
 |실패|1|  
 |Completion|2|  
   
@@ -591,7 +591,7 @@ ms.locfileid: "71297633"
 |DTSLoggingMode의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|설정|1|  
+|사용|1|  
 |사용 안 함|2|  
   
  **TransactionOption** 속성 - **DTSTransactionOption** 열거 값을 사용하여 설정합니다.  

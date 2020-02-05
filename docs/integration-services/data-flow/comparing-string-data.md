@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293244"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
@@ -37,7 +37,7 @@ ms.locfileid: "71293244"
   
 -   조건부 분할 변환에서는 식에서 문자열 비교를 사용하여 데이터 행을 전송할 출력을 결정할 수 있습니다. 자세한 내용은 [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)을 참조하세요.  
   
--   파생 열 변환에서는 식에서 문자열 비교를 사용하여 새 열 값을 생성할 수 있습니다. 자세한 내용은 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
+-   파생 열 변환에서는 식에서 문자열 비교를 사용하여 새 열 값을 생성할 수 있습니다. 자세한 내용은 [파생 열 변환](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
  또한 변수, 변수 매핑 및 선행 제약 조건에서는 문자열 비교가 포함될 수 있는 식이 사용됩니다. 식에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71293244"
   
  다음 표에서는 비교 옵션과 정렬 스타일에 대해 설명합니다.  
   
-|비교 옵션|설명|  
+|비교 옵션|Description|  
 |-----------------------|-----------------|  
 |대/소문자 무시|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
 |가나 형식 무시|비교 시 두 가지 형식의 일본어 가나 문자인 히라가나와 가타가나를 구분합니다. 이 옵션을 설정하면 문자열 비교 시 가나 형식이 무시됩니다.|  

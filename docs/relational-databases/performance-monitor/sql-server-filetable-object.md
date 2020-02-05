@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093499"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, FileTable 개체
@@ -25,7 +25,7 @@ ms.locfileid: "68093499"
 
 다음 표에서는 SQL Server **FileTable** 성능 개체에 대해 설명합니다.
 
-|**SQL Server FileTable 카운터**|설명|  
+|**SQL Server FileTable 카운터**|Description|  
 |-------------|-----------------|  
 |**Avg time delete FileTable item**|FileTable 항목을 삭제하는 데 걸리는 평균 시간(밀리초)입니다.|
 |**Avg time FileTable enumeration**|FileTable 열거형 요청에 걸리는 평균 시간(밀리초)입니다.|
@@ -47,15 +47,15 @@ ms.locfileid: "68093499"
 |**FileTable item update reqs/sec**|초당 총 FileTable 항목 업데이트 요청 수입니다.|
 |**FileTable kill handle ops/sec**|초당 총 FileTable 핸들 중지 작업 수입니다.|
 |**FileTable table operations/sec**|초당 FileTable 저장소 구성 요소에 의해 처리된 총 테이블 작업 이벤트 수입니다.|
-|**Time delete FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time FileTable enumeration BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time FileTable handle kill BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time move FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time per file I/O request BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time per file I/O response BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time rename FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time to get FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
-|**Time update FileTable item BASE**|내부용으로만 사용할 수 있습니다.| 
+|**Time delete FileTable item BASE**|내부 전용입니다.|
+|**Time FileTable enumeration BASE**|내부 전용입니다.|
+|**Time FileTable handle kill BASE**|내부 전용입니다.|
+|**Time move FileTable item BASE**|내부 전용입니다.|
+|**Time per file I/O request BASE**|내부 전용입니다.|
+|**Time per file I/O response BASE**|내부 전용입니다.|
+|**Time rename FileTable item BASE**|내부 전용입니다.|
+|**Time to get FileTable item BASE**|내부 전용입니다.|
+|**Time update FileTable item BASE**|내부 전용입니다.| 
  
 ## <a name="see-also"></a>참고 항목  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

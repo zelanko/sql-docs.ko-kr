@@ -22,10 +22,10 @@ ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 54890859e9ec27ebfb91009632245d4807f6897a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044039"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68044039"
 
   원격 서비스 바인딩을 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   

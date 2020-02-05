@@ -17,10 +17,10 @@ ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 39df0ace2a24cb4c69f38617ba1a7b70f5da2f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938208"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections 서버 구성 옵션
@@ -32,7 +32,7 @@ ms.locfileid: "67938208"
   
  다음 표에서는 remote admin connections 옵션에 사용할 수 있는 값을 보여줍니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|DAC를 사용하여 로컬 연결만 허용됨을 나타냅니다.|  
 |1|DAC를 사용하여 원격 연결이 허용됨을 나타냅니다.|  

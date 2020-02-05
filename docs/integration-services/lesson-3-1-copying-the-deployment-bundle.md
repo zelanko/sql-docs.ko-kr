@@ -11,10 +11,10 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 12fd42ba8f7fa5abf7f35c14001cb1bc68f10096
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295984"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사

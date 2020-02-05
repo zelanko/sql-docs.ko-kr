@@ -15,10 +15,10 @@ ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245447"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)

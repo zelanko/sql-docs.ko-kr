@@ -13,10 +13,10 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad7d22492411538a1f397f1a7d02436d1a02bde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901151"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>일정에 따라 정책 기반 관리 정책 평가
@@ -37,7 +37,7 @@ ms.locfileid: "67901151"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

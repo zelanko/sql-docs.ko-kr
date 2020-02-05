@@ -12,13 +12,13 @@ ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896756"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  

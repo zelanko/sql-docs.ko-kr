@@ -24,10 +24,10 @@ ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fa45fece4925165bb87ad960acd6e7d1731c38e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929188"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67929188"
 
   현재 데이터베이스에서 대칭 키를 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  REMOVE PROVIDER KEY  
  EKM(Extensible Key Management) 디바이스에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  키가 현재 세션에 열려 있으면 문이 실패합니다.  
   
  EKM(Extensible Key Management) 디바이스의 EKM 키에 비대칭 키를 매핑하고 **REMOVE PROVIDER KEY** 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 디바이스에서는 삭제되지 않으며 경고가 발생합니다.  

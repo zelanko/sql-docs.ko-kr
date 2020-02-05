@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947353"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
@@ -44,11 +44,11 @@ Azure Data Lake Analytics 태스크를 사용하여 U-SQL 작업을 Azure Data L
 
 ### <a name="u-sql-configuration"></a>U-SQL 구성
 
-U-SQL 구성에는 다음 두 가지 설정이 있습니다. **SourceType** 및 **SourceType** 값을 기반으로 하는 동적 옵션. 
+U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을 기반으로 하는 동적 옵션이 있습니다. 
 
 **SourceType**은 U-SQL 스크립트의 원본을 지정합니다. SSIS 패키지 실행 중에 Data Lake Analytics 계정에 스크립트가 제출됩니다. 이 속성의 옵션은 다음과 같습니다.
 
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**DirectInput**|인라인 편집기를 통해 U-SQL 스크립트를 지정합니다. 이 값을 선택하면 동적 옵션 **USQLStatement**가 표시됩니다.|  
 |**FileConnection**|U-SQL 스크립트를 포함하는 로컬 .usql 파일을 지정합니다. 이 옵션을 설정하면 동적 옵션 **FileConnection**이 표시됩니다.|  
@@ -70,11 +70,11 @@ U-SQL 구성에는 다음 두 가지 설정이 있습니다. **SourceType** 및 
 
 - **JobName:** U-SQL 작업의 이름을 지정합니다. 
 - **AnalyticsUnits:** U-SQL 작업의 분석 단위 수를 지정합니다.
-- **Priority:** U-SQL 작업의 우선순위를 지정합니다. 이 항목은 0~1000 사이의 값으로 설정할 수 있습니다. 숫자가 작을수록 우선 순위가 높습니다.
+- **Priority:** U-SQL 작업의 우선 순위를 지정합니다. 이 항목은 0~1000 사이의 값으로 설정할 수 있습니다. 숫자가 작을수록 우선 순위가 높습니다.
 - **RuntimeVersion:** U-SQL 작업의 Data Lake Analytics 런타임 버전을 지정합니다. 기본적으로 “default”로 설정됩니다. 일반적으로 이 속성을 변경할 필요가 없습니다.
 - **Synchronous:** 작업 실행이 완료될 때까지 태스크가 기다릴지 여부를 지정하는 부울 값입니다. 값이 true로 설정되면 작업이 완료된 후 태스크가 **성공**으로 표시됩니다. 값이 false로 설정되면 작업이 준비 단계를 통과한 후 태스크가 **성공**으로 표시됩니다.
 
-  |값|설명|
+  |값|Description|
   |-----------|-----------------|
   |True|태스크 결과는 U-SQL 작업 실행 결과를 기반으로 합니다. 작업 성공 > 태스크 성공. 작업 실패 > 태스크 실패. 태스크 성공 또는 실패 > 태스크 완료.|
   |False|태스크 결과는 U-SQL 작업 제출 및 준비 결과를 기반으로 합니다. 작업 제출 성공 및 준비 단계 통과 > 태스크 성공. 작업 제출 실패 또는 준비 단계에서 작업 실패 > 태스크 실패. 태스크 성공 또는 실패 > 태스크 완료.|
@@ -130,7 +130,7 @@ OUTPUT @rs1
 
 일반 페이지 구성의 모든 속성을 속성 식으로 할당하여 런타임에 속성의 동적 업데이트를 사용할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [Azure Data Lake Analytics 연결 관리자](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store 파일 시스템 태스크](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store 연결 관리자](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)

@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089872"
 ---
-# <a name="schemaid-transact-sql"></a>SCHEMA_ID(Transact-SQL)
+# <a name="schema_id-transact-sql"></a>SCHEMA_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   스키마 이름과 연결된 스키마 ID를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,18 +53,18 @@ SCHEMA_ID ( [ schema_name ] )
   
  *schema_name*이 유효한 스키마가 아닌 경우 NULL이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SCHEMA_ID는 시스템 스키마 및 사용자 정의 스키마의 ID를 반환합니다. SCHEMA_ID는 선택 목록, WHERE 절 및 식이 사용되는 어디서나 호출할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-default-schema-id-of-a-caller"></a>1\. 호출자의 기본 스키마 ID 반환  
+### <a name="a-returning-the-default-schema-id-of-a-caller"></a>A. 호출자의 기본 스키마 ID 반환  
   
 ```  
 SELECT SCHEMA_ID();  
 ```  
   
-### <a name="b-returning-the-schema-id-of-a-named-schema"></a>2\. 명명된 스키마의 스키마 ID 반환  
+### <a name="b-returning-the-schema-id-of-a-named-schema"></a>B. 명명된 스키마의 스키마 ID 반환  
   
 ```  
 SELECT SCHEMA_ID('dbo');  

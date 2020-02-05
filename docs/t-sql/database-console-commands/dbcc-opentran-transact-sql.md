@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039086"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN(Transact-SQL)
@@ -40,7 +40,7 @@ DBCC OPENTRAN은 로그 잘림을 발생하지 못하게 할 수 있는 활성 �
 > [!NOTE]
 >  DBCC OPENTRAN은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자에 대해 지원되지 않습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC OPENTRAN을 사용하여 트랜잭션 로그 내에 열린 트랜잭션이 존재하는지 확인할 수 있습니다. BACKUP LOG 문을 사용할 때 열린 트랜잭션이 있으면 로그가 완전히 잘리지 않고 로그의 비활성 부분만 잘릴 수 있습니다. 열린 트랜잭션을 식별하려면 sp_who를 사용하여 시스템 프로세스 ID를 얻습니다.
   
 ## <a name="result-sets"></a>결과 집합  
@@ -79,7 +79,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-returning-the-oldest-active-transaction"></a>1\. 가장 오래된 활성 트랜잭션 반환  
+### <a name="a-returning-the-oldest-active-transaction"></a>A. 가장 오래된 활성 트랜잭션 반환  
 다음 예에서는 현재 데이터베이스에 대한 트랜잭션 정보를 얻습니다. 결과는 다를 수 있습니다.
   
 ```sql  
@@ -112,7 +112,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]  
 >  "UID(사용자 ID)" 결과는 의미가 없으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 제거될 예정입니다.  
   
-### <a name="b-specifying-the-with-tableresults-option"></a>2\. WITH TABLERESULTS 옵션 지정  
+### <a name="b-specifying-the-with-tableresults-option"></a>B. WITH TABLERESULTS 옵션 지정  
 다음 예에서는 DBCC OPENTRAN 명령의 결과를 임시 테이블로 로드합니다.
   
 ```sql  

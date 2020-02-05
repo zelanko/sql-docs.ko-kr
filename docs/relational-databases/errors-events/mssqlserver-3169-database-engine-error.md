@@ -14,10 +14,10 @@ ms.assetid: 7d4dbed6-bb94-4908-bc03-2040a9cf63bc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 06a81eaa83b3420912494b61135790c4e8fabe29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039287"
 ---
 # <a name="mssqlserver_3169"></a>MSSQLSERVER_3169
@@ -31,7 +31,7 @@ ms.locfileid: "68039287"
 |이벤트 ID|3169|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
-|심볼 이름|NA|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|버전 %ls이(가) 실행되는 서버에서 데이터베이스가 백업되었습니다. 해당 버전은 버전 %ls이(가) 실행되는 이 서버와 호환되지 않습니다. 백업을 지원하는 서버에서 데이터베이스를 복원하거나 이 서버와 호환되는 백업을 사용하십시오.|  
   
 ## <a name="explanation"></a>설명  

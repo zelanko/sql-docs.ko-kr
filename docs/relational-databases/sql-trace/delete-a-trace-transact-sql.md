@@ -15,10 +15,10 @@ ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71952707"
 ---
 # <a name="delete-a-trace-transact-sql"></a>추적 삭제(Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "71952707"
   
 ### <a name="to-delete-a-trace"></a>추적을 삭제하려면  
   
-1.  `@status = 0`을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
+1.  **을 지정하고** sp_trace_setstatus`@status = 0`를 실행하여 추적을 중지합니다.  
   
-2.  `@status = 2`를 지정하고 **sp_trace_setstatus**를 실행하여 추적을 닫고 서버에서 추적 정보를 삭제합니다.  
+2.  **를 지정하고** sp_trace_setstatus`@status = 2`를 실행하여 추적을 닫고 서버에서 추적 정보를 삭제합니다.  
   
 > [!NOTE]  
 >  추적은 먼저 중지한 후 닫아야 합니다.  

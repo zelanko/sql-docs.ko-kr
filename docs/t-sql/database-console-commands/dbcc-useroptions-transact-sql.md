@@ -22,10 +22,10 @@ ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040451"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68040451"
 
 현재 연결에 설정된 SET 옵션을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -70,7 +70,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 데이터베이스 옵션 READ_COMMITTED_SNAPSHOT을 ON으로 설정하고 트랜잭션 격리 수준을 '커밋된 읽기'로 설정하면 DBCC USEROPTIONS가 커밋된 읽기 스냅샷의 격리 수준을 보고합니다. 그러나 실제 격리 수준은 커밋된 읽기입니다.
   
 ## <a name="permissions"></a>사용 권한  

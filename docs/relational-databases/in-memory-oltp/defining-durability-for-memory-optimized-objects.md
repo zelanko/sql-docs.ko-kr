@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 764824a74480b6d17c890f57714b0df9221bf523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68219877"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
@@ -27,7 +27,7 @@ ms.locfileid: "68219877"
  이 옵션은 스키마와 데이터 모두에 대한 내구성을 제공합니다. 데이터 내구성 수준은 트랜잭션을 완전 내구성으로 커밋할지 아니면 지연된 내구성으로 커밋할지에 따라 달라집니다. 완전한 내구성이 있는 트랜잭션은 디스크 기반 테이블과 유사하게 스키마 및 데이터에 대한 동일한 내구성 보증을 제공합니다. 지연된 내구성은 성능을 향상시키지만 서버 충돌이나 장애 조치(Failover)의 경우 데이터 손실을 발생시킬 수도 있습니다. 지연된 내구성에 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
   
  SCHEMA_ONLY  
- 이 옵션은 테이블 스키마의 내구성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하거나 Azure SQL 데이터베이스에서 다시 구성하는 경우 테이블 스키마는 지속되지만 테이블의 데이터가 손실됩니다. (이것은 다시 시작하면 테이블과 데이터가 손실되는 tempdb의 테이블과는 다릅니다.) 내구성이 없는 테이블을 만드는 일반적인 시나리오는 ETL 프로세스를 위한 준비 테이블 같은 임시 테이블을 저장하는 것입니다. SCHEMA_ONLY 내구성은 트랜잭션 로깅과 검사점을 방지하여 I/O 작업을 크게 줄일 수 있습니다.  
+ 이 옵션은 테이블 스키마의 내구성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작하거나 Azure SQL 데이터베이스에서 다시 구성하는 경우 테이블 스키마는 지속되지만 테이블의 데이터가 손실됩니다. (이것은 다시 시작하면 테이블과 데이터가 손실되는 tempdb의 테이블과는 다릅니다.) 내구성이 없는 테이블을 만드는 일반적인 시나리오는 ETL 프로세스를 위한 준비 테이블 같은 임시 테이블을 저장하는 것입니다. SCHEMA_ONLY 내구성은 트랜잭션 로깅과 검사점을 방지하여 I/O 작업을 크게 줄일 수 있습니다.  
   
  기본 SCHEMA_AND_DATA 테이블을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 디스크 기반 테이블과 동일한 내구성 보증을 제공합니다.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "68219877"
  실패했거나 손상된 디스크에 메모리 최적화 내구성이 있는 개체의 영구 복사본이 하나 이상 포함되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 기능은 메모리 최적화 테이블을 새 미디어에 복원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

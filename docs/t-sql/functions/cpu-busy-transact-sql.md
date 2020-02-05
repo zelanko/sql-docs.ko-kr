@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026483"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY(Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 이 함수는 최신 시작 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 활성 작업에서 소비한 시간을 반환합니다. `@@CPU_BUSY`는 CPU 시간 증가값 또는 "틱"에서 측정된 결과를 반환합니다. 이 값은 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. 마이크로초로 변환하려면 [@@TIMETICKS](./timeticks-transact-sql.md)를 곱합니다.
@@ -38,7 +38,7 @@ ms.locfileid: "68026483"
 > [!NOTE]  
 >  @@CPU_BUSY 또는 @@IO_BUSY에서 반환된 시간이 누적 CPU 시간의 약 49일을 초과할 경우 산술 오버플로 경고를 수신할 수 있습니다. 이 경우에 `@@CPU_BUSY`, `@@IO_BUSY` 및 `@@IDLE` 변수 값은 정확하지 않습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68026483"
 ## <a name="return-types"></a>반환 형식
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 CPU 활동을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서를 확인하려면 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)를 실행합니다.
   
 ## <a name="examples"></a>예  
@@ -68,7 +68,7 @@ CPU microseconds As of
 18406250         2006-12-05 17:00:50.600
 ```
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [sys.dm_os_sys_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE&#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY&#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  

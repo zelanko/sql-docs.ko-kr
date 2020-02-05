@@ -15,10 +15,10 @@ ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a511e977975ad0e23c9cf553de000b32bad24e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039141"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용

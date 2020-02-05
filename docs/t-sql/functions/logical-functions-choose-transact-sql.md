@@ -18,10 +18,10 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059737"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>논리 함수 - CHOOSE(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68059737"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 값 목록에서 지정된 인덱스에 있는 항목을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,12 +50,12 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>반환 형식  
  함수에 전달된 형식 집합 중에서 우선 순위가 가장 높은 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  CHOOSE는 배열에서 인덱스와 같은 역할을 하며 배열은 index 인수 다음에 나오는 인수로 구성됩니다. index 인수는 다음 중 반환될 값을 결정합니다.  
   
 ## <a name="examples"></a>예  
 
-### <a name="a-simple-choose-example"></a>1\. 간단한 CHOOSE 예제
+### <a name="a-simple-choose-example"></a>A. 간단한 CHOOSE 예제
 
  다음 예에서는 제공된 값 목록에서 세 번째 항목을 반환합니다.  
  
@@ -73,7 +73,7 @@ Developer
 (1 row(s) affected)  
 ```  
 
-### <a name="b-simple-choose-example-based-on-column"></a>2\. 열을 기반으로 하는 간단한 CHOOSE 예제
+### <a name="b-simple-choose-example-based-on-column"></a>B. 열을 기반으로 하는 간단한 CHOOSE 예제
 
  다음 예제에서는 `ProductCategoryID` 열의 값에 따라 간단한 문자열을 반환합니다.  
   

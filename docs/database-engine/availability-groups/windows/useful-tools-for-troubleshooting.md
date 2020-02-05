@@ -11,10 +11,10 @@ ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244727"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>문제 해결에 유용한 도구

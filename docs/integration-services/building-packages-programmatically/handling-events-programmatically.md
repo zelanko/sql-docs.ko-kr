@@ -25,10 +25,10 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299025"
 ---
 # <a name="handling-events-programmatically"></a>프로그래밍 방식으로 이벤트 처리
@@ -36,12 +36,12 @@ ms.locfileid: "71299025"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 런타임에서는 패키지의 유효성 검사 및 실행 전후와 도중에 발생하는 이벤트 컬렉션을 제공합니다. 이러한 이벤트는 두 가지 방법으로 캡처할 수 있습니다. 첫 번째 방법은 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하고 해당 클래스를 패키지의 **Execute** 및 **Validate** 메서드에 대한 매개 변수로 지정하는 것입니다. 두 번째 방법은 태스크 및 루프와 같이 다른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체를 포함할 수 있으며 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 이벤트가 발생할 때 실행되는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 개체를 만드는 것입니다. 이 섹션에서는 이러한 두 가지 방법에 대해 설명하고 각 사용 방법을 보여 주는 코드 예를 제공합니다.  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 런타임에서는 패키지의 유효성 검사 및 실행 전후와 도중에 발생하는 이벤트 컬렉션을 제공합니다. 이러한 이벤트는 두 가지 방법으로 캡처할 수 있습니다. 첫 번째 방법은 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하고 해당 클래스를 패키지의 **Execute** 및 **Validate** 메서드에 대한 매개 변수로 지정하는 것입니다. 두 번째 방법은 태스크 및 루프와 같이 다른 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 포함할 수 있으며 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에서 이벤트가 발생할 때 실행되는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 개체를 만드는 것입니다. 이 섹션에서는 이러한 두 가지 방법에 대해 설명하고 각 사용 방법을 보여 주는 코드 예를 제공합니다.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>IDTSEvents 콜백 받기  
  프로그래밍 방식으로 패키지를 만들고 실행하는 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 사용하여 유효성 검사 및 실행 중에 이벤트 알림을 받을 수 있습니다. 이렇게 하려면 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하는 클래스를 만들고 이 클래스를 패키지의 **Validate** 및 **Execute** 메서드에 대한 매개 변수로 지정합니다. 그러면 이벤트가 발생할 때 런타임 엔진에 의해 해당 클래스의 메서드가 호출됩니다.  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 이미 구현하는 클래스이므로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>를 직접 구현하는 다른 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 만들고 응답할 특정 이벤트를 재정의하는 것입니다. 그런 다음 해당 클래스를 <xref:Microsoft.SqlServer.Dts.Runtime.Package>의 **Validate** 및 **Execute** 메서드에 대한 매개 변수로 지정하여 이벤트 콜백을 받을 수 있습니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 이미 구현하는 클래스이므로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>를 직접 구현하는 다른 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 만들고 응답할 특정 이벤트를 재정의하는 것입니다. 그런 다음 해당 클래스를 **의** Validate**및**Execute<xref:Microsoft.SqlServer.Dts.Runtime.Package> 메서드에 대한 매개 변수로 지정하여 이벤트 콜백을 받을 수 있습니다.  
   
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 보여 주고 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 메서드를 재정의합니다. 그런 다음 이 클래스를 패키지의 **Validate** 및 **Execute** 메서드에 대한 매개 변수로 지정합니다.  
   
@@ -112,7 +112,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>DtsEventHandler 개체 만들기  
  런타임 엔진에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 통해 강력하고 매우 유연한 이벤트 처리 및 알림 시스템을 제공합니다. 이러한 개체를 사용하면 이벤트 처리기가 속해 있는 이벤트가 발생할 때만 실행되는 이벤트 처리기 내의 전체 워크플로를 디자인할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체는 상위 개체에 대해 해당 이벤트가 발생할 때 실행되는 컨테이너입니다. 이 아키텍처를 사용하면 컨테이너에서 발생하는 이벤트에 대한 응답으로 실행되는 격리된 워크플로를 만들 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체는 동기적이므로 이벤트에 연결된 이벤트 처리기가 반환되기 전까지는 실행이 다시 시작되지 않습니다.  
   
- 다음 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 만드는 방법을 보여 줍니다. 이 코드는 패키지의 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 컬렉션에 <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A>를 추가한 다음 해당 태스크의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 개체를 만듭니다. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>는 첫 번째 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A>에 대해 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 이벤트가 발생할 때 실행되는 이벤트 처리기에 추가됩니다. 이 예에서는 C:\Windows\Temp\DemoFile.txt라는 테스트용 파일이 있다고 가정합니다. 이 샘플을 처음 실행할 때는 이 파일이 성공적으로 복사되므로 이벤트 처리기가 호출되지 않습니다. 그러나 두 번째로 이 샘플을 실행할 때는 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> 값이 **false**여서 첫 번째 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>가 파일을 복사하지 못하므로 이벤트 처리기가 호출됩니다. 두 번째 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>는 원본 파일을 삭제하며 패키지에서는 발생한 오류로 인한 실패를 보고합니다.  
+ 다음 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 만드는 방법을 보여 줍니다. 이 코드는 패키지의 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 컬렉션에 <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A>를 추가한 다음 해당 태스크의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> 개체를 만듭니다. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>는 첫 번째 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A>에 대해 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 이벤트가 발생할 때 실행되는 이벤트 처리기에 추가됩니다. 이 예에서는 C:\Windows\Temp\DemoFile.txt라는 테스트용 파일이 있다고 가정합니다. 이 샘플을 처음 실행할 때는 이 파일이 성공적으로 복사되므로 이벤트 처리기가 호출되지 않습니다. 그러나 두 번째로 이 샘플을 실행할 때는 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> 값이 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A>false**여서 첫 번째** 가 파일을 복사하지 못하므로 이벤트 처리기가 호출됩니다. 두 번째 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>는 원본 파일을 삭제하며 패키지에서는 발생한 오류로 인한 실패를 보고합니다.  
   
 ## <a name="example"></a>예제  
   

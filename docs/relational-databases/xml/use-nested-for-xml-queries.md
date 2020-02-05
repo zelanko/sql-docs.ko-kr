@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001724"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
@@ -84,7 +84,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들어  
+ 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT Col1,   

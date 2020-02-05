@@ -11,10 +11,10 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298603"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
@@ -47,7 +47,7 @@ GO
   
  Oracle CDC 인스턴스 구성은 Oracle CDC Designer 콘솔이 작업하는 테이블인 **cdc.xdbcdc_config** 테이블에 저장됩니다. Oracle CDC 인스턴스의 전체 구성이 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 CDC 데이터베이스에 있으므로 Oracle CDC 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 스크립트를 만들 수 있습니다. 이 작업은 Oracle CDC Service 구성 및 Oracle CDC Designer 콘솔을 사용하여 수행됩니다.  
   
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
  다음에서는 Oracle CDC Service에서 작업하는 데 필요한 보안 요구 사항에 대해 설명합니다.  
   
 ### <a name="protection-of-source-oracle-data"></a>원본 Oracle 데이터의 보호  

@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211220"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "70211220"
 
   타이머를 시작합니다. 시간 제한이 만료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]은 대화에 대한 로컬 큐에 형식 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`의 메시지를 넣습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  큐에 메시지를 넣을 때까지 대기하는 시간(초)을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대화 타이머는 특정 시간이 지난 후 애플리케이션이 대화에서 메시지를 받는 방법을 제공합니다. 타이머가 만료되기 전에 대화에서 BEGIN CONVERSATION TIMER를 호출하면 제한 시간이 새 값으로 설정됩니다. 대화 수명과 달리 대화의 각 측면에는 별도의 대화 타이머가 있습니다. **DialogTimer** 메시지는 대화의 원격측에 영향을 미치지 않고 로컬 큐에 도착합니다. 따라서 애플리케이션은 다양한 용도로 타이머 메시지를 사용할 수 있습니다.  
   
  예를 들어 대화 타이머를 사용하여 애플리케이션이 지연된 응답을 너무 오랫동안 대기하지 않도록 할 수 있습니다. 애플리케이션이 30초 후에 대화를 완료하도록 하려면 해당 대화의 대화 타이머를 60초(30초에 30초의 유예 기간을 더한 값)로 설정할 수 있습니다. 대화가 60초 후에도 계속 열려 있으면 애플리케이션은 해당 대화에 대한 제한 시간 메시지를 큐에 받습니다.  
@@ -87,7 +87,7 @@ TIMEOUT = 120 ;
   
 ## <a name="see-also"></a>참고 항목  
  [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)  
   
   

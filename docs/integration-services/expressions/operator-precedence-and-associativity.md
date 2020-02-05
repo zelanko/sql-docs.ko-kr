@@ -14,10 +14,10 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e1c394cd8b58fccdae23e83b163164776de3948
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288709"
 ---
 # <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 계산 방향
@@ -43,7 +43,7 @@ ms.locfileid: "71288709"
 |&#124;|포괄적 비트 OR|왼쪽에서 오른쪽|  
 |&&|논리적 AND|왼쪽에서 오른쪽|  
 |&#124;&#124;|논리적 OR|왼쪽에서 오른쪽|  
-|? 으로 디코딩된 문자입니다.|조건 식|오른쪽에서 왼쪽|  
+|? :|조건 식|오른쪽에서 왼쪽|  
   
 ## <a name="see-also"></a>참고 항목  
  [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

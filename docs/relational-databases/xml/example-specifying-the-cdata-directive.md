@@ -1,5 +1,5 @@
 ---
-title: '예: CDATA 지시어 지정 | Microsoft Docs'
+title: '예제: CDATA 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006751"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>예: CDATA 지시어 지정
+# <a name="example-specifying-the-cdata-directive"></a>예제: CDATA 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   지시어가 **CDATA**로 설정되면 포함된 데이터가 엔터티 인코딩되지는 않지만 CDATA 섹션에 놓여집니다. **CDATA** 특성은 이름이 없어야 합니다.  
   

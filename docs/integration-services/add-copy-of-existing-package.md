@@ -15,10 +15,10 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299116"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
@@ -38,7 +38,7 @@ ms.locfileid: "71299116"
  **인증 유형**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 복사하는 경우 인증 유형을 선택합니다.  
   
- **User name**  
+ **사용자 이름**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  

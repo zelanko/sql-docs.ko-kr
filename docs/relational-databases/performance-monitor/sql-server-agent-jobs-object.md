@@ -14,10 +14,10 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987335"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
@@ -26,7 +26,7 @@ ms.locfileid: "67987335"
   
  이 표에는 **SQLAgent:Jobs** 카운터가 포함되어 있습니다.  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |**Active Jobs**|이 카운터는 현재 실행 중인 작업의 수를 보고합니다.|  
 |**Failed jobs**|이 카운터는 오류 발생으로 종료된 작업의 수를 보고합니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "67987335"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|설명|  
+|인스턴스|Description|  
 |--------------|-----------------|  
 |**_Total**|모든 작업에 대한 정보입니다.|  
 |**경고**|경고에 의해 시작된 작업의 정보입니다.|  

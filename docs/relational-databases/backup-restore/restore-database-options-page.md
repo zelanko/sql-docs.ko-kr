@@ -13,10 +13,10 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041549"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
@@ -99,7 +99,7 @@ ms.locfileid: "68041549"
  **기존 연결 닫기**  
  데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.  
   
-### <a name="prompt"></a>프롬프트  
+### <a name="prompt"></a>prompt  
  **각 백업 복원 전에 확인**  
  각 백업을 복원한 후 복원 순서를 계속할지 여부를 묻는 **복원 계속** 대화 상자를 표시합니다. 이 대화 상자는 다음 미디어 세트(알려진 경우)의 이름과 다음 백업 세트의 이름 및 설명을 표시합니다.  
   

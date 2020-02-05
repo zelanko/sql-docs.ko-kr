@@ -11,10 +11,10 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e603b7e7342ee349b885392c43e42f33009700ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293124"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>데이터 마이닝 모델 학습 대상 사용자 지정 속성
@@ -26,7 +26,7 @@ ms.locfileid: "71293124"
   
  다음 표에서는 데이터 마이닝 모델 학습 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|연결 관리자의 고유 식별자입니다.|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 연결 문자열입니다.|  

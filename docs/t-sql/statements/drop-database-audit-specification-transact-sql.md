@@ -19,10 +19,10 @@ ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898178"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67898178"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 삭제합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  기존 감사 사양 개체의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DROP DATABASE AUDIT SPECIFICATION은 DROP 명령이 실행되기 전에 수집된 감사 데이터를 제외한 감사 사양의 메타데이터를 제거합니다. 삭제하려면 `ALTER DATABASE AUDIT SPECIFICATION`을 사용하여 데이터베이스 감사 사양의 상태를 OFF로 설정해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -52,7 +52,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-database-audit-specification"></a>1\. 데이터베이스 감사 사양 삭제  
+### <a name="a-dropping-a-database-audit-specification"></a>A. 데이터베이스 감사 사양 삭제  
  다음 예에서는 `HIPAA_Audit_DB_Specification`라는 감사를 삭제합니다.  
   
 ```  

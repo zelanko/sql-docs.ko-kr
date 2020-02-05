@@ -18,10 +18,10 @@ ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 86f995fc650460bdbda6004917c974377cd1b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894866"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB(geometry 데이터 형식)
@@ -38,7 +38,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_multipoint*  
- 반환하려는 **geometryMultiPoint** 인스턴스의 WKB 표현입니다. *WKB_multipoint*은 **varbinary(max)** 식입니다.  
+ 반환하려는 **geometryMultiPoint** 인스턴스의 WKB 표현입니다. *WKB_multipoint*는 **varbinary(max)** 식입니다.  
   
  *SRID*  
  반환하려는 **geometryMultiPoint** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
@@ -50,7 +50,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  OGC 형식: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

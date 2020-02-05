@@ -16,16 +16,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929310"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  호출하는 **geometry** 인스턴스와의 거리가 *distance* 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 **geometry** 인스턴스를 반환합니다.  
+  호출하는 **geometry** 인스턴스와의 거리가 **distance** 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 *geometry* 인스턴스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ SQL Server 반환 형식: **geometry**
   
 -   **NULL**이 `@g.BufferWithCurves(NULL)`과 같은 메서드로 전달됩니다  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 그림에서는 이 메서드가 반환하는 geometry 인스턴스의 예를 보여 줍니다.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -75,7 +75,7 @@ SQL Server 반환 형식: **geometry**
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>1\. 1차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. 1차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
 ```
@@ -83,7 +83,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(-1).ToString(); 
  ```
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>2\. 2차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>B. 2차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 버퍼가 음수인 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ```
@@ -154,7 +154,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `GeometryCollection` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `CurvePolygon` 인스턴스를 반환합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 `GeometryCollection`distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에*  인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

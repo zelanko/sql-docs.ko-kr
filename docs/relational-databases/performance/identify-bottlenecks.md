@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946752"
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
@@ -46,7 +46,7 @@ ms.locfileid: "67946752"
 ## <a name="analyzing-bottlenecks"></a>병목 상태 분석  
  다양한 이벤트에서 과도하게 시간이 소요되면 튜닝할 수 있는 병목 상태가 있음을 의미합니다.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 -   다른 구성 요소로 인해 이 구성 요소에 로드가 도달하지 못해 로드를 완료하기까지의 시간이 길어지는 경우  
   
@@ -56,8 +56,8 @@ ms.locfileid: "67946752"
   
 |병목 상태가 발생할 수 있는 영역|서버에 미치는 영향|  
 |------------------------------|---------------------------|  
-|메모리 사용|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당된 메모리나 사용할 수 있는 메모리가 부족하면 성능이 저하됩니다. 이 경우 데이터를 데이터 캐시에서 직접 읽지 못하고 디스크에서 읽어야 합니다. 또한 Microsoft Windows 운영 체제에서 페이지가 필요할 때마다 디스크와 데이터를 스왑하면서 페이징을 과도하게 수행할 수 있습니다.|  
-|CPU 사용량|CPU 사용량이 장기간 높은 상태로 유지되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 튜닝이나 CPU 업그레이드가 필요할 수 있습니다.|  
+|메모리 사용량|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당된 메모리나 사용할 수 있는 메모리가 부족하면 성능이 저하됩니다. 이 경우 데이터를 데이터 캐시에서 직접 읽지 못하고 디스크에서 읽어야 합니다. 또한 Microsoft Windows 운영 체제에서 페이지가 필요할 때마다 디스크와 데이터를 스왑하면서 페이징을 과도하게 수행할 수 있습니다.|  
+|CPU 사용률|CPU 사용량이 장기간 높은 상태로 유지되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 튜닝이나 CPU 업그레이드가 필요할 수 있습니다.|  
 |디스크 I/O(입/출력)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인덱스를 사용하는 등의 방법으로 쿼리를 튜닝하여 불필요한 I/O를 줄일 수 있습니다.|  
 |사용자 연결|너무 많은 사용자가 동시에 서버에 액세스하는 경우 성능이 저하될 수 있습니다.|  
 |차단 잠금|잘못 설계된 애플리케이션은 잠금을 일으키고 동시성을 제한하여 결과적으로 응답 시간을 길어지고 트랜잭션 처리율이 낮아질 수 있습니다.|  

@@ -11,10 +11,10 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024957"
 ---
 # <a name="the-memory-optimized-filegroup"></a>메모리 액세스에 최적화된 파일 그룹
@@ -31,7 +31,7 @@ ms.locfileid: "68024957"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   `MEMORY_OPTIMIZED_DATA` 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 예를 들어  
+-   `MEMORY_OPTIMIZED_DATA` 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 다음은 그 예입니다.  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
@@ -61,7 +61,7 @@ ms.locfileid: "68024957"
 > 이 경우 데이터베이스가 RECOVERY_PENDING 상태에 유지될 수 있으므로 데이터베이스를 OFFLINE 및 ONLINE으로 설정하지 마십시오.
   
 ## <a name="see-also"></a>참고 항목  
-[메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
 

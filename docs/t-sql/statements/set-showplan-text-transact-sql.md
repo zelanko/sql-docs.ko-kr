@@ -27,18 +27,18 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941664"
 ---
-# <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)
+# <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하지 않도록 합니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 문 실행 방법에 대한 자세한 정보를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67941664"
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET SHOWPLAN_TEXT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
  SET SHOWPLAN_TEXT 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하지 않고 실행 정보만 반환합니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 대한 실행 계획 정보가 반환됩니다. 예를 들어 SET SHOWPLAN_TEXT 옵션을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 같은 테이블을 포함하는 다음 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_TEXT 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 실행 계획 정보가 있는 보고서를 생성하지 않고 문을 실행합니다.  
@@ -58,9 +58,9 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서가 각 문을 실행할 때 수행한 단계를 나타내는 계층적 트리를 구성하는 행 집합으로 정보를 반환합니다. 출력에 반영된 각 문에는 문의 텍스트가 있는 단일 행이 포함되고, 이 단일 행 뒤에는 실행 단계에 대한 자세한 정보가 있는 몇 개의 행이 있습니다. 다음 표에서는 출력에 포함된 열을 보여 줍니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
-|**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)의 **Argument** 열을 참조하세요.|  
+|**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 **SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 의 [Argument](../../t-sql/statements/set-showplan-all-transact-sql.md) 열을 참조하세요.|  
   
  실행 계획 출력에 표시된 물리적 연산자 및 논리적 연산자에 대한 자세한 내용은 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.  
   

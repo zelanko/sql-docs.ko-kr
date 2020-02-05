@@ -18,15 +18,15 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940833"
 ---
 # <a name="backup-compression-sql-server"></a>백업 압축(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 제한 사항, 백업 압축이 성능에 미치는 영향, 백업 압축의 구성 및 압축 비율을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 압축에 대해 설명합니다.  백업 압축은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise, Standard 및 Developer 버전에서 지원됩니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 모든 버전에서는 압축된 백업을 복원할 수 있습니다. 
+  이 항목에서는 제한 사항, 백업 압축이 성능에 미치는 영향, 백업 압축의 구성 및 압축 비율을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 압축에 대해 설명합니다.  백업 압축은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전: Enterprise, Standard 및 Developer에서 지원됩니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 모든 버전에서는 압축된 백업을 복원할 수 있습니다. 
  
   
 ##  <a name="Benefits"></a> 이점  
@@ -47,7 +47,7 @@ ms.locfileid: "67940833"
   
   
 ##  <a name="PerfImpact"></a> 백업 압축이 성능에 미치는 영향  
- 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.  
+ 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.  
   
  백업 I/O 성능을 손쉽게 확인하려면 다음과 같은 성능 카운터를 평가하여 백업 I/O를 디바이스로 격리하거나 디바이스에서 격리하면 됩니다.  
   
@@ -95,13 +95,13 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
  백업 파일을 최종 크기에 도달하는 데 필요한 만큼만 늘리도록 허용하려면 추적 플래그 3042를 사용합니다. 추적 플래그 3042를 사용하면 백업 작업에서 기본 백업 압축 사전 할당 알고리즘을 무시합니다. 이 추적 플래그는 압축된 백업에 실제로 필요한 크기만 할당하여 공간에 저장해야 하는 경우 유용합니다. 그러나 이 추적 플래그를 사용하면 약간의 성능 저하가 발생할 수 있습니다(백업 작업 시간이 늘어날 수 있음).  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [백업 압축 구성&#40;SQL Server&#41;](../../relational-databases/backup-restore/configure-backup-compression-sql-server.md)  
   
 -   [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
--   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [DBCC TRACEON&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
   

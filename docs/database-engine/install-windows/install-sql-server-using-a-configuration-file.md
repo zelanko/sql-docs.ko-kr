@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054786"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 설치
@@ -82,17 +82,17 @@ FEATURES=SQL,Tools
   
 1. 같은 시스템에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 구성하려면 
   
-    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
+    - 설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
   
     - 템플릿과 동일한 이미지 준비 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비합니다. 
   
-    - 설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하여 시스템에서 준비 인스턴스를 구성합니다. 
+    - 설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **준비 인스턴스의 이미지 완료**를 실행하여 시스템에서 준비 인스턴스를 구성합니다. 
   
 2. Windows SysPrep 도구를 사용하여 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 포함한 운영 체제 이미지를 준비하려면 
   
     -   설치 센터의 고급 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다. 
   
-    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다. 
+    -   설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **준비 인스턴스의 이미지 완료**를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다. 
   
     -   이미지 완료 구성 파일은 Windows 이미지와 함께 저장하여 준비 인스턴스의 구성을 자동화할 수 있습니다. 
   
@@ -128,7 +128,7 @@ FEATURES=SQL,Tools
   
 2. 업그레이드할 모든 추가 노드에서 ConfigurationFile.ini 파일을 입력하여 프로세스를 완료합니다. 
   
-## <a name="sample-syntax"></a>예제 구문  
+## <a name="sample-syntax"></a>샘플 구문  
  다음은 구성 파일을 사용하는 방법을 보여 주는 예입니다.  
   
 -   명령 프롬프트에 구성 파일을 지정하기  
@@ -143,9 +143,9 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

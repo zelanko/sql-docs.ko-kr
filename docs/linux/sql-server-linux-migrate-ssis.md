@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943813"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드
@@ -36,7 +36,7 @@ Linux 컴퓨터에서 SSIS 패키지를 실행하려면 먼저 SQL Server Integr
 Linux 컴퓨터에서 SSIS 패키지를 실행하려면 다음 작업을 수행합니다.
 
 1.  Linux 컴퓨터에 SSIS 패키지를 복사합니다.
-2.  다음 명령을 실행합니다.
+2.  다음 명령 실행:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```

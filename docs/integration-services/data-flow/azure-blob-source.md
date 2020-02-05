@@ -14,10 +14,10 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8342fc3595f695225ee5ea3e4a12259c2bb8301a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293457"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 원본
@@ -25,7 +25,7 @@ ms.locfileid: "71293457"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  SSIS 패키지는 **Azure Blob 원본** 구성 요소를 통해 Azure Blob에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. CSV와 AVRO.
+  SSIS 패키지는 **Azure Blob 원본** 구성 요소를 통해 Azure Blob에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 CSV 및 AVRO입니다.
   
   Azure Blob 원본용 편집기를 표시하려면 데이터 흐름 디자이너에서 **Azure Blob 원본** 을 끌어서 놓고 두 번 클릭하여 편집기를 엽니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298206"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 제공
@@ -22,7 +22,7 @@ ms.locfileid: "71298206"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- 데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 *식*을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
+ 데이터 흐름 태스크의 *[OData Source].[Query]* 속성에 **식**을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
   
  반환되는 열은 디자인 타임에서 반환된 열과 동일해야 합니다. 그렇지 않으면 패키지를 실행할 때 오류가 발생합니다. $select 쿼리 옵션을 사용할 때 동일한 열을 같은 순서로 지정해야 합니다. $select 옵션을 사용하는 것보다 안전한 방법은 원본 구성 요소 UI에서 직접 원하지 않는 열의 선택을 취소하는 것입니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71298206"
   
 1.  **데이터 흐름 태스크**를 마우스 오른쪽 단추로 클릭하고 **매개 변수화...** 옵션을 선택합니다.  
   
-2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
+2.  **매개 변수화** 대화 상자에서 **속성\<에 대한** [**OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
   
 3.  **새 매개 변수 만들기** 또는 **기존 매개 변수 사용**중에서 하나를 선택합니다.  
   

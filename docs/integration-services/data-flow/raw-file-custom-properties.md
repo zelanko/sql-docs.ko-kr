@@ -11,10 +11,10 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298142"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
@@ -28,7 +28,7 @@ ms.locfileid: "71298142"
   
  다음 표에서는 원시 파일 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|설명|  
+|속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|원시 데이터에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **파일 이름** (0) 및 **변수를 사용한 파일 이름** (1)입니다. 기본값은 **파일 이름** (0)입니다.|  
 |FileName|String|원본 파일의 경로 및 파일 이름입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "71298142"
   
  다음 표에서는 원시 파일 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|설명|  
+|속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|FileName 속성에 파일 이름이 포함되어 있는지, 아니면 파일 이름이 포함된 변수의 이름이 포함되어 있는지를 지정하는 값입니다. 옵션은 **파일 이름** (0) 및 **변수를 사용한 파일 이름** (1)입니다.|  
 |FileName|String|원시 파일 대상에서 쓰는 파일의 이름입니다.|  

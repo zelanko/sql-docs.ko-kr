@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094950"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
@@ -49,7 +49,7 @@ ms.locfileid: "68094950"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
   
 -   CREATE SERVER ROLE 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   

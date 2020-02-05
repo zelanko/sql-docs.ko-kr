@@ -19,10 +19,10 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fca2fd4670fae2838eb0512c68483024bdb4dee
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297836"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
@@ -30,7 +30,7 @@ ms.locfileid: "71297836"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  멀티캐스트 변환은 입력을 하나 이상의 출력으로 배포합니다. 이 변환은 조건부 분할 변환과 유사합니다. 둘 다 입력을 여러 출력으로 보냅니다. 두 변환의 차이점은 멀티캐스트 변환은 모든 행을 모든 출력으로 보내고 조건부 분할은 한 행을 단일 출력으로 보낸다는 것입니다. 자세한 내용은 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)을(를) 참조하세요.  
+  멀티캐스트 변환은 입력을 하나 이상의 출력으로 배포합니다. 이 변환은 조건부 분할 변환과 유사합니다. 둘 다 입력을 여러 출력으로 보냅니다. 두 변환의 차이점은 멀티캐스트 변환은 모든 행을 모든 출력으로 보내고 조건부 분할은 한 행을 단일 출력으로 보낸다는 것입니다. 자세한 내용은 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)을 참조하세요.  
   
  출력을 추가하여 멀티캐스트 변환을 구성합니다.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "71297836"
   **멀티캐스트 변환 편집기** 대화 상자를 사용하여 각 변환 출력에 대한 속성을 보고 설정할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
- **출력**  
+ **Outputs**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
- **Properties**  
+ **속성**  
  나열된 모든 출력 속성은 **Name** 과 **Description**을 제외하고 읽기 전용입니다.  
   
 ## <a name="see-also"></a>참고 항목  

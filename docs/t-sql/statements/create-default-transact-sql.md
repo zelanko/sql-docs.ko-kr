@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902853"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67902853"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 ALTER TABLE 또는 CREATE TABLE의 DEFAULT 키워드를 사용하여 만든 기본 정의를 사용하십시오.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표( **'** )로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스에서는 기본 이름만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들 경우 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
   
  기본값이 바인딩될 열과 호환되지 않으면 기본값을 삽입하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다. 예를 들어 N/A는 **numeric** 열의 기본값으로 사용할 수 없습니다.  
@@ -79,8 +79,8 @@ AS constant_expression [ ; ]
   
 |열 정의|입력 안 함, 기본값 없음|입력 안 함, 기본값 있음|NULL 입력, 기본값 없음|NULL 입력, 기본값 있음|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|기본|NULL|NULL|  
-|**NOT NULL**|Error|기본|error|error|  
+|**NULL**|NULL|기본값|NULL|NULL|  
+|**NOT NULL**|Error|기본값|error|error|  
   
  기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-simple-character-default"></a>1\. 단순한 문자 기본값 만들기  
+### <a name="a-creating-a-simple-character-default"></a>A. 단순한 문자 기본값 만들기  
  다음 예에서는 `unknown`이라는 문자 기본값을 만듭니다.  
   
 ```sql  
@@ -98,7 +98,7 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>2\. 기본값 바인딩  
+### <a name="b-binding-a-default"></a>B. 기본값 바인딩  
  다음 예에서는 예 1에서 만든 기본값을 바인딩합니다. `Phone` 테이블의 `Contact` 열에 항목이 지정되어 있지 않을 때만 기본값이 적용됩니다. 
  
  > [!Note] 

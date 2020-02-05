@@ -14,10 +14,10 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947884"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Wait Statistics 개체
@@ -26,7 +26,7 @@ ms.locfileid: "67947884"
   
  다음 표에서는 Wait Statistics 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Wait Statistics 카운터|설명|  
+|SQL Server Wait Statistics 카운터|Description|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|잠금을 기다리는 프로세스에 대한 통계입니다.|  
 |**Log buffer waits**|로그 버퍼 사용을 기다리는 프로세스에 대한 통계입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "67947884"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |----------|-----------------|  
 |**평균 대기 시간(밀리초)**|선택한 유형에 대한 평균 대기 시간입니다.|  
 |**초당 누적 대기 시간(밀리초)**|선택한 유형에 대한 초당 대기 시간 집계입니다.|  

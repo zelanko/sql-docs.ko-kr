@@ -15,10 +15,10 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289750"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE(SSIS 식)
@@ -39,7 +39,7 @@ GETDATE()
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ None  
   
 ## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  

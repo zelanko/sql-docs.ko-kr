@@ -25,19 +25,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941655"
 ---
-# <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
+# <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 명령문이 잘 정의된 XML 문서 형식으로 실행되는 방법에 대한 자세한 정보를 반환합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -45,7 +45,7 @@ ms.locfileid: "67941655"
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 SET SHOWPLAN_ALL 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.
 
@@ -61,7 +61,7 @@ SET SHOWPLAN_XML은 저장 프로시저 내부에서 지정할 수 없으며 일
 SET SHOWPLAN_XML은 XML 문서 집합으로 정보를 반환합니다. SET SHOWPLAN_XML ON 문 뒤에 오는 각 일괄 처리는 단일 문서로 출력에 반영됩니다. 각 문서에는 일괄 처리에 있는 문의 텍스트가 먼저 오고 그 뒤에 실행 단계에 대한 세부 정보가 옵니다. 문서는 예상 비용, 행 수, 액세스한 인덱스, 수행한 연산자 유형, 조인 순서 및 실행 계획에 대한 자세한 정보를 보여 줍니다.
 
 > [!NOTE]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.
+> **에서** 실제 실행 계획 포함[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.
 
 ### <a name="location-of-showplan-output"></a>실행 계획 출력 위치
 
@@ -69,7 +69,7 @@ SET SHOWPLAN_XML에 의한 XML 출력의 XML 스키마가 포함된 문서는 �
 
 - `\Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd`
 
-앞의 경로에서 노드 `130\`은(는) SQL Server 2016에서 사용됩니다. 숫자 130은 `SELECT @@VERSION`에 의해 반환되는 값의 첫 번째 노드인 13에서 파생된 것입니다. SQL Server 2017의 경우 해당 @@VERSION 값의 첫 번째 노드가 14이기 때문에 경로는 `140\`을(를) 사용합니다. SQL Server 2019의 경우 @@VERSION의 첫 번째 값은 15입니다.
+앞의 경로에서 노드 `130\`은(는) SQL Server 2016에서 사용됩니다. 숫자 130은 `SELECT @@VERSION`에 의해 반환되는 값의 첫 번째 노드인 13에서 파생된 것입니다. SQL Server 2017의 경우 해당 @`140\` 값의 첫 번째 노드가 14이기 때문에 경로는 @VERSION을(를) 사용합니다. SQL Server 2019의 경우 @@VERSION의 첫 번째 값은 15입니다.
 
 실행 계획 스키마는 [이 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.
 

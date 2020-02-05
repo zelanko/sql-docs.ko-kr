@@ -15,10 +15,10 @@ ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fefdced57d611d241dbb96b71a0b220139683243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083827"
 ---
 # <a name="get-information-about-event-notifications"></a>이벤트 알림에 대한 정보 가져오기
@@ -30,14 +30,14 @@ ms.locfileid: "68083827"
 -   [sys.event_notifications&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)  
   
 > [!NOTE]  
->  데이터베이스 수준에서 생성된 **sys.event_notifications**의 이벤트 알림에 대한 메타데이터를 보려면 최소한 데이터베이스에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나 이벤트 알림의 소유자이거나 ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다. 특정 큐에서 생성된 이벤트 알림의 경우 최소한 개체에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나 이벤트 알림의 소유자이거나 ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다.  
+>  데이터베이스 수준에서 만든 **sys.event_notifications** 에서 이벤트 알림에 대한 메타데이터를 보려면 최소한 데이터베이스에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나, 이벤트 알림의 소유자이거나, ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다. 특정 큐에서 만든 이벤트 알림의 경우 최소한 개체에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나, 이벤트 알림의 소유자이거나, ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다.  
   
  **서버 수준 이벤트 알림에 대한 정보를 가져오려면**  
   
 -   [sys.server_event_notifications&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)  
   
 > [!NOTE]  
->  최소한 서버에 대한 CONTROL 또는 VIEW ANY DEFINITION 권한이 있거나 이벤트 알림의 로그온 또는 소유자이거나 ALTER ANY EVENT NOTIFICATION 권한이 있어야 **sys.server_event_notifications**의 이벤트 알림에 대한 메타데이터를 볼 수 있습니다.  
+>  최소한 서버에 대한 CONTROL 또는 VIEW ANY DEFINITION 권한이 있거나, 이벤트 알림의 로그온 또는 소유자이거나, **sys.server_event_notifications**에서 이벤트 알림에 대한 메타데이터를 볼 수 있는 ALTER ANY EVENT NOTIFICATION 권한이 있어야 합니다.  
   
  **이벤트 알림을 발생시킬 수 있는 모든 이벤트에 대한 정보를 가져오려면**  
   

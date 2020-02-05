@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095750"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
@@ -54,7 +54,7 @@ JSON 파일의 콘텐츠를 로드한 후 JSON 텍스트를 테이블에 저장�
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage에서 JSON 문서 가져오기
 
-위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
+위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 다른 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
 
 1.  Azure Portal 또는 Azure PowerShell을 사용하여 Azure File Storage에 파일 스토리지 계정(예: `mystorage`), 파일 공유(예: `sharejson`) 및 폴더를 만듭니다.
 2.  파일 스토리지 공유에 일부 JSON 파일을 업로드합니다.
@@ -149,7 +149,7 @@ SELECT book.*
 |---|---|---|---|---|
 |978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 |978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World : 그리스 철학자|3.07|64|Jostein Gaarder| 
+|978-1857995879|소피의 세계: 그리스 철학자|3.07|64|Jostein Gaarder| 
 |978-1933988177|루씬 인 액션(개정판)|30.5|475|Michael McCandless|
 ||||||
 

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024911"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
@@ -69,7 +69,7 @@ ms.locfileid: "68024911"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -88,13 +88,13 @@ ms.locfileid: "68024911"
   
 6.  **인덱스 키 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
-7.  _table\_name_**에서 열 선택** 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  **table**name _\_에서 열 선택_ 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
 9. **포괄 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
-10. _table\_name_**에서 열 선택** 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+10. **table**name _\_에서 열 선택_ 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 11. **확인**을 클릭합니다.  
   
@@ -122,6 +122,6 @@ ms.locfileid: "68024911"
     GO  
     ```  
 
-## <a name="related-content"></a>관련 내용  
+## <a name="related-content"></a>관련 콘텐츠  
 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
 [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)   

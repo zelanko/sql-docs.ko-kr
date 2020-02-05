@@ -12,13 +12,13 @@ ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3c3444c213d71f9062f1456471db5d71ba9e842b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951515"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940249"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 및 varbinary(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67940249"
   
 **varbinary** [(_n_ | **max**)] 가변 길이 이진 데이터입니다. _n_은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트임을 나타냅니다. 스토리지 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 데이터 정의나 변수 선언문에서 _n_을 지정하지 않은 경우 기본 길이는 1입니다. CAST 함수에 _n_을 지정하지 않은 경우 기본 길이는 30입니다.
 
 | 데이터 형식 | 사용 시기... |
@@ -89,12 +89,12 @@ SELECT CAST( @BinaryVariable2 AS INT);
 GO  
 ```  
   
-최종 결과는 `123457`이 아니라 `57921`입니다.
+최종 결과는 `57921`이 아니라 `123457`입니다.
   
 > [!NOTE]  
 >  모든 데이터 형식과 **binary** 데이터 형식 간의 변환은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전 사이에서 같다고 보장할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

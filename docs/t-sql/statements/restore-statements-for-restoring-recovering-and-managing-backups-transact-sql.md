@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258765"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
-  이 섹션에서는 백업을 위한 RESTORE 문에 대해 설명합니다. 백업을 복원 및 복구하기 위한 주 RESTORE {DATABASE | LOG} 문 외에도 여러 가지 보조 RESTORE 문을 사용하여 백업을 관리하고 복원 시퀀스를 계획할 수 있습니다. 이 보조 RESTORE 명령에는 다음이 포함됩니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY.  
+  이 섹션에서는 백업을 위한 RESTORE 문에 대해 설명합니다. 백업을 복원 및 복구하기 위한 주 RESTORE {DATABASE | LOG} 문 외에도 여러 가지 보조 RESTORE 문을 사용하여 백업을 관리하고 복원 시퀀스를 계획할 수 있습니다. 이 보조 RESTORE 명령에는 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY가 포함됩니다.  
   
 > [!IMPORTANT]  
 >  이전 버전의 SQL Server에서는 모든 사용자가 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY 및 RESTORE VERIFYONLY Transact-SQL 문을 사용하여 백업 세트 및 백업 디바이스에 대한 정보를 검색할 수 있었습니다. 여기에는 백업 파일의 내용에 대한 정보도 포함되므로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 이러한 문을 사용하려면 CREATE DATABASE 권한이 필요합니다. 이 요구 사항을 통해 이전 버전보다 더욱 백업 파일의 보안을 유지하고 백업 정보를 보호할 수 있습니다. 이 사용 권한에 대한 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "75258765"
 |인수를 제거합니다.|Description|  
 |---------------|-----------------|  
 |[RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|BACKUP 명령을 사용하여 수행한 백업으로부터 데이터베이스를 복원 및 복구하는 데 사용되는 RESTORE DATABASE 및 RESTORE LOG Transact-SQL 문에 대해 설명합니다. RESTORE DATABASE는 모든 복구 모델에서 데이터베이스에 사용됩니다. RESTORE LOG는 전체 복구 모델 및 대량 로그 복구 모델에서만 사용됩니다. RESTORE DATABASE를 사용하여 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 수도 있습니다.|  
-|[RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE 문 및 연결된 보조 명령문 세트의 "Syntax" 섹션에 설명된 다음 인수를 문서화합니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.|  
+|[RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE 문과 관련 보조 문 집합인 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY의 "구문" 섹션에 설명되어 있는 인수에 대해 설명합니다. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.|  
 |[RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|RESTORE FILELISTONLY Transact-SQL 문에 대해 설명합니다. 이 문은 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 포함된 결과 집합을 반환하는 데 사용됩니다.|  
 |[RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|RESTORE HEADERONLY Transact-SQL 문에 대해 설명합니다. 이 문은 특정 백업 디바이스에서 모든 백업 세트에 대한 백업 헤더 정보가 모두 포함된 결과 집합을 반환하는 데 사용됩니다.|  
 |[RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|RESTORE LABELONLY Transact-SQL 문에 대해 설명합니다. 이 문은 지정된 백업 디바이스가 식별하는 백업 미디어에 대한 정보가 포함된 결과 집합을 반환하는 데 사용됩니다.|  

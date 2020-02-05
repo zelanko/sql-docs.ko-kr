@@ -14,10 +14,10 @@ ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013107"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold 서버 구성 옵션

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000124"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows의 PowerShell을 사용하여 SQL Server on Linux 관리
@@ -25,7 +25,7 @@ ms.locfileid: "68000124"
 
 Windows의 [SQL PowerShell](../powershell/download-sql-server-ps-module.md)은 PowerShell 갤러리에서 유지 관리됩니다. SQL Server를 사용하는 경우 항상 최신 버전의 SqlServer PowerShell 모듈을 사용해야 합니다.
 
-## <a name="before-you-begin"></a>시작하기 전 주의 사항
+## <a name="before-you-begin"></a>시작하기 전에
 
 SQL Server on Linux의 [알려진 문제](sql-server-linux-release-notes.md)를 확인합니다.
 
@@ -151,6 +151,6 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 - [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)

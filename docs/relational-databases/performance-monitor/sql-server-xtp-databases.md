@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947792"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 데이터베이스
@@ -29,7 +29,7 @@ ms.locfileid: "67947792"
 
 이 표에서는 **SQL Server XTP Databases** 카운터를 설명합니다.
 
-|카운터|설명| 
+|카운터|Description| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|트랜잭션 세그먼트 대규모 데이터 페이로드의 평균 크기입니다. 이 카운터는 사용자용이 아닌 매우 낮은 수준의 카운터입니다.|
 |**Avg Transaction Segment Size**|트랜잭션 세그먼트 페이로드의 평균 크기입니다. 이 값이 0이 되면 백엔드 할당자로부터 더 많은 페이지가 할당됩니다. 이 카운터는 사용자용이 아닌 매우 낮은 수준의 카운터입니다.|

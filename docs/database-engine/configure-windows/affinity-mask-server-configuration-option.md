@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013214"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 서버 구성 옵션
@@ -32,7 +32,7 @@ ms.locfileid: "68013214"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)][ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)을 대신 사용합니다.  
   
  멀티태스킹을 수행하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows는 서로 다른 프로세서 간에 프로세스 스레드를 이동하기도 합니다. 이는 운영 체제의 측면에서 볼 때는 효율적이지만 각 프로세서 캐시에 데이터를 반복적으로 다시 로드해야 하므로 시스템 부하가 큰 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 저하를 초래할 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서를 다시 로드할 필요가 없고 프로세서 간에 스레드 마이그레이션이 감소되어 컨텍스트 전환이 줄게 되므로 성능이 향상될 수 있습니다. 스레드와 프로세서의 이러한 관계를 프로세서 선호도라고 합니다.  
   
@@ -129,7 +129,7 @@ GO
 ### <a name="startup"></a>시작  
  지정된 선호도 마스크가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 또는 데이터베이스 연결 시 라이선스 정책을 위반하면 엔진 계층에서는 시작 프로세스나 데이터베이스 연결/복원 작업을 완료한 후에 선호도 마스크의 sp_configure 실행 값을 0으로 되돌리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 오류 메시지가 보고됩니다.  
   
-### <a name="reconfigure"></a>다시 구성  
+### <a name="reconfigure"></a>다시 구  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 명령을 실행할 때 지정된 선호도 마스크가 라이선스 정책을 위반하면 클라이언트 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 오류 메시지가 보고되므로 데이터베이스 관리자는 해당 선호도 마스크를 다시 구성해야 합니다. 이 경우 RECONFIGURE WITH OVERRIDE 명령은 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -20,10 +20,10 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027645"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM(geometry 데이터 형식)
@@ -43,10 +43,10 @@ ms.locfileid: "68027645"
   
  CLR 반환 형식: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 **Z**(높이) 값 및 **M**(측정값) 값을 포함하는 `Point` 인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (1 2)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M**의 값을 반환하여 (1 2 3 4)를 반환합니다.  
+ 다음 예에서는 `Point`Z **(높이) 값 및** M **(측정값) 값을 포함하는**  인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (1 2)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M**의 값을 반환하여 (1 2 3 4)를 반환합니다.  
   
 ```  
 DECLARE @g geometry;  

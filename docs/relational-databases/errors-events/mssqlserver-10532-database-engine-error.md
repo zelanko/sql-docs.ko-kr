@@ -12,10 +12,10 @@ ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72005990"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
@@ -30,7 +30,7 @@ ms.locfileid: "72005990"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_NO_ELIGIBLE_STMT|  
-|메시지 텍스트|**\@plan_handle**에 지정된 일괄 처리 또는 모듈에 계획 지침에 적합한 문이 포함되어 있지 않으므로 계획 지침 ‘%.\*ls’을(를) 만들 수 없습니다. **\@plan_handle**에 다른 값을 지정하세요.|  
+|메시지 텍스트|\***plan_handle\@에 지정된 일괄 처리 또는 모듈에 계획 지침에 적합한 문이 포함되어 있지 않으므로 계획 지침 ‘%.** ls’을(를) 만들 수 없습니다. **\@plan_handle**에 다른 값을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
 **\@plan_handle**로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  

@@ -52,12 +52,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914746"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909833"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,12 +67,12 @@ ms.locfileid: "67914746"
 ## <a name="usage"></a>사용  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
-## <a name="functions"></a>함수  
+## <a name="functions"></a>Functions  
  다음 표에는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 중복되지 않은 ODBC 스칼라 함수가 나와 있습니다.  
   
 ### <a name="string-functions"></a>문자열 함수  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> String_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp2와 string_exp1의 연결 결과인 문자열을 반환합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 string_exp1로 표시되는 열이 NULL 값을 포함할 경우 DB2는 NULL을 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 NULL이 아닌 문자열을 반환합니다.|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914746"
   
 ### <a name="numeric-function"></a>숫자 함수  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|소수점 이하 integer_exp 위치로 잘린 numeric_exp를 반환합니다. integer_exp가 음수인 경우 numeric_exp는 소수점 왼쪽의 &#124;integer_exp&#124; 위치로 잘립니다.|  
   
 ### <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
 |CURDATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
@@ -104,7 +104,7 @@ ms.locfileid: "67914746"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>1\. 저장 프로시저에서 ODBC 함수 사용  
+### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
 ```  
@@ -116,7 +116,7 @@ AS
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
   
-### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>2\. 사용자 정의 함수에서 ODBC 함수 사용  
+### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>B. 사용자 정의 함수에서 ODBC 함수 사용  
  다음 예에서는 사용자 정의 함수에 ODBC 함수를 사용합니다.  
   
 ```  
@@ -177,7 +177,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

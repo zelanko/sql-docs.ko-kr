@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816739"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816739"
   
 -   **CurvePolygon** 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트: **CircularString** 및 **CompoundCurve**가 포함될 수 있습니다.  
+ **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트인 **CircularString** 및 **CompoundCurve**가 포함될 수 있습니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 **CurvePolygon** 그림을 보여 줍니다.  
@@ -114,7 +114,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>1\. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 **CurvePolygon** 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -122,7 +122,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2\. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 코드 조각은 동일한 문에서 **CurvePolygon** 을 사용하여 geography 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  

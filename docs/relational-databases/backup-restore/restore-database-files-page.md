@@ -14,10 +14,10 @@ ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944826"
 ---
 # <a name="restore-database-files-page"></a>데이터베이스 복원(파일 페이지)
@@ -32,7 +32,7 @@ ms.locfileid: "67944826"
  **모든 폴더를 파일에 다시 배치**  
  복원된 파일의 위치를 다시 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**데이터 파일 폴더**|복원된 데이터 파일을 다시 배치할 데이터 파일 폴더 이름을 입력하거나 검색합니다.|  
 |**로그 파일 폴더**|복원된 로그 파일을 다시 배치할 로그 파일 또는 파일 폴더를 입력하거나 검색합니다.|  

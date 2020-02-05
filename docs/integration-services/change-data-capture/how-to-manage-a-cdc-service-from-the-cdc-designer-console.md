@@ -11,10 +11,10 @@ ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d54fb221cd4440ca5332ee47b0b183b857572c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294784"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법

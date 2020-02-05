@@ -18,10 +18,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042056"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection(geography 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "68042056"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 geography 인스턴스의 교집합을 반환합니다.  
   
  STIntersection()은 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "68042056"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>1\. Polygon 및 LineString의 교집합 계산  
+### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Polygon 및 LineString의 교집합 계산  
  다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 컴퓨팅합니다.  
   
 ```  
@@ -67,7 +67,7 @@ SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STIntersection(@h).ToString();  
 ```  
   
-### <a name="b-computing-the-intersection-of-a-polygon-and-a-curvepolygon"></a>2\. Polygon 및 CurvePolygon의 교집합 계산  
+### <a name="b-computing-the-intersection-of-a-polygon-and-a-curvepolygon"></a>B. Polygon 및 CurvePolygon의 교집합 계산  
  다음 예에서는 원호 세그먼트를 포함하는 인스턴스를 반환합니다.  
   
 ```  

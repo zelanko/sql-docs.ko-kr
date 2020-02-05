@@ -11,10 +11,10 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293265"
 ---
 # <a name="create-infocube-for-transaction-data"></a>트랜잭션 데이터용 InfoCube 만들기
@@ -24,7 +24,7 @@ ms.locfileid: "71293265"
 
   **트랜잭션 데이터용 InfoCube 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoCube를 만들 수 있습니다.  
   
- **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 **트랜잭션 데이터용 InfoCube 만들기**대화 상자를 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  
+ **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 **트랜잭션 데이터용 InfoCube 만들기**대화 상자를 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -61,13 +61,13 @@ ms.locfileid: "71293265"
  **InfoObject**  
  데이터 흐름 열과 연결된 InfoObject의 이름을 표시합니다.  
   
- **유형**  
+ **형식**  
  데이터 흐름 열과 연결된 InfoObject의 유형을 표시합니다. 다음 표에서는 유형에 사용할 수 있는 값을 나열합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |CHA|특징|  
-|UNI|단위|  
+|UNI|Units|  
 |KYF|주요 수치|  
 |TIM|시간 특징|  
   

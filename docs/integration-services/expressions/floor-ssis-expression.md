@@ -14,10 +14,10 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289621"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
@@ -41,7 +41,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  인수 식의 숫자 데이터 형식입니다. 결과는 *numeric_expression*과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 FLOOR 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  

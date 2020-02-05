@@ -12,13 +12,13 @@ ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138590"
 ---
-# <a name="mssqlserver2512"></a>MSSQLSERVER_2512
+# <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  

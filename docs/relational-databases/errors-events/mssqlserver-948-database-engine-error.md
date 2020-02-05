@@ -14,13 +14,13 @@ ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df788cebac293db707c9fd153724b6add3b39e92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903860"
 ---
-# <a name="mssqlserver948"></a>MSSQLSERVER_948
+# <a name="mssqlserver_948"></a>MSSQLSERVER_948
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -31,7 +31,7 @@ ms.locfileid: "67903860"
 |이벤트 ID|948|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
-|심볼 이름|NA|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|데이터베이스 '%.*ls'은(는) 해당 버전이 %d이므로 열 수 없습니다. 이 서버는 버전 %d 및 이전 버전을 지원합니다. 다운그레이드는 지원되지 않습니다.|  
   
 ## <a name="explanation"></a>설명  

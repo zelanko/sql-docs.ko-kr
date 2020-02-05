@@ -18,10 +18,10 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077927"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
@@ -46,12 +46,12 @@ static SqlHierarchyId GetRoot ( )
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 계층 트리의 루트 노드를 확인하는 데 사용됩니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-transact-sql-example"></a>1\. Transact-SQL 예  
+### <a name="a-transact-sql-example"></a>A. Transact-SQL 예  
 다음 예에서는 계층 트리의 루트를 반환합니다.
   
 ```sql
@@ -60,14 +60,14 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode = hierarchyid::GetRoot()  
 ```  
   
-### <a name="b-clr-example"></a>2\. CLR 예  
+### <a name="b-clr-example"></a>B. CLR 예  
 다음 코드 조각은 GetRoot() 메서드를 호출합니다.
   
 ```sql
 SqlHierarchyId.GetRoot()  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

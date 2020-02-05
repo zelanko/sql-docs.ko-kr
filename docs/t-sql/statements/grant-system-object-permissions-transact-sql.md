@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050673"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 시스템 개체 사용 권한(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050673"
 
   시스템 저장 프로시저, 확장 저장 프로시저, 함수 및 뷰와 같은 시스템 개체에 대한 권한을 부여합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  사용 권한을 부여할 보안 주체를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 문을 사용하면 특정 저장 프로시저, 확장 저장 프로시저, 테이블 반환 함수, 스칼라 함수, 뷰, 카탈로그 뷰, 호환성 뷰, INFORMATION_SCHEMA 뷰, 동적 관리 뷰 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 설치된 시스템 테이블에 대한 사용 권한을 부여할 수 있습니다. 이러한 각 시스템 개체는 서버의 리소스 데이터베이스(mssqlsystemresource)에 고유한 레코드로 존재합니다. 리소스 데이터베이스는 읽기 전용입니다. 개체에 대한 링크는 모든 데이터베이스의 sys 스키마에 레코드로 표시됩니다. 시스템 개체를 실행하거나 선택할 수 있는 사용 권한을 부여, 거부 및 취소할 수 있습니다.  
   
  개체를 실행하거나 선택할 수 있는 사용 권한을 부여할 경우 해당 개체를 사용하는 데 필요한 모든 사용 권한이 포함되는 것은 아닙니다. 대부분의 개체는 추가 사용 권한이 필요한 작업을 수행합니다. 예를 들어 sp_addlinkedserver에 대한 EXECUTE 권한이 부여된 사용자는 sysadmin 고정 서버 역할의 멤버가 아닌 경우 연결된 서버를 만들 수 없습니다.  
@@ -75,8 +75,8 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-select-permission-on-a-view"></a>1\. 뷰에 대한 SELECT 권한 부여  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Sylvester1` 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
+### <a name="a-granting-select-permission-on-a-view"></a>A. 뷰에 대한 SELECT 권한 부여  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 `Sylvester1` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -85,7 +85,7 @@ GRANT VIEW SERVER STATE to Sylvester1;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>2\. 확장 저장 프로시저에 대한 EXECUTE 권한 부여  
+### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 확장 저장 프로시저에 대한 EXECUTE 권한 부여  
  다음 예에서는 `EXECUTE`에 대한 `xp_readmail` 권한을 `Sylvester1`에 부여합니다.  
   
 ```  

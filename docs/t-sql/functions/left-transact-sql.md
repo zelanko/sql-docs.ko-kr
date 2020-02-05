@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059918"
 ---
 # <a name="left-transact-sql"></a>LEFT(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059918"
 
   문자열의 왼쪽부터 지정된 수만큼의 문자를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,17 +51,17 @@ LEFT ( character_expression , integer_expression )
  *integer_expression* 매개 변수는 UTF-16 서로게이트 문자를 한 문자로 계산합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
+ **character_expression**이 유니코드가 아닌 문자 데이터 형식인 경우 *varchar*를 반환합니다.  
   
- *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
+ **character_expression**이 유니코드 문자 데이터 형식인 경우 *nvarchar*를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SC 데이터 정렬을 사용하는 경우 *integer_expression* 매개 변수가 UTF-16 서로게이트 쌍을 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-left-with-a-column"></a>1. 열에서 LEFT 사용  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Product` 테이블에서 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
+### <a name="a-using-left-with-a-column"></a>A. 열에서 LEFT 사용  
+ 다음 예에서는 `Product` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
   
 ```  
 SELECT LEFT(Name, 5)   
@@ -70,7 +70,7 @@ ORDER BY ProductID;
 GO  
 ```  
   
-### <a name="b-using-left-with-a-character-string"></a>2. 문자열에서 LEFT 사용  
+### <a name="b-using-left-with-a-character-string"></a>B. 문자열에서 LEFT 사용  
  다음 예에서는 `LEFT`를 사용하여 `abcdefg` 문자열에서 가장 왼쪽에 있는 두 문자를 반환합니다.  
   
 ```  
@@ -87,7 +87,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>C. 열에서 LEFT 사용  
  다음 예에서는 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  

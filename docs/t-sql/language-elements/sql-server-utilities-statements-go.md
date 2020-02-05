@@ -20,20 +20,20 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072304"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **sqlcmd** 및 **osql** 유틸리티와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 인식되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아닌 명령을 제공합니다. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]sqlcmd**및**osql**유틸리티와** 코드 편집기에서 인식되는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문이 아닌 명령을 제공합니다. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
   
   GO는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 알립니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ GO [count]
  *count*  
  양의 정수입니다. GO 앞의 일괄 처리가 지정된 횟수만큼 실행됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  GO는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아니라 **sqlcmd** 및 **osql** 유틸리티와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 인식되는 명령입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 현재 일괄 처리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보내야 함을 나타내는 신호로 GO를 해석합니다. 문의 현재 일괄 처리는 첫 번째 GO의 경우 임시 세션이나 스크립트가 시작된 이후 또는 마지막 GO 이후에 입력된 모든 문으로 구성됩니다.  

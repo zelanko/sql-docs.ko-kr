@@ -17,10 +17,10 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051293"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
@@ -57,7 +57,7 @@ insert
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-element-nodes-into-the-document"></a>1\. 문서에 요소 노드 삽입  
+### <a name="a-inserting-element-nodes-into-the-document"></a>A. 문서에 요소 노드 삽입  
  다음 예에서는 문서에 요소를 삽입하는 방법을 보여 줍니다. 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, 여러 **insert** XML DML 문을 통해 예에서 요소 노드가 문서에 삽입되는 방법을 보여 줍니다. 각 삽입 이후 SELECT 문으로 결과를 표시합니다.  
   
 ```  
@@ -104,7 +104,7 @@ GO
   
  이 예의 여러 경로 식은 정적 입력별 요구 사항으로 "[1]"을 지정합니다. 이렇게 하면 단일 대상 노드가 보장됩니다.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>2\. 문서에 여러 요소 삽입  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>B. 문서에 여러 요소 삽입  
  다음 예에서는 문서를 **xml** 형식의 변수에 먼저 할당합니다. 그런 다음, 제품 기능을 나타내는 두 요소의 시퀀스를 **xml** 형식의 두 번째 변수에 할당하고, 이를 다시 첫 번째 변수에 삽입합니다.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 358553f62952c9bea60076ea34e85387b95bf543
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066335"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB(geometry 데이터 형식)
@@ -48,9 +48,9 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
  CLR 반환 형식: **SqlGeometry**  
   
- OGC 형식: **다각형**  
+ OGC 형식: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

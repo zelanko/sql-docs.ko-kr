@@ -18,10 +18,10 @@ ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066306"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid(geometry 데이터 형식)
@@ -41,7 +41,7 @@ STSrid
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **int**  
   
- CLR 유형: **SqlInt32**  
+ CLR 형식: **SqlInt32**  
   
 ## <a name="examples"></a>예  
  첫 번째 예제에서는 SRID 값이 13인 **geometry** 인스턴스를 만들고 `STSrid`를 사용하여 SRID를 확인합니다.  

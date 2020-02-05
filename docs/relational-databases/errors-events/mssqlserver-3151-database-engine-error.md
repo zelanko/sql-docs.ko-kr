@@ -12,13 +12,13 @@ ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 068f4737a3367acdd01862cc800a4255a472c843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001913"
 ---
-# <a name="mssqlserver3151"></a>MSSQLSERVER_3151
+# <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "68001913"
 **master** 데이터베이스에서 발생하는 다양한 문제를 나타내는 일반적인 오류 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-자세한 내용은 오류 로그를 확인하십시오. 사용 가능한 **master** 데이터베이스를 만들려면 REBUILDDATABASE 옵션을 사용하여 Setup.exe를 실행합니다. 자세한 내용은 SQL Server 온라인 설명서에서 "방법: 명령 프롬프트에서 SQL Server 설치"를 참조하세요.  
+자세한 내용은 오류 로그를 확인하십시오. 사용 가능한 **master** 데이터베이스를 만들려면 REBUILDDATABASE 옵션을 사용하여 Setup.exe를 실행합니다. 자세한 내용은 SQL Server 온라인 설명서의 "방법: 명령 프롬프트에서 SQL Server 설치"를 참조하세요.  
   

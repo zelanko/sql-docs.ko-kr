@@ -14,10 +14,10 @@ ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06c015c2f96bf2f7206a3e802d44a65871828d2c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290258"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT(SSIS 식)
@@ -41,7 +41,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_UI2  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *character_expression* 인수는 DT_WSTR 데이터 형식이어야 합니다.  
   
  *character_expression* 이 Null이거나 빈 문자열이면 CODEPOINT 결과도 Null이 됩니다.  

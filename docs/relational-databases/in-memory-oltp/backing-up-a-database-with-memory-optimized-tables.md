@@ -11,10 +11,10 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412793"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업

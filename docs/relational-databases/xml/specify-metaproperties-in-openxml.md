@@ -17,10 +17,10 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000699"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
@@ -38,7 +38,7 @@ ms.locfileid: "68000699"
 > [!NOTE]  
 >  XPath 탐색에서는 이러한 메타 속성을 참조할 수 없습니다.  
   
-|메타 속성 특성|설명|  
+|메타 속성 특성|Description|  
 |----------------------------|-----------------|  
 |**\@mp:id**|DOM 노드에 대해 시스템에서 생성된 문서 차원의 식별자를 제공합니다. 문서가 다시 구문 분석되지 않는 한 이 ID는 동일한 XML 노드를 참조합니다.<br /><br /> XML ID가 **0** 이면 해당 요소가 루트 요소임을 나타냅니다. 해당 부모 XML ID는 NULL입니다.|  
 |**\@mp:localname**|노드 이름의 로컬 부분을 저장합니다. 이 특성은 접두사 및 네임스페이스 URI와 함께 사용되어 요소 또는 특성 노드 이름을 지정합니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68000699"
   
  이 표에서는 계층 구조 정보를 검색할 수 있도록 허용하기 위해 제공되는 추가 부모 속성을 보여 줍니다.  
   
-|부모 메타 속성 특성|설명|  
+|부모 메타 속성 특성|Description|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|**../\@mp:id**에 해당합니다.|  
 |**\@mp:parentlocalname**|**../\@mp:localname**에 해당합니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68000699"
 ## <a name="examples"></a>예  
  다음 예에서는 OPENXML을 사용하여 여러 행 집합 뷰를 만드는 방법을 보여 줍니다.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>1\. OPENXML 행 집합 열을 메타 속성에 매핑  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. OPENXML 행 집합 열을 메타 속성에 매핑  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. 특히 OPENXML 문에서 *ColPattern* 매개 변수를 사용하여 여러 가지 메타 속성 특성을 행 집합 열에 매핑할 수 있는 방법을 보여 줍니다.  
   
  OPENXML 문에서는 다음을 보여 줍니다.  
@@ -114,7 +114,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### <a name="b-retrieving-the-whole-xml-document"></a>2\. 전체 XML 문서 검색  
+### <a name="b-retrieving-the-whole-xml-document"></a>B. 전체 XML 문서 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서를 하나의 열로 된 행 집합 뷰로 만듭니다. 이 열 **Col1**은 **xmltext** 메타 속성에 매핑되며 오버플로 열이 됩니다. 그 결과 열이 소비되지 않은 데이터를 수신합니다. 이 경우에는 전체 문서입니다.  
   
  그런 다음 SELECT 문은 완전한 행 집합을 반환합니다.  

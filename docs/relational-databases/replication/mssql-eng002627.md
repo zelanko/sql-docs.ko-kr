@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2c1939933c87ffe9519b0ca0656c83a02d952ec5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9c2e22fb15576e58d56adb79ddad5f9e31f418f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766554"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287851"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>메시지 정보  
@@ -31,7 +31,7 @@ ms.locfileid: "68766554"
 |이벤트 ID|2627|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|심볼 이름|해당 사항 없음|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|%ls 제약 조건 '%.*ls'을(를) 위반했습니다. 개체 '%.\*ls'에 중복 키를 삽입할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
@@ -62,6 +62,6 @@ ms.locfileid: "68766554"
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [병합 복제](../../relational-databases/replication/merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [트랜잭션 복제를 위한 업데이트 가능 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

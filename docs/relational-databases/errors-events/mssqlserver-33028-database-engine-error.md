@@ -12,13 +12,13 @@ ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cb42ae68df92466ab30cbb45f6ea526658143795
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908480"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -35,12 +35,12 @@ ms.locfileid: "67908480"
 ## <a name="explanation"></a>설명  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 위의 오류 메시지에 나열된 암호화 공급자를 열 수 없습니다. 암호화 공급자가 위의 오류 코드를 제공했습니다. 암호화 공급자에게 오류에 대한 자세한 정보를 문의해야 할 수 있습니다.  
   
-|오류 코드|설명|  
+|오류 코드|Description|  
 |--------------|---------------|  
 |0|성공했습니다. 오류가 없습니다.|  
 |1|실패. 지정되지 않았거나 예기치 않은 오류가 발생했습니다. 사용할 수 있는 추가 정보가 없습니다.|  
 |2|부족한 버퍼. 암호화 공급자가 사용할 공간을 할당할 수 없습니다.|  
-|3|지원되지 않음. 암호화 공급자가 이 릴리스에서 지원되지 않습니다. 다른 암호화 공급자를 선택하십시오.|  
+|3|지원되지 않습니다. 암호화 공급자가 이 릴리스에서 지원되지 않습니다. 다른 암호화 공급자를 선택하십시오.|  
 |4|찾을 수 없음. 지정된 암호화 공급자가 없거나 해당 파일에 액세스할 수 있는 권한을 가지고 있지 않습니다.|  
 |5|권한 부여 실패. 자격 증명을 만들 때 잘못된 암호나 사용자 이름을 제공할 경우 발생할 수 있습니다. 또한 자격 증명이 없는 경우에도 발생할 수 있습니다.|  
 |6|인수가 잘못되었습니다. 암호화 공급자에게 잘못된 인수가 전달되었습니다.|  

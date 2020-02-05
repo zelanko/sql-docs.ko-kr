@@ -19,10 +19,10 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898043"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67898043"
 
   이벤트 세션을 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ON SERVER
  *event_session_name*  
  기존 이벤트 세션의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이벤트 세션을 삭제하면 대상 및 세션 매개 변수와 같은 모든 구성 정보가 완전히 제거됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

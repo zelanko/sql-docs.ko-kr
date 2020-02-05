@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 94e360c19c4f734b891701a4ec40c82cdb57927d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710479"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase의 푸시다운 계산
@@ -64,7 +64,7 @@ SQL Server는 조건자 푸시다운에 대해 다음과 같은 기본 식과 �
 
 BETWEEN, NOT, IN 및 LIKE 연산자를 푸시다운할 수도 있습니다. 실제 동작은 쿼리 최적화 프로그램에서 기본 관계형 연산자를 사용하는 일련의 문으로 다시 작성하는 방법에 따라 달라집니다.
 
-이 예제의 쿼리에는 Hadoop에 푸시다운할 수 있는 여러 조건자가 있습니다. SQL Server는 Hadoop에 맵 감소 작업을 푸시하여 `customer.account_balance <= 200000` 조건자를 수행할 수 있습니다. `BETWEEN 92656 and 92677` 식도 Hadoop에 푸시할 수 있는 이진 및 논리 연산으로 구성됩니다. `customer.account_balance and customer.zipcode`의 논리적 **AND**는 최종 식입니다.
+이 예제의 쿼리에는 Hadoop에 푸시다운할 수 있는 여러 조건자가 있습니다. SQL Server는 Hadoop에 맵 감소 작업을 푸시하여 `customer.account_balance <= 200000` 조건자를 수행할 수 있습니다. `BETWEEN 92656 and 92677` 식도 Hadoop에 푸시할 수 있는 이진 및 논리 연산으로 구성됩니다. **의 논리적** AND`customer.account_balance and customer.zipcode`는 최종 식입니다.
 
 이 조건자를 결합하면 맵 감소 작업에서 모든 WHERE 절을 수행할 수 있습니다. SELECT 조건에 맞는 데이터만 SQL Server PDW에 다시 복사됩니다.
 

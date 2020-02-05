@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044309"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044309"
 
   스키마 간에 보안 개체를 이동합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  스키마에 포함된 보안 개체 중에서 스키마로 이동될 보안 개체의 한 부분 또는 두 부분으로 구성된 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자와 스키마는 완전히 분리됩니다.  
   
  ALTER SCHEMA는 같은 데이터베이스에서 스키마 간에 보안 개체를 이동할 때만 사용할 수 있습니다. 스키마 내에서 보안 개체를 변경하거나 삭제하려면 해당 보안 개체와 관련된 ALTER 또는 DROP 문을 사용합니다.  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-transferring-ownership-of-a-table"></a>1\. 테이블의 소유권 이전  
+### <a name="a-transferring-ownership-of-a-table"></a>A. 테이블의 소유권 이전  
  다음 예에서는 `HumanResources` 스키마에서 `Address` 스키마로 `Person` 테이블을 이동하여 HumanResources 스키마를 수정합니다.  
   
 ```  
@@ -106,7 +106,7 @@ ALTER SCHEMA HumanResources TRANSFER Person.Address;
 GO  
 ```  
   
-### <a name="b-transferring-ownership-of-a-type"></a>2\. 형식의 소유권 이전  
+### <a name="b-transferring-ownership-of-a-type"></a>B. 형식의 소유권 이전  
  다음 예에서는 `Production` 스키마에 형식을 만든 다음 해당 형식을 `Person` 스키마로 전송합니다.  
   
 ```  
@@ -135,10 +135,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 테이블의 소유권 이전  
- 다음 예는 `dbo` 스키마에 `Region` 테이블을 만들고, `Sales` 스키마를 만든 다음, `Region` 스키마에서 `dbo` 스키마로 `Sales` 테이블을 이동합니다.  
+ 다음 예는 `Region` 스키마에 `dbo` 테이블을 만들고, `Sales` 스키마를 만든 다음, `Region` 스키마에서 `dbo` 스키마로 `Sales` 테이블을 이동합니다.  
   
 ```  
 CREATE TABLE dbo.Region   

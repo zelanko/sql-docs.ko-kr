@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 050197c7ce5a6098397b6ad3db13a933983270d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d4aba7ca9e46725d771ba36c50ccc4e380fabae7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770738"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288126"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68770738"
  배포 에이전트는 스냅샷 복제 및 트랜잭션 복제와 함께 사용되며 초기 스냅샷을 구독자에 적용하고 배포 데이터베이스의 트랜잭션을 구독자로 이동합니다. 배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. 자세한 내용은 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)을 참조하세요.  
   
 ## <a name="merge-agent"></a>병합 에이전트  
- 병합 에이전트는 병합 복제와 함께 사용되며 초기 스냅샷을 구독자에 적용하고 발생한 증분 데이터 변경 내용을 이동 및 조정합니다. 각 병합 구독에는 게시자 및 구독자 모두에 연결되고 모두를 업데이트하는 자체 병합 에이전트가 있습니다. 병합 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. 기본적으로 병합 에이전트는 변경 내용을 구독자에서 게시자로 업로드한 다음 게시자에서 구독자로 변경 내용을 다운로드합니다. 자세한 내용은 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)을 참조하세요.  
+ 병합 에이전트는 병합 복제와 함께 사용되며 초기 스냅샷을 구독자에 적용하고 발생한 증분 데이터 변경 내용을 이동 및 조정합니다. 각 병합 구독에는 게시자 및 구독자 모두에 연결되고 모두를 업데이트하는 자체 병합 에이전트가 있습니다. 병합 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. 기본적으로 병합 에이전트는 변경 내용을 구독자에서 게시자로 업로드한 다음 게시자에서 구독자로 변경 내용을 다운로드합니다. 자세한 내용은 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)을(를) 참조하세요.  
   
 ## <a name="queue-reader-agent"></a>큐 판독기 에이전트  
  큐 판독기 에이전트는 지연 업데이트 옵션이 있는 트랜잭션 복제와 함께 사용됩니다. 이 에이전트는 배포자에서 실행되며 구독자에서 적용한 변경 내용을 게시자로 다시 보냅니다. 배포 에이전트 및 병합 에이전트와는 달리 지정한 배포 데이터베이스에 대한 모든 게시자 및 게시에 대해 하나의 큐 판독기 인스턴스만 사용됩니다. 큐 판독기 에이전트에 대한 자세한 내용은 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)를 참조하십시오. 업데이트할 수 있는 구독에 대한 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하십시오.  

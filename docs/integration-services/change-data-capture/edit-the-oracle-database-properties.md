@@ -13,10 +13,10 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e9178a16bf828d585e5f9fd3ae74a905fa6a0428
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298780"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
@@ -42,7 +42,7 @@ ms.locfileid: "71298780"
   
 -   **Windows 인증**: 현재 Windows 도메인 자격 증명을 사용하려면 선택합니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.  
   
--   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름**과 **암호**를 입력해야 합니다.  
+-   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
   
  뷰어에서 Oracle 데이터베이스 속성을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)을 참조하십시오.  
   

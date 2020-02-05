@@ -22,10 +22,10 @@ ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68097461"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68097461"
 > [!NOTE]  
 >  @@CPU_BUSY 또는 @@IO_BUSY로 반환된 시간이 누적 CPU 시간의 약 49일을 초과할 경우 산술 오버플로 경고를 받게 됩니다. 이 경우 @@CPU_BUSY, @@IO_BUSY 및 @@IDLE 변수 값은 정확하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68097461"
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함한 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
   
 ## <a name="examples"></a>예  

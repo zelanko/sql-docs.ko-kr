@@ -18,10 +18,10 @@ ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b15d0601255cc7f53b677c333f531057a05573a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075086"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68075086"
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 설명에 있는 점을 셉니다. 중복 점도 개수에 포함됩니다. 이 인스턴스가 **collection** 형식인 경우 이 메서드는 컬렉션의 각 요소에 있는 점의 총 개수를 반환합니다.  
   
 ## <a name="examples"></a>예  

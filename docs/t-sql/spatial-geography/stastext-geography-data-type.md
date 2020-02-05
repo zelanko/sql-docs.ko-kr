@@ -18,10 +18,10 @@ ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042503"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText(geography 데이터 형식)
@@ -43,7 +43,7 @@ ms.locfileid: "68042503"
   
  CLR 반환 형식: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geography** 인스턴스의 OGC 형식은 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)을 호출하여 확인할 수 있습니다.  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 서버에서 반환될 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다.  

@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908941"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
@@ -33,14 +33,14 @@ Microsoft Azure Storage로 백업하거나 Microsoft Azure Storage에서 복원�
 
 다음 단계에서는 백업 또는 복원 작업 실패 후 정리하는 방법을 설명합니다. PowerShell 스크립트를 사용하여 모든 단계를 수행할 수 있습니다. 다음 섹션에는 예제 PowerShell 스크립트가 포함되어 있습니다.  
   
-1. **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트나 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
+1. **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트나 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 Blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
   
-1. **임대 해제:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 해제할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
+1. **임대 중단:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 중단할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
   
     > [!TIP]  
     > SQL Server는 복원 작업 중 임대 ID를 실행하여 단독 액세스를 설정합니다. 복원 임대 ID는 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2입니다.  
   
-1. **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
+1. **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 중단해야 합니다.  
 
 ###  <a name="Code_Example"></a> PowerShell 스크립트 예  
   
@@ -125,6 +125,6 @@ if($lockedBlobs.Count -gt 0)
 } else { Write-Host " There are no blobs with locked lease status." }
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
-[URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[URL에 SQL Server 백업 모범 사례 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

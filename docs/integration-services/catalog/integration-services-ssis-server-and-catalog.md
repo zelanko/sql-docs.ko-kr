@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298969"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
@@ -41,7 +41,7 @@ ms.locfileid: "71298969"
  또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
   
 ##  <a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
- **SSISDB** 데이터베이스를 호스트하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**데이터베이스를 호스트하는**의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
   
 -   **SSISDB 데이터베이스**  
   

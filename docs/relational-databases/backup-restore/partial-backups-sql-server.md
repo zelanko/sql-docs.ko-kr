@@ -16,10 +16,10 @@ ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2c265d3a373eb53b822142fa2955d07b96b88f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033664"
 ---
 # <a name="partial-backups-sql-server"></a>부분 백업(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68033664"
   
  부분 백업은 차등 부분 백업에 대해 *차등 기반* 으로 사용될 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 > [!NOTE]  
 >  부분 백업은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 유지 관리 계획 마법사에서 지원하지 않습니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "68033664"
   
  **복원 시퀀스에서 부분 백업을 사용하려면**  
   
--   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

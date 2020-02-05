@@ -12,13 +12,13 @@ ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8638d205ba3958a88096d12e001a9362bb3d59cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951414"
 ---
-# <a name="mssqlserver7910"></a>MSSQLSERVER_7910
+# <a name="mssqlserver_7910"></a>MSSQLSERVER_7910
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -36,5 +36,5 @@ ms.locfileid: "67951414"
 이 메시지는 페이지가 IAM(Index Allocation Map) 페이지의 단일 페이지 슬롯 배열에 할당되었음을 나타내는 REPAIR의 정보 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+None  
   

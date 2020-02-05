@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119114"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119114"
 
 지정된 날짜 및 시간 인수에 대한 **datetimeoffset** 값을 반환합니다. 반환된 값에는 전체 자릿수 인수에서 지정한 전체 자릿수 및 오프셋 인수에서 지정한 오프셋이 포함됩니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -68,12 +68,12 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 표준 시간대 오프셋의 분 부분을 지정하는 정수 식입니다.  
   
 *전체 자릿수*  
-`DATETIMEOFFSETFROMPARTS`가 반환하는 **datetimeoffset** 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
+**가 반환하는** datetimeoffset`DATETIMEOFFSETFROMPARTS` 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
   
 ## <a name="return-types"></a>반환 형식
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 `DATETIMEOFFSETFROMPARTS`는 완전히 초기화된 **datetimeoffset** 데이터 형식을 반환합니다. 오프셋 인수는 표준 시간대 오프셋을 나타냅니다. 생략된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 `00:00`의 표준 시간대 오프셋을 가정합니다. 즉 표준 시간대 오프셋이 없습니다. 지정된 오프셋 인수의 경우 `DATETIMEOFFSETFROMPARTS`는 두 인수의 값을 모두 예상하고 둘 다 양수 또는 음수 값으로 예상합니다. *minute_offset*에 값이 있고 *hour_offset*에 값이 없으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 다른 인수에 잘못된 값이 있으면 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다. 하나 이상의 필수 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`는 `NULL`을 반환합니다. 그러나 *precision* 인수에 `NULL` 값이 있는 경우 `DATETIMEOFFSETFROMPARTS`에서 오류를 발생시킵니다.  
   
@@ -83,7 +83,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="examples"></a>예  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>1\. 소수 단위 초를 사용하지 않는 예  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. 소수 단위 초를 사용하지 않는 예  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -99,7 +99,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>2\. 소수 단위 초를 사용하는 예  
+### <a name="b-example-with-fractions-of-a-second"></a>B. 소수 단위 초를 사용하는 예  
 
 이 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
 
@@ -135,7 +135,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

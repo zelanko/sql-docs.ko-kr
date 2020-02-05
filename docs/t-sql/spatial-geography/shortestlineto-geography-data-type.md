@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042601"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo(geography 데이터 형식)
@@ -45,12 +45,12 @@ ms.locfileid: "68042601"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 비교할 두 **geography** 인스턴스가 교차하지 않을 때 해당 테두리에 있는 엔드포인트와 함계 **LineString** 인스턴스를 반환합니다. 반환된 **LineString**의 길이는 두 **geography** 인스턴스 사이의 최단 거리와 같습니다. 두 **geography** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>1. 교차하지 않는 인스턴스에서 ShortestLineTo() 호출  
+### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. 교차하지 않는 인스턴스에서 ShortestLineTo() 호출  
  다음 예에서는 `CircularString` 인스턴스와 `LineString` 인스턴스 사이의 최단 거리를 찾고 두 점을 연결하는 `LineString` 인스턴스를 반환합니다.  
   
  ```
@@ -59,7 +59,7 @@ ms.locfileid: "68042601"
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>2. 교차하는 인스턴스에서 ShortestLineTo() 호출  
+### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>B. 교차하는 인스턴스에서 ShortestLineTo() 호출  
  다음 예에서는 `LineString` 인스턴스가 `LineString` 인스턴스와 교차하기 때문에 빈 `CircularString` 인스턴스를 반환합니다.  
   
  ```

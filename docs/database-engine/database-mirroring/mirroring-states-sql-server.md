@@ -20,10 +20,10 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996561"
 ---
 # <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "67996561"
   
  가능한 데이터베이스 미러링 상태는 다음과 같습니다.  
   
-|미러링 상태|설명|  
+|미러링 상태|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|미러 데이터베이스의 내용이 주 데이터베이스의 내용보다 오래된 것입니다. 주 서버에서 로그 레코드를 미러 서버로 보내면 미러 서버에서 변경 내용을 미러 데이터베이스에 적용하여 롤포워드합니다.<br /><br /> 데이터베이스 미러링 세션의 시작 부분에서는 데이터베이스가 SYNCHRONIZING 상태입니다. 주 서버에서 데이터베이스를 제공하고 미러 서버는 계속 동기화를 시도합니다.|  
 |SYNCHRONIZED|미러 서버가 주 서버와 충분히 동기화되면 미러링 상태가 SYNCHRONIZED로 변경됩니다. 주 서버에서 계속 변경 내용을 미러 서버로 보내고 미러 서버에서 계속 변경 내용을 미러 데이터베이스에 적용하면 데이터베이스는 이 상태로 유지됩니다.<br /><br /> 트랜잭션 보안을 FULL로 설정하면 SYNCHRONIZED 상태에서 자동 장애 조치(Failover)와 수동 장애 조치가 모두 지원되며 장애 조치 후 데이터가 손실되지 않습니다.<br /><br /> 트랜잭션 보안을 해제하면 SYNCHRONIZED 상태에서도 항상 일부 데이터가 손실될 수 있습니다.|  

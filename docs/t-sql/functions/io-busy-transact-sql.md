@@ -23,13 +23,13 @@ ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7bb537df511483b05647d36dba2a0323e44b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024264"
 ---
-# <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY(Transact-SQL)
+# <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마지막으로 시작한 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 입력 및 출력 작업에 소요된 시간을 반환합니다. 결과는 CPU 시간 단위("틱")로 표시되며 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. @@TIMETICKS를 곱하여 마이크로초로 변환합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "68024264"
 > [!NOTE]  
 >  @@CPU_BUSY 또는 @@IO_BUSY로 반환된 시간이 누적 CPU 시간의 약 49일을 초과할 경우 산술 오버플로 경고를 받게 됩니다. 이 경우 @@CPU_BUSY, @@IO_BUSY 및 @@IDLE 변수 값은 정확하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68024264"
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함한 보고서를 표시하려면 sp_monitor를 실행합니다.  
   
 ## <a name="examples"></a>예  

@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244826"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
@@ -30,7 +30,7 @@ ms.locfileid: "75244826"
   
 -   [기본 사항](#Basics)  
   
--   [예제: SQL Data Warehouse 및 병렬 데이터 웨어하우스](#Examples)  
+-   [예: SQL Data Warehouse 및 병렬 데이터 웨어하우스](#Examples)  
   
 ##  <a name="Basics"></a> 기본 사항  
  하위 쿼리  
@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>9\. 상호 관련된 하위 쿼리가 있는 IN 사용  
- 다음 예에서는 상관 또는 반복 하위 쿼리에 `IN`을 사용합니다. 이것은 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 내부 쿼리는 외부 쿼리에서 선택한 각 행마다 한 번씩 반복적으로 실행됩니다. 이 `FactResellerSales` 테이블에서 `OrderQuantity`가 `5`이고 `DimEmployee` 및 `FactResellerSales` 테이블에서 직원 ID 번호가 일치하는 각 직원의 `EmployeeKey`와 이름 및 성의 인스턴스 하나를 검색합니다.  
+ 다음 예에서는 상관 또는 반복 하위 쿼리에 `IN`을 사용합니다. 이것은 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 내부 쿼리는 외부 쿼리에서 선택한 각 행마다 한 번씩 반복적으로 실행됩니다. 이 `EmployeeKey` 테이블에서 `OrderQuantity`가 `FactResellerSales`이고 `5` 및 `DimEmployee` 테이블에서 직원 ID 번호가 일치하는 각 직원의 `FactResellerSales`와 이름 및 성의 인스턴스 하나를 검색합니다.  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

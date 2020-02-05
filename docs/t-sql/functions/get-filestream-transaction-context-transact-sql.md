@@ -18,10 +18,10 @@ ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940103"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67940103"
 
   세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 토픽의 목록은 [Binary Large Object&#40;Blob&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,16 +41,16 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-type"></a>반환 형식  
  **varbinary(max)**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  트랜잭션이 시작되지 않았거나 취소 또는 커밋된 경우 NULL이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  트랜잭션은 명시적이어야 합니다. BEGIN TRANSACTION을 사용한 다음 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION을 사용합니다.  
   
  GET_FILESTREAM_TRANSACTION_CONTEXT를 호출하면 호출자에게 트랜잭션 기간 동안 트랜잭션에 대한 파일 시스템 액세스 권한이 부여됩니다. 다른 사용자가 파일 시스템을 통해 트랜잭션에 액세스할 수 있도록 하려면 EXECUTE AS를 사용하여 GET_FILESTREAM_TRANSACTION_CONTEXT를 다른 사용자로 실행합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션에 `GET_FILESTREAM_TRANSACTION_CONTEXT`를 사용하여 트랜잭션 컨텍스트를 구합니다.  
+ 다음 예에서는 `GET_FILESTREAM_TRANSACTION_CONTEXT` 트랜잭션에 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 트랜잭션 컨텍스트를 구합니다.  
   
 ```csharp  
 using System;  

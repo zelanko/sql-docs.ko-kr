@@ -18,10 +18,10 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930334"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "67930334"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `STConvexHull()`은 지정된 **geometry** 인스턴스가 포함된 가장 작은 볼록 다각형(convex polygon)을 반환합니다. **Point** 또는 동축 **LineString** 인스턴스는 입력 형식과 동일한 형식의 인스턴스를 생성합니다.  
   
 ## <a name="examples"></a>예  

@@ -11,10 +11,10 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298785"
 ---
 # <a name="error-handling"></a>오류 처리
@@ -38,10 +38,10 @@ ms.locfileid: "71298785"
   
  다음 표에서는 Oracle CDC 인스턴스가 상태 테이블에 보고할 수 있는 다양한 상태 코드에 대해 설명합니다.  
   
-|상태|활성 상태 코드|오류 상태 코드|설명|하위 상태|  
+|상태|활성 상태 코드|오류 상태 코드|Description|하위 상태|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 예기치 않게 중지되었음을 나타냅니다.|ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 실행되고 있지 않을 때 Oracle CDC Service 기본 인스턴스에 의해 설정됩니다.|  
-|error|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다.|MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  
+|오류|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다.|MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  
 |RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다.|IDLE: 모든 변경 레코드가 처리되어 대상 제어 테이블( **_CT**)에 저장되었습니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 제어 테이블( **_CT**)에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
 |STOPPED|0|0|CDC 인스턴스가 실행되고 있지 않습니다.|STOP 하위 상태는 CDC 인스턴스가 ACTIVE 상태에서 올바르게 중지되었음을 나타냅니다.|  
 |SUSPENDED|1|1|CDC 인스턴스가 실행되고 있지만 복구할 수 있는 오류로 인해 처리가 일시 중지되었습니다.|DISCONNECTED: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> STORAGE: 스토리지가 꽉 찼습니다. 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다. 경우에 따라 상태 테이블을 업데이트할 수 없기 때문에 이 상태가 나타나지 않을 수 있습니다.<br /><br /> LOGGER: 로거가 Oracle에 연결되어 있지만 일시적인 문제로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  

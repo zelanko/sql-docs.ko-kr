@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051341"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 작성 자습서를 시작합니다. 이 자습서는 SQL 문을 처음 작성하는 사용자를 위해 제공됩니다. 이 자습서는 새로운 사용자가 테이블을 만들고 데이터를 삽입하는 몇 가지 기본 문을 통해 작업을 시작하는 데 도움이 될 것입니다. 이 자습서에서는 [!INCLUDE[tsql](../includes/tsql-md.md)]가 구현하는 SQL 표준인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 사용합니다. 이 자습서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 클래스를 대체하는 것이 아니라 [!INCLUDE[tsql](../includes/tsql-md.md)] 언어를 간략하게 소개하는 데 목적이 있습니다. 의도적으로 간단한 문을 이 자습서에서 사용하고 있으므로 일반적인 프로덕션 데이터베이스에서 볼 수 있는 복잡한 문은 다루지 않습니다.  
   
->**참고:** 초보자라면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 문을 작성하는 대신 [!INCLUDE[tsql](../includes/tsql-md.md)]를 사용하는 것이 더 쉬울 수 있습니다.  
+>**참고:** 초보자라면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 문을 작성하는 대신 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하는 것이 더 쉬울 수 있습니다.  
   
 ## <a name="finding-more-information"></a>추가 정보 찾기  
 특정 문에 대한 자세한 내용을 보려면 SQL Server 온라인 설명서에 이름으로 해당 문을 검색하거나 목차를 사용하여 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../t-sql/transact-sql-reference-database-engine.md) 아래에 사전순으로 나열된 1,800개의 언어 요소를 찾아봅니다. 또한 관심이 있는 주제와 관련된 키워드를 검색하는 것도 좋은 방법이 될 수 있습니다. 예를 들어 월과 같은 날짜의 일부를 반환하는 방법을 보려면 **dates [SQL Server]** 의 색인을 검색한 다음 **dateparts**를 선택합니다. 이렇게 하면 [DATEPART&#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 항목이 제공됩니다. 마찬가지로 문자열을 사용하는 방법을 보려면 **문자열 함수**를 검색합니다. 이렇게 하면 [문자열 함수&#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 항목이 제공됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "68051341"
 [2단원: 데이터베이스 개체에 대한 사용 권한 구성](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 이 단원에서는 로그인 및 사용자를 만듭니다. 또한 뷰와 저장 프로시저를 만든 다음 저장 프로시저에 대한 사용 권한을 사용자에게 부여합니다.  
   
-[3단원: 데이터베이스 개체 삭제](../t-sql/lesson-3-deleting-database-objects.md)  
+[3단원: 데이터베이스 개체에 대한 액세스 권한 부여](../t-sql/lesson-3-deleting-database-objects.md)  
 이 단원에서는 데이터 액세스 권한 제거, 테이블에서 데이터 삭제, 테이블 삭제, 데이터베이스 삭제 등을 수행합니다.  
   
 ## <a name="requirements"></a>요구 사항  

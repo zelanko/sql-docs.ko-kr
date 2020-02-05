@@ -20,10 +20,10 @@ ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745310"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70745310"
 
   메시지 유형의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  메시지 본문에는 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되어야 합니다. *schema_collection_name*은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  메시지 유형의 유효성 검사를 변경해도 이미 큐에 배달된 메시지에는 영향을 주지 않습니다.  
   
  메시지 유형에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
@@ -86,7 +86,7 @@ ALTER MESSAGE TYPE
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

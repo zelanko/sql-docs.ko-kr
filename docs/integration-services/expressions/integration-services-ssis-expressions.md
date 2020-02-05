@@ -17,10 +17,10 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289683"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services(SSIS) 식
@@ -64,7 +64,7 @@ ms.locfileid: "71289683"
 > [!NOTE]  
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
   
- 변수에는 범위가 있으며 식 작성기의 **변수** 폴더에는 범위 내에 있고 사용할 수 있는 변수만 나열됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+ 변수에는 범위가 있으며 식 작성기의 **변수** 폴더에는 범위 내에 있고 사용할 수 있는 변수만 나열됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [데이터 흐름 구성 요소에서 식 사용](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  

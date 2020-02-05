@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982031"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982031"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 서버 감사 개체를 변경합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -107,7 +107,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 계속합니다. 감사 레코드는 보존되지 않습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. 계속 옵션을 선택하면 감사되지 않는 작업이 허용되어 보안 정책을 위반할 수 있습니다. 전체 감사를 유지 관리하는 것보다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 작업을 계속하는 것이 더 중요하면 이 옵션을 사용하십시오.  
   
 SHUTDOWN  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 어떤 이유로든 감사 대상에 데이터를 쓰지 못하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 강제 종료됩니다. `ALTER` 문을 실행하는 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에 `SHUTDOWN` 권한이 있어야 합니다. `SHUTDOWN` 권한이 실행중인 로그인에서 나중에 취소된 경우에도 종료 동작은 지속됩니다. 사용자에게 이 권한이 없으면 명령문은 실패하고 감사는 수정되지 않습니다. 감사 실패로 인해 시스템 무결성 또는 보안이 손상될 수 있는 경우 이 옵션을 사용하십시오. 자세한 내용은 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)을 참조하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 어떤 이유로든 감사 대상에 데이터를 쓰지 못하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 강제 종료됩니다. `ALTER` 문을 실행하는 로그인은 `SHUTDOWN` 내에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한이 있어야 합니다. `SHUTDOWN` 권한이 실행중인 로그인에서 나중에 취소된 경우에도 종료 동작은 지속됩니다. 사용자에게 이 권한이 없으면 명령문은 실패하고 감사는 수정되지 않습니다. 감사 실패로 인해 시스템 무결성 또는 보안이 손상될 수 있는 경우 이 옵션을 사용하십시오. 자세한 내용은 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)을 참조하세요. 
   
  FAIL_OPERATION  
  감사된 이벤트를 발생시키는 데이터베이스 동작이 실패합니다. 감사된 이벤트를 발생시키지 않는 동작은 계속할 수 있지만 감사된 이벤트는 발생할 수 없습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 모든 권한을 얻는 것보다 전체 감사를 유지 관리하는 것이 더 중요하면 이 옵션을 사용하십시오.  
@@ -135,7 +135,7 @@ SHUTDOWN
  조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER AUDIT를 호출할 때는 TO, WITH 또는 MODIFY NAME 절 중 하나 이상을 지정해야 합니다.  
   
  감사를 변경하려면 감사 상태를 OFF 옵션으로 설정해야 합니다. 감사가 STATE=OFF 외의 옵션으로 설정되었을 때 ALTER AUDIT를 실행하면 MSG_NEED_AUDIT_DISABLED 오류 메시지가 표시됩니다.  
@@ -151,7 +151,7 @@ SHUTDOWN
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-a-server-audit-name"></a>1\. 서버 감사 이름 변경  
+### <a name="a-changing-a-server-audit-name"></a>A. 서버 감사 이름 변경  
  다음 예에서는 서버 감사 이름 `HIPAA_Audit`를 `HIPAA_Audit_Old`로 변경합니다.  
   
 ```  
@@ -168,7 +168,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>2\. 서버 감사 대상 변경  
+### <a name="b-changing-a-server-audit-target"></a>B. 서버 감사 대상 변경  
  다음 예에서는 `HIPAA_Audit`라는 서버 감사를 파일 대상으로 변경합니다.  
   
 ```  

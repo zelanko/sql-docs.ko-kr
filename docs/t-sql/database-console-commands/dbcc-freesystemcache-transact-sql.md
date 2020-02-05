@@ -25,10 +25,10 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039135"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68039135"
 
 모든 캐시의 사용하지 않는 캐시 항목을 모두 해제합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 현재 항목에 필요한 메모리 확보를 위해 사용하지 않는 캐시 항목을 백그라운드에서 미리 정리합니다. 그러나 이 명령으로 모든 캐시나 지정된 Resource Governor 풀 캐시에서 사용하지 않는 항목을 수동으로 제거할 수 있습니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
 ```sql
@@ -58,7 +58,7 @@ MARK_IN_USE_FOR_REMOVAL
 NO_INFOMSGS  
 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC FREESYSTEMCACHE를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 예정된 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 ## <a name="result-sets"></a>결과 집합  
@@ -69,7 +69,7 @@ DBCC FREESYSTEMCACHE는 다음을 반환합니다. “DBCC 실행이 완료되�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>1\. 리소스 관리자 풀 캐시에서 사용하지 않는 캐시 항목 해제  
+### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>A. 리소스 관리자 풀 캐시에서 사용하지 않는 캐시 항목 해제  
 다음 예에서는 지정된 리소스 관리자 리소스 풀에만 사용되는 캐시를 정리하는 방법을 설명합니다.
   
 ```sql
@@ -77,7 +77,7 @@ DBCC FREESYSTEMCACHE는 다음을 반환합니다. “DBCC 실행이 완료되�
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>2\. 캐시에서 더 이상 사용되지 않는 항목 해제  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. 캐시에서 더 이상 사용되지 않는 항목 해제  
 다음 예에서는 MARK_IN_USE_FOR_REMOVAL 절을 사용하여 모든 현재 캐시에서 더 이상 사용되지 않는 항목을 해제합니다.
   
 ```sql

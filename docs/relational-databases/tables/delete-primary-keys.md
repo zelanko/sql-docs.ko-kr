@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cd4fecacab3343c5440db44cc2e03f8874b3e86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986458"
 ---
 # <a name="delete-primary-keys"></a>기본 키 삭제
@@ -43,7 +43,7 @@ ms.locfileid: "67986458"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -65,7 +65,7 @@ ms.locfileid: "67986458"
     > [!NOTE]  
     >  이 동작을 실행 취소하려면 변경 내용을 저장하지 않은 상태로 테이블을 닫습니다. 기본 키 삭제 작업을 취소하면 테이블에 대한 다른 모든 변경 내용이 손실됩니다.  
   
-3.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+3.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

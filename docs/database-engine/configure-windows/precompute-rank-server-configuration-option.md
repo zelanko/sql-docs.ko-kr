@@ -14,10 +14,10 @@ ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f50c3cd17c21ba822950807e02fcc962dac0fb8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938221"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank 서버 구성 옵션

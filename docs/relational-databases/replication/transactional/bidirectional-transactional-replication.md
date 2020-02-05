@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 85ab0f993e919b491376ff3d9ffa44afefd42603
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5d8f9be6d414580994a68c4ee56a26deee583d38
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710696"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286969"
 ---
 # <a name="bidirectional-transactional-replication"></a>양방향 트랜잭션 복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  양방향 트랜잭션 복제는 두 개의 서버가 서로 변경 내용을 교환할 수 있는 특수 트랜잭션 복제 토폴로지입니다. 각 서버는 데이터를 게시한 다음 상대 서버에서 게시한 것과 동일한 데이터가 포함된 게시를 구독합니다. [sp_addsubscription&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 `@loopback_detection` 매개 변수를 TRUE로 설정하면 변경 내용이 구독자에게만 전송되고 게시자에게 다시 전송되지 않습니다.  
+  양방향 트랜잭션 복제는 두 개의 서버가 서로 변경 내용을 교환할 수 있는 특수 트랜잭션 복제 토폴로지입니다. 각 서버는 데이터를 게시한 다음 상대 서버에서 게시한 것과 동일한 데이터가 포함된 게시를 구독합니다. `@loopback_detection`sp_addsubscription&#40;Transact-SQL&#41;[의 ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 매개 변수를 TRUE로 설정하면 변경 내용이 구독자에게만 전송되고 게시자에게 다시 전송되지 않습니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서는 피어 투 피어 트랜잭션 복제에서도 이 토폴로지가 지원되지만 양방향 복제를 사용하면 성능이 향상될 수 있습니다.  
   

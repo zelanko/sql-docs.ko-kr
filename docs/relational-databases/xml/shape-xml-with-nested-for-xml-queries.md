@@ -15,10 +15,10 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22522a2bfabc3406e8e3e1331a0518a38b930c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000669"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>중첩 FOR XML 쿼리로 XML 구체화
@@ -62,9 +62,9 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   외부 SELECT 문은 **ProductID** 특성과 두 개의 <`Price`> 자식 요소가 있는 <`Product`> 요소를 생성합니다.  
+-   외부 SELECT 문은 `Product`ProductID **특성과 두 개의 <** > 자식 요소가 있는 <`Price`> 요소를 생성합니다.  
   
--   두 개의 내부 SELECT 문은 각각 **PriceType** 특성과 제품 가격을 반환하는 XML이 포함된 두 개의 <`Price`> 요소를 생성합니다.  
+-   두 개의 내부 SELECT 문은 각각 `Price`PriceType **특성과 제품 가격을 반환하는 XML이 포함된 두 개의 <** > 요소를 생성합니다.  
   
 -   외부 SELECT 문에 있는 XMLSCHEMA 지시어는 결과 XML의 셰이프를 기술하는 인라인 XSD 스키마를 생성합니다.  
   

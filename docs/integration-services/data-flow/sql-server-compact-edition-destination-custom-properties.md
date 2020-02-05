@@ -11,10 +11,10 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75c34c5993204e4ee2331eea5bfde0014e355f19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291795"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 대상 사용자 지정 속성
@@ -26,7 +26,7 @@ ms.locfileid: "71291795"
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|설명|  
+|속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 있는 대상 테이블의 이름입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
   

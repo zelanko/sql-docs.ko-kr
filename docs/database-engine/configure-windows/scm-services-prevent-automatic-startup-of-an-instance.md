@@ -18,10 +18,10 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4293a8595ed287219da6e0d2f23e907236456daf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025658"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 서비스 - 인스턴스 자동 시작 방지

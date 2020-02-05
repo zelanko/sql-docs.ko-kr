@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298085"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
@@ -50,7 +50,7 @@ ms.locfileid: "71298085"
  **문자열 변환**  
  문자열 변환을 위해 적용할 규칙을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**자동 문자열 변환**|SAP Netweaver BW 시스템이 유니코드 시스템이면 모든 문자열을 **nvarchar** 로 변환하고, 그렇지 않으면 모든 문자열을 **varchar**로 변환합니다.|  
 |**VarChar로 문자열 변환**|모든 문자열을 **varchar**로 변환합니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "71298085"
  **요청 ID**  
  **다시 설정**을 클릭할 때 "G - 녹색"으로 상태를 다시 설정할 요청 ID를 지정합니다.  
   
- **다시 설정**  
+ **재설정**  
  확인 메시지를 표시한 후 지정된 요청 ID의 상태를 "G - 녹색"으로 다시 설정할 수 있습니다. 이 옵션은 문제가 발생하고 SAP Netweaver BW 시스템에서 노란색 또는 빨간색 상태로 요청에 플래그를 지정한 경우에 유용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

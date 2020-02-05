@@ -11,10 +11,10 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f1e80f153b8bf8b6e5b37ea6dd11811f3994106f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298805"
 ---
 # <a name="edit-instance-properties"></a>인스턴스 속성 편집

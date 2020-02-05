@@ -9,10 +9,10 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013670"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
@@ -31,7 +31,7 @@ ms.locfileid: "68013670"
 
 다음 표는 SQL Server에 대한 기본 압축 동작을 변경하는 추적 플래그를 보여 줍니다. 
 
-추적 플래그 | 설명
+추적 플래그 | Description
 ------------- | -------------
 1462          | 비동기 복제본에서 가용성 그룹에 대한 로그 스트림 압축을 사용하지 않도록 설정합니다. 이 기능은 네트워크 대역폭을 최적화하기 위해 비동기 복제본에서 기본적으로 설정되어 있습니다.
 9567          | 자동 시드 중 가용성 그룹에 대한 데이터 스트림 압축을 사용하도록 설정합니다. 자동 시드 중 압축은 전송 시간을 크게 줄일 수 있으며 프로세서 부하가 증가됩니다.

@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296974"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
@@ -37,21 +37,21 @@ ms.locfileid: "71296974"
 
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 **System.Drawing** 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
   
- [예제 1: JPEG 형식으로 이미지 변환](#example1)  
+ [예 1: JPEG 형식으로 이미지 변환](#example1)  
   
- [예제 2: 썸네일 이미지 만들기 및 저장](#example2)  
+ [예 2: 썸네일 이미지 만들기 및 저장](#example2)  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1 설명: JPEG 형식으로 이미지 변환  
+##  <a name="example1"></a>예 1 설명: JPEG 형식으로 이미지 변환  
  다음 예에서는 변수로 지정된 이미지 파일을 열고 인코더를 사용하여 이 파일을 압축된 JPEG 파일로 저장합니다. 인코더 정보를 검색하는 코드는 프라이빗 함수에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `CurrentImageFile` 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `CurrentImageFile`ReadOnlyVariables**속성에** 변수를 추가합니다.  
   
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   

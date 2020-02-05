@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051305"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
@@ -60,7 +60,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-예를 들어
+다음은 그 예입니다.
 
 ```
 Msg 2396, Level 16, State 1:
@@ -73,7 +73,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ### <a name="example-known-singleton"></a>예: 알려진 단일 항목
 
-이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. `<book>` 노드에서 평가되는 **value()** 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
+이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. **노드에서 평가되는**value()`<book>` 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

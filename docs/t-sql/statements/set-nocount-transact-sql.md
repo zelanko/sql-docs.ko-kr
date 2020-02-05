@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034947"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68034947"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 저장 프로시저의 영향을 받은 행 수를 나타내는 메시지가 결과 집합의 일부로 반환되지 않도록 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68034947"
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET NOCOUNT 옵션을 ON으로 설정하면 이 개수가 반환되지 않습니다. SET NOCOUNT 옵션을 OFF로 설정하면 이 수가 반환됩니다.  
   
  SET NOCOUNT가 ON으로 설정되어 있을 때도 @@ROWCOUNT 함수는 업데이트됩니다.  

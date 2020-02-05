@@ -18,10 +18,10 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078007"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
@@ -81,7 +81,7 @@ ms.locfileid: "68078007"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- “XML 스키마 1부: 구조 제2판, W3C 제안 수정 권장 사항”:  
+ "XML 스키마 1부: 구조 제2판, W3C 제안 수정 추천":  
   
 -   섹션 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
   

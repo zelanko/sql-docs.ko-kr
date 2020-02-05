@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297783"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
@@ -42,7 +42,7 @@ ms.locfileid: "71297783"
   
      정렬 변환은 Windows 데이터 정렬을 사용하여 문자열 값을 정렬합니다.  
   
-     -또는-  
+     또는  
   
 -   먼저 Transact-SQL CAST 연산자를 사용하여 **varchar** 값을 **nvarchar** 값으로 캐스팅한 다음 Transact-SQL ORDER BY 절을 사용하여 데이터를 정렬합니다.  
   

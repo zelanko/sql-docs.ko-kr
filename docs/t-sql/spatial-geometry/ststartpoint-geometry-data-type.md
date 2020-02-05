@@ -18,10 +18,10 @@ ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ede5ca7a0037eabee9c1588057fd18c45460e812
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066289"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint(geometry 데이터 형식)
@@ -43,7 +43,7 @@ ms.locfileid: "68066289"
   
  OGC(Open Geospatial Consortium) 형식: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `STStartPoint()`는 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)(1)과 동일합니다.  
   
 ## <a name="examples"></a>예  

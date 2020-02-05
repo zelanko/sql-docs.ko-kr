@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297588"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
@@ -42,7 +42,7 @@ ms.locfileid: "71297588"
   
  식 언어는 다음 수치 연산 함수를 제공합니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[ABS&#40;SSIS 식&#41;](../../integration-services/expressions/abs-ssis-expression.md)|숫자 식의 절대값을 양수로 반환합니다.|  
 |[EXP&#40;SSIS 식&#41;](../../integration-services/expressions/exp-ssis-expression.md)|밑이 e인 지정한 식의 지수를 반환합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "71297588"
   
  식 계산기는 다음 문자열 함수를 제공합니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[CODEPOINT&#40;SSIS 식&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|문자 식에서 가장 왼쪽 문자의 유니코드 코드 값을 반환합니다.|  
 |[FINDSTRING&#40;SSIS 식&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|식에서 지정한 문자열 항목의 인덱스(1부터 시작)를 반환합니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "71297588"
   
  식 계산기는 다음 날짜 및 시간 함수를 제공합니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|지정한 날짜에 날짜 또는 시간 간격을 더하여 새로운 DT_DBTIMESTAMP 값을 반환합니다.|  
 |[DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다.|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297588"
   
  식 계산기는 다음 Null 함수를 제공합니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[ISNULL&#40;SSIS 식&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|식이 Null인지 여부에 따라 부울 결과를 반환합니다.|  
 |[NULL&#40;SSIS 식&#41;](../../integration-services/expressions/null-ssis-expression.md)|요청한 데이터 형식의 Null 값을 반환합니다.|  

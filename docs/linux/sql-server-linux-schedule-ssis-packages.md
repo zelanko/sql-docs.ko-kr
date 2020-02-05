@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065157"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>cron을 사용하여 Linux에서 SQL Server Integration Services 패키지 실행 예약

@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067369"
 ---
 # <a name="model-database"></a>model 데이터베이스
@@ -41,7 +41,7 @@ ms.locfileid: "68067369"
 |파일|논리적 이름|물리적 이름|파일 증가|  
 |----------|------------------|-------------------|-----------------|  
 |주 데이터|modeldev|model.mdf|디스크가 꽉 찰 때까지 64MB씩 자동 증가|  
-|Log|modellog|modellog.ldf|최대 2TB까지 64MB씩 자동 증가|  
+|로그|modellog|modellog.ldf|최대 2TB까지 64MB씩 자동 증가|  
 
 SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014)를 참조하세요.  
 
@@ -52,41 +52,41 @@ SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스]
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니오|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|OFF|아니오|  
-|ENCRYPTION|OFF|아니오|  
-|MIXED_PAGE_ALLOCATION|ON|아니오|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|CHECKSUM|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|예|  
-|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|예|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|DISABLE_BROKER|아니오|  
-|TRUSTWORTHY|OFF|아니오|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|yes|  
+|ANSI_NULLS|OFF|yes|  
+|ANSI_PADDING|OFF|yes|  
+|ANSI_WARNINGS|OFF|yes|  
+|ARITHABORT|OFF|yes|  
+|AUTO_CLOSE|OFF|yes|  
+|AUTO_CREATE_STATISTICS|켜기|yes|  
+|AUTO_SHRINK|OFF|yes|  
+|AUTO_UPDATE_STATISTICS|켜기|yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|CHANGE_TRACKING|OFF|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
+|CURSOR_DEFAULT|GLOBAL|yes|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> yes|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|DB_CHAINING|OFF|예|  
+|ENCRYPTION|OFF|예|  
+|MIXED_PAGE_ALLOCATION|켜기|예|  
+|NUMERIC_ROUNDABORT|OFF|yes|  
+|PAGE_VERIFY|CHECKSUM|yes|  
+|PARAMETERIZATION|SIMPLE|yes|  
+|QUOTED_IDENTIFIER|OFF|yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|yes|  
+|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|yes|  
+|RECURSIVE_TRIGGERS|OFF|yes|  
+|Service Broker 옵션|DISABLE_BROKER|예|  
+|TRUSTWORTHY|OFF|예|  
   
  *데이터베이스의 현재 복구 모델을 확인하려면 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys.databases&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)를 참조하세요.  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  **model** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 -   파일이나 파일 그룹 추가  

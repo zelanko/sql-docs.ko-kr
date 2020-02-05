@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948010"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948010"
 
   여러 오류 상황에 대한 ISO 표준 동작을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문
   
@@ -51,7 +51,7 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET ANSI_WARNINGS는 다음 조건에 적용됩니다.  
   
 -   ON으로 설정한 경우 SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP, COUNT 등의 집계 함수에 NULL 값이 있으면 경고 메시지가 생성됩니다. OFF로 설정한 경우에는 경고가 발생하지 않습니다.  

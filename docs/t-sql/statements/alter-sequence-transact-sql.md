@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070331"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070331"
   
  시퀀스는 사양에 따라 일련의 숫자 값을 생성하는 사용자 정의 스키마 바운드 개체입니다. NEXT VALUE FOR 함수를 호출하면 시퀀스에서 새 값이 생성됩니다. 여러 시퀀스 번호를 한 번에 가져오려면 **sp_sequence_get_range** 를 사용합니다. CREATE SEQUENCE, **sp_sequence_get_range** 및 NEXT VALUE FOR 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  캐시 동작에 대한 자세한 내용은 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시퀀스를 만드는 방법 및 시퀀스 캐시를 관리하는 방법은 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요.  
   
  오름차순 시퀀스의 MINVALUE와 내림차순 시퀀스의 MAXVALUE는 시퀀스의 START WITH 값이 허용되지 않는 값으로 변경할 수 없습니다. 오름차순 시퀀스의 MINVALUE를 START WITH 값보다 큰 수로 변경하거나 내림차순 시퀀스의 MAXVALUE를 START WITH 값보다 작은 수로 변경하려면 RESTART WITH 인수를 포함하여 최소값과 최대값 사이의 원하는 위치에서 시퀀스를 다시 시작합니다.  
@@ -102,7 +102,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ## <a name="examples"></a>예  
  시퀀스를 만들고 **NEXT VALUE FOR** 함수를 사용하여 시퀀스 번호를 생성하는 방법에 대한 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
-### <a name="a-altering-a-sequence"></a>1\. 시퀀스 변경  
+### <a name="a-altering-a-sequence"></a>A. 시퀀스 변경  
  다음 예제에서는 범위가 100에서 200 사이인 **int** 데이터 형식을 사용하여 Test라는 스키마와 TestSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
   
 ```  
@@ -137,7 +137,7 @@ GO
   
  시퀀스가 순환하지 않기 때문에 200을 초과하는 경우 **NEXT VALUE FOR** 함수에서 오류가 발생합니다.  
   
-### <a name="b-restarting-a-sequence"></a>2\. 시퀀스 다시 시작  
+### <a name="b-restarting-a-sequence"></a>B. 시퀀스 다시 시작  
  다음 예에서는 CountBy1이라는 시퀀스를 만듭니다. 이 시퀀스는 기본값을 사용합니다.  
   
 ```  

@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100050"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68100050"
 > [!IMPORTANT]
 >  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)** , **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,9 +53,9 @@ SET TEXTSIZE { number }
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(10.0 이상) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 ODBC 드라이버가 자동으로 `-1`(무제한)을 지정합니다.  
   
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008보다 오래된 드라이버:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
+ **2008년보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET TEXTSIZE 설정은 @@TEXTSIZE 함수에 영향을 줍니다.  
   
  SET TEXTSIZE 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  

@@ -14,10 +14,10 @@ ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e278a3ab3f81e1a858830868b310c678f603e0ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986589"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성

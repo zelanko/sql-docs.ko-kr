@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296626"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
@@ -26,15 +26,15 @@ ms.locfileid: "71296626"
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 마스터의 속성을 표시합니다.
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|scale out 마스터 속성의 이름입니다.|  
 |property_value|**nvarchar(max)**|scale out 마스터 속성의 값입니다.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 이 보기는 각 scale out 마스터 속성의 행을 표시합니다. 이 뷰에 표시되는 속성은 다음과 같습니다.
 
-|속성 이름|설명|  
+|속성 이름|Description|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|로그 데이터베이스가 있는 SQL Server입니다.|
 |**LAST_ONLINE_TIME**|Scale Out 마스터가 마지막으로 온라인 상태인 시간입니다.|

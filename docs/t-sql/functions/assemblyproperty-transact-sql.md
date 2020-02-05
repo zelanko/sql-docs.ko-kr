@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040292"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68040292"
 
 이 기능은 어셈블리의 속성에 대한 정보를 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 *property_name*  
 정보를 검색할 속성의 이름입니다. *property_name*은 다음 값 중 하나일 수 있습니다.
   
-|값|설명|  
+|값|Description|  
 |---|---|
 |**CultureInfo**|어셈블리의 로캘입니다.|  
 |**PublicKey**|어셈블리의 공개 키 또는 공개 키 토큰입니다.|  
@@ -70,7 +70,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   

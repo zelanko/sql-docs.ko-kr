@@ -18,10 +18,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
 ms.openlocfilehash: 2758b728792c48ef309eb08f545ea4a6953c9e9d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530810"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY(Transact-SQL)  
@@ -64,7 +64,7 @@ DROP EXTERNAL LIBRARY library_name
 
 정보 메시지는 명령문이 성공한 경우 반환됩니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 SQL Server의 `DROP` 문과 달리 이 명령문은 옵션 인증 절 지정을 지원합니다. 이를 통해 **dbo** 또는 **db_owner** 역할의 사용자는 데이터베이스의 일반 사용자가 업로드한 패키지 라이브러리를 삭제할 수 있습니다.
 
@@ -87,7 +87,7 @@ GO
 DROP EXTERNAL LIBRARY customPackage;
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER EXTERNAL LIBRARY(Transact-SQL)](alter-external-library-transact-sql.md)  

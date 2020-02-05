@@ -27,10 +27,10 @@ ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941698"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67941698"
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하지 않도록 합니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 문이 실행된 방법에 대한 자세한 정보를 반환하고 해당 문에 대한 예상 리소스 요구 사항을 제공합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67941698"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET SHOWPLAN_ALL 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
  SET SHOWPLAN_ALL 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 문을 실행하지 않고 문에 대한 실행 정보를 반환하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실행되지 않습니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 정보가 반환됩니다. 예를 들어, SET SHOWPLAN_ALL을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 같은 테이블이 사용되는 이후 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_ALL 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보고서를 생성하지 않고 문을 실행합니다.  
@@ -58,7 +58,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  SET SHOWPLAN_ALL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서가 각 문을 실행할 때 취한 단계를 나타내는 계층적 트리를 이루는 행 집합으로 정보를 반환합니다. 출력에 반영된 각 문에는 문의 텍스트가 있는 단일 행이 포함되고, 이 단일 행 뒤에는 실행 단계에 대한 자세한 정보가 있는 몇 개의 행이 있습니다. 아래 표에서는 출력에 포함된 열을 보여 줍니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 형식이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.|  
 |**StmtId**|현재 일괄 처리에 있는 문의 수입니다.|  

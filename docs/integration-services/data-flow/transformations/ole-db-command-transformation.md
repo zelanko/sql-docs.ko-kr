@@ -16,10 +16,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291243"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환

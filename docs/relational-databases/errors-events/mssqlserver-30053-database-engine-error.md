@@ -10,13 +10,13 @@ ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2773c43695f67cc6d3878f1885686e74e84e67c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039314"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -48,7 +48,7 @@ ms.locfileid: "68039314"
 ## <a name="user-action"></a>사용자 동작  
 다음과 같이 시간 초과 문제의 가능한 원인에 적합한 사용자 동작을 선택합니다.  
   
-|예상 원인|사용자 동작|  
+|가능한 원인:|사용자 조치|  
 |------------------|---------------|  
 |쿼리 언어용 단어 분리기가 올바르지 않게 구성된 경우|타사 단어 분리기를 사용할 경우 운영 체제에 올바르지 않게 등록되어 있을 수 있습니다. 이 경우 단어 분리기를 다시 등록하십시오. 자세한 내용은 [검색에 사용된 단어 분리기를 이전 버전으로 되돌리기](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)를 참조하세요.|  
 |특정 쿼리 문자열에 대해 단어 분리기가 제대로 작동하지 않는 경우|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 단어 분리기의 경우 Microsoft 고객 서비스 지원 센터에 문의하십시오.|  

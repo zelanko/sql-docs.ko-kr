@@ -19,10 +19,10 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294298"
 ---
 # <a name="back-up-database-task"></a>데이터베이스 백업 태스크
@@ -30,7 +30,7 @@ ms.locfileid: "71294298"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  데이터베이스 백업 태스크는 여러 가지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업을 수행합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
+  데이터베이스 백업 태스크는 여러 가지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업을 수행합니다. 자세한 내용은 [SQL Server Database 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
  데이터베이스 백업 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스를 백업할 수 있습니다. 태스크에서 단일 데이터베이스만 백업하는 경우 데이터베이스 또는 데이터베이스 파일과 파일 그룹 등의 백업 구성 요소를 선택할 수 있습니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "71294298"
   
 |복구 모델|데이터베이스|데이터베이스 - 차등|트랜잭션 로그|파일 또는 파일 차등|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|간단|필수|선택 사항|지원되지 않음|지원되지 않음|  
-|전체|필수|선택 사항|필수|선택 사항|  
-|대량 로그|필수|선택 사항|필수|선택 사항|  
+|간단한|필수|옵션|지원되지 않음|지원되지 않음|  
+|전체|필수|옵션|필수|옵션|  
+|대량 로그|필수|옵션|필수|옵션|  
   
  데이터베이스 백업 태스크는 Transact-SQL BACKUP 문을 캡슐화합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   

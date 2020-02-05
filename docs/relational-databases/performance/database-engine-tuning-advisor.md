@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946946"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -111,7 +111,7 @@ ms.locfileid: "67946946"
   
 -   데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 설계 구조만 지정합니다. 데이터베이스 엔진 튜닝 관리자는 여러 옵션을 제공하지만 필요한 옵션만 지정합니다.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
  데이터베이스 엔진 튜닝 관리자는 전체 기능을 제공하기 위해 **xp_msver** 확장 저장 프로시저에 의존합니다. 이 확장 저장 프로시저는 기본적으로 튜닝됩니다. 데이터베이스 엔진 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 튜닝 중인 데이터베이스가 있는 컴퓨터에서 프로세서 개수 및 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 데이터베이스 엔진 튜닝 관리자는 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 가정합니다. 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다.  
   
  권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver** 을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)을 참조하세요.  

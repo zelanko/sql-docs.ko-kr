@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032395"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 - SQL Server on Linux

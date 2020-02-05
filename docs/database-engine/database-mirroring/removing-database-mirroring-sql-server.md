@@ -15,10 +15,10 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025263"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68025263"
 > [!NOTE]  
 >  세션을 중지한 후에 미러링을 계속하려면 데이터베이스 미러링 세션을 새로 설정해야 합니다. 미러링을 중지한 후에 로그 백업을 만들 경우 이 로그 백업을 미러 데이터베이스에 적용한 후에 미러링을 다시 시작해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링을 제거하려면**  
   
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  

@@ -20,10 +20,10 @@ ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 37fd90d37f989fb496b6d9fe1ea1153de25db0d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024733"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>SCM 서비스 - 사용된 계정의 암호 변경
@@ -37,7 +37,7 @@ ms.locfileid: "68024733"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  서비스에 사용되는 암호를 변경하려면 컴퓨터의 관리자여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  

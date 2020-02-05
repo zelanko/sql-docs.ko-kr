@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000442"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68000442"
 
 16바이트 GUID입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **uniqueidentifier** 데이터 형식의 열이나 지역 변수는 다음 방법에 따라 값으로 초기화됩니다.
 -   [NEWID](../../t-sql/functions/newid-transact-sql.md) 또는 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 함수를 사용합니다.    
 -   문자열 상수에서 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 형식으로 변환합니다. 여기서 *x*는 0-9 또는 a-f 범위의 16진수입니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 유효한 **uniqueidentifier** 값입니다.  
@@ -75,7 +75,7 @@ String                                       TruncatedValue
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

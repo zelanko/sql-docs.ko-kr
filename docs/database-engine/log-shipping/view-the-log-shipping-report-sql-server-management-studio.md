@@ -16,10 +16,10 @@ ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258559"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)

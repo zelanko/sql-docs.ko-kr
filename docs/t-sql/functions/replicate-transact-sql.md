@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944484"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67944484"
 
   지정한 횟수만큼 문자열 값을 반복합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,8 +55,8 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-replicate"></a>1\. REPLICATE 사용  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 프로덕션 코드 줄 앞에 `0` 문자를 4번 복제합니다.  
+### <a name="a-using-replicate"></a>A. REPLICATE 사용  
+ 다음 예에서는 `0` 데이터베이스의 프로덕션 코드 줄 앞에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 문자를 4번 복제합니다.  
   
 ```  
 SELECT [Name]  
@@ -81,7 +81,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ...  
 ```  
   
-### <a name="b-using-replicate-and-datalength"></a>2\. REPLICATE 및 DATALENGTH 사용  
+### <a name="b-using-replicate-and-datalength"></a>B. REPLICATE 및 DATALENGTH 사용  
  다음 예에서는 숫자 데이터 형식을 문자 또는 유니코드로 변환할 때 지정한 길이까지 0으로 왼쪽을 채웁니다.  
   
 ```  
@@ -117,10 +117,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: REPLICATE 사용  
- 다음 예에서는 `ItemCode` 값 앞의 `0` 문자를 4번 복제합니다.  
+### <a name="c-using-replicate"></a>3\. REPLICATE 사용  
+ 다음 예에서는 `0` 값 앞의 `ItemCode` 문자를 4번 복제합니다.  
   
 ```  
 -- Uses AdventureWorks  

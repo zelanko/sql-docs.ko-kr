@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1266097e82f5db84f5a91951adc784d6d9580ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901849"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67901849"
   
  SELECT, DELETE, UPDATE 및 MERGE 문에서 이 절을 지정할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>1\. GROUP BY 절과 함께 OPTION 절 사용  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. GROUP BY 절과 함께 OPTION 절 사용  
  다음 예에서는 `OPTION` 절과 함께 `GROUP BY` 절을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -83,9 +83,9 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>2\. OPTION 절에서 레이블을 사용하는 SELECT 문  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. OPTION 절에서 레이블을 사용하는 SELECT 문  
  다음 예제에서는 OPTION 절에서 레이블을 사용하는 간단한 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문을 보여 줍니다.  
   
 ```  

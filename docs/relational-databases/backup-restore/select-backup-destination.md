@@ -13,10 +13,10 @@ ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041453"
 ---
 # <a name="select-backup-destination"></a>백업 대상 선택

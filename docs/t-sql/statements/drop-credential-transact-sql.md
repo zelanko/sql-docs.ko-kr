@@ -23,10 +23,10 @@ ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e365b03b5a6a475f98a940f5b6f243bc7fa31789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898231"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67898231"
 
   서버에서 자격 증명을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  서버에서 제거할 자격 증명의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자격 증명 자체를 삭제하지 않고 자격 증명과 연결된 암호를 삭제하려면 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md)을 사용합니다.  
   
  자격 증명에 대한 정보는 **sys.credentials** 카탈로그 뷰에 표시됩니다.  

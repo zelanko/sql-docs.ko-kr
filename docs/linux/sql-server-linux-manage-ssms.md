@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000098"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용하여 SQL Server on Linux 관리
@@ -55,7 +55,7 @@ SQL Server로 작업하는 경우 항상 최신 버전의 SSML(SQL Server Manage
 
 1. **서버에 연결** 창에서 다음 정보를 입력합니다(SSMS가 이미 실행 중인 경우 **연결 > 데이터베이스 엔진**을 클릭하여 **서버에 연결** 창 열기).
 
-   | 설정 | 설명 |
+   | 설정 | Description |
    |-----|-----|
    | **서버 유형** | 기본값은 데이터베이스 엔진입니다. 이 값을 변경하지 마세요. |
    | **서버 이름** | 대상 Linux SQL Server 머신의 이름 또는 IP 주소를 입력합니다. |
@@ -140,7 +140,7 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 
 창을 확장하면 작업 모니터는 인스턴스에서 정보를 쿼리합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 하나 이상의 창을 동시에 확장하여 인스턴스에 대한 여러 종류의 작업을 볼 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [SSMS란 무엇인가요?](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS를 사용하여 데이터베이스 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
 - [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: d4fc71583bf972b2def20d78a69001f00d14966d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065831"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065831"
 
   데이터베이스 범위 자격 증명의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 범위 자격 증명이 변경되면 *identity_name*과 *secret*의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
   
  암호는 서비스 마스터 키를 사용하여 암호화됩니다. 서비스 마스터 키가 다시 생성되면 암호가 새 서비스 마스터 키를 사용하여 다시 암호화됩니다.  
@@ -64,7 +64,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>1\. 데이터베이스 범위 자격 증명의 암호 변경  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 데이터베이스 범위 자격 증명의 암호 변경  
  다음 예에서는 `Saddles`라는 데이터베이스 범위 자격 증명에 저장된 암호를 변경합니다. 데이터베이스 범위 자격 증명에는 `RettigB` Windows 로그인과 해당 암호가 들어 있습니다. 새 암호는 SECRET 절을 사용하여 데이터베이스 범위 자격 증명에 추가됩니다.  
   
 ```  
@@ -73,7 +73,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>2\. 자격 증명에서 암호 제거  
+### <a name="b-removing-the-password-from-a-credential"></a>B. 자격 증명에서 암호 제거  
  다음 예에서는 `Frames`라는 데이터베이스 범위 자격 증명에서 암호를 제거합니다. 데이터베이스 범위 자격 증명에는 `Aboulrus8` Windows 로그인과 해당 암호가 들어 있습니다. SECRET 옵션이 지정되지 않았기 때문에 문이 실행된 후에는 데이터베이스 범위 자격 증명 암호가 NULL이 됩니다.  
   
 ```  

@@ -17,10 +17,10 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115876"
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획

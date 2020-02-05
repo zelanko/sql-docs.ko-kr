@@ -16,10 +16,10 @@ ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ea6539e0d004f573281d54f7bb4a4c055c7b3e73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901108"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 게시자 백업 및 복원
@@ -37,7 +37,7 @@ ms.locfileid: "67901108"
   
 -   데이터베이스 복원 후 게시자 또는 배포자가 동기화되지 않으면 복제 에이전트가 오류 메시지를 기록합니다. 이런 경우 모든 관련 게시 및 구독을 삭제하고 다시 만들어야 합니다.  
   
-    1.  게시 및 구독의 정의를 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)를 참조하세요.  
+    1.  게시 및 구독의 정의를 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
          게시자 상태 버전과 배포자 상태 버전 간에 게시 정의가 변경된 경우에는 스크립트를 수정해야 합니다.  
   

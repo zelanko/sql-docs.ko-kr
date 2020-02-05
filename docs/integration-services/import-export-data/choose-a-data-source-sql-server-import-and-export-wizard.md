@@ -12,10 +12,10 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71951939"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
@@ -69,12 +69,12 @@ ms.locfileid: "71951939"
 -   [PostgreSQL에 연결](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [MySQL에 연결](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-여기에 나열되지 않은 데이터 원본에 연결하는 방법에 대한 자세한 내용은 [연결 문자열 참조](https://www.connectionstrings.com/)를 참조하세요. 이 타사 사이트에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
+여기에 나열되지 않은 데이터 원본에 연결하는 방법에 대한 내용은 [연결 문자열 참조](https://www.connectionstrings.com/)를 참조하세요. 이 타사 사이트에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
 
 ## <a name="whats-next"></a>다음 단계
  데이터 원본 및 연결하는 방법에 대한 정보를 제공한 후 다음 페이지는 **대상 선택**입니다. 이 페이지에서는 데이터 대상 및 연결하는 방법에 대한 정보를 제공합니다. 자세한 내용은 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

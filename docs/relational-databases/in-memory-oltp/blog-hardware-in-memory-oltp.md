@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951133"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server의 메모리 내 OLTP에 대한 하드웨어 고려 사항
@@ -73,6 +73,6 @@ NDT(비영구 메모리 최적화 테이블), 즉, DURABILITY=SCHEMA_ONLY인 메
 
 디스크 용량 측면에서는 메모리 최적화 테이블의 2-3배 크기를 권장합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [메모리 내 OLTP에 대한 예제 데이터베이스](sample-database-for-in-memory-oltp.md)

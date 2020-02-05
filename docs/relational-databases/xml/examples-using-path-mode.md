@@ -1,5 +1,5 @@
 ---
-title: '예: PATH 모드 사용 | Microsoft Docs'
+title: '예제: PATH 모드 사용 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943373"
 ---
-# <a name="examples-using-path-mode"></a>예: PATH 모드 사용
+# <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
@@ -269,7 +269,7 @@ FOR XML PATH('ProductModelData');
   
 -   첫 번째 중첩 `SELECT` 는 `data()` 를 열 이름으로 사용하여 ProductID 목록을 반환합니다. 쿼리에서 빈 문자열을 `FOR XML PATH`의 행 요소 이름으로 지정하므로 요소가 생성되지 않습니다. 대신 값 목록이 `ProductID` 특성에 할당됩니다.  
   
--   두 번째 중첩 `SELECT`는 제품 모델에 속한 제품에 대해 제품 이름을 검색합니다. 쿼리에서 `ProductNames`를 열 이름으로 지정하므로 <`ProductNames`> 요소에 래핑되어 반환되는 <`ProductName`> 요소를 생성합니다.  
+-   두 번째 중첩 `SELECT` 는 제품 모델에 속한 제품에 대해 제품 이름을 검색합니다. 쿼리에서 `ProductName`를 열 이름으로 지정하므로 <`ProductNames`> 요소에 래핑되어 반환되는 <`ProductNames`> 요소를 생성합니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- <`English`> 요소에 추가된 `@xml:lang` 특성이 미리 정의된 xml 네임스페이스에 정의됩니다.  
+ <`@xml:lang`> 요소에 추가된 `English` 특성이 미리 정의된 xml 네임스페이스에 정의됩니다.  
   
  다음은 결과입니다.  
 

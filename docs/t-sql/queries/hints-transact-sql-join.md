@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902012"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
@@ -45,7 +45,7 @@ ms.locfileid: "67902012"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,12 +68,12 @@ ms.locfileid: "67902012"
   
  REMOTE는 INNER JOIN 작업에 대해서만 사용할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  조인 힌트는 쿼리의 FROM 절에서 지정됩니다. 조인 힌트는 두 테이블 간에 조인 전략을 강제 적용합니다. 두 테이블에 대해 조인 힌트가 지정된 경우 쿼리 최적화 프로그램이 ON 키워드의 위치를 기반으로 하여 쿼리에서 조인된 모든 테이블에 대해 조인 순서를 강제 적용합니다. CROSS JOIN이 ON 절 없이 사용된 경우 괄호를 사용하여 조인 순서를 나타낼 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-hash"></a>1\. HASH 사용  
+### <a name="a-using-hash"></a>A. HASH 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `HASH` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  
@@ -84,7 +84,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>2\. LOOP 사용  
+### <a name="b-using-loop"></a>B. LOOP 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `LOOP` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  

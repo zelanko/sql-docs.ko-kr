@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086151"
 ---
 # <a name="unary-operators---positive"></a>단항 연산자 - 양수
@@ -40,7 +40,7 @@ ms.locfileid: "68086151"
   
  +(양수) 및 -(음수) 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 식에서 사용할 수 있습니다. ~(비트 NOT) 연산자는 정수 데이터 형식 범주에 속하는 데이터 형식 중 하나의 식에서만 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,17 +51,17 @@ ms.locfileid: "68086151"
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 숫자 데이터 형식 범주에서 [datetime](../../t-sql/language-elements/expressions-transact-sql.md) 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 **식**입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  *numeric_expression*의 데이터 형식을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  단항 더하기는 숫자 식 앞에 올 수 있지만 해당 식에서 반환하는 값에 대해서는 연산을 수행하지 않습니다. 특히 단항 더하기는 음수 식에서 양수 값을 반환하지 않습니다. 음수 식에서 양수 값을 반환하려면 [ABS](../../t-sql/functions/abs-transact-sql.md) 함수를 사용하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-a-variable-to-a-positive-value"></a>1\. 변수를 양수 값으로 설정  
+### <a name="a-setting-a-variable-to-a-positive-value"></a>A. 변수를 양수 값으로 설정  
  다음 예에서는 변수를 양수 값으로 설정합니다.  
   
 ```  
@@ -80,7 +80,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>2\. 음수 값에 단항 더하기 연산자 사용  
+### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>B. 음수 값에 단항 더하기 연산자 사용  
  다음 예에서는 같은 음수 식에 단항 더하기와 ABS() 함수를 사용하는 것을 보여 줍니다. 단항 더하기는 식에 영향을 주지 않지만 ABS 함수는 식의 양수 값을 반환합니다.  
   
 ```  

@@ -12,13 +12,13 @@ ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19fd1351963a578d83e8cf67a48c6f97dcd96afe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078866"
 ---
-# <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+# <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -46,8 +46,8 @@ ms.locfileid: "68078866"
 
 DBCC CHECKDB 실행. 정상적인 백업이 없으면 REPAIR 절 없이 DBCC CHECKDB를 실행하여 손상된 정도를 확인합니다. DBCC CHECKDB 실행 시 REPAIR 절을 사용하라는 메시지가 나타나면 적합한 REPAIR 절을 사용하여 DBCC CHECKDB를 실행하고 손상을 복구하십시오.
 
-> **경고 태그는 지원되지 않습니다.**
-> **tr 태그는 지원되지 않습니다.**
+> **경고 태그는 지원되지 않습니다.** 
+> **tr 태그는 지원되지 않습니다.** 
 > **tr 태그는 지원되지 않습니다.**
 
 REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해결되지 않으면 주 지원 공급자에게 문의하세요.

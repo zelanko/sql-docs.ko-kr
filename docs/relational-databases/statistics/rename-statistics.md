@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d9311ffde7323b11cd041e3fbc28eb249d019cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934180"
 ---
 # <a name="rename-statistics"></a>통계 이름 바꾸기
@@ -45,7 +45,7 @@ ms.locfileid: "67934180"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  

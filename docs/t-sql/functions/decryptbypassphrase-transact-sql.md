@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314519"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314519"
 
 이 함수는 원래 암호를 사용하여 암호화된 데이터를 해독합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 + **nchar**
 + **nvarchar**
 
-로 구분하거나 여러
+또는
 
 + **varchar**
 
@@ -81,7 +81,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DECRYPTBYPASSPHRASE`는 실행에 대한 권한이 필요없습니다. `DECRYPTBYPASSPHRASE`는 잘못된 암호나 잘못된 인증자 정보를 수신하는 경우 NULL을 반환합니다.  
   
 `DECRYPTBYPASSPHRASE`는 암호를 사용하여 암호 해독 키를 생성합니다. 이 암호 해독 키는 유지되지 않습니다.  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959127"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 가져오기 확장(미리 보기)
@@ -46,9 +46,9 @@ SQL Server 가져오기 확장(미리 보기)은 .txt 및 .csv 파일을 SQL 테
     
     **찾아보기**를 클릭하여 파일을 선택합니다. 파일 이름에 따라 테이블 이름을 자동으로 채워지지만 직접 변경할 수도 있습니다.
 
-    기본적으로 스키마는 dbo가 되지만 변경할 수 있습니다. 계속 진행하려면 **다음** 을 클릭합니다.
+    기본적으로 스키마는 dbo가 되지만 변경할 수 있습니다. **다음** 을 클릭하여 진행합니다.
     ![입력 파일](media/sql-server-import-extension/import-wizard-input-file.png)
-1. 이 마법사는 처음 50개 행을 기준으로 미리 보기를 생성합니다. 이 페이지에서는 데이터가 정확하게 표시되는지 확인하는 것 외에는 다른 작업을 수행할 필요가 없습니다. 계속 진행하려면 **다음** 을 클릭합니다.
+1. 이 마법사는 처음 50개 행을 기준으로 미리 보기를 생성합니다. 이 페이지에서는 데이터가 정확하게 표시되는지 확인하는 것 외에는 다른 작업을 수행할 필요가 없습니다. **다음** 을 클릭하여 진행합니다.
     ![가져오기 마법사 열기](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. 이 페이지에서 열 이름, 데이터 형식 및 기본 키인지 여부, null을 허용하지 여부를 변경할 수 있습니다. 원하는 대로 변경 작업을 수행할 수 있습니다. **데이터 가져오기**를 클릭하여 계속 진행합니다.
     ![가져오기 마법사 열기](media/sql-server-import-extension/import-wizard-modify-columns.png)

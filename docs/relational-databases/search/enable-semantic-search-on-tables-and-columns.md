@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082906"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
@@ -43,7 +43,7 @@ ms.locfileid: "68082906"
   
 -   전체 텍스트 인덱싱이 지원되는 데이터 형식의 열에 대한 의미 체계 인덱스를 만들 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)를 참조하세요.  
   
--   **varbinary(max)** 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 종류를 지정할 수 있습니다. 자세한 내용은 [방법: 인덱싱할 수 있는 문서 유형 결정 ](#doctypes)을 참조하세요.  
+-   **varbinary(max)** 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 종류를 지정할 수 있습니다. 자세한 내용은 이 항목의 [방법: 인덱싱할 수 있는 문서 유형 결정](#doctypes) 을 참조하세요.  
   
 -   의미 체계 인덱싱에서는 선택한 열에 대한 두 가지 유형의 인덱스, 즉 키 구 인덱스와 문서 유사성 인덱스를 만듭니다. 의미 체계 인덱싱을 사용하도록 설정할 때 둘 중 한 가지 인덱스 유형만 선택할 수는 없습니다. 그러나 이러한 두 인덱스는 독립적으로 쿼리할 수 있습니다. 자세한 내용은 [의미 체계 검색을 사용하여 문서의 키 구 찾기](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 및 [의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)를 참조하세요.  
   
@@ -131,7 +131,7 @@ GO
   
 -   이미 전체 텍스트 인덱싱을 사용하도록 설정된 열에 의미 체계 인덱싱을 추가하려면 **ADD STATISTICAL_SEMANTICS** 옵션을 사용합니다. 단일 **ALTER** 문에서는 하나의 열에만 의미 체계 인덱싱을 추가할 수 있습니다.  
   
- **예: 전체 텍스트 인덱싱이 이미 있는 열에 의미 체계 인덱싱 추가**  
+ **예제: 전체 텍스트 인덱싱이 이미 있는 열에 의미 체계 인덱싱 추가**  
   
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **Production.Document** 테이블에 대한 기존 전체 텍스트 인덱스를 변경합니다. 이 예에서는 전체 텍스트 인덱스가 이미 있는 **Production.Document** 테이블의 **Document** 열에 의미 체계 인덱스를 추가합니다. 또한 자동으로 다시 채워지지 않는 인덱스를 지정합니다.  
   
@@ -158,7 +158,7 @@ GO
 **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 삭제할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 삭제할 수 있습니다.  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 삭제  
-열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
+열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN**_column\_name_**DROP** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
+열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN** **column**name _\_DROP_ 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>데이터베이스 개체에 의미 체계 검색이 사용하도록 설정되어 있는지 확인  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>데이터베이스에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인
   
- [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 메타데이터 함수의 **IsFullTextEnabled** 속성을 쿼리합니다.  
+ **DATABASEPROPERTYEX&#40;Transact-SQL&#41;** 메타데이터 함수의 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 속성을 쿼리합니다.  
   
  반환 값이 1이면 데이터베이스에 대해 전체 텍스트 검색과 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>테이블에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인  
  
- [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) 메타데이터 함수의 **TableFullTextSemanticExtraction** 속성을 쿼리합니다.  
+ **OBJECTPROPERTYEX&#40;Transact-SQL&#41;** 메타데이터 함수의 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 속성을 쿼리합니다.  
   
  반환 값이 1이면 테이블에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -218,7 +218,7 @@ GO
    
  특정 열에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인하려면  
   
--   [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) 메타데이터 함수의 **StatisticalSemantics** 속성을 쿼리합니다.  
+-   **COLUMNPROPERTY&#40;Transact-SQL&#41;** 메타데이터 함수의 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 쿼리합니다.  
   
      반환 값이 1이면 열에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -277,7 +277,7 @@ GO
 ##  <a name="BestPracticeFilegroup"></a> 모범 사례: 전체 텍스트 및 의미 체계 인덱스에 대한 개별 파일 그룹을 만들 때의 고려 사항  
  디스크 공간 할당이 중요한 경우 전체 텍스트 및 의미 체계 인덱스에 대한 별도의 파일 그룹을 만드는 것이 좋습니다. 의미 체계 인덱스는 전체 텍스트 인덱스와 동일한 파일 그룹에 만들어집니다. 완전히 채워진 의미 체계 인덱스에는 많은 양의 데이터가 포함될 수 있습니다.  
  
-##  <a name="IssueNoResults"></a> 문제점: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
+##  <a name="IssueNoResults"></a> 문제: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
  **유니코드 언어에 대해 비유니코드 LCID가 지정되었습니까?**  
  비유니코드 열에 대해 의미 체계 인덱싱을 사용하도록 설정할 때 러시아어의 LCID 1049와 같이 유니코드 단어만 있는 언어의 LCID를 사용할 수 있습니다. 그러나 이 경우에는 이 열에 대한 의미 체계 인덱스에서 결과가 반환되지 않습니다.  
   

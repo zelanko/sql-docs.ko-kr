@@ -26,18 +26,18 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941844"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 표시되도록 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시되도록 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67941844"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STATISTICS IO ON이면 통계 정보가 표시되고 OFF이면 정보가 표시되지 않습니다.   
   
  이 옵션을 ON으로 설정한 후에는 이 옵션을 OFF로 설정할 때까지 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 통계 정보를 반환합니다.  

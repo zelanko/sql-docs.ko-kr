@@ -18,10 +18,10 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030713"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68030713"
   
  이러한 테이블을 쿼리하여 로그 전달 세션의 상태를 모니터링할 수 있습니다. 예를 들어 로그 전달 상태를 알려면 백업 작업, 복사 작업 및 복원 작업의 상태와 기록을 확인합니다. 다음의 모니터링 테이블을 쿼리하여 특정 로그 전달 기록 및 오류 정보를 볼 수 있습니다.  
   
-|Table|설명|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|로그 전달 작업에 대한 오류 정보를 저장합니다. 이 테이블을 쿼리하여 에이전트 세션에 대한 오류를 볼 수 있습니다. 필요에 따라 각 오류가 로그된 날짜 및 시간별로 오류를 정렬할 수 있습니다. 각 오류는 예외순으로 로그되고 에이전트 세션당 여러 개의 오류(시퀀스)가 로그될 수 있습니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68030713"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>로그 전달 모니터링을 위한 저장 프로시저  
  로그 전달 저장 프로시저를 사용하여 액세스할 수 있는 **msdb**의 테이블에 모니터링 및 기록 정보가 저장됩니다. 다음 표에 표시된 서버에서 이러한 저장 프로시저를 실행합니다.  
   
-|저장 프로시저|설명|프로시저 실행 위치|  
+|저장 프로시저|Description|프로시저 실행 위치|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|**log_shipping_monitor_primary** 테이블에서 지정한 주 데이터베이스에 대한 모니터 레코드를 반환합니다.|모니터 서버 또는 주 서버|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|**log_shipping_monitor_secondary** 테이블에서 지정한 보조 데이터베이스에 대한 모니터 레코드를 반환합니다.|모니터 서버 또는 보조 서버|  

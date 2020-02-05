@@ -22,18 +22,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913950"
 ---
-# <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS(Transact-SQL)
+# <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   몇몇 ISO 표준 동작을 전체적으로 지정하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정 그룹을 제어합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>구문
 
@@ -49,7 +49,7 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 ANSI_DEFAULTS는 클라이언트가 수정하지 않는 서버 쪽 설정입니다. 클라이언트는 자체 설정을 관리합니다. 기본적으로 이러한 설정은 서버 설정의 반대입니다. 사용자가 서버 설정을 수정하면 안 됩니다. 이 동작을 변경하려면 사용자는 SQL_COPT_SS_PRESERVE_CURSORS를 사용해야 합니다. 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 참조하세요.  
   
 이 옵션이 설정(ON)되어 있는 경우 다음 ISO 설정을 사용할 수 있습니다.  

@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4dde0368b8ba81807dc42775ab089f5f5c99768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913896"
 ---
 # <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67913896"
 
   데이터베이스의 **ANSI Null 기본값** 옵션이 **false**로 설정되어 있으면 세션의 동작을 수정하여 새 열의 기본 Null 허용 여부보다 우선 적용됩니다. **ANSI Null 기본값** 설정에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>구문
 
@@ -52,10 +52,10 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 설정은 CREATE TABLE과 ALTER TABLE 문에 열의 Null 허용이 지정되어 있지 않을 때 새 열의 Null 허용에만 영향을 줍니다. SET ANSI_NULL_DFLT_ON을 ON으로 설정하면 열의 Null 허용 여부 상태가 명시적으로 지정되지 않은 경우 ALTER TABLE과 CREATE TABLE 문을 사용해 만든 새 열에 Null 값을 사용할 수 있습니다. SET ANSI_NULL_DFLT_ON은 NULL 또는 NOT NULL을 명시적으로 지정하여 만든 열에 영향을 주지 않습니다.  
   
- SET ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON을 동시에 ON으로 설정할 수 없습니다. 둘 중 하나를 ON으로 설정하면 다른 옵션은 OFF로 설정됩니다. 따라서 ANSI_NULL_DFLT_OFF와 ANSI_NULL_DFLT_ON 중 하나만 ON으로 설정하거나 둘 다 OFF로 설정할 수 있습니다. 두 옵션 중 하나를 ON으로 설정하면 이 설정(SET ANSI_NULL_DFLT_OFF 또는 SET ANSI_NULL_DFLT_ON)이 적용됩니다. 두 옵션을 모두 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에 있는 **is_ansi_null_default_on** 열의 값을 사용합니다.  
+ SET ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON을 동시에 ON으로 설정할 수 없습니다. 둘 중 하나를 ON으로 설정하면 다른 옵션은 OFF로 설정됩니다. 따라서 ANSI_NULL_DFLT_OFF와 ANSI_NULL_DFLT_ON 중 하나만 ON으로 설정하거나 둘 다 OFF로 설정할 수 있습니다. 두 옵션 중 하나를 ON으로 설정하면 이 설정(SET ANSI_NULL_DFLT_OFF 또는 SET ANSI_NULL_DFLT_ON)이 적용됩니다. 두 옵션을 모두 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **sys.databases** 카탈로그 뷰에 있는 [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열의 값을 사용합니다.  
   
  Null 허용 여부 설정이 서로 다른 데이터베이스에서 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트로 가장 안정적으로 작업하려면 CREATE TABLE과 ALTER TABLE 문에서 NULL 또는 NOT NULL을 지정하는 것이 좋습니다.  
   
@@ -80,7 +80,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 **ANSI Null 기본값** 데이터베이스 옵션에 대해 `SET ANSI_NULL_DFLT_ON`을 두 가지 값으로 설정했을 때 결과를 보여줍니다.  
+ 다음 예에서는 `SET ANSI_NULL_DFLT_ON`ANSI Null 기본값**데이터베이스 옵션에 대해**을 두 가지 값으로 설정했을 때 결과를 보여줍니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077907"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
@@ -42,7 +42,7 @@ ms.locfileid: "68077907"
   
 **hierarchyid** 형식은 CLR 클라이언트에서 **SqlHierarchyId** 데이터 형식으로 사용할 수 있습니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **hierarchyid** 형식은 트리의 루트에서 노드까지의 경로를 인코딩하는 방법으로 계층 트리의 단일 노드에 대한 정보를 논리적으로 인코딩합니다. 이러한 경로는 루트 이후 거친 모든 자식의 노드 레이블 시퀀스로 논리적으로 표현됩니다. 표현은 슬래시로 시작하며 루트만 거친 경로는 단일 슬래시로 표시됩니다. 루트 아래 수준의 경우 각 레이블은 마침표로 분리된 정수 시퀀스로 인코딩됩니다. 자식 간의 비교는 마침표로 분리된 정수 시퀀스를 사전 순서로 비교하여 수행됩니다. 각 수준 다음에는 슬래시가 사용됩니다. 즉, 슬래시가 부모와 자식을 분리합니다. 예를 들어 다음은 길이가 각각 1, 2, 2, 3 및 3 수준인 유효한 **hierarchyid** 경로입니다.
   
 -   /  
@@ -60,7 +60,7 @@ ms.locfileid: "68077907"
 ## <a name="data-type-conversion"></a>데이터 형식 변환
 **hierarchyid** 데이터 형식은 다음과 같이 다른 데이터 형식으로 변환할 수 있습니다.
 -   [ToString()](../../t-sql/data-types/tostring-database-engine.md) 메서드를 사용하여 **hierarchyid** 값을 **nvarchar(4000)** 데이터 형식의 논리 표현으로 변환할 수 있습니다.  
--   **hierarchyid**를 **varbinary**로 변환하려면 [Read ()](../../t-sql/data-types/read-database-engine.md) 및 [Write ()](../../t-sql/data-types/write-database-engine.md)를 사용합니다.  
+-   [hierarchyid](../../t-sql/data-types/read-database-engine.md)를 [varbinary](../../t-sql/data-types/write-database-engine.md)로 변환하려면 **Read ()** 및 **Write ()** 를 사용합니다.  
 -   SOAP를 통해 **hierarchyid** 매개 변수를 전송하려면 먼저 문자열로 캐스팅해야 합니다.  
   
 ## <a name="upgrading-databases"></a>데이터베이스 업그레이드
@@ -76,7 +76,7 @@ ms.locfileid: "68077907"
 ### <a name="one-directional-replication"></a>단방향 복제
 단방향 복제에는 변경 내용이 구독자에 적용되지 않는 병합 복제 및 스냅샷 복제, 트랜잭션 복제가 포함됩니다. **hierarchyid** 열이 단방향 복제에서 어떻게 작동하는지는 구독자가 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 특별히 고려할 사항 없이 **hierarchyid** 열을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구독자에 복제할 수 있습니다.  
--   [!INCLUDE[ssEW](../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 구독자에게 **hierarchyid** 열을 복제하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 이러한 열을 변환해야 합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **hierarchyid** 열이 지원되지 않습니다. 이러한 버전 중 하나를 사용 중인 경우에도 데이터를 구독자로 복제할 수 있습니다. 이렇게 하려면 열을 호환되는 데이터 형식으로 변환할 수 있도록 스키마 옵션이나 게시 호환성 수준(병합 복제의 경우)을 설정해야 합니다.  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 이전 버전의 **를 실행하고 있는 구독자에게** hierarchyid[!INCLUDE[ssEW](../../includes/ssew-md.md)] 열을 복제하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자는 이러한 열을 변환해야 합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **hierarchyid** 열이 지원되지 않습니다. 이러한 버전 중 하나를 사용 중인 경우에도 데이터를 구독자로 복제할 수 있습니다. 이렇게 하려면 열을 호환되는 데이터 형식으로 변환할 수 있도록 스키마 옵션이나 게시 호환성 수준(병합 복제의 경우)을 설정해야 합니다.  
   
 열 필터링은 이러한 두 가지 시나리오에서 모두 지원됩니다. 여기에는 **hierarchyid** 열 필터링도 포함됩니다. 행 필터링은 필터에 **hierarchyid** 열이 포함되어 있지 않은 경우에 한해 지원됩니다.
   
@@ -90,7 +90,7 @@ ms.locfileid: "68077907"
 -   열 필터는 Null을 허용하지 않는 **hierarchyid** 열을 필터링할 수 없습니다. 게시자의 **hierarchyid** 열에 대한 기본값이 없기 때문에 구독자에서의 삽입은 실패합니다.  
 -   행 필터링은 필터에 **hierarchyid** 열이 포함되어 있지 않은 경우에 한해 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

@@ -18,10 +18,10 @@ ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f9f2198595e48c98277215b7ec186c7b7848f0d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894711"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText(geometry 데이터 형식)
@@ -50,7 +50,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  OGC 형식: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

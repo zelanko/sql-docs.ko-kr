@@ -18,10 +18,10 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042244"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB(geography 데이터 형식)
@@ -48,7 +48,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STGeomCollFromWKB()가 반환한 **geography** 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeometryCollection**, **MultiPolygon**, **MultiLineString** 또는 **MultiPoint**로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 **FormatException** 예외를 throw합니다.  

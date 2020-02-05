@@ -14,10 +14,10 @@ ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 94df8085482c48d02e1e174ade2207ddad494acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085430"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>FILESTREAM 액세스를 위한 방화벽 구성
@@ -28,7 +28,7 @@ ms.locfileid: "68085430"
   
 1.  제어판에서 **Windows 방화벽**을 엽니다.  
   
-2.  왼쪽 창에서 **고급 설정**을 클릭합니다. 관리자 암호를 묻거나 암호를 확인하는 메시지가 표시되면 암호를 입력하거나 확인합니다.  
+2.  왼쪽 창에서 **고급 설정**을 클릭합니다. 관리자 암호를 입력하거나 확인하라는 메시지가 표시되면 암호를 입력하거나 확인을 제공합니다.  
   
 3.  **고급 보안이 포함된 Windows 방화벽** 대화 상자의 왼쪽 창에서 **인바운드 규칙**을 클릭한 다음 오른쪽 창에서 **새 규칙**을 클릭합니다.  
   

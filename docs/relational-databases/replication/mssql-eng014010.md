@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5a8592dc8108a2dc1cd3c0832e5c4f6cb6635a8f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ddd12d7ec93a25b156cf1d173b4914a506ea3c5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811475"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286310"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68811475"
     go  
     ```  
   
-     [sp_addserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장 프로시저를 실행한 후에 @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용하려면 @SERVERNAME 서비스를 다시 시작해야 합니다.  
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
