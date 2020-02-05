@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768675"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284795"
 ---
 # <a name="configure-distribution"></a>배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68768675"
   
 -   배포 데이터베이스 크기를 적절히 조정합니다. 시스템에서 명령 저장에 필요한 공간을 결정할 수 있도록 일반적인 로드 상태에서 복제를 테스트합니다. 데이터베이스는 자주 자동 증가되지 않고도 명령을 저장할 수 있을 만큼 충분히 커야 합니다. 데이터베이스의 크기 변경에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
--   배포 데이터베이스에 **sync with backup** 옵션을 설정합니다. 자세한 내용은 [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) 및 [트랜잭션 복제에 통합 백업 사용&amp;#40;복제 Transact-SQL 프로그래밍&amp;#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)을 참조하세요.  
+-   배포 데이터베이스에 **sync with backup** 옵션을 설정합니다. 자세한 내용은 [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) 및 [트랜잭션 복제에 통합 백업 사용&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)을 참조하세요.  
   
 ## <a name="local-and-remote-distributors"></a>로컬 및 원격 배포자  
  기본적으로 배포자는 게시자와 같은 서버(로컬 배포자)이지만 게시자와는 다른 별도의 서버(원격 배포자)일 수도 있습니다. 일반적으로 다음 작업을 수행하려는 경우 원격 배포자를 사용합니다.  

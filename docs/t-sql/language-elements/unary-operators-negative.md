@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072140"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
@@ -39,7 +39,7 @@ ms.locfileid: "68072140"
   
  +(양수) 및 -(음수) 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 식에서 사용할 수 있습니다. ~(비트 NOT) 연산자는 정수 데이터 형식 범주에 속하는 데이터 형식 중 하나의 식에서만 사용할 수 있습니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68072140"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-a-variable-to-a-negative-value"></a>1\. 변수를 음의 값으로 설정  
+### <a name="a-setting-a-variable-to-a-negative-value"></a>A. 변수를 음의 값으로 설정  
  다음 예에서는 변수를 음의 값으로 설정합니다.  
   
 ```  
@@ -79,7 +79,7 @@ NegativeValue
   
 ```  
   
-### <a name="b-changing-a-variable-to-a-negative-value"></a>2\. 변수를 음의 값으로 변경  
+### <a name="b-changing-a-variable-to-a-negative-value"></a>B. 변수를 음의 값으로 변경  
  다음 예에서는 변수를 음의 값으로 변경합니다.  
   
 ```  
@@ -103,7 +103,7 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 양의 상수의 음수 반환  
  다음 예제에서는 양의 상수의 음수를 반환합니다.  
@@ -114,7 +114,7 @@ USE ssawPDW;
 SELECT TOP (1) - 17 FROM DimEmployee;  
 ```  
   
- 반환 값  
+ 반환  
   
 ```  
 -17  
@@ -129,14 +129,14 @@ USE ssawPDW;
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
- 반환 값  
+ 반환  
   
 ```  
 17  
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 열의 음수 반환  
- 다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
+ 다음 예에서는 `BaseRate` 테이블의 각 직원에 대해 `dimEmployee` 값의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  

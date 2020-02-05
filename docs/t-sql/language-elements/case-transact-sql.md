@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950354"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "67950354"
   
  CASE는 유효한 식이 허용되는 모든 문 및 절에 사용할 수 있습니다. 예를 들어 SELECT, UPDATE, DELETE 및 SET과 같은 문과 select_list, IN, WHERE, ORDER BY 및 HAVING과 같은 절에 CASE를 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -99,7 +99,7 @@ END
   
 -   지정된 순서대로 각 WHEN 절에 대해 input_expression = when_expression을 평가합니다.  
   
--   TRUE로 평가되는 첫 번째 *input_expression* = *when_expression*의 *result_expression*을 반환합니다.  
+-   TRUE로 평가되는 첫 번째 *input_expression*  when_expression = 의 *result_expression*을 반환합니다.  
   
 -   *input_expression* = *when_expression*이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression*을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
   
@@ -111,7 +111,7 @@ END
   
 -   *Boolean_expression*이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression*을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CASE 식의 중첩을 10개 수준까지만 허용합니다.  
   
  Transact-SQL 문, 문 블록, 사용자 정의 함수 및 저장 프로시저의 실행 흐름을 제어하는 데 CASE 식을 사용할 수는 없습니다. 흐름 제어 메서드의 목록은 [흐름 제어 언어&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)를 참조하세요.  
@@ -137,7 +137,7 @@ FROM Data ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>1\. SELECT 문에 단순 CASE 식 사용  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT 문에 단순 CASE 식 사용  
  `SELECT` 문 내에서 단순 `CASE` 식은 동등성만 검사하고 다른 비교 작업은 수행할 수 없습니다. 다음 예에서는 `CASE` 식을 사용하여 제품 라인 범주 표시를 이해하기 쉽게 변경합니다.  
   
 ```  
@@ -158,7 +158,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>2\. SELECT 문에 검색된 CASE 식 사용  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. SELECT 문에 검색된 CASE 식 사용  
  `SELECT` 문 내에서 검색된 `CASE` 식은 비교 값에 따라 결과 집합의 값이 바뀌도록 합니다. 다음 예에서는 제품의 가격 범위에 따라 가격을 텍스트 설명으로 표시합니다.  
   
 ```  
@@ -219,7 +219,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET 문에 CASE 사용  
- 다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `Employee`, `Vendor` 또는 `Customer` 테이블에 `BusinessEntityID` 열이 있는지 여부에 따라 `ContactType` 열에 대해 표시할 값을 결정합니다.  
+ 다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `ContactType`, `BusinessEntityID` 또는 `Employee` 테이블에 `Vendor` 열이 있는지 여부에 따라 `Customer` 열에 대해 표시할 값을 결정합니다.  
   
 ```  
   
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. CASE 식이 포함된 SELECT 문 사용  
  SELECT 문 내에서 CASE 식을 사용하면 비교 값에 따라 결과 집합에서 값을 바꿀 수 있습니다. 다음 예제에서는 CASE 식을 사용하여 제품 라인 범주의 표시를 더 쉽게 이해할 수 있도록 변경합니다. 값이 없으면 "Not for sale"(판매하지 않음) 텍스트가 표시됩니다.  

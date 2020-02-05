@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293227"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
@@ -26,13 +26,13 @@ ms.locfileid: "71293227"
 
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  
   
-|작업 값|출력|설명|  
+|작업 값|출력|Description|  
 |------------------------|------------|-----------------|  
 |1|DELETE|삭제된 행|  
-|2|Insert|삽입된 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에는 제공되지 않음)|  
-|3|Update|업데이트 전 행( **이전 값이 포함된 모두** CDC 모드를 사용하는 경우에만 제공됨)|  
-|4|Update|업데이트 후 행(업데이트 전을 따름)|  
-|5|Update|병합 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에만 제공됨)|  
+|2|삽입|삽입된 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에는 제공되지 않음)|  
+|3|업데이트|업데이트 전 행( **이전 값이 포함된 모두** CDC 모드를 사용하는 경우에만 제공됨)|  
+|4|업데이트|업데이트 후 행(업데이트 전을 따름)|  
+|5|업데이트|병합 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에만 제공됨)|  
 |기타|Error||  
   
  분할자를 사용하여 미리 정의된 삽입, 삭제 및 업데이트 출력에 연결하여 해당 출력을 추가적으로 처리할 수 있습니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "71293227"
   
  구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 1로 설정됩니다.  
+-   **오류 코드**: 1로 설정합니다.  
   
 -   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
--   **오류 행 열**: 오류를 유발한 행의 입력 열입니다.  
+-   **오류 행 열**: 오류의 원인이 된 행의 입력 열입니다.  
   
 ## <a name="configuring-the-cdc-splitter"></a>CDC 분할자 구성  
  CDC 분할자에 대해 구성 가능한 속성은 없습니다.  

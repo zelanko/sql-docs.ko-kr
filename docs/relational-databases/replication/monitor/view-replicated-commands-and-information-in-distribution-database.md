@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3794d249002fb6038be6a6d27d88e5f70e042104
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322221"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286340"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>배포 데이터베이스에서 복제된 명령 및 정보 보기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "75322221"
   
 1.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@publication` 및 `@article`를 지정합니다. 결과 집합의 **article id** 값을 확인합니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)를 실행합니다. (옵션) `@article_id`에 2단계의 아티클 ID를 지정합니다. (옵션) `@publisher_database_id`에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **database_id** 열에서 얻을 수 있습니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)를 실행합니다. (옵션) `@article_id`에 2단계의 아티클 ID를 지정합니다. (옵션) `@publisher_database_id`에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 **sys.databases** 카탈로그 뷰의 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 얻을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 복제 모니터링](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

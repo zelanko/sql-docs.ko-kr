@@ -21,18 +21,18 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0fa5615d70542373030e0344d6988d9d2d0a028c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026263"
 ---
-# <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
+# <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 이 함수는 현재 데이터베이스의 보안 주체 ID를 반환합니다. 보안 주체에 대한 자세한 내용은 [보안 주체&#40;데이터베이스 엔진#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -48,12 +48,12 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 **int**  
 데이터베이스 보안 주체가 없는 경우 NULL입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DATABASE_PRINCIPAL_ID`는 선택 목록, WHERE 절 또는 식을 허용하는 모든 위치에서 사용합니다. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-id-of-the-current-user"></a>1\. 현재 사용자의 ID 검색  
+### <a name="a-retrieving-the-id-of-the-current-user"></a>A. 현재 사용자의 ID 검색  
 이 예에서는 현재 사용자의 데이터베이스 보안 주체 ID를 반환합니다.
   
 ```sql
@@ -61,7 +61,7 @@ SELECT DATABASE_PRINCIPAL_ID();
 GO  
 ```  
   
-### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>2\. 지정한 데이터베이스 보안 주체의 ID 검색  
+### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. 지정한 데이터베이스 보안 주체의 ID 검색  
 이 예에서는 `db_owner` 데이터베이스 역할에 대한 데이터베이스 보안 주체 ID를 반환합니다.
   
 ```sql
@@ -69,7 +69,7 @@ SELECT DATABASE_PRINCIPAL_ID('db_owner');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
 [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

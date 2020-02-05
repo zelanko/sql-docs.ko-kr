@@ -13,10 +13,10 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117202"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX(Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68117202"
 
   지정한 테이블 및 XML 열에 새 선택적 XML 인덱스를 만듭니다. 선택적 XML 인덱스는 자주 쿼리하는 노드의 하위 집합만 인덱싱하여 XML 인덱싱 및 쿼리의 성능을 향상시킵니다. 또한 보조 선택적 XML 인덱스를 만들 수도 있습니다. 자세한 내용은 [보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -117,7 +117,7 @@ identifier
   
  WITH *\<index_options>* 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  대부분의 경우 더 나은 성능과 더 효율적인 스토리지를 위해 일반 XML 인덱스 대신 선택적 XML 인덱스를 만듭니다. 그러나 다음 조건 중 하나에 해당하는 경우에는 선택적 XML 인덱스가 권장되지 않습니다.  
   
 -   많은 수의 노드 경로를 매핑해야 하는 경우  

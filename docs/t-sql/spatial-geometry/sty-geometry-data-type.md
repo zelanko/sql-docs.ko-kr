@@ -18,10 +18,10 @@ ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066139"
 ---
 # <a name="sty-geometry-data-type"></a>STY(geometry 데이터 형식)
@@ -39,9 +39,9 @@ ms.locfileid: "68066139"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 유형: **SqlDouble**  
+ CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geometry** 인스턴스가 점인 경우 이 속성의 값은 Null입니다. 이 속성은 읽기 전용입니다.  
   
 ## <a name="examples"></a>예  

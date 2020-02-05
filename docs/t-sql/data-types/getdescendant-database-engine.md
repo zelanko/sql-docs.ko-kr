@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077970"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant(데이터베이스 엔진)
@@ -53,7 +53,7 @@ NULL 또는 현재 노드의 자식에 대한 **hierarchyid**입니다.
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 부모의 하위 항목인 자식 노드 하나를 반환합니다.
 -   parent가 NULL인 경우 NULL을 반환합니다.  
 -   parent가 NULL이 아니고 child1과 child2가 모두 NULL인 경우 부모의 자식을 반환합니다.  
@@ -68,7 +68,7 @@ GetDescendant는 결정적입니다. 따라서 GetDescendant가 동일한 입력
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>1\. 행을 가장 작은 항목 노드로 삽입  
+### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 행을 가장 작은 항목 노드로 삽입  
 노드 `/3/1/`에 있는 기존 직원에게 보고하는 새 직원을 고용합니다. 다음 코드를 실행하여 새 행을 추가합니다. 여기서는 새 행 노드를 `/3/1/1/`로 지정하는 인수 없이 GetDescendant 메서드를 사용합니다.
   
 ```sql
@@ -81,7 +81,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>2\. 행을 큰 하위 항목 노드로 삽입  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. 행을 큰 하위 항목 노드로 삽입  
 예 1과 같은 관리자에게 보고하는 다른 새 직원을 고용합니다. 다음 코드를 실행하여 새 행을 삽입합니다. 여기서는 GetDescendant 메서드에서 새 행의 노드가 예 1의 노드 다음에 오도록, 즉 `/3/1/2/`가 되도록 지정하는 child 1 인수를 사용합니다.
   
 ```sql
@@ -151,7 +151,7 @@ child2 = parent.GetDescendant(child1, SqlHierarchyId.Null);
 Console.Write(parent.GetDescendant(child1, child2).ToString());  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

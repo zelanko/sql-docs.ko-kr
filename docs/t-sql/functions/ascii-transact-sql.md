@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119191"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74119191"
 
 문자 식에서 가장 왼쪽 문자의 ASCII 코드 값을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -43,19 +43,19 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>인수  
 *character_expression*  
-**char** 또는 **varchar** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+[char](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **varchar** 형식의 **식**입니다.
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="remarks"></a>Remarks
-ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
+## <a name="remarks"></a>설명
+ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 **ASCII**의 [인쇄 가능 문자](https://www.wikipedia.org/wiki/ASCII) 섹션을 참조하세요.
 
 ASCII는 7비트 문자 집합입니다. 확장 ASCII 또는 상위 ASCII는 `ASCII` 함수에서 처리하지 않는 8비트 문자 집합입니다. 
 
 ## <a name="examples"></a>예 
 
-### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>1\. 이 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. 이 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -71,7 +71,7 @@ A           B           a           b           1           2
 65          66          97          98          49          50  
 ```  
   
-### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>2\. 이 예제에서는 7비트 ASCII 값이 올바르게 반환되는 방법을 보여 주지만 8비트 확장 ASCII 값은 처리되지 않습니다.
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>B. 이 예제에서는 7비트 ASCII 값이 올바르게 반환되는 방법을 보여 주지만 8비트 확장 ASCII 값은 처리되지 않습니다.
 
 ```sql
 SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
@@ -113,7 +113,7 @@ Extended_ASCII CHARACTER
 230            æ
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [CHAR&#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

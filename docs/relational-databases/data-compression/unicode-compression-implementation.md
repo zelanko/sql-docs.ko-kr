@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030474"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
@@ -49,7 +49,7 @@ ms.locfileid: "68030474"
   
  압축을 통해 절약할 수 있는 스토리지 공간은 압축하고 있는 데이터의 특성과 데이터 로캘에 따라 다릅니다. 다음 표에서는 로캘별로 절약할 수 있는 저장 공간을 보여 줍니다.  
   
-|로캘|압축률|  
+|Locale|압축률|  
 |------------|-------------------------|  
 |영어|50%|  
 |독일어|50%|  

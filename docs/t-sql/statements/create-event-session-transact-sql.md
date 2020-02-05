@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902798"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910196"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67902798"
 
 이벤트 원본, 이벤트 세션 대상 및 이벤트 세션 옵션을 식별하는 확장 이벤트 세션을 만듭니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>구문
 
@@ -143,7 +143,7 @@ WHERE \<predicate_expression>은 이벤트 처리 여부를 확인하는 데 사
 - *event_package_name*은 조건자 개체가 포함된 패키지입니다.
 - *predicate_compare_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_compare'로 정의된 전역 원본입니다.
 
-*number* **decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.
+*number***decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.
 
 '*string*' 조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.
 
@@ -183,7 +183,7 @@ MAX_EVENT_SIZE =*size* [ KB | **MB** ] 이벤트에 허용되는 최대 크기�
 
 MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU } 이벤트 버퍼가 만들어지는 위치를 지정합니다.
 
-**NONE** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 한 개의 버퍼 세트가 만들어집니다.
+**NONE**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 한 개의 버퍼 세트가 만들어집니다.
 
 PER_NODE NUMA 노드당 한 개의 버퍼 세트가 만들어집니다.
 
@@ -200,7 +200,7 @@ ON 시작 시 이벤트 세션이 시작됩니다.
 
 **OFF** 시작 시 이벤트 세션이 시작되지 않습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 논리 연산자의 우선 순위는 `NOT`(가장 높음), `AND`, `OR` 순입니다.
 

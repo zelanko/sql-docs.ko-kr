@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130156"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68130156"
 
   유니코드 표준에서 정의된 대로 지정된 정수 코드에 해당하는 유니코드 문자를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ SELECT NCHAR(UNICODE(@d));
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-nchar-and-unicode"></a>1\. NCHAR 및 UNICODE 사용  
+### <a name="a-using-nchar-and-unicode"></a>A. NCHAR 및 UNICODE 사용  
  다음 예에서는 `UNICODE` 및 `NCHAR` 함수를 사용하여 `UNICODE` 문자열에 있는 두 번째 문자의 `NCHAR` 값과 `København`(유니코드 문자)를 인쇄하고 실제 두 번째 문자인 `ø`를 인쇄합니다.  
   
 ```sql  
@@ -86,7 +86,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-substring-unicode-convert-and-nchar"></a>2\. SUBSTRING, UNICODE, CONVERT 및 NCHAR 사용  
+### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. SUBSTRING, UNICODE, CONVERT 및 NCHAR 사용  
  다음 예에서는 `SUBSTRING`, `UNICODE`, `CONVERT` 및 `NCHAR` 함수를 사용하여 `København` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자 및 UNICODE 값을 인쇄합니다.  
   
 ```sql  

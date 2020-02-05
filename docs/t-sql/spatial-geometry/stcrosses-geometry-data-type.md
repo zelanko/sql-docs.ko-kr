@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930143"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses(geometry 데이터 형식)
@@ -38,14 +38,14 @@ ms.locfileid: "67930143"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- `STCrosses()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
+ **를 호출할 인스턴스와 비교할 다른** geometry`STCrosses()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 조건이 모두 true이면 두 **geometry** 인스턴스는 교차합니다.  
   
 -   두 **geometry** 인스턴스가 교차하여 기하 도형의 차원이 원본 **geometry** 인스턴스의 최대 차원보다 작습니다.  

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077470"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux용 Pacemaker 클러스터 배포
@@ -29,7 +29,7 @@ ms.locfileid: "68077470"
 > * Pacemaker 클러스터를 만듭니다.
 > * SQL Server HA 및 SQL Server 에이전트 패키지를 설치합니다.
  
-## <a name="prerequisite"></a>사전 요구 사항
+## <a name="prerequisite"></a>필수 요소
 [SQL Server 2017을 설치](sql-server-linux-setup.md)합니다.
 
 ## <a name="install-the-high-availability-add-on"></a>고가용성 추가 기능 설치

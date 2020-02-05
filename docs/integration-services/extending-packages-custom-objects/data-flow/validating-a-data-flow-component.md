@@ -22,10 +22,10 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad9f44e88f92242e516001457d15ba1d93ad9ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287388"
 ---
 # <a name="validating-a-data-flow-component"></a>데이터 흐름 구성 요소의 유효성 검사
@@ -44,7 +44,7 @@ ms.locfileid: "71287388"
   
  최종 오류 값은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>입니다. 이 값은 패키지 XML을 편집하거나 개체 모델을 사용하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 속성을 직접 수정한 경우에만 발생하는 오류를 구성 요소에서 발견했음을 나타냅니다. 이러한 종류의 오류는 예를 들어 구성 요소에서 입력을 하나만 추가했는데 유효성 검사 과정에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>에 둘 이상의 입력이 있음을 발견한 경우에 발생합니다. 이 반환 값을 생성하는 오류는 **고급 편집기** 대화 상자에서 **다시 설정** 단추를 사용하여 구성 요소를 다시 설정하는 방법으로만 복구할 수 있습니다.  
   
- 구성 요소에서는 오류 값을 반환할 뿐 아니라 유효성 검사 도중 경고 또는 오류를 게시하여 피드백을 제공하기도 합니다. 이 메커니즘은 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드에서 제공합니다. 이러한 메서드가 호출되면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **오류 목록** 창에 해당 이벤트가 게시됩니다. 그런 다음 구성 요소 개발자는 발생한 오류와 적절한 경우 이를 수정하는 방법에 대한 직접적인 피드백을 사용자에게 제공할 수 있습니다.  
+ 구성 요소에서는 오류 값을 반환할 뿐 아니라 유효성 검사 도중 경고 또는 오류를 게시하여 피드백을 제공하기도 합니다. 이 메커니즘은 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드에서 제공합니다. 이러한 메서드가 호출되면 **의** 오류 목록[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 창에 해당 이벤트가 게시됩니다. 그런 다음 구성 요소 개발자는 발생한 오류와 적절한 경우 이를 수정하는 방법에 대한 직접적인 피드백을 사용자에게 제공할 수 있습니다.  
   
  다음 코드 예에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>의 재정의된 구현을 보여 줍니다.  
   
@@ -112,7 +112,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>ReinitializeMetaData 메서드  
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> 메서드에서 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>를 반환하는 구성 요소를 편집할 때마다 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 호출됩니다. 구성 요소에는 유효성 검사 도중 구성 요소에 의해 식별된 문제를 검색하고 수정하는 코드가 포함되어야 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 메서드는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 메서드에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA>를 반환하는 구성 요소를 편집할 때마다 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 디자이너에서 호출됩니다. 구성 요소에는 유효성 검사 도중 구성 요소에 의해 식별된 문제를 검색하고 수정하는 코드가 포함되어야 합니다.  
   
  다음 예에서는 유효성 검사 도중 문제를 검색하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 메서드에서 이러한 오류를 수정하는 구성 요소를 보여 줍니다.  
   

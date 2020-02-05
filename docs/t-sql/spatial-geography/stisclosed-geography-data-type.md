@@ -18,10 +18,10 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042027"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed(geography 데이터 형식)
@@ -43,7 +43,7 @@ ms.locfileid: "68042027"
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 도형이 점이거나 인스턴스가 비어 있으면 0을 반환합니다.  
   
  이 메서드는 **FullGlobe** 인스턴스가 또는 **Polygon** 또는 다른 유형의 인스턴스인 경우 True를 반환합니다.  

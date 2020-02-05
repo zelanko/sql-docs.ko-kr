@@ -18,10 +18,10 @@ ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929281"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67929281"
 
   SQL Server Audit 기능을 사용하여 서버 감사 개체를 삭제합니다. SQL Server Audit에 관한 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  감사를 변경하려면 감사 상태를 OFF 옵션으로 설정해야 합니다. 감사가 STATE=OFF 외의 옵션으로 설정되었을 때 DROP AUDIT를 실행하면 MSG_NEED_AUDIT_DISABLED 오류 메시지가 표시됩니다.  
   
  DROP SERVER AUDIT는 명령이 실행되기 전에 수집된 감사 데이터를 제외한 감사의 메타데이터를 제거합니다.  

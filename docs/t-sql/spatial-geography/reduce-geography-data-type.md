@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101764"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce(geography 데이터 형식)
@@ -50,7 +50,7 @@ ms.locfileid: "68101764"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 형식의 경우 이 알고리즘은 인스턴스에 포함된 각 **geography**에 대해 독립적으로 작동합니다. 이 알고리즘은 **Point** 인스턴스를 수정하지는 않습니다.  
   
  이 메서드는 **LineString** 인스턴스의 엔드포인트를 유지하려고 하지만 유효한 결과를 유지하기 위해 이러한 엔드포인트를 유지하지 못할 수 있습니다.  

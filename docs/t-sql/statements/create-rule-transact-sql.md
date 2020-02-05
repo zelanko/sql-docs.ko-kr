@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006501"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68006501"
   
  열 또는 별칭 데이터 형식에는 단 하나의 규칙만 바인딩할 수 있습니다. 그러나 열에는 규칙과 한 개 이상의 CHECK 제약 조건이 모두 연결될 수 있습니다. 이 경우 모든 제한 사항이 평가됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ AS condition_expression
 > [!NOTE]  
 >  별칭 데이터 형식을 사용하는 식에는 규칙을 만들지 않습니다. 별칭 데이터 형식을 사용하는 식에 규칙을 만들 수 있더라도 열이나 별칭 데이터 형식에 규칙을 바인딩하면 식이 참조될 때 컴파일되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  CREATE RULE을 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 함께 하나의 일괄 처리에서 사용할 수 없습니다. 규칙은 규칙이 작성되는 시점에 이미 데이터베이스에 있는 데이터에는 적용되지 않으며 시스템 데이터 형식에 바인딩할 수 없습니다.  
   
  규칙은 현재 데이터베이스에서만 만들 수 있습니다. 규칙을 만든 다음, **sp_bindrule**을 실행하여 열 또는 별칭 데이터 형식에 규칙을 바인딩합니다. 규칙은 반드시 열 데이터 형식과 호환되어야 합니다. 예를 들어 "\@value LIKE A%"는 숫자 열에 대한 규칙으로 사용할 수 없습니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
@@ -87,10 +87,10 @@ AS condition_expression
   
  이전 규칙의 바인딩을 해제하지 않고도 열 또는 데이터 형식에 새 규칙을 바인딩할 수 있습니다. 새 규칙은 이전 규칙을 덮어씁니다. 열에 바인딩된 규칙은 별칭 데이터 형식에 바인딩된 규칙보다 항상 우선합니다. 열에 규칙을 바인딩하면 해당 열의 별칭 데이터 형식에 이미 바인딩된 규칙이 대체됩니다. 그러나 데이터 형식에 규칙을 바인딩하면 해당 별칭 데이터 형식의 열에 바인딩된 규칙은 대체되지 않습니다. 다음 표에서는 규칙이 이미 있는 별칭 데이터 형식과 열에 규칙을 바인딩할 때 적용되는 선행 규칙을 보여 줍니다.  
   
-|새 규칙이 바인딩되는 대상|이전 규칙이 바인딩된 대상이<br /><br /> 별칭 데이터 형식인 경우|이전 규칙이 바인딩된 대상이<br /><br /> Column|  
+|새 규칙이 바인딩되는 대상|이전 규칙이 바인딩된 대상이<br /><br /> 별칭 데이터 형식인 경우|이전 규칙이 바인딩된 대상이<br /><br /> 열|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |별칭 데이터 형식|이전 규칙이 대체됨|변경 내용 없음|  
-|Column|이전 규칙이 대체됨|이전 규칙이 대체됨|  
+|열|이전 규칙이 대체됨|이전 규칙이 대체됨|  
   
  열에 기본값과 연결된 규칙이 모두 있는 경우에는 해당 기본값이 규칙에 의해 정의된 도메인 내에 있어야 합니다. 규칙과 충돌하는 기본값은 삽입할 수 없습니다. SQL Server 데이터베이스 엔진에서는 이러한 기본값을 삽입하려고 할 때마다 오류 메시지를 생성합니다.  
   
@@ -99,7 +99,7 @@ AS condition_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-rule-with-a-range"></a>1\. 범위가 있는 규칙 만들기  
+### <a name="a-creating-a-rule-with-a-range"></a>A. 범위가 있는 규칙 만들기  
  다음 예에서는 규칙이 바인딩된 열에 삽입되는 정수의 범위를 제한하는 규칙을 만듭니다.  
   
 ```  
@@ -108,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>2\. 목록이 있는 규칙 만들기  
+### <a name="b-creating-a-rule-with-a-list"></a>B. 목록이 있는 규칙 만들기  
  다음 예에서는 해당 규칙이 바인딩된 열에 입력하는 실제 값을 규칙에 나열된 값으로 제한하는 규칙을 만듭니다.  
   
 ```  
@@ -132,12 +132,12 @@ AS
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

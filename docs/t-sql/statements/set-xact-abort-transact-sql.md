@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 805b13301cad748331bc571a70cc77ffe8c8c27e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71952354"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "71952354"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 런타임 오류가 발생할 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 현재 트랜잭션을 자동으로 롤백할 것인지 여부를 지정합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +50,7 @@ ms.locfileid: "71952354"
 SET XACT_ABORT { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 SET XACT_ABORT 옵션을 ON으로 설정하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 런타임 오류가 발생할 경우 전체 트랜잭션이 종료된 후 롤백됩니다.
 

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075336"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS(Transact-SQL)
@@ -45,7 +45,7 @@ argument1, argument2, argument*N*
 ## <a name="return-types"></a>반환 형식
 길이와 형식이 입력에 따라 달라지는 문자열 값입니다.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>설명   
 `CONCAT_WS`는 가변 개수의 문자열 인수를 가져와서 단일 문자열로 연결(또는 조인)합니다. 첫 번째 함수 인수에 지정된 구분 기호와 연결된 해당 문자열 값을 구분합니다. `CONCAT_WS`에는 구분 기호 인수 및 최소 다른 두 개의 문자열 값 인수가 필요합니다. 그렇지 않으면 `CONCAT_WS`에서 오류가 발생합니다. `CONCAT_WS`는 병합하기 전에 모든 인수를 문자열 형식으로 암시적으로 변환합니다. 
 
 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 동작 및 데이터 형식 변환에 대한 자세한 내용은 [CONCAT(Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)를 참조하세요.
@@ -62,7 +62,7 @@ argument1, argument2, argument*N*
 
 ## <a name="examples"></a>예   
 
-### <a name="a--concatenating-values-with-separator"></a>1\.  구분 기호를 사용하여 값 연결
+### <a name="a--concatenating-values-with-separator"></a>A.  구분 기호를 사용하여 값 연결
 이 예제에서는 `-`로 값을 구분하여 sys.databases 테이블의 세 열을 연결합니다.   
 
 ```sql
@@ -80,7 +80,7 @@ FROM sys.databases;
 |4 - SIMPLE - NONE |
 
 
-### <a name="b--skipping-null-values"></a>2\.  NULL 값 유지
+### <a name="b--skipping-null-values"></a>B.  NULL 값 유지
 이 예제에서는 인수 목록의 `NULL` 값을 무시합니다.
 
 ```sql
@@ -123,7 +123,7 @@ STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(c
 FROM sys.databases;
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
  [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  

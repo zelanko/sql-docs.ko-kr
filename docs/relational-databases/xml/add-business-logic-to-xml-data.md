@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095457"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
@@ -31,7 +31,7 @@ ms.locfileid: "68095457"
   
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   
-## <a name="example-applying-xsl-transformation"></a>예: XSL 변환 적용  
+## <a name="example-applying-xsl-transformation"></a>예제: XSL 변환 적용  
  파일에 저장된 **xml** 데이터 형식 인스턴스와 XSL 변환을 수락하고, XML 데이터에 XSL 변환을 적용하고, 변환된 XML을 결과로 반환하는 CLR 함수 **TransformXml()** 를 고려해 보세요. 다음은 C#으로 작성된 기초 함수입니다.  
   
 ```  

@@ -19,16 +19,16 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051335"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **xml** 데이터 형식 변수 또는 열에 대해 [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)를 지정할 수 있습니다. 예를 들어 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)는 XML 인스턴스에 대해 지정된 XQuery를 실행합니다. 이 방식으로 XML을 구성하면 비-XML 유형의 열이나 Transact-SQL 변수로부터 값을 가져올 수 있습니다. 이러한 과정을 XML 내 관계형 데이터 바인딩이라고 합니다.  
+  [xml](../../t-sql/xml/xml-data-type-methods.md) 데이터 형식 변수 또는 열에 대해 **xml 데이터 형식 메서드**를 지정할 수 있습니다. 예를 들어 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)는 XML 인스턴스에 대해 지정된 XQuery를 실행합니다. 이 방식으로 XML을 구성하면 비-XML 유형의 열이나 Transact-SQL 변수로부터 값을 가져올 수 있습니다. 이러한 과정을 XML 내 관계형 데이터 바인딩이라고 합니다.  
   
  XML 내 비-XML 관계형 데이터를 바인딩하기 위해 SQL Server 데이터베이스 엔진은 다음과 같은 의사 함수를 제공합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68051335"
   
  또한 이 바인딩은 읽기 전용으로만 사용됩니다. 즉, 이러한 함수를 사용하는 열에는 데이터를 기록할 수 없습니다. 예를 들어 sql:variable("\@x")="*some expression"* 은 허용되지 않습니다.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>예: sql:variable()을 사용하는 도메인 간 쿼리  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>예: sql:variable()을 사용한 도메인 간 쿼리  
  이 예에서는 애플리케이션에서 **sql:variable()** 을 사용하여 쿼리를 매개 변수화하는 방법을 보여 줍니다. ISBN은 SQL 변수 @isbn을 사용하여 전달됩니다. 상수를 **sql:variable()** 로 바꿈으로써 0-7356-1588-2인 ISBN뿐만 아니라 다른 모든 ISBN을 검색하는 데 쿼리를 사용할 수 있습니다.  
   
 ```  

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982574"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982574"
   
  자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -248,8 +248,8 @@ MAXDOP = *max_degree_of_parallelism*
 
 ### <a name="examples-use-the-adventureworks-database"></a>예제에서는 AdventureWorks 데이터베이스를 사용합니다.  
 
-### <a name="a-using-create-statistics-with-sample-number-percent"></a>1\. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플을 사용하여 `Person` 통계를 만듭니다.  
+### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
+ 다음 예에서는 `ContactMail1` 데이터베이스의 `BusinessEntityID` 테이블에서 `EmailPromotion` 및 `Person` 열에 대해 5% 무작위 샘플을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -257,7 +257,7 @@ CREATE STATISTICS ContactMail1
     WITH SAMPLE 5 PERCENT;  
 ```  
   
-### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2\. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
+### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
  다음 예에서는 `NamePurchase` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Person` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
   
 ```sql  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
- 다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+ 다음 예제에서는 `NamePurchase` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `Person` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW 데이터베이스를 사용하는 예제입니다. 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 두 열에 대한 통계 만들기  
- 다음 예제에서는 `DimCustomer` 테이블의 `CustomerKey` 및 `EmailAddress` 열을 기반으로 `CustomerStats1` 통계를 만듭니다. 통계는 `Customer` 테이블에 있는 행의 통계적으로 의미 있는 샘플링을 기반으로 작성됩니다.  
+ 다음 예제에서는 `CustomerStats1` 테이블의 `CustomerKey` 및 `EmailAddress` 열을 기반으로 `DimCustomer` 통계를 만듭니다. 통계는 `Customer` 테이블에 있는 행의 통계적으로 의미 있는 샘플링을 기반으로 작성됩니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 전체 검사를 사용하여 통계 만들기  
- 다음 예제에서는 `DimCustomer` 테이블의 모든 행 검사를 기반으로 `CustomerStatsFullScan` 통계를 만듭니다.  
+ 다음 예제에서는 `CustomerStatsFullScan` 테이블의 모든 행 검사를 기반으로 `DimCustomer` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 샘플 비율을 지정하여 통계 만들기  
- 다음 예제에서는 `DimCustomer` 테이블 행의 50% 검사를 기반으로 `CustomerStatsSampleScan` 통계를 만듭니다.  
+ 다음 예제에서는 `CustomerStatsSampleScan` 테이블 행의 50% 검사를 기반으로 `DimCustomer` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

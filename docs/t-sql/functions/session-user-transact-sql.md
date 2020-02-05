@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843335"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73843335"
 
   SESSION_USER는 현재 데이터베이스에 있는 현재 컨텍스트의 사용자 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,14 +46,14 @@ SESSION_USER
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SESSION_USER를 CREATE TABLE 또는 ALTER TABLE 문에서 DEFAULT 제약 조건으로 사용하거나 임의의 표준 함수로 사용합니다. 지정된 기본값이 없으면 SESSION_USER를 테이블에 삽입할 수 있습니다. 이 함수에는 인수가 필요하지 않습니다. SESSION_USER는 쿼리에서 사용할 수 있습니다.  
   
  컨텍스트 전환 후 SESSION_USER를 호출하면 가장된 컨텍스트의 사용자 이름이 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>1\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 변수를 `nchar`로 선언하고 이 변수에 `SESSION_USER`의 현재 값을 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
 ```  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-session_user-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SESSION_USER 사용  
+### <a name="b-using-session_user-with-default-constraints"></a>B. DEFAULT 제약 조건으로 SESSION_USER 사용  
  다음 예에서는 배송물 수령을 기록하는 사람의 이름에 대한 `SESSION_USER` 제약 조건으로 `DEFAULT`를 사용하는 테이블을 만듭니다.  
   
 ```  
@@ -137,9 +137,9 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>3\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 현재 세션의 세션 사용자를 반환합니다.  
   
 ```  
