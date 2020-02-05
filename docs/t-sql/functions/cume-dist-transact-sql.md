@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026465"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST(Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_에서 값의 `CUME_DIST`는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 `CUME_DIST`r_에서 값의_ 는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ _partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파�
 ## <a name="return-types"></a>반환 형식
 **float(53)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `CUME_DIST`는 0을 초과하거나 1 이하인 값의 범위를 반환합니다. 동일한 값은 항상 동일한 누적 분포 값으로 계산되어야 합니다. `CUME_DIST`는 기본적으로 NULL 값을 포함하고 가능한 가장 낮은 값으로 취급합니다.
   
 `CUME_DIST`는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.
@@ -94,7 +94,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [PERCENT_RANK&#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

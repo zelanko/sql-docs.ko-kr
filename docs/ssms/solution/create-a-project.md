@@ -1,5 +1,5 @@
 ---
-title: 프로젝트 만들기 | Microsoft 문서
+title: 프로젝트 만들기
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264812"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251941"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
 
@@ -93,7 +93,7 @@ ms.locfileid: "68264812"
   
 4.  **확인**을 클릭합니다.  
   
-스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더의 기본 위치는 다음과 같습니다. C:\Documents 및 Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
+스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더에 대한 기본 위치는 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

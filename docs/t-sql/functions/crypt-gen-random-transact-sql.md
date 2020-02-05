@@ -18,18 +18,18 @@ ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 70df8f06eb1561dd186d5be643a5863ffab5981a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026455"
 ---
-# <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
+# <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 CAPI(Crypto API)에서 임의로 생성된 암호화 수를 반환합니다. `CRYPT_GEN_RANDOM`은 지정된 수의 바이트 길이로 16진수를 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-generating-a-random-number"></a>1. 난수 생성  
+### <a name="a-generating-a-random-number"></a>A. 난수 생성  
 이 함수는 길이 50바이트인 임의의 수를 생성합니다.
   
 ```sql
@@ -65,7 +65,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [RAND&#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

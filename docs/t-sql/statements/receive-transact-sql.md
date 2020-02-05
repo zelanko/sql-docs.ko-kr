@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211433"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211433"
 
   큐에서 하나 이상의 메시지를 검색합니다. 큐의 보존 기간 설정에 따라 큐에서 메시지를 제거하거나 큐에 있는 메시지의 상태를 업데이트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211433"
  TIMEOUT *제한 시간*  
  문이 메시지를 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. 이 절을 지정하지 않거나 시간 제한이 -**1**이면 대기 시간은 무제한입니다. 제한 시간이 만료되면 RECEIVE가 빈 결과 집합을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  일괄 처리 또는 저장 프로시저에서 RECEIVE 문이 첫 번째 문이 아닌 경우 이전 문은 세미콜론(;)으로 끝나야 합니다.  
@@ -155,9 +155,9 @@ ms.locfileid: "70211433"
 ## <a name="queue-columns"></a>큐 열  
  다음 표에서는 큐의 열을 나열합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상태**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에 의해 반환되는 메시지는 상태가 항상 **0**입니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=준비**1**=받은 메시지**2**=아직 완료되지 않음**3**=보낸 메시지 보유|  
+|**status**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에 의해 반환되는 메시지는 상태가 항상 **0**입니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=준비**1**=받은 메시지**2**=아직 완료되지 않음**3**=보낸 메시지 보유|  
 |**priority**|**tinyint**|메시지에 적용된 대화의 우선 순위 수준입니다.|  
 |**queuing_order**|**bigint**|큐 내의 메시지 정렬 번호입니다.|  
 |**conversation_group_id**|**uniqueidentifier**|이 메시지가 속하는 대화 그룹의 식별자입니다.|  
@@ -177,14 +177,14 @@ ms.locfileid: "70211433"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1\. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 결과 집합으로 메시지를 반환합니다.  
   
 ```  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
-### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2\. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
+### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 `conversation_handle`, `message_type_name` 및 `message_body` 열을 포함하는 결과 집합으로 메시지를 반환합니다.  
   
 ```  

@@ -1,10 +1,9 @@
 ---
-title: SQL Server 에이전트 프록시 만들기 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 에이전트 프록시 만들기
+ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24a1b058fcada694bc117bb261c17b863e4be569
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 5abaf32126cb8d61c6bdc3e7634aa00b6066c054
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553102"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245850"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ ms.locfileid: "69553102"
   
 ### <a name="Security"></a>보안  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>권한  
   
--   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 프록시를 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자를 **msdb** 데이터베이스의 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 하나에 추가해야 합니다. **SQLAgentUserRole**, **SQLAgentReaderRole** 또는 **SQLAgentOperatorRole**.  
+-   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 프록시를 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의** 에이전트 고정 데이터베이스 역할 **SQLAgentUserRole**, **SQLAgentReaderRole**또는 **SQLAgentOperatorRole**중 하나에 추가해야 합니다.  
   
 -   프록시와 자격 증명을 만드는 경우 **ALTER ANY CREDENTIAL** 권한이 필요합니다.  
   
@@ -106,7 +107,7 @@ ms.locfileid: "69553102"
     GO  
     ```  
   
-참조 항목:  
+자세한 내용은 다음을 참조하세요.  
   
 -   [CREATE CREDENTIAL(Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
   

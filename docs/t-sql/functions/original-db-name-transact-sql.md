@@ -18,20 +18,20 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914572"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME(Transact-SQL)
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용자가 데이터베이스 연결 문자열에 지정한 데이터베이스 이름을 반환합니다. 이 데이터베이스는 **sqlcmd-d** 옵션(USE *database*)을 사용하여 지정됩니다. ODBC(Open Database Connectivity) 데이터 원본 식(initial catalog = *databasename*)을 사용하여 지정할 수도 있습니다.  
   
  이 데이터베이스는 기본 사용자 데이터베이스와 다릅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67914572"
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  초기 데이터베이스가 지정되지 않으면 함수는 빈 문자열을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  

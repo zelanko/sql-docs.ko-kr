@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d0d93259d8acdeb6d548d18971bba2843b61bab7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0a31e90cb5cf94cd40a76b96d33208e81d27f6db
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769916"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286570"
 ---
 # <a name="publication-type"></a>게시 유형
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "68769916"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+ [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

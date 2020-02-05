@@ -14,10 +14,10 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288721"
 ---
 # <a name="null-ssis-expression"></a>NULL(SSIS 식)
@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>결과 형식  
  Null 값을 가진 유효한 데이터 형식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 NULL 결과도 Null입니다.  
   
  일부 데이터 형식의 Null 값을 요청하려면 매개 변수가 필요합니다. 다음 표에서는 이러한 데이터 형식과 해당 매개 변수를 보여 줍니다.  
@@ -51,7 +51,7 @@ NULL(typespec)
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252)는 1252 코드 페이지를 사용하여 30자를 DT_STR 데이터 형식으로 캐스팅합니다.|  
 |DT_WSTR|*charcount*|(DT_WSTR,20)은 20자를 DT_WSTR 데이터 형식으로 캐스팅합니다.|  
 |DT_BYTES|*bytecount*|(DT_BYTES,50)은 50바이트를 DT_BYTES 데이터 형식으로 캐스팅합니다.|  
-|DT_DECIMAL|*소수 자릿수*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
+|DT_DECIMAL|*scale*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
 |DT_NUMERIC|*전체 자릿수*<br /><br /> *scale*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252)는 1252 코드 페이지를 사용하여 값을 DT_TEXT 데이터 형식으로 캐스팅합니다.|  
   

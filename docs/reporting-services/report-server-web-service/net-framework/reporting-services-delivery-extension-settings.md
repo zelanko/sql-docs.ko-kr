@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128846"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 배달 확장 프로그램 설정
@@ -44,7 +44,7 @@ ms.locfileid: "63128846"
 |**ReplyTo**|전자 메일 메시지의 **Reply-To** 머리글에 표시되는 전자 메일 주소입니다. 값은 단일 전자 메일 주소여야 합니다. (선택 사항)|  
 |**IncludeReport**|전자 메일 배달에 보고서를 포함시킬지 여부를 나타내는 값입니다. **true** 값은 보고서가 전자 메일 메시지의 본문으로 배달됨을 나타냅니다.|  
 |**RenderFormat**|렌더링된 보고서를 생성하는 데 사용할 렌더링 확장 프로그램의 이름입니다. 이름은 보고서 서버에 설치되었으며 표시되는 렌더링 확장 프로그램의 이름과 일치해야 합니다. 이 값은 **IncludeReport** 설정이 **true** 값으로 설정된 경우에 필요합니다.|  
-|**Priority**|전자 메일 메시지를 전송하는 우선 순위입니다. 유효한 값은 **LOW**, **NORMAL** 및 **HIGH**입니다. 기본값은 **NORMAL**입니다.|  
+|**우선 순위**|전자 메일 메시지를 전송하는 우선 순위입니다. 유효한 값은 **LOW**, **NORMAL** 및 **HIGH**입니다. 기본값은 **NORMAL**입니다.|  
 |**Subject**|전자 메일 메시지의 제목 줄 텍스트입니다.|  
 |**설명**|전자 메일 메시지의 본문에 포함된 텍스트입니다.|  
 |**IncludeLink**|전자 메일 본문에 보고서에 대한 링크를 포함시킬지 여부를 나타내는 값입니다.|  

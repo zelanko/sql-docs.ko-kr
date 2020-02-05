@@ -1,32 +1,33 @@
 ---
-title: dbSqlPackage 공급자와 함께 MSDeploy 사용 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: dbSqlPackage 공급자와 함께 MSDeploy 사용
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140977"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243559"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
+
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
   
--   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
+-   **Extract**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
--   **게시**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
+-   **Publish**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
   
 -   **DeployReport**: 게시 작업으로 변경된 사항의 XML 보고서를 만듭니다.  
   
--   **스크립트**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
+-   **Script**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
   
 DACFx에 대한 자세한 내용은 [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx)의 DACFx 관리되는 API 설명서 또는 [SqlPackage.exe](../tools/sqlpackage.md)(DACFx 명령줄 도구)를 참조하세요.  
   
@@ -44,7 +45,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 동사  
 MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사를 지정합니다. **dbSqlPackage** 공급자는 다음 **MSDeploy** 동사를 지원합니다.  
   
-|동사|설명|  
+|동사|Description|  
 |--------|---------------|  
 |덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
 |동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
@@ -52,7 +53,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 원본  
 **dbSqlPackage** 공급자는 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로인 입력을 받아들입니다.  공급자의 입력 원본을 지정하는 구문은 다음과 같습니다.  
   
-|Input|Default|설명|  
+|입력|기본값|Description|  
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**해당 사항 없음**|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로입니다.<br /><br />**참고:** 연결 문자열을 입력 원본으로 사용할 때 지원되는 연결 문자열 속성은 *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* 및 *ConnectionTimeout*뿐입니다.|  
   
@@ -60,13 +61,13 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 **원본** 매개 변수는 다음과 같습니다.  
   
-|매개 변수|Default|설명|  
+|매개 변수|기본값|Description|  
 |-------------|-----------|---------------|  
-|**Profile**:{ *string*}|해당 사항 없음|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 결과 dacpac를 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다. 게시 프로필은 대상에 전달되고 **Publish**, **Script** 또는 **DeployReport** 작업 중 하나를 수행할 때 기본 옵션으로 사용됩니다.|  
+|**Profile**:{ *string*}|해당 없음|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 결과 dacpac를 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다. 게시 프로필은 대상에 전달되고 **Publish**, **Script** 또는 **DeployReport** 작업 중 하나를 수행할 때 기본 옵션으로 사용됩니다.|  
 |**DacApplicationName**={ *string* }|데이터베이스 이름|DACPAC 메타데이터에 저장할 애플리케이션 이름을 정의합니다. 기본 문자열은 데이터베이스 이름입니다.|  
 |**DacMajorVersion** ={*integer*}|**1**|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|  
 |**DacMinorVersion**={*integer*}|**0**|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|  
-|**DacApplicationDescription**={ *string* }|해당 사항 없음|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|  
+|**DacApplicationDescription**={ *string* }|해당 없음|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|  
 |**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|**True**인 경우 원본에서 애플리케이션 범위의 개체만 추출합니다. **False**인 경우 애플리케이션 범위의 개체 및 애플리케이션 범위 밖의 개체를 모두 추출합니다.|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|**True**인 경우 원본 데이터베이스 개체에서 참조하는 로그인, 서버 감사 및 자격 증명 개체를 추출합니다.|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|**True**인 경우 추출된 모든 개체에서 추출 권한을 무시하며, **False**인 경우는 그렇지 않습니다.|  
@@ -77,15 +78,15 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage 대상  
 **dbSqlPackage** 공급자는 유효한 SQL Server/SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로를 대상 입력으로 받아들입니다.  공급자의 대상을 지정하는 구문은 다음과 같습니다.  
   
-|Input|Default|설명|  
+|입력|기본값|Description|  
 |---------|-----------|---------------|  
-|-**dest:dbSqlPackage**={*input*}|해당 사항 없음|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 전체 또는 부분 경로입니다. *input*이 파일 경로인 경우 다른 명명된 매개 변수는 지정할 수 없습니다.|  
+|-**dest:dbSqlPackage**={*input*}|해당 없음|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 전체 또는 부분 경로입니다. *input*이 파일 경로인 경우 다른 명명된 매개 변수는 지정할 수 없습니다.|  
   
 모든 **dbSqlPackage** 작업에 다음 **대상** 매개 변수를 사용할 수 있습니다.  
   
-|속성|Default|설명|  
+|속성|기본값|Description|  
 |------------|-----------|---------------|  
-|**Action={Publish&#124;DeployReport&#124;Script}**|해당 사항 없음|**대상**에서 수행할 작업을 지정하는 선택적 매개 변수입니다.|  
+|**Action={Publish&#124;DeployReport&#124;Script}**|해당 없음|**대상**에서 수행할 작업을 지정하는 선택적 매개 변수입니다.|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|**SqlClr** 게시에서 배포 계획의 일부로 차단 어셈블리를 삭제할지 여부를 지정합니다. 기본적으로, 어셈블리를 삭제해야 하는 경우에는 모든 차단 또는 참조 어셈블리가 어셈블리 업데이트를 차단합니다.|  
 |**AllowIncompatiblePlatform={True &#124; False}**|**False**|SQL Server 플랫폼이 호환되지 않을 수 있는 경우에도 게시 작업을 진행해야 하는지 여부를 지정합니다.|  
 |**BackupDatabaseBeforeChanges={True &#124; False}**|**False**|변경 내용을 배포하기 전 데이터베이스를 백업합니다.|  
@@ -122,7 +123,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |**IgnoreFileSize= {True &#124; False}**|**True**|데이터베이스에 게시할 때 파일 크기의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|데이터베이스에 게시할 때 채우기 비율의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  
   
-|속성|Default|설명|  
+|속성|기본값|Description|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|데이터베이스에 게시할 때 전체 텍스트 인덱스 파일에 대한 경로의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|데이터베이스에 게시할 때 ID 열 초기값의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  
@@ -171,9 +172,9 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 다음 **대상** 매개 변수는 **DeployReport** 및 **Script** 작업에만 사용할 수 있습니다.  
   
-|매개 변수|Default|설명|  
+|매개 변수|기본값|Description|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|해당 사항 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다.  이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
+|**OutputPath**={ *string* }|해당 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다.  이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
   
 > [!NOTE]  
 > **OutputPath** 매개 변수가 **DeployReport** 또는 **Script** 작업에 제공되지 않은 경우 출력이 메시지로 반환됩니다.  

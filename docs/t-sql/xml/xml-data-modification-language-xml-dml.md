@@ -21,10 +21,10 @@ ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140885"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
@@ -42,11 +42,11 @@ ms.locfileid: "68140885"
   
  [XML 데이터 형식 및 열&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)에 설명된 것과 같이 **xml** 형식의 변수 및 열을 만들고 XML 문서 또는 조각을 여기에 할당할 수 있습니다. 이러한 XML 인스턴스를 수정 또는 업데이트하려면 다음을 수행합니다.  
   
--   **xml** 데이터 형식의 [modify() 메서드(xml 데이터 형식)](../../t-sql/xml/modify-method-xml-data-type.md)를 사용합니다.  
+-   [xml](../../t-sql/xml/modify-method-xml-data-type.md) 데이터 형식의 **modify() 메서드(xml 데이터 형식)** 를 사용합니다.  
   
 -   **modify()** 메서드 내부에 적합한 XML DML 문을 지정합니다.  
   
- 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 예를 들어  
+ 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 다음은 그 예입니다.  
   
 -   형식화된 또는 형식화되지 않은 **xml**의 경우 특성은 **xmlns**, **xmlns:\*** 및 **xml:base**입니다.  
   

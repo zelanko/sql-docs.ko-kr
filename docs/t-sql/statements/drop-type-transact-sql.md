@@ -21,10 +21,10 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072108"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68072108"
 
   현재 데이터베이스에서 별칭 데이터 형식 또는 CLR(공용 언어 런타임) 사용자 정의 형식을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  삭제하려는 별칭 데이터 형식 또는 사용자 정의 형식의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 사항 중 하나라도 해당하는 경우 DROP TYPE 문은 실행되지 않습니다.  
   
 -   데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식의 열을 포함하는 테이블이 있는 경우. 별칭 또는 사용자 정의 형식 열에 관한 정보는 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 또는 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  

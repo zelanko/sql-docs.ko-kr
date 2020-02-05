@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577184"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>보고서 작성기 함수 - RowNumber 함수
@@ -30,9 +30,9 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (**String**) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
+ (**String**) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 null(**의** Nothing[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **RowNumber** 는 [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) 가 집계 함수의 실행 값을 반환하는 것처럼 지정한 범위 내 행 개수의 실행 값을 반환합니다. 범위를 지정할 때 행 개수를 1로 다시 설정할 시점을 지정합니다.  
   
  *scope* 는 식이 될 수 없습니다. *scope* 는 포함하는 범위여야 합니다. 가장 바깥쪽에서 가장 안쪽 포함까지의 일반적인 범위는 보고서 데이터 세트, 데이터 영역, 행 그룹 또는 열 그룹입니다.  

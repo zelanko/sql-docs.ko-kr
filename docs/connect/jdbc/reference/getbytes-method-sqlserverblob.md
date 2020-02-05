@@ -16,10 +16,10 @@ ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4c7891c6d7454e0397406f9391fdfb60d0f0fc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213712"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes 메서드(SQLServerBlob)
@@ -44,13 +44,13 @@ public byte[] getBytes(long pos,
   
  가져올 데이터의 길이입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  요청된 데이터가 들어 있는 **byte** 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getBytes 메서드는 java.sql.Blob 인터페이스의 getBytes 메서드에 의해 지정됩니다.  
   
  null 또는 길이가 0인 BLOB이 있는 경우 위치 1에서 정확히 0바이트를 가져오려고 하면 빈 **byte** 배열(길이가 0인 바이트 배열)이 반환됩니다.  

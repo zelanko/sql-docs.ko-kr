@@ -1,6 +1,6 @@
 ---
-title: 연결 프로그램(새 파일) | Microsoft 문서
-ms.custom: ''
+title: 연결 프로그램(새 파일)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252050"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245780"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68252050"
 **열려는 프로그램을 선택하십시오.**  
 선택한 파일 형식에 대해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio에서 사용할 수 있는 편집기를 나열합니다. 표시된 목록에서 문서를 열 편집기를 선택하거나 **추가** 를 클릭하여 목록에 새 편집기를 포함합니다.  
   
-**파일**  
+**열기**  
 선택한 편집기로 문서를 열려면 **열기** 를 클릭합니다.  
   
 **추가**  

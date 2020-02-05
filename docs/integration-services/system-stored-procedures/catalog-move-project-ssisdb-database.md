@@ -11,10 +11,10 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcab50f0e1082ecbff8f19a9261a1d7694616b26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296761"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - SSISDB 데이터베이스
@@ -48,7 +48,7 @@ catalog.move_project [ @source_folder = ] source_folder
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -70,7 +70,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로젝트가 원본 폴더에서 대상 폴더로 이동되면 원본 폴더 및 해당 환경 참조에서 프로젝트가 삭제됩니다. 대상 폴더에는 동일한 프로젝트 및 환경 참조가 생성됩니다. 상대 환경 참조는 이동 후 다른 폴더로 확인되고, 절대 참조는 이동 후 같은 폴더로 확인됩니다.  
   
 > [!NOTE]  

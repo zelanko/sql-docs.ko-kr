@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024995"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
@@ -74,7 +74,7 @@ ms.locfileid: "68024995"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -89,7 +89,7 @@ ms.locfileid: "68024995"
   
 4.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
-5.  _table\_name_**에서 열 선택** 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+5.  **table**name _\_에서 열 선택_ 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68024995"
   
 9. **닫기**를 클릭합니다.  
   
-10. **파일** 메뉴에서 _table\_name_ **저장**을 클릭합니다.  
+10. **파일** 메뉴에서 **table**name _\_저장_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

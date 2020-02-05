@@ -1,10 +1,9 @@
 ---
-title: 전체 텍스트 인덱스 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 전체 텍스트 인덱스 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254620"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247258"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "68254620"
 현재 전체 텍스트 인덱스를 사용하여 전체 텍스트 검색을 지금 수행할 수 있는지 여부를 나타냅니다.  
   
 **추적 설정 변경**  
-다음 인덱스에 대한 변경 내용 추적 상태를 설명합니다. 수동, 자동 또는 해제.  
+수동, 자동 또는 해제와 같이 이 인덱스의 변경 내용 추적 상태에 대해 설명합니다.  
   
 **탐색 완료**  
 가장 최근의 탐색이 완료되었는지 여부를 표시합니다. 이 속성 값이 No이면 탐색이 아직 진행 중임을 의미합니다.  
@@ -88,7 +89,7 @@ ms.locfileid: "68254620"
 다음 탐색을 시작할 날짜와 시간을 표시합니다.  
   
 **현재 또는 마지막 탐색의 형식**  
-현재 또는 가장 최근 크롤링 유형을 다음과 같이 표시합니다. 최대 사용, 증분, 업데이트 또는 자동 전파.  
+최대, 증분, 업데이트 또는 자동 전파와 같이 현재 또는 가장 최근 탐색의 형식을 표시합니다.  
   
 **고유 인덱스 이름**  
 현재 데이터베이스에서 고유한 단일 열 인덱스가 있는 열의 이름에 대한 전체 목록을 표시합니다. 이러한 열은 전체 텍스트 인덱스를 만드는 데 사용할 수 있습니다.  
