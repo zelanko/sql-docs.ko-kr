@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071436"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68071436"
 
 이 함수는 지정한 이름 및 파일 그룹 값에 대해 파일 그룹 속성 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,12 +42,12 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## <a name="arguments"></a>인수  
  *filegroup_name*  
-명명된 속성 정보를 반환하는 `FILEGROUPPROPERTY`의 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
+명명된 속성 정보를 반환하는 **의 파일 그룹 이름을 나타내는** sysname`FILEGROUPPROPERTY` 형식의 식입니다.  
   
  *property*  
 파일 그룹 속성의 이름을 반환하는 **varchar(128)** 형식의 식입니다. *Property*는 다음 값 중 하나를 반환할 수 있습니다.  
   
-|값|설명|반환 값|  
+|값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|파일 그룹이 읽기 전용입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsUserDefinedFG**|파일 그룹이 사용자 정의 파일 그룹입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 잘못된 입력|  
@@ -56,7 +56,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 ## <a name="return-types"></a>반환 형식  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
   
 ## <a name="examples"></a>예  

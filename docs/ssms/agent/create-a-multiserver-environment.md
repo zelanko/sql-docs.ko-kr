@@ -1,10 +1,9 @@
 ---
-title: 다중 서버 환경 만들기 | Microsoft 문서
-ms.custom: ''
+title: 다중 서버 환경 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/30/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27ef7467b0a5877e75f0391c3afe5ea88003c8c4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8b01a04dfc4dbf31c08d595de184cd64f635e2c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264816"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245906"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,12 +56,12 @@ ms.locfileid: "68264816"
 ## <a name="related-tasks"></a>관련 작업  
 다음 항목에서는 다중 서버 환경을 만들기 위한 공통적인 태스크에 대해 설명합니다.  
   
-|설명|항목|  
+|Description|항목|  
 |---------------|---------|  
 |마스터 서버를 만드는 방법에 대해 설명합니다.|[마스터 서버 만들기](../../ssms/agent/make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](../../ssms/agent/make-a-target-server.md)|  
 |마스터 서버에 대상 서버를 등록하는 방법에 대해 설명합니다.|[마스터 서버에 대상 서버 등록](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
-|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 대상 서버 제거](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
+|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver(Transact-SQL)](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup(Transact-SQL)](https://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   

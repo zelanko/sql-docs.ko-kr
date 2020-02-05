@@ -11,10 +11,10 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571124"
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
@@ -25,7 +25,7 @@ ms.locfileid: "65571124"
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services에서는 이 기능을 지원하지 않습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 실행하는 경우 페이지가 나타나지 않습니다.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
  작업에 대한 정보를 보려면 페이지를 새로 고쳐 현재 보고서 서버에서 실행 중인 작업에 대한 정보를 가져와야 합니다.  
   
 1.  보고서 서버 폴더를 엽니다.  

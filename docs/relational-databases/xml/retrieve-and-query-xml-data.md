@@ -14,10 +14,10 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995271"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
@@ -28,7 +28,7 @@ ms.locfileid: "67995271"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 인스턴스의 내용을 보존하지만 XML 데이터 모델에서 중요하다고 간주되지 않는 XML 인스턴스의 측면은 보존하지 않습니다. 즉, 검색된 XML 인스턴스는 서버에 저장된 인스턴스와 다를 수 있지만 동일한 정보를 포함한다는 의미입니다.  
   
 ### <a name="xml-declaration"></a>XML 선언  
- 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 예를 들어  
+ 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 다음은 그 예입니다.  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -80,7 +80,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 결과의 네임스페이스 접두사는 다를 수 있습니다. 예를 들어  
+ 결과의 네임스페이스 접두사는 다를 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -92,13 +92,13 @@ GO
   
 |SET 옵션|필요한 값|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|켜기|  
+|ANSI_PADDING|켜기|  
+|ANSI_WARNINGS|켜기|  
+|ARITHABORT|켜기|  
+|CONCAT_NULL_YIELDS_NULL|켜기|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|켜기|  
   
  옵션이 표시된 대로 설정되어 있지 않으면 **xml** 데이터 형식의 메서드에 있는 쿼리 및 수정 작업이 실패합니다.  
   

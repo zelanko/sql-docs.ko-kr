@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1aa8519092b90f34089cd2c31441b51b2b0da014
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109688"
 ---
 # <a name="database-states"></a>데이터베이스 상태
@@ -41,7 +41,7 @@ ms.locfileid: "68109688"
 ## <a name="database-state-definitions"></a>데이터베이스 상태 정의  
  다음 표에서는 데이터베이스 상태를 정의합니다.  
   
-|State|정의|  
+|시스템 상태|정의|  
 |-----------|----------------|  
 |ONLINE|데이터베이스에 액세스할 수 있습니다. 복구의 실행 취소 단계가 완료되지 않은 경우에도 주 파일 그룹은 온라인 상태입니다.|  
 |OFFLINE|데이터베이스를 사용할 수 없습니다. 명시적 사용자 동작으로 인해 데이터베이스가 오프라인 상태가 되어 추가 사용자 동작이 수행될 때까지 오프라인 상태로 있습니다. 예를 들어 파일을 새 디스크로 이동하기 위해 데이터베이스를 오프라인으로 설정할 수 있습니다. 이러한 경우 이동이 완료되면 데이터베이스가 온라인 상태로 돌아옵니다.|  

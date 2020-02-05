@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914940"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67914940"
 > [!WARNING]  
 >  UuidCreateSequential 함수는 하드웨어 종속성이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스(예: 포함된 데이터베이스)를 다른 컴퓨터로 이동할 때 순차 값의 클러스터가 나타날 수 있습니다. Always On 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 사용 시 데이터베이스가 다른 컴퓨터로 장애 조치되면 순차 값의 클러스터가 나타날 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,8 +50,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>반환 형식  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
- NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 예를 들어  
+## <a name="remarks"></a>설명  
+ NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   

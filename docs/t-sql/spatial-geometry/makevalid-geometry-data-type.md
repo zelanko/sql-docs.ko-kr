@@ -18,10 +18,10 @@ ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101194"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68101194"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드로 인해 **geometry** 인스턴스의 점이 약간 변경될 수 있을 뿐만 아니라 **geometry** 인스턴스의 형식 자체가 변경될 수 있습니다.  
   
 ## <a name="examples"></a>예  

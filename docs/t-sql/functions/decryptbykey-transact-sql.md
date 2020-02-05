@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251372"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72251372"
 
 이 함수는 대칭 키를 사용하여 데이터의 암호를 해독합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다. `DECRYPTBYKEY`는 데이터 암호화에 사용되는 대칭 키가 열려 있지 않거나 *ciphertext*가 NULL이면 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DECRYPTBYKEY`는 대칭 키를 사용합니다. 데이터베이스는 이 대칭 키를 이미 열어 두어야 합니다. `DECRYPTBYKEY`는 동시에 여러 개의 키를 열어 둘 수 있습니다. 암호 텍스트를 해독하기 직전에 키를 열 필요는 없습니다.  
   
 대칭 암호화 및 암호 해독은 일반적으로 상대적으로 신속하게 작동하고 큰 데이터 볼륨과 관련된 작업에 적합합니다.  
@@ -73,7 +73,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-decrypting-by-using-a-symmetric-key"></a>1\. 대칭 키를 사용한 해독  
+### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. 대칭 키를 사용한 해독  
 이 예에서는 대칭 키로 암호 텍스트를 해독합니다.  
   
 ```sql  
@@ -93,7 +93,7 @@ SELECT NationalIDNumber, EncryptedNationalID
 GO  
 ```  
   
-### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>2\. 대칭 키 및 인증 해시를 사용한 해독  
+### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. 대칭 키 및 인증 해시를 사용한 해독  
 이 예에서는 인증자를 사용하여 암호화된 데이터를 해독합니다.  
   
 ```sql  

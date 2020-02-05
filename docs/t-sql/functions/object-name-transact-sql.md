@@ -25,18 +25,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914725"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME(Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   스키마 범위 개체에 대한 데이터베이스 개체 이름을 반환합니다. 스키마 범위 개체 목록에 대해서는 [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>사용 권한  
  개체에 대한 ANY 권한이 필요합니다. 데이터베이스 ID를 지정하려면 데이터베이스에 대해 CONNECT 권한도 필요합니다. 그렇지 않으면 게스트 계정을 설정해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [식](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE](../../t-sql/queries/where-transact-sql.md)를 참조하세요.  
   
  이 시스템 함수에서 반환하는 값에서는 현재 데이터베이스의 데이터 정렬을 사용합니다.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>1\. WHERE 절에서 OBJECT_NAME 사용  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. WHERE 절에서 OBJECT_NAME 사용  
  다음 예에서는 `sys.objects` 문의 `OBJECT_NAME` 절에서 `WHERE`으로 지정한 개체에 대한 열을 `SELECT` 카탈로그 뷰에서 반환합니다.  
   
 ```  
@@ -104,7 +104,7 @@ WHERE name = OBJECT_NAME(@MyID);
 GO  
 ```  
   
-### <a name="b-returning-the-object-schema-name-and-object-name"></a>2\. 개체 스키마 이름 및 개체 이름 반환  
+### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. 개체 스키마 이름 및 개체 이름 반환  
  다음 예에서는 임시 문이나 준비된 문이 아닌 모든 캐시된 쿼리 계획에 대한 개체 스키마 이름, 개체 이름 및 SQL 텍스트를 반환합니다.  
   
 ```  
@@ -132,9 +132,9 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. WHERE 절에서 OBJECT_NAME 사용  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. WHERE 절에서 OBJECT_NAME 사용  
  다음 예에서는 `sys.objects` 문의 `OBJECT_NAME` 절에서 `WHERE`으로 지정한 개체에 대한 열을 `SELECT` 카탈로그 뷰에서 반환합니다. (개체 번호(아래 예에서 274100017)는 달라집니다.  이 예를 테스트하려면 각자의데이터베이스에서 `SELECT name, object_id FROM sys.objects;`를 실행하여 유효한 개체 번호를 조회하세요.)  
   
 ```  

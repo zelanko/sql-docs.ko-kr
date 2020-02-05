@@ -18,10 +18,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101037"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "68101037"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 형식의 경우 이 알고리즘은 인스턴스에 포함된 각 **geometry**에 대해 독립적으로 작동합니다.  
   
  이 알고리즘은 **Point** 인스턴스를 수정하지 않습니다.  
@@ -54,13 +54,13 @@ ms.locfileid: "68101037"
   
  `Reduce()`은 **CircularString** 인스턴스에 대해 **LineString**, **CircularString** 또는 **CompoundCurve** 인스턴스를 반환합니다.  `Reduce()`은 **CompoundCurve** 인스턴스에 대해 **CompoundCurve** 또는 **LineString** 인스턴스를 반환합니다.  
   
- **Polygon** 인스턴스에서 근사값 알고리즘은 각 링에 독립적으로 적용됩니다. 이 메서드는 반환된 **Polygon** 인스턴스가 잘못된 경우 `FormatException`을 생성합니다. 예를 들어 `Reduce()`를 적용하여 인스턴스의 각 링을 단순화한 결과로 생성된 링이 겹치는 경우 잘못된 **MultiPolygon** 인스턴스가 생성됩니다.  내부 링이 없고 외부 링이 있는 **CurvePolygon** 인스턴스에서 `Reduce()`는 **CurvePolygon**, **LineString** 또는 **Point** 인스턴스를 반환합니다.  **CurvePolygon**에 내부 링이 있으면, **CurvePolygon** 또는 **MultiPoint** 인스턴스가 반환됩니다.  
+ **Polygon** 인스턴스에서 근사값 알고리즘은 각 링에 독립적으로 적용됩니다. 이 메서드는 반환된 `FormatException`Polygon**인스턴스가 잘못된 경우**을 생성합니다. 예를 들어 **를 적용하여 인스턴스의 각 링을 단순화한 결과로 생성된 링이 겹치는 경우 잘못된** MultiPolygon`Reduce()` 인스턴스가 생성됩니다.  내부 링이 없고 외부 링이 있는 **CurvePolygon** 인스턴스에서 `Reduce()`는 **CurvePolygon**, **LineString** 또는 **Point** 인스턴스를 반환합니다.  **CurvePolygon**에 내부 링이 있으면, **CurvePolygon** 또는 **MultiPoint** 인스턴스가 반환됩니다.  
   
  원호 세그먼트가 발견되면 근사값 알고리즘이 지정된 허용 오차 절반 이내에서 해당 현으로 어림할 수 있는지 여부를 확인합니다. 이 조건을 충족하는 현은 계산에서 원호가 현으로 바뀝니다. 현이 이 조건을 충족하지 못하면 원호가 유지되고 근사값 알고리즘이 나머지 세그먼트에 적용됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-reduce-to-simplify-a-linestring"></a>1\. Reduce()를 사용하여 LineString 단순화  
+### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Reduce()를 사용하여 LineString 단순화  
  다음 예에서는 `LineString` 인스턴스를 만들고 `Reduce()`를 사용하여 인스턴스를 단순화합니다.  
   
 ```  
@@ -69,8 +69,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0)
 SELECT @g.Reduce(.75).ToString();  
 ```  
   
-### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>2\. CircularString에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
- 다음 예제에서는 **CircularString** 인스턴스에서 세 가지 허용 오차 수준과 함께 `Reduce()`를 사용합니다.  
+### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. CircularString에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
+ 다음 예제에서는 `Reduce()`CircularString**인스턴스에서 세 가지 허용 오차 수준과 함께**를 사용합니다.  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -90,7 +90,7 @@ SELECT @g.Reduce(.75).ToString();
  반환된 각 인스턴스는 엔드포인트 (0 0) 및 (24 0)을 포함합니다.  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. CompoundCurve에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
- 다음 예제에서는 **CompoundCurve** 인스턴스에서 두 가지 허용 오차 수준과 함께 `Reduce()`를 사용합니다.  
+ 다음 예제에서는 `Reduce()`CompoundCurve**인스턴스에서 두 가지 허용 오차 수준과 함께**를 사용합니다.  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  

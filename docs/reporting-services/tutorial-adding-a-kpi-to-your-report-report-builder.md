@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041889"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
-이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 KPI(핵심 성과 지표)를 추가합니다.  
+이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 KPI(핵심 성과 지표)를 추가합니다.  
 
 KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 시나리오에서 제품 하위 범주별 판매 요약이 KPI입니다. KPI의 현재 상태는 색, 계기 및 표시기를 사용하여 표시됩니다.
   
@@ -134,7 +134,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 10. **다음**을 클릭합니다.  
   
-11. **마침**을 클릭합니다.  
+11. **Finish**를 클릭합니다.  
   
       디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 SalesDate, Subcategory 및 Details라는 3개의 행 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다. 열 그룹 창은 비어 있습니다.  
       
@@ -335,8 +335,8 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 2.  **저장**을 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
-보고서에 KPI 추가 자습서를 성공적으로 완료했습니다. 참조 항목:
+## <a name="next-steps"></a>다음 단계  
+보고서에 KPI 추가 자습서를 성공적으로 완료했습니다. 자세한 내용은 다음을 참조하세요.
 *  [계기](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [표시기](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '예: EXPLICIT 모드로 형제 구성 | Microsoft Docs'
+title: '예제: EXPLICIT 모드를 사용하여 형제 생성 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006826"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>예: EXPLICIT 모드를 사용하여 형제 생성
@@ -33,7 +33,7 @@ ms.locfileid: "68006826"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 다음 EXPLICIT 모드 쿼리는 이 XML을 생성합니다. 이 쿼리는 <`OrderHeader`> 요소, <`SalesPerson`> 요소 및 <`OrderDetail`> 요소에 대해 `Tag` 값을 각각 1, 2 및 3으로 지정합니다. <`SalesPerson`>과 <`OrderDetail`>은 형제이기 때문에 이 쿼리는 같은 `Parent` 태그 값으로 1을 지정하여 <`OrderHeader`> 요소를 식별합니다.  
+ 다음 EXPLICIT 모드 쿼리는 이 XML을 생성합니다. 이 쿼리는 <`Tag`> 요소, <`OrderHeader`> 요소 및 <`SalesPerson`> 요소에 대해 `OrderDetail` 값을 각각 1, 2 및 3으로 지정합니다. <`SalesPerson`>과 <`OrderDetail`>은 형제이기 때문에 이 쿼리는 같은 `Parent` 태그 값으로 1을 지정하여 <`OrderHeader`> 요소를 식별합니다.  
   
 ```  
 USE AdventureWorks2012;  

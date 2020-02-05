@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117177"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68117177"
   
  **CREATE SEQUENCE** 및 **NEXT VALUE FOR** 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -99,7 +99,7 @@ INCREMENT BY \<constant>
 **CACHE** 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시에 남아 있는 시퀀스 번호가 손실될 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다. 중복 유효성 검사는 레코드가 완전히 채워진 후에만 수행됩니다. 이는 생성 중에 동일한 번호가 둘 이상의 레코드에 사용되지만 중복으로 식별되는 경우가 발생할 수 있습니다. 이 상황이 발생하고 다른 자동 번호 값이 후속 레코드에 적용되면 자동 번호 값 사이의 간격이 발생하여 예상되는 동작이 될 수 있습니다.
+ 시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다. 중복 유효성 검사는 레코드가 완전히 채워진 후에만 수행됩니다. 이 문제는 생성 중에 동일한 번호가 둘 이상의 레코드에 사용되지만 중복으로 식별되는 경우가 발생할 수 있습니다. 이 상황이 발생하고 다른 자동 번호 값이 후속 레코드에 적용되면 자동 번호 값 사이의 간격이 발생하여 예상되는 동작이 될 수 있습니다.
   
 ### <a name="cache-management"></a>캐시 관리  
  성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **CACHE** 인수로 지정된 수의 시퀀스 번호를 미리 할당합니다.  

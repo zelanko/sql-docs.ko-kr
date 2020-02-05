@@ -18,16 +18,16 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077982"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-*this*의 *n*번째 상위 항목을 나타내는 **hierarchyid**를 반환합니다.
+**this**의 *n*번째 상위 항목을 나타내는 *hierarchyid*를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ SqlHierarchyId GetAncestor ( int n )
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 출력의 각 노드가 현재 노드를 지정된 수준의 상위 항목으로 갖는지 여부를 테스트하는 데 사용됩니다.
   
 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)보다 큰 숫자가 전달되면 NULL이 반환됩니다.
@@ -59,7 +59,7 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-child-nodes-of-a-parent"></a>1\. 부모의 자식 노드 찾기  
+### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. 부모의 자식 노드 찾기  
 `GetAncestor(1)`는 `david0`을 직계 상위 항목(부모)으로 갖는 직원을 반환합니다. 다음 예에서는 `GetAncestor(1)`를 사용합니다.
   
 ```sql
@@ -72,7 +72,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;  
 ```  
   
-### <a name="b-returning-the-grandchildren-of-a-parent"></a>2\. 부모의 손자 반환  
+### <a name="b-returning-the-grandchildren-of-a-parent"></a>B. 부모의 손자 반환  
 `GetAncestor(2)`는 계층에서 현재 노드보다 두 수준 낮은 직원을 반환합니다. 이러한 직원은 현재 노드의 손자입니다. 다음 예에서는 `GetAncestor(2)`를 사용합니다.
   
 ```sql
@@ -116,7 +116,7 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [IsDescendantOf&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

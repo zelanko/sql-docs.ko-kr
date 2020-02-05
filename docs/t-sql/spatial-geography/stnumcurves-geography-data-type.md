@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120927"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves(geography 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68120927"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. 빈 1차원 **geography** 인스턴스는 0을 반환합니다.  
   
  `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString**과 같은 **geography** 컬렉션에서는 작동하지 않습니다. **geography** 인스턴스가 1차원 데이터 형식이 아닌 경우에는 **NULL**이 반환됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68120927"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>1\. CircularString 인스턴스에 STNumCurves() 사용  
+### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `CircularString` 인스턴스의 곡선 수를 가져오는 방법을 보여 줍니다.  
   
 ```
@@ -59,7 +59,7 @@ ms.locfileid: "68120927"
  SELECT @g.STNumCurves();
  ```  
   
-### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>2\. CompoundCurve 인스턴스에 STNumCurves() 사용  
+### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. CompoundCurve 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `STNumCurves()`를 사용하여 `CompoundCurve` 인스턴스의 곡선 수를 반환합니다.  
   
 ```

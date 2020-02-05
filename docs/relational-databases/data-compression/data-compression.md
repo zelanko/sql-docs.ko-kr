@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055454"
 ---
 # <a name="data-compression"></a>Data Compression
@@ -91,7 +91,7 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
   
 보관 압축을 추가하려면 REBUILD 옵션 및DATA COMPRESSION = COLUMNSTORE_ARCHIVE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)을 사용하세요.  
   
-#### <a name="examples"></a>예:  
+#### <a name="examples"></a>예제:  
 ```  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
@@ -105,7 +105,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 보관 압축을 제거하고 데이터를 columnst또는e 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 를 사용하세요.  
   
-#### <a name="examples"></a>예:  
+#### <a name="examples"></a>예제:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -186,7 +186,7 @@ REBUILD PARTITION = ALL WITH (
 |게시자에서 모든 파티션이 압축된 경우 구독자에서 테이블을 압축하지만 파티션 구성표를 복제하지 않음|False|True|모든 파티션에서 압축을 사용할 수 있는지 확인합니다.<br /><br /> 테이블 수준에서 압축을 스크립팅합니다.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>압축이 다른 SQL Server 구성 요소에 주는 영향 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  압축은 스토리지 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
 -   대량 가져오기 및 내보내기 작업  

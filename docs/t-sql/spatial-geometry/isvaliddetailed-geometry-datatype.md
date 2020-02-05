@@ -15,10 +15,10 @@ ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101220"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
@@ -38,10 +38,10 @@ ms.locfileid: "68101220"
   
  CLR 반환 형식: **string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에는 가능한 반환 값이 있습니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |24400|Valid|  
 |24401|유효하지 않으며 이유를 알 수 없습니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68101220"
 |24413|{0} 곡선에 두 개의 겹치는 가장자리가 있으므로 유효하지 않습니다.|  
 |24414|{0} 곡선의 가장자리가 다른 {1} 곡선의 가장자리와 겹치므로 유효하지 않습니다.|  
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
-|24416|{1} 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
+|24416|{0} 지점에서 시작하는 {1} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
 ## <a name="examples"></a>예  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  

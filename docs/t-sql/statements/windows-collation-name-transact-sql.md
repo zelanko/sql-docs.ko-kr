@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874458"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874458"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 COLLATE 절에 Windows 데이터 정렬 이름을 지정합니다. Windows 데이터 정렬 이름은 데이터 정렬 지정자와 비교 스타일로 구성됩니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -72,12 +72,12 @@ Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정�
 이 옵션을 생략하면 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
 
 *VariationSelectorSensitivity*  
-- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
+- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]부터 
 
 - 이 옵션을 생략하면 변형 선택기를 구분하지 않도록 지정하며, **VSS**는 변형 선택기를 구분하도록 지정합니다.
 
 **UTF8**  
-- **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   
+- **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터   
 
 - 적합한 데이터 형식에 사용할 UTF-8 인코딩을 지정합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
@@ -87,7 +87,7 @@ Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정�
 **BIN2**  
 코드 포인트 비교 기능을 사용하는 이진 정렬 순서를 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 데이터 정렬 버전에 따라 일부 코드 포인트에는 정렬 가중치 및/또는 대문자/소문자 매핑이 정의되지 않을 수 있습니다. 예를 들어 동일한 문자가 지정되지만 동일한 데이터 정렬의 다른 버전에서 `LOWER`의 출력을 비교합니다.
 
 ```sql
@@ -196,7 +196,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |케추아어(페루)|Latin1_General_100_|사용할 수 없음|
 |로만시어(스위스)|Romansh_100_|사용할 수 없음|
 |이나리 라프어(핀란드)|Sami_Sweden_Finland_100_|사용할 수 없음|
-|라프어(룰레, 노르웨이)|Sami_Norway_100_|사용할 수 없음|
+|룰레 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|
 |룰레 라프어(스웨덴)|Sami_Sweden_Finland_100_|사용할 수 없음|
 |북부 라프어(핀란드)|Sami_Sweden_Finland_100_|사용할 수 없음|
 |북부 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|
@@ -246,6 +246,6 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 - [상수](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [선언 @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [table](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

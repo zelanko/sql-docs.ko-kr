@@ -1,10 +1,7 @@
 ---
-title: EventString 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: EventString 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008804"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307689"
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  XML 입력 파일에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 작업을 직접 지정합니다.  
+
+XML 입력 파일에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 작업을 직접 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,13 +41,13 @@ ms.locfileid: "68008804"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. **float** 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: **Weight**="100.01"). **Weight** 에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  

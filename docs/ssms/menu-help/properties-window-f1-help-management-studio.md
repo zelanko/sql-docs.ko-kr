@@ -1,6 +1,6 @@
 ---
-title: 속성 창 F1 도움말(Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 속성 창 F1 도움말(Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19a7cd6251165db2843a7afb691ad23ccf75fbda
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6301ce8d1500cb4c71bbcf725e5abe81fa2130b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257062"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243855"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68257062"
 **사전순**  
 선택한 개체에 대한 모든 디자인 타임 속성과 이벤트를 사전순으로 정렬합니다.  
   
-**Properties**  
+**속성**  
 개체에 대한 속성을 표시합니다.  
   
 **설명 창**  

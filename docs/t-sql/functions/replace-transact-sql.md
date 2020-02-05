@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944532"
 ---
 # <a name="replace-transact-sql"></a>REPLACE(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67944532"
 
 지정된 문자열 값의 모든 항목을 다른 문자열 값으로 바꿉니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)가 아닌 경우 REPLACE**는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  REPLACE는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 [COLLATE](~/t-sql/statements/collations.md)를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  
   
  0x0000 (**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 REPLACE에 포함할 수 없습니다.  

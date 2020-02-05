@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135851"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135851"
 
   대칭 키를 사용하여 데이터를 암호화합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  *cleartext* 값이 NULL이면 NULL을 반환합니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  EncryptByKey는 대칭 키를 사용합니다. 이 키는 열려 있어야 합니다. 대칭 키가 현재 세션에서 이미 열려 있으면 쿼리 컨텍스트에서 다시 열지 않아도 됩니다.  
   
  인증자는 암호화된 필드의 정수 값 대체를 막는 데 유용합니다. 예를 들어 급여 데이터로 이루어진 다음 테이블을 살펴봅니다.  
@@ -95,9 +95,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 함수를 ANSI_PADDING OFF 설정과 함께 사용하면 암시적 변환으로 인해 데이터가 손실될 수 있습니다. ANSI_PADDING에 관한 자세한 내용은 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서를 이용합니다.  
+ 다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서에 의존합니다.  
   
-### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>1\. 대칭 키로 문자열 암호화  
+### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 대칭 키로 문자열 암호화  
  다음 예에서는 `Employee` 테이블에 열을 추가한 다음 `NationalIDNumber` 열에 저장되는 주민 등록 번호의 값을 암호화합니다.  
   
 ```  
@@ -121,7 +121,7 @@ SET EncryptedNationalIDNumber
 GO  
 ```  
   
-### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>2\. 인증 값과 함께 레코드 암호화  
+### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. 인증 값과 함께 레코드 암호화  
   
 ```  
 USE AdventureWorks2012;  

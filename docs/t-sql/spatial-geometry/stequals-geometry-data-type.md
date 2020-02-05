@@ -18,10 +18,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107756"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals(geometry 데이터 형식)
@@ -38,14 +38,14 @@ ms.locfileid: "68107756"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- `STEquals()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
+ **를 호출할 인스턴스와 비교할 다른** geometry`STEquals()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  

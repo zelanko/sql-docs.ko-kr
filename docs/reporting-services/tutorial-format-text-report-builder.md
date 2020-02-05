@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043045"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
@@ -187,7 +187,7 @@ ms.locfileid: "63043045"
   
 4.  **레이아웃 선택** 페이지에서 테이블 전체를 볼 수 있도록 **그룹 확장/축소** 확인란의 선택을 취소하고 **다음**을 클릭합니다. 
   
-5.  **마침**을 클릭합니다.  
+5.  **Finish**를 클릭합니다.  
   
 6.  **실행**을 클릭합니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "63043045"
   
 8.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-9. **LinkText** 열의 **전체** 셀을 선택한 다음, Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **제품** 열의 빈 셀과 **판매** 열의 `[Sum(Sales)]` 셀을 선택합니다.  
+9. **LinkText** 열의 **전체** 셀을 선택한 다음, Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **제품** 열의 빈 셀과 `[Sum(Sales)]`판매**열의** 셀을 선택합니다.  
   
 11. 이 세 개의 셀을 선택한 상태에서 이 셀 중 하나를 마우스 오른쪽 단추로 클릭한 다음 **행 삭제**를 클릭합니다.  
 
@@ -222,7 +222,7 @@ ms.locfileid: "63043045"
   
 6.  텍스트가 다르게 표시되지 않습니다. 텍스트가 링크 텍스트처럼 표시되도록 해야 합니다.  
   
-7.  `[LinkText]`을(를) 선택합니다.  
+7.  `[LinkText]`를 선택합니다.  
   
 8.  **홈** 탭 > **글꼴**에서 **밑줄**을 선택하고 **색**을 **파란색**으로 변경합니다.  
   
@@ -353,7 +353,7 @@ ms.locfileid: "63043045"
   
 4.  **저장**을 클릭합니다.  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 보고서 작성기에서는 여러 가지 방법으로 텍스트 서식을 지정할 수 있습니다. [자습서: 자유 형식 보고서 만들기](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)에 더 많은 예제가 포함되어 있습니다.  
 

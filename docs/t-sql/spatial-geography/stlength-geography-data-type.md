@@ -18,10 +18,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139106"
 ---
 # <a name="stlength-geography-data-type"></a>STLength(geography 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68139106"
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geography** 인스턴스가 닫힌 경우 해당 길이는 인스턴스의 총 둘레 길이로 계산됩니다. 즉, 모든 다각형의 길이는 해당 둘레의 길이이며 점의 길이는 0입니다. **GeometryCollection**의 길이는 컬렉션 내에 포함된 모든 **geography** 인스턴스의 길이 합계를 계산하여 구합니다.  
   
  STLength()는 유효한 LineString과 잘못된 LineString 둘 다에서 작동합니다. 일반적으로 LineString은 겹치는 세그먼트로 인해 유효하지 않으며, 이는 부정확한 GPS 추적 같은 잘못된 부분 때문에 발생할 수 있습니다. STLength()는 겹친 세그먼트나 잘못된 세그먼트를 제거하지 않습니다. STLength()는 반환하는 길이 값에 겹치는 세그먼트 및 잘못된 세그먼트를 포함합니다. MakeValid() 메서드는 LineString에서 겹치는 세그먼트를 제거할 수 있습니다.  

@@ -23,10 +23,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927542"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927542"
 
   디지털 서명된 데이터가 서명된 후 변경되었는지 여부를 테스트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  서명이 일치하면 1을 반환하고 그렇지 않으면 0을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **VerifySignedByAsymKey**는 지정한 비대칭 키의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -66,7 +66,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-testing-for-data-with-a-valid-signature"></a>1\. 유효한 서명이 있는 데이터 테스트  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>A. 유효한 서명이 있는 데이터 테스트  
  다음 예에서는 선택한 데이터가 `WillisKey74` 비대칭 키로 서명된 후 변경되지 않은 경우 1을 반환하고 데이터가 손상된 경우에는 0을 반환합니다.  
   
 ```  
@@ -79,7 +79,7 @@ GO
 RETURN;  
 ```  
   
-### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>2\. 유효한 서명이 있는 데이터가 포함된 결과 집합 반환  
+### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 유효한 서명이 있는 데이터가 포함된 결과 집합 반환  
  다음 예에서는 `SignedData04` 비대칭 키로 서명된 후 변경되지 않은 데이터가 포함된 `WillisKey74`의 행을 반환합니다. 이 예에서는 `AsymKey_ID` 함수를 호출하여 데이터베이스에서 비대칭 키의 ID를 가져옵니다.  
   
 ```  

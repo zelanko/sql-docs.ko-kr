@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844317"
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73844317"
 
   기본값이 지정되지 않은 경우에 현재 사용자의 데이터베이스 사용자 이름에 대해 시스템이 제공한 값을 테이블에 삽입할 수 있도록 허용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ USER
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  USER는 USER_NAME 시스템 함수와 같은 기능을 제공합니다.  
   
  USER를 CREATE TABLE 또는 ALTER TABLE 문에서 DEFAULT 제약 조건으로 사용하거나 임의의 표준 함수로 사용합니다.  
@@ -57,7 +57,7 @@ USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-user-to-return-the-database-user-name"></a>1\. USER를 사용하여 데이터베이스 사용자 이름 반환  
+### <a name="a-using-user-to-return-the-database-user-name"></a>A. USER를 사용하여 데이터베이스 사용자 이름 반환  
  다음 예에서는 변수를 `char`로 선언하고 USER의 현재 값을 변수에 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
 ```  
@@ -76,7 +76,7 @@ The current user's database username is: dbo
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-user-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 USER 사용  
+### <a name="b-using-user-with-default-constraints"></a>B. DEFAULT 제약 조건으로 USER 사용  
  다음 예에서는 판매 행의 판매원에 대한 `USER` 제약 조건으로 `DEFAULT`를 사용하여 테이블을 만듭니다.  
   
 ```  

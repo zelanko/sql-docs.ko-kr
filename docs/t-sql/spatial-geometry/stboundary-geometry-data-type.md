@@ -18,10 +18,10 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930382"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary(geometry 데이터 형식)
@@ -41,12 +41,12 @@ ms.locfileid: "67930382"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `STBoundary()`은 **LineString**, **CircularString** 또는 **CompoundCurve** 인스턴스의 엔드포인트가 같을 때 빈 **GeometryCollection**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>1\. 엔드포인트가 다른 LineString 인스턴스에 STBoundary() 사용  
+### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. 엔드포인트가 다른 LineString 인스턴스에 STBoundary() 사용  
  다음 예에서는 `LineString``geometry` 인스턴스를 만듭니다. `STBoundary()`는 `LineString`의 경계를 반환합니다.  
   
 ```  
@@ -55,7 +55,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STBoundary().ToString();  
 ```  
   
-### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>2\. 엔드포인트가 같은 LineString 인스턴스에 STBoundary() 사용  
+### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>B. 엔드포인트가 같은 LineString 인스턴스에 STBoundary() 사용  
  다음 예에서는 엔드포인트가 같은 유효한 `LineString` 인스턴스를 만듭니다. `STBoundary()`는 빈 `GeometryCollection`을 반환합니다.  
   
 ```

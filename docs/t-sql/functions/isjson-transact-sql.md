@@ -18,10 +18,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109437"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68109437"
 
   문자열에 유효한 JSON이 포함되어 있는지 테스트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,12 +41,12 @@ ISJSON ( expression )
  *expression*  
  테스트할 문자열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  문자열에 유효한 JSON이 포함되어 있으면 1을 반환하고 그렇지 않으면 0을 반환합니다. *expression*이 null이면 null을 반환합니다.  
   
  오류를 반환하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **ISJSON**은 동일한 수준에서 키의 고유성을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예  

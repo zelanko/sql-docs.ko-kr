@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8efa6f503f552965e3885d92626e8b5da453e29b
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69494092"
 ---
 # <a name="broker-event-category"></a>Broker 이벤트 범주
@@ -29,7 +29,7 @@ ms.locfileid: "69494092"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Broker:Activation 이벤트 클래스](../../relational-databases/event-classes/broker-activation-event-class.md)|큐 모니터가 활성화 저장 프로시저를 시작하는 경우에 생성되는 이벤트입니다.|  
 |[Broker:Connection 이벤트 클래스](../../relational-databases/event-classes/broker-connection-event-class.md)|Service Broker에서 관리하는 전송 연결 상태를 보고하기 위해 생성되는 이벤트입니다.|  

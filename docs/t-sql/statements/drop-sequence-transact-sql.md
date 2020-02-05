@@ -19,10 +19,10 @@ ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077719"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68077719"
 
   현재 데이터베이스에서 시퀀스 개체를 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  삭제할 시퀀스의 이름입니다. 형식은 **sysname**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시퀀스 개체는 번호를 생성한 후 이 번호와 관계를 유지하지 않으므로 생성된 번호가 사용 중인 경우에도 삭제할 수 있습니다.  
   
  시퀀스 개체는 스키마 바운드가 아니므로 저장 프로시저 또는 트리거에서 참조하는 동안 삭제할 수 있습니다. 시퀀스 개체가 테이블에서 기본값으로 참조되는 경우에는 삭제할 수 없습니다. 오류 메시지에 시퀀스를 참조하는 개체가 표시됩니다.  
@@ -87,7 +87,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   

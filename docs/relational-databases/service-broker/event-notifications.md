@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048866"
 ---
 # <a name="event-notifications"></a>이벤트 알림
@@ -90,7 +90,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
   
 ## <a name="event-notification-tasks"></a>이벤트 알림 태스크  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |이벤트 알림을 만들고 구현하는 방법에 대해 설명합니다.|[이벤트 알림 구현](../../relational-databases/service-broker/implement-event-notifications.md)|  
 |원격 서버의 Service Broker로 메시지를 보내는 이벤트 알림에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성하는 방법에 대해 설명합니다.|[이벤트 알림에 대한 대화 보안 구성](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  

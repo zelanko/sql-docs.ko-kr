@@ -18,10 +18,10 @@ ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894705"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText(geometry 데이터 형식)
@@ -50,7 +50,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  OGC 형식: **MultiPolygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

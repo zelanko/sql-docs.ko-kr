@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548278"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -241,7 +241,7 @@ GO
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 절을 사용하여 행 집합 삭제  
- 다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
+ 다음 예에서는 `ProductCostHistory` 열의 값이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]을 초과하는 모든 행을 `StandardCost` 데이터베이스의 `1000.00`테이블에서 삭제합니다.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 커서를 사용하여 삭제할 행 확인  
- 다음 예에서는 `complex_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 다음 예에서는 `EmployeePayHistory`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `complex_cursor` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
- 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPerson` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
+ 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPersonQuotaHistory` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
- 다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
+ 다음 예에서는 `ProductProductPhoto` 문의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 절에 정의된 검색 조건에 따라 `FROM` 데이터베이스의 `DELETE` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```sql
 DECLARE @MyTableVar table (  
