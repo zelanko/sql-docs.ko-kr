@@ -13,10 +13,10 @@ ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126818"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 데이터베이스 속성
@@ -32,12 +32,12 @@ ms.locfileid: "68126818"
   
 -   고급 권한 사용자로 실행하도록 정의된 악의적인 모듈. 자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
- 이러한 경우 모두 특정 수준의 권한이 필요하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 이미 연결된 데이터베이스의 컨텍스트에 사용될 때 적합한 메커니즘에 의해 차단됩니다. 하지만 데이터베이스가 오프라인 상태인 경우 데이터베이스 파일에 액세스할 수 있는 사용자가 자신이 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 이를 연결하고 데이터베이스의 악의적인 내용을 추가할 가능성이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스가 분리 및 연결된 경우 데이터베이스 파일에 대한 액세스를 제한하는 데이터 및 로그 파일에 특정 사용 권한이 설정됩니다.  
+ 이러한 경우 모두 특정 수준의 권한이 필요하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 이미 연결된 데이터베이스의 컨텍스트에 사용될 때 적합한 메커니즘에 의해 차단됩니다. 하지만 데이터베이스가 오프라인 상태인 경우 데이터베이스 파일에 액세스할 수 있는 사용자가 자신이 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 이를 연결하고 데이터베이스의 악의적인 내용을 추가할 가능성이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스가 분리 및 연결된 경우 데이터베이스 파일에 대한 액세스를 제한하는 데이터 및 로그 파일에 특정 사용 권한이 설정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 데이터베이스는 즉시 트러스트될 수 없으므로 데이터베이스가 명시적으로 신뢰할 수 있는 것으로 표시되지 않는 한 데이터베이스가 해당 범위를 벗어나는 리소스에 액세스할 수 없습니다. 따라서 TRUSTWORTHY 옵션이 ON인 데이터베이스를 백업 또는 분리하고 동일한 또는 다른 SQL Server 인스턴스로 데이터베이스를 연결 또는 복원하는 경우 연결/복원 완료 시 TRUSTWORTHY 속성이 OFF로 설정됩니다. 또한 데이터베이스 외부의 리소스를 액세스하도록 디자인된 모듈과 EXTERNAL_ACCESS 또는 UNSAFE 권한이 설정된 어셈블리에는 성공적인 실행을 위한 추가 요구 사항이 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

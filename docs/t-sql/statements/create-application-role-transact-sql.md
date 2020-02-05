@@ -24,10 +24,10 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064590"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73064590"
 
   현재 데이터베이스에 애플리케이션 역할을 추가합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  서버가 이 역할에 대한 개체의 이름을 확인할 때 검색할 첫 번째 스키마를 지정합니다. DEFAULT_SCHEMA를 정의하지 않으면 애플리케이션 역할이 기본 스키마로 DBO를 사용합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  애플리케이션 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 애플리케이션 역할을 호출하는 애플리케이션은 해당 암호를 저장해야 합니다. 애플리케이션 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  

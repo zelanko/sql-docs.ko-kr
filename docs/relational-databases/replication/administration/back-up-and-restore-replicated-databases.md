@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0be4de8a2496bfc1c6f08c0207a64d486c9ed9c5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768817"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286862"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68768817"
   
 -   게시자, 배포자 및 모든 구독자의 **master** 및 **msdb** 시스템 데이터베이스. 이러한 데이터베이스는 각각 그리고 관련 복제 데이터베이스와 동시에 백업되어야 합니다. 예를 들어 게시 데이터베이스를 백업할 때 게시자의 **master** 및 **msdb** 데이터베이스를 동시에 백업합니다. 게시 데이터베이스를 복원한 경우 **master** 및 **msdb** 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스와 일치하는지 확인하십시오.  
   
- 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을(를) 참조하세요.  
+ 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
   
 ## <a name="backup-and-restore-strategies"></a>백업 및 복원 전략  
  복제 토폴로지의 각 노드를 백업하고 복원하는 전략은 사용하는 복제 유형에 따라 달라집니다. 각 복제 유형의 백업 및 복원 전략에 대한 자세한 내용은 다음 항목을 참조하십시오.  

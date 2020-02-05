@@ -18,10 +18,10 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950177"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText(geometry 데이터 형식)
@@ -48,8 +48,8 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- `STGeomFromText()`에 의해 반환되는 **geometry** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
+## <a name="remarks"></a>설명  
+ **에 의해 반환되는** geometry`STGeomFromText()` 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   

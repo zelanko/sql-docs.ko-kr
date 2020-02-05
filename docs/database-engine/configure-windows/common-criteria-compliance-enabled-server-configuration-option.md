@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262220"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled 구성
@@ -29,7 +29,7 @@ ms.locfileid: "68262220"
 
 common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대한 Common Criteria](https://www.commoncriteriaportal.org/)에 필요한 다음 요소를 사용할 수 있게 합니다.  
   
-|조건|설명|  
+|조건|Description|  
 |--------------|-----------------|  
 |RIP(잔여 정보 보호)|RIP를 사용하는 경우 메모리를 새 리소스에 다시 할당하기 전에 알려진 비트 패턴을 사용하여 메모리 할당을 덮어써야 합니다. RIP 표준이 충족되면 보안이 향상될 수 있지만 메모리 할당을 덮어쓰는 동안 성능이 저하될 수 있습니다. common criteria compliance enabled 옵션을 설정하면 덮어쓰기가 수행됩니다.|  
 |로그인 통계를 확인할 수 있는 기능|common criteria compliance enabled 옵션을 설정하면 로그인 감사를 사용할 수 있습니다. 사용자가 성공적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인할 때마다 마지막으로 성공한 로그인 시간, 마지막으로 실패한 로그인 시간 및 마지막으로 성공한 로그인 시간과 현재 로그인 시간 사이의 시도 횟수에 대한 정보를 사용할 수 있습니다. 이러한 로그인 통계는 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 동적 관리 뷰를 쿼리하여 볼 수 있습니다.|  
@@ -42,7 +42,7 @@ common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대
   
  `sp_configure` 시스템 저장 프로시저를 사용하여 설정을 변경하는 경우 show advanced options가 1로 설정되었을 때만 common criteria compliance enabled를 변경할 수 있습니다. 이 설정은 서버를 다시 시작한 후에 적용됩니다. 가능한 값은 0과 1입니다.  
   
--   0은 Common Criteria 준수를 설정하지 않음을 나타냅니다. 기본값입니다.  
+-   0은 Common Criteria 준수를 설정하지 않음을 나타냅니다. 이것이 기본값입니다.  
   
 -   1은 Common Criteria 준수를 설정함을 나타냅니다.  
   

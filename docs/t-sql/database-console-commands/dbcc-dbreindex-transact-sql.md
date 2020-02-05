@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101994"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68101994"
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC DBREINDEX는 테이블의 특정 인덱스나 테이블에 정의된 모든 인덱스를 다시 작성합니다. DBCC DBREINDEX는 인덱스를 동적으로 다시 작성할 수 있도록 하므로 PRIMARY KEY나 UNIQUE 제약 조건을 보장하는 인덱스를 다시 작성할 때 기존 제약 조건을 삭제하고 다시 만들 필요가 없습니다. 이는 테이블의 구조나 해당 제약 조건에 대한 정보가 없이도 인덱스를 다시 작성할 수 있음을 의미합니다. 이 과정은 테이블로 데이터를 대량 복사한 후 발생할 수 있습니다.
 
 DBCC DBREINDEX를 사용하면 하나의 문으로 한 테이블에 대한 모든 인덱스를 다시 작성할 수 있으며 이는 DROP INDEX 및 CREATE INDEX 문을 여러 번 코딩하는 것보다 쉽습니다. 각 DROP INDEX와 CREATE INDEX 문이 원자성을 가지려면 트랜잭션을 사용해야 하는 반면 DBCC DBREINDEX는 하나의 문에서 작업이 수행되므로 자동으로 원자성을 갖습니다. 또한 DBCC DBREINDEX는 개별 DROP INDEX 및 CREATE INDEX 문보다 더 많은 최적화를 제공합니다.
@@ -75,7 +75,7 @@ DBCC INDEXDEFRAG 또는 REORGANIZE 옵션을 가진 ALTER INDEX와는 달리 DBC
 
 인덱스를 다시 작성하거나 다시 구성하는 방법을 선택하는 데 대한 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하십시오.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
 DBCC DBREINDEX는 다음 개체에 대해 사용할 수 없습니다.
 -   시스템 테이블  
 -   공간 인덱스  
@@ -92,7 +92,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 호출자는 테이블을 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-rebuilding-an-index"></a>1\. 인덱스 다시 작성  
+### <a name="a-rebuilding-an-index"></a>A. 인덱스 다시 작성  
 다음 예에서는 `Employee_EmployeeID` 데이터베이스의 `80` 테이블에 채우기 비율 `Employee`의 `AdventureWorks` 클러스터형 인덱스를 다시 작성하는 방법을 보여 줍니다.
   
 ```sql  
@@ -102,7 +102,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>2\. 모든 인덱스 다시 작성  
+### <a name="b-rebuilding-all-indexes"></a>B. 모든 인덱스 다시 작성  
 다음 예에서는 채우기 비율 값 `Employee`을 사용하여 `AdventureWorks`의 `70` 테이블에서 모든 인덱스를 다시 작성하는 방법을 보여 줍니다.
   
 ```sql

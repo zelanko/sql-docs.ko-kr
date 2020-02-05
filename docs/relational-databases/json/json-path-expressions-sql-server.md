@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095738"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 경로 식(SQL Server)
@@ -31,14 +31,14 @@ ms.locfileid: "74095738"
   
 -   JSON 텍스트에서 값을 추출하기 위해 **JSON_VALUE** 를 호출하는 경우. 자세한 내용은 [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)을 참조하세요.  
   
--   JSON 개체 또는 배열을 추출하기 위해 **JSON_QUERY** 를 호출하는 경우. 자세한 내용은 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)을 참조하세요.  
+-   JSON 개체 또는 배열을 추출하기 위해 **JSON_QUERY** 를 호출하는 경우. 자세한 내용은 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요.  
   
 -   JSON 문자열에서 속성의 값을 업데이트하기 위해 **JSON_MODIFY**를 호출하는 경우. 자세한 내용은 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  
 
 ## <a name="parts-of-a-path-expression"></a>경로 식의 요소
  경로 식에는 두 가지 구성 요소가 있습니다.  
   
-1.  값이 **lax** 또는 **strict**인 선택적 [Path 모드](#PATHMODE)  
+1.  값이 [lax](#PATHMODE) 또는 **strict**인 선택적 **Path 모드**  
   
 2.  [PATH](#PATH) 자체.  
 
@@ -65,7 +65,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   속성 경로는 경로 단계의 집합입니다. 경로 단계는 다음 요소와 연산자를 포함할 수 있습니다.  
   
-    -   키 이름. 예를 들면 `$.name` 및 `$."first name"`입니다. 키 이름이 달러 기호로 시작되거나 공백과 같은 특수 기호를 포함하는 경우, 따옴표로 묶습니다.   
+    -   키 이름. 예를 들어 `$.name` 또는 `$."first name"`입니다. 키 이름이 달러 기호로 시작되거나 공백과 같은 특수 기호를 포함하는 경우, 따옴표로 묶습니다.   
   
     -   배열 요소 `$.product[3]`)을 입력합니다. 배열은 0부터 시작됩니다.  
   

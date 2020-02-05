@@ -11,10 +11,10 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012333"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>원격 데이터 보관 서버 구성 옵션 구성
@@ -24,7 +24,7 @@ ms.locfileid: "68012333"
   
  **remote data archive** 옵션에는 다음과 같은 값이 올 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 없습니다.|  
 |1|서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 있습니다.|  

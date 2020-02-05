@@ -24,10 +24,10 @@ ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211352"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "70211352"
 
   대화를 다른 대화 그룹으로 이동합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  대화가 이동될 대화 그룹의 식별자를 포함하는 변수 또는 상수입니다. *conversation_group_id*는 **uniqueidentifier** 형식이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  MOVE CONVERSATION 문은 *conversation_handle*로 지정된 대화를 *conversation_group_id*로 식별된 대화 그룹으로 이동합니다. 같은 큐와 연관된 대화 그룹 간에만 대화를 재지정할 수 있습니다.  
   
 > [!IMPORTANT]  
->  MOVE CONVERSATION 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
+>  MOVE CONVERSATION 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은  **문 종결자인 세미콜론(** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])으로 종결되어야 합니다.  
   
  MOVE CONVERSATION 문은 명령문을 포함하는 트랜잭션이 커밋되거나 롤백될 때까지 *conversation_handle*과 연결된 대화 그룹 및 *conversation_group_id*에 의해 지정된 대화 그룹을 잠급니다.  
   

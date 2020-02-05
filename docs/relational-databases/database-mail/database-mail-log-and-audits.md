@@ -17,10 +17,10 @@ ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4fa7f81d2ca96b8a54e36240bdee60508c1490bc
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228474"
 ---
 # <a name="database-mail-log-and-audits"></a>데이터베이스 메일 로그 및 감사
@@ -37,7 +37,7 @@ ms.locfileid: "70228474"
 |||  
 |-|-|  
 |**데이터베이스 메일 로그 검토 및 관리**|**항목 링크**|  
-|개별 메시지의 배달 상태 확인|[데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
+|개별 메시지의 배달 상태 확인|[데이터베이스 메일을 통해 보낸 메일 메시지의 상태 확인](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |데이터베이스 메일 메시지, 첨부 파일 및 로그 항목 정리|[sysmail_delete_mailitems_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |데이터베이스 전자 메일 메시지 및 로그 보관|[데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   

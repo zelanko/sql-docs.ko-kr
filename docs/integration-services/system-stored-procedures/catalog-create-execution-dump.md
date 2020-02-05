@@ -11,10 +11,10 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295511"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
@@ -50,7 +50,7 @@ EXEC create_execution_dump @execution_id = 88
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저 사용자는 **ssis_admin** 데이터베이스 역할의 멤버여야 합니다.  

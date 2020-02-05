@@ -41,10 +41,10 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020118"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
@@ -75,7 +75,7 @@ ms.locfileid: "68020118"
   
 -   [필터 생성](../../relational-databases/replication/generate-filters.md)  
   
--   [스냅샷 에이전트&amp;#40;새 게시 마법사&amp;#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
+-   [스냅샷 에이전트&#40;새 게시 마법사&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

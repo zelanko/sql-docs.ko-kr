@@ -13,13 +13,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116488"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스의 모든 테이블 또는 특정 테이블에 대해 행 수, 예약된 디스크 공간, 사용한 디스크 공간을 표시합니다.
@@ -48,28 +48,28 @@ VIEW SERVER STATE 권한이 필요합니다.
 ## <a name="result-sets"></a>결과 집합  
 다음은 모든 테이블에 관한 결과 집합입니다.
   
-|Column|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|데이터베이스에 사용된 총 공간(KB)입니다.|  
-|data_space|BIGINT|데이터에 사용된 공간(KB)입니다.|  
-|index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.|  
-|unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
+|reserved_space|bigint|데이터베이스에 사용된 총 공간(KB)입니다.|  
+|data_space|bigint|데이터에 사용된 공간(KB)입니다.|  
+|index_space|bigint|인덱스에 사용된 공간(KB)입니다.|  
+|unused_space|bigint|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
 |pdw_node_id|int|데이터에 대해 사용되는 컴퓨팅 노드입니다.|  
   
 한 테이블에 관한 결과 집합입니다.
   
-|Column|데이터 형식|설명|범위|  
+|열|데이터 형식|Description|범위|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|행 수입니다.||  
-|reserved_space|BIGINT|개체에 예약된 총 공간(KB)입니다.||  
-|data_space|BIGINT|데이터에 사용된 공간(KB)입니다.||  
-|index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.||  
-|unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.||  
+|rows|bigint|행 수입니다.||  
+|reserved_space|bigint|개체에 예약된 총 공간(KB)입니다.||  
+|data_space|bigint|데이터에 사용된 공간(KB)입니다.||  
+|index_space|bigint|인덱스에 사용된 공간(KB)입니다.||  
+|unused_space|bigint|예약된 공간이면서 사용되지 않은 공간(KB)입니다.||  
 |pdw_node_id|int|공간 사용량 보고에 사용되는 컴퓨팅 노드입니다.||  
 |distribution_id|int|공간 사용량 보고에 사용되는 배포입니다.|복제된 테이블의 경우 값이 -1입니다.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>1\. DBCC PDW_SHOWSPACEUSED 기본 구문  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 기본 구문  
 다음 예제에서는 행 수, 예약된 디스크 공간, [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 FactInternetSales 테이블에서 사용하는 디스크 공간을 표시합니다.
   
 ```sql
@@ -81,7 +81,7 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>2\. 현재 데이터베이스의 모든 테이블에 사용된 디스크 공간 표시  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 현재 데이터베이스의 모든 테이블에 사용된 디스크 공간 표시  
  다음 예제에서는 예약된 디스크 공간과, [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 모든 사용자 테이블 및 시스템 테이블에서 사용된 디스크 공간을 표시합니다.  
   
 ```sql
@@ -89,7 +89,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>관련 항목:
+ ## <a name="see-also"></a>참고 항목
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 

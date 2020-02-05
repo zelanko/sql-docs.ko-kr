@@ -11,10 +11,10 @@ ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846817"
 ---
 # <a name="save-trace-results-to-a-file"></a>파일에 추적 결과 저장
@@ -35,7 +35,7 @@ ms.locfileid: "70846817"
   
 -   쿼리 최적화 수행  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **sp_trace_create** 저장 프로시저의 **\@tracefile** 인수에 경로 및 파일 이름이 지정되면 추적 결과를 이 파일에 저장합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **sp_trace_create\@ 저장 프로시저의** **tracefile** 인수에 경로 및 파일 이름이 지정되면 추적 결과를 이 파일에 저장합니다.  
   
 > [!NOTE]  
 >  추적 파일을 저장하기 위한 경로가 **sp_trace_create** 저장 프로시저에 지정되는 경우 서버에서 해당 디렉터리에 액세스할 수 있어야 합니다. 또한 로컬 디렉터리가 **sp_trace_create**에 지정되는 경우 이는 서버 컴퓨터의 로컬 디렉터리라는 점을 유의하세요.  

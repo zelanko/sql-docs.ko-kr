@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928954"
 ---
-# <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
+# <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   연결에 대해 BEGIN TRANSACTION 모드를 암시적(*implicit*)으로 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67928954"
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ON이면 시스템이 암시적(*implicit*) 트랜잭션 모드입니다. 즉, @@TRANCOUNT = 0이면 다음 Transact-SQL 문 중 하나가 새 트랜잭션을 시작합니다. 보이지 않는 BEGIN TRANSACTION이 먼저 실행되는 것과 같습니다.  
   
 ||||  

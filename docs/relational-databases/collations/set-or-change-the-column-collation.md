@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74908715"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
@@ -122,7 +122,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- **tempdb**는 기본 서버 데이터 정렬을 사용하고 `TestPermTab.Col1`은 다른 데이터 정렬을 사용하므로 SQL Server는 “같음 작업에서 ‘Latin1_General_CI_AS_KS_WS’과(와) ‘Estonian_CS_AS’ 간의 데이터 정렬 충돌을 해결할 수 없습니다.”라는 오류를 반환합니다.  
+ **tempdb** 는 기본 서버 데이터 정렬을 사용하고 `TestPermTab.Col1` 은 다른 데이터 정렬을 사용하므로 SQL Server는 "같음 작업에서 'Latin1_General_CI_AS_KS_WS'과(와) 'Estonian_CS_AS' 간의 데이터 정렬 충돌을 해결할 수 없습니다"라는 오류를 반환합니다.  
   
  이 오류를 방지하는 데 사용할 수 있는 방법은 다음과 같습니다.  
   

@@ -18,10 +18,10 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077995"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
@@ -46,14 +46,14 @@ SqlInt16 GetLevel ( )
   
 **CLR 반환 형식: SqlInt16**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 하나 이상의 노드 수준을 확인하거나 지정된 수준의 멤버로 노드를 필터링하는 데 사용됩니다. 계층의 루트는 수준 0입니다.
   
 GetLevel은 너비 우선 검색 인덱스에 유용합니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-hierarchy-level-as-a-column"></a>1\. 계층 수준을 열로 반환  
+### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 계층 수준을 열로 반환  
 다음 예에서는 **hierarchyid**의 텍스트 표현을 반환한 다음, 테이블의 모든 행에 대해 **EmpLevel** 열로 계층 수준을 반환합니다.
   
 ```sql
@@ -62,7 +62,7 @@ OrgNode.GetLevel() AS EmpLevel, *
 FROM HumanResources.EmployeeDemo;  
 ```  
   
-### <a name="b-returning-all-members-of-a-hierarchy-level"></a>2\. 계층 수준의 모든 멤버 반환  
+### <a name="b-returning-all-members-of-a-hierarchy-level"></a>B. 계층 수준의 모든 멤버 반환  
 다음 예에서는 계층 수준 2에 있는 테이블의 모든 행을 반환합니다.
   
 ```sql
@@ -89,7 +89,7 @@ WHERE OrgNode.GetLevel() = 0;
 this.GetLevel()  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

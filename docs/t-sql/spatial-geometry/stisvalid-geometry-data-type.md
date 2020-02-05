@@ -18,10 +18,10 @@ ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030868"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid(geometry 데이터 형식)
@@ -41,7 +41,7 @@ ms.locfileid: "68030868"
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **geometry** 인스턴스의 OGC 형식은 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)을 호출하여 확인할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 올바른 **geometry** 인스턴스만 생성하지만 잘못된 인스턴스도 스토리지하고 검색할 수 있도록 합니다. 잘못된 인스턴스의 동일한 점 집합을 나타내는 올바른 인스턴스는 `MakeValid()` 메서드를 사용하여 검색할 수 있습니다.  

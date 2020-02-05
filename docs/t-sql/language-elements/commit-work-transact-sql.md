@@ -23,10 +23,10 @@ ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140249"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68140249"
 
   트랜잭션의 끝을 표시합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  COMMIT TRANSACTION이 사용자 정의 트랜잭션 이름을 허용하는 것을 제외하면 이 문은 COMMIT TRANSACTION과 동일한 기능을 수행합니다. COMMIT 구문은 선택적인 키워드인 WORK의 지정 여부와 관계 없이 SQL-92와 호환이 가능합니다.  
   
 ## <a name="see-also"></a>참고 항목  

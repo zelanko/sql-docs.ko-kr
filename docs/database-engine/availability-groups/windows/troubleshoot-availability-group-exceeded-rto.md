@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013755"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>문제 해결: 가용성 그룹 초과 RTO
@@ -42,7 +42,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- 다시 실행 스레드가 차단 해제된 보고 워크로드를 완료하도록 하거나 차단 세션 ID에 대해 [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) 명령을 실행하여 다시 실행 스레드를 즉시 차단 해제할 수 있습니다.  
+ 다시 실행 스레드가 차단 해제된 보고 워크로드를 완료하도록 하거나 차단 세션 ID에 대해 [KILL&#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) 명령을 실행하여 다시 실행 스레드를 즉시 차단 해제할 수 있습니다.  
   
 ##  <a name="BKMK_CONTENTION"></a> 리소스 경합으로 인한 다시 실행 스레드 뒤처짐  
  보조 복제본에 대한 큰 보고 워크로드 때문에 보조 복제본의 성능이 느려졌고 다시 실행 스레드가 뒤처졌습니다.  

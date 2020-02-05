@@ -14,10 +14,10 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943254"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
@@ -72,7 +72,7 @@ FOR XML AUTO, TYPE;
 ...  
 ```  
   
- XQuery에 의해 생성된 XML 열에 대한 열 별칭을 지정하면 XQuery에 의해 생성되는 XML에 래퍼 요소를 추가하는 데 해당 별칭이 사용됩니다. 예를 들어 다음 쿼리는 `MorePhoneNumbers`를 열 별칭으로 지정합니다.  
+ XQuery에 의해 생성된 XML 열에 대한 열 별칭을 지정하면 XQuery에 의해 생성되는 XML에 래퍼 요소를 추가하는 데 해당 별칭이 사용됩니다. 예를 들어 다음 쿼리는 `MorePhoneNumbers` 를 열 별칭으로 지정합니다.  
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  

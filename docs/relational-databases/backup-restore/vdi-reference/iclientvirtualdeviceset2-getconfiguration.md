@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5d7d42d081b0494feeb5c2b221575e0d5df1143a
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847454"
 ---
 # <a name="iclientvirtualdeviceset2getconfiguration-vdi"></a>IClientVirtualDeviceSet2::GetConfiguration (VDI)
@@ -37,15 +37,15 @@ HRESULT IClientVirtualDeviceSet2::GetConfiguration (
 
 *pCfg* 성공적으로 실행되면 서버에서 선택한 구성이 포함됩니다. 자세한 내용은 구성을 참조하세요.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 구성이 반환되었습니다. |
 | VD_E_ABORT | SignalAbort가 호출되었습니다. |
 | VD_E_TIMEOUT | 함수 시간이 초과되었습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 이 함수는 경고 가능 상태에서 차단됩니다. 성공적으로 호출된 후에는 가상 디바이스 세트의 디바이스가 열릴 수 있습니다.
 

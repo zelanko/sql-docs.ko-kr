@@ -22,10 +22,10 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edae052096c67e294f12a8f0f35e77b7f5a46187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294888"
 ---
 # <a name="selecting-input-columns-programmatically"></a>프로그래밍 방식으로 입력 열 선택
@@ -40,7 +40,7 @@ ms.locfileid: "71294888"
   
  가상 입력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSVirtualInput100.SetUsageType%2A> 메서드를 직접 호출하면 적절하지 않은 데이터 형식 및 다른 속성을 기반으로 하는 열을 거부하는 구성 요소 기능을 사용할 수 없으므로 이 메서드를 직접 호출하여 열을 선택하면 안 됩니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 코드 예제에서는 구성 요소의 디자인 타임 인스턴스를 사용하여 구성 요소의 열을 선택하는 방법을 보여 줍니다.  
   
 ```csharp  

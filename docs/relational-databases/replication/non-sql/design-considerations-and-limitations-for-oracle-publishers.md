@@ -14,10 +14,10 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321912"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
@@ -105,7 +105,7 @@ ms.locfileid: "75321912"
   
  또한 다음 문제를 고려해야 합니다.  
   
--   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 NULL을 다르게 처리합니다. Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
+-   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 NULL을 다르게 처리합니다.Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유성을 테스트할 때 필드의 후행 공백을 무시하지만 Oracle에서는 무시하지 않습니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75321912"
   
 -   표준 트랜잭션 게시는 최대 1000개의 열로 구성된 테이블을 지원합니다. Oracle 트랜잭션 게시는 995개의 열을 지원하고 복제 시 게시된 각 테이블에 5개의 열이 추가됩니다.  
   
--   COLLATE 절은 기본 키와 UNIQUE 제약 조건에 중요한 대/소문자 비교를 사용할 수 있도록 CREATE TABLE 문에 추가됩니다. 이 동작은 [sp_addarticle&#40;Transact-SQL&#41](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)의 `@schema_option` 매개 변수로 지정하는 스키마 옵션 0x1000으로 제어됩니다.  
+-   COLLATE 절은 기본 키와 UNIQUE 제약 조건에 중요한 대/소문자 비교를 사용할 수 있도록 CREATE TABLE 문에 추가됩니다. 이 동작은 `@schema_option`sp_addarticle&#40;Transact-SQL&#41[의 ](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 매개 변수로 지정하는 스키마 옵션 0x1000으로 제어됩니다.  
   
 -   저장 프로시저를 사용하여 Oracle 게시자를 구성하거나 유지 관리하는 경우 프로시저를 명시적 트랜잭션 내에 두지 마십시오. 이 기능은 Oracle 게시자에 연결하는 데 사용된 연결된 서버에서는 지원되지 않습니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "75321912"
   
 -   배포자에서 게시자로 스냅샷 에이전트와 로그 판독기 에이전트를 연결하는 계정은 다음 중 한 가지 방법으로 지정됩니다.  
   
-    -   [sp_adddistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)의 `@security_mode` 매개 변수(Oracle 인증을 사용하는 경우 `@login` 및 `@password`의 값도 지정)  
+    -   `@security_mode`sp_adddistpublisher&#40;Transact-SQL&#41;[의 ](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 매개 변수(Oracle 인증을 사용하는 경우 `@login` 및 `@password`의 값도 지정)  
   
     -   **배포자에서 Oracle 게시자를 구성할 때 사용하는 SQL Server Management Studio의** 서버에 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대화 상자에서 지정합니다.  
   
@@ -159,11 +159,11 @@ ms.locfileid: "75321912"
   
 -   스냅샷 에이전트와 로그 판독기 에이전트가 연결되는 계정은 [sp_changedistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 또는 속성 시트를 통해 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
--   [sp_adddistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)의 `@security_mode` 매개 변수에 1(Windows 통합 인증) 값을 지정하는 경우  
+-   `@security_mode`sp_adddistpublisher&#40;Transact-SQL&#41;[의 ](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 매개 변수에 1(Windows 통합 인증) 값을 지정하는 경우  
   
-    -   스냅샷 에이전트와 로그 판독기 에이전트에 사용되는 프로세스 계정 및 암호([sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 및 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)의 `@job_login` 및 `@job_password` 매개 변수)는 Oracle 게시자에 연결하는 데 사용되는 계정 및 암호와 같아야 합니다.  
+    -   스냅샷 에이전트와 로그 판독기 에이전트에 사용되는 프로세스 계정 및 암호(`@job_login`sp_addpublication_snapshot&#40;Transact-SQL&#41;`@job_password` 및 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)의 [ 및 ](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 매개 변수)는 Oracle 게시자에 연결하는 데 사용되는 계정 및 암호와 같아야 합니다.  
   
-    -   [sp_changepublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 또는 [sp_changelogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)를 통해 `@job_login` 매개 변수를 변경할 수는 없지만 암호는 변경할 수 있습니다.  
+    -   `@job_login`sp_changepublication_snapshot&#40;Transact-SQL&#41;[ 또는 ](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)sp_changelogreader_agent&#40;Transact-SQL&#41;[를 통해 ](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 매개 변수를 변경할 수는 없지만 암호는 변경할 수 있습니다.  
   
  복제 보안에 대한 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   

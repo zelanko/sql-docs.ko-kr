@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095651"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
@@ -82,13 +82,13 @@ ms.locfileid: "74095651"
 >    -  증가가 64MB에서 최대 1GB인 경우 증가 크기에 충분한 8개의 VLF를 만듭니다(예: 512MB 증가의 경우 64MB VLF 8개 생성).
 >    -  증가가 1GB보다 큰 경우 증가 크기에 충분한 16개의 VLF를 만듭니다(예: 8GB 증가의 경우 512MB VLF 16개 생성).
 
-수많은 작은 증가값에서 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. **이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다.** 반대로 로그 파일이 적거나 하나의 증분인 큰 크기로 설정된 경우 적은 수의 매우 큰 가상 로그 파일이 포함됩니다. 트랜잭션 로그의 **필수 크기** 및 **자동 증가** 설정을 올바르게 예측하는 방법에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) 중 *권장 사항* 섹션을 참조하세요.
+수많은 작은 증가값에서 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. **이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다.** 반대로 로그 파일이 적거나 하나의 증분인 큰 크기로 설정된 경우 적은 수의 매우 큰 가상 로그 파일이 포함됩니다. 트랜잭션 로그의 **필수 크기** 및 **자동 증가** 설정을 올바르게 예측하는 방법에 대한 자세한 내용은 *트랜잭션 로그 파일의 크기 관리* 중 [권장 사항](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) 섹션을 참조하세요.
 
 최적의 VLF 배포를 수행하기 위한 필수 증분을 사용하여 필요한 최종 크기에 가까운 *크기* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 현재 트랜잭션 로그 크기에 대해 최적의 VLF 분포를 결정하려면 아래 팁을 참조하세요. 
- - `ALTER DATABASE`의 `SIZE` 인수로 설정된 *크기* 값은 로그 파일의 초기 크기입니다.
- - *growth_increment* 값(자동 증가 값이라고도 함)은 `ALTER DATABASE`의 `FILEGROWTH` 인수로 설정된 대로 새로운 공간이 필요할 때마다 파일에 추가되는 공간입니다. 
+ - *의*  인수로 설정된 `SIZE`크기`ALTER DATABASE` 값은 로그 파일의 초기 크기입니다.
+ - *growth_increment* 값(자동 증가 값이라고도 함)은 `FILEGROWTH`의 `ALTER DATABASE` 인수로 설정된 대로 새로운 공간이 필요할 때마다 파일에 추가되는 공간입니다. 
  
-`ALTER DATABASE`의 `FILEGROWTH` 및 `SIZE` 인수에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
+`FILEGROWTH`의 `SIZE` 및 `ALTER DATABASE` 인수에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
 > [!TIP]
 > 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
@@ -243,7 +243,7 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 ### <a name="replication-transactions"></a>복제 트랜잭션
 로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 활성 로그에는 복제용으로 표시되었지만 아직 배포 데이터베이스로 전달되지 않은 모든 트랜잭션이 포함되어야 합니다. 이러한 트랜잭션이 제때에 복제되지 않으면 로그 잘라내기가 수행되지 않을 수 있습니다. 자세한 내용은 [트랜잭션 복제](../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목: 
+## <a name="see-also"></a>참고 항목 
 트랜잭션 로그 및 로그 관리 모범 사례에 대한 자세한 내용은 다음 문서 및 서적을 참조하세요.  
   
 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
@@ -252,7 +252,7 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [recovery interval 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [가속 데이터베이스 복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
+[sys.dm_db_log_info&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Paul Randall, “SQL Server의 로깅 및 복구 이해”](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
 [Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  

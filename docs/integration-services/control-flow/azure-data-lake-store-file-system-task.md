@@ -13,10 +13,10 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947345"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
@@ -35,7 +35,7 @@ Azure Data Lake Store 파일 시스템 태스크는 [Azure용 SSIS(SQL Server In
 
 **작업** 속성은 수행할 파일 시스템 작업을 지정합니다. 다음 작업 중 하나를 선택합니다.
 
-- **CopyToADLS:** 파일을 ADLS에 업로드합니다.
+- **CopyToADLS:** ADLS에 파일을 업로드합니다.
 - **CopyFromADLS:** ADLS에서 파일을 다운로드합니다.
 
 ## <a name="configure-the-properties-for-the-operation"></a>작업에 대한 속성 구성

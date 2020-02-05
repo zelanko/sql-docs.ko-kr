@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298472"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 연결 관리자
@@ -72,7 +72,7 @@ ms.locfileid: "71298472"
   
     -   SAP BW 연결 관리자를 두 번 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298472"
  **언어**  
  시스템에서 사용하는 언어를 지정합니다. 예를 들어, 영어의 경우 **EN** 을 지정합니다.  
   
- **User name**  
+ **사용자 이름**  
  시스템에 연결하는 데 사용할 사용자 이름을 지정합니다.  
   
  **암호**  

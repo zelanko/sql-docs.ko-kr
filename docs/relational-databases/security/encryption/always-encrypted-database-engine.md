@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254829"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  상시 암호화는 신용 카드 번호나 주민 등록 번호(예: 미국 사회 보장 번호)와 같이 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 기능입니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 표시하지 않을 수 있습니다. 따라서 Always Encrypted는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다. 온-프레미스 데이터베이스 관리자, 클라우드 데이터베이스 관리자 또는 기타 높은 권한을 가지고 있지만 인증되지 않은 사용자가 암호화된 데이터에 액세스할 수 없도록 함으로써 Always Encrypted는 고객이 직접 제어할 수 없는 중요한 데이터를 안전하게 저장하도록 해줍니다. 이를 통해 조직에서는 데이터를 Azure에 저장하기 위해 암호화하고 온-프레미스 데이터베이스 관리를 타사에 위임할 수 있도록 하거나, 자체 DBA 직원에 대한 보안 정보 사용 허가 요구 사항을 줄일 수 있습니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "75254829"
 
  상시 암호화는 암호화를 애플리케이션에 투명하게 만듭니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독합니다. 드라이버는 데이터를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 암호화된 데이터베이스 열에 저장되고 쿼리 결과에 포함된 데이터를 투명하게 암호 해독합니다.  
   
- Always Encrypted은 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]부터 모든 버전의 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], 그리고 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 모든 서비스 계층에서 사용할 수 있습니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 이전에는 Always Encrypted가 Enterprise Edition으로 제한되었습니다. 상시 암호화를 포함하는 Channel 9 프레젠테이션은 [상시 암호화를 사용하여 중요한 데이터의 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요.  
+ Always Encrypted은 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]부터 모든 버전의 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], 그리고 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 모든 서비스 계층에서 사용할 수 있습니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 이전에는 Always Encrypted가 Enterprise Edition으로 제한되었습니다. 상시 암호화를 포함하는 Channel 9 프레젠테이션은 [상시 암호화를 사용하여 중요한 데이터의 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요.  
 
   
 ## <a name="typical-scenarios"></a>일반적인 시나리오  
@@ -115,7 +115,7 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 |선택한 데이터베이스 열에 있는 기존 데이터 암호화|yes|yes|예|
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에 도입된 [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 Trasact-SQL을 사용하여 기존 데이터를 암호화하는 것을 지원합니다. 또한 암호화 작업을 위해 데이터를 데이터 외부로 이동하지 않아도 됩니다.
+> [에 도입된 ](always-encrypted-enclaves.md)보안 enclave를 사용한 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]는 Trasact-SQL을 사용하여 기존 데이터를 암호화하는 것을 지원합니다. 또한 암호화 작업을 위해 데이터를 데이터 외부로 이동하지 않아도 됩니다.
 
 > [!NOTE]
 > 데이터베이스를 호스트하는 컴퓨터와 다른 컴퓨터의 보안 환경에서 키 프로비저닝 또는 데이터 암호화 도구를 실행해야 합니다. 그러지 않으면 중요한 데이터나 키가 서버 환경에 누출되어 상시 암호화 사용의 이점이 줄어듭니다.  
@@ -148,7 +148,7 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
   
 -   임의 암호화를 사용하여 암호화된 열에 대한 쿼리는 이러한 열에서 작업을 수행할 수 없습니다. 임의 암호화를 사용하여 암호화된 열을 인덱싱하는 기능은 지원되지 않습니다.  
  > [!NOTE] 
- > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에 도입된 [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 임의 암호화를 사용하여 열에 대한 패턴 일치, 비교 연산자 및 인덱싱을 활성화하여 위의 제한 사항을 해결합니다.
+ > [에 도입된 ](always-encrypted-enclaves.md)보안 enclave를 사용한 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]는 임의 암호화를 사용하여 열에 대한 패턴 일치, 비교 연산자 및 인덱싱을 활성화하여 위의 제한 사항을 해결합니다.
 
 -   열 암호화 키는 각각 서로 다른 열 마스터 키로 암호화된 최대 2개의 암호화된 값을 가질 수 있습니다. 따라서 열 마스터 키 순환이 용이합니다.  
   
@@ -156,7 +156,7 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 
 -   암호화된 개체의 정의를 변경한 후 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)을 실행하여 개체에 대한 상시 암호화 메타데이터를 업데이트합니다.
   
-다음 특성이 있는 열에 대해서는 Always Encrypted가 지원되지 않습니다. 예를 들어 다음 조건 중 하나가 열에 적용되는 경우 열에 대한 `CREATE TABLE/ALTER TABLE`에서 `ENCRYPTED WITH` 절을 사용할 수 없습니다.  
+다음 특성이 있는 열에 대해서는 Always Encrypted가 지원되지 않습니다. 예를 들어 다음 조건 중 하나가 열에 적용되는 경우 열에 대한 `ENCRYPTED WITH`에서 `CREATE TABLE/ALTER TABLE` 절을 사용할 수 없습니다.  
   
 -   다음과 같은 데이터 형식 중 하나를 사용하는 열: `xml`, `timestamp`/`rowversion`, `image`, `ntext`, `text`, `sql_variant`, `hierarchyid`, `geography`, `geometry`, 별칭, 사용자 정의 형식.  
 - `FILESTREAM` 열  

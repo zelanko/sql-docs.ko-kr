@@ -12,13 +12,13 @@ ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fc5fb10b9c00d5b309c787c0a7e127e47a3be9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138579"
 ---
-# <a name="mssqlserver2511"></a>MSSQLSERVER_2511
+# <a name="mssqlserver_2511"></a>MSSQLSERVER_2511
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "68138579"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC_KEYS_OUT_OF_ORDER|  
-|메시지 텍스트|테이블 오류: 개체 ID %d, 인덱스 ID %d, 파티션 ID %I64d, 할당 단위 ID %I64d(%.*ls 유형). 페이지 %S_PGID, 슬롯 %d 및 %d의 키가 잘못되었습니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID %d, 인덱스 ID %d, 파티션 ID %I64d, 할당 단위 ID %I64d(유형 %.*ls). 페이지 %S_PGID, 슬롯 %d 및 %d의 키가 잘못되었습니다.|  
   
 ## <a name="explanation"></a>설명  
 지정된 인덱스에서 잘못된 키가 검색되었습니다. 키가 포함되어 있는 페이지가 손상되었을 수 있습니다.  

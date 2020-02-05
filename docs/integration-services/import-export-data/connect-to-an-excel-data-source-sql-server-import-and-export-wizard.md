@@ -10,10 +10,10 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82e21333bdd0f4be27f19ee19f43fd5f0abab309
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285572"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -38,7 +38,7 @@ Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야
 > 이 데이터 공급자에 대한 연결 옵션은 Excel이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 **Excel 파일 경로**  
- Excel 파일의 경로와 파일 이름을 지정합니다. 예를 들어
+ Excel 파일의 경로와 파일 이름을 지정합니다. 다음은 그 예입니다.
 -   로컬 컴퓨터의 파일은 **C:\\MyData.xlsx**입니다.
 -   네트워크 공유의 파일은 **\\\\Sales\\Database\\Northwind.xlsx**입니다.
 
@@ -66,7 +66,7 @@ Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야
 > [!NOTE]
 > 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)

@@ -26,10 +26,10 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907193"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
@@ -68,14 +68,14 @@ ms.locfileid: "72907193"
   
  다음 예에서는 XML 스키마 컬렉션 이름을 지정하기 위해 두 부분으로 된 명명 규칙이 사용됩니다. 첫 번째 부분은 스키마 이름이고 두 번째 부분은 XML 스키마 컬렉션 이름입니다.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예: xml 유형 변수와 스키마 컬렉션 연결  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예제: xml 유형 변수와 스키마 컬렉션 연결  
  다음 예제에서는 **xml** 형식 변수를 만들고 이를 스키마 컬렉션에 연결합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>예: xml 유형 열에 스키마 지정  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>예제: xml 유형 열에 스키마 지정  
  다음 예에서는 **xml** 유형 열이 포함된 테이블을 만들고 이 열에 대한 스키마를 지정합니다.  
   
 ```  
@@ -84,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>예: xml 유형 매개 변수를 저장 프로시저에 전달  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>예제: xml 유형 매개 변수를 저장 프로시저에 전달  
  다음 예에서는 **xml** 유형 매개 변수를 저장 프로시저에 전달하고 해당 변수에 대한 스키마를 지정합니다.  
   
 ```  
@@ -106,7 +106,7 @@ AS
   
  데이터 형식 계층에서 **xml** 데이터 형식은 **sql_variant** 및 사용자 정의 형식 아래, 기본 제공 유형 위에 표시됩니다.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>예: 형식화된 xml 열을 제한하기 위한 패싯 지정  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>예제: 형식화된 xml 열을 제한하기 위한 패싯 지정  
  형식화된 **xml** 열의 경우 열에 저장된 각 인스턴스에 대해 최상위의 단일 요소만 허용하도록 열을 제한할 수 있습니다. 이렇게 하려면 다음 예에서와 같이 테이블을 만들 때 선택 항목인 `DOCUMENT` 패싯을 지정합니다.  
   
 ```  

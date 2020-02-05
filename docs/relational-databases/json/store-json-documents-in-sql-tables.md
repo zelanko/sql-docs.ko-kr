@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096021"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
@@ -27,7 +27,7 @@ SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON �
 
 ## <a name="classic-tables"></a>클래식 테이블
 
-SQL Server 또는 SQL Database에 JSON 문서를 저장하는 가장 간단한 방법은 문서의 ID와 문서의 내용을 포함하는 2열 테이블을 만드는 것입니다. 예를 들어
+SQL Server 또는 SQL Database에 JSON 문서를 저장하는 가장 간단한 방법은 문서의 ID와 문서의 내용을 포함하는 2열 테이블을 만드는 것입니다. 다음은 그 예입니다.
 
 ```sql
 create table WebSite.Logs (
@@ -40,7 +40,7 @@ create table WebSite.Logs (
 
 nvarchar(max) 데이터 형식을 사용하면 최대 2GB 크기의 JSON 문서를 저장할 수 있습니다. 그러나 JSON 문서가 8KB보다 크지 않은 것으로 확인되면 성능상의 이유로 NVARCHAR(max) 대신 NVARCHAR(4000)을 사용하는 것이 좋습니다.
 
-앞의 예에서 만든 샘플 테이블은 유효한 JSON 문서가 `log` 열에 저장되어 있다고 가정합니다. 유효한 JSON이 `log` 열에 저장되었는지 확인하려는 경우 열에 CHECK 제약 조건을 추가할 수 있습니다. 예를 들어
+앞의 예에서 만든 샘플 테이블은 유효한 JSON 문서가 `log` 열에 저장되어 있다고 가정합니다. 유효한 JSON이 `log` 열에 저장되었는지 확인하려는 경우 열에 CHECK 제약 조건을 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 ALTER TABLE WebSite.Logs
@@ -50,7 +50,7 @@ ALTER TABLE WebSite.Logs
 
 누군가가 테이블에 문서를 삽입하거나 업데이트할 때마다 이 제약 조건은 JSON 문서의 형식이 올바른지 확인합니다. 제약 조건이 없으면 모든 JSON 문서가 아무런 처리 없이 열에 직접 추가되기 때문에 테이블이 삽입에 최적화됩니다.
 
-JSON 문서를 테이블에 저장하면 표준 Transact-SQL 언어를 사용하여 문서를 쿼리할 수 있습니다. 예를 들어
+JSON 문서를 테이블에 저장하면 표준 Transact-SQL 언어를 사용하여 문서를 쿼리할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
@@ -69,7 +69,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
 
 쿼리가 일부 속성(예: JSON 문서의 `severity` 속성)으로 문서를 자주 검색하는 경우 속성에 클래식 NONCLUSTERED 인덱스를 추가하여 쿼리 속도를 높일 수 있습니다.
 
-지정된 경로(경로 `$.severity`)의 JSON 열에서 JSON 값을 공개하는 계산 열을 만들고 이 계산 열에 표준 색인을 만들 수 있습니다. 예를 들어
+지정된 경로(경로 `$.severity`)의 JSON 열에서 JSON 값을 공개하는 계산 열을 만들고 이 계산 열에 표준 색인을 만들 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 create table WebSite.Logs (
@@ -125,7 +125,7 @@ create table WebSite.Logs (
 
 메모리 최적화 테이블은 자주 변경되는 문서에 가장 적합한 옵션입니다. 메모리 최적화 테이블을 고려할 때 성능도 고려합니다. 가능하면 메모리 최적화 콜렉션의 JSON 문서에 NVARCHAR (max) 대신 NVARCHAR (4000)을 사용하여 성능을 크게 향상시키세요.
 
-클래식 테이블과 마찬가지로 계산 열을 사용하여 메모리 최적화 테이블에서 공개된 필드에 인덱스를 추가할 수 있습니다. 예를 들어
+클래식 테이블과 마찬가지로 계산 열을 사용하여 메모리 최적화 테이블에서 공개된 필드에 인덱스를 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 create table WebSite.Logs (
@@ -141,7 +141,7 @@ create table WebSite.Logs (
 
 성능을 최대화하려면 JSON 값을 속성의 값을 유지하는 데 사용할 수 있는 가능한 가장 작은 유형으로 캐스팅합니다. 앞의 예에서는 **tinyint**가 사용됩니다.
 
-저장 프로시저에서 JSON 문서를 업데이트하는 SQL 쿼리를 넣으면 네이티브 컴파일의 이점을 얻을 수도 있습니다. 예를 들어
+저장 프로시저에서 JSON 문서를 업데이트하는 SQL 쿼리를 넣으면 네이티브 컴파일의 이점을 얻을 수도 있습니다. 다음은 그 예입니다.
 
 ```sql
 CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))

@@ -22,18 +22,18 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6278faa80721ce500257650db70359dcc740ee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132069"
 ---
-# <a name="contextinfo--transact-sql"></a>CONTEXT_INFO(Transact-SQL)
+# <a name="context_info--transact-sql"></a>CONTEXT_INFO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이 함수는 현재 세션 또는 일괄 처리에 대해 설정되거나 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문을 사용하여 파생된 **context_info** 값을 반환합니다.
+이 함수는 현재 세션 또는 일괄 처리에 대해 설정되거나 **SET CONTEXT_INFO** 문을 사용하여 파생된 [context_info](../../t-sql/statements/set-context-info-transact-sql.md) 값을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ CONTEXT_INFO()
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 null을 반환합니다.  
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 고유한 세션별 GUID를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 MARS(Multiple Active Result Sets) 기능을 사용하면 애플리케이션이 같은 시간에 같은 연결에서 여러 일괄 처리 또는 요청을 실행할 수 있습니다. MARS 연결 일괄 처리 중 하나가 SET CONTEXT_INFO를 실행하는 경우 `CONTEXT_INFO` 함수가 SET 문과 동일한 일괄 처리에서 실행하면 `CONTEXT_INFO` 함수는 새 컨텍스트 값을 반환합니다. `CONTEXT_INFO` 함수가 다른 연결 일괄 처리 중 하나 이상을 실행하는 경우 `CONTEXT_FUNCTION`은 SET 문을 실행한 일괄 처리를 완료한 후에 해당 일괄 처리가 시작되지 않으면 새 값을 반환하지 않습니다.
   
 ## <a name="permissions"></a>사용 권한  
@@ -67,7 +67,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SET CONTEXT_INFO&#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

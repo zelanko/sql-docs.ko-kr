@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173862"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72173862"
 
 보안 정책을 변경합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -88,7 +88,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 적용된 보안 조건자의 대상 테이블입니다. 사용되지 않도록 설정된 보안 정책은 여러 개가 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용하도록 설정할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 ALTER SECURITY POLICY 문은 트랜잭션 범위 내에 있습니다. 트랜잭션이 롤백되면 이 문도 롤백됩니다.  
   
 메모리 최적화 테이블에서 조건자 함수를 사용하는 경우, 보안 정책에 **SCHEMABINDING**를 포함하고 **WITH NATIVE_COMPILATION** 컴파일 힌트를 사용해야 합니다. SCHEMABINDING 인수는 모든 조건자에 적용되므로 ALTER 문으로 변경할 수 없습니다. 스키마 바인딩을 변경하려면 보안 정책을 삭제하고 다시 만들어야 합니다.  
@@ -107,7 +107,7 @@ ALTER ANY SECURITY POLICY 권한이 필요합니다.
 ## <a name="examples"></a>예  
 다음 예는 **ALTER SECURITY POLICY** 구문의 사용을 보여줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
-### <a name="a-adding-an-additional-predicate-to-a-policy"></a>1\. 정책에 추가적인 조건자 추가  
+### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 정책에 추가적인 조건자 추가  
 다음 구문은 `mytable` 테이블에서 필터 조건자를 추가하여 보안 정책을 변경합니다.  
   
 ```  
@@ -116,7 +116,7 @@ ALTER SECURITY POLICY pol1
     ON myschema.mytable;  
 ```  
   
-### <a name="b-enabling-an-existing-policy"></a>2\. 기존 정책을 사용하도록 설정  
+### <a name="b-enabling-an-existing-policy"></a>B. 기존 정책을 사용하도록 설정  
 다음 예에서는 ALTER 구문을 사용하여 보안 정책을 사용하도록 설정합니다.  
   
 ```  

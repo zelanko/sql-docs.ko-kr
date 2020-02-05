@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908766"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
@@ -77,9 +77,9 @@ ms.locfileid: "72908766"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 수준|쓰기 성능|읽기 성능|내결함성|Remarks|  
-|RAID 5|보통|보통|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
-|RAID 0|최고|최고|없음||  
+|RAID 수준|쓰기 성능|읽기 성능|내결함성|설명|  
+|RAID 5|정상|정상|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
+|RAID 0|최고|최고|None||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   

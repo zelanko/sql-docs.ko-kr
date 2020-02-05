@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282504"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
@@ -39,7 +39,7 @@ ms.locfileid: "71282504"
 > [!NOTE]  
 >  다음 표에 나열된 메시지는 패키지에 로깅이 사용되도록 설정되지 않은 경우에도 기록됩니다.  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|패키지 ""이(가) 시작되었습니다.|패키지의 실행이 시작되었습니다.|  
 |12289|DTS_MSG_PACKAGESUCCESS|패키지 ""이(가) 성공적으로 완료되었습니다.|패키지가 성공적으로 실행되었고 더 이상 실행 중이지 않습니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "71282504"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>패키지 실행 단계에 대한 메시지  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|애플리케이션 이벤트 로그에 메시지를 기록하도록 패키지를 구성한 경우 다양한 메시지에서 이 일반 형식을 사용합니다.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|패키지가 시작되었습니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "71282504"
 ### <a name="messages-about-events-that-occur"></a>발생한 이벤트에 대한 메시지  
  다음 표에서는 이벤트의 결과인 일부 메시지만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용하는 오류, 경고 및 정보 메시지의 보다 포괄적인 목록은 [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)를 참조하세요.  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|태스크가 실패했습니다.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|이 메시지는 발생한 오류를 보고합니다.|  
@@ -106,4 +106,4 @@ ms.locfileid: "71282504"
   
 8.  **로그 항목** 대화 상자에서 위쪽 및 아래쪽 화살표를 클릭하여 이전 또는 다음 로그 항목을 표시하고 복사 아이콘을 클릭하여 로그 항목을 복사합니다.  
   
-9. 텍스트 편집기를 열고 로그 항목을 텍스트 파일에 붙여 넣은 다음 저장합니다.
+9. 텍스트 편집기를 열고 로그 항목을 텍스트 파일에 붙여넣은 다음 저장합니다.

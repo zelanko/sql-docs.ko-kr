@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101929"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68101929"
 
 버퍼 풀에서 빈 버퍼를 제거하고 columnstore 개체 풀에서 columnstore 개체를 모두 제거합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
 SQL Server용 구문: 
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  각 컴퓨팅 노드 및 제어 노드에서 메모리 내 데이터 캐시를 제거합니다. 값을 지정하지 않으면 이것이 기본값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC DROPCLEANBUFFERS를 사용하면 서버를 종료하고 다시 시작하지 않아도 완전히 빈 버퍼 캐시를 사용하여 쿼리를 테스트할 수 있습니다.
 버퍼 풀에서 빈 버퍼를 삭제하고 columnstore 개체 풀에서 columnstore 개체를 삭제하려면 먼저 CHECKPOINT를 사용해 콜드 버퍼 캐시를 생성합니다. 이 과정은 현재 데이터베이스에 대한 모든 커밋되지 않은 페이지를 디스크로 기록하고 버퍼를 비웁니다. 버퍼를 비운 후에 DBCC DROPCLEANBUFFERS 명령을 실행해 버퍼 풀에서 모든 버퍼를 제거할 수 있습니다.
   
@@ -78,7 +78,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 - **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
 
-적용 대상: Azure SQL 데이터 웨어하우스
+적용 대상: Azure SQL Data Warehouse
 
 - DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   

@@ -12,13 +12,13 @@ ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df0bd7c7093aeb46421fca75c9e9233f2b1f4263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137128"
 ---
-# <a name="mssqlserver18264"></a>MSSQLSERVER_18264
+# <a name="mssqlserver_18264"></a>MSSQLSERVER_18264
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "68137128"
 |이벤트 원본|MSSQLENGINE|  
 |구성 요소|SQLEngine|  
 |심볼 이름|STRMIO_DBDUMP|  
-|메시지 텍스트|데이터베이스가 백업되었습니다. 데이터베이스: %s, 만든 날짜(시간): %s(%s), 덤프한 페이지 수: %d, 첫 번째 LSN: %s, 마지막 LSN: %s, 덤프 디바이스 수: %d, 디바이스 정보: (%s). 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
+|메시지 텍스트|데이터베이스가 백업되었습니다. 데이터베이스: %s, 만든 날짜(시간): %s(%s), 덤프한 페이지 수: %d, 첫 번째 LSN: %s, 마지막 LSN: %s, 덤프 디바이스 수: %d, 디바이스 정보: (%s). 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.|  
   
 ## <a name="explanation"></a>설명  
 기본적으로 백업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 이 정보 메시지가 추가됩니다. 트랜잭션 로그를 자주 백업하는 경우 이러한 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다.  

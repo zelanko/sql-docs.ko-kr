@@ -12,13 +12,13 @@ ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056713"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -52,9 +52,9 @@ ms.locfileid: "68056713"
   
 구독자에서 실행되는 병합 에이전트 같이 배포자와는 다른 노드에서 실행되는 복제 에이전트에서 시작한 **sp_get_redirected_publisher** 호출에서 오류 21879가 반환될 경우 특별히 고려해야 할 사항이 있습니다. Windows 인증을 사용하여 리디렉션된 게시자에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증이 구성되어 있어야만 성공적으로 연결할 수 있습니다. Windows 인증을 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증이 구성되어 있지 않을 경우 구독자에서 실행되는 병합 에이전트는 'NT AUTHORITY\ANONYMOUS LOGON' 로그인이 실패했음을 나타내는 오류 18456을 수신합니다. 다음 세 가지 방법으로 이 문제를 해결할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증을 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 **Kerberos 인증 및 SQL Server**를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증을 구성합니다. **온라인 설명서의**Kerberos 인증 및 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
   
 -   **sp_changedistpublisher**를 사용하여 MSdistpublishers에 있는 원래 게시자와 연관된 보안 모드를 변경하고 연결에 사용할 로그인 및 암호를 지정합니다.  
   
--   배포자에서 **sp_get_redirected_publisher**가 호출될 때 유효성 검사를 무시하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 *BypassPublisherValidation*을 지정합니다.  
+-   배포자에서 *sp_get_redirected_publisher*가 호출될 때 유효성 검사를 무시하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 **BypassPublisherValidation**을 지정합니다.  
   

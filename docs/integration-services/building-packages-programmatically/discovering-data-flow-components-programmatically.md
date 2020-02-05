@@ -20,10 +20,10 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3b0833c1c10fb8b4be039466594e2c2025a06b91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299055"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 검색
@@ -39,7 +39,7 @@ ms.locfileid: "71299055"
 ## <a name="next-step"></a>다음 단계  
  사용 가능한 구성 요소를 검색한 후에는 다음의 [프로그래밍 방식으로 데이터 흐름 구성 요소 추가](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md) 항목에 설명된 대로 구성 요소를 추가하고 구성합니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfos> 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 컬렉션을 열거하여 로컬 컴퓨터에서 사용할 수 있는 데이터 흐름 구성 요소를 프로그래밍 방식으로 검색하는 방법을 보여 줍니다. 이 샘플에는 Microsoft.SqlServer.ManagedDTS 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  

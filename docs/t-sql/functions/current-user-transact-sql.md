@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844619"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73844619"
 
 이 함수는 현재 사용자의 이름을 반환합니다. 이 함수는 `USER_NAME()`과 동일합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -45,14 +45,14 @@ CURRENT_USER
 ## <a name="return-types"></a>반환 형식
 **sysname**
   
-## <a name="remarks"></a>Remarks  
-`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `EXECUTE AS`에 대한 호출로 컨텍스트가 전환된 후 `CURRENT_USER`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
+## <a name="remarks"></a>설명  
+`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `CURRENT_USER`에 대한 호출로 컨텍스트가 전환된 후 `EXECUTE AS`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
   
 현재 사용자의 로그인을 반환하는 방법에 대해 알아보려면 [SUSER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER&#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-current_user-to-return-the-current-user-name"></a>1\. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
+### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
 이 예에서는 현재 사용자의 이름을 반환합니다.
   
 ```sql
@@ -60,8 +60,8 @@ SELECT CURRENT_USER;
 GO  
 ```  
   
-### <a name="b-using-current_user-as-a-default-constraint"></a>2\. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
-이 예에서는 판매 행의 `order_person` 열에 대한 `DEFAULT` 제약 조건으로 `CURRENT_USER`를 사용하는 테이블을 만듭니다.
+### <a name="b-using-current_user-as-a-default-constraint"></a>B. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
+이 예에서는 판매 행의 `CURRENT_USER` 열에 대한 `DEFAULT` 제약 조건으로 `order_person`를 사용하는 테이블을 만듭니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -133,7 +133,7 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
 [SYSTEM_USER&#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111760"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용자 정의 스칼라 함수
@@ -91,7 +91,7 @@ END
   
 -   스키마 바운드 저장 프로시저 또는 사용자 정의 함수에 의해 참조되는 경우 삭제하거나 변경할 수 없습니다.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  고유하게 컴파일된 사용자 정의 스칼라 함수는 SHOWPLAN_XML을 지원합니다. 고유 하 게 컴파일된 저장 프로시저에서와 같이 일반 SHOWPLAN_XML 스키마를 준수합니다. 사용자 정의 함수에 대한 기본 요소는 `<UDF>`입니다.  
   
  STATISTICS XML은 고유하게 컴파일된 사용자 정의 스칼라 함수에서 지원되지 않습니다. STATISTICS XML이 활성화된 상태에서 사용자 정의 함수를 참조하는 쿼리를 실행하는 경우 사용자 정의 함수에 대한 부분 없이 XML 콘텐츠가 반환됩니다.  

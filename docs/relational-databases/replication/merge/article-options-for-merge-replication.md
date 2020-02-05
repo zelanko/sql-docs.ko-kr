@@ -14,10 +14,10 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68106110"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
@@ -34,7 +34,7 @@ ms.locfileid: "68106110"
   
 -   관련된 레코드 집합이 하나의 단위로 처리되도록 지정합니다. 기본적으로 병합 복제는 행 단위로 테이블 변경 내용을 처리합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
--   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+-   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 -   제약 조건 및 트리거를 구독자로 복사할지 여부와 같은 스키마 옵션을 지정합니다. 자세한 내용은 [스키마 옵션 지정](../../../relational-databases/replication/publish/specify-schema-options.md)을 참조하세요.  
   

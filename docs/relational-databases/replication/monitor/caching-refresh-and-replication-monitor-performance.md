@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0661822f2c39d197460d19bb01adc847151dfa35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 45cad9f38fadd8280b6cb155c0e44643448ac4bf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320640"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286352"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>캐싱, 새로 고침 및 복제 모니터 성능
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "75320640"
   
 -   마지막으로 캐시를 만든 이후에 에이전트 기록을 변경한 경우 대기 시간은 최소 4초 또는 이전 캐시를 만드는 데 소요된 시간입니다.  
   
--   마지막으로 캐시를 만든 이후에 에이전트 기록을 변경하지 않으면(다른 변경 내용은 있을 수 있음) 대기 시간은 최대 30초 또는 이전 캐시를 만드는 데 소요된 시간입니다.  
+-   마지막으로 캐시를 만든 이후에 에이전트 기록을 변경하지 않은 경우(다른 변경 내용은 있을 수 있음) 대기 시간은 최대 30초 또는 이전 캐시를 만드는 데 소요된 시간입니다.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>복제 모니터 사용자 인터페이스 새로 고침  
  다음과 같은 방법으로 복제 모니터 사용자 인터페이스를 새로 고칠 수 있습니다.  

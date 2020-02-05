@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729889"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
@@ -33,7 +33,7 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스에 대한
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 `DBCC SHOWRESULTCACHESPACEUSED` 명령은 매개 변수를 사용하지 않으며 해당 명령이 실행되는 데이터베이스에서 사용하는 공간을 반환합니다.
 
@@ -43,15 +43,15 @@ VIEW SERVER STATE 권한이 필요합니다.
   
 ## <a name="result-sets"></a>결과 집합  
   
-|Column|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|데이터베이스에 사용된 총 공간(KB)입니다. 이 값은 캐시된 결과 집합이 증가할 때 변경됩니다.|  
-|data_space|BIGINT|데이터에 사용된 공간(KB)입니다.|  
-|index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.|  
-|unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
+|reserved_space|bigint|데이터베이스에 사용된 총 공간(KB)입니다. 이 값은 캐시된 결과 집합이 증가할 때 변경됩니다.|  
+|data_space|bigint|데이터에 사용된 공간(KB)입니다.|  
+|index_space|bigint|인덱스에 사용된 공간(KB)입니다.|  
+|unused_space|bigint|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [결과 집합 캐싱을 사용한 성능 조정](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532451"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 데이터베이스 백업 및 복원
@@ -72,8 +72,8 @@ ms.locfileid: "73532451"
 
 5. **대상** 섹션의 **대상 데이터베이스** 필드에 **TutorialDB_Restored**를 입력하여 백업 파일을 새 데이터베이스로 복원합니다. 그런 다음, **복원**을 선택합니다.
 
-   ![복원(restore)](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![복원](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 복원 작업의 상태를 보려면 **CTRL+T**를 눌러 **작업 기록**을 엽니다.
 
-   ![복원(restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![복원](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

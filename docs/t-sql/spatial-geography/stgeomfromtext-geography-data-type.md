@@ -19,10 +19,10 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042125"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText(geography 데이터 형식)
@@ -51,7 +51,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STGeomFromText()에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  

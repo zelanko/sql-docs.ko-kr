@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909262"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72909262"
 -   건넌뛴 열에 기본값이 있습니다.  
   
 ## <a name="sample-table-and-data-file"></a>예제 테이블 및 데이터 파일  
- 이 아티클의 예에서는 **dbo** 스키마에서 `myTestSkipCol`이라는 테이블을 기대합니다. *WideWorldImporters* 또는 *AdventureWorks*와 같은 샘플 데이터베이스 또는 다른 데이터베이스에서 이 테이블을 만들 수 있습니다. 이 테이블을 다음과 같이 만듭니다.  
+ 이 아티클의 예에서는 `myTestSkipCol`dbo**스키마에서**이라는 테이블을 기대합니다. *WideWorldImporters* 또는 *AdventureWorks*와 같은 샘플 데이터베이스 또는 다른 데이터베이스에서 이 테이블을 만들 수 있습니다. 이 테이블을 다음과 같이 만듭니다.  
   
 ```sql
 USE WideWorldImporters;  
@@ -66,7 +66,7 @@ GO
 ## <a name="option-1---use-a-non-xml-format-file"></a>옵션 #1 - 비 XML 서식 파일 사용  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>단계 #1 - 기본 비 XML 서식 파일 만들기  
-명령 프롬프트에서 다음 **bcp** 명령을 실행하여 `myTestSkipCol` 샘플 테이블에 대한 기본 비 XML 서식 파일을 만듭니다.  
+명령 프롬프트에서 다음 `myTestSkipCol`bcp**명령을 실행하여** 샘플 테이블에 대한 기본 비 XML 서식 파일을 만듭니다.  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
@@ -140,7 +140,7 @@ GO
   
 ### <a name="step-1---create-a-default-xml-format-file"></a>단계 #1 - 기본 XML 서식 파일 만들기   
 
-명령 프롬프트에서 다음 **bcp** 명령을 실행하여 `myTestSkipCol` 샘플 테이블에 대한 기본 XML 서식 파일을 만듭니다.  
+명령 프롬프트에서 다음 `myTestSkipCol`bcp**명령을 실행하여** 샘플 테이블에 대한 기본 XML 서식 파일을 만듭니다.  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -172,7 +172,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 ### <a name="step-2---modify-an-xml-format-file"></a>단계 #2 - XML 서식 파일 수정
 
-여기서 `myTestSkipCol2.xml`은 `Col2`를 건너뛴 수정된 XML 서식 파일입니다. `Col2`에 대한 `FIELD` 및 `ROW` 항목이 제거되고 항목 번호가 다시 지정되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
+여기서 `myTestSkipCol2.xml`은 `Col2`를 건너뛴 수정된 XML 서식 파일입니다. `FIELD`에 대한 `ROW` 및 `Col2` 항목이 제거되고 항목 번호가 다시 지정되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
 
 ```xml
 <?xml version="1.0"?>  
@@ -197,7 +197,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 XML 서식 파일을 사용하면 **bcp** 명령이나 `BULK INSERT` 문을 사용하여 테이블로 데이터를 직접 가져올 때 열을 건너뛸 수 없습니다. 그러나 테이블의 마지막 열을 제외하고 모든 열로 가져올 수 있습니다. 마지막 열을 제외하고 모든 열을 건너뛰어야 하는 경우 데이터 파일에 있는 열만 포함된 대상 테이블의 뷰를 만들어야 합니다. 그런 다음 해당 파일의 데이터를 뷰로 대량 가져오기를 수행할 수 있습니다.  
   
-다음 예에서는 `myTestSkipCol` 테이블에 `v_myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
+다음 예에서는 `v_myTestSkipCol` 테이블에 `myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
   
 SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다. 
   
@@ -241,7 +241,7 @@ GO
 ```
 
 ## <a name="see-also"></a>참고 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

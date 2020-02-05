@@ -18,10 +18,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042344"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference(geography 데이터 형식)
@@ -48,14 +48,14 @@ ms.locfileid: "68042344"
 ## <a name="exceptions"></a>예외  
  인스턴스에 대척점 끝이 있을 경우 메서드는 **ArgumentException**을 throw합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에서 반환될 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 반구보다 큰 공간 인스턴스를 지원합니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다. 이 메서드는 정확하지 않습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-difference-between-two-geography-instances"></a>1\. 두 geography 인스턴스 간의 차이 계산  
+### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. 두 geography 인스턴스 간의 차이 계산  
  다음 예제에서는 `STDifference()`를 사용하여 두 **geography** 인스턴스 간의 차이를 컴퓨팅합니다.  
   
 ```  
@@ -66,7 +66,7 @@ SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STDifference(@h).ToString();  
 ```  
   
-### <a name="b-using-a-fullglobe-with-stdifference"></a>2\. STDifference()에 FullGlobe 사용  
+### <a name="b-using-a-fullglobe-with-stdifference"></a>B. STDifference()에 FullGlobe 사용  
  다음 예에서는 `FullGlobe` 인스턴스를 사용합니다. 첫 번째 결과는 빈 `GeometryCollection`이고 두 번째 결과는 `Polygon` 인스턴스입니다. `STDifference()` 인스턴스가 매개 변수인 경우 `GeometryCollection`는 빈 `FullGlobe`을 반환합니다. 호출하는 `geography` 인스턴스의 모든 점이 `FullGlobe` 인스턴스에 포함됩니다.  
   
 ```

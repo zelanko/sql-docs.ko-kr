@@ -11,10 +11,10 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296008"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>2단원: SSIS에서 배포 번들 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "71296008"
   
 또한 배포 번들의 파일 목록을 확인하고 매니페스트의 내용을 검사합니다.  
   
-**이 단원에 소요되는 예상 시간:** : 30분  
+**이 단원에 소요되는 예상 시간:** 30분  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  

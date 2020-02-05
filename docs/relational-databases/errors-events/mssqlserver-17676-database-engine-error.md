@@ -12,13 +12,13 @@ ms.assetid: a4e2c568-f794-486e-ac38-380e30ab0c3d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f48dee2cd844253f33c7601a4e20e3f44cfd9377
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133588"
 ---
-# <a name="mssqlserver17676"></a>MSSQLSERVER_17676
+# <a name="mssqlserver_17676"></a>MSSQLSERVER_17676
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,7 +30,7 @@ ms.locfileid: "68133588"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DEMO_SIGNALSHUTDOWN|  
-|메시지 텍스트|<Ctrl+C> 또는 <Ctrl+Break> 신호로 인해 SQL Server가 종료됩니다. 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
+|메시지 텍스트|<Ctrl+C> 또는 <Ctrl+Break> 신호로 인해 SQL Server가 종료됩니다. 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.|  
   
 ## <a name="explanation"></a>설명  
 진단 출력입니다.  

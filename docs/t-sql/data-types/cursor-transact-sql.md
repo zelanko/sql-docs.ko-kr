@@ -15,10 +15,10 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682074"
 ---
 # <a name="cursor-transact-sql"></a>SET(Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71682074"
 
 커서에 대한 참조가 들어 있는 변수 또는 저장 프로시저 OUTPUT 매개 변수의 데이터 형식입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **cursor** 데이터 형식을 가진 변수와 매개 변수를 참조할 수 있는 작업은 다음과 같습니다.
 -   DECLARE *\@local_variable* 및 SET *\@local_variable* 문  
 -   OPEN, FETCH, CLOSE 및 DEALLOCATE 커서 문  
@@ -40,7 +40,7 @@ ms.locfileid: "71682074"
   
 **cursor** 데이터 형식은 CREATE TABLE 문에 있는 열에서 사용할 수 없습니다.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  

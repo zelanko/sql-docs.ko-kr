@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822040"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>가용성 그룹 모니터링 및 문제 해결
@@ -64,8 +64,8 @@ ms.locfileid: "74822040"
 |-----------|-----------------|  
 |[Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)|가용성 그룹에 대한 데이터 동기화 프로세스, 흐름 제어 게이트 및 가용성 그룹을 모니터링할 때 유용한 메트릭을 설명하고 RTO 및 RPO 메트릭을 수집하는 방법을 보여줍니다.|  
 |[가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|가용성 그룹 모니터링을 위한 도구의 정보를 제공합니다.|  
-|[Always On 상태 모델, 1단계: 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Always On 상태 모델의 개요를 제공합니다.|  
-|[Always On 상태 모델, 2부: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
+|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Always On 상태 모델의 개요를 제공합니다.|  
+|[Always On 상태 모델, 파트 2: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  

@@ -21,10 +21,10 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064671"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73064671"
 
   애플리케이션 역할의 이름, 암호 또는 기본 스키마를 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  서버에서 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  새 애플리케이션 역할 이름이 데이터베이스에 이미 있는 경우 문이 실패합니다. 애플리케이션 역할의 이름, 암호 또는 기본 스키마가 변경된 경우에도 역할과 연결된 ID는 변경되지 않습니다.  
   
 > [!IMPORTANT]  
@@ -76,7 +76,7 @@ ALTER APPLICATION ROLE application_role_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-name-of-application-role"></a>1\. 애플리케이션 역할의 이름 변경  
+### <a name="a-changing-the-name-of-application-role"></a>A. 애플리케이션 역할의 이름 변경  
  다음 예에서는 애플리케이션 역할의 이름을 `weekly_receipts`에서 `receipts_ledger`로 변경합니다.  
   
 ```sql  
@@ -90,7 +90,7 @@ ALTER APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-### <a name="b-changing-the-password-of-application-role"></a>2\. 애플리케이션 역할의 암호 변경  
+### <a name="b-changing-the-password-of-application-role"></a>B. 애플리케이션 역할의 암호 변경  
  다음 예에서는 `receipts_ledger` 애플리케이션 역할의 암호를 변경합니다.  
   
 ```sql  
@@ -112,7 +112,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [애플리케이션 역할](../../relational-databases/security/authentication-access/application-roles.md)   
- [CREATE APPLICATION ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

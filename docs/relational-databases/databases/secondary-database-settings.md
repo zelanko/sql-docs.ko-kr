@@ -13,10 +13,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127218"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
@@ -36,7 +36,7 @@ ms.locfileid: "68127218"
  로그 전달 구성에서 보조 서버로 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 연결 시 사용한 계정은 보조 서버 인스턴스에서 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
  **초기화 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **예, 주 데이터베이스의 전체 백업을 생성하고 보조 데이터베이스에 복원합니다.**  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 주 데이터베이스를 백업하여 보조 서버에 복원하는 방법으로 보조 데이터베이스를 구성하도록 합니다. **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로 해당 데이터베이스가 생성됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "68127218"
  보조 데이터베이스가 이미 초기화되었고 주 데이터베이스로부터 트랜잭션 로그 백업을 받을 준비가 되었음을 나타냅니다. 이 옵션은 **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우에는 사용할 수 없습니다.  
   
  **파일 복사 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **복사한 파일의 대상 폴더**  
  보조 데이터베이스를 복원하기 위해 트랜잭션 로그 백업을 복사할 경로를 입력합니다. 일반적으로 이 경로는 보조 서버에 있는 폴더의 로컬 경로입니다. 폴더가 다른 서버에 있으면 해당 폴더의 UNC 경로를 지정해야 합니다. 보조 서버 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 이 폴더에 대한 읽기 권한이 있어야 합니다. 또한 보조 서버 인스턴스에서 복사 및 복원 작업을 실행하는 데 사용할 프록시 계정에 이 네트워크 공유를 읽고 쓸 수 있는 권한을 부여해야 합니다. 기본적으로 이 계정은 보조 서버 인스턴스의 SQL Server 에이전트 서비스 계정이지만 sysadmin 권한이 있는 사용자가 다른 프록시 계정을 선택하여 작업에 사용할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "68127218"
  SQL Server 에이전트 복사 작업을 일시 중지합니다.  
   
  **트랜잭션 로그 복원 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **백업 복원 시 데이터베이스의 사용자 연결 끊기**  
  트랜잭션 로그 백업을 복원하는 동안 자동으로 보조 데이터베이스에서 사용자의 연결을 끊습니다.  

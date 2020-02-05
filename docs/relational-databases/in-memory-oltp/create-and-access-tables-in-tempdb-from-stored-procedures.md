@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f4ae543590e5985904e44235da89069c06c649ee
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412724"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>저장 프로시저에서 TempDB에 테이블 만들기 및 액세스
@@ -25,7 +25,7 @@ ms.locfileid: "74412724"
 
 임시 테이블 및 테이블 변수 시나리오의 메모리 최적화에 대한 자세한 내용은 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)을 참조하세요.
   
-  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **dbo.OrderQuantityByProduct** 형식의 **\@OrderQuantityByProduct** 테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
+  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **dbo.OrderQuantityByProduct\@ 형식의** **OrderQuantityByProduct** 테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

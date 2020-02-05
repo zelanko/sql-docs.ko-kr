@@ -16,10 +16,10 @@ ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4f7e49dc39d95e4d5bcce285040f8a598e6935ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026292"
 ---
 # <a name="cursor-functions-transact-sql"></a>커서 함수(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68026292"
   
 모든 커서 함수는 비결정적입니다. 즉, 이러한 함수가 실행될 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않습니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
   
   

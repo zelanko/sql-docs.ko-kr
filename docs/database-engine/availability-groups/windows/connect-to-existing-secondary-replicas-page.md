@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991144"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>기존 보조 복제본 연결 페이지 - Always On 가용성 그룹
@@ -40,7 +40,7 @@ ms.locfileid: "67991144"
  **취소**  
  마법사를 취소하려면 클릭합니다. **기존 보조 복제본에 연결** 페이지에서 마법사를 취소하면 작업이 수행되지 않고 마법사가 종료됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 복제본 추가 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

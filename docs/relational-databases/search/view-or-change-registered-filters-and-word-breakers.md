@@ -17,10 +17,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4b1679674ba3ae46dd988ef25703acd291fc6bfa
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056082"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
@@ -69,7 +69,7 @@ ms.locfileid: "74056082"
   
 1.  새로운 단어 분리기 또는 필터가 포함된 DLL 파일을 설치하려고 준비할 때 서버 인스턴스에 설치된 기존 DLL 파일과 다른 파일 이름을 사용합니다.  
   
-2.  새 DLL 파일을 서버 인스턴스에 대한 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일이 포함된 디렉터리로 복사합니다. 기본 위치는  
+2.  새 DLL 파일을 서버 인스턴스에 대한 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일이 포함된 디렉터리로 복사합니다. 기본 위치는 다음과 같습니다.  
   
      C:\Program Files\Microsoft SQL Server\MSSQL.*instance_name*\MSSQL\Binn  
   

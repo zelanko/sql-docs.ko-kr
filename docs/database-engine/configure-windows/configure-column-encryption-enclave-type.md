@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593829"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성
@@ -24,7 +24,7 @@ ms.locfileid: "73593829"
 
 **열 암호화 Enclave 형식** 서버 구성 옵션은 Always Encrypted에 사용되는 보안 Enclave의 형식을 제어합니다. 옵션은 다음 값 중 하나로 설정할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-------------------|-----------------| 
 |0|**보안 Enclave 없음** [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 Always Encrypted의 보안 Enclave를 초기화하지 않습니다. 결과적으로, 보안 Enclave를 사용한 Always Encrypted를 사용할 수 없게 됩니다.|  
 |1|**VBS(가상화 기반 보안)** [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 VBS(가상화 기반 보안) Enclave 초기화를 시도합니다.
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
  [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>참고 항목  

@@ -15,10 +15,10 @@ ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011937"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 서버 구성 옵션
@@ -29,7 +29,7 @@ ms.locfileid: "68011937"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
   
-## <a name="purpose"></a>용도  
+## <a name="purpose"></a>목적  
  기본 추적 기능은 데이터베이스 관리자가 처음 문제 발생 시 문제 진단에 필요한 로그 데이터를 가지고 있는지 확인하여 문제를 해결하도록 도와 줍니다.  
   
 ## <a name="viewing"></a>보기  
@@ -37,7 +37,7 @@ ms.locfileid: "68011937"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러를 사용하여 이 추적 파일을 보는 방법은 [추적 파일 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)를 참조하세요.  
   
-### <a name="example"></a>예:  
+### <a name="example"></a>예제:  
  다음 문은 기본 위치에 있는 기본 추적 로그를 엽니다.  
   
 ```  

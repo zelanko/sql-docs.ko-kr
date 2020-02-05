@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809942"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
@@ -33,7 +33,7 @@ ms.locfileid: "70809942"
   
  이러한 개체는 메일 호스트 데이터베이스 내에서 데이터베이스 메일에 대한 인터페이스입니다. 위에 나열된 개체에서 제공하는 기능을 구현하도록 다른 개체가 설치됩니다. 그러나 해당 개체는 내부 사용을 위해 예약됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**보기**|데이터베이스 메일에 제출된 모든 메시지를 나열합니다.|  
 |[sysmail_event_log&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**보기**|[Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)의 동작에 대한 메시지를 나열합니다.|  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768443"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287342"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68768443"
 
 한 서버와 가끔 연결되는 하나 이상의 클라이언트 간에 데이터를 교환하도록 병합 복제를 구성하는 방법을 배웁니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 

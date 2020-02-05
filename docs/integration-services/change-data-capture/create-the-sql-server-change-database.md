@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294760"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
@@ -46,9 +46,9 @@ ms.locfileid: "71294760"
  **SQL Server 변경 데이터베이스**  
  이 섹션은 데이터베이스를 만드는 데 사용됩니다.  
   
-1.  **데이터베이스 변경**: 새 변경 데이터베이스의 이름입니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
+1.  **변경 데이터베이스**: 이 이름은 새 변경 데이터베이스의 이름이기도 합니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
   
-2.  **데이터베이스 만들기**: **데이터베이스 만들기**를 클릭하여 데이터베이스를 만들 수 있습니다.  
+2.  **데이터베이스 만들기**: **데이터베이스 만들기** 를 클릭하여 데이터베이스를 만들 수 있습니다.  
   
      데이터베이스를 만들려면 로그인에 `sysasmin` 서버 역할이 있어야 합니다. 자세한 내용은 위의 보안 참고 사항을 참조하십시오.  
   

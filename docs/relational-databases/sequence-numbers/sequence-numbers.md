@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126775"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
@@ -85,7 +85,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>예  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR&#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) 및 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 항목에서 또 다른 예제를 찾아볼 수 있습니다.  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>1\. 단일 테이블에서 시퀀스 번호 사용  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 단일 테이블에서 시퀀스 번호 사용  
  다음 예에서는 Test라는 스키마, Orders라는 테이블, CountBy1이라는 시퀀스를 만든 다음 NEXT VALUE FOR 함수를 사용하여 테이블에 행을 삽입합니다.  
   
 ```  
@@ -130,7 +130,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>2\. 행을 삽입하기 전에 NEXT VALUE FOR 호출  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. 행을 삽입하기 전에 NEXT VALUE FOR 호출  
  예 1에서 만든 `Orders` 테이블을 사용하여 다음 예에서는 `@nextID`라는 변수를 선언한 다음 NEXT VALUE FOR 함수를 사용하여 변수를 다음으로 사용 가능한 시퀀스 번호로 설정합니다. 애플리케이션은 고객에게 잠재적 주문에 대한 `OrderID` 번호를 제공하고 주문의 유효성을 검사하는 등 주문에 대한 처리를 수행하고 있는 것으로 가정합니다. 처리에 걸리는 시간이나 처리 중 추가되는 다른 주문 수에 관계없이 이 연결에서 사용하도록 원래 번호가 보관됩니다. 마지막으로 `INSERT` 문은 `Orders` 테이블에 주문을 추가합니다.  
   
 ```  
@@ -391,7 +391,7 @@ GO
   
 ```  
   
- `SELECT *`를 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하는 `SELECT *` 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

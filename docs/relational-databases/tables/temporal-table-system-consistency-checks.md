@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d0957ffb1aa78ee0cbaf3c7c3e5acdb973aa8fb7
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165721"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Temporal 테이블 시스템 일관성 확인
@@ -45,7 +45,7 @@ temporal 테이블을 만들거나 테이블을 변경하여 temporal 테이블�
 
 ### <a name="data-consistency-check"></a>데이터 일관성 확인
 
-**SYSTEM_VERSIONING**을 **ON**으로 설정하고 DML 작업의 일부로 설정하기 전에 시스템은 **SysEndTime** ≥**SysStartTime** 검사를 수행합니다.
+**SYSTEM_VERSIONING** 을 **ON** 으로 설정하고 DML 작업의 일부로 설정하기 전에 시스템은 **SysEndTime** ≥**SysStartTime**검사를 수행합니다.
 
 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 검사는 기존 레코드가 겹치지 않고 모든 개별 레코드에서 임시 요구 사항이 충족되는지 확인합니다. 기본값은 데이터 일관성 검사를 수행하는 것입니다. 일반적으로 기록 데이터로 채워지는 기존 기록 테이블을 통합하는 경우와 같이 현재 테이블과 기록 테이블 사이에서 데이터 동기화가 이루어지지 않을 때마다 데이터 일관성을 검사하는 것이 좋습니다.
 

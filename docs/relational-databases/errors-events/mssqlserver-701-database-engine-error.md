@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907716"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -33,7 +33,7 @@ ms.locfileid: "72907716"
 |메시지 텍스트|시스템 메모리가 부족하여 이 쿼리를 실행할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행할 충분한 메모리를 할당하지 못했습니다. 이 오류는 운영 체제 설정, 실제 메모리 가용성 또는 현재 작업에 대한 메모리 한계 등 다양한 원인에 의해 발생할 수 있습니다. 대부분의 경우 실패한 트랜잭션은 이 오류의 원인이 아닙니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행할 충분한 메모리를 할당하지 못했습니다. 운영 체제 설정, 실제 메모리 가용성, 현재 워크로드의 메모리 제한을 비롯한 다양한 이유로 이 오류가 발생할 수 있습니다. 대부분의 경우 실패한 트랜잭션은 이 오류의 원인이 아닙니다.  
   
 서버에 충분한 메모리가 없으므로 DBCC 문 같은 진단 쿼리는 실패할 가능성이 있습니다.  
   

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982196"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982196"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 하나 이상의 사용자 데이터베이스 또는 데이터베이스 스냅샷을 제거합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -77,7 +77,7 @@ DROP DATABASE database_name [;]
 데이터베이스를 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스가 삭제되며 데이터베이스가 사용하는 물리적 디스크 파일도 삭제됩니다. 삭제 시 데이터베이스 또는 해당 데이터베이스의 파일 중 하나가 오프라인 상태이면 디스크 파일은 삭제되지 않습니다. 이 파일은 Windows 탐색기를 사용해 수동으로 삭제할 수 있습니다. 파일 시스템에서 파일을 삭제하지 않고 현재 서버에서 데이터베이스를 제거하려면 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 사용합니다.
 
 > [!WARNING]
-> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]입니다.
+> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]현재 버전[을 통한 ](https://go.microsoft.com/fwlink/p/?LinkId=299658)입니다.
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -136,7 +136,7 @@ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 �
 
 ## <a name="examples"></a>예
 
-### <a name="a-dropping-a-single-database"></a>1\. 단일 데이터베이스 삭제
+### <a name="a-dropping-a-single-database"></a>A. 단일 데이터베이스 삭제
 
 다음 예에서는 `Sales` 데이터베이스를 제거합니다.
 
@@ -144,7 +144,7 @@ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 �
 DROP DATABASE Sales;
 ```
 
-### <a name="b-dropping-multiple-databases"></a>2\. 여러 데이터베이스 삭제
+### <a name="b-dropping-multiple-databases"></a>B. 여러 데이터베이스 삭제
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
 

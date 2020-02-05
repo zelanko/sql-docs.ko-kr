@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843310"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843310"
 
   현재 연결에서 발생한 BEGIN TRANSACTION 문의 수를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.locfileid: "73843310"
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  BEGIN TRANSACTION 문은 @@TRANCOUNT을 1씩 늘립니다. @@TRANCOUNT에 영향을 주지 않는 ROLLBACK TRANSACTION *savepoint_name*을 제외한 ROLLBACK TRANSACTION은 @@TRANCOUNT을 0으로 줄입니다. COMMIT TRANSACTION 또는 COMMIT WORK는 @@TRANCOUNT을 1씩 줄입니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>1\. BEGIN 및 COMMIT 문의 영향  
+### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN 및 COMMIT 문의 영향  
  다음 예에서는 중첩된 `BEGIN` 및 `COMMIT` 문이 `@@TRANCOUNT` 변수에 주는 영향을 보여 줍니다.  
   
 ```  
@@ -73,7 +73,7 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-### <a name="b-showing-the-effects-of-the-begin-and-rollback-statements"></a>2\. BEGIN 및 ROLLBACK 문의 영향  
+### <a name="b-showing-the-effects-of-the-begin-and-rollback-statements"></a>B. BEGIN 및 ROLLBACK 문의 영향  
  다음 예에서는 중첩된 `BEGIN TRAN` 및 `ROLLBACK` 문이 `@@TRANCOUNT` 변수에 주는 영향을 보여 줍니다.  
   
 ```  

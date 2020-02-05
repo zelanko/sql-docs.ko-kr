@@ -22,18 +22,18 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121933"
 ---
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  DECLARE CURSOR 또는 SET *cursor_variable* 문에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 열고 커서를 채웁니다.  
+  DECLARE CURSOR 또는 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 지정된 *문을 실행하여* 서버 커서를 열고 커서를 채웁니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  커서를 나타내는 커서 변수의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  INSENSITIVE 또는 STATIC 옵션을 사용하여 커서를 선언한 경우 OPEN은 임시 테이블을 만들어 결과 집합을 보관합니다. 결과 집합에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 최대 행 크기를 초과하는 행이 있으면 OPEN이 실패합니다. KEYSET 옵션을 사용하여 커서를 선언하는 경우에는 OPEN이 임시 테이블을 만들어 키 집합을 보관합니다. 임시 테이블은 tempdb에 저장됩니다.  
   
  커서가 열린 후 @@CURSOR_ROWS 함수를 사용하여 마지막으로 열린 커서에서 한정하는 행 수를 받습니다.  

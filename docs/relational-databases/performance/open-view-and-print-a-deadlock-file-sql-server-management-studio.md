@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165760"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 교착 상태 파일 열기, 보기 및 인쇄
@@ -30,13 +30,13 @@ ms.locfileid: "74165760"
   
 ## <a name="open-and-view-a-deadlock-file"></a>교착 상태 파일 열기 및 보기  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. **의** 파일[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
 ## <a name="print-a-deadlock-file"></a>교착 상태 파일 인쇄  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. **의** 파일[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   

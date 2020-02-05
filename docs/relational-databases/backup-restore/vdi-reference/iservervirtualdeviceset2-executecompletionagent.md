@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847294"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
@@ -28,11 +28,11 @@ ms.locfileid: "70847294"
 HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. NOERROR 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 완료 에이전트는 SQL Server가 가상 디바이스 명령 완료를 사용하여 자기 자신과 동기화할 수 있는 메커니즘을 제공합니다. 명령을 실행하기 전에는 활성 상태여야 하며 모든 디바이스를 닫을 때까지 활성 상태를 유지해야 합니다.
 

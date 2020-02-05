@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000606"
 ---
 # <a name="read-database-engine"></a>Read(데이터베이스 엔진)
@@ -42,12 +42,12 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>반환 형식
  **CLR 반환 형식: void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Read는 입력 유효성을 검사하지 않습니다. 잘못된 이진 입력이 지정되면 Read는 예외를 발생시킵니다. 성공하더라도 메서드가 예상치 못한 결과를 반환하거나 예외를 발생시킬 수 있는 잘못된 **SqlHierarchyId** 개체가 생성될 수 있습니다.  
   
  Read는 새로 생성된 **SqlHierarchyId** 개체에서만 호출할 수 있습니다.  
   
- Read는 **hierarchyid** 열에 데이터를 쓸 때와 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 필요한 경우에 내부적으로 사용됩니다. 또한 Read는 **varbinary**와 **hierarchyid** 간의 변환 시 내부적으로 호출됩니다.  
+ Read는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hierarchyid**열에 데이터를 쓸 때와 같이**에서 필요한 경우에 내부적으로 사용됩니다. 또한 Read는 **varbinary**와 **hierarchyid** 간의 변환 시 내부적으로 호출됩니다.  
   
 ## <a name="examples"></a>예  
   

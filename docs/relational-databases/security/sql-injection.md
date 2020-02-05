@@ -14,15 +14,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126864"
 ---
-# <a name="sql-injection"></a>SQL 인젝션
+# <a name="sql-injection"></a>SQL 삽입
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 SQL Server에 전달되는 방식의 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
+  SQL 삽입은 구문 분석 및 실행을 위해 나중에 SQL Server의 인스턴스로 전달된 문자열에 악성 코드를 삽입한 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
   
 ## <a name="how-sql-injection-works"></a>SQL 삽입의 작동 방식  
  기본적으로 SQL 삽입에서는 SQL 명령과 연결되어 실행되는 사용자 입력 변수에 코드를 직접 삽입합니다. 간접적인 공격에서는 테이블에 스토리지할 문자열에 또는 메타데이터로 악의적인 코드를 주입합니다. 이후에 저장된 문자열이 동적 SQL 명령에 연결되고 악성 코드가 실행됩니다.  
@@ -85,7 +85,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   유효성 검사를 수행하지 않은 사용자 입력을 연결하지 않습니다. 문자열 연결은 스크립트 삽입이 발생하는 주요 진입점입니다.  
   
--   파일 이름을 생성하는 데 사용될 수 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
+-   파일 이름이 생성될 수도 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
   
  가능한 경우 다음 문자가 포함된 입력을 거부합니다.  
   
@@ -93,7 +93,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|쿼리 구분 기호|  
 |**'**|문자 데이터 문자열 구분 기호|  
-|**--**|문자 데이터 문자열 구분 기호<br />인 레코드를 모두 선택합니다.|  
+|**--**|문자 데이터 문자열 구분 기호<br />.|  
 |**/\*** ... **\*/**|주석 구분 기호. **/\*** 와 **\*/** 사이의 텍스트는 서버에서 검사되지 않습니다.|  
 |**xp_**|`xp_cmdshell`과 같이 카탈로그 확장 저장 프로시저의 이름 첫 자로 사용됩니다.|  
   

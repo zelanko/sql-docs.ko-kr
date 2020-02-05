@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594141"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73594141"
 
 데이터베이스 자격 증명을 만듭니다. 데이터베이스 자격 증명은 서버 로그인 또는 데이터베이스 사용자에 매핑되지 않습니다. 자격 증명은 데이터베이스가 액세스가 필요한 작업을 수행할 때 언제든 외부 위치에 액세스하기 위해 데이터베이스에서 사용됩니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -56,7 +56,7 @@ SECRET **=’** _secret_ **’** 나가는 인증에 필요한 암호를 지정�
 > [!WARNING]
 > SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 데이터베이스 범위 자격 증명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 리소스에 연결하는 데 필요한 인증 정보가 포함된 레코드입니다. 대부분의 자격 증명에는 Windows 사용자 및 암호가 들어 있습니다.
 
@@ -86,7 +86,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1\. 애플리케이션에 대한 데이터베이스 범위 자격 증명 만들기
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 애플리케이션에 대한 데이터베이스 범위 자격 증명 만들기
 
 다음 예에서는 `AppCred`라는 데이터베이스 범위 자격 증명을 만듭니다. 이 데이터베이스 범위 자격 증명에는 Windows 사용자 `Mary5` 및 암호가 들어 있습니다.
 
@@ -99,9 +99,9 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
     SECRET = '<EnterStrongPasswordHere>';
 ```
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>2\. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명 만들기
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명 만들기
 
-다음 예에서는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
+다음 예에서는 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/functions/openrowset-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

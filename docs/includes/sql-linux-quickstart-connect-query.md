@@ -44,7 +44,7 @@
    ```
 
 > [!TIP]
-> Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
+> Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
 
 ### <a name="insert-data"></a>데이터 삽입
 

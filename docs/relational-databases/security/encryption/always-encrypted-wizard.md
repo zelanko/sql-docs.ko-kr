@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594500"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted 마법사를 사용하여 열 암호화 구성
@@ -38,7 +38,7 @@ Always Encrypted 마법사는 선택한 데이터베이스 열에 대해 원하�
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 enclave로 구성된 경우 데이터를 데이터베이스 외부로 이동하지 않고 내부에서 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. 이 마법사는 내부 암호화를 지원하지 않습니다.
+> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 Enclave로 구성된 경우 데이터베이스 외부로 데이터를 이동하지 않고도 바로 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. 이 마법사는 내부 암호화를 지원하지 않습니다.
 
 ::: moniker-end
 
@@ -101,14 +101,14 @@ Windows 인증서 저장소, Azure Key Vault 또는 다른 키 저장소에 열 
 > [!TIP]
 > 이 마법사를 사용하면 Windows 인증서 저장소 및 Azure Key Vault에서만 키를 찾아보고 만들 수 있습니다. 또한 새 키와 해당 키를 설명하는 데이터베이스 메타데이터 개체의 이름을 자동으로 생성합니다. 키 프로비전 방법에 대한 추가 제어 및 열 마스터 키를 포함하는 키 저장소에 대한 추가 선택 항목이 필요한 경우 먼저 **새 열 마스터 키** 및 **새 열 암호화 키** 대화 상자를 사용하여 키를 만든 다음, 마법사를 실행하고 만든 키를 선택할 수 있습니다. [새 열 마스터 키 대화 상자를 사용하여 열 마스터 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) 및 [새 열 암호화 키 대화 상자를 사용하여 열 암호화 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)을 참조하세요. 
 
-## <a name="next-steps"></a>Next Steps
-- [SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>다음 단계
+- [SQL Server Management Studio로 Always Encrypted를 사용하여 열 쿼리](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목  
- - [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md) 
  - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](configure-always-encrypted-using-sql-server-management-studio.md)
- - [PowerShell을 사용하여 Always Encrypted 키 프로비전](configure-always-encrypted-keys-using-powershell.md)
+ - [PowerShell을 사용하여 Always Encrypted 키 프로비저닝](configure-always-encrypted-keys-using-powershell.md)
  - [PowerShell로 Always Encrypted를 사용하여 열 암호화 구성](configure-column-encryption-using-powershell.md)
  - [DAC 패키지로 Always Encrypted를 사용하여 열 암호화 구성](configure-always-encrypted-using-dacpac.md)
