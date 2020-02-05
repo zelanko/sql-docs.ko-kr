@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064688"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064688"
   
  이 기능은 Data Tier Application Framework(DACFx)를 사용하는 데이터베이스 내보내기와 호환되지 않습니다. 내보내기 전에 모든 비대칭 키를 삭제해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  프라이빗 키를 암호화하는 데 사용할 암호를 지정합니다. 이 절이 없는 경우 프라이빗 키는 데이터베이스 마스터 키로 암호화됩니다. *password*는 최대 128자입니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *asymmetric key*는 데이터베이스 수준에서 보안 가능한 엔터티입니다. 기본 형태의 이 엔터티에는 퍼블릭 키와 프라이빗 키가 모두 포함됩니다. FROM 절 없이 실행될 경우 CREATE ASYMMETRIC KEY는 새로운 키 쌍을 생성합니다. FROM 절로 실행될 경우 CREATE ASYMMETRIC KEY는 파일에서 키 쌍을 가져오거나 어셈블리 또는 DLL 파일에서 공개 키를 가져옵니다.  
   
  기본적으로 프라이빗 키는 데이터베이스 마스터 키로 보호됩니다. 데이터베이스 마스터 키를 만든 경우 프라이빗 키를 보호하기 위해 암호가 필요합니다.  
@@ -126,7 +126,7 @@ CREATE ASYMMETRIC KEY asym_key_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-asymmetric-key"></a>1\. 비대칭 키 만들기  
+### <a name="a-creating-an-asymmetric-key"></a>A. 비대칭 키 만들기  
  다음 예에서는 `PacificSales09` 알고리즘을 사용하여 `RSA_2048`라는 비대칭 키를 만들고 암호로 프라이빗 키를 보호합니다.  
   
 ```sql  
@@ -136,7 +136,7 @@ CREATE ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>2\. 파일로부터 비대칭 키를 만들어서 사용자에게 권한 부여  
+### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. 파일로부터 비대칭 키를 만들어서 사용자에게 권한 부여  
  다음 예에서는 파일에 저장된 키 쌍으로부터 비대칭 키 `PacificSales19`를 만든 다음, 사용자 `Christina`에게 비대칭 키의 소유권을 할당합니다. 프라이빗 키는 데이터베이스 마스터 키로 보호되며 마스터 키는 비대칭 키를 만들기 전에 만들어져야 합니다.  
   
 ```sql  
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM 공급자에서 비대칭 키 만들기  
- 다음 예제에서는 `EKM_Provider1`이라는 확장 가능 키 관리 공급자에 저장된 키 쌍에서 `EKM_askey1` 비대칭 키와, 해당 공급자에서 `key10_user1`이라는 키를 만듭니다.  
+ 다음 예제에서는 `EKM_askey1`이라는 확장 가능 키 관리 공급자에 저장된 키 쌍에서 `EKM_Provider1` 비대칭 키와, 해당 공급자에서 `key10_user1`이라는 키를 만듭니다.  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037579"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "68037579"
   
 -   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
-    데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [Drop a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+    데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     > 데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "68037579"
   
 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
 **데이터베이스를 분리하려면**  
   
 -   [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
@@ -146,7 +146,7 @@ ms.locfileid: "68037579"
   
 **데이터베이스 스냅샷을 삭제하려면**  
   
--   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  

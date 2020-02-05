@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113697"
 ---
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68113697"
 
 이 함수는 **int** ASCII 코드를 문자 값으로 변환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ CHAR ( integer_expression )
 ## <a name="return-types"></a>반환 형식
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 문자열에 제어 문자를 삽입하는 데 `CHAR`를 사용합니다. 이 표에서는 자주 사용되는 제어 문자를 보여 줍니다.
   
 |제어 문자|값|  
@@ -68,7 +68,7 @@ CHAR ( integer_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>1. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
+### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
 이 예에서는 `New Moon` 문자열에서 각 문자의 ASCII 값과 문자를 인쇄합니다.
   
 ```sql
@@ -109,7 +109,7 @@ GO
 110         n  
 ```
   
-### <a name="b-using-char-to-insert-a-control-character"></a>2. CHAR를 사용하여 제어 문자 삽입  
+### <a name="b-using-char-to-insert-a-control-character"></a>B. CHAR를 사용하여 제어 문자 삽입  
 이 예에서는 쿼리가 결과를 텍스트로 반환할 때 `CHAR(13)`를 사용하여 직원의 이름과 이메일 주소를 별도의 줄에 인쇄합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
   
 ```sql
@@ -199,7 +199,7 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [ASCII&#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

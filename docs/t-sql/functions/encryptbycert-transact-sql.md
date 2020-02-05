@@ -20,10 +20,10 @@ ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314586"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314586"
 
 인증서의 공개 키를 사용하여 데이터를 암호화합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ _cleartext_
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 이 함수는 인증서의 공개 키를 사용하여 데이터를 암호화합니다. 이러한 암호화된 텍스트는 이에 대응하는 프라이빗 키로만 해독할 수 있습니다. 이 비대칭 변환은 대칭 키를 사용한 암호화 및 암호 해독에 비해 비용이 많이 듭니다. 따라서 큰 데이터 세트로 작업할 경우에는 비대칭형 암호화를 사용하지 않는 것이 좋습니다.
   
 ## <a name="examples"></a>예  

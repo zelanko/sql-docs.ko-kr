@@ -23,15 +23,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909887"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을(를) 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
 >  뷰가 참조하는 개체의 이름을 변경하려면 뷰를 수정하여 뷰의 텍스트에 새 이름이 적용되도록 해야 합니다. 따라서 개체 이름을 바꾸기 전에는 개체의 종속 관계를 먼저 표시하여 변경으로 인해 영향을 받는 뷰가 있는지 확인해야 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "72909887"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  `sp_helptext` 를 사용하여 뷰의 정의를 반환하려면 **공용** 역할의 멤버여야 합니다. `sys.sql_expression_dependencies` 를 사용하여 뷰의 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 `sys.sql_expression_dependencies` 에 대한 SELECT 권한이 있어야 합니다. SELECT OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -65,7 +65,7 @@ ms.locfileid: "72909887"
 
      **속성 보기** 대화 상자에 표시되는 속성은 다음과 같습니다.  
   
-     **데이터베이스 백업**  
+     **Database**  
      이 뷰를 포함하는 데이터베이스의 이름입니다.  
   
      **Server**  
@@ -111,7 +111,7 @@ ms.locfileid: "72909887"
      **(이름)**  
      현재 뷰의 이름입니다.  
   
-     **Database Name**  
+     **데이터베이스 이름**  
      이 뷰를 포함하는 데이터베이스의 이름입니다.  
   
      **설명**  
@@ -153,7 +153,7 @@ ms.locfileid: "72909887"
      **백분율**  
      결과 집합에서 처음 n%에 해당하는 행만 반환하는 **TOP** 절이 쿼리에 포함되도록 지정합니다.  
   
-     **동률**  
+     **With Ties**  
      뷰에 **WITH TIES** 절이 포함되도록 지정합니다. **WITH TIES** 는 백분율을 기반으로 하는 **TOP** 절 및 **ORDER BY** 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율이 나뉘는 위치가 **ORDER BY** 절에서 동일한 값을 가진 행 집합의 중간에 놓이는 경우 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다.  
   
      **업데이트 사양**  

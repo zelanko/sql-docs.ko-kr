@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044035"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68044035"
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 현재 데이터베이스에서 하나 이상의 저장 프로시저나 프로시저 그룹을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  *procedure*  
  제거할 저장 프로시저나 저장 프로시저 그룹의 이름입니다. 번호를 매긴 프로시저 그룹 내의 개별 프로시저는 삭제할 수 없으며 전체 프로시저 그룹이 삭제됩니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  저장 프로시저를 제거하기 전에 종속 개체를 확인하여 적절하게 수정합니다. 저장 프로시저를 삭제하고 종속 개체를 업데이트하지 않으면 해당 개체 및 스크립트에서 오류가 발생할 수 있습니다. 자세한 내용은 [저장 프로시저의 종속성 보기](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)를 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  

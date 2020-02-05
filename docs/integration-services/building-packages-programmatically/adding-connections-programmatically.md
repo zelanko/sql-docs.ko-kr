@@ -25,10 +25,10 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299093"
 ---
 # <a name="adding-connections-programmatically"></a>프로그래밍 방식으로 연결 추가
@@ -45,7 +45,7 @@ ms.locfileid: "71299093"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체의 **QueryInterface** 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
+ 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 **개체의**QueryInterface<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 연결 관리자와 `package.Connections.Add("xxx")` 문에 사용되는 문자열을 보여 줍니다. 모든 연결 관리자의 목록은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   

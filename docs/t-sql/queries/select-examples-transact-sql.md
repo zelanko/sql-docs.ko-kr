@@ -31,10 +31,10 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74191083"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
@@ -43,11 +43,11 @@ ms.locfileid: "74191083"
   이 항목에서는 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하는 예제를 제공합니다.  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT를 사용하여 행 및 열 검색  
- 다음 예에서는 세 개의 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`Product` 사용)을 반환합니다.  
+ 다음 예에서는 세 개의 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `*` 데이터베이스의 `Product` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열([!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 사용)을 반환합니다.  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Name` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`ProductNumber`, `ListPrice`, `Product`)을 반환합니다. 또한 열 머리글이 추가됩니다.  
+ 다음 예에서는 `Name` 데이터베이스의 `ProductNumber` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`ListPrice`, `Product`, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)])을 반환합니다. 또한 열 머리글이 추가됩니다.  
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   

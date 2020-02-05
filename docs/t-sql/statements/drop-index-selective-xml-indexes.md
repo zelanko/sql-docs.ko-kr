@@ -15,10 +15,10 @@ ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044147"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX(선택적 XML 인덱스)
@@ -26,7 +26,7 @@ ms.locfileid: "68044147"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 선택적 XML 인덱스 또는 보조 선택적 XML 인덱스를 삭제합니다. 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   

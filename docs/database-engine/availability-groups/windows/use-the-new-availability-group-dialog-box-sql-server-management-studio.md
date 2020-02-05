@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821958"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "74821958"
 -   보조 복제본을 가용성 그룹에 조인할 수 없습니다.    
 -   초기 데이터 동기화를 수행할 수 없습니다.  
   
- 이러한 구성 태스크에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)를 참조하세요.  
+ 이러한 구성 작업에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)를 참조하세요.  
   
 ##  <a name="Permissions"></a> 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "74821958"
     > [!TIP]  
     >  복제본을 추가했지만 호스트 서버 인스턴스에 연결할 수 없는 경우 해당 복제본을 제거하고 새 복제본을 추가합니다. 자세한 내용은 [가용성 그룹에서 보조 복제본 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 및 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
-8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정**을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
+8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정**을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹&#40;일반 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)을 참조하세요.  
   
 9. 가용성 그룹을 만들려면 **확인**을 클릭합니다. 이렇게 하면 지정된 데이터베이스가 사전 요구 사항을 충족하는지 여부가 확인됩니다.  
   

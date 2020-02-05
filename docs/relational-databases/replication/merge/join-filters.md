@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033237"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -44,7 +44,7 @@ ms.locfileid: "68033237"
 LoginID = SUSER_SNAME()  
 ```  
   
- 이 필터는 각 직원의 구독이 **HumanResources.Employee** 테이블에서 해당 직원(이 경우에는 단일 행임)과 관련된 데이터만 포함하도록 합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+ 이 필터는 각 직원의 구독이 **HumanResources.Employee** 테이블에서 해당 직원(이 경우에는 단일 행임)과 관련된 데이터만 포함하도록 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  다음 단계는 두 테이블 간에 조인을 지정하는 데 사용된 구문과 유사한 구문을 사용하여 이 필터를 각 관련 테이블로 확장하는 것입니다. 첫 번째 조인 필터 절은 다음과 같습니다.  
   

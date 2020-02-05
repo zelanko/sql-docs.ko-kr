@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026511"
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG(Transact-SQL)
+# <a name="count_big-transact-sql"></a>COUNT_BIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수는 그룹에 있는 항목의 수를 반환합니다. `COUNT_BIG`은 [COUNT](../../t-sql/functions/count-transact-sql.md) 함수처럼 작동합니다. 이러한 함수는 해당 반환 값의 데이터 형식만이 다릅니다. `COUNT_BIG`은 항상 **bigint** 데이터 형식 값을 반환합니다. `COUNT`은 항상 **int** 데이터 형식 값을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>반환 형식
 **bigint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 COUNT_BIG(\*)은 그룹의 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.
   
 COUNT_BIG(ALL *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 값의 수를 반환합니다.
@@ -78,10 +78,10 @@ COUNT_BIG은 OVER 및 ORDER BY 절 **_없이_** 사용되는 경우 결정적 �
 ## <a name="examples"></a>예  
 예제는 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)을 참조하세요.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)  
-[int, bigint, smallint 및 tinyint&#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

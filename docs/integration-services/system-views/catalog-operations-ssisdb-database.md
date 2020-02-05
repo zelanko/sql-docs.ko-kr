@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296549"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations(SSISDB 데이터베이스)
@@ -29,7 +29,7 @@ ms.locfileid: "71296549"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 작업에 대한 자세한 정보를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|작업의 고유 식별자(ID)입니다.|  
 |operation_type|**smallint**|작업의 유형입니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296549"
 |object_type|**smallint**|작업의 영향을 받는 개체의 유형입니다. 개체는 폴더(`10`), 프로젝트(`20`), 패키지(`30`), 환경(`40`) 또는 실행 인스턴스(`50`)일 수 있습니다.|  
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
 |object_name|**nvarchar(260)**|개체 이름입니다.|  
-|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset**|작업이 시작된 시간입니다.|  
 |end_time|**datetimeoffsset**|작업이 종료된 시간입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296549"
 |server_name|**nvarchar(128)**|Windows 서버 및 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 인스턴스 정보입니다.|  
 |machine_name|**nvarchar(128)**|서버 인스턴스가 실행 중인 컴퓨터 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 각 작업에 대한 하나의 행을 표시합니다. 이를 통해 관리자는 프로젝트 배포 또는 패키지 실행과 같은 서버에서 수행된 모든 논리적 작업을 열거할 수 있습니다.  
   
  이 뷰는 **operation_type** 열에 나열된 다음 작업 유형을 표시합니다.  

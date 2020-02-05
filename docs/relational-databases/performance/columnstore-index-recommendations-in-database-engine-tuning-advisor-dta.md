@@ -13,10 +13,10 @@ ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 1d0086a6698c45d5c24d89f8e6a681d14051e11f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74166001"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항
@@ -55,7 +55,7 @@ dta.exe 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](
 ## <a name="see-also"></a>참고 항목
 [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[자습서: 데이테베이스 엔진 튜닝 관리자](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[자습서: 데이터베이스 엔진 튜닝 관리자](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
 
 
 

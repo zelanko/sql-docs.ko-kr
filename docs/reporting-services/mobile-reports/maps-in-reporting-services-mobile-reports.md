@@ -9,10 +9,10 @@ ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62683740"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 지도
@@ -77,8 +77,8 @@ SQL Server 모바일 보고서는 다양한 상황에 유용한 세 가지 다�
      
 8. 왼쪽 위 모서리에서 **저장** 아이콘을 선택하고 사용자의 컴퓨터 **Save Locally** (로컬에 저장)하거나 **Save to Server**(서버에 저장)합니다.  
   
-### <a name="see-also"></a>관련 항목:  
--  [Reporting Services 모바일 보고서의 사용자 지정 맵](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>참고 항목  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

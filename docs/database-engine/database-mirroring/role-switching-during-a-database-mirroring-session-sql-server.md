@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252788"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "75252788"
 2.  미러 서버는 주 서버에서 받은 마지막 로그 레코드의 LSN(로그 시퀀스 번호)을 장애 조치 LSN으로 기록합니다.  
   
     > [!NOTE]  
-    >  이 LSN을 보려면 [sys.database_mirroring&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)에서 **mirroring_failover_lsn** 열을 선택합니다.  
+    >  이 LSN을 보려면 **sys.database_mirroring&#40;Transact-SQL&#41;** 에서 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 열을 선택합니다.  
   
 3.  Redo Queue에서 대기 중인 로그가 있으면 미러 서버가 미러 데이터베이스의 롤포워드를 마칩니다. 소요 시간은 시스템 속도, 최근 작업 및 Redo Queue에 있는 로그 양에 따라 달라집니다. 동기 운영 모드의 경우 Redo Queue의 크기를 제한하여 장애 조치 시간을 조정할 수 있습니다. 그러나 이 경우 미러 서버에서 동기화 상태를 계속 유지해야 하므로 주 서버의 속도가 느려질 수 있습니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "75252788"
   
  다음 그림에서는 자동 장애 조치의 단일 인스턴스를 보여 줍니다.  
   
- ![자동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
+ ![자동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "자동 장애 조치(automatic failover)")  
   
  처음에는 세션에 전체 쿼럼이 있으며 세 서버가 모두 연결되어 있습니다. **Partner_A** 는 주 서버이고 **Partner_B** 는 미러 서버입니다. 먼저**Partner_A** (또는 **Partner_A**의 주 데이터베이스)를 사용할 수 없게 됩니다. 미러링 모니터 서버와 **Partner_B** 에서 주 서버를 더 이상 사용할 수 없다는 것을 인식하고 세션이 쿼럼을 유지합니다. **Partner_B** 가 주 서버가 되고 해당 데이터베이스 복사본을 새로운 주 데이터베이스로 사용할 수 있도록 만듭니다. 마지막으로 **Partner_A** 가 세션에 다시 연결되고 **Partner_B** 가 주 역할을 담당하고 있음을 확인합니다. 그런 다음**Partner_A** 는 미러 역할을 수행합니다.  
   

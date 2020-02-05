@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137333"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
@@ -143,17 +143,17 @@ ms.locfileid: "68137333"
 ##  <a name="Identifying"></a> 데이터베이스 포함 식별  
  데이터베이스의 포함 상태를 식별할 수 있는 도구가 두 가지 있습니다. [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)는 데이터베이스에서 포함되지 않은 엔터티일 가능성이 있는 엔터티를 모두 표시하는 뷰입니다. 런타임 시 실제로 포함되지 않은 엔터티가 식별될 때 database_uncontained_usage 이벤트가 발생합니다.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  이 뷰는 데이터베이스 경계를 넘는 엔터티와 같이 포함되지 않은 엔터티가 될 가능성이 있는 데이터베이스의 엔터티를 보여 줍니다. 여기에는 데이터베이스 모델 외부 개체를 사용할 수 있는 사용자 엔터티가 포함됩니다. 그러나 런타임이 될 때까지 일부 엔터티(예: 동적 SQL을 사용하는 엔터티)의 포함을 확인할 수 없기 때문에 이 뷰에서 실제로는 포함되지 않은 엔터티가 아닌 일부 엔터티를 보여 줄 수 있습니다. 자세한 내용은 [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)를 참조하세요.  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage 이벤트  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage 이벤트  
  XEvent는 런타임 시 포함되지 않은 엔터티가 식별될 때마다 발생합니다. 여기에는 클라이언트 코드에서 시작된 엔터티가 포함됩니다. 이 XEvent는 실제로 포함되지 않은 엔터티에 대해서만 발생합니다. 그러나 이벤트는 런타임에만 발생합니다. 따라서 실행하지 않은, 포함되지 않은 모든 사용자 엔터티는 이 XEvent에서 식별되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [수정된 기능&#40;포함된 데이터베이스&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)   
+ [포함된 데이터베이스의 보안 모범 사례](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [포함된 데이터베이스 사용자 - 휴대용 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

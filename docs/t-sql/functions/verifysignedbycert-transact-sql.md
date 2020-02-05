@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927551"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927551"
 
   디지털 서명된 데이터가 서명된 후 변경되었는지 여부를 테스트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  서명된 데이터가 변경되지 않았으면 1을, 변경되었으면 0을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **VerifySignedBycert**는 지정한 인증서의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -67,7 +67,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>1\. 서명된 데이터가 변경되지 않았는지 확인  
+### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 서명된 데이터가 변경되지 않았는지 확인  
  다음 예에서는 `Signed_Data`의 정보가 `Shipping04`라는 인증서로 서명된 후 변경되었는지 테스트합니다. 서명은 `DataSignature`에 저장됩니다. 인증서 `Shipping04`는 데이터베이스 내의 인증서 ID를 반환하는 `Cert_ID`로 전달됩니다. `VerifySignedByCert`가 1을 반환하면 서명이 올바른 것입니다. `VerifySignedByCert`가 0을 반환하면 `Signed_Data`의 데이터는 `DataSignature`를 생성하는 데 사용된 데이터와 다릅니다. 이 경우 `Signed_Data`가 서명된 후 변경되었거나 `Signed_Data`가 다른 인증서로 서명된 것입니다.  
   
 ```  
@@ -78,7 +78,7 @@ WHERE Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-### <a name="b-returning-only-records-that-have-a-valid-signature"></a>2\. 유효한 서명을 가진 레코드만 반환  
+### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 유효한 서명을 가진 레코드만 반환  
  이 쿼리에서는 인증서 `Shipping04`를 사용하여 서명된 이후 변경되지 않은 레코드만 반환합니다.  
   
 ```  
