@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934089"
 ---
 # <a name="update-statistics"></a>통계 업데이트
@@ -42,7 +42,7 @@ ms.locfileid: "67934089"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  UPDATE STATISTICS를 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 작업을 하려면 테이블 또는 뷰에 대한 ALTER 권한이 있어야 합니다. `sp_updatestats`를 사용할 경우 **sysadmin** 고정 서버 역할에 멤버 자격이 있거나 데이터베이스(**dbo**)의 소유권이 있어야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -95,7 +95,7 @@ ms.locfileid: "67934089"
     GO  
     ```  
   
-자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요.  
+자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)로 만든 데이터베이스 유지 관리 계획을 실행합니다.  
   
 ### <a name="to-update-all-statistics-in-a-database"></a>데이터베이스의 모든 통계를 업데이트하려면  
   

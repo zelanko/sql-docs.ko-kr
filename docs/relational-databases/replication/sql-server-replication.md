@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958348"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287123"
 ---
-# <a name="sql-server-replication"></a>SQL  Server  복제
+# <a name="sql-server-replication"></a>SQL Server 복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   복제는 한 데이터베이스에서 다른 데이터베이스로 데이터와 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70958348"
   
 ## <a name="publications-and-articles"></a>게시 및 문서 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [게시 만들기](publish/create-a-publication.md)    
 -   [아티클 정의](publish/define-an-article.md)   
 -   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
 -   [아티클 속성 보기 및 수정](publish/view-and-modify-article-properties.md)    

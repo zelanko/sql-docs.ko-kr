@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910081"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67910081"
 
   명시적 로컬 트랜잭션의 시작 위치를 표시합니다. 명시적 트랜잭션은 BEGIN TRANSACTION 문으로 시작되어 COMMIT 또는 ROLLBACK 문으로 끝납니다.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
  
- 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
+ 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
   
  @*tran_name_variable*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "서버: 메시지 3920, 수준 16, 상태 1, 줄 3"  
+ "Server: Msg 3920, Level 16, State 1, Line 3"  
   
  "WITH MARK 옵션은 첫 번째 BEGIN TRAN WITH MARK 문에만 적용되므로  
   
@@ -144,8 +144,8 @@ COMMIT TRAN T1;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-explicit-transaction"></a>1\. 명시적 트랜잭션 사용
-**적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+### <a name="a-using-an-explicit-transaction"></a>A. 명시적 트랜잭션 사용
+**적용 대상:** SQL Server(2008 이상), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 이 예제에서는 AdventureWorks를 사용합니다. 
 
@@ -156,8 +156,8 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>2\. 트랜잭션 롤백
-**적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+### <a name="b-rolling-back-a-transaction"></a>B. 트랜잭션 롤백
+**적용 대상:** SQL Server(2008 이상), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 다음 예제에서는 트랜잭션 롤백의 결과를 보여 줍니다. 이 예제에서는 ROLLBACK 문이 INSERT 문을 롤백하지만 만들어진 테이블은 그대로 있습니다.
 

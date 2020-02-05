@@ -18,10 +18,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100988"
 ---
 # <a name="starea-geometry-data-type"></a>STArea(geometry 데이터 형식)
@@ -41,12 +41,12 @@ ms.locfileid: "68100988"
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. **geometry** 인스턴스가 초기화되지 않은 경우 `STArea()`는 **NULL**을 반환합니다.  
+## <a name="remarks"></a>설명  
+ `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. `STArea()`geometry**인스턴스가 초기화되지 않은 경우**는 **NULL**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-area-of-a-polygon-instance"></a>1\. Polygon 인스턴스의 면적 계산  
+### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Polygon 인스턴스의 면적 계산  
  다음 예에서는 `Polygon``geometry` 인스턴스를 만들고 다각형의 면적을 계산합니다.  
   
 ```  
@@ -55,7 +55,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STArea();  
 ```  
   
-### <a name="b-computing-the-area-of-a-curvepolygon-instance"></a>2\. CurvePolygon 인스턴스의 면적 계산  
+### <a name="b-computing-the-area-of-a-curvepolygon-instance"></a>B. CurvePolygon 인스턴스의 면적 계산  
  다음 예에서는 `CurvePolygon` 인스턴스의 면적을 계산합니다.  
   
 ```

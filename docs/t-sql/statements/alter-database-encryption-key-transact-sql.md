@@ -18,10 +18,10 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065869"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065869"
 
   데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키와 인증서를 변경합니다. TDE(투명한 데이터 암호화)에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ ALTER DATABASE ENCRYPTION KEY
  ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  데이터베이스 암호화 키를 암호화하는 데 사용되는 비대칭 키의 이름을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
   
  Dbo(데이터베이스 소유자)가 변경될 경우 데이터베이스 암호화 키를 다시 생성하지 않아도 됩니다.

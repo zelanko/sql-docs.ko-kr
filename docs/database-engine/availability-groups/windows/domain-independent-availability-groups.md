@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000227"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
@@ -127,7 +127,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
    ```
 
 10. 주 복제본일 수 있는 모든 복제본에 대해 모든 관련 보조 복제본에 로그인 및 사용자를 만듭니다.
-11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어
+11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 다음은 그 예입니다.
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

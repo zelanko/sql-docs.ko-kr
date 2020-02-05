@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082269"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 데이터베이스 범위 자격 증명(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68082269"
 
   데이터베이스 범위 자격 증명에 대한 사용 권한을 철회합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  사용 권한을 철회하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
- 사용 권한을 취소할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 사용 권한을 취소할 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
  AS *revoking_principal*  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -101,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 범위 자격 증명은 사용 권한 계층에서 해당 사용자의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 데이터베이스 범위 자격 증명에 대해 철회할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
 |데이터베이스 범위 자격 증명 사용 권한|데이터베이스 범위 자격 증명 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  

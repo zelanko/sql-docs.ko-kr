@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822671"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
@@ -168,7 +168,7 @@ ms.locfileid: "74822671"
  보조 복제본의 현재 작동 상태를 나타냅니다. 이 값은 기본적으로 숨겨집니다. 사용 가능한 값은  
   
  **0**. 장애 조치(failover) 보류 중    
- **1**. Pending    
+ **1**. 보류 중    
  **2**. 온라인    
  **3**. 오프라인   
  **4**. 실패    

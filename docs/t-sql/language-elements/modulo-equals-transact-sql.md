@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 04a0b0881475bb47ca87dba03c207f3ceac9149e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122111"
 ---
 # <a name="-modulus-assignment-transact-sql"></a>%=(모듈러스 대입)(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68122111"
 
   한 숫자를 다른 숫자로 나누고 값을 연산 결과로 설정합니다. 예를 들어 @x 변수가 38일 경우 @x %= 5는 원래 값 @x를 5로 나누고 @x를 이 나누기의 나머지(3)로 설정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ expression %= expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 숫자 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 숫자 범주에서 [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 **식**입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자세한 내용은 [%&#40;모듈러스&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

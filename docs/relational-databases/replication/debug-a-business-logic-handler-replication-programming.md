@@ -19,10 +19,10 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321781"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)

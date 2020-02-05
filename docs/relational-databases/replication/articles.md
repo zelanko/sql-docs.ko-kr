@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 851f298d9a2b19a1f8a3bf3fc1ef415ac4a5e288
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770661"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288118"
 ---
 # <a name="articles"></a>아티클
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "68770661"
     >  **모든 \<ObjectType> 아티클의 속성** 대화 상자에서 변경한 속성은 이전에 **아티클 속성 - \<ObjectName>** 대화 상자에서 지정한 내용을 재정의합니다. 예를 들어 특정 개체 유형의 모든 아티클에 대해 여러 기본값을 설정하고 개별 개체에 대해 일부 속성도 설정하려면 먼저 모든 아티클의 기본값을 설정합니다. 그런 다음 개별 개체에 대해 속성을 설정합니다.  
   
  **강조 표시된 테이블은 다운로드 전용**  
- 병합 복제에 대해서만 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. 클라이언트 구독이 사용 중일 때는 구독자에서 변경 작업을 수행할 수 없게 지정하려면 선택합니다. 다운로드 전용 아티클은 구독자에서 업데이트할 수 없으므로 추적 메타데이터가 구독자로 전송되지 않습니다. 이로 인해 구독자의 스토리지 용량 및 성능상 이점이 줄어들 수 있으며 특히 네트워크 연결 속도가 느릴 경우 더욱 그렇습니다. 이 옵션은 **아티클 속성** 대화 상자에 있는 **동기화 방향** 옵션의 **구독자로 다운로드 전용, 구독자 변경 금지** 값과 동일합니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
+ 병합 복제에 대해서만 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 클라이언트 구독이 사용 중일 때는 구독자에서 변경 작업을 수행할 수 없게 지정하려면 선택합니다. 다운로드 전용 아티클은 구독자에서 업데이트할 수 없으므로 추적 메타데이터가 구독자로 전송되지 않습니다. 이로 인해 구독자의 스토리지 용량 및 성능상 이점이 줄어들 수 있으며 특히 네트워크 연결 속도가 느릴 경우 더욱 그렇습니다. 이 옵션은 **아티클 속성** 대화 상자에 있는 **동기화 방향** 옵션의 **구독자로 다운로드 전용, 구독자 변경 금지** 값과 동일합니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   
  **선택 표시된 개체만 목록에 표시**  
  개체 창에서 선택한 아티클만 표시하려면 이 확인란을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
   

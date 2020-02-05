@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908665"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
@@ -33,7 +33,7 @@ SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsof
    
 - 최소 하드 디스크 공간: 2GB.
   
-- 권장: 최소 16GB의 RAM.
+- 권장: 최소 16GB RAM.
    
 - PolyBase가 제대로 작동하려면 TCP/IP를 사용하도록 설정해야 합니다. Developer 및 Express SQL Server 버전을 제외하고 모든 버전의 SQL Server에서 TCP/IP는 기본적으로 사용하도록 설정되어 있습니다. Developer 및 Express 버전에서 PolyBase가 제대로 작동하기 위해서는 TCP/IP 연결을 사용하도록 설정해야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.
 
@@ -102,33 +102,33 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
 
-|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|설명|  
+|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBase|PolyBase 기능을 선택합니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 PolyBase 엔진의 시작 모드를 지정합니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False.|  
-|PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|설명|  
+|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore는 Hadoop 연결을 제외한 모든 PolyBase 기능에 대한 지원을 설치합니다. PolyBaseJava는 Hadoop 연결을 지원합니다. PolyBase는 두 기능을 모두 설치합니다. |  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 PolyBase 엔진의 시작 모드를 지정합니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False.|  
-|PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예제:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 

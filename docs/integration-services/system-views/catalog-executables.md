@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296614"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296614"
   
  실행 개체는 사용자가 패키지의 제어 흐름에 추가하는 태스크 또는 컨테이너입니다.  
   
-|열 이름|**Data type**|설명|  
+|열 이름|**데이터 형식**|Description|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|해당 실행에 대한 고유 식별자입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 식별자입니다.|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296614"
 > [!NOTE]  
 >  서버에서 작업을 수행할 권한이 있으면 작업에 대한 정보를 볼 수 있는 권한도 있습니다. 행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294518"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
@@ -74,15 +74,15 @@ ms.locfileid: "71294518"
   
  다음 표에서는 **dbo.xdbcdc_trace** 테이블에 포함된 항목에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |----------|-----------------|  
-|TIMESTAMP|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
-|유형|다음 값 중 하나가 포함됩니다.<br /><br /> error<br /><br /> INFO<br /><br /> 추적|  
+|timestamp|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
+|type|다음 값 중 하나가 포함됩니다.<br /><br /> 오류<br /><br /> INFO<br /><br /> TRACE|  
 |node|레코드가 기록된 노드의 이름입니다.|  
 |상태|상태 테이블에서 사용되는 상태 코드입니다.|  
 |sub_status|상태 테이블에서 사용되는 하위 상태 코드입니다.|  
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
-|원본(source)|추적 레코드를 생성한 Oracle CDC 구성 요소의 이름입니다.|  
+|source|추적 레코드를 생성한 Oracle CDC 구성 요소의 이름입니다.|  
 |text_data|오류 또는 추적 레코드에 텍스트 페이로드가 포함되는 사례에 대한 추가 텍스트 데이터입니다.|  
 |binary_data|오류 또는 추적 레코드에 이진 페이로드가 포함되는 사례에 대한 추가 이진 데이터입니다.|  
   
@@ -93,19 +93,19 @@ ms.locfileid: "71294518"
   
  다음 표에서는 **dbo.xdbcdc_databases** 테이블에 포함된 항목에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |----------|-----------------|  
-|NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 Oracle 데이터베이스의 이름입니다.|  
+|name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 Oracle 데이터베이스의 이름입니다.|  
 |config_version|해당 CDC 데이터베이스 **xdbcdc_config** 테이블의 마지막 변경에 대한 타임스탬프(UTC) 또는 이 테이블의 현재 행에 대한 타임스탬프(UTC)입니다.<br /><br /> UPDATE 트리거는 이 항목에 대한 GETUTCDATE()의 값을 적용합니다. **config_version** 을 사용하여 CDC Service에서 구성 변경 또는 설정/해제를 확인해야 할 CDC 인스턴스를 식별할 수 있습니다.|  
 |cdc_service_name|이 항목은 어떤 Oracle CDC Service가 선택한 Oracle 데이터베이스를 처리할지를 결정합니다.|  
-|enabled|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC 인스턴스는 재시도할 수 없는 오류로 인해 비활성화될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
+|사용|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC 인스턴스는 재시도할 수 없는 오류로 인해 비활성화될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  이 테이블에는 호스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 CDC Service가 나열됩니다. 이 테이블은 CDC Designer 콘솔에서 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 구성된 CDC Service의 목록을 확인하는 데 사용됩니다. 이 테이블은 CDC Service에서 실행 중인 하나의 Windows 서비스에서만 지정된 Oracle CDC Service 이름이 처리되는지 확인하는 데도 사용됩니다.  
   
  다음 표에서는 **dbo.xdbcdc_databases** 테이블에 포함된 캡처 상태에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC Service의 이름(Windows 서비스 이름)입니다.|  
 |cdc_service_sql_login|Oracle CDC Service에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. cdc_service라는 새 SQL 사용자가 만들어지고 이 로그인 이름에 연결된 다음 서비스에서 처리되는 각 CDC 데이터베이스에 대한 db_ddladmin, db_datareader 및 db_datawriter 고정 데이터베이스 역할의 멤버로 추가됩니다.|  
@@ -209,7 +209,7 @@ ms.locfileid: "71294518"
   
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 위치:  
   
  **cdc-service-name** 은 업데이트할 CDC Service의 이름입니다. 필수 매개 변수입니다.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "71294518"
      [sqlacct <sql-username> <sql-password>]  
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 위치:  
   
  **cdc-service-name** 은 새로 만든 서비스의 이름입니다. 이 이름을 사용하는 서비스가 이미 있는 경우 프로그램에서 오류가 반환됩니다. 긴 이름이나 공백이 있는 이름은 사용하지 마십시오. "/" 및 "\\" 문자는 서비스 이름에 올바른 문자가 아닙니다. 필수 매개 변수입니다.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "71294518"
   
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 위치:  
   
  **cdc-service-name** 삭제할 CDC Service의 이름입니다.  
   

@@ -15,10 +15,10 @@ ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846665"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용
@@ -64,7 +64,7 @@ ms.locfileid: "70846665"
      예를 들어 HOST_A 시스템의 인증서를 만들려면 다음 코드를 사용합니다.  
   
     > [!IMPORTANT]  
-    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **인증서** 패싯의 **\@ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
+    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **인증서\@ 패싯의** **ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
   
     ```  
     USE master;  
@@ -169,7 +169,7 @@ GO
   
  Transact-SQL 예제를 포함하여 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
   
- 고성능 모드 세션을 설정하는 Transact-SQL 예는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
+ 고성능 모드 세션을 설정하는 Transact-SQL 예제는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)를 참조하세요.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
@@ -180,7 +180,7 @@ GO
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  

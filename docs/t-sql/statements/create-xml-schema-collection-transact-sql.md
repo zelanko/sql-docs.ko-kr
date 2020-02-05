@@ -26,10 +26,10 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927720"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927720"
 
   스키마 구성 요소를 데이터베이스로 가져옵니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *식*  
  문자열 상수 또는 스칼라 변수입니다. **varchar**, **varbinary**, **nvarchar** 또는 **xml** 유형입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)을 사용하여 컬렉션에 있는 기존 네임스페이스에 새 구성 요소를 추가하거나 컬렉션에 새 네임스페이스를 추가할 수도 있습니다.  
   
  컬렉션을 제거하려면 [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)을 사용합니다.  
@@ -78,7 +78,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>1\. 데이터베이스에 XML 스키마 컬렉션 만들기  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. 데이터베이스에 XML 스키마 컬렉션 만들기  
  다음 예에서는 XML 스키마 컬렉션 `ManuInstructionsSchemaCollection`을 만듭니다. 이 컬렉션에는 스키마 네임스페이스가 하나만 있습니다.  
   
 ```  
@@ -170,8 +170,8 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  CREATE XML SCHEMA COLLECTION은 SQL Server에서 이해하는 스키마 구성 요소만 저장합니다. XML 스키마에 있는 모든 사항이 데이터베이스에 저장되는 것은 아닙니다. 따라서 XML 스키마 컬렉션을 제공된 방식과 똑같이 되돌리려면 XML 스키마를 데이터베이스 열 또는 컴퓨터의 다른 폴더에 저장하는 것이 좋습니다.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>2\. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
- XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들어  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
+ XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  

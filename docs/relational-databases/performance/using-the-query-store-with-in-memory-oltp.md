@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251298"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
@@ -45,9 +45,9 @@ ms.locfileid: "72251298"
   
 -   쿼리 저장소는 메모리 내 OLTP의 계획 생성 메커니즘을 활용하여 컴파일하는 동안 쿼리 실행 계획을 캡처합니다. 저장된 계획은 의미상 `SET SHOWPLAN_XML ON` 을(를) 사용하여 획득한 것과 같고 한 가지 차이점은 쿼리 저장소의 계획은 개별 문을 기준으로 분할 및 저장된다는 것입니다.  
     
--   혼합 작업이 있는 데이터베이스에서 쿼리 저장소를 실행하는 경우 [sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)의 **is_natively_compiled** 필드를 사용하여 네이티브 코드 컴파일에서 생성된 쿼리 계획을 쉽게 찾을 수 있습니다.  
+-   혼합 작업이 있는 데이터베이스에서 쿼리 저장소를 실행하는 경우 **sys.query_store_plan&#40;Transact-SQL&#41;** 의 [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 필드를 사용하여 네이티브 코드 컴파일에서 생성된 쿼리 계획을 쉽게 찾을 수 있습니다.  
   
--   쿼리 저장소 캡처 모드(**ALTER TABLE** 문의 *QUERY_CAPTURE_MODE* 매개 변수)는 구성된 값과 관계없이 항상 캡처되므로 기본적으로 컴파일된 모듈에서 쿼리에 영향을 주지 않습니다. 여기에는 `QUERY_CAPTURE_MODE = NONE`설정이 포함됩니다.  
+-   쿼리 저장소 캡처 모드(*ALTER TABLE* 문의 **QUERY_CAPTURE_MODE** 매개 변수)는 구성된 값과 관계없이 항상 캡처되므로 기본적으로 컴파일된 모듈에서 쿼리에 영향을 주지 않습니다. 여기에는 `QUERY_CAPTURE_MODE = NONE`설정이 포함됩니다.  
   
 -   쿼리 저장소로 캡처된 쿼리 컴파일 기간에는 기본 코드가 생성되기 전 쿼리 최적화에 소요된 시간만 포함됩니다. 더 정확히 말해 이 기간에는 C 코드 컴파일 시간 및 C 코드 생성을 위해 필요한 내부 구조 생성 시간이 포함되지 않습니다.  
   
@@ -135,7 +135,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
