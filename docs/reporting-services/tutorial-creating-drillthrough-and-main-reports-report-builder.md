@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637981"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
@@ -202,13 +202,13 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 2.  **다음**을 클릭합니다.  
   
-2.  **마침**을 클릭합니다.  
+2.  **Finish**를 클릭합니다.  
   
     디자인 화면에 테이블이 추가됩니다.  
   
 3.  보고서를 미리 보려면 **실행(!)** 을 클릭합니다.  
   
-## <a name="DFormat"></a>2. 데이터 형식을 통화로 지정  
+## <a name="DFormat"></a>2. 데이터 서식을 통화로 지정  
 드릴스루 보고서의 판매량 필드에 통화 서식을 적용합니다.  
   
 #### <a name="to-format-data-as-currency"></a>데이터 서식을 통화로 지정하려면  
@@ -515,7 +515,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 2.  **다음**을 클릭합니다.  
   
-3.  **마침**을 클릭합니다.  
+3.  **Finish**를 클릭합니다.  
   
 3.  보고서를 미리 보려면 **실행**을 클릭합니다.  
   
@@ -587,7 +587,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 4.  **3가지 모양** 유형을 클릭한 다음 **확인**을 클릭합니다.  
   
-5.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_QTY`을(를) 선택합니다.  
+5.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_QTY`를 선택합니다.  
   
 6.  `[Sum(Net QTY)]` Total `[Product_Category_Name]` 내의 **행 그룹에 있는**셀에 대해 2 ~ 5단계를 반복합니다.  
   
@@ -599,7 +599,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  **3가지 모양** 유형을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_Sales`을(를) 선택합니다.  
+4.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_Sales`를 선택합니다.  
   
 5.  `[Sum(Net_Sales)]` Total `[Product_Category_Name]` 내의 **행 그룹에 있는**셀에 대해 1 ~ 4단계를 반복합니다.  
   

@@ -1,10 +1,7 @@
 ---
-title: Issue 요소 (ssbdiagnose) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Issue 요소
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e4fff2c62073094805c075479724d3fc934ffca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 3a91cf0575cb84a744925b7b60be0146a4d9ec5f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986171"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254187"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 요소(ssbdiagnose)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** 유틸리티가 발견한 문제를 보고합니다. **ssbdiagnose** XML 출력 파일에는 보고되는 문제 당 하나의 Issue 요소가 포함됩니다.  
+
+**ssbdiagnose** 유틸리티가 발견한 문제를 보고합니다. **ssbdiagnose** XML 출력 파일에는 보고되는 문제 당 하나의 Issue 요소가 포함됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,20 +44,20 @@ ms.locfileid: "67986171"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**type**|Issue 요소가 보고하는 문제의 범주를 식별합니다.<br /><br /> **"진단"** 보고서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 발견된 구성 문제를 보고합니다.<br /><br /> **"문제"** 는 **ssbdiagnose** 의 분석을 완료하지 못하게 하는 문제를 보고합니다. 문제를 해결하고 **ssbdiagnose**를 다시 실행하십시오.<br /><br /> **"이벤트"** 는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **검사를 실행할 때 발견된** 이벤트를 보고합니다. 단, **-SHOWEVENTS** 가 지정된 경우에만 이벤트가 보고됩니다.|  
-|**코드**|메시지의 오류 번호를 식별합니다.|  
-|**서버**|문제가 발견된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 식별합니다. 문제가 기본 인스턴스에서 발견된 경우에는 서버 특성에 컴퓨터 이름만 포함되고 문제가 명명된 인스턴스에서 발견된 경우에는 서버 특성이 ComputerName\InstanceName 형식으로 지정됩니다.|  
-|**데이터베이스**|문제가 발견된 데이터베이스의 이름을 식별합니다.|  
-|**개체(object)**|문제가 발견된 개체의 이름을 식별합니다. 문제가 인스턴스 또는 데이터베이스 수준에서 발견된 경우 개체 특성이 인스턴스 또는 데이터베이스 이름을 반복합니다.|  
+|**code**|메시지의 오류 번호를 식별합니다.|  
+|**server**|문제가 발견된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 식별합니다. 문제가 기본 인스턴스에서 발견된 경우에는 서버 특성에 컴퓨터 이름만 포함되고 문제가 명명된 인스턴스에서 발견된 경우에는 서버 특성이 ComputerName\InstanceName 형식으로 지정됩니다.|  
+|**database**|문제가 발견된 데이터베이스의 이름을 식별합니다.|  
+|**object**|문제가 발견된 개체의 이름을 식별합니다. 문제가 인스턴스 또는 데이터베이스 수준에서 발견된 경우 개체 특성이 인스턴스 또는 데이터베이스 이름을 반복합니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
-|**Value**|오류 메시지 텍스트를 반환합니다.|  
+|**값**|오류 메시지 텍스트를 반환합니다.|  
 |**발생 빈도**|보고되는 오류 당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -62,7 +65,7 @@ ms.locfileid: "67986171"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[DiagnosticInformation 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
 ## <a name="example"></a>예제  
  이 요소는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 오류가 발견되었으며 마스터 키가 없는 데이터베이스에 대해 1102 오류를 보고합니다.  

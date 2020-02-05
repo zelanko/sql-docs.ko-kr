@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072207"
 ---
 # <a name="throw-transact-sql"></a>THROW(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072207"
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 예외를 발생시키고 TRY...CATCH 구문의 CATCH 블록으로 실행을 이전합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,10 +48,10 @@ THROW [ { error_number | @local_variable },
  *message*  
  예외를 설명하는 문자열 또는 변수입니다. *message*는 **nvarchar(2048)** 입니다.  
   
- *state*  
+ *상태*  
  메시지와 연결할 상태를 나타내는 0에서 255 사이의 상수 또는 변수입니다. *state*는 **tinyint**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  THROW 문 앞의 문 다음에는 세미콜론(;) 문 종결자를 붙여야 합니다.  
   
  TRY...CATCH 구문을 사용할 수 없으면 명령문 일괄 처리가 종료됩니다. 예외가 발생한 줄 번호와 프로시저가 설정됩니다. 심각도는 16으로 설정됩니다.  
@@ -71,7 +71,7 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-throw-to-raise-an-exception"></a>1\. THROW를 사용하여 예외 발생  
+### <a name="a-using-throw-to-raise-an-exception"></a>A. THROW를 사용하여 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 예외를 발생시키는 방법을 보여 줍니다.  
   
 ```sql  
@@ -86,7 +86,7 @@ THROW 51000, 'The record does not exist.', 1;
  The record does not exist.
  ```  
   
-### <a name="b-using-throw-to-raise-an-exception-again"></a>2\. THROW를 사용하여 다시 예외 발생  
+### <a name="b-using-throw-to-raise-an-exception-again"></a>B. THROW를 사용하여 다시 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 발생한 예외를 다시 발생시키는 방법을 보여 줍니다.  
   
 ```sql  

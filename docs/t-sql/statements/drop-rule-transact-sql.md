@@ -22,10 +22,10 @@ ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223606"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE(Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "68223606"
   현재 데이터베이스에서 하나 이상의 사용자 정의 규칙을 제거합니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 DROP RULE이 제거됩니다. 향후 개발 작업에서는 DROP RULE을 사용하지 않도록 하고 현재 이것을 사용하는 애플리케이션은 수정하십시오. 대신 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 CHECK 키워드로 만들 수 있는 CHECK 제약 조건을 사용하십시오. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 DROP RULE이 제거됩니다. 향후 개발 작업에서는 DROP RULE을 사용하지 않도록 하고 현재 이것을 사용하는 애플리케이션은 수정하십시오. 대신 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 CHECK 키워드로 만들 수 있는 CHECK 제약 조건을 사용하십시오. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  제거할 규칙입니다. 규칙 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 준수해야 합니다. 규칙 스키마 이름을 지정하는 것은 선택 사항입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 규칙이 열이나 별칭 데이터 형식에 바인딩된 경우 규칙을 삭제하려면 먼저 언바인딩해야 합니다. 규칙을 언바인딩하려면 **sp_unbindrule**을 사용하십시오. 바인딩된 규칙을 삭제하려고 시도하면 오류 메시지가 표시되고 DROP RULE 문이 취소됩니다.  
   
  규칙을 삭제한 후 이전에 규칙이 적용되었던 열에 새 데이터를 입력하면 해당 규칙의 제약 조건에 구애 받지 않고 입력됩니다. 기존 데이터는 아무런 영향도 받지 않습니다.  

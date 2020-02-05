@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118967"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68118967"
 
 이 함수는 GZIP 알고리즘을 사용하여 입력 식 값의 압축을 풉니다. `DECOMPRESS`는 바이트 배열(VARBINARY(MAX) 유형)을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,11 +42,11 @@ DECOMPRESS ( expression )
 ## <a name="return-types"></a>반환 형식  
 데이터 형식 **varbinary(max)** 의 값입니다. `DECOMPRESS`는 ZIP 알고리즘을 사용하여 입력 인수의 압축을 풉니다. 필요한 경우 사용자가 명시적으로 결과를 대상 유형으로 캐스팅해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-decompress-data-at-query-time"></a>1\. 쿼리 시간에 데이터 압축 해제  
+### <a name="a-decompress-data-at-query-time"></a>A. 쿼리 시간에 데이터 압축 해제  
 이 예제에서는 압축된 테이블 데이터를 반환하는 방법을 보여줍니다.  
   
 ```  
@@ -55,7 +55,7 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>2\. 계산 열을 사용하여 압축된 데이터 표시  
+### <a name="b-display-compressed-data-using-computed-column"></a>B. 계산 열을 사용하여 압축된 데이터 표시  
 이 예에서는 압축 해제된 데이터 스토리지에 대한 테이블을 만드는 방법을 보여줍니다.  
   
 ```  
