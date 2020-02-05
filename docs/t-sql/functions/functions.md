@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843707"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
@@ -34,7 +34,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
   
 ## <a name="aggregate-functions"></a>집계 함수
 
-집계 함수는 값 집합에 대한 계산을 수행하고 단일 값을 반환합니다. 이 함수는 select 목록 또는 SELECT 문의 HAVING 절에 허용됩니다. GROUP BY 절과 함께 집계를 사용하여 행 범주에 대한 집계를 계산할 수 있습니다. 특정 값 범위에 대한 집계를 계산하려면 OVER 절을 사용합니다. OVER 절은 GROUPING 또는 GROUPING_ID 집계 다음에 올 수 없습니다.
+집계 함수는 값 집합에서 계산을 수행하고 단일 값을 반환합니다. 이 함수는 select 목록 또는 SELECT 문의 HAVING 절에 허용됩니다. GROUP BY 절과 함께 집계를 사용하여 행 범주에 대한 집계를 계산할 수 있습니다. 특정 값 범위에 대한 집계를 계산하려면 OVER 절을 사용합니다. OVER 절은 GROUPING 또는 GROUPING_ID 집계 다음에 올 수 없습니다.
 
 모든 집계 함수는 결정적입니다. 즉, 동일한 입력 값에서 실행할 경우 항상 동일한 값을 반환합니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.|
 
@@ -52,7 +52,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
 
 ### <a name="categories-of-scalar-functions"></a>스칼라 함수의 범주
   
-|함수 범주|설명|  
+|함수 범주|Description|  
 |-----------------------|-----------------|  
 |[구성 함수](configuration-functions-transact-sql.md)|현재 구성에 대한 정보를 반환합니다.|  
 |[변환 함수](conversion-functions-transact-sql.md)|데이터 형식 캐스팅 및 변환을 지원합니다.|  

@@ -18,10 +18,10 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b9314935f347fb4c8768cfaa192c5df0c18d1ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114927"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 인증서 권한(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114927"
   인증서에 대한 사용 권한을 거부합니다.  
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,11 +47,11 @@ DENY permission  [ ,...n ]
  *permission*  
  인증서에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  사용 권한을 거부할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
- 사용 권한을 거부할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 사용 권한을 거부할 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -73,7 +73,7 @@ DENY permission  [ ,...n ]
  사용 권한이 거부된 보안 주체에게 사용 권한을 부여 받은 다른 보안 주체의 사용 권한도 거부됨을 나타냅니다.  
   
  *denying_principal*  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다. 다음 중 하나  
   
 -   데이터베이스 사용자  
   
@@ -91,7 +91,7 @@ DENY permission  [ ,...n ]
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인증서는 사용 권한 계층에서 부모 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 인증서에 대해 거부할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
 |인증서 권한|인증서 권한에 포함된 권한|데이터베이스 사용 권한에 포함된 사용 권한|  

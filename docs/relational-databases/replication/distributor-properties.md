@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 85e6f642ebc8ec750c5831cd8b8e12747e9d248e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321765"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284120"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 복제 배포자 속성 대화 상자 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -18,10 +18,10 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050844"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 엔드포인트 사용 권한(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050844"
   엔드포인트에 대한 사용 권한을 부여합니다.  
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스가 **master**인 경우에만 서버 범위의 사용 권한을 부여할 수 있습니다.  
   
  엔드포인트 정보는 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되며 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
@@ -95,8 +95,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>1\. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 부여합니다.  
+### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
+ 다음 예에서는 `VIEW DEFINITION` 로그인 `Mirror7`에 대해 엔드포인트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -104,8 +104,8 @@ GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>2\. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
- 다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `Shipping83`에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
+ 다음 예에서는 `TAKE OWNERSHIP`으로 `Shipping83` 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
 ```  
 USE master;  

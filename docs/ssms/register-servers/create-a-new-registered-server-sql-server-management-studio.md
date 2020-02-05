@@ -1,10 +1,7 @@
 ---
-title: 새 등록된 서버 만들기(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 새로 등록된 서버 만들기
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd57edd00e2e5cd6a8921f324b1de20260bfa9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267791"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246568"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>새 등록된 서버 만들기(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 등록된 서버 구성 요소에 서버를 등록하여 자주 액세스하는 서버에 대한 연결 정보를 저장하는 방법에 대해 설명합니다. 서버는 연결 전이나 개체 탐색기에서 연결할 때 등록할 수 있습니다. 로컬 컴퓨터에 있는 서버 인스턴스를 등록하는 특별한 메뉴 옵션이 있습니다.  
+
+이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 등록된 서버 구성 요소에 서버를 등록하여 자주 액세스하는 서버에 대한 연결 정보를 저장하는 방법에 대해 설명합니다. 서버는 연결 전이나 개체 탐색기에서 연결할 때 등록할 수 있습니다. 로컬 컴퓨터에 있는 서버 인스턴스를 등록하는 특별한 메뉴 옵션이 있습니다.  
   
  등록된 서버의 종류는 다음 두 가지입니다.  
   
@@ -61,13 +64,13 @@ ms.locfileid: "68267791"
      **Windows 인증**  
      Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결할 수 있습니다.  
   
-     **SQL Server 인증(SQL Server Authentication)**  
+     **SQL Server 인증**  
      사용자가 지정한 로그인 이름과 암호를 사용하여 트러스트되지 않은 연결로부터 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정이 설정되고 지정한 암호가 전에 기록한 암호와 일치하는지를 확인하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자체적으로 인증을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인 계정이 설정되어 있지 않으면 인증이 실패하고 오류 메시지가 나타납니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 자세한 내용은 [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
   
-     **User name**  
+     **사용자 이름**  
      연결 중인 현재 사용자 이름을 보여 줍니다. 이 읽기 전용 옵션은 Windows 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다. **사용자 이름**을 변경하려면 다른 사용자로 컴퓨터에 로그인합니다.  
   
      **로그인**  
@@ -88,7 +91,7 @@ ms.locfileid: "68267791"
      **등록된 서버 설명**  
      서버에 대한 선택적 설명을 입력합니다.  
   
-     **테스트**  
+     **Test**  
      **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다.  
   
      **저장**  

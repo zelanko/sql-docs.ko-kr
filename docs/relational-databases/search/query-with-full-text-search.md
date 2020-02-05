@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68053567"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -141,7 +141,7 @@ GO
 
 ### <a name="predicates-contains-and-freetext"></a>조건자 CONTAINS 및 FREETEXT
 
-**사용법** SELECT 문의 WHERE 또는 HAVING 절에 전체 텍스트 **조건자** CONTAINS 및 FREETEXT를 사용합니다.
+**사용 현황**. SELECT 문의 WHERE 또는 HAVING 절에 전체 텍스트 **조건자** CONTAINS 및 FREETEXT를 사용합니다.
 
 **결과** CONTAINS 및 FREETEXT 조건자는 지정된 행이 전체 텍스트 쿼리와 일치하는지 여부를 나타내는 TRUE 또는 FALSE 값을 반환합니다. 일치하는 행은 결과 집합에 반환됩니다.
 
@@ -157,7 +157,7 @@ CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하�
 
 ### <a name="rowset-valued-functions-containstable-and-freetexttable"></a>행 집합 반환 함수 CONTAINSTABLE 및 FREETEXTTABLE
 
-**사용법** SELECT 문의 FROM 절과 같은 일반 테이블 이름처럼 전체 텍스트 **함수** CONTAINSTABLE 및 FREETEXTTABLE 함수를 사용합니다.
+**사용 현황**. SELECT 문의 FROM 절과 같은 일반 테이블 이름처럼 전체 텍스트 **함수** CONTAINSTABLE 및 FREETEXTTABLE 함수를 사용합니다.
 
 이러한 함수 중 하나를 사용하는 경우 검색할 기본 테이블을 지정해야 합니다. 조건자와 마찬가지로 검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며, 경우에 따라 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.
 
@@ -175,7 +175,7 @@ CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하�
 ## <a name="examples_specific"></a> 특정 형식의 검색
 
 ###  <a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
- [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 **ProductReview** 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 **데이터베이스의**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="Inflectional_Generation_Term"></a> 특정 단어의 굴절형(생성 단어) 검색  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
   
-다음 예제에서는 `AdventureWorks` 데이터베이스의 `ProductReview` 테이블에 있는 `Comments` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
+다음 예제에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
   
 ```sql  
 USE AdventureWorks2012  

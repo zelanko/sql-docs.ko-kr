@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948281"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "67948281"
   
  UNION, EXCEPT 및 INTERSECT 연산자는 쿼리 간에 결과를 비교하거나 하나의 결과 집합으로 결합하는 데 사용됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SELECT 문은 복잡하기 때문에 자세한 구문 요소와 인수가 다음과 같은 절로 표시됩니다.  
   
 |||  
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  다음 단계에서는 SELECT 문의 논리적 처리 순서(바인딩 순서)를 보여 줍니다. 이 순서에 따라 특정 단계에서 정의한 개체를 후속 단계의 절에 사용할 수 있는 시기가 결정됩니다. 예를 들어 쿼리 프로세스가 FROM 절에 정의된 테이블 또는 뷰에 바인딩(액세스)할 수 있는 경우 이러한 개체 및 해당 열을 모든 후속 단계에서 사용할 수 있습니다. 반면, SELECT 절은 8단계이므로 해당 절에서 정의된 열 별칭 또는 파생 열을 이전 절에서 참조할 수는 없습니다. 그러나 ORDER BY 절 등의 후속 절에서는 이러한 항목을 참조할 수 있습니다. 문의 실제 실행은 쿼리 프로세서를 통해 결정되며 순서는 이 목록과 다를 수 있습니다.  
   
 1.  FROM  
-2.  ON  
+2.  켜기  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -143,11 +143,11 @@ SELECT <select_criteria>
 ## <a name="permissions"></a>사용 권한  
  데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECTINTO**를 사용하여 새 테이블을 만들려면 **CREATETABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTERSCHEMA** 권한이 둘 다 있어야 합니다.  
   
-## <a name="examples"></a>예:   
+## <a name="examples"></a>예제:   
 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스를 사용합니다.
   
-### <a name="a-using-select-to-retrieve-rows-and-columns"></a>1\. SELECT를 사용하여 행 및 열 검색  
- 이 섹션에서는 세 가지 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `DimEmployee` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`*` 사용)을 반환합니다.  
+### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT를 사용하여 행 및 열 검색  
+ 이 섹션에서는 세 가지 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`DimEmployee` 사용)을 반환합니다.  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 다음 예에서는 `AdventureWorksPDW2012` 데이터베이스의 `DimEmployee` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`FirstName`, `LastName`, `StartDate`)을 반환합니다. 세 번째 열 머리글 이름이 `FirstDay`로 변경됩니다.  
+ 다음 예에서는 `FirstName` 데이터베이스의 `LastName` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`StartDate`, `DimEmployee`, `AdventureWorksPDW2012`)을 반환합니다. 세 번째 열 머리글 이름이 `FirstDay`로 변경됩니다.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 이 예제에서는 `EndDate`가 NULL이 아니며 `MaritalStatus`가 'M'(기혼)인 `DimEmployee`의 행만 반환합니다.  
+ 이 예제에서는 `DimEmployee`가 NULL이 아니며 `EndDate`가 'M'(기혼)인 `MaritalStatus`의 행만 반환합니다.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -181,7 +181,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### <a name="b-using-select-with-column-headings-and-calculations"></a>2\. SELECT에 열 머리글 및 계산 사용  
+### <a name="b-using-select-with-column-headings-and-calculations"></a>B. SELECT에 열 머리글 및 계산 사용  
  다음 예제에서는 `DimEmployee` 테이블의 모든 행을 반환하며 `BaseRate` 및 40시간 근무 주를 기준으로 각 직원의 총 급여를 계산합니다.  
   
 ```sql  

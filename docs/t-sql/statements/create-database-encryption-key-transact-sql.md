@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061000"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68061000"
 
  데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키를 만듭니다. TDE(투명한 데이터 암호화)에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 데이터베이스 암호화 키를 암호화하는 데 사용되는 비대칭 키의 이름을 지정합니다. 비대칭 키로 데이터베이스 암호화 키를 암호화하려면 비대칭 키가 확장 가능 키 관리 공급자에 있어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 데이터베이스 암호화 키가 있어야 TDE(*Transparent Database Encryption*)를 사용하여 데이터베이스를 암호화할 수 있습니다. 데이터베이스가 명시적으로 암호화되면 특수 코드의 수정 없이 전체 데이터베이스가 파일 수준에서 암호화됩니다. 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키는 master 시스템 데이터베이스에 있어야 합니다.  
   
 데이터베이스 암호화 문은 사용자 데이터베이스에서만 사용할 수 있습니다.  

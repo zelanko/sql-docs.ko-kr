@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295033"
 ---
 # <a name="variables-window"></a>변수 창
@@ -51,7 +51,7 @@ ms.locfileid: "71295033"
  **표 옵션**  
  열 선택을 변경하고 **변수** 창에 필터를 적용할 수 있는 **가변 눈금 옵션** 대화 상자를 열려면 클릭합니다. 자세한 내용은 [가변 눈금 옵션](../integration-services/variable-grid-options.md)을 참조하세요.  
   
- **Name**  
+ **이름**  
  변수 이름을 봅니다. 사용자 정의 변수의 이름을 업데이트할 수 있습니다.  
   
  **범위**  
@@ -65,7 +65,7 @@ ms.locfileid: "71295033"
 > [!NOTE]  
 >  변수에 식을 할당할 경우 데이터 형식을 변경할 수 없습니다.  
   
- **Value**  
+ **값**  
  변수 값을 봅니다. 사용자 정의 변수에 대한 값을 업데이트할 수 있습니다. 이 값은 리터럴 또는 식일 수 있으며 값은 다중 행 문자열일 수 있습니다. 변수에 식을 할당하려면 **변수** 창의 **식** 열 옆에 있는 줄임표 단추를 클릭합니다.  
   
  **Namespace**  
@@ -77,7 +77,7 @@ ms.locfileid: "71295033"
  **설명**  
  변수 설명을 봅니다. 사용자 정의 변수에 대한 설명을 변경할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
- **변수**  
+ **식**  
  변수에 할당된 식을 봅니다. 식을 할당하려면 줄임표 단추를 클릭합니다.  
   
  변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
@@ -94,16 +94,16 @@ ms.locfileid: "71295033"
  **모든 범위의 변수 표시**  
  패키지의 범위 내에 있는 변수와 패키지의 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수를 표시하려면 이 옵션을 선택합니다. 패키지의 범위 내에 있는 변수와 선택된 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수만 표시하려면 이 옵션의 선택을 취소합니다.  
   
- 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)영역 아래에 있습니다.  
   
 ### <a name="options-for-columns"></a>열 옵션  
  **변수** 창에 표시할 열을 선택합니다.  
   
 -   **범위**  
   
--   **Data type**  
+-   **데이터 형식**  
   
--   **Value**  
+-   **값**  
   
 -   **Namespace**  
   

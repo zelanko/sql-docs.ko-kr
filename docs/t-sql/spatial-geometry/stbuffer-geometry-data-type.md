@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930362"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
@@ -45,8 +45,8 @@ ms.locfileid: "67930362"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- `STBuffer()`는 *허용 오차* = distance\*.001 및 *relative* = **false**로 지정하여 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
+## <a name="remarks"></a>설명  
+ `STBuffer()`는 [허용 오차](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) = distance *.001 및* relative\*  false = 로 지정하여 **BufferWithTolerance**와 동일한 방식으로 버퍼를 계산합니다.  
   
  *distance* > 0이면, **Polygon** 또는 **MultiPolygon** 인스턴스가 반환됩니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67930362"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>1\. 1차원 geometry 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. 1차원 geometry 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
 ```
@@ -78,7 +78,7 @@ ms.locfileid: "67930362"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>2\. Polygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Polygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 버퍼가 음수인 `Polygon` 인스턴스를 반환합니다.  
   
 ```
@@ -86,7 +86,7 @@ ms.locfileid: "67930362"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. CurvePolygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. CurvePolygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 `Polygon` 인스턴스에서 버퍼가 음수인 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ```
@@ -107,7 +107,7 @@ ms.locfileid: "67930362"
   
  이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY.`를 반환합니다.  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. parameter_value = 0을 사용하여 STBuffer() 호출  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. parameter_value = 0을 사용하여 STBuffer() 호출  
  다음 예에서는 호출 `geometry` 인스턴스의 복사본을 반환합니다.  
   
 ```
@@ -124,7 +124,7 @@ ms.locfileid: "67930362"
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. parameter_value > 0을 사용하여 STBuffer() 호출  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. parameter_value > 0을 사용하여 STBuffer() 호출  
  다음 예에서는 `Polygon` 인스턴스를 반환합니다.  
   
 ```
@@ -160,7 +160,7 @@ ms.locfileid: "67930362"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `MultiPolygon` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 `MultiPolygon`distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에*  인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BufferWithTolerance &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
