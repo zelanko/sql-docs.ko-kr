@@ -1,29 +1,32 @@
 ---
-title: 중단점 창 | Microsoft 문서
+title: 중단점 창
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638019"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243367"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 디버거 - 중단점 창
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **중단점** 창에서는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에 설정된 모든 중단점을 표시합니다. 중단점을 관리하려면 **중단점** 창의 도구 모음을 사용합니다. 여기서 중단점은 디버깅 데이터를 볼 수 있도록 디버그 모드에서 실행을 일시 중지하는 코드의 특정 위치를 의미합니다.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>작업 목록
 
@@ -38,7 +41,7 @@ ms.locfileid: "73638019"
 **이름**  
 중단점의 이름을 표시합니다. 중단점 이름은 디버거에서 지정됩니다. 이 이름에는 중단점을 포함하는 데이터베이스 엔진 쿼리 편집기 창의 이름과 중단점이 설정된 쿼리 편집기의 줄 번호가 포함됩니다.  
 
-**조건**  
+**Condition**  
 **(조건 없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.
 
 **적중 횟수**  
@@ -46,7 +49,7 @@ ms.locfileid: "73638019"
 
 **열** 목록에서 다음 열을 선택하여 해당 열을 추가하거나 제거할 수 있습니다.  
 
-**Assert**  
+**Filter**  
 **(없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.
 
 **적중될 때**  
@@ -55,7 +58,7 @@ ms.locfileid: "73638019"
 **언어**  
 **의 경우** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]을 표시합니다.  
 
-**함수**  
+**Function**  
 중단점이 설정된 줄의 번호를 표시합니다.  
 
 **최근에 사용한 파일**  

@@ -11,10 +11,10 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618499b25914ea4f521fa694ac14b9e9049ca330
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296694"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project(SSISDB 데이터베이스)
@@ -88,7 +88,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  유효성 검사를 통해 프로젝트에 있는 패키지 실행을 방해하는 문제를 확인할 수 있습니다. [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 또는 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 사용하여 유효성 검사 상태를 모니터링할 수 있습니다.  
   
  사용자가 액세스할 수 있는 환경만 유효성 검사에 사용할 수 있습니다. 유효성 검사 출력은 결과 집합으로 클라이언트에 전송됩니다.  

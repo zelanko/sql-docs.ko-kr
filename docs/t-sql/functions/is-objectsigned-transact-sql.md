@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314608"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314608"
 
   개체가 지정된 인증서 또는 비대칭 키로 서명되었는지를 나타냅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,10 +62,10 @@ IS_OBJECTSIGNED (
 ## <a name="returned-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  IS_OBJECTSIGNED는 다음과 같은 값을 반환합니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |NULL|개체가 서명되지 않았거나 개체가 유효하지 않습니다.|  
 |0|개체가 서명되었지만 서명이 유효하지 않습니다.|  
@@ -76,7 +76,7 @@ IS_OBJECTSIGNED (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>1\. 데이터베이스의 확장 속성 표시  
+### <a name="a-displaying-extended-properties-on-a-database"></a>A. 데이터베이스의 확장 속성 표시  
  다음 예에서는 **master** 데이터베이스의 spt_fallback_db 테이블이 스키마 서명 인증서로 서명되었는지를 테스트합니다.  
   
 ```  

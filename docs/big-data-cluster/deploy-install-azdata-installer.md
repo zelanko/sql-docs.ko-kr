@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594334"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Windows Installer를 사용하여 `azdata`를 설치하고 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 관리
@@ -30,12 +30,12 @@ ms.locfileid: "73594334"
 
 Microsoft Windows Installer를 사용하여 `azdata`를 설치하려면 다음을 수행합니다.
 
-1. 기존에 `pip`를 사용하여 `azdata`를 설치했다면 제거합니다. 기존에 Windows Installer를 사용하여 `azdata`를 설치했다면 다음 단계로 넘어갑니다.
+1. 기존에 `azdata`를 사용하여 `pip`를 설치했다면 제거합니다. 기존에 Windows Installer를 사용하여 `azdata`를 설치했다면 다음 단계로 넘어갑니다.
 1. Windows Installer를 사용하여 `azdata`를 설치합니다.
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>기존에 `pip`를 사용하여 설치한 경우 제거
 
-`azdata`의 이전 릴리스가 설치된 경우 먼저 제거한 다음 최신 버전을 설치해야 합니다.
+`azdata`의 이전 릴리스가 설치된 경우 먼저 제거한 후 최신 버전을 설치해야 합니다.
 
    `azdata`의 릴리스 후보 버전을 제거하려면 다음 명령을 실행합니다.
 
@@ -62,10 +62,10 @@ Windows Installer를 사용하여 `azdata`를 제거하려면 아래에서 해�
 
 | 플랫폼      | Instructions                                           |
 | ------------- |--------------------------------------------------------|
-| Windows 10| 시작 > 설정 > 앱                                |
+| 윈도우 10| 시작 > 설정 > 앱                                |
 | Windows 8     | 시작 > 제어판 > 프로그램 > 프로그램 제거 |
 
-제거할 프로그램의 이름은 `Azdata CLI`입니다. 이 애플리케이션을 선택하고 `Uninstall` 단추를 클릭합니다.
+제거할 프로그램의 이름은 `Azdata CLI`입니다. 이 애플리케이션을 선택한 다음 `Uninstall` 단추를 클릭합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

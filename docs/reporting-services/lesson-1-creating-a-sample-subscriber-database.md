@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513165"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
@@ -55,11 +55,11 @@ ms.locfileid: "62513165"
     GO  
     ```  
   
-7.  **! 실행**을 도구 모음에서 클릭합니다.  
+7.  **! 실행** 을 도구 모음에서 클릭합니다.  
   
-8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예를 들어 `select * from OrderInfo`  
+8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 + 보고서 배포를 추진하고 구독자마다 보고서 출력을 다르게 할 구독 데이터를 만들었습니다. 
 + 다음에는 저장된 자격 증명을 사용하도록 보고서의 데이터 원본 속성을 수정합니다. 
 + 또한 구독에서 구독자 데이터와 함께 사용할 매개 변수를 포함하도록 보고서 디자인을 수정합니다. [2단원: 보고서 데이터 원본 속성 수정](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  

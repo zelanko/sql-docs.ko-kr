@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594071"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
@@ -28,7 +28,7 @@ ms.locfileid: "73594071"
 ## <a name="defining-a-report-server-url"></a>보고서 서버 URL 정의  
  URL을 통해 네트워크에 있는 보고서 서버 애플리케이션 인스턴스의 위치를 정확하게 식별할 수 있습니다. 보고서 서버 URL을 만들 때 다음 부분을 지정해야 합니다.  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |호스트 이름|TCP/IP 네트워크는 IP 주소를 사용하여 네트워크에 있는 디바이스를 고유하게 식별합니다. 물리적 IP 주소는 컴퓨터에 설치된 네트워크 어댑터 카드당 한 개가 있습니다. IP 주소가 호스트 헤더로 확인되면 호스트 헤더를 지정할 수 있습니다. 보고서 서버를 회사 네트워크에 배포하는 경우 컴퓨터의 네트워크 이름을 사용할 수 있습니다.|  
 |포트|TCP 포트는 디바이스의 엔드포인트입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  
