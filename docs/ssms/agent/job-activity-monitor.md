@@ -1,10 +1,9 @@
 ---
-title: 작업 활동 모니터 | Microsoft 문서
-ms.custom: ''
+title: 작업 활동 모니터
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,13 +12,15 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3e08cddb16b38d49c93ad596e3bcb87a3afa0d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b23ddaf501201f8b86de820d29ade0ea5d977ce2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262359"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242360"
 ---
 # <a name="job-activity-monitor"></a>작업 활동 모니터
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "68262359"
 **실행 가능**  
 작업을 실행할 수 있으면**예** 이고 작업을 실행할 수 없으면 **아니요** 입니다. 단계나 대상 서버가 없는 경우 작업을 실행할 수 없습니다.  
   
-**예약**  
+**예약됨**  
 작업이 작업 일정에 할당되어 있으면**예** 이고, 그렇지 않으면 **아니요** 입니다.  
   
 \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 고정 서버 역할과 서버 관리자 그룹의 멤버만 이 열의 값을 볼 수 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  

@@ -12,10 +12,10 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573293"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버에서 기본 인증 구성
@@ -82,9 +82,9 @@ ms.locfileid: "65573293"
   
 |요소|필수|유효한 값|  
 |-------------|--------------|------------------|  
-|LogonMethod|예<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|**2** = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> **3** = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 **에서 지원되지** 않습니다 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
-|Realm|선택 사항|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
-|DefaultDomain|선택 사항|사용자를 인증할 때 서버가 사용하는 도메인을 지정합니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 컴퓨터가 도메인 멤버인 경우 해당 도메인이 기본 도메인입니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|  
+|LogonMethod|yes<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|**2** = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> **3** = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 **에서 지원되지** 않습니다 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|Realm|옵션|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
+|DefaultDomain|옵션|사용자를 인증할 때 서버가 사용하는 도메인을 지정합니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 컴퓨터가 도메인 멤버인 경우 해당 도메인이 기본 도메인입니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 애플리케이션의 애플리케이션 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   

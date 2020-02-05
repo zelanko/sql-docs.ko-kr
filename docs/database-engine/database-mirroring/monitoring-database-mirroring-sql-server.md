@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212293"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "70212293"
   
      다음 표에서는 데이터베이스 미러링 모니터와 별도로 데이터베이스 미러링 모니터링을 관리하고 사용하기 위한 저장 프로시저를 설명합니다.  
   
-    |절차|설명|  
+    |절차|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|서버 인스턴스의 모든 미러된 데이터베이스에 대한 상태 정보를 정기적으로 업데이트하는 작업을 만듭니다.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|데이터베이스 미러링 모니터링 매개 변수의 값을 변경합니다.|  
@@ -126,12 +126,12 @@ ms.locfileid: "70212293"
   
      **상태** 페이지 메트릭에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 모니터"에 표시되는 성능 메트릭을 참조하세요.  
   
--    **sp_dbmmonitorresults**사용  
+-   **sp_dbmmonitorresults**사용  
   
      시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)을 참조하세요.  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
- 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태** 페이지에서 **주 로그 (**_\<시간>_**)** 및 **미러 로그 (**_\<시간>_**)** 레이블의 시간을 확인하면 됩니다.  
+ 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태** 페이지에서 _주 로그 (\<_ **시간>** **)** 및 _미러 로그 (\<_ **시간>** **)** 레이블의 시간을 확인하면 됩니다.  
   
  **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업** 을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "70212293"
   
      가능한 상태는 다음과 같습니다.  
   
-    -   Unknown  
+    -   알 수 없음  
   
     -   동기화 중  
   
     -   동기화됨  
   
-    -   일시 중지됨  
+    -   일시 중단  
   
     -   연결 끊김  
   
@@ -179,7 +179,7 @@ ms.locfileid: "70212293"
   
      미러링 모니터 서버의 연결 상태입니다. 가능한 상태는 다음과 같습니다.  
   
-    -   Unknown  
+    -   알 수 없음  
   
     -   연결됨  
   
@@ -302,7 +302,7 @@ ms.locfileid: "70212293"
   
      데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다. 자세한 내용은 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

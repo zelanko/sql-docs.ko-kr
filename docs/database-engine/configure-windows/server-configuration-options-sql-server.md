@@ -30,10 +30,10 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75002016"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
@@ -114,13 +114,13 @@ ms.locfileid: "75002016"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+( *\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + ( *\<프로세서 수>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 *의 경우 (256+(\<* 프로세서 수>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -4) * 8) 수식을 사용하고, 64비트 *의 경우 (512 + (\<* 프로세서 수>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[중첩 트리거](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
+    |[OLE Automation 프로시저](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)(A)|0|1|0|  
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, 구식)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  

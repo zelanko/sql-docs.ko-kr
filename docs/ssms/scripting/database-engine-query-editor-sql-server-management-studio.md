@@ -1,6 +1,6 @@
 ---
-title: 데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263499"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253938"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68263499"
  **사용 가능한 데이터베이스**  
  같은 서버의 다른 데이터베이스로 연결을 변경합니다.  
   
- **Execute**  
+ **실행**  
  선택한 코드를 실행하거나, 코드를 선택하지 않은 경우 쿼리 편집기에 있는 모든 코드를 실행합니다.  
   
  **디버그**  
@@ -147,7 +147,7 @@ ms.locfileid: "68263499"
  **프로시저 나가기**  
  다음으로 가장 높은 호출 수준(함수, 저장 프로시저 또는 트리거)으로 돌아갑니다. 저장 프로시저, 함수 또는 트리거를 호출한 후 문에서 실행이 일시 중지됩니다.  
   
- **창**  
+ **Windows**  
  **중단점** 창 또는 **직접 실행** 창을 엽니다.  
   
 ## <a name="see-also"></a>참고 항목  

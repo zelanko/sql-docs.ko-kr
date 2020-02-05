@@ -1,10 +1,7 @@
 ---
-title: Table의 Name 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Table의 Name 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d8c2cedbf969975504b29f00832a4ae3722b29c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034593"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307950"
 ---
 # <a name="name-element-for-table-dta"></a>Table의 Name 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  튜닝을 위한 테이블 이름을 지정합니다.  
+
+튜닝을 위한 테이블 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68034593"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 1에서 255자 사이|  
 |**기본값**|없음|  

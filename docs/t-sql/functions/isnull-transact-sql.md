@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843641"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73843641"
 
 NULL을 지정된 대체 값으로 바꿉니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>반환 형식  
  *check_expression* 식과 같은 유형을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공된 경우 *replacement_value* 데이터 형식을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공되고 *replacement_value*가 제공되지 않은 경우 **int**를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  NULL이 아닐 경우 *check_expression* 값이 반환되고, 그렇지 않고 형식이 다른 경우는 *check_expression* 형식으로 암시적으로 변환된 후 *replacement_value*가 반환됩니다. *replacement_value*는 *replacement_value*가 *check_expression*보다 긴 경우 잘릴 수 있습니다.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isnull-with-avg"></a>1\. AVG와 함께 ISNULL 사용  
+### <a name="a-using-isnull-with-avg"></a>A. AVG와 함께 ISNULL 사용  
  다음 예에서는 모든 제품의 평균 무게를 구하는 방법을 보여 줍니다. `50` 테이블의 `Weight` 열에 있는 모든 NULL 항목을 `Product` 값으로 대체합니다.  
   
 ```  
@@ -80,7 +80,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="b-using-isnull"></a>2\. ISNULL 사용  
+### <a name="b-using-isnull"></a>B. ISNULL 사용  
  다음 예에서는 `AdventureWorks2012`에서 모든 특별 행사에 대한 설명, 할인율, 최소 수량 및 최대 수량을 선택하는 방법을 보여 줍니다. 특정한 특별 행사에 대한 최대 수량이 NULL인 경우 결과 집합의 `MaxQty`는 `0.00`으로 표시됩니다.  
   
 ```  
@@ -93,7 +93,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  설명       |  DiscountPct    |   MinQty    |   최대 수량       |
+|  Description       |  DiscountPct    |   MinQty    |   최대 수량       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0.02           |   11        |   14                 |
@@ -126,7 +126,7 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. AVG와 함께 ISNULL 사용  
  다음 예에서는 샘플 표에 있는 모든 제품의 평균 무게를 구하는 방법을 보여 줍니다. `50` 테이블의 `Weight` 열에 있는 모든 NULL 항목을 `Product` 값으로 대체합니다.  
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  허용 가능 매출 및 서비스  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. WHERE 절에서 NULL 테스트를 위해 IS NULL 사용  
- 다음 예에서는 `Weight` 열에 `NULL`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
+ 다음 예에서는 `NULL` 열에 `Weight`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
   
 ```  
 -- Uses AdventureWorks  

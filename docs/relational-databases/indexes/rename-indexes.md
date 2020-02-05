@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906306"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
@@ -48,7 +48,7 @@ ms.locfileid: "72906306"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  인덱스에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -69,7 +69,7 @@ ms.locfileid: "72906306"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 _table name_ **저장**을 클릭합니다.  
+8.  **파일** 메뉴에서 **table name**_저장_을 클릭합니다.  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   

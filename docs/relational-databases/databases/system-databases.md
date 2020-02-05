@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2bce8ef0c47a26ef1b1a095160ce6cc7357a00f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127359"
 ---
 # <a name="system-databases"></a>시스템 데이터베이스
@@ -28,7 +28,7 @@ ms.locfileid: "68127359"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 포함된 시스템 데이터베이스는 다음과 같습니다.  
   
-|시스템 데이터베이스|설명|  
+|시스템 데이터베이스|Description|  
 |---------------------|-----------------|  
 |[master 데이터베이스](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 모든 시스템 수준 정보를 기록합니다.|  
 |[msdb 데이터베이스](../../relational-databases/databases/msdb-database.md)|SQL Server 에이전트에서 알림과 작업을 예약하는 데 사용됩니다.|  

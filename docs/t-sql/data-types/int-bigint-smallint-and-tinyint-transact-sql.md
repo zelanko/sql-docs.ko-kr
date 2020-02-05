@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077910"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint 및 tinyint(Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68077910"
 |**smallint**|-2^15(-32,768) ~ 2^15-1(32,767)|2바이트|  
 |**tinyint**|0 ~ 255|1바이트|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **int** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 주 정수 데이터 형식입니다. **bigint** 데이터 형식은 정수 값이 **int** 데이터 형식에서 지원하는 범위를 초과하는 경우에 사용하기 위한 것입니다.
   
 **bigint**의 데이터 형식 우선 순위 위치는 **smallmoney**와 **int** 사이입니다.
@@ -107,7 +107,7 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

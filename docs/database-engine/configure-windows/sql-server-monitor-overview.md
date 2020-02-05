@@ -15,10 +15,10 @@ ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032494"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
@@ -51,7 +51,7 @@ ms.locfileid: "68032494"
  **동작**  
  탐색 트리에서 선택한 노드의 상황에 맞는 메뉴를 포함합니다.  
   
- **이동**  
+ **Go**  
  모니터링 구성 요소의 목록을 포함합니다.  
   
 -   데이터베이스 미러링  

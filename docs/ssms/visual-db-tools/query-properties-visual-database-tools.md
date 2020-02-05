@@ -1,10 +1,9 @@
 ---
-title: 쿼리 속성(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266286"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255335"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68266286"
 **이름**  
 현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 이를 변경할 수 없습니다.  
   
-**Database Name**  
+**데이터베이스 이름**  
 선택한 테이블의 데이터 원본 이름을 표시합니다.  
   
 **서버 이름**  
@@ -77,7 +78,7 @@ SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집�
 **식**  
 쿼리에서 반환할 행의 수나 비율을 지정합니다. **Percent** 를 예로 설정한 경우 이 값은 쿼리에서 반환할 행의 비율을 나타내고, **Percent** 를 아니요로 설정한 경우 이 값은 반환할 행의 수를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
-**Percent**  
+**백분율**  
 결과 집합의 처음 *n* %에 해당하는 행만 쿼리가 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **With Ties**  

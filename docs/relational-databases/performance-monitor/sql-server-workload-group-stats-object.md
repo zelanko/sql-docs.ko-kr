@@ -14,10 +14,10 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947817"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
@@ -26,17 +26,17 @@ ms.locfileid: "67947817"
   
  각 활성 작업 그룹은 리소스 관리자 작업 그룹 이름과 동일한 인스턴스 이름으로 SQLServer:Workload Group Stats 성능 개체의 인스턴스를 만듭니다. 다음 표에서는 이 인스턴스에서 지원하는 카운터에 대해 설명합니다.  
   
-|카운터 이름|설명|  
+|카운터 이름|Description|  
 |------------------|-----------------|  
 |**Active parallel threads**|병렬 스레드 사용량의 현재 개수입니다.|  
 |**Active requests**|현재 작업 그룹에서 현재 실행 중인 요청 수로, 그룹 ID로 필터링된 sys.dm_exec_requests의 행 개수와 동일해야 합니다.|  
 |**Blocked requests**|현재 작업 그룹에 있는 차단된 요청의 현재 수로, 작업 특성을 결정하는 데 사용할 수 있습니다.|  
 |**CPU delayed %**|지정된 성능 개체 인스턴스의 모든 요청에 대해 배포된 시스템 CPU이며 총 활성 시간 비율로 나타냅니다.| 
-|**CPU delayed % base**|내부용으로만 사용할 수 있습니다.| 
+|**CPU delayed % base**|내부 전용입니다.| 
 |**CPU effective %**|지정된 성능 개체 인스턴스의 모든 요청에 사용된 시스템 CPU 사용량이며 총 활성 시간 비율로 나타냅니다.| 
-|**CPU effective % base**|내부용으로만 사용할 수 있습니다.| 
+|**CPU effective % base**|내부 전용입니다.| 
 |**CPU usage %**|현재 작업 그룹에 있는 모든 요청에 의한 CPU 대역폭 사용량으로, 컴퓨터를 기준으로 측정되고 시스템에 있는 모든 CPU를 기준으로 평균화됩니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 사용할 수 있는 CPU 양이 변경되면 그에 따라 변경됩니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 전달되는 CPU를 기준으로는 평균화되지 않습니다.| 
-|**CPU usage % base**|내부용으로만 사용할 수 있습니다.| 
+|**CPU usage % base**|내부 전용입니다.| 
 |**CPU violated %**|CPU 예약과 유효 일정 비율 간의 차이입니다.|  
 |**Max request CPU time (ms)**|작업 그룹에서 현재 실행 중인 요청에 의해 사용되는 최대 CPU 시간(밀리초)입니다.|  
 |**Max request memory grant (KB)**|쿼리를 위한 최대 메모리 부여 값(KB)입니다.|  

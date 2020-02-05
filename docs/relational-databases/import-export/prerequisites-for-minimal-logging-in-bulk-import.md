@@ -17,10 +17,10 @@ ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70910838"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -39,7 +39,7 @@ ms.locfileid: "70910838"
 -   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 
   
     > [!NOTE]  
-    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 익스텐트 할당을 기록합니다.  
+    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 익스텐트 할당을 기록합니다.  
   
 -   메모리 최적화 테이블이 아닙니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70910838"
 > [!NOTE]  
 >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

@@ -23,10 +23,10 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984290"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984290"
 
   현재 데이터베이스에서 어셈블리 및 모든 관련 파일을 제거합니다. 어셈블리는 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)를 사용하여 만들고 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)를 사용하여 수정할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  지정하면 *assembly_name*만 삭제되고 어셈블리에서 참조하는 종속 어셈블리는 삭제되지 않습니다. 지정하지 않으면 DROP ASSEMBLY가 *assembly_name*과 모든 종속 어셈블리를 삭제합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어셈블리를 삭제하면 데이터베이스에서 어셈블리와 원본 코드 및 디버그 파일 등의 모든 관련 파일이 제거됩니다.  
   
  WITH NO DEPENDENTS를 지정하지 않으면 DROP ASSEMBLY가 *assembly_name*과 모든 종속 어셈블리를 삭제합니다. 종속 어셈블리를 삭제하려는 시도가 실패하면 DROP ASSEMBLY가 오류를 반환합니다.  
