@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099978"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 데이터 정렬 이름(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68099978"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows 데이터 정렬을 지원하기 전에 개발된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬이라는 제한된 수(<80)의 데이터 정렬도 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원되지만 새로운 개발 작업에 사용해서는 안 됩니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** 사용할 이진 정렬 순서를 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 서버에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬을 나열하려면 다음 쿼리를 실행합니다.
 
@@ -70,7 +70,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> 정렬 순서 ID 80의 경우 코드 페이지 1250과 이진 순서를 가진 Window 데이터 정렬을 사용하세요. 예를 들어 Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN 등이 있습니다.
+> 정렬 순서 ID 80의 경우 코드 페이지 1250과 이진 순서를 가진 Window 데이터 정렬을 사용하세요. 예를 들어, Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -78,6 +78,6 @@ WHERE name LIKE 'SQL%';
 - [상수](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [선언 @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [table](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

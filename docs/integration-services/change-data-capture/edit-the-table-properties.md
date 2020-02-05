@@ -13,10 +13,10 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294743"
 ---
 # <a name="edit-the-table-properties"></a>테이블 속성 편집
@@ -44,7 +44,7 @@ ms.locfileid: "71294743"
   
 2.  캡처 인스턴스를 다음 중 하나로 저장합니다.  
   
-    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만 이전 캡처 인스턴스는 삭제되지 않습니다.  
+    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만, 이전 캡처 인스턴스는 삭제되지 않습니다.  
   
          **참고**: 캡처 인스턴스는 테이블당 두 개를 초과할 수 없습니다. 이미 두 개의 캡처 인스턴스가 있는 경우에는 이 옵션을 사용할 수 없습니다.  
   

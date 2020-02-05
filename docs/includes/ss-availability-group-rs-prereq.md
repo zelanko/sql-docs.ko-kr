@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213314"
----
 ## <a name="prerequisites"></a>사전 요구 사항
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
@@ -24,7 +16,7 @@ SQL Server 인스턴스를 호스트하는 각 복제본에서 AlwaysOn 가용�
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>AlwaysOn_health 이벤트 세션을 사용하도록 설정
+## <a name="enable-an-alwayson_health-event-session"></a>AlwaysOn_health 이벤트 세션을 사용하도록 설정
 
  가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 주려면 Always On 가용성 그룹 확장 이벤트(XEvents) 세션을 사용하도록 설정하여 줄 수 있습니다. 그렇게 하려면 SQL Server의 각 인스턴스에서 다음 명령을 실행합니다.
 

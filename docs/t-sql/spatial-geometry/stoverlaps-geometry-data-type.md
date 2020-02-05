@@ -18,10 +18,10 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140923"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps(geometry 데이터 형식)
@@ -38,14 +38,14 @@ ms.locfileid: "68140923"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- `STOverlaps()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
+ **를 호출할 인스턴스와 비교할 다른** geometry`STOverlaps()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인스턴스의 교차점을 나타내는 영역의 차원이 동일하며 해당 영역이 두 인스턴스와 같지 않으면 두 **geometry** 인스턴스가 겹치는 것입니다.  
   
  `STOverlaps()`은 **geometry** 인스턴스가 교차하는 점의 차원이 다르면 항상 0을 반환합니다.  

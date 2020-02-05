@@ -23,10 +23,10 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034944"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68034944"
 
   각 쿼리를 컴파일하지만 실행하지는 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68034944"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET NOEXEC 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. SET NOEXEC 옵션을 OFF로 설정하면 컴파일 후 모든 일괄 처리가 실행됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 실행은 컴파일과 실행의 두 단계로 이루어집니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 구문의 유효성 및 실행 시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 개체 이름 유효성을 검사하도록 할 때 사용할 수 있는 유용한 기능입니다. 또한 더 큰 일괄 처리 문에 포함된 문을 디버깅할 때도 유용한 기능입니다.  

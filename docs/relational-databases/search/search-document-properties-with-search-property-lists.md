@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056106"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
@@ -126,7 +126,7 @@ ms.locfileid: "74056106"
   
  **Transact-SQL을 사용하여 속성을 검색 속성 목록에 추가하려면**  
   
- [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문서에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문을 사용합니다.  
+ [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문서에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문을 사용합니다.  
   
  다음 예에서는 속성을 검색 속성 목록에 추가할 때 이러한 값을 사용하는 방법을 보여 줍니다.  
   
@@ -150,7 +150,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Transact-SQL을 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- `SET SEARCH PROPERTY LIST = <property_list_name>` 절과 함께 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용합니다.  
+ [ 절과 함께 ](../../t-sql/statements/alter-fulltext-index-transact-sql.md)ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;`SET SEARCH PROPERTY LIST = <property_list_name>` 문을 사용합니다.  
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   

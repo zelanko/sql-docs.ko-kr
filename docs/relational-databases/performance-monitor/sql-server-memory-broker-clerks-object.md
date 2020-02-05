@@ -13,10 +13,10 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093409"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerk 개체
@@ -25,7 +25,7 @@ ms.locfileid: "68093409"
 
 다음 표에서는 SQL Server **Memory Broker Clerks** 성능 개체에 대해 설명합니다.
 
-|**SQL Server Memory Broker Clerk 카운터**|설명|  
+|**SQL Server Memory Broker Clerk 카운터**|Description|  
 |-------------|-----------------|  
 |**Internal benefit**|엔트리 개수 압력에 대한 메모리의 내부 값(ms/페이지/ms)입니다(100억으로 곱하고 정수로 잘림).|
 |**Memory broker clerk size**|클럭의 크기(페이지)입니다.|

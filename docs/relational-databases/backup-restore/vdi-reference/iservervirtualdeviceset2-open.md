@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847224"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -37,14 +37,14 @@ HRESULT IServerVirtualDeviceSet2::Open (
 
 *lpName* BACKUP 또는 RESTORE 명령의 첫 번째 VIRTUAL_DEVICE= 절에서 제공됩니다. 이 이름은 클라이언트에서 만든 가상 디바이스 세트에 대한 액세스 권한을 얻기 위한 키로 사용됩니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-|반환 값 | 설명 |
+|Return Value | 설명 |
 |---|---|
 | NOERROR | 함수가 성공했습니다. |
 | VD_E_INVALID | 제공된 이름으로 서버에서 액세스할 수 있는 가상 디바이스 세트를 식별하지 못했습니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 이 함수가 성공적으로 호출된 후에 서버는 GetConfiguration 및 SetConfiguration을 사용하여 가상 디바이스 세트를 계속 구성할 수 있습니다.
 

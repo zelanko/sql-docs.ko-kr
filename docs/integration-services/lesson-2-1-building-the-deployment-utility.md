@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296036"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>2-1단원 - 배포 유틸리티 작성
@@ -52,7 +52,7 @@ ms.locfileid: "71296036"
   
 4.  출력 창에서 다음 정보를 확인합니다.  
   
-    빌드 시작: SQL Integration Services 프로젝트: 증분 ...  
+    빌드 시작: SQL Integration Services 프로젝트: 증분...  
   
     배포 유틸리티를 만드는 중...  
   

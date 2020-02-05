@@ -11,10 +11,10 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298904"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 인스턴스 배포 스크립트
@@ -37,7 +37,7 @@ ms.locfileid: "71298904"
  **다른 이름으로 저장**  
  원하는 위치에 저장할 수 있는 텍스트 파일로 스크립트를 저장합니다. 스크립트를 포함하는 파일을 다른 서버에 복사하여 해당 서버에서 실행할 수 있습니다.  
   
- **복사**  
+ **Copy**  
  스크립트를 클립보드에 복사합니다. 그런 다음 스크립트를 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 텍스트 편집기에 붙여넣어 나중에 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

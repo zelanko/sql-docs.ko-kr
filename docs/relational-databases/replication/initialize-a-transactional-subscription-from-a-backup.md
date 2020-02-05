@@ -20,10 +20,10 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320480"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>트랜잭션 구독을 백업에서 초기화
@@ -36,12 +36,12 @@ ms.locfileid: "75320480"
   
     -   값이 **1**이면 게시에서 이 기능을 지원하는 것입니다.  
   
-    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 `@property`에 **allow_initialize_from_backup** 값, `@value`에 **true** 값을 지정합니다.  
+    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **에** allow_initialize_from_backup`@property` 값, **에** true`@value` 값을 지정합니다.  
   
 2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **allow_initialize_from_backup** 에 **true**값을 지정합니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
     > [!WARNING]  
-    >  구독자 데이터가 누락되는 것을 방지하려면 `@allow_initialize_from_backup = N'true'`에서 **sp_addpublication** 또는 **sp_changepublication**을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하세요.  
+    >  구독자 데이터가 누락되는 것을 방지하려면 **에서** sp_addpublication**또는**sp_changepublication`@allow_initialize_from_backup = N'true'`을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하세요.  
   
 3.  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) 문을 사용하여 게시 데이터베이스의 백업을 만듭니다.  
   

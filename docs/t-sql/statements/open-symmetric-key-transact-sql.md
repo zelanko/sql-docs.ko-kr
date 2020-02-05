@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129394"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129394"
 
   대칭 키를 해독하여 사용할 수 있게 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  대칭 키를 보호하는 데 사용된 암호입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  열린 대칭 키는 보안 컨텍스트가 아니라 세션에 바인딩됩니다. 열린 키는 명시적으로 닫히거나 세션이 종료될 때까지 계속 사용할 수 있습니다. 대칭 키를 연 후 컨텍스트를 전환하면 키가 계속 열려 있으며 가장된 컨텍스트에서 사용할 수 있습니다. 열린 대칭 키에 대한 정보는 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
  대칭 키가 다른 키로 암호화되어 있으면 먼저 해당 키를 열어야 합니다.  
@@ -81,15 +81,15 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>사용 권한  
  호출자는 키에 대한 일부 사용 권한을 가지고 있어야 하며 키에 대한 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다. 해독 메커니즘에 따라 추가 요구 사항이 따를 수도 있습니다.  
   
--   인증서로 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   인증서에 의한 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
--   비대칭 키로 암호 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   비대칭 키에 의한 암호 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
 -   DECRYPTION BY PASSWORD: 대칭 키를 암호화하는 데 사용된 암호 중 하나를 알고 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>1\. 인증서를 사용하여 대칭 키 열기  
+### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. 인증서를 사용하여 대칭 키 열기  
  다음 예에서는 `SymKeyMarketing3` 대칭 키를 열고 `MarketingCert9` 인증서의 프라이빗 키를 사용하여 해독합니다.  
   
 ```  
@@ -99,7 +99,7 @@ OPEN SYMMETRIC KEY SymKeyMarketing3
 GO  
 ```  
   
-### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>2\. 다른 대칭 키를 사용하여 대칭 키 열기  
+### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. 다른 대칭 키를 사용하여 대칭 키 열기  
  다음 예에서는 `MarketingKey11` 대칭 키를 열고 `HarnpadoungsatayaSE3` 대칭 키를 사용하여 해독합니다.  
   
 ```  

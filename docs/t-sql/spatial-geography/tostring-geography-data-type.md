@@ -17,10 +17,10 @@ ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120678"
 ---
 # <a name="tostring-geography-data-type"></a>ToString(geography 데이터 형식)
@@ -42,7 +42,7 @@ ms.locfileid: "68120678"
   
  CLR 반환 형식: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 Null 인스턴스에서 호출되면 문자열 "Null"을 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 서버에서 얻을 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다. 이 메서드는 `AsTextZM()`과 동일한 값을 반환합니다.  
   
  이 메서드는 정확하지 않습니다.  

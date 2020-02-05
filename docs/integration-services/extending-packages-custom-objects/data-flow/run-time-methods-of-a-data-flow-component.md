@@ -17,10 +17,10 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0657cf413c9a7c9d9e12584aacc08b4600a83a56
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297186"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 런타임 메서드

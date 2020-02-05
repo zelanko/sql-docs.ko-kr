@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843700"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843700"
 
 지정된 테이블 또는 뷰에 대해 생성된 마지막 ID 값을 반환합니다. 생성된 마지막 ID 값은 임의의 세션 및 범위에 대한 값일 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ID 값을 반환할 테이블 또는 뷰의 이름입니다. *table_or_view*는 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_CURRENT와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last*가 정의하는 범위와 세션은 각기 다릅니다.  
 
 -   IDENT_CURRENT는 임의의 세션과 범위에 있는 특정 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
@@ -70,7 +70,7 @@ IDENT_CURRENT 값이 NULL인 경우(테이블에 행이 포함된 적이 없거�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>1\. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
+### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
  다음 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대해 마지막으로 생성된 ID 값을 반환합니다.  
   
 ```sql  
@@ -80,7 +80,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-ident_current-identity-and-scope_identity"></a>2\. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
+### <a name="b-comparing-identity-values-returned-by-ident_current-identity-and-scope_identity"></a>B. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
  다음 예에서는 `IDENT_CURRENT`, `@@IDENTITY` 및 `SCOPE_IDENTITY`가 반환하는 서로 다른 ID 값을 보여 줍니다.  
   
 ```sql 
@@ -140,9 +140,9 @@ SELECT IDENT_CURRENT('t7');
 ## <a name="see-also"></a>참고 항목  
  [@@IDENTITY&#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR&#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

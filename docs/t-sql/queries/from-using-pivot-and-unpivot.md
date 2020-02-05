@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305173"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `UNPIVOT` 절의 열 식별자는 카탈로그 데이터 정렬을 따릅니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 경우 데이터 정렬은 항상 `SQL_Latin1_General_CP1_CI_AS`입니다. 부분적으로 포함된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터 정렬은 항상 `Latin1_General_100_CI_AS_KS_WS_SC`입니다. 열이 다른 열과 결합되면 충돌을 피하기 위해 collate 절(`COLLATE DATABASE_DEFAULT`)이 필요합니다.  
 
   
@@ -158,7 +158,7 @@ FROM PurchaseOrderHeader;
 > [!IMPORTANT]  
 >  집계 함수에 `PIVOT`을 사용하면 집계 계산 시 값 열의 모든 NULL 값이 사용되지 않습니다.  
   
-`UNPIVOT`은 열을 행으로 회전하여 `PIVOT`과 거의 반대되는 작업을 수행합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이와 같이 두 개의 추가 열을 식별 해야 합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 존재하는 열을 `Orders`라고 합니다. 이 두 열은 각각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의에서 *pivot_column*과 *value_column*에 해당합니다. 쿼리는 다음과 같습니다.  
+`UNPIVOT`은 열을 행으로 회전하여 `PIVOT`과 거의 반대되는 작업을 수행합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이와 같이 두 개의 추가 열을 식별 해야 합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 존재하는 열을 `Orders`라고 합니다. 이 두 열은 각각 *정의에서*pivot_column*과* value_column[!INCLUDE[tsql](../../includes/tsql-md.md)]에 해당합니다. 쿼리는 다음과 같습니다.  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -203,7 +203,7 @@ VendorID    Employee    Orders
   
 `UNPIVOT`이 `PIVOT`의 정반대는 아닙니다. `PIVOT`은 집계를 수행하고 출력에서 가능한 여러 행을 단일 행으로 병합합니다. 행이 병합되었기 때문에 `UNPIVOT`은 원래 테이블 반환 식 결과를 다시 생성하지 않습니다. 또한 `UNPIVOT` 입력에 있는 Null 값이 출력에 나타나지 않습니다. 값이 나타나지 않으면 이는 `PIVOT` 작업 전에 입력에 원래 Null 값이 있었을 수 있음을 나타냅니다.  
   
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Sales.vSalesPersonSalesByFiscalYears` 뷰는 `PIVOT`을 사용하여 각 영업 사원의 총 매출액을 회계 연도별로 반환합니다. 뷰를 스크립팅하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기**에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 **뷰** 폴더에서 뷰를 찾습니다. 뷰 이름을 마우스 오른쪽 단추로 클릭한 다음, **뷰 스크립팅**을 선택합니다.  
+`Sales.vSalesPersonSalesByFiscalYears` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 뷰는 `PIVOT`을 사용하여 각 영업 사원의 총 매출액을 회계 연도별로 반환합니다. 뷰를 스크립팅하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기**에 있는 **데이터베이스에 대한**뷰[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 폴더에서 뷰를 찾습니다. 뷰 이름을 마우스 오른쪽 단추로 클릭한 다음, **뷰 스크립팅**을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

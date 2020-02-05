@@ -24,10 +24,10 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116528"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68116528"
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC INDEXDEFRAG는 인덱스 검색 성능을 향상시키기 위해 페이지의 물리적 순서가 왼쪽에서 오른쪽으로 리프 노드의 논리적 순서와 일치하도록 인덱스 리프 수준의 조각을 모읍니다.
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ DBCC DBREINDEX나 일반적인 인덱스 작성 작업과 달리 DBCC INDEXDEFRA
   
 조각 모음은 데이터베이스 복구 모델 설정에 관계없이 항상 전체 로깅됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요. 심하게 조각난 인덱스를 조각 모음할 경우 인덱스 작성을 전체 로깅하는 것보다 더 큰 로그가 생성될 수 있습니다. 그러나 조각 모음은 일련의 짧은 트랜잭션으로 수행되므로 로그 백업을 자주 하거나 복구 모델 설정이 SIMPLE인 경우에는 큰 로그가 필요하지 않습니다.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
 DBCC INDEXDEFRAG는 인덱스 리프 페이지를 섞어 놓습니다. 따라서 인덱스가 디스크의 다른 인덱스와 인터리브된 경우 해당 인덱스에 대해 DBCC INDEXDEFRAG를 실행해도 인덱스의 모든 리프 페이지가 연결되지는 않습니다. 페이지의 클러스터링을 향상시키려면 인덱스를 다시 작성하십시오.
 DBCC INDEXDEFRAG는 다음 인덱스를 조각 모음하는 데 사용할 수 없습니다.
 -   비활성화된 인덱스입니다.  
@@ -112,15 +112,15 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 호출자는 테이블을 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>1\. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
-다음 예제에서는 `AdventureWorks` 데이터베이스의 `Production.Product` 테이블에서 `PK_Product_ProductID` 인덱스의 모든 파티션을 조각 모음합니다.
+### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
+다음 예제에서는 `PK_Product_ProductID` 데이터베이스의 `Production.Product` 테이블에서 `AdventureWorks` 인덱스의 모든 파티션을 조각 모음합니다.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
 GO  
 ```  
   
-### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>2\. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
+### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>B. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
  다음 예에서는 데이터베이스에서 선언된 임계값 이상으로 조각화된 모든 인덱스에 조각 모음을 수행하는 간단한 방법을 보여 줍니다.  
   
 ```sql  

@@ -15,10 +15,10 @@ ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101049"
 ---
 # <a name="parse-geometry-data-type"></a>Parse(geometry 데이터 형식)
@@ -42,8 +42,8 @@ Parse ( 'geometry_tagged_text' )
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- `Parse()`에 의해 반환되는 **geometry** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
+## <a name="remarks"></a>설명  
+ **에 의해 반환되는** geometry`Parse()` 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  문자열 'Null'은 Null **geometry** 인스턴스로 해석됩니다.  
   

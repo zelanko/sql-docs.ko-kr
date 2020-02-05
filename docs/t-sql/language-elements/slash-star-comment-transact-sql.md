@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121677"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>슬래시 별(주석 블록)(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121677"
 
   사용자가 제공하는 텍스트를 나타냅니다. /* 및 \*/ 사이의 텍스트는 서버에서 평가되지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ text_of_comment
  *text_of_comment*  
  주석 텍스트입니다. 한 개 이상의 문자열로 구성됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  주석은 별도의 줄 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 삽입될 수 있습니다. 여러 줄로 이루어진 주석은 /* 및 \*/로 표시되어야 합니다. 여러 줄로 이루어진 주석에 자주 사용되는 스타일 규칙은 첫 번째 줄을 /\*로 시작하고, 후속 줄은 \*\*로 시작하며, \*/로 끝나는 것입니다.  
   
  주석의 길이에는 제한이 없습니다.  

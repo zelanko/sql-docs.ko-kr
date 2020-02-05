@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095594"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
@@ -42,11 +42,11 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 시스템 계정은 지금까지 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)([en-us의 NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) 또는 [NetworkService](/windows/desktop/Services/networkservice-account)([en-us의 NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) 계정에 대한 로그인을 생성하고 해당 로그인 권한을 부여하여 사용 권한을 부여 받았습니다. 이 메서드는 시스템 계정으로 실행 중인 SQL에 모든 프로세스 또는 서비스 사용 권한을 부여합니다.
 
-서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `HealthService`의 컨텍스트에서 실행 중일 때 `View Server State`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
+서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `View Server State`의 컨텍스트에서 실행 중일 때 `HealthService`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-a-service-sid"></a>1\. 서비스 SID 만들기
+### <a name="a-create-a-service-sid"></a>A. 서비스 SID 만들기
 
 다음 PowerShell 명령은 System Center Operations Manager 상태 서비스에서 서비스 SID를 만듭니다.
 
@@ -57,7 +57,7 @@ sc.exe --% sidtype "HealthService" unrestricted
 > [!IMPORTANT]
 > `--%`는 나머지 명령 구문 분석을 중지하도록 PowerShell에 지시합니다. 이는 레거시 명령 및 애플리케이션을 사용할 때 유용합니다.
 
-### <a name="b-query-a-service-sid"></a>2\. 서비스 SID 쿼리
+### <a name="b-query-a-service-sid"></a>B. 서비스 SID 쿼리
 
 서비스 SID를 확인하거나 서비스 SID가 있는지 확인하려면 PowerShell에서 다음 명령을 실행합니다.
 

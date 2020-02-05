@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294197"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
@@ -54,7 +54,7 @@ ms.locfileid: "71294197"
  **DestinationType**  
  데이터 프로필 출력을 파일이나 변수에 저장할 것인지 여부를 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**FileConnection**|파일 연결 관리자에서 지정한 위치에 있는 파일에 프로필 출력을 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 파일 연결 관리자를 지정합니다.|  
 |**변수**|프로필 출력을 패키지 변수에 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 패키지 변수를 지정합니다.|  

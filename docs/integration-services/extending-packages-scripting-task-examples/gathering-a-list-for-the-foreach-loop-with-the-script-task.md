@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297020"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
@@ -32,11 +32,11 @@ ms.locfileid: "71297020"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 예에서는 **System.IO** 네임스페이스에서 메서드를 사용하여 컴퓨터에서 만든 날짜 또는 수정한 날짜가 사용자가 변수에 지정한 일 수를 경과하지 않았거나 경과한 Excel 통합 문서의 목록을 수집합니다. 이 예에서는 C 드라이브의 디렉터리에서 확장명이 .xls인 파일을 재귀적으로 검색하고 각 파일을 마지막으로 수정한 날짜를 검사하여 목록에 포함할 파일인지 확인합니다. 그런 다음 조건에 맞는 파일을 **ArrayList**에 추가하고 이 **ArrayList**를 Foreach 루프 컨테이너에서 나중에 사용할 수 있도록 변수에 저장합니다. Foreach 루프 컨테이너는 Foreach from Variable 열거자를 사용하도록 구성됩니다.  
   
 > [!NOTE]  
->  Foreach from Variable 열거자와 함께 사용하는 변수는 **개체** 형식이어야 합니다. 이 변수에 추가하는 개체는 **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** 또는 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** 인터페이스 중 하나를 구현해야 합니다. **배열** 또는 **ArrayList**가 주로 사용됩니다. **ArrayList**를 사용하려면 **System.Collections** 네임스페이스에 대한 참조 및 **Imports** 문이 필요합니다.  
+>  Foreach from Variable 열거자와 함께 사용하는 변수는 **개체** 형식이어야 합니다. 변수에 배치하는 개체는 **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** 또는 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** 인터페이스 중 하나를 구현해야 합니다. **배열** 또는 **ArrayList**가 주로 사용됩니다. **ArrayList**를 사용하려면 **System.Collections** 네임스페이스에 대한 참조 및 **Imports** 문이 필요합니다.  
   
  `FileAge` 패키지 변수에 각기 다른 양수 및 음수 값을 사용하여 이 태스크를 시험해 볼 수 있습니다. 예를 들어 만든 지 5일이 지나지 않은 파일을 검색하려면 5를 입력하고, 만든 지 3일이 지난 파일을 검색하려면 -3을 입력합니다. 드라이브에 검색할 폴더가 많은 경우 이 태스크를 수행하는 데 1~2분 정도 소요될 수 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71297020"
   
 2.  Foreach from Variable 열거자에서 나중에 사용할 수 있도록 스크립트 태스크에서 수집된 파일 목록을 받을 `FileList`라는 **개체** 형식의 패키지 변수를 만듭니다.  
   
-3.  스크립트 태스크의 **ReadOnlyVariables** 속성에 `FileAge` 변수를 추가하고, **ReadWriteVariables** 속성에 `FileList` 변수를 추가합니다.  
+3.  스크립트 태스크의 `FileAge`ReadOnlyVariables**속성에** 변수를 추가하고, `FileList`ReadWriteVariables**속성에** 변수를 추가합니다.  
   
 4.  코드 내에서 **System.Collections** 및 **System.IO** 네임스페이스를 가져옵니다.  
   

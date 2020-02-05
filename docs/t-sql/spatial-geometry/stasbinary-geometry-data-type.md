@@ -18,10 +18,10 @@ ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100979"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary(geometry 데이터 형식)

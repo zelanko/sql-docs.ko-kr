@@ -15,10 +15,10 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1ebc4f10802f7a90dc828bab4b6f2aa1d01d6ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058619"
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
@@ -73,7 +73,7 @@ END;
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |로그온 트리거를 만드는 방법에 대해 설명합니다. LOGON 트리거는 모든 데이터베이스에서 만들 수 있지만 서버 수준에서 등록되며 **master** 데이터베이스에 저장됩니다.|[CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)|  
 |로그온 트리거를 수정하는 방법에 대해 설명합니다.|[ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)|  

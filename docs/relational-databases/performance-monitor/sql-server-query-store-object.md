@@ -14,10 +14,10 @@ ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140725"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
@@ -27,7 +27,7 @@ ms.locfileid: "68140725"
   
  다음 표에서는 **SQLServer:Query Store**카운터에 대해 설명합니다.  
   
-|SQL Server 쿼리 저장소 카운터|설명|  
+|SQL Server 쿼리 저장소 카운터|Description|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU usage**|쿼리 저장소의 CPU 사용량을 나타냅니다.|  
 |**Query Store logical reads**|쿼리 저장소에서 수행된 논리적 읽기 수를 나타냅니다.|  
@@ -36,13 +36,13 @@ ms.locfileid: "68140725"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|쿼리 저장소 인스턴스|설명|  
+|쿼리 저장소 인스턴스|Description|  
 |--------------------------|-----------------|  
 |**_Total**|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 쿼리 저장소의 정보입니다.|  
 |\<데이터베이스 이름>|이 데이터베이스에 대한 쿼리 저장소 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

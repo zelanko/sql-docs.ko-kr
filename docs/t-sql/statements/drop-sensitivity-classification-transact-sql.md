@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223592"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION(Transact-SQL)
@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - 분류된 열이 속한 테이블의 이름입니다.
     - *column_name* - 분류를 삭제할 열의 이름입니다.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 - 여러 개체 분류는 단일 'DROP SENSITIVITY CLASSIFICATION' 문을 사용하여 삭제할 수 있습니다.
 
@@ -70,7 +70,7 @@ ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSIT
 ## <a name="examples"></a>예  
 
 
-### <a name="a-dropping-classification-from-a-single-column"></a>1\. 단일 열에서 분류 삭제
+### <a name="a-dropping-classification-from-a-single-column"></a>A. 단일 열에서 분류 삭제
 
 다음 예제에서는 `dbo.sales.price` 열에서 분류를 제거합니다.  
 
@@ -79,7 +79,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price
 ```
 
-### <a name="b-dropping-classification-from-multiple-columns"></a>2\. 여러 열에서 분류 삭제
+### <a name="b-dropping-classification-from-multiple-columns"></a>B. 여러 열에서 분류 삭제
 
 다음 예제에서는 `dbo.sales.price`, `dbo.sales.discount` 및 `SalesLT.Customer.Phone` 열에서 분류를 제거합니다.  
 

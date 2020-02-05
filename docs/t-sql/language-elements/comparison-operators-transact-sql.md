@@ -21,10 +21,10 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140263"
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68140263"
 |연산자|의미|  
 |--------------|-------------|  
 |[=(같음)](../../t-sql/language-elements/equals-transact-sql.md)|같음|  
-|[>(보다 큼)](../../t-sql/language-elements/greater-than-transact-sql.md)|보다 큼|  
+|[>(보다 큼)](../../t-sql/language-elements/greater-than-transact-sql.md)|초과|  
 |[<(보다 작음)](../../t-sql/language-elements/less-than-transact-sql.md)|보다 작음|  
 |[>=(크거나 같음)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|크거나 같음|  
 |[<=(작거나 같음)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|작거나 같음|  
@@ -45,9 +45,9 @@ ms.locfileid: "68140263"
 |[\!>(보다 크지 않음)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|보다 크지 않음(ISO 표준이 아님)|  
   
 ## <a name="boolean-data-type"></a>부울 데이터 형식  
- 비교 연산자의 결과는 **Boolean** 데이터 형식입니다. 이 결과에는 TRUE, FALSE 및 UNKNOWN이라는 세 가지 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
+ 비교 연산자의 결과는 **Boolean** 데이터 형식입니다. TRUE, FALSE 및 UNKNOWN의 세 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
   
- **Boolean** 데이터 형식은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean**데이터 형식은 다른** 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
   
  SET ANSI_NULLS가 ON이면 한두 개의 NULL 식이 있는 연산자가 UNKNOWN을 반환합니다. SET ANSI_NULLS가 OFF이면 같음(=) 및 같지 않음(<>) 연산자를 제외하고 동일한 규칙이 적용됩니다. SET ANSI_NULLS가 OFF이면 이러한 연산자는 다른 모든 NULL과 동등한 알려진 값으로 NULL을 처리하고 TRUE 또는 FALSE(UNKNOWN은 절대 아님)만 반환합니다.  
   

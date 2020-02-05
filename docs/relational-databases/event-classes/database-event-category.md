@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf3fd2a6cd222320e55b7336272bf9f662b81694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009573"
 ---
 # <a name="database-event-category"></a>Database 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "68009573"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Data File Auto Grow 이벤트 클래스](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|데이터 파일이 자동으로 증가함을 나타냅니다. 데이터 파일이 ALTER DATABASE를 통해 명시적으로 증가하는 경우 이 이벤트는 트리거되지 않습니다.|  
 |[Data File Auto Shrink 이벤트 클래스](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|데이터 파일이 축소되었음을 나타냅니다.|  

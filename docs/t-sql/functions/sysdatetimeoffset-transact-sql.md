@@ -31,20 +31,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7213174c47bb466f34b896560060c140086b325a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117518"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
+  **인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ SYSDATETIMEOFFSET ( )
 ## <a name="return-type"></a>반환 형식  
  **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetimeoffset** 식을 참조할 수 있는 모든 곳에서 SYSDATETIMEOFFSET을 참조할 수 있습니다.  
   
  SYSDATETIMEOFFSET은 비결정적 함수입니다. 열에서 이 함수를 참조하는 뷰와 식은 인덱싱될 수 없습니다.  
@@ -66,7 +66,7 @@ SYSDATETIMEOFFSET ( )
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
   
-### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>1\. 날짜 및 시간 함수가 반환하는 형식 표시  
+### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 날짜 및 시간 함수가 반환하는 형식 표시  
  다음 예에서는 날짜 및 시간 함수가 반환하는 다양한 형식을 보여 줍니다.  
   
 ```  
@@ -89,7 +89,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
 ```  
   
-### <a name="b-converting-date-and-time-to-date"></a>2\. 날짜 및 시간을 날짜로 변환  
+### <a name="b-converting-date-and-time-to-date"></a>B. 날짜 및 시간을 날짜로 변환  
  다음 예에서는 날짜 및 시간 값을 `date`으로 변환하는 방법을 보여 줍니다.  
   
 ```  
@@ -137,7 +137,7 @@ GETUTCDATE()       20:18:45.3470000
   
 ## <a name="see-also"></a>참고 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

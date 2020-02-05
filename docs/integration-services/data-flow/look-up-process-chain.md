@@ -11,10 +11,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 048ead08bf4a0f3f275eb265434581c8be4405bc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292320"
 ---
 # <a name="look-up-process-chain"></a>프로세스 체인 조회
@@ -44,7 +44,7 @@ ms.locfileid: "71292320"
 ## <a name="lookup-options"></a>조회 옵션  
  조회 필드에 별표 와일드카드 문자(*)를 사용하거나 문자열 일부를 별표 와일드카드 문자와 함께 사용하여 결과를 필터링할 수 있습니다. 조회 필드를 비워 두면 해당 필드에서 빈 문자열만 일치하는 항목으로 필터링됩니다.  
   
- **Process chain**  
+ **프로세스 체인**  
  조회할 프로세스 체인의 이름을 입력하거나 이름의 일부와 별표 와일드카드 문자(*)를 입력합니다. 모든 프로세스 체인을 포함하려면 별표 와일드카드 문자만 사용합니다.  
   
  **조회**  

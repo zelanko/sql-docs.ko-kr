@@ -12,13 +12,13 @@ ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4581b68f15b78060b359429eaa2599003fa497b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131708"
 ---
-# <a name="mssqlserver17148"></a>MSSQLSERVER_17148
+# <a name="mssqlserver_17148"></a>MSSQLSERVER_17148
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -30,11 +30,11 @@ ms.locfileid: "68131708"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|STARTUP_SERVERUNINSTALL|  
-|메시지 텍스트|서비스 제어 관리자로부터 '중지' 요청을 받아 SQL Server를 종료하고 있습니다. 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
+|메시지 텍스트|서비스 제어 관리자로부터 '중지' 요청을 받아 SQL Server를 종료하고 있습니다. 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.|  
   
 ## <a name="explanation"></a>설명  
 서비스 제어 관리자에 의해 SQL Server가 종료되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+None  
   

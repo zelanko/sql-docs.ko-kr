@@ -11,10 +11,10 @@ ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c5a85072bec1fc304156268680c201ad2245e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095650"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
@@ -40,7 +40,7 @@ ms.locfileid: "74095650"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL 추적 최적화](../../relational-databases/sql-trace/optimize-sql-trace.md)|추적이 시스템 성능에 미치는 영향을 줄이는 방법을 설명합니다.|  
 |[추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)|추적에 필터를 사용하는 방법을 설명합니다.|  

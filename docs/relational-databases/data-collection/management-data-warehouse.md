@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133618"
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
@@ -39,7 +39,7 @@ ms.locfileid: "68133618"
   
  다음 표에서는 core 스키마의 데이터베이스 테이블에 대해 설명합니다. 이러한 데이터베이스 테이블에서는 데이터 수집기를 사용하여 데이터가 있었던 위치, 데이터를 삽입한 사용자 및 데이터가 데이터 웨어하우스에 업로드된 시간을 추적할 수 있습니다.  
   
-|테이블 이름|설명|  
+|테이블 이름|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|관리 데이터 웨어하우스 보고서에서 성능 카운터를 그룹화하고 집계하는 방법에 대한 정보를 저장합니다.|  
 |core.snapshots_internal|새로운 각 스냅샷을 식별합니다. 업로드 패키지가 새 일괄 처리 데이터를 업로드하기 시작할 때마다 새 행이 이 테이블에 삽입됩니다.|  
@@ -109,7 +109,7 @@ ms.locfileid: "68133618"
   
  데이터베이스 테이블 열에 대한 자세한 데이터 형식 및 콘텐츠 정보는 각 테이블에 해당되는 데이터 수집기 저장 프로시저에 대한 설명서를 참조하십시오.  
   
-### <a name="best-practices"></a>최선의 구현 방법  
+### <a name="best-practices"></a>모범 사례  
  관리 데이터 웨어하우스를 사용할 때는 다음과 같은 최선의 방법을 따르는 것이 좋습니다.  
   
 -   새 수집기 유형을 추가하지 않는 한 관리 데이터 웨어하우스 테이블의 메타데이터를 수정하지 않습니다.  

@@ -11,10 +11,10 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 976c495cca321a5731a59ff69e3d7935323cdce5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294658"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
@@ -37,7 +37,7 @@ ms.locfileid: "71294658"
  **다른 이름으로 저장**  
  스크립트를 텍스트 파일에 저장합니다. Oracle 데이터베이스 관리자(DBA)가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 사용되며, 스크립트를 텍스트 파일로 저장하여 나중에 전자 메일 또는 다른 방법으로 Oracle DBA에게 보낸 다음 Oracle 데이터베이스에서 스크립트를 실행하는 데 사용되는 SQL*Plus Oracle 유틸리티 또는 기타 도구를 사용하여 스크립트를 실행할 수 있습니다.  
   
- **복사**  
+ **Copy**  
  스크립트를 클립보드에 복사합니다. Oracle 데이터베이스 관리자가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 필요한 위치에 스크립트를 붙여 넣을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

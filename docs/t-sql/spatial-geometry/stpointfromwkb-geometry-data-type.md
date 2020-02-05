@@ -18,10 +18,10 @@ ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 985fb4f48363a1cb3f8411b80365705ee2392498
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066425"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB(geometry 데이터 형식)
@@ -50,7 +50,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  OGC 형식: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  

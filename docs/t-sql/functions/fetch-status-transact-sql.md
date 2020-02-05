@@ -20,18 +20,18 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071562"
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS(Transact-SQL)
+# <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 현재 연결에서 연 모든 커서에 실행된 마지막 커서 FETCH 문의 상태를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,16 +42,16 @@ ms.locfileid: "68071562"
 ## <a name="return-type"></a>반환 형식  
  **integer**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |&nbsp;0|FETCH 문이 성공적으로 수행되었습니다.|  
 |-1|FETCH 문이 실패했거나 행이 결과 집합의 범위를 벗어났습니다.|  
 |-2|인출된 행이 없습니다.|
 |-9|커서는 페치 작업을 수행하지 않습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `@@FETCH_STATUS`는 연결의 모든 커서에 전역으로 적용되므로 신중히 사용하세요. FETCH 문이 실행된 후 다른 커서에 대해 다른 FETCH 문을 실행하기 전에 `@@FETCH_STATUS`의 테스트를 수행해야 합니다. `@@FETCH_STATUS`는 연결에서 페치가 수행되기 전에 정의되지 않습니다.  
   
 예를 들어 사용자는 한 커서에서 FETCH 문을 실행한 후 다른 커서에서 결과를 열고 처리하는 저장 프로시저를 호출합니다. 호출된 저장 프로시저에서 컨트롤이 반환되면 `@@FETCH_STATUS`는 저장 프로시저 내에서 실행된 마지막 FETCH를 반영하고 저장 프로시저가 호출되기 전에 실행된 FETCH 문은 반영하지 않습니다.  

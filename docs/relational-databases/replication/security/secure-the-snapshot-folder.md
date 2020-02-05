@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 68f87d4707f17eab8a37332b6db2baff5ed5a42f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: acfa04e4763eafd522cfa741fe835573b510cc4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768460"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287247"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅샷 폴더 보안 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68768460"
 > [!NOTE]  
 >  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅샷 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅샷 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅샷 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
   
- 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅샷 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
+ 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅샷 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\ *\<instance&gt;* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
   
  스냅샷 폴더에 대한 액세스 권한을 부여할 때는 폴더가 액세스되는 방법에 따라 권한을 부여해야 합니다. 다음 대화 상자 탭은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003에서 사용됩니다.  
   

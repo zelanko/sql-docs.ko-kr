@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995848"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
@@ -140,11 +140,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
-|CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
-|CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
-|CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|인증서|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
+|인증서|CONTROL|CL|DATABASE|CONTROL|  
+|인증서|REFERENCES|RF|DATABASE|REFERENCES|  
+|인증서|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|인증서|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -247,10 +247,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -297,40 +297,40 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY AVAILABILITY GROUP|ALAG|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY CONNECTION|ALCO|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY DATABASE|ALDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY ENDPOINT|ALHE|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY EVENT SESSION|AAES|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY LOGIN|ALLG|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER RESOURCES|ALRS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER SERVER STATE|ALSS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER SETTINGS|ALST|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER TRACE|ALTR|해당 사항 없음|해당 사항 없음|  
-|SERVER|AUTHENTICATE SERVER|AUTH|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONNECT ANY DATABASE|CADB|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONNECT SQL|COSQ|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONTROL SERVER|CL|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE ANY DATABASE|CRDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE AVAILABILITY GROUP|CRAC|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE ENDPOINT|CRHE|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE SERVER ROLE|CRSR|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 사항 없음|해당 사항 없음|  
-|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 사항 없음|해당 사항 없음|  
-|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 사항 없음|해당 사항 없음|  
-|SERVER|SELECT ALL USER SECURABLES|SUS|해당 사항 없음|해당 사항 없음|  
-|SERVER|SHUTDOWN|SHDN|해당 사항 없음|해당 사항 없음|  
-|SERVER|UNSAFE ASSEMBLY|XU|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW ANY DATABASE|VWDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW ANY DEFINITION|VWAD|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW SERVER STATE|VWSS|해당 사항 없음|해당 사항 없음|  
+|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 없음|해당 없음|  
+|SERVER|ALTER ANY AVAILABILITY GROUP|ALAG|해당 없음|해당 없음|  
+|SERVER|ALTER ANY CONNECTION|ALCO|해당 없음|해당 없음|  
+|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 없음|해당 없음|  
+|SERVER|ALTER ANY DATABASE|ALDB|해당 없음|해당 없음|  
+|SERVER|ALTER ANY ENDPOINT|ALHE|해당 없음|해당 없음|  
+|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 없음|해당 없음|  
+|SERVER|ALTER ANY EVENT SESSION|AAES|해당 없음|해당 없음|  
+|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 없음|해당 없음|  
+|SERVER|ALTER ANY LOGIN|ALLG|해당 없음|해당 없음|  
+|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 없음|해당 없음|  
+|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 없음|해당 없음|  
+|SERVER|ALTER RESOURCES|ALRS|해당 없음|해당 없음|  
+|SERVER|ALTER SERVER STATE|ALSS|해당 없음|해당 없음|  
+|SERVER|ALTER SETTINGS|ALST|해당 없음|해당 없음|  
+|SERVER|ALTER TRACE|ALTR|해당 없음|해당 없음|  
+|SERVER|AUTHENTICATE SERVER|AUTH|해당 없음|해당 없음|  
+|SERVER|CONNECT ANY DATABASE|CADB|해당 없음|해당 없음|  
+|SERVER|CONNECT SQL|COSQ|해당 없음|해당 없음|  
+|SERVER|CONTROL SERVER|CL|해당 없음|해당 없음|  
+|SERVER|CREATE ANY DATABASE|CRDB|해당 없음|해당 없음|  
+|SERVER|CREATE AVAILABILITY GROUP|CRAC|해당 없음|해당 없음|  
+|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 없음|해당 없음|  
+|SERVER|CREATE ENDPOINT|CRHE|해당 없음|해당 없음|  
+|SERVER|CREATE SERVER ROLE|CRSR|해당 없음|해당 없음|  
+|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 없음|해당 없음|  
+|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 없음|해당 없음|  
+|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 없음|해당 없음|  
+|SERVER|SELECT ALL USER SECURABLES|SUS|해당 없음|해당 없음|  
+|SERVER|SHUTDOWN|SHDN|해당 없음|해당 없음|  
+|SERVER|UNSAFE ASSEMBLY|XU|해당 없음|해당 없음|  
+|SERVER|VIEW ANY DATABASE|VWDB|해당 없음|해당 없음|  
+|SERVER|VIEW ANY DEFINITION|VWAD|해당 없음|해당 없음|  
+|SERVER|VIEW SERVER STATE|VWSS|해당 없음|해당 없음|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
@@ -350,10 +350,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|User|ALTER|AL|DATABASE|ALTER ANY USER|  
-|User|CONTROL|CL|DATABASE|CONTROL|  
-|User|IMPERSONATE|IM|DATABASE|CONTROL|  
-|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
@@ -417,7 +417,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 
-*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어
+*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 다음은 그 예입니다.
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
@@ -426,7 +426,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ##  <a name="_examples"></a> 예  
  이 섹션의 예에서는 사용 권한 정보를 검색하는 방법을 보여 줍니다.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1\. 부여 가능한 사용 권한의 전체 목록 반환  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 부여 가능한 사용 권한의 전체 목록 반환  
  다음 문에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 함수를 사용하여 모든 `fn_builtin_permissions` 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)를 참조하세요.  
   
 ```sql  
@@ -434,7 +434,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2\. 특정 개체 클래스의 사용 권한 반환  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. 특정 개체 클래스의 사용 권한 반환  
  다음 예제에서는 `fn_builtin_permissions` 를 사용하여 보안 개체 범주에 사용할 수 있는 모든 사용 권한을 표시합니다. 다음 예에서는 어셈블리의 사용 권한을 반환합니다.  
   
 ```sql  
@@ -461,6 +461,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
+ [sys.database_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
