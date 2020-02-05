@@ -18,16 +18,16 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066548"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  호출하는 **geography** 인스턴스와의 거리가 *distance* 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 **geography** 인스턴스를 반환합니다.  
+  호출하는 **geography** 인스턴스와의 거리가 **distance** 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 *geography* 인스턴스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68066548"
   
 -   **NULL**이 `@g.BufferWithCurves(NULL)`과 같은 메서드로 전달됩니다  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 여러 거리 값에 대해 반환되는 결과를 보여 줍니다.  
   
 |거리 값|유형 차원|반환되는 공간 유형|  
@@ -71,7 +71,7 @@ ms.locfileid: "68066548"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>1\. 1차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. 1차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
  ```sql
@@ -79,7 +79,7 @@ ms.locfileid: "68066548"
  SELECT @g.BufferWithCurves(-1).ToString();
 ``` 
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>2\. 2차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>B. 2차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 버퍼가 음수인 `CurvePolygon` 인스턴스를 반환합니다.  
   
  ```sql

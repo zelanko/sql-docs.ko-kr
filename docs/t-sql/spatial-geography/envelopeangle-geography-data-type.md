@@ -18,10 +18,10 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066460"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle(geography 데이터 형식)
@@ -43,12 +43,12 @@ EnvelopeAngle( )
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스에 있는 지점을 도 단위로 반환합니다. EnvelopeCenter()와 함께 사용할 경우 `EnvelopeAngle()`은 **geography** 인스턴스의 경계 원을 반환합니다.  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 메서드는 **FullGlobe** 인스턴스로 확장되었습니다.  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 `EnvelopeAngle()`에 적용된 반구 제한이 제거되었습니다. 그러나 각도가 90도보다 큰 인스턴스의 경우 180도가 반환됩니다. **geography** 인스턴스가 둘 이상의 반구에 걸쳐 있을 경우 `EnvelopeAngle()`이 정확하지 않습니다.  
+ `EnvelopeAngle()`의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 적용된 반구 제한이 제거되었습니다. 그러나 각도가 90도보다 큰 인스턴스의 경우 180도가 반환됩니다. `EnvelopeAngle()`geography**인스턴스가 둘 이상의 반구에 걸쳐 있을 경우**이 정확하지 않습니다.  
   
 ## <a name="examples"></a>예  
   

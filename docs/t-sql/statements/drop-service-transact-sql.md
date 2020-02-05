@@ -22,10 +22,10 @@ ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73791313"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73791313"
 
   기존 서비스를 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  삭제할 서비스의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서비스를 참조하는 대화 우선 순위가 있으면 해당 서비스를 삭제할 수 없습니다.  
   
  서비스를 삭제하면 해당 서비스가 사용하는 큐에서 서비스에 대한 모든 메시지가 삭제됩니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 해당 서비스를 사용하는 진행 중인 대화의 원격 대화 상대에게 오류를 보냅니다.  

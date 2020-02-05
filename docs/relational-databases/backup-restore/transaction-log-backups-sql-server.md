@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041347"
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041347"
 ##  <a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 방법  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
-|Time|이벤트|  
+|Time|행사|  
 |----------|-----------|  
 |8:00 AM|데이터베이스를 백업합니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  
@@ -61,7 +61,7 @@ ms.locfileid: "68041347"
 > 복원해야 하는 로그 백업의 수를 제한하려면 데이터를 정기적으로 백업해야 합니다. 예를 들어 주별 전체 데이터베이스 백업과 일별 차등 데이터베이스 백업을 예약할 수 있습니다.  
 > 또 복구 전략을 구현할 때 필요한 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](https://wikipedia.org/wiki/Recovery_point_objective), 특히 전체 및 차등 데이터베이스 백업 케이던스에 대해 생각해보세요.
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **트랜잭션 로그 백업을 만들려면**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

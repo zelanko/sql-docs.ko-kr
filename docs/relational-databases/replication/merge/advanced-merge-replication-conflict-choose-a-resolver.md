@@ -15,10 +15,10 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033443"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>고급 병합 복제 충돌 - 해결 프로그램 선택
@@ -43,7 +43,7 @@ ms.locfileid: "68033443"
 |충돌 결과 데이터가 원본 충돌 데이터와 달라야 합니다.|새 값을 계산하는 아티클 해결 프로그램을 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [논리적 레코드에서 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [데이터 다시 게시](../../../relational-databases/replication/republish-data.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115805"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
@@ -49,7 +49,7 @@ ms.locfileid: "68115805"
  **범주**  
  작업 범주로 작업을 필터링합니다.  
   
- **예약**  
+ **예약됨**  
  일정이 있는 작업을 모두 표시하거나 일정이 없는 작업을 모두 표시합니다.  
   
  **상태**  

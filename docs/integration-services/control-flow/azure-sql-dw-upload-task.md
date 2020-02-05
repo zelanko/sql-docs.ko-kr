@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947191"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
@@ -46,7 +46,7 @@ ms.locfileid: "67947191"
 
 ### <a name="filesystem"></a>FileSystem
 
-필드|설명
+필드|Description
 -----|-----------
 LocalDirectory|업로드할 데이터 파일이 포함된 로컬 디렉터리를 지정합니다.
 Recursively|하위 디렉터리를 재귀적으로 검색할 것인지 여부를 지정합니다.
@@ -67,7 +67,7 @@ HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. *
 
 ### <a name="blobstorage"></a>BlobStorage
 
-필드|설명
+필드|Description
 -----|-----------
 AzureStorageConnection|Azure Storage 연결 관리자를 지정합니다.
 BlobContainer|원본 데이터가 있는 Blob 컨테이너의 이름을 지정합니다.

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019504"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux의 보안 기능 연습
@@ -27,7 +27,7 @@ SQL Server를 처음 사용하는 Linux 사용자인 경우 다음 작업에서 
 
 ## <a name="create-a-login-and-a-database-user"></a>로그인 및 데이터베이스 사용자 만들기 
 
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문을 통해 master 데이터베이스에서 로그인을 만들어 SQL Server에 대한 액세스 권한을 다른 사용자에게 부여합니다. 예를 들어
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문을 통해 master 데이터베이스에서 로그인을 만들어 SQL Server에 대한 액세스 권한을 다른 사용자에게 부여합니다. 다음은 그 예입니다.
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -48,7 +48,7 @@ GO
 - SQL Server 관리자 계정은 모든 데이터베이스에 연결할 수 있으며 모든 데이터베이스에서 추가 로그인과 사용자를 만들 수 있습니다.  
 - 사용자가 데이터베이스를 만들면 데이터베이스 소유자가 되며 해당 데이터베이스에 연결할 수 있습니다. 데이터베이스 소유자는 추가 사용자를 만들 수 있습니다.
 
-나중에 다른 로그인에 `ALTER ANY LOGIN` 권한을 부여하여 추가 로그인을 만들 권한을 부여할 수 있습니다. 데이터베이스 내에서 다른 사용자에게 `ALTER ANY USER` 권한을 부여하여 추가 사용자를 만들 권한을 부여할 수 있습니다. 예를 들어   
+나중에 다른 로그인에 `ALTER ANY LOGIN` 권한을 부여하여 추가 로그인을 만들 권한을 부여할 수 있습니다. 데이터베이스 내에서 다른 사용자에게 `ALTER ANY USER` 권한을 부여하여 추가 사용자를 만들 권한을 부여할 수 있습니다. 다음은 그 예입니다.   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -67,7 +67,7 @@ GO
 
 사용자 데이터베이스에 연결하는 첫 번째 사용자는 관리자 및 데이터베이스 소유자 계정이 됩니다. 그러나 이 사용자는 데이터베이스에서 사용할 수 있는 모든 권한을 가집니다. 이 권한은 대부분의 사용자가 가지는 것보다 많은 권한입니다. 
 
-처음 시작하는 경우 기본 제공 ‘고정 데이터베이스 역할’을 사용하여 몇 가지 일반적인 권한 범주를 할당할 수 있습니다.  예를 들어 `db_datareader` 고정 데이터베이스 역할은 데이터베이스의 모든 테이블을 읽을 수 있지만 변경하지는 않습니다. [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 문을 사용하여 고정 데이터베이스 역할의 멤버 자격을 부여합니다. 다음 예제에서는 `db_datareader` 고정 데이터베이스 역할에 사용자 `Jerry`를 추가합니다.   
+처음 시작하는 경우 기본 제공 ‘고정 데이터베이스 역할’을 사용하여 몇 가지 일반적인 권한 범주를 할당할 수 있습니다.  예를 들어 `db_datareader` 고정 데이터베이스 역할은 데이터베이스의 모든 테이블을 읽을 수 있지만 변경하지는 않습니다. [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 문을 사용하여 고정 데이터베이스 역할의 멤버 자격을 부여합니다. 다음 예제에서는 `Jerry` 고정 데이터베이스 역할에 사용자 `db_datareader`를 추가합니다.   
    
 ```   
 USE AdventureWorks2014;   
@@ -80,7 +80,7 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 나중에 데이터에 대한 보다 정확한 액세스를 구성할 준비가 되면(권장됨) [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) 문을 사용하여 사용자 정의 데이터베이스 역할을 만듭니다. 그런 다음, 사용자 지정 역할에 특정 세분화된 권한을 할당합니다.
 
-예를 들어 다음 문은 `Sales`라는 데이터베이스 역할을 만들고, `Orders` 테이블의 행을 표시, 업데이트 및 삭제하는 기능을 `Sales` 그룹에 부여하고, 사용자 `Jerry`를 `Sales` 역할에 추가합니다.   
+예를 들어 다음 문은 `Sales`라는 데이터베이스 역할을 만들고, `Sales` 테이블의 행을 표시, 업데이트 및 삭제하는 기능을 `Orders` 그룹에 부여하고, 사용자 `Jerry`를 `Sales` 역할에 추가합니다.   
    
 ```   
 CREATE ROLE Sales;   
@@ -220,20 +220,20 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 
 ```
 USE master;  
-GO  
+이동  
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
-GO  
+이동  
 
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
-GO  
+이동  
 
 USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
-GO
+이동
   
 ALTER DATABASE AdventureWorks2014  
 SET ENCRYPTION ON;   
@@ -259,7 +259,7 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
 USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
-의 모든 멘션을  
+WITH  
   COMPRESSION,  
   ENCRYPTION   
    (  
@@ -267,7 +267,7 @@ USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Dat
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
+이동  
 ```
 
 For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).

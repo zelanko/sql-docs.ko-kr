@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f98fa5b39585c8e8cd66178a82a9d6c95b330c7a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2e115bd7007d967429495a18a1421ee4bd46687d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909604"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287723"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>복제 모니터에서 데이터 새로 고침
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "72909604"
 
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>세부 정보 창이 자동으로 새로 고쳐지도록 지정하려면  
   
-1.  다음과 같이 예를 들어  
+1.  다음과 같이 다음은 그 예입니다.  
   
     1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   

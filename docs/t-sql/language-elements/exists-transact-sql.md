@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075261"
 ---
 # <a name="exists-transact-sql"></a>EXISTS(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68075261"
 
   하위 쿼리를 지정하여 행의 존재 여부를 테스트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ EXISTS ( subquery )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>1\. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
+### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
  다음 예에서는 하위 쿼리에 `NULL`을 지정하여 결과 집합을 반환하고 `EXISTS`를 사용하여 TRUE로 계속 평가됩니다.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE EXISTS (SELECT NULL)
 ORDER BY Name ASC ;  
 ```  
   
-### <a name="b-comparing-queries-by-using-exists-and-in"></a>2\. EXISTS 및 IN을 사용하여 쿼리 비교  
+### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. EXISTS 및 IN을 사용하여 쿼리 비교  
  다음 예에서는 기능이 동일한 두 쿼리를 비교합니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `IN`을 사용합니다.  
   
 ```  
@@ -296,7 +296,7 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>F. EXISTS 사용  
  다음 예제에서는 `ProspectiveBuyer` 테이블의 행이 `DimCustomer` 테이블의 행과 일치하는지 여부를 식별합니다. 쿼리는 두 테이블의 `LastName` 및 `BirthDate` 값이 모두 일치하는 경우에만 행을 반환합니다.  
@@ -313,7 +313,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS 사용  
- NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `LastName` 및 `BirthDate`가 `ProspectiveBuyers` 테이블의 모든 항목에 일치하지 않는 행을 `DimCustomer` 테이블에서 찾습니다.  
+ NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `DimCustomer` 및 `LastName`가 `BirthDate` 테이블의 모든 항목에 일치하지 않는 행을 `ProspectiveBuyers` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  

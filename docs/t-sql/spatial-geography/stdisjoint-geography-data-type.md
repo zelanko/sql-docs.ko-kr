@@ -18,10 +18,10 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042325"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint(geography 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "68042325"
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 **geography** 인스턴스의 점 집합에 대한 교차점이 비어 있으면 두 인스턴스가 분리된 것입니다.  
   
  이 메서드는 **geography** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  

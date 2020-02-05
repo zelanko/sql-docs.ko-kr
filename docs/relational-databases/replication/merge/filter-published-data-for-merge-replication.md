@@ -14,10 +14,10 @@ ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033264"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>병합 복제의 게시된 데이터 필터링
@@ -26,9 +26,9 @@ ms.locfileid: "68033264"
   
  병합 복제는 모바일 사용자를 지원하는 여러 애플리케이션에서 사용됩니다. 이러한 애플리케이션에는 대개 많은 구독이 있으며 각 구독은 고유한 데이터 집합을 받습니다. 매개 변수가 있는 필터를 조인 필터와 함께 사용하면 관리자는 하나의 게시 또는 적은 수의 게시를 설정한 다음에도 다양한 데이터 집합을 사용자에게 제공할 수 있으므로 여러 게시를 만들 때 발생하는 관리 오버헤드를 줄일 수 있습니다.  
   
--   매개 변수가 있는 필터를 사용하면 게시를 여러 개 만들지 않아도 데이터의 다른 파티션을 다른 구독자에게 보낼 수 있습니다. 예를 들어 지정된 판매 담당자의 데이터가 해당 담당자에게만 복제되도록 테이블을 필터링할 수 있습니다. 매개 변수가 있는 필터의 다양한 옵션을 활용하여 성능을 최적화하고 데이터 및 애플리케이션 요구 사항에 가장 적합한 필터링을 만들 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을(를) 참조하세요.  
+-   매개 변수가 있는 필터를 사용하면 게시를 여러 개 만들지 않아도 데이터의 다른 파티션을 다른 구독자에게 보낼 수 있습니다. 예를 들어 지정된 판매 담당자의 데이터가 해당 담당자에게만 복제되도록 테이블을 필터링할 수 있습니다. 매개 변수가 있는 필터의 다양한 옵션을 활용하여 성능을 최적화하고 데이터 및 애플리케이션 요구 사항에 가장 적합한 필터링을 만들 수 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
--   조인 필터는 일반적으로 필터를 관련 테이블로 확장하기 위해 매개 변수가 있는 필터와 함께 사용되며 정적 필터와 함께 사용할 수도 있습니다. 예를 들어 판매 담당자는 일반적으로 고객 테이블 및 주문 테이블과 같은 다른 테이블에 데이터를 저장합니다. 판매 담당자가 자신의 고객 및 고객의 주문에 대한 정보만을 받을 수 있도록 이러한 정보를 필터링할 수 있습니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을(를) 참조하세요.  
+-   조인 필터는 일반적으로 필터를 관련 테이블로 확장하기 위해 매개 변수가 있는 필터와 함께 사용되며 정적 필터와 함께 사용할 수도 있습니다. 예를 들어 판매 담당자는 일반적으로 고객 테이블 및 주문 테이블과 같은 다른 테이블에 데이터를 저장합니다. 판매 담당자가 자신의 고객 및 고객의 주문에 대한 정보만을 받을 수 있도록 이러한 정보를 필터링할 수 있습니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
   
  필터는 행 식별을 위해 복제에 사용된 **rowguidcol** 을 포함하지 않아야 합니다. 기본적으로 이 열은 병합 복제를 설정할 때 추가된 열이며 이름은 **rowguid**입니다.  
   

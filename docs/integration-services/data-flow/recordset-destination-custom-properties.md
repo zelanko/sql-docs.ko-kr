@@ -11,10 +11,10 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292047"
 ---
 # <a name="recordset-destination-custom-properties"></a>레코드 집합 대상 사용자 지정 속성
@@ -26,7 +26,7 @@ ms.locfileid: "71292047"
   
  다음 표에서는 레코드 집합 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|설명|  
+|속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|ADO 레코드 집합을 보유하는 변수의 이름입니다.|  
   

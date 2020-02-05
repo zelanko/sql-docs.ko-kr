@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035678"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 예제 테이블(SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "68035678"
   
  **myTeam** 테이블에는 다음 열이 있습니다.  
   
-|Column|데이터 형식|Null 허용 여부|설명|  
+|열|데이터 형식|Null 허용 여부|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Null이 아님|행의 기본 키. 팀 멤버의 직원 ID|  
 |**이름**|**nvarchar(50)**|Null이 아님|팀 멤버의 이름|  
-|**Title**|**nvarchar(50)**|Null 허용|팀 직원의 직함|  
+|**제목**|**nvarchar(50)**|Nullable|팀 직원의 직함|  
 |**배경**|**nvarchar(50)**|Null이 아님|행이 마지막으로 업데이트된 날짜와 시간 (기본값)|  
   
 **HumanResources.myTeam을 만들려면**  

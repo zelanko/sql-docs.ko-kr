@@ -13,10 +13,10 @@ ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 04eb7dcce16e107cadcce53400d23d995a19fd03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915990"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Replication XPs 서버 구성 옵션

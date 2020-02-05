@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075199"
 ---
 # <a name="goto-transact-sql"></a>GOTO(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075199"
 
   실행 흐름을 지정된 레이블로 변경합니다. GOTO 다음에 이어지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 건너뛰고 지정된 레이블에서 처리를 계속 이어갑니다. GOTO 문과 레이블은 프로시저, 일괄 처리, 문 블록 등 어디에서나 사용할 수 있습니다. GOTO 문은 중첩될 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ GOTO label
  *label*  
  GOTO의 대상이 해당 레이블인 경우 처리가 시작되는 지점입니다. 레이블은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다. 레이블은 GOTO 사용 여부에 관계 없이 주석을 기록하는 방법으로 사용될 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  GOTO는 조건부 흐름 제어 문, 문 블록 또는 프로시저 내에서 사용할 수 있지만 일괄 처리 밖에 있는 레이블로 이동할 수 없습니다. GOTO 분기는 GOTO 전후에 정의된 레이블로 이동할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054606"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약
@@ -38,7 +38,7 @@ SSMS를 사용하여 패키지를 예약하면 SSIS에서 선택된 패키지의
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 아티클에 설명된 기능을 사용하려면 SQL Server Management Studio 버전 17.7 이상이 필요합니다. SSMS의 최신 버전을 받으려면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.
+이 아티클에 설명된 기능을 사용하려면 SQL Server Management Studio 버전 17.7 이상이 필요합니다. SSMS의 최신 버전을 다운로드하려면 [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)(SSMS(SQL Server Management Studio) 다운로드)를 참조하세요.
 
 ## <a name="schedule-a-package-in-ssms"></a>SSMS에서 패키지 예약
 
@@ -75,5 +75,5 @@ SSMS를 사용하여 패키지를 예약하면 SSIS에서 선택된 패키지의
 SSIS 패키지를 예약하는 다른 방법에 대해 알아보려면 [Azure에서 SSIS 패키지의 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
 
 Azure Data Factory 파이프라인, 활동 및 트리거에 대해 자세히 알아보려면 다음 아티클을 참조하세요.
--   [Azure Data Factory의 파이프라인 및 활동](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Azure Data Factory의 파이프라인 및 작업](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
 -   [Azure Data Factory의 파이프라인 실행 및 트리거](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

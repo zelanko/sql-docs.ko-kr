@@ -17,10 +17,10 @@ ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 015570319e537199f13bd1d3783c508e22ab49ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987377"
 ---
 # <a name="run-system-monitor"></a>시스템 모니터 실행
@@ -33,7 +33,7 @@ ms.locfileid: "67987377"
  시스템 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하면 다른 성능 모니터링 도구로 모니터링할 때와 마찬가지로 성능 오버헤드가 발생할 수 있습니다. 특정 인스턴스에서 실제 오버헤드의 발생 여부는 하드웨어 플랫폼, 카운터 수, 선택된 업데이트 간격에 따라 결정됩니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 시스템 모니터가 통합되면서 성능 감소를 최소화하도록 설계되었습니다.  
   
 > [!NOTE]  
->  시스템 모니터 스냅인에서 모니터링할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터를 선택했으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되지 않은 경우에도 해당 카운터를 볼 수 있습니다.  
+>  시스템 모니터 스냅인에서 모니터링할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터를 선택했으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되지 않은 경우에도 해당 카운터를 볼 수 있습니다.  
   
  시스템 모니터를 시작하는 방법은 [시스템 모니터 시작&#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)을 참조하세요.  
   

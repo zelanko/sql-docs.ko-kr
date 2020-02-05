@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902699"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67902699"
   
  PolyBase는 다음 파일 형식을 지원합니다.
   
--   구분 기호로 분리된 텍스트  
+-   구분된 텍스트  
   
 -   Hive RCFile  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67902699"
   
 외부 테이블을 만들려면 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)을 참조하세요.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문
   
@@ -124,7 +124,7 @@ WITH (
 구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 ꞌ|ꞌ입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
   
   
- 예:  
+ 예제:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -138,7 +138,7 @@ WITH (
 구분 기호로 분리된 텍스트 파일에 형식 문자열의 데이터에 대한 필드 종결자를 지정합니다. 문자열 구분 기호는 길이가 한 자 이상이며 작은따옴표로 묶입니다. 기본값은 빈 문자열 ""입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
  
   
- 예:  
+ 예제:  
 
 -   STRING_DELIMITER = '"'
 
@@ -170,7 +170,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   시간: 'HH:mm:ss'  
+-   Time: 'HH:mm:ss'  
   
 **날짜 형식 예**는 다음 표에 있습니다.
   
@@ -182,23 +182,23 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   Am, pm(tt)은 필요하지 않습니다. 기본값은 AM입니다.
   
-|날짜 형식|예제|설명|  
+|날짜 형식|예제|Description|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|이 날짜 형식은 연도, 월, 일 외에도 00-24시간, 00-59분, 00-59초, 3자리 밀리초를 포함합니다.|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-12시간, 00-59분, 00-59초, 3자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다. |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분을 포함합니다.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간 및 00-59분(초 없음)과, AM, am, PM 또는 pm을 포함합니다.|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|연도, 월, 일. 시간 요소가 포함되지 않습니다.|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월, 일. 월을 3M으로 지정하면 입력 값은 Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov 또는 Dec 문자열 중 하나입니다.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초를 포함합니다.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다.|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|연도, 월, 일. 시간 요소가 포함되지 않습니다.|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월, 일. 월을 3M으로 지정하면 입력 값은 Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov 또는 Dec 문자열 중 하나입니다.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초를 포함합니다.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초와, 입력 파일에 `{+&#124;-}HH:ss`로 입력한 시간대 오프셋을 포함합니다. 예를 들어, 일광절약시간이 적용되지 않은 로스엔젤레스는 UTC보다 8시간 늦으므로 입력 파일에서 -08:00 값으로 로스엔젤레스의 시간대를 지정합니다.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초, (AM, am, PM, 또는 pm) 및 시간대 오프셋을 포함합니다. 이전 행의 설명을 참조하세요.|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|날짜 값이 없고 00-23시간, 00-59분, 00-59초만 있습니다.|  
   
  지원되는 모든 날짜 형식:
   
-|DATETIME|smalldatetime|날짜|Datetime2|datetimeoffset|  
+|Datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -228,7 +228,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 -   'zzz' 문자는 {+|-}HH:ss] 형식으로 시스템의 현재 시간대에 대한 시간대 오프셋을 지정합니다.
   
  USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
- PolyBase는 구분 기호로 분리된 텍스트 파일에서 데이터를 검색 하는 경우 분리 된 텍스트 파일에서 누락 값을 처리 하는 방법을 지정 합니다.
+ PolyBase가 텍스트 파일에서 데이터를 검색할 경우 구분된 텍스트 파일에서 누락된 값을 처리하는 방법을 지정합니다.
   
  TRUE  
  텍스트 파일에서 데이터를 검색할 때 외부 테이블 정의에서 해당하는 열의 데이터 형식에 대한 기본값을 사용하여 누락된 각 값을 저장합니다. 예를 들어, 누락된 값을 다음으로 바꿉니다.  
@@ -303,7 +303,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>1\. DELIMITEDTEXT 외부 파일 형식 만들기  
+### <a name="a-create-a-delimitedtext-external-file-format"></a>A. DELIMITEDTEXT 외부 파일 형식 만들기  
  이 예제에서는 구분 기호로 분리된 텍스트 파일에 대해 이름이 *textdelimited1*인 외부 파일 형식을 만듭니다. FORMAT\_OPTIONS에 대해 나열된 옵션은 파일의 필드가 파이프 문자 '|'를 사용하여 구분되어야 함을 지정합니다. 또한 텍스트 파일은 Gzip 코덱을 사용하여 압축됩니다. DATA\_COMPRESSION을 지정하지 않은 경우 텍스트 파일이 압축되지 않습니다.
   
  구분 기호로 분리된 텍스트 파일의 경우 데이터 압축 메서드는 기본 코덱 'org.apache.hadoop.io.compress.DefaultCodec’ 또는 Gzip 코덱 'org.apache.hadoop.io.compress.GzipCodec'이 될 수 있습니다.
@@ -319,7 +319,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>2\. RCFile 외부 파일 형식 만들기  
+### <a name="b-create-an-rcfile-external-file-format"></a>B. RCFile 외부 파일 형식 만들기  
  이 예제에서는 직렬화/역직렬화 메서드org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe를 사용하는 RCFile에 대한 외부 파일 형식을 만듭니다. 데이터 압축 메서드에 기본 코덱을 사용하도록 지정합니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 것이 기본값입니다.
   
 ```  

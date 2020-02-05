@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030719"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "68030719"
   
 ## <a name="primary-server-tables"></a>주 서버 테이블  
   
-|Table|설명|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 주 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|이 주 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "68030719"
   
 ## <a name="primary-server-stored-procedures"></a>주 서버 저장 프로시저  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|백업 작업, 로컬 모니터 레코드 및 원격 모니터 레코드를 포함하여 로그 전달 구성에 대한 주 데이터베이스를 설정합니다.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|기존 주 데이터베이스에 보조 데이터베이스 이름을 추가합니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68030719"
   
 ## <a name="secondary-server-tables"></a>보조 서버 테이블  
   
-|Table|설명|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 보조 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|이 보조 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "68030719"
   
 ## <a name="secondary-server-stored-procedures"></a>보조 서버 저장 프로시저  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|로그 전달에 대한 보조 데이터베이스를 설정합니다.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|지정된 주 데이터베이스에 대한 보조 서버에서 주 정보를 설정하고, 로컬 및 원격 모니터 링크를 추가하며, 복사본을 만들고 작업을 복원합니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68030719"
   
 ## <a name="monitor-server-tables"></a>모니터 서버 테이블  
   
-|Table|설명|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68030719"
   
 ## <a name="monitor-server-stored-procedures"></a>모니터 서버 저장 프로시저  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|로그 전달 경고 작업이 아직 생성되지 않았으면 하나를 생성합니다.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|관련된 주 데이터베이스가 없으면 로그 전달 경고 작업을 제거합니다.|  

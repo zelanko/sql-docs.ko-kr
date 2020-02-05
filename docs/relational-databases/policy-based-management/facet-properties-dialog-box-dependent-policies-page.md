@@ -14,10 +14,10 @@ ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557988"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>패싯 속성 대화 상자, 종속 정책 페이지

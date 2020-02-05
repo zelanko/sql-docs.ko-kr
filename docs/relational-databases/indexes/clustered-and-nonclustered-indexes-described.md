@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811135"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
@@ -66,7 +66,7 @@ ms.locfileid: "68811135"
 > [!IMPORTANT]
 > 인덱스 디자인 지침 및 내부 요소에 대한 자세한 내용은 [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)를 참조하세요.
 
-## <a name="related-content"></a>관련 내용
+## <a name="related-content"></a>관련 콘텐츠
 
 - [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)
 - [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md)

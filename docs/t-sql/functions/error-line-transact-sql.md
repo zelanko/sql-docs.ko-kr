@@ -23,18 +23,18 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904361"
 ---
-# <a name="errorline-transact-sql"></a>ERROR_LINE(Transact-SQL)
+# <a name="error_line-transact-sql"></a>ERROR_LINE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 TRY...CATCH 구문의 CATCH 블록을 실행시키는 오류의 발생 줄 번호를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,14 +45,14 @@ ERROR_LINE ( )
 ## <a name="return-type"></a>반환 형식  
 **int**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.  
   
 -   오류가 발생한 줄 번호입니다.    
 -   오류가 저장 프로시저 또는 트리거 내에서 발생한 경우 루틴의 줄 번호  
 -   CATCH 블록 범위 밖에서 호출된 경우 NULL입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `ERROR_LINE`에 대한 호출은 CATCH 블록 범위 내의 어디에서나 발생할 수 있습니다.  
   
 `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다. 이는 CATCH 블록의 범위 내에서 위치와 `ERROR_LINE` 호출의 위치 및 `ERROR_LINE`에 대한 호출 수에 관계 없이 발생합니다. 이는 @ERROR 같은 함수와 대조적입니다. @@ERROR는 오류가 발생한 명령문 바로 다음 명령문 또는 CATCH 블록의 첫 번째 명령문에 오류 번호를 반환합니다.  
@@ -61,7 +61,7 @@ CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-errorline-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_LINE 사용  
+### <a name="a-using-error_line-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
   
 ```  
@@ -89,7 +89,7 @@ ErrorLine
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>2. 저장 프로시저의 오류 줄 번호 반환을 위해 CATCH 블록에서 ERROR_LINE 사용  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. 저장 프로시저의 오류 줄 번호 반환을 위해 CATCH 블록에서 ERROR_LINE 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
   
 ```  
@@ -129,7 +129,7 @@ ErrorLine
    
 ```
 
-### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_LINE 사용  
+### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호 및 오류 자체와 관련된 정보를 반환합니다.  
   
 ```  

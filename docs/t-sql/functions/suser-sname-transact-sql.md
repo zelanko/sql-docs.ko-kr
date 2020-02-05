@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981782"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981782"
 
   SID(보안 ID)와 연결된 로그인 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SUSER_SNAME을 ALTER TABLE 또는 CREATE TABLE에서 DEFAULT 제약 조건으로 사용할 수 있습니다. SUSER_SNAME은 SELECT 목록이나 WHERE 절, 그리고 식이 사용되는 모든 곳에 사용할 수 있습니다. 지정된 매개 변수가 없는 경우에도 SUSER_SNAME 다음에는 항상 괄호가 나와야 합니다.  
   
  인수 없이 SUSER_SNAME이 호출되면 현재 보안 컨텍스트의 이름이 반환됩니다. EXECUTE AS를 사용하여 컨텍스트를 전환한 일괄 처리 내에서 인수 없이 SUSER_SNAME이 호출되면 가장된 컨텍스트의 이름이 반환됩니다. 가장된 컨텍스트에서 SUSER_SNAME이 호출된 경우 ORIGINAL_LOGIN은 원래 컨텍스트의 이름을 반환합니다.  
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-suser_sname"></a>1\. SUSER_SNAME 사용  
+### <a name="a-using-suser_sname"></a>A. SUSER_SNAME 사용  
  다음 예에서는 현재 보안 컨텍스트의 로그인 이름을 반환합니다.  
   
 ```  
@@ -75,7 +75,7 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>2\. Windows 사용자의 SID로 SUSER_SNAME 사용  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. Windows 사용자의 SID로 SUSER_SNAME 사용  
  다음 예에서는 Windows SID와 연결된 로그인 이름을 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. SUSER_SNAME 사용  
  다음 예에서는 `0x01` 값을 갖는 SID에 대한 로그인 이름을 반환합니다.  

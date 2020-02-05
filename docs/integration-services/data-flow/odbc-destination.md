@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298221"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
@@ -38,7 +38,7 @@ ms.locfileid: "71298221"
   
 -   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 삽입 메서드를 사용하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
--   **행 단위**: 이 모드에서는 ODBC 대상이 매개 변수가 포함된 INSERT 문을 준비하고 **SQL Execute**를 사용하여 한 번에 하나씩 행을 삽입합니다.  
+-   **행 단위**: 이 모드에서는 ODBC 대상이 매개 변수가 포함된 INSERT 문을 준비하고 **SQL 실행** 을 사용하여 한 번에 하나씩 행을 삽입합니다.  
   
 ## <a name="error-handling"></a>오류 처리  
  ODBC 대상에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
@@ -104,13 +104,13 @@ ms.locfileid: "71298221"
 #### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 새로 만들기를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-#### <a name="new"></a>단추를 사용하여 새  
+#### <a name="new"></a>새로 만들기  
  **새로 만들기**를 클릭합니다. 새 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
  대상으로 데이터를 로드하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 이름 - 일괄 처리|일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 다음 옵션을 사용할 수 있습니다.|  
 ||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블이나 뷰를 선택합니다.<br /><br /> 이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(\*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.<br /><br /> **일괄 처리 크기**: 대량 로드에 대한 일괄 처리 크기를 입력합니다. 일괄 처리로 로드되는 행의 개수입니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "71298221"
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  
   
-#### <a name="column"></a>Column  
+#### <a name="column"></a>열  
  사용되지 않습니다.  
   
 #### <a name="error"></a>Error  
@@ -164,7 +164,7 @@ ms.locfileid: "71298221"
 #### <a name="truncation"></a>잘림  
  ODBC 대상에서 흐름 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  오류에 대한 설명을 표시합니다.  
   
 #### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  
@@ -177,7 +177,7 @@ ms.locfileid: "71298221"
  다음 옵션을 사용하여 ODBC 대상에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
   
 #### <a name="fail-component"></a>구성 요소 실패  
- 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 이것이 기본 동작입니다.  
+ 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 기본 동작입니다.  
   
 #### <a name="ignore-failure"></a>오류 무시  
  오류 또는 잘림이 무시됩니다.  

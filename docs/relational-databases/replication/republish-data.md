@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908237"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287331"
 ---
 # <a name="republish-data"></a>데이터 다시 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72908237"
   
  ![데이터 재게시](../../relational-databases/replication/media/repl-06a.gif "데이터 재게시")  
   
- 모든 서버는 게시자인 동시에 구독자로 작동할 수 있습니다. 예를 들어 다음 다이어그램에서 런던에 존재하며 미국의 다른 4개 도시인 시카고, 뉴욕, 샌디에고 및 시애틀과 같은 4개 도시에 배포해야 하는 테이블 게시를 보십시오. 이 경우 다음과 같이 뉴욕 사이트가 조건에 맞기 때문에 뉴욕에 있는 서버를 런던에서 시작된 게시된 테이블로 구독하도록 선택합니다.  
+ 모든 서버는 게시자인 동시에 구독자로 작동할 수 있습니다. 예를 들어 다음 다이어그램에서 런던에 존재하며 미국의 다른 4개 도시인 시카고, 뉴욕, 샌디에고 및 시애틀과 같은 4개 도시에 배포해야 하는 테이블 게시를 고려합니다. 이 경우 다음과 같이 뉴욕 사이트가 조건에 맞기 때문에 뉴욕에 있는 서버를 런던에서 시작된 게시된 테이블로 구독하도록 선택합니다.  
   
 -   런던으로 돌아가는 네트워크 연결이 상대적으로 안정적입니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72908237"
   
  복제는 다음 표에 나와 있는 재게시 시나리오를 지원합니다.  
   
-|게시자|게시 구독자|구독자|  
+|게시자|게시 구독자|가입자|  
 |---------------|---------------------------|----------------|  
 |트랜잭션 게시|트랜잭션 구독/트랜잭션 게시|트랜잭션 구독|  
 |트랜잭션 게시|트랜잭션 구독/병합 게시*|병합 구독|  

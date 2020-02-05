@@ -13,10 +13,10 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 508f0cfa001107ad43536525d65311bf3a294f4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093420"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 개체
@@ -25,7 +25,7 @@ ms.locfileid: "68093420"
 
 다음 표에서는 SQL Server **LogPool FreePool** 성능 개체에 대해 설명합니다.
 
-|**SQL Server LogPool FreePool 카운터**|설명|  
+|**SQL Server LogPool FreePool 카운터**|Description|  
 |-------------|-----------------|  
 |**Free Buffer Refills/sec**|다시 채우기에 할당될 초당 버퍼 수입니다.|
 |**Free List Length**|사용 가능한 목록의 길이입니다.|

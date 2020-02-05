@@ -18,10 +18,10 @@ ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898292"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67898292"
 
   현재 데이터베이스에서 대화 우선 순위를 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  제거할 대화 우선 순위의 이름을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대화 우선 순위를 삭제해도 기존의 모든 대화는 대화 우선 순위에 할당된 우선 순위 수준대로 계속 작동합니다.  
   
 ## <a name="permissions"></a>사용 권한  

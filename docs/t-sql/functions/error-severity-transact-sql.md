@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094650"
 ---
-# <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY(Transact-SQL)
+# <a name="error_severity-transact-sql"></a>ERROR_SEVERITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수는 해당 오류가 TRY...CATCH 구문의 CATCH 블록을 실행시키는 경우 오류가 발생하는 오류의 심각도 값을 반환합니다.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,21 +45,21 @@ ERROR_SEVERITY ( )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 오류가 발생하는 CATCH 블록에서 호출되는 경우 `ERROR_SEVERITY`는 `CATCH` 블록이 실행되도록 한 오류의 심각도 값을 반환합니다.  
 
 `ERROR_SEVERITY`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `ERROR_SEVERITY`는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
   
 `ERROR_SEVERITY`는 `CATCH` 블록의 범위 내에서 실행되는 경우 실행 횟수 또는 실행 위치에 관계 없이 오류의 심각도 값을 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
   
 `ERROR_SEVERITY`는 일반적으로 중첩된 `CATCH` 블록에서 작동합니다. `ERROR_SEVERITY`는 해당 `CATCH` 블록을 참조한 `CATCH` 블록의 범위에 관련된 오류 심각도 값을 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 `CATCH` 블록에는 내부 `TRY...CATCH` 구문이 있을 수 있습니다. 해당 내부 `CATCH` 블록 내에서 `ERROR_SEVERITY`는 내부 `CATCH` 블록을 호출한 오류의 심각도 값을 반환합니다. `ERROR_SEVERITY`가 외부 `CATCH` 블록에서 실행되는 경우 해당 외부 `CATCH` 블록을 호출한 오류의 심각도 값을 반환합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_SEVERITY 사용  
+### <a name="a-using-error_severity-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_SEVERITY`는 해당 오류의 심각도 값을 반환합니다.  
 ```sql  
 BEGIN TRY  
@@ -85,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 저장된 프로시저는 오류에 대한 정보를 반환합니다.  
 
 ```sql  

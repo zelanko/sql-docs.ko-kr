@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066005"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68066005"
 
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 우선 순위의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ FOR CONVERSATION
  변경할 대화 우선 순위의 이름을 지정합니다. 현재 데이터베이스의 대화 우선 순위를 참조하는 이름이어야 합니다.  
   
  SET  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET는 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET은 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  PRIORITY_LEVEL을 지정하지 않으면 대화 우선 순위의 우선 순위 수준 속성이 변경되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER BROKER PRIORITY를 사용하여 변경한 속성은 기존 대화에 적용되지 않습니다. 기존 대화에는 대화가 시작될 때 할당된 우선 순위가 계속 적용됩니다.  
   
  자세한 내용은 [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)를 참조하세요.  
@@ -117,7 +117,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>1\. 기존 대화 우선 순위의 우선 순위 수준만 변경  
+### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>A. 기존 대화 우선 순위의 우선 순위 수준만 변경  
  우선 순위 수준을 변경하지만 계약, 로컬 서비스 또는 원격 서비스 속성은 변경하지 않습니다.  
   
 ```  
@@ -126,7 +126,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
     SET (PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>2\. 기존 대화 우선 순위의 모든 속성 변경  
+### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>B. 기존 대화 우선 순위의 모든 속성 변경  
  우선 순위 수준, 계약, 로컬 서비스 및 원격 서비스 속성을 변경합니다.  
   
 ```  
@@ -141,6 +141,6 @@ ALTER BROKER PRIORITY SimpleContractPriority
 ## <a name="see-also"></a>참고 항목  
  [CREATE BROKER PRIORITY&#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

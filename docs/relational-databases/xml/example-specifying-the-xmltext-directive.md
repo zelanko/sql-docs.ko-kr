@@ -1,5 +1,5 @@
 ---
-title: '예: XMLTEXT 지시어 지정 | Microsoft Docs'
+title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006681"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  결과 XML 문서에서 다음에 유의하십시오.  
   
--   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`Parent`> 요소의 특성이 묶는 <`overflow`> 요소의 특성 목록에 첨부됩니다.  
+-   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 특성 목록에 첨부됩니다.  
   
--   <`xmltext`> 요소의 `PersonID` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
+-   <`PersonID`> 요소의 `xmltext` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
   
  다음은 결과입니다.  
   
@@ -152,7 +152,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 예를 들어  
+ `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT 1 AS Tag,  

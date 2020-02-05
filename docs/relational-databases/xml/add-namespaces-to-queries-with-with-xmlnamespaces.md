@@ -22,10 +22,10 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095452"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
@@ -219,7 +219,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 예를 들어  
+ 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 다음은 그 예입니다.  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

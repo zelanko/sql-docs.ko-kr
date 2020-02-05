@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051232"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of(XML DML)
@@ -46,7 +46,7 @@ with Expression2
 ## <a name="examples"></a>예  
 **replace value of** XML DML 문의 다음 예제에서는 XML 문서에서 노드를 업데이트하는 방법을 보여줍니다.  
   
-### <a name="a-replacing-values-in-an-xml-instance"></a>1\. XML 인스턴스에서 값 바꾸기  
+### <a name="a-replacing-values-in-an-xml-instance"></a>A. XML 인스턴스에서 값 바꾸기  
 다음 예제에서는 먼저 문서 인스턴스가 **xml** 형식의 변수에 할당됩니다. 그러면 **replace value of**XML DML 문이 문서의 값을 업데이트합니다.  
   
 ```sql
@@ -77,7 +77,7 @@ SELECT @myDoc;
   
 업데이트될 대상은 경로 식에서 식 끝에 "[1]"을 추가하여 명시적으로 지정된 최대 하나의 노드여야 합니다.  
   
-### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>2\. if 식을 사용하여 대체 값 결정  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. if 식을 사용하여 대체 값 결정  
 아래 예에서 볼 수 있듯이 **replace value of XML DML** 문의 Expression2에서 **if** 식을 지정할 수 있습니다. Expression1은 첫 번째 작업 센터의 LaborHours 특성이 업데이트될 것임을 확인합니다. Expression2는 **if** 식을 사용하여 LaborHours 특성의 새 값을 확인합니다.  
   
 ```sql

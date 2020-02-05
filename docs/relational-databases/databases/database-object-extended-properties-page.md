@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099643"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
@@ -25,13 +25,13 @@ ms.locfileid: "68099643"
   확장 속성을 사용하여 데이터베이스 개체에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지를 사용하여 선택한 개체의 확장 속성을 확인하거나 수정할 수 있습니다. 모든 데이터베이스 개체 유형의 **확장 속성** 페이지는 동일합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **데이터베이스 백업**  
+ **Database**  
  선택한 데이터베이스의 이름을 표시합니다. 이 필드는 읽기 전용입니다.  
   
  **데이터 정렬**  
  선택한 데이터베이스에 사용된 데이터 정렬을 표시합니다. 이 필드는 읽기 전용입니다.  
   
- **Properties**  
+ **속성**  
  개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
  **찾아보기 단추**  

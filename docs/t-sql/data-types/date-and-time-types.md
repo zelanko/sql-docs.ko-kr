@@ -13,10 +13,10 @@ ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0c220523a431e8387601307709aa42bd9d4eeb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113763"
 ---
 # <a name="date-and-time-types"></a>날짜 및 시간 형식
@@ -32,8 +32,8 @@ ms.locfileid: "68113763"
 [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
 [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

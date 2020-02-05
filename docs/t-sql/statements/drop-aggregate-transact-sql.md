@@ -23,10 +23,10 @@ ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 356d08eaeeb470500ccf39c86872806cf2a9be9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984322"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984322"
 
   현재 데이터베이스에서 사용자 정의 집계 함수를 제거합니다. 사용자 정의 집계 함수는 [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md)를 사용하여 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  삭제할 사용자 정의 집계 함수의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DROP AGGREGATE는 삭제할 사용자 정의 집계 함수를 참조하는 스키마 바인딩으로 생성된 뷰, 함수 또는 저장 프로시저가 있는 경우에는 실행할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  

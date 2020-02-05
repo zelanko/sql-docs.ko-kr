@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33a6e32fead5e2c16a9b1c66d6de78d49adbee58
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962438"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73962438"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되어 있으므로 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SET CONCAT_NULL_YIELDS_NULL 옵션이 ON일 경우 NULL 값을 문자열과 연결하면 결과가 NULL 값입니다. 예를 들어 `SELECT 'abc' + NULL`은 `NULL`를 생성합니다. SET CONCAT_NULL_YIELDS_NULL 옵션이 OFF일 경우, NULL 값을 문자열과 연결하면 그 결과가 문자열 자체(NULL 값은 빈 문자열로 처리됨)가 됩니다. 예를 들어 `SELECT 'abc' + NULL`은 `abc`를 생성합니다.  
   
  SET CONCAT_NULL_YIELDS_NULL이 지정되지 않은 경우 **CONCAT_NULL_YIELDS_NULL** 데이터베이스 옵션의 설정이 적용됩니다.  
