@@ -11,10 +11,10 @@ ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957067"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 

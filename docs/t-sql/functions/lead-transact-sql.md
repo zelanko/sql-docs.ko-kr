@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059942"
 ---
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
@@ -60,7 +60,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-compare-values-between-years"></a>1\. 연도 간 값 비교  
+### <a name="a-compare-values-between-years"></a>A. 연도 간 값 비교  
  다음 쿼리에서는 LEAD 함수를 사용하여 특정 직원의 연도별 판매 할당량 간 차이를 반환합니다. 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql  
@@ -85,7 +85,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>2\. 파티션 내의 값 비교  
+### <a name="b-compare-values-within-partitions"></a>B. 파티션 내의 값 비교  
  다음 예에서는 LEAD 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 분할하기 위해 PARTITION BY 절이 지정되었습니다. LEAD 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에 지정된 ORDER BY 절은 함수를 적용하기 전에 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql  
@@ -137,7 +137,7 @@ b           c           i
 1           5           -2  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-compare-values-between-quarters"></a>D: 분기별 값 비교  
  다음 예에서는 LEAD 함수를 보여줍니다. 쿼리는 이후의 분기 동안 지정된 직원에 대한 판매 할당량 값의 차이를 가져옵니다. 마지막 행 다음에 사용 가능한 선행(lead) 값이 없기 때문에 기본값인 0이 사용됩니다.  

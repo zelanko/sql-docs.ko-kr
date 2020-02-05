@@ -22,10 +22,10 @@ ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553264"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "69553264"
 
 지정한 추적 플래그를 해제합니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 추적 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 작동 방식을 제어하는 일부 특징을 사용자 지정하는 데 사용합니다.
   
 ## <a name="result-sets"></a>결과 집합  

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7bc8d1e1a84ddacbffe5b830e1b5931eb94a5f14
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 497cf728ab104f706de0fbd8fd6946c481dd4c55
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745326"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004686"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 서버 감사 사양 개체를 변경합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  감사에서 이 감사 사양에 대한 레코드를 수집하거나 수집하지 못하도록 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  감사 사양을 변경하려면 감사 사양의 상태를 OFF 옵션으로 설정해야 합니다. 감사 사양에 STATE=OFF 외의 옵션이 설정되었을 때 이 ALTER SERVER AUDIT SPECIFICATION 실행되면 오류 메시지가 표시됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -68,13 +68,14 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  만들어진 서버 감사 사양은 CONTROL SERVER 또는 ALTER ANY SERVER AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 감사에 대한 명시적인 액세스가 있는 보안 주체가 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 `HIPAA_Audit`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
+ 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `HIPAA_Audit` Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    DROP (FAILED_LOGIN_GROUP)  
-    ADD (DATABASE_OBJECT_ACCESS_GROUP);  
+    DROP (FAILED_LOGIN_GROUP),  
+    ADD (DATABASE_OBJECT_ACCESS_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   

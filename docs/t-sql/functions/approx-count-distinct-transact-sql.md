@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962338"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73962338"
 
 이 함수는 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -38,12 +38,12 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>인수  
 *expression*  
-**image**, **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 
+[image](../../t-sql/language-elements/expressions-transact-sql.md), **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 **식**입니다. 
 
 ## <a name="return-types"></a>반환 형식
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `APPROX_COUNT_DISTINCT( expression )`는 그룹의 각 행에 대한 식을 계산하고 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 이 함수는 절대적인 정밀도보다 응답성이 더 중요한 큰 데이터 집합을 기반으로 집계를 제공하도록 디자인되었습니다.  
 
 `APPROX_COUNT_DISTINCT`는 빅 데이터 시나리오에서 사용하도록 디자인되고 다음 조건에 최적화됩니다.
@@ -59,7 +59,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-approx_count_distinct"></a>1\. APPROX_COUNT_DISTINCT 사용 
+### <a name="a-using-approx_count_distinct"></a>A. APPROX_COUNT_DISTINCT 사용 
 이 예제에서는 orders 테이블에서 다양한 주문 키의 대략적인 개수를 반환합니다.
   
 ```sql
@@ -75,7 +75,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approx_count_distinct-with-group-by"></a>2\. GROUP BY와 함께 APPROX_COUNT_DISTINCT 사용 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. GROUP BY와 함께 APPROX_COUNT_DISTINCT 사용 
 이 예제에서는 orders 테이블에서 주문 상태별로 다양한 주문 키의 대략적인 개수를 반환합니다. 
   
 ```sql
@@ -95,6 +95,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

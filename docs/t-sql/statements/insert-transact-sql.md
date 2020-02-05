@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982220"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982220"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 새 행을 하나 이상 추가합니다. 예제를 보려면 [예제](#InsertExamples)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -162,7 +162,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  해당 범위 내에서 [table](../../t-sql/data-types/table-transact-sql.md) 변수를 INSERT 문의 테이블 원본으로 사용할 수 있습니다.  
   
- *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 예를 들어 여러 테이블 뷰에 대한 INSERT에는 하나의 기본 테이블에서만 열을 참조하는 *column_list*를 사용해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
+ *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 예를 들어 여러 테이블 뷰에 대한 INSERT에는 하나의 기본 테이블에서만 열을 참조하는 *column_list*를 사용해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT Clause  
  삽입 작업의 일부로 삽입된 행을 반환합니다. 결과는 처리 중인 애플리케이션에 반환되거나 다음 처리를 위해 테이블 또는 테이블 변수에 삽입될 수 있습니다.  
   
- 로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 *execute_statement*를 포함하는 INSERT 문에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)이 지원되지 않습니다. OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다. 
+ 로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 [execute_statement](../../t-sql/queries/output-clause-transact-sql.md)를 포함하는 INSERT 문에서는 *OUTPUT 절*이 지원되지 않습니다. OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다. 
   
  VALUES  
  삽입할 데이터 값의 목록을 표시합니다. *column_list*(지정된 경우) 또는 테이블의 각 열에 대해 하나의 데이터 값이 있어야 합니다. 값 목록은 괄호로 묶어야 합니다.  
@@ -295,10 +295,10 @@ OUTPUT Clause
 > [!NOTE]
 >  열 목록이 제공되지 않으면 구문 오류가 발생합니다.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 SQL 그래프 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)를 참조하세요. 
 
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>데이터 대량 가져오기에 대한 최선의 구현 방법  
@@ -352,7 +352,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
   
 -   **text** 또는 **image** 열에 Null 값을 삽입하면 유효한 텍스트 포인터가 생성되지 않고 8KB 텍스트 페이지도 사전 할당되지 않습니다.  
   
--   **uniqueidentifier** 데이터 형식으로 만든 열은 특별한 형식이 지정된 16바이트 이진 값을 저장합니다. ID 열과 달리 **uniqueidentifier** 데이터 형식을 사용하는 열에 대해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 값을 생성하지 않습니다. 삽입 작업 중에는 **uniqueidentifier** 열에 **uniqueidentifier** 데이터 형식의 변수 및 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*(하이픈을 포함하여 36자, *x*는 0-9 또는 a-f 범위의 16진수) 형식의 문자열 상수를 사용할 수 있습니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 **uniqueidentifier** 변수 또는 열의 유효한 값입니다. GUID(Globally Unique Identifier)를 가져오려면 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 함수를 사용하세요.  
+-   **uniqueidentifier** 데이터 형식으로 만든 열은 특별한 형식이 지정된 16바이트 이진 값을 저장합니다. ID 열과 달리 [!INCLUDE[ssDE](../../includes/ssde-md.md)]uniqueidentifier**데이터 형식을 사용하는 열에 대해**에서 자동으로 값을 생성하지 않습니다. 삽입 작업 중에는 **uniqueidentifier** 열에 *uniqueidentifier* 데이터 형식의 변수 및 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*(하이픈을 포함하여 36자, **x**는 0-9 또는 a-f 범위의 16진수) 형식의 문자열 상수를 사용할 수 있습니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 **uniqueidentifier** 변수 또는 열의 유효한 값입니다. GUID(Globally Unique Identifier)를 가져오려면 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 함수를 사용하세요.  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>사용자 정의 형식 열에 값 삽입  
  다음과 같은 방법으로 사용자 정의 형식 열에 값을 삽입할 수 있습니다.  
@@ -413,7 +413,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
   
 ##  <a name="InsertExamples"></a> 예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|INSERT • 테이블 값 생성자|  
 |[열 값 처리](#ColumnValues)|IDENTITY • NEWID • 기본값 • 사용자 정의 형식|  
@@ -427,16 +427,16 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 INSERT 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-inserting-a-single-row-of-data"></a>1\. 단일 데이터 행 삽입  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 한 행을 삽입합니다. 이 테이블의 열은 `UnitMeasureCode`, `Name` 및 `ModifiedDate`입니다. 모든 열에 대한 값이 제공되고 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다 *.*  
+#### <a name="a-inserting-a-single-row-of-data"></a>A. 단일 데이터 행 삽입  
+ 다음 예에서는 `Production.UnitMeasure` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 한 행을 삽입합니다. 이 테이블의 열은 `UnitMeasureCode`, `Name` 및 `ModifiedDate`입니다. 모든 열에 대한 값이 제공되고 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다 *.*  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>2\. 여러 데이터 행 삽입  
- 다음 예에서는 [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용하여 단일 INSERT 문으로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 세 개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
+#### <a name="b-inserting-multiple-rows-of-data"></a>B. 여러 데이터 행 삽입  
+ 다음 예에서는 [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용하여 단일 INSERT 문으로 `Production.UnitMeasure` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 세 개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -445,7 +445,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 테이블 열과 순서가 다른 데이터 삽입  
- 다음 예에서는 열 목록을 사용하여 각 열에 삽입되는 값을 명시적으로 지정합니다. [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 열 순서는 `UnitMeasureCode`, `Name`, `ModifiedDate`이지만 *column_list*에는 열이 이 순서대로 나열되어 있지 않습니다.  
+ 다음 예에서는 열 목록을 사용하여 각 열에 삽입되는 값을 명시적으로 지정합니다. `Production.UnitMeasure` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 열 순서는 `UnitMeasureCode`, `Name`, `ModifiedDate`이지만 *column_list*에는 열이 이 순서대로 나열되어 있지 않습니다.  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -502,7 +502,7 @@ GO
 ```  
   
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. NEWID()를 사용하여 uniqueidentifier 열에 데이터 삽입  
- 다음 예에서는 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 함수를 사용하여 `column_2`의 GUID를 가져옵니다. 두 번째 `INSERT` 문에서 볼 수 있듯이 ID 열과 달리 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 데이터 형식의 열에 대해서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 자동으로 생성하지 않습니다.  
+ 다음 예에서는 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 함수를 사용하여 `column_2`의 GUID를 가져옵니다. 두 번째 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문에서 볼 수 있듯이 ID 열과 달리 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 데이터 형식의 열에 대해서는 `INSERT`에서 값을 자동으로 생성하지 않습니다.  
   
 ```sql
 CREATE TABLE dbo.T1   
@@ -535,7 +535,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT 및 EXECUTE 옵션을 사용하여 다른 테이블의 데이터 삽입  
  다음 예에서는 INSERT...SELECT 또는 INSERT...EXECUTE를 사용하여 한 테이블의 데이터를 다른 테이블에 삽입하는 방법을 보여 줍니다. 이 방법은 모두 열 목록에 리터럴 값과 식을 포함하는 다중 테이블 SELECT 문을 기반으로 합니다.  
   
- 첫 번째 INSERT 문은 SELECT 문을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 원본 테이블(`Employee`, `SalesPerson` 및 `Person`)에서 데이터를 파생시키고 결과 집합을 `EmployeeSales` 테이블에 저장합니다. 두 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 포함하는 저장 프로시저를 호출하고 세 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 리터럴 문자열로 참조합니다.  
+ 첫 번째 INSERT 문은 SELECT 문을 사용하여 `Employee` 데이터베이스의 원본 테이블(`SalesPerson`, `Person` 및 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)])에서 데이터를 파생시키고 결과 집합을 `EmployeeSales` 테이블에 저장합니다. 두 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 포함하는 저장 프로시저를 호출하고 세 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 리터럴 문자열로 참조합니다.  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -588,7 +588,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>9\. WITH 공통 테이블 식을 사용하여 삽입할 데이터 정의  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `NewEmployee` 테이블을 만듭니다. 공통 테이블 식(`EmployeeTemp`)은 하나 이상의 테이블에서 `NewEmployee` 테이블에 삽입할 행을 정의합니다. INSERT 문은 공통 테이블 식의 열을 참조합니다.  
+ 다음 예에서는 `NewEmployee` 데이터베이스에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 만듭니다. 공통 테이블 식(`EmployeeTemp`)은 하나 이상의 테이블에서 `NewEmployee` 테이블에 삽입할 행을 정의합니다. INSERT 문은 공통 테이블 식의 열을 참조합니다.  
   
 ```sql
 CREATE TABLE HumanResources.NewEmployee  
@@ -631,7 +631,7 @@ GO
 ```  
   
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. TOP을 사용하여 원본 테이블에서 삽입되는 데이터 제한  
- 다음 예에서는 `EmployeeSales` 테이블을 만들고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 테이블에서 가져온 임의의 직원 상위 5명에 대한 이름 및 연간 매출 데이터를 삽입합니다. INSERT 문은 `SELECT` 문에서 반환되는 행 중 5개를 선택합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. SELECT 문의 ORDER BY 절은 상위 5명의 직원을 결정하는 데 사용되지 않습니다.  
+ 다음 예에서는 `EmployeeSales` 테이블을 만들고 `HumanResources.Employee` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 가져온 임의의 직원 상위 5명에 대한 이름 및 연간 매출 데이터를 삽입합니다. INSERT 문은 `SELECT` 문에서 반환되는 행 중 5개를 선택합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. SELECT 문의 ORDER BY 절은 상위 5명의 직원을 결정하는 데 사용되지 않습니다.  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -940,8 +940,8 @@ SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales
 FROM dbo.EmployeeSales;  
 ```  
   
-#### <a name="v-inserting-data-returned-from-an-output-clause"></a>22. OUTPUT 절에서 반환된 데이터 삽입  
- 다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하여 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 `Quantity` 테이블의 `ProductInventory` 열을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `SalesOrderDetail` 테이블에서 처리되는 순서대로 매일 업데이트하고 또한 재고가 0이 되는 제품의 행을 삭제합니다. 이 예에서는 삭제된 행을 캡처한 후 다른 `ZeroInventory` 테이블에 삽입하여 재고가 없는 제품을 추적합니다.  
+#### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. OUTPUT 절에서 반환된 데이터 삽입  
+ 다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하여 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 `Quantity` 테이블의 `ProductInventory` 열을 `SalesOrderDetail` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 처리되는 순서대로 매일 업데이트하고 또한 재고가 0이 되는 제품의 행을 삭제합니다. 이 예에서는 삭제된 행을 캡처한 후 다른 `ZeroInventory` 테이블에 삽입하여 재고가 없는 제품을 추적합니다.  
   
 ```sql
 --Create ZeroInventory table.  

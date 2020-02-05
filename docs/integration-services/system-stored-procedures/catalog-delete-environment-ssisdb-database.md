@@ -11,10 +11,10 @@ ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0539fc5af006a20cf554776c014da66c1120d129
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296860"
 ---
 # <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment(SSISDB 데이터베이스)
@@ -43,7 +43,7 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

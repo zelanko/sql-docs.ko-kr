@@ -13,10 +13,10 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099616"
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
@@ -65,7 +65,7 @@ ms.locfileid: "68099616"
   
  메모리 최적화 파일 그룹의 파일에 대해서는 이 필드가 **제한 없음**이어야 합니다.  
   
- **경로**  
+ **Path**  
  선택한 파일의 경로를 표시합니다. 새 파일의 경로를 지정하려면 파일 경로 옆에 있는 편집 단추를 클릭하고 대상 폴더로 이동합니다. 기존 파일의 경로는 수정할 수 없습니다.  
   
  FILESTREAM 파일의 경우 경로는 폴더입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 이 폴더에 기본 파일을 만듭니다.  

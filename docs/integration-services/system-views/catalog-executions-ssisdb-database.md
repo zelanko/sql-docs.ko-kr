@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295205"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions(SSISDB 데이터베이스)
@@ -29,7 +29,7 @@ ms.locfileid: "71295205"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 패키지 실행 인스턴스를 표시합니다. 패키지 실행 태스크로 실행되는 패키지는 부모 패키지와 같은 실행 인스턴스에서 실행됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|실행 인스턴스의 고유 식별자(ID)입니다.|  
 |folder_name|**sysname(nvarchar(128))**|프로젝트가 있는 폴더의 이름입니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "71295205"
 |use32bitruntime|**bit**|64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 값이 `1`이면 32비트 런타임으로 실행이 수행됩니다. 값이 `0`이면 64비트 런타임으로 실행이 수행됩니다.|  
 |object_type|**smallint**|개체의 유형입니다. 개체는 프로젝트(`20`) 또는 패키지(`30`)일 수 있습니다.|  
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
-|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset**|실행 인스턴스가 시작된 시간입니다.|  
 |end_time|**datetimeoffsset**|실행 인스턴스가 종료된 시간입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295205"
 |machine_name|**nvarchar(128)**|서버 인스턴스가 실행 중인 컴퓨터 이름입니다.|  
 |dump_id|**uniqueidentifier**|실행 덤프의 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그의 각 실행 인스턴스에 대한 행을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  

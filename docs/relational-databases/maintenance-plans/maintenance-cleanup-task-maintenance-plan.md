@@ -15,10 +15,10 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115745"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
@@ -50,7 +50,7 @@ ms.locfileid: "68115745"
  **확장명에 따라 폴더 검색 및 파일 삭제**  
  지정한 확장명을 가진 파일을 지정한 폴더에서 모두 삭제합니다. 예를 들어 Tuesday 폴더에서 확장명이 .bak인 백업 파일을 모두 삭제할 수 있습니다.  
   
- **Folder**  
+ **폴더**  
  삭제할 파일이 있는 폴더의 경로와 이름입니다.  
   
  **파일 확장명**  
@@ -90,13 +90,13 @@ ms.locfileid: "68115745"
  **특정 사용자 이름 및 암호 사용**  
  SQL Server 인증을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
- **User name**  
+ **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

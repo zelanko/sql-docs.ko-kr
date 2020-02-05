@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235332"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)

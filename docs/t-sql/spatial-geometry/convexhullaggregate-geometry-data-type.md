@@ -15,10 +15,10 @@ ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c35ca3cfecd0eca0b08c0a1437cd8b57570126b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017507"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate(geometry 데이터 형식)
@@ -43,7 +43,7 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="exception"></a>예외  
  유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. [STIsValid &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md) 참조  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null**을 반환합니다. [Spatial Reference Identifier&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
   
  이 메서드는 **null** 입력을 무시합니다.  
