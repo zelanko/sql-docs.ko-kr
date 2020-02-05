@@ -18,18 +18,18 @@ ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd6cbe675fa5e9aba72fc545d1108c3aad6f930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026339"
 ---
-# <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID(Transact_SQL)
+# <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID(Transact_SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 이 함수는 현재 세션에서 현재 트랜잭션의 트랜잭션 ID를 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ CURRENT_TRANSACTION_ID( )
 ## <a name="return-types"></a>반환 형식
 **bigint**
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 [sys.dm_tran_current_transaction&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)에서 가져온 현재 세션에서 현재 트랜잭션의 트랜잭션 ID입니다.
   
 ## <a name="permissions"></a>사용 권한  
@@ -54,7 +54,7 @@ CURRENT_TRANSACTION_ID( )
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [sp_set_session_context&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [행 수준 보안](../../relational-databases/security/row-level-security.md)  

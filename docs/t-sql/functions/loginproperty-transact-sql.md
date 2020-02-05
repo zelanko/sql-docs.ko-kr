@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059759"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68059759"
 
   로그인 정책 설정에 대한 정보를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,12 +60,12 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  반환될 로그인 속성 정보가 포함된 식입니다. *propertyname*은 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|잘못된 암호를 사용하여 연속해서 로그인을 시도한 횟수를 반환합니다.|  
 |**BadPasswordTime**|잘못된 암호를 사용하여 마지막으로 로그인을 시도한 시간을 반환합니다.|  
 |**DaysUntilExpiration**|암호 만료일까지 남은 일 수를 반환합니다.|  
-|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 **master**에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
+|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master**에 저장된**  로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**DefaultLanguage**|메타데이터에 저장된 로그인 기본 언어를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**HistoryLength**|암호 정책 적용 메커니즘을 사용하여 로그인에 대해 추적된 암호의 수를 반환합니다. 암호 정책이 적용되지 않을 경우 0이며 암호 정책 적용은 1에서 시작됩니다.|  
 |**IsExpired**|로그인이 만료되었는지 여부를 나타납니다.|  
@@ -76,7 +76,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|현재 암호가 설정된 날짜를 반환합니다.|  
 |**PasswordHashAlgorithm**|암호를 해시하는 데 사용되는 알고리즘을 반환합니다.|  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  데이터 형식은 요청된 값에 따라 달라집니다.  
   
  **IsLocked**, **IsExpired** 및 **IsMustChange**는 **int** 형식입니다.  
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   로그인이 올바른 SQL Server 로그인이 아니면 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 기본 제공 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 암호 정책 설정에 대한 정보를 반환합니다. 속성 이름은 대/소문자를 구분하지 않으므로 속성 이름 **BadPasswordCount**와 **badpasswordcount**는 같습니다. **PasswordHash, PasswordHashAlgorithm** 및 **PasswordLastSetTime** 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 모든 구성에서 사용할 수 있지만 다른 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]에서 실행 중이고 CHECK_POLICY 및 CHECK_EXPIRATION이 모두 설정된 경우에만 사용할 수 있습니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -119,7 +119,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-checking-whether-a-login-must-change-its-password"></a>1\. 로그인이 해당 암호를 변경해야 하는지 여부 확인  
+### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. 로그인이 해당 암호를 변경해야 하는지 여부 확인  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `John3`이 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 해당 암호를 변경해야 하는지 여부를 확인합니다.  
   
 ```  
@@ -127,7 +127,7 @@ SELECT LOGINPROPERTY('John3', 'IsMustChange');
 GO  
 ```  
   
-### <a name="b-checking-whether-a-login-is-locked-out"></a>2\. 로그인이 잠겼는지 여부 확인  
+### <a name="b-checking-whether-a-login-is-locked-out"></a>B. 로그인이 잠겼는지 여부 확인  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `John3`가 잠겼는지 여부를 확인합니다.  
   
 ```  

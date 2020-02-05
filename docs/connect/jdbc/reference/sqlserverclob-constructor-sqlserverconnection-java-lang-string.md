@@ -16,19 +16,19 @@ ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971803"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 생성자(SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체 및 데이터의 문자열이 지정된 경우 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 클래스의 새 인스턴스를 초기화합니다.  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-class.md) 개체 및 데이터의 문자열이 지정된 경우 [SQLServerClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 새 인스턴스를 초기화합니다.  
   
 > [!NOTE]  
->  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 메서드를 사용합니다.  
+>  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 클래스의 [createClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   

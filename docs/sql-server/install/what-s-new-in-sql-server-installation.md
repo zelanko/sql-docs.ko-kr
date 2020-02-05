@@ -10,10 +10,10 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045655"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 설치의 새로운 기능
@@ -25,7 +25,7 @@ ms.locfileid: "68045655"
   
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치에 SysPrep이 지원됩니다. 이제 장애 조치(Failover) 클러스터 설치에 SysPrep이 지원됩니다. 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md) 및 [SysPrep을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-sysprep.md)를 참조하세요.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서의 업그레이드는 지원되지만 \-함께\- 설치는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서의 업그레이드는 지원되지만 \-함께\- 설치는 지원되지 않습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
  
   
 ## <a name="see-also"></a>참고 항목  
