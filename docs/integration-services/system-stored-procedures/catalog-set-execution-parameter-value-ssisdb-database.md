@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295307"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
@@ -70,16 +70,16 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  매개 변수의 값입니다. *parameter_value*는 **sql_variant**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  주어진 실행에 사용된 매개 변수 값을 확인하려면 catalog.execution_parameter_values 뷰를 쿼리하십시오.  
   
  패키지 실행 중에 기록되는 정보의 범위를 지정하려면, *parameter_name*을 LOGGING_LEVEL로 설정하고 *parameter_value*를 다음 값 중 하나로 설정합니다.  
   
  *object_type* 매개 변수를 50으로 설정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|없음<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|0|None<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
 |1|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |2|성능<br /><br /> 성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.|  
 |3|자세히<br /><br /> 사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다. <br />사용자 지정 이벤트는 Integration Services 태스크에 의해 기록되는 이벤트를 포함합니다. 자세한 내용은 [사용자 지정된 로깅 메시지](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)를 참조하세요.|  
@@ -137,7 +137,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

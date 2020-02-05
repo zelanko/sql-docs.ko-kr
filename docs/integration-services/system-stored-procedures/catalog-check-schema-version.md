@@ -11,10 +11,10 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295619"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
@@ -41,7 +41,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
  매개 변수를 **1**로 설정하면 32비트 버전의 dtexec가 호출됩니다. *use32bitruntime*은 **int**입니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한이 필요합니다.  

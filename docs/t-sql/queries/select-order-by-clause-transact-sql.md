@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981717"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981717"
   
 -   [순위 함수](../../t-sql/functions/ranking-functions-transact-sql.md) 값이 결과 집합에 적용되는 순서를 결정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 SELECT/INTO 또는 CREATE TABLE AS SELECT (CTAS) 문에서 지원되지 않습니다.
@@ -137,7 +137,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  쿼리 실행 계획에서 오프셋 행 수 값은 TOP 쿼리 연산자의 **Rows** 또는 **Top** 특성에 표시됩니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  ORDER BY 절에서 정수를 지정하는 방식으로 SELECT 목록에 있는 열의 위치를 나타내지 않도록 해야 합니다. 예를 들어 `SELECT ProductID, Name FROM Production.Production ORDER BY 2`와 같은 문은 유효하지만 실제 열 이름을 지정하는 것에 비해 다른 사용자가 이해하기 어렵습니다. 또한 열 순서 변경 또는 새 열 추가와 같이 SELECT 목록을 변경하려면 예기치 않은 결과가 발생하지 않도록 ORDER BY 절을 수정해야 합니다.  
   
  SELECT TOP (*N*) 문에는 항상 ORDER BY 절을 사용합니다. 이 방법은 TOP의 영향을 받는 행을 예측 가능한 방식으로 나타내는 유일한 방법입니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
@@ -199,7 +199,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|ORDER BY|  
 |[오름차순 또는 내림차순 지정](#SortOrder)|DESC • ASC|  
@@ -212,7 +212,7 @@ ORDER BY SchemaName + ''; -- wrong
 ###  <a name="BasicSyntax"></a>기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 ORDER BY 절의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>1\. SELECT 목록에 정의된 단일 열 지정  
+#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. SELECT 목록에 정의된 단일 열 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 결과 집합을 정렬합니다. 특정 정렬 순서를 지정하지 않으므로 기본값(오름차순)이 사용됩니다.  
   
 ```sql
@@ -223,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>2\. SELECT 목록에 정의되지 않은 열 지정  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. SELECT 목록에 정의되지 않은 열 지정  
  다음 예에서는 SELECT 목록에 없지만 FROM 절에 지정된 테이블에 정의되어 있는 열을 기준으로 결과 집합을 정렬합니다.  
   
 ```sql
@@ -262,7 +262,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ###  <a name="SortOrder"></a> 오름차순 또는 내림차순 정렬 지정  
   
-#### <a name="a-specifying-a-descending-order"></a>1\. 내림차순 지정  
+#### <a name="a-specifying-a-descending-order"></a>A. 내림차순 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 내림차순으로 결과 집합을 정렬합니다.  
   
 ```sql
@@ -274,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>2\. 오름차순 지정  
+#### <a name="b-specifying-an-ascending-order"></a>B. 오름차순 지정  
  다음 예에서는 `Name` 열을 기준으로 오름차순으로 결과 집합을 정렬합니다. 문자가 숫자순이 아니라 사전순으로 정렬됩니다. 즉, 10이 2보다 먼저 옵니다.  
   
 ```sql
@@ -366,7 +366,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1\. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 정수 상수를 OFFSET 및 FETCH 절의 값으로 지정합니다. 첫 번째 쿼리는 `DepartmentID` 열을 기준으로 정렬된 모든 행을 반환합니다. 이 쿼리에서 반환된 결과를 다음에 나오는 두 쿼리의 결과와 비교해 보세요. 다음 쿼리에서는 `OFFSET 5 ROWS` 절을 사용하여 처음 5개 행을 건너뛰고 나머지 행을 모두 반환합니다. 마지막 쿼리에서는 `OFFSET 0 ROWS` 절을 사용하여 첫 번째 행에서 시작한 다음 `FETCH NEXT 10 ROWS ONLY`를 사용하여 반환되는 행을 정렬된 결과 집합의 10개 행으로 제한합니다.  
   
 ```sql
@@ -391,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>2\. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 변수 `@StartingRowNumber` 및 `@FetchRows`를 선언하고 이러한 변수를 OFFSET 및 FETCH 절에 지정합니다.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 결과 집합을 숫자 `EmployeeKey` 열을 기준으로 오름차순으로 정렬하는 방법을 보여 줍니다.  
   
 ```sql

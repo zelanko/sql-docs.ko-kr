@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256087"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
@@ -72,17 +72,17 @@ ms.locfileid: "75256087"
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime2(7)**|비결정적|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함됩니다.|**datetimeoffset(7)**|비결정적|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime2(7)**|비결정적|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime2(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime2(7)**|비결정적|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함됩니다.|**datetimeoffset(7)**|비결정적|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime2(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime2(7)**|비결정적|  
   
 #### <a name="lower-precision-system-date-and-time-functions"></a>정밀도가 낮은 시스템 날짜 및 시간 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime**|비결정적|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|**인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime**|비결정적|  
   
 ###  <a name="GetDateandTimeParts"></a> 날짜 및 시간 부분을 반환하는 함수
   
@@ -116,7 +116,7 @@ ms.locfileid: "75256087"
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|지정된 *date*의 지정된 *datepart*에 간격을 더하여 새 **datetime** 값을 반환합니다.|*date* 인수의 데이터 형식|결정적|  
+|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|지정된 **date**의 지정된 *datepart*에 간격을 더하여 새 *datetime* 값을 반환합니다.|*date* 인수의 데이터 형식|결정적|  
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|선택 사항인 오프셋 옵션을 사용하여 지정한 날짜가 포함된 달의 마지막 날을 반환합니다.|반환 유형은 *start_date* 인수 형식이거나 **date** 데이터 형식입니다.|결정적|  
 |[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET은 DATETIMEOFFSET 값의 표준 시간대 오프셋을 변경하고 UTC 값을 유지합니다.|**datetimeoffset**을 *DATETIMEOFFSET*의 소수 자릿수로 표시|결정적|  
 |[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET은 datetime2 값을 datetimeoffset 값으로 변환합니다. *TODATETIMEOFFSET*은 datetime2 값을 지정된 time_zone의 현지 시간으로 해석합니다.|**datetimeoffset**을 *datetime* 인수의 소수 자릿수로 표시|결정적|  

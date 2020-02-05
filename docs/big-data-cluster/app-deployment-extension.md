@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707144"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 애플리케이션을 배포하는 방법
@@ -27,7 +27,7 @@ ms.locfileid: "73707144"
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>기능
 
 이 확장은 Visual Studio Code에서 다음 작업을 지원합니다.
 
@@ -95,7 +95,7 @@ azdata bdc endpoint list
 
 Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열어야* 합니다.
 
-템플릿 중 하나에서 새 앱을 배포하려면 `App Specifications` 창에서 `New App Template` 단추를 클릭합니다. 여기에서 이름, 런타임 및 로컬 머신에서 새 앱을 저장할 위치를 묻는 메시지가 표시됩니다. 사용자가 제공하는 이름 및 버전은 DNS-1035 레이블이어야 하고, 소문자 영숫자 문자 또는 '-'로 구성되어야 하고, 영문자로 시작하고 영숫자 문자로 끝나야 합니다.
+템플릿 중 하나에서 새 앱을 배포하려면 `New App Template` 창에서 `App Specifications` 단추를 클릭합니다. 여기에서 이름, 런타임 및 로컬 머신에서 새 앱을 저장할 위치를 묻는 메시지가 표시됩니다. 사용자가 제공하는 이름 및 버전은 DNS-1035 레이블이어야 하고, 소문자 영숫자 문자 또는 '-'로 구성되어야 하고, 영문자로 시작하고 영숫자 문자로 끝나야 합니다.
 
 확장의 전체 기능을 사용할 수 있도록 현재 Visual Studio Code 작업 영역에 저장하는 것이 좋지만 로컬 파일 시스템의 어느 위치에나 저장할 수 있습니다.
 
@@ -115,14 +115,14 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
 앱의 소스 코드는 작업 영역 폴더에 있습니다.
 
 - **소스 파일 이름**
-   - 이 파일은 `spec.yaml`에서 `src`로 지정된 소스 코드 파일입니다.
-   - `spec.yaml`에 표시된 것처럼 앱의 `entrypoint`로 간주되는 `handler`라는 함수 1개가 있습니다. 이 함수는 `msg`라는 문자열 입력을 사용하고 `out`이라는 문자열 출력을 반환합니다. 이 설정은 `spec.yaml`의 `inputs` 및 `outputs`에 지정되어 있습니다.
+   - 이 파일은 `src`에서 `spec.yaml`로 지정된 소스 코드 파일입니다.
+   - `handler`에 표시된 것처럼 앱의 `entrypoint`로 간주되는 `spec.yaml`라는 함수 1개가 있습니다. 이 함수는 `msg`라는 문자열 입력을 사용하고 `out`이라는 문자열 출력을 반환합니다. 이 설정은 `inputs`의 `outputs` 및 `spec.yaml`에 지정되어 있습니다.
 
-스캐폴드된 템플릿을 원하지 않고 이미 빌드한 앱 배포의 `spec.yaml`을 사용하려는 경우 `New App Template` 단추 옆의 `New Deploy Spec` 단추를 클릭하고 동일한 프로세스를 진행합니다. 이제 `spec.yaml`만 표시되며, 선택 항목을 수정할 수 있습니다.
+스캐폴드된 템플릿을 원하지 않고 이미 빌드한 앱 배포의 `spec.yaml`을 사용하려는 경우 `New Deploy Spec` 단추 옆의 `New App Template` 단추를 클릭하고 동일한 프로세스를 진행합니다. 이제 `spec.yaml`만 표시되며, 선택 항목을 수정할 수 있습니다.
 
 ### <a name="deploy-app"></a>앱 배포
 
-`spec.yaml`의 Code Lens `Deploy App`을 통해 이 앱을 즉시 배포하거나, 앱 사양 메뉴에서 `spec.yaml` 파일 옆에 있는 번개 폴더 단추를 누를 수 있습니다. 확장은 `spec.yaml`이 있는 디렉터리의 모든 파일을 압축하고 클러스터에 앱을 배포합니다. 
+`Deploy App`의 Code Lens `spec.yaml`을 통해 이 앱을 즉시 배포하거나, 앱 사양 메뉴에서 `spec.yaml` 파일 옆에 있는 번개 폴더 단추를 누를 수 있습니다. 확장은 `spec.yaml`이 있는 디렉터리의 모든 파일을 압축하고 클러스터에 앱을 배포합니다. 
 
 >[!NOTE]
 >모든 앱 파일이 `spec.yaml`과 동일한 디렉터리에 있는지 확인합니다. `spec.yaml`은 앱 소스 코드 디렉터리의 루트 수준에 있어야 합니다. 
@@ -144,7 +144,7 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
 사이드바에서 다음 정보와 함께 배포한 앱을 모두 볼 수 있습니다.
 
 - state
-- version
+- 버전
 - 입력 매개 변수
 - 출력 매개 변수
 - 링크
@@ -191,7 +191,7 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
-또는 앱에 필요한 형식으로 필요한 입력을 제공하는 `.txt`, `.json` 또는 `.csv`의 상대 또는 절대 파일 경로로 문자열을 지정합니다. 파일 구문 분석은 파일 경로가 `string that contains a / or \ character`로 정의되는 `Node.js Path library`를 기반으로 합니다.
+또는 앱에 필요한 형식으로 필요한 입력을 제공하는 `.txt`, `.json` 또는 `.csv`의 상대 또는 절대 파일 경로로 문자열을 지정합니다. 파일 구문 분석은 파일 경로가 `Node.js Path library`로 정의되는 `string that contains a / or \ character`를 기반으로 합니다.
 
 필요한 입력 매개 변수를 제공하지 않으면, 문자열 파일 경로가 지정되었거나 해당 매개 변수가 잘못된 경우 적절한 오류 메시지가 잘못된 파일 경로와 함께 표시됩니다. 앱의 작성자는 정의하는 매개 변수를 잘 알고 있어야 합니다.
 

@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295891"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
@@ -120,7 +120,7 @@ ms.locfileid: "63295891"
 
     ![보고서-작성기-식-자습서-레이아웃-선택](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. **마침**을 클릭합니다.  
+17. **Finish**를 클릭합니다.  
   
 ## <a name="UpdateNames"></a>2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
   

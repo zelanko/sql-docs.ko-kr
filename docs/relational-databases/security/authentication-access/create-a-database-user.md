@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981932"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
@@ -63,7 +63,7 @@ ms.locfileid: "73981932"
   
  보안 주체는 사용 권한을 사용자에게 부여할 수 있습니다. 사용자의 범위는 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 **ALTER ANY USER** 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SSMS를 사용하여 사용자 만들기  
@@ -115,7 +115,7 @@ ms.locfileid: "73981932"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **데이터베이스 사용자 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
+ **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
 -   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   
@@ -125,13 +125,13 @@ ms.locfileid: "73981932"
   
 -   **확장 속성** 페이지에서는 데이터베이스 사용자에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지에서는 다음과 같은 옵션을 선택할 수 있습니다.  
   
-     **데이터베이스**  
+     **Database**  
      선택한 데이터베이스의 이름을 표시합니다. 이 필드는 읽기 전용입니다.  
   
      **데이터 정렬**  
      선택한 데이터베이스에 사용된 데이터 정렬을 표시합니다. 이 필드는 읽기 전용입니다.  
   
-     **Properties**  
+     **속성**  
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
@@ -159,7 +159,7 @@ ms.locfileid: "73981932"
     GO  
     ```  
   
- 자세한 내용은 추가 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예제가 포함된 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
+ 자세한 내용은 추가 [ 예제가 포함된 ](../../../t-sql/statements/create-user-transact-sql.md)CREATE USER&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../../includes/tsql-md.md)]를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   

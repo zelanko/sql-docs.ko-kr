@@ -21,7 +21,7 @@ ms.locfileid: "73727697"
 
 SQL Server Machine Learning Services의 작업자 계정 및 기본 구성을 변경하여 외부 스크립트의 동시 실행 수를 조정하는 방법을 알아봅니다.
 
-Machine Learning Services에 대한 설치 프로세스의 일부로, *서비스별 작업 실행을 지원하기 위해 새로운 Windows*사용자 계정 풀[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]이 생성됩니다. 이러한 작업자 계정의 목적은 여러 SQL Server 사용자에 의한 외부 스크립트의 동시 실행을 격리하는 것입니다.
+Machine Learning Services에 대한 설치 프로세스의 일부로, * 서비스별 작업 실행을 지원하기 위해 새로운 Windows *사용자 계정 풀[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]이 생성됩니다. 이러한 작업자 계정의 목적은 여러 SQL Server 사용자에 의한 외부 스크립트의 동시 실행을 격리하는 것입니다.
 
 > [!Note]
 > SQL Server 2019에서 **SQLRUserGroup**의 구성원은 여러 작업자 계정이 아닌 단일 SQL Server 실행 패드 서비스 계정 하나뿐입니다. 이 문서에서는 SQL Server 2016 및 2017에 대한 작업자 계정을 설명합니다.

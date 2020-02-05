@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295226"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
@@ -26,15 +26,15 @@ ms.locfileid: "71295226"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 속성을 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|카탈로그 속성의 이름입니다.|  
 |property_value|**nvarchar(256)**|카탈로그 속성 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 각 카탈로그 속성에 대한 행을 표시합니다.
   
-|속성 이름|설명|  
+|속성 이름|Description|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|패키지에 대한 서버 차원의 기본 실행 모드 – `Server`(0) 또는 `Scale Out`(1). |
 |**ENCRYPTION_ALGORITHM**|중요한 데이터를 암호화하는 데 사용되는 암호화 알고리즘의 유형입니다. 지원되는 값은 `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` 및 `AES_256`입니다. 참고: 이 속성을 변경하려면 단일 사용자 모드에서 카탈로그 데이터베이스를 실행해야 합니다.|

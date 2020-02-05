@@ -13,10 +13,10 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297595"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
@@ -46,10 +46,10 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  FINDSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다.  문자열 리터럴인*character_expression* 및 *searchstring* 인수나 DT_STR 데이터 형식의 데이터 열은 FINDSTRING 연산이 수행되기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
- *character_expression* 또는 *searchstring*이 Null이면 FINDSTRING은 Null을 반환합니다.  
+ *character_expression* 또는 *searchstring* 이 Null이면 FINDSTRING은 Null을 반환합니다.  
   
  *occurrence* 인수의 값이 1이면 첫 번째 발생의 인덱스를 가져오고 값이 2이면 두 번째 발생의 인덱스를 가져옵니다.  
   

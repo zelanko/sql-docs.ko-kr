@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708284"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71708284"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 스냅샷 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -87,7 +87,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  데이터베이스를 만들 수 있는 모든 사용자는 데이터베이스 스냅샷을 만들 수 있습니다. 그러나 미러 데이터베이스의 스냅샷을 만들려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> 데이터베이스 스냅샷을 만드는 방법(Transact-SQL 사용)  
@@ -101,7 +101,7 @@ AdventureWorks_snapshot_evening
 
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     켜기  
   
      (  
   
@@ -120,16 +120,16 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  데이터베이스 스냅샷을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
   
-###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
 > [!NOTE]  
 >  이 예에서 사용된 `.ss` 확장명은 임의로 지정됩니다.  
   
- 이 섹션에서는 다음과 같은 예를 보여 줍니다.  
+ 이 섹션에는 다음 예제가 포함되어 있습니다.  
   
--   1\. [AdventureWorks 데이터베이스에 대한 스냅샷 만들기](#Creating_on_AW)  
+-   A. [AdventureWorks 데이터베이스에 대한 스냅샷 만들기](#Creating_on_AW)  
   
--   2\. [Sales 데이터베이스에 대한 스냅샷 만들기](#Creating_on_Sales)
+-   B. [Sales 데이터베이스에 대한 스냅샷 만들기](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅샷 만들기  
  이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅샷을 만듭니다. 스냅샷 이름 `AdventureWorks_dbss_1800` 및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  
@@ -165,7 +165,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   

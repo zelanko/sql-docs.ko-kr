@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295158"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages(SSISDB 데이터베이스)
@@ -29,7 +29,7 @@ ms.locfileid: "71295158"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 작업 중에 기록된 메시지를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|메시지의 고유 식별자(ID)입니다.|  
 |operation_id|**bigint**|작업의 고유 ID입니다.|  
@@ -39,16 +39,16 @@ ms.locfileid: "71295158"
 |message|**nvarchar(max)**|메시지의 텍스트입니다.|  
 |extended_info_id|**bigint**|작업 메시지와 관련된 추가 정보의 ID는 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 뷰에서 확인할 수 있습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그에서 작업하는 동안 기록된 각 메시지에 대한 행을 표시합니다. 메시지는 서버, 패키지 실행 프로세스 또는 실행 엔진에서 생성할 수 있습니다.  
   
  이 뷰는 다음과 같은 메시지 유형을 표시합니다.  
   
-|**message_type** 값|설명|  
+|**message_type** 값|Description|  
 |-----------------------------|-----------------|  
-|-1|Unknown|  
+|-1|알 수 없음|  
 |120|Error|  
-|110|경고|  
+|110|Warning|  
 |70|정보|  
 |10|사전 유효성 검사|  
 |20|사후 유효성 검사|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295158"
   
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  
   
-|**message_source_type**|설명|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|T-SQL 및 CLR 저장 프로시저와 같은 API 항목|  
 |20|패키지(ISServerExec.exe)를 실행하는 데 사용되는 외부 프로세스|  

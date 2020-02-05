@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296526"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects(SSISDB 데이터베이스)
@@ -26,11 +26,11 @@ ms.locfileid: "71296526"
 
   **SSISDB** 카탈로그에 표시된 모든 프로젝트에 대한 자세한 정보를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|프로젝트의 고유 식별자(ID)입니다.|  
 |folder_id|**bigint**|프로젝트가 있는 폴더의 고유 ID입니다.|  
-|NAME|**sysname**|프로젝트의 이름입니다.|  
+|name|**sysname**|프로젝트의 이름입니다.|  
 |description|**nvarchar(1024)**|프로젝트에 대한 설명(옵션)입니다.|  
 |project_format_version|**int**|프로젝트를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
 |deployed_by_sid|**varbinary(85)**|프로젝트를 설치한 사용자의 보안 식별자(SID)입니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "71296526"
 |validation_status|**char(1)**|유효성 검사 상태입니다.|  
 |last_validation_time|**datetimeoffset(7)**|마지막 유효성 검사 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그에 있는 각 프로젝트에 대한 행을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293865"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
@@ -113,7 +113,7 @@ ms.locfileid: "71293865"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|모든 작업을 복사합니다.|  
 |**False**|지정한 작업만 복사합니다.|  
@@ -131,18 +131,18 @@ ms.locfileid: "71293865"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 작업이 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 덮어씁니다.|  
-|**Skip**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 건너뜁니다.|  
+|**skip**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 건너뜁니다.|  
   
  **EnableJobsAtDestination**  
  대상 서버로 복사한 작업을 활성화할지 여부를 선택합니다.  
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|대상 서버에서 작업을 활성화합니다.|  
 |**False**|대상 서버에서 작업을 비활성화합니다.|  

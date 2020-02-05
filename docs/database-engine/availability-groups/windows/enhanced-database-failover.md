@@ -14,10 +14,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822241"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스에 대해 향상된 데이터베이스 장애 조치(failover) 사용
@@ -37,7 +37,7 @@ SQL Server 2016에서는 마법사 또는 Transact-SQL을 사용하여 설정할
 
 **시나리오 3**
 
-가용성 그룹은 다음 두 개의 데이터베이스가 포함된 인스턴스 A와 인스턴스 B 간에 구성됩니다. DB1 및 DB2. 가용성 모드는 자동 장애 조치 모드가 포함된 동기 커밋으로 설정되며, 확장된 데이터베이스 장애 조치를 사용하도록 설정됩니다. DB2의 데이터와 트랜잭션 로그 파일을 포함한 디스크에 대한 액세스가 손실됩니다. 문제가 검색되면 가용성 그룹에서 자동으로 인스턴스 B로 장애 조치합니다.
+가용성 그룹은 DB1과 DB2라는 두 개의 데이터베이스를 포함하여 인스턴스 A와 인스턴스 B 간에 구성됩니다. 가용성 모드는 자동 장애 조치 모드가 포함된 동기 커밋으로 설정되며, 확장된 데이터베이스 장애 조치를 사용하도록 설정됩니다. DB2의 데이터와 트랜잭션 로그 파일을 포함한 디스크에 대한 액세스가 손실됩니다. 문제가 검색되면 가용성 그룹에서 자동으로 인스턴스 B로 장애 조치합니다.
 
 ## <a name="configure-enhanced-failover"></a>향상된 장애 조치(failover) 구성
 

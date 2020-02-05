@@ -18,10 +18,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907256"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
@@ -88,9 +88,9 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 - RevoScaleR의 경우 동일한 함수는 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)입니다.  
 - MicrosoftML의 동일한 함수는 [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)입니다.  
 
-`PREDICT`를 사용하여 내부 모델 구조를 볼 수 없습니다. 모델 자체의 콘텐츠를 이해하려면 모델 개체를 로드하고 deserialize하고 해당 R 코드를 사용하여 모델을 구문 분석해야 합니다.
+`PREDICT`를 사용하여 내부 모델 구조를 볼 수 없습니다. 모델 자체의 콘텐츠를 이해하려면 모델 개체를 로드하고 역직렬화하고 해당 R 코드를 사용하여 모델을 구문 분석해야 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 `PREDICT` 함수는 SQL Server 2017 이상 모든 버전 및 Windows와 Linux에서 지원됩니다. `PREDICT`는 클라우드의 Azure SQL Database에서도 지원됩니다. 이러한 모든 지원은 다른 컴퓨터 학습 기능이 사용 가능한지 여부와 관계없이 활성화됩니다.
 
@@ -110,7 +110,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ### <a name="using-predict-in-a-from-clause"></a>FROM 절에 PREDICT 사용
 
-이 예제는 `SELECT` 문의 `FROM`절에서 `PREDICT` 함수를 참조합니다.
+이 예제는 `PREDICT` 문의 `FROM`절에서 `SELECT` 함수를 참조합니다.
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**를 사용하여 dbo.mytable에 속한 열을 참조합니다. **PREDICT** 함수에 대해 지정된 별칭 **p**를 사용하여 PREDICT 함수에서 반환된 열을 참조합니다.
+**매개 변수에서 테이블 원본에 대해 지정된 별칭**d`DATA`를 사용하여 dbo.mytable에 속한 열을 참조합니다. **PREDICT** 함수에 대해 지정된 별칭 **p**를 사용하여 PREDICT 함수에서 반환된 열을 참조합니다.
 
 ### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 

@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244756"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
@@ -47,7 +47,7 @@ object_source [ AS ] alias
   
 -   열 별칭 지정: 선택 목록에 열을 포함한 열과 식 모두가 이 예에서 별칭이 지정됩니다. `SalesTerritoryRegion AS SalesTR` 단순 열 별칭을 보여줍니다. `Sum(SalesAmountQuota) AS TotalSales` 데모  
   
--   테이블 별칭 지정: `dbo.DimSalesTerritory AS st`은 `dbo.DimSalesTerritory` 테이블에 대해 `st` 별칭을 만드는 방법을 보여줍니다.  
+-   테이블 별칭 지정: `dbo.DimSalesTerritory AS st`은 `st` 테이블에 대해 `dbo.DimSalesTerritory` 별칭을 만드는 방법을 보여줍니다.  
   
 ```  
 -- Uses AdventureWorks  

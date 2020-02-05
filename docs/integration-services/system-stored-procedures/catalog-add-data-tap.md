@@ -11,10 +11,10 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295570"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  데이터 탭의 ID를 반환합니다. *data_tap_id*는 **bigint**입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(\<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의 `output0.txt` 파일에 저장됩니다.  
+ 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(`output0.txt`\<드라이브 *>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의*  파일에 저장됩니다.  
   
 ```sql
 Declare @execution_id bigint  
@@ -80,8 +80,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 데이터 탭을 추가하려면 실행 인스턴스가 생성됨 상태([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰의 **status** 열 값이 1임)여야 합니다. 실행 인스턴스를 실행하면 상태 값이 변경됩니다. [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 호출하여 실행을 만들 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 데이터 탭을 추가하려면 실행 인스턴스가 생성됨 상태(**catalog.operations&#40;SSISDB 데이터베이스&#41;** 뷰의 [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 열 값이 1임)여야 합니다. 실행 인스턴스를 실행하면 상태 값이 변경됩니다. [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 호출하여 실행을 만들 수 있습니다.  
   
  다음은 add_data_tap 저장 프로시저에 대한 고려 사항입니다.  
   
@@ -103,7 +103,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>요구 사항  
   
 ## <a name="external-resources"></a>외부 리소스  
- rafael-salas.com의 블로그 항목 - [SSIS 2012: 데이터 탭 살펴보기](https://go.microsoft.com/fwlink/?LinkId=239983)  
+ raffael-alas.com의 블로그 항목 - [SSIS 2012: 데이터 탭 살펴보기](https://go.microsoft.com/fwlink/?LinkId=239983)  
   
 ## <a name="see-also"></a>참고 항목  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
