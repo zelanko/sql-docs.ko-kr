@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934448"
 ---
 # <a name="file-states"></a>파일 상태
@@ -45,7 +45,7 @@ ms.locfileid: "67934448"
 ## <a name="file-state-definitions"></a>파일 상태 정의  
  다음 표에서는 파일 상태를 정의합니다.  
   
-|State|정의|  
+|시스템 상태|정의|  
 |-----------|----------------|  
 |ONLINE|모든 작업에 파일을 사용할 수 있습니다. 데이터베이스가 온라인 상태일 경우 주 파일 그룹의 파일은 항상 온라인 상태입니다. 주 파일 그룹의 파일이 온라인 상태가 아니면 데이터베이스가 온라인 상태가 아니고 보조 파일의 상태가 정의되어 있지 않은 것입니다.|  
 |OFFLINE|파일에 액세스할 수 없으며 디스크에 파일이 없을 수도 있습니다. 명시적 사용자 동작으로 인해 파일이 오프라인 상태가 되면 추가 사용자 작업이 수행될 때까지 오프라인 상태로 있습니다.<br /><br /> **\*\* 주의 \*\*** 파일이 손상되었을 때 파일을 오프라인으로 설정할 수 있지만 손상된 파일은 복원할 수 있습니다. 오프라인으로 설정된 파일을 온라인으로 설정할 수 있는 유일한 방법은 백업에서 파일을 복원하는 것입니다. 단일 파일 복원 방법은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요. <br /><br /> 데이터베이스 전체 또는 대량 로그 복구 중이고 파일이 삭제되면 데이터베이스 파일도 오프라인으로 설정됩니다. sys.master_files의 항목은 트랜잭션 로그가 drop_lsn 값을 초과하여 잘릴 때까지 계속 유지됩니다. 자세한 내용은 [트랜잭션 로그 잘림](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)을 참조하세요. |  

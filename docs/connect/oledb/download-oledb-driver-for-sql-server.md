@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381839"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버 다운로드
@@ -24,7 +24,7 @@ SQL Server용 Microsoft OLE DB Driver의 다음 버전을 다운로드할 수 �
 
 - [SQL Server용 Microsoft OLE DB Driver 18.3.0](https://go.microsoft.com/fwlink/?linkid=871294)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Microsoft OLE DB Driver for SQL Server에 대한 릴리스 정보입니다](release-notes-for-oledb-driver-for-sql-server.md)  
 [SQL Server용 OLE DB 드라이버 시스템 요구 사항](system-requirements-for-oledb-driver-for-sql-server.md)  

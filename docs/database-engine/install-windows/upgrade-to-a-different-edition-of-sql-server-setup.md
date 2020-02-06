@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258791"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>다른 SQL Server 버전으로 업그레이드(설치 프로그램)
@@ -29,7 +29,7 @@ ms.locfileid: "75258791"
 - [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에서:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 노드 중 하나에서 버전 업그레이드를 실행하는 것으로 충분합니다. 이 노드는 활성 또는 수동 모드로 있을 수 있으며, 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 가져오지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
+> **장애 조치 클러스터 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 노드 중 하나에서 버전 업그레이드를 실행하는 것으로 충분합니다. 이 노드는 활성 또는 수동 모드로 있을 수 있으며, 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 가져오지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
