@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056148"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
@@ -111,7 +111,7 @@ GO
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |DDL 트리거 생성, 수정 또는 삭제하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[DDL 트리거 구현](../../relational-databases/triggers/implement-ddl-triggers.md)|  
 |CLR DDL 트리거를 만드는 방법에 대해 설명합니다.|[CLR 트리거 만들기](../../relational-databases/triggers/create-clr-triggers.md)|  

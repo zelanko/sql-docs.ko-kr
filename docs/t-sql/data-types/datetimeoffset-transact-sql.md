@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148829"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
@@ -52,9 +52,9 @@ ms.locfileid: "70148829"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00 00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|예|  
-|표준 시간대 오프셋 인식 및 유지|예|  
-|일광 절약 시간제 인식|아니오|  
+|사용자 정의 초 소수 부분 자릿수|yes|  
+|표준 시간대 오프셋 인식 및 유지|yes|  
+|일광 절약 시간제 인식|예|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수 초의 전체 자릿수|  
 |---|---|---|---|
@@ -71,7 +71,7 @@ ms.locfileid: "70148829"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset에 대해 지원되는 문자열 리터럴 형식
 다음 표에는 **datetimeoffset**에 대해 지원되는 ISO 8601 문자열 리터럴 형식이 나와 있습니다. **datetimeoffset**의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
   
-|ISO 8601|설명|  
+|ISO 8601|Description|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|이 두 가지 형식은 SET LANGUAGE 및 SET DATEFORMAT 세션 로캘 설정의 영향을 받지 않습니다. **datetimeoffset**과 **datetime** 부분 사이에는 공백이 허용되지 않습니다.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 정의에 따른 이 형식은 **datetime** 부분이 UTC(Coordinated Universal Time)로 표현되어야 함을 나타냅니다. 예를 들어 1999-12-12 12:30:30.12345 -07:00는 1999-12-12 19:30:30.12345Z로 표시되어야 합니다.|  
@@ -208,7 +208,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |TIME만|DATE 부분의 기본값은 1900-1-1입니다. TIMEZONE의 기본값은 +00:00입니다.|  
 |TIMEZONE만|기본값이 제공됩니다.|  
 |DATE+TIME|TIMEZONE의 기본값은 +00:00입니다.|  
-|DATE+TIMEZONE|허용 안 됨|  
+|DATE+TIMEZONE|허용되지 않음|  
 |TIME+TIMEZONE|DATE 부분의 기본값은 1900-1-1입니다.|  
 |DATE+TIME+TIMEZONE|중요하지 않음|  
   
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

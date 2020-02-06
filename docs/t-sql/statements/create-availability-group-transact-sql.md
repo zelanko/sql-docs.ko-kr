@@ -25,10 +25,10 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244593"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
@@ -141,7 +141,7 @@ CREATE AVAILABILITY GROUP group_name
 >  AUTOMATED_BACKUP_PREFERENCE 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  기존 가용성 그룹의 자동화된 백업 기본 설정을 보려면 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰의 **automated_backup_preference** 또는 **automated_backup_preference_desc** 열을 선택합니다. 또한 [sys.fn_hadr_backup_is_preferred_replica&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)를 사용하여 기본 백업 복제본을 확인할 수 있습니다.  이 함수는 `AUTOMATED_BACKUP_PREFERENCE = NONE`인 경우에도 복제본 하나 이상에 대해 1을 반환합니다.  
+>  기존 가용성 그룹의 자동화된 백업 기본 설정을 보려면 **sys.availability_groups** 카탈로그 뷰의 **automated_backup_preference** 또는 [automated_backup_preference_desc](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 열을 선택합니다. 또한 [sys.fn_hadr_backup_is_preferred_replica&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)를 사용하여 기본 백업 복제본을 확인할 수 있습니다.  이 함수는 `AUTOMATED_BACKUP_PREFERENCE = NONE`인 경우에도 복제본 하나 이상에 대해 1을 반환합니다.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  이 가용성 그룹에 대한 자동 장애 조치(failover)를 트리거할 오류 상태를 지정합니다. FAILURE_CONDITION_LEVEL은 그룹 수준에서 설정되지만 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다. 또한 오류 상태는 주 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
@@ -190,7 +190,7 @@ CREATE AVAILABILITY GROUP group_name
  SQL Server 2017에서 도입되었습니다. 가용성 그룹이 WSFC(Windows Server 장애 조치(Failover) 클러스터)에 있는지 확인하는 데 사용됩니다.  가용성 그룹이 Windows Server 장애 조치(failover) 클러스터의 장애 조치(failover) 클러스터 인스턴스에 있는 경우 WSFC로 설정합니다. 클러스터가 Windows Server 장애 조치(failover) 클러스터가 아닌 클러스터 관리자(예: Linux Pacemaker)에 의해 관리되는 경우 EXTERNAL로 설정합니다. 클러스터를 조정하기 위해 가용성 그룹이 WSFC를 사용하지 않을 때 NONE으로 설정합니다. 예: 가용성 그룹에 클러스터 관리자가 없는 Linux 서버가 포함된 경우. 
 
  DATABASE *database_name*  
- 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(즉, 가용성 그룹을 만들 서버 인스턴스)에 있는 하나 이상의 사용자 데이터베이스 목록을 지정합니다. 하나의 가용성 그룹에 여러 개의 데이터베이스를 지정할 수 있지만 각 데이터베이스는 하나의 가용성 그룹에만 속할 수 있습니다. 가용성 그룹에서 지원할 수 있는 데이터베이스 형식에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요. 가용성 그룹에 이미 속해 있는 로컬 데이터베이스를 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **replica_id** 열을 확인합니다.  
+ 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(즉, 가용성 그룹을 만들 서버 인스턴스)에 있는 하나 이상의 사용자 데이터베이스 목록을 지정합니다. 하나의 가용성 그룹에 여러 개의 데이터베이스를 지정할 수 있지만 각 데이터베이스는 하나의 가용성 그룹에만 속할 수 있습니다. 가용성 그룹에서 지원할 수 있는 데이터베이스 형식에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요. 가용성 그룹에 이미 속해 있는 로컬 데이터베이스를 확인하려면 **sys.databases** 카탈로그 뷰의 [replica_id](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 확인합니다.  
   
  DATABASE 절은 선택적입니다. 생략하면 새 가용성 그룹이 비어 있습니다.  
   
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다. 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]장애 조치(failover) 파트너로 참여하는 경우 이 인수를 사용합니다. FCI 서버 인스턴스에서 SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)을 실행하면 전체 복제본 이름인 '*FCI_network_name*[\\*instance_name*]' 문자열 전체가 반환됩니다.  
   
  *instance_name*  
- *system_name* 또는 *FCI_network_name*으로 호스팅되고 HADR 서비스를 사용하도록 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 명명된 인스턴스에서 이 값 이름은 `select ServerProperty(N'InstanceName');`를 실행하여 반환되는 값과 같습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]system_name*또는*FCI_network_name*으로 호스팅되고 HADR 서비스를 사용하도록 설정된*  인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 명명된 인스턴스에서 이 값 이름은 `select ServerProperty(N'InstanceName');`를 실행하여 반환되는 값과 같습니다.  
   
  \  
  *system_name* 또는 *FCI_network_name*에서 구분하기 위해 *instance_name*을 지정하는 경우에만 사용되는 구분 기호입니다.  
@@ -228,7 +228,7 @@ CREATE AVAILABILITY GROUP group_name
  WSFC 노드 및 서버 인스턴스의 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
  ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
- 현재 REPLICA ON 절에서 정의 중인 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)에 대한 URL 경로를 지정합니다.  
+ 현재 REPLICA ON 절에서 정의 중인 가용성 복제본을 호스팅하는 [ 인스턴스의 ](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)데이터베이스 미러링 엔드포인트[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 URL 경로를 지정합니다.  
   
  ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
@@ -294,7 +294,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0은 이 가용성 복제본이 백업 수행을 위한 것이 아님을 나타냅니다. 이 값은 예를 들어 백업을 장애 조치할 대상으로 사용하지 않을 원격 가용성 복제본의 경우에 유용합니다.  
   
- 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
  SECONDARY_ROLE **(** ... **)**  
  이 가용성 복제본이 현재 보조 역할을 소유하는 경우(즉, 보조 복제본일 때마다) 적용되는 역할별 설정을 지정합니다. 괄호 안에 보조 역할 옵션 중 하나 또는 모두를 지정합니다. 둘 다 지정할 경우 쉼표로 구분된 목록을 사용합니다.  
@@ -313,12 +313,12 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
- 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
   
- 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'** ).  
+ 명명된 인스턴스의 경우 **sys.dm_tcp_listener_states** 동적 관리 뷰의 **port** 및 [type_desc](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'** ).  
   
  복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법에 대한 자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx)을 참조하세요.  
   

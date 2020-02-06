@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075162"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;=(크거나 같음)(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68075162"
 
   한 식이 다른 한 식보다 크거나 같은지 비교합니다(비교 연산자).  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,16 +49,16 @@ expression >= expression
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다. 변환은 [데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md) 규칙에 따라 달라집니다.  
   
 ## <a name="result-types"></a>결과 형식  
- Boolean  
+ 부울  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크거나 같으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다.  
   
  =(등가) 비교 연산자와 달리 두 NULL 값에 대한 >= 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 >= 사용  
+### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 >= 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 13보다 큰 모든 행을 반환합니다.  
   
 ```  

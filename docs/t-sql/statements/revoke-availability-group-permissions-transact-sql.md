@@ -20,16 +20,16 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242608"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 취소(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Always On 가용성 그룹에 대한 사용 권한을 취소합니다. 
+  AlwaysOn 가용성 그룹에 대한 사용 권한을 취소합니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 취소합니다.  
+ 다음 예에서는 `VIEW DEFINITION` 로그인 `MyAg`에 대해 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. CASCADE를 지정하여 TAKE OWNERSHIP 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `TAKE OWNERSHIP`에 대해 `MyAg`가 MyAg에 대한 TAKE OWNERSHIP을 부여한 모든 보안 주체로부터 가용성 그룹 `PKomosinski`에 대한 `PKomosinski` 권한을 취소합니다.  
+ 다음 예에서는 `TAKE OWNERSHIP` 사용자 `MyAg`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 MyAg에 대한 TAKE OWNERSHIP을 부여한 모든 보안 주체로부터 가용성 그룹 `PKomosinski`에 대한 `PKomosinski` 권한을 취소합니다.  
   
 ```  
 USE master;  

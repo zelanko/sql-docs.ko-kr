@@ -13,10 +13,10 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095662"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. 저장 프로시저를 만들고 여기에 인증서로 서명  
-다음 코드를 사용하여 `Vendor` 데이터베이스 스키마의 `Purchasing`테이블에서 데이터를 선택하는 저장 프로시저를 만들어 신용 등급이 1인 회사만 여기에 액세스할 수 있도록 제한할 수 있습니다. 저장 프로시저의 첫 번째 섹션은 저장 프로시저를 실행하는 사용자 계정의 컨텍스트를 표시합니다. 이 섹션은 개념을 보여 주기 위한 것으로, 요구 사항을 만족할 필요는 없습니다.  
+다음 코드를 사용하여 `Vendor` 데이터베이스 스키마의 `Purchasing` 테이블에서 데이터를 선택하는 저장 프로시저를 만들어 신용 등급이 1인 회사만 여기에 액세스할 수 있도록 제한할 수 있습니다. 저장 프로시저의 첫 번째 섹션은 저장 프로시저를 실행하는 사용자 계정의 컨텍스트를 표시합니다. 이 섹션은 개념을 보여 주기 위한 것으로, 요구 사항을 만족할 필요는 없습니다.  
   
 ```sql  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ## <a name="5-grant-the-certificate-account-database-rights"></a>5. 인증서 계정에 데이터베이스 권한 부여  
-다음 코드를 실행하여 기본 테이블 및 저장 프로시저에 대한 권한을 `TestCreditRatingcertificateAccount`에 부여합니다.  
+다음 코드를 실행하여 기본 테이블 및 저장 프로시저에 대한 권한을 `TestCreditRatingcertificateAccount` 에 부여합니다.  
   
 ```sql  
 GRANT SELECT   
@@ -285,7 +285,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
