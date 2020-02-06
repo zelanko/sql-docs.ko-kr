@@ -20,10 +20,10 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314598"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314598"
 
 이 함수는 비대칭 키를 사용하여 데이터를 암호화합니다.  
   
- ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 + **nvarchar**
 + **varbinary**
   
-로 구분하거나 여러
+또는
   
 + **varchar**
  
@@ -67,7 +67,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 + **nvarchar**
 + **varbinary**
   
-로 구분하거나 여러
+또는
   
 + **varchar**
  
@@ -76,7 +76,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 비대칭 키를 사용하는 암호화 및 암호 해독 작업은 상당한 리소스를 소비하므로 대칭 키 암호화 및 해독 작업과 비교하여 비용이 많이 듭니다. 개발자는 큰 데이터 세트(예: 데이터베이스 테이블에 저장된 사용자 데이터 세트)에서 비대칭 키 암호화 및 암호 해독 작업을 피하는 것이 좋습니다. 대신 개발자는 먼저 강력한 대칭 키로 해당 데이터를 암호화한 다음, 비대칭 키로 해당 대칭 키를 암호화는 것이 좋습니다.  
   
 알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 `ENCRYPTBYASYMKEY`는 **NULL**을 반환합니다. 특정 제한은 다음과 같습니다.

@@ -18,10 +18,10 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095533"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 업그레이드(Transact-SQL)
@@ -54,9 +54,9 @@ ms.locfileid: "74095533"
   
 -   분리되지 않고 복사된 복제 데이터베이스를 연결하는 경우에는 다음을 수행해야 합니다.  
   
-    -   동일한 서버 인스턴스의 업그레이드된 버전에 데이터베이스를 연결하는 경우 연결 작업이 완료된 후 **sp_vupgrade_replication**을 실행하여 복제를 업그레이드해야 합니다. 자세한 내용은 [sp_vupgrade_replication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)을 참조하세요.  
+    -   동일한 서버 인스턴스의 업그레이드된 버전에 데이터베이스를 연결하는 경우 연결 작업이 완료된 후 **sp_vupgrade_replication** 을 실행하여 복제를 업그레이드해야 합니다. 자세한 내용은 [sp_vupgrade_replication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)을 참조하세요.  
   
-    -   버전에 관계없이 다른 서버 인스턴스에 데이터베이스를 연결하는 경우 연결 작업이 완료된 후 **sp_removedbreplication**을 실행하여 복제를 제거해야 합니다. 자세한 내용은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
+    -   버전에 관계없이 다른 서버 인스턴스에 데이터베이스를 연결하는 경우 연결 작업이 완료된 후 **sp_removedbreplication** 을 실행하여 복제를 제거해야 합니다. 자세한 내용은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  

@@ -13,17 +13,17 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125174"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
   
-|파일 특성 이름|유형|크기|Default|설명|파일 시스템 접근성|  
+|파일 특성 이름|type|크기|기본값|Description|파일 시스템 접근성|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|변수|이 항목의 위치를 식별하는 **hierarchyid** 입니다.|계층적 FileNamespace에서 이 노드의 위치입니다.<br /><br /> 테이블의 기본 키입니다.|Windows 경로 값을 설정하여 만들고 수정할 수 있습니다.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 함수가 반환하는 값|FILESTREAM 데이터의 고유 ID입니다.|해당 사항 없음|  

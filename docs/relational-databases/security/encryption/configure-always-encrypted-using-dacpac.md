@@ -13,16 +13,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595748"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC package로 Always Encrypted를 사용하여 열 암호화 구성 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-DACPAC라고도 하는 [DAC(데이터 계층 애플리케이션) 패키지](../../data-tier-applications/data-tier-applications.md)는 테이블 및 테이블 내 열을 비롯한 모든 SQL Server 개체를 정의하는 SQL Server 데이터베이스 배포의 이식 가능한 단위입니다. DACPAC를 데이터베이스에 게시하는 경우(DACPAC를 사용하여 데이터베이스를 업그레이드하는 경우) DACPAC의 스키마와 일치하도록 대상 데이터베이스의 스키마가 업데이트를 가져옵니다. SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 또는 [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)에서 [데이터 계층 애플리케이션 업그레이드 마법사](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)를 사용하여 DACPAC를 게시할 수 있습니다.
+DACPAC라고도 하는 [DAC(데이터 계층 애플리케이션) 패키지](../../data-tier-applications/data-tier-applications.md)는 테이블 및 테이블 내 열을 비롯한 모든 SQL Server 개체를 정의하는 SQL Server 데이터베이스 배포의 이식 가능한 단위입니다. DACPAC를 데이터베이스에 게시하는 경우(DACPAC를 사용하여 데이터베이스를 업그레이드하는 경우) DACPAC의 스키마와 일치하도록 대상 데이터베이스의 스키마가 업데이트를 가져옵니다. SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) 또는 [sqlpackage](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell)에서 [데이터 계층 애플리케이션 업그레이드 마법사](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)를 사용하여 DACPAC를 게시할 수 있습니다.
 
 이 문서에서는 DACPAC 또는/및 대상 데이터베이스에 [Always Encrypted](always-encrypted-database-engine.md)로 보호되는 열이 포함된 경우 데이터베이스를 업그레이드할 때 특별히 고려해야 할 사항을 살펴봅니다. DACPAC에 있는 열의 암호화 체계가 대상 데이터베이스에 있는 기존 열의 암호화 체계와 다른 경우 DACPAC를 게시하면 열에 저장된 데이터가 암호화되거나, 암호 해독되거나 다시 암호화됩니다. 자세한 내용은 아래 표를 참조하세요.
 
@@ -40,7 +40,7 @@ DAC 패키지를 배포하면 Always Encrypted에 사용되는 열 마스터 키
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 Enclave로 구성된 경우 데이터베이스 외부로 데이터를 이동하지 않고도 바로 암호화 작업을 실행할 수 있습니다. [보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. DACPAC 배포에는 바로 암호화를 사용할 수 없습니다.
+> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]를 사용하고 SQL Server 인스턴스가 보안 Enclave로 구성된 경우 데이터베이스 외부로 데이터를 이동하지 않고도 바로 암호화 작업을 실행할 수 있습니다. [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요. DACPAC 배포에는 바로 암호화를 사용할 수 없습니다.
 
 ::: moniker-end
 
@@ -60,12 +60,12 @@ DACPAC 또는/및 대상 데이터베이스에 Always Encrypted가 설정된 경
 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요. 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 - [SQL Server Management Studio로 Always Encrypted를 사용하여 열 쿼리](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>참고 항목  
- - [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md) 
  - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](configure-always-encrypted-using-sql-server-management-studio.md)
  - [Always Encrypted 마법사를 사용하여 열 암호화 구성](always-encrypted-wizard.md)

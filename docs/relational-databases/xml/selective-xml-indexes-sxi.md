@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000712"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
@@ -120,7 +120,7 @@ FOR
   
 -   base64Binary 및 hexBinary와 같은 이진 XS 유형이 있는 노드의 인덱싱  
   
--   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예: `/a/b/c/*`, `/a//b/*` 또는 `/a/b/*:c`.  
+-   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다.  `/a/b/c/*`, `/a//b/*`또는 `/a/b/*:c`  
   
 -   자식, 특성 또는 하위 항목 이외의 모든 축 인덱싱. `//<step>` 은 특별한 경우로 허용됩니다.  
   
@@ -129,7 +129,7 @@ FOR
 -   id() 함수를 사용하여 노드 식별자 지정 및 검색  
   
   
-###  <a name="prereq"></a> 사전 요구 사항  
+###  <a name="prereq"></a> 필수 조건  
  사용자 테이블의 XML 열에 대해 선택적 XML 인덱스를 만들려면 먼저 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   클러스터형 인덱스는 사용자 테이블의 기본 키에 있어야 합니다.  
@@ -191,11 +191,11 @@ FOR
 -   선택적 XML 인덱스 및 보조 선택적 XML 인덱스는 데이터베이스 튜닝 관리자에서 지원되지 않습니다.  
   
   
-##  <a name="reltasks"></a> 관련 태스크  
+##  <a name="reltasks"></a> 관련 작업  
   
 |||  
 |-|-|  
-|**태스크**|**항목**|  
+|**Task**|**항목**|  
 |선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 선택적 최적화 힌트를 지정합니다.|[선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |보조 선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  

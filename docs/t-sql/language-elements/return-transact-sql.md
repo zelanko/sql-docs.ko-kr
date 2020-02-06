@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072368"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68072368"
 
   쿼리나 프로시저를 무조건 종료합니다. RETURN은 즉각적이고 완전하며 프로시저, 일괄 처리, 문 블록에서 아무 때나 종료하는 데 사용할 수 있습니다. RETURN 다음에 있는 문은 실행되지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,14 +55,14 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  달리 설명하지 않는 한 모든 시스템 저장 프로시저는 0 값을 반환합니다. 이 값은 성공을 나타내며 0 이외의 값은 실패를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  저장 프로시저와 함께 사용할 경우 RETURN은 null 값을 반환할 수 없습니다. 프로시저에서 Null 값을 반환하려는 경우(예: @status가 NULL일 때 RETURN @status 사용) 경고 메시지가 생성되고 값 0이 반환됩니다.  
   
  현재 프로시저를 실행한 일괄 처리나 프로시저에 있는 후속 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 반환 상태 값을 포함시킬 수 있지만 `EXECUTE @return_status = <procedure_name>` 형식으로 입력해야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-from-a-procedure"></a>1\. 프로시저에서 반환  
+### <a name="a-returning-from-a-procedure"></a>A. 프로시저에서 반환  
  다음 예에서는 `findjobs`를 실행할 때 매개 변수로 사용자 이름을 지정하지 않은 경우 `RETURN`으로 사용자의 화면에 메시지를 보낸 다음 프로시저를 종료하는 방법을 보여 줍니다. 사용자 이름을 지정하면 현재 데이터베이스에서 이 사용자가 만든 모든 개체 이름을 해당 시스템 테이블에서 가져옵니다.  
   
 ```  
@@ -82,7 +82,7 @@ ELSE
     END;  
 ```  
   
-### <a name="b-returning-status-codes"></a>2\. 상태 코드 반환  
+### <a name="b-returning-status-codes"></a>B. 상태 코드 반환  
  다음 예에서는 지정된 연락처 ID의 주를 확인하는 방법을 보여 줍니다. 주가 워싱턴(`WA`)인 경우 `1`이 반환됩니다. 그 외 다른 조건(`2` 또는 `WA`가 `StateProvince` 이외의 값)인 경우 `ContactID`가 반환됩니다.  
   
 ```  

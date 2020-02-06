@@ -16,10 +16,10 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321890"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>병합 복제에 대한 충돌 해결
@@ -28,9 +28,9 @@ ms.locfileid: "75321890"
   
  지정된 충돌 보존 기간(기본값: 14일) 동안 복제 충돌 뷰어에서 충돌 데이터를 확인할 수 있습니다. 충돌 보존 기간을 설정하려면 다음 중 하나를 수행하십시오.  
   
--   [sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@conflict_retention` 매개 변수에 보존 값을 지정합니다.  
+-   `@conflict_retention`sp_addmergepublication&#40;Transact-SQL&#41;[의 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 매개 변수에 보존 값을 지정합니다.  
   
--   `@property` 매개 변수에 **conflict_retention** 값, [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)의 `@value` 매개 변수에 보존 값을 지정합니다.  
+-   **매개 변수에**conflict_retention`@property` 값, `@value`sp_changemergepublication&#40;Transact-SQL&#41;[의 ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 매개 변수에 보존 값을 지정합니다.  
   
  기본적으로 충돌 정보는 다음 위치에 저장됩니다.    
 -   게시 호환성 수준이 90RTM 이상일 경우 게시자 및 구독자.   
@@ -84,7 +84,7 @@ ms.locfileid: "75321890"
     -   **decentralized_conflicts** - 1은 충돌 행이 구독자에 저장된다는 것을 의미하며, 0은 충돌 행이 구독자에 저장되지 않는다는 것을 의미합니다.  
   
         > [!NOTE]  
-        >  병합 게시의 충돌 로깅 방식은 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@conflict_logging` 매개 변수를 사용하여 설정합니다. `@centralized_conflicts` 매개 변수는 사용되지 않습니다.  
+        >  병합 게시의 충돌 로깅 방식은 `@conflict_logging`sp_addmergepublication[의 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 매개 변수를 사용하여 설정합니다. `@centralized_conflicts` 매개 변수는 사용되지 않습니다.  
   
      다음 표에서는 `@conflict_logging`에 지정된 값에 따라 이러한 열의 값을 보여 줍니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75321890"
     -   **decentralized_conflicts** - 1은 충돌 행이 구독자에 저장된다는 것을 의미하며, 0은 충돌 행이 구독자에 저장되지 않는다는 것을 의미합니다.  
   
         > [!NOTE]  
-        >  병합 게시의 충돌 로깅 방식은 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@conflict_logging` 매개 변수를 사용하여 설정합니다. `@centralized_conflicts` 매개 변수는 사용되지 않습니다.  
+        >  병합 게시의 충돌 로깅 방식은 `@conflict_logging`sp_addmergepublication[의 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 매개 변수를 사용하여 설정합니다. `@centralized_conflicts` 매개 변수는 사용되지 않습니다.  
   
 2.  게시 데이터베이스의 게시자나 구독 데이터베이스의 구독자에서 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)를 실행합니다. 특정 게시에 속한 아티클에 대한 충돌 테이블 정보만 반환하려면 `@publication`에 값을 지정합니다. 이렇게 하면 충돌이 있는 아티클에 대한 충돌 테이블 정보가 반환됩니다. 정보를 보려는 아티클의 **source_object** 값을 확인합니다. 아티클에 대한 **conflict_table** 값이 NULL인 경우 이 아티클에 삭제 충돌만 발생한 것입니다.  
   

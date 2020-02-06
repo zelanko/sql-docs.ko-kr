@@ -17,10 +17,10 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 249639ef13d9200d1d6cedc189044c30ba8ff7ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042266"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN(geography 데이터 형식)
@@ -44,11 +44,11 @@ ms.locfileid: "68042266"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- 이 메서드는 매개 변수가 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)의 결과보다 크면 Null을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 매개 변수가 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)의 결과보다 크면 Null을 반환하고 **expression** 매개 변수가 1보다 작으면 *ArgumentOutOfRangeException*을 throw합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `MultiPoint``geography` 인스턴스를 만들고 `STGeometryN()`을 사용하여 **GeometryCollection**의 두 번째 `geography` 인스턴스를 찾습니다.  
+ 다음 예에서는 `MultiPoint``geography` 인스턴스를 만들고 `STGeometryN()`을 사용하여 `geography`GeometryCollection**의 두 번째**  인스턴스를 찾습니다.  
   
 ```  
 DECLARE @g geography;  

@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982586"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982586"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 및 열에 공간 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블이나 뷰에 인덱스를 만들 수도 있습니다. 공간 인덱스를 사용하려면 클러스터형 기본 키를 포함할 테이블이 필요합니다. 공간 인덱스에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -247,7 +247,7 @@ BOUNDING_BOX
  > [!NOTE]
  > 경계 상자 좌표는 USING GEOMETRY_GRID 절 내에서만 적용됩니다.  
  >
- > *xmax*는 *xmin*보다 커야 하고 *ymax*는 *ymin*보다 커야 합니다. *xmax* > *xmin* 및 *ymax* > *ymin*이라고 가정할 때, 모든 유효한 [float](../../t-sql/data-types/float-and-real-transact-sql.md) 값 표현을 지정할 수 있습니다. 그렇지 않으면 해당 오류가 발생합니다.  
+ > *xmax*는 *xmin*보다 커야 하고 *ymax*는 *ymin*보다 커야 합니다. [xmax](../../t-sql/data-types/float-and-real-transact-sql.md)  xmin >  및 *ymax*  ymin > 이라고 가정할 때, 모든 유효한 *float* 값 표현을 지정할 수 있습니다. 그렇지 않으면 해당 오류가 발생합니다.  
  >
  > 기본값은 없습니다.  
  >
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
-ON     
+켜기     
 *fillfactor*로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됨을 나타냅니다.  
   
 OFF 또는 *fillfactor*를 지정되지 않음     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  tempdb에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON     
+ 켜기     
  인덱스 작성에 사용된 중간 정렬 결과가 tempdb에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 세트에 tempdb가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
   
  OFF     
@@ -356,7 +356,7 @@ IGNORE_DUP_KEY =**OFF**
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON    
+ 켜기    
  이전 통계가 자동으로 다시 계산되지 않습니다.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  명명된 기존 공간 인덱스를 삭제하고 다시 작성하도록 지정합니다. 기본값은 OFF입니다.  
   
- ON     
+ 켜기     
  기존 인덱스가 삭제되고 다시 작성됩니다. 지정된 인덱스 이름은 현재 존재하는 인덱스 이름과 같아야 합니다. 그러나 인덱스 정의는 수정할 수 있습니다. 예를 들어 다른 열, 정렬 순서, 파티션 구성표 또는 인덱스 옵션을 지정할 수 있습니다.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON     
+ 켜기     
  인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON    
+ 켜기    
  인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF     
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  인덱스 데이터에 페이지 압축 사용  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 CREATE SPATIAL INDEX 문에는 각 옵션을 한 번씩만 지정할 수 있으며 옵션을 중복 지정하면 오류가 발생합니다.  
   
 테이블의 각 공간 열에는 최대 249개의 공간 인덱스를 만들 수 있습니다. 예를 들어 특정 공간 열에 두 개 이상의 공간 인덱스를 만들면 한 열에 있는 서로 다른 공간 분할 매개 변수를 인덱싱하는 데 유용할 수 있습니다.  
@@ -491,8 +491,8 @@ CREATE SPATIAL INDEX 문에는 각 옵션을 한 번씩만 지정할 수 있으�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1\. geometry 열에 공간 인덱스 만들기
-다음 예에서는 **geometry** 형식 열 `geometry_col`을 포함하는 `SpatialTable` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. geometry 열에 공간 인덱스 만들기
+다음 예에서는 `SpatialTable`geometry**형식 열**을 포함하는 `geometry_col` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -501,7 +501,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2\. geometry 열에 공간 인덱스 만들기
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. geometry 열에 공간 인덱스 만들기
 다음 예에서는 `SIndx_SpatialTable_geometry_col2` 테이블의 `geometry_col`에 두 번째 공간 인덱스 `SpatialTable`를 만듭니다. 이 예에서는 `GEOMETRY_GRID`를 공간 분할 구성표로 지정합니다. 또한 경계 상자를 지정하고 표 수준마다 다른 밀도를 지정하며 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
 ```sql  
@@ -538,7 +538,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. geography 열에 공간 인덱스 만들기
-다음 예에서는 **geography** 형식 열 `geography_col`을 포함하는 `SpatialTable2` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
+다음 예에서는 `SpatialTable2`geography**형식 열**을 포함하는 `geography_col` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
@@ -571,7 +571,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)       
 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)       
 [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)       

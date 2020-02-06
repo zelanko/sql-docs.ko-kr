@@ -11,10 +11,10 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251329"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project(SSISDB 데이터베이스)
@@ -56,7 +56,7 @@ catalog.deploy_project [@folder_name =] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -76,7 +76,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장 프로시저는 프로젝트를 배포하거나 업데이트하는 동안 프로젝트의 개별 패키지에 대한 보호 수준을 확인하지 않습니다.  
   
   

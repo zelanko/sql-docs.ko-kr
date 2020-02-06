@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452902"
 ---
 # <a name="temporal-table-security"></a>임시 테이블 보안
@@ -28,7 +28,7 @@ temporal 테이블에 보안이 적용되는 방식을 이해하려면 temporal 
 
  다음 표는 temporal 테이블에 적용되는 보안 원칙에 대해 설명합니다.
 
-|원칙|설명|
+|원칙|Description|
 |---------------|-----------------|
 |system-versioning을 설정/해제하려면 영향을 받는 개체에 대해 가장 높은 권한이 있어야 함|SYSTEM_VERSIONING을 설정 및 해제하려면 현재 및 기록 테이블에 대해 CONTROL 권한이 있어야 합니다.|
 |기록 데이터는 직접 수정할 수 없음|SYSTEM_VERSIONING이 ON일 경우 사용자가 현재 또는 기록 테이블에 대해 가지고 있는 실제 권한과 상관없이 기록 데이터를 수정할 수 없습니다. 여기에는 데이터 및 스미카 수정이 포함됩니다.|
@@ -41,7 +41,7 @@ SYSTEM_VERSIONING이 ON으로 설정된 경우에는 스키마 수정 작업이 
 
 ### <a name="disallowed-alter-schema-operations"></a>허용되지 않는 ALTER 스키마 작업
 
-|연산|현재 테이블|기록 테이블|
+|작업(Operation)|현재 테이블|기록 테이블|
 |---------------|-------------------|-------------------|
 |**DROP TABLE**|허용되지 않음|허용되지 않음|
 |**ALTER TABLE...SWITCH PARTITION**|SWITCH IN만( [임시 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)참조)|SWITCH OUT만( [임시 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)참조)|
@@ -50,7 +50,7 @@ SYSTEM_VERSIONING이 ON으로 설정된 경우에는 스키마 수정 작업이 
 
 ## <a name="allowed-alter-table-operations"></a>허용되는 ALTER TABLE 작업
 
-|연산|현재|기록|
+|작업(Operation)|현재|기록|
 |---------------|-------------|-------------|
 |**ALTER TABLE...REBUILD**|허용됨(독립적)|허용됨(독립적)|
 |**CREATE  INDEX**|허용됨(독립적)|허용됨(독립적)|

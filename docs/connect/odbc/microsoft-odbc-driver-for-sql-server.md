@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702686"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -35,7 +35,7 @@ ODBC 드라이버에는 [**sqlcmd**](../../tools/sqlcmd-utility.md) 및 [**bcp**
 
 - ![다운로드-아래쪽 화살표-원](../../ssdt/media/download.png)[ODBC 드라이버를 다운로드하려면](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>설명서
+## <a name="documentation"></a>문서화
 
 ### <a name="features"></a>기능
 

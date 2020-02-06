@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948060"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67948060"
 > [!NOTE]  
 >  관계형 인덱스를 만들려면 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요. 공간 인덱스를 만드는 방법은 [CREATE SPATIAL INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  보조 XML 인덱스의 유형을 지정합니다.  
   
- Value  
+ 값  
  키 열이 기본 XML 인덱스의 노드 값 및 경로인 열에 보조 XML 인덱스를 만듭니다.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  *fillfactor*로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.  
   
  OFF 또는 *fillfactor*를 지정되지 않음  
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **tempdb**에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 집합에 **tempdb**가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
   
  OFF  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  명명된 기존 XML 인덱스를 삭제하고 다시 작성하도록 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  기존 인덱스가 삭제되고 다시 작성됩니다. 지정된 인덱스 이름은 현재 존재하는 인덱스 이름과 같아야 합니다. 그러나 인덱스 정의는 수정할 수 있습니다. 예를 들어 다른 열, 정렬 순서, 파티션 구성표 또는 인덱스 옵션을 지정할 수 있습니다.  
   
  OFF  
@@ -191,12 +191,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  XML 인덱스를 작성, 다시 작성 또는 삭제하는 오프라인 인덱스 작업은 테이블에 대해 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.  
   
 > [!NOTE]
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -233,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **xml** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 인덱스 키 열 또는 키가 아닌 열에 허용되는 경우에 한해 키 또는 키가 아닌 포괄 열로 인덱싱될 수 있습니다. 계산된 **xml** 열에 기본 XML 인덱스를 만들 수 없습니다.  
   
  XML 인덱스에 대한 정보를 보려면 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) 카탈로그 뷰를 사용합니다.  
@@ -245,7 +245,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-primary-xml-index"></a>1\. 기본 XML 인덱스 만들기  
+### <a name="a-creating-a-primary-xml-index"></a>A. 기본 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 기본 XML 인덱스를 만듭니다.  
   
 ```sql  
@@ -261,7 +261,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>2\. 보조 XML 인덱스 만들기  
+### <a name="b-creating-a-secondary-xml-index"></a>B. 보조 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 보조 XML 인덱스를 만듭니다.  
   
 ```sql  

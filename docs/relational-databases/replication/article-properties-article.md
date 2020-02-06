@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768196"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288276"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,10 +87,10 @@ ms.locfileid: "68768196"
  자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
  **복제**  
- 이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)을 참조하세요.  
+ 이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)를 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
+ 병합 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **해결 프로그램**탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -126,9 +126,9 @@ ms.locfileid: "68768196"
  기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
- 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+ 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
- 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
+ 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md) 을 참조하세요.  
   
  **요청 시 동기화 작업 중 구독자가 대화형으로 충돌 해결**  
  대화형으로 충돌을 해결하고 구독자가 요청 시 동기화(병합 복제의 기본값)를 사용하게 하려면 이 옵션을 선택합니다. 새 구독 마법사의 **동기화 일정** 페이지에서 요청 시 동기화를 지정합니다. 충돌을 대화형으로 해결하려면 대화형 해결 프로그램 사용자 인터페이스를 사용합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
@@ -137,7 +137,7 @@ ms.locfileid: "68768196"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **데이터 매핑**탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138749"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
@@ -52,7 +52,7 @@ ms.locfileid: "68138749"
   
 -   사용자 정의 함수는 중첩될 수 있습니다. 즉, 하나의 사용자 정의 함수가 다른 사용자 정의 함수를 호출할 수 있습니다. 중첩 수준은 호출된 함수의 실행이 시작되면 늘어나고 호출된 함수의 실행이 끝나면 줄어듭니다. 사용자 정의 함수는 최대 32 수준까지 중첩될 수 있습니다. 최대 중첩 수준을 초과하면 전체 함수 호출 체인이 실패합니다. Transact-SQL 사용자 정의 함수의 관리 코드 참조는 32 수준의 중첩 제한에 대해 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  
   
--   다음 Service Broker 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수에 **포함시킬 수 없습니다**.  
+-   다음 Service Broker 문은 **사용자 정의 함수에**포함시킬 수 없습니다[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
     -   `BEGIN DIALOG CONVERSATION`  
   
@@ -66,12 +66,12 @@ ms.locfileid: "68138749"
   
     -   `SEND`  
   
-###  <a name="Security"></a> 사용 권한 
+###  <a name="Security"></a> 권한 
 
 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수가 사용자 정의 형식을 지정하면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.  
   
 ##  <a name="Scalar"></a> 스칼라 함수  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 다중 명령문 **스칼라 함수(스칼라 UDF)** 를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
+ 다음 예에서는 **데이터베이스의 다중 명령문**스칼라 함수(스칼라 UDF)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -105,7 +105,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > 스칼라 함수에 대한 자세한 내용 및 예제는 [CREATE FUNCTION(Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)을 참조하세요. 
 
 ##  <a name="TVF"></a> 테이블 반환 함수  
-다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 **인라인 TVF(테이블 반환 함수)** 를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
+다음 예제에서는 **데이터베이스에서**인라인 TVF(테이블 반환 함수)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +132,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 **MSTVF(다중 명령문 테이블 반환 함수)** 를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
+다음 예제에서는 **데이터베이스에서**MSTVF(다중 명령문 테이블 반환 함수)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -185,7 +185,7 @@ FROM dbo.ufn_FindReports(1);
 > [!NOTE]  
 > 인라인 TVF(테이블 반환 함수) 및 MSTVF(다중 명령문 테이블 반환 함수)에 대한 자세한 정보 및 예제는 [CREATE FUNCTION(Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)을 참조하세요. 
 
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
 `SCHEMABINDING` 절을 사용하여 UDF(사용자 정의 함수)를 만들지 않은 경우 기본 개체에 대한 변경 내용이 함수의 정의에 영향을 주어 함수가 호출될 때 예기치 않은 결과를 초래할 수 있습니다. 기본 개체에 대한 변경으로 인해 함수가 최신 상태를 유지하지 못하게 되는 일이 발생하지 않도록 다음 메서드 중 하나를 구현하는 것이 좋습니다.  
   
 -   UDF를 만들 때 `WITH SCHEMABINDING` 절을 지정합니다. 이렇게 하면 함수도 수정되지 않는 한 함수 정의에서 참조된 개체를 수정할 수 없습니다.  
