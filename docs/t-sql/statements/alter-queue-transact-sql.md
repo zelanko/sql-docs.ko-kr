@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982051"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982051"
 
   큐의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -157,7 +157,7 @@ WITH
   
  포이즌 메시지 처리가 OFF로 설정된 큐는 트랜잭션 롤백이 연속으로 5회 발생하더라도 비활성화되지 않습니다. 이렇게 하면 애플리케이션에서 사용자 지정 포이즌 메시지 처리 시스템을 정의할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  활성화 저장 프로시저가 지정된 큐에 메시지가 포함된 경우 활성화 상태를 OFF에서 ON으로 변경하면 활성화 저장 프로시저가 즉시 활성화됩니다. 활성화 상태를 ON에서 OFF로 변경하면 Broker에서 저장 프로시저 인스턴스를 활성화하는 것을 중지하지만 현재 실행 중인 저장 프로시저 인스턴스는 중지하지 않습니다.  
   
  큐를 변경하여 활성화 저장 프로시저를 추가해도 큐의 활성화 상태는 변경되지 않습니다. 또한 큐의 활성화 저장 프로시저를 변경해도 현재 실행 중인 활성화 저장 프로시저 인스턴스에는 영향을 주지 않습니다.  
@@ -173,14 +173,14 @@ WITH
   
 ## <a name="examples"></a>예  
   
-### <a name="a-making-a-queue-unavailable"></a>1\. 큐를 사용할 수 없게 설정  
+### <a name="a-making-a-queue-unavailable"></a>A. 큐를 사용할 수 없게 설정  
  다음 예에서는 `ExpenseQueue` 큐에서 메시지를 받을 수 없도록 설정합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
-### <a name="b-changing-the-activation-stored-procedure"></a>2\. 활성화 저장 프로시저 변경  
+### <a name="b-changing-the-activation-stored-procedure"></a>B. 활성화 저장 프로시저 변경  
  다음 예에서는 큐가 시작하는 저장 프로시저를 변경합니다. 이 저장 프로시저는 `ALTER QUEUE` 문을 실행한 사용자로 실행됩니다.  
   
 ```  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 큐 판독기 수 변경  
- 다음 예에서는 이 큐에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저 인스턴스의 최대 수를 `7`로 설정합니다.  
+ 다음 예에서는 이 큐에 대해 `7`가 시작하는 저장 프로시저 인스턴스의 최대 수를 [!INCLUDE[ssSB](../../includes/sssb-md.md)]로 설정합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

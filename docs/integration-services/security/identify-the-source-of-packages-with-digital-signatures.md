@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295699"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
@@ -62,7 +62,7 @@ ms.locfileid: "71295699"
   
  다음 표에서는 DWORD 데이터의 유효한 값 및 연관된 정책을 나열합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|관리 제한이 없습니다.|  
 |1|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  
@@ -149,7 +149,7 @@ ms.locfileid: "71295699"
  **제거**  
  디지털 서명을 제거하려면 클릭합니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
  [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   

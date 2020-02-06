@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577159"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
@@ -44,7 +44,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>반환 값  
  **VariantArray**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Multilookup**을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. **MultiLookup** 은 이름 또는 키 집합에 대해 **Lookup** 을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 **Multilookup**을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
   
  **Multilookup** 은 다음을 수행합니다.  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  일 대 일 관계의 이름-값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)을 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 세트에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)을 사용합니다.  
   
- 다음과 같은 제한 사항이 있습니다.  
+ 다음 제한 사항이 적용됩니다.  
   
 -   **Multilookup** 은 모든 필터 식이 적용된 후 평가됩니다.  
   

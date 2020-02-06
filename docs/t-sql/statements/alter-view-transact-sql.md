@@ -21,10 +21,10 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981948"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73981948"
 
   인덱싱된 뷰를 포함하여 이전에 만든 뷰를 수정합니다. ALTER VIEW는 종속된 저장 프로시저 또는 트리거에 영향을 주지 않으며 사용 권한을 변경하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  뷰에 대해 실행된 모든 데이터 수정 명령문이 *select_statement* 내의 기준 집합을 준수하도록 설정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER TRIGGER에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 설명 부분을 참조하세요.  
   
 > [!NOTE]  

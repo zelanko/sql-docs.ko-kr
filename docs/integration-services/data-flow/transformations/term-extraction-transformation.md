@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297753"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
@@ -180,7 +180,7 @@ ms.locfileid: "71297753"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -241,7 +241,7 @@ ms.locfileid: "71297753"
  점수를 용어의 빈도로 지정합니다.  
   
  **TFIDF**  
- 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다.  
   
  **빈도 임계값**  
  단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  

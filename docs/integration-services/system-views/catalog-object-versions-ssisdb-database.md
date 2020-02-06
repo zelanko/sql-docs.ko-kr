@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296512"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions(SSISDB 데이터베이스)
@@ -26,7 +26,7 @@ ms.locfileid: "71296512"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 개체의 버전을 표시합니다. 이 릴리스에서는 프로젝트 버전만 이 뷰에서 지원됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|개체 버전의 고유 식별자(ID)입니다. 이 번호는 순차적이지 않을 수 있습니다.|  
 |object_id|**bigint**|개체의 고유 ID입니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71296512"
 |restored_by|**nvarchar(128)**|개체를 복원한 사용자의 이름입니다.|  
 |last_restored_time|**datetimeoffset**|개체가 마지막으로 복원된 날짜 및 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그에 있는 개체의 각 버전에 대한 행을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  

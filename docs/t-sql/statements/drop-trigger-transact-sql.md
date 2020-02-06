@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980992"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73980992"
 
   현재 데이터베이스에서 하나 이상의 DML 또는 DDL 트리거를 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  트리거 또는 트리거 테이블을 삭제하여 DML 트리거를 제거할 수 있습니다. 테이블을 삭제하면 이와 연결된 모든 트리거도 삭제됩니다.  
   
  트리거를 삭제하면 **sys.objects**, **sys.triggers** 및 **sys.sql_modules** 카탈로그 뷰에서 트리거 정보가 제거됩니다.  
@@ -103,15 +103,15 @@ ON ALL SERVER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-dml-trigger"></a>1\. DML 트리거 삭제  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
+### <a name="a-dropping-a-dml-trigger"></a>A. DML 트리거 삭제  
+ 다음 예에서는 `employee_insupd` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
   
-### <a name="b-dropping-a-ddl-trigger"></a>2\. DML 트리거 삭제  
+### <a name="b-dropping-a-ddl-trigger"></a>B. DML 트리거 삭제  
  다음 예에서는 `safety` DDL 트리거를 삭제합니다.  
   
 > [!IMPORTANT]  

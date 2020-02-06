@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934885"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>'가용성 그룹 마법사'를 사용하여 Always On 가용성 그룹에 데이터베이스 추가
@@ -49,7 +49,7 @@ ms.locfileid: "67934885"
      마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>'새 가용성 그룹' 마법사 사용
@@ -93,9 +93,9 @@ ms.locfileid: "67934885"
   
 6.  **기존 보조 복제본에 연결** 페이지에서 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 모두 동일한 사용자 계정의 서비스로 실행 중인 경우 **모든 연결**을 클릭합니다. 다른 계정에서 서비스로 실행 중인 서버 인스턴스가 있는 경우 각 서버 인스턴스 이름의 오른쪽에 있는 개별 **연결** 단추를 클릭합니다.  
   
-     자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)를 참조하세요.  
+     자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)을 참조하세요.  
   
-7.  **유효성 검사** 페이지에서는 이 마법사에서 지정한 값이 새 가용성 그룹 마법사의 요구 사항을 충족하는지 여부를 확인합니다. 변경하려면 **이전** 을 클릭하여 이전 마법사 페이지로 돌아가서 하나 이상의 값을 변경하면 됩니다. **다음**을 클릭하여 **유효성 검사** 페이지로 돌아가서 **유효성 검사 다시 실행**을 클릭합니다.  
+7.  **유효성 검사** 페이지에서는 이 마법사에서 지정한 값이 새 가용성 그룹 마법사의 요구 사항을 충족하는지 여부를 확인합니다. 변경하려면 **이전** 을 클릭하여 이전 마법사 페이지로 돌아가서 하나 이상의 값을 변경하면 됩니다. **다음** 을 클릭하여 **유효성 검사** 페이지로 돌아가서 **유효성 검사 다시 실행**을 클릭합니다.  
   
      자세한 내용은 [유효성 검사 페이지&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md)를 참조하세요.  
   
@@ -113,13 +113,13 @@ ms.locfileid: "67934885"
   
      마법사가 완료되면 **닫기** 를 클릭하여 종료합니다.  
   
-     자세한 내용은 [결과 페이지&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)를 참조하세요.  
+     자세한 내용은 [결과 페이지&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
 11. 모든 보조 데이터베이스에서 초기 데이터 동기화가 자동으로 시작되지 않은 경우 아직 조인되지 않은 모든 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

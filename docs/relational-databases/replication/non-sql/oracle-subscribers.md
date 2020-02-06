@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907984"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
@@ -32,7 +32,7 @@ ms.locfileid: "72907984"
   
 1.  배포자에서 Oracle 구독자에 연결할 수 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 Oracle 클라이언트 네트워킹 소프트웨어 및 Oracle OLE DB 공급자를 설치하고 구성합니다. Oracle 클라이언트 네트워킹 소프트웨어는 사용 가능한 최신 버전이어야 합니다. Oracle에서는 최신 버전의 클라이언트 소프트웨어를 설치할 것을 권장합니다. 따라서 클라이언트 소프트웨어 버전이 데이터베이스 소프트웨어 버전보다 최신인 경우가 종종 있습니다. 소프트웨어를 설치하는 가장 간단한 방법은 Oracle 클라이언트 디스크에서 Oracle Universal Installer를 사용하는 것입니다. Oracle Universal Installer에서 다음 정보를 지정합니다.  
   
-    |정보|설명|  
+    |정보|Description|  
     |-----------------|-----------------|  
     |Oracle|Oracle 소프트웨어 설치를 위한 디렉터리 경로입니다. 기본값(C:\oracle\ora90 또는 유사한 경로)을 그대로 적용하거나 다른 경로를 입력합니다. Oracle 홈에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "Oracle 홈에 대한 고려 사항" 섹션을 참조하십시오.|  
     |Oracle 홈 이름|Oracle 홈 경로에 대한 별칭입니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72907984"
   
      Oracle Universal Installer가 작업을 완료하면 Net Configuration Assistant를 사용하여 네트워크 연결을 구성합니다. 네트워크 연결을 구성하려면 다음 4가지 정보를 입력해야 합니다. Oracle 데이터베이스 관리자는 데이터베이스와 수신기를 설정할 때 네트워크를 구성하며, 필요한 경우 이 정보를 사용자에게 제공할 수 있어야 합니다. 다음과 같은 작업을 수행해야 합니다.  
   
-    |작업|설명|  
+    |작업|Description|  
     |------------|-----------------|  
     |데이터베이스 식별|두 가지 방법으로 데이터베이스를 식별할 수 있습니다. 첫 번째 방법은 Oracle SID(시스템 식별자)를 사용하는 것으로 모든 Oracle 릴리스에서 사용할 수 있습니다. 두 번째 방법은 서비스 이름을 사용하는 것으로 Oracle 릴리스 8.0부터 사용할 수 있습니다. 두 가지 방법 모두 데이터베이스를 만들 때 구성된 값을 사용하며 클라이언트 네트워크 구성에서 데이터베이스를 위한 수신기를 구성할 때 관리자가 사용한 것과 동일한 명명 규칙을 사용하는 것이 중요합니다.|  
     |데이터베이스에 대한 네트워크 별칭 식별|Oracle 데이터베이스 액세스에 사용할 네트워크 별칭을 지정해야 합니다. 네트워크 별칭은 데이터베이스를 만들 때 구성된 원격 SID 또는 서비스 이름을 가리킵니다. 이 별칭은 다양한 Oracle 릴리스 및 제품에서 네트 서비스 이름 및 TNS 별칭 등 여러 이름으로 불립니다. SQL*Plus의 경우 로그인 시 이 별칭을 "Host String" 매개 변수로 입력하라는 메시지가 나타납니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "72907984"
   
 2.  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  명령 프롬프트에서 다음을 입력합니다.  
+3.  명령 프롬프트에 다음을 입력합니다.  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -128,7 +128,7 @@ ms.locfileid: "72907984"
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|해당 사항 없음|  
+|**sql_variant**|해당 없음|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  

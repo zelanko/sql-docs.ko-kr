@@ -1,10 +1,7 @@
 ---
-title: 운영자 속성 - 새 운영자(알림 페이지) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 새 연산자(알림 페이지)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bad4791f749e8932b4a4ccfe84ff0522476f694
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260055"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247645"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>운영자 속성 - 새 운영자(알림 페이지)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -49,7 +51,7 @@ ms.locfileid: "68260055"
 **호출기**  
 호출기 주소로 전자 메일을 보내 이 운영자에게 알립니다.  
   
-**Net send**  
+**Net Send**  
 **net send**를 사용하여 이 운영자에게 알립니다.  
   
 ## <a name="see-also"></a>참고 항목  

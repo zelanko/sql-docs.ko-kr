@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940971"
 ---
 # <a name="back-up-database-backup-options-page"></a>데이터베이스 백업(백업 옵션 페이지)
@@ -54,7 +54,7 @@ ms.locfileid: "67940971"
   
 |||  
 |-|-|  
-|**After**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
+|**이후**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
 |**위치**|백업 세트가 만료되어 덮어쓸 수 있는 특정 날짜를 지정합니다.|  
   
 ### <a name="compression"></a>압축  

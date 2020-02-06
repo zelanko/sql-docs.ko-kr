@@ -21,18 +21,18 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000507"
 ---
-# <a name="sqlvariant-transact-sql"></a>sql_variant(Transact-SQL)
+# <a name="sql_variant-transact-sql"></a>sql_variant(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 여러 가지 데이터 형식의 값을 저장하는 데이터 형식입니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68000507"
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **sql_variant**는 열, 매개 변수, 변수 및 사용자 정의 함수의 반환 값으로 사용될 수 있습니다. **sql_variant**는 이 데이터베이스 개체들이 다른 데이터 형식의 값을 지원할 수 있게 합니다.
   
 **sql_variant** 형식의 열은 다른 데이터 형식의 행을 포함할 수 있습니다. 예를 들어 **sql_variant**로 정의된 열은 **int**, **binary** 및 **char** 값을 저장할 수 있습니다.
@@ -59,7 +59,7 @@ sql_variant
   
 ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 Microsoft OLE DB Provider for ODBC(MSDASQL)를 사용할 때 **sql_variant** 열을 쿼리하면 이진 데이터로 반환됩니다. 예를 들어 문자열 데이터 'PS2091'를 포함하는 **sql_variant** 열은 0x505332303931로 반환됩니다.
   
-## <a name="comparing-sqlvariant-values"></a>sql_variant 값 비교  
+## <a name="comparing-sql_variant-values"></a>sql_variant 값 비교  
 **sql_variant** 데이터 형식은 변환을 위한 데이터 형식 계층 구조 목록의 맨 위에 속합니다. **sql_variant** 비교를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 계층 구조 순서는 데이터 형식 패밀리로 그룹화됩니다.
   
 |데이터 형식 계층|데이터 형식 패밀리|  
@@ -81,10 +81,10 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 |**smallint**|정확한 수치|  
 |**tinyint**|정확한 수치|  
 |**bit**|정확한 수치|  
-|**nvarchar**|유니코드|  
-|**nchar**|유니코드|  
-|**varchar**|유니코드|  
-|**char**|유니코드|  
+|**nvarchar**|Unicode|  
+|**nchar**|Unicode|  
+|**varchar**|Unicode|  
+|**char**|Unicode|  
 |**varbinary**|이진|  
 |**binary**|이진|  
 |**uniqueidentifier**|Uniqueidentifier |  
@@ -92,12 +92,12 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 **sql_variant** 비교에는 다음 규칙이 적용됩니다.
 -   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 서로 다른 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 높은 데이터 형식 패밀리의 값이 두 값 중 더 큰 것으로 간주됩니다.  
 -   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 동일한 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 낮은 기본 데이터 형식의 값이 암시적으로 다른 데이터 형식으로 변환된 다음, 비교됩니다.  
--   **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식의 **sql_variant** 값을 비교하는 경우 해당 데이터 정렬은 LCID, LCID 버전, 비교 플래그 및 정렬 ID를 기준으로 먼저 비교됩니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
+-   **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식의 **sql_variant** 값을 비교하는 경우 해당 데이터 정렬은 먼저 LCID, LCID 버전, 비교 플래그 및 정렬 ID와 같은 기준에 따라 비교됩니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
   
-## <a name="converting-sqlvariant-data"></a>sql_variant 데이터 변환  
+## <a name="converting-sql_variant-data"></a>sql_variant 데이터 변환  
 **sql_variant** 데이터 형식을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 개체의 데이터 형식을 **sql_variant** 형식으로 암시적으로 변환할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 **sql_variant** 데이터에서 다른 데이터 형식의 개체로의 암시 적 변환을 지원하지 않습니다.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
 다음 표에서는 **sql_variant**를 사용하여 저장할 수 없는 값 형식을 나열합니다.
   
 |||  
@@ -114,8 +114,8 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 
 ## <a name="examples"></a>예  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>1\. 테이블에서 sql_variant 사용  
- 다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `tableA`에 `sql_variant` 및 `colB` 유형인 `colA`가 있는 경우 `colB` =`1689`인 `colA`값`46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
+### <a name="a-using-a-sql_variant-in-a-table"></a>A. 테이블에서 sql_variant 사용  
+ 다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `SQL_VARIANT_PROPERTY`에 `colA` 및 `46279.1` 유형인 `colB`가 있는 경우  =`1689``tableA`인 `colA`값`sql_variant`에 대한 `colB` 정보를 검색합니다.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -137,8 +137,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>2\. 변수로 sql_variant 사용   
- 다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, @v1 변수에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
+### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 변수로 sql_variant 사용   
+ 다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, `SQL_VARIANT_PROPERTY` 변수에 대한 @v1 정보를 검색합니다.  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -149,7 +149,7 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```    
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   

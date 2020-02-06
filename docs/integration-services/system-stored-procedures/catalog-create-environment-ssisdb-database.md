@@ -11,10 +11,10 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295559"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment(SSISDB 데이터베이스)
@@ -48,7 +48,7 @@ catalog.create_environment [@folder_name =] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   이름이 같은 환경이 지정된 폴더에 이미 있는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  환경 이름은 폴더 내에서 고유해야 합니다.  
   
   

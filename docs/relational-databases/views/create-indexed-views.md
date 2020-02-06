@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325515"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
@@ -80,7 +80,7 @@ OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유�
 
 인덱싱된 뷰의 정의는 결정적이어야 합니다. `WHERE` 및 `GROUP BY` 절뿐만 아니라 SELECT 목록의 모든 식이 결정적이면 뷰가 결정적입니다. 결정적 식은 특정 입력 값 집합을 사용하여 계산될 때마다 항상 같은 결과를 반환합니다. 결정적 함수만 결정적 식에 참여할 수 있습니다. 예를 들어 `DATEADD` 함수는 세 매개 변수에 지정된 인수 값 집합에 대해 항상 같은 결과를 반환하므로 결정적 함수입니다. `GETDATE`는 항상 같은 인수로 호출되지만 실행될 때마다 반환하는 값이 바뀌므로 비결정적 함수입니다.
 
-뷰 열이 결정적인지 여부를 확인하려면 **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 사용합니다. 스키마 바인딩되어 있는 뷰의 결정적 열이 정확한지 여부를 확인하려면 `COLUMNPROPERTY` 함수의 **IsPrecise** 속성을 사용합니다. `COLUMNPROPERTY`는 TRUE이면 1을 반환하고 FALSE이면 0을 반환하며 입력이 잘못되면 NULL을 반환합니다. 이는 해당 열이 비결정적이거나 정확하지 않음을 의미합니다.
+뷰 열이 결정적인지 여부를 확인하려면 **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 사용합니다. 스키마 바인딩되어 있는 뷰의 결정적 열이 정확한지 여부를 확인하려면 **함수의**IsPrecise`COLUMNPROPERTY` 속성을 사용합니다. `COLUMNPROPERTY`는 TRUE이면 1을 반환하고 FALSE이면 0을 반환하며 입력이 잘못되면 NULL을 반환합니다. 이는 해당 열이 비결정적이거나 정확하지 않음을 의미합니다.
 
 식이 결정적인 경우에도 float 식이 포함되어 있으면 정확한 결과는 프로세서 아키텍처 또는 마이크로코드 버전에 따라 달라질 수 있습니다. 데이터 무결성을 보장하기 위해 이런 식은 인덱싱된 뷰의 키가 아닌 열로만 참여할 수 있습니다. float 식이 없는 결정적 식을 정확하다고 합니다. 정확한 결정적 식만 인덱싱된 뷰의 `WHERE` 또는 `GROUP BY` 절과 키 열에 참여할 수 있습니다.
 
@@ -112,7 +112,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
    ||||
    |-|-|-|
    |`COUNT`|ROWSET 함수(`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` 및 `OPENXML`)|`OUTER` 조인(`LEFT`, `RIGHT` 또는 `FULL`)|
-   |파생 테이블(`FROM` 절에서 `SELECT` 문을 지정하여 정의)|자체 조인|`SELECT *` 또는`SELECT <table_name>.*`을 사용하여 열 지정|
+   |파생 테이블(`SELECT` 절에서 `FROM` 문을 지정하여 정의)|자체 조인|`SELECT *` 또는`SELECT <table_name>.*`을 사용하여 열 지정|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` 또는 `AVG`|CTE(공통 테이블 식)|
    |**float**<sup>1</sup>, **text**, **ntext**, **image**, **XML** 또는 **filestream** 열|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 `OVER` 절|
    |전체 텍스트 조건자(`CONTAINS`, `FREETEXT`)|Null 허용 식을 참조하는 `SUM` 함수|`ORDER BY`|
