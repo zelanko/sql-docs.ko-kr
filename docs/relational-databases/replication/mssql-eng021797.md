@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db0911d4af8d8cbd4860a07bc8c48305ffae0648
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8e269094ddf04da0612e4118ac18552d807d31f7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711011"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287990"
 ---
 # <a name="mssql_eng021797"></a>MSSQL_ENG021797
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71711011"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |심볼 이름||  
-|메시지 텍스트|‘%s’은(는) '머신\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
+|메시지 텍스트|'%s'은(는) '컴퓨터\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
   
 ## <a name="explanation"></a>설명  
  이 오류는 `@job_login` 매개 변수에 대해 지정된 값이 Null이거나 잘못된 경우 다음 복제 저장 프로시저에서 발생합니다. 이 오류는 **db_owner** 고정 데이터베이스 역할의 멤버가 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 스크립트를 실행하는 경우 발생할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 보안 모델이 변경되었으므로 이러한 스크립트를 업데이트해야 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "71711011"
   
 -   [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
   
- 이러한 저장 프로시저는 적절한 서버의 **sysadmin** 고정 서버 역할의 멤버나 적절한 데이터베이스의 **db_owner** 고정 데이터베이스 역할의 멤버만 실행할 수 있습니다. 저장 프로시저는 각각 에이전트 작업을 만들어 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있게 해줍니다. 역할이 **sysadmin** 인 사용자의 경우 Windows 계정이 지정되어 있지 않더라도(계정이 지정된 경우에는 올바른 계정이어야 함) 에이전트 작업이 암시적으로 생성됩니다. 에이전트는 적절한 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 컨텍스트 아래에서 실행됩니다. 계정이 반드시 필요한 것은 아니지만 에이전트에 대해 별도의 계정을 지정하는 것은 보안을 위한 최선의 구현 방법입니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을(를) 참조하세요.  
+ 이러한 저장 프로시저는 적절한 서버의 **sysadmin** 고정 서버 역할의 멤버나 적절한 데이터베이스의 **db_owner** 고정 데이터베이스 역할의 멤버만 실행할 수 있습니다. 저장 프로시저는 각각 에이전트 작업을 만들어 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있게 해줍니다. 역할이 **sysadmin** 인 사용자의 경우 Windows 계정이 지정되어 있지 않더라도(계정이 지정된 경우에는 올바른 계정이어야 함) 에이전트 작업이 암시적으로 생성됩니다. 에이전트는 적절한 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 컨텍스트 아래에서 실행됩니다. 계정이 반드시 필요한 것은 아니지만 에이전트에 대해 별도의 계정을 지정하는 것은 보안을 위한 최선의 구현 방법입니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
  각 프로시저의 `@job_login` 매개 변수에 대해 올바른 Windows 계정을 지정합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가져온 복제 스크립트를 사용할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 필요한 저장 프로시저와 매개 변수를 포함하도록 스크립트를 업데이트합니다. 자세한 내용은 [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)를 참조하세요.  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130298"
 ---
 # <a name="max-transact-sql"></a>MAX(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130298"
 
   식의 최대값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>반환 형식  
  *식*과 동일한 값을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  MAX는 Null 값을 무시합니다.  
  
  선택할 행이 없는 경우 MAX는 NULL을 반환합니다.  
@@ -73,7 +73,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1\. 간단한 예  
+### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 가장 높은(최대) 세율을 반환합니다.  
   
 ```sql  
@@ -92,8 +92,8 @@ GO
  (1 row(s) affected)  
  ```  
   
-### <a name="b-using-the-over-clause"></a>2\. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
+### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
+ 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 `HumanResources.Department` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```sql  
 SELECT DISTINCT Name  

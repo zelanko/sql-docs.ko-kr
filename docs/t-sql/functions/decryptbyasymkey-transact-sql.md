@@ -20,10 +20,10 @@ ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c187caf0dc0027d6d7fa86cbd1bee09e76f0228d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118958"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68118958"
 
 이 함수는 대칭 키를 사용하여 암호화된 데이터의 암호를 해독합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 대칭 암호화/암호 해독, 비대칭 키 암호화/암호 해독과 비교하여 비용이 많습니다. 큰 데이터 세트를 작업할 때(예: 테이블에 저장된 사용자 데이터) 개발자는 비대칭 키 암호화/암호 해독을 피하는 것이 좋습니다.  
   
 ## <a name="permissions"></a>사용 권한  

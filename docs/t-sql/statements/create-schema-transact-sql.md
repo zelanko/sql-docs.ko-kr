@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117297"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117297"
 
   현재 데이터베이스에 스키마를 만듭니다. CREATE SCHEMA 트랜잭션에서는 새 스키마 내에 테이블과 뷰를 만들고 해당 개체에 대한 GRANT, DENY 또는 REVOKE 권한을 설정할 수도 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  새 스키마를 제외한 모든 보안 개체에 대한 사용 권한을 거부하는 DENY 문을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]  
 >  CREATE SCHEMA AUTHORIZATION을 포함하지만 이름을 지정하지 않는 문은 이전 버전과의 호환성을 위해서만 허용됩니다. 이 문은 오류를 일으키지 않지만 스키마를 만들지는 않습니다.  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **암시적 스키마 및 사용자 만들기**  
   
- 일부 경우에 사용자는 데이터베이스 사용자 계정(데이터베이스의 데이터베이스 보안 주체)이 없더라도 데이터베이스를 사용할 수 있습니다. 이런 경우 다음과 같은 상황이 발생할 수 있습니다.  
+ 일부 경우에 사용자는 데이터베이스 사용자 계정(데이터베이스의 데이터베이스 보안 주체)이 없더라도 데이터베이스를 사용할 수 있습니다. 이는 다음과 같은 상황에서 발생할 수 있습니다.  
   
 -   로그인에 **CONTROL SERVER** 권한이 있습니다.  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  이 동작은 Windows 그룹에 속한 사용자가 개체를 만들어 소유할 수 있도록 허용하므로 필요합니다. 그러나 스키마 및 사용자가 의도하지 않게 생성될 수 있습니다. 의도하지 않은 사용자 및 스키마 생성을 방지하려면 가능한 경우 데이터베이스 보안 주체를 명시적으로 만들어 기본 스키마를 할당하세요. 또는 데이터베이스에서 개체를 만들 때 두, 세 부분으로 구성된 개체 이름을 사용하여 기존 스키마를 명시적으로 지정합니다.  
 
 > [!NOTE]
->  Azure Active Directory 사용자의 암시적 생성은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 가능하지 않습니다. 외부 공급자에서 Azure AD 사용자를 생성하면 AAD에서 사용자 상태를 확인해야 하므로 사용자 생성은 오류 2760과 함께 실패합니다. **지정한 스키마 이름 "\<user_name@domain>"이 없거나 사용할 권한이 없습니다.** 그리고 2759 오류: **이전 오류로 인해 CREATE SCHEMA가 실패했습니다.** 이러한 오류를 해결하려면 먼저 외부 공급자로부터 Azure AD 사용자를 만든 다음, 개체를 만드는 명령문을 다시 실행하십시오.
+>  Azure Active Directory 사용자의 암시적 생성은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 가능하지 않습니다. 외부 공급자에서 Azure AD 사용자를 생성하려면 AAD에서 사용자 상태를 확인해야 하므로 사용자 생성은 오류 2760과 함께 실패합니다. **지정한 스키마 이름 "\<user_name@domain>"이 없거나 그것을 사용할 권한이 없습니다.** 그리고 2759 오류 또한 발생합니다. **CREATE SCHEMA가 이전 오류로 인해 실패했습니다.** 이러한 오류를 해결하려면 먼저 외부 공급자로부터 Azure AD 사용자를 만든 다음, 개체를 만드는 명령문을 다시 실행하십시오.
  
   
 ## <a name="deprecation-notice"></a>사용 중단 고지 사항  
@@ -141,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>1\. 스키마 만들기 및 사용 권한 부여  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>A. 스키마 만들기 및 사용 권한 부여  
  다음 예에서는 `Sprockets`가 소유하고 `Annik` 테이블을 포함하는 `NineProngs` 스키마를 만듭니다. 이 문에서는 `SELECT`에게 `Mandar` 권한을 부여하고 `SELECT`에게는 `Prasanna` 권한을 거부합니다. `Sprockets` 및 `NineProngs`는 단일 문으로 생성됩니다.  
   
 ```  
@@ -154,9 +154,9 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>2\. 스키마 및 스키마에 테이블 만들기  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. 스키마 및 스키마에 테이블 만들기  
  다음 예에서는 `Sales` 스키마를 만든 다음, 해당 스키마에 `Sales.Region` 테이블을 만듭니다.  
   
 ```  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 스키마 소유자 설정  
- 다음 예에서는 `Mary`가 소유한 `Production` 스키마를 만듭니다.  
+ 다음 예에서는 `Production`가 소유한 `Mary` 스키마를 만듭니다.  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582060"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가
@@ -70,7 +70,7 @@ ms.locfileid: "65582060"
 |--------------------------------------------|-----------------------|  
 |**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**정수**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**부동**|**Single**, **Double**, **Decimal**|  
 |**텍스트**|**String**, **Char**, **GUID**, **Timespan**|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65582060"
 |**TopN, BottomN**|식을 하나의 **Integer** 값과 비교합니다.|  
 |**TopPercent, BottomPercent**|식을 하나의 **Integer** 또는 **Float** 값과 비교합니다.|  
 |**사이**|식이 두 값 사이에 있는지(해당 값 포함) 여부를 테스트합니다.|  
-|**입력**|식이 일련의 값에 포함되어 있는지 여부를 테스트합니다.|  
+|**위치**|식이 일련의 값에 포함되어 있는지 여부를 테스트합니다.|  
   
 ### <a name="value"></a>값  
  Value 식은 필터 수식의 최종 부분을 지정합니다. 보고서 처리기는 평가 식을 사용자가 지정한 데이터 형식으로 변환한 다음 필터 수식 전체를 계산하여 식에 지정된 데이터가 필터를 통과하는지 여부를 확인합니다.  

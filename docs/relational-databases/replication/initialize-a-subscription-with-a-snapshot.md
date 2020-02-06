@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3624d1eef64f10ae93802c4a7514fd54edcc0e74
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767849"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287930"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68767849"
  특정 시점에서 중단된 스냅샷 전송은 자동으로 재개되며 전송이 이미 완료된 파일은 다시 보내지 않습니다. 스냅샷 에이전트의 배달 단위는 각 게시 아티클에 대한 bcp 파일이므로 부분적으로 배달된 파일은 완전히 다시 배달되어야 합니다. 그러나 스냅샷 배달을 재개하면 전송되는 데이터 양이 크게 줄어들 수 있으므로 연결이 불안한 경우에도 스냅샷이 늦지 않게 배달될 수 있습니다.  
   
 ## <a name="snapshot-options"></a>Snapshot Options  
- 스냅샷으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다. 다음 작업을 수행할 수 있습니다.  
+ 스냅샷으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다. 다음을 수행할 수 있습니다.  
   
 -   기본 스냅샷 폴더 위치 대신 또는 기본 스냅샷 폴더 위치에 추가로 대체 스냅샷 폴더 위치를 지정합니다. 자세한 내용은 [스냅샷 옵션 수정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   

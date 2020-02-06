@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4fb95da97a5fbe9df9024a48b30d581e771d2ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122014"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>같지 않음(Transact SQL) - 기존
@@ -36,7 +36,7 @@ ms.locfileid: "68122014"
 
   두 식을 비교합니다(비교 연산자). Null이 아닌 식을 비교하는 경우 왼쪽 피연산자가 오른쪽 피연산자와 같지 않으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다. 피연산자 중 하나 또는 둘 다가 NULL이면 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md) 항목을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ expression <> expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 <> 사용  
+### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 <> 사용  
  다음 예에서는 `Production.ProductCategory` 테이블에서 `ProductCategoryID`의 값이 3  또는 2가 아닌 모든 행을 반환합니다.  
   
 ```  
