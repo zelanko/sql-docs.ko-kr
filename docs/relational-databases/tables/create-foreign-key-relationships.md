@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123754"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.
+이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.
 
 ## <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 제한 사항
 
@@ -73,7 +73,7 @@ ms.locfileid: "68123754"
 
 ### <a name="using-transact-sql"></a>Transact-SQL 사용
 
-다음 예제에서는 테이블을 만들고 AdventureWorks 데이터베이스의 `Sales.SalesReason` 테이블에 있는 `SalesReasonID` 열을 참조하는 `TempID` 열의 외래 키 제약 조건을 정의합니다. ON DELETE CASCADE 및 ON UPDATE CASCADE 절을 사용하면 `Sales.SalesReason` 테이블에 대한 변경 내용이 `Sales.TempSalesReason` 테이블에 자동으로 전파되었는지 확인할 수 있습니다.    
+다음 예제에서는 테이블을 만들고 AdventureWorks 데이터베이스의 `TempID` 테이블에 있는 `SalesReasonID` 열을 참조하는 `Sales.SalesReason` 열의 외래 키 제약 조건을 정의합니다. ON DELETE CASCADE 및 ON UPDATE CASCADE 절을 사용하면 `Sales.SalesReason` 테이블에 대한 변경 내용이 `Sales.TempSalesReason` 테이블에 자동으로 전파되었는지 확인할 수 있습니다.    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -91,7 +91,7 @@ CREATE TABLE Sales.TempSalesReason
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>기존 테이블에서 외래 키 만들기
 
 ### <a name="using-transact-sql"></a>Transact-SQL 사용
-다음 예제에서는 `TempID` 열의 외래 키를 만들고 AdventureWorks 데이터베이스의 `Sales.SalesReason` 테이블에 있는 `SalesReasonID` 열을 참조합니다.
+다음 예제에서는 `TempID` 열의 외래 키를 만들고 AdventureWorks 데이터베이스의 `SalesReasonID` 테이블에 있는 `Sales.SalesReason` 열을 참조합니다.
 
 ```sql
 ALTER TABLE Sales.TempSalesReason
@@ -101,7 +101,7 @@ ALTER TABLE Sales.TempSalesReason
       ON UPDATE CASCADE
 ;
 ```
-참조 항목:
+자세한 내용은 다음을 참조하세요.
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)

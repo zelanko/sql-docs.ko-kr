@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228436"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
@@ -28,7 +28,7 @@ ms.locfileid: "70228436"
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>'sp_send_dbmail' 저장 프로시저를 찾을 수 없음
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 저장 프로시저는 msdb 데이터베이스에 설치됩니다. msdb 데이터베이스에서 **sp_send_dbmail**을 실행하거나 저장 프로시저 이름의 세 부분을 모두 지정해야 합니다.
 
-예:
+예제:
 ```sql
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
@@ -48,7 +48,7 @@ EXEC dbo.sp_send_dbmail ...
 
 프로필에 대한 권한을 확인하려면 프로필 이름으로 저장 프로시저 [sysmail_help_principalprofile_sp(Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)를 실행합니다. 저장 프로시저 [sysmail_add_principalprofile_sp(Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) 또는 [데이터베이스 메일 구성 마법사](configure-database-mail.md)를 사용하여 msdb 사용자 또는 그룹에 프로필 액세스 권한을 부여합니다.
 
-## <a name="permission-denied-on-sp_send_dbmail"></a>sp_send_dbmail에 대해 권한 거부됨
+## <a name="permission-denied-on-sp_send_dbmail"></a>sp_send_dbmail에 대해 권한이 거부 경우
 
 이 항목에서는 데이터베이스 메일 보내기를 시도하는 사용자가 sp_send_dbmail을 실행할 권한이 없음을 나타내는 오류 메시지를 받은 경우의 문제 해결 방법을 설명합니다.
 
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 **sp_configure** 시스템 저장 프로시저의 [Database Mail XPs 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)을 사용합니다.
+데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션**을 사용합니다.
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  
@@ -109,7 +109,7 @@ EXECUTE dbo.sysmail_help_status_sp;
 EXECUTE dbo.sysmail_start_sp;
 ```
 
-Service Broker는 자신이 활성화될 때 메시지의 대화 수명을 검사하며 지정된 대화 수명보다 오랫동안 Service Broker 전송 큐에 남아있던 메시지는 즉시 실패합니다. 데이터베이스 메일은 실패한 메시지의 상태를 [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) 및 관련 뷰에 업데이트합니다. 사용자는 이메일 메시지를 다시 보낼지 여부를 결정해야 합니다. 데이터베이스 메일이 사용하는 대화 수명의 구성 방법은 [sysmail_configure_sp(Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md)를 참조하세요.
+Service Broker는 자신이 활성화될 때 메시지의 대화 수명을 검사하며 지정된 대화 수명보다 오랫동안 Service Broker 전송 큐에 남아있던 메시지는 즉시 실패합니다. 데이터베이스 메일은 실패한 메시지의 상태를 [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) 및 관련 뷰에 업데이트합니다. 사용자는 전자 메일 메시지를 다시 보낼지 여부를 결정해야 합니다. 데이터베이스 메일이 사용하는 대화 수명의 구성 방법은 [sysmail_configure_sp(Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md)를 참조하세요.
 
 
 

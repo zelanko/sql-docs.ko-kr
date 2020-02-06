@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194106"
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
@@ -40,9 +40,9 @@ ms.locfileid: "63194106"
 |**CustomProperties**|사용자 지정 보고서 항목에 대한 사용자 지정 속성 컬렉션입니다.|  
 |**Height**|사용자 지정 보고서 항목 컨트롤의 높이입니다.|  
 |**Width**|사용자 지정 보고서 항목 컨트롤의 너비입니다.|  
-|**보고서**|보고서의 데이터 세트 목록과 같은 보고서 수준 속성의 컨테이너입니다.|  
+|**Report**|보고서의 데이터 세트 목록과 같은 보고서 수준 속성의 컨테이너입니다.|  
 |**AltReportItem**|사용자 지정 보고서 항목 런타임 컨트롤이 지원되지 않는 곳에서 사용하는, 대체 보고서 항목 개체입니다.|  
-|**스타일**|사용자 지정 보고서 항목의 스타일 속성입니다.|  
+|**Style**|사용자 지정 보고서 항목의 스타일 속성입니다.|  
 |**Adornment**|컨트롤의 대화형 편집에 사용되는 도구 영역 창입니다.|  
 |**Site**|구성 요소의 **사이트**입니다.|  
 |**DesignerVerbCollection**|컨트롤의 바로 가기 메뉴를 위한 사용자 지정 동사 배열입니다.|  
@@ -61,7 +61,7 @@ ms.locfileid: "63194106"
 |**OnPaint**|**Paint** 이벤트에 대한 응답으로 호출됩니다.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 사용자 지정 보고서 항목의 유형을 식별하는 데 사용되는 특성입니다. 보고서 디자이너 구성 파일의 **ReportItem** 요소의 \<**Name**> 특성 값과 이름이 일치해야 합니다.  
+ 사용자 지정 보고서 항목의 유형을 식별하는 데 사용되는 특성입니다. 보고서 디자이너 구성 파일의 \<ReportItem**요소의** **Name**> 특성 값과 이름이 일치해야 합니다.  
   
 #### <a name="public-methods"></a>Public 메서드  
   

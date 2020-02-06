@@ -1,28 +1,28 @@
 ---
-title: 추적 테이블에 최대 테이블 크기 설정(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 추적 테이블에 최대 테이블 크기 설정
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- size [SQL Server], trace tables
-- maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c12f87a5c70050fa6de7cfec41ee81fe8496452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 21d68638d85acd48f8f1c552319b0ea4784dec68
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104190"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307612"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>추적 테이블에 최대 테이블 크기 설정(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 테이블의 최대 테이블 크기를 설정하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 테이블의 최대 테이블 크기를 설정하는 방법에 대해 설명합니다.  
   
 ### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>추적 테이블에 최대 테이블 크기를 설정하려면  
   
@@ -54,6 +54,6 @@ ms.locfileid: "68104190"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

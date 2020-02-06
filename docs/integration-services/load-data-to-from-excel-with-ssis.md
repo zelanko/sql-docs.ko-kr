@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295854"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
@@ -51,11 +51,11 @@ ms.locfileid: "71295854"
 
 -   SSIS에 빌드되는 **SQL Server 가져오기 및 내보내기 마법사**. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) 및 [Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
-## <a name="files-you-need"> </a> Excel에 연결하는 데 필요한 파일 가져오기
+## <a name="files-you-need"></a> Excel에 연결하는 데 필요한 파일 가져오기
 
 SSIS를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
 
-Excel용 연결 구성 요소의 최신 버전을 다음에서 다운로드합니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920). 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
+[Microsoft Access 데이터베이스 엔진 2016 재배포 가능](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Excel용 연결 구성 요소를 다운로드합니다. 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
 
 ### <a name="notes-about-the-download-and-installation"></a>다운로드 및 설치에 대한 참고
 
@@ -63,11 +63,11 @@ Excel용 연결 구성 요소의 최신 버전을 다음에서 다운로드합�
 
 -   컴퓨터에 32비트 버전의 Office가 이미 설치되어 있는 경우 32비트 버전의 구성 요소를 설치해야 합니다. 또한 32비트 모드에서 SSIS 패키지를 실행하거나 가져오기 및 내보내기 마법사의 32비트 버전을 실행하는지 확인해야 합니다.
 
--   Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어
+-   Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 다음은 그 예입니다.
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    2016 재배포 가능 패키지를 설치하는 데 문제가 있는 경우 다음에서 2010 재배포 가능 패키지를 대신 설치합니다. [Microsoft Access 데이터베이스 엔진 2010 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=13255). (Excel 2013용 재배포 가능 패키지는 없습니다.)
+    2016 재배포 가능을 설치하는 데 문제가 있는 경우 [Microsoft Access 데이터베이스 엔진 2010 재배포 가능](https://www.microsoft.com/download/details.aspx?id=13255)에서 2010 재배포 가능 패키지를 대신 설치합니다. (Excel 2013용 재배포 가능 패키지는 없습니다.)
 
 ## <a name="specify-excel"></a> Excel을 데이터 원본으로 지정
 
@@ -87,7 +87,7 @@ SSIS에서 Excel 연결 관리자를 만들어 Excel 원본 또는 대상 파일
 
 데이터 원본의 목록에서 Excel이 표시되지 않는 경우 32비트 마법사를 실행하고 있는지 확인합니다. Excel 연결 구성 요소는 일반적으로 32비트 파일이며 64비트 마법사에는 표시되지 않습니다.
 
-## <a name="excel-file"> </a> Excel 파일 및 파일 경로
+## <a name="excel-file"></a> Excel 파일 및 파일 경로
 
 제공할 정보의 첫 번째 부분은 Excel 파일에 대한 경로 및 파일 이름입니다. 이 정보는 SSIS 패키지의 **Excel 연결 관리자 편집기**나 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 입력합니다.
 
@@ -214,7 +214,7 @@ SSIS에서는 데이터 형식을 암시적으로 변환하지 않습니다. 따
 
 Excel 드라이버는 지정한 원본에서 특정 개수의 행(기본값: 8행)을 읽어 각 열의 데이터 형식을 추측합니다. 열에 혼합된 데이터 형식, 특히 숫자 데이터와 텍스트 데이터가 혼합되어 있으면 드라이버는 주로 사용된 데이터 형식을 지정하고 다른 형식의 데이터가 포함된 셀에 Null 값을 반환합니다. 사용된 횟수가 같은 경우에는 숫자 유형이 적용됩니다. Excel 워크시트에서 대부분의 셀 서식 옵션은 이러한 데이터 형식 결정에 영향을 주지 않습니다.
 
-모든 값을 텍스트로 가져오도록 가져오기 모드를 지정하여 Excel 드라이버의 이러한 동작을 수정할 수 있습니다. 가져오기 모드를 지정하려면 속성 창에서 Excel 연결 관리자의 연결 문자열에 있는 **확장 속성** 값에 `IMEX=1`을 추가합니다. 
+모든 값을 텍스트로 가져오도록 가져오기 모드를 지정하여 Excel 드라이버의 이러한 동작을 수정할 수 있습니다. 가져오기 모드를 지정하려면 속성 창에서 Excel 연결 관리자의 연결 문자열에 있는 `IMEX=1`확장 속성**값에**을 추가합니다. 
 
 ### <a name="truncated-text"></a>잘린 텍스트
 
@@ -254,9 +254,9 @@ Excel 열에 텍스트 데이터가 포함되어 있음이 확인되면 드라�
 
 -   기존 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 255자보다 긴 값의 인스턴스가 하나 이상 포함되어야 합니다.
 
--   패키지를 디자인하는 동안, 런타임 시 또는 가져오기 및 내보내기 마법사에 의해 새 대상 테이블을 만드는 경우 `CREATE TABLE` 문은 대상 메모 열의 데이터 형식으로 LONGTEXT(또는 해당 동의어 중 하나)를 사용해야 합니다. 마법사에서 필요한 경우 **열 매핑** 페이지의 **대상 테이블 만들기** 옵션 옆에 있는 **SQL 편집**을 클릭하여 `CREATE TABLE` 문을 확인하고 수정합니다.
+-   패키지를 디자인하는 동안, 런타임 시 또는 가져오기 및 내보내기 마법사에 의해 새 대상 테이블을 만드는 경우 `CREATE TABLE` 문은 대상 메모 열의 데이터 형식으로 LONGTEXT(또는 해당 동의어 중 하나)를 사용해야 합니다. 마법사에서 필요한 경우 `CREATE TABLE`열 매핑**페이지의**대상 테이블 만들기**옵션 옆에 있는**SQL 편집**을 클릭하여**  문을 확인하고 수정합니다.
 
-## <a name="related-content"></a>관련 내용
+## <a name="related-content"></a>관련 콘텐츠
 
 이 문서에 설명된 구성 요소와 절차에 대한 자세한 내용은 다음 문서를 참조하세요.
 

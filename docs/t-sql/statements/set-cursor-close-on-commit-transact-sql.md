@@ -24,18 +24,18 @@ ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929106"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION 문의 동작을 제어합니다. 이 설정의 기본값은 OFF입니다. 즉, 트랜잭션을 커밋할 때 서버가 커서를 닫지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67929106"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  CURSOR_CLOSE_ON_COMMIT 옵션이 ON이면 ISO에 따라 커밋 또는 롤백될 때 열려 있는 모든 커서를 닫습니다. SET CURSOR_CLOSE_ON_COMMIT 옵션이 OFF이면 트랜잭션이 커밋될 때 커서가 닫히지 않습니다.  
   
 > [!NOTE]  

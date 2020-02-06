@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255458"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 스키마 컬렉션 사용 권한(Transact-SQL)

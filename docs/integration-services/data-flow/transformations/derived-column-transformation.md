@@ -20,10 +20,10 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297960"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
@@ -50,7 +50,7 @@ ms.locfileid: "71297960"
 ## <a name="configuration-of-the-derived-column-transformation"></a>파생 열 변환 구성  
  다음과 같은 방법으로 파생 열 변환을 구성할 수 있습니다.  
   
--   변경될 각 입력 열이나 새 열에 대한 식을 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+-   변경될 각 입력 열이나 새 열에 대한 식을 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
     > [!NOTE]  
     >  파생 열 변환에서 덮어쓰는 입력 열을 참조하는 식은 파생 값이 아닌 원래 열 값을 사용합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "71297960"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71297960"
  **정밀도**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 전체 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
- **소수 자릿수**  
+ **규모**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 소수 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
  **코드 페이지**  

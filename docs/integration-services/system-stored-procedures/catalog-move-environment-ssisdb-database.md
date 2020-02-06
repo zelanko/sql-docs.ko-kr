@@ -11,10 +11,10 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296833"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment(SSISDB 데이터베이스)
@@ -48,7 +48,7 @@ catalog.move_environment [ @source_folder = ] source_folder
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -68,7 +68,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로젝트의 환경 참조는 환경과 함께 이동하지 않습니다. 따라서 수동으로 업데이트해야 합니다. 이 저장 프로시저는 환경 이동으로 인해 환경 참조가 끊어진 경우에도 성공합니다. 이 저장 프로시저가 완료된 후에 환경 참조를 업데이트해야 합니다.  
   
 > [!NOTE]  

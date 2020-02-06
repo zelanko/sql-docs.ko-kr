@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126992"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
@@ -38,7 +38,7 @@ ms.locfileid: "68126992"
  이 시퀀스를 소유할 스키마를 지정합니다.  
   
  **데이터 형식**  
- 시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음을 포함합니다.  
+ 시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음 내용이 포함됩니다.  
   
 |데이터 형식|범위|  
 |---------------|-----------|  

@@ -13,10 +13,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298515"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>조회 변환 전체 캐시 모드 - 캐시 연결 관리자
@@ -53,7 +53,7 @@ ms.locfileid: "71298515"
   
 -   같은 캐시 파일을 사용하도록 다른 패키지에 캐시 연결 관리자 구성  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [캐시 변환](../../integration-services/data-flow/transformations/cache-transform.md)  
   

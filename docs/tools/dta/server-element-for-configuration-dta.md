@@ -1,10 +1,7 @@
 ---
-title: Configuration의 Server 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Configuration의 Server 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f5ce7a8d8cda4c130da96a68e9cbdbacd8b5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9bb781ac08e8dc8a7750dfbcea874287fb5c2241
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307608"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration의 Server 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 엔진 튜닝 관리자가 가상 구성( **Configuration** 요소에 의해 지정됨)을 평가하는 서버에 대한 식별 정보를 포함합니다.  
+
+데이터베이스 엔진 튜닝 관리자가 가상 구성( **Configuration** 요소에 의해 지정됨)을 평가하는 서버에 대한 식별 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105989"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -50,7 +53,7 @@ ms.locfileid: "68105989"
 |**부모 요소**|[Configuration 요소&#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)|  
 |**자식 요소**|[Server의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Configuration의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Server** 요소에 하나의 **Configuration** 요소만 지정할 수 있습니다. **데이터베이스 엔진 튜닝 관리자 XML 스키마** 에서 이 요소의 이름은 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)입니다. 이 **Server** 요소와 **DTAInput** 요소의 자식 요소를 혼동하지 마십시오. 자세한 내용은 [Server 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
