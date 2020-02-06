@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74550192"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY(Transact-SQL)
@@ -60,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 테이블에서 sql_variant 사용  
- 다음 예에서는 `tableA`에 `sql_variant` 및 `colB` 형식의 `colA`가 있는 경우 `colB` =`1689`일 때 `colA` 값 `46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
+ 다음 예에서는 `SQL_VARIANT_PROPERTY`에 `colA` 및 `46279.1` 형식의 `colB`가 있는 경우  =`1689``tableA`일 때 `colA` 값 `sql_variant`에 대한 `colB` 정보를 검색합니다.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -83,7 +83,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 변수로 sql_variant 사용   
- 다음 예에서는 변수 @v1에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
+ 다음 예에서는 변수 `SQL_VARIANT_PROPERTY`에 대한 @v1 정보를 검색합니다.  
   
 ```sql    
 DECLARE @v1 sql_variant;  

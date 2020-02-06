@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425935"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425935"
 
   현재 데이터베이스의 파일 이름과 속성 이름이 지정되면 지정된 파일 이름 속성 값을 반환합니다. 현재 데이터베이스에 없는 파일 또는 존재하지 않는 확장 파일 속성에 대한 NULL을 반환합니다. 현재 확장된 파일 속성은 Azure Blob 스토리지에 있는 데이터베이스에만 적용됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|값|설명|
+|값|Description|
 |-----------|-----------------|  
 |**BlobTier**|대상 Azure 페이지 Blob의 계층입니다. Azure 페이지 Blob 스토리지를 사용하는 표준 및 GeneralPurpose 데이터베이스에만 적용됩니다.|
 |**AccountType**|스토리지 계정 유형은 BLOB 스토리지인지 파일 스토리지인지, 프리미엄 스토리지인지 표준 스토리지인지를 나타냅니다.|
@@ -58,7 +58,7 @@ FILEPROPERTYEX ( name , property )
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *file_name*은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
   
 ## <a name="examples"></a>예  

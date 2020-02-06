@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843648"
 ---
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73843648"
 
   **uniqueidentifier** 형식의 고유한 값을 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,12 +43,12 @@ NEWID ( )
 ## <a name="return-types"></a>반환 형식  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `NEWID()`는 RFC4122와 호환됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-newid-function-with-a-variable"></a>1\. 변수가 있는 NEWID 함수 사용  
+### <a name="a-using-the-newid-function-with-a-variable"></a>A. 변수가 있는 NEWID 함수 사용  
  다음 예에서는 `NEWID()`를 사용하여 **uniqueidentifier** 데이터 형식으로 선언된 변수에 값을 할당합니다. 값이 테스트되기 전에 **uniqueidentifier** 데이터 형식 변수의 값이 인쇄됩니다.  
   
 ```  
@@ -67,11 +67,11 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
 > [!NOTE]  
 >  NEWID에서 반환된 값은 컴퓨터마다 다릅니다. 설명을 돕기 위해 이 숫자가 표시됩니다.  
   
-### <a name="b-using-newid-in-a-create-table-statement"></a>2\. CREATE TABLE 문에서 NEWID 사용  
+### <a name="b-using-newid-in-a-create-table-statement"></a>B. CREATE TABLE 문에서 NEWID 사용  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 다음 예에서는 **uniqueidentifier** 데이터 형식을 사용하여 `cust` 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
+ 다음 예에서는 `cust`uniqueidentifier**데이터 형식을 사용하여** 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727731"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 PREDICT T-SQL 문 모니터링
@@ -24,7 +24,7 @@ ms.locfileid: "73727731"
 
 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 문을 지원하는 모든 버전의 SQL Server에서 다음 확장 이벤트를 사용할 수 있습니다. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |이벤트  |기본 제공 실행 시간 중단점|
 |predict_model_cache_hit |이벤트|PREDICT 함수 모델 캐시에서 모델을 검색할 때 발생합니다. 다른 predict_model_cache_* 이벤트와 함께 이 이벤트를 사용하여 PREDICT 함수 모델 캐시에서 발생한 문제를 해결하세요.|

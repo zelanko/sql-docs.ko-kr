@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914268"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 서버 사용 권한(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914268"
 
   서버 수준의 GRANT 및 DENY 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  사용자 정의 서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스가 master인 경우에만 서버 범위의 사용 권한을 취소할 수 있습니다.  
   
  REVOKE는 GRANT 및 DENY 권한을 모두 제거합니다.  
@@ -145,8 +145,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-a-permission-from-a-login"></a>1\. 로그인에서 사용 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW SERVER STATE`에서 `WanidaBenshoof` 권한을 취소합니다.  
+### <a name="a-revoking-a-permission-from-a-login"></a>A. 로그인에서 사용 권한 취소  
+ 다음 예에서는 `VIEW SERVER STATE` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `WanidaBenshoof` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -154,8 +154,8 @@ REVOKE VIEW SERVER STATE FROM WanidaBenshoof;
 GO  
 ```  
   
-### <a name="b-revoking-the-with-grant-option"></a>2\. WITH GRANT 옵션 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONNECT SQL`에서 `JanethEsteves`을 부여할 수 있는 권한을 취소합니다.  
+### <a name="b-revoking-the-with-grant-option"></a>B. WITH GRANT 옵션 취소  
+ 다음 예에서는 `CONNECT SQL` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `JanethEsteves`을 부여할 수 있는 권한을 취소합니다.  
   
 ```  
 USE master;  

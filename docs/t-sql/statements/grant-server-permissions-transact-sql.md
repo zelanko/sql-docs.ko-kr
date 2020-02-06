@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050795"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 서버 사용 권한(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68050795"
 
   서버에 대한 사용 권한을 부여합니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  사용자 정의 서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스가 master인 경우에만 서버 범위의 사용 권한을 부여할 수 있습니다.  
   
  서버 사용 권한에 대한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되고 서버 보안 주체에 대한 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 역할의 멤버 자격에 대한 정보는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
@@ -127,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 세 가지 서버 사용 권한이 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 추가되었습니다.  
   
  **CONNECT ANY DATABASE** 권한  
@@ -144,8 +144,8 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-a-permission-to-a-login"></a>1\. 로그인에 사용 권한 부여  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONTROL SERVER`에 대해 `TerryEminhizer` 권한을 부여합니다.  
+### <a name="a-granting-a-permission-to-a-login"></a>A. 로그인에 사용 권한 부여  
+ 다음 예에서는 `CONTROL SERVER` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 `TerryEminhizer` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -153,8 +153,8 @@ GRANT CONTROL SERVER TO TerryEminhizer;
 GO  
 ```  
   
-### <a name="b-granting-a-permission-that-has-grant-permission"></a>2\. GRANT 권한이 있는 사용 권한 부여  
- 다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `ALTER ANY EVENT NOTIFICATION`에 대해 `JanethEsteves`을 부여합니다.  
+### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. GRANT 권한이 있는 사용 권한 부여  
+ 다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 `ALTER ANY EVENT NOTIFICATION` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 `JanethEsteves`을 부여합니다.  
   
 ```  
 USE master;  

@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066098"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68066098"
   저장 프로시저, 함수, 어셈블리 또는 트리거에 디지털 서명을 추가하고 연대 서명도 추가합니다.  
   
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 비대칭 키의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서명하거나 연대 서명할 모듈과 모듈에 서명하는 데 사용되는 인증서 또는 비대칭 키가 있어야 합니다. 모듈의 모든 문자는 서명 계산에 포함됩니다. 여기에는 선행 캐리지 리턴과 줄 바꿈도 포함됩니다.  
   
  모듈에 서명하거나 연대 서명하는 데 사용되는 인증서와 비대칭 키의 수는 제한되지 않습니다.  
@@ -103,7 +103,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>1\. 인증서를 사용하여 저장 프로시저에 서명  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 인증서를 사용하여 저장 프로시저에 서명  
  다음 예에서는 `HumanResources.uspUpdateEmployeeLogin` 인증서를 사용하여 `HumanResourcesDP` 저장 프로시저에 서명합니다.  
   
 ```  
@@ -113,7 +113,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>2\. 서명된 BLOB을 사용하여 저장 프로시저에 서명  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 서명된 BLOB을 사용하여 저장 프로시저에 서명  
  다음 예에서는 새 데이터베이스를 만들고 예에서 사용할 인증서를 만듭니다. 예에서는 간단한 저장 프로시저를 만들어 서명하고 `sys.crypt_properties`에서 서명 BLOB을 검색합니다. 서명이 삭제된 후 다시 추가됩니다. 예에서는 WITH SIGNATURE 구문을 사용하여 프로시저에 서명합니다.  
   
 ```  

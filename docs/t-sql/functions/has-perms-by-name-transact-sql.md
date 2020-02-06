@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982948"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982948"
 
   보안 개체에 대한 현재 사용자의 유효 사용 권한을 평가합니다. 연관된 함수는 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *securable_class*는 **nvarchar(60)** 형식의 스칼라 식입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** 또는 **USER** 중 하나로 설정되어야 합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, **USER** 중 하나로 설정해야 합니다.  
   
  *permission*  
  확인할 사용 권한 이름을 나타내는 **sysname** 형식의 Null이 아닌 스칼라 식입니다. 기본값은 없습니다. 사용 권한 이름 ANY는 와일드카드입니다.  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  쿼리가 실패하면 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 기본 제공 함수는 지정된 보안 개체에 대한 특정 유효 사용 권한이 현재 보안 주체에 있는지 여부를 테스트합니다. HAS_PERMS_BY_NAME은 사용자에게 보안 개체에 대한 유효 사용 권한이 있으면 1을 반환하고, 사용자에게 보안 개체에 대한 유효 사용 권한이 없으면 0을 반환하며, 보안 개체 클래스 또는 사용 권한이 유효하지 않으면 NULL을 반환합니다. 유효 사용 권한은 다음 중 하나입니다.  
   
 -   보안 주체에게 직접 부여되고 거부되지 않은 사용 권한  
@@ -95,15 +95,15 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  사용되는 데이터 정렬은 다음과 같습니다.  
   
--   현재 데이터베이스 데이터 정렬: 스키마에 포함되지 않은 보안 개체를 포함하는 데이터베이스 수준 보안 개체, 한 부분 또는 두 부분으로 구성된 스키마 범위 보안 개체, 세 부분으로 구성된 이름을 사용할 경우 대상 데이터베이스.  
+-   현재 데이터베이스 데이터 정렬: 스키마에 포함되지 않은 보안 개체를 포함하는 데이터베이스 수준 보안 개체, 한 부분 또는 두 부분으로 된 스키마 범위 보안 개체, 세 부분으로 된 이름을 사용할 경우 대상 데이터베이스  
   
--   master 데이터베이스 데이터 정렬: 서버 수준 보안 개체.  
+-   master 데이터베이스 데이터 정렬: 서버 수준 보안 개체  
   
 -   열 수준 확인에는 'ANY'를 사용할 수 없습니다. 적절한 사용 권한을 지정해야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>1\. 서버 수준 VIEW SERVER STATE 권한이 있는지 확인  
+### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 서버 수준 VIEW SERVER STATE 권한이 있는지 확인  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
@@ -111,7 +111,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
-### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>2\. Ps 서버 보안 주체에 대한 IMPERSONATE 권한이 있는지 확인  
+### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Ps 서버 보안 주체에 대한 IMPERSONATE 권한이 있는지 확인  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   

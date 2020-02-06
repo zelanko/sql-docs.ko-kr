@@ -18,10 +18,10 @@ ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e8669d2d4a04fba9a18f091dabab04fc1284ce03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042253"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText(geography 데이터 형식)
@@ -48,7 +48,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STGeomCollFromText()에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 **ArgumentException**을 throw합니다.  

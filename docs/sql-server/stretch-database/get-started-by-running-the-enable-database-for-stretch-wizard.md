@@ -22,19 +22,19 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843797"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- Stretch Database에 대한 데이터베이스를 구성하려면 Stretch에 데이터베이스 사용 마법사를 실행합니다.  이 문서에서는 입력해야 하는 정보와 마법사에서 선택해야 하는 항목에 대해 설명합니다.  
+ Stretch Database에 대해 데이터베이스를 구성하려면 스트레치에 데이터베이스 사용 마법사를 실행합니다.  이 문서에서는 입력해야 하는 정보와 마법사에서 선택해야 하는 항목에 대해 설명합니다.  
   
- 스트레치 데이터베이스에 대해 자세히 알아보려면 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요. 
+ Stretch Database에 대한 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요. 
  
  > [!NOTE] 
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
@@ -58,13 +58,13 @@ ms.locfileid: "73843797"
 ##  <a name="Tables"></a> 테이블 선택  
  스트레치에 사용할 테이블을 선택합니다.  
  
-많은 행이 있는 테이블이 정렬된 목록 위쪽에 나타납니다. 마법사는 테이블 목록을 표시하기 전에 이를 분석하여 현재 Stretch Database에서 지원되지 않는 데이터 형식을 확인합니다. 
+많은 행이 있는 테이블이 정렬된 목록 위쪽에 나타납니다. 마법사는 테이블 목록을 표시하기 전에 Stretch Database에서 현재 지원되지 않는 데이터 형식에 대해 분석합니다. 
   
  ![Stretch Database 마법사의 테이블 선택 페이지](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 마법사의 테이블 선택 페이지")  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
-|(제목 없음)|선택한 테이블을 스트레치에 사용하려면 이 열에서 확인란을 선택합니다.|  
+|(제목 없음)|선택한 테이블에서 스트레치를 사용하려면 이 열의 확인란을 선택합니다.|  
 |**이름**|데이터베이스에서 테이블 이름을 지정합니다.|  
 |(제목 없음)|이 열의 기호는 경고를 나타내지만 선택한 테이블에서 스트레치를 사용할 수는 있습니다. 또한 예를 들어 지원되지 않는 데이터 형식을 사용하는 등 선택한 테이블에서 스트레치를 사용하지 못하게 하는 차단 문제를 나타낼 수도 있습니다. 기호 위로 마우스를 올려 놓으면 도구 설명에 추가 정보가 표시됩니다. 자세한 내용은 [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.|  
 |**확대됨**|테이블이 이미 스트레치에 대해 활성화되었는지 여부를 나타냅니다.|  
@@ -98,7 +98,7 @@ ms.locfileid: "73843797"
 
 다른 유형의 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 다음 중 하나를 수행합니다.  
   
--   마법사를 종료하고 ALTER TABLE 문을 실행하여 테이블에 대해 스트레치를 사용하도록 설정하고 필터 함수를 지정합니다. 자세한 내용은 [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.  
+-   마법사를 종료하고 ALTER TABLE 문을 실행하여 테이블에 대해 스트레치를 사용하도록 설정하고 필터 함수를 지정합니다. 자세한 내용은 [테이블에 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)을 참조하세요.  
   
 -   마법사를 종료한 후 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필수 단계는 [마법사를 실행한 후 필터 함수 추가](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)를 참조하세요.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "73843797"
 > 데이터베이스에서 Stretch를 사용하도록 설정하려면 사용 중인 구독에 관리자 권한이 있어야 합니다. Stretch Database 마법사는 사용자가 관리자 권한이 있는 구독만 표시합니다.
   
 3.  Stretch Database에 사용할 Azure 지역을 선택합니다.
-    -   새 서버를 만들면 서버가 이 지역에 생성됩니다.  
+    -   새 서버를 만드는 경우 이 지역에 서버가 만들어집니다.  
     -   선택한 지역에 기존 서버가 있는 경우 **기존 서버**를 선택할 때 이러한 서버가 나열됩니다.
   
      대기 시간을 최소화하려면 SQL Server가 위치해 있는 Azure 지역을 선택합니다. 지역에 대한 자세한 내용은 [Azure 지역](https://azure.microsoft.com/regions/)을 참조하세요.  
@@ -144,7 +144,7 @@ ms.locfileid: "73843797"
          ![기존 Azure 서버 선택 - Stretch Database 마법사](../../sql-server/stretch-database/media/stretch-wizard-5.png "기존 Azure 서버 선택 - Stretch Database 마법사")  
   
 ##  <a name="Credentials"></a> 보안 자격 증명  
- 스트레치 데이터베이스가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호하기 위해 데이터베이스 마스터 키가 있어야 합니다.  
+ Stretch Database가 원격 데이터베이스에 연결하는 데 사용하는 자격 증명을 보호하려면 데이터베이스 마스터 키가 있어야 합니다.  
   
  데이터베이스 마스터 키가 이미 있는 경우 암호를 입력합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "73843797"
 ##  <a name="Network"></a> IP 주소 선택  
  서브넷 IP 주소 범위(권장)를 사용하거나, SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure에서 방화벽 규칙을 만들기 위해 SQL Server의 공용 IP 주소를 사용합니다.  
   
- 이 페이지에 제공된 IP 주소 또는 주소 범위를 통해 Azure 서버는 들어오는 데이터, 쿼리, SQL Server에서 시작한 관리 작업이 Azure Firewall을 통과하도록 허용합니다. 마법사는 SQL Server의 방화벽 설정에서 아무 것도 변경하지 않습니다.  
+ 이 페이지에서 제공하는 IP 주소 또는 주소는 SQL Server에서 시작된 들어오는 데이터, 쿼리 및 관리 작업을 허용하도록 Azure 서버에 지시하여 Azure Firewall을 통과합니다. 마법사는 SQL Server의 방화벽 설정에서 아무 것도 변경하지 않습니다.  
   
  ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")  
   
@@ -176,26 +176,26 @@ ms.locfileid: "73843797"
  ![Stretch Database 마법사의 결과 페이지](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 마법사의 결과 페이지")  
   
 ##  <a name="KnownIssues"></a> 마법사 문제 해결  
- **스트레치 데이터베이스 마법사가 실패했습니다.**  
- 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)을 참조하세요.  
+ **Stretch Database 마법사에 실패했습니다.**  
+ Stretch Database가 아직 서버 수준에서 사용하도록 설정되지 않은 경우 이를 사용하도록 설정하기 위해 시스템 관리자 권한 없이 마법사를 실행하면 마법사에 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   
 ## <a name="next-steps"></a>다음 단계  
- Stretch Database에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
+ Stretch Database에 추가 테이블 사용 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
   
--   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) : 추가 테이블을 사용합니다.  
+-   [테이블에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 하여 추가 테이블을 사용하도록 설정합니다.  
   
 -   데이터 마이그레이션 상태를 보려면 [데이터 마이그레이션 모니터링 및 문제 해결&#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)을 참조하세요.  
   
 -   [데이터 마이그레이션 일시 중지 및 다시 시작&#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [테이블에 대해 Stretch Database를 사용하도록 설정](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

@@ -1,8 +1,7 @@
 ---
-title: SQL Server 에이전트 | Microsoft 문서
+title: SQL Server 에이전트
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552662"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257929"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 
@@ -42,8 +43,8 @@ ms.locfileid: "69552662"
 ## <a name="Components"></a>SQL Server 에이전트 구성 요소  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 다음 구성 요소를 사용하여 수행될 태스크, 태스크를 수행할 시기 및 태스크의 성공 또는 실패를 보고하는 방법을 정의합니다.  
   
-### <a name="jobs"></a>에서  
-*작업* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 작업을 사용하면 한 번 이상 실행되고 성공과 실패에 대해 모니터링될 수 있는 관리 태스크를 정의할 수 있습니다. 작업은 한 대의 로컬 서버나 다중 원격 서버에서 실행될 수 있습니다.  
+### <a name="jobs"></a>교육  
+*작업* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 작업을 사용하여 두 번 이상 실행할 수 있으며 성공 또는 실패를 모니터링하는 관리 작업을 정의합니다. 하나의 로컬 서버 또는 여러 원격 서버에서 작업을 실행할 수 있습니다.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에서 장애 조치 이벤트가 발생할 때 실행하고 있던 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 다른 장애 조치 클러스터 노드로 장애가 조치된 후 다시 시작되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hyper-V 노드가 일시 중지될 때 실행되고 있던 에이전트 작업은 일시 중지로 인해 다른 노드로 장애 조치(failover)될 경우 다시 시작되지 않습니다. 시작되었지만 장애 조치(failover) 이벤트로 인해 완료되지 못한 작업은 시작된 것으로 기록되지만 완료 또는 실패의 추가 로그 항목이 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 종료되지 않은 것처럼 나타납니다.  
@@ -61,7 +62,7 @@ ms.locfileid: "69552662"
 각 작업 단계는 특정 보안 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 작업 단계의 경우 EXECUTE AS 문을 사용하여 해당 작업 단계에 대한 보안 컨텍스트를 설정합니다. 다른 작업 단계 유형의 경우에는 프록시 계정을 사용하여 해당 작업 단계에 대한 보안 컨텍스트를 설정합니다.  
   
 ### <a name="schedules"></a>일정  
-*일정* 은 작업이 실행되는 시기를 지정합니다. 같은 일정으로 둘 이상의 작업을 실행할 수 있으며 같은 작업에 둘 이상의 일정을 적용할 수 있습니다. 일정은 작업이 실행되는 시간에 대해 다음 조건을 정의할 수 있습니다.  
+*일정* 은 작업이 실행되는 시기를 지정합니다. 동일한 일정에 따라 둘 이상의 작업을 실행할 수 있으며, 둘 이상의 일정을 동일한 작업에 적용할 수 있습니다. 일정은 작업이 실행되는 시기에 대해 다음 조건을 정의할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작할 때마다  
   
@@ -69,11 +70,11 @@ ms.locfileid: "69552662"
   
 -   특정 날짜와 특정 시간에 한 번  
   
--   되풀이되는 일정에 따라  
+-   되풀이 일정.  
   
 자세한 내용은 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)을 참조하세요.  
   
-### <a name="alerts"></a>,  
+### <a name="alerts"></a>경고  
 *경고* 는 특정 이벤트에 대한 자동 응답입니다. 예를 들어 이벤트는 시작되는 작업 또는 특정 임계값에 도달한 시스템 리소스일 수 있습니다. 경고가 발생할 조건을 정의합니다.  
   
 경고는 다음 조건 중 하나에 대해 응답할 수 있습니다.  
@@ -93,7 +94,7 @@ ms.locfileid: "69552662"
 자세한 내용은 [경고](../../ssms/agent/alerts.md)를 참조하세요.  
   
 ### <a name="operators"></a>연산자  
-*운영자* 는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 유지 관리하는 개인에 대한 연락처 정보를 정의합니다. 일부 기업의 경우 운영자의 업무는 한 명에게 할당되기도 합니다. 다중 서버를 사용하는 기업의 경우에는 여러 명이 운영자의 업무를 분담할 수 있습니다. 운영자는 보안 정보가 보유하지 않으며 보안 주체를 정의하지 않습니다.  
+*운영자* 는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 유지 관리하는 개인에 대한 연락처 정보를 정의합니다. 일부 기업의 경우 운영자의 업무는 한 명에게 할당되기도 합니다. 다중 서버를 사용하는 기업의 경우에는 여러 명이 운영자의 업무를 분담할 수 있습니다. 운영자는 보안 정보를 포함하지 않으며 보안 주체를 정의하지 않습니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 중 하나 이상을 통해 운영자에게 경고를 알릴 수 있습니다.  
   
@@ -124,9 +125,9 @@ ms.locfileid: "69552662"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의되어 있는 하위 시스템을 나열합니다.  
   
-|하위 시스템 이름|설명|  
+|하위 시스템 이름|Description|  
 |--------------|-----------|  
-|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br />**경고** 이후 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 ActiveX 스크립팅 하위 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
+|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br />**경고** 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] 버전에서 ActiveX 스크립팅 하위 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |운영 체제(**CmdExec**)|실행 프로그램을 실행합니다.|  
 |PowerShell|PowerShell 스크립팅 작업 단계를 실행합니다.|  
 |복제 배포자|복제 배포 에이전트를 활성화하는 작업 단계를 실행합니다.|  
@@ -164,7 +165,7 @@ ms.locfileid: "69552662"
   
 다음 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작합니다.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------|-----|  
 |SQL Server 에이전트를 구성하는 방법을 설명합니다.|[SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md)|  
 |SQL Server 에이전트 서비스를 시작, 중지 및 일시 중지하는 방법을 설명합니다.|[SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

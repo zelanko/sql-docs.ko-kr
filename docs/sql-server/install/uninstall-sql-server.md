@@ -10,10 +10,10 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045762"
 ---
 # <a name="uninstall-sql-server"></a>SQL Server 제거 
@@ -35,7 +35,7 @@ ms.locfileid: "68045762"
  이 문서에서는 로컬 컴퓨터에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거하는 과정에 대해 설명합니다.  
   
  [Data Quality 서버 개체 제거](../../sql-server/install/remove-data-quality-server-objects.md)  
- 이 문서에서는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 수동으로 제거하거나 DQS([!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)])의 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소만 제거하는 방법에 대해 설명합니다.  
+ 이 문서에서는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 수동으로 제거하거나 DQS([!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)])의 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 구성 요소만 제거하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
   

@@ -16,10 +16,10 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321870"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "75321870"
   
     -   @conflict_retention sp_addpublication [의](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)매개 변수에 보존 값을 지정합니다.  
   
-    -   @property 매개 변수에 대해 **'conflict_retention'** 값을 지정하고 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)의 @value 매개 변수에 대해 보존 기간 값을 지정합니다.  
+    -   **매개 변수에 대해**'conflict_retention'@property 값을 지정하고 @valuesp_changepublication[의 ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 매개 변수에 대해 보존 기간 값을 지정합니다.  
   
 ### <a name="to-view-conflicts"></a>충돌을 보려면  
   

@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091760"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68091760"
 
   인증서를 파일로 내보냅니다.  
   
- ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -86,7 +86,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  키를 백업하기 전에 프라이빗 키의 암호를 해독하는 데 사용되는 암호입니다. 이 인수는 인증서가 마스터 키로 암호화된 경우에는 필요하지 않습니다. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프라이빗 키가 데이터베이스에 있는 암호로 암호화된 경우 암호 해독 암호를 지정해야 합니다.  
   
  프라이빗 키를 파일로 백업할 때는 암호화가 필요합니다. 파일의 프라이빗 키를 보호하는 데 사용되는 암호는 데이터베이스에 있는 인증서의 프라이빗 키를 암호화하는 데 사용되는 암호와 다릅니다.  
@@ -104,7 +104,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-exporting-a-certificate-to-a-file"></a>1\. 인증서를 파일로 내보내기  
+### <a name="a-exporting-a-certificate-to-a-file"></a>A. 인증서를 파일로 내보내기  
  다음 예에서는 인증서를 파일로 내보냅니다.  
   
 ```  
@@ -112,7 +112,7 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>2\. 인증서와 프라이빗 키 내보내기  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. 인증서와 프라이빗 키 내보내기  
  다음 예에서는 백업된 인증서의 프라이빗 키가 암호 `997jkhUbhk$w4ez0876hKHJH5gh`를 사용하여 암호화됩니다.  
   
 ```  
@@ -138,7 +138,7 @@ GO
  [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
- [CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   

@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982577"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982577"
 
   새 동의어를 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  동의어를 만들 때 기준 개체가 존재해야 할 필요는 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기준 개체의 존재 여부를 런타임에 검사합니다.  
   
  다음과 같은 유형의 개체에 대해 동의어를 만들 수 있습니다.  
@@ -117,7 +117,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>1\. 로컬 개체의 동의어 만들기  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>A. 로컬 개체의 동의어 만들기  
  다음 예에서는 먼저 `Product` 데이터베이스의 기준 개체인 `AdventureWorks2012`에 대한 동의어를 만든 다음 동의어를 사용하여 쿼리합니다.  
   
 ```  
@@ -147,7 +147,7 @@ GO
  (4 row(s) affected)
 ``` 
   
-### <a name="b-creating-a-synonym-to-remote-object"></a>2\. 원격 개체의 동의어 만들기  
+### <a name="b-creating-a-synonym-to-remote-object"></a>B. 원격 개체의 동의어 만들기  
  다음 예에서 기준 개체인 `Contact`는 원격 서버인 `Server_Remote`에 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  

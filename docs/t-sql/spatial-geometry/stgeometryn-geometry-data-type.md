@@ -18,10 +18,10 @@ ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950204"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN(geometry 데이터 형식)
@@ -45,8 +45,8 @@ ms.locfileid: "67950204"
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- 이 메서드는 매개 변수가 `STNumGeometries()`의 결과보다 크면 **null**을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 매개 변수가 **의 결과보다 크면** null`STNumGeometries()`을 반환하고 **expression** 매개 변수가 1보다 작으면 *ArgumentOutOfRangeException*을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `MultiPoint``geometry collection`을 만들고 `STGeometryN()`을 사용하여 컬렉션의 두 번째 `geometry` 인스턴스를 찾습니다.  

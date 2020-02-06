@@ -21,10 +21,10 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594399"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594399"
 
   암호화 값을 추가 또는 삭제해 데이터베이스의 열 암호화 키를 수정합니다. 열 암호화 키는 해당 열 마스터 키의 순환을 허용하는 값을 최대 2개까지 가질 수 있습니다. 열 암호화 키는 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 사용하여 열을 암호화할 때 사용됩니다. 열 암호화 값을 추가하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 사용하여 값을 암호화하는 데 사용된 열 마스터 키를 정의해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  이 문의 일반 텍스트 CEK 값은 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키가 회전할 필요가 있는 경우(지금의 열 마스터 키는 새 열 마스터 키로 교체해야 합니다) 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가할 수 있습니다. 이 워크플로를 사용하면 클라이언트 애플리케이션이 열 암호화 키로 암호화된 데이터에 액세스할 수 있게 하는 동시에 새 열 마스터 키가 클라이언트 애플리케이션에 사용할 수 있게 됩니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 애플리케이션에서 Always Encrypted 기반 드라이버는 민감한 데이터에 액세스하기 위해 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용할 수 있습니다. Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다. 
  
 SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용하여 열 마스터 키를 순환하는 것이 좋습니다. [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) 및 [PowerShell을 사용하여 Always Encrypted 키 순환](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)을 참조하세요.
@@ -80,7 +80,7 @@ SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>1\. 열 암호화 키 값 추가  
+### <a name="a-adding-a-column-encryption-key-value"></a>A. 열 암호화 키 값 추가  
  다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```sql  
@@ -95,7 +95,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>2\. 열 암호화 키 값 삭제  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. 열 암호화 키 값 삭제  
  다음 예에서는 값을 삭제하여 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```sql  
@@ -117,6 +117,6 @@ GO
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [보안 enclave를 사용한 Always Encrypted용 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

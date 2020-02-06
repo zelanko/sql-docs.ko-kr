@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297896"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
@@ -64,11 +64,11 @@ ms.locfileid: "71297896"
   
     -   **SQL 쿼리 결과 사용**을 클릭한 다음 **SQL 명령** 창에 쿼리를 작성합니다.  
   
-         -또는-  
+         또는  
   
          **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 공급하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         -또는-  
+         또는  
   
          **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   

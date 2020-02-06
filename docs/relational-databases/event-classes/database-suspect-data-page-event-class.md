@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 10caa7bd8270cdc73d1d5f9addd2b0ef55b89073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009543"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
@@ -33,16 +33,16 @@ ms.locfileid: "68009543"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Database Suspect Data Page 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|주의 대상 페이지 이벤트가 발생한 데이터베이스의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **database_id** 열과 같습니다.|3|예|  
-|**EventClass**|**int**|이벤트 유형이 213입니다.|27|아니오|  
-|**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|아니오|  
-|**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|예|  
-|**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|예|  
-|**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|예|  
-|**ObjectID2**|**int**|파일 내 주의 대상 페이지의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **page_id** 열과 같습니다.|56|예|  
-|**오류**|**int**|발생한 오류 유형입니다. 이 값은 **suspect_pages** 테이블의 페이지에 대한 **event_type** 값과 같습니다.|31|예|  
+|**DatabaseID**|**int**|주의 대상 페이지 이벤트가 발생한 데이터베이스의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **database_id** 열과 같습니다.|3|yes|  
+|**EventClass**|**int**|이벤트 유형이 213입니다.|27|예|  
+|**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|예|  
+|**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|yes|  
+|**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|yes|  
+|**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|yes|  
+|**ObjectID2**|**int**|파일 내 주의 대상 페이지의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **page_id** 열과 같습니다.|56|yes|  
+|**오류**|**int**|발생한 오류 유형입니다. 이 값은 **suspect_pages** 테이블의 페이지에 대한 **event_type** 값과 같습니다.|31|yes|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

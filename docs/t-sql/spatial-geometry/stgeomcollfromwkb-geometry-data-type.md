@@ -18,10 +18,10 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09e6d37f95832ed2b3e9a51ef351e6f62e464b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950211"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB(geometry 데이터 형식)
@@ -48,8 +48,8 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- `STGeomCollFromWKB()`에 의해 반환된 **geometry** 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeomCollection**, **MultiPolygon**, **MultiLineString** 또는 **MultiPoint**로 설정됩니다.  
+## <a name="remarks"></a>설명  
+ **에 의해 반환된** geometry`STGeomCollFromWKB()` 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeomCollection**, **MultiPolygon**, **MultiLineString** 또는 **MultiPoint**로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 FormatException 예외를 throw합니다.  
   

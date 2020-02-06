@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008881"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68008881"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 인용 부호 구분 식별자 및 리터럴 문자열에 관해 ISO 규칙을 따르도록 합니다. 큰따옴표로 구분된 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약 키워드이거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙 구문에서 일반적으로 허용하지 않는 문자를 포함할 수 있습니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 SET QUOTED_IDENTIFIER 옵션을 ON으로 설정하면 식별자를 큰따옴표로 구분할 수 있으며, 리터럴은 작은따옴표로 구분해야 합니다. SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식별자에 따옴표를 사용할 수 없으며 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
 
@@ -105,7 +105,7 @@ public 역할의 멤버 자격이 필요합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>1\. 따옴표 붙은 식별자 설정 및 예약 키워드 개체 이름 사용
+### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>A. 따옴표 붙은 식별자 설정 및 예약 키워드 개체 이름 사용
 
 다음 예에서는 `SET QUOTED_IDENTIFIER` 옵션을 `ON`으로 설정하고 테이블 이름의 키워드를 큰따옴표로 묶어 예약 키워드 이름이 있는 개체를 생성 및 사용합니다.
 
@@ -136,7 +136,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 ```
 
-### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>2\. 작은따옴표 및 큰따옴표를 사용해 따옴표 붙은 식별자 설정 사용
+### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>B. 작은따옴표 및 큰따옴표를 사용해 따옴표 붙은 식별자 설정 사용
 
  다음 예에서는 `SET QUOTED_IDENTIFIER` 옵션이 `ON`과 `OFF`로 설정된 문자열 식에서 작은따옴표 및 큰따옴표가 사용되는 방법을 보여 줍니다.
 

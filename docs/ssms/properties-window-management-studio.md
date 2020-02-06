@@ -1,6 +1,6 @@
 ---
-title: 속성 창(Management Studio) | Microsoft 문서
-ms.custom: ''
+title: 속성 창(Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262017"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257589"
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "68262017"
   
 ## <a name="options"></a>옵션  
   
-|요소|설명|  
+|요소|Description|  
 |-----------|---------------|  
 |**개체 이름**|현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.|  
 |**범주별**|선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기(+) 또는 빼기(-) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.|  
 |**사전순**|선택한 개체에 대한 모든 디자인 타임 속성과 이벤트를 사전순으로 정렬합니다.|  
-|**Properties**|개체에 대한 속성을 표시합니다.|  
+|**속성**|개체에 대한 속성을 표시합니다.|  
 |**설명 창**|설명 창은 속성 창의 맨 아래에 나타나며 속성 유형과 속성에 대한 간단한 설명을 표시합니다. 바로 가기 메뉴의 **설명** 명령을 사용하여 속성 설명을 설정 및 해제할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
