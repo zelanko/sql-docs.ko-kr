@@ -11,10 +11,10 @@ ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e8da4de862bf67a552da61a5d921e7c6c4c51fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281342"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog(SSISDB 데이터베이스)
@@ -43,9 +43,9 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장 프로시저는 *property_value*가 각 *property_name*에 대해 유효한지 확인합니다.  
   
  이 저장 프로시저는 보류 중이거나, 지연되거나, 실행 중이거나, 일시 중지된 실행과 같은 활성 실행이 없는 경우에만 수행할 수 있습니다.  

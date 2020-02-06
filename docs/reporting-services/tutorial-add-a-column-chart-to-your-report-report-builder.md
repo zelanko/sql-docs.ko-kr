@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041399"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
@@ -100,7 +100,7 @@ ms.locfileid: "63041399"
   
 4.  **다음**을 클릭합니다.  
  
-6.  **마침**을 클릭합니다.  
+6.  **Finish**를 클릭합니다.  
   
     디자인 화면에 차트가 추가됩니다. 새 세로 막대형 차트에는 대표 데이터만 표시됩니다. 범례는 Sales Date A, Sales Date B 등으로, 보고서의 대략적인 모양을 보여 줍니다. 
     
@@ -215,7 +215,7 @@ ms.locfileid: "63041399"
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블을 표시합니다.
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블 표시
 
 x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 이 섹션에서는 속성 창의 속성을 설정하여 모두 표시합니다.
 
@@ -297,7 +297,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 4.  **저장**을 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 보고서에 세로 막대형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

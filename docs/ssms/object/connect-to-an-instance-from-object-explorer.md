@@ -1,6 +1,6 @@
 ---
-title: SQL Server 또는 Azure SQL Database에 연결 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 또는 Azure SQL Database에 연결
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264611"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257210"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
 
@@ -28,7 +28,7 @@ ms.locfileid: "68264611"
 
 1. **개체 탐색기**에서 **연결 > 데이터베이스 엔진...** 을 클릭합니다.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![연결](../media/connect-to-server/connect-db-engine.png)
 
 1. **서버에 연결** 양식을 입력하고 **연결**을 클릭합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "68264611"
 
    ![연결됨](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 [테이블 디자인, 생성 및 업데이트](../visual-db-tools/design-tables-visual-database-tools.md)
 

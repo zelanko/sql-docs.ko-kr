@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049946"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
@@ -55,7 +55,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>결과 집합  
  다음 형식의 테이블을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|매개 변수의 유형입니다. 값은 프로젝트 매개 변수의 경우 `20`이고, 패키지 매개 변수의 경우 `30`입니다.|  
 |parameter_data_type|**nvarchar(128)**|매개 변수의 데이터 형식입니다.|  

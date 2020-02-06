@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495466"
 ---
 # <a name="set-operators---union-transact-sql"></a>집합 연산자 - UNION(Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68495466"
   
 -   데이터 형식이 호환되어야 합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ALL
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-union"></a>1\. 단순 UNION 사용  
+### <a name="a-using-a-simple-union"></a>A. 단순 UNION 사용  
 다음 예에서는 결과 집합에 `ProductModelID` 및 `Name` 테이블의 `ProductModel` 및 `Gloves` 열의 내용이 포함됩니다.  
  
 ```sql
@@ -100,7 +100,7 @@ ORDER BY Name;
 GO  
 ```  
   
-### <a name="b-using-select-into-with-union"></a>2\. UNION과 함께 SELECT INTO 사용  
+### <a name="b-using-select-into-with-union"></a>B. UNION과 함께 SELECT INTO 사용  
 다음 예에서 두 번째 `INTO` 문의 `SELECT` 절은 `ProductResults` 및 `ProductModel` 테이블의 선택된 열에 대해 UNION 작업을 수행한 마지막 결과 집합을 `Gloves` 테이블에 포함하도록 지정합니다. `Gloves` 테이블은 첫 번째 `SELECT` 문에서 생성됩니다.  
   
 ```sql
@@ -246,10 +246,10 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 단순 UNION 사용  
-다음 예제에서는 결과 집합에 `FactInternetSales`와 `DimCustomer` 테이블 모두의 `CustomerKey` 열 내용이 포함됩니다. ALL 키워드는 사용되지 않으므로 중복 결과가 제외됩니다.  
+다음 예제에서는 결과 집합에 `CustomerKey`와 `FactInternetSales` 테이블 모두의 `DimCustomer` 열 내용이 포함됩니다. ALL 키워드는 사용되지 않으므로 중복 결과가 제외됩니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. 두 SELECT 문에서 ORDER BY와 함께 UNION 사용  
- UNION 문의 SELECT 문에 ORDER BY 절이 포함되어 있으면, 해당 절을 모든 SELECT 문 뒤에 배치해야 합니다. 다음 예제에서는 열이 ORDER BY로 정렬된 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
+ UNION 문의 SELECT 문에 ORDER BY 절이 포함되어 있으면, 해당 절을 모든 SELECT 문 뒤에 배치해야 합니다. 다음 예제에서는 열이 ORDER BY로 정렬된 두 `UNION` 문에서 `SELECT`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -289,7 +289,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. WHERE 및 ORDER BY와 함께 두 SELECT 문의 UNION 사용  
-다음 예제에서는 WHERE 및 ORDER BY가 필요한 곳에 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
+다음 예제에서는 WHERE 및 ORDER BY가 필요한 곳에 두 `UNION` 문에서 `SELECT`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -317,11 +317,11 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. ALL 및 괄호의 효과를 나타내기 위해 세 개의 SELECT 문의 UNION 사용  
-다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 `UNION`을 사용하여 **같은 테이블**의 결과를 결합합니다.  
+다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 **을 사용하여** 같은 테이블`UNION`의 결과를 결합합니다.  
   
-첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `ALL` 없이 `UNION`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
+첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `UNION` 없이 `ALL`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
   
-세 번째 예제에서는 첫 번째 `UNION`에서 `ALL`을 사용하고 `ALL`을 사용하지 않는 두 번째 `UNION`은 괄호로 묶습니다. 두 번째 `UNION`은 괄호 안에 있기 때문에 먼저 처리됩니다. `ALL` 옵션이 사용되지 않고 중복이 제거되므로 테이블에서 복제되지 않은 행만 반환됩니다. 이러한 행은 `UNION ALL` 키워드를 사용하여 첫 번째 `SELECT` 결과와 결합됩니다. 이 예제에서는 두 집합 간의 중복 항목을 제거하지 않습니다.  
+세 번째 예제에서는 첫 번째 `ALL`에서 `UNION`을 사용하고 `UNION`을 사용하지 않는 두 번째 `ALL`은 괄호로 묶습니다. 두 번째 `UNION`은 괄호 안에 있기 때문에 먼저 처리됩니다. `ALL` 옵션이 사용되지 않고 중복이 제거되므로 테이블에서 복제되지 않은 행만 반환됩니다. 이러한 행은 `SELECT` 키워드를 사용하여 첫 번째 `UNION ALL` 결과와 결합됩니다. 이 예제에서는 두 집합 간의 중복 항목을 제거하지 않습니다.  
   
 ```sql
 -- Uses AdventureWorks  

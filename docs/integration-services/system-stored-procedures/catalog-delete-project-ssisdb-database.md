@@ -11,10 +11,10 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296784"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project(SSISDB 데이터베이스)
@@ -43,7 +43,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  해당 프로젝트의 모든 개체 및 환경 참조는 프로젝트와 함께 삭제됩니다. 그러나 프로젝트 버전 및 관련 작업 레코드는 다음에 작업 정리 작업을 실행할 때까지 유지됩니다.  
   
   

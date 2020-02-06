@@ -18,10 +18,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120818"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN(geography 데이터 형식)
@@ -47,7 +47,7 @@ ms.locfileid: "68120818"
   
  OGC(Open Geospatial Consortium) 형식: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자가 **geography** 인스턴스를 만든 경우 STPointN()는 *expression*을 통해 지정된 점을 원래 입력된 순서대로 정렬하여 반환합니다.  
   
  시스템에서 **geography** 인스턴스를 생성한 경우 STPointN()은 *식*을 통해 지정한 점을 모두 출력 순서와 동일하게 **geography** 인스턴스, 이 인스턴스 내의 링(해당되는 경우), 이 링 내의 점 순서로 정렬하여 반환합니다. 이 순서는 결정적입니다.  

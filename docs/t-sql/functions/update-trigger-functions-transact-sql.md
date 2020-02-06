@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927639"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 트리거 함수(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927639"
 
   테이블 또는 뷰의 지정된 열에서 INSERT 또는 UPDATE를 시도했는지 여부를 나타내는 부울 값을 반환합니다. UPDATE()는 트리거가 특정 동작을 실행해야 하는지 여부를 테스트하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내의 어디서나 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,12 +48,12 @@ UPDATE ( column )
   
 ## <a name="arguments"></a>인수  
  *column*  
- INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 모든 [데이터 형식](../../t-sql/data-types/data-types-transact-sql.md)을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
+ INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [에서 지원되는 모든 ](../../t-sql/data-types/data-types-transact-sql.md)데이터 형식[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- Boolean  
+ 부울  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  UPDATE()는 INSERT 또는 UPDATE의 성공 여부와 관계없이 TRUE를 반환합니다.  
   
  둘 이상의 열에 대해 INSERT 또는 UPDATE 동작을 테스트하려면 별도의 UPDATE(*column*) 절을 지정하세요. COLUMNS_UPDATED를 사용하여 여러 열에 대한 INSERT 또는 UPDATE 동작을 테스트할 수도 있습니다. 이 경우 삽입 또는 업데이트된 열을 나타내는 비트 패턴이 반환됩니다.  

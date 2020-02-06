@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095819"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 다음 `SELECT...FOR JSON AUTO`의 예제에는 `JOIN`'ed 테이블의 데이터 간에 일 대 다 관계가 있을 때 JSON 결과가 어떻게 표시되는지가 포함됩니다.
 
-반환된 JSON에서 null 값이 없음도 보여줍니다. 그러나 `FOR` 절에 `INCLUDE_NULL_VALUES` 키워드를 사용하여 이 기본 동작을 재정의할 수 있습니다.
+반환된 JSON에서 null 값이 없음도 보여줍니다. 그러나 `INCLUDE_NULL_VALUES` 절에 `FOR` 키워드를 사용하여 이 기본 동작을 재정의할 수 있습니다.
 
 ```sql
 go

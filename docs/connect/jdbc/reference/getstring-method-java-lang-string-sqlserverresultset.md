@@ -16,10 +16,10 @@ ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8961f6b67a4b22370d6712e44616036631d1935
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979483"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 메서드(java.lang.String)(SQLServerResultSet)
@@ -39,13 +39,13 @@ public java.lang.String getString(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **문자열** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getString 메서드는 java.sql.ResultSet 인터페이스의 getString 메서드에 의해 지정됩니다.  
   
  SQL Server의 모든 열은 String으로 반환될 수 있습니다. 즉, 모든 숫자 기반 및 문자 기반 형식의 **문자열** 표현과 binary, varbinary, varbinary(max), image, timestamp 및 uniqueidentifier 같은 이진 열의 16진수 문자 표현이 반환될 수 있습니다.  

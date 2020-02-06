@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055994"
 ---
 # <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
@@ -29,7 +29,7 @@ ms.locfileid: "68055994"
   
  AFTER 트리거의 순서를 지정하려면 **sp_settriggerorder** 저장 프로시저를 사용합니다. **sp_settriggerorder** 에는 다음과 같은 옵션이 있습니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**첫째**|DML 트리거를 트리거 동작에 대해 실행할 첫 번째 AFTER 트리거로 지정합니다.|  
 |**마지막**|DML 트리거를 트리거 동작에 대해 실행할 마지막 AFTER 트리거로 지정합니다.|  
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  ALTER TRIGGER 문에 의해 첫 번째 트리거나 마지막 트리거가 변경되는 경우 **첫 번째** 나 **마지막** 특성이 삭제되고 순서 값은 **없음**으로 설정됩니다. 순서는 **sp_settriggerorder**를 사용하여 다시 설정해야 합니다.  
   
- OBJECTPROPERTY 함수는 **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** 및 **ExecIsLastDeleteTrigger** 속성을 사용하여 트리거가 첫 번째 트리거인지 또는 마지막 트리거인지 보고합니다.  
+ OBJECTPROPERTY 함수는 **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** 및 **ExecIsLastDeleteTrigger** 등의 속성을 사용하여 트리거가 최초 또는 마지막 트리거인지 보고합니다.  
   
  복제 시 즉시 업데이트 구독이나 지연 업데이트 구독에 포함된 테이블에 대해 첫 번째 트리거가 자동으로 생성됩니다. 복제의 트리거는 첫 번째 트리거여야 합니다. 첫 번째 트리거가 있는 테이블을 즉시 업데이트 구독이나 지연 업데이트 구독에 포함시키면 복제 시 오류가 발생합니다. 테이블이 구독에 포함된 후 트리거를 첫 번째 트리거로 만들려고 하면 **sp_settriggerorder** 에서 오류가 반환됩니다. 복제 트리거에 ALTER를 사용하거나 **sp_settriggerorder** 를 사용하여 복제 트리거를 마지막 트리거나 없음 트리거로 변경하면 구독이 제대로 작동하지 않게 됩니다.  
   

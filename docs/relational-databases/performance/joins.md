@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68419591"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
@@ -229,7 +229,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>적응 조인 작업 추적
 적응 조인 연산자에는 다음과 같은 계획 연산자 특성이 있습니다.
 
-|계획 특성|설명|
+|계획 특성|Description|
 |---|---|
 |AdaptiveThresholdRows|해시 조인에서 중첩된 루프 조인으로 전환하는 데 사용되는 임계값을 보여 줍니다.|
 |EstimatedJoinType|가능한 조인 형식입니다.|
@@ -276,7 +276,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 예를 들어
+또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 다음은 그 예입니다.
 
 ```sql
 SELECT s.CustomerID,

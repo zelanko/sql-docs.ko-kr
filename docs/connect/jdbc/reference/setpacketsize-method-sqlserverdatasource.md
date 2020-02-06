@@ -16,10 +16,10 @@ ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973277"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setPacketSize(int packetSize)
   
  네트워크 패킷 크기가 들어 있는 **int** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성에 허용되는 값 범위는 [-1 | 0 | 512..32767]입니다. 이 속성을 허용 범위 이외의 값으로 설정하면 예외가 발생합니다.  
   
  애플리케이션에서는 SSL(Secure Sockets Layer) 암호화를 사용하여 연결되어 있는 동안 packetSize 속성을 설정할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 서버와 패킷 크기를 협상합니다. encrypt 속성이 “**true**”로 설정되어 있으며 협상된 패킷 크기가 JVM(Java Virtual Machine)의 기본 보안 공급자가 제공하는 SSL 레코드 크기보다 큰 경우에는 드라이버에서 오류가 발생하고 연결이 종료됩니다.  

@@ -1,10 +1,9 @@
 ---
-title: 관리 태스크 자동화(SQL Server 에이전트) | Microsoft 문서
-ms.custom: ''
+title: 관리 태스크 자동화(SQL Server 에이전트)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2061e3f61342842ad9cbab21a3033c36dd4190ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d3247284cc47c5a190905b9252f3558798efb55
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251940"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255726"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>관리 태스크 자동화(SQL Server 에이전트)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

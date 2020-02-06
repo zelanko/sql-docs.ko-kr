@@ -11,10 +11,10 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281013"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id*는 **bigint**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Transact-SQL에서 *profile_value* 또는 *event_value* 인수에 대한 여러 값을 결합하려면, 다음 예제를 따릅니다. OnError (8) 및 DiagnosticEx (15) 이벤트를 캡처하기 위해 *events_value*를 계산하는 수식은 `2^8 + 2^15 = 33024`입니다.  
   
 ## <a name="return-codes"></a>반환 코드  
@@ -85,7 +85,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296673"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,25 +26,25 @@ ms.locfileid: "71296673"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 실행에 대한 실행 이벤트 메시지와 연결된 조건에 대한 정보를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|BIGINT|오류 컨텍스트의 고유 ID입니다.|  
-|Event_message_id|BIGINT|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
+|Context_id|bigint|오류 컨텍스트의 고유 ID입니다.|  
+|Event_message_id|bigint|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
 |Context_depth|int|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
 |Package_path|Nvarchar(max)|컨텍스트 원본의 패키지 경로입니다.|  
-|Context_type|SMALLINT|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
+|Context_type|smallint|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
 |Context_source_name|Nvarchar(4000)|컨텍스트의 원본인 개체의 이름입니다.|  
 |Context_source_id|Nvarchar(38)|컨텍스트의 원본인 개체의 고유 ID입니다.|  
 |Property_name|Nvarchar(4000)|컨텍스트의 원본에 연결된 속성의 이름입니다.|  
 |Property_value|Sql_variant|컨텍스트의 원본에 연결된 속성 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 컨텍스트 유형을 나열합니다.  
   
 ||||  
 |-|-|-|  
-|컨텍스트 유형 값|유형 이름|설명|  
-|10|태스크|오류가 발생할 당시의 태스크 상태입니다.|  
+|컨텍스트 유형 값|유형 이름|Description|  
+|10|Task|오류가 발생할 당시의 태스크 상태입니다.|  
 |20|파이프라인|파이프라인 구성 요소의 오류: 원본, 대상 또는 변환 구성 요소.|  
 |30|시퀀스|시퀀스의 상태입니다.|  
 |40|For 루프|For Loop의 상태입니다.|  

@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295275"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
@@ -58,13 +58,13 @@ catalog.set_object_parameter_value [@object_type =] object_type
  패키지의 이름입니다. 이 인수는 매개 변수가 패키지 매개 변수인 경우에 필요합니다. *object_name*은 **nvarchar(260)** 입니다.  
   
  [@value_type =] *value_type*  
- 매개 변수 값의 유형입니다. *parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면 `V` 문자를 사용하고, *parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면 `R` 문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)** 입니다.  
+ 매개 변수 값의 유형입니다. `V`parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면*  문자를 사용하고, `R`parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면*  문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -88,9 +88,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
--   *value_type*이 지정되지 않으면 *parameter_value*에 대한 리터럴 값이 기본적으로 사용됩니다. 리터럴 값이 사용되는 경우 [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰의 *value_set*가 `1`로 설정됩니다. NULL 매개 변수 값은 허용되지 않습니다.  
+-   *value_type*이 지정되지 않으면 *parameter_value*에 대한 리터럴 값이 기본적으로 사용됩니다. 리터럴 값이 사용되는 경우 *object_parameters* 뷰의 [value_set](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)가 `1`로 설정됩니다. NULL 매개 변수 값은 허용되지 않습니다.  
   
 -   *value_type*에 참조된 값임을 나타내는 `R` 문자가 포함된 경우 *parameter_value*는 환경 변수 이름을 참조합니다.  
   

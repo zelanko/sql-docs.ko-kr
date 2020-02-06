@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769637"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287278"
 ---
 # <a name="secure-the-publisher"></a>게시자 보안 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ ms.locfileid: "68769637"
  PAL을 관리하려면 [게시 액세스 목록에서 로그인 관리](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)를 참조하세요.  
   
 ## <a name="snapshot-agent"></a>스냅샷 에이전트  
- 각 게시에 하나의 스냅샷 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+ 각 게시에 하나의 스냅샷 에이전트가 있습니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 ## <a name="ftp-snapshot-delivery"></a>FTP 스냅샷 배달  
  UNC 공유가 아닌 FTP 공유를 통해서만 스냅샷을 사용할 수 있도록 지정한 경우 FTP 액세스를 구성할 때 로그인과 암호를 지정해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 ## <a name="log-reader-agent"></a>로그 판독기 에이전트  
- 트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+ 트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 ## <a name="queue-reader-agent"></a>큐 판독기 에이전트  
  지정된 배포자와 관련된 모든 게시자와 게시(지연 업데이트 구독 허용)에 하나의 큐 판독기 에이전트가 있습니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)을 참조하세요.  

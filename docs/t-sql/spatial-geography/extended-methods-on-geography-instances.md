@@ -13,10 +13,10 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930463"
 ---
 # <a name="extended-methods-on-geography-instances"></a>geography 인스턴스의 확장 메서드
@@ -50,7 +50,7 @@ ms.locfileid: "67930463"
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Assert](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   

@@ -1,10 +1,9 @@
 ---
-title: 성능 개체 사용 | Microsoft 문서
-ms.custom: ''
+title: 성능 개체 사용
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73e36b4d0ee10d42ec7774e20693d217ee274344
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee697990c729a28872f8562241cd5dbfdc3225b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260907"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257817"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ ms.locfileid: "68260907"
   
 |인스턴스 유형|개체 이름|  
 |-----------------|---------------|  
-|Default|**SQLAgent:** _object_:_counter_|  
-|명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
+|기본값|**SQLAgent:** _object_:_counter_|  
+|named|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 성능 개체가 포함됩니다.  
   
-|개체 이름|설명|  
+|개체 이름|Description|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|시작된 작업, 성공률 및 현재 상태에 대한 성능 정보|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|작업 단계에 대한 상태 정보|  

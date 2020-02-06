@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 디버거
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -9,15 +10,15 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097929"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252998"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
 
@@ -67,11 +68,11 @@ ms.locfileid: "74097929"
 
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|원격 디버깅을 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 구성하는 방법을 설명합니다.|[TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|원격 디버깅을 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 구성하는 방법을 설명합니다.|[TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |디버거 작동을 시작, 중지 및 제어하는 방법을 설명합니다.|[Transact-SQL 디버거 실행](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 실행하는 방법을 설명합니다.|[Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |디버거를 사용하여 매개 변수 및 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터와 시스템 정보를 보는 방법을 설명합니다.|[Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

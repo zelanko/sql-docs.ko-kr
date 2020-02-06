@@ -1,6 +1,6 @@
 ---
 title: 스레드 창
-titleSuffix: T-SQL Debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119238"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253015"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 디버거 - 스레드 창
 
@@ -55,7 +55,7 @@ ms.locfileid: "74119238"
  **위치**  
  디버깅 중인 쿼리 편집기 세션에서 사용하는 스크립트 파일의 이름을 표시합니다.  
   
- **Priority**  
+ **우선 순위**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 이 기능을 지원하지 않습니다.  
   
  **일시 중지됨**  

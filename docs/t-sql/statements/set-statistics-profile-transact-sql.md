@@ -24,10 +24,10 @@ ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131927"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68131927"
 
   문에 대한 프로필 정보를 표시합니다. STATISTICS PROFILE은 임의 쿼리, 뷰 및 저장 프로시저에서 작동합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68131927"
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STATISTICS PROFILE 옵션을 설정하면 실행된 각 쿼리가 일반 결과 집합을 반환하고 그 뒤에는 쿼리 실행 프로필을 보여 주는 추가 결과 집합을 반환합니다.  
   
  추가 결과 집합에는 쿼리에 대한 SHOWPLAN_ALL 열과 다음 열이 포함됩니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**행**|각 연산자에서 만든 실제 행 수|  
 |**Executes**|연산자가 실행된 횟수|  

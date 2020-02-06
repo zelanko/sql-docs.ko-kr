@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292271"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
@@ -28,7 +28,7 @@ ms.locfileid: "71292271"
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ## <a name="two-types-of-parsing"></a>두 가지 유형의 구문 분석  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 데이터 변환을 위해 빠른 구문 분석과 표준 구문 분석의 두 가지 구문 분석 유형이 제공됩니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 데이터 변환을 위해 빠른 구문 분석과 표준 구문 분석이라는 두 가지 유형의 구문 분석을 제공합니다.  
   
 -   빠른 구문 분석은 신속하고 간단한 구문 분석 루틴이지만 로캘 특정 데이터 형식 변환을 지원하지 않으며 가장 자주 사용되는 날짜 및 시간 형식만 지원합니다. 
   
@@ -51,7 +51,7 @@ ms.locfileid: "71292271"
 ## <a name="numeric-data-formats-fast-parse"></a>숫자 데이터 형식(빠른 구문 분석)
 빠른 구문 분석에서는 데이터 구문 분석을 위해 로캘을 구분하지 않는 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석은 일부 제한된 정수 데이터 형식만 지원합니다.  
   
-### <a name="integer-data-type"></a>정수 데이터 형식
+### <a name="integer-data-type"></a>Integer 데이터 형식
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공되는 정수 데이터 형식은 DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 및 DT_UI8입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  빠른 구문 분석에서는 정수 데이터에 대해 다음과 같은 형식이 지원됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "71292271"
   
 -   다음 표에 나열된 ISO 8601 형식  
   
-    |형식|설명|  
+    |형식|Description|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|네 자리 연도, 두 자리 월 및 두 자리 일이 포함된 기본 및 하이픈으로 연결된 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
     |YYYY-MM|네 자리 연도와 두 자리 연도의 기본 및 하이픈으로 연결된 축약 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
@@ -112,7 +112,7 @@ ms.locfileid: "71292271"
   
  자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-### <a name="time-data-type"></a>시간 데이터 형식
+### <a name="time-data-type"></a>Time 데이터 형식
  빠른 구문 분석에서는 시간 데이터에 대해 다음과 같은 문자열 형식이 지원됩니다.  
   
 -   선행 공백을 포함하는 시간 형식. 예를 들어 " 10:24"는 유효한 값입니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "71292271"
   
 -   다음 표에 나열된 ISO 8601 시간 형식  
   
-    |형식|설명|  
+    |형식|Description|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|두 자리 시간, 두 자리 분 및 두 자리 초의 기본 및 확장 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
     |HHMI<br /><br /> HH:MI|두 자리 시간과 두 자리 분의 기본 및 확장 잘림 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71292271"
   
 -   다음 표에 나열된 표준 시간대를 지정하는 시간 형식  
   
-    |형식|설명|  
+    |형식|Description|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|현지 시간을 얻기 위해 UTC(Coordinated Universal Time)에 더한 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
     |-HH:MI<br /><br /> -HHMI|현지 시간을 얻기 위해 UTC에서 뺀 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71292271"
   
 -   다음 표에 나열된 소수 부분을 포함하는 시간 형식  
   
-    |형식|설명|  
+    |형식|Description|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n은 시간의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 12.750은 12:45를 나타냅니다.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n은 분의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 1220.500은 12:20:30을 나타냅니다.|  
@@ -178,12 +178,12 @@ ms.locfileid: "71292271"
   
  빠른 구문 분석에서는 문자열이 DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET으로 출력됩니다. 잘림 형식의 날짜/시간 값은 채워집니다. 다음 표에서는 누락된 날짜 및 시간 부분에 대해 추가되는 값을 나열합니다.  
   
-|날짜/시간 부분|패딩|  
+|날짜/시간 부분|안쪽 여백|  
 |---------------------|-------------|  
 |초|00을 추가합니다.|  
 |분|00:00을 추가합니다.|  
 |Hour|00:00:00을 추가합니다.|  
-|Day|해당 월의 일에 대해 01을 추가합니다.|  
+|일|해당 월의 일에 대해 01을 추가합니다.|  
 |Month|해당 연도의 월에 대해 01을 추가합니다.|  
   
  자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -202,7 +202,7 @@ ms.locfileid: "71292271"
 5.  **확인**을 클릭합니다.  
 
 ## <a name="standard-parse"></a>Standard Parse
-표준 구문 분석은 로캘 기반의 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 자동 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 표준 구문 분석은 API를 구문 분석하는 OLE DB와 동일합니다.  
+표준 구문 분석은 로캘 기반의 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 Automation 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 표준 구문 분석은 API를 구문 분석하는 OLE DB와 동일합니다.  
   
  표준 구문 분석은 국가별 데이터에 대한 데이터 형식 변환을 지원하며 데이터 형식이 빠른 구문 분석에서 지원되지 않는 경우에만 사용되어야 합니다. 자동 데이터 형식 변환 API에 대한 자세한 내용은 [MSDN Library(](https://go.microsoft.com/fwlink/?LinkId=79427))의 "데이터 형식 변환 API(Data Type Conversion APIs)"를 참조하십시오. 
  

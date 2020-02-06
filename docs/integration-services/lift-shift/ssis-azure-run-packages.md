@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054629"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
@@ -64,7 +64,7 @@ Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 �
 
 ## <a name="script"></a> 스크립트 또는 코드를 사용하여 패키지 실행
 
-`Microsoft.SQLServer.Management.IntegrationServices` 네임 스페이스에서 `Package` 개체의 `Execute` 메서드를 호출하여 관리되는 API를 호출할 수 있는 모든 개발 환경에서 패키지를 실행할 수 있습니다.
+`Execute` 네임 스페이스에서 `Package` 개체의 `Microsoft.SQLServer.Management.IntegrationServices` 메서드를 호출하여 관리되는 API를 호출할 수 있는 모든 개발 환경에서 패키지를 실행할 수 있습니다.
 
 자세한 내용은 다음 예제를 참조하세요.
 

@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908782"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
@@ -26,7 +26,7 @@ ms.locfileid: "72908782"
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
   
-1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수와 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
+1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath&#40;Transact-SQL&#41;[ 함수와 함께 ](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
 2.  그러면 애플리케이션에서는 이 논리 경로를 사용하여 파일 또는 디렉터리에 대한 핸들을 가져오고 개체에 대해 일부 작업을 수행합니다. 경로를 CreateFile() 또는 CreateDirectory()와 같은 지원되는 파일 시스템 API 함수에 전달하여 파일을 만들거나 열고 핸들을 가져올 수 있습니다. 그런 다음 핸들을 사용하여 데이터 스트리밍, 디렉터리 열거 또는 구성, 파일 특성 가져오기 또는 설정, 파일 또는 디렉터리 삭제 등과 같은 작업을 수행할 수 있습니다.  
 
@@ -105,26 +105,26 @@ ms.locfileid: "72908782"
   
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
-|**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
-|**확장 특성**|아니오||  
-|**구문 재분석 지점**|아니오||  
-|**영구 ACL**|아니오||  
-|**명명된 스트림**|아니오||  
-|**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
-|**압축**|예||  
-|**암호화**|예||  
-|**TxF**|아니오||  
-|**파일 ID**|아니오||  
-|**개체 ID**|아니오||  
-|**심볼 링크**|아니오||  
-|**하드 링크**|아니오||  
-|**짧은 이름**|아니오||  
-|**디렉터리 변경 알림**|아니오||  
-|**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
-|**메모리 매핑된 파일**|아니오||  
-|**취소 I/O**|예||  
-|**보안**|아니오|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
-|**USN 저널**|아니오|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
+|**Oplock**|yes|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
+|**확장 특성**|예||  
+|**구문 재분석 지점**|예||  
+|**영구 ACL**|예||  
+|**명명된 스트림**|예||  
+|**스파스 파일**|yes|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
+|**압축**|yes||  
+|**암호화**|yes||  
+|**TxF**|예||  
+|**파일 ID**|예||  
+|**개체 ID**|예||  
+|**심볼 링크**|예||  
+|**하드 링크**|예||  
+|**짧은 이름**|예||  
+|**디렉터리 변경 알림**|예||  
+|**바이트 범위 잠금**|yes|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
+|**메모리 매핑된 파일**|예||  
+|**취소 I/O**|yes||  
+|**보안**|예|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
+|**USN 저널**|예|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   

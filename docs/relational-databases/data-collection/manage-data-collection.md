@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- 데이터 컬렉션
+- 데이터 수집
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
@@ -16,10 +16,10 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 53869016813d3950f35fa5b926cbba295df63237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133606"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
@@ -71,7 +71,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 데이터 수집기 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|데이터 수집기를 활성화합니다.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|데이터 수집기를 비활성화합니다.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 컬렉션 집합 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|요청 시 컬렉션 집합을 실행합니다.|  
 |[sp_syscollector_start_collection_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|컬렉션 집합을 시작합니다.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 컬렉션 집합 항목에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|컬렉션 항목을 만듭니다.|  
 |[sp_syscollector_delete_collection_item&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|컬렉션 항목을 삭제합니다.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 수집기 유형 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|수집기 유형을 만듭니다.|  
 |[sp_syscollector_update_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|수집기 유형을 업데이트합니다.|  
@@ -114,7 +114,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 구성 정보와 실행 로그 데이터를 가져오는 데 사용할 수 있는 뷰에 대해 설명합니다.  
   
-|뷰 이름|설명|  
+|뷰 이름|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|데이터 수집기 구성을 가져옵니다.|  
 |[syscollector_collection_items&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|컬렉션 항목 정보를 가져옵니다.|  
@@ -128,7 +128,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 관리 데이터 웨어하우스에 대한 액세스를 구성하는 데 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|관리 데이터 웨어하우스에 대한 연결 문자열에 정의된 데이터베이스 이름을 지정합니다.|  
 |[sp_syscollector_set_warehouse_instance_name&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|관리 데이터 웨어하우스에 대한 연결 문자열에 정의된 인스턴스를 지정합니다.|  
@@ -137,7 +137,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 관리 데이터 웨어하우스 구성 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|관리 데이터 웨어하우스에 컬렉션 스냅샷을 만듭니다.|  
 |[core.sp_update_data_source&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|데이터 컬렉션의 데이터 원본을 업데이트합니다.|  
@@ -149,7 +149,7 @@ ms.locfileid: "68133606"
   
  다음 표에서는 업로드 패키지에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|데이터 업로드 다시 시도 횟수를 구성합니다.|  
 |[sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|업로드 다시 시도 사이에 데이터를 저장할 임시 스토리지를 지정합니다.|  
@@ -158,20 +158,20 @@ ms.locfileid: "68133606"
   
  다음 표에서는 데이터 컬렉션 실행 로그 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|설명|  
+|프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|실행 로그에서 컬렉션 집합 항목을 삭제합니다.|  
   
-### <a name="functions"></a>함수  
+### <a name="functions"></a>Functions  
  다음 표에서는 실행 및 정보 추적에 사용할 수 있는 함수에 대해 설명합니다.  
   
-|함수 이름|설명|  
+|함수 이름|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details&#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|특정 패키지에 대한 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 실행 로그 데이터를 가져옵니다.|  
 |[fn_syscollector_get_execution_stats&#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|컬렉션 집합 또는 패키지에 대한 실행 통계를 가져옵니다. 이 정보에는 기록된 오류가 포함됩니다.|  
 |[snapshots.fn_trace_getdata&#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|일반 SQL 추적 수집기 유형을 사용하여 데이터를 수집할 때 기록된 이벤트를 가져옵니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 실행](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
  [SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  

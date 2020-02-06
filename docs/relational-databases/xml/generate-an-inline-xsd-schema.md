@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943155"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
@@ -37,7 +37,7 @@ ms.locfileid: "67943155"
   
  FOR XML 쿼리에 XMLSCHEMA를 지정하는 경우 스키마와 XML 데이터를 모두 쿼리 결과로 수신합니다. 데이터의 각 최상위 요소는 기본 네임스페이스 선언을 사용하여 이전 스키마를 참조하며, 이 선언은 인라인 스키마의 대상 네임스페이스를 참조합니다.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 다음을 유의하십시오.  
   
--   ListPrice 및 DealerPrice 모두 같은 `money` 유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`row`> 요소의 복합 유형 선언에는 <`Price`> 자식 요소가 하나만 있습니다.  
+-   ListPrice 및 DealerPrice 모두 같은 `money`유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`Price`> 요소의 복합 유형 선언에는 <`row`> 자식 요소가 하나만 있습니다.  
   
--   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`Price`> 요소에 대해 `xsi:nil` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `nillable` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`Price`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
+-   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`xsi:nil`> 요소에 대해 `Price` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `Price` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`nillable`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
   
  `...`  
   

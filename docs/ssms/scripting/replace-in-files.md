@@ -1,6 +1,6 @@
 ---
-title: 파일에서 바꾸기 | Microsoft 문서
-ms.custom: ''
+title: 파일에서 바꾸기
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265979"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253714"
 ---
 # <a name="replace-in-files"></a>파일에서 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265979"
 ## <a name="find-what"></a>찾을 내용  
  **파일에서 바꾸기** 탭의 컨트롤을 사용하여 검색할 문자열이나 식을 지정할 수 있습니다.  
   
- **Find what**  
+ **찾을 내용**  
  검색할 텍스트를 입력합니다. 대화 상자에서는 대화 상자를 열기 전에 커서로 선택한 텍스트, 가까이 위치한 텍스트 또는 이전에 검색한 텍스트를 사용하여 가능한 검색 텍스트를 입력합니다. 드롭다운 목록에서 검색 문자열을 선택하여 가장 최근에 사용한 20개의 문자열을 다시 사용할 수 있습니다.  
   
  **[와일드카드가 포함된 문자열]**  
@@ -40,7 +40,7 @@ ms.locfileid: "68265979"
  **식 작성기**  
  **찾기 옵션** 에서 **사용** 확인란을 선택하면 **찾을 내용**입력란 옆에 있는 삼각형 단추가 활성화됩니다. 이 단추를 클릭하면 선택한 **사용** 옵션에 따라 와일드카드 또는 정규식 목록이 표시됩니다. 이 목록에서 항목을 선택하면 해당 항목이 **찾을 내용** 입력란에 지정된 문자열에 추가됩니다.  
   
-## <a name="replace-with"></a>바꿀 내용  
+## <a name="replace-with"></a>바꿀 항목  
  이러한 컨트롤을 사용하면 일치하는 문자열 또는 식의 자리에 삽입할 내용을 지정할 수 있습니다.  
   
  **Replace with**  
@@ -99,7 +99,7 @@ ms.locfileid: "68265979"
  **단어 단위로**  
  이 확인란을 선택하면 **찾을 내용** 에 지정한 문자열과 단어 단위로 일치하는 인스턴스만 찾기 결과 창에 표시됩니다. 예를 들어 **MyObject** 를 검색하면 "MyObject"는 반환되지만 "CMyObject"나 "MyObjectC"는 반환되지 않습니다.  
   
- **찾기 옵션**  
+ **사용**  
  **찾을 내용** 또는 **바꿀 내용** 입력란에 입력한 특수 문자의 해석 방법을 나타냅니다. 옵션에는 **와일드카드** 및 **정규식**이 있습니다.  
   
  **Regular Expressions**  

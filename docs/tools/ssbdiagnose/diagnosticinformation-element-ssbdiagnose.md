@@ -1,10 +1,7 @@
 ---
-title: DiagnosticInformation 요소 (ssbdiagnose) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: DiagnosticInformation 요소
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d20ef070a390eb942b29498381da9e2479d0218
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 06d67e0a20067390c14837221725fd4b27c8c337
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257790"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 요소(ssbdiagnose)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **DiagnosticInformation** 요소에는  유틸리티가 발견한 진단 정보를 보고하는 모든 요소가 포함됩니다. **DiagnosticInformation** 은 **ssbdiagnostic** XML 출력 파일의 루트 요소입니다.  
+
+**DiagnosticInformation** 요소에는  유틸리티가 발견한 진단 정보를 보고하는 모든 요소가 포함됩니다. **DiagnosticInformation** 은 **ssbdiagnostic** XML 출력 파일의 루트 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +39,13 @@ ms.locfileid: "67986175"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
-|**없음**|해당 사항 없음|  
+|**없음**|해당 없음|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -55,7 +58,7 @@ ms.locfileid: "67986175"
 |**부모 요소**|없음|  
 |**자식 요소**|[Banner 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](https://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

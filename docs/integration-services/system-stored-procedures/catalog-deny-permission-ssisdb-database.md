@@ -11,10 +11,10 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281037"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission(SSISDB 데이터베이스)
@@ -62,7 +62,7 @@ catalog.deny_permission [ @object_type = ] object_type
  5(기타 오류)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -73,20 +73,20 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장 프로시저를 통해 다음 표에 설명된 사용 권한 유형을 거부할 수 있습니다.  
   
 |permission_type 값|사용 권한 이름|사용 권한 설명|적용할 수 있는 개체 유형|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|보안 주체가 개체의 일부로 간주되는 정보(예: 속성)를 읽을 수 있습니다. 개체 내에 포함된 다른 개체의 내용을 열거하거나 읽을 수는 없습니다.|폴더, 프로젝트, 환경, 작업|  
 |`2`|MODIFY|보안 주체가 개체의 일부로 간주되는 정보(예: 속성)를 수정할 수 있습니다. 개체 내에 포함된 다른 개체를 수정할 수는 없습니다.|폴더, 프로젝트, 환경, 작업|  
-|`3`|CREATE 문을 실행하기 전에|보안 주체가 프로젝트의 모든 패키지를 실행할 수 있습니다.|프로젝트|  
+|`3`|CREATE 문을 실행하기 전에|보안 주체가 프로젝트의 모든 패키지를 실행할 수 있습니다.|Project|  
 |`4`|MANAGE_PERMISSIONS|보안 주체가 개체에 사용 권한을 할당할 수 있습니다.|폴더, 프로젝트, 환경, 작업|  
-|`100`|CREATE_OBJECTS|보안 주체가 폴더에 개체를 만들 수 있습니다.|Folder|  
-|`101`|READ_OBJECTS|보안 주체가 폴더의 모든 개체를 읽을 수 있습니다.|Folder|  
-|`102`|MODIFY_OBJECTS|보안 주체가 폴더의 모든 개체를 수정할 수 있습니다.|Folder|  
-|`103`|EXECUTE_OBJECTS|보안 주체가 폴더의 모든 프로젝트에 있는 모든 패키지를 실행할 수 있습니다.|Folder|  
-|`104`|MANAGE_OBJECT_PERMISSIONS|보안 주체가 폴더의 모든 개체에 대한 사용 권한을 관리할 수 있습니다.|Folder|  
+|`100`|CREATE_OBJECTS|보안 주체가 폴더에 개체를 만들 수 있습니다.|폴더|  
+|`101`|READ_OBJECTS|보안 주체가 폴더의 모든 개체를 읽을 수 있습니다.|폴더|  
+|`102`|MODIFY_OBJECTS|보안 주체가 폴더의 모든 개체를 수정할 수 있습니다.|폴더|  
+|`103`|EXECUTE_OBJECTS|보안 주체가 폴더의 모든 프로젝트에 있는 모든 패키지를 실행할 수 있습니다.|폴더|  
+|`104`|MANAGE_OBJECT_PERMISSIONS|보안 주체가 폴더의 모든 개체에 대한 사용 권한을 관리할 수 있습니다.|폴더|  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 오류나 경고가 발생하는 몇 가지 조건을 설명합니다.  

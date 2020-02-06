@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687383"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
@@ -466,7 +466,7 @@ ID     Value
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- 대상 테이블에 대한 `UPDATE` 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 *expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해 `SELECT` 권한이 요구됩니다.  
+ 대상 테이블에 대한 `UPDATE` 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 `SELECT`expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해*  권한이 요구됩니다.  
   
  UPDATE 권한은 `sysadmin` 고정 서버 역할, `db_owner` 및 `db_datawriter` 고정 데이터베이스 역할, 테이블 소유자의 멤버에게 기본적으로 부여됩니다. `sysadmin`, `db_owner` 및 `db_securityadmin` 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
   
@@ -808,7 +808,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  이 섹션의 예에서는 LOB(Large Object) 데이터 형식을 사용하여 정의된 열의 값을 업데이트하는 방법을 보여 줍니다.  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>18. UPDATE를 .WRITE와 함께 사용하여 nvarchar(max) 열의 데이터 수정  
- 다음 예에서는 .WRITE 절을 사용해 `Production.Document` 테이블의 **nvarchar(max)** 열인 `DocumentSummary`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋) 및 대체할 문자 수(길이)를 지정하여 `components`를 `features`로 대체합니다. 이 예에서는 또한 OUTPUT 절을 사용하여 `DocumentSummary` 열의 이전 및 이후 이미지를 `@MyTableVar` 테이블 변수에 반환합니다.  
+ 다음 예에서는 .WRITE 절을 사용해 `DocumentSummary` 테이블의 **nvarchar(max)** 열인 `Production.Document`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋) 및 대체할 문자 수(길이)를 지정하여 `components`를 `features`로 대체합니다. 이 예에서는 또한 OUTPUT 절을 사용하여 `DocumentSummary` 열의 이전 및 이후 이미지를 `@MyTableVar` 테이블 변수에 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -979,7 +979,7 @@ EXEC Production.uspProductUpdate 'BK-%';
  이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 UPDATE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. OUTPUT 절과 함께 UPDATE 사용  
- 다음 예에서는 `VacationHours` 테이블의 처음 10개 행에 대해 `Employee` 열을 25% 업데이트하고 `ModifiedDate` 열의 값을 현재 날짜로 설정합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `VacationHours`의 값, 그리고 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
+ 다음 예에서는 `VacationHours` 테이블의 처음 10개 행에 대해 `Employee` 열을 25% 업데이트하고 `ModifiedDate` 열의 값을 현재 날짜로 설정합니다. `OUTPUT` 절은 `VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `deleted.VacationHours`의 값, 그리고 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. OUTPUT 절을 사용하는 더 많은 예제는 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
   
@@ -1013,7 +1013,7 @@ GO
  이 섹션의 예에서는 다른 문에 UPDATE를 사용하는 방법을 보여 줍니다.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. 저장 프로시저에 UPDATE 사용  
- 다음 예에서는 저장 프로시저에 UPDATE 문을 사용합니다. 이 프로시저에서는 `@NewHours`라는 입력 매개 변수 하나와 `@RowCount`라는 출력 매개 변수 하나를 사용합니다. UPDATE 문에 사용된 `@NewHours` 매개 변수 값은 `HumanResources.Employee` 테이블의 `VacationHours` 열을 업데이트합니다. `@RowCount` 출력 매개 변수는 영향을 받는 행 수를 지역 변수에 반환하는 데 사용됩니다. SET 절에 사용된 CASE 식은 `VacationHours`에 대해 설정되는 값을 조건에 따라 결정합니다. 시간당 급여를 받는 직원(`SalariedFlag` = 0)의 경우 현재 시간 수에 `VacationHours`에 지정된 값을 더한 값으로 `@NewHours`가 설정되고, 그 외의 경우에는 `VacationHours`에 지정된 값으로 `@NewHours`가 설정됩니다.  
+ 다음 예에서는 저장 프로시저에 UPDATE 문을 사용합니다. 이 프로시저에서는 `@NewHours`라는 입력 매개 변수 하나와 `@RowCount`라는 출력 매개 변수 하나를 사용합니다. UPDATE 문에 사용된 `@NewHours` 매개 변수 값은 `VacationHours` 테이블의 `HumanResources.Employee` 열을 업데이트합니다. `@RowCount` 출력 매개 변수는 영향을 받는 행 수를 지역 변수에 반환하는 데 사용됩니다. SET 절에 사용된 CASE 식은 `VacationHours`에 대해 설정되는 값을 조건에 따라 결정합니다. 시간당 급여를 받는 직원(`SalariedFlag` = 0)의 경우 현재 시간 수에 `VacationHours`에 지정된 값을 더한 값으로 `@NewHours`가 설정되고, 그 외의 경우에는 `VacationHours`에 지정된 값으로 `@NewHours`가 설정됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1072,7 +1072,7 @@ GO
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 단순 UPDATE 문 사용  
  다음 예에서는 업데이트할 행을 지정하기 위해 WHERE 절을 사용하지 않았을 때 모든 행이 영향을 받는 방식을 보여 줍니다.  
   
- 이 예에서는 `DimEmployee` 테이블의 모든 행에 대해 `EndDate` 및 `CurrentFlag` 열의 값을 업데이트합니다.  
+ 이 예에서는 `EndDate` 테이블의 모든 행에 대해 `CurrentFlag` 및 `DimEmployee` 열의 값을 업데이트합니다.  
   
 ```sql  
 -- Uses AdventureWorks  

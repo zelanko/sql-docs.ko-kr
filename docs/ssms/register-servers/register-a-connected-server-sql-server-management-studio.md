@@ -1,10 +1,7 @@
 ---
-title: 연결된 서버 등록(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/28/2016
+title: 연결된 서버 등록
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
+ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256298"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256278"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 SSMS( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] )를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 연결된 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  메뉴에서 **보기**\\**등록된 서버** 로 이동하여 SSMS에서 등록된 서버를 볼 수 있습니다.
+
+이 항목에서는 SSMS( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] )를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 연결된 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  메뉴에서 **보기**\\**등록된 서버** 로 이동하여 SSMS에서 등록된 서버를 볼 수 있습니다.
   
  **항목 내용**  
   
@@ -53,7 +56,7 @@ Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../inc
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 자세한 내용은 [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
 
-     -    **User name**  
+     -    **사용자 이름**  
 연결 중인 현재 사용자 이름을 보여 줍니다. 이 읽기 전용 옵션은 Windows 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다. **사용자 이름**을 변경하려면 다른 사용자로 컴퓨터에 로그인합니다. 
 
      -    **로그인**  
@@ -74,13 +77,12 @@ Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../inc
 **등록된 서버 설명**  
 서버에 대한 선택적 설명을 입력합니다.  
   
-**테스트**  
+**Test**  
 **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다.  
   
 **저장**  
 등록된 서버 설정을 저장하려면 클릭합니다. 
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [새 등록된 서버 만들기(SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

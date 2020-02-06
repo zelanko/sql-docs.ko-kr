@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122243"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;=(작거나 같음)(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68122243"
   
  =(등가) 비교 연산자와 달리 두 NULL 값에 대한 >= 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ expression <= expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 <= 사용  
+### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 <= 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 3보다 작거나 같은 모든 행을 반환합니다.  
   
 ```  

@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109349"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE(Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109349"
   
  스칼라 값 대신 JSON 문자열에서 개체 또는 배열을 추출하려면 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요. **JSON_VALUE**와 **JSON_QUERY**의 차이점에 대한 정보는, [JSON_VALUE 및 JSON_QUERY 비교](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ JSON_VALUE ( expression , path )
  *path*  
  추출할 속성을 지정하는 JSON 경로입니다. 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]과 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path*의 값으로 변수를 제공할 수 있습니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
   
  *path*의 형식이 유효하지 않으면 **JSON_VALUE**가 오류를 반환합니다.  
   
@@ -67,7 +67,7 @@ JSON_VALUE ( expression , path )
   
  4000자를 초과하는 스칼라 값을 반환해야 하는 경우 **JSON_VALUE** 대신 **OPENJSON**을 사용합니다. 자세한 내용은 [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 ### <a name="lax-mode-and-strict-mode"></a>lax 모드와 strict 모드
 
@@ -146,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

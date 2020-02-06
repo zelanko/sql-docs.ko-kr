@@ -23,10 +23,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844513"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73844513"
 > [!NOTE]
 > 문자열 식의 문자 수를 반환하려면 [LEN](../../t-sql/functions/len-transact-sql.md) 함수를 사용합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -50,9 +50,9 @@ DATALENGTH ( expression )
 임의 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
-*expression*의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
+**expression**의 데이터 형식이 *nvarchar(max)* , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DATALENGTH`는 다음과 같이 가변 길이 데이터를 저장할 수 있는 데이터 형식과 함께 사용할 때 매우 유용합니다.
 - **image**
 - **ntext**
@@ -81,7 +81,7 @@ ORDER BY EnglishProductName;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [LEN&#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245244"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
@@ -38,19 +38,19 @@ RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있�
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에는 다음 예제가 포함되어 있습니다.  
   
--   [예: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [예제: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [예: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [예: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [예제: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [예: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [예제: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [예: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [예제: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [예: XMLType 열 쿼리](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [예제: XMLType 열 쿼리](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

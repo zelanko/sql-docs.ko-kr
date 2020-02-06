@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401703"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
@@ -24,7 +24,7 @@ ms.locfileid: "74401703"
   
  원격 서버를 구성하려면 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]의 “원격 테이블 복사”를 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  원격 서버 컴퓨터의 이름 또는 원격 서버의 IPv4 주소입니다. IPv6 주소는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스를 **Computer_Name\Instance_Name** 또는 **IP_address\Instance_Name** 형식으로 지정할 수 있습니다. 서버는 원격이어야 하되 (local)로 지정할 수 없습니다.  
   
  TCP *port* 번호  
- 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 다음은 그 예입니다.  **ServerA,1450** 또는 **10.192.14.27,1435**  
+ 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예: **ServerA, 1450** 또는 **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP 주소를 사용하여 원격 서버에 연결하는 것이 좋습니다. 네트워크 구성에 따라 컴퓨터 이름을 사용하여 연결할 때는 비 어플라이언스 DNS 서버를 사용하여 올바른 서버에 대한 이름을 확인하는 추가 단계가 필요할 수 있습니다. IP 주소를 사용하여 연결하는 경우에는 이 단계가 필요하지 않습니다. 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]의 “DNS 전달자를 사용하여 비 어플라이언스 DNS 이름 확인(분석 플랫폼 시스템)”을 참조하세요.  
@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="Examples"></a> 예  
   
 ### <a name="a-creating-a-remote-table"></a>A. 원격 테이블 만들기  
- 이 예제에서는 데이터베이스 `OrderReporting` 및 스키마 `Orders`에 대해 `MyOrdersTable`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `e4n8@3`인 사용자 `David`의 자격 증명을 사용합니다.  
+ 이 예제에서는 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 스키마 `MyOrdersTable`에 대해 `OrderReporting`라는 `Orders` SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `David`인 사용자 `e4n8@3`의 자격 증명을 사용합니다.  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

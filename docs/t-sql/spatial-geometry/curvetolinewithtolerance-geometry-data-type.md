@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929309"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "67929309"
 ## <a name="exceptions"></a>예외  
  허용 오차를 <= 0으로 설정하면 `ArgumentOutOfRange` 예외가 발생합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 결과 **LineString**의 허용 오차 크기를 지정할 수 있습니다.  
   
  다음 표에서는 여러 유형에 대해 `CurveToLineWithTolerance()`에서 반환하는 인스턴스 유형을 보여 줍니다.  
@@ -71,8 +71,8 @@ ms.locfileid: "67929309"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>1\. CircularString 인스턴스에 여러 허용 오차 값 사용  
- 다음 예에서는 허용 오차를 설정하면 `CircularString` 인스턴스에서 반환된 `LineString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  
+### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 여러 허용 오차 값 사용  
+ 다음 예에서는 허용 오차를 설정하면 `LineString` 인스턴스에서 반환된 `CircularString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  
   
 ```
  DECLARE @g geometry; 
@@ -80,7 +80,7 @@ ms.locfileid: "67929309"
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
  ```  
   
-### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>2\. LineString 하나를 포함하는 MultiLineString 인스턴스에 메서드 사용  
+### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. LineString 하나를 포함하는 MultiLineString 인스턴스에 메서드 사용  
  다음 예에서는 `MultiLineString` 인스턴스 하나만 포함하는 `LineString` 인스턴스에서 반환되는 결과를 보여 줍니다.  
   
 ```
@@ -99,7 +99,7 @@ ms.locfileid: "67929309"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
- 다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
+ 다음 예에서는 `CurvePolygon`relative`CurveToLineWithTolerance()`를 true로 설정하여 *인스턴스를 사용해*를 호출합니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -117,7 +117,7 @@ ms.locfileid: "67929309"
   
 ## <a name="see-also"></a>참고 항목  
  [CurveToLineWithTolerance &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+ [STCurveToLine&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

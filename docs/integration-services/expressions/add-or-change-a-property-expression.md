@@ -14,10 +14,10 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290501"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
@@ -47,7 +47,7 @@ ms.locfileid: "71290501"
   
     -   **식** 열에서 속성 식을 직접 입력하거나 변경한 다음 **확인**을 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   속성의 식 행에서 줄임표(...)를 클릭하여 **식 작성기**를 엽니다.  
   

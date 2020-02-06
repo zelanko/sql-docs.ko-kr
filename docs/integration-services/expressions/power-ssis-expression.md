@@ -13,10 +13,10 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 818f99100150c366c3caf982555f802b2ca6fc68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297432"
 ---
 # <a name="power-ssis-expression"></a>POWER(SSIS 식)
@@ -43,7 +43,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>결과 형식  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *numeric_expression* 및 *power* 인수는 거듭제곱을 계산하기 전에 DT_R8 데이터 형식으로 캐스팅됩니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  *numeric_expression* 이 0이고 *power* 가 음수이면 식 계산기는 오류를 반환하고 반환 결과를 Null로 설정합니다.  

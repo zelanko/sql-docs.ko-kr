@@ -9,10 +9,10 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581903"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
@@ -47,9 +47,9 @@ ms.locfileid: "65581903"
   
     -   **이미지**  
   
-3.  페이지 머리글을 마우스 오른쪽 단추로 클릭하고 **머리글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 머리글의 너비를 조정합니다. 마치면 **확인**을 클릭합니다.  
+3.  페이지 머리글을 마우스 오른쪽 단추로 클릭하고 **머리글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 머리글의 너비를 조정합니다. 그런 후 **OK**를 클릭합니다.  
   
-4.  페이지 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 바닥글의 너비를 조정합니다. 마치면 **확인**을 클릭합니다.  
+4.  페이지 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 바닥글의 너비를 조정합니다. 그런 후 **OK**를 클릭합니다.  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>페이지 머리글/바닥글을 제거하려면  
   

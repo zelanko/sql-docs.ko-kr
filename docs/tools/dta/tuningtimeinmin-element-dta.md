@@ -1,10 +1,7 @@
 ---
-title: TuningTimeInMin 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningTimeInMin 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 31d72b47896360c673865aec9847f268ad79d9d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105848"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304692"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  튜닝 세션의 최대 길이(분)를 지정합니다.  
+
+튜닝 세션의 최대 길이(분)를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105848"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|480분(8시간)|  
@@ -48,11 +51,11 @@ ms.locfileid: "68105848"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 코드 예에서는 최대 튜닝 시간을 12시간으로 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  

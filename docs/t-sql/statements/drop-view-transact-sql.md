@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072099"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072099"
 
   현재 데이터베이스에서 하나 이상의 뷰를 제거합니다. DROP VIEW는 인덱싱된 뷰에 대해 실행할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  제거할 뷰의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  뷰를 삭제하면 해당 뷰의 정의 및 뷰에 대한 기타 정보가 시스템 카탈로그에서 삭제됩니다. 또한 해당 뷰에 대한 모든 권한도 삭제됩니다.  
   
  DROP TABLE을 사용하여 삭제된 테이블의 뷰는 모두 DROP VIEW를 사용하여 명시적으로 삭제해야 합니다.  
@@ -81,7 +81,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-drop-a-view"></a>1\. 뷰 삭제  
+### <a name="a-drop-a-view"></a>A. 뷰 삭제  
  다음 예에서는 `Reorder` 뷰를 제거합니다.  
   
 ```sql

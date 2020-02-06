@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294369"
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
@@ -39,7 +39,7 @@ ms.locfileid: "71294369"
   
  다음 표에서는 **FileUsageType**값을 나열합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|다중 파일 연결 관리자에서 기존 파일을 사용합니다.|  
 |**1**|다중 파일 연결 관리자에서 파일을 만듭니다.|  
@@ -69,6 +69,6 @@ ms.locfileid: "71294369"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [파일 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)를 참조하세요.  
   
- 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)을 참조하십시오.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
   

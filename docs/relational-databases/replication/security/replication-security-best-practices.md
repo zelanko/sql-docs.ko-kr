@@ -16,10 +16,10 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078777"
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
@@ -30,7 +30,7 @@ ms.locfileid: "68078777"
   
 -   VPN(가상 프라이빗 네트워크), SSL(Secure Sockets Layer) 또는 IPSEC(IP 보안)과 같은 산업 표준 방법을 사용하여 복제 토폴로지의 컴퓨터 간 연결을 암호화합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요. VPN 및 SSL을 사용하여 인터넷에서 데이터를 복제하는 방법은 [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)을 참조하십시오.  
   
-     SSL을 사용하여 복제 토폴로지에서 컴퓨터 간의 연결 보안을 유지하는 경우 각 복제 에이전트의 **-EncryptionLevel** 매개 변수 값을 **1** 또는 **2** 로 지정합니다(값 **2** 가 권장됨). 값 **1** 을 지정하면 암호화가 사용되지만 에이전트에서 SSL 서버 인증서가 신뢰할 수 있는 발급자에 의해 서명된 것인지 확인하지는 않습니다. 값 **2** 를 지정하면 인증서가 확인됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     SSL을 사용하여 복제 토폴로지에서 컴퓨터 간의 연결 보안을 유지하는 경우 각 복제 에이전트의 **-EncryptionLevel** 매개 변수 값을 **1** 또는 **2** 로 지정합니다(값 **2** 가 권장됨). 값 **1** 을 지정하면 암호화가 사용되지만 에이전트에서 SSL 서버 인증서가 신뢰할 수 있는 발급자에 의해 서명된 것인지 확인하지는 않습니다. 값 **2** 를 지정하면 인증서가 확인됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241775"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 가용성 그룹의 가용성 모드 간 차이점

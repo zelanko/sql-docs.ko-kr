@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984395"
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67984395"
   보안 주체에 대한 사용 권한을 거부합니다. 보안 주체가 해당 그룹 또는 역할의 멤버 자격을 통해 사용 권한을 상속받는 것을 방지합니다. DENY가 개체 소유자 또는 sysadmin 고정 서버 역할의 멤버에 적용되지 않는 경우를 제외하고 DENY는 모든 사용 권한에 우선합니다.
   sysadmin 고정 서버 역할 및 개체 소유자의 **Security Note** 멤버는 사용 권한을 거부할 수 없습니다."
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -128,11 +128,11 @@ DENY
   
  AS *principal*  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.
-권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 사용자 Mary가 principal_id 12이고 사용자 Raul은 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
+권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 Mary라는 사용자가 principal_id 12이고 Raul이라는 사용자는 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
   
 이 명령문에 AS를 사용한다고 해서 다른 사용자로 가장하는 기능을 의미하는 것은 아닙니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DENY 문의 전체 구문은 복잡합니다. 위의 구문 다이어그램은 구조를 강조하기 위해 단순하게 표현되었습니다. 특정 보안 개체에 대한 사용 권한을 거부하는 완전한 구문은 아래에 나열된 항목에서 설명합니다.  
   
  GRANT OPTION을 지정하여 사용 권한이 부여된 보안 주체의 사용 권한을 거부할 경우 CASCADE를 지정하지 않으면 DENY 문이 실패합니다.  
@@ -165,7 +165,7 @@ DENY
 |인증서|[DENY 인증서 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
 |계약|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |데이터베이스|[DENY 데이터베이스 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
-|DATABASE SCOPED CREDENTIAL|[DENY 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
+|데이터베이스 범위 자격 증명|[DENY 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
 |엔드포인트|[GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |전체 텍스트 카탈로그|[DENY 전체 텍스트 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |전체 텍스트 중지 목록|[DENY 전체 텍스트 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
@@ -176,7 +176,7 @@ DENY
 |큐|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |원격 서비스 바인딩|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |역할|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|경로|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|라우팅|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |스키마|[DENY 스키마 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |검색 속성 목록|[DENY 검색 속성 목록 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
 |서버|[DENY 서버 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
@@ -185,8 +185,8 @@ DENY
 |대칭 키|[DENY 대칭 키 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
 |동의어|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |시스템 개체|[DENY 시스템 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
-|Table|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|형식|[DENY 형식 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|테이블|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Type|[DENY 형식 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
 |사용자|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |보기|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |XML 스키마 컬렉션|[DENY XML 스키마 컬렉션 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  

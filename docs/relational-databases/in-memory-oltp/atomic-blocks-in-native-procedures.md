@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951228"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
@@ -126,21 +126,21 @@ ORDER BY c1
 GO  
 ```  
   
- 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332, 41333 및 41839 오류가 발생하면 트랜잭션이 중단됩니다.  
+ 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332, 41333 및 41839 오류가 발생하면 트랜잭션을 중단시킵니다.  
   
 ## <a name="session-settings"></a>세션 설정  
  저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 설정은 **BEGIN ATOMIC** 으로 지정할 수도 있고 같은 값으로 항상 고정할 수도 있습니다.  
   
  **BEGIN ATOMIC**에는 다음 옵션이 필요합니다.  
   
-|필요한 설정|설명|  
+|필요한 설정|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|지원되는 값은 **SNAPSHOT**, **REPEATABLEREAD**및 **SERIALIZABLE**입니다.|  
 |**LANGUAGE**|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
-|선택적 설정|설명|  
+|선택적 설정|Description|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 **DATEFORMAT** 에서 **LANGUAGE**와 관련된 기본 날짜 형식을 재정의합니다.|  
 |**DATEFIRST**|지정되면 **DATEFIRST** 에서 **LANGUAGE**와 관련된 기본값을 재정의합니다.|  
@@ -150,16 +150,16 @@ GO
   
 |SET 옵션|ATOMIC 블록의 시스템 기본값|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|켜기|  
+|ANSI_PADDING|켜기|  
+|ANSI_WARNING|켜기|  
+|ARITHABORT|켜기|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|켜기|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|켜기|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|켜기|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> catch되지 않는 예외는 ATOMIC 블록을 롤백시키지만 오류로 인해 트랜잭션이 실패하지 않는다면 트랜잭션이 중단되지 않습니다.|  

@@ -14,10 +14,10 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13d07fe353c4d10345cce609f4b82cd7019db6c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297400"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT(SSIS 식)
@@ -41,7 +41,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 SQRT 결과도 Null입니다.  
   
  인수가 음수 값이면 SQRT가 실패합니다.  

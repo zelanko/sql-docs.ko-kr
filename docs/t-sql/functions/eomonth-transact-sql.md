@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904382"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67904382"
 
 이 함수는 선택 사항인 오프셋 옵션을 사용하여 지정한 날짜가 포함된 달의 마지막 날을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,12 +50,12 @@ EOMONTH ( start_date [, month_to_add ] )
 ## <a name="return-type"></a>반환 형식  
  **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `EOMONTH` 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버 이상 버전에 대해서는 원격으로 실행할 수 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>1\. 명시적 datetime 형식을 사용하는 EOMONTH  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>A. 명시적 datetime 형식을 사용하는 EOMONTH  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -72,7 +72,7 @@ Result
 (1 row(s) affected)  
 ```  
 
-### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>2\. 문자열 매개 변수 및 암시적 변환을 사용하는 EOMONTH  
+### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. 문자열 매개 변수 및 암시적 변환을 사용하는 EOMONTH  
   
 ```  
 DECLARE @date VARCHAR(255) = '12/1/2011';  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. month_to_add 매개 변수를 사용하거나 사용하지 않는 EOMONTH  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. month_to_add 매개 변수를 사용하거나 사용하지 않는 EOMONTH  
   
 참고: 이러한 결과 집합에 표시된 값은 실행 날짜를 반환합니다.
         

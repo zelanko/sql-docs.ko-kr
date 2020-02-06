@@ -18,10 +18,10 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927761"
 ---
 # <a name="ranking-functions-transact-sql"></a>순위 함수(Transact-SQL)

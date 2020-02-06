@@ -18,13 +18,13 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014976"
 ---
-# <a name="sqlsrvquery"></a>sqlsrv_query
+# <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 문을 준비하고 실행합니다.  
@@ -55,7 +55,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     배열의 각 요소에 대한 설명이 다음 표에 나와 있습니다.  
   
-    |요소|설명|  
+    |요소|Description|  
     |-----------|---------------|  
     |*$value*|리터럴 값, PHP 변수 또는 PHP by-reference 변수입니다.|  
     |*$direction*[선택 사항]|매개 변수 방향을 나타내기 위해 사용되는 다음 **SQLSRV_PARAM_\*** 상수 중 하나입니다. **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
@@ -64,10 +64,10 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 *$options* [선택 사항]: 쿼리 속성을 설정하는 결합형 배열입니다. [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties)에서도 지원하는 동일한 키 목록입니다.
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 문 리소스입니다. 명령문을 만들 수 없거나 실행할 수 없는 경우 **false**가 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **sqlsrv_query** 함수는 일회성 쿼리에 적합하며 특수한 환경이 적용되지 않는 한 쿼리를 실행하는 기본 선택이어야 합니다. 이 함수는 최소한의 코드 작성으로 쿼리를 실행하기 위한 간소한 메서드를 제공합니다. **sqlsrv_query** 함수는 명령문 준비와 명령문 실행을 수행하므로 매개 변수가 있는 쿼리를 실행하는 데 사용할 수 있습니다.  
   
 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
@@ -156,7 +156,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
+> PHP에서는 [부동 소수점 숫자](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://php.net/manual/en/language.types.float.php)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
