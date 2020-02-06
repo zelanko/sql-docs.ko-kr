@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088971"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION(Transact-SQL)
@@ -63,7 +63,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  보기에 유지할 이벤트 수입니다. 예를 들어 100을 지정하는 경우 필터 조건과 일치하는 최신 이벤트 100개가 진단 세션에 유지됩니다. 일치하는 이벤트가 100개보다 작은 경우 진단 세션은 100개 미만의 이벤트를 포함하게 됩니다. *max_item_count_num*은 100 이하이거나 100,000개여야 합니다.  
   
  *event_name*  
- 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)에 나열된 이벤트 중 하나입니다.  
+ 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 [의 ](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)sys.pdw_diag_events`sys.pdw_diag_events.is_enabled='True'`에 나열된 이벤트 중 하나입니다.  
   
  *filter_property_name*  
  결과를 제한하는 속성의 이름입니다. 예를 들어, 세션 ID에 따라 제한하려는 경우 *filter_property_name*은 *SessionId*여야 합니다. *filter_property_name*에 대한 가능한 값의 목록은 아래 *property_name*을 참조하세요.  
@@ -77,7 +77,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  이벤트와 관련된 속성입니다.  속성 이름은 캡처 태그의 일부가 되거나 필터링 조건의 일부가 될 수 있습니다.  
   
-|속성 이름|설명|  
+|속성 이름|Description|  
 |-------------------|-----------------|  
 |UserName|사용자(로그인) 이름입니다.|  
 |SessionId|세션 ID입니다.|  
@@ -85,10 +85,10 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |CommandType|명령 유형입니다.|  
 |CommandText|처리된 명령 내 텍스트입니다.|  
 |OperationType|이벤트에 대한 작업 유형입니다.|  
-|Duration|이벤트의 기간입니다.|  
+|Duration|이벤트의 재생 시간입니다.|  
 |SPID|서비스 프로세스 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  각 사용자는 최대 10개의 동시 진단 세션이 허용됩니다. 현재 세션 목록은 [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md)를 참조하고, `DROP DIAGNOSTICS SESSION`을 사용하여 필요 없는 세션을 드롭하세요.  
   
  진단 세션은 드롭될 때까지 메타데이터를 계속 수집합니다.  
@@ -101,7 +101,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-diagnostics-session"></a>1\. 진단 세션 만들기  
+### <a name="a-creating-a-diagnostics-session"></a>A. 진단 세션 만들기  
  이 예제에서는 데이터베이스 엔진 성능의 메트릭을 기록하는 진단 세션을 만듭니다. 이 예제에서는 엔진 쿼리 실행/종료 이벤트 및 차단 DMS 이벤트를 수신하는 진단 세션을 만듭니다. 반환되는 항목은 명령 텍스트, 컴퓨터 이름, 요청 ID(쿼리 ID) 및 이벤트가 만들어진 세션입니다.  
   
 ```  
@@ -148,7 +148,7 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
-### <a name="b-alternative-diagnostic-session"></a>2\. 대체 진단 세션  
+### <a name="b-alternative-diagnostic-session"></a>B. 대체 진단 세션  
  약간 다른 속성을 가진 두 번째 예입니다.  
   
 ```  

@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909492"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
@@ -61,13 +61,13 @@ ms.locfileid: "72909492"
   
  필터의 가용성은 데이터 열에 따라 다릅니다. 일부 데이터 열은 필터링할 수 없습니다. 다음 표와 같이 필터링 가능 데이터 열을 특정 관계형 연산자로만 필터링할 수 있습니다.  
   
-|관계형 연산자|연산자 기호|설명|  
+|관계형 연산자|연산자 기호|Description|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
+|Like|LIKE|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |유사하지 않음|유사하지 않음|추적 이벤트 데이터가 입력한 텍스트와 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같음|=|추적 이벤트 데이터가 입력한 값과 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같지 않음|<>|추적 이벤트 데이터가 입력한 값과 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
-|보다 큼|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
+|초과|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
 |크거나 같음|>=|추적 이벤트 데이터가 입력한 값보다 크거나 같아야 함을 지정합니다.|  
 |보다 작음|<|추적 이벤트 데이터가 입력한 값보다 작아야 함을 지정합니다.|  
 |작거나 같음|<=|추적 이벤트 데이터가 입력한 값보다 작거나 같아야 함을 지정합니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "72909492"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**기간**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**오류**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -128,7 +128,7 @@ ms.locfileid: "72909492"
 |**SqlHandle**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**성공**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**TargetUserName**|LIKE, NOT LIKE|  

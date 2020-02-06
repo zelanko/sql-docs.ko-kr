@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141060"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 절(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68141060"
 
   쿼리에서 열을 반환하도록 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias*는 ORDER BY 절에는 사용할 수 있지만, WHERE, GROUP BY 또는 HAVING 절에서는 사용할 수 없습니다. 쿼리 식이 DECLARE CURSOR 문의 일부인 경우 *column_alias*는 FOR UPDATE 절에서 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SELECT 목록에 포함된 **text** 또는 **ntext** 열에 대해 반환되는 데이터의 길이는 **text** 열의 실제 크기, 기본 TEXTSIZE 세션 설정 또는 하드 코딩된 애플리케이션 제한 중에서 가장 작은 값으로 설정됩니다. 세션에 대해 반환되는 텍스트의 길이를 변경하려면 SET 문을 사용하세요. 기본적으로 하나의 SELECT 문이 반환하는 텍스트 데이터의 길이 제한은 4,000바이트입니다.  
   
  다음 동작 중 하나를 시도하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 예외 511을 발생시키고 현재 실행 중인 문을 롤백합니다.  

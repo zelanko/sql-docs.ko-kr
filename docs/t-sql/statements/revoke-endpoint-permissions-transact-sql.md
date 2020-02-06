@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082285"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 엔드포인트 사용 권한(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082285"
 
   엔드포인트에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스가 **master**인 경우에만 서버 범위의 사용 권한을 취소할 수 있습니다.  
   
  엔드포인트 정보는 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되며 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
@@ -103,8 +103,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>1\. 엔드포인트에 대한 VIEW DEFINITION 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 `VIEW DEFINITION`으로부터 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 취소합니다.  
+### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 취소  
+ 다음 예에서는 `VIEW DEFINITION`로그인 `Mirror7`으로부터 엔드포인트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -112,8 +112,8 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>2\. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `PKomosinski` 및 `PKomosinski`가 `Shipping83`에 대해 `TAKE OWNERSHIP`을 부여한 모든 보안 주체로부터 엔드포인트 `Shipping83`에 대한 `TAKE OWNERSHIP` 권한을 취소합니다.  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 취소  
+ 다음 예에서는 `TAKE OWNERSHIP` 사용자 `Shipping83` 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 `PKomosinski`에 대해 `PKomosinski`을 부여한 모든 보안 주체로부터 엔드포인트 `TAKE OWNERSHIP`에 대한 `Shipping83` 권한을 취소합니다.  
   
 ```  
 USE master;  

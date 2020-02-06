@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072247"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+(문자열 연결)(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072247"
 
   두 개 이상의 문자 또는 이진 문자열, 열 또는 문자열 및 열 이름의 조합을 하나의 식(문자열 연산자)으로 연결하는 문자열 식의 연산자입니다.  예를 들어 `SELECT 'book'+'case';`는 `bookcase`를 반환합니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ expression + expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 문자 및 이진 데이터 형식 범주에서 **image**, **ntext** 또는 **text** 데이터 형식을 제외한 모든 데이터 형식으로 구성된 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다.  
+ 문자 및 이진 데이터 형식 범주에서 [image](../../t-sql/language-elements/expressions-transact-sql.md), **ntext** 또는 **text** 데이터 형식을 제외한 모든 데이터 형식으로 구성된 유효한 **식**입니다. 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다.  
   
  이진 문자열 사이에 문자가 있는 형태의 연결에서는 문자 데이터로의 명시적 변환이 필요합니다. 다음 예에서는 이진 연결에 `CONVERT` 또는 `CAST`가 필요한 경우와 `CONVERT` 또는 `CAST`를 사용하지 않아야 하는 보여 줍니다.  
   
@@ -67,14 +67,14 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>결과 형식  
  결과는 우선 순위가 가장 높은 인수의 데이터 형식으로 반환됩니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  \+ (문자열 연결) 연산자는 비어 있는 문자열, 즉 길이가 0인 문자열을 다룰 때와 NULL 또는 알 수 없는 값을 다룰 때 다르게 동작합니다. 길이가 0인 문자열은 문자가 포함되지 않은 두 개의 작은 따옴표로 지정할 수 있습니다. 길이가 0인 이진 문자열은 16진수 상수에 바이트 값이 지정되지 않은 0x로 지정할 수 있습니다. 길이가 0인 문자열을 연결하면 항상 지정된 문자열 2개가 연결됩니다. Null 값을 가진 문자열을 처리할 때는 세션 설정에 따라 연결 결과가 달라집니다. Null 값에 대해 수행되는 산술 연산에서 Null 값이 Null이 아닌 다른 값과 더해지면 대개 알 수 없는 값이 얻어지는 것처럼, Null 값을 다른 문자열과 연결하면 결과는 Null로 계산됩니다. 하지만 현재 세션에 대한 `CONCAT_NULL_YIELDS_NULL`의 설정을 변경하여 이 동작을 변경할 수 있습니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)을 참조하세요.  
   
  문자열 연결의 결과가 제한치인 8,000바이트를 초과하면 결과가 잘립니다. 하지만 연결된 문자열 중 하나 이상이 큰 값 형식이면 잘림은 발생하지 않습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-string-concatenation"></a>1\. 문자열 연결 사용  
+### <a name="a-using-string-concatenation"></a>A. 문자열 연결 사용  
  다음 예에서는 여러 문자 열에서 사람의 성, 쉼표, 공백 및 사람의 이름을 사용하여 `Name`이라는 열 머리글의 단일 열을 만듭니다. 결과 집합에서 성과 이름이 사전 오름차순으로 정렬됩니다.  
   
 ```sql  
@@ -85,7 +85,7 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>2\. numeric 및 date 데이터 형식의 결합  
+### <a name="b-combining-numeric-and-date-data-types"></a>B. numeric 및 date 데이터 형식의 결합  
  다음 예에서는 `CONVERT` 함수를 사용하여 **numeric** 및 **date** 데이터 형식을 연결합니다.  
   
 ```sql  
@@ -153,7 +153,7 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. 여러 문자열의 연결  
  다음 예에서는 샘플 데이터베이스 내에서 여러 개의 문자열을 하나의 긴 문자열로 연결하여 부사장들의 성과 첫 번째 이니셜을 표시합니다. 성 뒤에는 쉼표, 그리고 첫 번째 이니셜 뒤에는 마침표가 추가됩니다.  

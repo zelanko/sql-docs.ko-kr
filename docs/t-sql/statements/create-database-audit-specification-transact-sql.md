@@ -25,10 +25,10 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656650"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION(Transact-SQL)
@@ -95,7 +95,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>예
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 데이터베이스 감사 주체에 대해 테이블에서 SELECT 및 INSERT 감사 
- 다음 예제에서는 `Payrole_Security_Audit`라는 서버 감사를 만든 다음, `AdventureWorks2012` 데이터베이스의 `HumanResources.EmployeePayHistory` 테이블에 대해 `dbo` 사용자로 `SELECT` 및 `INSERT` 문을 감사하는 `Payrole_Security_Audit`라는 데이터베이스 감사 사양을 만듭니다.  
+ 다음 예제에서는 `Payrole_Security_Audit`라는 서버 감사를 만든 다음, `Payrole_Security_Audit` 데이터베이스의 `SELECT` 테이블에 대해 `INSERT` 사용자로 `dbo` 및 `HumanResources.EmployeePayHistory` 문을 감사하는 `AdventureWorks2012`라는 데이터베이스 감사 사양을 만듭니다.  
   
 ```  
 USE master ;  
@@ -122,7 +122,7 @@ GO
 ``` 
 
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 특정 데이터베이스 역할에 대해 _sales_ 스키마에서 _모든_ 개체에 대해 DML(INSERT, UPDATE 또는 DELETE) 감사  
- 다음 예에서는 `DataModification_Security_Audit`라는 서버 감사를 만든 다음, `AdventureWorks2012` 데이터베이스의 `Sales` 스키마에 있는 모든 개체에 대해 새 데이터베이스 역할 `SalesUK`의 사용자에 의한 `INSERT`, `UPDATE` 및 `DELETE` 문을 감사하는 `Audit_Data_Modification_On_All_Sales_Tables`라는 데이터베이스 감사 사양을 만듭니다.  
+ 다음 예에서는 `DataModification_Security_Audit`라는 서버 감사를 만든 다음, `Audit_Data_Modification_On_All_Sales_Tables` 데이터베이스의 `INSERT` 스키마에 있는 모든 개체에 대해 새 데이터베이스 역할 `UPDATE`의 사용자에 의한 `DELETE`, `SalesUK` 및 `Sales` 문을 감사하는 `AdventureWorks2012`라는 데이터베이스 감사 사양을 만듭니다.  
   
 ```  
 USE master ;  
