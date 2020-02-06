@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75720821"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG(Transact-SQL)
@@ -96,7 +96,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`name` 셀에 있는 `NULL` 값은 결과에 반환되지 않습니다.   
+`NULL` 셀에 있는 `name` 값은 결과에 반환되지 않습니다.   
 
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
@@ -153,7 +153,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `STRING_AGG` 함수가 `SELECT` 목록의 유일한 항목이 아닌 경우 `GROUP BY` 절이 필요합니다.
+> `GROUP BY` 함수가 `STRING_AGG` 목록의 유일한 항목이 아닌 경우 `SELECT` 절이 필요합니다.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 

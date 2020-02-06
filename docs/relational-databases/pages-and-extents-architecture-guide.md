@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325495"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
@@ -64,7 +64,7 @@ ms.locfileid: "75325495"
 
 이 제한은 varchar, nvarchar, varbinary 또는 sql_variant 열이 있는 테이블에는 제한적으로 적용됩니다. 테이블에 있는 모든 고정 및 변수 열의 전체 행 크기가 8,060바이트 한계를 초과하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 하나 이상의 가변 길이 열을 가장 너비가 넓은 열부터 시작하여 ROW_OVERFLOW_DATA 할당 단위에 있는 페이지로 동적으로 옮깁니다. 
 
-삽입 또는 업데이트 작업으로 행의 전체 크기가 8,060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
+삽입 또는 업데이트 작업으로 행의 전체 크기가 8060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
 
 ##### <a name="row-overflow-considerations"></a>행 오버플로 고려 사항 
 
@@ -94,7 +94,7 @@ ms.locfileid: "75325495"
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, 추적 플래그 1118을 사용하여 항상 균일 익스텐트를 사용하도록 기본 할당을 변경할 수 있습니다. 이 추적 플래그에 대한 자세한 내용은 [DBCC TRACEON - 추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 TempDB에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 TempDB에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `SET MIXED_PAGE_ALLOCATION`의 `ALTER DATABASE` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>익스텐트 할당 및 빈 공간 관리 
 

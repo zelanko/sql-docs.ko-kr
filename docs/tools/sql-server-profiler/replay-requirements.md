@@ -1,30 +1,28 @@
 ---
-title: 재생 요구 사항 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Replay Requirements
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307480"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 나 Distributed Replay Utility를 사용하여 추적 데이터를 재생하려면 특정 이벤트 클래스 및 열 집합이 추적에 캡처되어야 합니다. **TSQL_Replay** 추적 템플릿을 사용하여 나중에 재생에 사용되도록 추적을 구성한 경우 이러한 설정이 기본적으로 사용됩니다. 이 항목에서는 이러한 설정 및 기타 재생 요구 사항에 대해 설명합니다.  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 나 Distributed Replay Utility를 사용하여 추적 데이터를 재생하려면 특정 이벤트 클래스 및 열 집합이 추적에 캡처되어야 합니다. **TSQL_Replay** 추적 템플릿을 사용하여 나중에 재생에 사용되도록 추적을 구성한 경우 이러한 설정이 기본적으로 사용됩니다. 이 항목에서는 이러한 설정 및 기타 재생 요구 사항에 대해 설명합니다.  
   
 > [!NOTE]  
 >  리소스를 많이 사용하는 OLTP 애플리케이션(활성 동시 연결 수가 많거나 처리량이 많음)을 재생하는 데는 Distributed Replay Utility를 사용하는 것이 좋습니다. Distributed Replay Utility는 여러 컴퓨터의 추적 데이터를 재생할 수 있으므로 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하세요.  
@@ -71,7 +69,7 @@ ms.locfileid: "67928890"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **애플리케이션 이름**  
   
 -   **LoginName**  
   
@@ -83,7 +81,7 @@ ms.locfileid: "67928890"
   
 -   **HostName**  
   
--   **ServerName**  
+-   **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**  
   
 -   **Binary Data**  
   

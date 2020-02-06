@@ -1,20 +1,21 @@
 ---
 title: Azure Container Service 구성
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포에 대해 AKS(Azure Kubernetes Service)를 구성하는 방법을 알아봅니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016886"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251207"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
 
@@ -69,7 +70,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
    az account set --subscription <subscription id>
    ```
 
-1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `westus2` 위치에 `sqlbdcgroup`이라는 리소스 그룹을 만듭니다.
+1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `sqlbdcgroup` 위치에 `westus2`이라는 리소스 그룹을 만듭니다.
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -103,7 +104,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 **Standard_L8s**인 Linux 에이전트 노드 1개를 사용하여 *kubcluster*라는 Kubernetes 클러스터를 만듭니다.
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 *Standard_L8s*인 Linux 에이전트 노드 1개를 사용하여 **kubcluster**라는 Kubernetes 클러스터를 만듭니다.
 
    스크립트를 실행하기 전에 `<version number>`를 이전 단계에서 확인한 버전 번호로 바꿉니다.
 

@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557938"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 커넥터, 부록
@@ -153,7 +153,7 @@ ms.locfileid: "75557938"
 * 이 새 자격 증명 모음을 사용할 수 있도록 SQL Server 서비스 사용자에게 권한을 부여합니다.  
 * 새 자격 증명 모음 이름이 반영되도록 데이터베이스 엔진에서 사용하는 SQL Server 자격 증명을 수정합니다(필요할 경우).  
   
-키 백업은 동일한 지리적 지역 또는 미국, 캐나다, 일본, 오스트레일리아, 인도, APAC, 유럽, 브라질, 중국, 미국 정부, 독일 등의 국가별 클라우드에 있다면 다양한 Azure 지역에서 복원할 수 있습니다.  
+키 백업은 동일한 지역 또는 국가(미국, 캐나다, 일본, 오스트레일리아, 인도, APAC, 유럽, 브라질, 중국, 미국 정부 또는 독일) 클라우드에 있는 경우 Azure 지역에서 복원할 수 있습니다.  
   
   
 ##  <a name="AppendixB"></a> 2. 질문과 대답  
