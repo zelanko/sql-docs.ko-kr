@@ -18,10 +18,10 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095259"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "74095259"
     > [!NOTE]  
     >  로그 파일을 지정하지 않고 데이터베이스를 연결할 경우 연결 작업은 원래 위치에서 로그 파일을 검색합니다. 원래 위치에 로그 복사본이 있으면 해당 복사본이 연결됩니다. 원래 로그 파일을 사용하지 않으려면 새 로그 파일의 경로를 지정하거나 로그 파일의 원본을 새 위치로 복사한 후 제거합니다.  
   
-3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](../../relational-databases/databases/attach-a-database.md)을(를) 참조하세요.  
+3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](../../relational-databases/databases/attach-a-database.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라고 하는 `MyAdventureWorks`데이터베이스의 복사본을 만듭니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 연결한 서버 인스턴스에 연결된 쿼리 편집기 창에서 실행됩니다.  

@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882404"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
@@ -94,7 +94,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 민감도 순위를 정의하는 사전 정의된 값 세트를 기반으로 하는 식별자입니다. Advanced Threat Protection과 같은 다른 서비스에서 순위에 따라 변칙을 검색하는 데 사용됩니다.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 - 한 개체에 분류를 하나만 추가할 수 있습니다. 이미 분류된 개체에 분류를 추가하면 기존 분류를 덮어씁니다.
 - 하나의 `ADD SENSITIVITY CLASSIFICATION` 문을 사용하여 여러 개체를 분류할 수 있습니다.
@@ -108,7 +108,7 @@ ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSIT
 
 ## <a name="examples"></a>예  
 
-### <a name="a-classifying-two-columns"></a>1\. 두 개의 열 분류
+### <a name="a-classifying-two-columns"></a>A. 두 개의 열 분류
 
 다음 예제에서는 민감도 레이블 **Highly Confidential** 및 정보 유형 **Financial**을 사용하여 **dbo.sales.price** 및 **dbo.sales.discount** 열을 분류합니다.
 
@@ -118,7 +118,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>2\. 레이블만 분류
+### <a name="b-classifying-only-a-label"></a>B. 레이블만 분류
 다음 예제에서는 레이블 **Confidential** 및 레이블 ID **643f7acd-776a-438d-890c-79c3f2a520d6**을 사용하여 **dbo.customer.comments** 열을 분류합니다. 이 열의 정보 유형은 분류되지 않았습니다.
 
 ```sql
