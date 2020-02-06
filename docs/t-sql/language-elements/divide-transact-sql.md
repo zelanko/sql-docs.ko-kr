@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee91b9b909820a36b8ffa152ff88a3018ed4950c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894905"
 ---
 # <a name="-division-transact-sql"></a>/(나누기)(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67894905"
 
   숫자를 다른 숫자로 나눕니다(산술 나누기 연산자).  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>인수  
  *dividend*  
- 나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)일 수 있습니다.  
+ 나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 [datetime](../../t-sql/language-elements/expressions-transact-sql.md) 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 **식**일 수 있습니다.  
   
  *divisor*  
  피제수를 나눌 숫자 식입니다. *divisor*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.  
@@ -52,7 +52,7 @@ dividend / divisor
   
  정수 *dividend*를 정수 *divisor*로 나누면 결과는 소수 부분이 잘린 정수가 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  / 연산자로 반환되는 실제 값은 첫째 식을 둘째 식으로 나누어 나온 몫입니다.  
   
 ## <a name="examples"></a>예  
@@ -82,7 +82,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 나누기 산술 연산자를 사용하여 각 직원의 휴가 시간 대 병가 시간의 간단한 비율을 계산합니다.  
   
 ```  

@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71341996"
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "71341996"
 
   STUFF 함수는 다른 문자열에 문자열을 삽입합니다. 이 함수는 지정된 시작 위치와 문자 수에 따라 첫 번째 문자열의 문자를 삭제하고 두 번째 문자열을 시작 위치에 삽입합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>반환 형식  
  지원되는 문자 데이터 형식 중 *character_expression*이 이 있을 경우 문자 데이터를 반환합니다. 지원되는 이진 데이터 형식 중 *character_expression*이 이 있을 경우 이진 데이터를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시작 위치 또는 길이가 음수이거나 시작 위치가 첫 번째 문자열의 길이를 넘어서면 null 문자열이 반환됩니다. 시작 위치가 0일 경우 Null 값이 반환됩니다. 삭제할 길이가 첫 번째 문자열보다 길면 첫 번째 문자열의 첫 번째 문자까지 삭제됩니다.  
 
 결과 값이 반환 유형이 지원하는 최대값보다 크면 오류가 발생합니다.  

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982777"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73982777"
 
  이 기능은 Data Tier Application Framework(DACFx)를 사용하는 데이터베이스 내보내기와 호환되지 않습니다. 내보내기 전에 모든 인증서를 삭제해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -161,7 +161,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다. 기본값은 ON입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인증서는 X.509 표준을 따르고 X.509 V1 필드를 지원하는 데이터베이스 수준의 보안 개체입니다. CREATE CERTIFICATE는 파일, 이진 상수 또는 어셈블리에서 인증서를 로드할 수 있습니다. 이 문은 또한 키 쌍을 생성하고 자체 서명된 인증서를 만들 수 있습니다.  
   
  프라이빗 키는 암호화된 형식으로 \< = 2500 바이트여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 프라이빗 키는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 1024 비트 길이이고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 2048 비트 길이입니다. 외부 원본으로부터 가져온 프라이빗 키의 최소 길이는 384비트이고 최대 길이는 4,096비트입니다. 가져온 프라이빗 키의 길이는 64비트의 정수 배수여야 합니다. TDE에 사용되는 인증서의 프라이빗 키 크기는 3456비트로 제한됩니다.  
@@ -181,14 +181,14 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  암호화 및 서명에 대한 기본 제공 함수는 인증서의 만료 날짜를 검사하지 않습니다. 이러한 함수의 사용자는 인증서 만료에 대한 검사 시기를 결정해야 합니다.  
   
- [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &amp;#40;Transact-SQL&amp;#41](../../t-sql/functions/certencoded-transact-sql.md) 문서의 예제 B를 참조하세요.  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &#40;Transact-SQL&amp;amp;#41](../../t-sql/functions/certencoded-transact-sql.md) 문서의 예제 B를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE CERTIFICATE 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-self-signed-certificate"></a>1\. 자체 서명된 인증서 만들기  
+### <a name="a-creating-a-self-signed-certificate"></a>A. 자체 서명된 인증서 만들기  
  다음 예에서는 `Shipping04`라는 인증서를 만듭니다. 이 인증서의 프라이빗 키는 암호를 사용하여 보호됩니다.  
   
 ```sql  
@@ -199,7 +199,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-### <a name="b-creating-a-certificate-from-a-file"></a>2\. 파일로부터 인증서 만들기  
+### <a name="b-creating-a-certificate-from-a-file"></a>B. 파일로부터 인증서 만들기  
  다음 예에서는 데이터베이스에서 인증서를 만들고 파일로부터 키 쌍을 로드합니다.  
   
 ```sql  

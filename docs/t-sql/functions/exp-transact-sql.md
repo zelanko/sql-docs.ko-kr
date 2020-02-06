@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071589"
 ---
 # <a name="exp-transact-sql"></a>EXP(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68071589"
 
   지정한 **float** 식의 지수 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,21 +41,21 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  상수 **e**는 자연 로그의 밑이며 대략적인 값은 2.718281...입니다.  
   
  숫자의 지수 값이란 **e**를 그 숫자만큼 거듭 제곱한 값을 말합니다. 예를 들어 EXP(1.0) = e^1.0 = 2.71828182845905이며 EXP(10) = e^10 = 22026.4657948067입니다.  
   
- 숫자의 자연 로그 값을 계산하고 다시 그 값의 지수를 계산하면 결국 원래 숫자가 됩니다. EXP(LOG (*n*)) = *n*. 마찬가지로 숫자의 지수를 계산하고 다시 그 값의 자연 로그 값을 구하면 원래 숫자가 됩니다. LOG(EXP (*n*)) = *n*.  
+ 숫자의 자연 로그 값을 계산하고 다시 그 값의 지수를 계산하면 결국 원래 숫자가 됩니다. EXP (LOG (*n*)) = *n*. 마찬가지로 숫자의 지수를 계산하고 다시 그 값의 자연 로그 값을 구하면 원래 숫자가 됩니다. LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-exponent-of-a-number"></a>1\. 숫자의 지수 찾기  
+### <a name="a-finding-the-exponent-of-a-number"></a>A. 숫자의 지수 찾기  
  다음 예에서는 변수를 선언하고 텍스트 설명과 함께 지정된 변수(`10`)의 지수 값을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -73,7 +73,7 @@ The EXP of the variable is: 22026.5
 (1 row(s) affected)  
 ```  
   
-### <a name="b-finding-exponentials-and-natural-logarithms"></a>2\. 지수 및 자연 로그 찾기  
+### <a name="b-finding-exponentials-and-natural-logarithms"></a>B. 지수 및 자연 로그 찾기  
  다음 예에서는 `20`의 자연 로그 값을 구한 후 그 값의 지수 값을 계산하고, 다시 `20`의 지수 값을 구한 후 그 값의 자연 로그 값을 계산하여 반환합니다. 이 함수는 서로 역함수 관계에 있으며 두 함수의 반환 값은 모두 `20`입니다.  
   
 ```  
@@ -90,7 +90,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. 숫자의 지수 찾기  
  다음 예에서는 지정한 값(`10`)의 지수 값을 반환합니다.  

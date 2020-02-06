@@ -23,10 +23,10 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072016"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072016"
 
 전체 XML 스키마 컬렉션과 모든 해당 구성 요소를 삭제합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 삭제할 XML 스키마 컬렉션의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 트랜잭션 내부에서 XML 스키마 컬렉션을 삭제하고 나중에 트랜잭션을 롤백하는 경우 XML 스키마 컬렉션이 삭제되지 않습니다.  
   
 사용 중인 XML 스키마 컬렉션은 삭제할 수 없습니다. 따라서 다음 조건에서는 컬렉션을 삭제할 수 없습니다.  
@@ -59,7 +59,7 @@ XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 트
   
 -   테이블 제약 조건에 지정된 컬렉션  
   
--   스키마 바운드 함수 또는 저장 프로시저에서 참조하는 컬렉션. 예를 들어 다음 함수는 `WITH SCHEMABINDING`을 지정하기 때문에 `MyCollection` XML 스키마 컬렉션을 잠급니다. 이것을 제거하면 XML SCHEMA COLLECTION에 대한 잠금이 사라집니다.  
+-   스키마 바운드 함수 또는 저장 프로시저에서 참조하는 컬렉션. 예를 들어 다음 함수는 `MyCollection`을 지정하기 때문에 `WITH SCHEMABINDING` XML 스키마 컬렉션을 잠급니다. 이것을 제거하면 XML SCHEMA COLLECTION에 대한 잠금이 사라집니다.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  

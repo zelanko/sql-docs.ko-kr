@@ -14,10 +14,10 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f84bb32435afe7cbe52cea6ed25f59940dbd42c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297522"
 ---
 # <a name="len-ssis-expression"></a>LEN(SSIS 식)
@@ -41,7 +41,7 @@ LEN(character_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *character_expression* 인수는 DT_WSTR, DT_TEXT, DT_NTEXT 또는 DT_IMAGE 데이터 형식일 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  *character_expression* 이 문자열 리터럴 또는 DT_STR 데이터 형식의 데이터 열인 경우 LEN이 연산을 수행하기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  

@@ -11,16 +11,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594412"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 모듈은 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 구성하기 위한 cmdlet을 제공합니다.
+SqlServer PowerShell 모듈은 [ 또는 ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)에서 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 구성하기 위한 cmdlet을 제공합니다.
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell을 사용하여 Always Encrypted를 구성할 때의 보안 고려 사항
 
@@ -121,7 +121,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 상시 암호화에 사용할 수 있는 PowerShell cmdlet은 다음과 같습니다.
 
-|CMDLET |설명
+|CMDLET |Description
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Azure에 인증을 수행하고 인증 토큰을 획득합니다.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |데이터베이스의 기존 열 암호화 키 개체에 대한 새 암호화된 값을 추가합니다.
@@ -146,7 +146,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 ## <a name="see-also"></a>참고 항목
 
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)

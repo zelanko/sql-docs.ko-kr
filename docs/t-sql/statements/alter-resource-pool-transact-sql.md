@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982081"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982081"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 리소스 관리자 리소스 풀 구성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  풀에 대한 MAX_IOPS_PER_VOLUME이 0으로 설정된 경우 풀이 전혀 제어되지 않으며, 다른 풀에 MIN_IOPS_PER_VOLUME 집합이 설정되었더라도 시스템에서 모든 IOPS를 사용할 수 있습니다. 이 경우에는 이 풀의 IO를 제어하려는 경우 이 풀에 대한 MAX_IOPS_PER_VOLUME 값을 높은 값(예를 들어, 최대값 2^31-1)으로 설정하는 것이 좋습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  MAX_CPU_PERCENT 및 MAX_MEMORY_PERCENT는 MIN_CPU_PERCENT 및 MIN_MEMORY_PERCENT 각각보다 크거나 같아야 합니다.  
   
  MAX_CPU_PERCENT는 가능하면 MAX_CPU_PERCENT 값 보다 큰 CPU 용량을 사용할 수 있습니다. CAP_CPU_PERCENT를 초과하는 정기적인 급격한 증가가 있을 수 있지만 추가 CPU 용량을 사용할 수 있다 해도 워크로드는 오랜 시간 동안 CAP_CPU_PERCENT를 초과해서는 안 됩니다.  

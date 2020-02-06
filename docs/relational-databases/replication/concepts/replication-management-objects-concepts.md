@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908526"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286082"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908526"
  [배포 구성](../../../relational-databases/replication/configure-distribution.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 배포를 구성하는 방법을 보여 줍니다.  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 아티클을 작성, 삭제 및 수정하는 방법을 보여 줍니다.  
   
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
@@ -143,7 +143,7 @@ ms.locfileid: "72908526"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>복제 서버에 연결  
- RMO 프로그래밍 개체의 경우 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
+ RMO 프로그래밍 개체의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클래스의 인스턴스를 사용하여 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
   
 -   지정된 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 대해 모든 연결 속성을 정의합니다.  
   

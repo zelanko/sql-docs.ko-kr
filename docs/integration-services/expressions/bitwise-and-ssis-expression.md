@@ -15,10 +15,10 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 295affd0b03368d8156bec8e3b7193f3ce0684ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290311"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (비트 AND)(SSIS 식)
@@ -45,7 +45,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  둘 중 한 조건이 Null이면 식 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  

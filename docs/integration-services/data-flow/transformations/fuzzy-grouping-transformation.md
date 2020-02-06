@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297933"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
@@ -90,7 +90,7 @@ ms.locfileid: "71297933"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -148,7 +148,7 @@ ms.locfileid: "71297933"
  **숫자**  
  열 데이터 비교 시 선행 및 후행 숫자의 의미를 지정합니다. 예를 들어 선행 숫자가 의미가 있을 경우 "123 Main Street"는 "456 Main Street"와 그룹화되지 않습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**Neither**|선행 및 후행 숫자 모두 의미가 없습니다.|  
 |**Leading**|선행 숫자만 의미가 있습니다.|  

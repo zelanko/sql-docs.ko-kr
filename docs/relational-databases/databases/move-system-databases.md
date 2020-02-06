@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100457"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
@@ -218,7 +218,7 @@ ms.locfileid: "68100457"
   
 ##  <a name="Examples"></a> 예  
   
-### <a name="a-moving-the-tempdb-database"></a>1\. tempdb 데이터베이스 이동  
+### <a name="a-moving-the-tempdb-database"></a>A. tempdb 데이터베이스 이동  
  다음 예에서는 계획된 재배치의 일부로 `tempdb` 데이터와 로그 파일을 새 위치로 이동합니다.  
   
 > [!NOTE]  

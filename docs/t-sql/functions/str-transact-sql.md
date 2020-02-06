@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906880"
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67906880"
 
   숫자 데이터에서 변환된 문자 데이터를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STR에 대한 *length* 및 *decimal* 매개 변수가 제공되는 경우 해당 값은 양수여야 합니다. 숫자는 기본적으로 또는 decimal 매개 변수가 0인 경우 정수로 반올림됩니다. 지정된 길이는 소수점 앞의 숫자 부분과 숫자 부호(있는 경우)를 더한 것보다 크거나 같아야 합니다. 짧은 *float_expression*은 지정된 길이에서 오른쪽 정렬되며 긴 *float_expression*은 지정된 십진 자릿수에서 잘립니다. 예를 들어 STR(12 **,** 10)의 결과는 12가 됩니다. 이는 결과 집합에서 오른쪽 정렬됩니다. 그러나 STR(1223 **,** 2)은 결과 집합을 **로 자릅니다. 문자열 함수는 중첩될 수 있습니다.  
   
 > [!NOTE]  

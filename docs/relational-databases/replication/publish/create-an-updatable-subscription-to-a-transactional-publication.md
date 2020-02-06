@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321254"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
@@ -51,7 +51,7 @@ ms.locfileid: "75321254"
 
     * **이미 정의한 연결된 서버나 원격 서버 사용** [sp_addserver(Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver(Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio 또는 다른 메서드를 사용하여 구독자와 게시자 간에 원격 서버 또는 연결된 서버를 정의한 경우 이 옵션을 선택합니다.
 
-    연결된 서버 계정에 필요한 사용 권한에 대한 자세한 내용은 [여기에 링크 설명 입력](../../../relational-databases/replication/security/secure-the-subscriber.md)의 **지연 업데이트 구독**을 참조하세요.
+    연결된 서버 계정에 필요한 사용 권한에 대한 자세한 내용은 **여기에 링크 설명 입력**의 [지연 업데이트 구독](../../../relational-databases/replication/security/secure-the-subscriber.md)을 참조하세요.
 
 8. 마법사를 완료합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "75321254"
 
     * **이미 정의한 연결된 서버나 원격 서버 사용** [sp_addserver(Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver(Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio 또는 다른 메서드를 사용하여 구독자와 게시자 간에 원격 서버 또는 연결된 서버를 정의한 경우 이 옵션을 선택합니다.
 
-    연결된 서버 계정에 필요한 사용 권한에 대한 자세한 내용은 [여기에 링크 설명 입력](../../../relational-databases/replication/security/secure-the-subscriber.md)의 **지연 업데이트 구독**을 참조하세요.
+    연결된 서버 계정에 필요한 사용 권한에 대한 자세한 내용은 **여기에 링크 설명 입력**의 [지연 업데이트 구독](../../../relational-databases/replication/security/secure-the-subscriber.md)을 참조하세요.
 
 11. 마법사를 완료합니다.
 
@@ -201,7 +201,7 @@ ms.locfileid: "75321254"
 1. 게시자에서 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)을 실행하여 게시에서 지연 업데이트 구독을 지원하는지 확인합니다. 
 
     * 결과 집합의 allow_queued_tran 값이 1이면 게시는 즉시 업데이트 구독을 지원합니다.
-    * 결과 집합의 allow_queued_tran 값이 0이면 지연 업데이트 구독을 설정하여 게시를 다시 만들어야 합니다. 자세한 내용은 방법: 트랜잭션 게시에 대한 구독 업데이트를 설정합니다(복제 Transact-SQL 프로그래밍).
+    * 결과 집합의 allow_queued_tran 값이 0이면 지연 업데이트 구독을 설정하여 게시를 다시 만들어야 합니다. 자세한 내용은 방법: 트랜잭션 게시에 대한 구독 업데이트 설정(복제 Transact-SQL 프로그래밍)을 참조하세요.
 
 2. 게시자에서 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)을 실행하여 게시에서 밀어넣기 구독을 지원하는지 확인합니다. 
 
@@ -228,10 +228,10 @@ ms.locfileid: "75321254"
     * 이 구독에 대한 배포 에이전트 작업 일정.
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>지연 업데이트 충돌 해결 옵션 설정 
-**게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 지연 업데이트 구독을 지원하는 게시에 대한 충돌 해결 옵션을 설정할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+**게시 속성 -** Publication> **대화 상자의 \<구독 옵션** 페이지에서 지연 업데이트 구독을 지원하는 게시에 대한 충돌 해결 옵션을 설정할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **충돌 해결 정책** 옵션에 대해 다음 값 중 하나를 선택합니다.  
+1.  **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 **충돌 해결 정책** 옵션에 대해 다음 값 중 하나를 선택합니다.  
   
     -   **게시자 변경 내용 유지**    
     -   **구독자 변경 내용 유지**    

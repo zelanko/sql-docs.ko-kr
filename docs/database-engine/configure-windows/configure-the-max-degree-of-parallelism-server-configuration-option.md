@@ -17,10 +17,10 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2e0296f410c84705e0a31ed6ab3e347b188c180e
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72260339"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
@@ -49,9 +49,9 @@ ms.locfileid: "72260339"
 -   쿼리 및 인덱스 작업과 함께 이 옵션은 DBCC CHECKTABLE, DBCC CHECKDB 및 DBCC CHECKFILEGROUP의 병렬 처리도 제어합니다. 추적 플래그 2528을 사용하여 이러한 문의 병렬 실행 계획을 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
 > [!TIP]
-> 쿼리 수준에서 이를 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.     
-> 데이터베이스 수준에서 이를 수행하려면 **MAXDOP** [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용합니다.      
-> 작업 수준에서 이 작업을 수행하려면 **MAX_DOP** [Resource Governor 작업 그룹 구성 옵션](../../t-sql/statements/create-workload-group-transact-sql.md)을 사용합니다.      
+> 쿼리 수준에서 이 작업을 수행하려면 **MAXDOP** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용합니다.     
+> 데이터베이스 수준에서 이 작업을 수행하려면 **MAXDOP** [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용합니다.      
+> 워크로드 수준에서 이 작업을 수행하려면 **MAX_DOP** [Resource Governor 워크로드 그룹 구성 옵션](../../t-sql/statements/create-workload-group-transact-sql.md)을 사용합니다.      
 
 ###  <a name="Guidelines"></a> 지침  
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 서비스 시작 중에 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]가 NUMA 노드 또는 소켓당 8개 초과의 실제 코어를 감지하면 soft-NUMA 노드가 기본적으로 자동 생성됩니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 논리 프로세서를 동일한 실제 코어에서 서로 다른 soft-NUMA 노드에 배치합니다. 아래 표의 권장 사항은 동일한 소프트 NUMA 노드 내에서 병렬 쿼리의 모든 작업자 스레드를 유지하는 것을 목표로 합니다. 이렇게 하면 쿼리의 성능이 향상되고 워크로드에 대한 NUMA 노드에서 작업자 스레드 배포가 향상됩니다. 자세한 내용은 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)를 참조하세요.
@@ -69,7 +69,7 @@ ms.locfileid: "72260339"
 > 위 표의 NUMA 노드는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 버전에서 자동으로 생성되는 소프트 NUMA 노드 또는 소프트 NUMA가 사용되지 않는 경우 하드웨어 기반 NUMA 노드를 가리킵니다.   
 >  Resource Governor 작업 그룹에 대해 최대 병렬 처리 수준 옵션을 설정할 때도 동일한 지침을 사용합니다. 자세한 내용은 [작업 그룹 만들기(Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조하세요.
   
-**최대 병렬 처리 수준** 서버 구성 값을 구성할 때 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 다음 지침을 사용합니다.
+[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]최대 병렬 처리 수준[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버 구성 값을 구성할 때 **~** 에서 다음 지침을 사용합니다.
 
 ||||
 |----------------|-----------------|-----------------|
@@ -80,7 +80,7 @@ ms.locfileid: "72260339"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

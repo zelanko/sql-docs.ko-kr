@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075276"
 ---
 # <a name="-equals-transact-sql"></a>=(같음)(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075276"
 
   [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 두 식이 같은지 비교합니다(비교 연산자).  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,9 +46,9 @@ expression = expression
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 두 식의 데이터 형식이 같지 않은 경우 한 식의 데이터 형식을 다른 식의 데이터 형식으로 암시적인 변환이 가능해야 합니다. 변환은 [데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md) 규칙을 기반으로 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
- Boolean  
+ 부울  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  NULL 식을 사용하여 비교하는 경우 결과는 `ANSI_NULLS` 설정에 따라 다음과 같이 달라집니다.  
   
 -   `ANSI_NULLS`이 ON으로 설정된 경우 NULL은 알 수 없는 값이며 다른 Null을 포함한 다른 모든 값과 비교할 수 없다는 ANSI 규칙에 따라 NULL과 비교 결과는 UNKNOWN입니다.  
@@ -62,7 +62,7 @@ expression = expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1. 간단한 쿼리에서 = 사용  
+### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 = 사용  
  다음 예에서는 Equals 연산자(=)를 사용하여 `HumanResources.Department` 열의 값이 'Manufacturing' 단어와 같은 `GroupName` 테이블의 모든 행을 반환합니다.  
   
 ```  
@@ -87,7 +87,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-comparing-null-and-non-null-values"></a>2. NULL 값과 NULL이 아닌 값 비교  
+### <a name="b-comparing-null-and-non-null-values"></a>B. NULL 값과 NULL이 아닌 값 비교  
  다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI_NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
   
 ```  

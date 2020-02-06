@@ -25,18 +25,18 @@ ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071454"
 ---
-# <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME(Transact-SQL)
+# <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 이 함수는 지정한 파일 그룹 ID에 해당하는 파일 그룹 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,11 +52,11 @@ FILEGROUP_NAME ( filegroup_id )
 ## <a name="return-types"></a>반환 형식  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *filegroup_id*는 **sys.filegroups** 카탈로그 뷰의 **data_space_id** 열에 해당합니다.  
   
 ## <a name="examples"></a>예  
-이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 파일 그룹 ID `1`의 파일 그룹 이름을 반환합니다.  
+이 예에서는 `1` 데이터베이스에 있는 파일 그룹 ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 파일 그룹 이름을 반환합니다.  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531599"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>빅 데이터 클러스터의 상태를 보는 방법 
@@ -24,7 +24,7 @@ ms.locfileid: "73531599"
 
 ## <a id="datastudio"></a> Azure Data Studio 사용
 
-[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 **참가자 빌드**를 다운로드한 후에 SQL Server 빅 데이터 클러스터 대시보드를 사용하여 서비스 엔드포인트와 빅 데이터 클러스터 상태를 볼 수 있습니다. 아래 기능 중 일부는 Azure Data Studio 참가자 빌드에서만 처음으로 제공되는 것입니다.
+**Azure Data Studio**의 최신 [참가자 빌드](https://aka.ms/getazuredatastudio)를 다운로드한 후에 SQL Server 빅 데이터 클러스터 대시보드를 사용하여 서비스 엔드포인트와 빅 데이터 클러스터 상태를 볼 수 있습니다. 아래 기능 중 일부는 Azure Data Studio 참가자 빌드에서만 처음으로 제공되는 것입니다.
 
 1. 먼저 Azure Data Studio에서 빅 데이터 클러스터에 연결합니다. 자세한 내용은 [Azure Data Studio를 사용하여 SQL Server 빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)을 참조하세요.
 
@@ -223,7 +223,7 @@ azdata bdc status show
 azdata bdc status show --all --resource storage-0
 ```
 
-특정 서비스를 실행하는 모든 구성 요소의 상태를 보려면 그에 대응되는 명령 그룹 `azdata bdc <serviceName> status show`를 사용해야 합니다. 예를 들어
+특정 서비스를 실행하는 모든 구성 요소의 상태를 보려면 그에 대응되는 명령 그룹 `azdata bdc <serviceName> status show`를 사용해야 합니다. 다음은 그 예입니다.
 
 - azdata bdc sql status show --all
 - azdata bdc hdfs status show --all

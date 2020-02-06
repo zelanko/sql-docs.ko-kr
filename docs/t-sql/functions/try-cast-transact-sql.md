@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151949"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70151949"
 
   캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,14 +54,14 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>반환 형식  
  캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **TRY_CAST** 함수는 전달된 값을 사용하여 지정된 *data_type*으로 변환하려고 시도합니다. 캐스팅에 성공하면 **TRY_CAST**는 지정된 *data_type*으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CAST**가 실패합니다.  
   
  **TRY_CAST**는 예약 키워드가 아니며 모든 호환성 수준에서 사용할 수 있습니다. **TRY_CAST**는 원격 서버에 연결할 때 **TRY_CONVERT**와 동일한 의미 체계를 갖습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-try_cast-returns-null"></a>1\. TRY_CAST가 null을 반환  
+### <a name="a-try_cast-returns-null"></a>A. TRY_CAST가 null을 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CAST가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -101,7 +101,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-try_cast-fails-with-an-error"></a>2\. TRY_CAST가 오류와 함께 실패  
+### <a name="b-try_cast-fails-with-an-error"></a>B. TRY_CAST가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CAST가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  

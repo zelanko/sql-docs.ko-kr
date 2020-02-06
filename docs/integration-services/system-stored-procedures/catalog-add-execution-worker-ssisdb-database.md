@@ -12,10 +12,10 @@ author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: c5c53af690df29c17012e19267debfe2273b4193
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281383"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker(SSISDB 데이터베이스)
@@ -44,7 +44,7 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
 
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909116"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
@@ -49,7 +49,7 @@ ms.locfileid: "72909116"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -61,10 +61,10 @@ ms.locfileid: "72909116"
      **NULL 허용**  
      사용자 정의 데이터 형식에 NULL 값이 허용되는지 여부를 지정합니다. 기존 사용자 정의 데이터 형식의 Null 허용 여부는 편집할 수 없습니다.  
   
-     **Data type**  
+     **데이터 형식**  
      목록 상자에서 기본 데이터 형식을 선택합니다. 목록 상자에는 **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** 및 **xml** 데이터 형식을 제외한 모든 데이터 형식이 표시됩니다. 기존 사용자 정의 데이터 형식의 데이터 형식은 편집할 수 없습니다.  
   
-     **Default**  
+     **기본값**  
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 기본값을 선택합니다.  
   
      **길이/전체 자릿수**  
@@ -78,7 +78,7 @@ ms.locfileid: "72909116"
      **규칙**  
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙을 선택합니다.  
   
-     **소수 자릿수**  
+     **규모**  
      소수점의 오른쪽에 저장될 수 있는 최대 자릿수를 지정합니다.  
   
      **스키마**  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934044"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
@@ -124,7 +124,7 @@ ms.locfileid: "67934044"
 ###  <a name="Security"></a> 보안  
  자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 및 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -151,7 +151,7 @@ ms.locfileid: "67934044"
      **Null 값 전달**  
      매개 변수의 값으로 NULL 값을 전달합니다.  
   
-     **Value**  
+     **값**  
      프로시저를 호출할 때 매개 변수의 값을 입력합니다.  
   
 5.  저장 프로시저를 실행하려면 **확인**을 클릭합니다.  

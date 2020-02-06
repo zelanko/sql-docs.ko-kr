@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908085"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -44,7 +44,7 @@ ms.locfileid: "72908085"
   
 -   부분적으로 포함된 데이터베이스에 대해 수정된 데이터베이스 기능 목록을 검토합니다. 자세한 내용은 [수정된 기능&#40;포함된 데이터베이스&#41;](../../relational-databases/databases/modified-features-contained-database.md)을 참조하세요.  
   
--   데이터베이스에 포함되지 않은 개체 또는 기능을 찾으려면 [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)를 쿼리합니다. 자세한 내용은 다음을 참조하십시오.  
+-   데이터베이스에 포함되지 않은 개체 또는 기능을 찾으려면 [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 를 쿼리합니다. 자세한 내용은 다음을 참조하십시오.  
   
 -   **database_uncontained_usage** XEvent를 모니터링하여 포함되지 않은 기능이 사용되는 경우를 확인합니다.  
   
@@ -119,7 +119,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
+ [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

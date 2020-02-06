@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095377"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 결과 집합의 출력 번호를 지정합니다. 보다 구체적으로는, 결과 집합 파티션 내의 행 일련 번호를 반환합니다. 각 파티션의 첫 번째 행은 1로 시작합니다. 
@@ -38,7 +38,7 @@ ms.locfileid: "68095377"
 > [!NOTE]
 > `ROW_NUMBER`는 쿼리를 실행할 때 계산되는 임시 값입니다. 테이블의 숫자를 유지하려면 [IDENTITY 속성](../../t-sql/statements/create-table-transact-sql-identity-property.md) 및 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>구문  
@@ -71,7 +71,7 @@ ROW_NUMBER ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-examples"></a>1\. 간단한 예제 
+### <a name="a-simple-examples"></a>A. 간단한 예제 
 
 다음 쿼리는 알파벳 순서로 4개의 시스템 테이블을 반환합니다.
 
@@ -85,7 +85,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -104,14 +104,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-`recovery_model_desc` 열에 `PARTITION BY` 절을 추가하면 `recovery_model_desc` 값이 변경될 때 번호 매기기가 다시 시작됩니다. 
+`PARTITION BY` 열에 `recovery_model_desc` 절을 추가하면 `recovery_model_desc` 값이 변경될 때 번호 매기기가 다시 시작됩니다. 
  
 ```sql
 SELECT 
@@ -123,7 +123,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -131,7 +131,7 @@ FROM sys.databases WHERE database_id < 5;
 |3 |tempdb |SIMPLE |
 
 
-### <a name="b-returning-the-row-number-for-salespeople"></a>2\. 영업 사원의 행 번호 반환  
+### <a name="b-returning-the-row-number-for-salespeople"></a>B. 영업 사원의 행 번호 반환  
  다음 예에서는 연간 누계 판매 실적에 따라 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 영업 사원에 대한 행 번호를 계산합니다.  
   
 ```sql  
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. PARTITION에 ROW_NUMBER() 사용  
+### <a name="d-using-row_number-with-partition"></a>D. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `PARTITION BY` 인수를 사용하여 `TerritoryName` 열을 기준으로 쿼리 결과 집합을 분할합니다. `ORDER BY` 절에 지정된 `OVER` 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. `ORDER BY` 문의 `SELECT` 절은 전체 쿼리 결과 집합을 `TerritoryName`을 기준으로 정렬합니다.  
   
 ```sql  
@@ -218,7 +218,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 영업 사원의 행 번호 반환  
  다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 `ROW_NUMBER`를 반환합니다.  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. PARTITION에 ROW_NUMBER() 사용  
+### <a name="f-using-row_number-with-partition"></a>F. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `ROW_NUMBER` 인수에 `PARTITION BY` 함수를 사용하는 방법을 보여 줍니다. 이로 인해 `ROW_NUMBER` 함수가 각 파티션의 행에 번호를 매기게 됩니다.  
   
 ```sql  

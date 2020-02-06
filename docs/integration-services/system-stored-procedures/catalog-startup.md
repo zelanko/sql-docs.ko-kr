@@ -11,10 +11,10 @@ ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ecc8678da81b9d4559f36d3cb70a88a7444f87e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295266"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
@@ -28,7 +28,7 @@ ms.locfileid: "71295266"
   
  저장 프로시저는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스가 다운될 때 실행 중이었던 패키지의 상태를 수정합니다.  
   
- **카탈로그 만들기** 대화 상자에서 **SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행** 옵션을 선택하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스를 다시 시작할 때마다 저장 프로시저를 자동으로 실행하도록 설정할 수 있습니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]카탈로그 만들기**대화 상자에서**SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행**옵션을 선택하여** 서버 인스턴스를 다시 시작할 때마다 저장 프로시저를 자동으로 실행하도록 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ catalog.startup
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

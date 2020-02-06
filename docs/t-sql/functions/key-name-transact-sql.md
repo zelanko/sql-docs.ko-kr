@@ -18,18 +18,18 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109329"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME(Transact-SQL)
+# <a name="key_name-transact-sql"></a>KEY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   대칭 키 GUID 또는 ciphertext에서 대칭 키의 이름을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>1\. key_guid를 사용하여 대칭 키의 이름 표시  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. key_guid를 사용하여 대칭 키의 이름 표시  
  **master** 데이터베이스에는 ##MS_ServiceMasterKey##라는 대칭 키가 있습니다. 다음 예에서는 sys.symmetric_keys 동적 관리 뷰에서 해당 키의 GUID를 가져오고, 이를 변수에 할당한 다음 해당 변수를 KEY_NAME 함수로 전달하여 GUID에 해당하는 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -66,7 +66,7 @@ WHERE name = '##MS_ServiceMasterKey##' ;
 SELECT KEY_NAME(@guid) AS [Name of Key];  
 ```  
   
-### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>2\. ciphertext를 사용하여 대칭 키의 이름 표시  
+### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>B. ciphertext를 사용하여 대칭 키의 이름 표시  
  다음 예에서는 대칭 키를 만들고 데이터를 테이블에 채우는 전체 과정을 보여 줍니다. 그런 다음 암호화된 텍스트를 전달할 때 KEY_NAME이 키 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -110,7 +110,7 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ## <a name="see-also"></a>참고 항목  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY&#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

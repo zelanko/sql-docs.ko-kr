@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008774"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
@@ -42,7 +42,7 @@ DNS 서버의 첫 번째 반환된 IP 주소가 연결 가능하지 않은 경�
 
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결
 
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 수신기 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스에 연결할 때 항상 **MultiSubnetFailover=Yes**를 지정합니다. **MultiSubnetFailover**는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 모든 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대해 보다 빠르게 장애 조치(failover)를 수행할 수 있도록 합니다. **MultiSubnetFailover**는 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(failover) 시간도 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치(failover) 동안 드라이버에서 TCP 연결을 적극적으로 다시 시도합니다.
+**가용성 그룹 수신기 또는** 장애 조치(failover) 클러스터 인스턴스에 연결할 때 항상 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 지정합니다. **MultiSubnetFailover**는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 모든 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대해 보다 빠르게 장애 조치(failover)를 수행할 수 있도록 합니다. **MultiSubnetFailover**는 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(failover) 시간도 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치(failover) 동안 드라이버에서 TCP 연결을 적극적으로 다시 시도합니다.
 
 **MultiSubnetFailover** 연결 속성은 애플리케이션이 가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스에서 배포되는 중이라는 것을 나타냅니다. 드라이버는 모든 IP 주소에 연결하려고 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결하려고 합니다. **MultiSubnetFailover=Yes**를 사용하여 연결하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. **MultiSubnetFailover=Yes** 는 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(failover) 클러스터 인스턴스의 장애 조치(failover) 후 더 빠르게 다시 연결할 수 있도록 합니다. **MultiSubnetFailover=Yes**는 단일 및 다중 서브넷 가용성 그룹과 장애 조치(failover) 클러스터 인스턴스에 모두 적용됩니다.  
 
@@ -56,11 +56,11 @@ DNS 서버의 첫 번째 반환된 IP 주소가 연결 가능하지 않은 경�
   
 -   64개 이상의 IP 주소로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 없습니다.
 
--   **MultiSubnetFailover=Yes**를 지정하면 애플리케이션의 동작에 영향을 주지 않고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 또는 Kerberos 인증을 모두 사용할 수 있습니다.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MultiSubnetFailover=Yes**를 지정하면 애플리케이션의 동작에 영향을 주지 않고**  인증 또는 Kerberos 인증을 모두 사용할 수 있습니다.
 
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.
 
--   분산 트랜잭션은 지원되지 않습니다.  
+-   분산된 트랜잭션은 지원되지 않습니다.  
   
 읽기 전용 라우팅이 적용되지 않으면 다음과 같은 경우 가용성 그룹의 보조 복제본 위치에 대한 연결이 실패합니다.  
   
@@ -94,7 +94,7 @@ ODBC 연결 속성에 대한 자세한 내용은 [SQLSetConnectAttr](../../../re
   
 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]을 사용하는 ODBC 애플리케이션은 연결을 만들 때 두 가지 함수 중 하나를 사용할 수 있습니다.  
   
-|함수|설명|  
+|함수|Description|  
 |------------|---------------|  
 |[SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect**는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 **ApplicationIntent**와 **MultiSubnetFailover**를 모두 지원합니다.|  
 |[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect**는 DSN, 연결 문자열 키워드 또는 연결 속성을 통해 **ApplicationIntent** 및 **MultiSubnetFailover**를 지원합니다.|

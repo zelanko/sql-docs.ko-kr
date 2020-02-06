@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125179"
 ---
 # <a name="filetables-sql-server"></a>FileTable(SQL Server)
@@ -117,7 +117,7 @@ ms.locfileid: "68125179"
  [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
  파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
   
- [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
+ [Transact-SQL을 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
  FileTable에서 Transact-SQL DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
   
  [파일 입/출력 API를 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
@@ -127,7 +127,7 @@ ms.locfileid: "68125179"
  FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
 ##  <a name="relcontent"></a> 관련 내용  
- [FileTable Schema](../../relational-databases/blob/filetable-schema.md)  
+ [FileTable 스키마](../../relational-databases/blob/filetable-schema.md)  
  FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
   
  [FileTable과 기타 SQL Server 기능 간 호환성](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  

@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049031"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
@@ -29,7 +29,7 @@ ms.locfileid: "68049031"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델로 **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은 [ALTER DATABASE(Transact-SQL) 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. SQL Server 데이터베이스가 업그레이드되면 해당 데이터베이스에 대한 호환성 수준이 보존되거나(가능한 경우) 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 지원되는 최소 수준으로 변경됩니다. 
@@ -131,7 +131,7 @@ Azure SQL Database에 연결되면 이 섹션에는 SLO(서비스 수준 목표)
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
+ 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
 **스냅샷 격리 허용**  
@@ -216,18 +216,18 @@ Service Broker를 활성화 또는 비활성화합니다.
 **Serice Broker 식별자**  
 읽기 전용 식별자입니다.  
 
-## <a name="state"></a>State  
+## <a name="state"></a>시스템 상태  
  **데이터베이스 읽기 전용**  
  데이터베이스가 읽기 전용인지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 사용자가 데이터베이스의 데이터를 읽을 수만 있습니다. 사용자가 데이터나 데이터베이스 개체를 수정할 수는 없지만 `DROP DATABASE` 문을 사용하여 데이터베이스 자체를 삭제할 수는 있습니다. 데이터베이스를 사용하고 있을 때는 **데이터베이스 읽기 전용** 옵션의 새 값을 지정할 수 없습니다. master 데이터베이스는 예외인데, 이 옵션이 설정되어 있는 동안 시스템 관리자만 master를 사용할 수 있습니다.  
   
  **데이터베이스 상태**  
- 데이터베이스의 현재 상태를 확인합니다. 편집할 수 없습니다. **데이터베이스 상태**에 대한 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)를 참조하십시오.  
+ 데이터베이스의 현재 상태를 확인합니다. 편집할 수는 없습니다. **데이터베이스 상태**에 대한 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)를 참조하십시오.  
 
  **암호화 사용**  
  **True**이면 이 데이터베이스에 데이터베이스 암호화를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
  
  **액세스 제한**  
- 데이터베이스에 액세스할 수 있는 사용자를 지정합니다. 가능한 값은  
+ 데이터베이스에 액세스할 수 있는 사용자를 지정합니다. 가능한 값은 다음과 같습니다.  
   
 -   **여러 항목**  
   

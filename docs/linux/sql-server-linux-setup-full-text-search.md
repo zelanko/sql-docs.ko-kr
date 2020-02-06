@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874758"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 | 언어 | 언어 ID |
 |---|---|
-| 중립 | 0 |
+| 무감정 | 0 |
 | 아랍어 | 1025 |
 | 벵골어(인도) | 1093 |
 | 복말 | 1044 |
@@ -136,7 +136,7 @@ sudo zypper update mssql-server-fts
 | 타밀어 | 1097 |
 | 텔루구어 | 1098 |
 | 태국어 | 1054 |
-| 중국어(번체) | 1028 |
+| 중국어 번체 | 1028 |
 | 터키어 | 1055 |
 | 우크라이나어 | 1058 |
 | 우르두어 | 1056 |
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 
 **sp_help_fulltext_system_components ‘filter’** 를 호출하여 설치된 필터 목록을 확인할 수 있습니다. SQL Server의 경우 다음 필터가 설치됩니다.
 
-| 구성 요소 이름 | 클래스 ID | 버전 옵션 |
+| 구성 요소 이름 | 클래스 ID | 버전 |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

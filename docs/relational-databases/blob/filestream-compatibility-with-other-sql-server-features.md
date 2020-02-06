@@ -15,10 +15,10 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245402"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
@@ -69,7 +69,7 @@ ms.locfileid: "75245402"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- 게시자에서 FILESTREAM 특성을 사용할 수 있는 **varbinary(max)** 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 **varbinary(max)** 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 복제하는 경우가 아니면 FILESTREAM 특성을 복제하는 것이 좋습니다. FILESTREAM 열이 있는 테이블은 지정된 스키마 옵션에 상관없이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 구독자에 복제할 수 없습니다.  
+ 게시자에서 FILESTREAM 특성을 사용할 수 있는 **varbinary(max)** 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 @schema_optionsp_addarticle[ 또는 ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle[의 ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 매개 변수를 사용합니다. FILESTREAM 특성이 없는 **varbinary(max)** 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 복제하는 경우가 아니면 FILESTREAM 특성을 복제하는 것이 좋습니다. FILESTREAM 열이 있는 테이블은 지정된 스키마 옵션에 상관없이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 구독자에 복제할 수 없습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](https://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
@@ -77,7 +77,7 @@ ms.locfileid: "75245402"
 ### <a name="considerations-for-transactional-replication"></a>트랜잭션 복제에 대한 고려 사항  
  트랜잭션 복제를 위해 게시된 테이블의 FILESTREAM 열을 사용할 경우 다음 사항을 고려하십시오.  
   
--   FILESTREAM 특성을 포함하는 열이 테이블에 있으면 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)의 @sync_method 속성에 *database snapshot* 또는 *database snapshot character* 값을 사용할 수 없습니다.  
+-   FILESTREAM 특성을 포함하는 열이 테이블에 있으면 *sp_addpublication*의 *속성에*database snapshot@sync_method 또는 [database snapshot character](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 값을 사용할 수 없습니다.  
   
 -   max text repl size 옵션은 복제를 위해 게시된 열에 삽입할 수 있는 데이터의 최대 크기를 지정합니다. 이 옵션을 사용하여 복제되는 FILESTREAM 데이터의 크기를 제어할 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75245402"
   
     -   NEWSEQUENTIALID()가 NEWID()보다 성능이 더 좋으므로 병합 복제에서는 기본적으로 NEWSEQUENTIALID()를 사용합니다. 병합 복제를 위해 게시될 테이블에 **uniqueidentifier** 열을 추가할 경우 NEWSEQUENTIALID()를 기본값으로 지정합니다.  
   
--   병합 복제에는 큰 개체 유형을 위한 최적화가 포함됩니다. 이 최적화 작업은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 @stream_blob_columns 매개 변수를 통해 제어됩니다. FILESTREAM 특성을 복제하도록 스키마 옵션을 설정하면 @stream_blob_columns 매개 변수 값이 **true**로 설정됩니다. 이러한 최적화 작업은 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 사용하여 덮어쓸 수 있습니다. 다음 저장 프로시저를 통해 @stream_blob_columns를 **false**로 설정할 수 있습니다. 병합 복제를 위해 이미 게시된 테이블에 FILESTREAM 열을 추가하는 경우 sp_changemergearticle을 사용하여 옵션을 **true** 로 설정하는 것이 좋습니다.  
+-   병합 복제에는 큰 개체 유형을 위한 최적화가 포함됩니다. 이 최적화 작업은 @stream_blob_columnssp_addmergearticle[의 ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 매개 변수를 통해 제어됩니다. FILESTREAM 특성을 복제하도록 스키마 옵션을 설정하면 @stream_blob_columns 매개 변수 값이 **true**로 설정됩니다. 이러한 최적화 작업은 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 사용하여 덮어쓸 수 있습니다. 다음 저장 프로시저를 통해 @stream_blob_columns를 **false**로 설정할 수 있습니다. 병합 복제를 위해 이미 게시된 테이블에 FILESTREAM 열을 추가하는 경우 sp_changemergearticle을 사용하여 옵션을 **true** 로 설정하는 것이 좋습니다.  
   
 -   아티클이 만들어진 후 FILESTREAM의 스키마 옵션을 사용하면 FILESTREAM 열의 데이터가 2GB가 넘고 복제 도중 충돌이 있을 경우 복제에 실패할 수 있습니다. 이러한 상황의 발생을 예상할 경우 만들 때 사용할 수 있는 적절한 FILESTREAM 스키마 옵션을 사용하여 테이블 아티클을 삭제하고 다시 만드는 것이 좋습니다.  
   
