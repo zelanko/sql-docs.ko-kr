@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822257"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "74822257"
  WSFC의 전반적인 상태는 클러스터에 있는 노드 쿼럼의 투표에 의해 결정됩니다. 계획되지 않은 재해나 영구적인 하드웨어 또는 통신 장애로 인해 WSFC가 오프라인으로 전환된 경우 수동 관리 작업을 수행해야 합니다. Windows Server 또는 WSFC 관리자는 강제 쿼럼을 수행하고 내결함성이 없는 구성에서 활성 클러스터 노드를 다시 온라인으로 전환해야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 레지스트리 키는 WSFC의 하위 키입니다. WSFC를 삭제하고 다시 만들려는 경우 원본 WSFC에서 가용성 복제본을 호스팅한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 각 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 비활성화했다가 다시 활성화해야 합니다.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 레지스트리 키는 WSFC의 하위 키입니다. WSFC를 삭제하고 다시 만들려는 경우 원본 WSFC에서 가용성 복제본을 호스팅한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 비활성화했다가 다시 활성화해야 합니다.  
   
  WSFC 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 방법과 WSFC 쿼럼에 대한 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)을 참조하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74822257"
  **가용성 그룹에 대한 장애 조치(Failover) 정책 설정은 독립 실행형 인스턴스에서 호스팅되는지 FCI 인스턴스에서 호스팅되는지에 관계없이 모든 복제본에 적용됩니다.  
   
 > [!NOTE]  
->  FCI 내의 **노드 수** 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다양한 버전에 **Always On 가용성 그룹**에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
+>  FCI 내의 **노드 수** 및 **의 다양한 버전에** Always On 가용성 그룹[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI에서 가용성 복제본을 호스팅하는 경우의 고려 사항  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74822257"
   
 -   **백서:**  
   
-     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

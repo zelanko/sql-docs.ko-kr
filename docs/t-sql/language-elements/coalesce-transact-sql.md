@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950297"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67950297"
 
 인수를 순서대로 평가하고 처음으로 `NULL`이 아닌 첫 번째 식의 현재 값을 반환합니다. 예를 들어 `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`는 세 번째 값이 Null이 아닌 첫 값이기 때문에 세 번째 값을 반환합니다. 
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ _expression_
 ## <a name="return-types"></a>반환 형식  
 데이터 형식 우선 순위가 가장 높은 _식_의 데이터 형식을 반환합니다. 모든 식에서 Null을 허용하지 않으면 결과가 Null을 허용하지 않는 형식으로 처리됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 모든 인수가 `NULL`인 경우 `COALESCE`가 `NULL`를 반환합니다. Null 값 중 하나 이상이 `NULL` 형식이어야 합니다.  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE 및 CASE 비교  
@@ -65,7 +65,7 @@ END
   
 입력 값(_expression1_, _expression2_, _expressionN_ 등)이 여러 번 평가 됩니다. 하위 쿼리가 포함된 값 식은 비결정적인 것으로 간주되어 하위 쿼리가 두 번 평가됩니다. 이 결과는 SQL 표준을 준수합니다. 어느 경우에든 첫 번째 평가와 예정된 평가 간에 서로 다른 결과가 반환될 수 있습니다.  
   
-예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 다중 사용자 환경의 `READ COMMITTED` 격리 수준에서는 이 코드에서 `NULL`을 반환할 수 있습니다. 일정한 결과가 반환되도록 하려면 `SNAPSHOT ISOLATION` 격리 수준을 사용하거나 `ISNULL` 함수로 `COALESCE`를 바꿔야 합니다. 또는 다음 예와 같이 하위 쿼리가 하위 선택 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
+예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 다중 사용자 환경의 `NULL` 격리 수준에서는 이 코드에서 `READ COMMITTED`을 반환할 수 있습니다. 일정한 결과가 반환되도록 하려면 `SNAPSHOT ISOLATION` 격리 수준을 사용하거나 `COALESCE` 함수로 `ISNULL`를 바꿔야 합니다. 또는 다음 예와 같이 하위 쿼리가 하위 선택 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,13 +109,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `COALESCE`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 `NULL` 값은 **int**로 변환됩니다.  
+4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `NULL`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 **값은**int`COALESCE`로 변환됩니다.  
   
 5.  `ISNULL`에는 다음 두 개의 매개 변수만 사용됩니다. 반대로, `COALESCE`가 사용하는 매개 변수의 수는 가변적입니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-a-simple-example"></a>1\. 간단한 예 실행  
+### <a name="a-running-a-simple-example"></a>A. 간단한 예 실행  
 다음 예에서는 `COALESCE`가 Null 이외의 값이 있는 첫 번째 열에서 데이터를 선택하는 방법을 보여 줍니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -124,7 +124,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>2\. 복잡한 예 실행  
+### <a name="b-running-a-complex-example"></a>B. 복잡한 예 실행  
 다음 예에서는 `wages` 테이블에 직원의 연봉 정보에 대한 시급, 월급 및 커미션의 3개 열이 포함되어 있습니다. 그러나 각 직원은 이 중 한 종류의 급여만 받습니다. 모든 직원에게 지급된 총 급여액을 확인하려면 `COALESCE` 함수를 사용하여 `hourly_wage`, `salary`, `commission`에서 검색된 Null이 아닌 값만 포함시킵니다.  
   
 ```sql  
@@ -217,7 +217,7 @@ Socks, Mens  Blue       PN1965         Blue
 NULL         White      PN9876         White
 ```  
   
-첫 번째 행에서의 `FirstNotNull` 값은 `Socks, Mens`가 아닌 `PN1278`입니다. 예제에서 `Name` 열이 `COALESCE`에 대한 매개 변수로 지정되지 않았기 때문에 이와 같은 값이 사용됩니다.  
+첫 번째 행에서의 `FirstNotNull` 값은 `PN1278`가 아닌 `Socks, Mens`입니다. 예제에서 `Name` 열이 `COALESCE`에 대한 매개 변수로 지정되지 않았기 때문에 이와 같은 값이 사용됩니다.  
   
 ### <a name="d-complex-example"></a>D: 복잡한 예  
 다음 예제에서는 `COALESCE`를 사용하여 세 열의 값을 비교하고 열에서 찾은 Null이 아닌 값만 반환합니다.  

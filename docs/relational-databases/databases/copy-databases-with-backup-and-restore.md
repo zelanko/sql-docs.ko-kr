@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137320"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
@@ -65,7 +65,7 @@ ms.locfileid: "68137320"
  오류 및 의도하지 않은 결과를 방지하려면 복원 작업 전에 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 기록 테이블을 통해 복원하려는 백업에서 데이터베이스 및 로그 파일을 찾을 수 있습니다.  
   
 ## <a name="moving-the-database-files"></a>데이터베이스 파일 이동  
- 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 예를 들어  
+ 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 다음은 그 예입니다.  
   
 -   이전 버전의 기본 위치에 만든 백업에서 데이터베이스를 복원하려는 경우  
   
@@ -133,7 +133,7 @@ ms.locfileid: "68137320"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   

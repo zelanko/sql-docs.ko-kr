@@ -16,10 +16,10 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954681"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 메서드(java.lang.String)
@@ -37,13 +37,13 @@ public final int executeUpdate(java.lang.String sql)
 
 SQL 문이 포함된 **문자열**입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.
 
 ## <a name="exceptions"></a>예외
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정됩니다.
 
 SQLServerPreparedStatement 개체에 대한 SQL 문은 개체가 만들어질 때 지정되므로 이 메서드를 호출하면 예외가 발생합니다.

@@ -15,10 +15,10 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012887"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
@@ -53,7 +53,7 @@ ms.locfileid: "68012887"
   
      [SQL Server 구성 관리자](#SSMSProcedure)  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
  방화벽의 포트를 열면 서버가 악의적인 공격에 노출될 수 있습니다. 포트를 열기 전에 방화벽 시스템을 잘 이해해야 합니다. 자세한 내용은 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)를 참조하세요.  
@@ -77,7 +77,7 @@ ms.locfileid: "68012887"
   
 6.  **프로필** 대화 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 때의 컴퓨터 연결 환경을 설명하는 프로필을 선택한 다음 **다음**을 클릭합니다.  
   
-7.  **이름** 대화 상자에 이 규칙의 이름 및 설명을 입력한 다음 **마침**을 클릭합니다.  
+7.  **이름** 대화 상자에서 이 규칙의 이름 및 설명을 입력한 후 **마침**을 클릭합니다.  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>동적 포트 사용 시 SQL Server에 대한 액세스를 열려면  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68012887"
   
 6.  **프로필** 대화 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 때의 컴퓨터 연결 환경을 설명하는 프로필을 선택한 다음 **다음**을 클릭합니다.  
   
-7.  **이름** 대화 상자에 이 규칙의 이름 및 설명을 입력한 다음 **마침**을 클릭합니다.  
+7.  **이름** 대화 상자에서 이 규칙의 이름 및 설명을 입력한 후 **마침**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 방화벽 설정 구성(Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  

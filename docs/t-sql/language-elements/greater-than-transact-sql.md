@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 977066e40cc35b5a769192005dadc0e52b37a91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075134"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt;(보다 큼)(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075134"
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 두 식을 비교합니다(비교 연산자). Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크면 결과는 TRUE입니다.  그렇지 않으면 결과는 FALSE입니다. 피연산자 중 하나 또는 둘 다가 NULL이면 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md) 항목을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ expression > expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 > 사용  
+### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 > 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 13보다 큰 모든 행을 반환합니다.  
   
 ```  
@@ -78,7 +78,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>2\. 두 변수 비교에 > 사용  
+### <a name="b-using--to-compare-two-variables"></a>B. 두 변수 비교에 > 사용  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  

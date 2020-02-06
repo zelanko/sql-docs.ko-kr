@@ -8,26 +8,20 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974461"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656968"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 중에서 선택합니다. 이 문서에서는 Microsoft SQL Server를 지원하는 모니터링 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
-
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 모니터링 파트너
 
-| 파트너 | 설명 | 링크 |
+| 파트너 | Description | 링크 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 진단 관리자는 SQL Server 환경 내의 상태, 성능 및 가용성 문제를 중앙 콘솔에서 모두 관리자에게 사전에 알려 주는 강력한 성능 모니터링 및 진단 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise의 스포트라이트 - SQL Server의 비교할 수 없는 모니터링, 진단 및 최적화로 24시간 연속 최고 성능을 보장합니다. 스포트라이트는 SQL Server 데이터베이스의 최적 적합도에 필요한 세부 정보에 대한 액세스를 제공합니다. 상태 및 성능, 자동화된 경고 및 동작, 모바일 디바이스 지원에 대한 직관적인 개요를 확인하세요.|[Marketplace][quest_marketplace]<br>[웹 사이트][quest_website]<br>[비디오][quest_video] | |
@@ -41,7 +35,7 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 다른 일부 파트너에 대해 자세히 알아보려면 [고가용성 및 재해 복구 파트너][hadr_partners], [관리 파트너][management_partners] 및 [개발 파트너][dev_partners]를 참조하세요.
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040214"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 테이블 행이나 식 목록에 대해 계산한 이진 체크섬 값을 반환합니다.
   
-![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>반환 형식  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 테이블의 행에 대해 계산한 `BINARY_CHECKSUM(*)`은 나중에 행을 수정하지 않은 경우 같은 값을 반환합니다. `BINARY_CHECKSUM`은 해시 함수의 속성을 충족합니다. 식의 두 목록에 대해 적용되는 경우 두 목록의 해당 요소가 유형이 동일하고 등호(=) 연산자를 사용하여 비교할 때 동일한 경우 같은 값을 반환합니다. 이러한 정의에서는 지정된 유형의 Null 값은 동일한 값으로 비교됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 식 체크섬도 변경될 수 있습니다. 그러나 이 변경은 보장되지 않으므로, 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `BINARY_CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `BINARY_CHECKSUM`보다 훨씬 더 낮습니다.
   
 `BINARY_CHECKSUM`은 식 목록에 대해 작동할 수 있으며 지정된 목록에 대해 같은 값을 반환합니다. 식의 두 목록에 대해 적용되는 `BINARY_CHECKSUM`은 두 목록의 해당 요소가 유형 및 바이트 표현에서 동일할 경우 같은 값을 반환합니다. 이러한 정의에서 지정된 유형의 Null 값은 바이트 표현이 동일한 것으로 간주됩니다.
@@ -70,7 +70,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-로 구분하거나 여러  
+또는  
 
 * **sql_variant**(**sql_variant**의 기본 형식이 문자열 데이터 형식인 경우)입니다.  
   
@@ -96,7 +96,7 @@ SELECT BINARY_CHECKSUM(*) from myTable;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM&#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  

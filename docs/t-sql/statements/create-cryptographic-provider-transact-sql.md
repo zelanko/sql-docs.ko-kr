@@ -23,10 +23,10 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061018"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68061018"
 
   EKM(확장 가능 키 관리) 공급자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에 암호화 공급자를 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  *path_of_DLL*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EKM(확장 가능 키 관리) 인터페이스를 구현하는 .dll의 경로입니다. **Microsoft Azure 주요 자격 증명 모음용 SQL Server 커넥터**를 사용하는 경우 기본 위치는 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** 입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공급자에서 만든 모든 키는 해당 GUID로 공급자를 참조합니다. GUID는 모든 버전의 DLL에 보존됩니다.  
   
  SQLEKM 인터페이스를 구현하는 DLL은 인증서를 사용하여 디지털로 서명해야 합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 서명을 확인합니다. 여기에는 해당 루트가 Windows 시스템에서 **Trusted Root Cert Authorities** 위치에 설치해야 하는 해당 인증서 체인이 포함됩니다. 서명이 제대로 확인되지 않으면 CREATE CRYPTOGRAPHIC PROVIDER 문이 실패합니다. 인증서 및 인증서 체인에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
@@ -68,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  CONTROL SERVER 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .dll 파일로부터 `SecurityProvider`라는 암호화 공급자를 만듭니다. .dll 파일의 이름은 `c:\SecurityProvider\SecurityProvider_v1.dll`이고 이 파일은 서버에 설치됩니다. 먼저 공급자의 인증서가 서버에 설치되어 있어야 합니다.  
+ 다음 예에서는 `SecurityProvider`에서 .dll 파일로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 암호화 공급자를 만듭니다. .dll 파일의 이름은 `c:\SecurityProvider\SecurityProvider_v1.dll`이고 이 파일은 서버에 설치됩니다. 먼저 공급자의 인증서가 서버에 설치되어 있어야 합니다.  
   
 ```  
 -- Install the provider  

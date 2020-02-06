@@ -20,10 +20,10 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258308"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 거부(Transact-SQL)
@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 거부  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 거부합니다.  
+ 다음 예에서는 `VIEW DEFINITION` 로그인 `MyAg`에 대해 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 거부합니다.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
- 다음 예에서는 `TAKE OWNERSHIP` 옵션으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `MyAg`에 대해 가용성 그룹 `PKomosinski`에 대한 `CASCADE` 권한을 거부합니다.  
+ 다음 예에서는 `TAKE OWNERSHIP` 옵션으로 `MyAg` 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 가용성 그룹 `PKomosinski`에 대한 `CASCADE` 권한을 거부합니다.  
   
 ```  
 USE master;  

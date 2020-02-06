@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014822"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 가용성 그룹: 고가용성 및 재해 복구 솔루션
@@ -55,17 +55,17 @@ ms.locfileid: "68014822"
   
 -   다음과 같은 활성 보조 기능 중 하나 또는 둘 모두를 지원하도록 가용성 복제본을 구성할 수 있습니다.  
   
-    -   읽기 전용 연결 액세스. 복제본이 보조 복제본으로 실행되는 경우 복제본에 읽기 전용으로 연결하여 해당 데이터베이스에 액세스하고 데이터베이스를 읽을 수 있습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+    -   읽기 전용 연결 액세스. 복제본이 보조 복제본으로 실행되는 경우 복제본에 읽기 전용으로 연결하여 해당 데이터베이스에 액세스하고 데이터베이스를 읽을 수 있습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
-    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
      활성 보조 기능을 사용하면 IT 효율성을 향상시키고 보다 효율적인 보조 하드웨어 리소스 활용을 통해 비용을 절감할 수 있습니다. 또한 읽기 전용 애플리케이션 및 백업 작업을 보조 복제본으로 오프로드하면 주 복제본의 성능이 향상될 수 있습니다.  
   
 -   각 가용성 그룹에 대해 가용성 그룹 수신기를 지원합니다. *가용성 그룹 수신기* 는 Always On 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 서버 이름입니다. 가용성 그룹 수신기는 들어오는 연결을 주 복제본이나 읽기 전용 보조 복제본에 전달합니다. 수신기는 가용성 그룹이 장애 조치(Failover)된 후 빠른 애플리케이션 장애 조치(Failover)를 제공합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
--   가용성 그룹 장애 조치(Failover)를 효율적으로 제어할 수 있도록 유연한 장애 조치(Failover) 정책을 지원합니다. 자세한 내용은 [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
+-   가용성 그룹 장애 조치(Failover)를 효율적으로 제어할 수 있도록 유연한 장애 조치(Failover) 정책을 지원합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
--   페이지 손상 방지를 위해 자동 페이지 복구를 지원합니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
+-   페이지 손상 방지를 위해 자동 페이지 복구를 지원합니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)를 참조하세요.  
   
 -   안정적인 고성능 전송을 위한 암호화 및 압축을 지원합니다.  
   
@@ -147,9 +147,9 @@ ms.locfileid: "68014822"
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 함께 다른 기능을 사용할 경우의 제한 사항에 대한 자세한 내용은 [Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)를 참조하세요.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 함께 다른 기능을 사용할 경우의 제한 사항에 대한 자세한 내용은 [Always On 가용성 그룹: 상호 운용성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 가용성 그룹 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
@@ -165,7 +165,7 @@ ms.locfileid: "68014822"
   
      [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션 빌드](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   

@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114797"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68114797"
   보안 개체의 OBJECT 클래스 멤버에 대한 사용 권한을 거부합니다. OBJECT 클래스의 멤버에는 테이블, 뷰, 테이블 반환 함수, 저장 프로시저, 확장 저장 프로시저, 스칼라 함수, 집계 함수, 서비스 큐 및 동의어에 대한 사용 권한이 있습니다.  
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL을 거부하더라도 일부 가능한 사용 권한은 거부되지 않습니다. ALL을 거부하는 것은 지정된 개체에 적용할 수 있는 모든 ANSI-92 사용 권한을 거부하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
- - 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
- - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
- - 저장 프로시저 사용 권한: EXECUTE  
- - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
- - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+ - 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
+ - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - 저장 프로시저 사용 권한: EXECUTE.  
+ - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  ANSI-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  개체에 대한 정보는 다양한 카탈로그 뷰에 표시됩니다. 자세한 내용은 [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)을 참조하세요.  
   
  개체는 사용 권한 계층에서 해당 개체의 부모인 스키마에 포함된 스키마 수준 보안 개체입니다. 다음 표에는 개체에 대해 거부할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
@@ -139,15 +139,15 @@ PRIVILEGES
 ## <a name="examples"></a>예  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.
   
-### <a name="a-denying-select-permission-on-a-table"></a>1\. 테이블에 대한 SELECT 권한 거부  
- 다음 예에서는 `Person.Address` 테이블에 대해 사용자 `RosaQdM`의 `SELECT` 권한을 거부합니다.  
+### <a name="a-denying-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 권한 거부  
+ 다음 예에서는 `SELECT` 테이블에 대해 사용자 `RosaQdM`의 `Person.Address` 권한을 거부합니다.  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 권한 거부  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. 저장 프로시저에 대한 EXECUTE 권한 거부  
  다음 예에서는 `EXECUTE`이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 권한을 거부합니다.  
   
 ```  

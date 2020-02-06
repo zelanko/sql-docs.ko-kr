@@ -18,10 +18,10 @@ ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d3d3ddc6d14414344e847249cb337e9f6a0d5c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041525"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>새 위치로 파일 복원(SQL Server)
@@ -51,13 +51,13 @@ ms.locfileid: "68041525"
   
 -   RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니다.  
   
--   전체 복구 모델 또는 대량 로그 복구 모델의 경우 파일을 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 사용하여 파일 및 파일 그룹을 복원하는 방법에 대해 설명합니다.  
+-   전체 복구 모델 또는 대량 로그 복구 모델의 경우 파일을 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법을 설명합니다.  
   
 -   암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -90,11 +90,11 @@ ms.locfileid: "68041525"
     |-----------------|------------|  
     |**복원**|확인란이 선택되어 있으면 백업 세트가 복원됩니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그** 또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
-    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
+    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그**또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
+    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
     |**Server**|백업 작업을 수행한 데이터베이스 엔진 인스턴스의 이름입니다.|  
     |**논리적 파일 이름**|파일의 논리적 이름입니다.|  
-    |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
+    |**Database**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
     |**크기**|백업 세트의 크기를 바이트 단위로 표시한 것입니다.|  
@@ -107,7 +107,7 @@ ms.locfileid: "68041525"
     |열 머리글|값|  
     |-----------------|------------|  
     |**원래 파일 이름**|원본 백업 파일의 전체 경로입니다.|  
-    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그** 또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
+    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그**또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
     |**다음으로 복원**|복원할 데이터베이스 파일의 전체 경로입니다. 새 복원 파일을 지정하려면 입력란을 클릭하고 제안된 경로와 파일 이름을 편집합니다. **다음으로 복원** 열에서 경로 또는 파일 이름을 변경하는 것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 MOVE 옵션을 사용하는 것과 같습니다.|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  

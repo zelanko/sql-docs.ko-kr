@@ -20,10 +20,10 @@ ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3bc543e40f4f5189a1d813d21b66af6b26b51d52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026437"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>암호화 함수(Transact-SQL)
@@ -74,9 +74,9 @@ ms.locfileid: "68026437"
 |||  
 |-|-|  
 |[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [함수](../../t-sql/functions/functions.md)  
 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
 [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

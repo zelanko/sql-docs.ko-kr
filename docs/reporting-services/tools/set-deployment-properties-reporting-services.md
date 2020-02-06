@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
 ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175334"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
@@ -79,7 +79,7 @@ ms.locfileid: "66175334"
     > [!NOTE]  
     > **빌드** 를 선택하면 보고서 디자이너는 보고서 프로젝트를 빌드한 다음 미리 보거나 보고서 서버에 게시하기 전에 오류를 확인합니다. **배포** 를 선택하면 보고서 디자이너는 배포 속성에서 정의된 보고서 서버에 보고서를 게시합니다. **배포** 를 선택하지 않으면 보고서 디자이너는 **StartItem** 속성에 지정된 보고서를 로컬 미리 보기 창에 표시합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 - [데이터 원본 및 보고서 게시](../../reporting-services/reports/publishing-data-sources-and-reports.md)
 - [보고서 미리 보기](../../reporting-services/reports/previewing-reports.md)

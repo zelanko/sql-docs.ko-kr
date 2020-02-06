@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071401"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68071401"
 
   현재 데이터베이스의 파일 이름과 속성 이름이 지정되면 지정된 파일 이름 속성 값을 반환합니다. 현재 데이터베이스에 없는 파일에 대해서는 NULL을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ FILEPROPERTY ( file_name , property )
  *property*  
  반환할 파일 속성의 이름이 포함된 식입니다. *속성*은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|반환 값|  
+|값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|파일 그룹이 읽기 전용입니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsPrimaryFile**|파일이 주 파일입니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 입력이 잘못되었습니다.|  
@@ -60,7 +60,7 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *file_name*은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
   
 ## <a name="examples"></a>예  

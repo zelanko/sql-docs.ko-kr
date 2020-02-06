@@ -14,10 +14,10 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7341a6dad3633b95882ba1b06e5f27e8c7af50db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289921"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
@@ -45,7 +45,7 @@ dividend / divisor
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
  0으로 나눌 수는 없습니다. *divisor* 하위 식의 계산 방법에 따라 다음 오류 중 하나가 발생합니다.  

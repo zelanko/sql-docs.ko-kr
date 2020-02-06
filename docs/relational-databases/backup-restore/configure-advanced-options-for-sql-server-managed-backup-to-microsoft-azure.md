@@ -12,10 +12,10 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242568"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업용 고급 옵션 구성
@@ -32,7 +32,7 @@ ms.locfileid: "75242568"
 ## <a name="configure-encryption"></a>암호화 구성  
  다음 단계는 저장 프로시저 [managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)를 사용하여 암호화 설정을 지정하는 방법을 설명합니다.  
 
-1.  **암호화 알고리즘 결정:** 사용할 암호화 알고리즘의 이름을 먼저 결정합니다. 다음 알고리즘 중 하나 선택:  
+1.  **암호화 알고리즘 결정:** 먼저 사용할 암호화 알고리즘의 이름을 결정합니다. 다음 알고리즘 중 하나 선택:  
   
     -   AES_128  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75242568"
   
     -   NO_ENCRYPTION  
   
-2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
+2.  **데이터베이스 마스터 키 생성:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +55,7 @@ ms.locfileid: "75242568"
     GO  
     ```  
   
-3.  **백업 인증서 또는 비대칭 키 만들기:** 암호화에서 사용할 인증서 또는 비대칭 키를 사용할 수 있습니다. 다음 예제에서는 백업 암호화에 사용할 백업 인증서를 만듭니다.  
+3.  **백업 인증서 또는 비대칭 키 생성:** 암호화에서 사용할 CERTIFICATE 또는 ASYMMETRIC KEY를 사용할 수 있습니다. 다음 예제에서는 백업 암호화에 사용할 백업 인증서를 만듭니다.  
   
     ```sql  
     USE Master;  
@@ -88,9 +88,9 @@ ms.locfileid: "75242568"
   
 2.  **로그 백업을 위한 빈도 결정:** 로그 백업을 수행하는 빈도를 결정합니다. 이 값은 분 단위 또는 시간 단위입니다.  
   
-3.  **주별 백업에 대한 요일 결정:** 주별로 백업하는 경우 전체 백업을 수행할 요일을 선택합니다.  
+3.  **주별 백업에 대한 요일 결정:** 주별로 백업하는 경우 전체 백업을 수행할 요일을 결정합니다.  
   
-4.  **백업 시작 시간 결정:** 24시간 표기법을 사용하여 백업을 시작할 시간을 선택합니다.  
+4.  **백업 시작 시간 결정:** 24시간 표시법을 사용하여 백업을 시작할 시간을 선택합니다.  
   
 5.  **백업에서 허용되는 시간 길이 결정:** 백업이 완료되어야 하는 시간의 양을 지정합니다.  
   

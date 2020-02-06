@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943066"
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67943066"
   예를 들어 정수 170을 이진 1010 1010으로 변환합니다.
 정수 75를 이진 0100 1011로 변환합니다.
 
-|적용한 후|비트 수치 연산|
+|operator|비트 수치 연산|
 |---- |---- |
 |AND <br> 모든 위치에서 비트가 모두 1이면 결과는 1입니다. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
 |또는 <br> 모든 위치에서 어느 한쪽 비트가 1이면 결과는 1입니다. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|

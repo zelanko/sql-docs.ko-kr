@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066068"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066068"
 
   비대칭 키의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  프라이빗 키가 현재 보호되는 이전 암호를 지정합니다. 프라이빗 키가 데이터베이스 마스터 키로 암호화된 경우 필요하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 마스터 키가 없으면 ENCRYPTION BY PASSWORD 옵션이 필요하고 암호가 제공되지 않으면 작업이 실패합니다. 데이터베이스 마스터 키 만들기에 대한 자세한 내용은 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.  
   
  ALTER ASYMMETRIC KEY를 사용하면 다음 표에서와 같이 PRIVATE KEY 옵션을 지정하여 프라이빗 키 보호를 변경할 수 있습니다.  
@@ -86,7 +86,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-the-private-key"></a>1\. 프라이빗 키의 암호 변경  
+### <a name="a-changing-the-password-of-the-private-key"></a>A. 프라이빗 키의 암호 변경  
  다음 예에서는 비대칭 키 `PacificSales09`의 프라이빗 키를 보호하는 데 사용된 암호를 변경합니다. 새 암호는 `<enterStrongPasswordHere>`입니다.  
   
 ```  
@@ -97,7 +97,7 @@ ALTER ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>2\. 비대칭 키로부터 프라이빗 키 제거  
+### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. 비대칭 키로부터 프라이빗 키 제거  
  다음 예에서는 `PacificSales19`에서 프라이빗 키를 제거하여 퍼블릭 키만 남겨 둡니다.  
   
 ```  

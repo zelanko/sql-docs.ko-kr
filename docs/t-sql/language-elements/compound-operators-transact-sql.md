@@ -16,10 +16,10 @@ ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929533"
 ---
 # <a name="compound-operators-transact-sql"></a>복합 연산자(Transact-SQL)
@@ -54,7 +54,7 @@ expression operator expression
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자세한 내용은 각 연산자와 관련된 항목을 참조하세요.  
   
 ## <a name="examples"></a>예  

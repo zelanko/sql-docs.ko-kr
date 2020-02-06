@@ -1,10 +1,9 @@
 ---
-title: '연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft Docs'
-ms.custom: ''
+title: 데이터베이스 다이어그램 추가 및 변경
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246253"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68258919"
   
 3.  데이터베이스 다이어그램 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스 다이어그램**을 선택합니다.  
   
-    데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없으면 다음 메시지가 나타납니다. **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
+    데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없는 경우에는 다음과 같은 메시지가 나타납니다. **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
   
     **테이블 추가** 대화 상자가 표시됩니다.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68258919"
   
 1.  `Address` 테이블을 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 **테이블 뷰**를 가리킨 다음 **표준**을 클릭합니다.  
   
-    테이블 표에는 다음과 같은 세 개의 열이 표시됩니다. **열 이름**, **데이터 형식** 및 **Null 허용**.  
+    테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 표시됩니다.  
   
 2.  `Address` 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 뷰** 를 클릭한 다음 **키**를 선택합니다.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68258919"
   
 2.  **이름 선택** 대화 상자에서 **확인** 을 클릭하여 기본 이름인 **Table1**을 적용합니다.  
   
-    새 테이블 표에는 다음과 같은 세 개의 열이 표시됩니다. **열 이름**, **데이터 형식** 및 **Null 허용**.  
+    새 테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 나타납니다.  
   
 3.  **Table1**에 다음 정보를 추가합니다.  
   
@@ -131,7 +132,7 @@ ms.locfileid: "68258919"
   
 2.  `T2col1` 을 `T1col1`로 끕니다.  
   
-    백그라운드에 **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열** 대화 상자가 나타납니다.  
+    백그라운드의 **외래 키 관계** 대화 상자와 포그라운드의 **테이블 및 열** 대화 상자 두 개가 나타납니다.  
   
 3.  **확인** 을 클릭하여 새 관계를 저장합니다.  
   
@@ -196,7 +197,7 @@ XML을 포함하여 대부분의 데이터 형식에 대해 인덱스를 만들 
   
 3.  오류가 발생하면 **저장 후 알림** 대화 상자에 오류와 원인이 나타납니다. 오류를 수정하고 다이어그램을 다시 저장합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 이는 기존 테이블 두 개와 새 테이블 두 개만으로 이루어진 기본 다이어그램이지만 이 다이어그램을 만들어본 사용자라면 시각적으로 새 스키마를 만들거나 기존 데이터베이스를 다이어그램으로 만들 수 있습니다. 다음을 추가로 살펴볼 수 있습니다.  
   
 -   관련 테이블 그룹을 포함하는 새 다이어그램 만들기  

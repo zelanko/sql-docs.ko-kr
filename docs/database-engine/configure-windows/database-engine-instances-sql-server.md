@@ -11,10 +11,10 @@ ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012048"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "68012048"
 |데이터베이스 애플리케이션에서 데이터베이스 메일을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]로부터 전자 메일 메시지를 보내는 방법에 대해 설명합니다.|[데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)|  
 |확장 이벤트를 사용하여 성능 기준을 작성하거나 성능 문제를 진단하는 데 사용할 수 있는 성능 데이터를 캡처하는 방법에 대해 설명합니다. 확장 이벤트는 성능 데이터 수집을 위한 경량형의 확장성이 뛰어난 시스템입니다.|[확장 이벤트](../../relational-databases/extended-events/extended-events.md)|  
 |SQL 추적을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 이벤트 캡처 및 기록을 위한 사용자 지정 시스템을 작성하는 방법에 대해 설명합니다.|[SQL 추적](../../relational-databases/sql-trace/sql-trace.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 들어오는 애플리케이션 요청 추적을 캡처하는 방법에 대해 설명합니다. 나중에 성능 테스트, 문제 진단 등과 같은 활동을 위해 이러한 추적을 재생할 수 있습니다.|[SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 들어오는 애플리케이션 요청 추적을 캡처하는 방법에 대해 설명합니다. 나중에 성능 테스트, 문제 진단 등과 같은 활동을 위해 이러한 추적을 재생할 수 있습니다.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |CDC(변경 데이터 캡처) 및 변경 추적 기능에 대해 설명하고 이러한 기능을 사용하여 데이터베이스의 데이터 변경 사항을 추적하는 방법에 대해 설명합니다.|[데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |로그 파일 뷰어를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 기록, SQL Server 로그, Windows 이벤트 로그 등과 같은 다양한 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 및 메시지를 찾아서 보는 방법에 대해 설명합니다.|[로그 파일 뷰어](../../relational-databases/logs/log-file-viewer.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 데이터베이스를 분석하고 잠재적 성능 문제를 해결하기 위한 권장 구성을 만드는 방법에 대해 설명합니다.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  

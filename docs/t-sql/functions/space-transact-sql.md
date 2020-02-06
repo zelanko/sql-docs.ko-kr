@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c04af45ee0188c2520ccad6b65f50be2021cdf10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907058"
 ---
 # <a name="space-transact-sql"></a>SPACE(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67907058"
 
   반복된 공백 문자열을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ SPACE ( integer_expression )
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  유니코드 데이터에 공백을 포함하거나 8000개가 넘는 공백을 반환하려면 SPACE 대신 REPLICATE를 사용합니다.  
   
 ## <a name="examples"></a>예  
@@ -64,7 +64,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 성을 없애고 쉼표 하나, 공백 두 개 및 `DimCustomer`의 `AdventureWorksPDW2012` 테이블에 나열된 사람의 이름을 연결합니다.  
   
 ```  

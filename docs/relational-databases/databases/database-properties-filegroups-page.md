@@ -13,10 +13,10 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099626"
 ---
 # <a name="database-properties-filegroups-page"></a>데이터베이스 속성(파일 그룹 페이지)
@@ -27,7 +27,7 @@ ms.locfileid: "68099626"
   
  FILESTREAM이 설정되지 않은 경우 **Filestream** 섹션은 사용할 수 없습니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md)을 사용하여 FILESTREAM 스토리지를 설정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 파일 그룹을 사용하는 방법은 [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)을 참조하세요. FILESTREAM 데이터 및 파일 그룹에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 행 파일 그룹을 사용하는 방법은 [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)을 참조하세요. FILESTREAM 데이터 및 파일 그룹에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
   
  데이터베이스가 메모리 최적화 테이블을 하나 이상 포함하려면 메모리 최적화 파일 그룹이 필요합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68099626"
  **읽기 전용**  
  파일 그룹을 읽기 전용 상태로 설정하려면 선택합니다.  
   
- **Default**  
+ **기본값**  
  이 파일 그룹을 기본 파일 그룹으로 만들려면 선택합니다. 행 및 FILESTREAM 데이터에 대해 각각 한 개의 기본 파일 그룹을 가질 수 있습니다.  
   
  **추가**  

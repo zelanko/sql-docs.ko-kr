@@ -1,10 +1,9 @@
 ---
-title: 테이블 반환 개체(열) 속성(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블 반환 개체(열) 속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d5c82466168714f6a58055e1ed50959602318ef3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242160"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>테이블 반환 개체(열) 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68261471"
 **정밀도**  
 숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
-**소수 자릿수**  
+**규모**  
 숫자 데이터 형식에 대해 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 값은 전체 자릿수보다 작거나 같아야 합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
 **크기**  

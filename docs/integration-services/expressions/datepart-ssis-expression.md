@@ -14,10 +14,10 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290281"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART(SSIS 식)
@@ -35,7 +35,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>인수  
- *날짜 부분*  
+ *datepart*  
  새 값을 반환할 날짜 부분을 지정하는 매개 변수입니다.  
   
  *date*  
@@ -44,7 +44,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 DATEPART 결과도 Null입니다.  
   
  날짜 리터럴은 다음의 날짜 데이터 형식 중 하나로 명시적 캐스팅되어야 합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -57,12 +57,12 @@ DATEPART(datepart, date)
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|일|dd, d|  
 |Week|wk, ww|  
-|Weekday|dw|  
+|요일|dw|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|둘째|ss, s|  
+|초|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 식 예  

@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296426"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037051"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>함수 - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 실행 중인 실행 인스턴스에 대한 성능 통계를 반환합니다.  
   
@@ -39,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  실행 ID를 지정하지 않으면 여러 실행에 대한 성능 통계가 반환됩니다. **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다. *execution_id*는 **BigInt**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 dm_execution_performance_counter 함수에서 반환된 카운터 이름 값을 보여 줍니다.  
   
-|카운터 이름|설명|  
+|카운터 이름|Description|  
 |------------------|-----------------|  
 |BLOB bytes read|데이터 흐름 엔진이 모든 원본에서 읽는 BLOB(Binary Large Object) 데이터의 바이트 수입니다.|  
 |BLOB bytes written|데이터 흐름 엔진이 모든 대상에 기록하는 BLOB 데이터의 바이트 수입니다.|  
@@ -60,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>반환 값  
  dm_execution_performance_counters 함수는 진행 중인 실행에 대해 다음과 같은 열이 있는 테이블을 반환합니다. 반환되는 정보는 실행에 포함된 모든 패키지에 대한 정보입니다. 진행 중인 실행이 없는 경우 빈 테이블이 반환됩니다.  
   
-|열 이름|열 유형|설명|Remarks|  
+|열 이름|열 유형|Description|설명|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL**은 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
 |counter_name|**nvarchar(128)**|카운터의 이름입니다.|값의 **설명** 섹션을 참조하세요.|  

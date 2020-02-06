@@ -23,13 +23,13 @@ ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071529"
 ---
-# <a name="fileid-transact-sql"></a>FILE_ID(Transact-SQL)
+# <a name="file_id-transact-sql"></a>FILE_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 현재 데이터베이스의 구성 요소 파일에 지정된 논리 이름의 경우 이 함수는 파일 ID 번호를 반환합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "68071529"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)를 사용하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,20 +47,20 @@ FILE_ID ( file_name )
   
 ## <a name="arguments"></a>인수  
 *file_name*  
-반환될 파일 ID 값 `FILE_ID`가 포함된 파일의 논리적 이름을 나타내는 **sysname**형식 식입니다.  
+반환될 파일 ID 값 **가 포함된 파일의 논리적 이름을 나타내는** sysname`FILE_ID`형식 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *file_name*은 sys.master_files 또는 sys.database_files 카탈로그 뷰의 name 열에 표시되는 논리적 파일 이름과 일치합니다.  
 
-*file_name*이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 `FILE_ID`는 `NULL`을 반환합니다.
+`FILE_ID`file_name`NULL`이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 *는* 을 반환합니다.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그에 할당되는 파일 ID 번호는 32767보다 큽니다. `FILE_ID` 함수는 **smallint** 반환 형식이므로 `FILE_ID`는 전체 텍스트 파일을 지원하지 않습니다. 대신 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)를 사용하십시오.  
   
 ## <a name="examples"></a>예  
-이 예에서는 `ADVENTUREWORKS2012` 데이터베이스의 구성 요소 파일인 `AdventureWorks_Data` 파일의 파일 ID 값을 반환합니다.  
+이 예에서는 `AdventureWorks_Data` 데이터베이스의 구성 요소 파일인 `ADVENTUREWORKS2012` 파일의 파일 ID 값을 반환합니다.  
 
 ```sql  
 USE AdventureWorks2012;  
