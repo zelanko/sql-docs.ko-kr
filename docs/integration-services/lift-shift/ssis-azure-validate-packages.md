@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72915988"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사
@@ -45,8 +45,8 @@ Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSI
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | âœ“        |           |     | âœ“         | âœ“                 |
 | AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
-| Cache              |          | âœ“         | âœ“   |           |                   |
-| 내보내기              |          | âœ“         | âœ“   |           |                   |
+| 캐시              |          | âœ“         | âœ“   |           |                   |
+| Excel              |          | âœ“         | âœ“   |           |                   |
 | 파일               |          | âœ“         | âœ“   |           |                   |
 | FlatFile           |          | âœ“         | âœ“   |           |                   |
 | Ftp                |          |           |     | âœ“         |                   |

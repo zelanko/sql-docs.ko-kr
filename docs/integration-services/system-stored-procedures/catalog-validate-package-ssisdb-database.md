@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295259"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package(SSISDB 데이터베이스)
@@ -67,7 +67,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   변수가 패키지 매개 변수에서 참조되지만 유효성 검사에 참조된 환경이 포함되지 않은 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  유효성 검사를 통해 패키지 실행을 방해할 수도 있는 문제를 확인할 수 있습니다. [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 또는 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 사용하여 유효성 검사 상태를 모니터링할 수 있습니다.  
   
   

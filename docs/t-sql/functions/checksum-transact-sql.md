@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064747"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68064747"
 
 `CHECKSUM` 함수는 테이블의 행이나 식 목록에 대해 계산한 체크섬 값을 반환합니다. `CHECKSUM`을 사용하여 해시 인덱스를 작성합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -58,10 +58,10 @@ CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `CHECKSUM`은 인수 목록에 대해 체크섬이라고 하는 해시 값을 계산합니다. 이 해시 값을 사용하여 해시 인덱스를 작성합니다. `CHECKSUM` 함수가 열 인수인 경우 결과는 해시 인덱스이며 인덱스는 계산된 `CHECKSUM` 값을 통해 작성됩니다. 이 결과는 열에 대한 등가 검색에 사용할 수 있습니다.
   
-`CHECKSUM` 함수는 해시 함수 속성을 만족합니다. 즉 두 식 목록에 적용된 `CHECKSUM`은 두 목록의 해당 요소가 같은 데이터 형식을 갖고 해당하는 요소가 같음(=) 연산자를 사용하여 비교했을 때 동일하면 동일한 값을 반환합니다. 지정된 형식의 Null 값은 `CHECKSUM` 함수에서는 동일한 것으로 비교되게 정의됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 목록 체크섬도 변경될 수 있습니다. 그러나 이것이 보장되지는 않습니다. 따라서 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `CHECKSUM`에 비해 훨씬 낮습니다.
+`CHECKSUM` 함수는 해시 함수 속성을 만족합니다. 즉 두 식 목록에 적용된 `CHECKSUM`은 두 목록의 해당 요소가 같은 데이터 형식을 갖고 해당하는 요소가 같음(=) 연산자를 사용하여 비교했을 때 동일하면 동일한 값을 반환합니다. 지정된 형식의 Null 값은 `CHECKSUM` 함수에서는 동일한 것으로 비교되게 정의됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 목록 체크섬도 변경될 수 있습니다. 그러나 이는 보장되지 않습니다. 따라서 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `CHECKSUM`에 비해 훨씬 낮습니다.
   
 식 순서는 계산된 `CHECKSUM` 값에 영향을 미칩니다. `CHECKSUM(*)`에 사용되는 열의 순서는 테이블 또는 뷰 정의에 지정된 열의 순서입니다. 계산 열도 마찬가지입니다.
   
@@ -103,7 +103,7 @@ GO
   
 계산된 열에 인덱스를 만들면 체크섬 열이 만들어지고 `ProductName` 값의 변경 사항이 체크섬 열에 전파됩니다. 또는 인덱싱할 열에 직접 인덱스를 작성할 수 있습니다. 그러나 긴 키 값의 경우 기본 인덱스가 체크섬 인덱스처럼 수행되지 않을 수 있습니다.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CHECKSUM_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES&#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM&#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

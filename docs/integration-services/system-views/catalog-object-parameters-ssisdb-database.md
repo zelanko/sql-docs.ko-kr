@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295190"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters(SSISDB 데이터베이스)
@@ -26,7 +26,7 @@ ms.locfileid: "71295190"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 패키지 및 프로젝트의 매개 변수를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|매개 변수의 고유 식별자(ID)입니다.|  
 |project_id|**bigint**|프로젝트의 고유 ID입니다.|  

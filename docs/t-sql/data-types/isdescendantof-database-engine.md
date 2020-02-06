@@ -18,10 +18,10 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077817"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf(데이터베이스 엔진)
@@ -50,14 +50,14 @@ IsDescendantOf 테스트를 수행해야 하는 **hierarchyid** 노드입니다.
   
 **CLR 반환 형식: SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 부모에서 시작하는 하위 트리의 모든 노드에 대해서는 true를 반환하고 다른 모든 노드에 대해서는 false를 반환합니다.
   
 부모는 자신의 하위 항목으로 간주됩니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isdescendantof-in-a-where-clause"></a>1\. WHERE 절에서 IsDescendantOf 사용  
+### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. WHERE 절에서 IsDescendantOf 사용  
 다음 예에서는 관리자와 관리자에게 보고하는 직원을 반환합니다.
   
 ```sql
@@ -69,7 +69,7 @@ SELECT * FROM HumanResources.EmployeeDemo
 WHERE OrgNode.IsDescendantOf(@Manager) = 1  
 ```  
   
-### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>2\. IsDescendantOf를 사용하여 관계 평가  
+### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>B. IsDescendantOf를 사용하여 관계 평가  
 다음 코드는 세 개의 변수를 선언하고 채웁니다. 그런 다음 계층 관계를 평가하고 비교를 기반으로 두 개의 출력된 결과 중 하나를 반환합니다.
   
 ```sql
@@ -97,7 +97,7 @@ ELSE
 this.IsDescendantOf(Parent)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

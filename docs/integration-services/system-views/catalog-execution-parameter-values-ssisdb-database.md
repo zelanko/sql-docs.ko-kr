@@ -11,10 +11,10 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d621eab941a4b4db5e679583fba56d6743d4d27
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296565"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values(SSISDB 데이터베이스)
@@ -26,7 +26,7 @@ ms.locfileid: "71296565"
 
   실행 인스턴스 중에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용한 실제 매개 변수 값을 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |execution_parameter_id|**bigint**|실행 매개 변수의 고유 식별자(ID)입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 ID입니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "71296565"
 |value_set|**bit**|값이 `1`이면 매개 변수 값이 할당되었고, 값이 `0`이면 매개 변수 값이 할당되지 않았습니다.|  
 |runtime_override|**bit**|값이 `1`이면 실행이 시작되기 전에 매개 변수 값이 원래 값에서 변경된 것이고, 값이 `0`이면 매개 변수 값이 원래 설정된 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그의 각 실행 매개 변수에 대한 행을 표시합니다. 실행 매개 변수 값은 단일 실행 인스턴스 중에 프로젝트 매개 변수 또는 패키지 매개 변수에 할당되는 값입니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114786"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 스키마 권한(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114786"
 스키마에 대한 사용 권한을 거부합니다.  
   
 
-![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ CASCADE
 -   비대칭 키에 매핑된 데이터베이스 사용자  
 -   서버 보안 주체로 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 스키마는 데이터베이스 수준 보안 개체입니다. 사용 권한 계층의 부모인 데이터베이스에 의해 포함됩니다. 다음 표에는 스키마에서 거부될 수 있는 가장 구체적이고 제한된 사용 권한이 나열되어 있습니다. 표는 암시적으로 포함하는 보다 일반적인 사용 권한을 보여줍니다.  
   
 |스키마 사용 권한|스키마 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  

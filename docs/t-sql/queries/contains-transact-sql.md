@@ -35,17 +35,17 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982828"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [ 전체 텍스트 검색을 수행하기 위해 ](../../t-sql/queries/where-transact-sql.md) SELECT 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)]WHERE 절[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 조건자입니다.  
   
  CONTAINS는 다음을 검색할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73982828"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 전체 텍스트 검색 형식에 대한 자세한 내용은 [전체 텍스트 검색이 있는 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -165,7 +165,7 @@ CONTAINS (
   
  *language_term*은 특정 언어의 LCID에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
- 문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정하는 경우 *language_term*은 **sys.syslanguages &#40;Transact-SQL&#41;** 호환성 뷰의 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
  값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 값을 유니코드로 변환합니다.  
   
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  내부 검색 단어 `CC`는 계산하지 않습니다.  
   
  **MAX**  
- 지정된 단어 사이의 거리와 관계없이 해당 단어가 포함된 행을 모두 반환합니다. 기본값입니다.  
+ 지정된 단어 사이의 거리와 관계없이 해당 단어가 포함된 행을 모두 반환합니다. 이것이 기본값입니다.  
   
  \<match_order>  
  검색 쿼리에서 반환하도록 지정한 순서로 단어가 나올지 여부를 지정합니다. \<match_order>를 지정하려면 \<maximum_distance>도 지정해야 합니다.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  지정한 순서를 무시합니다. 예를 들어 `NEAR(A,B)`는 `A ... B` 및 `B ... A`와 모두 일치합니다.  
   
- 기본값입니다.  
+ 이것이 기본값입니다.  
   
  예를 들어 다음 근접 단어는 거리와 관계없이 지정한 순서로 "`Monday`", "`Tuesday`" 및 "`Wednesday`" 단어를 검색합니다.  
   
@@ -359,7 +359,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="querying-multiple-columns-full-text-search"></a>여러 열 쿼리(전체 텍스트 검색)  
  검색할 열 목록을 지정하여 여러 열을 쿼리할 수 있습니다. 열은 동일한 테이블에 있어야 합니다.  
   
- 예를 들어 다음 CONTAINS 쿼리는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스 `Production.Product` 테이블의 `Name` 및 `Color` 열에서 `Red`라는 단어를 검색합니다.  
+ 예를 들어 다음 CONTAINS 쿼리는 `Red` 예제 데이터베이스 `Name` 테이블의 `Color` 및 `Production.Product` 열에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]라는 단어를 검색합니다.  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-contains-with-simple_term"></a>1\. \<simple_term>에 CONTAINS 사용  
+### <a name="a-using-contains-with-simple_term"></a>A. \<simple_term>에 CONTAINS 사용  
  다음 예에서는 가격이 `$80.99` 이고 `Mountain`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simple_term"></a>2\. \<simple_term>에 CONTAINS 및 구 사용  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. \<simple_term>에 CONTAINS 및 구 사용  
  다음 예에서는 `Mountain`이나 `Road`라는 구가 포함된 모든 제품을 반환합니다.  
   
 ```sql  

@@ -14,10 +14,10 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321640"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정
@@ -43,9 +43,9 @@ ms.locfileid: "75321640"
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |큐 판독기 에이전트|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>가 아닌 **\<Publisher>-\<Publisher**>입니다.**  
+ \*Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>가 아닌** **Publisher>-\<Publisher\<>입니다.**  
   
- \*\*Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.**  
+ \*\*Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>가 아닌** **Publisher>-\<DistributionDatabase\<>입니다.**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Management Studio에서 복제 에이전트 명령줄 매개 변수를 확인한 다음 수정하려면  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75321640"
   
 3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+4.  **작업 속성 -** Job> **대화 상자의 \<단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
   
 5.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75321640"
   
 4.  **구독 <SubscriptionName>** 창에서 **작업**을 클릭하고 **\<AgentName> 작업 속성**을 클릭합니다.  
   
-5.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+5.  **작업 속성 -** Job> **대화 상자의 \<단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
   
 6.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321640"
   
 3.  표에서 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+4.  **작업 속성 -** Job> **대화 상자의 \<단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
   
 5.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   

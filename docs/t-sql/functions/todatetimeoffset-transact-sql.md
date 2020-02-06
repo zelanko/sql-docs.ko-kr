@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098969"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68098969"
 
   **datetime2** 표현식에서 변환된 **datetimeoffset** 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>1\. 현재 날짜 및 시간의 표준 시간대 오프셋 변경  
+### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>A. 현재 날짜 및 시간의 표준 시간대 오프셋 변경  
  다음 예에서는 현재 날짜 및 시간의 표준 시간대 오프셋을 표준 시간대 `-07:00`으로 변경합니다.  
   
 ```sql  
@@ -72,7 +72,7 @@ SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
-### <a name="b-changing-the-time-zone-offset-in-minutes"></a>2\. 표준 시간대 오프셋(분) 변경  
+### <a name="b-changing-the-time-zone-offset-in-minutes"></a>B. 표준 시간대 오프셋(분) 변경  
  다음 예에서는 현재 표준 시간대를 `-120`분으로 변경합니다.  
   
 ```sql  
@@ -91,7 +91,7 @@ SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
 ## <a name="see-also"></a>참고 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

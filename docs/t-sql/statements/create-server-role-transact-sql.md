@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117127"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117127"
 
   새로운 사용자 정의 서버 역할을 만듭니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  새 서버 역할을 소유할 로그인입니다. 로그인을 지정하지 않으면 CREATE SERVER ROLE을 실행하는 로그인이 서버 역할을 소유합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 역할은 서버 수준 보안 개체입니다. 서버 역할을 만든 후 GRANT, DENY 및 REVOKE를 사용하여 역할의 서버 수준 사용 권한을 구성합니다. 서버 역할에 로그인을 추가하거나 서버 역할에서 로그인을 제거하려면 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)을 사용합니다. 서버 역할을 삭제하려면 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)을 사용합니다. 자세한 내용은 [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)를 참조하세요.  
   
  [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 및 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰를 쿼리하여 서버 역할을 볼 수 있습니다.  
@@ -75,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>1\. 로그인이 소유하는 서버 역할 만들기  
+### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. 로그인이 소유하는 서버 역할 만들기  
  다음 예에서는 `buyers` 로그인이 소유하는 `BenMiller` 서버 역할을 만듭니다.  
   
 ```  
@@ -84,7 +84,7 @@ CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>2\. 고정 서버 역할이 소유하는 서버 역할 만들기  
+### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>B. 고정 서버 역할이 소유하는 서버 역할 만들기  
  다음 예에서는 `auditors` 고정 서버 역할이 소유하는 `securityadmin` 서버 역할을 만듭니다.  
   
 ```  

@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412681"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
@@ -60,7 +60,7 @@ ms.locfileid: "74412681"
     - `DECLARE @mytablevariable my_type;`입니다.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 시나리오: 글로벌 tempdb &#x23;&#x23;table 바꾸기  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 시나리오: 전역 tempdb &#x23;&#x23;table 바꾸기  
   
 메모리 최적화 SCHEMA_ONLY 테이블이 포함된 전역 임시 테이블을 교체하는 작업은 매우 간단합니다. 런타임 시가 아니라 배포 시 테이블을 만든다는 것이 가장 큰 차이점입니다. 컴파일 시간 최적화로 인해 메모리 최적화 테이블을 만드는 시간은 기존의 테이블을 만드는 것보다 오래 걸립니다. 온라인 워크로드의 일부로 메모리 최적화 테이블을 만들고 삭제하는 작업은 워크로드의 성능뿐만 아니라 AlwaysOn 보조 데이터베이스와 데이터베이스 복구에 대한 다시 실행 성능에도 영향을 미칩니다.
 
@@ -269,7 +269,7 @@ Microsoft SQL Server에서 메모리 최적화 기능을 사용하려면 데이�
 - Azure SQL 데이터베이스에서는 이 FILEGROUP을 만들지 않아도 됩니다.  
   
   
-*필수 구성 요소:* FILEGROUP에 대한 다음 Transact-SQL 코드는 이 문서의 뒷부분에 나오는 섹션에서 긴 T-SQL 코드 샘플에 대한 필수 구성 요소입니다.  
+*필수 구성 요소:* FILEGROUP에 대한 다음 TRANSACT-SQL 코드는 이 문서의 뒷부분에 나오는 섹션에서 긴 T-SQL 코드 샘플에 대한 필수 구성 요소입니다.  
   
 1. SSMS.exe 또는 T-SQL을 전송할 수 있는 다른 도구를 사용해야 합니다.  
 2. SSMS에 예제 FILEGROUP T-SQL 코드를 붙여넣습니다.  
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 다음 리소스를 사용하면 메모리 최적화 테이블의 활성 메모리 요구량을 예측할 수 있습니다.  
   
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [메모리 최적화 테이블의 테이블 및 행 크기: 계산 예제](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기: 계산 예](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 큰 테이블 변수의 경우 비클러스터형 인덱스는 메모리 최적화 *테이블*보다 더 많은 메모리를 사용합니다. 행 개수 및 인덱스 키가 클수록 차이가 증가합니다.  
   

@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294450"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
@@ -121,10 +121,10 @@ ms.locfileid: "71294450"
  **길이**  
  열 데이터 형식을 지정합니다. 데이터 형식에 적용 가능한 경우 **Length**를 업데이트할 수 있습니다.  
   
- **전체 자릿수**  
+ **정밀도**  
  특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용 가능한 경우 **Precision**를 업데이트할 수 있습니다.  
   
- **소수 자릿수**  
+ **규모**  
  특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용 가능한 경우 **Scale**를 업데이트할 수 있습니다.  
   
  **코드 페이지**  

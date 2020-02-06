@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842c70125c5d311f36df50afa72feae47c47bd55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064710"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>데이터 정렬 - COLLATIONPROPERTY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68064710"
 
 이 함수는 지정된 데이터 정렬의 요청된 속성을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -46,12 +46,12 @@ COLLATIONPROPERTY( collation_name , property )
 *property*  
 데이터 정렬 속성입니다. *property* 인수는 **varchar(128)** 데이터 형식이며, 다음 값 중 하나일 수 있습니다.
   
-|속성 이름|설명|  
+|속성 이름|Description|  
 |---|---|
 |**CodePage**|데이터 정렬의 유니코드가 아닌 코드 페이지입니다. 이는 **varchar** 데이터에 사용되는 문자 집합입니다. 이러한 값을 변환하고 해당 문자 매핑을 확인하려면 [부록 G DBCS/유니코드 매핑 표](https://msdn.microsoft.com/library/cc194886.aspx) 및 [부록 H 코드 페이지](https://msdn.microsoft.com/library/cc195051.aspx)를 참조하세요.<br /><br />기본 데이터 형식: **int**|  
 |**LCID**|데이터 정렬의 Windows 로캘 ID입니다. 이는 정렬 및 비교 규칙에 사용되는 문화권입니다. 이러한 값을 변환하려면 [LCID 구조](https://msdn.microsoft.com/library/cc233968.aspx)를 참조하세요(먼저 **varbinary**로 변환해야 함).<br /><br />기본 데이터 형식: **int**|  
-|**ComparisonStyle**|데이터 정렬의 Windows 비교 스타일입니다. 모든 이진 데이터 정렬((\_BIN) 및 (\_BIN2) 모두 해당)의 경우와 모든 속성((\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) 및 (\_CS\_AS\_KS\_WS\_VSS))이 대/소문자를 구분하는 경우 0을 반환합니다. 비트 마스크 값:<br /><br /> 대/소문자 무시: 1<br /><br /> 악센트 무시: 2<br /><br /> 일본어 가나 무시: 65536<br /><br /> 전자/반자 무시: 131072<br /><br /> 참고: 비교 동작에 영향을 주는 경우에도 \_VSS(변형 선택기 구분) 옵션은 이 값으로 표시되지 않습니다.<br /><br />기본 데이터 형식: **int**|  
-|**버전(Version)**|데이터 정렬의 버전입니다. 0 ~ 3 사이의 값을 반환합니다.<br /><br /> 이름에 “140”이 있는 데이터 정렬은 3을 반환합니다.<br /><br /> 이름에 “100”이 있는 데이터 정렬은 2를 반환합니다.<br /><br /> 이름에 “90”이 있는 데이터 정렬은 1을 반환합니다.<br /><br /> 다른 모든 데이터 정렬은 0을 반환합니다.<br /><br />기본 데이터 형식: **tinyint**|  
+|**ComparisonStyle**|데이터 정렬의 Windows 비교 스타일입니다. 모든 이진 데이터 정렬((\_BIN) 및 (\_BIN2) 모두 해당)의 경우와 모든 속성((\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) 및 (\_CS\_AS\_KS\_WS\_VSS))이 대/소문자를 구분하는 경우 0을 반환합니다. 비트 마스크 값:<br /><br /> 대/소문자 무시: 1<br /><br /> 악센트 무시: 2<br /><br /> Ignore Kana : 65536<br /><br /> 전자/반자 무시: 131072<br /><br /> 참고: 비교 동작에 영향을 주는 경우에도 \_VSS(변형 선택기 구분) 옵션은 이 값으로 표시되지 않습니다.<br /><br />기본 데이터 형식: **int**|  
+|**버전**|데이터 정렬의 버전입니다. 0 ~ 3 사이의 값을 반환합니다.<br /><br /> 이름에 “140”이 있는 데이터 정렬은 3을 반환합니다.<br /><br /> 이름에 “100”이 있는 데이터 정렬은 2를 반환합니다.<br /><br /> 이름에 “90”이 있는 데이터 정렬은 1을 반환합니다.<br /><br /> 다른 모든 데이터 정렬은 0을 반환합니다.<br /><br />기본 데이터 형식: **tinyint**|  
   
 ## <a name="return-types"></a>반환 형식
 **sql_variant**
@@ -80,7 +80,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 1252   
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
   

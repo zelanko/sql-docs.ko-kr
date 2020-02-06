@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165463"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
@@ -67,7 +67,7 @@ ms.locfileid: "74165463"
 
 데이터 플러시는 현재 실행 중인 가장 오래된 트랜잭션보다 더 오래된 메모리 내 내부 버퍼의 모든 레코드를 삭제하여 이러한 레코드를 디스크 기반 기록 테이블로 이동합니다.
 
-**sys.sp_xtp_flush_temporal_history @schema_name, @object_name** 과 같이 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)를 호출하고 스키마 및 테이블 이름을 지정하여 데이터 플러시를 적용할 수 있습니다. 이 사용자 실행 명령을 사용하면 내부 일정에 따라 시스템에 의해 데이터 플러시 태스크를 호출할 때와 같은 데이터 이동 프로세스가 호출됩니다.
+[sys.sp_xtp_flush_temporal_history ](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md), **@schema_name과 같이 @object_namesp_xtp_flush_temporal_history**를 호출하고 스키마 및 테이블 이름을 지정하여 데이터 플러시를 적용할 수 있습니다. 이 사용자 실행 명령을 사용하면 내부 일정에 따라 시스템에 의해 데이터 플러시 태스크를 호출할 때와 같은 데이터 이동 프로세스가 호출됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

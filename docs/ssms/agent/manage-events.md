@@ -1,10 +1,9 @@
 ---
-title: 이벤트 관리 | Microsoft 문서
-ms.custom: ''
+title: 이벤트 관리
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a777dc834e835f7f06bc301158e4967d9c8117e1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c7acceed73fdc902fc384f6f7b81fa39e1bfbc5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258169"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254135"
 ---
 # <a name="manage-events"></a>이벤트 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "68258169"
   
 -   **중앙 집중식**- 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 단일 서버에서 중앙 집중식으로 제어하고 간편하게 볼 수 있습니다.  
   
--   **확장성**- 많은 물리적 서버를 한 대의 논리적 서버에서 관리할 수 있습니다. 이 물리적 서버 그룹에 필요한 만큼 서버를 추가하거나 제거할 수 있습니다.  
+-   **확장성**. 많은 물리적 서버를 한 대의 논리적 서버에서 관리할 수 있습니다. 이 물리적 서버 그룹에 필요한 만큼 서버를 추가하거나 제거할 수 있습니다.  
   
--   **효율성**- 경고와 운영자를 한 번만 정의하면 되므로 구성 시간이 줄어듭니다.  
+-   **효율성** 경고와 운영자를 한 번만 정의하면 되므로 구성 시간이 줄어듭니다.  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>경고 관리 서버 사용의 단점  
 경고 관리 서버를 설정하면 다음과 같은 단점이 있습니다.  

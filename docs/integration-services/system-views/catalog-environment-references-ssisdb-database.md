@@ -11,10 +11,10 @@ ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295203"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references(SSISDB 데이터베이스)
@@ -26,7 +26,7 @@ ms.locfileid: "71295203"
 
   **SSISDB** 카탈로그에 있는 모든 프로젝트의 환경 참조를 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|참조의 고유 식별자(ID)입니다.|  
 |project_id|**bigint**|프로젝트의 고유 ID입니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "71295203"
 |validation_status|**char(1)**|유효성 검사의 상태입니다.|  
 |last_validation_time|**datatimeoffset(7)**|마지막 유효성 검사 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 카탈로그에 있는 각 환경 참조에 대한 행을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -51,7 +51,7 @@ ms.locfileid: "71295203"
 > [!NOTE]  
 >  프로젝트에 대한 READ 권한이 있으면 해당 프로젝트와 연결된 모든 패키지 및 환경 참조에 대해서도 READ 권한을 가집니다. 행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로젝트에는 상대 환경 참조 또는 절대 환경 참조가 있을 수 있습니다. 상대 참조는 환경을 이름으로 참조하며 환경이 프로젝트와 같은 폴더에 있어야 합니다. 절대 참조는 환경을 이름과 폴더로 참조하며 프로젝트와 다른 폴더에 있는 환경을 참조할 수도 있습니다. 하나의 프로젝트에서 여러 환경을 참조할 수 있습니다.  
   
   

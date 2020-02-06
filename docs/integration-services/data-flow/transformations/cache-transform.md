@@ -17,10 +17,10 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297993"
 ---
 # <a name="cache-transform"></a>캐시 변환
@@ -67,7 +67,7 @@ ms.locfileid: "71297993"
  캐시 연결 관리자에 대한 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)를 참조하십시오.  
   
 ### <a name="options"></a>옵션  
- **Cache connection manager**  
+ **전체 캐시**  
  목록을 사용하여 기존 캐시 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   
  **새로 만들기**  

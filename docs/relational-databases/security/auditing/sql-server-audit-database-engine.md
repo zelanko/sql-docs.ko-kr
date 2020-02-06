@@ -17,16 +17,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903843"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사된 이벤트는 이벤트 로그 또는 감사 파일에 쓸 수 있습니다.  
+  *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사 이벤트는 이벤트 로그 또는 감사 파일에 기록될 수 있습니다.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -115,7 +115,7 @@ ms.locfileid: "72903843"
 ## <a name="considerations"></a>고려 사항  
  감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하여 서버를 시작할 수 있습니다.  
   
- 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
+ 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**플래그를 사용하여**를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**플래그를 사용하여**를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
   
  서비스 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72903843"
 ### <a name="data-definition-language-statements"></a>데이터 정의 언어 문  
  다음 DDL 문을 사용하여 감사 사양을 생성, 변경 및 삭제할 수 있습니다.  
   
-|DDL 문|설명| 
+|DDL 문|Description| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|보안 개체의 소유권을 변경합니다.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 변경합니다.|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903843"
 ### <a name="dynamic-views-and-functions"></a>동적 뷰 및 함수  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 동적 뷰 및 함수를 나열합니다.  
   
-|동적 뷰 및 함수|설명|  
+|동적 뷰 및 함수|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|감사의 현재 상태에 대한 정보를 제공합니다.|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903843"
 ### <a name="catalog-views"></a>카탈로그 뷰  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 카탈로그 뷰를 나열합니다.  
   
-|카탈로그 뷰|설명|  
+|카탈로그 뷰|Description|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|서버 인스턴스에 있는 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  
