@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109448"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE(Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68109448"
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요. datetime 데이터의 범위는 1753-01-01부터 9999-12-31까지이지만 date 데이터의 범위는 0001-01-01부터 9999-12-31까지입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ISDATE는 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.  
   
  ISDATE의 반환 값은 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)의 설정에 따라 달라집니다.  
@@ -82,7 +82,7 @@ ISDATE ( expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>1\. ISDATE를 사용하여 올바른 datetime 식 테스트  
+### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. ISDATE를 사용하여 올바른 datetime 식 테스트  
  다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  
   
 ```  
@@ -92,7 +92,7 @@ ELSE
     PRINT 'INVALID';  
 ```  
   
-### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>2\. SET DATEFORMAT 및 SET LANGUAGE 설정이 반환 값에 미치는 영향  
+### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>B. SET DATEFORMAT 및 SET LANGUAGE 설정이 반환 값에 미치는 영향  
  다음 문에서는 `SET DATEFORMAT` 및 `SET LANGUAGE` 설정의 결과로 반환되는 값을 보여 줍니다.  
   
 ```  
@@ -140,7 +140,7 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. ISDATE를 사용하여 올바른 datetime 식 테스트  
  다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  

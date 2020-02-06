@@ -11,10 +11,10 @@ ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571355"
 ---
 # <a name="server-properties-history-page"></a>서버 속성(기록 페이지)
@@ -31,7 +31,7 @@ ms.locfileid: "65571355"
  4) **기록** 을 클릭하여 이 페이지를 엽니다.  
   
 ## <a name="options"></a>옵션  
- **보고서 기록에 스냅숏을 무제한으로 보관**  
+ **보고서 기록에 스냅샷을 무제한으로 보관**  
  모든 보고서 기록 스냅샷을 유지합니다. 보고서 기록 크기를 줄이려면 스냅샷을 수동으로 삭제해야 합니다.  
   
  **보고서 기록의 복사본 개수 제한**  

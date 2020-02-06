@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281187"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
@@ -64,7 +64,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
@@ -84,13 +84,13 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  환경 변수를 사용하면 패키지 실행 시 사용할 프로젝트 매개 변수나 패키지 매개 변수에 효율적으로 값을 할당할 수 있습니다. 환경 변수는 매개 변수 값이 구성을 활성화합니다. 변수 이름은 환경 내에서 고유해야 합니다.  
   
  이 저장 프로시저는 변수의 데이터 형식에 대한 유효성을 검사하여 해당 변수가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 지원되는지 확인합니다.  
   
 > [!TIP]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 지원되지 않는 **Sbyte** 데이터 형식 대신 **Int16** 데이터 형식을 사용하는 것이 좋습니다.  
+>  **에서는 지원되지 않는** Sbyte[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식 대신 **Int16** 데이터 형식을 사용하는 것이 좋습니다.  
   
  *value* 매개 변수를 사용하여 이 저장 프로시저에 전달된 값은 다음 표에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환됩니다.  
   

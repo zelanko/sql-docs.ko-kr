@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115316"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리
@@ -38,7 +38,7 @@ ms.locfileid: "68115316"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 유틸리티 탐색 창  
  유틸리티 탐색기 탐색 창에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개체를 유틸리티 제어 지점별로 그룹화하여 트리 뷰로 제공합니다. 폴더를 확장하려면 유틸리티 탐색기 탐색 창에서 더하기 기호(+)를 클릭하거나 UCP 이름을 두 번 클릭합니다. 일반적인 태스크를 수행하려면 폴더나 개체를 마우스 오른쪽 단추로 클릭하고, 트리 뷰의 노드는 다음과 같습니다.  
   
--   트리 뷰의 최상위 노드는 UCP(유틸리티 제어 지점)입니다. 노드 이름은 “Utility_Name” (ComputerName\UCP_instance_name) 형식으로 구성됩니다. UCP가 없는 경우 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 연결하지 않은 경우 연결해야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. 대시 보드에 있는 데이터로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 창을 채우려면 트리 뷰의 UCP 이름을 클릭합니다. 자세한 내용은 [유틸리티 대시보드&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)를 참조하세요.  
+-   트리 뷰의 최상위 노드는 UCP(유틸리티 제어 지점)입니다. 노드 이름은 "Utility_Name" (ComputerName\UCP_instance_name) 형식으로 구성됩니다. UCP가 없는 경우 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 연결하지 않은 경우 연결해야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. 대시 보드에 있는 데이터로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 창을 채우려면 트리 뷰의 UCP 이름을 클릭합니다. 자세한 내용은 [유틸리티 대시보드&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)를 참조하세요.  
   
      대시보드의 데이터를 새로 고치려면 UCP 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68115316"
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서 **관리되는 인스턴스** 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
+-   **유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서**관리되는 인스턴스[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 추가합니다.  
   
