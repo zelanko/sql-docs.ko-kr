@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325461"
 ---
 # <a name="recovery-models-sql-server"></a>복구 모델(SQL Server)

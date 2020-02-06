@@ -1,10 +1,7 @@
 ---
-title: StorageBoundInMB 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: StorageBoundInMB 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f206c59908ab5c44c1b5026e9c7d6dd054e33f1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: f6d83065a572e2d125b43830653fde5a2298eb2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105972"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306619"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성(인덱스 및 분할 집합)에 사용될 수 있는 최대 공간(MB)을 지정합니다.  
+
+데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성(인덱스 및 분할 집합)에 사용될 수 있는 최대 공간(MB)을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105972"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|없음|  
@@ -48,9 +51,9 @@ ms.locfileid: "68105972"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 스토리지 크기보다 작은 공간을 가정합니다.  
   
 -   현재 원시 데이터 크기의 3배이며 테이블에 있는 힙과 클러스터형 인덱스의 전체 크기를 포함합니다.  
@@ -63,7 +66,7 @@ ms.locfileid: "68105972"
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 코드 예에서는 튜닝 권장 구성에서 사용할 수 있는 최대 디스크 공간으로 1500MB를 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  

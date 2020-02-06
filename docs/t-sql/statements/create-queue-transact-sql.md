@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326092"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71326092"
 
 데이터베이스에 새 큐를 만듭니다. 큐는 메시지를 저장합니다. 서비스에 대한 메시지가 도착하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 서비스에 연결된 큐에 넣습니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -110,7 +110,7 @@ POISON_MESSAGE_HANDLING은 큐에 대해 포이즌 메시지 처리를 사용하
 
 ON *filegroup |* [**DEFAULT**]는 이 큐를 만들 파일 그룹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 지정합니다. *filegroup* 매개 변수를 사용하여 파일 그룹을 지정하거나 DEFAULT 식별자를 사용하여 Service Broker 데이터베이스의 기본 파일 그룹을 사용할 수 있습니다. 이 절의 컨텍스트에서 DEFAULT는 키워드가 아니므로 식별자로 구분해야 합니다. 파일 그룹을 지정하지 않으면 큐는 데이터베이스의 기본 파일 그룹을 사용합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 큐는 SELECT 문의 대상이 될 수 있습니다. 그러나 큐의 내용은 SEND, RECEIVE, END CONVERSATION 등 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에서 실행되는 문을 사용해야만 수정할 수 있습니다. 큐는 INSERT, UPDATE, DELETE 또는 TRUNCATE 문의 대상이 될 수 없습니다.
 
@@ -128,7 +128,7 @@ ON *filegroup |* [**DEFAULT**]는 이 큐를 만들 파일 그룹[!INCLUDE[ssNoV
 
 다음 표에서는 큐의 열을 나열합니다.
 
-|열 이름|데이터 형식|설명|
+|열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
 |상태|**tinyint**|메시지의 상태입니다. RECEIVE 문은 상태가 **1**인 모든 메시지를 반환합니다. 메시지 보존이 설정되면 상태는 0으로 설정됩니다. 메시지 보존이 설정되지 않으면 메시지는 큐에서 삭제됩니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=보존된 받은 메시지<br /><br /> **1**=수신 준비 완료<br /><br /> **2**=아직 완료되지 않음ㄴ<br /><br /> **3**=보존된 보낸 메시지|
 |priority|**tinyint**|이 메시지에 할당된 우선 순위 수준입니다.|
@@ -156,7 +156,7 @@ ON *filegroup |* [**DEFAULT**]는 이 큐를 만들 파일 그룹[!INCLUDE[ssNoV
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-queue-with-no-parameters"></a>1\. 매개 변수 없이 큐 만들기
+### <a name="a-creating-a-queue-with-no-parameters"></a>A. 매개 변수 없이 큐 만들기
 
 다음 예에서는 메시지를 받을 수 있는 큐를 만듭니다. 큐에 대해 지정된 활성화 저장 프로시저가 없습니다.
 
@@ -164,7 +164,7 @@ ON *filegroup |* [**DEFAULT**]는 이 큐를 만들 파일 그룹[!INCLUDE[ssNoV
 CREATE QUEUE ExpenseQueue ;
 ```
 
-### <a name="b-creating-an-unavailable-queue"></a>2\. 사용할 수 없는 큐 만들기
+### <a name="b-creating-an-unavailable-queue"></a>B. 사용할 수 없는 큐 만들기
 
 다음 예에서는 메시지를 받을 수 없는 큐를 만듭니다. 큐에 대해 지정된 활성화 저장 프로시저가 없습니다.
 

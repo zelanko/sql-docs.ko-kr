@@ -1,6 +1,6 @@
 ---
-title: 도구 상자 항목 선택(유지 관리 태스크 페이지) | Microsoft 문서
-ms.custom: ''
+title: 도구 상자 항목 선택(유지 관리 태스크 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffbc5973d32de6d7fdf8a880ebc2bdf758ff2e73
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265299"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257731"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>도구 상자 항목 선택(유지 관리 태스크 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68265299"
 **이름**  
 사용 가능한 구성 요소의 이름을 표시합니다. 각 이름 앞에는 확인란이 있습니다. 이 확인란이 선택되어 있으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 컴퓨터의 레지스트리에서 해당 구성 요소에 대한 항목을 발견한 것입니다. 구성 요소는 활성 **도구 상자** 탭에 이미 표시되어 있거나, 표시되어 있지 않을 경우 **확인**을 클릭하면 해당 탭에 추가됩니다. 확인란이 선택되어 있지 않으면 구성 요소가 현재 **도구 상자**에 표시되어 있지 않거나 **확인** 을 클릭하면 **도구 상자**에서 제거된다는 것을 나타냅니다.  
   
-**경로**  
+**Path**  
 구성 요소의 전체 경로를 표시합니다. 제품과 함께 제공된 기본 구성 요소를 확인하려면 이 열을 정렬한 다음 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 설치 경로에 저장되어 있는 구성 요소를 찾습니다.  
   
 **마지막으로 수정한 날짜**  
@@ -44,6 +44,6 @@ ms.locfileid: "68265299"
 **언어**  
 구성 요소의 언어입니다.  
   
-**버전(Version)**  
+**버전**  
 구성 요소의 버전입니다.  
   

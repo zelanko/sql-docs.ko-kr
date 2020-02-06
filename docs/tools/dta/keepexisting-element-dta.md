@@ -1,10 +1,7 @@
 ---
-title: KeepExisting 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: KeepExisting 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7caf2afc79a61f33bd31665714cf6d2ba270a656
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 50741d36bfd0dd3b9f566954d1ef53b86be14609
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034822"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307639"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 엔진 튜닝 관리자가 권장 구성을 생성할 때 유지해야 하는 물리적인 디자인 구조(인덱스, 인덱싱된 뷰 또는 분할)를 지정합니다.  
+
+데이터베이스 엔진 튜닝 관리자가 권장 구성을 생성할 때 유지해야 하는 물리적인 디자인 구조(인덱스, 인덱싱된 뷰 또는 분할)를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68034822"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 서버에서 지정한 길이 제한 적용|  
 |**허용된 값**|**NONE**<br /> 기존 구조 없음<br /><br /> **ALL**<br /> 모든 기존 구조<br /><br /> **ALIGNED**<br /> 모든 파티션 정렬 구조<br /><br /> **CL_IDX**<br /> 테이블의 모든 클러스터형 인덱스<br /><br /> **IDX**<br /> 테이블의 모든 클러스터형 및 비클러스터형 인덱스<br /><br /> 이 요소에 이러한 값 중 하나만 사용합니다.|  

@@ -1,23 +1,24 @@
 ---
-title: '방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897135"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241522"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
+
 데이터베이스 개체를 평가하는 단위 테스트를 작성하려면 먼저 테스트 프로젝트를 만들어야 합니다. 이 프로젝트에는 SQL Server 단위 테스트가 포함되지만 다른 유형의 테스트도 포함될 수 있습니다.  
   
 지정된 데이터베이스 프로젝트에 대한 모든 SQL Server 단위 테스트를 단일 테스트 프로젝트 내에 둘 수 있습니다. 하지만 다음 질문의 답변에 따라 추가 테스트 프로젝트를 만들 수도 있습니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "67897135"
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>SQL Server 단위 테스트 클래스로 테스트 프로젝트를 만들려면  
   
--   [방법: 빈 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) 또는 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)에 설명된 절차를 수행합니다.  
+-   [방법: 빈 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) 또는 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)에 설명된 절차를 따릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

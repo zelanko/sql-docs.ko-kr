@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727508"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server의 R 스크립팅 오류
@@ -37,7 +37,7 @@ R 런타임이 작동하지만 스크립트에서 오류를 반환하는 경우 
 
 또한 R과 데이터베이스 엔진 간에 데이터를 이동할 때 발생할 수 있는 데이터 형식의 문제를 해결하기 위해 스크립트를 검토하고 약간 다시 작성하는 것이 좋습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)을 참조하세요.
 
-또한 sqlrutils 패키지를 사용하면 저장 프로시저로 더 쉽게 사용되는 형식으로 R 스크립트를 번들로 포함할 수 있습니다. 참조 항목:
+또한 sqlrutils 패키지를 사용하면 저장 프로시저로 더 쉽게 사용되는 형식으로 R 스크립트를 번들로 포함할 수 있습니다. 자세한 내용은 다음을 참조하세요.
 * [sqlrutils 패키지](r/ref-r-sqlrutils.md)
 * [sqlrutils를 사용하여 저장 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

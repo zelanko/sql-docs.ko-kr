@@ -1,10 +1,7 @@
 ---
-title: SQL Server 에이전트 오류 로그 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: SQL Server 에이전트 오류 로그
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +12,20 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 35cd4c53674ea55a18b0d397c48852c6579124be
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 59053d57c165e8574fcfb5af54ade6c3ad5ce2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71067457"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230027"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "71067457"
   
 기본적으로 실행 추적 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그를 가득 채울 수 있으므로 이 로그에 기록되지 않습니다. 오류 로그가 가득 차게 되면 좀 더 중요한 오류를 놓칠 수 있는 가능성이 높아집니다. 오류 로그는 서버의 처리 부하에도 영향을 주기 때문에 실행 추적 메시지를 오류 로그로 캡처할 경우 얻을 수 있는 가치에 대해 신중하게 고려해야 합니다. 일반적으로 특정 문제를 디버깅할 때만 모든 메시지를 캡처하는 것이 가장 좋습니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지되었을 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그의 위치를 수정할 수 있습니다. 오류 로그가 비어 있으면 로그를 열 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중단하지 않고 [dbo.sp_cycle_agent_errorlog](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql?view=sql-server-2017)를 사용하여 언제든지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 로그를 반복할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지되었을 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그의 위치를 수정할 수 있습니다. 오류 로그가 비어 있으면 로그를 열 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중단하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dbo.sp_cycle_agent_errorlog[를 사용하여 언제든지 ](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql?view=sql-server-2017) 에이전트 로그를 반복할 수 있습니다.  
   
 **SQL Server 에이전트 오류 로그를 보려면**  
   

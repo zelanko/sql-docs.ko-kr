@@ -1,30 +1,30 @@
 ---
-title: 테이블에 추적 결과 저장(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 테이블에 추적 결과 저장
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9191c2ab44f4152a54211a1a66a5d843c0d6c12c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 6fb406988c9aeb92e7f0c1d3689e5b513a7ea0d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928754"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307429"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>테이블에 추적 결과 저장(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 데이터베이스 테이블에 저장하는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 데이터베이스 테이블에 저장하는 방법에 대해 설명합니다.  
   
-### <a name="to-save-trace-results-to-a-table"></a>추적 결과를 테이블에 저장하려면  
+## <a name="to-save-trace-results-to-a-table"></a>추적 결과를 테이블에 저장하려면
   
 1.  **파일** 메뉴에서 **새 추적**을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결합니다.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "67928754"
 7.  **추적 속성** 대화 상자에서 **최대 행 수 설정(천 단위)** 확인란을 선택하여 저장할 최대 행 수를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

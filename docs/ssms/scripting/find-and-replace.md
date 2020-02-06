@@ -1,6 +1,6 @@
 ---
-title: 찾기 및 바꾸기 | Microsoft 문서
-ms.custom: ''
+title: 찾기 및 바꾸기
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e9af0cfad0823af262595d54242fe65575253c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265506"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253895"
 ---
 # <a name="find-and-replace"></a>찾기 및 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68265506"
  **식 작성기**  
  **찾기 옵션** 에서 **사용** 확인란을 선택하면 **찾을 내용**입력란 옆에 있는 삼각형 단추가 활성화됩니다. 이 단추를 클릭하면 선택한 **사용** 옵션에 따라 와일드카드 또는 정규식 목록이 표시됩니다. 이 목록에서 항목을 선택하면 해당 항목이 **찾을 내용** 입력란에 지정된 문자열에 추가됩니다.  
   
-## <a name="replace-with"></a>바꿀 내용  
+## <a name="replace-with"></a>바꿀 항목  
  이러한 컨트롤을 사용하면 일치하는 문자열 또는 식의 자리에 삽입할 내용을 지정할 수 있습니다.  
   
  **Replace with**  
@@ -68,7 +68,7 @@ ms.locfileid: "68265506"
  **찾는 위치** 에 여러 파일을 포함하는 값을 지정한 경우 사용할 수 있습니다. 현재 파일을 검색 또는 수정하지 않으려면 이 단추를 클릭합니다. 검색은 **찾는 위치**의 목록에 있는 다음 파일에서 계속됩니다.  
   
 ## <a name="look-in"></a>찾는 위치  
- **찾는 위치**  
+ **Look in**  
  **찾을 내용**에 지정된 텍스트를 찾을 위치를 선택합니다. 사용할 수 있는 옵션은 대화 상자를 열 때 포커스가 놓여 있던 문서 창을 검색하는 **현재 문서**와 **에서 현재 열려 있는 모든 문서 창을 검색하는**모든 열린 문서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다.  
   
 ## <a name="find-options"></a>사용  
@@ -86,7 +86,7 @@ ms.locfileid: "68265506"
  **숨겨진 텍스트 검색**  
  숨겨지거나 축소된 텍스트를 찾습니다.  
   
- **찾기 옵션**  
+ **사용**  
  **찾을 내용** 또는 **바꿀 내용** 입력란에 입력한 특수 문자의 해석 방법을 나타냅니다. 옵션에는 **와일드카드** 및 **정규식**이 있습니다.  
   
  **Regular Expressions**  

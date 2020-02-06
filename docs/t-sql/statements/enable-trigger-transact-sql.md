@@ -23,10 +23,10 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980941"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73980941"
 
 DML, DDL 또는 LOGON 트리거를 활성화합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ DDL 트리거의 경우 서버 범위에서 실행하도록 *trigger_name*을 �
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 트리거를 활성화해도 트리거를 다시 만드는 것은 아닙니다. 비활성화된 트리거는 현재 데이터베이스 내에 여전히 개체로 존재하지만 실행하지는 않습니다. 트리거를 활성화하려면 트리거가 원래 프로그래밍된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 실행될 때 트리거가 실행되도록 합니다. 트리거는 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md)를 사용하여 비활성화됩니다. 테이블에 정의된 DML 트리거는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 비활성화되거나 활성화될 수도 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -77,7 +77,7 @@ DML 트리거를 활성화하려면 최소한 트리거가 만들어진 테이�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-a-dml-trigger-on-a-table"></a>1\. 테이블의 DML 트리거 활성화  
+### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 테이블의 DML 트리거 활성화  
 다음 예에서는 AdventureWorks 데이터베이스의 `uAddress` 테이블에서 만든 `Address` 트리거를 비활성화한 다음, 다시 활성화하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -87,7 +87,7 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>2\. DDL 트리거 활성화  
+### <a name="b-enabling-a-ddl-trigger"></a>B. DDL 트리거 활성화  
 다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 다음, 비활성화하고 활성화합니다.  
   
 ```sql  

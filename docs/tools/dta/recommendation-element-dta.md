@@ -1,10 +1,7 @@
 ---
-title: 권장 요소 (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Recommendation 요소(DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306037"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 요소(DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  사용자 지정 구성의 일부인 가상 인덱스에 대한 정보를 포함합니다.  
+
+사용자 지정 구성의 일부인 가상 인덱스에 대한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +43,7 @@ ms.locfileid: "68034573"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -53,7 +56,7 @@ ms.locfileid: "68034573"
 |**부모 요소**|[Schema의 Table 요소&#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**자식 요소**|[Create 요소&#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 요소입니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조하십시오.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **RecommendationTypecomplexType** 입니다. 이 요소는 가상 구성에 대한 인덱스를 지정하는 데 사용됩니다. 이 **Recommendation** 요소와 분할을 지정하는 데 사용할 수 있는 다른 형식(**RecommendationPType**) 또는 뷰(**RecommendationViewType**)를 혼동하지 마세요. 이러한 다른 **Recommendation** 요소 유형에 대한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조하세요.  
   
 ## <a name="example"></a>예제  

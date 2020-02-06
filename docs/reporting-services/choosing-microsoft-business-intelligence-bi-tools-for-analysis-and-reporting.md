@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1189098b494eb0de48c00f1a37b282a4f5395edf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892569"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242560"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -27,7 +27,7 @@ ms.locfileid: "68892569"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
-|작업|사용자|||BI 도구|||  
+|워크로드|사용자|||BI 도구|||  
 |---------------|----------|-|-|--------------|-|-|  
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**셀프 서비스 BI**|분석가/최종 사용자||||||  
@@ -36,7 +36,7 @@ ms.locfileid: "68892569"
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |데이터 시각화 및 탐색||[파워 뷰](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 맵](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5(250MB 미만의 파일을 볼 수 있도록 지원)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10용 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5(250MB 미만의 파일을 볼 수 있도록 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10용 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |공동 작업 및 공유|||[SharePoint 사이트](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint 팀 사이트](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 사이트](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**기업 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
@@ -49,4 +49,3 @@ ms.locfileid: "68892569"
 |데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
- *Reporting Services에는 최신 페이지를 매긴 보고서 제공과 같은 운영 보고서 및 사용자 지정 보고서 제공을 지원하는 여러 기능이 있습니다.

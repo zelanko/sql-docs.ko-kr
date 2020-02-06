@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295184"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -26,7 +26,7 @@ ms.locfileid: "71295184"
 
   각 실행 단계에서 데이터 흐름 구성 요소에 의해 소비된 시간을 표시합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|단계의 고유 ID(식별자)입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 ID입니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71295184"
 |end_time|**datetimeoffset(7)**|단계가 종료된 시간입니다.|  
 |execution_path|**nvarchar(max)**|데이터 흐름 태스크의 실행 경로입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 데이터 흐름 구성 요소의 각 실행 단계(예: 유효성 검사, 실행 전, 실행 후, PrimeOutput, ProcessInput)에 대한 행을 표시합니다. 각 행은 특정 실행 단계의 시작 및 종료 시간을 표시합니다.  
   
 ## <a name="example"></a>예제  

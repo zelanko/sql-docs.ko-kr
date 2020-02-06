@@ -1,10 +1,9 @@
 ---
-title: 조건 창(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 조건 창
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2e7bc19ea897e370617aeb8e0e0995e857489464
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263900"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258697"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,15 +59,15 @@ ms.locfileid: "68263900"
   
 |**열**|**쿼리 유형**|**설명**|  
 |--------------|------------------|-------------------|  
-|Column|All|계산된 열의 쿼리 또는 식에 사용되는 데이터 열 이름을 표시합니다. 이 열은 가로로 스크롤할 때 항상 표시되도록 설정되어 있습니다.|  
-|별칭|SELECT, INSERT FROM, UPDATE, MAKE TABLE|열의 대체 이름 또는 계산 열에 사용할 수 있는 이름을 지정합니다.|  
-|Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|관련 데이터 열에 대한 테이블 또는 테이블 구조 개체의 이름을 지정합니다. 계산된 열의 경우에는 이 열이 비어 있습니다.|  
+|열|모두|계산된 열의 쿼리 또는 식에 사용되는 데이터 열 이름을 표시합니다. 이 열은 가로로 스크롤할 때 항상 표시되도록 설정되어 있습니다.|  
+|Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|열의 대체 이름 또는 계산 열에 사용할 수 있는 이름을 지정합니다.|  
+|테이블|SELECT, INSERT FROM, UPDATE, MAKE TABLE|관련 데이터 열에 대한 테이블 또는 테이블 구조 개체의 이름을 지정합니다. 계산된 열의 경우에는 이 열이 비어 있습니다.|  
 |출력|SELECT, INSERT FROM, MAKE TABLE|쿼리 출력에 데이터 열을 나타낼지 여부를 지정합니다.<br /><br />참고: 데이터베이스에서 허용하면 결과 집합에 표시하지 않고 정렬 또는 검색 절에 데이터 열을 사용할 수 있습니다.|  
 |정렬 형식|SELECT, INSERT FROM|관련 데이터 열을 쿼리 결과를 정렬하는 데 사용하고 오름차순으로 정렬할 것인지 또는 내림차순으로 정렬할 것인지 지정합니다.|  
 |정렬 순서|SELECT, INSERT FROM|결과 집합을 정렬하는 데 사용되는 데이터 열에 정렬 우선 순위를 지정합니다. 데이터 열의 정렬 순서를 변경하면 다른 모든 열의 정렬 순서도 적절히 업데이트됩니다.|  
-|그룹화 방법|SELECT, INSERT FROM, MAKE TABLE|관련 데이터 열을 사용하여 집계 쿼리를 만들도록 지정합니다. 이 표 형태 열은 **도구** 메뉴에서 **그룹화 방법** 을 선택하거나 SQL 창에 GROUP BY 절을 추가한 경우에만 나타납니다.<br /><br />기본적으로 이 열의 값은 **그룹화 방법**으로 설정되어 있으며 열은 GROUP BY 절의 일부가 됩니다.<br /><br />이 열의 한 셀로 이동하고 집계 함수를 선택하여 관련 데이터 열에 적용하면 기본적으로 결과 식이 결과 집합에 대한 출력 열로 추가됩니다.|  
-|조건|All|관련 데이터 열에 대한 검색 조건(필터)을 지정합니다. 연산자 및 검색할 값을 입력합니다. 이때 기본 연산자는 "="입니다. 텍스트 값은 작은따옴표로 묶어야 합니다.<br /><br />관련 데이터 열이 GROUP BY 절의 일부인 경우 입력한 식은 HAVING 절에 사용됩니다.<br /><br />**조건** 표 형태 열에서 두 개 이상의 셀에 값을 입력하는 경우 결과 검색 조건은 AND 논리로 자동으로 연결됩니다.<br /><br />예를 들어 (fname > 'A') AND (fname < 'M') 같은 단일 데이터베이스 열에 여러 검색 조건식을 지정하려면 조건 창에 데이터 열을 두 번 추가하고 데이터 열의 각 인스턴스에 대해 **조건** 표 형태 열에서 별도의 값을 입력합니다.|  
-|또는...|All|OR 논리를 사용한 이전 식에 연결된 데이터 열에 추가 검색 조건식을 지정합니다. 맨 오른쪽의 **또는...** 열에서 Tab 키를 눌러 표 형태의 **또는...** 열을 추가할 수 있습니다.|  
+|그룹화 기준|SELECT, INSERT FROM, MAKE TABLE|관련 데이터 열을 사용하여 집계 쿼리를 만들도록 지정합니다. 이 표 형태 열은 **도구** 메뉴에서 **그룹화 방법** 을 선택하거나 SQL 창에 GROUP BY 절을 추가한 경우에만 나타납니다.<br /><br />기본적으로 이 열의 값은 **그룹화 방법**으로 설정되어 있으며 열은 GROUP BY 절의 일부가 됩니다.<br /><br />이 열의 한 셀로 이동하고 집계 함수를 선택하여 관련 데이터 열에 적용하면 기본적으로 결과 식이 결과 집합에 대한 출력 열로 추가됩니다.|  
+|조건|모두|관련 데이터 열에 대한 검색 조건(필터)을 지정합니다. 연산자 및 검색할 값을 입력합니다. 이때 기본 연산자는 "="입니다. 텍스트 값은 작은따옴표로 묶어야 합니다.<br /><br />관련 데이터 열이 GROUP BY 절의 일부인 경우 입력한 식은 HAVING 절에 사용됩니다.<br /><br />**조건** 표 형태 열에서 두 개 이상의 셀에 값을 입력하는 경우 결과 검색 조건은 AND 논리로 자동으로 연결됩니다.<br /><br />예를 들어 (fname > 'A') AND (fname < 'M') 같은 단일 데이터베이스 열에 여러 검색 조건식을 지정하려면 조건 창에 데이터 열을 두 번 추가하고 데이터 열의 각 인스턴스에 대해 **조건** 표 형태 열에서 별도의 값을 입력합니다.|  
+|또는...|모두|OR 논리를 사용한 이전 식에 연결된 데이터 열에 추가 검색 조건식을 지정합니다. 맨 오른쪽의 **또는...** 열에서 Tab 키를 눌러 표 형태의 **또는...** 열을 추가할 수 있습니다.|  
 |추가|INSERT FROM|관련 데이터 열에 대상 데이터 열의 이름을 지정합니다. 삽입 원본 쿼리를 만들 때 쿼리 및 뷰 디자이너는 원본과 해당 대상 데이터 열을 일치시킵니다. 쿼리 및 뷰 디자이너가 일치하는 내용을 선택할 수 없는 경우 열 이름을 지정해야 합니다.|  
 |새 값|UPDATE, INSERT INTO|관련 열에 넣을 값을 지정합니다. 리터럴 값 또는 식을 입력합니다.|  
   

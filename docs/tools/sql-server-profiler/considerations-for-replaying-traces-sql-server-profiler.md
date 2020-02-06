@@ -1,26 +1,25 @@
 ---
-title: 추적 재생에 대한 고려 사항(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
+title: 추적 재생 시 고려 사항
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cfac7ed273cf43c2efc4a9751cdbf1ba8b8a2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/06/2017
+ms.openlocfilehash: a8a4288d4810ca137d8e6397188ada0e69b945bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930103"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307344"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>추적 재생에 대한 고려 사항(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 다음과 같은 종류의 추적을 재생할 수 없습니다.  
   
@@ -45,6 +44,6 @@ ms.locfileid: "67930103"
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [READTEXT&#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [WRITETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)   
- [UPDATETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   
