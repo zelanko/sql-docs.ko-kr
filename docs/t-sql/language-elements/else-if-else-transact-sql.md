@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075308"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68075308"
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression*이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression*가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression*이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ IF Boolean_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-boolean-expression"></a>1\. 간단한 부울 식 사용  
+### <a name="a-using-a-simple-boolean-expression"></a>A. 간단한 부울 식 사용  
  다음 예에 포함된 간단한 부울 식(`1=1`)의 결과는 true이므로 첫째 문이 출력됩니다.  
   
 ```  
@@ -71,7 +71,7 @@ ELSE PRINT 'Boolean_expression is false.' ;
 GO  
 ```  
   
-### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>2\. 쿼리를 부울 식의 일부로 사용  
+### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 부울 식의 일부로 쿼리를 실행합니다. `Product` 테이블에는 `WHERE` 절을 충족하는 자전거 10대가 있으므로 첫째 print 문이 실행됩니다. 둘째 문이 실행되도록 하려면 `> 5`를 `> 15`로 변경합니다.  
   
 ```  
@@ -134,7 +134,7 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  

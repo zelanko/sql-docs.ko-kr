@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293795"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
@@ -60,7 +60,7 @@ ms.locfileid: "71293795"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>웹 서비스 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 웹 서비스 태스크에 사용할 수 있는 사용자 지정 로그 항목을 보여 줍니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**WSTaskBegin**|태스크에서 웹 서비스 액세스를 시작했습니다.|  
 |**WSTaskEnd**|태스크에서 웹 서비스 메서드를 완료했습니다.|  
@@ -154,7 +154,7 @@ ms.locfileid: "71293795"
  **변수**  
  확인란을 선택하여 입력을 제공하기 위한 변수를 사용합니다.  
   
- **Value**  
+ **값**  
  Variable 확인란이 선택된 경우 목록에서 변수를 선택하여 입력을 제공하고 선택되지 않은 경우 입력에 사용할 값을 입력합니다.  
   
 ## <a name="web-service-task-editor-output-page"></a>웹 서비스 태스크 편집기(출력 페이지)
@@ -164,7 +164,7 @@ ms.locfileid: "71293795"
  **OutputType**  
  결과를 저장할 때 사용할 스토리지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|결과를 파일에 저장합니다. 이 값을 선택하면 동적 옵션 **File**이 표시됩니다.|  
 |**변수**|결과를 변수에 저장합니다. 이 값을 선택하면 동적 옵션 **Variable**이 표시됩니다.|  

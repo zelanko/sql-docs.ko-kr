@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727427"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 성능 - 데이터 최적화
@@ -181,7 +181,7 @@ RevoScaleR에서 제공하는 컴퓨팅 컨텍스트 및 변환을 사용할 수
 
 ## <a name="articles-in-this-series"></a>이 시리즈의 문서
 
-[R의 성능 조정 - 소개](sql-server-r-services-performance-tuning.md)
+[R의 성능 튜닝 - 소개](sql-server-r-services-performance-tuning.md)
 
 [R의 성능 조정 - SQL Server 구성](sql-server-configuration-r-services.md)
 

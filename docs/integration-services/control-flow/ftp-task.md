@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294136"
 ---
 # <a name="ftp-task"></a>FTP 태스크
@@ -45,7 +45,7 @@ ms.locfileid: "71294136"
   
  이는 FTP 태스크에서 여러 개의 파일을 받고 여러 개의 원격 파일을 삭제할 수 있다는 것을 의미합니다. 그러나 파일 연결 관리자는 하나의 파일만 액세스할 수 있기 때문에 연결 관리자를 사용할 경우 하나의 파일만 보내고 하나의 로컬 파일만 삭제할 수 있습니다. 여러 개의 로컬 파일에 액세스하려면 FTP 태스크에 변수를 사용하여 경로 정보를 제공해야 합니다. 예를 들어 "C:\Test\&#42;.txt"가 포함된 변수는 Test 디렉터리에서 .txt 확장명을 가진 모든 파일 삭제 또는 보내기를 지원하는 경로를 제공합니다.  
   
- 여러 개의 파일을 보내고 여러 개의 로컬 파일 및 디렉터리에 액세스하려면 Foreach 루프에 태스크를 포함하여 FTP 태스크를 여러 번 실행할 수도 있습니다. Foreach 루프는 For Each File 열거자를 사용하여 디렉터리의 모든 파일을 열거할 수 있습니다. 자세한 내용은 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)을 참조하세요.  
+ 여러 개의 파일을 보내고 여러 개의 로컬 파일 및 디렉터리에 액세스하려면 Foreach 루프에 태스크를 포함하여 FTP 태스크를 여러 번 실행할 수도 있습니다. Foreach 루프는 For Each File 열거자를 사용하여 디렉터리의 모든 파일을 열거할 수 있습니다. 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)을 참조하십시오.  
   
  FTP 태스크는 경로에서 *?* 및 *\** 와일드카드 문자를 지원합니다. 와일드카드 문자를 사용하면 태스크가 여러 개의 파일에 액세스할 수 있습니다. 그러나 와일드카드 문자는 파일 이름을 지정하는 경로 부분에만 사용할 수 있습니다. 예를 들어 C:\MyDirectory\\*.txt는 유효한 경로지만 C:\\\*\MyText.txt는 유효한 경로가 아닙니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71294136"
 ## <a name="predefined-ftp-operations"></a>미리 정의된 FTP 작업  
  FTP 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|설명|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |파일 보내기|로컬 컴퓨터의 파일을 FTP 서버로 보냅니다.|  
 |파일 받기|FTP 서버의 파일을 로컬 컴퓨터에 저장합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "71294136"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|태스크에서 FTP 서버에 대한 연결을 시작했음을 나타냅니다.|  
 |**FTPOperation**|태스크에서 수행하는 FTP 작업의 시작 부분과 유형을 보고합니다.|  
@@ -111,7 +111,7 @@ ms.locfileid: "71294136"
  **IsRemotePathVariable**  
  원격 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **RemoteVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **RemotePath**가 표시됩니다.|  
@@ -122,7 +122,7 @@ ms.locfileid: "71294136"
  **IsLocalPathVariable**  
  로컬 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **LocalVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **LocalPath**가 표시됩니다.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71294136"
  **연산**  
  수행할 FTP 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 보내기**|파일을 보냅니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  
 |**파일 받기**|파일을 받습니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  

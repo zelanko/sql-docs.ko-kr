@@ -14,10 +14,10 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292905"
 ---
 # <a name="destination-assistant"></a>대상 길잡이
@@ -48,7 +48,7 @@ ms.locfileid: "71292905"
 ## <a name="add-new-destination-dialog-box"></a>새 대상 추가 대화 상자
 다음 표에서는 **새 대상 추가** 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |유형|연결할 대상 유형을 선택합니다.|  
 |연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만듭니다.|  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041232"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72041232"
 
 특정 길이나 전체 자릿수로 반올림한 숫자 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** 및 **smallmoney** 범주|**money**|  
 |**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ROUND는 항상 하나의 값을 반환합니다. *length*가 음수이고 소수점 전의 자릿수보다 클 경우 ROUND는 0을 반환합니다.  
   
 |예제|결과|  
@@ -77,11 +77,11 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
-|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 다음은 그 예입니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-round-and-estimates"></a>1\. ROUND 및 어림값 사용  
+### <a name="a-using-round-and-estimates"></a>A. ROUND 및 어림값 사용  
  다음 예에서는 마지막 자릿수가 항상 어림값인 `ROUND`를 사용하는 두 개의 식을 보여 줍니다.  
   
 ```  
@@ -96,7 +96,7 @@ GO
 123.9990    124.0000      
 ```  
   
-### <a name="b-using-round-and-rounding-approximations"></a>2\. ROUND 사용 및 어림값 반올림  
+### <a name="b-using-round-and-rounding-approximations"></a>B. ROUND 사용 및 어림값 반올림  
  다음 예에서는 반올림과 어림값을 보여 줍니다.  
   
 ```  

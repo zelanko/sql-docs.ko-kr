@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908287"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285014"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "72908287"
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
 
-1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **\@publication** 및 다음 매개 변수를 지정합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72908287"
   
 ###   <a name="use-transact-sql"></a>Transact-SQL 사용  
  
-1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   

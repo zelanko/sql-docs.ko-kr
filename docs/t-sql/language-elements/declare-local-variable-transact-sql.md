@@ -22,18 +22,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894891"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -158,7 +158,7 @@ CURSOR
  *logical_expression*  
  TRUE 또는 FALSE를 반환하는 논리 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  일괄 처리나 프로시저에서 변수는 종종 WHILE, LOOP 또는 IF...ELSE 블록의 카운터로 사용됩니다.  
   
  변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 SQL 문을 생성하려면 EXECUTE를 사용합니다.  
@@ -193,7 +193,7 @@ CURSOR
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-declare"></a>1\. DECLARE 사용  
+### <a name="a-using-declare"></a>A. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Man`으로 시작하는 모든 연락처 정보를 검색합니다.  
   
 ```  
@@ -223,7 +223,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>2\. 두 변수가 있는 DECLARE 사용  
+### <a name="b-using-declare-with-two-variables"></a>B. 두 변수가 있는 DECLARE 사용  
  다음 예에서는 북미 영업 지역 소속이고 연간 $2,000,000 이상을 판매한 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 판매원을 검색합니다.  
   
 ```  
@@ -278,7 +278,7 @@ DECLARE @LocationTVP
 AS LocationTableType;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-declare"></a>E. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Walt`으로 시작하는 모든 연락처 정보를 검색합니다.  

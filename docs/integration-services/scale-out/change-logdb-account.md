@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896980"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out 로깅을 위한 계정 변경
@@ -32,7 +32,7 @@ Scale Out 로깅에 사용되는 계정을 변경하려면 다음을 수행합�
 ## <a name="1-create-a-user-for-ssisdb"></a>1. SSISDB 사용자 만들기
 데이터베이스 사용자를 만드는 방법에 대한 지침은 [데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)를 참조하세요.
 
-## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2. 데이터베이스 역할 ssis_cluster_worker에 사용자 추가
+## <a name="2-add-the-user-to-the-database-role-ssis_cluster_worker"></a>2. 데이터베이스 역할 ssis_cluster_worker에 사용자 추가
 
 데이터베이스 역할을 조인하는 방법에 대한 지침은 [역할 조인](../../relational-databases/security/authentication-access/join-a-role.md)을 참조하세요.
 

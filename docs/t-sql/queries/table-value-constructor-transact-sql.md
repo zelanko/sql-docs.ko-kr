@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948252"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67948252"
 
   테이블에 생성할 행 값 식의 집합을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하면 단일 DML  문에 여러 데이터 행을 지정할 수 있습니다. 테이블 값 생성자는 INSERT ...의 VALUES 절로 지정할 수 있습니다. VALUES 문 또는 MERGE 문의 USING 절 또는 FROM 절의 파생 테이블로 사용됩니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  파생 테이블로 사용하는 경우 행 수에 제한이 없습니다.  
  
- INSERT ...의 VALUES 절로 사용되는 경우 VALUES 문에는 1000개의 행 제한이 있습니다. 행 수가 최대값을 초과하면 오류 10738이 반환됩니다. 1000개를 초과하는 행을 삽입하려면 다음 방법 중 하나를 사용합니다.  
+ INSERT ...의 VALUES 절로 사용되는 경우 VALUES 문에는 1000개의 행 제한이 있습니다. 행 수가 최대값을 초과하면 오류 10738이 반환됩니다. 1000개 이상의 행을 삽입하려면 다음 방법 중 하나를 사용합니다.  
   
 - 다중 INSERT  문 만들기  
   
@@ -111,7 +111,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-multiple-rows-of-data"></a>1\. 여러 데이터 행 삽입  
+### <a name="a-inserting-multiple-rows-of-data"></a>A. 여러 데이터 행 삽입  
  다음 예에서는 `dbo.Departments` 테이블을 만든 다음 테이블 값 생성자를 사용하여 이 테이블에 5개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
   
 ```sql
@@ -123,7 +123,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'),
 GO  
 ```  
   
-### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>2\. DEFAULT 및 NULL 값을 사용하여 여러 행 삽입  
+### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>B. DEFAULT 및 NULL 값을 사용하여 여러 행 삽입  
  다음 예에서는 테이블 값 생성자를 사용하여 테이블에 행을 삽입할 때 DEFAULT  및 NULL을 지정하는 방법을 보여 줍니다.  
   
 ```sql

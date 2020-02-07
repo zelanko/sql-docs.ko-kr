@@ -21,10 +21,10 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5af33c29f1c013937cff99f8d357b0b538b9ffdb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292476"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
@@ -74,7 +74,7 @@ ms.locfileid: "71292476"
   
  플랫 파일 원본은 다음과 같은 연결 관리자 유형 중 하나를 사용할 수 있습니다.  
   
--   원본이 단일 플랫 파일인 경우 플랫 파일 연결 관리자. 자세한 내용은 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)을(를) 참조하세요.  
+-   원본이 단일 플랫 파일인 경우 플랫 파일 연결 관리자. 자세한 내용은 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)을 참조하세요.  
   
 -   원본이 다중 플랫 파일이고 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 다중 플랫 파일 연결 관리자. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다. 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)을 참조하세요.  
   

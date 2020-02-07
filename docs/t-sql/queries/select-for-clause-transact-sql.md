@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904350"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
@@ -40,7 +40,7 @@ FOR 절을 사용하여 쿼리 결과에 대해 다음 옵션 중 하나를 지�
   
 -   **FOR JSON**을 지정하여 쿼리 결과를 JSON으로 서식 저정합니다.  
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -216,7 +216,7 @@ _원치 않는 줄 바꿈을 표시 안 함:_ SSMS(SQL Server Management Studio)
  열을 하위 요소로 반환하도록 지정합니다. 그렇지 않은 경우에는 XML 특성에 매핑됩니다. 이 옵션은 RAW, AUTO 및 PATH 모드에서만 지원됩니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
   
  XSINIL  
- **True**로 설정된 **xsi:nil** 특성이 있는 요소가 NULL 열 값에 대해 생성되도록 지정합니다. 이 옵션은 ELEMENTS 지시어에만 지정할 수 있습니다. 참조 항목:
+ **True**로 설정된 **xsi:nil** 특성이 있는 요소가 NULL 열 값에 대해 생성되도록 지정합니다. 이 옵션은 ELEMENTS 지시어에만 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.
 
 - [XSINIL 매개 변수를 사용하여 NULL 값에 대한 요소를 생성합니다](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
 - [SELECT 문에 대한 FOR XML](../../relational-databases/xml/for-xml-sql-server.md)

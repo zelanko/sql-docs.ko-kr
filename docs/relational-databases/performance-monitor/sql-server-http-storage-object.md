@@ -11,17 +11,17 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155774"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, HTTP 스토리지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:HTTP Storage** 성능 개체는 Microsoft Azure Storage 계정을 모니터링하는 성능 카운터로 구성됩니다. [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 기능을 사용하여 Azure Storage Blob에 데이터베이스 파일을 저장할 수 있습니다. 이 성능 개체는 각 Azure 스토리지 계정을 각각 다른 드라이브로 취급합니다.  
   
-|카운터 이름|설명|  
+|카운터 이름|Description|  
 |------------------|-----------------|  
 |**Avg. Bytes/Read**|읽기당 HTTP 스토리지에서 전송된 평균 바이트 수입니다.|  
 |**Avg. Bytes/Transfer**|읽기 또는 쓰기 작업 중 HTTP 스토리지에서 전송되는 평균 바이트 수입니다.|  

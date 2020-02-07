@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c3406d6745802ece620942bf51b23c4d3643ee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727449"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 저장 프로시저를 사용하여 R 코드 운영화
@@ -32,7 +32,7 @@ SQL Server Machine Learning Services에서 R 및 Python 기능을 사용하는 �
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>SQl용 R 코드 최적화 지침
 
-R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL에서 R 코드를 쉽게 변환할 수 있습니다. 여기에는 문제를 야기하는 데이터 형식을 방지하고 불필요한 데이터 변환을 방지하고 쉽게 매개 변수화 할 수 있는 단일 함수 호출로 R 코드를 다시 작성하는 작업이 포함됩니다. 참조 항목:
+R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL에서 R 코드를 쉽게 변환할 수 있습니다. 여기에는 문제를 야기하는 데이터 형식을 방지하고 불필요한 데이터 변환을 방지하고 쉽게 매개 변수화 할 수 있는 단일 함수 호출로 R 코드를 다시 작성하는 작업이 포함됩니다. 자세한 내용은 다음을 참조하세요.
 
 + [R 라이브러리 및 데이터 형식](r-libraries-and-data-types.md)
 + [R Services에서 사용할 R 코드 변환](converting-r-code-for-use-in-sql-server.md)

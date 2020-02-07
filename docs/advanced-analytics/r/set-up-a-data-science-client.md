@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 643de4d56692687b7c88b88c712fb1cc478eb0a1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0a31afef0924e4eda2b2eb9fbe5d27f7f4ab9f51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200409"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ RStudio를 다시 열면 R Client(또는 독립 실행형 서버)의 R 실행 �
 
 R의 기본 설정 IDE가 아직 없는 경우 **Visual Studio용 R 도구**를 추천합니다.
 
-+ [RTVS(Visual Studio용 R 도구) 다운로드](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [RTVS(Visual Studio용 R 도구) 다운로드](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
 + [설치 지침](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS는 여러 버전의 Visual Studio에서 사용할 수 있습니다.
 + [Visual Studio용 R 도구 시작](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 

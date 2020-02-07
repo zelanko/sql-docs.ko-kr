@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305076"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
@@ -73,7 +73,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 3. Scale Out 작업자를 설정합니다.
 
-    `[catalog].[add_execution_worker]`를 호출합니다. 모든 컴퓨터에서 패키지를 실행할 수 있는 경우 이 저장 프로시저를 호출할 필요가 없습니다. 
+    `[catalog].[add_execution_worker]`을 호출합니다. 모든 컴퓨터에서 패키지를 실행할 수 있는 경우 이 저장 프로시저를 호출할 필요가 없습니다. 
 
 4. 실행을 시작합니다.
 
@@ -118,7 +118,7 @@ Scale Out에서 패키지를 실행하려면 다음 권한 중 하나가 있어�
 
 2.  **카탈로그 속성** 대화 상자에서 **서버 차원의 기본 실행 모드**를 **Scale Out**으로 설정합니다.
 
-이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때  **\@runinscaleout** 매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
+이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때 **\@runinscaleout** 매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
 
 ![실행 모드](media/exe-mode.PNG)
 

@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296150"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>1-3단원: OLE DB 연결 관리자 추가 및 구성
@@ -55,6 +55,6 @@ ms.locfileid: "71296150"
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [4단계: 패키지에 데이터 흐름 태스크 추가](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [캐시 없음](../integration-services/connection-manager/ole-db-connection-manager.md)  
   

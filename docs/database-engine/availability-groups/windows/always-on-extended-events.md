@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991561"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
@@ -81,15 +81,15 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|availability_replica_state_change|  
-|범주|Always On|  
-|채널|Operational|  
+|Category|Always On|  
+|채널|작동|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -97,7 +97,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
 |previous_state|availability_replica_state|변경 전의 복제본 역할입니다.<br /><br /> **가능한 값:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|변경 후의 복제본 역할입니다.<br /><br /> **가능한 값:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|availability_group_lease_expired|  
-|범주|Always On|  
-|채널|Operational|  
+|Category|Always On|  
+|채널|작동|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,15 +140,15 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|범주|Always On|  
+|Category|Always On|  
 |채널|Analytic|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|값이 FALSE이면 이 가용성 복제본에서 자동 장애 조치(Failover)가 무효화됩니다.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|값이 FALSE이면 이 가용성 복제본에서 자동 장애 조치(Failover)가 무효화됩니다.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,18 +177,18 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported(여러 오류 번호): 전송 또는 연결 문제의 경우  
  각 실패한 이벤트는 가용성 그룹이 의존하는 전송 또는 데이터베이스 미러링 엔드포인트에서 연결 문제가 발생했음을 나타냅니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|error_reported<br /><br /> 필터링할 번호: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
-|범주|오류|  
+|Category|오류|  
 |채널|Admin|  
   
 #### <a name="error-numbers-to-filter"></a>필터링할 오류 번호  
   
-|오류 번호|설명|  
+|오류 번호|Description|  
 |------------------|-----------------|  
 |35201|가용성 복제본 '%ls'에 연결 설정을 시도하는 동안 연결 시간 제한이 발생했습니다.|  
-|35202|ID [%ls]인 가용성 복제본 '%ls'에서 ID [%ls]인 '%ls'까지 가용성 그룹 '%ls'에 대한 연결이 설정되었습니다.  이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
+|35202|ID [%ls]인 가용성 복제본 '%ls'에서 ID [%ls]인 '%ls'까지 가용성 그룹 '%ls'에 대한 연결이 설정되었습니다.  이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.|  
 |35206|가용성 복제본 '%ls'에 대해 이전에 설정된 연결에서 연결 시간 제한이 발생했습니다.|  
 |35204|엔드포인트 종료로 인해 인스턴스 '%ls' 및 '%ls' 간의 연결이 사용하지 않도록 설정되었습니다.|  
 |시간 제한 + 연결됨|  
@@ -204,7 +204,7 @@ GO
 |28091|인증이 없는 %S_MSG에 대한 시작 엔드포인트는 지원되지 않습니다.|  
 |33309|기본 %S_MSG 엔드포인트 구성이 아직 로드되지 않았으므로 클러스터 엔드포인트를 시작할 수 없습니다.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|data_movement_suspend_resume|  
-|범주|Always On|  
-|채널|Operational|  
+|Category|항상 사용 가능|  
+|채널|작동|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
 ||||  
 |-|-|-|  
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|사용 가능한 경우 가용성 그룹의 이름입니다.|  
 |availability_replica_id|guid|가용성 복제본의 ID입니다.|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|일시 중단 또는 다시 시작 작업의 원본입니다.|  
 |suspend_reason|unicode_string|데이터베이스 복제본 관리자에서 캡처된 일시 중단 이유입니다.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,15 +283,15 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|alwayson_ddl_execution|  
-|범주|Always On|  
+|Category|Always On|  
 |채널|Analytic|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|DDL 작업의 단계를 나타냅니다. BEGIN, COMMIT 또는 ROLLBACK.|  
 |인수를 제거합니다.|unicode_string|실행된 명령문의 텍스트입니다.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|availability_replica_manager_state_change|  
-|범주|Always On|  
-|채널|Operational|  
+|Category|Always On|  
+|채널|작동|  
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|설명|  
+|속성|Type_name|Description|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|가용성 복제본 관리자의 현재 상태입니다.<br /><br /> 온라인<br /><br /> 오프라인<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |속성|error_reported<br /><br /> 오류 번호 1480: REPLICATION_TYPE_MSG 데이터베이스 "DATABASE_NAME"이 REASON_MSG로 인해 역할을 "OLD_ROLE"에서 "NEW_ROLE"로 변경함|  
-|범주|오류|  
+|Category|오류|  
 |채널|Admin|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 세션 정의  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

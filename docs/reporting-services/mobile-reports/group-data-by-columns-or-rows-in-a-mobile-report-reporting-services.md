@@ -9,10 +9,10 @@ ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200909"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
@@ -60,5 +60,5 @@ ms.locfileid: "63200909"
 
    이제 차트의 각 막대는 Category 열의 각 범주에 대한 값을 나타냅니다.
 
-### <a name="see-also"></a>관련 항목:
+### <a name="see-also"></a>참고 항목
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b67be59da71667167594ef82e67dfef6f8118fbb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725215"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901898"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 Python 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ SQL 프로그래머를 위한 이 자습서에서는 SQL Server에서 [NYCTaxi_s
 
 + [SQL Server Machine Learning Services 및 Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [사용 권한](../security/user-permission.md)
++ [권한](../security/user-permission.md)
 
 + [NYC Taxi 데모 데이터베이스](demo-data-nyctaxi-in-sql.md)
 

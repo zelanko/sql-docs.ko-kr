@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255474"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)
@@ -36,7 +36,7 @@ ms.locfileid: "75255474"
   
 -   **REVOKE**는 기존의 **GRANT** 또는 **DENY** 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>권한 목록  
  모든 사용 권한은 이 포스터에 그래픽으로 표시됩니다. 이 방법이 사용 권한의 중첩된 계층 구조를 볼 수 있는 가장 쉬운 방법입니다. 예를 들어, **ALTER ON LOGIN** 권한은 자체적으로 부여될 수 있지만, 또한 로그인에 해당 로그인에 대한 **CONTROL** 권한이 부여되거나 또는 로그인에 **ALTER ANY LOGIN** 권한이 부여된다면 포함될 수 있습니다.  
   
- ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
  이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 **apsdoc\@microsoft.com**에 이메일로 요청합니다.  
   

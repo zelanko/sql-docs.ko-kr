@@ -1,11 +1,7 @@
 ---
-title: '방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897364"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241597"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
+
 SSDT(SQL Server Data Tools) 데이터베이스 프로젝트의 대상 SQL Server 버전을 지원되는 SQL Server 인스턴스(SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 또는 SQL Azure)로 변경할 수 있습니다. 이렇게 하면 데이터베이스 개발을 한 프로젝트에 중앙 집중화하고 필요할 때 여러 버전의 SQL Server 인스턴스에 프로젝트를 게시할 수 있습니다.  
   
 SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQL Azure에 게시할 프로젝트에 지원되지 않는 기능을 사용하는 경우)가 자동으로 감지되므로 이 작업을 간단하게 수행할 수 있습니다.  

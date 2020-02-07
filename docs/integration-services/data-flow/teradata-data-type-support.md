@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83f028772a93dbd2104d9f449fcd7aa3b1be0d8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74543011"
 ---
 # <a name="data-type-support"></a>데이터 형식 지원
@@ -71,4 +71,4 @@ SSIS 구성 요소는 TPT API(Teradata Parallel Transporter API)를 사용하여
 - [Teradata 연결 관리자](teradata-connection-manager.md) 구성
 - [Teradata 원본](teradata-source.md) 구성
 - [Teradata 대상](teradata-destination.md) 구성
-- 질문이 있으면 [Tech Community](https://aka.ms/AA6iwdw)를 방문하세요.
+- 질문이 있는 경우 [Tech Community](https://aka.ms/AA6iwdw)를 방문하세요.

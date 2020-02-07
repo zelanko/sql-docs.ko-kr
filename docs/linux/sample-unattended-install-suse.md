@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593515"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>예제: SUSE Linux Enterprise Server를 위한 무인 SQL Server 설치 스크립트
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>샘플: SUSE Linux Enterprise Server를 위한 무인 SQL Server 설치 스크립트
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 샘플 Bash 스크립트는 대화형 입력 없이 SLES(SUSE Linux Enterprise Server) v12 SP2에 SQL Server 2017을 설치합니다. 이 스크립트는 데이터베이스 엔진, SQL Server 명령줄 도구 및 SQL Server 에이전트를 설치하는 예를 제공하고, 설치 후 단계를 수행합니다. 필요에 따라 전체 텍스트 검색을 설치하고 관리자를 만들 수 있습니다.
 
 > [!TIP]
-> 무인 설치 스크립트가 필요하지 않은 경우 SQL Server를 설치하는 가장 빠른 방법은 [SLES용 빠른 시작](quickstart-install-connect-suse.md)을 따르는 것입니다. 다른 설치 정보는 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md)을 참조하세요.
+> 무인 설치 스크립트가 필요하지 않은 경우 SQL Server를 설치하는 가장 빠른 방법은 [SLES용 빠른 시작](quickstart-install-connect-suse.md)을 따르는 것입니다. 다른 설치 정보는 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

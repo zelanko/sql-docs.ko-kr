@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e370af38481593404629fb3367deb3b9f54bb869
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595678"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용
@@ -84,7 +84,7 @@ Enclave 계산이 필요한 쿼리 처리를 위해 클라이언트 애플리케
 
 이 방법을 사용하는 단계별 지침은 [자습서: 임의 암호화를 사용하는 Enclave 사용 열에 인덱스 만들기 및 사용](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)을 참조하세요. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](always-encrypted-enclaves-query-columns.md)
 
 ## <a name="see-also"></a>참고 항목  

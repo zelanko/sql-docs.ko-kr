@@ -1,23 +1,24 @@
 ---
-title: '연습: SQL Server 단위 테스트 만들기 및 실행 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 만들기 및 실행
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242704"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
+
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 애플리케이션 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 애플리케이션 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
   
 이 연습에서는 다음 작업을 수행합니다.  
@@ -720,8 +721,8 @@ ms.locfileid: "68141212"
   
     |테스트|예상 결과|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|통과|  
-    |Sales_uspShowOrderDetailsTest|통과|  
+    |Sales_uspPlaceNewOrderTest|합격|  
+    |Sales_uspShowOrderDetailsTest|합격|  
     |Sales_uspFillOrderTest|다음 오류로 인해 실패합니다. "ScalarValueCondition 조건(scalarValueCondition2)이 실패했습니다. ResultSet 1 행 1 열 1: 실제 '-100'이 예상했던 값 '100'과 일치하지 않습니다." 이 오류는 저장 프로시저의 정의에 사소한 오류가 포함되었기 때문에 발생합니다.|  
   
     이제 오류를 수정하고 다시 테스트를 실행합니다.  
@@ -981,7 +982,7 @@ ms.locfileid: "68141212"
   
     테스트가 성공합니다. 즉, 실패해야 할 때 프로시저가 실패했습니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 일반적인 프로젝트에서는 모든 중요한 데이터베이스 개체가 올바르게 작동하는지 확인하기 위해 추가 단위 테스트를 정의해야 합니다. 테스트 집합이 완료되었으면 해당 테스트를 버전 제어에 체크 인하여 팀과 공유합니다.  
   
 기준선을 설정한 후에는 데이터베이스 개체를 만들고, 수정한 후 변경 사항으로 인해 예상된 동작이 중단되는지 여부를 확인하기 위한 관련 테스트를 만들 수 있습니다.  

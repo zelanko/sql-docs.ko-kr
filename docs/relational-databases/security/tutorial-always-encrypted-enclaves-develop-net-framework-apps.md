@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595488"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발
@@ -56,14 +56,14 @@ ms.locfileid: "73595488"
 
 8. \<구성\> 섹션을 찾아 \<configsections\> 섹션을 추가하거나 업데이트합니다.
 
-   1\. \<구성\> 섹션에 \<configSections\> 섹션이 포함되어 있지 **않으면** \<구성\> 바로 아래 있는 다음 콘텐츠를 추가합니다.
+   a. \<구성\> 섹션에 \<configSections\> 섹션이 포함되어 있지 **않으면**\<구성\> 바로 아래 있는 다음 콘텐츠를 추가합니다.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   2\. \<구성\> 섹션에 이미 \<configsections\> 섹션이 있는 경우 \<configsections\> 내에 다음 줄을 추가합니다.
+   b. \<구성\> 섹션에 이미 \<configsections\> 섹션이 있는 경우 \<configsections\> 내에 다음 줄을 추가합니다.
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

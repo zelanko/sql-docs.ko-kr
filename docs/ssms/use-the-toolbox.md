@@ -1,6 +1,6 @@
 ---
-title: 도구 상자 사용 | Microsoft 문서
-ms.custom: ''
+title: 도구 상자 사용
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252202"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

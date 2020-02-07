@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284430"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
@@ -50,7 +50,7 @@ ms.locfileid: "71284430"
 ##  <a name="msgError"></a> 오류 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTS_E_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|대상에서 저장 프로시저 "%1"을(를) 덮어쓰고 있습니다.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|"%2" 열의 데이터 형식 "%1"이(가) %3에 대해 지원되지 않습니다. 이 열은 DT_NTEXT로 변환됩니다.|  
@@ -1417,7 +1417,7 @@ ms.locfileid: "71284430"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|행 수인 %2!ld!이(가) "%1" 속성에 적합하지 않습니다. 0보다 커야 합니다.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|어댑터가 %1!I64d!바이트 길이의 문자열을 기록하라는 요청을 받았지만 모든 데이터의 길이는 4294967295바이트보다 작아야 합니다.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|입력이 출력으로 매핑되지 않았습니다. "%1"에는 적어도 하나 이상의 입력 열이 출력 열로 매핑되어야 합니다.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|코드 페이지가 %2!d!인 "%1"에서 코드 페이지가 %4!d!인 "%3"(으)로의 변환은 지원되지 않습니다.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|코드 페이지가 %2!d!인 "%1"에서 코드 페이지가 %4!d!인 "%3"(으)로의 변환은 은 지원되지 않습니다.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1에 대한 외부 메타데이터 열 매핑이 잘못되었습니다.  외부 메타데이터 열 ID는 0일 수 없습니다.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1이(가) 존재하지 않는 외부 메타데이터 열로 매핑되었습니다.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|열 "%1"에 대해 DT_TEXT, DT_NTEXT 또는 DT_IMAGE 유형의 Long 개체 데이터를 데이터 흐름 태스크 버퍼에 쓰지 못했습니다.|  
@@ -2024,7 +2024,7 @@ ms.locfileid: "71284430"
 ##  <a name="msgWarning"></a> 경고 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 **DTS_W_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|평가 기간이 %1!lu!일 남았습니다. 기간이 만료되면 패키지를 실행할 수 없습니다.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|경고가 발생했습니다. 이 경고는 다른 경고에 대한 세부 사항을 설명하며, 이 경고 이전에 더 구체적인 경고가 있습니다.|  
@@ -2170,7 +2170,7 @@ ms.locfileid: "71284430"
 ##  <a name="msgInfo"></a> 정보 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 **DTS_I_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|이 컨테이너에 대한 분산 트랜잭션을 시작하고 있습니다.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|이 컨테이너에 의해 시작된 분산 트랜잭션을 커밋하고 있습니다.|  
@@ -2269,10 +2269,10 @@ ms.locfileid: "71284430"
 ##  <a name="msgGeneral"></a> 일반 및 이벤트 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTS_MSG_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템에서 지정한 파일을 찾을 수 없습니다.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템은 지정된 파일을 찾을 수 없습니다.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Microsoft SSIS 서비스를 시작하고 있습니다.<br /><br /> 서버 버전 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 서비스가 시작되었습니다.<br /><br /> 서버 버전 %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|대기 작업의 시간이 초과되었습니다.|  
@@ -2308,7 +2308,7 @@ ms.locfileid: "71284430"
 ##  <a name="msgSuccess"></a> Success Messages  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 **DTS_S_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|값이 NULL입니다.|  
 |0x40005|262149|DTS_S_TRUNCATED|문자열 값이 잘렸습니다. 너무 길어서 열에 맞지 않는 문자열을 버퍼에서 받았으며 문자열이 버퍼에 의해 잘렸습니다.|  
@@ -2317,7 +2317,7 @@ ms.locfileid: "71284430"
 ##  <a name="msgPipeline"></a> 데이터 흐름 구성 요소 오류 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTSBC_E_** 로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|설명|  
+|16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|출력 및 오류 출력의 총 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|인덱스 %1!lu!(으)로 출력을 검색할 수 없습니다.|  

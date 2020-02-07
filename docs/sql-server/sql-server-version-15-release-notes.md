@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096114"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 관련 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
+이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 관련 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 정보는 다음을 참조하세요.
 
 > [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -29,7 +29,7 @@ ms.locfileid: "74096114"
 
 라이선싱에 대한 전체 세부 정보는 설치 미디어의 `License Terms` 폴더에 있습니다.
 
-## <a name="documentation"></a>설명서
+## <a name="documentation"></a>문서화
 
 - **문제 및 고객에게 미치는 영향**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 버전별로 필터링할 수 있습니다. 각 설명서 페이지의 왼쪽 맨 위에 있는 컨트롤을 사용하여 요구 사항에 맞게 필터링합니다.
 
@@ -76,7 +76,7 @@ SQL Server 2019의 RTM 빌드 번호는 `15.0.2000.5`입니다.
 
 - **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
