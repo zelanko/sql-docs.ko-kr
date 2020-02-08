@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776379"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux 설치 및 업그레이드를 위한 리포지토리 구성

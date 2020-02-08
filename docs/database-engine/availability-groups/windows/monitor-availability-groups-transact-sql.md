@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014700"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68014700"
 >  ID 열로 뷰를 조인하여 한 번의 쿼리로 여러 뷰에서 정보를 반환할 수 있습니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 카탈로그 뷰를 사용하려면 서버 인스턴스에 대한 모든 정의 보기 권한이 필요합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 동적 관리 뷰를 사용하려면 서버에 대한 서버 상태 보기 권한이 필요합니다.  
   
 ##  <a name="AoAgFeatureOnSI"></a> 서버 인스턴스의 Always On 가용성 그룹 모니터링 기능  
@@ -82,7 +82,7 @@ ms.locfileid: "68014700"
   
  WSFC 클러스터와 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 및 [장애 조치(failover) 클러스터링 및 Always On 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
-##  <a name="AvGroups"></a> 가용성 그룹 모니터링  
+##  <a name="AvGroups"></a> Monitoring Availability Groups  
  서버 인스턴스가 가용성 복제본을 호스팅하는 가용성 그룹을 모니터링하려면 다음 뷰를 사용합니다.  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014700"
   
  가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **Always On 가용성 그룹 모니터링 태스크:**  
   
 -   [개체 탐색기 정보를 사용하여 가용성 그룹 모니터링&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  
@@ -264,7 +264,7 @@ ms.locfileid: "68014700"
   
 -   [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, Databases 개체](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Always On 가용성 그룹에 대한 정책 기반 관리**  
   

@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580668"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)

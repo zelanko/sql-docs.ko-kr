@@ -22,10 +22,10 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072450"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (보다 크지 않음)(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072450"
 
   두 식을 비교합니다(비교 연산자). Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크지 않으면 결과는 TRUE입니다. 그렇지 않으면 결과는 FALSE입니다. =(등가) 비교 연산자와 달리 두 NULL 값에 대한 !> 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
- ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   

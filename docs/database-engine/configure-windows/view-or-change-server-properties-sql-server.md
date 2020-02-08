@@ -19,10 +19,10 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a604ee89ed33f30d15e5402cba8d04668c7528f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945761"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "67945761"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
   
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "67945761"
   
     ```  
   
-#### <a name="to-change-a-server-property-by-using-spconfigure"></a>sp_configure를 사용하여 서버 속성을 변경하려면  
+#### <a name="to-change-a-server-property-by-using-sp_configure"></a>sp_configure를 사용하여 서버 속성을 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -143,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
- 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 실행 중인 컴퓨터에 WMI가 설치되어 있어야 합니다.  
+ 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 구성 관리자 사용  
  일부 서버 속성은 SQL Server 구성 관리자를 사용하여 보거나 변경할 수 있습니다. 예를 들어 SQL Server 인스턴스의 버전 및 에디션을 보거나 오류 로그 파일이 저장된 위치를 변경할 수 있습니다. [서버 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)를 쿼리하여 이러한 속성을 볼 수도 있습니다.  

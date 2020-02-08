@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254064"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
@@ -39,7 +39,7 @@ Always On 리소스 DLL은 내부 SQL Server 구성 요소의 상태를 모니�
 
 ## <a name="lease-mechanism"></a>임대 메커니즘  
 
-다른 장애 조치 메커니즘과 달리 SQL Server 인스턴스는 임대 메커니즘에서 활성 역할을 수행합니다. 임대 메커니즘은 클러스터 리소스 호스트와 SQL Server 프로세스 간에 Looks-Alive 유효성 검사로 사용됩니다. 메커니즘은 서로의 상태를 확인하고 궁극적으로 분리 장애(split-brain) 시나리오를 방지하여 양쪽(클러스터 서비스 및 SQL Server 서비스)이 자주 접촉하는 상태에 있는지 확인하는 데 사용됩니다.  주 복제본인 AG를 온라인으로 전환하면 SQL Server 인스턴스는 AG에 대한 전용 임대 작업자 스레드를 생성합니다. 임대 작업자는 임대 갱신 및 임대 중지 이벤트를 비롯한 리소스 호스트와 메모리의 작은 지역을 공유합니다. 임대 작업자 및 리소스 호스트는 순환 방식으로 작동하며 고유한 임대 갱신 이벤트 또는 중지 이벤트를 알리기 위해 해당하는 임대 갱신 이벤트에 신호를 전송한 다음, 중지하고, 다른 당사자를 대기합니다. 리소스 호스트 및 SQL Server 임대 스레드는 모두 다른 스레드의 신호를 받은 후에 스레드가 다시 시작될 때마다 업데이트되는 TTL(Time To Live) 값을 유지합니다. 신호를 기다리는 동안 TTL(Time To Live)에 도달한 경우 임대가 만료된 다음, 복제본이 해당 특정 AG의 확인 상태로 전환됩니다. 임대 중지 이벤트가 신호를 보내면 복제본은 확인 역할로 전환됩니다. 
+다른 장애 조치 메커니즘과 달리 SQL Server 인스턴스는 임대 메커니즘에서 활성 역할을 수행합니다. 임대 메커니즘은 클러스터 리소스 호스트와 SQL Server 프로세스 간에 Looks-Alive 유효성 검사로 사용됩니다. 메커니즘은 서로의 상태를 확인하고 궁극적으로 분리 장애(split-brain) 시나리오를 방지하여 양쪽(클러스터 서비스 및 SQL Server 서비스)이 자주 접촉하는 상태에 있는지 확인하는 데 사용됩니다.  주 복제본인 AG를 온라인으로 전환하면 SQL Server 인스턴스는 AG에 대한 전용 임대 작업자 스레드를 생성합니다. 임대 작업자는 임대 갱신 및 임대 중지 이벤트를 비롯한 리소스 호스트와 메모리의 작은 지역을 공유합니다. 임대 작업자 및 리소스 호스트는 순환 방식으로 작동하며 고유한 임대 갱신 이벤트 또는 중지 이벤트를 알리기 위해 해당하는 임대 갱신 이벤트에 신호를 전송한 다음, 중지하고, 다른 당사자를 대기합니다. 리소스 호스트 및 SQL Server 임대 스레드는 모두 다른 스레드의 신호를 받은 후에 스레드가 다시 시작될 때마다 업데이트되는 TTL(time-to-live) 값을 유지합니다. 신호를 기다리는 동안 TTL(time-to-live)에 도달한 경우 임대가 만료된 다음, 복제본이 해당 특정 AG의 확인 상태로 전환됩니다. 임대 중지 이벤트가 신호를 보내면 복제본은 확인 역할로 전환됩니다. 
 
 ![이미지](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
@@ -63,7 +63,7 @@ SQL Server 클러스터의 모니터링을 적게 사용하는 경우 장단점�
 
 임대 시간 제한은 통신 오류가 발생할 때 분할 브레인 시나리오를 방해합니다. 모든 통신에서 오류가 발생하더라도 리소스 DLL 프로세스는 종료되고 임대를 업데이트할 수 없습니다. 임대가 만료되면 AG를 자체적으로 오프라인 상태로 전환합니다. 클러스터가 새로운 복제본을 설정하기 전에 SQL Server의 인스턴스에서는 더 이상 주 복제본을 호스트하지 않습니다. 새로운 주 복제본을 선택하는 나머지 클러스터에 현재 주 복제본과 조정할 방법이 없기 때문에 시간 제한 값은 현재 주 복제본이 오프라인 상태로 전환되기 전에 새로운 주 복제본을 설정하지 않도록 합니다. 
 
-클러스터가 장애 조치할 때 새로운 주 복제본이 온라인 상태가 되기 전에 이전의 주 복제본을 호스트하는 SQL Server의 인스턴스는 확인 상태로 전환되어야 합니다. 언제든지 SQL Server 임대 스레드에는 ½ \* LeaseTimeout의 남은 TTL(Time To Live)이 있습니다. 임대가 갱신될 때마다 새로운 TTL(Time To Live)이 `LeaseInterval` 또는 ½ \* LeaseTimeout으로 업데이트되기 때문입니다. 클러스터 서비스 또는 리소스 호스트가 임대 중지 이벤트의 신호를 보내지 않고 중지되거나 종료될 경우 클러스터는 `SameSubnetThreshold`\ `SameSubnetDelay` 밀리초 뒤에 주 노드를 배달 못한 것으로 선언합니다. 주 복제본이 오프라인 상태가 되도록 이 시간 내에 임대가 만료되어야 합니다. 임대 시간 제한에 대한 최대 TTL(Time To Live)은 ½ \* `LeaseTimeout`이기 때문에, ½ \* `LeaseTimeout`은 `SameSubnetThreshold` \* `SameSubnetDelay`보다 작아야 합니다. 
+클러스터가 장애 조치할 때 새로운 주 복제본이 온라인 상태가 되기 전에 이전의 주 복제본을 호스트하는 SQL Server의 인스턴스는 확인 상태로 전환되어야 합니다. 언제든지 SQL Server 임대 스레드에는 ½ \* LeaseTimeout의 남은 TTL(time-to-live)이 있습니다. 임대가 갱신될 때마다 새로운 TTL(time-to-live)이 `LeaseInterval` 또는 ½ \* LeaseTimeout으로 업데이트되기 때문입니다. 클러스터 서비스 또는 리소스 호스트가 임대 중지 이벤트의 신호를 보내지 않고 중지되거나 종료될 경우 클러스터는 `SameSubnetThreshold`\ `SameSubnetDelay` 밀리초 뒤에 주 노드를 배달 못한 것으로 선언합니다. 주 복제본이 오프라인 상태가 되도록 이 시간 내에 임대가 만료되어야 합니다. 임대 시간 제한에 대한 최대 TTL(Time To Live)은 ½ \* `LeaseTimeout`이기 때문에, ½ \* `LeaseTimeout`은 `SameSubnetThreshold` \* `SameSubnetDelay`보다 작아야 합니다. 
 
 `SameSubnetThreshold \<= CrossSubnetThreshold` 및 `SameSubnetDelay \<= CrossSubnetDelay`는 모든 SQL Server 클러스터에 true여야 합니다. 
 

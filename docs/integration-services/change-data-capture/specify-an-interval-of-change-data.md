@@ -13,10 +13,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294568"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정

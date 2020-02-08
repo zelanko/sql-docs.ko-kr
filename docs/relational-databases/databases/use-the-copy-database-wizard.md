@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127122"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
@@ -81,7 +81,7 @@ ms.locfileid: "68127122"
 > **중요!!** **분리 및 연결** 방법은 원본 및 대상 데이터베이스 소유권을 **데이터베이스 복사 마법사**를 실행 중인 로그인으로 설정합니다.  데이터베이스 소유권을 변경하려면 [ALTER AUTHORIZATION(Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.
   
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
 -   대상 서버에서 SQL Server 에이전트가 시작되었는지 확인합니다.  
 
 -   대상 서버에서 원본 서버의 데이터 및 로그 파일 디렉터리에 연결할 수 있는지 확인합니다.
@@ -98,7 +98,7 @@ ms.locfileid: "68127122"
   
 
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  원본 서버와 대상 서버 모두에서 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="Overview"></a> 데이터베이스 복사 마법사 페이지 
@@ -117,7 +117,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 -    **SQL Server 인증 사용**  
 사용자가 SQL Server 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.
 
-     -    **User name**  
+     -    **사용자 이름**  
 연결할 사용자 이름을 입력하는 데 사용됩니다. 이 옵션은 **SQL Server 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.
 
      -    **암호**  
@@ -137,7 +137,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 -    **SQL Server 인증 사용**  
 사용자가 SQL Server 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.
 
-     -    **User name**  
+     -    **사용자 이름**  
 연결할 사용자 이름을 입력하는 데 사용됩니다. 이 옵션은 **SQL Server 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.
 
      -    **암호**  
@@ -165,7 +165,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 -    **이동**  
 데이터베이스를 대상 서버로 이동합니다.
 
--    **복사**  
+-    **Copy**  
 데이터베이스를 대상 서버에 복사합니다.
 
 -    **원본**  
@@ -237,17 +237,17 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 ###   <a name="location-of-source-database-files"></a>원본 데이터베이스 파일 위치
 이 페이지는 원본 서버와 대상 서버가 다를 때만 사용할 수 있습니다.  원본 서버의 데이터베이스 파일이 포함된 파일 시스템 공유를 지정합니다.
   
--    **데이터베이스 백업**  
+-    **Database**  
      이동 중인 각 데이터베이스의 이름을 표시합니다.  
   
 -    **폴더 위치**  
 원본 서버에 있는 데이터베이스 파일의 폴더 위치입니다.
-예를 들면 `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA`과 같습니다.
+예: `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA`
 
   
 -    **원본 서버의 파일 공유**  
 원본 서버에 있는 데이터베이스 파일이 포함된 파일 공유입니다.  공유를 수동으로 입력하거나 줄임표를 클릭하여 원하는 공유로 이동합니다.
-예를 들면 `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data`과 같습니다.
+예: `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data`
 
 ### <a name="configure-the-package"></a>패키지 구성
 데이터베이스 복사 마법사는 SSIS 패키지를 만들어 데이터베이스를 전송합니다.
@@ -269,14 +269,14 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
 
 > **중요!!** Integration Services 프록시 계정에서는 **분리 및 연결** 방법으로 사용되어야 합니다.  
 
--    **즉시 실행**  
+-    **Run immediately**  
      SSIS 패키지가 마법사 완료 후 실행됩니다.
   
 -    **일정**  
      SSIS 패키지가 일정에 따라 실행됩니다. 
   
      -    **일정 변경**   
-그러면 **새 작업 일정** 대화 상자가 열립니다.  원하는 대로 구성합니다.  완료되었으면 **확인** 을 클릭합니다.
+그러면 **새 작업 일정** 대화 상자가 열립니다.  원하는 대로 구성합니다.  작업이 완료되면 **확인**을 클릭합니다.
 
 
 -    **Integration Services 프록시 계정** 드롭다운 목록에서 사용 가능한 프록시 계정을 선택합니다.  전송을 예약하려면 **SSIS 패키지 실행 하위 시스템**에 대한 사용 권한으로 구성되어 사용자가 사용할 수 있는 프록시 계정이 하나 이상 있어야 합니다.

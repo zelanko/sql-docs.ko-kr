@@ -11,10 +11,10 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296043"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>2-2단원: Foreach 루프 컨테이너 추가 및 구성
@@ -88,7 +88,7 @@ ms.locfileid: "71296043"
 ## <a name="go-to-next-task"></a>다음 작업으로 이동  
 [3단계: 플랫 파일 연결 관리자 수정](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

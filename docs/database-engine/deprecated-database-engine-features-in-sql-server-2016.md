@@ -16,10 +16,10 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bfad58a8d1fbcfe6baad67ce38461a6d6bbcf72
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247527"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능

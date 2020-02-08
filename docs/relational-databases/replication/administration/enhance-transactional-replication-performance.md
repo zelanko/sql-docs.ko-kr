@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710384"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288180"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "71710384"
   
 -   에이전트를 잦은 간격으로 실행하는 대신 계속 실행합니다.  
   
-     일정을 분 단위처럼 자주 실행하도록 설정하는 대신 계속 실행되도록 설정하면 에이전트를 시작하고 중지할 필요가 없으므로 복제 성능이 향상됩니다. 배포 에이전트가 계속 실행되도록 설정하면 변경 내용이 토폴로지에 연결된 다른 서버로 짧은 대기 시간 내에 전파됩니다. 참조 항목:  
+     일정을 분 단위처럼 자주 실행하도록 설정하는 대신 계속 실행되도록 설정하면 에이전트를 시작하고 중지할 필요가 없으므로 복제 성능이 향상됩니다. 배포 에이전트가 계속 실행되도록 설정하면 변경 내용이 토폴로지에 연결된 다른 서버로 짧은 대기 시간 내에 전파됩니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [동기화 일정 지정](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   

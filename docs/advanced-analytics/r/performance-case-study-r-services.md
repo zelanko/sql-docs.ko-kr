@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727411"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대한 성능: 결과 및 리소스
@@ -41,7 +41,7 @@ SQL Server R Services 개발 팀의 이 사례 연구는 다양한 최적화의 
 3. 페이지 압축, 행 압축, 인덱싱, 열 형식 데이터 저장소 등의 SQL Server 기능을 테스트하기 위해 테이블의 복사본에 다양한 수정 사항이 적용되었습니다.
 4. 각 최적화를 적용하기 전후에 성능을 측정했습니다.
 
-| 테이블 이름| 설명|
+| 테이블 이름| Description|
 |------|------|
 | *airline* | `rxDataStep`을 사용하여 원래 xdf 파일에서 변환된 데이터|                          |
 | *airlineWithIntCol*   | 문자열이 아닌 정수에서 변환된 *DayOfWeek*. *rowNum* 열도 추가합니다.|
@@ -92,12 +92,12 @@ R Services 또는 RevoScaleR 함수와 관련된 문제를 해결하는 데 도�
 
 첫 번째 테스트에서는 데이터 크기를 줄이기 위해 압축 및 열 형식 테이블의 사용을 비교했습니다.
 
-| 테이블 이름            | 행     | 예약됨   | data       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
+| 테이블 이름            | 행     | Reserved   | 데이터       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816KB | 2972160KB | 6128KB    | 528KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784KB  | 623744KB  | 1352KB    | 688KB  | 79%                 |
 | *airlineWithRowComp*  | 10000000 | 1262520KB | 1258880KB | 2552KB    | 1088KB | 58%                 |
-| *airlineColumnar*     | 9999999  | 201992KB  | 201624KB  | n/a        | 368KB  | 93%                 |
+| *airlineColumnar*     | 9999999  | 201992KB  | 201624KB  | 해당 없음        | 368KB  | 93%                 |
 
 **결론**
 
@@ -268,8 +268,8 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 테이블 이름 | 테스트 이름 | 평균 시간(모델 학습) | 모델 저장/로드 시간|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21.59| 2.08|
-| airline    | LoadModelAndPredict | | 2.09(예측 시간 포함) |
+| 항공사    | SaveModel| 21.59| 2.08|
+| 항공사    | LoadModelAndPredict | | 2.09(예측 시간 포함) |
 
 **결론**
 
@@ -402,8 +402,8 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 [R의 성능 튜닝 - 소개](sql-server-r-services-performance-tuning.md)
 
-[R의 성능 튜닝 - SQL Server 구성](sql-server-configuration-r-services.md)
+[R의 성능 조정 - SQL Server 구성](sql-server-configuration-r-services.md)
 
-[R의 성능 튜닝 - R 코드 및 데이터 최적화](r-and-data-optimization-r-services.md)
+[R의 성능 조정 - R 코드 및 데이터 최적화](r-and-data-optimization-r-services.md)
 
-[성능 튜닝-사례 연구 결과](performance-case-study-r-services.md)
+[성능 조정 - 사례 연구 결과](performance-case-study-r-services.md)

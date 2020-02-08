@@ -9,10 +9,10 @@ ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63317014"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
@@ -119,7 +119,7 @@ ms.locfileid: "63317014"
   
 또한, 필터를 함께 캐스케이드하여 선택한 첫 번째 값으로 두 번째 이용 가능 값을 필터링할 수 있습니다. 필터를 캐스케이드하려면 일반 갤러리 요소와 마찬가지로 키 열에 필터를 적용합니다.  
 
-### <a name="see-also"></a>관련 항목: 
+### <a name="see-also"></a>참고 항목 
   
 * [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

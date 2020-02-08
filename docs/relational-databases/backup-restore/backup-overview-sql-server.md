@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70176268"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -128,7 +128,7 @@ ms.locfileid: "70176268"
   
  백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 제한 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> Related tasks  
  **백업 디바이스 및 백업 미디어**  
   
 -   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907811"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288243"
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

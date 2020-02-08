@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952383"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831973"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -416,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>9\. Oracle용 외부 테이블 만들기
 
@@ -444,7 +444,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -459,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>J. Teradata용 외부 테이블 만들기
 
@@ -604,7 +604,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>인수
 
@@ -750,7 +750,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>인수
 
@@ -817,7 +817,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 REJECTED_ROW_LOCATION = *디렉터리 위치*
 
 거부된 행과 해당 오류 파일을 작성해야 하는 외부 데이터 원본 내 디렉터리를 지정합니다.
-지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
+지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. "\_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "\_" 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
 
 reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있습니다. data와 reason은 별도의 파일에 있으므로 해당 파일의 접미사가 일치해야 합니다.
 
@@ -945,7 +945,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>개요: 분석 플랫폼 시스템
 
 외부 테이블을 사용하여 다음을 수행합니다.
-  
+
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 Hadoop 또는 Azure Blob Storage 데이터를 쿼리합니다.
 - Hadoop 또는 Azure Blob 스토리지의 데이터를 가져와서 Analytics Platform System에 저장합니다.
 
@@ -976,7 +976,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>인수
 

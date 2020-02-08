@@ -12,10 +12,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952509"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL을 사용하여 복제 구성

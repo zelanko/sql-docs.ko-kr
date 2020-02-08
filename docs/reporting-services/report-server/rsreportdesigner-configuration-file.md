@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581334"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
@@ -50,9 +50,9 @@ ms.locfileid: "65581334"
     <Designer> . . . </Designer>  
 ```  
   
-## <a name="configuration-settings"></a>Configuration 설정  
+## <a name="configuration-settings"></a>구성 설정  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|웹 서비스 연결 보안 수준을 지정합니다. 유효한 값은 0에서 3 사이이며 0은 보안 수준이 가장 낮습니다. 자세한 내용은 [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하세요.|  
 |**InstanceName**|미리 보기 서버의 식별자입니다. 이 값은 수정하지 마세요.|  

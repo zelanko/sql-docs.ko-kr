@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571244"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65571244"
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|설명|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "65571244"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어  
+     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -129,7 +129,7 @@ ms.locfileid: "65571244"
   
 4.  데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|설명|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -140,7 +140,7 @@ ms.locfileid: "65571244"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어  
+     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

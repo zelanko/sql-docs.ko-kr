@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500449"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>데이터 세트 속성 대화 상자, 쿼리(보고서 작성기)
@@ -45,7 +45,7 @@ ms.locfileid: "66500449"
 > [!NOTE]  
 >  모든 데이터 원본에서 모든 쿼리 유형을 지원하는 것은 아닙니다. 예를 들어 **테이블** 은 데이터 원본 유형 **OLE DB** 와 **ODBC**에서만 지원됩니다.  
   
- **데이터 집합 속성**  
+ **쿼리**  
  이 옵션은 **텍스트** 명령 유형 옵션을 선택하면 표시됩니다. 쿼리를 입력하거나 **가져오기**를 클릭하여 이미 존재하는 쿼리를 가져옵니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
 > [!NOTE]  

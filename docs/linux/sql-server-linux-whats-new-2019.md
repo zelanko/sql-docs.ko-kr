@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890554"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux의 새로운 기능
@@ -20,7 +20,7 @@ ms.locfileid: "72890554"
 
 이 문서에서는 Linux에서 실행되는 SQL Server 2019에 사용할 수 있는 주요 기능 및 서비스에 대해 설명합니다. 패키지 다운로드 및 알려진 문제에 대해서는 [릴리스 정보](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)를 참조하세요.
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>업데이트
 
 SQL Server 2019 on Linux에서 업데이트가 수행되었습니다.
 

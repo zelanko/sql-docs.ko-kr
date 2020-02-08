@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245092"
 ---
 # <a name="connect-to-the-teradata-source"></a>Teradata 원본에 연결

@@ -14,10 +14,10 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298034"
 ---
 # <a name="source-assistant"></a>원본 길잡이
@@ -48,7 +48,7 @@ ms.locfileid: "71298034"
 ## <a name="add-new-source-dialog-box"></a>새 원본 추가 대화 상자
 다음 표에서는 **새 원본 추가** 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |유형|연결할 원본 유형을 선택합니다.|  
 |연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만듭니다.|  

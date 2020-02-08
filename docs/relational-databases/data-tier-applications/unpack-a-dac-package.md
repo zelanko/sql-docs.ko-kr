@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909530"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기

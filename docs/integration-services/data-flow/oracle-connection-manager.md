@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553251"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 연결 관리자
@@ -78,9 +78,9 @@ Oracle 연결 관리자에는 다음과 같은 사용자 지정 연결 관리자
 
 - **EnableDetailedTracing**: 사용되지 않습니다.
 
-- **OracleHome**: 커넥터에서 사용할 32비트 Oracle Home 이름 또는 폴더를 지정합니다. (옵션)
+- **OracleHome**: 커넥터에서 사용할 32비트 Oracle Home 이름 또는 폴더를 지정합니다. (선택 사항)
 
-- **OracleHome64**: 64비트 모드로 실행될 때 커넥터에서 사용할 64비트 Oracle Home 이름 또는 폴더를 지정합니다. (옵션)
+- **OracleHome64**: 64비트 모드로 실행될 때 커넥터에서 사용할 64비트 Oracle Home 이름 또는 폴더를 지정합니다. (선택 사항)
 
 사용자 지정 속성은 Oracle 연결 관리자 편집기에 나열되지 않습니다. **OracleHome** 및 **OracleHome64** 속성을 설정하려면
 

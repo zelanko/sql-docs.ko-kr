@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278135"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText(geometry 데이터 형식)
@@ -50,20 +50,20 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  OGC 형식: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다. Open Geospatial Consortium(OGC) Simple Features for SQL Specification 버전 1.2.1에서 제공하는 3차원 및 측정된 기하 도형 WKT 표기법은 지원되지 않습니다. Z(높이) 및 M(측정) 값에 지원되는 표현에 대한 예를 참조하세요.
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STLineFromText()`를 사용하여 `geometry` 인스턴스를 만듭니다.
 
-### <a name="example-1-two-dimension-geometry-wkt"></a>예 1: 2차원 기하 도형 WKT
+### <a name="example-1-two-dimension-geometry-wkt"></a>예제 1: 2차원 기하 도형 WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
-### <a name="example-2-three-dimension-geometry-wkt"></a>예 2: 3차원 기하 도형 WKT
+### <a name="example-2-three-dimension-geometry-wkt"></a>예제 2: 3차원 기하 도형 WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  

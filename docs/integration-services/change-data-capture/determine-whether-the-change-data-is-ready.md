@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294766"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
@@ -90,7 +90,7 @@ ms.locfileid: "71294766"
   
  다음 표에서 첫 번째 열은 샘플 Transact-SQL 쿼리에 의해 SQL 실행 태스크에서 반환되는 값을 보여 줍니다. 두 번째 열은 다른 구성 요소에서 이러한 값에 응답하는 방식을 보여 줍니다.  
   
-|반환 값|의미|응답|  
+|Return Value|의미|응답|  
 |------------------|-------------|--------------|  
 |0|변경 데이터가 준비되지 않았음을 나타냅니다.<br /><br /> 선택한 간격의 끝 지점 뒤에 오는 변경 데이터 캡처 레코드가 없습니다.|지연을 구현하는 구성 요소에서 실행이 계속됩니다. 그런 다음 제어가 For 루프 컨테이너로 반환되어 반환되는 값이 0인 한 SQL 실행 태스크가 계속 검사됩니다.|  
 |1|변경 데이터가 전체 간격에 대해 캡처되지 않았거나 삭제되었음을 나타낼 수 있습니다. 이는 오류 상태로 처리됩니다.<br /><br /> 선택한 간격의 시작 지점 앞에 오는 변경 데이터 캡처 레코드가 없습니다.|오류를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  

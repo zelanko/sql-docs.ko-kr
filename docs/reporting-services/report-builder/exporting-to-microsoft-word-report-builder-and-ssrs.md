@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413559"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688202"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -53,9 +53,9 @@ ms.locfileid: "66413559"
 ##  <a name="DocumentProperties"></a> 문서 속성  
  Word 렌더러는 DOCX 파일에 다음과 같은 메타데이터를 기록합니다.  
   
-|보고서 요소 속성|설명|  
+|보고서 요소 속성|Description|  
 |-------------------------------|-----------------|  
-|Report Title(보고서 제목)|Title|  
+|Report Title(보고서 제목)|제목|  
 |Report.Author|작성자|  
 |Report.Description|주석|  
   
@@ -72,9 +72,9 @@ ms.locfileid: "66413559"
   
  이는 Word 렌더러가 **PageNumber** 및 **TotalPages** 등의 페이지 매김과 관련된 필드에 대해 보고서를 구문 분석하며, 함수를 호출하는 것이 아니라 단순 참조만 처리하기 때문입니다. 이 경우 식에서는 **ToString** 함수를 호출합니다. 다음 두 식은 동일하며, 보고서를 보고서 작성기 또는 보고서 디자이너에서 미리 보거나 게시된 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 라이브러리에서 렌더링할 때 두 식 모두 올바르게 렌더링됩니다. 그러나 Word 렌더러는 두 번째 식만 올바르게 구문 분석하여 올바른 페이지 번호를 렌더링합니다.  
   
--   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`입니다.  
   
--   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식,  `=Avg(Fields!YTDPurchase.Value, "Sales)`및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
+-   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식, `=Avg(Fields!YTDPurchase.Value, "Sales)` 및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
   
  이러한 문제를 방지하려면 머리글 및 바닥글에서 식을 사용할 때 하나의 복합 식 대신 여러 텍스트를 사용해 실행하세요. 다음은 이와 동등한 두 가지 식입니다. 첫 번째 식은 복합식이고 두 번째 식은 텍스트 실행을 사용합니다. Word 렌더러는 두 번째 식만 성공적으로 구문 분석합니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413559"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003(.doc) 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://www.microsoft.com/download/details.aspx?id=12439)을 참조하세요.  
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://www.microsoft.com/download/details.aspx?id=1285)을 참조하세요.
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-word** 이고 파일 이름 확장명은 .doc입니다.  
   

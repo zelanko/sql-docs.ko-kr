@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727653"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server의 R 언어 확장
@@ -33,7 +33,7 @@ SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그
 
 병렬 및 분산 워크로드를 처리하기 위해 Microsoft에서 추가한 R 패키지에는 다음 라이브러리가 포함되어 있습니다.
 
-| 라이브러리 | 설명 |
+| 라이브러리 | Description |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server의 MicrosoftML](../r/ref-r-microsoftml.md)을 참조하세요. | 
@@ -58,7 +58,7 @@ SQL Server "내부"에서 실행되는 R 코드는 저장 프로시저를 호출
 
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
-1. R 런타임에 대한 요청은 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 전달된 매개 변수  _@language='R'_ 에 의해 표시됩니다. SQL Server는 실행 패드 서비스에 이 요청을 보냅니다.
+1. R 런타임에 대한 요청은 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 전달된 매개 변수 _@language='R'_ 에 의해 표시됩니다. SQL Server는 실행 패드 서비스에 이 요청을 보냅니다.
 Linux에서 SQL은 **실행 패드** 서비스를 사용하여 각 사용자에 대한 별도의 실행 패드 프로세스와 통신합니다. 자세한 내용은 [확장성 아키텍처 다이어그램](extensibility-framework.md#architecture-diagram)을 참조하세요.
 2. 실행 패드 서비스가 적절한 시작 관리자(여기서는 RLauncher)를 시작합니다.
 3. RLauncher가 외부 R 프로세스를 시작합니다.
@@ -83,7 +83,7 @@ Microsoft R을 지원하는 원격 데이터 과학 클라이언트에서 연결
 8. SQL Satellite가 SQL Server와의 통신과 관련 작업 개체 정리를 관리합니다.
 9. SQL Server가 클라이언트에 결과를 전달합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [SQL Server의 확장성 프레임워크](extensibility-framework.md)
 + [SQL Server의 Python 및 기계 학습 확장](extension-python.md)

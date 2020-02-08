@@ -16,10 +16,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908243"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
@@ -30,7 +30,7 @@ ms.locfileid: "72908243"
   
 2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
 
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   
 ##  <a name="ViewDACContents"></a> DAC 내용 보기  
@@ -135,7 +135,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
  **업그레이드 동작 보기 예(PowerShell)**  
   
- 다음 예에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
+ 다음 예제에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

@@ -27,10 +27,10 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125318"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68125318"
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Distributed Transaction Coordinator(MS DTC)에서 관리되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 분산 트랜잭션을 시작하도록 지정합니다.  
     
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  MS DTC 유틸리티에서 분산 트랜잭션 추적에 사용되는 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  BEGIN DISTRIBUTED TRANSACTION 문을 실행하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 트랜잭션 주관자로서 트랜잭션의 수행을 제어합니다. 이후 세션에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 포함된 모든 인스턴스 간의 분산 트랜잭션 완료를 MS DTC에서 관리하도록 요청합니다.  
   
  트랜잭션 수준의 스냅샷 격리는 분산 트랜잭션을 지원하지 않습니다.  

@@ -15,10 +15,10 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7f4d77bba168f84b42aab0884369cf834af3779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099236"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
@@ -35,7 +35,7 @@ ms.locfileid: "68099236"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다. [sys.dm_resource_governor_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 동적 관리 뷰를 쿼리해 is_configuration_pending의 현재 상태를 가져와서 보류 중인 구성이 있는지 여부를 확인할 수 있습니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  작업 그룹을 이동하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="MoveWGSSMS"></a> SQL Server Management Studio를 사용하여 작업 그룹 이동  

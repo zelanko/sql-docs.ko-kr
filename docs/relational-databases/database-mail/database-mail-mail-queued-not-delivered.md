@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228416"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-이 항목은 이메일 메시지가 정상적으로 큐에 들어가지만 메시지가 배달되지 않는 문제의 해결 방법을 설명합니다.
+이 항목은 전자 메일 메시지가 정상적으로 큐에 들어가지만 메시지가 배달되지 않는 문제의 해결 방법을 설명합니다.
 
 ## <a name="diagnose-the-problem"></a>문제 진단 
 

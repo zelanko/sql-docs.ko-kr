@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241814"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경

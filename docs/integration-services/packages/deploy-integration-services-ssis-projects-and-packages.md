@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680965"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
@@ -63,7 +63,7 @@ ms.locfileid: "71680965"
 ## <a name="features-of-project-deployment-model"></a>프로젝트 배포 모델의 기능  
  다음 표에서는 프로젝트 배포 모델에만 배포되는 프로젝트에 사용할 수 있는 기능을 나열합니다.  
   
-|기능|설명|  
+|기능|Description|  
 |-------------|-----------------|  
 |매개 변수|매개 변수는 패키지에서 사용할 데이터를 지정합니다. 패키지 매개 변수 및 프로젝트 매개 변수를 사용하여 각각 패키지 수준 또는 프로젝트 수준으로 매개 변수 범위를 지정할 수 있습니다. 매개 변수를 식 또는 태스크에서 사용할 수 있습니다. 프로젝트가 카탈로그에 배포되면 각 매개 변수의 리터럴 값을 할당하거나 디자인 타임에 할당된 기본값을 사용할 수 있습니다. 리터럴 값 대신 환경 변수를 참조할 수도 있습니다. 환경 변수 값은 패키지 실행 시 확인됩니다.|  
 |환경|환경은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 참조할 수 있는 변수의 컨테이너입니다. 각 프로젝트는 환경 참조를 여러 개 가질 수 있지만 단일 패키지 실행 인스턴스는 단일 환경의 변수만 참조할 수 있습니다. 환경을 사용하여 패키지에 할당할 값을 구성할 수 있습니다. 예를 들어 "Dev", "test" 및 "Production"이라는 환경이 있을 수 있습니다.|  
@@ -135,7 +135,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 열고 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **프로젝트 배포 모델로 변환**을 클릭합니다.  
   
-     -또는-  
+     또는  
   
      [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 개체 탐색기에서 **프로젝트** 노드를 마우스 오른쪽 단추로 클릭하고 **패키지 가져오기**를 선택합니다.  
   
@@ -145,17 +145,17 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 연 다음 **프로젝트** 메뉴에서 **배포** 를 선택하여 **Integration Services 배포 마법사**를 시작합니다.  
   
-     로 구분하거나 여러  
+     또는  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** 노드를 확장하고 배포할 프로젝트의 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
   
-     로 구분하거나 여러  
+     또는  
   
      명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
   
 2.  **원본 선택** 페이지에서 **프로젝트 배포 파일** 을 클릭하여 프로젝트 배포 파일을 선택합니다.  
   
-     로 구분하거나 여러  
+     또는  
   
      **Integration Services 카탈로그** 를 클릭하여 SSISDB 카탈로그에 이미 배포된 프로젝트를 선택합니다.  
   
@@ -296,7 +296,7 @@ static void Main()
 
  - Windows Search에서 **"SQL Server 배포 마법사"** 를 입력합니다. 
 
- 로 구분하거나 여러
+ 또는
 
  - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -416,7 +416,7 @@ static void Main()
   
     2.  **환경 변수 사용**을 클릭한 다음 만든 환경 변수를 선택합니다.  
   
-14. **확인** 을 두 번 클릭하여 변경 내용을 저장합니다.  
+14. **확인**을 두 번 클릭하여 변경 내용을 저장합니다.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
 
@@ -571,7 +571,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **원본** 드롭다운 목록에서 **파일 시스템** 을 선택하면 페이지에 다음 옵션이 표시됩니다. 패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.  
   
- **Folder**  
+ **폴더**  
  패키지 경로를 입력하거나 **찾아보기**를 클릭하여 패키지로 이동합니다.  
   
  **원본** 드롭다운 목록에서 **SSIS 패키지 저장소**를 선택하면 페이지에 다음 옵션이 표시됩니다. 패키지 저장소에 대한 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](../../integration-services/service/package-management-ssis-service.md)를 참조하세요.  
@@ -579,7 +579,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Server**  
  서버 이름을 입력하거나 서버를 선택합니다.  
   
- **Folder**  
+ **폴더**  
  패키지 경로를 입력하거나 **찾아보기**를 클릭하여 패키지로 이동합니다.  
   
  **원본** 드롭다운 목록에서 **Microsoft SQL Server** 를 선택하면 페이지에 다음 옵션이 표시됩니다. 패키지가 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다.  
@@ -593,13 +593,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **SQL Server 인증 사용**  
  사용자가 지정한 로그인 이름과 암호를 사용하여 트러스트되지 않은 연결로부터 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정이 설정되었는지와 지정한 암호가 이전에 기록한 암호와 일치하는지를 확인하여 연결을 인증합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인 계정이 설정되어 있지 않으면 인증이 실패하고 오류 메시지가 나타납니다.  
   
- **User name**  
+ **사용자 이름**  
  SQL Server 인증을 사용할 경우 사용자 이름을 지정합니다.  
   
  **암호**  
  SQL Server 인증을 사용할 경우 암호를 제공합니다.  
   
- **Folder**  
+ **폴더**  
  패키지 경로를 입력하거나 **찾아보기**를 클릭하여 패키지로 이동합니다.  
   
 ###  <a name="selectPackages"></a> 패키지 선택 페이지에서 옵션 설정  
@@ -659,7 +659,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **부모 패키지**  
  패키지 실행 태스크를 사용하여 자식 패키지를 실행하는 패키지의 이름을 나열합니다.  
   
- **태스크 이름**  
+ **작업 이름**  
  패키지 실행 태스크의 이름을 나열합니다.  
   
  **원래 참조**  
@@ -713,7 +713,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **범위**  
  매개 변수의 범위를 나열합니다.  
   
- **Value**  
+ **값**  
  매개 변수 값을 나열합니다.  
   
  매개 변수 속성을 구성하려면 값 필드 옆에 있는 줄임표 단추를 클릭합니다.  

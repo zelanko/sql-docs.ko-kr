@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c1e63f93a26765b63085f19d99d0bba327b69d55
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2f7874ecabe33f507ca471d13e00d2f48f6f8976
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908546"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287674"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "72908546"
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정 | Microsoft 문서](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)   
  [병합 복제의 게시된 데이터 필터링](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

@@ -14,10 +14,10 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986594"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
@@ -39,6 +39,6 @@ ms.locfileid: "67986594"
 
 ## <a name="see-also"></a>참고 항목
 
-[SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)  
 

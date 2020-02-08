@@ -16,10 +16,10 @@ ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974106"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>setLockTimeout 메서드(SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setLockTimeout(int lockTimeout)
   
  대기할 시간(밀리초)을 나타내는 **int** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  잠금 제한 시간은 데이터베이스에서 잠금 시간 초과가 보고될 때까지의 대기 시간(밀리초)입니다. 기본값인 -1은 무기한 대기를 의미합니다. 이 값을 지정하면 연결의 모든 문에 대해 이 값이 기본값으로 사용됩니다.  
   
 > [!NOTE]  

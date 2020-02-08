@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783396"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
@@ -393,7 +393,7 @@ SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 �
 
     다음 표에는 가능한 **coredump.coredumptype** 값이 나와 있습니다.
 
-    | 형식 | 설명 |
+    | Type | Description |
     |-----|-----|
     | **mini** | Mini는 가장 작은 덤프 파일 형식입니다. Linux 시스템 정보를 사용하여 프로세스의 스레드 및 모듈을 결정합니다. 덤프에는 호스트 환경 스레드 스택 및 모듈만 포함됩니다. 간접 메모리 참조 또는 전역은 포함되지 않습니다. |
     | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps**에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |
@@ -507,7 +507,7 @@ sudo systemctl restart mssql-server
 
 MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-conf에 대한 여러 가지 다른 설정이 있습니다. 다음 표에서는 이 설정에 대해 간략하게 설명합니다. 해당 사용에 대한 자세한 내용은 Windows 지원 문서 [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)(MS DTC에 대한 진단 추적을 사용하도록 설정하는 방법)의 세부 정보를 참조하세요.
 
-| mssql-conf 설정 | 설명 |
+| mssql-conf 설정 | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 분산 트랜잭션에 대한 보안 전용 RPC 호출 구성 |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 분산 트랜잭션에 대한 보안 전용 RPC 호출을 구성 |
@@ -613,11 +613,11 @@ outboundnetworkaccess = 1
 
 다음 옵션은 Linux에서 실행되는 SQL Server 인스턴스에 대해 TLS를 구성합니다.
 
-|옵션 |설명 |
+|옵션 |Description |
 |--- |--- |
 |**network.forceencryption** |1인 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 모든 연결을 강제로 암호화합니다. 기본적으로 이 옵션은 0입니다. |
-|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 인증서 파일의 절대 경로입니다. 예:   `/etc/ssl/certs/mssql.pem`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
-|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 프라이빗 키 파일의 절대 경로입니다. 예:  `/etc/ssl/private/mssql.key`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
+|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 인증서 파일의 절대 경로입니다. 예제:   `/etc/ssl/certs/mssql.pem`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
+|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 프라이빗 키 파일의 절대 경로입니다. 예제:  `/etc/ssl/private/mssql.key`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
 |**network.tlsprotocols** |SQL Server에서 허용하는 TLS 프로토콜의 쉼표로 구분된 목록입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항상 가장 강력한 허용 프로토콜을 협상하려고 시도합니다. 클라이언트에서 허용되는 프로토콜을 지원하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 연결 시도를 거부합니다.  호환성을 위해 지원되는 모든 프로토콜이 기본적으로 허용됩니다(1.2, 1.1, 1.0).  클라이언트에서 TLS 1.2을 지원하는 경우 TLS 1.2만 허용하는 것이 좋습니다. |
 |**network.tlsciphers** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 TLS에 대해 허용하는 암호화를 지정합니다. 이 문자열은 [OpenSSL의 암호화 목록 형식](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)에 따라 형식을 지정해야 합니다. 일반적으로 이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호화가 허용됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 파일의 경로입니다. |

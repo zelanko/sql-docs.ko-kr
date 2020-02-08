@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031518"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68031518"
   
  **AT TIME ZONE** 구현은 표준 시간대 전반에 **datetime** 값을 변환하기 위해 Windows 메커니즘을 따릅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,10 +48,10 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-types"></a>반환 형식  
  **datetimeoffset**의 데이터 형식을 반환합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  대상 표준 시간대의 **datetimeoffset** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **AT TIME ZONE**은 DST 변경에서 영향을 받는 간격에 해당하는 **smalldatetime**, **datetime** 및 **datetime2** 데이터 형식의 입력 값을 변환하기 위한 특정 규칙을 적용합니다.  
   
 -   시간이 미리 설정되어 있으면 현지 시간에는 시간 조정 기간과 동일한 간격이 있습니다. 이 기간은 일반적으로 1시간이지만 표준 시간대에 따라 30분 또는 45분이 될 수 있습니다. 이 간격에 있는 시간대의 지점은 DST 변경 *후*에 오프셋으로 변환됩니다.  
@@ -121,7 +121,7 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="examples"></a>예  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>1\. 오프셋 정보 없는 날짜/시간에 대상 표준 시간대 오프셋 추가  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. 오프셋 정보 없는 날짜/시간에 대상 표준 시간대 오프셋 추가  
  원래 **datetime** 값이 동일한 표준 시간대에서 제공된다는 것을 아는 경우 **AT TIME ZONE**을 사용하여 표준 시간대 규칙에 기반한 오프셋을 추가합니다.  
   
 ```sql
@@ -133,7 +133,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>2\. 다른 표준 시간대 사이의 값 변환  
+### <a name="b-convert-values-between-different-time-zones"></a>B. 다른 표준 시간대 사이의 값 변환  
  다음 예제에서는 다른 표준 시간대 사이의 값을 변환합니다.  
   
 ```sql

@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296114"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
@@ -83,10 +83,10 @@ ms.locfileid: "71296114"
   
     |플랫 파일 열|제안 형식|대상 열|대상 형식|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|날짜|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     **CurrencyID** 열에 제안된 데이터 형식은 대상 테이블의 필드 데이터 형식과 호환되지 않습니다. `DimCurrency.CurrencyAlternateKey`의 데이터 형식은 nchar(3)이므로 **CurrencyID**를 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경해야 합니다. 또한 `DimDate.FullDateAlternateKey` 필드는 Date 데이터 형식으로 정의되므로 **CurrencyDate**의 형식을 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경해야 합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71296114"
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [3단계: OLE DB 연결 관리자 추가 및 구성](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [플랫 파일 연결 관리자](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Integration Services 데이터 형식](../integration-services/data-flow/integration-services-data-types.md)  
   

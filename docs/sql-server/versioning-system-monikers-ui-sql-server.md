@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049913"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
@@ -56,11 +56,11 @@ SQL Server 2014 및 이전 버전의 경우 각 버전에는 설명서 파일의
 
 ## <a name="products-not-editions"></a>제품, 에디션 아님
 
-### <a name="editions"></a>버전
+### <a name="editions"></a>에디션
 
 1990년대부터 2000년대에 접어들면서 Microsoft SQL Server는 1개의 제품만 있었습니다. 각 SQL Server 버전에는 SQL Server 2008 _Developer_ 및 _Enterprise_ 버전과 같은 다양한 _버전_이 있었습니다. 에디션은 약간 다른 기능 세트를 제공하지만 코어 제품은 동일했습니다. 새 SQL Server 릴리스에는 여전히 다양한 에디션이 있을 수 있습니다.
 
-### <a name="products"></a>제품
+### <a name="products"></a>Products
 
 최근 들어 클라우드 컴퓨팅 및 Microsoft Azure의 사용이 증가하면서 Microsoft는 Azure SQL Database 제품을 출시했습니다. 기존 SQL Server 온-프레미스 제품과 Azure SQL Database 제품은 많은 코드를 공유하지만, 이러한 제품은 실제로 두 가지 별도 제품입니다.
 
@@ -115,7 +115,7 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 
 | attribute | 값 |
 | :-------- | :---- |
-| Title | SQL Server 2017의 새로운 기능 |
+| 제목 | SQL Server 2017의 새로운 기능 |
 | 모니커 범위 | `>= sql-server-2017 || = sqlallproducts-allversions` |
 | `https` 주소 | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
@@ -168,7 +168,7 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
     - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 이전 버전, 2014-2005](../toc/previous-versions-sql-server.md)  
 [SQL Server 설명서 탐색 가이드](sql-docs-navigation-guide.md)  

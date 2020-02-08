@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082577"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
@@ -50,7 +50,7 @@ ms.locfileid: "68082577"
 
 ### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 사용 권한
+#### <a name="Permissions"></a> 권한
 
 개체에 대한 ALTER 사용 권한이 필요합니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "68082577"
 
 1. **개체 탐색기**에서 열 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.
 2. **열 이름**아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.
-3. **파일** 메뉴에서 _테이블 이름_ **저장**을 클릭합니다.
+3. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다. 
 
 > [!NOTE]
 > **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.

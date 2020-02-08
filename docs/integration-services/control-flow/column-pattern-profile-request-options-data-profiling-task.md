@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294253"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -60,7 +60,7 @@ ms.locfileid: "71294253"
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
-|Street|Place|  
+|Street|위치|  
 |Street|Way|  
   
  이러한 태그의 조합을 기반으로 주소에 대한 결과 패턴은 다음과 같을 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "71294253"
   
 -   **일반**  
   
--   **Options**  
+-   **옵션**  
   
 ### <a name="data-options"></a>데이터 옵션  
  **ConnectionManager**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294253"
   
  자세한 내용은 이 항목의 "TableorView 옵션" 섹션을 참조하십시오.  
   
- **Column**  
+ **열**  
  프로파일링할 기존 열을 선택합니다. 모든 열을 프로파일링하려면 **(\*)** 를 선택합니다.  
   
  자세한 내용은 이 항목의 "열 옵션" 섹션을 참조하십시오.  

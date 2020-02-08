@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903858"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
@@ -29,7 +29,7 @@ ms.locfileid: "72903858"
 ##  <a name="creating"></a> 전체 텍스트 카탈로그 만들기  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 카탈로그 만들기
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 사용합니다. 예를 들어
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 사용합니다. 다음은 그 예입니다.
 
 ```sql 
 USE AdventureWorks;  
@@ -66,7 +66,7 @@ GO
   
 다음 표에서는 전체 텍스트 카탈로그에 관련된 속성을 나열합니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용할 수 있습니다. 
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|악센트 구분 설정입니다.|
 |**ImportStatus**|전체 텍스트 카탈로그를 가져올지 여부를 나타냅니다.|  

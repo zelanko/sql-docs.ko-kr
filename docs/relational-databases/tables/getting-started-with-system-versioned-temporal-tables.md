@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165778"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>시스템 버전 관리 temporal 테이블 시작
@@ -26,7 +26,7 @@ ms.locfileid: "74165778"
 
 임시 테이블에서는 일반적인 DML 및 쿼리 기능뿐 아니라, 확장된 Transact-SQL 구문을 통해 데이터 기록에서 정보를 확인하는 편리하고 간편한 방법도 제공합니다. 모든 시스템 버전 테이블에는 기록 테이블이 할당되어 있습니다. 그러나 사용자가 추가 인덱스를 만들거나 다른 스토리지 옵션을 선택하여 작업 성능 또는 스토리지 공간을 최적화하려는 경우가 아니면 이 테이블은 사용자에게 전혀 표시되지 않습니다.
 
-아래 다이어그램에는 시스템 버전 관리 temporal 테이블의 일반적인 워크플로가 나와 있습니다. ![임시 시작하기](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+아래 다이어그램에는 시스템 버전 관리 temporal 테이블의 일반적인 워크플로가 나와 있습니다. ![임시 시작하기](../../relational-databases/tables/media/getting-started-with-temporal.png "Temporal 시작")
 
 이 항목은 다음의 5개 하위 항목으로 이루어져 있습니다.
 

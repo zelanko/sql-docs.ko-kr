@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296274"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
@@ -38,7 +38,7 @@ ms.locfileid: "71296274"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사하는 간단한 방법입니다. 이 개요에서는 마법사에서 원본 및 대상으로 사용할 수 있는 데이터 원본과 마법사를 실행하는 데 필요한 권한에 대해 설명합니다.
 
 ## <a name="get-the-wizard"></a>마법사 가져오기
-마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
+마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>마법사를 실행하면 어떻게 될까요?
 -    **단계 목록을 참조하세요.** 마법사의 단계에 대한 설명은 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)를 참조하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "71296274"
 -   [MySQL에 연결](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-여기에 나열되지 않은 데이터 원본에 연결하는 방법에 대한 자세한 내용은 [연결 문자열 참조](https://www.connectionstrings.com/)를 참조하세요. 이 타사 사이트에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
+여기에 나열되지 않은 데이터 원본에 연결하는 방법에 대한 내용은 [연결 문자열 참조](https://www.connectionstrings.com/)를 참조하세요. 이 타사 사이트에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
 
 ## <a name="what-permissions-do-i-need"></a>어떤 권한이 필요한가요?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 성공적으로 실행하려면 적어도 다음 권한이 있어야 합니다. 현재 데이터 원본과 대상으로 작업하는 경우 이미 필요한 권한이 있을 수 있습니다.
@@ -99,7 +99,7 @@ SSIS에 대한 자세한 내용은 [SQL Server Integration Services](../../integ
 ## <a name="whats-next"></a>다음 단계  
  마법사를 시작합니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 
