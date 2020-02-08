@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723793"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자를 위한 SQL 개발
@@ -84,7 +84,7 @@ SQL Server에서 패키지를 설치하기 위한 가지 옵션이 있습니다.
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  이 예제에서는 R grep 함수를 사용하여 사용 가능한 경로의 벡터를 검색하고 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
+  이 예제에서는 R grep 함수를 사용하여 사용 가능한 경로의 벡터를 검색하고 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)를 참조하세요.
 
   패키지가 이미 설치된 경우 `installed.packages()`를 실행하여 설치된 패키지 목록을 확인합니다.
 

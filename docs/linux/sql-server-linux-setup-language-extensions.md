@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660777"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971220"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Linux에 SQL Server 언어 확장 설치
 
@@ -30,7 +30,7 @@ Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 �
 
 언어 확장은 Linux 컨테이너에서도 지원됩니다. 언어 확장을 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
 
-언어 확장 및 [Machine Learning Services](../advanced-analytics/index.yml)는 기본적으로 SQL Server 빅 데이터 클러스터에 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
+언어 확장 및 [Machine Learning Services](../advanced-analytics/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
 
 ## <a name="uninstall-preview-version"></a>미리 보기 버전 제거
 
@@ -86,7 +86,7 @@ ls /opt/microsoft/mssql/bin
 
 인터넷에 연결된 디바이스에서 패키지는 각 운영 체제의 패키지 설치 프로그램을 사용하여 데이터베이스 엔진과 독립적으로 다운로드 및 설치됩니다. 다음 표에서는 이용 가능한 모든 패키지에 대해 설명합니다.
 
-| 패키지 이름 | 적용 대상 | 설명 |
+| 패키지 이름 | 적용 대상 | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 모든 언어 | Java 언어 확장에 사용되는 확장성 프레임워크 |
 |mssql-server-extensibility-java | Java | Java 언어 확장에 사용되고 지원되는 Java 런타임을 포함하는 확장성 프레임워크 |
@@ -119,7 +119,7 @@ sudo yum install mssql-server-extensibility-java
 아래 명령을 사용하여 Ubuntu에 Java용 언어 확장을 설치할 수 있습니다.
 
 > [!Tip]
-> 가능하면 `apt-get update`를 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다. 또한 Ubuntu의 일부 docker 이미지에는 https apt 전송 옵션이 없을 수도 있습니다. 설치하려면 `apt-get install apt-transport-https`를 사용합니다.
+> 가능하면 `apt-get update`을 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다. 또한 Ubuntu의 일부 docker 이미지에는 https apt 전송 옵션이 없을 수도 있습니다. 설치하려면 `apt-get install apt-transport-https`를 사용합니다.
 
 ```bash
 # Install as root or sudo
@@ -262,19 +262,19 @@ Java 기능 통합에는 라이브러리가 포함되지 않지만 `grep -r JRE_
 
 |||
 |--|----|
-| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 경로
 
 |||
 |--|----|
-| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 경로
 
 |||
 |--|----|
-| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>패키지 목록
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 외부 리소스 풀에 대한 [리소스 거버넌스](../t-sql/statements/create-external-resource-pool-transact-sql.md)에서 Linux와 Windows 사이에 패리티가 있지만, [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)에 대한 통계는 현재 Linux에서 다른 단위를 사용합니다 
  
-| 열 이름   | 설명 | Linux의 값 | 
+| 열 이름   | Description | Linux의 값 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 리소스 풀에 사용되는 최대 메모리 양입니다. | Linux에서 이 통계의 출처는 CGroups 메모리 하위 시스템이며, 여기서 값은 memory.max_usage_in_bytes입니다. |
 |write_io_count | Resource Governor 통계를 다시 설정한 후 발생한 총 쓰기 IO입니다. | Linux에서 이 통계의 출처는 CGroups blkio 하위 시스템이며, 쓰기 행의 값은 blkio.throttle.io_serviced입니다. | 

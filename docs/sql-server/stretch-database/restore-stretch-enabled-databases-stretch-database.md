@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843768"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 복원(Stretch Database)
@@ -21,10 +21,10 @@ ms.locfileid: "73843768"
 
   필요한 경우 백업된 데이터베이스를 복원하면 다양한 유형의 실패, 오류 및 재해로부터 복구하는 데 도움이 됩니다.
   
-  백업에 대한 자세한 내용은 [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)을 참조하세요.
+  백업에 대한 자세한 내용은 [스트레치 지원 데이터베이스 Backup](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)을 참조하세요.
 
 > [!TIP]
-> 백업은 전체 고가용성 및 무중단 업무 방식 솔루션의 한 부분일 뿐입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../database-engine/sql-server-business-continuity-dr.md)을 참조하세요.
+> Backup은 전체 고가용성 및 비즈니스 연속성 솔루션의 한 부분입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../database-engine/sql-server-business-continuity-dr.md)을 참조하세요.
 
 ## <a name="restore-your-sql-server-data"></a>SQL Server 데이터 복원
 하드웨어 오류 또는 손상을 복구하려면 백업에서 스트레치 사용 SQL Server 데이터베이스를 복원합니다. 현재 사용하는 SQL Server 복원 방법을 계속 사용할 수 있습니다. 자세한 내용은 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.
@@ -38,7 +38,7 @@ Azure의 SQL Server 스트레치 데이터베이스 서비스는 Azure Storage �
 
 Azure 포털을 사용하여 라이브 Azure 데이터베이스를 이전 시점으로 복원하려면 다음을 수행합니다.
 
-1. [Azure 포털][]에 로그인합니다.
+1. [Azure Portal][]에 로그인합니다.
 2. 화면 왼쪽에서 **찾아보기** 를 선택한 다음 **SQL 데이터베이스**를 선택합니다.
 3. 데이터베이스를 찾아서 선택합니다.
 4. 데이터베이스 블레이드 맨 위에서 **복원**을 클릭합니다.
@@ -50,7 +50,7 @@ Azure의 SQL Server 스트레치 데이터베이스 서비스는 데이터베이
 
 Azure 포털을 사용하여 삭제된 Azure 데이터베이스를 삭제된 시점으로 복원하려면 다음을 수행합니다.
 
-1. [Azure 포털][]에 로그인합니다.
+1. [Azure Portal][]에 로그인합니다.
 2. 화면 왼쪽에서 **찾아보기** 를 선택한 다음 **SQL Server**를 선택합니다.
 3. 서버를 찾아서 선택합니다.
 4. 서버 블레이드의 작업까지 아래로 스크롤하여 **삭제된 데이터베이스** 타일을 클릭합니다.
@@ -84,5 +84,5 @@ Azure 포털을 사용하여 삭제된 Azure 데이터베이스를 삭제된 시
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [Azure 포털]: https://portal.azure.com/
+ [Azure Portal]: https://portal.azure.com/
  

@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ad9346cacd3cb29b19245fb11b0d21c373d93738
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595658"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용 
@@ -72,6 +72,6 @@ enclave가 설정되지 않은 키로 암호화된 기존 열이 있는 경우 e
 
 클라이언트 쪽 도구를 통해 열 암호화를 순환하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-ssms.md) 및 [PowerShell을 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-powershell.md)을 참조하세요.
 
-## <a name="next-steps"></a>Next Steps
-- [보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리](always-encrypted-enclaves-query-columns.md)
+## <a name="next-steps"></a>다음 단계
+- [보안 Enclave를 사용한 Always Encrypted를 사용하여 열 쿼리](always-encrypted-enclaves-query-columns.md)
 - [보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발](always-encrypted-enclaves-client-development.md)

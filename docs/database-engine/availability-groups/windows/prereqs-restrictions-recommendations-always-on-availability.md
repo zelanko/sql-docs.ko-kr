@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258080"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831930"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258080"
     -   지정된 스레드가 얼마 동안 유휴 상태인 경우 일반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스레드 풀로 반환됩니다. 일반적으로 비활성 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 그러나 마지막 활동에 따라 유휴 스레드가 더 길게 유지될 수 있습니다.  
 
     -   SQL Server 인스턴스에서는 보조 복제본에 대한 병렬 다시 실행을 위해 최대 100개의 스레드를 사용합니다. 각 데이터베이스는 최대 총 CPU 코어 수의 절반을 사용하지만 데이터베이스당 스레드는 16개까지 사용됩니다. 단일 인스턴스에 필요한 총 스레드 수가 100개를 넘으면 SQL Server에서는 나머지 모든 데이터베이스에 대해 단일 다시 실행 스레드를 사용합니다. 직렬 다시 실행 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 
-    
-    > [!NOTE]
-    > 데이터베이스는 오름차순 데이터베이스 ID를 기준으로 단일 스레드가 됩니다. 따라서, 사용할 수 있는 작업자 스레드보다 더 많은 가용성 그룹 데이터베이스를 호스트하는 SQL Server 인스턴스에 대해 데이터베이스 생성 순서를 고려해야 합니다. 예를 들어 32개 이상의 CPU 코어가 있는 시스템에서는 가용성 그룹 또는 그룹에 있는 처음 6개의 데이터베이스(데이터베이스 ID별로 정렬됨)가 병렬 다시 실행 모드를 사용하고 모든 후속 데이터베이스는 단일 다시 실행 모드를 사용합니다.
-  
+     
 -   또한 가용성 그룹은 다음과 같이 비공유 스레드를 사용합니다.  
   
     -   각각의 주 복제본은 각 주 데이터베이스에 대해 1개의 로그 캡처 스레드를 사용합니다. 또한 각 보조 데이터베이스에 대해 1개의 로그 전송 스레드를 사용합니다. 로그 전송 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다.    
   
     -   보조 복제본의 백업은 백업 작업 시간 동안 주 스레드를 복제본에 보관합니다.  
   
- 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
+ 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
   
 ###  <a name="PermissionsSI"></a> 사용 권한(서버 인스턴스)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258080"
   
 ###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
  WSFC 노드 간의 통신 및 가용성 복제본 간의 통신에는 동일한 네트워크 링크를 사용하는 것이 좋습니다.  개별 네트워크 링크를 사용하면 가끔씩이라도 일부 링크에 문제가 발생할 경우 예기치 않은 동작이 발생할 수 있습니다.  
@@ -386,7 +383,7 @@ ms.locfileid: "75258080"
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056810"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
@@ -68,7 +68,7 @@ ms.locfileid: "74056810"
 -   인증서 기반 사용자. 로그인할 수는 없지만 권한을 부여받고 모듈에 서명할 수 있습니다. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   비대칭 키 기반 사용자. 로그인할 수는 없지만 권한을 부여받고 모듈에 서명할 수 있습니다. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -140,7 +140,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> 관리되는 인스턴스 기능에 대한 Azure AD 관리자가 만든 후 변경되었습니다. 자세한 내용은 [MI에 대한 새로운 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
+> 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -202,7 +202,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)을 참조하세요.  
+ 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)을 참조하세요.  
   
 WITH PASSWORD = '*password*'  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
@@ -243,7 +243,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
 > [!WARNING]  
 >  이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. 자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  FOR LOGIN을 생략하면 새 데이터베이스 사용자는 같은 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑됩니다.  
   
  기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
@@ -347,7 +347,7 @@ Azure SQL Database 관리되는 인스턴스 데이터베이스에서 사용자�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>1\. SQL Server 로그인 기반 데이터베이스 사용자 만들기  
+### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. SQL Server 로그인 기반 데이터베이스 사용자 만들기  
  다음 예에서는 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이라는 `AbolrousHazem` 로그인을 만든 다음 `AbolrousHazem`에 이에 해당하는 `AdventureWorks2012`이라는 데이터베이스 사용자를 만듭니다.  
   
 ```  
@@ -361,7 +361,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>2\. 기본 스키마로 데이터베이스 사용자 만들기  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. 기본 스키마로 데이터베이스 사용자 만들기  
  다음 예에서는 암호를 사용하여 `WanidaBenshoof`라는 서버 로그인을 만든 다음 기본 스키마인 `Wanida`을 사용하여 해당 데이터베이스 사용자 `Marketing`를 만듭니다.  
   
 ```  

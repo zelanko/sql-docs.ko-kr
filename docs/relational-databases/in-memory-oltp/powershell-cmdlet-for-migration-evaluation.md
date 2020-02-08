@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698312"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
@@ -55,9 +55,9 @@ Save-SqlMigrationReport
 - `-Schema`
 - `-Object`
 
-반대로 `-InputObject`를 지정하지 _않으면_ `-Server` 및 `-Database`를 지정해야 합니다. `-Server`를 지정하면 `-Schema` 또는 `-Object`나 둘 다를 모두 지정하여 범위를 좁힐 수 있습니다.
+반대로 `-InputObject`를 지정하지 _않으면_`-Server` 및 `-Database`를 지정해야 합니다. `-Server`를 지정하면 `-Schema` 또는 `-Object`나 둘 다를 모두 지정하여 범위를 좁힐 수 있습니다.
 
-| 매개 변수 이름 | 설명 |
+| 매개 변수 이름 | Description |
 | :------------- | :---------- |
 | 데이터베이스 | 대상 SQL Server 데이터베이스의 이름입니다. `-Server`가 필수 항목인 경우 필수입니다.<br/><br/> SQLPS에서는 선택 사항입니다. |
 | FolderPath | cmdlet이 생성된 보고서를 저장해야 하는 폴더입니다.<br/><br/> 필수 사항입니다. |
@@ -67,7 +67,7 @@ Save-SqlMigrationReport
 | 암호 | `-Username`이 필요한 경우 필요합니다. |
 | 스키마 | 보고할 개체를 소유하는 스키마의 이름입니다.<br/><br/> (선택 사항) |
 | 서버 | 대상 SQL Server 인스턴스의 이름입니다. `-InputObject` 매개 변수를 제공하지 않는 경우 Windows PowerShell 환경에서 필수 항목입니다.<br/><br/> SQLPS에서는 선택 사항입니다. |
-| Username | Windows 인증과 달리 SQL Server 인증을 통해 연결할 때 필요합니다. 이 외에는 생략됩니다. |
+| 사용자 이름 | Windows 인증과 달리 SQL Server 인증을 통해 연결할 때 필요합니다. 이 외에는 생략됩니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -111,7 +111,7 @@ Save-SqlMigrationReport `
 
 HTML은 주로 다음과 같은 헤더가 있는 2열 테이블입니다.
 
-- 설명
+- Description
 - 유효성 검사 결과
 
 다음은 한 테이블에 대한 HTML 보고서의 실제 예입니다.
@@ -176,7 +176,7 @@ HTML은 주로 다음과 같은 헤더가 있는 2열 테이블입니다.
 
 그리고 그 다음은 테이블의 모양에 대한 대략적인 정보입니다.
 
-| 설명 | 유효성 검사 결과 |
+| Description | 유효성 검사 결과 |
 | :---------- | :---------------- |
 | 이 테이블에 지원되지 않는 데이터 형식이 정의되지 않았습니다. | 성공 |
 | 이 테이블에 스파스 열이 정의되지 않았습니다. | 성공 |

@@ -21,10 +21,10 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553262"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "69553262"
 
 지정한 추적 플래그를 설정합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 예기치 않은 상황이 발생하지 않도록 다음 방법 중 하나를 사용하여 프로덕션 서버에서 서버 차원의 추적 플래그만 설정하는 것이 좋습니다.
 -   Sqlservr.exe의 **-T** 명령줄 시작 옵션을 사용합니다. 모든 문이 추적 플래그가 설정된 상태에서 실행되므로 이 방법이 최선의 구현 방법입니다. 여기에는 시작 스크립트의 명령이 포함됩니다. 자세한 내용은 [sqlservr Application](../../tools/sqlservr-application.md)을 참조하세요.  
 -   사용자 또는 애플리케이션이 시스템에서 동시에 명령문을 실행하지 않는 동안에만 DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** 을 사용합니다.  

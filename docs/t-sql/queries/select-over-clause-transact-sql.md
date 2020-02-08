@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981700"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73981700"
   
 -   [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -188,7 +188,7 @@ ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window fra
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-over-clause-with-the-row_number-function"></a>1\. OVER 절에 ROW_NUMBER 함수 사용  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예에서는 OVER 절에 ROW_NUMBER 함수를 사용하여 파티션 내의 각 행에 대한 행 번호를 표시하는 방법을 보여 줍니다. OVER 절에 지정된 ORDER BY 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. SELECT 문의 ORDER BY 절은 전체 쿼리 결과 집합이 반환되는 순서를 결정합니다.  
   
 ```sql  
@@ -228,7 +228,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>2\. OVER 절에 집계 함수 사용  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. OVER 절에 집계 함수 사용  
  다음 예에서는 쿼리에서 반환된 모든 행에 대해 `OVER` 절에 집계 함수를 사용합니다. 이 예에서는 하위 쿼리를 사용하는 것보다 `OVER` 절을 사용하는 것이 집계 값을 파생시키는 데 더 효율적입니다.  
   
 ```sql  

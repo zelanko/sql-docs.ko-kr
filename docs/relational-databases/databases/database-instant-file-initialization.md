@@ -18,17 +18,17 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982453"
 ---
 # <a name="database-file-initialization"></a>데이터베이스 파일 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 데이터 및 로그 파일이 초기화되어 이전에 삭제한 파일의 디스크에 남아 있는 기존 데이터를 덮어씁니다. 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 파일을 비워(0으로 채워져) 초기화됩니다.  
   
-- 데이터베이스를 만듭니다.  
+- 데이터베이스 만들기  
 - 기존 데이터베이스에 데이터 또는 로그 파일을 추가합니다.  
 - 기존 파일의 크기를 늘립니다(자동 증가 작업 포함).  
 - 데이터베이스 또는 파일 그룹을 복원합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "73982453"
 > [!NOTE]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터 그리고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상에서 [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV의 *instant_file_initialization_enabled* 열을 사용하여 인스턴트 파일 초기화가 사용되는지 확인할 수 있습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME*이 부여되면 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 다음과 유사한 정보 메시지가 기록됩니다. 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
@@ -80,7 +80,7 @@ ms.locfileid: "73982453"
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
 
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
 삭제된 디스크 내용은 새 데이터가 파일에 기록될 때만 덮어쓰기 때문에 인스턴트 파일 초기화(IFI)를 사용하는 경우 데이터 파일의 해당하는 특정 영역에 다른 데이터를 쓸 때까지 권한 없는 사용자가 삭제된 내용에 액세스할 수 있습니다. 데이터베이스 파일이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결되어 있는 동안 파일의 DACL(임의 액세스 제어 목록)에 의해 이러한 정보 공개 위협이 줄어듭니다. 이 DACL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 로컬 관리자에게만 파일 액세스를 허용합니다. 그러나 파일이 분리되면 *SE_MANAGE_VOLUME_NAME*이 없는 사용자 또는 서비스가 액세스할 수 있습니다. 데이터베이스를 백업할 때도 유사한 사항을 고려해야 합니다. 즉, 백업 파일이 적절한 DACL로 보호되지 않는 경우 권한이 없는 사용자 또는 서비스가 삭제된 내용을 사용할 수 있게 됩니다.  
 
 또 다른 고려 사항은 파일이 IFI를 사용하여 증가하는 경우입니다. SQL Server 관리자는 잠재적으로 원시 페이지 콘텐츠에 엑세스하고 이전에 삭제된 내용을 확인할 수 있습니다.

@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670531"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68670531"
   
  시퀀스를 만들고 사용하는 방법에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요. 시퀀스 번호의 범위를 생성하려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)를 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>반환 형식  
  시퀀스 형식을 사용하여 숫자를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **NEXT VALUE FOR** 함수는 저장 프로시저 및 트리거에 사용할 수 있습니다.  
   
  **NEXT VALUE FOR** 함수를 쿼리 또는 기본 제약 조건에 사용하면 같은 시퀀스 개체가 두 번 이상 사용되거나 값을 제공하는 문과 현재 실행 중인 기본 제약 조건 둘 다에서 사용되는 경우 결과 집합의 한 행 내에서 같은 시퀀스를 참조하는 모든 열에 대해 동일한 값이 반환됩니다.  
@@ -184,7 +184,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="a-using-a-sequence-in-a-select-statement"></a>1\. SELECT 문에 시퀀스 사용  
+### <a name="a-using-a-sequence-in-a-select-statement"></a>A. SELECT 문에 시퀀스 사용  
  다음 예에서는 사용할 때마다 1씩 증가하는 `CountBy1`이라는 시퀀스를 만듭니다.  
   
 ```  
@@ -202,7 +202,7 @@ SecondUse
 2
 ```  
   
-### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>2\. 변수를 다음 시퀀스 값으로 설정  
+### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>B. 변수를 다음 시퀀스 값으로 설정  
  다음 예에서는 변수를 시퀀스 번호의 다음 값으로 설정하는 세 가지 방법을 보여 줍니다.  
   
 ```  

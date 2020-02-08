@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981812"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981812"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 인덱스의 속성을 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -210,10 +210,10 @@ ALTER FULLTEXT INDEX ON table_name
   
 |변경 내용 추적|WITH NO POPULATION|결과|  
 |---------------------|------------------------|------------|  
-|설정 안 됨|지정 안 됨|인덱스에 대해 전체 채우기가 수행됩니다.|  
-|설정 안 됨|Specified|ALTER FULLTEXT INDEX...START POPULATION 문이 실행될 때까지 인덱스 채우기가 발생하지 않습니다.|  
-|설정|지정됨|오류가 발생하고 인덱스가 변경되지 않습니다.|  
-|설정|지정 안 됨|인덱스에 대해 전체 채우기가 수행됩니다.|  
+|설정 안 됨|지정되지 않음|인덱스에 대해 전체 채우기가 수행됩니다.|  
+|설정 안 됨|지정됨|ALTER FULLTEXT INDEX...START POPULATION 문이 실행될 때까지 인덱스 채우기가 발생하지 않습니다.|  
+|사용|지정됨|오류가 발생하고 인덱스가 변경되지 않습니다.|  
+|사용|지정되지 않음|인덱스에 대해 전체 채우기가 수행됩니다.|  
   
  전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
@@ -294,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-manual-change-tracking"></a>1\. 수동 변경 내용 추적 설정  
+### <a name="a-setting-manual-change-tracking"></a>A. 수동 변경 내용 추적 설정  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 수동 변경 내용 추적을 설정합니다.  
   
 ```  
@@ -305,7 +305,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-### <a name="b-associating-a-property-list-with-a-full-text-index"></a>2\. 전체 텍스트 인덱스와 속성 목록 연결  
+### <a name="b-associating-a-property-list-with-a-full-text-index"></a>B. 전체 텍스트 인덱스와 속성 목록 연결  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   

@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843763"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843763"
 
   sys.messages의 기존 메시지 또는 제공된 문자열에서 메시지를 작성합니다. FORMATMESSAGE의 기능은 RAISERROR 문의 기능과 유사합니다. 단, RAISERROR는 메시지를 즉시 인쇄하는 반면 FORMATMESSAGE는 추가 처리를 위해 서식이 지정된 메시지를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>반환 형식  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  FORMATMESSAGE는 RAISERROR 문과 유사하게 메시지의 자리 표시자 변수를 제공된 매개 변수 값으로 대체하여 메시지를 편집합니다. 오류 메시지에서 허용되는 자리 표시자와 편집 프로세스에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하세요.  
   
  FORMATMESSAGE는 사용자의 현재 언어로 된 메시지를 찾습니다. 지역화된 버전의 메시지가 없는 경우 미국 영어 버전이 사용됩니다.  
@@ -65,7 +65,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-example-with-a-message-number"></a>1\. 메시지 번호 사용 예  
+### <a name="a-example-with-a-message-number"></a>A. 메시지 번호 사용 예  
  다음 예는 sys.messages에 "아티클 '%s'을(를) 게시 '%s'에 추가할 수 없습니다."로 저장된 복제 메시지 `20009`를 사용합니다. FORMATMESSAGE는 `First Variable` 및 `Second Variable` 값을 매개 변수 자리 표시자로 대체합니다. 결과 문자열 "아티클 '첫 번째 변수'를 게시 '두 번째 변수'에 추가할 수 없습니다."는 지역 변수 `@var1`에 저장됩니다.  
   
 ```  
@@ -75,9 +75,9 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>2\. 메시지 문자열 사용 예  
+### <a name="b-example-with-a-message-string"></a>B. 메시지 문자열 사용 예  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  다음 예는 입력으로 문자열을 사용합니다.  
   
@@ -108,7 +108,7 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
   
 ## <a name="see-also"></a>참고 항목  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
- [THROW&#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

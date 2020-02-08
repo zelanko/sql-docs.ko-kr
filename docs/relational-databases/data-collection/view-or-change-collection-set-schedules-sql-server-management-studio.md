@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055326"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "74055326"
   
 2.  캐시된 모드를 사용하는 컬렉션 집합(예: **쿼리 통계**)을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
   
-3.  **일반** 페이지에서 컬렉션 빈도를 변경할 수 있습니다. 이렇게 하려면 다음 단계를 수행합니다.  
+3.  **일반** 페이지에서 컬렉션 빈도를 변경할 수 있습니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  세부 정보 창에서 **컬렉션 항목** 테이블의 **컬렉션 빈도(초)** 열에 표시된 숫자를 두 번 클릭합니다.  
   

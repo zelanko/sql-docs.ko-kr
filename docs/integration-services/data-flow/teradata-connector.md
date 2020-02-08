@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75755848"
 ---
 # <a name="microsoft-connector-for-teradata-preview"></a>Microsoft Connector for Teradata(미리 보기)
@@ -78,4 +78,4 @@ SQL Server 2017 및 이전 버전을 대상으로 하는 SSIS 패키지를 실�
 - [Teradata 연결 관리자](teradata-connection-manager.md) 구성
 - [Teradata 원본](teradata-source.md) 구성
 - [Teradata 대상](teradata-destination.md) 구성
-- 질문이 있으면 [Tech Community](https://aka.ms/AA6iwdw)를 방문하세요.
+- 질문이 있는 경우 [Tech Community](https://aka.ms/AA6iwdw)를 방문하세요.

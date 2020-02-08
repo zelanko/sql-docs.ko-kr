@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982995"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982995"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit를 사용하여 서버 감사 개체를 만듭니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -145,7 +145,7 @@ SHUTDOWN
   
  조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 감사를 처음 만들 때는 사용할 수 없는 상태입니다.  
   
  CREATE SERVER AUDIT 문은 트랜잭션 범위 내에 있습니다. 트랜잭션이 롤백되면 이 문도 롤백됩니다.  
@@ -157,7 +157,7 @@ SHUTDOWN
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-server-audit-with-a-file-target"></a>1\. 파일 대상을 사용하여 서버 감사 만들기  
+### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. 파일 대상을 사용하여 서버 감사 만들기  
  다음 예에서는 이진 파일을 대상으로 사용하고 옵션 없이 `HIPAA_Audit`라는 서버 감사를 만듭니다.  
   
 ```sql  
@@ -165,7 +165,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2\. Windows 애플리케이션 로그 대상과 옵션을 사용하여 서버 감사 만들기  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Windows 애플리케이션 로그 대상과 옵션을 사용하여 서버 감사 만들기  
  다음 예에서는 Windows 애플리케이션 로그에 대한 대상 집합을 사용하여 `HIPAA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
   
 ```sql  

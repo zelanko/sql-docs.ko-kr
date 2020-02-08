@@ -14,10 +14,10 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6485a99d759d4c4b09ec2b78946f7e1aecd46204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986971"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, Broker TO Statistics 개체
@@ -28,13 +28,13 @@ ms.locfileid: "67986971"
   
  다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Broker TO Statistics 카운터|설명|  
+|SQL Server Broker TO Statistics 카운터|Description|  
 |----------------------------------------------|-----------------|  
 |**Avg. Length of Batched Writes**|일괄 처리에 저장되는 평균 전송 개체 수입니다.|  
 |**Avg. Time To Write Batch (ms)**|전송 개체 일괄 처리를 저장하는 데 필요한 평균 시간(밀리초)입니다.|  
-|**Avg. Time to Write Batch Base**|내부용으로만 사용할 수 있습니다.|
+|**Avg. Time to Write Batch Base**|내부 전용입니다.|
 |**Avg. Time Between Batches (ms)**|전송 개체의 일괄 처리 기록 간 평균 시간(밀리초)입니다.|  
-|**Avg. Time Between Batches Base**|내부용으로만 사용할 수 있습니다.| 
+|**Avg. Time Between Batches Base**|내부 전용입니다.| 
 |**Tran Object Gets/sec**|대화에서 전송 개체를 요청한 초당 횟수입니다.|  
 |**Tran Objects Marked Dirty/sec**|전송 개체가 커밋되지 않은 것으로 표시된 초당 횟수입니다. 전송 개체는 처음 수정하면 커밋된 것으로 표시되어 메모리 내장 복사본이 **tempdb**에 저장된 복사본과 달라지게 됩니다. 전송 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 대화의 메시지 전송 상태에 변경 사항을 기록할 때 수정됩니다.|  
 |**Tran Object Writes/sec**|전송 개체의 일괄 처리가 **tempdb** 작업 테이블에 기록된 초당 횟수입니다. 기록된 횟수가 많으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리가 스트레스 상태임을 나타낼 수 있습니다.|  

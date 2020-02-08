@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982043"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition(Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982043"
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가되는 계산 열의 속성을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ column_name AS computed_column_expression
   
 ## <a name="arguments"></a>인수  
 *column_name*  
- 변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자의 문자를 포함할 수 있습니다. 새 열의 경우 **타임스탬프** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
+ 변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자의 문자를 포함할 수 있습니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
   
 *computed_column_expression*  
  계산 열의 값을 정의하는 식입니다. 계산 열은 테이블에 물리적으로 저장된 열이 아니라 해당 테이블의 다른 열을 사용하여 식으로 계산된 가상의 열입니다. 예를 들어 계산 열은 cost AS price * qty 정의를 가질 수 있습니다. 식은 계산되지 않은 열 이름, 상수, 함수, 변수 및 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 하위 쿼리가 될 수 없으며 별칭 데이터 형식을 포함할 수 없습니다.  
@@ -145,7 +145,7 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  이 컨텍스트에서 default는 키워드가 아니라 이것은 기본 파일 그룹에 대한 식별자이며 ON "default" 또는 ON [default]와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  각 PRIMARY KEY 및 UNIQUE 제약 조건은 인덱스를 생성합니다. UNIQUE 및 PRIMARY KEY 제약 조건의 수가 많아도 테이블의 비클러스터형 인덱스는 999개, 클러스터형 인덱스는 1개를 초과할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

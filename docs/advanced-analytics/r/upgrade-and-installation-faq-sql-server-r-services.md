@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727350"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 또는 R Server 업그레이드 및 설치에 대한 FAQ
@@ -72,7 +72,7 @@ SQL Server 2016 초기 릴리스 버전에서는 인터넷에 연결하지 않�
 
 다음 버전은 SQL Server 2016 시험판 버전과 함께 설치되었습니다.
 
-| 버전 옵션 | 빌드         |
+| 버전 | 빌드         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -163,7 +163,7 @@ Revolution Analytics 제품의 이전 설치 또는 SQL Server R Services 시험
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (7.5.0의 경우)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [SQL Server Machine Learning Services(데이터베이스 내)](../r/sql-server-r-services.md)
 

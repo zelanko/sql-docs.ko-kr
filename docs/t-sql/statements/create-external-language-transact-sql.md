@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536239"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
@@ -102,13 +102,13 @@ WITH (<option_spec>)
 
 **external_lang_env_variables**
 
-이 인수를 통해 외부 프로세스가 시작하기 전에 외부 언어 런타임에 환경 변수 세트를 지정할 수 있습니다. 환경 변수의 예로 런타임 자체의 홈 디렉터리가 있습니다. 예를 들어 JRE_HOME.
+이 인수를 통해 외부 프로세스가 시작하기 전에 외부 언어 런타임에 환경 변수 세트를 지정할 수 있습니다. 환경 변수의 예로 런타임 자체의 홈 디렉터리가 있습니다. 다음은 그 예입니다.  JRE_HOME.
 
 **platform**
 
 이 매개 변수는 하이브리드 OS 시나리오에 필요합니다. 하이브리드 아키텍처에서 언어는 플랫폼당 한 번 등록해야 합니다. 플랫폼 및 언어 이름은 외부 언어마다 고유한 키입니다. 플랫폼을 지정하지 않으면 현재 OS를 가정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 현재 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않습니다.
 
@@ -135,7 +135,7 @@ TO database_principal_name;
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-an-external-language-in-a-database"></a>1\. 데이터베이스에 외부 언어 만들기  
+### <a name="a-create-an-external-language-in-a-database"></a>A. 데이터베이스에 외부 언어 만들기  
 
 다음 예제는 Windows에서 SQL Server의 데이터베이스에 외부 언어가 호출한 Java를 추가합니다.
 
@@ -145,7 +145,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-### <a name="b-create-an-external-language-for-both-windows-and-linux"></a>2\. Windows 및 Linux 겸용 외부 언어 만들기
+### <a name="b-create-an-external-language-for-both-windows-and-linux"></a>B. Windows 및 Linux 겸용 외부 언어 만들기
 
 Windows용 하나와 Linux용 하나로 최대 두 개의 `<file_spec>`를 지정할 수 있습니다.
 
@@ -166,7 +166,7 @@ TO mylogin;
 ```
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [ALTER EXTERNAL LANGUAGE(Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE(Transact-SQL)](drop-external-language-transact-sql.md)  

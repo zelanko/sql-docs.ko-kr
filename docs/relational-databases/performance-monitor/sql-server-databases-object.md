@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093598"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
@@ -30,7 +30,7 @@ ms.locfileid: "68093598"
   
  이 표에서는 SQL Server **Databases** 카운터를 설명합니다.  
   
-|SQL Server Databases 카운터|설명|  
+|SQL Server Databases 카운터|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|데이터베이스에 대한 활성 트랜잭션 수입니다.|  
 |**EOL/LP 요청의 평균 거리**|마지막 VLF에서 요청에 대하여 로그 풀 요청당 로그 끝의 평균 거리(바이트)입니다.| 
@@ -43,7 +43,7 @@ ms.locfileid: "68093598"
 |**Group Commit Time/sec**|초당 그룹 정지 시간(마이크로초)입니다.|
 |**Log Bytes Flushed/sec**|플러시된 총 로그 바이트 수입니다.|  
 |**Log Cache Hit Ratio**|로그 캐시에서 충족된 로그 캐시 읽기 비율입니다.|  
-|**Log Cache Hit Ratio Base**|내부용으로만 사용할 수 있습니다.| 
+|**Log Cache Hit Ratio Base**|내부 전용입니다.| 
 |**Log Cache Reads/sec**|로그 관리자 캐시를 통해 수행된 초당 읽기입니다.|  
 |**Log File(s) Size (KB)**|데이터베이스에 있는 모든 트랜잭션 로그 파일의 총 크기(KB)입니다.|  
 |**Log File(s) Used Size (KB)**|데이터베이스에서 사용된 모든 로그 파일의 총 크기입니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093598"
 |**Log Pool Push Low Memory/sec**|메모리 부족으로 실패하는 로그 블록 푸시 비율입니다.|
 |**Log Pool Push No Free Buffer/sec**|사용 가능한 버퍼를 사용할 수 없어서 실패하는 로그 블록 푸시 비율입니다.|
 |**Log Pool Req. Behind Trunc/sec**|잘라내기 LSN 이후에 요청된 블록으로 인한 로그 풀 캐시 누락입니다.|
-|**Log Pool Requests Base**|내부용으로만 사용할 수 있습니다.| 
+|**Log Pool Requests Base**|내부 전용입니다.| 
 |**Log Pool Requests Old VLF/sec**|로그의 마지막 VLF에 없는 로그 풀 요청입니다.|  
 |**Log Pool Requests/sec**|로그 풀에서 처리된 로그 블록 요청 수입니다.|  
 |**Log Pool Total Active Log Size**|공유 캐시 버퍼 관리자에 저장된 현재 총 활성 로그(바이트)입니다.|
@@ -77,7 +77,7 @@ ms.locfileid: "68093598"
 |**Tracked transactions/sec**|데이터베이스의 커밋 테이블에 기록된 커밋된 트랜잭션의 수입니다.|  
 |**Transactions/sec**|데이터베이스에 대해 시작된 초당 트랜잭션 수입니다.<br /><br /> **Transactions/sec** 는 XTP 전용 트랜잭션(고유하게 컴파일된 저장 프로시저를 통해 시작된 트랜잭션)을 계산하지 않습니다.|  
 |**Write Transactions/sec**|마지막 1초 동안 데이터베이스에 쓰고 커밋된 트랜잭션 수입니다.|  
-|**XTP Controller DLC Latency Base**|내부용으로만 사용할 수 있습니다.| 
+|**XTP Controller DLC Latency Base**|내부 전용입니다.| 
 |**XTP Controller DLC Latency/Fetch**|초당 직접 로그 소비자로 들어가며 XTP 컨트롤러가 검색 중인 로그 블록 간의 평균 대기 시간(마이크로초)입니다.|
 |**XTP Controller DLC Peak Latency**|XTP 컨트롤러가 수행하는 직접 로그 소비자로부터의 페치에서 기록되는 최대 대기 시간(마이크로초)입니다.|
 |**XTP Controller Log Processed/sec**|초당 XTP 컨트롤러 스레드가 처리하는 로그 바이트의 양입니다.|
@@ -85,6 +85,6 @@ ms.locfileid: "68093598"
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Serve, 데이터베이스 복제본](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [SQL Server, 데이터베이스 복제본](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

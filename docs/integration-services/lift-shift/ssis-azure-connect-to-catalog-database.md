@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037173"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그(SSISDB)에 연결
@@ -35,7 +35,7 @@ Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결
 시작하기 전에 SSMS(SQL Server Management Studio) 버전 17.2 이상이 설치되어 있는지 확인합니다. SSISDB 카탈로그 데이터베이스가 SQL Database Managed Instance에서 호스트될 경우 SSMS 버전이 17.6 이상인지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal에서 연결 정보 가져오기
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. Azure Portal의 왼쪽 메뉴에서 **SQL 데이터베이스**를 선택한 다음 **SQL 데이터베이스** 페이지에서 `SSISDB` 데이터베이스를 클릭합니다. 
 3. `SSISDB` 데이터베이스의 **개요** 페이지에서 다음 이미지와 같이 정규화된 서버 이름을 검토합니다. 마우스로 서버 이름 위를 가리켜서 **복사하려면 클릭** 옵션을 표시합니다.
 
@@ -48,11 +48,11 @@ Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결
 
 2. **서버에 연결합니다**. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안된 값 | 설명 | 
+   | 설정       | 제안 값 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
+   | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수입니다. |
    | **서버 이름** | 정규화된 서버 이름 | **mysqldbserver.database.windows.net** 형식이어야 합니다. |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | |
+   | **인증** | SQL Server 인증 | |
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 

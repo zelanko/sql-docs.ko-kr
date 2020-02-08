@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595798"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910236"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다�
    
 ## <a name="param"></a>Always Encrypted에 대한 매개 변수화   
  
-Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수([SqlParameter 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
+Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
   
 매개 변수화하지 않으면 .NET Framework Data Provider가 쿼리 편집기에서 작성한 각 문을 매개 변수화되지 않은 쿼리로 전달합니다. 쿼리에 암호화된 열을 대상으로 하는 리터럴 또는 Transact-SQL 변수가 포함된 경우 .NET Framework Data Provider for SQL Server는 쿼리를 데이터베이스로 전송하기 전에 검색 및 암호화할 수 없습니다. 따라서 일반 텍스트 리터럴 Transact-SQL 변수와 암호화된 열 간의 형식 불일치로 인해 쿼리에 실패합니다. 예를 들어 `SSN` 열이 암호화된 것으로 가정할 경우 매개 변수화하지 않으면 다음 쿼리가 실패합니다.   
 
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 또한 SQL Server Management Studio가 매개 변수화하지 않는 변수의 몇 가지 예도 있습니다.
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,9 +214,9 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > 매개 변수화를 사용하지 않으면 형식 변환을 포함하여 전체 쿼리가 SQL Server/Azure SQL Database 내에서 처리됩니다. 매개 변수화를 사용하면 일부 형식 변환이 SQL Server Management Studio 내의 .NET Framework에서 수행됩니다. .NET Framework 형식 시스템과 SQL Server 형식 시스템 간의 차이(예: float와 같은 일부 형식의 정밀도 차이)로 인해 매개 변수화를 사용하여 실행된 쿼리는 매개 변수화를 사용하지 않고 실행된 쿼리와 다른 결과를 생성할 수 있습니다. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 
 ## <a name="see-also"></a>참고 항목
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

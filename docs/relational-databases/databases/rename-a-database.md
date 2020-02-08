@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907424"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
@@ -28,7 +28,7 @@ ms.locfileid: "72907424"
   
 ## <a name="in-this-topic"></a>항목 내용
   
-- 시작하기 전 주의 사항:  
+- 시작하기 전에  
   
      [제한 사항](#limitations-and-restrictions)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72907424"
 > [!NOTE]
 > Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항
+## <a name="before-you-begin"></a>시작하기 전에
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
   

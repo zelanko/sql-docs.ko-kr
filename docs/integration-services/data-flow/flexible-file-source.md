@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292393"
 ---
 # <a name="flexible-file-source"></a>유연한 파일 원본
@@ -47,8 +47,8 @@ Flexible File Source용 편집기를 표시하려면 데이터 흐름 디자이�
 **고급 편집기**에서 다음 속성을 사용할 수 있습니다.
 
 - **rowDelimiter:** 파일의 행을 구분하는 데 사용되는 문자입니다. 하나의 문자만 허용됩니다. **기본**값은 \r\n입니다.
-- **escapeChar:** 입력 파일의 내용에서 열 구분 기호를 이스케이프하는 데 사용되는 특수 문자입니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값이 없습니다.
-- **quoteChar:** 문자열 값을 인용하는 데 사용되는 문자입니다. 인용 문자 안의 열과 행 구분 기호는 문자열 값의 일부로 처리됩니다. 이 속성은 입력 및 출력 데이터 세트 모두에 적용할 수 있습니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값이 없습니다.
+- **escapeChar:** 입력 파일의 내용에서 열 구분 기호를 이스케이프하는 데 사용되는 특수 문자입니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값은 없습니다.
+- **quoteChar:** 문자열 값을 인용하는 데 사용되는 문자입니다. 인용 문자 안의 열과 행 구분 기호는 문자열 값의 일부로 처리됩니다. 이 속성은 입력 및 출력 데이터 세트 모두에 적용할 수 있습니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값은 없습니다.
 - **nullValue:** null 값을 나타내는 데 사용되는 하나 이상의 문자입니다. **기본**값은 \N입니다.
 - **encodingName:** 인코딩 이름을 지정합니다. [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) 속성을 참조하세요.
 - **skipLineCount:**  입력 파일에서 데이터를 읽을 때 건너뛸 비어 있지 않은 행의 수를 나타냅니다. skipLineCount와 firstRowAsHeader가 모두 지정되면 먼저 줄을 건너뛴 다음, 입력 파일에서 헤더 정보를 읽습니다.

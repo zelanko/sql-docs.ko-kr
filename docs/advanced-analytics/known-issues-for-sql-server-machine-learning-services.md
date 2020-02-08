@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706847"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200393"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프�
 
 `libc++.so`가 설치되지 않은 클린 Linux 컴퓨터에서는 `commonlauncher.so`가 `libc++.so`를 로드하지 못해 Java 또는 외부 언어를 사용하여 `sp_execute_external_script`(SPEES) 쿼리를 실행하는 데 실패합니다.
 
-예를 들어
+다음은 그 예입니다.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Java'
@@ -259,7 +259,7 @@ R 솔루션에 영향을 줄 수 있는 알려진 추가 문제는 [Machine Lear
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. 기본 위치가 아닌 위치에 있는 SQL Server에서 R 스크립트를 실행할 때 액세스 거부 경고
 
-SQL Server 인스턴스가 `Program Files` 폴더 외부와 같이 기본이 아닌 위치에 설치된 경우 패키지를 설치하는 스크립트를 실행하려고 할 때 ACCESS_DENIED 경고가 발생합니다. 예를 들어
+SQL Server 인스턴스가 `Program Files` 폴더 외부와 같이 기본이 아닌 위치에 설치된 경우 패키지를 설치하는 스크립트를 실행하려고 할 때 ACCESS_DENIED 경고가 발생합니다. 다음은 그 예입니다.
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": 액세스가 거부되었습니다*
 
@@ -403,7 +403,7 @@ R에서 이진 데이터 형식(R **원시** 데이터 형식)이 반환되는 �
 
 이 문제가 발생한 경우 `f` 의 정의를 `g`의 정의 내에 포함하여 문제를 해결할 수 있습니다. `g` 앞의 모든 곳에서 `f`를 정상적으로 호출합니다.
 
-예를 들어
+다음은 그 예입니다.
 
 ```R
 f <- function(x) { 2*x * 3 }
@@ -590,7 +590,7 @@ SQL Server 2017 누적 업데이트 12(CU12)부터 `sp_execute_external_script`�
 
 ### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Linux에서 pip를 사용하여 Python 패키지를 설치할 때 잘못된 인터프리터 오류 
 
-SQL Server 2019에서 **pip**를 사용하려는 경우. 예를 들어
+SQL Server 2019에서 **pip**를 사용하려는 경우. 다음은 그 예입니다.
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -617,7 +617,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7. Windows에 SQL Server 2019를 설치한 후 pip를 사용하 여 Python 패키지를 설치할 수 없음
 
-Windows에 SQL Server 2019를 설치한 후 DOS 명령줄에서 **pip**를 통해 python 패키지를 설치하려고 하면 실패합니다. 예를 들어
+Windows에 SQL Server 2019를 설치한 후 DOS 명령줄에서 **pip**를 통해 python 패키지를 설치하려고 하면 실패합니다. 다음은 그 예입니다.
 
 ```bash
 pip install quantfolio
@@ -650,7 +650,7 @@ pip install quantfolio
 
 `libc++abi.so`가 설치되지 않은 클린 Linux 컴퓨터에서 `sp_execute_external_script`(SPEES) 쿼리를 실행하면 "지정한 파일이나 디렉터리가 없습니다" 오류와 함께 실패합니다.
 
-예를 들어
+다음은 그 예입니다.
 
 ```text
 EXEC sp_execute_external_script
@@ -681,7 +681,7 @@ Total execution time: 00:01:00.387
 
 **해결 방법**
 
-다음 명령을 실행합니다.
+다음 명령 실행:
 
 ```bash
 sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
@@ -703,7 +703,7 @@ Revolution R Enterprise의 기존 라이선스가 있는 경우 [!INCLUDE[ssNoVe
 
 일부 [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 시험판 버전에는 Revolution Analytics를 통해 생성된 Windows용 R 개발 환경이 포함되어 있었습니다. 이 도구는 더 이상 제공되지 않으며 지원되지 않습니다.
 
-[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]와의 호환성을 위해 Microsoft R Client를 대신 설치하는 것이 좋습니다. [Visual Studio용 R 도구](https://www.visualstudio.com/vs/rtvs/) 및 [Visual Studio Code](https://code.visualstudio.com/)도 Microsoft R 솔루션을 지원합니다.
+[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]와의 호환성을 위해 Microsoft R Client를 대신 설치하는 것이 좋습니다. [Visual Studio용 R 도구](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) 및 [Visual Studio Code](https://code.visualstudio.com/)도 Microsoft R 솔루션을 지원합니다.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. SQLite ODBC 드라이버와 RevoScaleR의 호환성 문제
 

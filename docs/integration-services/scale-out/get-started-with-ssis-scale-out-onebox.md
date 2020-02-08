@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082159"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>단일 컴퓨터에서 Integration Services(SSIS) Scale Out 시작
@@ -45,7 +45,7 @@ SQL Server 설치 마법사의 **기능 선택** 페이지에서 다음 항목�
 
 SQL Server 설치 마법사를 완료합니다.
 
-## <a name="2-install-sql-server-management-studio"></a>2. SQL Server Management Studio 설치
+## <a name="2-install-sql-server-management-studio"></a>2. SQL Server Management Studio를 설치합니다.
 
 [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하고 설치합니다.
 

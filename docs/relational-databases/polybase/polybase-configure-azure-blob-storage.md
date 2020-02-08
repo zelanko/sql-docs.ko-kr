@@ -10,10 +10,10 @@ ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258688"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성
@@ -48,7 +48,7 @@ PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.m
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  
   
-   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "|::ref1::|")  
+   ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc에서 PolyBase 서비스 중지 및 시작")  
   
 ## <a name="configure-an-external-table"></a>외부 테이블 구성
 

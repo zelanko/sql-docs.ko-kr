@@ -11,10 +11,10 @@ ms.author: raajmera
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73801127"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio용 데이터 가상화 확장

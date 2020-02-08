@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74249847"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910136"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -446,7 +446,7 @@ WITH (FORMAT = 'CSV'
 다음 예제에서는 SAS 키를 만든 Azure Blob Storage 위치에 있는 csv 파일에서 데이터를 로드하는 방법을 보여 줍니다. Azure Blob Storage 위치는 외부 데이터 원본으로 구성되었습니다. 이 경우, 사용자 데이터베이스의 마스터 키로 암호화된 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

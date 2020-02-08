@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401631"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)  
@@ -25,7 +25,7 @@ ms.locfileid: "74401631"
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 구체화된 뷰용으로 저장된 기본 테이블에 증분 변경 횟수를 표시합니다. 오버헤드 비율은 TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS)로 계산합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
 

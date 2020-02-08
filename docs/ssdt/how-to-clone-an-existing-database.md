@@ -1,23 +1,24 @@
 ---
-title: '방법: 기존 데이터베이스 복제 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 기존 데이터베이스 복제
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017621"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241585"
 ---
 # <a name="how-to-clone-an-existing-database"></a>방법: 기존 데이터베이스 복제
+
 이 작업에서는 이전 절차에서 배운 단계 중 일부를 사용하여 새 데이터베이스를 만들고 기존 데이터를 이식합니다. 또한 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)에 설명된 단계를 사용하여 소스 및 프로젝트 데이터베이스의 스키마를 동기화합니다.  
   
 이러한 단계를 사용하면 프로덕션 데이터베이스에서 스키마 및 데이터가 동일한 개발 또는 테스트 데이터베이스를 손쉽게 만들 수 있습니다. 그런 다음 프로덕션 데이터베이스의 작업을 전혀 방해하지 않고 연결된 모드에서 테스트 데이터베이스를 계속해서 개발하거나 오프라인 개발 및 테스트를 위한 데이터베이스 프로젝트를 만들 수 있습니다.  

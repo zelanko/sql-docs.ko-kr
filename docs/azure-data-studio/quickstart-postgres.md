@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127247"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 PostgreSQL 연결 및 쿼리
@@ -43,14 +43,14 @@ ms.locfileid: "71127247"
 
    ![새 연결 화면](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 설정       | 예제 값 | 설명 |
+   | 설정       | 예제 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | localhost | 정규화된 서버 이름 |
-   | **User name** | postgres | 로그인할 사용자 이름입니다. |
+   | **사용자 이름** | postgres | 로그인할 사용자 이름입니다. |
    | **암호(SQL 로그인)** | *password* | 로그인하는 계정의 암호입니다. |
    | **암호** | *확인* | 연결할 때마다 암호를 입력하지 않으려면 이 확인란을 선택합니다. |
-   | **데이터베이스 이름** | \<Default\> | 연결에서 데이터베이스를 지정하도록 하려면 이 항목을 채웁니다. |
-   | **서버 그룹** | \<Default\> | 이 옵션을 사용하면 만드는 특정 서버 그룹에 이 연결을 할당할 수 있습니다. | 
+   | **데이터베이스 이름** | \<기본값\> | 연결에서 데이터베이스를 지정하도록 하려면 이 항목을 채웁니다. |
+   | **서버 그룹** | \<기본값\> | 이 옵션을 사용하면 만드는 특정 서버 그룹에 이 연결을 할당할 수 있습니다. | 
    | **이름(선택 사항)** | ‘비워 둠’  | 이 옵션을 사용하면 서버의 이름을 지정할 수 있습니다. | 
 
 5. **연결**을 선택합니다. 
@@ -131,6 +131,6 @@ ms.locfileid: "71127247"
 
    ![결과 보기](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 [Azure Data Studio에서 Postgres에 사용할 수 있는 시나리오](postgres-extension.md)에 대해 알아보세요. 

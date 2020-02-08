@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727555"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습된 기계 학습 모델 설치
@@ -211,9 +211,9 @@ R 및 Python을 사용하여 인터넷에 연결된 SQL Server Machine Learning 
 
 + [가장 효율적인 분산 딥 러닝 컴퓨팅 성능을 제공하는 Microsoft Computational Network Toolkit](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
-+ [SQL Server 컴퓨터 학습 서비스](sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 서비스](sql-machine-learning-services-windows-install.md)
 + [SQL Server 인스턴스에서 R 및 Python 구성 요소 업그레이드](../install/upgrade-r-and-python.md)
 + [R용 MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python용 microsoftml 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294133"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
@@ -36,7 +36,7 @@ ms.locfileid: "71294133"
 ## <a name="predefined-file-system-operations"></a>미리 정의된 파일 시스템 작업  
  파일 시스템 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|설명|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |디렉터리 복사|폴더를 다른 위치에 복사합니다.|  
 |파일 복사|파일을 다른 위치에 복사합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "71294133"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>파일 시스템 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|태스크에서 수행하는 작업을 보고합니다. 이 로그 항목은 파일 시스템 작업이 시작될 때 기록되며 원본 및 대상에 대한 정보를 포함합니다.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71294133"
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationConnection**이 표시됩니다.|  
@@ -119,11 +119,11 @@ ms.locfileid: "71294133"
  **연산**  
  수행할 파일 시스템 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**디렉터리 복사**|디렉터리를 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
 |**파일 복사**|파일을 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
-|**디렉터리 만들기**|디렉터리를 만듭니다. 이 값을 선택하면 원본 및 대상 디렉터리에 대한 동적 옵션이 표시됩니다.|  
+|**디렉터리 만들기**|디렉터리 만들기 이 값을 선택하면 원본 및 대상 디렉터리에 대한 동적 옵션이 표시됩니다.|  
 |**디렉터리 삭제**|디렉터리를 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**디렉터리 내용 삭제**|디렉터리의 내용을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**파일 삭제**|파일을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
@@ -177,7 +177,7 @@ ms.locfileid: "71294133"
  **읽기 전용**  
  파일이 읽기 전용인지 여부를 나타냅니다.  
   
- **Archive**  
+ **보관**  
  파일 또는 디렉터리가 보관될 준비가 되었는지 여부를 나타냅니다.  
   
  **시스템**  

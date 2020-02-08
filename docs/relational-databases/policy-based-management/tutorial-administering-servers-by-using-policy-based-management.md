@@ -15,10 +15,10 @@ ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558236"
 ---
 # <a name="tutorial-managing-servers-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 서버 관리

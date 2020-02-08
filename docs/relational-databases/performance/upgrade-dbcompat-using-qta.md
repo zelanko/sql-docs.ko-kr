@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165677"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
@@ -89,7 +89,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
         -  QTA 워크플로가 완료된 후 사용자 데이터베이스가 있어야 하는 대상 데이터베이스 호환성 수준을 설정합니다.
         완료되면 **다음**을 클릭합니다.
     
-       ![새 데이터베이스 업그레이드 세션 설정 창](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![새 데이터베이스 업그레이드 세션 설정 창](../../relational-databases/performance/media/qta-new-session-setup.png "새 데이터베이스 업그레이드 설정 창")  
   
     2.  **설정** 창에서 두 개의 열에는 대상 데이터베이스에 있는 쿼리 저장소의 **현재** 상태가 **권장** 설정과 함께 표시됩니다. 
         -  권장 설정은 기본적으로 선택되어 있지만, 현재 열 위에 있는 라디오 단추를 클릭하면 현재 설정이 수락되며, 현재 쿼리 저장소 구성을 미세 조정할 수도 있습니다. 
@@ -153,7 +153,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
 
         다음 페이지는 데이터베이스 호환성 수준이 성공적으로 업그레이드되었음을 확인합니다.
 
-        ![QTA 2단계 하위 2단계](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![QTA 2단계 하위 2단계](../../relational-databases/performance/media/qta-step2-substep2.png "QTA 2단계 하위 2단계")
 
     3.  **데이터 수집 관찰**에서는 해당 쿼리 저장소가 최적화 기회를 검색하는 데 사용할 비교 기준을 수집할 수 있도록 대표적인 워크로드 주기를 다시 실행할 것을 사용자에게 요청합니다. 워크로드가 실행되면 **새로 고침** 단추를 사용하여 발견된 경우 회귀된 쿼리의 목록을 계속 업데이트합니다. **표시할 쿼리** 값을 변경하여 표시되는 쿼리의 수를 제한합니다. 목록의 순서는 **메트릭**(기간 또는 CpuTime) 및 **집계**(평균이 기본값)의 영향을 받습니다. 또한 **표시할 쿼리**의 수를 선택합니다. 워크로드가 완료되면 **워크로드 실행 완료**를 선택하고 **다음**을 클릭합니다.
 

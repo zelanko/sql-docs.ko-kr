@@ -11,10 +11,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283685"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>1-5단원: 플랫 파일 원본 추가 및 구성
@@ -49,7 +49,7 @@ ms.locfileid: "71283685"
 ## <a name="go-to-next-task"></a>다음 작업으로 이동
 [6단계: 조회 변환 추가 및 구성](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [플랫 파일 원본](../integration-services/data-flow/flat-file-source.md)  
 [플랫 파일 연결 관리자](../integration-services/connection-manager/flat-file-connection-manager.md)  
   

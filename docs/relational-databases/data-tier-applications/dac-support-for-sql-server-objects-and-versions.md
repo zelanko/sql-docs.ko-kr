@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810582"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
@@ -50,8 +50,8 @@ ms.locfileid: "68810582"
 |DATABASE ROLE|FUNCTION: 인라인 테이블 반환|  
 |FUNCTION: 다중 문 테이블 반환|FUNCTION: 스칼라|  
 |INDEX: 클러스터형|INDEX: 비클러스터형 인덱스|  
-|INDEX: 공간|INDEX: 고유|  
-|Login|사용 권한|  
+|INDEX: 공간|INDEX: 고유한|  
+|LOGIN|사용 권한|  
 |역할 멤버 자격|SCHEMA|  
 |통계|STORED PROCEDURE: Transact-SQL|  
 |동의어|TABLE: CHECK 제약 조건|  
@@ -60,7 +60,7 @@ ms.locfileid: "68810582"
 |TABLE: INDEX 제약 조건|TABLE: PRIMARY KEY 제약 조건|  
 |TABLE: UNIQUE 제약 조건|TRIGGER: DML|  
 |TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: 사용자 정의 데이터 형식|  
-|TYPE: 사용자 정의 테이블 형식|User|  
+|TYPE: 사용자 정의 테이블 형식|USER|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> 각 SQL Server 버전에서 지원되는 데이터 계층 애플리케이션  

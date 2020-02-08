@@ -20,18 +20,18 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105013"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG(Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 그룹에 있는 값의 체크섬을 반환합니다. `CHECKSUM_AGG`는 Null 값을 무시합니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)은 `CHECKSUM_AGG` 다음에 올 수 있습니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ DISTINCT
 ## <a name="return-types"></a>반환 형식
 모든 *expression* 값의 체크섬을 **int**로 반환합니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `CHECKSUM_AGG`는 테이블의 변경 내용을 감지할 수 있습니다.
   
 `CHECKSUM_AGG` 결과는 테이블의 행 순서 종속되지 않습니다. 또한 `CHECKSUM_AGG` 함수에서는 `DISTINCT` 키워드 및 `GROUP BY` 절을 사용할 수 있습니다.
@@ -97,7 +97,7 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CHECKSUM&#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES&#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

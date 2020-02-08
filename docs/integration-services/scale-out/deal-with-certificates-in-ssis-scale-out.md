@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896959"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out의 인증서 관리
@@ -47,7 +47,7 @@ SQL Server 설치 마법사의 **Integration Services Scale Out 구성 - 마스�
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
-예를 들어
+다음은 그 예입니다.
 
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -60,7 +60,7 @@ MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMac
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-예를 들어
+다음은 그 예입니다.
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
@@ -73,7 +73,7 @@ netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
-예를 들어
+다음은 그 예입니다.
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
@@ -88,13 +88,13 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Scale Out 작업자를 Scale Out 마스터에 다시 연결
 각 Scale Out 작업자에 대해 작업자를 삭제한 다음 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 사용하여 다시 추가하거나 다음을 수행합니다.
 
-1\.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 SSL 인증서를 설치합니다.
+a.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 SSL 인증서를 설치합니다.
 
-2\.  Scale Out 작업자 서비스 구성 파일을 업데이트합니다.
+b.  Scale Out 작업자 서비스 구성 파일을 업데이트합니다.
 
 작업자 노드에서 Scale Out 작업자 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`를 업데이트합니다. **MasterHttpsCertThumbprint**를 새 SSL 인증서의 지문으로 업데이트합니다.
 
-c.  Scale Out 작업자 서비스를 다시 시작합니다.
+다.  Scale Out 작업자 서비스를 다시 시작합니다.
 
 ## <a name="scale-out-worker-certificate"></a>Scale Out 작업자 인증서
 
@@ -111,7 +111,7 @@ Scale Out 작업자 인증서를 변경하려는 경우 다음을 수행합니�
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 
-예를 들어
+다음은 그 예입니다.
 
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
@@ -127,7 +127,7 @@ certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 
-예를 들어
+다음은 그 예입니다.
 
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine

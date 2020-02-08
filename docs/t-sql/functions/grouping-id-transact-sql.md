@@ -19,18 +19,18 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910652"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID(Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   그룹 수준을 계산하는 함수입니다. GROUP BY 절이 지정된 경우 GROUPING_ID는 SELECT \<select> 목록, HAVING 및 ORDER BY 절에만 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,10 +46,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ## <a name="return-type"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  GROUPING_ID \<column_expression>은 GROUP BY 목록의 식과 정확하게 일치해야 합니다. 예를 들어 DATEPART(yyyy, \<*column name*>)를 기준으로 그룹화하는 경우에는 GROUPING_ID(DATEPART(yyyy, \<*column name*>))를 사용하고, \<*column name*>를 기준으로 그룹화하는 경우에는 GROUPING_ID(\<*column name*>)를 사용하세요.  
   
-## <a name="comparing-groupingid--to-grouping-"></a>GROUPING_ID ()와 GROUPING () 비교  
+## <a name="comparing-grouping_id--to-grouping-"></a>GROUPING_ID ()와 GROUPING () 비교  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ])는 각 출력 행의 열 목록에 있는 각 열에 대해 반환되는 동등 함수인 GROUPING (\<column_expression>)을 0과 1로 구성된 문자열로 입력합니다. GROUPING_ID는 문자열을 밑이 2인 숫자로 해석하고 그에 해당하는 정수를 반환합니다. 예를 들어 다음 문을 살펴보세요: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. 다음 표에서는 GROUPING_ID () 입력 및 출력 값을 보여 줍니다.  
   
 |집계된 열|GROUPING_ID (a, b, c) 입력 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 출력|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>GROUPING_ID ()의 기술적 정의  
+## <a name="technical-definition-of-grouping_id-"></a>GROUPING_ID ()의 기술적 정의  
  각 GROUPING_ID 인수는 GROUP BY 목록의 요소여야 합니다. GROUPING_ID ()는 최하위 N 비트가 lit인 **integer** 비트맵을 반환합니다. lit **bit**는 해당 인수가 지정된 출력 행에 대해 그룹화 열이 아님을 나타냅니다. 최하위 **bit**는 인수 N에 해당하고 N-1번째 최하위 **bit**는 인수 1에 해당합니다.<sup></sup>  
   
-## <a name="groupingid--equivalents"></a>GROUPING_ID ()와 동일한 기능의 함수  
+## <a name="grouping_id--equivalents"></a>GROUPING_ID ()와 동일한 기능의 함수  
  단일 그룹화 쿼리의 경우 GROUPING (\<column_expression>)은 GROUPING_ID (\<column_expression>)와 같으며 둘 다 0을 반환합니다.  
   
  예를 들어 다음 두 개의 문은 동일합니다.  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>1\. GROUPING_ID를 사용하여 그룹화 수준 식별  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. GROUPING_ID를 사용하여 그룹화 수준 식별  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Name`과 `Title`, `Name,` 및 Company Total별 직원 수를 반환합니다. `GROUPING_ID()`는 `Title` 열의 각 행에 대해 집계 수준을 식별하는 값을 생성합니다.  
   
 ```  
@@ -114,7 +114,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>2\. GROUPING_ID를 사용하여 결과 집합 필터링  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. GROUPING_ID를 사용하여 결과 집합 필터링  
   
 #### <a name="simple-example"></a>간단한 예  
  다음 예제에서 title별 직원 수를 갖는 행만 반환하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`에서 주석 문자를 제거하세요. department별 직원 수를 갖는 행만 반환하려면 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`에서 주석 문자를 제거하세요.  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  다음은 필터링되지 않은 결과 집합입니다.  
   
-|속성|Title|Grouping Level|Employee Count|속성|  
+|속성|제목|Grouping Level|Employee Count|속성|  
 |----------|-----------|--------------------|--------------------|----------|  
 |문서 제어|Control Specialist|0|2|문서 제어|  
 |문서 제어|Document Control Assistant|0|2|문서 제어|  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID ()를 ROLLUP 및 CUBE와 함께 사용하여 그룹화 수준 식별  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID ()를 ROLLUP 및 CUBE와 함께 사용하여 그룹화 수준 식별  
  다음 예제에서의 코드는 `GROUPING()`을 사용하여 `Bit Vector(base-2)` 열을 계산하는 방법을 보여 줍니다. `GROUPING_ID()`는 해당 `Integer Equivalent` 열을 계산하는 데 사용됩니다. `GROUPING_ID()` 함수의 열 순서는 `GROUPING()` 함수로 연결되는 열의 순서와 반대입니다.  
   
  이 예제에서 `GROUPING_ID()`는 `Grouping Level` 열의 각 행에 대해 그룹화 수준을 식별하는 값을 생성합니다. 그룹화 수준이 1로 시작되는 연속된 정수 목록(0, 1, 2,...*n*)이 아닌 경우도 있습니다.  
@@ -304,7 +304,7 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  다음은 결과 집합의 일부입니다.  
   
-|Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Year|Month|일|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1497452.6066|000|0|Year Month Day|  
 |2007|1|2|21772.3494|000|0|Year Month Day|  
@@ -385,7 +385,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
  다음은 결과 집합의 일부입니다.  
   
-|Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Year|Month|일|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1497452.6066|000|0|Year Month Day|  
 |2007|1|2|21772.3494|000|0|Year Month Day|  
@@ -411,8 +411,8 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|2|2|76282.9556|001|4|Month Day|  
 |NULL|1|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|1|9220000.2675|011|6|Day|  
-|NULL|NULL|2|144513.3741|011|6|Day|  
+|NULL|NULL|1|9220000.2675|011|6|일|  
+|NULL|NULL|2|144513.3741|011|6|일|  
 |NULL|NULL|NULL|9364513.6416|111|7|총합계|  
   
 ## <a name="see-also"></a>참고 항목  

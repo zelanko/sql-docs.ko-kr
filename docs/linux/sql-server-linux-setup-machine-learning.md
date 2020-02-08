@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531246"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971371"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -170,9 +170,9 @@ zypper update
 
 인터넷에 연결된 디바이스에서 패키지는 각 운영 체제의 패키지 설치 프로그램을 사용하여 데이터베이스 엔진과 독립적으로 다운로드 및 설치됩니다. 다음 표에서는 사용할 수 있는 모든 패키지에 대해 설명하지만, R 및 Python의 경우 전체 기능 설치 또는 최소 기능 설치를 제공하는 패키지를 지정합니다.
 
-| 패키지 이름 | 적용 대상 | 설명 |
+| 패키지 이름 | 적용 대상 | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | R 및 Python 코드를 실행하는 데 사용되는 확장성 프레임워크입니다. |
+|mssql-server-extensibility  | 모두 | R 및 Python 코드를 실행하는 데 사용되는 확장성 프레임워크입니다. |
 | microsoft-openmpi  | Python, R | Linux에서 병렬 처리를 위해 Revo* 라이브러리에서 사용하는 메시지 전달 인터페이스입니다. |
 | mssql-mlservices-python | Python | Anaconda 및 Python의 오픈 소스 배포입니다. |
 |mssql-mlservices-mlm-py  | Python | ‘전체 설치’.  이미지 기능화 및 텍스트 감정 분석을 위한 revoscalepy, microsoftml, 미리 학습된 모델을 제공합니다.| 
@@ -221,7 +221,7 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 필요한 모든 조합(단일 또는 여러 언어)으로 언어 지원을 설치할 수 있습니다. R 및 Python의 경우 두 가지 패키지를 선택할 수 있습니다. 하나는 사용 가능한 모든 기능을 ‘전체 설치’로 제공합니다.  대체 선택은 미리 학습된 기계 학습 모델을 제외하고 ‘최소 설치’로 간주됩니다. 
 
 > [!Tip]
-> 가능하면 `apt-get update`를 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다. 또한 Ubuntu의 일부 docker 이미지에는 https apt 전송 옵션이 없을 수도 있습니다. 설치하려면 `apt-get install apt-transport-https`를 사용합니다.
+> 가능하면 `apt-get update`을 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다. 또한 Ubuntu의 일부 docker 이미지에는 https apt 전송 옵션이 없을 수도 있습니다. 설치하려면 `apt-get install apt-transport-https`를 사용합니다.
 
 ### <a name="example-1----full-installation"></a>예제 1 - 전체 설치 
 
@@ -426,7 +426,7 @@ EULA 동의의 가능한 모든 순열은 [mssql-conf 도구를 사용하여 SQL
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/mlservices 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ EULA 동의의 가능한 모든 순열은 [mssql-conf 도구를 사용하여 SQL
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/mlservices 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 경로
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>패키지 목록

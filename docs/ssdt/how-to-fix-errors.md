@@ -1,23 +1,24 @@
 ---
-title: '방법: 오류 수정 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 오류 수정
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035176"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241389"
 ---
 # <a name="how-to-fix-errors"></a>방법: 오류 수정
+
 오류 목록 창에는 모든 배포 또는 빌드 오류가 표시됩니다. 데이터베이스 엔터티와 해당 정의를 편집하는 경우 Transact\-SQL 편집기나 테이블 디자이너에서 수행한 편집 작업으로 인해 발생한 구문 및 의미 오류도 이 목록에 표시됩니다. 오류 목록은 여러 탭에서 스크립트를 편집할 때 동적으로 업데이트됩니다. 그러면 식별된 오류에 따라 보다 세부적으로 문제를 해결할 수 있습니다.  
   
 > [!WARNING]  

@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055932"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp를 사용하는 경우 호환 데이터 형식 지정(SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "74055932"
 ### <a name="example"></a>예제  
  다음 예에서는 **bcp** 명령을 사용하여 대화형으로 `HumanResources.myTeam` 테이블에서 `myTeam.txt` 파일로 대량 데이터 내보내기를 수행합니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 테이블 및 테이블을 만드는 방법은 [HumanResources.myTeam 예제 테이블&#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)을 참조하세요.  
   
- 명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 **bcp**는 데이터 형식 정보를 묻는 메시지를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 **bcp** 는 데이터 형식 정보를 묻는 메시지를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -91,7 +91,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  테이블 열이 모두 지정된 후 **bcp** 명령은 방금 입력한 필드 단위 정보를 저장할 비 XML 서식 파일을 필요에 따라 생성할지를 묻는 메시지를 표시합니다(이전 예 참조). 서식 파일 생성하도록 선택하면 해당 테이블에서 데이터를 내보내거나 구조가 비슷한 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 때마다 서식 파일을 생성할 수 있습니다.  
   
 > [!NOTE]  
->  서식 파일을 사용하면 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스로 데이터를 대량 가져오거나 테이블에서 데이터를 대량 내보낼 때 서식을 다시 지정할 필요가 없습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
+>  서식 파일을 사용하면 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스로 데이터를 대량 가져오거나 테이블에서 데이터를 대량 내보낼 때 서식을 다시 지정할 필요가 없습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
   
  다음 예에서는 `myFormatFile.fmt`라는 비 XML 서식 파일을 만듭니다.  
   

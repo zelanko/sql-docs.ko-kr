@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595708"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 순환
@@ -27,7 +27,7 @@ ms.locfileid: "73595708"
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 Always Encrypted 열 마스터 키 및 열 암호화 키를 순환하는 작업을 설명합니다.
 
-모범 사례 권장 사항 및 중요한 보안 고려 사항을 비롯한 Always Encrypted 키 관리에 대한 개요는 [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.
+모범 사례, 권장 사항 및 중요한 보안 고려 사항을 비롯한 Always Encrypted 키 관리의 개요는 [Always Encrypted를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.
 
 <a name="rotatecmk"></a>
 ## <a name="rotate-column-master-keys"></a>열 마스터 키 순환 
@@ -56,14 +56,14 @@ SQL Server Management Studio에서 이전 열 마스터 키로 보호된 열 암
 
 ### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>3단계: 새 열 마스터 키로 애플리케이션 구성
 
-이 단계에서는 순환할 열 마스터 키로 보호된 데이터베이스 열(즉, 순환할 열 마스터 키로 암호화된 열 암호화 키로 암호화된 데이터베이스 열)을 쿼리하는 모든 클라이언트 애플리케이션이 새 열 마스터 키에 액세스할 수 있는지 확인해야 합니다. 이 단계는 새 열 마스터 키가 있는 키 저장소의 유형에 따라 달라집니다. 예를 들어
+이 단계에서는 순환할 열 마스터 키로 보호된 데이터베이스 열(즉, 순환할 열 마스터 키로 암호화된 열 암호화 키로 암호화된 데이터베이스 열)을 쿼리하는 모든 클라이언트 애플리케이션이 새 열 마스터 키에 액세스할 수 있는지 확인해야 합니다. 이 단계는 새 열 마스터 키가 있는 키 저장소의 유형에 따라 달라집니다. 다음은 그 예입니다.
 
 - 새 열 마스터 키가 Windows 인증서 저장소에 저장된 인증서인 경우 데이터베이스에서 열 마스터 키의 키 경로에 지정된 위치와 동일한 인증서 저장소 위치(*현재 사용자* 또는 *로컬 컴퓨터*)에 인증서를 배포해야 합니다. 애플리케이션에서 인증서에 액세스할 수 있어야 합니다.
   - 인증서가 *현재 사용자* 인증서 저장소 위치에 저장된 경우 인증서를 애플리케이션 Windows ID(사용자)의 현재 사용자 저장소로 가져와야 합니다.
   - 인증서가 *로컬 컴퓨터* 인증서 저장소 위치에 저장된 경우 애플리케이션의 Windows ID에 인증서에 액세스할 권한이 있어야 합니다.
 - 새 열 마스터 키가 Microsoft Azure 주요 자격 증명 모음에 저장된 경우 애플리케이션이 Azure에 인증할 수 있고 키에 대한 액세스 권한이 있도록 애플리케이션을 구현해야 합니다.
 
-자세한 내용은 [Always Encrypted용 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
+자세한 내용은 [열 마스터 키 만들기 및 저장(Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
 
 > [!NOTE]
 > 순환의 이 시점에서는 이전 열 마스터 키와 새 열 마스터 키가 모두 유효하며 데이터에 액세스하는 데 사용할 수 있습니다.
@@ -105,10 +105,10 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 또한 키 저장소에서 이전 열 마스터 키와 새 열 마스터 키를 모두 액세스할 수 있어야 합니다. 키 저장소에 액세스하고 열 마스터 키를 사용하려면 키 저장소 또는/및 키에 대한 사용 권한이 필요할 수 있습니다.
 - **인증서 저장소 - 로컬 컴퓨터** - 열 마스터 키로 사용되는 인증서에 대한 읽기 권한이 있거나 컴퓨터의 관리자여야 합니다.
 - **Azure Key Vault** – 열 마스터 키를 포함하는 자격 증명 모음에 대한 *create*, *get*, *unwrapKey*, *wrapKey*, *sign* 및 *verify* 권한이 필요합니다.
-- **CNG(키 저장소 공급 깅업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
+- **CNG(키 저장소 공급 기업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 - **CAPI(암호화 서비스 공급 기업)** – 저장소 및 CSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 
-자세한 내용은 [Always Encrypted용 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
+자세한 내용은 [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
 
 <a name="rotatecek"></a> 
 ## <a name="rotate-column-encryption-keys"></a>열 암호화 키 순환
@@ -139,14 +139,14 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 - **CNG(키 저장소 공급 기업)** – 저장소 및 KSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 - **CAPI(암호화 서비스 공급 기업)** – 저장소 및 CSP 구성에 따라 키 저장소 또는 키를 사용할 때 필수 사용 권한 및 자격 증명을 확인하는 메시지가 표시될 수도 있습니다.
 
-자세한 내용은 [Always Encrypted용 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
+자세한 내용은 [Always Encrypted를 위한 열 마스터 키 만들기 및 저장](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
 
-## <a name="next-steps"></a>Next Steps
-- [SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>다음 단계
+- [SQL Server Management Studio로 Always Encrypted를 사용하여 열 쿼리](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted를 사용하여 애플리케이션 개발](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>참고 항목
-- [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md) 
 - [SQL Server Management Studio를 사용하여 Always Encrypted 구성](configure-always-encrypted-using-sql-server-management-studio.md)
 - [PowerShell을 사용하여 Always Encrypted 구성](configure-always-encrypted-using-powershell.md)

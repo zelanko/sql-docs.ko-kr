@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707919"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML(SQL Server의 R 라이브러리)
@@ -31,7 +31,7 @@ ms.locfileid: "73707919"
 **MicrosoftML** 라이브러리는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 컴퓨터 학습 서비스](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -55,7 +55,7 @@ ms.locfileid: "73707919"
 
 ## <a name="1-machine-learning-algorithms"></a>1 - 기계 학습 알고리즘
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank의 구현으로, MART 그래디언트 부스팅 알고리즘의 유효 구현을 나타냅니다.  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)를 사용하는 임의 포리스트 및 분위 회귀 포리스트 구현입니다.  |
@@ -69,7 +69,7 @@ ms.locfileid: "73707919"
 
 ## <a name="2-transformation-functions"></a>2 - 변환 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 여러 열에서 단일 벡터 값 열을 만드는 변환입니다.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 사전에서 범주별 변형을 사용하여 표시기 벡터를 만듭니다.  |
@@ -87,7 +87,7 @@ ms.locfileid: "73707919"
 
 ## <a name="3-scoring-and-training-functions"></a>3 - 점수 매기기 및 학습 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | SQL Server에서 저장 프로시저를 사용하거나, R 코드에서 점수 매기기 라이브러리를 실행하여 실시간 점수 매기기를 통해 훨씬 더 빠른 예측 성능을 제공합니다.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 입력 데이터 세트의 데이터를 출력 데이터 세트로 변환합니다.|
@@ -96,7 +96,7 @@ ms.locfileid: "73707919"
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4 - 분류 및 회귀에 대한 손실 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 지수 분류 손실 함수에 대한 사양입니다. | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 로그 분류 손실 함수에 대한 사양입니다.  |
@@ -107,14 +107,14 @@ ms.locfileid: "73707919"
 
 ## <a name="5-feature-selection-functions"></a>5 - 특성 선택 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | 개수 모드에서 특성 선택에 대한 사양입니다. |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | 상호 정보 모드에서 특성 선택에 대한 사양입니다. |
 
 ## <a name="6-ensemble-modeling-functions"></a>6 - 앙상블 모델링 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble)을 사용하여 빠른 트리 모델을 학습하기 위한 함수 이름과 인수를 포함하는 목록을 만듭니다.|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble)을 사용하여 빠른 포리스트 모델을 학습하기 위한 함수 이름과 인수를 포함하는 목록을 만듭니다.|
@@ -124,14 +124,14 @@ ms.locfileid: "73707919"
 
 ## <a name="7-neural-networking-functions"></a>7 - 신경망 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) 기계 학습 알고리즘에 대한 최적화 알고리즘을 지정합니다.|
 
 
 ## <a name="8-package-state-functions"></a>8 - 패키지 상태 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | 패키지 전체 상태를 저장하는 데 사용되는 환경 개체입니다. |
 
@@ -150,7 +150,7 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
 + [컴퓨팅 컨텍스트 사용 방법 알아보기](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708680"
 ---
 # <a name="back-up-files-and-filegroups"></a>파일 및 파일 그룹 백업
@@ -43,7 +43,7 @@ ms.locfileid: "71708680"
   
 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
 
-###  <a name="Permissions"></a> 사용 권한
+###  <a name="Permissions"></a> 권한
 
 `BACKUP DATABASE` 및 `BACKUP LOG` 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71708680"
   
   [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |*database*|트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다.|  
 |FILE _=_ *logical_file_name*|파일 백업에 포함할 파일의 논리적 이름을 지정합니다.|  
@@ -161,7 +161,7 @@ ms.locfileid: "71708680"
   
 - `SalesGroup2` 및 `SGrp2Fi1` 파일을 포함하는 `SGrp2Fi2`파일 그룹  
   
-#### <a name="a-create-a-file-backup-of-two-files"></a>1\. 두 파일의 파일 백업 만들기  
+#### <a name="a-create-a-file-backup-of-two-files"></a>A. 두 파일의 파일 백업 만들기  
 다음 예에서는 `SGrp1Fi2` 의 `SalesGroup1` 파일과 `SGrp2Fi2` 파일 그룹의 `SalesGroup2` 파일에 대해서만 차등 파일 백업을 만듭니다.  
   
 ```sql  
@@ -173,7 +173,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>2\. 보조 파일 그룹의 전체 파일 백업 만들기  
+#### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>B. 보조 파일 그룹의 전체 파일 백업 만들기  
 다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 전체 파일 백업을 만듭니다.  
   
 ```sql  

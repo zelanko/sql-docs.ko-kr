@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077441"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
@@ -30,7 +30,7 @@ ms.locfileid: "68077441"
 > * Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한을 만듭니다.
 > * Pacemaker 클러스터에서 가용성 그룹 리소스를 만듭니다(외부 형식만 해당).
 
-## <a name="prerequisite"></a>사전 요구 사항
+## <a name="prerequisite"></a>필수 요소
 - [Linux의 SQLServer에 대한 Pacemaker 클러스터 배포](sql-server-linux-deploy-pacemaker-cluster.md)에 설명된 대로 Pacemaker 고가용성 클러스터를 배포합니다.
 
 
@@ -354,11 +354,11 @@ sudo systemctl restart mssql-server
 
 11. 읽을 수 있는 시나리오에 대해 수신기를 만드는 경우 SSMS 17.3 이상에서 마법사를 통해 읽기 전용 라우팅을 만들 수 있습니다. SSMS 또는 Transact-SQL을 통해 나중에 추가할 수도 있습니다. 지금 읽기 전용 라우팅을 추가하려면
 
-    1\.  읽기 전용 라우팅 탭을 선택합니다.
+    a.  읽기 전용 라우팅 탭을 선택합니다.
 
-    2\.  읽기 전용 복제본의 URL을 입력합니다. 이러한 URL은 엔드포인트가 아니라 인스턴스의 포트를 사용한다는 점을 제외하고 엔드포인트와 비슷합니다.
+    b.  읽기 전용 복제본의 URL을 입력합니다. 이러한 URL은 엔드포인트가 아니라 인스턴스의 포트를 사용한다는 점을 제외하고 엔드포인트와 비슷합니다.
 
-    c.  각 URL을 선택하고 아래쪽에서 읽을 수 있는 복제본을 선택합니다. 여러 개를 선택하려면 Shift 키를 누른 채 선택하거나 클릭하여 끕니다.
+    다.  각 URL을 선택하고 아래쪽에서 읽을 수 있는 복제본을 선택합니다. 여러 개를 선택하려면 Shift 키를 누른 채 선택하거나 클릭하여 끕니다.
 
 12. **다음**을 클릭합니다.
 
@@ -512,7 +512,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    위치
+    Where
     - *AGName*은 가용성 그룹의 이름입니다.
     - *DBName*은 가용성 그룹에 사용되는 데이터베이스의 이름입니다. 쉼표로 구분된 이름 목록일 수도 있습니다.
     - *PortOfEndpoint*는 생성된 엔드포인트에서 사용하는 포트 번호입니다.
@@ -676,7 +676,7 @@ Linux의 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 기준으�
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대해 가용성 그룹을 만들고 구성하는 방법을 살펴보았습니다. 또한 다음 방법에 대해 알아보았습니다.
+이 자습서에서는 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대해 가용성 그룹을 만들고 구성하는 방법을 살펴보았습니다. 구체적으로 다음 작업 방법을 알아보았습니다.
 > [!div class="checklist"]
 > * 가용성 그룹을 사용하도록 설정합니다.
 > * AG 엔드포인트 및 인증서를 만듭니다.

@@ -20,10 +20,10 @@ ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010477"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68010477"
 
 지정된 인증서 속성 값을 반환합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +76,7 @@ int 데이터 형식의 인증서 ID 값입니다.
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* 및 *Subject*는 모두 **nvarchar**를 반환합니다.  
 -   *SID*는 **varbinary**를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에서 인증서 정보를 참조합니다.
   
 ## <a name="permissions"></a>사용 권한  
@@ -101,7 +101,7 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
 [CERT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)

@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294188"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
@@ -172,12 +172,12 @@ ms.locfileid: "71294188"
  **위치**  
  자식 패키지의 위치를 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**SQL Server**|위치를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 설정합니다.|  
 |**파일 시스템**|파일 시스템에 위치를 설정합니다.|  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  자식 패키지의 스토리지 위치 유형을 선택합니다.  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294188"
 #### <a name="location-dynamic-options"></a>Location 동적 옵션  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294188"
  자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  
   
 ##### <a name="location--file-system"></a>Location = 파일 시스템  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)  

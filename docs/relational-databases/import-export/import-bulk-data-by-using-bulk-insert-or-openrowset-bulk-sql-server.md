@@ -23,12 +23,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056391"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909966"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK ...)을 사용하여 데이터를 SQL Server로 가져오기
 
@@ -53,7 +53,7 @@ BULK INSERT는 데이터 파일의 데이터를 테이블로 로드합니다. �
 - [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)
 - [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
 - [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)
-- [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
+- [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
 - [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)
 - [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
@@ -95,7 +95,7 @@ BULK 옵션의 추가 사용법에 대한 자세한 내용은 [OPENROWSET&#40;Tr
 
 BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_의 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.
 
-예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce`에서 공유 폴더 `computer2`에 있습니다.
+예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce` 에서 공유 폴더 `computer2`에 있습니다.
 
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
@@ -114,7 +114,7 @@ Azure Blob Storage에서 가져오는 경우 데이터가 퍼블릭(익명 액�
 다음 예제에서는 BULK INSERT 명령을 사용하여 SAS 키를 만든 Azure Blob Storage 위치에 있는 csv 파일의 데이터를 로드하는 방법을 보여 줍니다. Azure Blob Storage 위치는 외부 데이터 원본으로 구성되었습니다. 이 경우, 사용자 데이터베이스의 마스터 키로 암호화된 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -145,7 +145,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 다음 예제에서는 OPENROWSET 명령을 사용하여 SAS 키를 만든 Azure Blob Storage 위치에 있는 csv 파일의 데이터를 로드하는 방법을 보여 줍니다. Azure Blob Storage 위치는 외부 데이터 원본으로 구성되었습니다. 이 경우, 사용자 데이터베이스의 마스터 키로 암호화된 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -176,7 +176,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [SELECT 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)

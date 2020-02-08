@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536179"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319045"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,14 +100,14 @@ ms.locfileid: "73536179"
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
-|메모리\*|**최소:**<br/><br/> Express Edition: 512MB<br/><br/> 기타 모든 버전: 1GB<br/><br/> **권장:**<br/><br/> Express Edition: 1GB<br/><br/> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
+|메모리\*|**최소:**<br/><br/> Express Edition: 512MB<br/><br/> 기타 모든 버전: 1 GB<br/><br/> **권장:**<br/><br/> Express Edition: 1 GB<br/><br/> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
 |프로세서 속도|**최소:** x64 프로세서: 1.4GHz<br/><br/> **권장:** 2.0GHz 이상|  
 |프로세서 유형|x64 프로세서: AMD Opteron, AMD Athlon 64, Intel EM64T를 지원하는 Intel Xeon, Intel EM64T를 지원하는 Intel Pentium IV|  
   
 > [!NOTE]  
 > [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 설치는 x64 프로세서에서만 지원됩니다. x86 프로세서에서는 더 이상 지원되지 않습니다.  
   
- \* [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
+ \*[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
 
 **Server Core 지원:**
 
@@ -126,14 +126,17 @@ Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [
 다음 표에서는 어떤 SQL Server 2019 버전이 어떤 Windows 버전과 호환되는지 설명합니다.  
   
 
-| SQL Server 버전:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Essentials    |    예     |    예    |    예   | 예 |   예   |
+| SQL Server 버전:               | Enterprise | Developer | Standard | 웹 | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2019 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2019 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows 10 Enterprise             |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 10 Professional           |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 10 Home                   |    예      |    yes    |    yes   | 예  |   yes   |
 | &nbsp; | &nbsp; |
 
 
@@ -189,7 +192,7 @@ Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 읽기 전용 도메인 컨트롤러에서 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 읽기 전용 도메인 컨트롤러에서 보안 그룹을 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 프로비전할 수 없습니다. 이 경우 설치 프로그램에서 오류가 발생합니다. 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스는 읽기 전용 도메인 컨트롤러만 액세스할 수 있는 환경에서 지원되지 않습니다. 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
 

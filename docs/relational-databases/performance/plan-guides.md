@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113476"
 ---
 # <a name="plan-guides"></a>계획 지침
@@ -158,7 +158,7 @@ where SalesOrderID =  @so_id',
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |계획 지침을 만드는 방법에 대해 설명합니다.|[새 계획 지침 만들기](../../relational-databases/performance/create-a-new-plan-guide.md)|  
 |매개 변수가 있는 쿼리에 대한 계획 지침을 만드는 방법에 대해 설명합니다.|[매개 변수가 있는 쿼리를 위한 계획 지침 만들기](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  

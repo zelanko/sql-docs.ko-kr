@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846673"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287630"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "70846673"
   
 -   다른 게시 유형을 선택한 경우에 ID 범위 관리는 수동으로 설정해야 합니다.  
   
- **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>** 의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>** 의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 열 관리 옵션을 지정하려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70846673"
   
 5.  4단계에서 **자동** 또는 **True** 를 선택한 경우 다음 표를 참조하여 옵션 값을 입력합니다. 이러한 설정의 사용 방법은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.  
   
-    |옵션|값|설명|  
+    |옵션|값|Description|  
     |------------|-----------|-----------------|  
     |**게시자 범위 크기**|범위 크기에 대한 정수 값(예: 20000)|[ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
     |**구독자 범위 크기**|범위 크기에 대한 정수 값(예: 10000)|[ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  

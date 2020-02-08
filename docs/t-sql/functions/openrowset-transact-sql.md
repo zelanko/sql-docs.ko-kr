@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542282"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910146"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -235,7 +235,7 @@ OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스�
 
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터 대량 가져오기
 
-OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8,000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8,000바이트를 초과하는 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.
+OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8000바이트를 초과하는 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.
 
 > [!NOTE]
 > 자동으로 생성된 서식 파일은 LOB 필드의 길이 또는 최대 길이를 지정하지 않습니다. 그러나 직접 서식 파일을 편집하고 길이 또는 최대 길이를 지정할 수 있습니다.
@@ -422,7 +422,7 @@ SELECT * FROM OPENROWSET(
 다음 예제에서는 OPENROWSET 명령을 사용하여 SAS 키를 만든 Azure Blob Storage 위치에 있는 csv 파일의 데이터를 로드하는 방법을 보여 줍니다. Azure Blob Storage 위치는 외부 데이터 원본으로 구성되었습니다. 이 경우, 사용자 데이터베이스의 마스터 키로 암호화된 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

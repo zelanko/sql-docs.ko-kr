@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320613"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
@@ -154,7 +154,7 @@ ms.locfileid: "75320613"
  백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다. 백업을 복원한 후에 데이터베이스의 DBCC CHECKDB를 통해 데이터베이스 일관성 검사를 수행하여 백업 미디어가 손상되지 않았는지 확인하는 것이 좋습니다. 
 
 ### <a name="verify-media-stability-and-consistency"></a>미디어 안정성 및 일관성 확인
-백업 유틸리티(BACKUP T-SQL 명령, SQL Server 유지 관리 계획, 백업 소프트웨어 또는 솔루션 등)에서 제공하는 확인 옵션을 사용합니다. 예를 보려면 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요. BACKUP CHECKSUM과 같은 고급 기능을 사용하여 백업 미디어 자체의 문제를 검색합니다. 자세한 내용은 [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.
+백업 유틸리티(BACKUP T-SQL 명령, SQL Server 유지 관리 계획, 백업 소프트웨어 또는 솔루션 등)에서 제공하는 확인 옵션을 사용합니다. 예를 보려면 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요. BACKUP CHECKSUM과 같은 고급 기능을 사용하여 백업 미디어 자체의 문제를 검색합니다. 자세한[ 내용은 ](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.
 
 ### <a name="document-backuprestore-strategy"></a>백업/복원 전략 문서화 
 백업 및 복원 절차를 문서화하고 실행 문서에 사본을 보관하는 것이 좋습니다.

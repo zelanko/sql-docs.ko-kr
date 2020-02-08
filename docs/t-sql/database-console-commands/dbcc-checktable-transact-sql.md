@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982323"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982323"
 
 테이블 또는 인덱싱된 뷰를 구성하는 모든 페이지 및 구조의 무결성을 검사합니다.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>구문    
     
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > MAXDOP가 0으로 설정되면 서버는 최대 병렬 처리 수준을 선택합니다.  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
     
 > [!NOTE]    
 > 데이터베이스의 모든 테이블에서 DBCC CHECKTABLE을 수행하려면 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 사용합니다.    
@@ -180,7 +180,7 @@ DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 �
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해    
 DBCC CHECKTABLE 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
     
-|State|설명|    
+|시스템 상태|Description|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
@@ -221,7 +221,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     
 ## <a name="examples"></a>예    
     
-### <a name="a-checking-a-specific-table"></a>1\. 특정 테이블 검사    
+### <a name="a-checking-a-specific-table"></a>A. 특정 테이블 검사    
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee`테이블에 대한 데이터 페이지 무결성을 검사합니다.
     
 ```sql    
@@ -229,7 +229,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>2\. 테이블에 오버헤드가 적은 검사 수행    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>B. 테이블에 오버헤드가 적은 검사 수행    
  다음 예에서는 `Employee` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 오버헤드가 적은 검사를 수행합니다.    
     
 ```sql    

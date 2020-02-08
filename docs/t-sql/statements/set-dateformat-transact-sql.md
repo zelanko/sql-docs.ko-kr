@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929063"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67929063"
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  날짜 부분의 순서입니다. 유효한 매개 변수는 **mdy**, **dmy**, **ymd**, **ydm**, **myd** 및 **dym**입니다. 유니코드나 유니코드로 변환된 DBCS(더블바이트 문자 집합) 중 하나가 될 수 있습니다. 미국 영어 기본값은 **mdy**입니다. 모든 지원 언어의 기본 DATEFORMAT에 대한 내용은 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DATEFORMAT **ydm**은 **date**, **datetime2** 및 **datetimeoffset** 데이터 형식에 대해 지원되지 않습니다.  
   
  DATEFORMAT 설정은 문자열 형식에 따라 날짜 데이터 형식에 대해 문자열을 다르게 해석할 수 있습니다. 예를 들어 **datetime** 및 **smalldatetime** 해석은 **date**, **datetime2** 또는  **datetimeoffset**과 일치하지 않을 수 있습니다. DATEFORMAT은 문자열이 데이터베이스의 날짜 값으로 변환될 때 문자열의 해석에 영향을 줍니다. 날짜 데이터 형식 값의 표시나 데이터베이스 스토리지 형식에 영향을 주지 않습니다.  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727461"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>R에서 olapR을 사용하여 MDX 쿼리를 만드는 방법
@@ -43,8 +43,8 @@ ms.locfileid: "73727461"
 4. 다음과 같은 도우미 함수를 사용하여 MDX 쿼리에 포함할 차원 및 측정값에 대한 자세한 정보를 제공합니다.
 
      + `cube()` SSAS 데이터베이스의 이름을 지정합니다. 명명된 인스턴스에 연결할 경우 머신 이름 및 인스턴스 이름을 제공합니다. 
-     + `columns()` **ON COLUMNS** 인수에서 사용할 측정값의 이름을 제공합니다.
-     + `rows()` **ON ROWS** 인수에서 사용할 측정값의 이름을 제공합니다.
+     + `columns()`**ON COLUMNS** 인수에서 사용할 측정값의 이름을 제공합니다.
+     + `rows()`**ON ROWS** 인수에서 사용할 측정값의 이름을 제공합니다.
      + `slicers()` 슬라이서로 사용할 필드 또는 멤버를 지정합니다. 슬라이서는 모든 MDX 쿼리 데이터에 적용되는 필터와 유사합니다.
      
      + `axis()` 쿼리에서 사용할 추가 축의 이름을 지정합니다. 
@@ -81,7 +81,7 @@ Analysis Services에 쉽게 복원될 수 있는 백업 파일을 포함하여 �
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. 슬라이서가 포함된 기본 MDX
 
-이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서*로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
+이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_ 을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서*로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -176,9 +176,9 @@ explore(ocs, "Sales")
 
 | 결과  |
 | ----|
-| _Customer_|
+| _고객_|
 |_Date_|
-|_Region_|
+|_지역_|
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>지정된 차원 및 계층의 모든 멤버를 반환하려면
@@ -201,6 +201,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [R에서 OLAP 큐브의 데이터 사용](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

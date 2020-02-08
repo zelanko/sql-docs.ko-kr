@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401576"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
@@ -180,7 +180,7 @@ SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여
 
 다음 그림은 반복적인 파티션 유지 관리 작업을 보여 줍니다(자세한 단계는 아래 참조).
 
-![Partitioning2](../../relational-databases/tables/media/partitioning2.png "|::ref6::|")
+![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
 
 반복적인 파티션 유지 관리 작업 단계는 아래와 같습니다.
 

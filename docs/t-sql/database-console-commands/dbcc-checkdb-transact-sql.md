@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982417"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "73982417"
 >     
 > 메모리 최적화 테이블에는 DBCC 복구 옵션을 사용할 수 없기 때문에 정기적으로 데이터베이스를 백업하고 백업을 테스트해야 합니다. 메모리 최적화 테이블에서 데이터 무결성 문제가 발생하는 경우 마지막 양호한 백업에서 복원해야 합니다.    
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>구문    
     
@@ -158,7 +158,7 @@ DATA_PURITY
 > [!WARNING]
 > PHYSICAL_ONLY를 지정하면 열 무결성 검사는 수행되지 않습니다.
     
- 이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 이러한 오류를 수동으로 수정하는 방법은 기술 자료 문서 923247: [SQL Server 2005 이상 버전에서 DBCC 오류 2570 문제 해결](https://support.microsoft.com/kb/923247)을 참조하세요.  
+ 이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 이러한 오류를 수동으로 수정하는 방법은 기술 자료 문서 923247: [SQL Server 2005 및 이후 버전에서 DBCC 오류 2570 문제 해결](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 이상).  
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > MAXDOP가 0으로 설정되면 SQL Server는 최대 병렬 처리 수준을 사용하도록 선택합니다.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
 DBCC CHECKDB는 비활성화된 인덱스는 검사하지 않습니다. 비활성 인덱스에 대한 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.    
 
 사용자 정의 형식이 바이트 정렬된 것으로 표시되면 사용자 정의 형식의 직렬화가 하나만 있어야 합니다. 바이트 정렬된 사용자 정의 형식의 일관성 있는 직렬화가 없으면 DBCC CHECKDB를 실행할 때 오류 2537이 발생합니다. 자세한 내용은 [사용자 정의 형식 요구 사항](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)을 참조하세요.    
@@ -201,7 +201,7 @@ Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 �
 데이터베이스 및 테이블에 대해 FILESTREAM을 사용하는 경우 선택적으로 파일 시스템에 **varbinary(max)** BLOB(Binary Large Object)를 저장할 수 있습니다. 파일 시스템에 BLOB을 저장하는 데이터베이스에 대해 DBCC CHECKDB를 사용하면 DBCC는 파일 시스템과 데이터베이스 사이의 연결 수준 일관성을 검사합니다.
 예를 들어 테이블에 FILESTREAM 특성을 사용하는 **varbinary(max)** 열이 있는 경우 DBCC CHECKDB는 파일 시스템 디렉터리, 파일과 테이블 행, 열, 열 값 사이에 일 대 일 매핑이 존재하는지 확인합니다. REPAIR_ALLOW_DATA_LOSS 옵션을 지정하면 DBCC CHECKDB가 손상을 복구할 수 있습니다. FILESTREAM 손상을 복구하기 위해 DBCC에서는 파일 시스템 데이터가 없는 테이블 행을 삭제합니다.
     
-## <a name="best-practices"></a>최선의 구현 방법    
+## <a name="best-practices"></a>모범 사례    
 프로덕션 시스템에서 자주 사용하려면 `PHYSICAL_ONLY` 옵션을 사용하는 것이 좋습니다. PHYSICAL_ONLY를 사용하면 큰 데이터베이스에 대한 DBCC CHECKDB 실행 시간이 훨씬 단축될 수 있습니다. 또한 옵션을 지정하지 않고 정기적으로 DBCC CHECKDB를 실행하는 것이 좋습니다. 실행 빈도는 개별 비즈니스 및 프로덕션 환경에 따라 달라집니다.
     
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사    
@@ -213,7 +213,7 @@ Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 �
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해    
 DBCC CHECKDB 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 성공 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
     
-|State|설명|    
+|시스템 상태|Description|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
@@ -369,7 +369,7 @@ sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이�
     
 ## <a name="examples"></a>예    
     
-### <a name="a-checking-both-the-current-and-another-database"></a>1\. 현재 데이터베이스와 다른 데이터베이스 모두 검사    
+### <a name="a-checking-both-the-current-and-another-database"></a>A. 현재 데이터베이스와 다른 데이터베이스 모두 검사    
 다음 예에서는 현재 데이터베이스 및 `DBCC CHECKDB` 데이터베이스에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 실행합니다.
     
 ```sql    
@@ -381,7 +381,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>2\. 현재 데이터베이스 검사 후 정보 메시지를 표시하지 않음    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>B. 현재 데이터베이스 검사 후 정보 메시지를 표시하지 않음    
 다음 예에서는 현재 데이터베이스를 검사하되 모든 정보 메시지를 표시하지 않습니다.
     
 ```sql    

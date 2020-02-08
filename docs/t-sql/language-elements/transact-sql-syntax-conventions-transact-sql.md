@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981906"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "73981906"
 |_기울임꼴_|사용자가 제공하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 매개 변수입니다.|  
 |**굵게**|데이터베이스 이름, 테이블 이름, 열 이름, 인덱스 이름, 저장 프로시저, 유틸리티, 데이터 형식 이름 및 텍스트를 표시된 대로 정확히 입력합니다.|  
 |밑줄|밑줄 친 값이 포함된 절이 문에 지정되지 않을 때 적용되는 기본값을 나타냅니다.|  
-|&#124;(세로 막대)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 사용할 수 있습니다.|  
+|&#124; (세로줄)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 사용할 수 있습니다.|  
 |`[ ]`(대괄호)|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |{}(중괄호)|필수 구문 항목입니다. 중괄호는 입력하지 않습니다.|  
 |[ **,** ..._n_]|앞의 항목이 _n_ 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
@@ -84,7 +84,7 @@ _object\_name_
   
 중간 노드를 생략하려면 마침표를 사용해 이 위치를 표시하십시오. 다음 표에서는 개체 이름의 유효한 형식을 보여 줍니다.  
   
-|개체 참조 형식|설명|  
+|개체 참조 형식|Description|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|네 부분으로 이루어진 이름입니다.|  
 |_server_._database_.._object_|스키마 이름이 생략됩니다.|  

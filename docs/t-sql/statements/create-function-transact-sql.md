@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982790"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73982790"
 > [!NOTE]  
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE FUNCTION(SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md)을 참조하세요.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -346,15 +346,15 @@ RETURNS return_data_type
  만든 함수 이름에서 참조할 어셈블리 및 메서드를 지정합니다.  
   
 -   *assembly_name* - 다음의 `name` 열에 있는 값과 일치해야 합니다.   
-    `SELECT * FROM sys.assemblies;`을 참조하세요.  
+    `SELECT * FROM sys.assemblies;`입니다.  
     이 이름은 `CREATE ASSEMBLY` 문에 사용된 이름입니다.  
   
 -   *class_name* - 다음의 `assembly_name` 열에 있는 값과 일치해야 합니다.  
-    `SELECT * FROM sys.assembly_modules;`을 참조하세요.  
+    `SELECT * FROM sys.assembly_modules;`입니다.  
     흔히 이 값은 마침표 또는 점을 포함합니다. 이러한 경우 Transact-SQL 구문에서는 값을 대괄호 쌍 []이나 큰따옴표 쌍 ""으로 묶어야 합니다.  
   
 -   *method_name* - 다음의 `method_name` 열에 있는 값과 일치해야 합니다.   
-    `SELECT * FROM sys.assembly_modules;`을 참조하세요.  
+    `SELECT * FROM sys.assembly_modules;`입니다.  
     메서드는 정적이어야 합니다.  
   
 일반적인 예에서 모든 형식이 MyFood 네임스페이스에 있는 MyFood.DLL의 경우 `EXTERNAL NAME` 값은 다음과 같을 수 있습니다.   
@@ -531,7 +531,7 @@ INLINE = { ON | OFF }
  ALLOW_PAGE_LOCKS = { **ON** | OFF }  
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
 `SCHEMABINDING` 절을 사용하여 사용자 정의 함수를 만들지 않은 경우 기본 개체에 대한 변경 내용이 함수의 정의에 영향을 주어 함수가 호출될 때 예기치 않은 결과를 초래할 수 있습니다. 기본 개체에 대한 변경으로 인해 함수가 최신 상태를 유지하지 못하게 되는 일이 발생하지 않도록 다음 메서드 중 하나를 구현하는 것이 좋습니다.  
   
 -   함수를 만들 때 `WITH SCHEMABINDING` 절을 지정합니다. 이렇게 하면 함수도 수정되지 않는 한 함수 정의에서 참조된 개체를 수정할 수 없습니다.  
@@ -581,7 +581,7 @@ INLINE = { ON | OFF }
 ### <a name="computed-column-interoperability"></a>계산된 열 상호 운용성  
  함수는 다음 속성을 가집니다. 이러한 속성의 값은 지속 또는 인덱싱할 수 있는 계산 열에 함수를 사용할 수 있는지 여부를 결정합니다.  
   
-|속성|설명|참고|  
+|속성|Description|메모|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|함수가 결정적 또는 비결정적입니다.|결정적 함수에서는 로컬 데이터 액세스가 허용됩니다. 예를 들어 동일한 데이터베이스 상태에서 특정 입력 값 집합을 사용하여 호출할 때 항상 동일한 결과를 반환하는 함수는 결정적인 함수입니다.|  
 |**IsPrecise**|함수는 정확하거나 정확하지 않습니다.|정확하지 않은 함수에는 부동 소수점 연산과 같은 연산이 포함됩니다.|  
@@ -655,22 +655,22 @@ SELECT 쿼리에도 `ORDER BY`를 지정하고 쿼리를 실행해야 `ORDER` �
 ## <a name="metadata"></a>메타데이터  
  다음 표에서는 사용자 정의 함수에 대한 메타데이터를 반환하는 데 사용할 수 있는 시스템 카탈로그 뷰를 나열합니다.  
   
-|시스템 뷰|설명|  
+|시스템 뷰|Description|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|아래 예제 섹션의 예제 E를 참조하세요.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR 사용자 정의 함수에 대한 정보를 표시합니다.|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|사용자 정의 함수에 정의된 매개 변수에 대한 정보를 표시합니다.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|함수에서 참조하는 기본 개체를 표시합니다.|  
   
-## <a name="permissions"></a>Permissions  
- 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수가 사용자 정의 형식을 지정하면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
 
 > [!NOTE]
 > UDF에 대한 자세한 예제 및 성능 고려 사항은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요. 
 
-### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>1\. ISO 주를 계산하는 스칼라 반환 사용자 정의 함수 사용  
+### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. ISO 주를 계산하는 스칼라 반환 사용자 정의 함수 사용  
  다음 예에서는 사용자 정의 함수 `ISOweek`를 만듭니다. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 `SET DATEFIRST 1`을 호출해야 합니다.  
   
  또한 이 예에서는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 사용하여 저장 프로시저가 실행될 수 있는 보안 컨텍스트를 지정하는 방법을 보여 줍니다. 이 예에서 `CALLER` 옵션은 프로시저를 호출하는 사용자의 컨텍스트에서 프로시저를 실행하도록 지정합니다. 지정할 수 있는 다른 옵션은 `SELF`, `OWNER` 및 *user_name*입니다.  
@@ -709,7 +709,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>2\. 인라인 테이블 반환 함수 만들기  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. 인라인 테이블 반환 함수 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 인라인 테이블 값 함수를 반환합니다. `ProductID` 열, `Name` 열, 그리고 대리점에 판매된 각 제품에 대한 대리점별 총 연간 매출의 집계를 `YTD Total` 열로 반환합니다.  
   
 ```sql  
@@ -735,7 +735,7 @@ GO
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-### <a name="c-creating-a-multi-statement-table-valued-function"></a>3\. 다중 문 테이블 반환 함수 만들기  
+### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. 다중 문 테이블 반환 함수 만들기  
  다음 예에서는 AdventureWorks2012 데이터베이스에서 테이블 값 함수 `fn_FindReports(InEmpID)`를 만듭니다. 이 함수에 유효한 직원 ID를 제공하면 해당 직원에게 보고하는 모든 직속 부하 직원 및 관련 부서 직원에 해당하는 테이블이 반환됩니다. 이 함수는 재귀 CTE(공통 테이블 식)를 사용하여 직원의 계층적 목록을 생성합니다. 재귀 CTE에 대한 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
 ```sql  
@@ -783,7 +783,7 @@ FROM dbo.ufn_FindReports(1);
 GO  
 ```  
   
-### <a name="d-creating-a-clr-function"></a>4\. CLR 함수 만들기  
+### <a name="d-creating-a-clr-function"></a>D. CLR 함수 만들기  
  이 예에서는 CLR 함수 `len_s`를 만듭니다. 함수를 만들기 전에 `SurrogateStringFunction.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 이상)  
@@ -810,7 +810,7 @@ GO
   
  CLR 테이블 반환 함수를 만드는 방법에 대한 예는 [CLR 테이블 반환 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)를 참조하세요.  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>5\. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
+### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
   
 ```sql  
 SELECT definition, type   

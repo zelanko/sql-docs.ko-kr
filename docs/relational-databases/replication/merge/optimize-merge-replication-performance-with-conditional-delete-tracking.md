@@ -16,10 +16,10 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321510"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>조건부 삭제 추적으로 병합 복제 성능 최적화

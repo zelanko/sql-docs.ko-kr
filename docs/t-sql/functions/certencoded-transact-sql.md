@@ -18,10 +18,10 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040098"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
@@ -42,7 +42,7 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **CERTENCODED** 및 **CERTPRIVATEKEY**를 함께 사용하여 이진 형태로 인증서의 다른 부분을 반환합니다.
   
 ## <a name="permissions"></a>사용 권한  
@@ -66,7 +66,7 @@ SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
-### <a name="b-copying-a-certificate-to-another-database"></a>2\. 다른 데이터베이스에 인증서 복사  
+### <a name="b-copying-a-certificate-to-another-database"></a>B. 다른 데이터베이스에 인증서 복사  
 조금 더 복잡한 예에서는 `SOURCE_DB` 및 `TARGET_DB`라는 두 데이터베이스를 만듭니다. 그런 다음, `SOURCE_DB`에 인증서를 만들어 `TARGET_DB`에 복사합니다. 마지막으로, `SOURCE_DB`에서 암호화된 데이터가 인증서 사본을 사용하여 `TARGET_DB`에서 해독될 수 있음을 보여 줍니다.
   
 예제 환경을 만들려면 `SOURCE_DB` 및 `TARGET_DB` 데이터베이스를 만들고 각 데이터베이스에 마스터 키를 만듭니다. 그런 다음, `SOURCE_DB`에서 인증서를 만듭니다.
@@ -152,10 +152,10 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982665"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "73982665"
   
 -   이전 버전과 호환되는 인터페이스를 통해 스키마가 변경된 기존 테이블을 에뮬레이트할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -158,7 +158,7 @@ OR ALTER
   
  WITH VIEW_METADATA를 사용하여 뷰를 만드는 경우 뷰에 INSTEAD OF INSERT 또는 INSTEAD OF UPDATE 트리거가 있으면 **timestamp** 열을 제외한 모든 열을 업데이트할 수 있습니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 주의를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스에서만 뷰를 만들 수 있습니다. CREATE VIEW는 쿼리 일괄 처리에서 첫째 문이어야 합니다. 최대 1,024개의 열을 뷰에 포함시킬 수 있습니다.  
   
  뷰를 통해 쿼리할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 문에 참조된 모든 데이터베이스 개체가 존재하는지, 문의 컨텍스트 내에서 유효한지, 데이터 변경 문이 데이터 무결성 규칙을 위반하지 않는지 확인합니다. 확인이 실패하면 오류 메시지가 반환됩니다. 성공적으로 확인한 경우 작업이 기본 테이블에 대한 동작으로 변환됩니다.  
@@ -353,7 +353,7 @@ FROM Tn;
 
 이 예에서는 AdventureWorks 2012 또는 AdventureWorksDW 데이터베이스를 사용합니다.  
 
-### <a name="a-using-a-simple-create-view"></a>1\. 간단한 CREATE VIEW 사용  
+### <a name="a-using-a-simple-create-view"></a>A. 간단한 CREATE VIEW 사용  
  다음 예에서는 간단한 `SELECT` 문을 사용하여 뷰를 만듭니다. 간단한 뷰는 열 조합을 자주 쿼리할 때 유용합니다. 이 뷰의 데이터는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 및 `Person.Person` 테이블에 있습니다. 이 데이터는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 직원 이름과 채용 날짜 정보를 제공합니다. 입사일 추적 담당자에게 이 테이블의 모든 데이터에 액세스할 권한을 주지 않아도 해당 뷰를 만들 수 있습니다.  
   
 ```  
@@ -366,7 +366,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>2\. WITH ENCRYPTION 사용  
+### <a name="b-using-with-encryption"></a>B. WITH ENCRYPTION 사용  
  다음 예에서는 `WITH ENCRYPTION` 옵션을 사용하여 계산 열, 이름이 바뀐 열 및 복수 열을 보여 줍니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -464,7 +464,7 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-creating-a-simple-view"></a>F. 간단한 뷰 만들기  
  다음 예는 원본 테이블에서 일부 열만 선택하여 뷰를 만듭니다.  

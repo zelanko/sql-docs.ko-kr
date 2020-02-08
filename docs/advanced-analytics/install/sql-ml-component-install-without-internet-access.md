@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064134"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>인터넷 액세스가 없는 컴퓨터에 SQL Server 기계 학습 R 및 Python 설치
@@ -41,10 +41,10 @@ ms.locfileid: "74064134"
 
 인터넷에 연결된 컴퓨터에서 초기 릴리스에 대한 R 및 Python 기능을 제공하는 CAB 파일을 다운로드하고 SQL Server 2019용 설치 미디어를 다운로드합니다.
 
-릴리스  |다운로드 링크  |
+해제  |다운로드 링크  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
-Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
+Microsoft R 서버      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
 Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
 Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
 
@@ -73,10 +73,10 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 인터넷에 연결된 컴퓨터에서 초기 릴리스에 대한 R 및 Python 기능을 제공하는 CAB 파일을 다운로드하고 SQL Server 2017용 설치 미디어를 다운로드합니다. 
 
-릴리스  |다운로드 링크  |
+해제  |다운로드 링크  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+Microsoft R 서버      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
@@ -100,7 +100,7 @@ SQL Server 2016 데이터베이스 내 분석은 R 전용으로, 각각 제품 �
 
 ### <a name="1---download-2016-cabs"></a>1 - 2016 CAB 다운로드
 
-릴리스  | Microsoft R Open | Microsoft R Server |
+해제  | Microsoft R Open | Microsoft R 서버 |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
@@ -141,7 +141,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 데이터베이스 엔진과 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용하는 것이 좋습니다. 누적 업데이트는 설치 프로그램을 통해 설치됩니다. 
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-1. 기준선 인스턴스를 사용하여 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
+1. 기준선 인스턴스를 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
 
@@ -149,7 +149,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-1. 기준선 인스턴스를 사용하여 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
+1. 기준선 인스턴스를 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
 
@@ -157,7 +157,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1. 기준선 인스턴스를 사용하여 시작합니다. SQL Server 2016 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 SP 2의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
+1. 기준선 인스턴스를 시작합니다. SQL Server 2016 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 SP 2의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
 
