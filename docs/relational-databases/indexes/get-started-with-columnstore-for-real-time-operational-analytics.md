@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908031"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
@@ -28,7 +28,7 @@ ms.locfileid: "72908031"
   
 -   **복잡성.** ETL을 구현하려면 특히 수정된 행만 로드하는 데 상당한 코딩이 필요할 수 있습니다. 따라서 수정된 행을 식별하기가 복잡할 수 있습니다.  
   
--   **비용이 듭니다.** ETL을 구현하려면 추가 하드웨어 및 소프트웨어 라이선스 구매 비용이 듭니다.  
+-   **비용.** ETL을 구현하려면 추가 하드웨어 및 소프트웨어 라이선스 구매 비용이 듭니다.  
   
 -   **데이터 대기 시간.** ETL을 구현하면 분석을 실행하는 데 지연 시간이 추가됩니다. 예를 들어 ETL 작업이 각 업무일 종료 시간에 실행되는 경우 분석 쿼리는 최소한 하루 이전의 데이터에서 실행됩니다. 많은 기업에서 이러한 지연은 허용되지 않습니다. 실시간 데이터 분석에 의존하기 때문입니다. 예를 들어 사기 감지에는 운영 데이터에 대한 실시간 분석이 필요합니다.  
   

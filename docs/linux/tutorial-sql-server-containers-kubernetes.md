@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558353"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포

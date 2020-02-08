@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710461"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase를 사용한 형식 매핑
@@ -33,27 +33,27 @@ PolyBase로 외부 테이블을 만들 때 데이터 형식 및 열 수를 포�
 
 | SQL 데이터 형식 | .NET 데이터 형식            | Hive 데이터 형식 | Hadoop/Java 데이터 형식 | 주석                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
-| TINYINT       | Byte                      | TINYINT        | ByteWritable          | 부호 없는 숫자의 경우만.     |
-| SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
+| tinyint       | Byte                      | tinyint        | ByteWritable          | 부호 없는 숫자의 경우만.     |
+| smallint      | Int16                     | smallint       | ShortWritable         |
 | int           | Int32                     | int            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | 단일                    | FLOAT          | FloatWritable         |
+| bigint        | Int64                     | bigint         | LongWritable          |
+| bit           | 부울                   | boolean        | BooleanWritable       |
+| float         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | float          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
-| SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
-| char          | String<br /><br /> Char[] | string         | Varchar               |
-| varchar       | String<br /><br /> Char[] | string         | Varchar               |
-| BINARY        | Byte[]                    | BINARY         | BytesWritable         | Hive 0.8 이상에 적용됩니다. |
-| varbinary     | Byte[]                    | BINARY         | BytesWritable         | Hive 0.8 이상에 적용됩니다. |
-| 날짜          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| Datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| Time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
-| Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Hive 0.11 이상에 적용됩니다. |
+| smallmoney    | Decimal                   | double         | DoubleWritable        |
+| nchar         | String<br /><br /> Char[] | 문자열         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | 문자열         | Varchar               |
+| char          | String<br /><br /> Char[] | 문자열         | Varchar               |
+| varchar       | String<br /><br /> Char[] | 문자열         | Varchar               |
+| binary        | Byte[]                    | binary         | BytesWritable         | Hive 0.8 이상에 적용됩니다. |
+| varbinary     | Byte[]                    | binary         | BytesWritable         | Hive 0.8 이상에 적용됩니다. |
+| date          | DateTime                  | timestamp      | TimestampWritable     |
+| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
+| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
+| Datetime      | DateTime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
+| decimal       | Decimal                   | decimal        | BigDecimalWritable    | Hive 0.11 이상에 적용됩니다. |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,11 +62,11 @@ PolyBase로 외부 테이블을 만들 때 데이터 형식 및 열 수를 포�
 
 | Oracle 데이터 형식 | SQL Server 형식 | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,13 +93,13 @@ PolyBase로 외부 테이블을 만들 때 데이터 형식 및 열 수를 포�
 
 | BSON 데이터 형식     | SQL Server 형식 |
 | ------------------ | --------------- |
-| Double             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | 이진 데이터        | nvarchar        |
 | 개체 ID입니다.          | nvarchar        |
-| Boolean            | bit             |
-| date               | Datetime2       |
-| 32비트 정수     | 정수             |
+| 부울            | bit             |
+| Date               | Datetime2       |
+| 32비트 정수     | Int             |
 | 타임스탬프          | nvarchar        |
 | 64비트 정수     | BigInt          |
 |10진수 128         | Decimal         | 
@@ -119,7 +119,7 @@ MongoDB는 BSON 문서를 사용하여 데이터 레코드를 저장합니다. �
 
 | Teradata 데이터 형식 | SQL Server 형식 | 
 | -------------      | -------------   |
-|INTEGER             |정수              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
@@ -134,7 +134,7 @@ MongoDB는 BSON 문서를 사용하여 데이터 레코드를 저장합니다. �
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |

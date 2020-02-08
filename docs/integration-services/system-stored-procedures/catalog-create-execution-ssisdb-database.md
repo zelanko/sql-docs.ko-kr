@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295554"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution(SSISDB 데이터베이스)
@@ -73,7 +73,7 @@ Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅�
  실행 인스턴스의 고유 식별자를 반환합니다. *execution_id*는 **bigint**입니다.  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다.  
   
  환경 참조가 *reference_id* 매개 변수로 지정되면 저장 프로시저에서 프로젝트 및 패키지 매개 변수를 리터럴 값 또는 해당 환경 변수에서 참조된 값으로 채웁니다. 환경 참조가 지정되면 패키지를 실행하는 동안 기본 매개 변수 값이 사용됩니다. 특정 실행 인스턴스에 사용되는 값을 정확하게 확인하려면 이 저장 프로시저의 *execution_id* 출력 매개 변수 값을 사용하고 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 뷰를 쿼리합니다.  
@@ -101,7 +101,7 @@ GO
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

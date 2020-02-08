@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957017"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용

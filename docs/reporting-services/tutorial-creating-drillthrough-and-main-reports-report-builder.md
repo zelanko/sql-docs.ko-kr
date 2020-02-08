@@ -126,7 +126,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 7.  **필터 식** 목록을 열고 **All Sales Territory**를 확장한 다음 **North America**, **확인**을 차례로 클릭합니다.  
   
-    이제 쿼리에는 북미의 판매만 포함할 필터가 제공됩니다.  
+    이제 쿼리에는 북아메리카의 판매만 포함할 필터가 제공됩니다.  
   
 8.  측정값 그룹 창에서 Date를 확장한 다음 Calendar Year를 필터 창의 **계층** 열로 끕니다.  
   
@@ -417,7 +417,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 7.  **필터 식** 목록을 열고 **All Sales Territory**를 확장한 다음 **North America**, **확인**을 차례로 클릭합니다.  
   
-    이제 쿼리에는 북미의 판매만 포함할 필터가 제공됩니다.  
+    이제 쿼리에는 북아메리카의 판매만 포함할 필터가 제공됩니다.  
   
 8.  측정값 그룹 창에서 Date를 확장한 다음 Calendar Year를 필터 창의 **계층** 열로 끕니다.  
   

@@ -13,10 +13,10 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8549b5a3a1675353ad0adce42fc63a460f893cae
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905014"
 ---
 # <a name="change-resource-pool-settings"></a>리소스 풀 설정 변경
@@ -35,7 +35,7 @@ ms.locfileid: "72905014"
   
  모든 리소스 풀에 대한 최대 CPU 비율과 최소 CPU 비율의 합은 100을 초과할 수 없습니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  리소스 풀 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ChgRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 설정 변경  

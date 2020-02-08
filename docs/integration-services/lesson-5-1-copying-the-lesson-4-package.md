@@ -11,10 +11,10 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 17a72f7d11a2ed743bbede2852b6336ce808a75d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295926"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>5-1단원: 4단원 패키지 복사

@@ -13,10 +13,10 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92f6384d099a6f29ec43387283a1e52a3e600076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298928"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스

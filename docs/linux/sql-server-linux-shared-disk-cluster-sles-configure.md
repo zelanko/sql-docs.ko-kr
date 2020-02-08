@@ -10,32 +10,32 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032226"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server의 SLES 공유 디스크 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 가이드에서는 SLES(SUSE Linux Enterprise Server)에서 SQL Server에 대해 2노드 공유 디스크 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/)를 토대로 구축된 SUSE [HAE(고가용성 확장)](https://www.suse.com/products/highavailability)를 기준으로 합니다. 
+이 가이드에서는 SLES(SUSE Linux Enterprise Server)에서 SQL Server에 대해 2노드 공유 디스크 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/)를 토대로 빌드된 SUSE [HAE(고가용성 확장)](https://www.suse.com/products/highavailability)를 기반으로 합니다. 
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대한 자세한 내용은 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-다음 엔드투엔드 시나리오를 완료하려면 2노드 클러스터와 다른 서버를 배포하여 NFS 공유를 구성하는 두 대의 컴퓨터가 필요합니다. 아래 단계에서는 이러한 서버를 구성하는 방법을 간략하게 설명합니다.
+다음 종단 간 시나리오를 완료하려면 2노드 클러스터와 다른 서버를 배포하여 NFS 공유를 구성하는 두 대의 컴퓨터가 필요합니다. 아래 단계에서는 이러한 서버를 구성하는 방법을 간략하게 설명합니다.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>각 클러스터 노드에서 운영 체제 설정 및 구성
 
 첫 번째 단계는 클러스터 노드에서 운영 체제를 구성하는 것입니다. 이 연습에서는 HA 추가 기능을 위한 유효한 구독과 함께 SLES를 사용합니다.
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>각 클러스터 노드에 SQL Server 설치 및 구성
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>각 클러스터 노드에서 SQL Server 설치 및 구성
 
-1. 두 노드에 SQL Server를 설치하고 설정합니다. 자세한 지침은 [Linux에서 SQL Server 설치](sql-server-linux-setup.md)를 참조하세요.
-2. 구성의 목적에 따라 노드 하나를 주 노드로 지정하고 다른 노드를 보조 노드로 지정합니다. 이 지침에 따라 이러한 용어를 사용합니다. 
+1. 두 노드에서 모두 SQL Server를 설치하고 설정합니다. 자세한 내용은 [SQL Server on Linux 설치](sql-server-linux-setup.md)를 참조하세요.
+2. 구성의 목적을 위해 노드 하나를 주 노드로 지정하고 다른 노드를 보조 노드로 지정합니다. 이 용어는 가이드 전체에서 사용됩니다. 
 3. 보조 노드에서 SQL Server를 중지하고 사용하지 않도록 설정합니다. 다음 예제에서는 SQL Server를 중지하고 사용하지 않도록 설정합니다.
 
     ```bash
@@ -44,8 +44,8 @@ ms.locfileid: "68032226"
     ```
 
     > [!NOTE]
-    > 설정 시에 SQL Server 인스턴스에 대해 서버 마스터 키가 생성되고 `/var/opt/mssql/secrets/machine-key`에 배치됩니다. Linux에서 SQL Server는 항상 mssql이라는 로컬 계정으로 실행됩니다. 이 계정은 로컬 계정이므로 해당 ID가 노드 간에 공유되지 않습니다. 따라서 각 로컬 mssql 계정이 서버 마스터 키의 암호를 해독하기 위해 액세스할 수 있도록 주 노드에서 각 보조 노드로 암호화 키를 복사해야 합니다.
-4. 주 노드에서 Pacemaker에 대한 SQL server 로그인을 만들고 `sp_server_diagnostics`를 실행하기 위한 로그인 권한을 부여합니다. Pacemaker는 이 계정을 사용하여 SQL Server를 실행 중인 노드를 확인합니다.
+    > 설정 시 SQL Server 인스턴스의 서버 마스터 키가 생성되어 `/var/opt/mssql/secrets/machine-key`에 저장됩니다. Linux에서 SQL Server는 항상 mssql이라는 로컬 계정으로 실행됩니다. 이 계정은 로컬 계정이므로 해당 ID가 노드 간에 공유되지 않습니다. 따라서 각 로컬 mssql 계정이 서버 마스터 키의 암호 해독을 위해 액세스할 수 있도록 주 노드에서 각 보조 노드로 암호화 키를 복사해야 합니다.
+4. 주 노드에서 Pacemaker용 SQL Server 로그인을 만들고 `sp_server_diagnostics` 실행 권한을 로그인에 부여합니다. Pacemaker는 이 계정을 사용하여 SQL Server를 실행 중인 노드를 확인합니다.
 
     ```bash
     sudo systemctl start mssql-server
@@ -67,9 +67,9 @@ ms.locfileid: "68032226"
     sudo ip addr show
     ```
 
-    각 노드에서 컴퓨터 이름을 설정합니다. 각 노드에 15자 이하의 고유 이름을 지정합니다. [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)를 사용하거나 [수동으로](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html) `/etc/hostname`에 추가하여 컴퓨터 이름을 설정합니다.
+    각 노드에서 컴퓨터 이름을 설정합니다. 각 노드에 15자 이하의 고유 이름을 지정합니다. [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)를 사용하거나 [수동으로](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)`/etc/hostname`에 추가하여 컴퓨터 이름을 설정합니다.
 
-    다음 예제에서는 `SLES1` 및 `SLES2`라는 두 노드를 추가하여 `/etc/hosts`를 보여 줍니다.
+    다음 예제에서는 `SLES1` 및 `SLES2`라는 두 노드의 정보가 추가된 `/etc/hosts`를 보여 줍니다.
 
     ```
     127.0.0.1   localhost
@@ -93,7 +93,7 @@ ms.locfileid: "68032226"
 
 - [NFS를 사용하여 파일 시스템 공유](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
-이 지침을 따르지 않으면 네트워크에 액세스하고 SQL 노드의 IP 주소를 스푸핑할 수 있는 누구든지 사용자의 데이터 파일에 액세스할 수 있습니다. 항상 그런 것처럼 프로덕션 환경에서 사용하기 전에 시스템에 대해 위협 모델링을 수행해야 합니다. 
+이 지침을 따르지 않으면 네트워크에 액세스하고 SQL 노드의 IP 주소를 스푸핑할 수 있는 누구든지 사용자의 데이터 파일에 액세스할 수 있습니다. 언제나와 마찬가지로, 프로덕션 환경에서 사용하기 전에 시스템의 위협을 모델링해야 합니다. 
 
 또 다른 스토리지 옵션은 다음과 같이 SMB 파일 공유를 사용하는 것입니다.
 
@@ -103,7 +103,7 @@ ms.locfileid: "68032226"
 
 NFS 서버를 구성하려면 SUSE 설명서에서 다음 단계를 참조하세요. [NFS 서버 구성](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
-### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>NFS 공유 스토리지에 연결하도록 모든 클러스터 노드 구성
+### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>NFS 공유 스토리지에 연결하도록 모든 클러스터 노드를 구성합니다.
 
 공유 스토리지 위치를 가리키는 SQL Server 데이터베이스 파일 경로를 탑재하도록 클라이언트 NFS를 구성하기 전에, 데이터베이스 파일을 나중에 공유에 복사할 수 있도록 임시 위치에 저장해야 합니다.
 
@@ -124,7 +124,7 @@ NFS 서버를 구성하려면 SUSE 설명서에서 다음 단계를 참조하세
     > [!NOTE]
     > 고가용성 NFS 스토리지와 관련해서 SUSE의 모범 사례 및 다음 권장 사항을 따르는 것이 좋습니다. [DRBD 및 Pacemaker를 사용하는 고가용성 NFS 스토리지](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
-2. SQL Server가 새 파일 경로를 사용하여 시작되는지 확인합니다. 각 노드에서 이러한 확인 작업을 수행합니다. 이때 한 번에 하나의 노드만 SQL Server를 실행해야 합니다. 두 노드 모두 데이터 파일에 동시에 액세스하려고 하므로 동시에 실행할 수 없습니다(두 노드에서 실수로 SQL Server를 시작하지 않도록 하려면 파일 시스템 클러스터 리소스를 사용하여 해당 노드가 다른 노드에서 두 번 탑재되지 않도록 확인). 다음 명령은 SQL Server를 시작하고, 상태를 확인하고, SQL Server를 중지합니다.
+2. SQL Server가 새 파일 경로를 사용하여 성공적으로 시작되는지 확인합니다. 각 노드에서 이 작업을 수행합니다. 이때 한 번에 하나의 노드에서만 SQL Server를 실행해야 합니다. 두 노드 모두 데이터 파일에 동시에 액세스하려고 하므로 동시에 실행할 수 없습니다. 우연히 두 노드에서 모두 SQL Server를 시작하는 경우를 방지하려면 파일 시스템 클러스터 리소스를 사용하여 각기 다른 노드에서 공유가 두 번 탑재되지 않도록 합니다. 다음 명령은 SQL Server를 시작하고 상태를 확인한 다음, SQL Server를 중지합니다.
 
     ```bash
     sudo systemctl start mssql-server
@@ -132,7 +132,7 @@ NFS 서버를 구성하려면 SUSE 설명서에서 다음 단계를 참조하세
     sudo systemctl stop mssql-server
     ```
 
-이때 SQL Server의 두 인스턴스는 모두 공유 스토리지의 데이터베이스 파일을 사용하여 실행되도록 구성됩니다. 다음 단계는 Pacemaker에 맞게 SQL Server를 구성하는 것입니다. 
+이때 SQL Server의 두 인스턴스는 모두 공유 스토리지의 데이터베이스 파일을 사용하여 실행되도록 구성되어 있습니다. 다음 단계는 Pacemaker에 대해 SQL Server를 구성하는 것입니다. 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>각 클러스터 노드에 Pacemaker 설치 및 구성
 
@@ -198,7 +198,7 @@ NFS 서버를 구성하려면 SUSE 설명서에서 다음 단계를 참조하세
 - **SQL Server 리소스 이름**: 클러스터형 SQL Server 리소스의 이름입니다. 
 - **제한 시간 값**: 제한 시간 값은 리소스가 온라인 상태가 되는 동안 클러스터가 대기하는 시간입니다. SQL Server의 경우에는 SQL Server에서 `master` 데이터베이스를 온라인 상태로 전환하는 데 필요한 시간입니다. 
 
-작업 환경에서는 다음 스크립트의 값을 업데이트합니다. 한 노드에서를 실행하여 클러스터형 서비스를 구성하고 시작합니다.
+다음 스크립트의 값을 환경에 맞게 업데이트합니다. 한 노드에서 실행하여 클러스터형 서비스를 구성하고 시작합니다.
 
 ```bash
 sudo crm configure
@@ -249,7 +249,7 @@ Full list of resources:
 
 클러스터 리소스를 관리하려면 다음 SUSE 항목을 참조하세요. [클러스터 리소스 관리](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>수동 장애 조치(manual failover)
+### <a name="manual-failover"></a>수동 장애 조치(failover)
 
 리소스는 하드웨어 또는 소프트웨어 장애가 발생할 경우 클러스터의 다른 노드로 자동 장애 조치(failover) 또는 마이그레이션하도록 구성되지만, Pacemaker GUI 또는 명령줄을 사용하여 리소스를 클러스터의 다른 노드로 수동으로 이동할 수도 있습니다. 
 

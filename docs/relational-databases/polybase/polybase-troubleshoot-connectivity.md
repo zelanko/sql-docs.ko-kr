@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909147"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
@@ -100,7 +100,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 ## <a name="arguments"></a>인수
 
-| 인수 | 설명|
+| 인수 | Description|
 | --- | --- |
 | Name Node Address  | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
 | Name Node Port  | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
@@ -232,7 +232,7 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 Kerberos HDFS 데이터에 액세스할 수 있는지 확인합니다. 다음 작업 중 하나를 수행할 수 있습니다. 
 
     - 고유한 Java 프로그램을 작성하거나
-    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 예를 들어
+    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 다음은 그 예입니다.
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
@@ -249,7 +249,7 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 
 4. KDC에서 AES256을 지원할 수 있는 경우 [JCE 정책 파일](http://www.oracle.com/technetwork/java/javase/downloads/index.html)을 설치했는지 확인합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)(Active Directory 인증을 사용하여 PolyBase와 Cloudera 통합)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)(CDH의 Kerberos 설정에 대한 Cloudera 가이드)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)(HDP의 Kerberos 설정에 대한 Hortonworks 가이드)  

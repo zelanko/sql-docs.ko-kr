@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63fdc82f3ecfe2dec42bbc760883e7ccca599f81
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281424"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
@@ -28,13 +28,13 @@ Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용하여
 
 시작하기 전에 Visual Studio 또는 Visual Studio Code가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)에서 Visual Studio Community Edition 버전 평가판 또는 Visual Studio Code 평가판을 다운로드합니다.
 
-Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
+Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database에서 연결 정보 가져오기
 
 Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.

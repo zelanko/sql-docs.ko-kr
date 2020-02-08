@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72586770"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
@@ -41,7 +41,7 @@ ms.locfileid: "72586770"
 - 클러스터 세부 정보(기존):
   - 이름: `Cluster`
   - 네트워크 이름: `Cluster Network 1`
-  - 노드: `SQLNODE1, SQLNODE2`
+  - 노드(전체): `SQLNODE1, SQLNODE2`
   - 공유 스토리지: `Cluster Disk 3`(`SQLNODE1` 소유)
 - 클러스터 세부 정보(만들 예정):
   - 네트워크 이름 리소스: `DTCnet1`
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7.   가용성 그룹 만들기
-**CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 만들어야 합니다.  현재는 기존 가용성 그룹을 변경할 수 없습니다.  새 가용성 그룹 마법사에서는 새 가용성 그룹에 대한 DTC를 지원할 수 없습니다.  다음 스크립트에서는 새 가용성 그룹을 만들고 보조를 조인합니다.  `SQLNODE1` 에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+**CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 만들어야 합니다.  현재는 기존 가용성 그룹을 변경할 수 없습니다.  새 가용성 그룹 마법사에서는 새 가용성 그룹에 대한 DTC를 지원할 수 없습니다.  다음 스크립트에서는 새 가용성 그룹을 만들고 보조를 조인합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************

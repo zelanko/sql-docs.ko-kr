@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713276"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
@@ -39,7 +39,7 @@ ms.locfileid: "71713276"
 
 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않은 경우에도 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]는 가용성 그룹의 데이터베이스에 대한 분산 트랜잭션을 방지하지 않습니다. 그러나 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않으면 일부 상황에서 장애 조치가 실패할 수 있습니다. 특히 새 주 복제본 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스는 DTC에서 트랜잭션 결과를 가져올 수 없습니다. 장애 조치 후 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스가 DTC에서 미결 트랜잭션의 결과를 얻도록 하려면 분산 트랜잭션에 대한 가용성 그룹을 구성합니다. 
 
-DTC는 데이터베이스가 장애 조치(failover) 클러스터의 멤버이기도 한 경우를 제외하고 가용성 그룹 처리에 포함되지 않습니다. 가용성 그룹 내에서 복제본 간의 일관성은 가용성 그룹 논리를 통해 유지 관리됩니다. 보조 복제본이 영구 저장소에 로그 레코드를 유지했음을 확인해야 주 복제본이 커밋을 완료하고 호출자에게 커밋을 확인합니다. 그런 후에만 주 복제본이 트랜잭션 완료를 선언합니다. 비동기 모드에서는 보조 복제본의 승인을 기다리지 않으며, 명시적으로 소량의 데이터가 손실될 가능성이 있습니다.
+DTC는 데이터베이스가 장애 조치(failover) 클러스터의 멤버이기도 한 경우를 제외하고 가용성 그룹 처리에 포함되지 않습니다. 가용성 그룹 내에서 복제본 간의 일관성은 가용성 그룹 논리를 통해 유지 관리됩니다. 보조 복제본이 영구 스토리지에 로그 레코드를 유지했음을 확인해야 주 복제본이 커밋을 완료하고 호출자에게 커밋을 확인합니다. 그런 후에만 주 복제본이 트랜잭션 완료를 선언합니다. 비동기 모드에서는 보조 복제본의 승인을 기다리지 않으며, 명시적으로 소량의 데이터가 손실될 가능성이 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -195,7 +195,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](https://technet.microsoft.com/library/cc754134.aspx)을 참조하세요.
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 
 [분산 트랜잭션](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

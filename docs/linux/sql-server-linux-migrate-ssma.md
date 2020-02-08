@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558424"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>SSMA(SQL Server Migration Assistant)를 사용하여 Linux로의 데이터베이스 마이그레이션 자동화

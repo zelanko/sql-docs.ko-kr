@@ -24,10 +24,10 @@ ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165933"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트

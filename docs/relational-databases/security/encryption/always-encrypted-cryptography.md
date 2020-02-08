@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594401"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 암호화
@@ -31,7 +31,7 @@ ms.locfileid: "73594401"
   
  CEK(열 암호화 키)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하는 데 사용되는 키)입니다.  
   
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. Microsoft CNG(Cryptography API: Next Generation)를 .NET Framework([SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx))에서 지원하는 키 저장소 공급자는 RFC 8017의 섹션 A.2.1에 지정된 기본 매개 변수를 사용합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다. 다른 모든 키 저장소 공급자는 SHA-256을 사용합니다. 
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. Microsoft CNG(Cryptography API: Next Generation)를 .NET Framework([SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx))에서 지원하는 키 저장소 공급자는 RFC 8017의 섹션 A.2.1에 지정된 기본 매개 변수를 사용합니다. 이러한 기본 매개 변수는 SHA-1의 해시 함수와 SHA-1이 포함된 MGF1의 마스크 생성 함수를 사용합니다. 다른 모든 키 저장소 공급자는 SHA-256을 사용합니다. 
   
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
@@ -92,14 +92,14 @@ enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorit
 MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)  
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 위치:  
   
 ```  
 versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>4단계: Concatenation  
+### <a name="step-4-concatenation"></a>4단계: 연결  
  마지막으로, 알고리즘 버전 바이트, MAC, IV 및 AES_256_CBC 암호 텍스트를 연결하여 암호화된 값이 생성됩니다.  
   
 ```  
@@ -129,7 +129,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 -   4바이트 길이 **int** 일반 텍스트 값은 암호화 후 65바이트 길이의 이진 값이 됩니다.  
   
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  이 문서에서 설명된 알고리즘에 대한 자세한 내용은 [.NET 참조](https://referencesource.microsoft.com/)에서 **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** 및 **SqlColumnEncryptionCertificateStoreProvider.cs** 파일을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- - [항상 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

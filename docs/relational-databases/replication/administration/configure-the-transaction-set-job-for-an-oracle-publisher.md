@@ -17,10 +17,10 @@ ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f25f3d9c9a69d3a8f87e8a4eb1886f31092940f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322058"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>Oracle 게시자에 대한 트랜잭션 집합 작업 구성

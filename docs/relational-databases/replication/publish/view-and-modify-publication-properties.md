@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff07e2eaa15b76fe45a3f3ef7128a47e9415a4d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 852363b7106d6f4a6b4fb359a14410dd8cb09a99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908055"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287510"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

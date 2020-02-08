@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75755844"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle을 사용하면 SSIS 패키지에서 Oracle 데이터 원본에서 데이터를 내보내거나 이 원본으로 데이터를 로드할 수 있습니다.
+Microsoft Connector for Oracle를 사용하면 SSIS 패키지에서 Oracle 데이터 원본에서 데이터를 내보내거나 이 원본으로 데이터를 로드할 수 있습니다.
 
 ## <a name="version-support"></a>버전 지원
 

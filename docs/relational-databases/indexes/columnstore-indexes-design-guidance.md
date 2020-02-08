@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009438"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
@@ -125,7 +125,7 @@ columnstore 인덱스는 데이터를 관리하고 보관하는 적합한 방법
 
 데이터 크기가 충분히 크지 않은 경우 columnstore 인덱스는 rowstore 인덱스에 사용할 수 있는 것보다 더 적은 파티션으로 최상의 성능을 얻을 수 있습니다. 파티션당 백만 개 이상의 행이 있지 않으면 대부분의 행이 columnstore 압축의 성능 혜택을 받지 못하는 deltastore로 이동할 수 있습니다. 예를 들어 10개의 파티션이 있는 테이블에 100만 개 행을 로드하고 각 파티션에서 100, 000개 행을 받으면 모든 행이 델타 행 그룹으로 이동합니다. 
 
-예:
+예제:
 * 1,000,000개 행을 하나의 파티션 또는 분할되지 않은 테이블에 로드합니다. 1,000,000개 행이 있는 압축된 행 그룹 하나를 받습니다. 높은 데이터 압축 및 빠른 쿼리 성능에 적합합니다.
 * 1,000,000개 행을 10개의 파티션에 균등하게 로드합니다. 각 파티션은 columnstore 압축의 최소 임계값보다 작은 100,000개 행을 받습니다. 결과적으로 columnstore 인덱스에는 각각 100,000개 행이 있는 10개의 델타 행 그룹이 생성됩니다. columnstore에 델타 행 그룹을 적용하는 방법이 있습니다. 그러나 columnstore 인덱스에 행만 있는 경우 압축된 행 그룹이 너무 작아서 최상의 압축 및 쿼리 성능을 제공할 수 없습니다.
 
@@ -168,7 +168,7 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 ## <a name="related-tasks"></a>관련 작업  
 다음은 columnstore 인덱스를 만들고 유지하기 위한 태스크입니다. 
   
-|태스크|참조 항목|참고|  
+|Task|참조 항목|메모|  
 |----------|----------------------|-----------|  
 |테이블을 columnstore로 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 테이블을 클러스터형 columnstore 인덱스로 만들 수 있습니다. 먼저 rowstore 테이블을 만든 다음 이를 columnstore로 변환할 필요가 없습니다.|  
 |columnstore 인덱스가 포함된 메모리 테이블을 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스가 포함된 메모리 최적화 테이블을 만들 수 있습니다. 테이블을 만든 후 ALTER TABLE ADD INDEX 구문을 사용하여 columnstore 인덱스를 추가할 수도 있습니다.|  

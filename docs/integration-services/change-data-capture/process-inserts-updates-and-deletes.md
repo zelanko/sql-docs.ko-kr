@@ -13,10 +13,10 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294606"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 처리
@@ -74,7 +74,7 @@ select
  **다음 항목:** [대상에 변경 내용 적용](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [조건부 분할 변환](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [조건부 분할 변환을 사용하여 데이터 세트 분할](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

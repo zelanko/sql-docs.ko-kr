@@ -19,10 +19,10 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292239"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
@@ -146,7 +146,7 @@ ms.locfileid: "71292239"
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
 |테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -176,7 +176,7 @@ ms.locfileid: "71292239"
  **매개 변수**  
  쿼리 텍스트에 ?를 매개 변수 자리 표시자로 사용하여 매개 변수가 있는 쿼리를 입력한 경우 **쿼리 매개 변수 설정** 대화 상자를 사용하여 쿼리 입력 매개 변수를 패키지 변수에 매핑합니다.  
   
- **Build query**  
+ **쿼리 작성**  
  **쿼리 작성기** 대화 상자를 사용하여 시각적으로 SQL 쿼리를 생성할 수 있습니다.  
   
  **찾아보기**  

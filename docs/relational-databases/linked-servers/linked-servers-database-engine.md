@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165338"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
@@ -64,7 +64,7 @@ ms.locfileid: "74165338"
 ## <a name="linked-server-details"></a>연결된 서버 정보  
  다음 그림은 연결된 서버 구성의 기본 사항을 보여 줍니다.  
   
- ![클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층](../../relational-databases/linked-servers/media/lsvr.gif "클라이언트 계층, 서버 계층 및 데이터베이스 서버 계층")  
   
 연결된 서버는 일반적으로 분산 쿼리를 처리하는 데 사용됩니다. 클라이언트 애플리케이션이 연결된 서버를 통해 분산 쿼리를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 명령을 구문 분석하고 OLE DB로 요청을 보냅니다. 행 집합 요청은 공급자에 대해 쿼리를 실행하거나 공급자로부터 기본 테이블을 여는 형식일 수 있습니다.  
 

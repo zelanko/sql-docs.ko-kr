@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064646"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73064646"
 
   새 계약을 만듭니다. 계약은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에 사용되는 메시지 유형을 정의하며 해당 유형의 메시지를 보낼 수 있는 대화 상대도 결정합니다. 각 대화는 계약을 따릅니다. 시작 서비스는 대화가 시작될 때 대화에 대한 계약을 지정합니다. 대상 서비스는 대상 서비스가 받아들이는 대화에 대한 계약을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  이 계약에서 기본 메시지 유형의 메시지를 지원함을 나타냅니다. 기본적으로 모든 데이터베이스에는 DEFAULT라는 메시지 유형이 있습니다. 이 메시지 유형은 유효성 검사 NONE을 사용합니다. 이 절의 컨텍스트에서 DEFAULT는 키워드가 아니므로 식별자로 구분해야 합니다. Microsoft SQL Server에서는 DEFAULT 메시지 유형을 지정하는 DEFAULT 계약도 제공합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  계약에서 메시지 유형의 순서는 중요하지 않습니다. 대상이 첫 번째 메시지를 받으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 상대 중 어느 한 쪽이 언제든지 해당 대화 상대에 허용된 메시지를 보낼 수 있도록 허용합니다. 예를 들어 대화 시작자가 **//Adventure-Works.com/Expenses/SubmitExpense** 메시지 유형을 보낼 수 있는 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 시작자가 대화 중에 **SubmitExpense** 메시지를 얼마든지 보낼 수 있도록 허용합니다.  
   
  계약에서 메시지 유형과 방향은 변경할 수 없습니다. 계약에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  

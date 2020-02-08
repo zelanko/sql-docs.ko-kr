@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903933"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
@@ -34,7 +34,7 @@ ms.locfileid: "72903933"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  리소스 관리자 기본 풀 또는 내부 리소스 풀을 삭제할 수 없습니다. 작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다. 자세한 내용은 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  리소스 풀을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
@@ -68,7 +68,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

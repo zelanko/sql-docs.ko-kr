@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251979"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
@@ -143,7 +143,7 @@ deallocate #hfunctions
  패키지에서 모든 변경을 쿼리하는 래퍼 함수를 호출하는 경우 래퍼 함수는 __CDC_STARTLSN 및 \__CDC_SEQVAL 열도 반환합니다. 이러한 두 열은 각각 결과 집합의 첫 번째 열과 두 번째 열이 됩니다. 또한 래퍼 함수는 이러한 두 열에 따라 결과 집합을 정렬합니다.  
   
 ## <a name="writing-your-own-table-value-function"></a>테이블 반환 함수 직접 작성  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)을 참조하세요.  
   
  다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수는 변경 데이터 캡처 함수를 사용하여 변경 테이블이 내부적으로 사용하는 이진 LSN(로그 시퀀스 번호) 값에 **datetime** 값을 매핑합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
   
@@ -210,13 +210,13 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>변경 데이터의 추가 메타데이터 검색  
  위에 나와 있는 사용자가 만든 테이블 반환 함수는 **__$operation** 열을 사용하지만 **cdc.fn_cdc_get_net_changes_<capture_instance>** 함수는 각 변경 행의 메타데이터 열 4개를 반환합니다. 데이터 흐름에 이러한 값을 사용하려면 테이블 반환 래퍼 함수에서 추가 열로 이러한 값을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블의 업데이트 작업에서 두 개의 서로 다른 행을 수정하면 변경 테이블에는 모두 동일한 **__$start_lsn** 값이 있는 4개의 행(이전 값과 새 값 두 개씩 포함)이 포함됩니다.|  
 |**__$seqval**|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
 |**__$operation**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
 |**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다. 변경된 열을 확인해야 하는 경우 이 값을 검토할 수 있습니다.|  
-|**\<captured source table columns>**|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
+|**\<captured source table columns>**|다름|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
   
  자세한 내용은 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)를 참조하세요.  
   

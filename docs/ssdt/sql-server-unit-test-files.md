@@ -1,23 +1,24 @@
 ---
-title: SQL Server 단위 테스트 파일 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트 파일
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110659"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256332"
 ---
 # <a name="sql-server-unit-test-files"></a>SQL Server 단위 테스트 파일
+
 SQL Server 단위 테스트는 관리 코드에 대한 단위 테스트와 마찬가지로 테스트 프로젝트에 있습니다. **솔루션 탐색기**의 테스트 프로젝트 계층 구조에서 SQL Server 단위 테스트를 구성하는 항목을 볼 수 있습니다.  
   
 SQL Server 단위 테스트는 몇 개의 파일에 포함된 여러 항목으로 구성됩니다. 다음 표에서는 SQL Server 단위 테스트를 구성하기 위해 상호 작용하는 파일에 대해 설명합니다.  

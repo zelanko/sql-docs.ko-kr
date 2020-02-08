@@ -16,10 +16,10 @@ ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 132a9d08f41d29ef5b11404d7b662122abdc8516
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909384"
 ---
 # <a name="rename-views"></a>뷰 이름 바꾸기
@@ -31,7 +31,7 @@ ms.locfileid: "72909384"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "72909384"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  뷰의 모든 종속성 목록을 가져옵니다. 뷰를 참조하는 모든 개체, 스크립트 또는 애플리케이션은 새 뷰 이름을 반영하도록 수정되어야 합니다. 자세한 내용은 [Get Information About a View](../../relational-databases/views/get-information-about-a-view.md)를 참조하세요. 뷰 이름을 바꾸는 것보다 뷰를 삭제하고 새로운 이름으로 다시 만드는 것이 좋습니다. 뷰를 다시 만들면 뷰에 참조된 개체에 대한 종속성 정보가 업데이트됩니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  SCHEMA에 대한 ALTER 권한, OBJECT에 대한 CONTROL 권한 및 데이터베이스의 CREATE VIEW 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

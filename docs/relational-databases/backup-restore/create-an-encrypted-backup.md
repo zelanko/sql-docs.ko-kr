@@ -11,10 +11,10 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70280814"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기

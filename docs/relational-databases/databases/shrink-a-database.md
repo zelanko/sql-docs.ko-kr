@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909620"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
@@ -76,7 +76,7 @@ ms.locfileid: "72909620"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -89,7 +89,7 @@ ms.locfileid: "72909620"
   
 3.  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
   
-     **데이터베이스 백업**  
+     **Database**  
      선택한 데이터베이스의 이름을 표시합니다.  
   
      **현재 할당된 공간**  

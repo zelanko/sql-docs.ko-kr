@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6172f4e209c1c8d7ecb5768494f2c5fea0497d83
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770458"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288464"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>메시지 정보  
@@ -62,7 +62,7 @@ ms.locfileid: "68770458"
   
 -   에이전트가 토폴로지의 한 컴퓨터에 로그인할 수 없는 경우  
   
-     **-LoginTimeOut** 값을 복제 에이전트 점검 작업이 실행되는 간격보다 작게 설정하는 것이 좋습니다. 경우에 따라서는 로그인 제한 시간을 초과하게 하는 네트워크 문제 때문에 **-LoginTimeOut** 의 값이 높게 설정될 수 있습니다. **-LoginTimeOut** 이 작게 설정되면 복제에서 더 구체적인 오류를 보고할 수 있으므로 권한, 네트워크 문제 또는 다른 문제로 인해 일어날 수 있는 로그인 문제를 해결하는 데 도움이 됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     **-LoginTimeOut** 값을 복제 에이전트 점검 작업이 실행되는 간격보다 작게 설정하는 것이 좋습니다. 경우에 따라서는 로그인 제한 시간을 초과하게 하는 네트워크 문제 때문에 **-LoginTimeOut** 의 값이 높게 설정될 수 있습니다. **-LoginTimeOut** 이 작게 설정되면 복제에서 더 구체적인 오류를 보고할 수 있으므로 권한, 네트워크 문제 또는 다른 문제로 인해 일어날 수 있는 로그인 문제를 해결하는 데 도움이 됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -73,9 +73,9 @@ ms.locfileid: "68770458"
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

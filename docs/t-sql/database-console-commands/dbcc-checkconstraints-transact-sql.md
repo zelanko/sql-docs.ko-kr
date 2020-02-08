@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982404"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982404"
 
 현재 데이터베이스의 지정한 테이블에서 특정 제약 조건이나 모든 제약 조건의 무결성을 확인합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  검사할 테이블이나 제약 조건입니다. *table_name* 또는 *table_id*를 지정하면 해당 테이블에 설정된 모든 제약 조건을 검사합니다. *constraint_name* 또는 *constraint_id*를 지정하면 해당 제약 조건만 검사합니다. 테이블 식별자도 제약 조건 식별자도 지정하지 않으면 현재 데이터베이스의 모든 테이블에 대해 설정된 모든 제약 조건을 검사합니다.  
  제약 조건 이름은 제약 조건이 속해 있는 테이블을 고유하게 식별합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
- 의 모든 멘션을  
+ WITH  
  지정할 옵션을 설정합니다.  
   
  ALL_CONSTRAINTS  
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC CHECKCONSTRAINTS는 테이블의 모든 FOREIGN KEY 제약 조건 및 CHECK 제약 조건에 대한 쿼리를 생성 및 실행합니다.
   
 예를 들어 외래 키 쿼리의 형식은 다음과 같습니다.
@@ -105,18 +105,18 @@ temporal 일관성 검사만 실행하기 위해 constraint_name 또는 constrai
 ## <a name="result-sets"></a>결과 집합  
 DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |테이블 이름|**varchar**|테이블 이름입니다.|  
 |Constraint Name|**varchar**|위반된 제약 조건의 이름입니다.|  
-|위치|**varchar**|제약 조건을 위반한 행을 식별하는 열 값 할당입니다.<br /><br /> 이 열의 값은 제약 조건을 위반한 행을 쿼리하는 SELECT 문의 WHERE 절에 사용될 수 있습니다.|  
+|Where|**varchar**|제약 조건을 위반한 행을 식별하는 열 값 할당입니다.<br /><br /> 이 열의 값은 제약 조건을 위반한 행을 쿼리하는 SELECT 문의 WHERE 절에 사용될 수 있습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-checking-a-table"></a>1\. 테이블 검사  
+### <a name="a-checking-a-table"></a>A. 테이블 검사  
 다음은 `Table1` 데이터베이스에 있는 `AdventureWorks` 테이블의 제약 조건 무결성을 검사하는 예입니다.
   
 ```sql  
@@ -132,7 +132,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>2\. 특정 제약 조건 검사  
+### <a name="b-checking-a-specific-constraint"></a>B. 특정 제약 조건 검사  
 다음은 `CK_ProductCostHistory_EndDate` 제약 조건의 무결성을 검사하는 예입니다.
   
 ```sql  

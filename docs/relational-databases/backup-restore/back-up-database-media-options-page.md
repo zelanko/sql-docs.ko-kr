@@ -14,10 +14,10 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155555"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
@@ -39,7 +39,7 @@ ms.locfileid: "70155555"
 ## <a name="options"></a>옵션  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
- **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. **BACKUP TO URL. WITH FORMAT** Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+ **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. **BACKUP TO URL. WITH FORMAT** Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [URL에 대한 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
 
  **일반** 페이지에서 **URL**을 백업 대상으로 선택한 경우 **미디어 덮어쓰기** 옵션을 사용할 수 없습니다.
   
@@ -84,7 +84,7 @@ ms.locfileid: "70155555"
 >  트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  **트랜잭션 로그 잘라내기**  
- 트랜잭션 로그를 백업한 다음, 잘라 로그 공간을 확보합니다. 데이터베이스는 온라인 상태로 유지됩니다. 이 옵션이 기본 옵션입니다.  
+ 트랜잭션 로그를 백업한 다음, 잘라 로그 공간을 확보합니다. 데이터베이스는 온라인 상태로 유지됩니다. 기본 옵션입니다.  
   
  **비상 로그 백업을 수행하고 복원 중인 상태로 데이터베이스 유지**  
  비상 로그 백업을 수행하고 데이터베이스를 복원 상태로 둡니다. 이 옵션을 사용하여 일반적으로 데이터베이스 복원 준비 과정에서 백업되지 않은 로그(활성 로그)를 백업하는 *비상 로그 백업*을 만들 수 있습니다. 데이터베이스가 완전히 복원되기 전까지는 데이터베이스를 사용할 수 없습니다.  

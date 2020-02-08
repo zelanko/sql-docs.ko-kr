@@ -13,10 +13,10 @@ ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012345"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access 서버 구성 옵션 구성
@@ -51,7 +51,7 @@ ms.locfileid: "68012345"
  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote access [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **remote access** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 로컬 또는 원격 서버에서 저장 프로시저 실행을 제어할 수 있습니다. 이 옵션의 기본값은 1이며 원격 서버에서 로컬 저장 프로시저를 실행하거나 로컬 서버에서 원격 저장 프로시저를 실행할 권한을 부여합니다. 원격 서버에서 로컬 저장 프로시저를 실행할 수 없거나 로컬 서버에서 원격 저장 프로시저를 실행할 수 없게 하려면 옵션을 0으로 설정합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 대신 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 를 사용하세요.
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)][sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 대신 사용하세요.
   
  **항목 내용**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68012345"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -98,7 +98,7 @@ ms.locfileid: "68012345"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `remote access` 옵션의 값을 `0`으로 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `remote access` 옵션의 값을 `0`(으)로 설정하는 방법을 보여 줍니다.  
   
 ```sql  
 EXEC sp_configure 'remote access', 0 ;  

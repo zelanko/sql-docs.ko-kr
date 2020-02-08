@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71708361"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
@@ -29,9 +29,9 @@ ms.locfileid: "71708361"
 > * 이 데이터를 마스터 인스턴스의 중요 데이터와 조인합니다.
 
 > [!TIP]
-> 원하는 경우 이 자습서의 명령에 대한 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub의 [데이터 가상화 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)을 참조하세요.
+> 원하는 경우 이 자습서의 명령을 위해 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub의 [데이터 가상화 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)을 참조하세요.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **kubectl**

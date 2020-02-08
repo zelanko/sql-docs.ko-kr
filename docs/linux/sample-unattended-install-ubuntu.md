@@ -9,24 +9,24 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910479"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>예제: Ubuntu용 무인 SQL Server 설치 스크립트
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>샘플: Ubuntu용 무인 SQL Server 설치 스크립트
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 샘플 Bash 스크립트는 대화형 입력 없이 Ubuntu 16.04에 SQL Server 2017을 설치합니다. 이 스크립트는 데이터베이스 엔진, SQL Server 명령줄 도구 및 SQL Server 에이전트를 설치하는 예를 제공하고, 설치 후 단계를 수행합니다. 필요에 따라 전체 텍스트 검색을 설치하고 관리자를 만들 수 있습니다.
 
 > [!TIP]
-> 무인 설치 스크립트가 필요하지 않은 경우 SQL Server를 설치하는 가장 빠른 방법은 [용 빠른 시작](quickstart-install-connect-ubuntu.md)을 따르는 것입니다. 다른 설치 정보는 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md)을 참조하세요.
+> 무인 설치 스크립트가 필요하지 않은 경우 SQL Server를 설치하는 가장 빠른 방법은 [용 빠른 시작](quickstart-install-connect-ubuntu.md)을 따르는 것입니다. 다른 설치 정보는 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- Linux에서 SQL Server를 실행하려면 2GB 이상의 메모리가 필요합니다.
+- SQL Server on Linux를 실행하려면 2GB 이상의 메모리가 필요합니다.
 - 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 - 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
@@ -174,7 +174,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>스크립트 이해
-Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설정하는 것입니다. 이러한 변수는 샘플과 같은 스크립팅 변수이거나 환경 변수일 수 있습니다. 변수 `MSSQL_SA_PASSWORD`는 SQL Server 설치에 **필수**이며, 스크립트용으로 생성된 사용자 지정 변수도 있습니다. 샘플 스크립트는 다음 단계를 수행합니다.
+Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설정하는 것입니다. 이 변수는 샘플과 같은 스크립팅 변수이거나 환경 변수일 수 있습니다. `MSSQL_SA_PASSWORD` 변수는 SQL Server 설치에 **필수**이며, 다른 변수는 스크립트용으로 생성된 사용자 지정 변수입니다. 샘플 스크립트는 다음 단계를 수행합니다.
 
 1. 공용 Microsoft GPG 키를 가져옵니다.
 
@@ -196,7 +196,7 @@ Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설�
 
 1. 다른 시스템에서 SQL Server에 연결하는 데 필요한 TCP의 포트 1433을 시스템 방화벽에서 차단 해제합니다.
 
-1. 선택적으로 교착 상태 추적을 위한 추적 플래그를 설정합니다. (줄의 주석 처리를 제거해야 함)
+1. 필요에 따라 교착 상태 추적을 위한 추적 플래그를 설정합니다. (줄의 주석 처리를 제거해야 함)
 
 1. SQL Server가 이제 설치되었습니다. 작동 가능하게 하려면 프로세스를 다시 시작합니다.
 
@@ -223,4 +223,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux의 SQL Server에 대한 자세한 내용은 [Linux의 SQL Server 개요](sql-server-linux-overview.md)를 참조하세요.
+SQL Server on Linux에 대한 자세한 내용은 [SQL Server on Linux 개요](sql-server-linux-overview.md)를 참조하세요.

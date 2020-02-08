@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557878"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>서버 감사 및 데이터베이스 감사 사양 만들기

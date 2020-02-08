@@ -18,10 +18,10 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e0c1b30985bf93ff1b04af85e45bf64e53c75853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293726"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 데이터 판독기 태스크
@@ -80,7 +80,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>WMI 데이터 판독기 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 WMI 데이터 판독기 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|태스크에서 WMI 데이터 읽기를 시작했음을 나타냅니다.|  
 |**WMIDataReaderOperation**|태스크에서 실행한 WQL 쿼리를 보고합니다.|  
@@ -130,7 +130,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySourceType**  
  태스크에서 실행하는 WQL 쿼리의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|WQL 쿼리에 대한 원본을 설정합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySourceType**이 표시됩니다.|  
 |**파일 연결**|WQL 쿼리가 포함된 파일을 선택합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySourceType**이 표시됩니다.|  
@@ -145,7 +145,7 @@ Select * FROM Win32_QuickFixEngineering
  **DestinationType**  
  태스크에서 실행하는 WQL 쿼리의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|WQL 쿼리 결과를 저장할 파일을 선택합니다. 이 값을 선택하면 동적 옵션인 **DestinationType**이 표시됩니다.|  
 |**변수**|WQL 쿼리 결과를 저장할 변수를 설정합니다. 이 값을 선택하면 동적 옵션인 **DestinationType**이 표시됩니다.|  

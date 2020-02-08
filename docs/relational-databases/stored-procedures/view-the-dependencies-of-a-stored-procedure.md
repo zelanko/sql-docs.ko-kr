@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 027373f9ff65d02c6bc2fb49079be3e1eda817bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050908"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
@@ -36,7 +36,7 @@ ms.locfileid: "68050908"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  시스템 함수: **sys.dm_sql_referencing_entities**  
  참조된 엔터티에 대한 CONTROL 권한과 sys.dm_sql_referencing_entities에 대한 SELECT 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   

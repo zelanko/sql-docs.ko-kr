@@ -15,10 +15,10 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278149"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
@@ -43,7 +43,7 @@ exist (XQuery)
  XQuery  
  문자열 리터럴인 XQuery 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]  
 >  **exist()** 메서드는 비어 있지 않은 결과를 반환하는 XQuery 식에 대해 1을 반환합니다. **exist()** 메서드 내에서 **true()** 또는 **false()** 함수를 지정하면 **true()** 및 **false()** 함수가 각각 부울 값인 True와 False를 반환하기 때문에 **exist()** 메서드가 1을 반환합니다. 즉, 이들 함수는 비어 있지 않은 결과를 반환합니다. 따라서 **exist()** 는 다음 예에서와 같이 1(True)을 반환합니다.  
@@ -57,7 +57,7 @@ select @x.exist('true()');
 ## <a name="examples"></a>예  
  다음 예에서는 **exist()** 메서드를 지정하는 방법을 보여 줍니다.  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>예: xml 형식의 변수에 대해 exist() 메서드 지정  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>예제: xml 형식의 변수에 대해 exist() 메서드 지정  
  다음 예에서 @x는 **xml** 형식 변수(형식화되지 않은 xml)이고 @f는 **exist()** 메서드에서 반환한 값을 저장하는 정수 형식 변수입니다. XML 인스턴스에 저장된 날짜 값이 `2002-01-01`이면 **exist()** 메서드가 True(1)를 반환합니다.  
   
 ```  
@@ -90,7 +90,7 @@ SELECT @f;
   
 -   **text()** 메서드는 형식화되지 않은 값 `2002-01-01`을 포함하는 텍스트 노드를 반환합니다. (XQuery 형식은 **xdt:untypedAtomic**입니다.) 이 경우 암시적 캐스트가 지원되지 않으므로 **x**에서 **xsd:date**로 이 형식화된 값을 명시적으로 캐스팅해야 합니다.  
   
-### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>예: 형식화된 xml 변수에 대해 exist() 메서드 지정  
+### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>예제: 형식화된 xml 변수에 대해 exist() 메서드 지정  
  다음 예에서는 **xml** 형식 변수에 대해 **exist()** 메서드를 사용하는 방법을 보여 줍니다. 이 메서드는 스키마 네임스페이스 컬렉션 이름인 `ManuInstructionsSchemaCollection`을 지정하므로 형식화된 XML 변수입니다.  
   
  다음 예에서는 제조 지침 문서를 이 변수에 할당한 다음, **exist()** 메서드를 사용하여 **LocationID** 특성 값이 50인 <`Location`> 요소가 문서에 있는지 확인합니다.  
@@ -110,7 +110,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>예: xml 형식 열에 대해 exist() 메서드 지정  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>예제: xml 형식 열에 대해 exist() 메서드 지정  
  다음 쿼리에서는 카탈로그 설명에 사양 <`Specifications`> 요소가 없는 제품 모델 ID를 검색합니다.  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025492"
 ---
 # <a name="server-properties---connections-page"></a>서버 속성 - 연결 페이지
@@ -34,7 +34,7 @@ ms.locfileid: "68025492"
  **Default connection options**  
  다음 표에서 설명하는 기본 연결 옵션을 지정합니다.  
   
-|구성 옵션|설명|  
+|구성 옵션|Description|  
 |--------------------------|-----------------|  
 |**지연된 제약 조건 검사 비활성화**|중간 또는 지연된 제약 조건 검사를 제어합니다.|  
 |**암시적 트랜잭션**|문 실행 시 트랜잭션을 암시적으로 실행할지 여부를 제어합니다.|  

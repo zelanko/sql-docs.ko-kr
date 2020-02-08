@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255929"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
@@ -675,7 +675,7 @@ deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 �
 
 행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트**라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
 
-![열 세그먼트](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
+![열 세그먼트](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "열 세그먼트") 
  
 columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다.   
 

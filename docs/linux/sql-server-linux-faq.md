@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929909"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server FAQ(질문과 대답)
@@ -28,7 +28,7 @@ ms.locfileid: "72929909"
 
 1. **Linux의 SQL Server가 다른 플랫폼에서 작동하나요?**
 
-   SQL Server는 이전에 나열된 배포판용 Linux에서 테스트되었으며 지원됩니다. 다른 Linux 배포판은 밀접하게 관련되어 있으며 SQL Server를 실행할 수도 있습니다(예: CentOS는 Red Hat Enterprise Server와 밀접하게 관련되어 있음). 그러나 지원되지 않는 운영 체제에 SQL Server를 설치하도록 선택하는 경우 [Microsoft SQL Server 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)의 **지원 정책** 섹션을 검토하여 자세한 지원 정보를 참조하세요. 또한 일부 커뮤니티에서 유지 관리하는 Linux 배포판에는 기본 운영 체제가 문제가 될 경우 지원을 받을 수 있는 공식적인 방법이 없습니다.
+   SQL Server는 앞에 나열된 배포에 대해 Linux에서 테스트되었으며 지원됩니다. 다른 Linux 배포판은 밀접하게 관련되어 있으며 SQL Server를 실행할 수도 있습니다(예: CentOS는 Red Hat Enterprise Server와 밀접하게 관련되어 있음). 그러나 지원되지 않는 운영 체제에 SQL Server를 설치하도록 선택하는 경우 [Microsoft SQL Server 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)의 **지원 정책** 섹션을 검토하여 자세한 지원 정보를 참조하세요. 또한 일부 커뮤니티에서 유지 관리하는 Linux 배포판에는 기본 운영 체제가 문제가 될 경우 지원을 받을 수 있는 공식적인 방법이 없습니다.
 
 1. **Linux의 SQL Server가 Windows의 SQL Server와 동일한가요?**
 
@@ -91,11 +91,11 @@ ms.locfileid: "72929909"
 
 1. **오프라인으로 SQL Server를 설치하기 위한 설치 패키지를 다운로드할 수 있나요?**
 
-   예 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)의 패키지 다운로드 링크를 참조하세요. 또한 [오프라인 설치 지침](sql-server-linux-setup.md#offline)을 검토하세요.
+   예. 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)의 패키지 다운로드 링크를 참조하세요. 또한 [오프라인 설치 지침](sql-server-linux-setup.md#offline)을 검토하세요.
 
 1. **Linux에서 SQL Server 무인 설치를 수행할 수 있나요?**
 
-   예 무인 설치에 대한 설명은 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md#unattended)을 참조하세요. [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 및 [Ubuntu](sample-unattended-install-ubuntu.md)에 대한 샘플 스크립트를 참조하세요. SQL Server 고객 자문 팀에서 만든 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)를 검토할 수도 있습니다.
+   예. 무인 설치에 대한 설명은 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md#unattended)을 참조하세요. [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 및 [Ubuntu](sample-unattended-install-ubuntu.md)에 대한 샘플 스크립트를 참조하세요. SQL Server 고객 자문 팀에서 만든 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)를 검토할 수도 있습니다.
 
 ## <a name="tools"></a>도구
 
@@ -120,7 +120,7 @@ ms.locfileid: "72929909"
    [시스템 DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 사용하여 Linux 프로세스 정보를 비롯한 SQL Server에 대한 다양한 유형의 정보를 수집할 수 있습니다. [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)를 사용하여 쿼리 성능을 향상시킬 수 있습니다. 기본 제공 [성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/) 등의 기타 도구는 Windows의 SSMS(SQL Server Management Studio)에서 원격으로 작동합니다.
 
    > [!TIP]
-   > 성능을 향상시키는 한 가지 방법은 Linux 운영 체제와 SQL Server 인스턴스를 올바르게 구성하는 것입니다. 자세한 내용은 [Linux의 SQL Server에 대한 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
+   > 성능을 향상시키는 한 가지 방법은 Linux 운영 체제와 SQL Server 인스턴스를 올바르게 구성하는 것입니다. 자세한 내용은 [SQL Server on Linux의 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
 
 ## <a name="administration"></a>관리
 
@@ -134,7 +134,7 @@ ms.locfileid: "72929909"
 
 1. **Linux에서 Active Directory 인증이 지원되나요?**
 
-   예 자세한 내용은 [Linux의 SQL Server에 대한 Active Directory 인증](sql-server-linux-active-directory-authentication.md)을 참조하세요.
+   예. 자세한 내용은 [Linux의 SQL Server에 대한 Active Directory 인증](sql-server-linux-active-directory-authentication.md)을 참조하세요.
 
 1. **Linux에서 Always On 및 클러스터링이 지원되나요?**
 
@@ -150,7 +150,7 @@ ms.locfileid: "72929909"
 
 1. **Oracle 및 다른 데이터베이스 엔진에서 Linux의 SQL Server로 데이터를 마이그레이션할 수 있나요?**
 
-   예 SSMA는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE(이전의 SAP Sybase ASE)를 비롯한 여러 유형의 데이터베이스 엔진에서 마이그레이션하도록 지원합니다. SSMA를 사용하는 방법에 대한 예제는 [SQL Server Migration Assistant를 사용하여 Oracle 스키마를 Linux의 SQL Server로 마이그레이션](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)을 참조하세요.
+   예. SSMA는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE(이전의 SAP Sybase ASE)를 비롯한 여러 유형의 데이터베이스 엔진에서 마이그레이션하도록 지원합니다. SSMA를 사용하는 방법에 대한 예제는 [SQL Server Migration Assistant를 사용하여 Oracle 스키마를 Linux의 SQL Server로 마이그레이션](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)을 참조하세요.
 
 1. **SQL Server 파일에는 어떤 사용 권한이 필요한가요?**
 

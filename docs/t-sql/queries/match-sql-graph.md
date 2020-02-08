@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901950"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67901950"
 
   그래프의 검색 조건을 지정합니다. MATCH는 WHERE 절의 일부로 SELECT 문에서 그래프 노드와 에지 테이블과 함께만 사용할 수 있습니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -134,14 +134,14 @@ FROM 절에 제공된 에지 테이블의 이름 또는 별칭입니다.
 * **+** : 패턴을 1번 이상 반복합니다. 최단 경로를 찾는 즉시 종료됩니다.    
 * **{1,n}** : 패턴을 1~‘n’번 반복합니다. 최단 경로를 찾는 즉시 종료됩니다.     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 MATCH 내 노드 이름은 반복이 가능합니다.  즉 노드는 같은 쿼리에서 임의의 횟수 만큼 통과할 수 있습니다.  
 MATCH 내 에지 이름을 반복할 수 없습니다.  
 에지는 어느 방향이든 가리킬 수 있지만 명시적인 방향이어야 합니다.  
 OR 또는 NOT 연산자는 MATCH 패턴에서 지원되지 않습니다. MATCH는 WHERE 절에서 AND를 사용하여 다른 식과 결합할 수 있습니다. 그러나 OR나 NOT을 사용한 다른 식과의 결합은 지원되지 않습니다. 
 
 ## <a name="examples"></a>예  
-### <a name="a--find-a-friend"></a>1\.  친구 찾기 
+### <a name="a--find-a-friend"></a>A.  친구 찾기 
  다음 예에서는 Person 노드 테이블 및 친구 Edge 테이블을 만들고 일부 데이터를 삽입한 다음, MATCH를 사용하여 그래프에 있는 사람인 Alice라는 친구를 찾습니다.
 
  ```
@@ -172,7 +172,7 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>2\.  친구의 친구 찾기
+ ### <a name="b--find-friend-of-a-friend"></a>B.  친구의 친구 찾기
  다음 예제에서는 친구 Alice의 친구를 찾으려 합니다. 
 
  ```
@@ -216,5 +216,5 @@ AND Person1.name = 'Alice';
 
 ## <a name="see-also"></a>참고 항목  
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)  

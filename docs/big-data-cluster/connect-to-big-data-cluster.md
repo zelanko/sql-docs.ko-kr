@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73882398"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용하여 SQL Server 빅 데이터 클러스터에 연결

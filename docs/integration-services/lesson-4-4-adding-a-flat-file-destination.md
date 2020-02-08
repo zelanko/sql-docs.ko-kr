@@ -11,10 +11,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295944"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>4-4단원: 플랫 파일 대상 추가

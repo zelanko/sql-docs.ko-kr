@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e9616620b0d8683d0158bfb76b5145f1bff52054
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2f8529b7fca4782709f8c8981a27e62dae2029a2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258014"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76364113"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -120,6 +120,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |보안|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
 |보안|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
 |보안|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|보안|sp_changedbowner|ALTER AUTHORIZATION|sp_changedbowner|243|
 |보안|sp_changeobjectowner|ALTER SCHEMA 또는 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
 |보안|sp_control_dbmasterkey_password|마스터 키가 있어야 하며 암호가 정확해야 합니다.|sp_control_dbmasterkey_password|274|  
 |보안|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  

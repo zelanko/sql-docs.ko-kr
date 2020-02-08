@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982876"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982876"
 
   보안 개체의 소유권을 변경합니다.    
     
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>구문    
     
@@ -130,7 +130,7 @@ ALTER AUTHORIZATION ON
 |ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |AVAILABILITY GROUP |**적용 대상**: SQL Server 2012 이상|
-|CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|인증서|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
 |DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
 |엔드포인트|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|    
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | 스키마 소유자    
  엔터티를 소유하게 될 보안 주체의 이름입니다. 데이터베이스 보안 주체 즉, 데이터베이스 사용자 또는 역할이 데이터베이스 개체를 소유해야 합니다. 서버 보안 주체(로그인)가 서버 개체(예: 데이터베이스)를 소유해야 합니다. **스키마 소유자**를 *principal_name*으로 지정하여 개체의 스키마를 소유하는 보안 주체가 해당 개체를 소유하도록 표시합니다.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
  ALTER AUTHORIZATION을 사용하면 소유자가 있는 엔터티의 소유권을 변경할 수 있습니다. 데이터베이스 수준 엔터티의 소유권은 데이터베이스 수준의 모든 보안 주체에게 이전할 수 있습니다. 서버 수준 엔터티의 소유권은 서버 수준 보안 주체에게만 이전할 수 있습니다.    
     
 > [!IMPORTANT]    
@@ -229,10 +229,10 @@ ALTER AUTHORIZATION ON
   
 실행기  |대상  |결과    
 ---------|---------|---------  
-SQL Server 인증 로그인     |SQL Server 인증 로그인         |성공  
+SQL Server 인증 로그인     |SQL Server 인증 로그인         |Success  
 SQL Server 인증 로그인     |Azure AD 사용자         |실패           
-Azure AD 사용자     |SQL Server 인증 로그인         |성공           
-Azure AD 사용자     |Azure AD 사용자         |성공           
+Azure AD 사용자     |SQL Server 인증 로그인         |Success           
+Azure AD 사용자     |Azure AD 사용자         |Success           
   
 데이터베이스의 Azure AD 소유자를 확인하려면 사용자 데이터베이스에서(이 예제의 `testdb`에서) 다음의 Transact-SQL 명령을 실행합니다.  
     
@@ -253,18 +253,18 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>최선의 구현 방법  
+### <a name="best-practice"></a>모범 사례  
   
 데이터베이스의 개별 소유자로 Azure AD 사용자를 사용하는 대신 **db_owner** 고정된 데이터베이스 역할의 구성원으로 Azure AD 그룹을 사용합니다. 다음 단계에서는 데이터베이스 소유자로 비활성화된 로그인을 구성하고 Azure Active Directory 그룹(`mydbogroup`)을 **db_owner** 역할의 멤버가 되게 하는 방법을 보여줍니다. 
 1.  Azure AD 관리자로서 SQL Server에 로그인해 데이터베이스의 소유자를 비활성화된 SQL Server 인증 로그인으로 변경합니다. 예를 들어 사용자 데이터베이스에서 다음을 실행 합니다.  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들어  
+2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 다음은 그 예입니다.  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들어  
+3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 다음은 그 예입니다.  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -287,7 +287,7 @@ SELECT IS_MEMBER ('db_owner');
     
 ## <a name="examples"></a>예    
     
-### <a name="a-transfer-ownership-of-a-table"></a>1\. 테이블의 소유권 이전    
+### <a name="a-transfer-ownership-of-a-table"></a>A. 테이블의 소유권 이전    
  다음 예에서는 `Sprockets` 테이블의 소유권을 `MichikoOsada` 사용자에게 이전합니다. 테이블은 `Parts` 스키마 내부에 있습니다.    
     
 ```    
@@ -302,14 +302,14 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들어    
+ 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 다음은 그 예입니다.    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>2\. 뷰 소유권을 스키마 소유자에게 이전    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. 뷰 소유권을 스키마 소유자에게 이전    
  다음 예에서는 `ProductionView06` 뷰의 소유권을 뷰가 포함된 스키마의 소유자에게 이전합니다. 뷰는 `Production` 스키마 내부에 있습니다.    
     
 ```    

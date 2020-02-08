@@ -24,10 +24,10 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298184"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
@@ -93,7 +93,7 @@ ms.locfileid: "71298184"
   
  **OLE DB 대상 편집기** 대화 상자에 표시된 빠른 로드 옵션 외에도 **고급 편집기** 대화 상자의 FastLoadOptions 속성에 옵션을 입력하여 다음과 같은 대량 로드 옵션을 사용하도록 OLE DB 대상을 구성할 수 있습니다.  
   
-|빠른 로드 옵션|설명|  
+|빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값 **>** 형식으로 입력합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
@@ -140,7 +140,7 @@ ms.locfileid: "71298184"
  **데이터 액세스 모드**  
  대상으로 데이터를 로드하는 방법을 지정합니다. DBCS(더블바이트 문자 집합) 데이터는 빠른 로드 옵션 중 하나를 사용하여 로드해야 합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다.|  
 |테이블 또는 뷰 - 빠른 로드|빠른 로드 옵션을 사용하여 OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.|  

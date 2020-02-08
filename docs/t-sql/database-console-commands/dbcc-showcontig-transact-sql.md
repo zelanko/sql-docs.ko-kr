@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039065"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68039065"
 지정한 테이블이나 뷰의 데이터와 인덱스에 대한 조각화 정보를 표시합니다.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)][sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 대신 사용합니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  조각화 정보를 검사할 인덱스입니다. 이 인수를 지정하지 않으면 지정한 테이블이나 뷰의 기본 인덱스를 처리합니다. 인덱스 ID를 가져오려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
- 의 모든 멘션을  
+ WITH  
  DBCC 문에서 반환되는 정보 유형에 대한 옵션을 지정합니다.  
   
  FAST  
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합에 표시되는 정보를 설명합니다.
   
-|통계|설명|  
+|통계|Description|  
 |---|---|
 |**검색한 페이지**|테이블이나 인덱스의 페이지 수입니다.|  
 |**검색한 익스텐트**|테이블이나 인덱스의 익스텐트 수입니다.|  
@@ -110,7 +110,7 @@ DBCC SHOWCONTIG
   
 TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이전 테이블에 설명된 9개의 열도 반환합니다.
   
-|통계|설명|  
+|통계|Description|  
 |---|---|
 |**개체 이름**|처리되는 테이블 또는 뷰의 이름입니다.|  
 |**ObjectId**|개체 이름의 ID입니다.|  
@@ -142,13 +142,13 @@ WITH TABLERESULTS와 FAST를 지정할 때의 결과 집합은 다음 열이 Nul
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 DBCC SHOWCONTIG 문은 *index_id*를 지정했을 때 지정된 인덱스의 리프 수준에서 페이지 체인을 검색하고, *table_id*만 지정하거나 *index_id*가 0인 경우에는 지정한 테이블의 데이터 페이지를 검색합니다. 이 작업에는 내재된 공유(IS) 테이블 잠금만 필요합니다. 이런 방법으로 배타적(X) 테이블 잠금이 필요한 경우를 제외하고 모든 업데이트와 삽입을 수행할 수 있으므로 실행 속도 및 동시성의 유지 그리고 반환되는 통계 데이터 수 사이에서 절충점을 찾을 수 있습니다. 그러나 조각화를 평가하는 데만 이 명령을 사용하는 경우에는 최상의 성능을 얻으려면 WITH FAST 옵션을 사용하는 것이 좋습니다. 고속 검색은 인덱스의 리프 또는 데이터 수준 페이지를 읽지 않습니다. WITH FAST 옵션은 힙에 적용되지 않습니다.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
 DBCC SHOWCONTIG는 **ntext**, **text** 및 **image** 데이터 형식에 데이터를 표시하지 않습니다. 이것은 텍스트와 이미지 데이터를 저장하는 텍스트 인덱스가 더 이상 존재하지 않기 때문입니다.
   
-또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어
+또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 다음은 그 예입니다.
 -   지정된 테이블이나 인덱스가 분할되는 경우 DBCC SHOWCONTIG는 지정된 테이블이나 인덱스의 첫 번째 파티션만 표시합니다.  
 -   DBCC SHOWCONTIG는 행 오버플로 스토리지 정보와 **nvarchar(max)** , **varchar(max)** , **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
 -   공간 인덱스는 DBCC SHOWCONTIG에서 지원되지 않습니다.  
@@ -188,7 +188,7 @@ DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 �
 사용자는 테이블을 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-displaying-fragmentation-information-for-a-table"></a>1\. 테이블의 조각화 정보 표시  
+### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. 테이블의 조각화 정보 표시  
 다음 예에서는 `Employee` 테이블의 조각화 정보를 표시합니다.
   
 ```sql  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2\. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
 다음 예에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Production.Product`테이블에서 `AK_Product_Name` 인덱스의 테이블 ID 및 인덱스 ID를 가져옵니다.
   
 ```sql  

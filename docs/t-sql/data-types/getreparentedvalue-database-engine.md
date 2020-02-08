@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278362"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
@@ -53,12 +53,12 @@ _newRoot_
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 _oldRoot_에서 _newRoot_로 노드를 이동하여 트리를 수정하는 데 사용됩니다. GetReparentedValue는 계층 구조에서 계층 구조 노드를 새 위치로 이동하는 데 사용됩니다. **hierarchyid** 데이터 형식은 계층 구조를 나타내지만 적용하지는 않습니다. 사용자는 hierarchyid가 새 위치에 대해 적절히 구성되어 있는지 확인해야 합니다. **hierarchyid** 데이터 형식의 고유한 인덱스는 중복 항목을 방지하는 데 도움이 될 수 있습니다. 전체 하위 트리를 이동하는 예는 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-comparing-two-node-locations"></a>1\. 두 노드 위치 비교  
+### <a name="a-comparing-two-node-locations"></a>A. 두 노드 위치 비교  
 다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 **\@NewParent** 노드의 하위 항목이 되도록 노드를 이동하는 경우 노드의 **hierarchyid**가 어떻게 달라지는지 보여 줍니다. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
   
 ```sql
@@ -80,7 +80,7 @@ WHERE OrgNode = @SubjectEmployee ;
 GO  
 ```  
   
-### <a name="b-updating-a-node-to-a-new-location"></a>2\. 새 위치로 노드 업데이트  
+### <a name="b-updating-a-node-to-a-new-location"></a>B. 새 위치로 노드 업데이트  
 다음 예에서는 UPDATE 문의 `GetReparentedValue()`를 사용하여 계층에서 노드를 이전 위치에서 새 위치로 이동합니다.
   
 ```sql
@@ -109,7 +109,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 this. GetReparentedValue(oldParent, newParent)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

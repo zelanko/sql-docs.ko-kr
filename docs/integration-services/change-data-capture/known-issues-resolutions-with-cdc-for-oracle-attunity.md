@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713428"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity의 Oracle용 Change Data Capture의 알려진 오류 및 해결 방법
@@ -156,7 +156,7 @@ SQL Server 내의 CDC 데이터베이스에서 추적 테이블을 쿼리하여 
 
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [변경 데이터 작업&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296716"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution(SSISDB 데이터베이스)
@@ -39,7 +39,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  실행이 실패할 경우 다시 시도 횟수입니다. Scale Out에서 실행인 경우에만 적용됩니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 0으로 설정됩니다. *retry_count*는 **int**입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래된 프로젝트를 참조합니다. 이 잘못된 참조로 인해 저장 프로시저가 실패합니다.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ GO
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

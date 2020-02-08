@@ -22,10 +22,10 @@ ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050779"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 서버 보안 주체 사용 권한(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68050779"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 사용 권한을 부여합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -88,7 +88,7 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스가 master인 경우에만 서버 범위의 사용 권한을 부여할 수 있습니다.  
   
  서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-impersonate-permission-on-a-login"></a>1\. 로그인에 IMPERSONATE 권한 부여  
+### <a name="a-granting-impersonate-permission-on-a-login"></a>A. 로그인에 IMPERSONATE 권한 부여  
  다음 예에서는 Windows 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 부여합니다.  
   
 ```  
@@ -118,7 +118,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>2\. GRANT OPTION을 지정하여 VIEW DEFINITION 권한 부여  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. GRANT OPTION을 지정하여 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `RMeyyappan`에 대한 `GRANT OPTION`을 부여합니다.  
   
 ```  

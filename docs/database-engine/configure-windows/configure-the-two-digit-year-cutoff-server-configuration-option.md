@@ -14,10 +14,10 @@ ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012294"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff 서버 구성 옵션 구성
@@ -53,7 +53,7 @@ ms.locfileid: "68012294"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -74,7 +74,7 @@ ms.locfileid: "68012294"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `two digit year cutoff` 옵션의 값을 `2030`으로 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `two digit year cutoff` 옵션의 값을 `2030`(으)로 설정하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

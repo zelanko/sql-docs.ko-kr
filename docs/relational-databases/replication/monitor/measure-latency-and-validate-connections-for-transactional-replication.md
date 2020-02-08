@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321858"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288164"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

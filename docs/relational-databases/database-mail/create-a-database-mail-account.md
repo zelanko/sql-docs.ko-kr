@@ -14,10 +14,10 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211364"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
@@ -32,7 +32,7 @@ ms.locfileid: "70211364"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   전자 메일을 보내는 데 사용할 SMTP(Simple Mail Transfer Protocol) 서버의 이름과 포트 번호를 결정합니다. SMTP 서버에 인증이 필요한 경우 SMTP 서버의 사용자 이름과 암호를 결정합니다.  
   

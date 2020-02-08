@@ -18,10 +18,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09dc970627cb282ed2597c191727b57c173c7bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930638"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf(geography 데이터 형식)
@@ -45,7 +45,7 @@ ms.locfileid: "67930638"
   
 CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 **geography** 인스턴스의 유형이 지정된 유형과 동일하거나 지정된 유형이 인스턴스 유형의 상위 항목이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  

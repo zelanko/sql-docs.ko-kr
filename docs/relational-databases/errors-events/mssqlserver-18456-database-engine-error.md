@@ -12,13 +12,13 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137089"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
@@ -60,7 +60,7 @@ ms.locfileid: "68137089"
 ## <a name="additional-error-information"></a>추가 오류 정보  
 보안 향상을 위해 클라이언트로 반환되는 오류 메시지는 의도적으로 인증 오류의 특성을 숨깁니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 해당 오류에는 인증 실패 조건에 매핑되는 오류 상태가 포함되어 있습니다. 로그인 실패 이유를 확인하려면 오류 상태를 다음 목록과 비교합니다.  
   
-|State|설명|  
+|시스템 상태|Description|  
 |---------|---------------|  
 |1|오류 정보를 사용할 수 없습니다. 일반적으로 이 상태는 오류 정보를 수신할 수 있는 권한이 없음을 의미합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 문의하십시오.|  
 |2|사용자 ID가 잘못되었습니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "68137089"
 ## <a name="examples"></a>예  
 이 예에서 인증 오류 상태는 8이며 암호가 잘못되었음을 나타냅니다.  
   
-|date|원본|메시지|  
+|Date|원본|메시지|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|로그온|오류: 18456, 심각도: 14, 상태: 8.|  
 |2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: <ip address>]|  

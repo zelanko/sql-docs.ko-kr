@@ -14,10 +14,10 @@ ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1559e997270712dd701a1295de4a896a2425642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012297"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout 서버 구성 옵션 구성
@@ -31,7 +31,7 @@ ms.locfileid: "68012297"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "68012297"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   이 값을 설정하려면 먼저 원격 서버 연결이 가능해야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

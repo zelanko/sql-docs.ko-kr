@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574823"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65574823"
  
  *  동일한 보고서에서 **특정 위치에 책갈피를 추가** 할 수 있습니다. 
   
-[자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)에서 샘플 데이터를 사용하여 하이퍼링크를 추가해 보세요.  
+[자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md)를 참조하세요.  

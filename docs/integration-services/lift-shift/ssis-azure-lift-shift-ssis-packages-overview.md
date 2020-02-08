@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896185"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
@@ -75,7 +75,7 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 ### <a name="available-ssis-components"></a>지원되는 SSIS 구성 요소
 
-SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
+SSISDB를 호스트하기 위해 SQL Database의 인스턴스를 프로비전하는 경우 Azure Feature Pack for SSIS 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
 
 추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS Integration Runtime에 대한 사용자 지정 설치](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
@@ -87,11 +87,11 @@ ISV인 경우 사용이 허가된 구성 요소의 설치를 업데이트하여 
 
 온-프레미스 및 Azure 가상 머신의 SQL Server에서는 MSDTC(Microsoft Distributed Transaction Coordinator) 트랜잭션을 사용할 수 있습니다. Azure-SSIS IR의 각 노드에서 MSDTC를 구성하려면 사용자 지정 설정 기능을 사용합니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
-Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다. 자세한 내용은 [클라우드 데이터베이스에 대한 분산 트랜잭션](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview)을 참조하세요.
+Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다. 자세한 내용은 [클라우드 데이터베이스의 분산 트랜잭션](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview)을 참조하세요.
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 
-시작하려면 [자습서를 참조하세요. Azure에서 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)
+시작하려면 [자습서: Azure에서 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)
 
 ### <a name="prerequisites"></a>사전 요구 사항
 

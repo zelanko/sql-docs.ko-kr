@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149931"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
@@ -45,7 +45,7 @@ SQL Server R Services를 사용할 수 있는 예측 유형의 예는 다음과 
 |-|-|
 |분류/범주화|사용자 의견을 긍정 및 부정 범주로 자동으로 구분|
 |회귀/연속 값 예측|크기 및 위치를 기준으로 주택 가격 예측|
-|변칙 검색|사기성 은행 거래 감지 |
+|이상 감지|사기성 은행 거래 감지 |
 |권장 사항|이전 구매에 따라 온라인 쇼핑객이 구매하려고 할 수 있는 제품 제안|
 
 ### <a name="how-to-execute-r-scripts"></a>R 스크립트를 실행하는 방법
@@ -62,7 +62,7 @@ R Services에서 R 스크립트를 실행하는 방법에는 다음 두 가지�
 
 Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 프레임워크를 사용할 수 있습니다. 가장 일반적인 오픈 소스 R 패키지는 R Services에 미리 설치되어 있습니다. Microsoft의 다음 R 패키지도 포함되어 있습니다.
 
-| 패키지 | 설명 |
+| 패키지 | Description |
 |-|-|
 | [RevoScaleR](../r/ref-r-revoscaler.md) | 확장 가능한 R의 기본 패키지입니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 많은 형식의 모델링에 사용됩니다. 또한 이 패키지의 함수는 병렬 처리를 위해 사용 가능한 코어 간에 워크로드를 자동으로 분산합니다. |
 | [MicrosoftML(R)](../r/ref-r-microsoftml.md) | 텍스트 분석, 이미지 분석 및 감정 분석을 위한 사용자 지정 모델을 만들기 위한 기계 학습 알고리즘을 추가합니다. |

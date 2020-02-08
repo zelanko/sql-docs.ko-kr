@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74317938"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted 구성 및 사용 

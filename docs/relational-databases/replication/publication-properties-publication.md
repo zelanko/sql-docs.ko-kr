@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c4d1c2c09c764e1e5102e520ccb2f6152e57ce7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321364"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286585"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 복제 '게시 속성' 대화 상자
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150296"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 개인 정보 제공
@@ -23,7 +23,7 @@ ms.locfileid: "71150296"
 
 이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
 
-- Azure SQL 데이터베이스
+- Azure SQL Database
 - [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SSDT(SQL Server Data Tools)
 - Azure Data Studio
@@ -33,7 +33,7 @@ ms.locfileid: "71150296"
 
 *허용된 사용 시나리오*의 정의입니다. Microsoft는 이 문서의 컨텍스트에서 Microsoft에서 시작된 작업이나 작업으로 "허용된 사용 시나리오"를 정의합니다.
 
-## <a name="access-control"></a>액세스 제어
+## <a name="access-control"></a>Access Control
 
 SQL Server 설치 내에서 로그인, 사용자 또는 계정을 보호하는 데 사용되는 자격 증명 관련 정보입니다.
 

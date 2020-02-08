@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706955"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml(SQL Server의 Python 모듈)
@@ -30,7 +30,7 @@ ms.locfileid: "73706955"
 
 **microsoftml** 모듈은 Python 3.5을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
-+ [SQL Server 컴퓨터 학습 서비스](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [데이터 과학 클라이언트용 Python 클라이언트 라이브러리](setup-python-client-tools-sql.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "73706955"
 
 ## <a name="1-training-functions"></a>1 - 학습 함수
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 모델 앙상블을 학습합니다. |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 임의 포리스트입니다. |
@@ -68,14 +68,14 @@ ms.locfileid: "73706955"
 
 ### <a name="categorical-variable-handling"></a>범주 변수 처리
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 텍스트 열을 범주로 변환합니다. |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 텍스트 열을 해시하고 범주로 변환합니다. |
 
 ### <a name="schema-manipulation"></a>스키마 조작
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 여러 열을 단일 벡터로 연결합니다. |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 데이터 세트에서 열을 삭제합니다. |
@@ -84,7 +84,7 @@ ms.locfileid: "73706955"
 
 ### <a name="variable-selection"></a>변수 선택
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |개수에 따른 기능 선택입니다. |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 상호 정보에 따른 기능 선택입니다. |
@@ -92,7 +92,7 @@ ms.locfileid: "73706955"
 
 ### <a name="text-analytics"></a>텍스트 분석
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 텍스트 열을 숫자 기능으로 변환합니다. |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 감정 분석입니다. |
@@ -100,7 +100,7 @@ ms.locfileid: "73706955"
 
 ### <a name="image-analytics"></a>이미지 분석 
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 이미지를 로드합니다. |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 이미지 크기를 조정합니다. |
@@ -109,7 +109,7 @@ ms.locfileid: "73706955"
 
 ### <a name="featurization-functions"></a>기능화 함수
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 데이터 원본에 대한 데이터 변환 |
 
@@ -117,7 +117,7 @@ ms.locfileid: "73706955"
 
 ## <a name="3-scoring-functions"></a>3 - 점수 매기기 함수
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Microsoft Machine Learning 모델을 사용하여 점수 매기기 |
 
@@ -135,7 +135,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [Python 자습서](../tutorials/sql-server-python-tutorials.md)
 + [자습서: T-SQL에 Python 코드 포함](../tutorials/run-python-using-t-sql.md)

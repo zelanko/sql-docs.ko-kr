@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298833"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집

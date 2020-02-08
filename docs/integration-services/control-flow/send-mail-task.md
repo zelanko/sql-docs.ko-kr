@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293926"
 ---
 # <a name="send-mail-task"></a>메일 보내기 태스크
@@ -64,7 +64,7 @@ ms.locfileid: "71293926"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>메일 보내기 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|태스크에서 전자 메일 메시지 보내기를 시작했음을 나타냅니다.|  
 |**SendMailTaskEnd**|태스크에서 전자 메일 메시지 보내기를 완료했음을 나타냅니다.|  
@@ -112,7 +112,7 @@ ms.locfileid: "71293926"
   
  **관련 항목:** [SMTP 연결 관리자](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
- **보낸 사람**  
+ **From**  
  보낸 사람의 전자 메일 주소를 지정합니다.  
   
  **수행할 작업**  
@@ -130,13 +130,13 @@ ms.locfileid: "71293926"
  **MessageSourceType**  
  메시지의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 메시지 텍스트로 설정합니다. 이 값을 선택하면 동적 옵션 **MessageSource**가 표시됩니다.|  
 |**파일 연결**|원본을 메시지 텍스트가 포함된 파일로 설정합니다. 이 값을 선택하면 동적 옵션 **MessageSource**가 표시됩니다.|  
 |**변수**|원본을 메시지 텍스트가 포함된 변수로 설정합니다. 이 값을 선택하면 동적 옵션 **MessageSource**가 표시됩니다.|  
   
- **Priority**  
+ **우선 순위**  
  메시지의 우선 순위를 설정합니다.  
   
  **Attachments**  

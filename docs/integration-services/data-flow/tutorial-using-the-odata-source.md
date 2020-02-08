@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297764"
 ---
 # <a name="tutorial-using-the-odata-source"></a>자습서: OData 원본 사용
@@ -28,7 +28,7 @@ ms.locfileid: "71297764"
   
 1.  **SQL Server Data Tools** 또는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 실행합니다.  
   
-2.  **파일**을 클릭하고 **새로 만들기**를 가리킨 후 **프로젝트**를 클릭합니다.  
+2.  **File**을 클릭하고 **New**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
 3.  **새 프로젝트** 대화 상자에서 **설치됨**, **템플릿**, **비즈니스 인텔리전스**를 차례로 확장하고 **Integration Services**를 클릭합니다.  
   

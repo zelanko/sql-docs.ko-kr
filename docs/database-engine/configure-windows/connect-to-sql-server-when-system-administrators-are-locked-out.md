@@ -15,10 +15,10 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74761238"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결

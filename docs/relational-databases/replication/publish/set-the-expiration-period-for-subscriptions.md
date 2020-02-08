@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846546"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287556"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 구독 만료 기간은 구독이 만료되어 제거되기 전까지 유효한 기간을 나타냅니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 구독 만료 기간은 구독이 만료되어 제거되기 전까지 유효한 기간을 나타냅니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
  **항목 내용**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "70846546"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 설정하려면  
   
-1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간(시간)을 지정합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간(시간)을 지정합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>병합 게시에 대한 구독 만료 기간을 설정하려면  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70846546"
   
     -   **3** = 년  
   
-     기본 만료 기간은 14일입니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+     기본 만료 기간은 14일입니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 변경하려면  
   
@@ -101,6 +101,6 @@ ms.locfileid: "70846546"
   
 ## <a name="see-also"></a>참고 항목  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [구독 만료 및 비활성화](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d3b98adece53952f72afc999f950c0388b65c96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67904919"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 보기
@@ -29,7 +29,7 @@ ms.locfileid: "67904919"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  이 기능은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 이상 버전에서만 지원됩니다.  
   
 > [!IMPORTANT]  
@@ -86,7 +86,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Cluster.exe 사용  
   
 > [!NOTE]  
->  cluster.exe 유틸리티는 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 릴리스에서 더 이상 사용되지 않습니다.  이후 개발에는 PowerShell과 장애 조치(failover) 클러스터링을 함께 사용하세요.  cluster.exe 유틸리티는 Windows Server의 다음 릴리스에서 제거될 예정입니다. 자세한 내용은 [Cluster.exe 명령을 장애 조치(failover) 클러스터용 Windows PowerShell Cmdlet에 매핑](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)을 참조하십시오.  
+>  cluster.exe 유틸리티는 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 릴리스에서 더 이상 사용되지 않습니다.  이후 개발에는 PowerShell과 장애 조치(failover) 클러스터링을 함께 사용하세요.  cluster.exe 유틸리티는 Windows Server의 다음 릴리스에서 제거될 예정입니다. 자세한 내용은 [Cluster.exe 명령을 장애 조치(failover) 클러스터용 Windows PowerShell Cmdlet에 매핑](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)을 참조하세요.  
   
 ##### <a name="to-view-nodeweight-settings"></a>NodeWeight 설정을 보려면  
   

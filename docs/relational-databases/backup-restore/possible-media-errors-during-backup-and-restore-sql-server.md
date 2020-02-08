@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258647"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)

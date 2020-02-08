@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322150"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현

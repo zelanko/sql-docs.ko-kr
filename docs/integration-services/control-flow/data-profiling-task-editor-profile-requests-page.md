@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294177"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
@@ -68,7 +68,7 @@ ms.locfileid: "71294177"
  **프로필 유형**  
  다음 옵션에서 데이터 프로필을 선택합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**후보 키 프로필 요청**|후보 키 프로필을 컴퓨팅합니다.<br /><br /> 이 프로필은 열 또는 열 집합이 선택한 테이블에 대해 키인지, 아니면 근사 키인지를 보고합니다. 또한 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터 문제를 식별할 수 있습니다.|  
 |**열 길이 분포 프로필 요청**|열 길이 분포 프로필을 컴퓨팅합니다.<br /><br /> 열 길이 분포 프로필은 선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다. 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 개의 문자로 구성된 미국 주 코드 열을 프로파일링하는 중 3자 이상의 값이 검색될 수 있습니다.|  

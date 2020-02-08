@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981951"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "73981951"
 > [!IMPORTANT]  
 >  문자열을 사용하여 EXECUTE를 호출하려면 먼저 문자열의 유효성을 검사해야 합니다. 유효성을 검사하지 않은 사용자 입력으로 생성된 명령은 실행하지 마세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -266,12 +266,12 @@ Execute a character string
  AS \<context_specification>  
  문이 실행될 컨텍스트를 지정합니다.  
   
- Login  
+ LOGIN  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
  가장할 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버입니다.  
   
- User  
+ USER  
  가장할 컨텍스트를 현재 데이터베이스의 사용자로 지정합니다. 가장의 범위는 현재 데이터베이스로 제한됩니다. 데이터베이스 사용자로 컨텍스트 전환 시 해당 사용자의 서버 수준 사용 권한은 상속되지 않습니다.  
   
 > [!IMPORTANT]  
@@ -327,7 +327,7 @@ Execute a character string
   
  실행 중에 반환되는 실제 결과 집합은 WITH RESULT SETS 절을 사용하여 결과 집합 수, 열 수, 열 이름, null 허용 여부, 데이터 형식 중 한 가지 방법으로 정의된 결과와 다를 수 있습니다. 결과 집합의 수가 다른 경우 오류가 발생하고 일괄 처리가 중단됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *value* 또는 @*parameter_name*=*value*를 사용하여 매개 변수를 제공할 수 있습니다. 를 사용하여 제공할 수 있습니다. 매개 변수는 트랜잭션의 일부가 아니므로 나중에 롤백되는 트랜잭션에서 매개 변수가 변경된 경우 해당 매개 변수의 값은 이전 값으로 되돌아가지 않습니다. 호출자에게 반환되는 값은 항상 모듈이 반환되는 시점의 값입니다.  
   
  한 모듈에서 다른 모듈을 호출하거나 CLR(공용 언어 런타임) 모듈, 사용자 정의 유형 또는 집계를 참조하여 관리 코드를 실행하면 중첩이 발생합니다. 호출된 모듈이나 관리 코드 참조가 실행될 때는 중첩 수준이 증가하고 호출된 모듈이나 관리 코드 참조가 끝날 때는 중첩 수준이 감소합니다. 최대값인 32 중첩 수준을 초과하면 전체 호출 체인이 실행되지 않습니다. 현재 중첩 수준은 @@NESTLEVEL system 함수에 저장됩니다.  
@@ -370,7 +370,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  CompanyDomain\SqlUser1은 SQLUsers 그룹의 멤버 자격을 통해 데이터베이스에 액세스할 수 있지만 `CompanyDomain\SqlUser1`이 데이터베이스의 보안 주체로 존재하지 않기 때문에 `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` 문은 실행되지 않습니다.  
   
-### <a name="best-practices"></a>최선의 구현 방법  
+### <a name="best-practices"></a>모범 사례  
  문이나 모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 수준 권한만 있어도 되는 경우에는 서버 수준 권한이 있는 로그인 이름을 지정하지 마세요. 마찬가지로 데이터베이스 소유자 권한이 필요한 경우가 아니라면 데이터베이스 소유자 계정을 지정하지 마세요.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -391,7 +391,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-execute-to-pass-a-single-parameter"></a>1\. EXECUTE를 사용하여 단일 매개 변수 전달  
+### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. EXECUTE를 사용하여 단일 매개 변수 전달  
  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `uspGetEmployeeManagers` 저장 프로시저에는 하나의 매개 변수가 필요합니다(`@EmployeeID`). 다음 예에서는 매개 변수 값으로 `Employee ID 6`을 사용하여 `uspGetEmployeeManagers` 저장 프로시저를 실행합니다.  
   
 ```  
@@ -416,7 +416,7 @@ dbo.uspGetEmployeeManagers @EmployeeID = 6;
 GO  
 ```  
   
-### <a name="b-using-multiple-parameters"></a>2\. 여러 매개 변수 사용  
+### <a name="b-using-multiple-parameters"></a>B. 여러 매개 변수 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `spGetWhereUsedProductID` 저장 프로시저를 실행합니다. 이 저장 프로시저는 두 개의 매개 변수를 전달합니다. 첫 번째 매개 변수는 제품 ID(`819`)이고 두 번째 매개 변수인 `@CheckDate,`는 `datetime` 값입니다.  
   
 ```  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>13. EXECUTE를 사용하여 단일 결과 집합 다시 정의  
  이전의 일부 예에서는 `EXEC dbo.uspGetEmployeeManagers 6;`을 실행하여 7개의 열을 반환했습니다. 다음 예에서는 `WITH RESULT SET` 구문을 사용하여 반환되는 결과 집합의 이름과 데이터 형식을 변경하는 방법을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>14. EXECUTE를 사용하여 두 결과 집합 다시 정의  
  둘 이상의 결과 집합을 반환하는 문을 실행하는 경우 각 예상 결과 집합을 정의합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 다음 예에서는 두 결과 집합을 반환하는 프로시저를 만듭니다. 그런 다음, **WITH RESULT SETS** 절을 사용하고 두 결과 집합 정의를 지정하여 프로시저를 실행합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```  
 --Create the procedure  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>예제 O: 기본 프로시저 실행  
  저장 프로시저 실행:  
