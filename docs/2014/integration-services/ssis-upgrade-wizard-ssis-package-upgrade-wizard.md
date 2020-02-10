@@ -13,24 +13,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055315"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS 업그레이드 마법사(SSIS 패키지 업그레이드 마법사)
+  
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 및 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 에서 개발된 패키지를 현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용하는 패키지 형식으로 마이그레이션할 수 있습니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
   
 -   [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages.md)  
   
   

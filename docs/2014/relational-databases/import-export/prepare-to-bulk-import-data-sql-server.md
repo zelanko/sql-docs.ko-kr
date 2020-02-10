@@ -19,13 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011855"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>대량 데이터 가져오기 준비(SQL Server)
+  
   **bcp** 명령, BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하여 데이터 파일의 데이터만 대량으로 가져올 수 있습니다.  
   
 > [!NOTE]  
@@ -34,11 +35,12 @@ ms.locfileid: "66011855"
 > [!NOTE]  
 >  원격 테이블로 데이터를 대량으로 가져올 수 없습니다.  
   
- 데이터 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 가져올 경우 다음 지침을 따르십시오.  
+ 데이터 파일에서의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 가져오는 경우 다음 지침을 따르십시오.  
   
 -   사용자 계정에 대해 필요한 권한 가져오기  
   
-     **bcp** 유틸리티, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하는 사용자 계정에는 테이블에 대해 필요한 권한(테이블 소유자가 할당)이 있어야 합니다. 각 방법에 필요한 사용 권한에 대한 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 및 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
+     
+  **bcp** 유틸리티, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하는 사용자 계정에는 테이블에 대해 필요한 권한(테이블 소유자가 할당)이 있어야 합니다. 각 방법에 필요한 사용 권한에 대한 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 및 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
 -   대량 로그 복구 모델 사용  
   
@@ -66,12 +68,12 @@ ms.locfileid: "66011855"
   
      주로 데이터 파일의 끝 부분에 있는 숨겨진 문자는 다양한 유틸리티와 텍스트 편집기를 사용하여 표시할 수 있습니다. 대량 가져오기 작업 동안 ASCII 데이터 파일에 있는 숨겨진 문자가 문제를 일으켜 "예기치 않은 Null 발견" 오류가 발생할 수 있습니다. 이 경우 숨겨진 문자를 모두 찾아서 제거하면 이 문제가 해결됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [Bcp 유틸리티 &#40;SQL Server를 사용 하 여 대량 데이터 가져오기 및 내보내기&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

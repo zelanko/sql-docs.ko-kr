@@ -1,5 +1,5 @@
 ---
-title: Integration Services 서버용 보고서 | Microsoft Docs
+title: Integration Services 서버에 대 한 보고서 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056438"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 서버를 위한 보고서
@@ -62,7 +62,7 @@ ms.locfileid: "66056438"
 |섹션|Description|  
 |-------------|-----------------|  
 |Assert|보고서에 적용된 현재 필터(예: 지정된 문자열이 있는 연결 및 **마지막으로 실패한 시간** 범위)를 보여 줍니다.<br /><br /> **마지막으로 실패한 시간** 범위를 설정하면 특정 날짜 범위 동안 발생한 연결 실패만 표시됩니다. 날짜 범위는 수 일, 수 개월 또는 수 년으로 지정할 수 있습니다.|  
-|설명|연결 문자열, 연결 실패 기간 동안의 실행 수 및 연결이 마지막으로 실패한 날짜를 보여 줍니다.|  
+|세부 정보|연결 문자열, 연결 실패 기간 동안의 실행 수 및 연결이 마지막으로 실패한 날짜를 보여 줍니다.|  
   
 ## <a name="all-operations-report"></a>모든 작업 보고서  
  **모든 작업 보고서** 에는 패키지 배포, 유효성 검사 및 실행과 기타 관리 작업을 비롯하여 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 작업에 대한 요약이 표시됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "66056438"
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ## <a name="custom-reports"></a>사용자 지정 보고서  
- **Integration Services 카탈로그** 노드 아래의 **SSISDB** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스>.\<소유자>.\<개체>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ **Integration Services 카탈로그** 노드 아래의 **SSISDB**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스>.\<소유자>.\<개체>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  

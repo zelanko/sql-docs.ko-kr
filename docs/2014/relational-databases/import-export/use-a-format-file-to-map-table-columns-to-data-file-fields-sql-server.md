@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011737"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
   데이터 파일은 테이블의 해당 열에서 서로 다른 순서로 정렬된 필드를 포함할 수 있습니다. 이 항목에서는 테이블 열과 서로 다른 순서로 필드가 정렬된 데이터 파일에 맞게 수정된 비 XML 및 XML 서식 파일에 대해 설명합니다. 수정된 서식 파일은 데이터 필드를 해당 테이블 열로 매핑합니다.  
   
 > [!NOTE]  
->  비 XML 서식 파일 또는 XML 서식 파일은 **bcp** 명령, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터 파일을 테이블로 대량으로 가져오는 데 사용할 수 있습니다. 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
+>  비 XML 서식 파일 또는 XML 서식 파일을 사용 하 여 데이터 파일을 테이블에 대량으로 가져올 수 있습니다. **bcp** 명령, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET (BULK ...) 문 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
   
 ## <a name="sample-table-and-data-file"></a>예제 테이블 및 데이터 파일  
  이 항목의 수정된 서식 파일의 예는 다음 테이블 및 데이터 파일을 기준으로 합니다.  
@@ -47,7 +47,8 @@ GO
 ```  
   
 ### <a name="data-file"></a>데이터 파일  
- `myTestOrder-c.txt`데이터 파일에는 다음 레코드가 포함됩니다.  
+ 
+  `myTestOrder-c.txt`데이터 파일에는 다음 레코드가 포함됩니다.  
   
 ```  
 DataField3,DataField2,1,DataField4  
@@ -56,7 +57,8 @@ DataField3,DataField2,1,DataField4
   
 ```  
   
- `myTestSkipCol2-c.dat`에서 `myTestSkipCol` 테이블로 데이터를 대량으로 가져오려면 서식 파일은 첫 번째 데이터 필드를 `Col3`으로, 두 번째 데이터 필드를 `Col2`로, 세 번째 데이터 필드를 `Col1`로, 네 번째 데이터 필드를 `Col4`로 매핑해야 합니다.  
+ 
+  `myTestSkipCol2-c.dat`에서 `myTestSkipCol` 테이블로 데이터를 대량으로 가져오려면 서식 파일은 첫 번째 데이터 필드를 `Col3`으로, 두 번째 데이터 필드를 `Col2`로, 세 번째 데이터 필드를 `Col1`로, 네 번째 데이터 필드를 `Col4`로 매핑해야 합니다.  
   
 ## <a name="using-a-non-xml-format-file"></a>비 XML 서식 파일 사용  
  해당 데이터 필드의 위치를 나타내는 열의 순서 값을 변경하면 열 매핑 순서를 변경할 수 있습니다.  
@@ -81,7 +83,8 @@ DataField3,DataField2,1,DataField4
 ### <a name="example"></a>예제  
  다음 예에서는 `BULK INSERT` 문에서 비 XML 서식 파일인 `myTestOrder-c.txt`를 사용하여 `myTestOrder` 데이터 파일에서 `myTestOrder.fmt` 예제 테이블로 데이터를 대량으로 가져옵니다.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,7 +99,8 @@ GO
 ## <a name="using-an-xml-format-file"></a>XML 서식 파일 사용  
  다음 비 XML 서식 파일 예제에서는 `myTestOrder.xml`의 필드를 `myTestOrder-c.txt` 테이블의 열에 매핑하는 서식 파일인 `myTestOrder`을 보여 줍니다. 데이터 파일 및 테이블을 만드는 방법은 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"을 참조하십시오.  
   
- `myTestOrder.xml` 서식 파일에는 다음 정보가 포함됩니다.  
+ 
+  `myTestOrder.xml` 서식 파일에는 다음 정보가 포함됩니다.  
   
 ```  
 <?xml version="1.0"?>  
@@ -122,9 +126,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  XML 스키마의 구문 및 추가 XML 서식 파일 예제에 대한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)를 참조하세요.  
   
 ### <a name="example"></a>예제  
- 다음 예에서는 `OPENROWSET` 대량 행 집합 공급자에서 XML 서식 파일인 `myTestOrder-c.txt` 을 사용하여 `myTestOrder` 데이터 파일에서 `myTestOrder.xml` 예제 테이블로 데이터를 대량으로 가져옵니다. `INSERT... SELECT` 문은 SELECT 목록에서 열 목록을 지정합니다.  
+ 다음 예에서는 `OPENROWSET` 대량 행 집합 공급자에서 XML 서식 파일인 `myTestOrder-c.txt` 을 사용하여 `myTestOrder` 데이터 파일에서 `myTestOrder.xml` 예제 테이블로 데이터를 대량으로 가져옵니다. 
+  `INSERT... SELECT` 문은 SELECT 목록에서 열 목록을 지정합니다.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,8 +144,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [서식 파일을 사용 하 여 테이블 열 &#40;SQL Server를 건너뜁니다&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011078"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
@@ -39,7 +39,7 @@ ms.locfileid: "66011078"
   
  다음 설명에서는 Title 및 Keywords라는 두 개의 속성을 지정하는 검색 속성 목록의 논리적 뷰를 보여 줍니다. Keywords의 속성 목록 이름은 "Tags"입니다. 이 속성은 GUID가 F29F85E0-4FF9-1068-AB91-08002B27B3D9인 동일한 속성 집합에 속합니다. 속성 정수 식별자는 Title의 경우 2이고, Tags(Keywords)의 경우 5입니다. 전체 텍스트 엔진은 각 속성을 검색 속성 목록에 고유한 내부 속성 ID로 임의 매핑합니다. Title 속성의 내부 속성 ID는 1이고 Tags 속성의 내부 속성 ID는 2입니다.  
   
- ![내부 테이블에 대한 검색 속성 목록의 매핑](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
+ ![내부 테이블에 대한 검색 속성 목록의 매핑](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "내부 테이블에 대한 검색 속성 목록의 매핑")  
   
  내부 속성 ID는 속성의 속성 정수 식별자와 다를 가능성이 높습니다. 지정된 속성이 여러 검색 속성 목록에 대해 등록된 경우 검색 속성 목록마다 서로 다른 내부 속성 ID가 할당될 수 있습니다. 예를 들어 내부 속성 ID가 한 검색 속성 목록에서는 4이고, 다른 목록에서는 1이고, 또 다른 목록에서는 3일 수 있습니다. 반대로 속성 정수 식별자는 속성에 내재된 것이므로 속성이 사용되는 위치에 관계없이 항상 동일합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011078"
   
  다음 설명에서는 앞의 설명에 표시된 검색 속성 목록과 연결된 전체 텍스트 목록에 검색 단어가 어떻게 나타나는지에 대한 논리적 뷰를 보여 줍니다. 샘플 문서인 Document 1은 문서 본문과 Title, Author 및 Keywords라는 세 개의 속성을 포함합니다. 검색 속성 목록에 지정된 Title 및 Keywords 속성의 경우 검색 단어는 전체 텍스트 인덱스에서 해당 내부 속성 ID와 연결됩니다. 반면 Author 속성의 내용은 문서 본문의 일부인 것처럼 인덱싱됩니다. 즉, 속성을 등록하면 속성에 저장되는 내용의 양에 따라 전체 텍스트 인덱스 크기가 어느 정도 커질 수 있습니다.  
   
- ![검색 속성 목록을 사용하는 전체 텍스트 인덱스](../../database-engine/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
+ ![검색 속성 목록을 사용하는 전체 텍스트 인덱스](../../database-engine/media/ifts-spl-and-fti.gif "검색 속성 목록을 사용하는 전체 텍스트 인덱스")  
   
  Title 속성의 검색 단어("Favorite", "Biking" 및 "Trails")는 이 인덱스에 대해 Title에 할당된 내부 속성 ID 1과 연결되어 있습니다. Keywords 속성의 검색 단어("biking" 및 "mountain")는 이 인덱스에 대해 Tags에 할당된 내부 속성 ID 2와 연결되어 있습니다. Author 속성의 검색 단어("Jane" 및 "Doe")와 문서 본문의 검색 단어의 경우 내부 속성 ID는 0입니다. "biking"이라는 단어는 Title 속성, Keywords(Tags) 속성 및 문서 본문에 나옵니다. Title 또는 Keywords(Tags) 속성에서 "biking"에 대한 속성 검색을 수행하면 결과에 이 문서가 반환됩니다. "biking"에 대한 일반 전체 텍스트 쿼리에서도 속성 검색에 대해 인덱스가 구성되지 않은 것처럼 이 문서가 반환됩니다. Author 속성에서 "biking"에 대한 속성 검색을 수행하면 이 문서가 반환되지 않습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66011078"
 ##  <a name="impact"></a> 속성 검색 사용의 영향  
  하나 이상의 속성에 대한 검색을 지원하도록 전체 텍스트 인덱스를 구성하면 검색 속성 목록에 지정한 속성 수와 각 속성의 내용에 따라 인덱스 크기가 어느 정도 커집니다.  
   
- 일반적인 Microsoft Word 인덱싱하도록 테스트<sup>?? </sup>, Excel<sup>?? </sup>, 및 PowerPoint<sup>??</sup> 문서, 전체 텍스트 인덱스에 대 한 일반적인 검색 속성을 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
+ Microsoft Word의 일반적인 인덱싱하도록?, Excel<sup>??</sup>?<sup>및 PowerPoint를 테스트 하</sup> <sup>는 경우</sup> 문서에서는 일반 검색 속성을 인덱싱하는 전체 텍스트 인덱스를 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
   
   
   
@@ -78,7 +78,7 @@ ms.locfileid: "66011078"
   
 2.  **데이터베이스**를 확장한 다음 검색 속성 목록을 만들려는 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장하고 **검색 속성 목록**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **스토리지**를 확장하고 **검색 속성 목록**을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  **새 검색 속성 목록**을 선택합니다.  
   
@@ -132,7 +132,8 @@ ms.locfileid: "66011078"
   
  **Transact-SQL을 사용하여 속성을 검색 속성 목록에 추가하려면**  
   
- [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md) 항목에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) 문을 사용합니다.  
+ 
+  [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](/sql/t-sql/statements/alter-search-property-list-transact-sql) 항목에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문을 사용합니다.  
   
  다음 예에서는 속성을 검색 속성 목록에 추가할 때 이러한 값을 사용하는 방법을 보여 줍니다.  
   
@@ -158,7 +159,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Transact-SQL을 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- `SET SEARCH PROPERTY LIST = <property_list_name>` 절과 함께 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 문을 사용합니다.  
+ [ 절과 함께 ](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;`SET SEARCH PROPERTY LIST = <property_list_name>` 문을 사용합니다.  
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
@@ -201,7 +202,7 @@ GO
   
 2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장합니다.  
+3.  **스토리지**를 확장합니다.  
   
 4.  **검색 속성 목록** 을 확장하여 검색 속성 목록을 표시합니다.  
   
@@ -232,14 +233,14 @@ GO
   
 2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장하고 **검색 속성 목록** 노드를 확장합니다.  
+3.  **스토리지**를 확장하고 **검색 속성 목록** 노드를 확장합니다.  
   
 4.  삭제할 속성 목록을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [검색 필터 구성 및 관리](configure-and-manage-filters-for-search.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 바로 가기 메뉴를 사용 하 여 선행 제약 조건 값을 설정 합니다. | Microsoft Docs
+title: 바로 가기 메뉴를 사용 하 여 선행 제약 조건의 값을 설정 합니다. Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055655"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>바로 가기 메뉴를 사용하여 선행 제약 조건 값 설정
@@ -30,11 +30,12 @@ ms.locfileid: "66055655"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건을 마우스 오른쪽 단추로 클릭한 후 **성공**, **실패**또는 **완료**를 클릭합니다.  
+4.  
+  **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건을 마우스 오른쪽 단추로 클릭한 후 **성공**, **실패**또는 **완료**를 클릭합니다.  
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [선행 제약 조건](control-flow/precedence-constraints.md)   
  [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [선행 제약 조건의 속성 설정](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   

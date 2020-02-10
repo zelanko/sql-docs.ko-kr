@@ -1,5 +1,5 @@
 ---
-title: 균형 조정 된 원격 서버의 패키지 부하 로깅 | Microsoft Docs
+title: 원격 서버에서 부하가 분산 된 패키지에 대 한 로깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057847"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>원격 서버의 로드 균형 조정된 패키지 로깅
@@ -27,7 +27,7 @@ ms.locfileid: "66057847"
 ## <a name="related-tasks"></a>관련 작업  
  패키지에서 로깅을 사용하도록 설정하는 방법은 [SQL Server Data Tools에서 패키지 로깅 설정](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
   
   

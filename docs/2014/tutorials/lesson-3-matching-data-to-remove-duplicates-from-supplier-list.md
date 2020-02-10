@@ -1,5 +1,5 @@
 ---
-title: '3단원: 공급자 목록에서 중복 제거는 데이터 일치 | Microsoft Docs'
+title: '3 단원: 데이터와 일치 하 여 공급자 목록에서 중복 항목 제거 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484649"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>3단원: 데이터 일치로 공급자 목록에서 중복 항목 제거
@@ -25,6 +25,6 @@ ms.locfileid: "65484649"
  이 단원에서는 일치 작업을 수행하여 공급자 목록에서 중복 항목을 제거합니다. 먼저 공급자 목록에서 중복 항목을 식별하는 하나의 규칙으로 일치 정책을 만들어 기술 자료에 게시합니다. 다음으로 일치에 대한 데이터 품질 프로젝트를 만들고 실행합니다. 마지막으로 일치 작업의 결과를 나중에 MDS(Master Data Services)에 데이터를 업로드하는 데 사용할 Excel 파일로 내보냅니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 1: 일치 정책 정의](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
+ [태스크 1: 일치 정책 정의](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

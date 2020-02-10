@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010480"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스
-  OpenSqlFilestream API는 FILESTREAM binary large object (BLOB) 파일 시스템에 저장 된에 대 한 Win32 호환 파일 핸들을 가져옵니다. 이 핸들은 다음 Win32 API 중 하나로 전달될 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
+  OpenSqlFilestream API는 파일 시스템에 저장 된 FILESTREAM BLOB (binary large object)에 대 한 Win32 호환 파일 핸들을 가져옵니다. 핸들이 [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)의 Win32 API 중 하나로 전달될 수 있습니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 동일한 트랜잭션에서 실행할 수 있습니다. 이를 통해 SQL 데이터와 FILESTREAM BLOB 데이터 간의 일관성을 유지 관리할 수 있습니다.  
   
@@ -48,12 +48,12 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>매개 변수  
  *FilestreamPath*  
- [in] `nvarchar(max)` 에서 반환 되는 경로 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) 함수입니다. PathName은 FILESTREAM 테이블 및 열에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 또는 UPDATE 권한이 있는 계정의 컨텍스트에서 호출해야 합니다.  
+ 진행 PathName 함수 `nvarchar(max)` 에서 반환 하는 경로입니다 [](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName은 FILESTREAM 테이블 및 열에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 또는 UPDATE 권한이 있는 계정의 컨텍스트에서 호출해야 합니다.  
   
  *DesiredAccess*  
  [in] FILESTREAM BLOB 데이터에 액세스하는 데 사용되는 모드를 설정합니다. 이 값은 [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527)(DeviceIoControl 함수)에 전달됩니다.  
   
-|이름|값|의미|  
+|속성|값|의미|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|데이터를 파일에서 읽을 수 있습니다.|  
 |SQL_FILESTREAM_WRITE|1|데이터를 파일에 쓸 수 있습니다.|  
@@ -83,7 +83,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *AllocationSize*  
  [in] 데이터 파일의 처음 할당 크기(바이트)를 지정합니다. 읽기 모드에서는 무시됩니다. 이 매개 변수는 NULL일 수 있으며, 이 경우 기본 파일 시스템 동작이 사용됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 함수가 성공적으로 실행되면 지정된 파일에 대해 열린 핸들이 반환되고 함수가 실패하면 INVALID_HANDLE_VALUE가 반환됩니다. 확장 오류 정보를 보려면 GetLastError()를 호출합니다.  
   
 ## <a name="examples"></a>예  
@@ -95,12 +95,12 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 API를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 설치해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 도구와 함께 설치됩니다. 자세한 내용은 [Installing SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)(SQL Server Native Client 설치)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)   
  [FILESTREAM 데이터 부분 업데이트](make-partial-updates-to-filestream-data.md)   
- [FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+ [FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   
   

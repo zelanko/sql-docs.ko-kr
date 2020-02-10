@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900903"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
@@ -27,7 +27,7 @@ ms.locfileid: "62900903"
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|원시 데이터에 액세스하는 데 사용되는 모드입니다. 가능한 값은 `File name`(0) 및 `File name from variable`(1)입니다. 기본값은 `File name`(0)입니다.|  
-|FileName|문자열|원본 파일의 경로 및 파일 이름입니다.|  
+|FileName|String|원본 파일의 경로 및 파일 이름입니다.|  
   
  원시 파일 원본의 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62900903"
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|FileName 속성에 파일 이름이 포함되어 있는지, 아니면 파일 이름이 포함된 변수의 이름이 포함되어 있는지를 지정하는 값입니다. 옵션으로는 `File name`(0) 및 `File name from variable`(1)이 있습니다.|  
-|FileName|문자열|원시 파일 대상에서 쓰는 파일의 이름입니다.|  
+|FileName|String|원시 파일 대상에서 쓰는 파일의 이름입니다.|  
 |WriteOption|Integer(열거형)|원시 파일 대상에서 이름이 같은 기존 파일을 삭제하는지 여부를 지정하는 값입니다. 옵션으로는 `Create Always`(0), `Create Once`(1), `Truncate and Append`(3) 및 `Append`(2)가 있습니다. 이 속성의 기본값은 `Create Always`(0)입니다.|  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.locfileid: "62900903"
   
  자세한 내용은 [Raw File Destination](raw-file-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [공용 속성](../common-properties.md)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](../common-properties.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010943"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
@@ -26,20 +26,20 @@ ms.locfileid: "66010943"
  SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 연결되는 인스턴스 인식형 서비스입니다. SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 서비스 계정 정보를 각 필터 데몬 호스트 프로세스에 전파합니다.  
   
   
-##  <a name="setting"></a> 서비스 계정 설정  
+##  <a name="setting"></a>서비스 계정 설정  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>전체 텍스트 검색용 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정을 설정하려면  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**를 마우스 오른쪽 단추로 클릭 **SQL 전체 텍스트 필터 데몬 시작 관리자 ( *`instance name`* )** 를 클릭 하 고 **속성**합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 고 **SQL 전체 텍스트 필터 데몬 시작 관리자*`instance name`*()** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
 3.  대화 상자의 **로그온** 탭을 클릭한 다음 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스에서 만든 각 프로세스를 실행할 계정을 선택하거나 입력합니다.  
   
 4.  대화 상자를 닫은 다음 **다시 시작** 을 클릭하여 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 다시 시작합니다.  
   
   
-##  <a name="error"></a> SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작 되지 않습니다.  
+##  <a name="error"></a>SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작 되지 않는 경우  
  다음과 같은 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않을 수 있습니다.  
   
 -   SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정과 연결된 암호가 만료되었습니다.  
@@ -48,7 +48,8 @@ ms.locfileid: "66010943"
   
     1.  계정에 대한 새 Windows 암호를 설정합니다.  
   
-    2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 새 암호를 사용하도록 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 업데이트합니다.  
+    2.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 새 암호를 사용하도록 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 업데이트합니다.  
   
 -   서비스 계정의 사용자 계정 또는 암호가 잘못되었습니다.  
   
@@ -66,14 +67,15 @@ ms.locfileid: "66010943"
   
      로컬 컴퓨터에서 서비스가 올바르게 구성되어 있지 않을 수 있습니다.  
   
-     로컬 컴퓨터에서 명명된 파이프 기능이 해제되었거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 기본 명명된 파이프 이외의 다른 명명된 파이프를 사용하도록 구성된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없습니다.  
+     로컬 컴퓨터에서 명명된 파이프 기능이 해제되었거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기본 명명된 파이프 이외의 다른 명명된 파이프를 사용하도록 구성된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 있는 권한이 없습니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 관리, 쿼리 및 시작하기 위한 기본 사용 권한이 부여됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 후 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹 사용 권한이 제거된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없으며 전체 텍스트 검색이 비활성화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 사용 권한이 있는지 확인하세요.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 관리, 쿼리 및 시작하기 위한 기본 사용 권한이 부여됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 후 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹 사용 권한이 제거된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없으며 전체 텍스트 검색이 비활성화됩니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 사용 권한이 있는지 확인하세요.  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
  [전체 텍스트 검색 업그레이드](upgrade-full-text-search.md)  
   

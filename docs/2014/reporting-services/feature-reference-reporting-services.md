@@ -16,16 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109172"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 만들고 관리 하 고 보는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함 되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
   
- 도구나 애플리케이션 실행 중에 사용자 인터페이스 항목에 액세스하려면 대화 상자, 웹 페이지 또는 마법사가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다. 시작 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 도구, 참조 [자습서: Services 도구 찾기 및 보고를 시작 하는 방법 &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)합니다.  
+ 도구나 애플리케이션 실행 중에 사용자 인터페이스 항목에 액세스하려면 대화 상자, 웹 페이지 또는 마법사가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 도구를 시작하는 방법에 대한 자세한 내용은 [자습서: Reporting Services 도구를 찾고 시작하는 방법&#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 디자이너 F1 도움말](tools/report-designer-f1-help.md)  
@@ -38,16 +39,16 @@ ms.locfileid: "66109172"
  보고서 서버 인스턴스의 관리 및 배포에 사용되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 도구에 대한 도움말을 제공합니다.  
   
  [Management Studio의 보고서 서버 F1 도움말](tools/report-server-in-management-studio-f1-help.md)  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  
+ 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]보고서 및 보고서 서버를 관리 하는 데 사용 되는 대화 상자에 대 한 도움말을 제공 합니다.  
   
  [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)  
  웹 브라우저에서 보고서를 보는 데 사용되는 HTML 뷰어 구성 요소에 대한 도움말을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 개념&#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
- [Reporting Services 보고서&#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [SSRS를 &#40;Reporting Services 보고서&#41;](reports/reporting-services-reports-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-data/report-datasets-ssrs.md)   
  [보고서 작성기 시작](https://www.microsoft.com/download/en/details.aspx?id=29072)   
- [보고서 작성기 1.0을 사용하여 보고서 디자인 및 구현](https://go.microsoft.com/fwlink/?LinkId=142601)  
+ [보고서 작성기 1.0를 사용 하 여 보고서 디자인 및 구현](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

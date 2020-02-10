@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010323"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "66010323"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **새 쿼리** 를 클릭하여 쿼리 편집기를 표시합니다.  
   
-2.  복사를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드는 Archive 라는 FILESTREAM 사용 데이터베이스를 만듭니다.  
+2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 복사 ARCHIVE 라는 FILESTREAM 사용 데이터베이스를 만듭니다.  
   
     > [!NOTE]  
     >  이 스크립트의 경우 C:\Data 디렉터리가 있어야 합니다.  
@@ -59,7 +59,7 @@ GO
   
  기존 데이터베이스의 경우 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문을 사용하여 FILESTREAM 파일 그룹을 추가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

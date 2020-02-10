@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010989"
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "66010989"
   
  세 개의 Transact-SQL 행 집합 함수를 통해 의미 체계 인덱스를 쿼리하여 구조화된 데이터 결과를 검색합니다.  
   
-##  <a name="whatcanido"></a> 의미 체계 검색을 사용 하 여 어떻게 해야 합니까?  
+##  <a name="whatcanido"></a>의미 체계 검색을 사용 하 여 무엇을 할 수 있나요?  
  의미 체계 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 전체 텍스트 검색 기능을 기반으로 구축되었지만 이를 통해 키워드 검색보다 뛰어난 새로운 시나리오가 지원됩니다. 전체 텍스트 검색을 사용하면 문서의 *단어* 를 쿼리할 수 있지만, 의미 체계 검색을 사용하면 문서의 *의미* 를 쿼리할 수 있습니다. 가능한 솔루션에는 자동 태그 추출, 관련 내용 검색 및 유사 내용 간의 계층 탐색이 포함됩니다. 예를 들어 키 구의 인덱스를 쿼리하여 조직 또는 문서 모음에 대한 분류를 만들 수 있습니다. 또는 문서 유사성 인덱스를 쿼리하여 업무 설명과 일치하는 이력서를 확인할 수 있습니다.  
   
  다음 예에서는 의미 체계 검색 기능을 보여 줍니다.  
   
-###  <a name="find1"></a> 문서의 키 구 찾기  
+###  <a name="find1"></a>문서에서 키 구 찾기  
  다음 쿼리는 예제 문서에서 식별된 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 통계적 유의성 점수를 기준으로 내림차순으로 표시됩니다. 이 쿼리는 [semantickeyphrasetable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 함수를 호출합니다.  
   
 ```sql  
@@ -50,7 +50,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a> 유사 하거나 관련 된 문서 찾기  
+###  <a name="find2"></a>유사 하거나 관련 된 문서 찾기  
  다음 쿼리에서는 예제 문서와 유사하거나 관련된 것으로 확인된 문서를 가져옵니다. 쿼리 결과는 두 문서의 유의성 점수를 기준으로 내림차순으로 표시됩니다. 이 쿼리는 [semanticsimilaritytable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 함수를 호출합니다.  
   
 ```vb  
@@ -70,7 +70,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> 유사 하거나 관련 된 문서를 만드는 키 구 찾기  
+###  <a name="find3"></a>문서를 비슷하거나 관련 된 것으로 만드는 키 구 찾기  
  다음 쿼리에서는 두 예제 문서를 서로 유사하거나 관련된 것으로 만드는 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 가중치 점수를 기준으로 내림차순으로 표시됩니다. 이 쿼리는 [semanticsimilaritydetailstable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 함수를 호출합니다.  
   
 ```sql  
@@ -89,16 +89,17 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="store"></a> SQL Server에서 문서를 저장합니다.  
+##  <a name="store"></a>SQL Server에 문서 저장  
  의미 체계 검색을 사용하여 문서를 인덱싱하려면 문서를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장해야 합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 FileTable 기능을 사용하여 구조화되지 않은 파일과 문서를 관계형 데이터베이스의 주요 데이터로 저장할 수 있습니다. 따라서 데이터베이스 개발자는 Transact-SQL 집합 기반 작업에서 구조화된 데이터와 함께 문서를 조작할 수 있습니다.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 FileTable 기능을 사용하여 구조화되지 않은 파일과 문서를 관계형 데이터베이스의 주요 데이터로 저장할 수 있습니다. 따라서 데이터베이스 개발자는 Transact-SQL 집합 기반 작업에서 구조화된 데이터와 함께 문서를 조작할 수 있습니다.  
   
  FileTable 기능에 대한 자세한 내용은 [FileTable&#40;SQL Server&#41;](../blob/filetables-sql-server.md)을 참조하세요. 데이터베이스에 문서를 저장하는 다른 옵션인 FILESTREAM 기능에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../blob/filestream-sql-server.md)을 참조하세요.  
   
   
   
-##  <a name="reltasks"></a> 관련 태스크  
+##  <a name="reltasks"></a> 관련 작업  
  [의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)  
  통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
   

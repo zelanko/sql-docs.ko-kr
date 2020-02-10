@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011154"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
@@ -37,7 +37,7 @@ ms.locfileid: "66011154"
   
 ##  <a name="examples"></a> 순위를 사용하여 검색 결과를 제한하는 예  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>A: 예 상위 3개의 일치하는 항목만 검색  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>예 A: 상위 3개의 일치하는 항목만 검색  
  다음 예제에서는 CONTAINSTABLE을 사용하여 상위 3개의 일치하는 항목만 반환합니다.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>예 2: 상위 10개의 일치하는 항목 검색  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>예 B: 상위 10개의 일치하는 항목 검색  
  다음 예에서는 CONTAINSTABLE을 사용하여 `Description` 열에 "light"나 "lightweight"라는 단어와 근접한 "aluminum"이라는 단어가 포함된 상위 5개 제품에 대한 설명을 반환합니다.  
   
 ```  
@@ -141,9 +141,11 @@ GO
 ### <a name="rank-computation-issues"></a>순위 계산 문제  
  많은 요소가 순위 계산 과정에 영향을 줍니다.  각 언어별 단어 분리기는 텍스트를 다르게 토큰화합니다. 예를 들어 "dog-house"란 문자열을 특정 단어 분리기는 "dog" "house"로 분리하고 다른 단어 분리기는 "dog-house"로 분리할 수 있습니다. 즉, 단어뿐만 아니라 문서 길이도 다르기 때문에 지정된 언어에 따라 일치 항목과 순위가 달라집니다. 문서 길이의 차이는 모든 쿼리의 순위에 영향을 줄 수 있습니다.  
   
- `IndexRowCount`와 같은 통계는 크게 달라질 수 있습니다. 예를 들어 카탈로그의 마스터 인덱스에 20억 개 행이 있고 메모리 내 중간 인덱스에 하나의 새 문서가 인덱싱되면 메모리 내 인덱스의 문서 수를 기준으로 한 해당 문서의 순위와 마스터 인덱스 문서에 대한 순위에 차이가 생길 수 있습니다. 이런 이유로 다수의 행이 인덱싱 또는 다시 인덱싱 채우기 후에는 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 인덱스를 마스터 인덱스에 병합하는 것이 좋습니다. 또한 전체 텍스트 검색 엔진은 중간 인덱스의 개수와 크기 같은 매개 변수를 기준으로 인덱스를 자동으로 병합합니다.  
+ 
+  `IndexRowCount`와 같은 통계는 크게 달라질 수 있습니다. 예를 들어 카탈로그의 마스터 인덱스에 20억 개 행이 있고 메모리 내 중간 인덱스에 하나의 새 문서가 인덱싱되면 메모리 내 인덱스의 문서 수를 기준으로 한 해당 문서의 순위와 마스터 인덱스 문서에 대한 순위에 차이가 생길 수 있습니다. 이런 이유로 다수의 행이 인덱싱 또는 다시 인덱싱 채우기 후에는 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 인덱스를 마스터 인덱스에 병합하는 것이 좋습니다. 또한 전체 텍스트 검색 엔진은 중간 인덱스의 개수와 크기 같은 매개 변수를 기준으로 인덱스를 자동으로 병합합니다.  
   
- `MaxOccurrence` 값은 32개 범위 중 하나로 정규화됩니다. 예를 들어 이것은 50단어 길이의 문서가 100단어 길이의 문서와 동일하게 처리된다는 것을 의미합니다. 정규화에 사용되는 표는 아래와 같습니다. 문서 길이가 인접 테이블 값 32와 128 사이의 범위에 이기 때문에 효과적으로 배열과 길이가 같은, 128로 간주 됩니다 (32 < `docLength` < = 128).  
+ 
+  `MaxOccurrence` 값은 32개 범위 중 하나로 정규화됩니다. 예를 들어 이것은 50단어 길이의 문서가 100단어 길이의 문서와 동일하게 처리된다는 것을 의미합니다. 정규화에 사용되는 표는 아래와 같습니다. 문서 길이는 인접 한 테이블 값 32과 128 사이의 범위에 있기 때문에 실제로는 동일한 길이인 128 (32 < `docLength` <= 128)로 처리 됩니다.  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +205,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색을 사용한 쿼리](query-with-full-text-search.md)  
   
   

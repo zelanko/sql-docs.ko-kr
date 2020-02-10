@@ -15,32 +15,33 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055265"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
+  
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
   
  용어 추출 변환에 대한 자세한 내용은 [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
- **명사**  
+## <a name="options"></a>옵션  
+ **수식어**  
  변환에서 개별 명사만 추출하도록 지정합니다.  
   
- **명사구**  
+ **명사 구**  
  변환에서 명사구만 추출하도록 지정합니다.  
   
  **명사 및 명사구**  
  변환에서 명사 및 명사구를 모두 추출하도록 지정합니다.  
   
- **빈도**  
+ **주기와**  
  점수를 용어의 빈도로 지정합니다.  
   
  **TFIDF**  
- 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다.  
   
  **빈도 임계값**  
  단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  
@@ -52,12 +53,13 @@ ms.locfileid: "66055265"
  추출 시 대/소문자 구분 여부를 지정합니다. 기본값은 `False`입니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
+ 
+  [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [용어 추출 변환 편집기&#40;용어 추출 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [용어 추출 변환 편집기&#40;제외 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [용어 추출 변환 편집기 &#40;용어 추출 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [용어 추출 변환 편집기 &#40;제외 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [용어 조회 변환](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 주석이 추가 된 예제 XSD 스키마 (SQLXML 4.0) XPath 예 | Microsoft 문서
+title: XPath 예제에 대 한 주석이 추가 된 예제 XSD 스키마 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010725"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 예에 대한 주석이 추가된 예제 XSD 스키마(SQLXML 4.0)
-  이 섹션의 예제 XPath 쿼리는 매핑 스키마를 참조합니다. 해당 매핑 스키마는 주석이 추가된 XSD(XML 스키마) 파일입니다. 매핑 스키마에 대 한 자세한 내용은 참조 하세요. [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다.  
+  이 섹션의 예제 XPath 쿼리는 매핑 스키마를 참조합니다. 해당 매핑 스키마는 주석이 추가된 XSD(XML 스키마) 파일입니다. 매핑 스키마에 대 한 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)을 참조 하세요.  
   
  주석이 추가된 XSD 스키마에 대해 XPath 쿼리를 실행하려면 다음 작업을 수행해야 합니다.  
   
 -   XPath 쿼리가 포함된 템플릿을 만듭니다. 이 템플릿에서 XPath 쿼리를 실행할 대상 매핑 스키마를 지정합니다. 이 경우 템플릿 파일과 연결된 디렉터리(또는 템플릿에 상대 경로가 `mapping-schema` 특성 값으로 지정되어 있는 경우 해당 하위 디렉터리 중 하나)에 매핑 스키마를 저장해야 합니다.  
   
--   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 애플리케이션을 만듭니다. 자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+-   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 애플리케이션을 만듭니다. 자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  이 섹션의 모든 예에서는 이해를 돕기 위해 템플릿에 XPath 쿼리를 지정하고 ADO를 사용하여 템플릿을 실행합니다. 따라서 SampleSchema1.xml이라는 다음 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  
   

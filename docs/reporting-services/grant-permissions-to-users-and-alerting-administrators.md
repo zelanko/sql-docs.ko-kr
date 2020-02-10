@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580487"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
@@ -31,7 +31,7 @@ ms.locfileid: "65580487"
 
 SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수준(SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)을 참조하세요.
 
-## <a name="grant-permissions"></a>사용 권한 부여
+## <a name="grant-permissions"></a>권한 부여
   
 1.  사용 권한을 부여할 SharePoint 사이트로 이동합니다.  
   
@@ -39,7 +39,7 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
   
      이 옵션이 나타나지 않으면 다른 사람에게 권한을 부여할 권한이 없는 것입니다.  
   
-3.  **사용 권한 부여**를 클릭합니다.  
+3.  **권한 부여**를 클릭합니다.  
   
 4.  **사용자/그룹**에서 권한을 부여할 대상의 사용자 이름, 그룹 이름 또는 메일 주소를 입력합니다.  
   

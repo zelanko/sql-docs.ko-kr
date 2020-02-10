@@ -15,35 +15,36 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055947"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
-  **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **열거**  
+  **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
+  
+## <a name="options"></a>옵션  
+ **목록을**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   
  **개체**  
  Objects 열거형을 사용합니다.  
   
- **미리 채우기**  
+ **미리**  
  Objects 열거형과 함께 **미리 채우기** 옵션을 사용합니다.  
   
  **이름**  
  Names 열거형을 사용합니다.  
   
- **URN**  
+ **Urn**  
  URNs 열거형을 사용합니다.  
   
- **위치**  
+ **위치도**  
  Locations 열거형을 사용합니다. 이 옵션은 파일에 대해서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)   
  [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

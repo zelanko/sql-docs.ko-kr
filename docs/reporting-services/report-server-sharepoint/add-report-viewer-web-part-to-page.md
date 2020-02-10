@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574784"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
@@ -42,7 +42,7 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
     ![사무실 리본에서 웹 파트를 삽입합니다.](media/sharepoint-insert-web-part.png)
 
-4. **범주** 아래에서 **SQL Server Reporting Services(기본 모드)를 선택합니다. **파트** 아래에서 **보고서 뷰어**를 선택합니다. 그런 다음 **추가**를 선택합니다.
+4. **범주** 아래에서 **SQL Server Reporting Services(기본 모드)를 선택합니다. **파트** 아래에서 **보고서 뷰어**를 선택합니다. 그런 다음, **추가**를 선택합니다.
 
     ![보고서 뷰어 웹 파트를 추가합니다.](media/sharepoint-report-viewer-web-part.png)
 

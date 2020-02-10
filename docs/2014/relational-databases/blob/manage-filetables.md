@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009986"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
@@ -192,7 +192,7 @@ GO
  FileTable이 보유한 대부분의 잠금은 애플리케이션에서 연 파일에 해당합니다.  
   
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
- 동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
+ 동적 관리 뷰 **sys.dm_tran_locks&#40;Transact-SQL&#41;** 의 [request_owner_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 필드와 **sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;** 의 [fcb_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
   
 ```sql  
 SELECT opened_file_name  
@@ -231,7 +231,7 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC와 FileTable  
  DBCC CHECKCONSTRAINTS를 사용하여 시스템 정의 제약 조건을 비롯한 FileTable의 제약 조건을 확인할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable과 기타 SQL Server 기능 간 호환성](filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '2단원: Suppliers 기술 자료를 사용 하 여 공급자 데이터 정리 | Microsoft Docs'
+title: '2 단원: Suppliers 기술 자료를 사용 하 여 공급자 데이터 정리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488469"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>2단원: 공급자 기술 자료를 사용하여 공급자 데이터 정리
@@ -22,9 +22,9 @@ ms.locfileid: "65488469"
   
  컴퓨터 기반 프로세스에는 DQS 클라이언트 기본 페이지에서 구성 옵션을 사용하여 구성할 수 있는 다음과 같은 임계값이 사용됩니다.  
   
--   **제안 최소 점수:** 최소 점수 또는 신뢰도 수준 DQS에서 대체 값을 제안 하기 위해 사용 되는 합니다.  
+-   **제안에 대 한 최소 점수:** DQS에서 값에 대 한 대체를 제안 하는 데 사용 되는 최소 점수 또는 신뢰도 수준입니다.  
   
--   **자동 수정 최소 점수:** 최소 점수 또는 신뢰도 수준 값을 자동으로 수정 하는 것에 대 한 DQS에 의해 사용 되는 합니다.  
+-   **자동 수정 최소 점수:** DQS에서 값을 자동으로 수정 하는 데 사용 되는 최소 점수 또는 신뢰도 수준입니다.  
   
  이러한 설정을 구성하는 방법에 대한 자세한 내용은 [정리 및 일치에 대한 임계값 구성](https://msdn.microsoft.com/library/hh510415.aspx) 을 참조하십시오.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "65488469"
   
 5.  정리 프로세스의 결과를 Excel 파일로 내보냅니다.  
   
-6.  새 규칙, 값, 수정 사항 등을 사용 하 여 기술 자료의 지식을 늘릴 수는 도메인으로 정리 프로젝트에서 값을 가져오기...  
+6.  정리 프로젝트의 값을 도메인으로 가져와서 기술 자료의 정보를 새로운 규칙, 값, 수정 등으로 보강 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 1: 데이터 품질 프로젝트 만들기](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [태스크 1: 데이터 품질 프로젝트 만들기](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

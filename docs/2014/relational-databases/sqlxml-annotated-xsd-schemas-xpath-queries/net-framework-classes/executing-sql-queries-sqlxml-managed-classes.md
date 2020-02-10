@@ -1,5 +1,5 @@
 ---
-title: SQL 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft 문서
+title: SQL 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014935"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL 쿼리 실행(SQLXML 관리되는 클래스)
   이 예에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
--   매개 변수 (SqlXmlParameter 개체)를 만듭니다.  
+-   매개 변수 만들기 (SqlXmlParameter 개체)  
   
--   SqlXmlParameter 개체의 속성 이름 및 값에 값을 지정 합니다.  
+-   SqlXmlParameter 개체의 속성 (이름 및 값)에 값을 할당 합니다.  
   
- 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수를 지정 (*성*), Value 속성만 설정 됩니다. 이 쿼리 매개 변수는 위치 때문에 이름이 필요 합니다. Name 속성이 설정 되지 않았습니다.  
+ 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수 (*LastName*)를 지정할 때 Value 속성만 설정 됩니다. Name 속성은 설정 되지 않습니다 .이 쿼리에서 매개 변수는 위치 이며 이름이 필요 하지 않기 때문입니다.  
   
- 기본적으로 SqlXmlCommand 개체의 CommandType 속성은 **Sql**. 명시적으로 설정되지 않았습니다.  
+ SqlXmlCommand 개체의 CommandType 속성은 기본적으로 **Sql**입니다. 명시적으로 설정되지 않았습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -99,7 +99,7 @@ public static int Main(String[] args)
   
  이 예를 테스트하려면 컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있어야 합니다.  
   
- SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 [CommandText 속성을 사용 하 여 템플릿 파일 실행](executing-template-files-by-using-the-commandtext-property.md).  
+ SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 [CommandText 속성을 사용 하 여 템플릿 파일 실행](executing-template-files-by-using-the-commandtext-property.md)을 참조 하세요.  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -120,7 +120,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>ExecuteToStream 사용  
- 기존의 스트림에 Stream 개체를 생성 하 고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 이전 예제에서 코드는 ExecuteToStream 메서드를 사용 하 여 여기 개정 되어:  
+ 기존 스트림이 있는 경우 Stream 개체를 만들고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 이전 예제의 코드는 ExecuteToStream 메서드를 사용 하도록 여기에서 수정 되었습니다.  
   
 ```  
 using System;  
@@ -153,6 +153,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod를 사용할 수 있습니다. 자세한 내용은 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod를 사용할 수도 있습니다. 자세한 내용은 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
   
   

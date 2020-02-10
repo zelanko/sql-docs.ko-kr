@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877878"
 ---
 # <a name="variables-window"></a>변수 창
@@ -29,9 +29,10 @@ ms.locfileid: "62877878"
  **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
 > [!NOTE]
->  `Name` 및 `Namespace` 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
+>  
+  `Name` 및 `Namespace` 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **변수 추가**  
  사용자 정의 변수를 추가합니다.  
   
@@ -60,24 +61,24 @@ ms.locfileid: "62877878"
 > [!NOTE]  
 >  변수에 식을 할당할 경우 데이터 형식을 변경할 수 없습니다.  
   
- **Value**  
+ **값**  
  변수 값을 봅니다. 사용자 정의 변수에 대한 값을 업데이트할 수 있습니다. 이 값은 리터럴 또는 식일 수 있으며 값은 다중 행 문자열일 수 있습니다. 변수에 식을 할당하려면 **변수** 창의 **식** 열 옆에 있는 줄임표 단추를 클릭합니다.  
   
  `Namespace`  
- 네임스페이스 이름을 봅니다. 사용자 정의 변수는 처음에 생성 합니다 **사용자** 있지만 네임 스페이스에서 네임 스페이스 이름을 변경할 수는 `Namespace` 필드. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
+ 네임스페이스 이름을 봅니다. 사용자 정의 변수는 처음에 **user** 네임 스페이스에 생성 되지만 `Namespace` 필드에서 네임 스페이스 이름을 변경할 수 있습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
- **Raise Change Event**  
+ **변경 이벤트 발생**  
  값이 변경될 때 `OnVariableValueChanged` 이벤트를 발생시킬지 여부를 나타냅니다. 사용자 정의 및 시스템 변수에 대한 값을 업데이트할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
  **설명**  
  변수 설명을 봅니다. 사용자 정의 변수에 대한 설명을 변경할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
- **변수**  
+ **식**  
  변수에 할당된 식을 봅니다. 식을 할당하려면 줄임표 단추를 클릭합니다.  
   
  변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   

@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058363"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
+  
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  
   
  유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  중복 값을 가진 행을 그룹화하는 데 사용할 입력 열을 이 목록에서 선택합니다.  
   
@@ -37,7 +38,8 @@ ms.locfileid: "66058363"
  입력 열을 변환의 출력에 포함할지 여부를 선택합니다. 그룹화에 사용되는 모든 열이 자동으로 출력에 복사됩니다. 이 열을 선택하여 추가 열을 포함할 수 있습니다.  
   
  **입력 열**  
- **사용 가능한 입력 열** 목록에서 이전에 선택한 입력 열 중 하나를 선택합니다.  
+ 
+  **사용 가능한 입력 열** 목록에서 이전에 선택한 입력 열 중 하나를 선택합니다.  
   
  **출력 별칭**  
  해당 출력 열을 설명하는 이름을 입력합니다. 기본적으로 출력 열 이름은 입력 열 이름과 같습니다.  
@@ -59,15 +61,15 @@ ms.locfileid: "66058363"
   
 |값|Description|  
 |-----------|-----------------|  
-|**Neither**|선행 및 후행 숫자 모두 의미가 없습니다.|  
-|**Leading**|선행 숫자만 의미가 있습니다.|  
-|**Trailing**|후행 숫자만 의미가 있습니다.|  
+|**아니면**|선행 및 후행 숫자 모두 의미가 없습니다.|  
+|**붙지**|선행 숫자만 의미가 있습니다.|  
+|**붙이지**|후행 숫자만 의미가 있습니다.|  
 |**LeadingAndTrailing**|선행 및 후행 숫자 모두 의미가 있습니다.|  
   
  **비교 플래그**  
  문자열 비교 옵션에 대한 자세한 내용은 [문자열 데이터 비교](data-flow/comparing-string-data.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

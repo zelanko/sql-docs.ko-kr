@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055796"
 ---
 # <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정
@@ -33,19 +33,23 @@ ms.locfileid: "66055796"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
-2.  **솔루션 탐색기**에서 패키지를 두 번 클릭하여 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너로 열거나 마우스 오른쪽 단추로 클릭하고 **디자이너 보기**를 선택합니다.  
+2.  
+  **솔루션 탐색기**에서 패키지를 두 번 클릭하여 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너로 열거나 마우스 오른쪽 단추로 클릭하고 **디자이너 보기**를 선택합니다.  
   
-3.  **제어 흐름** 탭을 클릭한 후 다음 중 하나를 수행합니다.  
+3.  
+  **제어 흐름** 탭을 클릭한 후 다음 중 하나를 수행합니다.  
   
     -   제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
     -   **보기** 메뉴에서 **속성 창**을 클릭합니다.  
   
-4.  **속성** 창에서 패키지 속성을 편집합니다.  
+4.  
+  **속성** 창에서 패키지 속성을 편집합니다.  
   
-5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
+5.  
+  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [패키지 속성 설정](set-package-properties.md)  
   

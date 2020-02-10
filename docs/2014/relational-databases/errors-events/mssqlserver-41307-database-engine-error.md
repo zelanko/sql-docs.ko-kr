@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0bf9ea69f6e38b06eb5723cc6c9058265ada50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868050"
 ---
-# <a name="mssqlserver41307"></a>MSSQLSERVER_41307
+# <a name="mssqlserver_41307"></a>MSSQLSERVER_41307
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -35,7 +35,7 @@ ms.locfileid: "62868050"
 ## <a name="explanation"></a>설명  
  메모리 액세스에 최적화된 테이블의 행 크기 제한은 8,060바이트입니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../in-memory-oltp/memory-optimized-tables.md)를 참조하세요. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

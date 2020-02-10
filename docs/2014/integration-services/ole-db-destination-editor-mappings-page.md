@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057087"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 대상 편집기(매핑 페이지)
+  
   **OLE DB 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
  OLE DB 대상에 대한 자세한 내용은 [OLE DB Destination](data-flow/ole-db-destination.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -39,10 +40,10 @@ ms.locfileid: "66057087"
  **대상 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [대상 편집기 &#40;오류 출력 페이지를 OLE DB&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [OLE DB 대상을 사용하여 데이터 로드](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

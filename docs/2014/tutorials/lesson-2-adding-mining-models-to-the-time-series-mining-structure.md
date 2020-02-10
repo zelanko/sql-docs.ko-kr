@@ -1,5 +1,5 @@
 ---
-title: '2단원: 시계열 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
+title: '2 단원: 시계열 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855714"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>2단원: 시계열 마이닝 구조에 마이닝 모델 추가
-  이 단원에서는 방금 만든 마이닝 구조에 새 마이닝 모델을 추가 합니다 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)합니다.  
+  이 단원에서는 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)에서 방금 만든 마이닝 구조에 새 마이닝 모델을 추가 합니다.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 문  
- 기존 마이닝 구조에 새 마이닝 모델을 추가 하려면 사용 합니다 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 기존 마이닝 구조에 새 마이닝 모델을 추가 하려면 [ALTER 마이닝 structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 문을 사용 합니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- DMX에서 개체를 이름 지정에 대 한 자세한 내용은 [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
+ DMX에서 개체의 이름을 지정 하는 방법에 대 한 자세한 내용은 [id &#40;dmx&#41;](/sql/dmx/identifiers-dmx)를 참조 하세요.  
   
  코드의 다음 줄에서는 마이닝 모델에서 사용할 마이닝 구조의 열을 정의합니다.  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- 조정할 수 있는 알고리즘 매개 변수에 대 한 자세한 내용은 참조 하세요. [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)합니다.  
+ 조정할 수 있는 알고리즘 매개 변수에 대 한 자세한 내용은 [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)를 참조 하세요.  
   
  다음 구문을 사용하여 마이닝 모델의 열이 예측에 사용되도록 지정할 수 있습니다.  
   
@@ -95,7 +95,8 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 시계열 마이닝 모델을 추가하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
+1.  
+  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
   
 2.  ALTER MINING STRUCTURE 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   
@@ -105,7 +106,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +118,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +130,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [ReportingDate],  
@@ -144,7 +145,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +160,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  
@@ -181,9 +182,10 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+8.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-9. 에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Forecasting_ARIMA.dmx`입니다.  
+9. 다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Forecasting_ARIMA.dmx`이름을로 합니다.  
   
 10. 도구 모음에서 **실행** 단추를 클릭합니다.  
   
@@ -209,19 +211,20 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+2.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-3.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Forecasting_ARTXP.dmx`입니다.  
+3.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Forecasting_ARTXP.dmx`이름을로 합니다.  
   
 4.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
  다음 단원에서는 모든 모델과 마이닝 구조를 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [3단원: 처리 된 시계열 구조 및 모델](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [3단원: 시계열 구조 및 모델 처리](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 시계열 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+ [Microsoft Time Series 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

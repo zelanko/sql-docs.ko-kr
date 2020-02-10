@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900400"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
@@ -40,7 +40,7 @@ ms.locfileid: "62900400"
   
 ## <a name="related-tasks"></a>관련 작업  
   
--   [데이터 품질 클라이언트에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Data Quality Client에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
 -   [도메인으로 정리 프로젝트 값 가져오기](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62900400"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [관리 &#40;열기, 잠금 해제, 이름 바꾸기 및 삭제&#41; 데이터 품질 프로젝트](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [데이터 품질 프로젝트&#41; 열기, 잠금 해제, 이름 바꾸기 및 삭제 &#40;관리](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   social.technet.microsoft.com의 문서, [복합 도메인을 사용하여 복합 데이터 정리](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)  
   

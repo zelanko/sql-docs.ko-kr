@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877147"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>전체 데이터베이스 복원(단순 복구 모델)
@@ -36,7 +36,7 @@ ms.locfileid: "62877147"
 > [!NOTE]  
 >  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="Overview"></a> 단순 복구 모델에서의 데이터베이스 복원 개요  
+##  <a name="Overview"></a>단순 복구 모델에서의 데이터베이스 복원 개요  
  단순 복구 모델에서는 차등 데이터베이스 백업을 복원할지 여부에 따라 전체 데이터베이스 복원이 하나 또는 두 개의 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문으로 이루어집니다. 전체 데이터베이스 백업만 사용하는 경우 다음 그림과 같이 최신 백업을 복원하면 됩니다.  
   
  ![전체 데이터베이스 백업만 복원](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "전체 데이터베이스 백업만 복원")  
@@ -94,7 +94,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **전체 데이터베이스 백업을 복원하려면**  
   
 -   [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
@@ -113,7 +113,7 @@ GO
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [sp_addumpdevice&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   

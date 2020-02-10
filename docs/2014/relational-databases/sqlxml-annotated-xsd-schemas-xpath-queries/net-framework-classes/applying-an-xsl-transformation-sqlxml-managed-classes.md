@@ -1,5 +1,5 @@
 ---
-title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft 문서
+title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012598"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
   이 예에서는 AdventureWorks 데이터베이스를 대상으로 SQL 쿼리를 실행합니다. 그리고 쿼리 결과에 XSL 변환을 적용하여 직원의 이름과 성의 두 개 열로 이루어진 테이블을 생성합니다.  
   
- SqlXmlCommand 개체의 XslPath 속성은 XSL 파일 및 디렉터리 경로 지정 하려면 사용 됩니다.  
+ SqlXmlCommand 개체의 XslPath 속성은 XSL 파일 및 해당 디렉터리 경로를 지정 하는 데 사용 됩니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

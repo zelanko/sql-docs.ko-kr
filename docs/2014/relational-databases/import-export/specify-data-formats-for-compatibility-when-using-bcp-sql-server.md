@@ -17,34 +17,36 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011833"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
-  이 항목에서는 데이터 형식 특성, 필드별 프롬프트 및 비 xml 서식 파일의 필드에서 데이터를 저장 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` 명령입니다. 이러한 개념을 잘 알고 있으면 다른 데이터베이스 프로그램과 같은 다른 프로그램으로 대량으로 가져오기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 대량으로 내보낼 때 특히 유용합니다. 원본 테이블의 기본 데이터 형식(네이티브, 문자 또는 유니코드)이 다른 프로그램에서 필요한 데이터 레이아웃과 호환되지 않을 수 있습니다. 호환되지 않는 경우 데이터를 내보낼 때는 데이터 레이아웃을 지정해야 합니다.  
+  이 항목에서는 데이터 형식 특성과 필드별 프롬프트에 대해 설명 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` 명령의 비 xml 서식 파일에 필드 단위로 데이터를 저장 하는 방법에 대해 설명 합니다. 이러한 개념을 잘 알고 있으면 다른 데이터베이스 프로그램과 같은 다른 프로그램으로 대량으로 가져오기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 대량으로 내보낼 때 특히 유용합니다. 원본 테이블의 기본 데이터 형식(네이티브, 문자 또는 유니코드)이 다른 프로그램에서 필요한 데이터 레이아웃과 호환되지 않을 수 있습니다. 호환되지 않는 경우 데이터를 내보낼 때는 데이터 레이아웃을 지정해야 합니다.  
   
 > [!NOTE]  
 >  데이터를 가져오거나 내보내기 위한 데이터 형식에 익숙하지 않은 경우 [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)을 참조하세요.  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [bcp 데이터 형식 특성](#bcpDataFormatAttr)  
   
 -   [필드별 프롬프트 개요](#FieldSpecificPrompts)  
   
--   [비 XML 서식 파일의 필드에서 데이터를 저장합니다.](#FieldByFieldNonXmlFF)  
+-   [비 XML 서식 파일에 필드 필드 데이터 저장](#FieldByFieldNonXmlFF)  
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="bcpDataFormatAttr"></a> bcp 데이터 형식 특성  
- `bcp` 명령을 사용하여 데이터 파일 내 각 필드의 구조를 다음 데이터 형식 특성에 따라 지정할 수 있습니다.  
+##  <a name="bcpDataFormatAttr"></a>bcp 데이터 형식 특성  
+ 
+  `bcp` 명령을 사용하여 데이터 파일 내 각 필드의 구조를 다음 데이터 형식 특성에 따라 지정할 수 있습니다.  
   
 -   파일 스토리지 유형  
   
-     *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.  
+     
+  *파일 스토리지 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다. 자세한 내용은 [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.  
   
 -   접두사 길이  
   
@@ -58,19 +60,21 @@ ms.locfileid: "66011833"
   
      문자 데이터 필드에서 필요에 따라 종료 문자를 사용하면 데이터 파일 내 각 필드( *필드 종결자*사용)와 행( *행 종결자*사용)의 끝을 표시할 수 있습니다. 종결 문자는 한 필드나 행이 끝나고 다른 필드나 행이 시작하는 부분을 표시하여 데이터 파일을 읽는 프로그램에 전달하는 한 방법입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
-##  <a name="FieldSpecificPrompts"></a> 필드별 프롬프트 개요  
- 대화형 `bcp` 명령에는 **에** 또는 **아웃** 옵션은 있 서식 파일 스위치 포함 되지 않습니다 ( **-f**) 데이터 형식 스위치 (또는 **-n**, **-c**합니다 **-w**, 또는 **-N**), 각 이전에 대 한 원본 또는 대상 테이블의 각 열에는 명령 프롬프트 특성을 설정 합니다. 각 프롬프트에서 `bcp` 명령은 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식( **-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
+##  <a name="FieldSpecificPrompts"></a>필드별 프롬프트 개요  
+ 대화형 `bcp` 명령 **에 in** 또는 **out** 옵션이 포함 되어 있지만 형식 파일 스위치 (**-f**) 또는 데이터 형식 스위치 (**-n**, **-c**, **-w**또는 **-n**)가 포함 되어 있지 않은 경우 원본 또는 대상 테이블의 각 열에 대해 명령에서 각 이전 특성에 대해 차례로 메시지를 표시 합니다. 각 프롬프트에서 `bcp` 명령은 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식(**-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서는 `bcp` 명령을 사용하여 대화형으로 `HumanResources.myTeam` 테이블에서 `myTeam.txt` 파일로 데이터를 대량 내보냅니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 테이블 및 테이블을 만드는 방법은 [HumanResources.myTeam 예제 테이블&#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)을 참조하세요.  
   
- 명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 `bcp`는 데이터 형식 정보를 묻는 프롬프트를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 `bcp`는 데이터 형식 정보를 묻는 프롬프트를 표시합니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   
- 각 열에 대해 bcp는 필드별 값을 묻는 프롬프트를 표시합니다. 다음 예는 테이블의 `EmployeeID` 및 `Name` 열에 대한 필드별 프롬프트를 보여 주며 각 열에 대한 기본 파일 스토리지 유형(네이티브 형식)을 제안합니다. `EmployeeID` 및 `Name` 열의 접두사 길이는 각각 0, 2입니다. 사용자는 각 필드의 종결자로 쉼표(`,`)를 지정합니다.  
+ 각 열에 대해 bcp는 필드별 값을 묻는 프롬프트를 표시합니다. 다음 예는 테이블의 `EmployeeID` 및 `Name` 열에 대한 필드별 프롬프트를 보여 주며 각 열에 대한 기본 파일 스토리지 유형(네이티브 형식)을 제안합니다. 
+  `EmployeeID` 및 `Name` 열의 접두사 길이는 각각 0, 2입니다. 사용자는 각 필드의 종결자로 쉼표(`,`)를 지정합니다.  
   
  `Enter the file storage type of field EmployeeID [smallint]:`  
   
@@ -92,7 +96,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
  각 테이블 열에 대한 프롬프트(필요한 경우에만)가 순서대로 표시됩니다.  
   
-##  <a name="FieldByFieldNonXmlFF"></a> 비 XML 서식 파일에 필드 단위 데이터 저장  
+##  <a name="FieldByFieldNonXmlFF"></a>비 XML 서식 파일에 필드 필드 데이터 저장  
  테이블 열이 모두 지정된 후 `bcp` 명령은 방금 제공된 필드 단위 정보를 저장할 비 XML 서식 파일을 만들 것인지 묻는 메시지를 표시합니다(이전 예 참조). 서식 파일 생성하도록 선택하면 해당 테이블에서 데이터를 내보내거나 구조가 비슷한 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 때마다 서식 파일을 생성할 수 있습니다.  
   
 > [!NOTE]  
@@ -109,22 +113,22 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 > [!NOTE]  
 >  문자 또는 네이티브 형식과 같은 하나의 데이터 형식으로 파일을 스토리지하는 데이터 파일의 경우 **format** 옵션을 사용하면 데이터를 내보내거나 가져올 필요 없이 즉시 형식 파일을 만들 수 있습니다. 이 방법은 쉽고, XML 서식 파일뿐 아니라 비 XML 서식 파일도 만들 수 있다는 장점이 있습니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Bcp &#40;SQL Server를 사용 하 여 File Storage 유형을 지정&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
--   [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Bcp &#40;SQL Server를 사용 하 여 데이터 파일에 접두사 길이를 지정&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
+-   [Bcp &#40;SQL Server를 사용 하 여 필드 길이를 지정&#41;](specify-field-length-by-using-bcp-sql-server.md)  
   
--   [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [필드 및 행 종결자를 지정 하 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 ## <a name="related-content"></a>관련 내용  
  없음  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 &#40;SQL Server 대량 가져오기 및 내보내기&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  
   

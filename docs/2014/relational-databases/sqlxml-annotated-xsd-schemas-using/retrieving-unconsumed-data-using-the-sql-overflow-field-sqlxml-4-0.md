@@ -1,5 +1,5 @@
 ---
-title: 사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-필드 (SQLXML 4.0) | Microsoft 문서
+title: 'Sql: 오버플로 필드를 사용 하 여 사용 되지 않은 데이터 검색 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18651b91ee2a47819360eae4c57c18ac3eae672b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013775"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석 스키마를 사용하여 데이터베이스에서 데이터를 검색할 때는 `sql:overflow-field` 특성을 지정하여 오버플로 데이터가 저장되어 있는 테이블 열을 식별할 수 있습니다. 합니다 `sql:overflow-field` 특성에 지정할 수 있습니다  **\<요소 >** 합니다.  
+  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석 스키마를 사용하여 데이터베이스에서 데이터를 검색할 때는 `sql:overflow-field` 특성을 지정하여 오버플로 데이터가 저장되어 있는 테이블 열을 식별할 수 있습니다. 특성 `sql:overflow-field` 은 ** \<요소>** 에 지정할 수 있습니다.  
   
  이 데이터는 다음과 같은 방법으로 검색할 수 있습니다.  
   
@@ -34,9 +35,9 @@ ms.locfileid: "66013775"
 -   데이터베이스의 오버플로 열에 저장된 자식 요소와 해당 하위 항목은 스키마에 명시적으로 지정된 내용에 따라 자식 요소로 추가되며, 이때 순서는 유지되지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>1\. 요소에 Specifying sql:overflow-field 지정  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 요소에 Specifying sql:overflow-field 지정  
  이 예에서는 다음 스크립트를 실행한 결과 tempdb 데이터베이스에 Customers2라는 테이블이 생성되었다고 가정합니다.  
   
 ```  
@@ -60,7 +61,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- 또한 tempdb 데이터베이스에 대 한 가상 디렉터리를 만들어야-및의 템플릿 가상 이름도 `template` "template" 이라는 형식입니다.  
+ 또한 tempdb 데이터베이스에 대 한 가상 디렉터리를 만들어야 하며 "template" 이라는 `template` 형식의 템플릿 가상 이름도 만들어야 합니다.  
   
  다음 예에서 매핑 스키마는 Customers2 테이블의 AddressOverflow 열에 저장되어 있는 사용되지 않은 데이터를 검색합니다.  
   
@@ -99,7 +100,7 @@ GO
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  결과 집합은 다음과 같습니다.  
   

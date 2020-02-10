@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010162"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
@@ -62,9 +62,9 @@ ms.locfileid: "66010162"
   
 
   
-##  <a name="best"></a> 최선의 구현 방법  
+##  <a name="best"></a>모범 사례  
   
-###  <a name="config"></a> 물리적 구성 및 유지 관리  
+###  <a name="config"></a>물리적 구성 및 유지 관리  
  FILESTREAM 스토리지 볼륨을 설정할 때 다음 지침을 고려하십시오.  
   
 -   FILESTREAM 컴퓨터 시스템에서 약식 파일 이름을 해제합니다. 약식 파일 이름은 생성하는 데 시간이 많이 소요됩니다. 약식 파일 이름을 비활성화하려면 Windows **fsutil** 유틸리티를 사용합니다.  
@@ -81,17 +81,17 @@ ms.locfileid: "66010162"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 수준|쓰기 성능|읽기 성능|내결함성|Remarks|  
-|RAID 5|보통|보통|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
-|RAID 0|최고|최고|없음||  
+|RAID 수준|쓰기 성능|읽기 성능|내결함성|설명|  
+|RAID 5|정상|정상|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
+|RAID 0|최고|최고|None||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
   
 
   
-###  <a name="database"></a> 물리적 데이터베이스 디자인  
+###  <a name="database"></a>물리적 데이터베이스 디자인  
  FILESTREAM 데이터베이스를 디자인할 때 다음 같은 지침을 고려하십시오.  
   
--   FILESTREAM 열을 해당 수반 되어야 합니다 `uniqueidentifier`ROWGUID 열입니다. 이러한 종류의 테이블에는 고유한 인덱스도 함께 나타나야 합니다. 일반적으로 이러한 인덱스는 클러스터형 인덱스가 아닙니다. 데이터베이스 비즈니스 논리에 클러스터형 인덱스가 필요한 경우, 인덱스에 저장된 값이 임의의 값이 아니어야 합니다. 임의의 값인 경우에는 테이블에서 행이 추가되거나 제거될 때마다 인덱스가 다시 정렬됩니다.  
+-   FILESTREAM 열에는 해당 `uniqueidentifier`하는 ROWGUID 열이 수반 되어야 합니다. 이러한 종류의 테이블에는 고유한 인덱스도 함께 나타나야 합니다. 일반적으로 이러한 인덱스는 클러스터형 인덱스가 아닙니다. 데이터베이스 비즈니스 논리에 클러스터형 인덱스가 필요한 경우, 인덱스에 저장된 값이 임의의 값이 아니어야 합니다. 임의의 값인 경우에는 테이블에서 행이 추가되거나 제거될 때마다 인덱스가 다시 정렬됩니다.  
   
 -   성능상의 이유로 FILESTREAM 파일 그룹 및 컨테이너는 운영 체제, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그, tempdb 또는 페이징 파일 이외의 볼륨에 있어야 합니다.  
   

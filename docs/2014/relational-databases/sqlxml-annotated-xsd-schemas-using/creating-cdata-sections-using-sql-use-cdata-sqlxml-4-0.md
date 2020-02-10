@@ -1,5 +1,5 @@
 ---
-title: Sql:use 사용 하 여 CDATA 섹션 만들기-cdata (SQLXML 4.0) | Microsoft Docs
+title: 'Sql을 사용 하 여 CDATA 섹션 만들기: use-CDATA (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,28 +20,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014009"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
   XML에서 CDATA 섹션은 태그 문자로 인식될 문자가 포함된 텍스트 블록을 이스케이프하는 데 사용됩니다.  
   
- Microsoft의 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서에서 태그 문자로 처리 됩니다; 예를 들어 꺾쇠 괄호는 문자가 포함 될 수 있습니다 (\< 및 >), 작음 보다-또는-같음 기호 (< =), 및 앰퍼샌드 (&)는 태그 문자로 처리 합니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스에는 XML 파서에서 태그 문자로 처리 되는 문자를 포함 하는 경우가 있습니다. 예를 들어 꺾쇠 괄호 (\< 및 >), 작거나 같음 기호 (<=) 및 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
   
- `sql:use-cdata` 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 데이터를 CDATA 섹션에 래핑하도록 지정하는 데 사용됩니다. 즉, `sql:field`로 지정된 열의 값을 CDATA 섹션에 포함할지 여부를 나타냅니다. `sql:use-cdata` 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
+ 
+  `sql:use-cdata` 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 데이터를 CDATA 섹션에 래핑하도록 지정하는 데 사용됩니다. 즉, `sql:field`로 지정된 열의 값을 CDATA 섹션에 포함할지 여부를 나타냅니다. 
+  `sql:use-cdata` 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
   
- `sql:use-cdata` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
+ 
+  `sql:use-cdata` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
- `sql:url-encode`나 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에는 이 주석을 사용할 수 없습니다.  
+ 
+  `sql:url-encode`나 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에는 이 주석을 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>1\. 요소에 sql:use-cdata 지정  
- 다음 스키마에서 `sql:use-cdata` 1(true)로 설정 됩니다는  **\<주소란 1, 주소란 >** 내 합니다  **\<주소 >** 요소입니다. 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 요소에 sql:use-cdata 지정  
+ 다음 스키마에서 `sql:use-cdata` 는 ** \<Address>** 요소 내의 ** \<AddressLine1>** 에 대해 1 (True)로 설정 됩니다. 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,7 +86,7 @@ ms.locfileid: "66014009"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  다음은 결과 집합의 일부입니다.  
   

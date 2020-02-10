@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057708"
 ---
 # <a name="merge-join-transformation-editor"></a>병합 조인 변환 편집기
@@ -29,7 +29,7 @@ ms.locfileid: "66057708"
   
  병합 조인 변환에 대한 자세한 내용은 [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **조인 유형**  
  내부 조인, 왼쪽 우선 외부 조인 또는 완전 조인을 사용할지 여부를 지정합니다.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "66057708"
  **출력 별칭**  
  각 출력 열의 별칭을 입력합니다. 기본값은 입력 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [병합 조인 변환을 사용하여 데이터 세트 확장](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [병합 및 병합 조인 변환에 대 한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [병합 조인 변환을 사용 하 여 데이터 집합 확장](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [병합 변환](data-flow/transformations/merge-transformation.md)   
  [UNION ALL 변환](data-flow/transformations/union-all-transformation.md)  
   

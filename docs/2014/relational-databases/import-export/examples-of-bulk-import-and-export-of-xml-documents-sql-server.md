@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011967"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
     
-##  <a name="top"></a> XML 문서 대량 수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 또는 대량 내보내기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.  
+##  <a name="top"></a>XML 문서를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스로 대량 가져오거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 대량으로 내보낼 수 있습니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.  
   
  다음을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 분할되지 않은 뷰로 대량 가져올 수 있습니다.  
   
@@ -37,24 +37,24 @@ ms.locfileid: "66011967"
   
 -   BULK INSERT  
   
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+-   INSERT ... 선택 * OPENROWSET (BULK)에서  
   
- 자세한 내용은 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) 하 고 [BULK INSERT 또는 OPENROWSET 대량 데이터 가져오기&#40;대량... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)합니다.  
+ 자세한 내용은 [Bcp 유틸리티를 사용 하 여 대량 데이터 가져오기 및 내보내기 &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) 을 사용 하 여 대량 데이터 가져오기 및 내보내기 [BULK INSERT 또는 OPENROWSET&#40;bulk ... &#41; &#40;SQL Server&#41;를 사용 하 여 대량 데이터 가져오기 ](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
  다음과 같은 예가 제공됩니다.  
   
--   1\. [XML 데이터를 이진 바이트 스트림으로 대량 가져오기](#binary_byte_stream)  
+-   A. [XML 데이터를 이진 바이트 스트림으로 대량 가져오기](#binary_byte_stream)  
   
--   2\. [기존 행에 XML 데이터 대량 가져오기](#existing_row)  
+-   B. [기존 행에 XML 데이터 대량 가져오기](#existing_row)  
   
--   3\. [XML 데이터 대량 가져오기 dtd가 포함 된 파일](#file_contains_dtd)  
+-   C. [DTD가 포함 된 파일에서 XML 데이터 대량 가져오기](#file_contains_dtd)  
   
--   4\. [서식 파일을 사용 하 여 명시적으로 필드 종결자 지정](#field_terminator_in_format_file)  
+-   D. [서식 파일을 사용 하 여 명시적으로 필드 종결자 지정](#field_terminator_in_format_file)  
   
--   5\. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
+-   E. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> 1. XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
+###  <a name="binary_byte_stream"></a>은. XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
  적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XML 파서가 XML 선언에 지정된 인코딩 체계에 따라 데이터를 가져오도록 합니다.  
   
 #### <a name="sample-table"></a>예제 테이블  
@@ -88,7 +88,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>설명  
  이 경우 SINGLE_BLOB을 사용하면 XML 인코딩 선언에 지정된 XML 문서의 인코딩과 서버가 적용한 문자열 코드 페이지 간 불일치를 피할 수 있습니다.  
   
  NCLOB 또는 CLOB 데이터 형식을 사용할 경우 코드 페이지 또는 인코딩 충돌이 발생하면 다음 중 하나를 수행해야 합니다.  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   데이터베이스 데이터 정렬 설정을 비유니코드 XML 인코딩 체계에 맞추거나 불일치를 해결합니다.  
   
- [&#91;맨 위로 이동&#93;](#top)  
+ [&#91;Top&#93;](#top)  
   
-###  <a name="existing_row"></a> 2. 기존 행에 XML 데이터 대량 가져오기  
+###  <a name="existing_row"></a>B. 기존 행에 XML 데이터 대량 가져오기  
  이 예에서는 `OPENROWSET` 대량 행 집합 공급자를 사용하여 `T`예제 테이블의 기존 행에 XML 인스턴스를 추가합니다.  
   
 > [!NOTE]  
@@ -134,14 +134,15 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;맨 위로 이동&#93;](#top)  
+ [&#91;Top&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a> 3. DTD가 포함된 파일에 있는 XML 데이터 대량 가져오기  
+###  <a name="file_contains_dtd"></a>C. DTD가 포함된 파일에 있는 XML 데이터 대량 가져오기  
   
 > [!IMPORTANT]  
 >  XML 환경에서 반드시 필요한 경우가 아니면 DTD(문서 유형 정의)에 대한 지원을 설정하지 않는 것이 좋습니다. DTD 지원을 설정하면 서버가 공격 받을 수 있는 노출 영역이 증가하며 서비스 거부 공격에 노출될 수 있습니다. DTD 지원을 설정해야 할 경우에는 신뢰할 수 있는 XML 문서만 처리하여 이러한 보안 위험을 줄일 수 있습니다.  
   
- [bcp](../../tools/bcp-utility.md) 명령을 사용하여 DTD가 들어 있는 파일에서 XML 데이터를 가져오려고 하면 다음과 유사한 오류가 발생할 수 있습니다.  
+ 
+  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 DTD가 들어 있는 파일에서 XML 데이터를 가져오려고 하면 다음과 유사한 오류가 발생할 수 있습니다.  
   
  "SQLState = 42000, NativeError = 6359"  
   
@@ -178,15 +179,17 @@ INSERT T1
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
 ```  
   
- `INSERT` 문을 실행하면 XML에서 DTD가 잘리고 `T1` 테이블에 저장됩니다.  
+ 
+  `INSERT` 문을 실행하면 XML에서 DTD가 잘리고 `T1` 테이블에 저장됩니다.  
   
- [&#91;맨 위로 이동&#93;](#top)  
+ [&#91;Top&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a> 4. 서식 파일을 사용하여 명시적으로 필드 종결자 지정  
+###  <a name="field_terminator_in_format_file"></a>2. 서식 파일을 사용하여 명시적으로 필드 종결자 지정  
  다음 예에서는 XML 문서 `Xmltable.dat`를 대량으로 가져오는 방법을 보여 줍니다.  
   
 #### <a name="sample-data-file"></a>예제 데이터 파일  
- `Xmltable.dat` 의 문서에는 두 개의 XML 값이 있으며 각 행마다 하나의 XML 값을 갖습니다. 첫 번째 XML 값은 UTF-16으로 인코딩되고 두 번째 값은 UTF-8로 인코딩됩니다.  
+ 
+  `Xmltable.dat` 의 문서에는 두 개의 XML 값이 있으며 각 행마다 하나의 XML 값을 갖습니다. 첫 번째 XML 값은 UTF-16으로 인코딩되고 두 번째 값은 UTF-8로 인코딩됩니다.  
   
  이 데이터 파일의 내용은 다음과 같은 16진수 덤프로 표시됩니다.  
   
@@ -212,7 +215,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>예제 테이블  
- XML 문서를 대량으로 가져오거나 내보낼 때는 문서에 나타날 가능성이 없는 [필드 종결자](specify-field-and-row-terminators-sql-server.md) 를 사용해야 합니다. 예를 들어 다음과 같이`\0`: `z`문자 앞에 오는 일련의 Null( `\0\0\0\0z`) 4개를 사용할 수 있습니다.  
+ XML 문서를 대량으로 가져오거나 내보낼 때는 문서에 나타날 가능성이 없는 [필드 종결자](specify-field-and-row-terminators-sql-server.md) 를 사용 해야 합니다. 예를 들어 일련의 네 가지 null (`\0`)이 오고 그 뒤 `z`에 `\0\0\0\0z`문자가 있습니다.  
   
  이 예에서는 `xTable` 예제 테이블에 대해 이 필드 종결자를 사용하는 방법을 보여 줍니다. 이 예제 테이블을 만들려면 다음 `CREATE TABLE` 문을 사용합니다.  
   
@@ -243,9 +246,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;맨 위로 이동&#93;](#top)  
+ [&#91;Top&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a> 5. XML 데이터 대량 내보내기  
+###  <a name="bulk_export_xml_data"></a>우표. XML 데이터 대량 내보내기  
  다음 예에서는 `bcp` 를 사용하여 동일한 XML 서식 파일로 앞의 예에서 만든 테이블에서 XML 데이터를 대량으로 내보냅니다. 다음 `bcp` 명령에서 `<server_name>` 및 `<instance_name>` 은 적절한 값으로 바꿔야 하는 자리 표시자를 나타냅니다.  
   
 ```  
@@ -253,15 +256,17 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터가 데이터베이스에 유지되면 XML 인코딩을 저장하지 않습니다. 그러므로 XML 필드의 원래 인코딩은 XML 데이터를 내보내면 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터를 내보낼 때 UTF-16 인코딩을 사용합니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터가 데이터베이스에 유지되면 XML 인코딩을 저장하지 않습니다. 그러므로 XML 필드의 원래 인코딩은 XML 데이터를 내보내면 사용할 수 없습니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터를 내보낼 때 UTF-16 인코딩을 사용합니다.  
   
- [&#91;맨 위로 이동&#93;](#top)  
+ [&#91;Top&#93;](#top)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [SELECT 절 &#40;Transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
- [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [데이터 &#40;SQL Server 대량 가져오기 및 내보내기&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

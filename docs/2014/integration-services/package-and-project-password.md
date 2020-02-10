@@ -14,20 +14,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056985"
 ---
 # <a name="package-and-project-password"></a>패키지 및 프로젝트 암호
+  
   **패키지 암호** 대화 상자를 사용하여 암호로 암호화된 패키지에 패키지 암호를 제공할 수 있습니다. 패키지에서 **암호로 중요한 데이터 암호화**또는 **암호로 모든 데이터 암호화** 보호 수준을 사용하는 경우 암호를 제공해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **암호**  
  암호를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   

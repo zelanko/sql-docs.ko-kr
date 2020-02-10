@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489102"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>태스크 5: Excel에서 도메인 기반 특성 만들기
-  변환 하면이 태스크에서는 **상태** 특성을 **공급 업체** 엔터티를 **도메인 기반 특성**. State 특성 도메인 기반 단일 하 라는 새로운 엔터티가 MDS에 게시를 구성 하 고 나면 **상태** 열의 모든 값을 사용 하 여 MDS 서버에 만들어집니다 하며 **상태** 특성을 **공급 업체** 엔터티를 값으로 채워집니다 합니다 **상태** 엔터티. 이제는 **공급 업체** 모델에는 두 개의 엔터티가 있어야 합니다. **공급 업체** 및 **상태** 여기서는 **상태** 특성을 **공급 업체** 엔터티가 종속 된 도메인 기반 특성을 **상태** 엔터티.  
+  이 태스크에서는 **공급자** 엔터티의 **State** 특성을 **도메인 기반 특성**으로 변환 합니다. State 특성을 도메인 기반으로 구성한 후 MDS에 게시 하면 **상태** 라는 새 엔터티가 열의 모든 값을 사용 하 여 mds 서버에 생성 되 고 **공급자** 엔터티의 **state** 특성은 **state** 엔터티의 값으로 채워집니다. 이제 **Suppliers** **모델에** **는 공급자 엔터티의** **state** 특성과 **state 엔터티에 종속** 된 도메인 기반 **특성이 있는 두** 개의 엔터티가 있어야 합니다.  
   
-1.  전환할 **Excel** 포함 된 창을 **Cleansed and Matched Suppliers.xlsx** 엽니다.  
+1.  정리한 **공급자와 일치** 하는 **Excel** 창으로 전환 합니다.  
   
-2.  클릭 **새로 고침** MDS에서 최신 업데이트를 받도록 리본의 단추입니다. 선택적 수행한 경우 레코드가 두 개 더 표시 됩니다 **작업 4**합니다.  
+2.  리본에서 **새로 고침** 단추를 클릭 하 여 MDS에서 최신 업데이트를 가져옵니다. 선택적 **작업 4**를 수행한 경우에는 두 개 이상의 레코드가 표시 됩니다.  
   
-3.  열 이름을 클릭 **상태** (셀 **I1**)에 **머리글 행**합니다.  
+3.  **머리글 행**에서 열 이름 **상태** ( **I1**셀)를 클릭 합니다.  
   
-     ![Excel-특성 속성 단추](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel-특성 속성 단추")  
+     ![Excel - 특성 속성 단추](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel - 특성 속성 단추")  
   
-4.  클릭 **특성 속성** 리본 메뉴에 있습니다.  
+4.  리본에서 **특성 속성** 을 클릭 합니다.  
   
-5.  에 **특성 속성** 대화 상자에서 **제약 된 목록 (도메인 기반)** 에 대 한 합니다 **특성 유형**합니다.  
+5.  **특성 속성** 대화 상자에서 **특성 유형에**대 한 **제한 목록 (도메인 기반)** 을 선택 합니다.  
   
-6.  형식 **상태** 에 대 한 합니다 **새 엔터티 이름** 클릭 **확인**합니다.  
+6.  **새 엔터티 이름** 에 **상태** 를 입력 하 고 **확인**을 클릭 합니다.  
   
-     ![Excel-특성 속성 대화 상자](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel-특성 속성 대화 상자")  
+     ![Excel - 특성 속성 대화 상자](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel - 특성 속성 대화 상자")  
   
-7.  이제 Excel에서 표시 되어야 **아래쪽 화살표** 의 값을 클릭할 때 합니다 **상태** 열입니다. 필요에 따라 드롭 다운 목록을 사용해서 값을 변경할 수 있습니다.  
+7.  이제 Excel에서는 **상태** 열에서 값을 클릭 하면 **아래쪽 화살표가** 표시 됩니다. 필요에 따라 드롭 다운 목록을 사용해서 값을 변경할 수 있습니다.  
   
-     ![Excel-상태를 사용 하 여 목록 드롭다운](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel-상태를 사용 하 여 목록 드롭다운")  
+     ![Excel - 상태가 있는 드롭다운 목록](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - 상태가 있는 드롭다운 목록")  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 6: 마스터 데이터 관리자를 사용 하 여 도메인 기반 특성이 생성 되었는지 확인](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [태스크 6: 마스터 데이터 관리자를 사용하여 도메인 기반 특성이 생성되었는지 확인](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

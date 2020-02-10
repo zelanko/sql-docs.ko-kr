@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d49bcc6b25b9d66d8aba77c2300549c682a879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867709"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -45,7 +45,7 @@ ms.locfileid: "62867709"
   
 -   운영 체제에서 I/O 작업이 완료되었다고 너무 빨리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알리는 경우. 실제 데이터 손상이 없는 경우에도 오류 메시지가 표시됩니다.  
   
- 최적화 프로그램 힌트 NOLOCK을 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하는 경우. NOLOCK 또는 READ UNCOMMITTED를 사용하는 쿼리에서 다른 사용자가 이동하거나 변경 중인 데이터를 읽으려고 하면 605 오류가 발생합니다. 일시적 605 오류인지 확인하려면 나중에 쿼리를 다시 실행합니다. 자세한 내용은 기술 자료 문서를 참조 하세요 [235880](https://support.microsoft.com/kb/235880/en-us): "받게"오류 605"오류 메시지가 최적화 프로그램 힌트 NOLOCK 사용 하 여 쿼리를 실행 하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 SQL Server에서 설정한."  
+ 최적화 프로그램 힌트 NOLOCK을 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하는 경우. NOLOCK 또는 READ UNCOMMITTED를 사용하는 쿼리에서 다른 사용자가 이동하거나 변경 중인 데이터를 읽으려고 하면 605 오류가 발생합니다. 일시적 605 오류인지 확인하려면 나중에 쿼리를 다시 실행합니다. 자세한 내용은 기술 자료 문서 [235880](https://support.microsoft.com/kb/235880/en-us) "You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server."("SQL Server에서 최적화 프로그램 힌트 NOLOCK를 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하면 "오류 605" 오류 메시지가 나타난다")를 참조하세요.  
   
  일반적으로 데이터에 액세스하는 동안 오류가 발생했는데 후속 DBCC CHECKDB 작업이 오류 없이 완료되면 일시적 605 오류일 가능성이 큽니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62867709"
   
      USE`database_name`;  
   
-     GO  
+     이동  
   
      SELECT au.allocation_unit_id, OBJECT_NAME(p.object_id) AS table_name, fg.name AS filegroup_name,  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62867709"
   
      ORDER BY au.allocation_unit_id;  
   
-     GO  
+     이동  
   
 2.  오류 메시지에 지정된 두 번째 할당 단위 ID와 연결된 테이블에 대해 REPAIR 절 없이 DBCC CHECKTABLE을 실행합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62867709"
     > [!CAUTION]  
     >  REPAIR 절을 사용할 경우 DBCC CHECKDB가 데이터에 미치는 영향을 확인하려면 이 문을 실행하기 전에 주 지원 공급자에게 문의하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DBCC CHECKTABLE&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)  
   
   

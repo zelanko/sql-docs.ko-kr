@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011166"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
@@ -56,13 +56,13 @@ ms.locfileid: "66011166"
   
          전체 텍스트 카탈로그를 사용할 수 없는 경우 연결된 전체 텍스트 인덱스가 다시 작성됩니다. 이 옵션은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 데이터베이스에 대해서만 사용할 수 있습니다.  
   
-         **Rebuild**  
+         **다시 빌드**  
          향상된 새로운 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 작성합니다. 인덱스를 다시 작성하면 시간이 오래 걸릴 수 있으며 업그레이드 후 CPU 및 메모리가 많이 필요할 수 있습니다.  
   
-         **다시 설정**  
+         **재설정**  
          전체 텍스트 카탈로그를 다시 설정합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 파일이 제거되지만 전체 텍스트 카탈로그 및 전체 텍스트 인덱스의 메타데이터는 유지됩니다. 업그레이드가 끝나면 모든 전체 텍스트 인덱스의 변경 내용 추적이 해제되고 탐색이 자동으로 시작되지 않습니다. 업그레이드가 완료된 후 전체 채우기를 수동으로 실행할 때까지 카탈로그가 비어 있습니다.  
   
-         전체 텍스트 업그레이드 옵션을 선택 하는 방법에 대 한 내용은 [전체 텍스트 검색 업그레이드](upgrade-full-text-search.md)합니다.  
+         전체 텍스트 업그레이드 옵션을 선택 하는 방법에 대 한 자세한 내용은 [전체 텍스트 검색 업그레이드](upgrade-full-text-search.md)를 참조 하세요.  
   
         > [!NOTE]  
         >  [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 동작을 사용하여 전체 텍스트 업그레이드 옵션을 설정할 수도 있습니다.  
@@ -72,16 +72,16 @@ ms.locfileid: "66011166"
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스의 전체 텍스트 속성 및 관련 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|Description|기능|  
+|속성|Description|함수|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|전체 텍스트 구성 요소가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 설치되어 있는지 여부를 나타냅니다.|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|운영 체제 단어 분리기 및 필터가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 함께 등록되고 사용되는지 여부를 나타냅니다.|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|전체 텍스트 엔진이 서명된 이진 파일만 로드할지 여부를 지정합니다.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 전체 텍스트 검색 작업 모니터링  
+##  <a name="monitor"></a>전체 텍스트 검색 작업 모니터링  
  일부 동적 관리 뷰 및 함수는 서버 인스턴스의 전체 텍스트 검색 작업을 모니터링하는 데 유용합니다.  
   
- **채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 보려면**  
+ **진행 중인 채우기 작업을 포함 하는 전체 텍스트 카탈로그에 대 한 정보를 보려면**  
   
 -   [sys.dm_fts_active_catalogs&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
@@ -89,23 +89,23 @@ ms.locfileid: "66011166"
   
 -   [sys.dm_fts_fdhosts&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **진행 중인 인덱스 채우기에 대한 정보를 보려면**  
+ **진행 중인 인덱스 채우기에 대 한 정보를 보려면**  
   
 -   [sys.dm_fts_index_population&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **전체 텍스트 탐색이나 전체 텍스트 탐색 범위의 일부로 사용되는 메모리 풀의 메모리 버퍼를 보려면**  
+ **탐색 또는 탐색 범위의 일부로 사용 되는 메모리 풀의 메모리 버퍼를 보려면**  
   
 -   [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **전체 텍스트 탐색이나 전체 텍스트 탐색 범위에 대해 전체 텍스트 Gatherer 구성 요소에서 사용할 수 있는 공유 메모리 풀을 보려면**  
+ **전체 텍스트 탐색 이나 전체 텍스트 탐색 범위에 대해 전체 텍스트 gatherer 구성 요소에서 사용할 수 있는 공유 메모리 풀을 보려면**  
   
 -   [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **각 전체 텍스트 인덱싱 일괄 처리에 대한 정보를 보려면**  
+ **각 전체 텍스트 인덱싱 일괄 처리에 대 한 정보를 보려면**  
   
 -   [sys.dm_fts_outstanding_batches&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **진행 중인 채우기와 관련된 특정 범위에 대한 정보를 보려면**  
+ **진행 중인 채우기와 관련 된 특정 범위에 대 한 정보를 보려면**  
   
 -   [sys.dm_fts_population_ranges&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

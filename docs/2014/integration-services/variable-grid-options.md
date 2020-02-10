@@ -15,36 +15,40 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054682"
 ---
 # <a name="variable-grid-options"></a>가변 눈금 옵션
+  
   **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
   
 ## <a name="options-for-filter"></a>필터 옵션  
  **시스템 변수 표시**  
- **변수** 창에 시스템 변수를 나열하려면 선택합니다. 시스템 변수는 미리 정의되어 있습니다. 시스템 변수는 추가하거나 삭제할 수 없습니다. **RaiseChangedEvent** 속성 설정을 수정할 수 있습니다.  
+ 
+  **변수** 창에 시스템 변수를 나열하려면 선택합니다. 시스템 변수는 미리 정의되어 있습니다. 시스템 변수는 추가하거나 삭제할 수 없습니다. 
+  **RaiseChangedEvent** 속성 설정을 수정할 수 있습니다.  
   
  이 목록은 색으로 구분됩니다. 시스템 변수는 회색으로 표시되고 사용자 정의 변수는 검은색으로 표시됩니다.  
   
  **모든 범위의 변수 표시**  
  패키지의 범위 내에 있는 변수와 패키지의 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수를 표시하려면 이 옵션을 선택합니다. 패키지의 범위 내에 있는 변수와 선택된 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수만 표시하려면 이 옵션의 선택을 취소합니다.  
   
- 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)영역 아래에 있습니다.  
   
 ## <a name="options-for-columns"></a>열 옵션  
- **변수** 창에 표시할 열을 선택합니다.  
+ 
+  **변수** 창에 표시할 열을 선택합니다.  
   
 -   **범위**  
   
--   **Data type**  
+-   **데이터 형식**  
   
--   **Value**  
+-   **값**  
   
--   **Namespace**  
+-   **네임스페이스**  
   
 -   **변수 값 변경 시 이벤트 발생**  
   
@@ -52,7 +56,7 @@ ms.locfileid: "66054682"
   
 -   **식**  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [변수 창](../../2014/integration-services/variables-window.md)   
  [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   

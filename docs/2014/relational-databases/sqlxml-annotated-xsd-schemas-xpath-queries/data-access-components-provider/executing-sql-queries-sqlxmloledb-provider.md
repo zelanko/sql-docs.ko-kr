@@ -1,5 +1,5 @@
 ---
-title: SQL 쿼리 실행 (SQLXMLOLEDB 공급자) | Microsoft Docs
+title: SQL 쿼리 실행 (SQLXMLOLEDB Provider) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013183"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리 실행(SQLXMLOLEDB 공급자)
@@ -29,12 +29,12 @@ ms.locfileid: "66013183"
   
 -   xml root  
   
- 이 클라이언트 쪽 ADO 예제 애플리케이션에서는 예제 SQL 쿼리가 클라이언트에서 실행됩니다. ClientSideXML 속성을 True로 설정 하기 때문에 FOR XML 절이 있는 SELECT 문은 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
+ 이 클라이언트 쪽 ADO 예제 애플리케이션에서는 예제 SQL 쿼리가 클라이언트에서 실행됩니다. ClientSideXML 속성이 True로 설정 되어 있기 때문에 FOR XML 절이 없는 SELECT 문이 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
- Xml 루트 속성 생성 되는 XML 문서에 대 한 단일 최상위 루트 요소를 제공 합니다.  
+ Xml root 속성은 생성 되는 XML 문서에 대해 단일 최상위 루트 요소를 제공 합니다.  
   
 > [!NOTE]  
->  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 데이터 공급자에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 사용하도록 지정하는데, 이렇게 하려면 추가 네트워크 클라이언트를 설치해야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)합니다.  
+>  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 데이터 공급자에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 사용하도록 지정하는데, 이렇게 하려면 추가 네트워크 클라이언트를 설치해야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)을 참조 하세요.  
   
 ```  
 Option Explicit  

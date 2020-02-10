@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011273"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
@@ -26,7 +26,8 @@ ms.locfileid: "66011273"
   
 -   [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)를 사용하여 전체 텍스트 카탈로그를 다시 구성합니다. 이 문을 실행하면 해당 카탈로그에 있는 전체 텍스트 인덱스의 마스터 병합이 수행되므로 성능 테스트 전에 실행해야 합니다.  
   
--   작은 열을 전체 텍스트 키 열로 선택합니다. 900바이트 열이 지원되지만 전체 텍스트 인덱스에서는 비교적 작은 키 열을 사용하는 것이 좋습니다. `int` 및 `bigint`는 최적의 성능을 제공합니다.  
+-   작은 열을 전체 텍스트 키 열로 선택합니다. 900바이트 열이 지원되지만 전체 텍스트 인덱스에서는 비교적 작은 키 열을 사용하는 것이 좋습니다. 
+  `int` 및 `bigint`는 최적의 성능을 제공합니다.  
   
 -   정수 전체 텍스트 키를 사용하면 **docid** 매핑 테이블과의 조인이 방지됩니다. 따라서 정수 전체 텍스트 키는 작업량을 줄여 쿼리 성능을 높이고 탐색 성능을 개선합니다. 전체 텍스트 키가 클러스터형 인덱스 키인 경우에도 또 다른 성능 이점을 얻을 수 있습니다.  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66011273"
 -   선택적 관계 조건을 포함하는 애플리케이션의 경우 선택적 관계 조건자와 비선택적 전체 텍스트 조건자를 사용하는 쿼리는 쿼리 최적화 프로그램을 사용하도록 작성되었을 때 최상의 성능을 발휘할 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램이 효과적인 쿼리 계획을 생성하기 위해 조건자나 범위 축소 중 어느 것을 이용할지 결정할 수 있습니다. 이러한 방식은 관계형 데이터를 전체 텍스트 데이터로 인덱싱하는 것보다 간단하고 효율적일 때가 많습니다.  
   
 ## <a name="related-resources"></a>관련 리소스  
- [SQL Server 2008 전체 텍스트 검색: 내부 구조 및 향상 기능](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055279"
 ---
 # <a name="technical-reference-integration-services"></a>기술 참조(Integration Services)
-  도구, 언어 및 프로그래밍 참조 설명서를 찾으려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.  
+  의에 대 한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]도구, 언어 및 프로그래밍 참조 설명서를 찾습니다.  
   
- ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **Change Data Capture Service 및 Designer**  
+ ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **변경 데이터 캡처 서비스 및 디자이너**  
  [Attunity Oracle CDC Service](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Attunity Oracle CDC Designer](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "66055279"
  ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **오류 및 이벤트**  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **TRANSACT-SQL 참조**  
+ ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **transact-sql 참조**  
  [보기&#40;Integration Services 카탈로그&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
  [저장 프로시저&#40;Integration Services 카탈로그&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  

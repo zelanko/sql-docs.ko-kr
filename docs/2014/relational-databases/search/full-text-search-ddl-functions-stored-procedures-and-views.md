@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011306"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰
@@ -22,7 +22,7 @@ ms.locfileid: "66011306"
   
  사용되지 않는 개체는 이 목록에 포함되지 않습니다.  
   
- 의미 체계 검색을 지원하는 데이터베이스 개체 목록은 [의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)를 참조하세요.  
+ 의미 체계 검색을 지원하는 데이터베이스 개체 목록은 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)를 참조하세요.  
   
 ##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   

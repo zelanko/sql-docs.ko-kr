@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012819"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>전체 텍스트 카탈로그와 인덱스 백업 및 복원
@@ -103,7 +103,7 @@ GO
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [전체 텍스트 검색 업그레이드](upgrade-full-text-search.md)  
   

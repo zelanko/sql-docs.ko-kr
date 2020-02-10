@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011647"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
@@ -37,19 +37,19 @@ ms.locfileid: "66011647"
  유니코드 문자 형식으로 제공되는 기본값과 다른 필드 또는 행 종결자를 사용하려면 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
 ## <a name="command-options-for-unicode-character-format"></a>유니코드 문자 형식의 명령 옵션  
- **bcp**, BULK INSERT 또는 INSERT... SELECT \* FROM OPENROWSET(BULK...)를 사용하여 테이블로 유니코드 원시 형식 데이터를 가져올 수 있습니다. **bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
+ **Bcp**, BULK INSERT 또는 INSERT ...를 사용 하 여 테이블에 유니코드 문자 형식 데이터를 가져올 수 있습니다. SELECT \* FROM OPENROWSET (BULK ...)를 선택 합니다. **Bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
   
  다음 명령줄 옵션에서 유니코드 문자 형식을 사용할 수 있습니다.  
   
-|Command|옵션|Description|  
+|명령|옵션|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-w**|유니코드 문자 형식을 사용합니다.|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|대량으로 데이터를 가져올 때 유니코드 문자 형식을 사용합니다.|  
+|**틀린**|**-w**|유니코드 문자 형식을 사용합니다.|  
+|BULK INSERT|DATAFILETYPE **= '** widechar **'**|대량으로 데이터를 가져올 때 유니코드 문자 형식을 사용합니다.|  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 > [!NOTE]  
->  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
+>  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **bcp** 를 사용하여 유니코드 문자 데이터를 대량으로 내보내는 방법과 BULK INSERT를 사용하여 동일한 데이터를 대량으로 가져오는 방법을 보여 줍니다.  
@@ -84,10 +84,13 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |한정자|Description|  
 |----------------|-----------------|  
 |**-w**|유니코드 문자 형식을 지정합니다.|  
-|**-t** `,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 유니코드 문자 (\t)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
-|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
+|**-t**`,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 유니코드 문자 (\t)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
+|**-T**|
+  **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 
+  **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
   
- 다음 예에서는 `myTestUniCharData` 테이블의 유니코드 문자 형식 데이터를 필드 종결자로 쉼표(`myTestUniCharData-w.Dat`)를 사용하는 새 데이터 파일인 `,`로 대량으로 내보냅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 다음 예에서는 `myTestUniCharData` 테이블의 유니코드 문자 형식 데이터를 필드 종결자로 쉼표(`myTestUniCharData-w.Dat`)를 사용하는 새 데이터 파일인 `,`로 대량으로 내보냅니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, -T  
@@ -95,7 +98,8 @@ bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, 
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-unicode-character-data"></a>BULK INSERT를 사용하여 유니코드 문자 데이터 대량 가져오기  
- 다음 예에서는 `BULK INSERT`를 사용하여 `myTestUniCharData-w.Dat` 데이터 파일의 데이터를 `myTestUniCharData` 테이블로 가져옵니다. 기본 필드 종결자(`,`)가 아닌 필드 종결자는 문에서 선언해야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ 다음 예에서는 `BULK INSERT`를 사용하여 `myTestUniCharData-w.Dat` 데이터 파일의 데이터를 `myTestUniCharData` 테이블로 가져옵니다. 기본 필드 종결자(`,`)가 아닌 필드 종결자는 문에서 선언해야 합니다. 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,22 +116,22 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
- **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
+##  <a name="RelatedTasks"></a> 관련 작업  
+ **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용 하려면**  
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [원시 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [데이터를 가져오거나 내보내기 위해 유니코드 원시 형식 사용&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>참고 항목  
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
+ [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)  
   
   

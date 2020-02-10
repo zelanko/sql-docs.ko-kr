@@ -1,5 +1,5 @@
 ---
-title: '태스크 5: 용어 기반 관계 설정 | Microsoft Docs'
+title: '작업 5: 용어 기반 관계 설정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489118"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>태스크 5: 용어 기반 관계 설정
-  이 태스크에서는 몇 가지 용어 기반 관계에 대 한 값에 대 한 정의 **Supplier Name** 도메인입니다. 용어 기반 관계를 사용하면 도메인에서 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 **Inc.** 로 수정할 수 있습니다 **Incorporated**합니다. DQS는 기술 자료 검색, 정리 또는 일치 프로세스에서 이러한 관계를 사용합니다. 참조 [만들 용어 기반 관계](https://msdn.microsoft.com/library/hh510404.aspx) 대 한 자세한 내용은 합니다.  
+  이 태스크에서는 **공급자 이름** 도메인의 값에 대 한 몇 가지 용어 기반 관계를 정의 합니다. 용어 기반 관계를 사용하면 도메인에서 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 **i n c.** 는 **통합**되도록 수정할 수 있습니다. DQS는 기술 자료 검색, 정리 또는 일치 프로세스에서 이러한 관계를 사용합니다. 자세한 내용은 [용어 기반 관계 만들기](https://msdn.microsoft.com/library/hh510404.aspx) 를 참조 하세요.  
   
-1.  선택 **Supplier Name** 에 **도메인 목록**합니다.  
+1.  **도메인 목록**에서 **공급자 이름** 을 선택 합니다.  
   
-2.  으로 전환 합니다 **용어 기반 관계** 오른쪽 창에서 탭 합니다.  
+2.  오른쪽 창에서 **용어 기반 관계** 탭으로 전환 합니다.  
   
-3.  클릭 **새 관계 추가** 테이블에는 관계를 추가 하려면 도구 모음의 단추입니다.  
+3.  도구 모음에서 **새 관계 추가** 단추를 클릭 하 여 테이블에 대 한 관계를 추가 합니다.  
   
-4.  형식 **Co.** 에 대 한 합니다 **값** 필드 및 **회사** 에 대 한 합니다 **수정** 필드입니다.  
+4.  **값** 필드에 대해 **Co** 를 입력 하 고 다음 **으로 수정** 필드에 **Company** 를 입력 합니다.  
   
 5.  다음 값에 대해 위의 두 단계를 반복합니다.  
   

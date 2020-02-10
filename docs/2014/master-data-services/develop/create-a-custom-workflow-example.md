@@ -11,14 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84e4dccb97b045e5077d75c4280cee066a154d5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483055"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>사용자 지정 워크플로 예제(Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용자 지정 워크플로 클래스 라이브러리를 만들 때는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 클래스를 만듭니다. 이 인터페이스에는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출하는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>라는 메서드가 하나 포함됩니다. <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드에는 두 개의 매개변수가 포함됩니다. *workflowType*에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]의 **워크플로 유형** 텍스트 상자에 입력한 텍스트가 들어 있고 *dataElement*에는 워크플로 비즈니스 규칙을 트리거한 항목의 메타데이터와 항목 데이터가 들어 있습니다.  
+  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용자 지정 워크플로 클래스 라이브러리를 만들 때는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 클래스를 만듭니다. 이 인터페이스에는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출하는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>라는 메서드가 하나 포함됩니다. 
+  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드에는 두 개의 매개변수가 포함됩니다. *workflowType*에는 **의 **워크플로 유형[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 텍스트 상자에 입력한 텍스트가 들어 있고 *dataElement*에는 워크플로 비즈니스 규칙을 트리거한 항목의 메타데이터와 항목 데이터가 들어 있습니다.  
   
 ## <a name="custom-workflow-example"></a>사용자 지정 워크플로 예제  
  다음 코드 예제에서는 워크플로 비즈니스 규칙을 트리거한 요소에 대한 XML 데이터에서 Name, Code 및 LastChgUserName 특성을 추출하기 위해 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 구현하는 방법과 추출한 특성을 다른 데이터베이스에 삽입하기 위한 저장 프로시저를 호출하는 방법을 보여 줍니다. 항목 데이터 XML의 예와 항목 데이터 XML에 포함되는 태그에 대한 설명은 [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)을 참조하십시오.  
@@ -68,7 +70,7 @@ namespace MDSWorkflowTestLib
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [사용자 지정 워크플로 만들기&#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [사용자 지정 워크플로 &#40;MDS(Master Data Services)를 만듭니다&#41;](create-a-custom-workflow-master-data-services.md)  
   
   

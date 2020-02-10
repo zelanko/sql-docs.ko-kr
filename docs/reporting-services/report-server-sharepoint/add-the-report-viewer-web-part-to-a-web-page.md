@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579395"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>웹 페이지에 보고서 뷰어 웹 파트 추가
@@ -52,7 +52,7 @@ ms.locfileid: "65579395"
   
 9. 도구 창의 아래쪽에서 **적용** 을 클릭한 다음 **확인** 을 클릭하여 창을 닫습니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [보고서 뷰어 웹 파트 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   

@@ -1,5 +1,5 @@
 ---
-title: 주석이 추가 된 XDR 스키마를 해당 XSD 스키마 (SQLXML 4.0) 변환 | Microsoft 문서
+title: 주석이 추가 된 XDR 스키마를 해당 XSD 스키마로 변환 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c09f9eff920c11f37f0fd173f6cd612aca6df6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014543"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>주석이 추가된 XDR 스키마를 해당 XSD 스키마로 변환(SQLXML 4.0)
-  XSD(XML 스키마 정의) 언어는 XDR(XML-Data Reduced) 스키마 정의 언어의 후속 제품입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 새로 XSD를 지원하므로 XSD를 사용하여 주석이 추가된 새 스키마를 만들 수 있습니다. SQLXML 4.0에는 기존의 주석이 추가된 XDR 스키마를 해당하는 XSD 스키마로 변환하는 데 도움을 주기 위한 XDR-XSD 변환기 도구가 포함되어 있습니다.  
+  XSD(XML 스키마 정의) 언어는 XDR(XML-Data Reduced) 스키마 정의 언어의 후속 제품입니다. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 새로 XSD를 지원하므로 XSD를 사용하여 주석이 추가된 새 스키마를 만들 수 있습니다. SQLXML 4.0에는 기존의 주석이 추가된 XDR 스키마를 해당하는 XSD 스키마로 변환하는 데 도움을 주기 위한 XDR-XSD 변환기 도구가 포함되어 있습니다.  
   
 > [!IMPORTANT]  
 >  주석이 추가된 스키마를 SQLXML 4.0에서 사용하기 위해 XSD로 변환하려는 경우에만 이 도구를 사용합니다. 이 도구는 범용 XDR-XSD 변환 도구가 아닙니다. 따라서 변환된 XSD 스키마를 다른 환경에서 사용할 경우 원래 XDR 스키마와 동일하게 동작하지 않을 수도 있습니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "66014543"
 cvtschema XDRFileName, [-y], [-w] [-?]  
 ```  
   
- 각 항목이 나타내는 의미는 다음과 같습니다.  
+ 위치:  
   
  XDRFileName  
  XSD로 변환될 XDR 파일의 이름입니다. 이 도구는 입력 XDR 파일을 읽어 들이고 현재 디렉터리에 XSD 출력 파일을 생성합니다. 입력 파일의 확장명이 .xdr 또는 .xml인 경우 생성되는 출력 XDR 파일은 이름은 같지만 확장명은 .xsd입니다. 입력 파일의 확장명이 .xml 또는 .xdr이 아니거나 확장명이 없는 경우 출력 파일이 같은 이름으로 생성되고 입력 파일 이름에 .xsd 확장명이 추가됩니다. 예를 들어 입력 XDR 파일 이름이 SampleFile.abc인 경우 결과 XSD는 SampleFile.abc.xsd로 저장됩니다.  
@@ -53,10 +54,11 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  (옵션) 도구의 변환 프로세스에서 생성된 심각하지 않은 경고를 반환합니다. 기본적으로 심각한 오류에 대한 메시지만 표시됩니다.  
   
  -?  
- `cvtschema`에서 지정할 수 있는 옵션 목록을 설명과 함께 반환합니다.  
+ 
+  `cvtschema`에서 지정할 수 있는 옵션 목록을 설명과 함께 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [XSD 데이터 형식을 XPath 데이터 형식에 매핑 &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
- [XSD 주석 &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [&#40;SQLXML 4.0&#41;XSD 데이터 형식을 XPath 데이터 형식에 매핑](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;XSD 주석](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

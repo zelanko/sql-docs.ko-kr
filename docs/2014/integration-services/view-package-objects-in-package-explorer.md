@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054505"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>패키지 탐색기에서 패키지 개체 보기
@@ -26,11 +26,14 @@ ms.locfileid: "66054505"
   
 #### <a name="to-view-the-package-structure-and-content"></a>패키지 구조 및 내용을 보려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 탐색기 **에서 보려는 패키지가 들어 있는**프로젝트를 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 탐색기 **에서 보려는 패키지가 들어 있는**프로젝트를 엽니다.  
   
-2.  **패키지 탐색기** 탭을 클릭합니다.  
+2.  
+  **패키지 탐색기** 탭을 클릭합니다.  
   
-3.  **변수**, **선행 제약 조건**, **이벤트 처리기**, **연결 관리자**, **로그 공급자**또는 **실행 파일** 폴더의 내용을 보려면 각 폴더를 확장합니다.  
+3.  
+  **변수**, **선행 제약 조건**, **이벤트 처리기**, **연결 관리자**, **로그 공급자**또는 **실행 파일** 폴더의 내용을 보려면 각 폴더를 확장합니다.  
   
 4.  패키지 구조에 따라 다음 수준의 폴더를 확장합니다.  
   
@@ -42,7 +45,7 @@ ms.locfileid: "66054505"
   
 -   개체를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [패키지 개체 보기](view-package-objects.md)  
   
   

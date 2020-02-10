@@ -14,18 +14,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011577"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
+  
   `varbinary`, `varbinary(max)`, `image` 또는 `xml` 데이터 형식의 문서를 인덱싱하려면 추가 처리가 필요합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
   
  지정된 필터는 지정된 문서 유형(.doc, .pdf, .xls, .xml 등)에만 해당됩니다. 이러한 필터는 IFilter 인터페이스를 구현합니다. 이러한 문서 유형에 대한 자세한 내용을 보려면 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 카탈로그 뷰를 쿼리하세요.  
   
- 이진 문서는 단일 `varbinary(max)` 또는 `image` 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. 파일 확장명이 표시 되지 않으므로 경우 파일에 저장 됩니다는 `varbinary(max)` 또는 `image` 열, 파일 확장명 (.doc,.xls,.pdf 등)는 별도 테이블의 열에, 즉 유형 열에 저장 되어야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. 에 **문서** 테이블에 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **문서** 형식의 열이 `varbinary(max)`, 및 유형 열 **FileExtension**, 형식입니다 `nvarchar(8)`.  
+ 이진 문서는 단일 `varbinary(max)` 또는 `image` 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. 파일이 `varbinary(max)` 또는 `image` 열에 저장 된 경우 파일 확장명이 표시 되지 않으므로 파일 확장명 (.doc, .xls, .pdf 등)을 테이블의 별도 열 (형식 열 이라고 함)에 저장 해야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **Document** 테이블에서 **Document** 열은 `varbinary(max)`형식이 고 **fileextension**유형 열은 형식 `nvarchar(8)`입니다.  
   
 > [!NOTE]  
 >  필터 구현에 따라 필터에서 부모 개체에 포함된 개체를 처리할 수도 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다른 개체에 대한 링크를 따라가도록 필터를 구성하지 않습니다.  
@@ -42,7 +43,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.fulltext_index_columns&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [FILESTREAM과 기타 SQL Server 기능 간 호환성](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

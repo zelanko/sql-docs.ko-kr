@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010425"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
@@ -27,9 +27,9 @@ ms.locfileid: "66010425"
   
 -   모든 파일 특성 열에 NOT NULL 제약 조건이 있습니다. 값을 명시적으로 설정하지 않은 경우 적절한 기본값이 제공됩니다.  
   
--   INSERT 문이 **name**, **path_locator**, **parent_path_locator** 또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
+-   INSERT 문이 **name**, **path_locator**, **parent_path_locator**또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
--   애플리케이션에서는 [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
+-   애플리케이션에서는 **GetPathLocator&#40;Transact-SQL&#41;** 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)를 가져올 수 있습니다.  
   
 ##  <a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "66010425"
   
 -   **last_access_time** 값은 **last_write_time** 및 **creation_time**보다 이전일 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](load-files-into-filetables.md)   
- [FileTable에서 디렉터리 및 경로 작업](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)  
   

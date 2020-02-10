@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057216"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 원본 편집기(연결 관리자 페이지)
@@ -31,12 +31,12 @@ ms.locfileid: "66057216"
   
 -   **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
-### <a name="connection-manager"></a>ODBC 원본 편집기  
+### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-### <a name="new"></a>단추를 사용하여 새  
+### <a name="new"></a>새로 만들기  
  **새로 만들기**를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 ### <a name="data-access-mode"></a>데이터 액세스 모드  
@@ -55,7 +55,7 @@ ms.locfileid: "66057216"
 ### <a name="preview"></a>미리 보기  
  **미리 보기** 를 클릭하면 선택한 테이블 또는 뷰에서 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 원본 사용자 지정 속성](data-flow/odbc-source-custom-properties.md)   
  [ODBC 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

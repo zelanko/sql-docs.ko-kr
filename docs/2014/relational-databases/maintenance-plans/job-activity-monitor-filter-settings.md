@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856640"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
@@ -48,7 +48,7 @@ ms.locfileid: "62856640"
  **범주**  
  작업 범주로 작업을 필터링합니다.  
   
- **예약**  
+ **예약됨**  
  일정이 있는 작업을 모두 표시하거나 일정이 없는 작업을 모두 표시합니다.  
   
  **상태**  
@@ -59,12 +59,12 @@ ms.locfileid: "62856640"
  이름이 지정되지 않은 이 상자에서는 선택된 조건에 대한 간단한 설명을 제공합니다.  
   
  **필터 적용**  
- 필터를 적용 하려면 클릭 **필터 적용** 을 클릭 한 다음 **확인**합니다. 필터 설정을 유지 하는 **필터 설정** 대화 상자의 적용을 제외한의 선택을 취소 **필터 적용**, 클릭 하 고 **확인**, 모든 행을 표시 합니다.  
+ 필터를 적용 하려면 **필터 적용** 을 클릭 한 다음 **확인**을 클릭 합니다. **필터 설정 대화 상자** 에서 필터 설정을 유지 하 되 적용 하지 않으려면 **필터 적용**의 선택을 취소 한 다음 **확인**을 클릭 하 여 모든 행을 표시 합니다.  
   
  **지우기**  
  필터 설정을 기본 설정으로 되돌립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 활동 모니터링](../../ssms/agent/monitor-job-activity.md)  
   
   

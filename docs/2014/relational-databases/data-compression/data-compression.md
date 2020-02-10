@@ -23,13 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873549"
 ---
 # <a name="data-compression"></a>Data Compression
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 rowstore 테이블 및 인덱스를 위해 행 및 페이지 압축을 지원하며 columnstore 테이블 및 인덱스를 위해 columnstore 및 columnstore 보관 압축을 지원합니다.  
   
  rowstore 테이블 및 인덱스의 경우 데이터베이스 크기를 줄이려면 데이터 압축 기능을 사용하십시오. 데이터를 압축하면 공간을 절약할 수 있을 뿐만 아니라 데이터가 보다 적은 수의 페이지에 저장되어 쿼리가 디스크에서 읽어야 하는 페이지가 적어지므로 I/O가 많은 작업의 성능을 향상시킬 수 있습니다. 그러나 데이터를 애플리케이션과 교환하는 동안 데이터를 압축하고 압축 해제하기 위해 데이터베이스 서버에 추가 CPU 리소스가 필요합니다. 다음 데이터베이스 개체에 대해 행 및 페이지 압축을 구성할 수 있습니다.  
@@ -57,13 +58,13 @@ ms.locfileid: "62873549"
   
 -   데이터 압축의 세부 사항은 서비스 팩이나 후속 릴리스에서 예고 없이 변경될 수 있습니다.  
   
--   일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 압축을 사용할 수 없습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
+-   일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 압축을 사용할 수 없습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
 -   시스템 테이블에는 압축을 사용할 수 없습니다.  
   
 -   압축하면 한 페이지에 더 많은 행을 저장할 수 있지만 테이블 또는 인덱스의 최대 행 크기는 변경되지 않습니다.  
   
--   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어 열 c1이 있는 테이블`char(8000)` 및 c2`char(53)` 은 추가 압축 오버 헤드 때문에 압축할 수 없습니다. vardecimal 스토리지 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
+-   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어, c1`char(8000)` 및 c2`char(53)` 열이 있는 테이블은 추가 압축 오버 헤드로 인해 압축할 수 없습니다. vardecimal 스토리지 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
   
     -   고정 길이 형식으로의 업데이트가 항상 성공해야 합니다.  
   
@@ -99,10 +100,11 @@ ms.locfileid: "62873549"
   
 -   큰 값 데이터 형식은 해당 크기 때문에 일반 행 데이터와 별도로 특수 용도 페이지에 저장되기도 합니다. 별도로 저장되는 데이터에는 데이터 압축을 사용할 수 없습니다.  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 vardecimal 저장소 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
+-   
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 vardecimal 스토리지 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 저장소 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 저장소 형식을 지원 합니다. 그러나 행 수준 압축은 동일한 목표를 달성 하므로 vardecimal 저장소 형식은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Columnstore 및 Columnstore 보관 압축 사용  
   
@@ -119,7 +121,7 @@ ms.locfileid: "62873549"
   
  보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예를 들면 다음과 같습니다.  
+ 예제:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -135,7 +137,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  보관 압축을 제거하고 데이터를 columnst또는e 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예를 들면 다음과 같습니다.  
+ 예제:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -167,11 +169,12 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>메타데이터  
  다음 시스템 뷰에는 클러스터형 인덱스의 데이터 압축 정보가 포함되어 있습니다.  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` 하 고 `type_desc` 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE 포함 합니다.  
+-   [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -및 `type` `type_desc` 열에는 클러스터형 columnstore 및 비클러스터형 columnstore가 포함 됩니다.  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` 하 고 `data_compression_desc` 열에는 COLUMNSTORE 및 columnstore_archive가 포함 됩니다.  
+-   [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -및 `data_compression` `data_compression_desc` 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함 됩니다.  
   
- [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
+ 
+  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>압축이 분할된 테이블 및 인덱스에 주는 영향  
  분할된 테이블 및 인덱스에서 데이터 압축을 사용할 때는 다음 사항을 고려해야 합니다.  
@@ -251,12 +254,12 @@ REBUILD PARTITION = ALL WITH (
   
 -   데이터는 서로 다른 페이지 수 및 페이지당 행 수를 사용하여 저장되므로 압축을 사용하도록 설정하면 쿼리 계획이 변경될 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [행 압축 구현](row-compression-implementation.md)   
  [페이지 압축 구현](page-compression-implementation.md)   
  [유니코드 압축 구현](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [Transact-sql&#41;&#40;파티션 구성표 만들기](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREATE PARTITION FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

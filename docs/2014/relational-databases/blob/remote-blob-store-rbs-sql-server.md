@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009844"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 저장소 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 스토리지 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
   
  RBS는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어에 포함되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치되지 않습니다.  
   
@@ -53,9 +53,10 @@ ms.locfileid: "66009844"
  RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 스토리지 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 스토리지 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
   
 ## <a name="rbs-security"></a>RBS 보안  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 사용자 지정 공급자를 사용하여 BLOB를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 시스템을 우회하는 다른 프로세스에 사용할 수 있습니다. 사용자 지정 공급자가 사용하는 스토리지 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 사용자 지정 공급자를 사용하여 BLOB를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 시스템을 우회하는 다른 프로세스에 사용할 수 있습니다. 사용자 지정 공급자가 사용하는 스토리지 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
   
-##  <a name="rbsresources"></a> RBS 리소스  
+##  <a name="rbsresources"></a>RBS 리소스  
  **RBS 설명서**  
  RBS 설명서는 Windows 설치 관리자 패키지에 포함되어 있습니다. RBS를 설치하지 않고 RBS 설명서를 검토하고 싶으면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN Library에서 온라인으로 [설명서의](https://go.microsoft.com/fwlink/?LinkId=210192)버전을 볼 수 있습니다.  
   

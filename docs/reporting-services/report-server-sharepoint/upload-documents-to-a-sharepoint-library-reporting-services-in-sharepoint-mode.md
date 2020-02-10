@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2187cd5f69b49095b085ee6f49241227207842c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580465"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
@@ -49,7 +49,7 @@ SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드
   
  사용자가 데이터를 필터링할 수 있도록 보고서에 매개 변수를 포함할 수 있으며 이러한 매개 변수에 특정 값을 지정하거나 사용자에게 매개 변수가 표시되는 방식을 변경할 수 있습니다. 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 라이브러리에 공유 데이터 원본 게시](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   

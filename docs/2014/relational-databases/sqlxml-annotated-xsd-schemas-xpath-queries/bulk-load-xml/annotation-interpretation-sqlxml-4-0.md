@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013446"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>주석 해석(SQLXML 4.0)
   이 섹션의 항목에서는 XML 대량 로드가 XSD 스키마의 주석을 해석하는 방법에 대해 설명합니다. 여기서 설명하는 동작은 XDR 스키마의 주석에도 적용됩니다.  
   
 > [!NOTE]  
->  이 항목의 내용은 XML 대량 로드에서 처리 시 사용하는 주석에 대해서만 설명합니다. SQLXML 4.0에서 지원 되는 XSD 스키마에 대 한 주석의 전체 목록은 참조 하세요 [XSD 스키마에서 주석을 사용 하 여 &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)합니다. XDR 스키마에 대 한 지원 되는 주석 목록은 참조 하세요 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
+>  이 항목의 내용은 XML 대량 로드에서 처리 시 사용하는 주석에 대해서만 설명합니다. SQLXML 4.0에서 지원 되는 XSD 스키마에 대 한 전체 주석 목록은 [Xsd 스키마에서 주석 사용 &#40;sqlxml 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)을 참조 하세요. XDR 스키마에 대해 지원 되는 주석 목록은 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 Xdr 스키마 ](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [sql: relationship 및 키 순서 지정 규칙 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
@@ -36,13 +36,13 @@ ms.locfileid: "66013446"
  [sql: 매핑된 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
  XML 대량 로드에서 `sql:mapped` 주석이 해석되는 방법에 대해 설명합니다.  
   
- [sql:-필드와-값 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [sql: limit 필드 및 sql: limit 값 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  XML 대량 로드에서 `sql:limit-field` 및 `sql:limit-value` 주석이 해석되는 방법에 대해 설명합니다.  
   
- [sql:overflow-필드 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
+ [sql: 오버플로 필드 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
  XML 대량 로드에서 `sql:overflow` 주석이 해석되는 방법에 대해 설명합니다.  
   
- [다른 주석은 &#40;SQLXML 4.0&#41;](annotation-interpretation-other-annotations.md)  
- XML 대량 로드에서 다음 주석이 해석 되는 방법에 대해 설명 합니다. `sql:id-prefix`, `sql:use-cdata`, `sql:url-encode`, `sql:is-mapping-schema`, `sql:key-fields`합니다.  
+ [SQLXML 4.0 &#40;다른 주석&#41;](annotation-interpretation-other-annotations.md)  
+ XML 대량 로드에서 다음 주석을 해석 하는 방법에 대해 `sql:id-prefix`설명 `sql:use-cdata`합니다 `sql:url-encode`. `sql:is-mapping-schema`, `sql:key-fields`,,,.  
   
   

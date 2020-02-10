@@ -1,5 +1,5 @@
 ---
-title: 경로에 구성 요소 연결 | Microsoft Docs
+title: 경로를 사용 하 여 구성 요소 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060392"
 ---
 # <a name="connect-components-with-paths"></a>경로에 구성 요소 연결
+  
   **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭의 디자인 화면에서 패키지의 데이터 흐름을 구성합니다. 데이터 흐름에 데이터 흐름 구성 요소가 두 개 있으면 원본 또는 변환의 출력을 변환 또는 대상의 입력에 연결하여 두 구성 요소를 연결할 수 있습니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다.  
   
  다음 다이어그램에서는 하나의 원본 구성 요소, 두 개의 변환, 하나의 대상 구성 요소 및 이를 연결하는 경로가 포함된 간단한 데이터 흐름을 보여 줍니다.  
   
- ![Data flow](media/mw-dts-08.gif "Data flow")  
+ ![데이터 흐름](media/mw-dts-08.gif "데이터 흐름")  
   
  두 구성 요소를 연결한 다음에는 **데이터 흐름 경로 편집기**에서 경로를 통해 이동하는 데이터의 메타데이터와 경로의 속성을 볼 수 있습니다. 자세한 내용은 [Integration Services Paths](data-flow/integration-services-paths.md)을(를) 참조하세요.  
   
@@ -48,10 +49,10 @@ ms.locfileid: "66060392"
   
 -   [데이터 흐름에 데이터 뷰어 추가](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 태스크](control-flow/data-flow-task.md)   
  [데이터 흐름](data-flow/data-flow.md)   
- [변환을 사용하여 데이터 변환](data-flow/transformations/transform-data-with-transformations.md)   
+ [변환을 사용 하 여 데이터 변환](data-flow/transformations/transform-data-with-transformations.md)   
  [데이터 오류 처리](data-flow/error-handling-in-data.md)  
   
   

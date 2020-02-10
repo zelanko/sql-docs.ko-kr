@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010928"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
@@ -67,7 +67,7 @@ ms.locfileid: "66010928"
   
 1.  새로운 단어 분리기 또는 필터가 포함된 DLL 파일을 설치하려고 준비할 때 서버 인스턴스에 설치된 기존 DLL 파일과 다른 파일 이름을 사용합니다.  
   
-2.  새 DLL 파일을 서버 인스턴스에 대한 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일이 포함된 디렉터리로 복사합니다. 기본 위치는  
+2.  새 DLL 파일을 서버 인스턴스에 대한 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일이 포함된 디렉터리로 복사합니다. 기본 위치는 다음과 같습니다.  
   
      C:\Program Files\Microsoft SQL Server\MSSQL.*instance_name*\MSSQL\Binn  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66010928"
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [검색 필터 구성 및 관리](configure-and-manage-filters-for-search.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](configure-and-manage-word-breakers-and-stemmers-for-search.md)  

@@ -15,19 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054523"
 ---
 # <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
+  
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [웹 서비스 태스크](control-flow/web-service-task.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
- **서비스**  
+## <a name="options"></a>옵션  
+ **출력소**  
  목록에서 웹 메서드를 실행하는 데 사용할 웹 서비스를 선택합니다.  
   
  **메서드**  
@@ -48,13 +49,13 @@ ms.locfileid: "66054523"
  **변수**  
  확인란을 선택하여 입력을 제공하기 위한 변수를 사용합니다.  
   
- **Value**  
+ **값**  
  Variable 확인란이 선택된 경우 목록에서 변수를 선택하여 입력을 제공하고 선택되지 않은 경우 입력에 사용할 값을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [웹 서비스 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [웹 서비스 태스크 편집기&#40;출력 페이지&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [웹 서비스 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [웹 서비스 태스크 편집기 &#40;출력 페이지&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

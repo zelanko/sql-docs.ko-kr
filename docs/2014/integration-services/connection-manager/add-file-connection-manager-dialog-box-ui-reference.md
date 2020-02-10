@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833875"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
@@ -29,7 +29,7 @@ ms.locfileid: "62833875"
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기본 제공 태스크 및 데이터 흐름 구성 요소는 다중 파일 연결 관리자를 사용하지 않습니다. 그러나 스크립트 태스크와 스크립트 구성 요소에서 이 연결 관리자를 사용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 유형**  
  다중 파일 연결 관리자에 사용할 파일 형식을 지정합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62833875"
  **화살표 단추**  
  파일이나 폴더를 선택한 다음 화살표 단추를 통해 위/아래로 이동하여 액세스 순서를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)  
   
   

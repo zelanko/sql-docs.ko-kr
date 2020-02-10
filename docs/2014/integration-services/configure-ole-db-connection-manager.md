@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060547"
 ---
 # <a name="configure-ole-db-connection-manager"></a>OLE DB 연결 관리자 구성
+  
   **OLE DB 연결 관리자 구성** 대화 상자를 사용하면 새 연결을 만들거나 기존 연결을 복사하여 데이터 원본에 대한 연결을 추가할 수 있습니다.  
   
  OLE DB 연결 관리자에 대한 자세한 내용은 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터 연결**  
  목록에서 기존 OLE DB 데이터 연결을 선택합니다.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "66060547"
  **Delete**  
  데이터 연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

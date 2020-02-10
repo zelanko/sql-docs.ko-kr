@@ -13,14 +13,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055423"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 패키지 주요 사항
-  패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 만들기](create-packages-in-sql-server-data-tools.md) SSIS 디자이너에서 하 고 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)합니다.  
+  패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 SSIS 디자이너 및 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)의 [SQL Server Data Tools에서 패키지를 만듭니다](create-packages-in-sql-server-data-tools.md) .  
   
  기본 패키지에는 다음 요소가 포함됩니다.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "66055423"
   
  자세한 내용은 [Data Flow](data-flow/data-flow.md)을 참조하세요.  
   
- 기본 패키지를 만드는 방법의 예제를 참조 하세요. [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)합니다.  
+ 기본 패키지를 만드는 방법에 대 한 예는 [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)를 참조 하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -50,7 +51,7 @@ ms.locfileid: "66055423"
   
 1.  MSDN.Microsoft.com의 비디오, [기본 패키지 만들기(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [선행 제약 조건](control-flow/precedence-constraints.md)  
   

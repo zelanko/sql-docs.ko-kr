@@ -1,5 +1,5 @@
 ---
-title: sql:-필드와-(SQLXML 4.0) | Microsoft Docs
+title: 'sql: limit 필드 및 sql: limit 값 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013572"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 및 sql:limit-value (SQLXML 4.0)
-  XML 대량 로드는 해당 정의별로 `sql:limit-field` 및 `sql:limit-value` 주석을 처리합니다. 자세한 내용은 [sql: 필터링 사용 하 여 값-필드와-값 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)합니다.  
+  XML 대량 로드는 해당 정의별로 `sql:limit-field` 및 `sql:limit-value` 주석을 처리합니다. 자세한 내용은 [sql을 사용 하 여 값 필터링: limit 필드 및 sql: limit 값 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)를 참조 하세요.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  
   

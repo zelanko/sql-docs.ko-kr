@@ -1,5 +1,5 @@
 ---
-title: OLE DB (SQLXML 4.0)를 사용 하 여 Updategram 실행 | Microsoft 문서
+title: OLE DB를 사용 하 여 Updategram 실행 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014788"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
-  이 항목에서는 updategram을 실행 하는 DB usingOLE의 작업 예제를 제공 합니다.  
+  이 항목에서는 updategram을 실행 하기 위한 usingOLE DB의 작업 예제를 제공 합니다.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream을 사용하여 XML 명령 설정  
- OLE DB (버전 2.6 이상) ICommandStream 인터페이스를 문자열 대신 스트림 개체로 명령을 전달합니다.  
+ OLE DB (버전 2.6 이상) ICommandStream 인터페이스는 문자열이 아닌 스트림 개체로 명령을 전달 합니다.  
   
- 이 인터페이스를 사용하면 XML 파서가 이해하는 모든 인코딩을 명령에 사용할 수 있습니다. Icommand:: Execute를 호출 하는 경우 명령 텍스트를 읽어 오며 스트림에 직접 및 변환이 필요 하지 않습니다. 인터페이스는 ICommandStream을 사용 하 여 XML 명령을 실행 합니다. 따라서 더 효율적입니다.  
+ 이 인터페이스를 사용하면 XML 파서가 이해하는 모든 인코딩을 명령에 사용할 수 있습니다. ICommand:: Execute가 호출 되 면 명령 텍스트를 스트림에서 직접 읽어 변환이 필요 하지 않습니다. 따라서 ICommandStream 인터페이스를 사용 하 여 XML 명령을 실행 하는 것이 더 효율적입니다.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>ICommandStream을 사용하여 XML을 명령으로 설정 및 결과를 XML 문서로 검색  
- ICommandStream 인터페이스 수를 명령으로 XML 문서를 설정 하 고 결과 XML 문서로 검색할 수 있습니다.  
+ ICommandStream 인터페이스를 사용 하 여 XML 문서를 명령으로 설정할 수 있으며 결과는 XML 문서로 검색할 수 있습니다.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>XPath 쿼리를 사용하여 템플릿 실행  
- XPath 쿼리로 구성 된 다음 XML 템플릿은 ICommandStream을 사용 하 여 명령으로 지정 됩니다.  
+ XPath 쿼리로 구성 된 다음 XML 템플릿은 ICommandStream를 사용 하 여 명령으로 지정 됩니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -58,19 +58,19 @@ ms.locfileid: "66014788"
 </Schema>  
 ```  
   
- 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 합니다  **\<Person.Contact >** 요소는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑됩니다.  
+ 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여 ** \<contact>** 요소는 AdventureWorks 데이터베이스의 person. contact 테이블에 매핑됩니다.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML을 명령으로 설정하고 결과를 XML 문서로 검색하려면  
   
 1.  데이터베이스에 대한 연결을 초기화하고 설정합니다.  
   
-2.  ICommand의 ICommandStream 인터페이스를 가져옵니다.  
+2.  ICommand에서 ICommandStream 인터페이스를 가져옵니다.  
   
 3.  필요한 명령 속성을 설정합니다. 이 예에서 공급자별 속성 SSPROP_STREAM_BASEPATH는 매핑 스키마와 템플릿 파일이 저장되는 디렉터리로 설정됩니다.  
   
-4.  ICommandStream::SetCommandStream를 사용 하 여 명령 스트림을 지정 합니다. 이 예에서 실행되는 XML 템플릿은 파일에서 읽어옵니다. 이 기능은 큰 XML 템플릿을 실행하려는 경우에 유용합니다.  
+4.  ICommandStream:: SetCommandStream을 사용 하 여 명령 스트림을 지정 합니다. 이 예에서 실행되는 XML 템플릿은 파일에서 읽어옵니다. 이 기능은 큰 XML 템플릿을 실행하려는 경우에 유용합니다.  
   
-5.  Icommand:: Execute를 IID_ISequentialStream 인터페이스 id입니다. 요청을 사용 하 여 XML 명령을 실행 합니다.  
+5.  ICommand:: Execute를 사용 하 여 IID_ISequentialStream 인터페이스 ID를 요청 하 여 XML 명령을 실행 합니다.  
   
 6.  결과를 처리합니다. 이 예에서는 스트림에서 읽은 XML이 화면에 표시됩니다.  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리 매개 변수 값이 필요 (@Title). 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
+ 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리에는 매개 변수 (@Title)의 값이 필요 합니다. 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
   
  매개 변수 값을 템플릿에 전달하는 경우 매개 변수 이름과 값을 모두 지정해야 합니다.  
   

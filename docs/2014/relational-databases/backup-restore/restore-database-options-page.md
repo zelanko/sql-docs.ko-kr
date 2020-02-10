@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875639"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
@@ -26,12 +26,12 @@ ms.locfileid: "62875639"
   
 -   [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
--   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복원 태스크를 지정할 때 이 복원 작업에 대해 RESTORE 문을 포함하는 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성할 수 있습니다. 스크립트를 생성하려면 **스크립트** 를 클릭한 다음 스크립트 대상을 선택합니다. RESTORE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="restore-options"></a>복원 옵션  
  복원 작업의 동작 측면을 수정하려면 **복원 옵션** 패널의 옵션을 사용합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "62875639"
  **기존 연결 닫기**  
  데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.  
   
-### <a name="prompt"></a>프롬프트  
+### <a name="prompt"></a>prompt  
  **각 백업 복원 전에 확인**  
  각 백업을 복원한 후 복원 순서를 계속할지 여부를 묻는 **복원 계속** 대화 상자를 표시합니다. 이 대화 상자는 다음 미디어 세트(알려진 경우)의 이름과 다음 백업 세트의 이름 및 설명을 표시합니다.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62875639"
   
 -   다음 백업이 로그 백업인 경우 **트랜잭션 로그 복원** 태스크를 사용합니다. 트랜잭션 로그를 복원하여 복원 순서를 재개하는 방법은 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [장치에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
+ [디바이스에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

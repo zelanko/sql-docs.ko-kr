@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012572"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 환경에서 SQLXML 기능 액세스
   이 예에서는 다음 내용을 설명합니다.  
   
--   사용 하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml) Microsoft에 액세스 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경입니다.  
+-   SQLXML 관리 되 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 클래스 (Microsoft. Data sqlxml)를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 환경에서 microsoft에 액세스 하는 방법입니다.  
   
 -   .NET Framework 환경에서 생성된 DiffGram이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 데이터 업데이트를 적용하는 방법  
   
- 이 애플리케이션에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. 연락처 데이터를 XML 문서를 반환 하는 XPath 쿼리 실행 (**FirstName**하십시오 **LastName**). 애플리케이션은 .NET Framework 환경의 데이터 세트에 XML 문서를 로드합니다. 그런 다음 데이터 집합에 있는 첫 번째 연락처에서 이름을 "Susan"으로 변경합니다. 그리고 해당 데이터 세트에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
+ 이 애플리케이션에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. XPath 쿼리를 실행 하면 연락처 데이터 (**FirstName**, **LastName**)로 구성 된 XML 문서가 반환 됩니다. 애플리케이션은 .NET Framework 환경의 데이터 세트에 XML 문서를 로드합니다. 그런 다음 데이터 세트에 있는 첫 번째 연락처에서 이름을 &quot;Susan&quot;으로 변경합니다. 그리고 해당 데이터 세트에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **예제를 테스트 합니다.**  
+ **이 예를 테스트하려면**  
   
  이 예를 테스트하려면 컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있어야 합니다.  
   

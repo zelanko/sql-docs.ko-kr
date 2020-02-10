@@ -1,5 +1,5 @@
 ---
-title: ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리를 실행 | Microsoft Docs
+title: ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012526"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
-  ExecuteToStream 메서드를 사용 하는 대신 명령을 실행 하는 ExecuteXmlReader 메서드가 SqlXmlCommand 개체의 사용할 수 있습니다. 이 메서드는 결과 (이 예제에서 요소 또는 특성 이름과 값 인쇄)의 추가 처리를 위해 사용할 수 있는 XmlReader 개체를 반환 합니다.  
+  ExecuteToStream 메서드를 사용 하는 대신 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용 하 여 명령을 실행할 수 있습니다. 이 메서드는 결과를 추가로 처리 하는 데 사용할 수 있는 XmlReader 개체를 반환 합니다 .이 예제에서는 요소 또는 특성 이름과 값을 인쇄 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

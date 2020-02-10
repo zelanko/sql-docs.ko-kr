@@ -1,5 +1,5 @@
 ---
-title: 주석이 추가 된 XSD 스키마 (SQLXML 4.0) 쿼리에서 사용 하 여 | Microsoft Docs
+title: 쿼리에 주석이 추가 된 XSD 스키마 사용 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014472"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>쿼리에 주석이 추가된 XSD 스키마 사용(SQLXML 4.0)
   템플릿에 XDR 스키마에 대한 XPath 쿼리를 지정하는 방식으로 주석이 추가된 스키마에 대해 쿼리를 지정하여 데이터베이스에서 데이터를 검색할 수 있습니다.  
   
- 합니다  **\<sql:xpath-쿼리 >** 요소를 사용 하면 주석이 추가 된 스키마에서 정의 된 XML 뷰에 대해 XPath 쿼리를 지정할 수 있습니다. XPath 쿼리를 실행할 컬렉션인 주석이 추가 된 스키마를 사용 하 여 식별 됩니다는 `mapping-schema` 특성을  **\<sql:xpath-쿼리 >** 요소입니다.  
+ **Sql: xpath-query>요소를 사용 하면 주석이 추가 된 스키마에 정의 된 XML 뷰에 대해 xpath 쿼리를 지정할 수 있습니다. \<** Xpath 쿼리가 실행 될 주석이 추가 된 스키마는 `mapping-schema` ** \<sql: xpath 쿼리>** 요소의 특성을 사용 하 여 식별 됩니다.  
   
  템플릿은 하나 이상의 쿼리를 포함하는 유효한 XML 문서입니다. FOR XML 및 XPath 쿼리는 문서 조각을 반환합니다. 템플릿은 문서 조각의 컨테이너 역할을 하며 단일 최상위 요소를 지정하는 방법을 제공합니다.  
   
@@ -62,12 +62,12 @@ ms.locfileid: "66014472"
 </sql:xpath-query>  
 ```  
   
- 그러면 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿 파일의 일부로 쿼리를 실행할 수 있습니다. 자세한 내용은 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
+ 그러면 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿 파일의 일부로 쿼리를 실행할 수 있습니다. 자세한 내용은 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 XDR 스키마 ](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="using-inline-mapping-schemas"></a>인라인 매핑 스키마 사용  
  주석이 추가된 스키마를 템플릿에 직접 포함한 다음 이 템플릿에 인라인 스키마에 대한 XPath 쿼리를 지정할 수 있습니다. 이 템플릿은 Updategram일 수도 있습니다.  
   
- 템플릿에는 여러 개의 인라인 스키마가 포함될 수 있습니다. 서식 파일에 포함 된 인라인 스키마를 사용 하려면 지정 합니다 **id** 특성을 고유한 값으로는  **\<xsd: schema >** 요소와 사용 하 여 **#idvalue**인라인 스키마를 참조 합니다. **id** 특성의 동작과 동일 합니다 **그것이** ({urn: 스키마-microsoft-com:xml-sql} id) XDR 스키마에 사용 합니다.  
+ 템플릿에는 여러 개의 인라인 스키마가 포함될 수 있습니다. 템플릿에 포함 된 인라인 스키마를 사용 하려면 ** \<xsd: schema>** 요소에 고유한 값을 사용 하 여 **id** 특성을 지정한 다음 **#idvalue** 를 사용 하 여 인라인 스키마를 참조 합니다. **Id** 특성은 XDR 스키마에 사용 되는 **sql: id** ({urn: 스키마-microsoft-com: xml) id)의 동작과 동일 합니다.  
   
  예를 들어 다음 템플릿에서는 주석이 추가된 두 개의 인라인 스키마를 지정합니다.  
   
@@ -114,23 +114,25 @@ ms.locfileid: "66014472"
 </ROOT>  
 ```  
   
- 이 템플릿에서는 두 개의 XPath 쿼리도 지정합니다. 각 합니다  **\<xpath 쿼리 >** 요소를 지정 하 여 매핑 스키마를 고유 하 게 식별 합니다 `mapping-schema` 특성입니다.  
+ 이 템플릿에서는 두 개의 XPath 쿼리도 지정합니다. 각 ** \<xpath 쿼리>** 요소는 특성을 `mapping-schema` 지정 하 여 매핑 스키마를 고유 하 게 식별 합니다.  
   
- 템플릿에 인라인 스키마를 지정 하는 경우는 `sql:is-mapping-schema` 주석에서 지정 해야 합니다  **\<xsd: schema >** 요소입니다. `sql:is-mapping-schema`는 부울 값(0=false, 1=true)을 사용합니다. 인라인 스키마를 사용 하 여 **sql:는-매핑-스키마 "1" =** 주석이 추가 된 인라인 스키마로 처리 되 고 XML 문서에 반환 되지 않습니다.  
+ 템플릿에서 인라인 스키마를 지정 하는 경우 `sql:is-mapping-schema` ** \<xsd: schema>** 요소에도 주석을 지정 해야 합니다. 
+  `sql:is-mapping-schema`는 부울 값(0=false, 1=true)을 사용합니다. **Sql: is 매핑-schema = "1"** 인 인라인 스키마는 인라인 주석이 추가 된 스키마로 처리 되 고 XML 문서에서 반환 되지 않습니다.  
   
- `sql:is-mapping-schema` 주석은 템플릿 네임스페이스 `urn:schemas-microsoft-com:xml-sql`에 속합니다.  
+ 
+  `sql:is-mapping-schema` 주석은 템플릿 네임스페이스 `urn:schemas-microsoft-com:xml-sql`에 속합니다.  
   
- 이 예를 테스트하려면 로컬 디렉터리에 템플릿(InlineSchemaTemplate.xml)을 지정한 다음 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿을 실행합니다. 자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+ 이 예를 테스트하려면 로컬 디렉터리에 템플릿(InlineSchemaTemplate.xml)을 지정한 다음 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿을 실행합니다. 자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
- 지정 하는 것 외에도 `mapping-schema` 특성을  **\<sql:xpath-쿼리 >** 템플릿에서 (XPath 쿼리를 경우) 또는 요소  **\<updg:sync >** updategram의 요소를 수행할 수 있습니다 다음.  
+ `mapping-schema` **템플릿의 \<sql: xpath-query>** 요소에 대 한 특성을 지정 하는 것 외에도 (xpath 쿼리가 있는 경우) 또는 updategram의 ** \<updg: sync>** 요소에서 다음을 수행할 수 있습니다.  
   
--   지정 합니다 `mapping-schema` 특성을  **\<루트 >** 템플릿의 요소 (전역 선언). 그러면 이 매핑 스키마가 명시적 `mapping-schema` 주석이 없는 모든 XPath 및 Updategram 노드에서 사용할 기본 스키마가 됩니다.  
+-   `mapping-schema` **템플릿의 \<루트>** 요소 (전역 선언)에 특성을 지정 합니다. 그러면 이 매핑 스키마가 명시적 `mapping-schema` 주석이 없는 모든 XPath 및 Updategram 노드에서 사용할 기본 스키마가 됩니다.  
   
 -   ADO `mapping schema` 개체를 사용하여 `Command` 특성을 지정합니다.  
   
- `mapping-schema` 에 지정 된 특성을  **\<xpath 쿼리 >** 또는  **\<updg:sync >** 요소에 가장 높은 우선 순위; ADO `Command` 개체 우선 순위가 가장 낮습니다.  
+ Xpath 쿼리 `mapping-schema`>또는 ** \<updg: sync>** 요소에 지정 된 특성은 우선 순위가 가장 높습니다. ** \<** ADO `Command` 개체의 우선 순위가 가장 낮습니다.  
   
- 템플릿의 XPath 쿼리를 지정 하 고 XPath 쿼리가 실행 되는 매핑 스키마를 지정 하지 않으면 경우 XPath 쿼리로 처리 하는 **dbobject** 형식 쿼리 합니다. 예를 들어 다음 템플릿을 참조하십시오.  
+ 템플릿에서 XPath 쿼리를 지정 하 고 XPath 쿼리가 실행 되는 매핑 스키마를 지정 하지 않으면 XPath 쿼리가 **dbobject** type 쿼리로 처리 됩니다. 예를 들어 다음 템플릿을 참조하십시오.  
   
 ```  
 <sql:xpath-query   
@@ -139,6 +141,6 @@ ms.locfileid: "66014472"
 </sql:xpath-query>  
 ```  
   
- 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리도 취급 되는 **dbobject** 형식 쿼리는 Production.ProductPhoto가 테이블 이름 및 @ProductPhotoID= '100'는 ID 값이 100 인 제품 사진을 찾는 조건자 인 합니다. @LargePhoto 값을 검색 하는 열이입니다.  
+ 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리는 **dbobject** 형식 쿼리로 처리 됩니다. 여기서는 Production photo가 테이블 이름이 고 @ProductPhotoID= ' 100 '은 ID 값이 100 인 제품 사진을 찾는 조건자입니다. @LargePhoto값을 검색할 열입니다.  
   
   

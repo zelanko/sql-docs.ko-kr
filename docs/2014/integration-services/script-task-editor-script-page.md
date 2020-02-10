@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056184"
 ---
 # <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
@@ -29,7 +29,7 @@ ms.locfileid: "66056184"
   
  스크립트 태스크에 대한 자세한 내용은 [Script Task](control-flow/script-task.md) 및 [스크립트 태스크 편집기에서 스크립트 태스크 구성](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **ScriptLanguage**  
  태스크에 대한 스크립트 언어를 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C# 중에서 선택합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66056184"
  스크립트 태스크에 대한 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용하십시오. 자세한 내용은 [General Page](general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
  **EntryPoint**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정된 메서드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 ScriptMain 클래스에 있어야 합니다. ScriptMain 클래스는 스크립트 템플릿에서 생성하는 기본 클래스입니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정된 메서드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 ScriptMain 클래스에 있어야 합니다. ScriptMain 클래스는 스크립트 템플릿에서 생성하는 기본 클래스입니다.  
   
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66056184"
  **스크립트 편집**  
  스크립트를 작성하거나 수정할 수 있는 VSTA IDE가 열립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [스크립트 태스크 편집기&#40;일반 페이지&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [일반 페이지](general-page-of-integration-services-designers-options.md)   
+ [스크립트 태스크 편집기 &#40;일반 페이지&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [식 페이지](expressions/expressions-page.md)   
- [스크립트 태스크 예](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [스크립트 태스크 예제](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

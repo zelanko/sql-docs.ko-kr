@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489142"
 ---
-# <a name="task-5-adding-data-flow-task"></a>태스크 5: Data Flow Task 추가
+# <a name="task-5-adding-data-flow-task"></a>태스크 5: 데이터 흐름 태스크 추가
   이 작업에서는 SSIS 패키지의 제어 흐름에 데이터 흐름 태스크를 추가합니다.  
   
-1.  끌어서 놓기 **데이터 흐름 태스크** 에서 **SSIS 도구 상자** 하는 **제어 흐름** SSIS 디자이너의 탭 합니다. 표시 되지 않으면 합니다 **SSIS 도구 상자**, 아무 곳 이나 클릭 합니다 **제어 흐름** 탭을 클릭 **SSIS** 메뉴를 클릭 **SSIS 도구 상자**.  
+1.  Ssis 디자이너의 **데이터 흐름 태스크** 를 **ssis 도구 상자** 에서 **제어 흐름** 탭으로 끌어서 놓습니다. **Ssis 도구 상자가**표시 되지 않으면 **제어 흐름** 탭의 아무 곳 이나 클릭 하 고 메뉴 모음에서 **Ssis** 를 클릭 한 다음 **ssis 도구 상자**를 클릭 합니다.  
   
-     ![끌어서 놓기 데이터 흐름 태스크를 SSIS 도구 상자](../../2014/tutorials/media/et-addingdataflowtask.jpg "끌어서 놓기 데이터 흐름 태스크를 SSIS 도구 상자에서")  
+     ![SSIS 도구 상자에서 데이터 흐름 태스크 끌어서 놓기](../../2014/tutorials/media/et-addingdataflowtask.jpg "SSIS 도구 상자에서 데이터 흐름 태스크 끌어서 놓기")  
   
-2.  마우스 오른쪽 단추로 클릭 합니다 **데이터 흐름 태스크** 에 **제어 흐름** 탭을 클릭 **이름 바꾸기**합니다.  
+2.  **제어 흐름** 탭에서 **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다.  
   
-3.  형식 **Receive, Cleanse, 일치 및 Curate Supplier Data** 누릅니다 **ENTER**합니다.  
+3.  **수신, 정리, 일치 및 공급자 데이터** 를 입력 하 고 **enter**키를 누릅니다.  
   
-4.  두 번 클릭 합니다 **데이터 흐름 태스크** 으로 전환 합니다 **데이터 흐름** 탭 합니다.  
+4.  데이터 흐름 **태스크** 를 두 번 클릭 하 여 **데이터 흐름** 탭으로 전환 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 6: 데이터 흐름에 Excel 원본 추가](task-6-adding-excel-source-to-the-data-flow.md)  

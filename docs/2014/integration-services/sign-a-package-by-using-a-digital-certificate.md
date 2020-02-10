@@ -15,16 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055622"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>디지털 인증서를 사용하여 패키지 서명
   이 항목에서는 디지털 인증서를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 서명하는 방법을 설명합니다. 디지털 서명을 다른 설정과 함께 사용하여 잘못된 패키지를 로드하거나 실행하지 못하게 할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 서명하려면 먼저 다음 태스크를 수행해야 합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 서명하려면 먼저 다음 태스크를 수행해야 합니다.  
   
 -   인증서와 연결할 프라이빗 키를 만들거나 가져오고 이 프라이빗 키를 로컬 컴퓨터에 저장합니다.  
   
@@ -46,27 +47,33 @@ ms.locfileid: "66055622"
   
 ### <a name="to-sign-a-package"></a>패키지에 서명하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 서명할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 서명할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 **SSIS** 메뉴에서 **디지털 서명**을 클릭합니다.  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 **SSIS** 메뉴에서 **디지털 서명**을 클릭합니다.  
   
-4.  **디지털 서명** 대화 상자에서 **서명**을 클릭합니다.  
+4.  
+  **디지털 서명** 대화 상자에서 **서명**을 클릭합니다.  
   
-5.  **인증서 선택** 대화 상자에서 인증서를 선택합니다.  
+5.  
+  **인증서 선택** 대화 상자에서 인증서를 선택합니다.  
   
 6.  필요에 따라 **인증서 보기**를 클릭하여 인증서 정보를 봅니다.  
   
-7.  **확인** 을 클릭하여 **인증서 선택** 대화 상자를 닫습니다.  
+7.  
+  **확인** 을 클릭하여 **인증서 선택** 대화 상자를 닫습니다.  
   
-8.  **확인** 을 클릭하여 **디지털 서명** 대화 상자를 닫습니다.  
+8.  
+  **확인** 을 클릭하여 **디지털 서명** 대화 상자를 닫습니다.  
   
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
      패키지에 서명했더라도 패키지를 로드하기 전에 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 구성해야 합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

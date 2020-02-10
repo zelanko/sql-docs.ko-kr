@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574814"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
@@ -94,11 +94,11 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
 |**브라우저 종류**|**지원**|**브라우저 기본값**|**서버 기본값**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Negotiate|예 Edge에서는 기본 인증 설정이 사용됩니다.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|예 기본 인증 설정이 Internet Explorer에서 작동합니다.|
-|**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|예 기본 인증 설정이 Chrome에서 작동합니다.|
-|**Mozilla Firefox**(+)|NTLM, 기본|NTLM|예 기본 인증 설정이 Firefox에서 작동합니다.|
-|**Apple Safari**(+)|NTLM, 기본|Basic|예 기본 인증 설정이 Safari에서 작동합니다.|
+|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Negotiate|예. Edge에서는 기본 인증 설정이 사용됩니다.|
+|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|예. 기본 인증 설정이 Internet Explorer에서 작동합니다.|
+|**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|예. 기본 인증 설정이 Chrome에서 작동합니다.|
+|**Mozilla Firefox**(+)|NTLM, 기본|NTLM|예. 기본 인증 설정이 Firefox에서 작동합니다.|
+|**Apple Safari**(+)|NTLM, 기본|Basic|예. 기본 인증 설정이 Safari에서 작동합니다.|
 
  **(+)** 최신 공개 릴리스 버전
 
@@ -157,7 +157,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 [웹 포털에서 보고서 찾기 및 보기](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
 [웹 포털(SSRS 기본 모드)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML 뷰어 및 보고서 도구 모음](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

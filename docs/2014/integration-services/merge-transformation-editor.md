@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057677"
 ---
 # <a name="merge-transformation-editor"></a>병합 변환 편집기
@@ -29,7 +29,7 @@ ms.locfileid: "66057677"
   
  병합 변환에 대한 자세한 내용은 [Merge Transformation](data-flow/transformations/merge-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **출력 열 이름**  
  출력 열 이름을 지정합니다.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66057677"
  **병합 입력 2**  
  병합 입력 2로 병합할 열을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)   
+ [병합 및 병합 조인 변환에 대 한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [병합 조인 변환](data-flow/transformations/merge-join-transformation.md)   
  [UNION ALL 변환](data-flow/transformations/union-all-transformation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 설치 하 고 OData 원본 구성 요소를 제거 합니다. | Microsoft Docs
+title: OData 원본 구성 요소 설치 및 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058034"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData 원본 구성 요소 설치 및 제거
@@ -37,6 +37,7 @@ ms.locfileid: "66058034"
 >  64비트 설치 관리자는 32비트 및 64비트 버전의 OData 원본 구성 요소를 설치합니다. 32비트 OS를 사용하는 경우에는 32비트 설치 관리자를 실행해야 합니다.  
   
 ## <a name="uninstallation"></a>제거  
- OData 원본 구성 요소는 **프로그램 및 기능** 메뉴에서 제거할 수 있습니다. **Microsoft SQL Server SSIS OData 원본 구성 요소(x64)** 항목을 찾고 **제거**를 클릭합니다.  
+ OData 원본 구성 요소는 **프로그램 및 기능** 메뉴에서 제거할 수 있습니다. 
+  **Microsoft SQL Server SSIS OData 원본 구성 요소(x64)** 항목을 찾고 **제거**를 클릭합니다.  
   
   

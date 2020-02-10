@@ -1,5 +1,5 @@
 ---
-title: 보기 및 통합에서 실행 중인 패키지 중지 Services 서버 | Microsoft Docs
+title: Integration Services 서버에서 실행 중인 패키지 보기 및 중지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054594"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services 서버에서 실행 중인 패키지 보기 및 중지
+  
   `SSISDB` 데이터베이스는 사용자에게 표시되지 않는 내부 테이블에 실행 기록을 저장합니다. 그러나 공용 뷰 쿼리를 통해 이 데이터베이스에서 필요한 정보를 얻을 수 있습니다. 또한 이 데이터베이스는 패키지와 관련된 일반적인 태스크를 수행하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
   
  일반적으로 서버의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 관리합니다. 그러나 데이터베이스 뷰를 쿼리하고 저장 프로시저를 직접 호출하거나 관리되는 API를 호출하는 사용자 지정 코드를 작성할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 관리되는 API는 뷰를 쿼리하고 저장 프로시저를 호출하여 많은 태스크를 수행합니다. 예를 들어 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 목록을 보고 필요한 경우 패키지를 중지하도록 요청할 수 있습니다.  
@@ -60,8 +61,8 @@ ms.locfileid: "66054594"
  관리되는 API를 통해 프로그래밍 방식으로 액세스  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스 및 해당 클래스를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md)   
- [패키지 실행 보고서 문제 해결](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [패키지 실행 문제 해결 보고서](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

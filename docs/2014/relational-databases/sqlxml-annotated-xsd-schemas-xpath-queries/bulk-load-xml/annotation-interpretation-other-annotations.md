@@ -1,5 +1,5 @@
 ---
-title: 다른 주석 (SQLXML 4.0) | Microsoft 문서
+title: 기타 주석 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013607"
 ---
 # <a name="other-annotations-sqlxml-40"></a>기타 주석(SQLXML 4.0)
@@ -49,7 +49,7 @@ ms.locfileid: "66013607"
  `sql:key-fields`  
  XML 대량 로드는 이 주석을 항상 무시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [주석 해석 &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQLXML 4.0 &#40;주석 해석&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

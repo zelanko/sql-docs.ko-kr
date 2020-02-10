@@ -1,5 +1,5 @@
 ---
-title: Integration Services 서버용 보고서 보기 | Microsoft Docs
+title: Integration Services 서버에 대 한 보고서 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054544"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서 보기
@@ -38,8 +38,8 @@ ms.locfileid: "66054544"
   
     -   **모든 연결**  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services 서버를 위한 보고서](../../2014/integration-services/reports-for-the-integration-services-server.md)   
- [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [Integration Services 서버에 대 한 보고서](../../2014/integration-services/reports-for-the-integration-services-server.md)   
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

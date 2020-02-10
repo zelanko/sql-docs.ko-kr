@@ -1,5 +1,5 @@
 ---
-title: 설정 및 버전 정보 검색 | Microsoft Docs
+title: 버전 정보 설정 및 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843484"
 ---
 # <a name="set-and-retrieve-version-information"></a>버전 정보 설정 및 검색
@@ -69,7 +69,7 @@ ms.locfileid: "62843484"
   
 -   [기록 및 상태 보고서 만들기](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)  
   
   

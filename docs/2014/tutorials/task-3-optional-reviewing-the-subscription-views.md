@@ -1,5 +1,5 @@
 ---
-title: '태스크 3(선택 사항): 구독 뷰 검토 | Microsoft Docs'
+title: '작업 3 (선택 사항): 구독 뷰 검토 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,25 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489257"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>태스크 3(선택 사항): 구독 뷰 검토
   이 작업에서는 SQL Server Management Studio를 사용하여 SQL 뷰가 만들어졌는지 확인합니다.  
   
-1.  시작할 **SQL Server Management Studio**합니다. 클릭 합니다 **시작** 단추를 클릭 **모든 프로그램**, 클릭 **Microsoft SQL Server 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  
+1.  
+  **SQL Server Management Studio**를 시작합니다. **시작** 단추를 클릭 하 고 **모든 프로그램**, **Microsoft SQL Server 2012**를 차례로 클릭 한 다음 **SQL Server Management Studio**를 클릭 합니다.  
   
-2.  에 **서버에 연결** 창에서 **서버 유형** 에 **데이터베이스 엔진**, 형식 합니다 **서버 이름** (선택 또는 **( 로컬)** , 및 적절 한 선택 **인증**, 클릭 **Connect**합니다.  
+2.  **서버에 연결** 창에서 **서버 유형** 을 **데이터베이스 엔진**로 설정 하 고 **서버 이름을** 입력 하거나 **(로컬)** 을 선택 하 고 적절 한 **인증**을 선택 하 고 **연결**을 클릭 합니다.  
   
-3.  에 **개체 탐색기** 창 확장 **데이터베이스**, 확장 **MDS**를 차례로 확장 **뷰**.  
+3.  **개체 탐색기** 창에서 **데이터베이스**, **MDS**, **보기**를 차례로 확장 합니다.  
   
-4.  표시 되는지 확인 합니다 **mdm. 공급 업체** 보기 목록에서.  
+4.  Mdm이 표시 되는지 확인 **합니다. 목록의 공급자** 뷰입니다.  
   
-     ![SQL Server Management Studio-mdm. 공급 업체 보기](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "mdm.-SQL Server Management Studio 공급자 보기")  
+     ![SQL Server Management Studio - mdm.Suppliers 뷰](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - mdm.Suppliers 뷰")  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 4: SQL Server Data Tools를 사용 하 여 SSIS 프로젝트 만들기](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

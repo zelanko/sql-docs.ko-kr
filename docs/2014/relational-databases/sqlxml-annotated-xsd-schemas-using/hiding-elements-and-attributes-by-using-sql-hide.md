@@ -1,5 +1,5 @@
 ---
-title: Sql:hide를 사용 하 여 요소 및 특성을 숨기기 | Microsoft 문서
+title: 'Sql: hide |를 사용 하 여 요소 및 특성 숨기기 Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,24 +25,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013833"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
-  XSD 스키마에 대해 XPath 쿼리를 실행하면 결과 XML 문서에는 스키마에 지정된 요소와 특성이 포함됩니다. `sql:hide` 주석을 사용하여 일부 요소와 특성이 스키마에서 숨겨지도록 지정할 수 있습니다. 이는 쿼리의 선택 조건에 스키마의 특정 요소나 특성이 필요하지만 생성되는 XML 문서에는 해당 요소나 특성이 포함되지 않게 하려는 경우에 유용합니다.  
+  XSD 스키마에 대해 XPath 쿼리를 실행하면 결과 XML 문서에는 스키마에 지정된 요소와 특성이 포함됩니다. 
+  `sql:hide` 주석을 사용하여 일부 요소와 특성이 스키마에서 숨겨지도록 지정할 수 있습니다. 이는 쿼리의 선택 조건에 스키마의 특정 요소나 특성이 필요하지만 생성되는 XML 문서에는 해당 요소나 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
- `sql:hide` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
+ 
+  `sql:hide` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>1\. 특성에 sql:hide 지정  
- 이루어져 있으며이 예에서 XSD 스키마는  **\<Person.Contact >** 요소를 사용 하 여 **ContactID**, **이름**, 및 **성** 속성입니다.  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 특성에 sql:hide 지정  
+ 이 예의 XSD 스키마는 **ContactID**, **FirstName**및 **LastName** 특성을 사용 하 여 ** \<Contact>** 요소로 구성 됩니다.  
   
- **\<Person.Contact >** 요소는 복합 형식이 고, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성의  **\<Person.Contact >** 요소는 단순 형식 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 동일한 이름의 열에 매핑됩니다. 스키마에는 `sql:hide` 주석은에 지정 됩니다 합니다 **ContactID** 특성. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** XML 문서에 반환 되지 않습니다.  
+ Person. Contact>요소는 복합 유형 이므로 동일한 이름 (기본 매핑)의 테이블에 매핑됩니다. ** \<** Person. Contact>요소의 모든 특성은 단순 유형 이며 AdventureWorks 데이터베이스의 person 테이블에서 이름이 같은 열에 매핑됩니다. ** \<** 스키마에서 `sql:hide` 주석은 **ContactID** 특성에 지정 됩니다. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** 는 XML 문서에 반환 되지 않습니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -79,7 +81,7 @@ ms.locfileid: "66013833"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -89,7 +91,7 @@ ms.locfileid: "66013833"
 </ROOT>  
 ```  
   
- 요소에 대해 `sql:hide`를 지정하면 생성되는 XML 문서에 요소와 해당 특성 또는 자식 요소가 표시되지 않습니다. 다른 XSD 스키마는 다음과 같습니다 `sql:hide` 에 지정 된  **\<OD >** 요소:  
+ 요소에 대해 `sql:hide`를 지정하면 생성되는 XML 문서에 요소와 해당 특성 또는 자식 요소가 표시되지 않습니다. 다음은 ** \<OD>** 요소에를 `sql:hide` 지정 하는 또 다른 XSD 스키마입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +146,7 @@ ms.locfileid: "66013833"
 </xsd:schema>  
 ```  
   
- 때 XPath 쿼리 (예를 들어 `/Customers[@CID="1"]`) 지정이 스키마에 대해 생성 되는 XML 문서에 포함 되어 있지 않습니다는  **\<OD >** 요소와 그 자식,이 부분 결과에 표시 된 대로:  
+ 이 스키마에 대해 XPath 쿼리 ( `/Customers[@CID="1"]`예:)를 지정 하는 경우 생성 되는 XML 문서에는 다음 부분 결과에 표시 된 것 처럼 ** \<OD>** 요소와 해당 자식이 포함 되지 않습니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

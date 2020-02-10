@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c50e4bdbfe6fd9af1c5e5a6d528a270c0b63c50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870211"
 ---
-# <a name="mssqlserver12304"></a>MSSQLSERVER_12304
+# <a name="mssqlserver_12304"></a>MSSQLSERVER_12304
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -35,7 +35,7 @@ ms.locfileid: "62870211"
 ## <a name="user-action"></a>사용자 동작  
  열에서 IDENTITY 속성을 사용하는 메모리 최적화 테이블 형식을 사용하지 마세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

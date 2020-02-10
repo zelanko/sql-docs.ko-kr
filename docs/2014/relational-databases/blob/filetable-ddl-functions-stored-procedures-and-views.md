@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010097"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL, 함수, 저장 프로시저 및 뷰
@@ -65,7 +65,7 @@ ms.locfileid: "66010097"
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**추가됨**|[FileTable 관리](manage-filetables.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable 관리](manage-filetables.md)  
   
   

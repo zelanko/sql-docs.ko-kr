@@ -1,5 +1,5 @@
 ---
-title: 샘플 XPath 쿼리 (SQLXML 4.0) | Microsoft Docs
+title: 예제 XPath 쿼리 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010705"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath 쿼리 예제(SQLXML 4.0)
@@ -30,13 +30,13 @@ ms.locfileid: "66010705"
 >  이 섹션의 예제 쿼리는 쿼리에서 수행되는 XPath 작업의 유형별로 그룹화됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [주석이 추가 된 예제 XSD 스키마 XPath 예제 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0의 XPath 예제에 대해 주석이 추가 된 샘플 XSD 스키마&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  이 섹션에 제공된 XPath 쿼리 예제에서 이 파일을 사용합니다.  
   
  [XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 축을 지정하는 방법을 보여 줍니다.  
   
- [XPath 쿼리에 부울 반환 조건자 지정 &#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath 쿼리에서 부울 값 조건자 지정 &#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 부울 값 조건자를 지정하는 방법을 보여 줍니다.  
   
  [XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "66010705"
  [XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다.  
   
- [XPath 쿼리에 명시적 변환 함수를 지정 &#40;SQLXML 4.0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [XPath 쿼리에 명시적 변환 함수 지정 &#40;SQLXML 4.0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
  XPath 쿼리에 명시적 변환 함수를 지정하는 방법을 보여 줍니다.  
   
  [XPath 쿼리에 부울 연산자 지정 &#40;SQLXML 4.0&#41;](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  

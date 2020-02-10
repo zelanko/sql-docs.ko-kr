@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912547"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62912547"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC3_CHECK_CATALOG|  
-|메시지 텍스트|확인 카탈로그 메시지 ERROR 수준 LEVEL 상태 STATE: 메시지.|  
+|메시지 텍스트|카탈로그 검사 메시지 ERROR 수준 LEVEL 상태 STATE: MESSAGE을(를) 확인하십시오.|  
   
 ## <a name="explanation"></a>설명  
  DBCC CHECKCATALOG 또는 DBCC CHECKDB에서 지정된 개체에 대한 시스템 메타데이터 테이블 간의 불일치를 발견했습니다. 즉, 오류 메시지에 지정된 개체와 기록된 개체 ID가 일치하지 않습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "62912547"
 ### <a name="do-not-manually-update-system-tables"></a>시스템 테이블 수동 업데이트 금지  
  시스템 테이블을 수동으로 업데이트하지 마십시오. SQL Server는 시스템 데이터베이스에 대한 수동 변경을 지원하지 않습니다. SQL Server 데이터베이스에서 시스템 테이블을 업데이트할 경우 두 가지 이벤트(이벤트 ID 17659와 이벤트 ID 3859)가 기록됩니다. 자세한 내용은 기술 자료 문서 2688307, "SQL Server 데이터베이스의 시스템 테이블을 업데이트할 경우 이벤트 ID 17659와 이벤트 ID 3859가 기록됨"을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스의 시스템 테이블을 업데이트할 경우 이벤트 ID 17659와 이벤트 ID 3859가 기록됨](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 패키지 관리 옵션 (SSIS 패키지 업그레이드 마법사)를 선택 합니다. | Microsoft Docs
+title: 패키지 관리 옵션 선택 (SSIS 패키지 업그레이드 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056025"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>패키지 관리 옵션 선택(SSIS 패키지 업그레이드 마법사)
+  
   **패키지 관리 옵션 선택** 페이지를 사용하여 패키지 업그레이드 옵션을 지정할 수 있습니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
   
 -   [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **새 공급자 이름을 사용하도록 연결 문자열 업데이트**  
  연결 문자열이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]현재 버전의 다음 공급자에 대해 다음 이름을 사용하도록 업데이트합니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66056025"
   
  유효성 검사로 인해 업그레이드 프로세스의 소요 시간이 늘어납니다. 성공적으로 업그레이드될 가능성이 높은 큰 패키지의 경우에는 이 옵션을 선택하지 않는 것이 좋습니다.  
   
- **새 패키지 ID 만들기**  
+ **새 패키지 Id 만들기**  
  업그레이드 패키지의 새 패키지 ID를 만듭니다.  
   
  **패키지 업그레이드 실패 시 업그레이드 프로세스 계속**  
@@ -74,7 +75,7 @@ ms.locfileid: "66056025"
   
  자세한 내용은 [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages.md)  
   
   

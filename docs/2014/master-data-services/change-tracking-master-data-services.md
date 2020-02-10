@@ -13,13 +13,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483527"
 ---
 # <a name="change-tracking-master-data-services"></a>변경 내용 추적(Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 변경 내용 추적 그룹을 사용하여 특성 값이 변경될 때 동작을 수행할 수 있습니다. 새 값이 무엇인지 모르지만 대신 변경이 발생했는지 알고 싶으면 변경 내용 추적을 사용합니다.  
   
 ## <a name="configuring-change-tracking"></a>변경 내용 추적 구성  
@@ -32,15 +33,15 @@ ms.locfileid: "65483527"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|변경 내용 추적 그룹에 특성 추가|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|특성 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만듭니다.|[특성 값 변경 기반 동작 시작&#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|변경 내용 추적 그룹에 특성 추가|[특성을 변경 내용 추적 그룹 &#40;MDS(Master Data Services)에 추가&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|특성 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만듭니다.|[특성 값 변경을 기반으로 하는 작업 시작 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [유효성 검사 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [특성 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

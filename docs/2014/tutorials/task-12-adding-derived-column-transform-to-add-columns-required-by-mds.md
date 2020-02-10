@@ -1,5 +1,5 @@
 ---
-title: '태스크 12: 추가 파생 열 변환을 추가 하 여 MDS에 필요한 열 | Microsoft Docs'
+title: '태스크 12: 파생 열 변환을 추가 하 여 MDS에 필요한 열 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485247"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가
-  이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 두 개의 파생된 열을 추가한 **ImportType** 하 고 **BatchTag**를이 변환에 전달 되는 레코드입니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 참조 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md) 대 한 자세한 내용은 합니다.  
+  이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 이 변환에 전달 된 레코드에 두 개의 파생 열 **Importtype** 및 **batchtag**를 추가 합니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 자세한 내용은 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md) 을 참조 하십시오.  
   
-1.  끌어서 놓기 **파생 열 변환** 에서 **일반적인** 섹션의 **SSIS 도구 상자** 에 **데이터 흐름** 탭 합니다.  
+1.  **SSIS 도구 상자** 의 **공통** 섹션에서 **파생 열 변환을** **데이터 흐름** 탭으로 끌어서 놓습니다.  
   
-2.  마우스 오른쪽 단추로 클릭 **파생 열** 에서 변환 된 **데이터 흐름** 탭을 클릭 **이름 바꾸기**합니다. 형식 **Add Columns Required by MDS** 누릅니다 **ENTER**합니다.  
+2.  **데이터 흐름** 탭에서 **파생 열** 변환을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다. **MDS에 필요한 열 추가** 를 입력 하 고 **enter**키를 누릅니다.  
   
-3.  연결 **Filter Duplicates** 하 **Add Columns Required by MDS** 파란색 커넥터를 사용 하 여 합니다. 표시 되어야 합니다 **입/출력 선택** 대화 상자.  
+3.  **중복 필터** 를 연결 하 여 파란색 커넥터를 사용 하는 **MDS에 필요한 열을 추가** 합니다. **입력 출력 선택** 대화 상자가 표시 됩니다.  
   
-4.  에 **입/출력 선택** 대화 상자에서 **Unique Records**, 클릭 **확인**합니다.  
+4.  **입력 출력 선택** 대화 상자에서 **고유 레코드**를 선택 하 고 **확인**을 클릭 합니다.  
   
-     ![출력 선택 대화 상자를 입력](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "출력 선택 대화 상자를 입력 합니다.")  
+     ![입/출력 선택 대화 상자](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "입/출력 선택 대화 상자")  
   
-5.  클릭 **SSIS** 메뉴 모음에서 클릭 **변수**합니다.  
+5.  메뉴 모음에서 **SSIS** 를 클릭 하 고 **변수**를 클릭 합니다.  
   
-6.  에 **변수** 창에서 클릭 **변수 추가** 도구 모음 단추입니다.  
+6.  **변수** 창의 도구 모음에서 **변수 추가** 단추를 클릭 합니다.  
   
      ![SSIS 변수 창](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 변수 창")  
   
-7.  형식 **ImportType** 에 대 한 합니다 **이름** 및 **2** 에 대 한 합니다 **값**합니다. MDS의 엔터티에 새 멤버를 추가하기 때문에 값을 2로 지정합니다. 이 매개 변수에 대 한 자세한 내용은 참조 하세요 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md)합니다.  
+7.  **이름** 에 **importtype** 을 입력 하 고 **값**으로 **2** 를 입력 합니다. MDS의 엔터티에 새 멤버를 추가하기 때문에 값을 2로 지정합니다. 이 매개 변수에 대 한 자세한 내용은 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md)을 참조 하십시오.  
   
-8.  클릭 **변수 추가** 도구 모음 단추를 다시 합니다.  
+8.  **변수 추가** 도구 모음 단추를 다시 클릭 합니다.  
   
-9. 형식 **BatchTag** 에 대 한 합니다 **이름**를 선택 **문자열** 에 대 한 합니다 **데이터 형식**, 및 **EIMBatch** 에 대 한를 **값**합니다. **BatchTag** MDS에 제출할 일괄 처리는 고유 이름입니다.  
+9. **이름**에 **batchtag** 를 입력 하 고, **데이터 형식**으로 **문자열** 을 선택 하 고, **값**에 대해 **eimbatch** 를 선택 합니다. **Batchtag** 는 MDS에 제출할 일괄 처리에 대 한 고유 이름입니다.  
   
-10. 에 **데이터 흐름** 탭을 두 번 클릭 **Add Columns Required by MDS**합니다.  
+10. **데이터 흐름** 탭에서 **MDS에 필요한 열 추가**를 두 번 클릭 합니다.  
   
-11. 에 **파생 열 변환 편집기** 대화 상자의 합니다 **아래쪽 창의 목록 상자에서에서**, 형식 **ImportType** 에 대 한는 **파생 열 이름**.  
+11. **파생 열 변환 편집기** 대화 상자의 **아래쪽 창에 있는 목록 상자**에 **파생 열 이름**에 대 한 **importtype** 을 입력 합니다.  
   
-12. 확장 **변수 및 매개 변수** 왼쪽 위 창에서 끌어서 놓기 **user:: importtype** 하는 **식** 열입니다.  
+12. 왼쪽 위 창에서 **변수 및 매개 변수** 를 확장 하 고 **User:: Importtype** 을 **식** 열로 끌어 놓습니다.  
   
      ![파생 열 변환 편집기](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "파생 열 변환 편집기")  
   
-13. 형식 **BatchTag** 의 다음 행에는 **파생 열 이름**합니다.  
+13. 다음 행에서 **파생 열 이름**으로 **batchtag** 를 입력 합니다.  
   
-14. 끌어서 놓기 **user:: batchtag** 에서 **변수와 매개 변수** 하는 **식** 열입니다.  
+14. **사용자:: BatchTag** 를 **변수 및 매개 변수** 에서 **식** 열로 끌어서 놓습니다.  
   
-15. 클릭 **확인** 닫으려면 합니다 **파생 열 변환** 대화 상자.  
+15. **확인** 을 클릭 하 여 **파생 열 변환** 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 13: MDS 준비 테이블에 데이터를 쓸 OLE DB 대상 추가](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

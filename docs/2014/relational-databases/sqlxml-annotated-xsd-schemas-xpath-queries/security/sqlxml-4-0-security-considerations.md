@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f9a2380ae4ab5b59fa974093d81a09266ebd8c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010527"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
@@ -27,16 +27,16 @@ ms.locfileid: "66010527"
  [핵심 SQLXML 보안 고려 사항](core-sqlxml-security-considerations.md)  
  데이터 액세스에 SQLXML을 사용하기 위한 보안 지침을 제공합니다.  
   
- [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 보안 고려 사항은 SQLXML 4.0&#41;&#40;](updategram-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0에서 updategram을 사용하기 위한 보안 지침을 제공합니다.  
   
- [주석 스키마 보안 고려 사항 &#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;주석이 추가 된 스키마 보안 고려 사항&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0에서 주석 스키마를 사용하기 위한 보안 지침을 제공합니다.  
   
- [XML 보안 고려 사항에 대 한 &#40;SQLXML 4.0&#41;](for-xml-security-considerations-sqlxml-4-0.md)  
+ [XML 보안 고려 사항은 SQLXML 4.0을 &#40;&#41;](for-xml-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0에서 FOR XML을 사용하기 위한 보안 지침을 제공합니다.  
   
- [대량 로드 보안 고려 사항 &#40;SQLXML 4.0&#41;](bulk-load-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;대량 로드 보안 고려 사항&#41;](bulk-load-security-considerations-sqlxml-4-0.md)  
  SQLXML 4.0에서 XML 대량 로드를 사용하기 위한 보안 지침을 제공합니다.  
   
   

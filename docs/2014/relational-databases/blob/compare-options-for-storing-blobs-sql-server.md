@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010345"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
@@ -38,7 +38,8 @@ ms.locfileid: "66010345"
 -   Windows 애플리케이션에서는 파일 및 디렉터리 데이터에 대한 파일 시스템 API와의 호환성이 필요합니다.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이미 파일 시스템에 파일로 저장된 구조화되지 않은 데이터를 효율적으로 저장, 관리 및 스트리밍할 수 있는 FILESTREAM 기능이 있습니다. 그러나 FILESTREAM 솔루션은 사용자 지정 프로그래밍이 필요하며, 위에서 설명한 Windows 애플리케이션 호환성에 대한 요구 사항을 충족하지 않습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이미 파일 시스템에 파일로 저장된 구조화되지 않은 데이터를 효율적으로 스토리지, 관리 및 스트리밍할 수 있는 FILESTREAM 기능이 있습니다. 그러나 FILESTREAM 솔루션은 사용자 지정 프로그래밍이 필요하며, 위에서 설명한 Windows 애플리케이션 호환성에 대한 요구 사항을 충족하지 않습니다.  
   
 ##  <a name="FileTables"></a> FileTable  
  기존의 FILESTREAM 기능을 기반으로 구축된 FileTable 기능은 파일 기반 데이터에 대한 비트랜잭션 액세스 및 Windows 애플리케이션 호환성 요구 사항을 해결함으로써 기업 고객이 구조화되지 않은 파일 데이터 및 디렉터리 계층 구조를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있게 해 줍니다.  
@@ -47,16 +48,16 @@ ms.locfileid: "66010345"
   
 |기능|파일 서버 및 데이터베이스 솔루션|FILESTREAM 솔루션|FileTable 솔루션|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**단일화된 관리 태스크**|아니요|사용자 계정 컨트롤|**예**|  
-|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니요|사용자 계정 컨트롤|**예**|  
-|**통합 보안 모델**|아니요|사용자 계정 컨트롤|**예**|  
-|**FILESTREAM 데이터의 현재 위치 업데이트**|사용자 계정 컨트롤|아니요|**예**|  
-|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니요|아니요|**예**|  
-|**Windows 응용 프로그램 호환성**|사용자 계정 컨트롤|아니요|**예**|  
-|**파일 특성에 대한 관계형 액세스**|아니요|아니요|**예**|  
+|**단일화된 관리 태스크**|예|yes|**예**|  
+|**단일 서비스 집합**: 검색, 보고, 쿼리 등|예|yes|**예**|  
+|**통합 보안 모델**|예|yes|**예**|  
+|**FILESTREAM 데이터의 현재 위치 업데이트**|yes|예|**예**|  
+|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|예|예|**예**|  
+|**Windows 애플리케이션 호환성**|yes|예|**예**|  
+|**파일 특성에 대한 관계형 액세스**|예|예|**예**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교  
- 이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server Remote BLOB Store 및 FILESTREAM 기능 비교](https://go.microsoft.com/fwlink/?LinkId=210317)합니다.  
+ 이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server 원격 BLOB 저장소 및 FILESTREAM 기능 비교](https://go.microsoft.com/fwlink/?LinkId=210317)를 참조하세요.  
   
 ##  <a name="more"></a> 자세한 정보  
  [FILESTREAM&#40;SQL Server&#41;](filestream-sql-server.md)  

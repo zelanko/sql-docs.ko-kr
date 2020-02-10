@@ -10,31 +10,36 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014247"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
+  
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예제에 도입 된 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CurvePolygon` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  하위 유형을 포함 하 여에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]도입 된 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요. `CurvePolygon`  
   
- 특성을 정의 하는 다음 조건을 `CurvePolygon` 인스턴스:  
+ 다음 조건은 `CurvePolygon` 인스턴스의 특성을 정의 합니다.  
   
--   `CurvePolygon` 인스턴스의 경계는 외부 링과 모든 내부 링으로 정의됩니다.  
+-   
+  `CurvePolygon` 인스턴스의 경계는 외부 링과 모든 내부 링으로 정의됩니다.  
   
--   `CurvePolygon` 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
+-   
+  `CurvePolygon` 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- `CurvePolygon` 인스턴스는 `Polygon` 인스턴스와 다릅니다. `CurvePolygon` 인스턴스에는 원호 세그먼트인 `CircularString` 및 `CompoundCurve`가 포함될 수 있습니다.  
+ 
+  `CurvePolygon` 인스턴스는 `Polygon` 인스턴스와 다릅니다. `CurvePolygon` 인스턴스에는 원호 세그먼트인 `CircularString` 및 `CompoundCurve`가 포함될 수 있습니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 `CurvePolygon` 그림을 보여 줍니다.  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- `CurvePolygon` 인스턴스가 허용되려면 해당 인스턴스가 비어 있거나 허용된 원호 링만 포함해야 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
+ 
+  `CurvePolygon` 인스턴스가 허용되려면 해당 인스턴스가 비어 있거나 허용된 원호 링만 포함해야 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
   
 1.  허용되는 `LineString`, `CircularString` 또는 `CompoundCurve` 인스턴스여야 합니다. 허용되는 인스턴스에 대한 자세한 내용은 [LineString](linestring.md), [CircularString](circularstring.md)및 [CompoundCurve](compoundcurve.md)를 참조하십시오.  
   
@@ -55,7 +60,8 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 이 허용됩니다. `geography` 유형 인스턴스가 유효하지 않아도 `@g5`가 허용됩니다.  
+ `@g3` 이 허용됩니다. 
+  `@g5` 유형 인스턴스가 유효하지 않아도 `geography`가 허용됩니다.  
   
  다음 예에서는 `System.FormatException`이 발생합니다.  
   
@@ -67,7 +73,8 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 이 허용되지 않습니다. `@g2` 가 허용되지 않습니다.  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- `CurvePolygon` 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
+ 
+  `CurvePolygon` 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
   
 1.  이 두 링은 단일 탄젠트 점에서만 접할 수 있습니다.  
   
@@ -122,7 +129,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>1\. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 `CurvePolygon` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -130,21 +137,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2\. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 코드 조각은 동일한 문에서 `CurvePolygon`을 사용하여 geography 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
-### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>3\. CurvePolygon을 사용하여 Geography 인스턴스 인스턴스화  
+### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. CurvePolygon을 사용하여 Geography 인스턴스 인스턴스화  
  이 코드 조각은 `geography`을 사용하여 `CurvePolygon` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>4\. 외부 경계 링만 사용하여 CurvePolygon 저장  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. 외부 경계 링만 사용하여 CurvePolygon 저장  
  이 예에서는 단순 원을 `CurvePolygon` 인스턴스에 저장하는 방법을 보여 줍니다. 외부 경계 링만 사용하여 원을 정의합니다.  
   
 ```sql  
@@ -153,7 +160,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 SELECT @g.STArea() AS Area;  
 ```  
   
-### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>5\. 내부 링을 포함하는 CurvePolygon 저장  
+### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 내부 링을 포함하는 CurvePolygon 저장  
  이 예에서는 `CurvePolygon` 인스턴스에서 도넛형을 만듭니다. 외부 경계 링과 내부 링을 모두 사용하여 도넛형을 정의합니다.  
   
 ```sql  
@@ -181,7 +188,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1과 @g2 모두 동일한 외부 경계 링을 사용합니다. 이 원의 반지름은 5이고 둘 다 내부 링에 대해 사각형을 사용합니다.  그러나 @g1 인스턴스는 유효하고 @g2 인스턴스는 유효하지 않습니다.  @g2가 유효하지 않은 이유는 내부 링이 외부 링에 의해 경계가 지정된 내부 공간을 4개의 개별 영역으로 분할하기 때문입니다.  다음 그림에서는 이를 실행한 결과를 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

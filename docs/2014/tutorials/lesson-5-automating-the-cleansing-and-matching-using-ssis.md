@@ -1,5 +1,5 @@
 ---
-title: '5단원: 정리 및 일치 하는 SSIS를 사용 하 여 자동화 | Microsoft Docs'
+title: '5 단원: SSIS를 사용 하 여 정리 및 일치 자동화 | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489750"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>5단원: SSIS를 사용하여 정리 및 일치 자동화
-  1 단원에서에서 Suppliers 기술 자료를 작성 하 고이 단원 2에서 데이터를 정리 및 3과 도구를 사용 하 여 데이터 일치를 사용 **DQS 클라이언트**합니다. 실제 시나리오에서는 사용 하지 않고 일치 하는 프로세스를 DQS를 지원 하지 않거나 정리 자동화 하려는 원본에서 데이터를 가져올 해야 합니다 **DQS 클라이언트** 도구입니다. SQL Server Integration Services (SSIS)에 다양 한 이기종 원본에서 데이터를 통합 하는 데 사용할 수 있는 구성 요소 및 **[DQS 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 정리를 호출 하는 구성 요소 DQS에 의해 노출 하는 기능입니다. 현재, DQS를 사용 하려면 SSIS에 대 한 일치 하는 기능을 제공 하지 않습니다 하지만 사용할 수 있습니다 합니다 **[유사 항목 그룹화 변환](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 데이터의 중복을 식별 하 합니다.  
+  1 단원에서는 Suppliers 기술 자료를 작성 하 고이를 사용 하 여 2 단원에서 데이터를 정리 하 고 도구 **DQS 클라이언트**를 사용 하 여 3 단원에서 데이터를 일치 시킵니다. 실제 시나리오에서는 dqs가 지원 하지 않는 소스에서 데이터를 끌어오거나 **Dqs 클라이언트** 도구를 사용 하지 않고도 정리 및 일치 프로세스를 자동화 해야 할 수 있습니다. SSIS (SQL Server Integration Services)에는 다양 한 유형의 원본과 **[Dqs 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 구성 요소의 데이터를 통합 하 여 dqs에서 노출 하는 정리 기능을 호출 하는 데 사용할 수 있는 구성 요소가 있습니다. 현재 DQS는 사용할 SSIS에 대해 일치 하는 기능을 제공 하지 않지만 **[유사 항목 그룹화 변환을](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 사용 하 여 데이터에서 중복 항목을 식별할 수 있습니다.  
   
- 사용 하 여 MDS에 데이터를 업로드할 수 있습니다 합니다 **엔터티 기반 준비 기능**합니다. MDS에서 엔터티를 만들면 해당 준비 테이블 및 저장 프로시저가 자동으로 생성됩니다. 예를 들어 Supplier 엔터티를 만들 때 합니다 **stg.supplier_Leaf** 테이블 및 **stg.udp_Supplier_Leaf** 자동으로 생성 된 저장된 프로시저입니다. 준비 테이블 및 프로시저를 사용하여 엔터티 멤버를 만들고, 업데이트 및 삭제합니다. 이 단원에서는 Supplier 엔터티에 대해 새로운 엔터티 멤버를 만듭니다. 데이터를 MDS 서버에 로드하기 위해 SSIS 패키지는 먼저 데이터를 stg.supplier_Leaf 준비 테이블에 로드한 후 연관된 저장 프로시저인 stg.udp_Supplier_Leaf를 트리거합니다. 참조 [데이터 가져오기](../master-data-services/overview-importing-data-from-tables-master-data-services.md) 대 한 자세한 내용은 합니다.  
+ **엔터티 기반 준비 기능**을 사용 하 여 MDS에 데이터를 업로드할 수 있습니다. MDS에서 엔터티를 만들면 해당 준비 테이블 및 저장 프로시저가 자동으로 생성됩니다. 예를 들어 공급자 엔터티를 만들 때 **supplier_Leaf** 테이블과 **stg. udp_Supplier_Leaf** 저장 프로시저가 자동으로 생성 됩니다. 준비 테이블 및 프로시저를 사용하여 엔터티 멤버를 만들고, 업데이트 및 삭제합니다. 이 단원에서는 Supplier 엔터티에 대해 새로운 엔터티 멤버를 만듭니다. 데이터를 MDS 서버에 로드하기 위해 SSIS 패키지는 먼저 데이터를 stg.supplier_Leaf 준비 테이블에 로드한 후 연관된 저장 프로시저인 stg.udp_Supplier_Leaf를 트리거합니다. 자세한 내용은 [데이터 가져오기](../master-data-services/overview-importing-data-from-tables-master-data-services.md) 를 참조 하세요.  
   
  이 단원에서는 다음 작업을 수행합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65489750"
   
 2.  Supplier 엔터티의 데이터를 다른 애플리케이션에 노출하기 위해 Supplier 엔티터에 구독 뷰를 만듭니다. 이 작업을 수행하면 SQL Server Management Studio를 사용해서 확인할 수 있는 SQL 뷰가 생성됩니다. 이 버전의 자습서에서는 이 뷰를 사용하지 않습니다.  
   
-3.  만들기 및 사용 하 여 SSIS 프로젝트 실행 **SQL Server Data Tools**합니다. 프로젝트에서 사용 **데이터 정리** DQS 서버에 정리 요청을 제출 하려면 변환 합니다. 사용 하도록 DQS 일치 기능을 아직 노출 하지 않습니다 **유사 항목 그룹화** 중복을 식별 하는 변환입니다.  
+3.  **SQL Server Data Tools**를 사용 하 여 SSIS 프로젝트를 만들고 실행 합니다. 프로젝트는 **데이터 정리** 변환을 사용 하 여 dqs 서버에 정리 요청을 제출 합니다. DQS에서는 일치 기능이 아직 노출 되지 않으므로 **유사 항목 그룹화** 변환을 사용 하 여 중복 항목을 식별 합니다.  
   
 4.  마스터 데이터 관리자를 사용해서 MDS에 데이터가 생성되었는지 확인합니다.  
   
