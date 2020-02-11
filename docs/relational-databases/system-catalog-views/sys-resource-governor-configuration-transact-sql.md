@@ -20,10 +20,10 @@ ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982624"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982624"
 
   저장된 리소스 관리자 상태를 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|메타데이터에 저장된 것과 같은 분류자 함수의 ID입니다. Null을 허용하지 않습니다.<br /><br /> **참고** 이 함수는 새 세션을 분류 하 고 규칙을 사용 하 여 작업을 적절 한 작업 그룹으로 라우팅하는 데 사용 됩니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.|  
 |is_enabled|**bit**|리소스 관리자의 현재 상태를 나타냅니다.<br /><br /> 0 = Resource Governor를 사용할 수 없습니다.<br /><br /> 1 = Resource Governor를 사용할 수 있습니다.<br /><br /> Null을 허용하지 않습니다.|  
@@ -66,9 +66,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Resource Governor 카탈로그 뷰 &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [dm_resource_governor_configuration &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [dm_resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   
   

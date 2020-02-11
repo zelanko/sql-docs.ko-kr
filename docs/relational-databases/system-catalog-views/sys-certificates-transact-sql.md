@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255838"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates(Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "75255838"
 
   데이터베이스의 각 인증서에 대해 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**이름의**|**sysname 이며**|인증서의 이름입니다. 데이터베이스 내에서 고유합니다.|  
+|**name**|**sysname**|인증서의 이름입니다. 데이터베이스 내에서 고유합니다.|  
 |**certificate_id**|**int**|인증서의 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**principal_id**|**int**|이 인증서를 소유하는 데이터베이스 보안 주체의 ID입니다.|  
 |**pvt_key_encryption_type**|**char (2)**|프라이빗 키가 암호화된 방법입니다.<br /><br /> NA = 인증서에 프라이빗 키가 없음<br /><br /> MK = 프라이빗 키가 마스터 키로 암호화됨<br /><br /> PW = 프라이빗 키가 사용자 정의 암호로 암호화됨<br /><br /> SK = 프라이빗 키가 서비스 마스터 키로 암호화됨|  
@@ -44,20 +44,20 @@ ms.locfileid: "75255838"
 |**cert_serial_number**|**nvarchar (64)**|인증서의 일련 번호입니다.|  
 |**s**|**varbinary (85)**|이 인증서의 로그인 SID입니다.|  
 |**string_sid**|**nvarchar(128)**|이 인증서의 로그인 SID를 나타내는 문자열입니다.|  
-|**제목**|**nvarchar (4000)**|이 인증서의 주체입니다.|  
-|**expiry_date**|**날짜**|인증서 만료 날짜입니다.|  
-|**start_date**|**날짜**|인증서가 유효하게 되는 날짜입니다.|  
-|**n**|**varbinary (32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
+|**제목**|**nvarchar(4000)**|이 인증서의 주체입니다.|  
+|**expiry_date**|**datetime**|인증서 만료 날짜입니다.|  
+|**start_date**|**datetime**|인증서가 유효하게 되는 날짜입니다.|  
+|**thumbprint**|**varbinary (32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  
-|**pvt_key_last_backup_date**|**날짜**|인증서의 개인 키를 마지막으로 내보낸 날짜와 시간입니다.|  
+|**pvt_key_last_backup_date**|**datetime**|인증서의 개인 키를 마지막으로 내보낸 날짜와 시간입니다.|  
   
-## <a name="permissions"></a>권한  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]자세한 내용은 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조 하세요.  
+## <a name="permissions"></a>사용 권한  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Transact-sql&#41;인증서 &#40;만들기](../../t-sql/statements/create-certificate-transact-sql.md)  
+ [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   
   

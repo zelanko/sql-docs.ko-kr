@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754834"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
@@ -26,11 +26,11 @@ ms.locfileid: "62754834"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **서버 인스턴스**  
  기록이 보고되고 있는 서버 인스턴스의 이름입니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  해당 기록이 보고되고 있는 데이터베이스의 이름입니다.  
   
  **목록 필터 기준**  
@@ -62,14 +62,14 @@ ms.locfileid: "62754834"
 > [!NOTE]  
 >  이 대화 상자는 기록 목록을 자동으로 새로 고치지 않습니다. 목록을 새로 고치려면 **새로 고침** 을 클릭하거나 다른 필터 옵션을 선택합니다. **sysadmin** 고정 서버 역할의 멤버만 미러링 기록을 업데이트할 수 있습니다.  
   
- **기록**  
+ **History**  
  기록 목록을 표시합니다. 열 머리글을 클릭하면 해당 열을 기준으로 표가 정렬됩니다. 목록에는 다음 열이 있습니다.  
   
 |열 이름|Description|  
 |-----------------|-----------------|  
 |**기록된 시간**|기록 행의 타임스탬프입니다.|  
 |**역할**|이 데이터베이스에 대한 서버 인스턴스의 현재 미러링 역할(주 서버 또는 미러 서버)입니다.|  
-|**미러링 상태**|데이터베이스의 상태입니다.<br /><br /> 연결 끊김<br /><br /> 장애 조치(Failover) 보류 중<br /><br /> Suspended<br /><br /> 동기화됨<br /><br /> 동기화 중<br /><br /> Unknown|  
+|**미러링 상태**|데이터베이스의 상태입니다.<br /><br /> 연결 끊김<br /><br /> 장애 조치(Failover) 보류 중<br /><br /> 일시 중단<br /><br /> 동기화됨<br /><br /> 동기화 중<br /><br /> 알 수 없음|  
 |**미러링 모니터 서버 연결**|데이터베이스의 미러링 세션에 있는 미러링 모니터 서버 연결의 상태입니다(연결됨 또는 연결 끊김). 미러링 모니터 서버가 없을 경우 값은 NULL입니다.|  
 |**보내지 않은 로그**|주 서버 인스턴스의 Send Queue에 있는 보내지 않은 로그의 크기(KB)입니다.|  
 |**전송 시간**|주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다( *전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "62754834"
 |**복원 속도**|트랜잭션이 미러 데이터베이스로 복원되는 속도(KB/초)입니다.|  
 |**미러 커밋 오버헤드**|트랜잭션당 평균 지연 시간(밀리초)입니다(동기 모드에만 해당). 이 지연 시간은 주 서버 인스턴스에서 미리 서버 인스턴스가 트랜잭션 로그 레코드를 Redo Queue에 쓸 때까지 대기하는 동안 발생한 오버헤드 양입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062217"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
@@ -41,9 +41,9 @@ ms.locfileid: "66062217"
   
 ##  <a name="options"></a> 옵션 구성  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **형식**  
- 작업 유형을 지정합니다. 다음의 가능한 값은는 **형식** 필드 및 해당 TRANSACT-SQL operations_type 열에 값 `catalog.operations` 보기.  
+ 작업 유형을 지정합니다. 다음은 **형식** 필드에 사용할 수 있는 값과 transact-sql `catalog.operations` 뷰의 operations_type 열에 있는 해당 값입니다.  
   
 |||  
 |-|-|  

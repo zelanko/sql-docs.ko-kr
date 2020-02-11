@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797670"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 데이터베이스 조인(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "72797670"
   
      [보안](#Security)  
   
--   **보조 데이터베이스를 준비하려면:**  
+-   **다음을 사용 하 여 보조 데이터베이스를 준비 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,21 +43,21 @@ ms.locfileid: "72797670"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  보조 데이터베이스가 그룹에 조인 된 후 발생 하는 상황에 대 한 자세한 내용은 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;개요](overview-of-always-on-availability-groups-sql-server.md)를 참조 하세요.  
+>  보조 데이터베이스가 그룹에 조인 된 후에 발생 하는 상황에 대 한 자세한 내용은 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;개요 ](overview-of-always-on-availability-groups-sql-server.md)를 참조 하세요.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
--   보조 복제본은 이미 가용성 그룹에 조인되어 있어야 합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
+-   보조 복제본은 이미 가용성 그룹에 조인되어 있어야 합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
--   보조 데이터베이스는 최근에 준비된 것이어야 합니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
+-   보조 데이터베이스는 최근에 준비된 것이어야 합니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -65,13 +65,15 @@ ms.locfileid: "72797670"
   
 1.  개체 탐색기에서 보조 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  변경할 가용성 그룹을 확장하고 **가용성 데이터베이스** 노드를 확장합니다.  
   
 4.  마우스 오른쪽 단추로 데이터베이스를 클릭하고 **가용성 그룹에 조인**을 클릭합니다.  
   
-5.  **가용성 그룹에 데이터베이스 조인** 대화 상자가 열립니다. 제목 표시줄에 표시된 가용성 그룹 이름과 표에 표시된 데이터베이스 이름을 확인하고 **확인**이나 **취소**를 클릭합니다.  
+5.  
+  **가용성 그룹에 데이터베이스 조인** 대화 상자가 열립니다. 제목 표시줄에 표시된 가용성 그룹 이름과 표에 표시된 데이터베이스 이름을 확인하고 **확인**이나 **취소**를 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹에 보조 데이터베이스를 조인하려면**  
@@ -91,14 +93,15 @@ ms.locfileid: "72797670"
     ```  
   
     > [!NOTE]  
-    >  컨텍스트에서 사용되는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보려면 [가용성 그룹 만들기&#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)를 참조하세요.  
+    >  컨텍스트에서 사용되는 이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보려면 [가용성 그룹 만들기&#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)를 참조하세요.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **가용성 그룹에 보조 데이터베이스를 조인하려면**  
+ **가용성 그룹에 보조 데이터베이스를 조인 하려면**  
   
 1.  보조 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  `Add-SqlAvailabilityDatabase` cmdlet을 사용하여 하나 이상의 보조 데이터베이스를 가용성 그룹에 조인합니다.  
+2.  
+  `Add-SqlAvailabilityDatabase` cmdlet을 사용하여 하나 이상의 보조 데이터베이스를 가용성 그룹에 조인합니다.  
   
      예를 들어 다음 명령은 보조 데이터베이스 `Db1`을 보조 복제본을 호스팅하는 서버 인스턴스 중 하나의 가용성 그룹 `MyAG` 에 조인합니다.  
   
@@ -117,9 +120,9 @@ ms.locfileid: "72797670"
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
- [삭제 SQL Server&#41;AlwaysOn 가용성 그룹 &#40;구성 문제 해결](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [삭제&#41;SQL Server AlwaysOn 가용성 그룹 구성 &#40;문제 해결](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
