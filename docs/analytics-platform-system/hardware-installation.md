@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401119"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Analytics Platform System (APS) 어플라이언스에 대 한 하드웨어 설치
@@ -22,7 +22,7 @@ ms.locfileid: "74401119"
 ## <a name="BeforeMoving"></a>로드 도크에서 구성 요소를 이동 하기 전에  
 어플라이언스 구성 요소를 이동, 압축 풀기 또는 랙 제거 하기 전에 다음 작업을 수행 합니다.  
   
-|작업|설명|  
+|Task|Description|  
 |--------|---------------|  
 |모든 구성 요소가 도착 했는지 확인 합니다.|BOM (자재 청구)을 사용 하 여 모든 구성 요소가 도착 했 고 데이터 센터에 대 한 수신 도크에서 해당 pallets에 있는지 확인 합니다.|  
 |데이터 센터가 어플라이언스에 대 한 모든 요구 사항을 충족 하는지 확인|IHV에서 제공 하는 하드웨어 사양 및 케이블 다이어그램을 검토 하 여이 작업을 시작 합니다. 다음 단계는 랙 공간 및 연결 요구 사항에 대 한 세부 정보를 제공 합니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "74401119"
 >   
 > 지원 또는 적절 한 장비 없이 어플라이언스 노드나 기타 고급 구성 요소를 리프트 하거나 이동 하지 마십시오. 각 구성 요소를 안전 하 게 처리 하는 데 필요한 지원, 장비 및 도구를 미리 확인할 수 있도록 IHV에 문의 하세요.  
   
-|작업|설명|  
+|Task|Description|  
 |--------|---------------|  
 |팔레트의 수준 확인|팔레트의 이동 또는 압축 풀기를 시작 하기 전에이를 수준 접지 해야 합니다.|  
 |팔레트에서 노드를 제거 합니다.|팔레트 위쪽에서 시작 하 여 팔레트에서 위쪽 노드를 제거 합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "74401119"
 ## <a name="AfterMoving"></a>추가 구성 요소 설치  
 다음 검사 목록을 사용 하 여 추가 구성 요소를 설치 합니다.  
   
-|작업|설명||  
+|Task|Description||  
 |--------|---------------|-|  
 |압축 풀기 및 랙 네트워크 스위치 및 Pdu|랙 다이어그램을 사용 하 여 네트워크 스위치 및 Pdu를 랙의 적절 한 위치에 배치 합니다.||  
 |케이블 레이블에 따라 Infiniband 및 이더넷 케이블 연결|케이블링 다이어그램을 참조 하세요. 각 케이블에는 연결 해야 하는 위치를 지정 하는 각 끝에 레이블이 있습니다.||  

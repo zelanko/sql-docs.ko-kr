@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_parallel_workers (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_exec_query_parallel_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -22,40 +22,40 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 000dd995427f8eafec759688db1ab76a6546b789
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263267"
 ---
-# <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (TRANSACT-SQL)
+# <a name="sysdm_exec_query_parallel_workers-transact-sql"></a>sys.dm_exec_query_parallel_workers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  노드당 반환 작업자 가용성 정보입니다.  
+  노드당 작업자 가용성 정보를 반환 합니다.  
   
-|이름|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|NUMA 노드 id입니다.|  
+|**node_id**|**int**|NUMA 노드 ID입니다.|  
 |**scheduler_count**|**int**|이 노드의 스케줄러 수입니다.|  
-|**max_worker_count**|**int**|병렬 쿼리에 대 한 작업자의 최대 수입니다.|  
-|**reserved_worker_count**|**int**|모든 요청에서 사용 되는 기본 작업자 수를 더한 병렬 쿼리에서 예약 된 작업자 수입니다.| 
-|**free_worker_count**|**int**|작업에 사용할 수 있는 작업자의 수입니다.<br /><br />**참고:** 들어오는 모든 요청에서 사용 가능한 작업자 수를 뺍니다는 1 개 이상 작업자를 사용 합니다.  사용 가능한 작업자 수가 과도 하 게 로드 서버의 음수 있음을 가능성이 있습니다.| 
-|**used_worker_count**|**int**|병렬 쿼리에서 사용 되는 작업자 수입니다.|  
+|**max_worker_count**|**int**|병렬 쿼리에 대 한 최대 작업자 수입니다.|  
+|**reserved_worker_count**|**int**|병렬 쿼리로 예약 된 작업자 수와 모든 요청에서 사용 하는 주 작업자 수| 
+|**free_worker_count**|**int**|작업에 사용할 수 있는 작업자 수입니다.<br /><br />**참고:** 들어오는 모든 요청은 하나 이상의 작업자를 사용 하며이는 사용 가능한 작업자 수에서 뺍니다.  사용량이 많은 서버에서 사용 가능한 작업자 수가 음수가 될 수 있습니다.| 
+|**used_worker_count**|**int**|병렬 쿼리에서 사용 하는 작업자 수입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
  
 ## <a name="examples"></a>예  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>A. 현재 병렬 작업자 가용성 확인  
+### <a name="a-viewing-current-parallel-worker-availability"></a>A. 현재 병렬 작업자 가용성 보기  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [dm_os_workers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)

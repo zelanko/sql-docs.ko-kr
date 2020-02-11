@@ -16,14 +16,14 @@ ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918646"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 및 RecordCount 속성 예제(VB)
-이 예제에서는 열기를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 게시자 테이블에는 ***Pubs*** 데이터베이스입니다. 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 특정 국가/지역에서 해당 게시자에 표시 되는 레코드의 수를 제한 하는 속성입니다. 합니다 **RecordCount** 속성 필터링 및 필터링 되지 않은 레코드 집합 간의 차이 표시 하는 데 사용 됩니다.  
+이 예에서는 ***Pubs*** 데이터베이스의 Publishers 테이블에서 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다. 그런 다음 [Filter](../../../ado/reference/ado-api/filter-property.md) 속성을 사용 하 여 특정 국가/지역의 해당 게시자로 표시 되는 레코드 수를 제한 합니다. **RecordCount** 속성은 필터링 되거나 필터링 되지 않은 레코드 집합 간의 차이를 표시 하는 데 사용 됩니다.  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  선택 하려는 데이터를 알고 때 일반적으로 더 효과적으로 열을 **레코드 집합** SQL 문을 사용 하 여 합니다. 이 예제에서는 하나만 만드는 방법을 보여 줍니다 **레코드 집합** 특정 국가에서 레코드를 가져와야 합니다.  
+>  선택할 데이터를 알고 있는 경우 일반적으로 SQL 문을 사용 하 여 **레코드 집합** 을 여는 것이 더 효율적입니다. 이 예에서는 하나의 **레코드 집합** 을 만들고 특정 국가에서 레코드를 가져올 수 있는 방법을 보여 줍니다.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

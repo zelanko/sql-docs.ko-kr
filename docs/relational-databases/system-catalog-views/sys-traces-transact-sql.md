@@ -1,5 +1,5 @@
 ---
-title: sys.traces (TRANSACT-SQL) | Microsoft Docs
+title: sys. 추적 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,27 +20,28 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126684"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  합니다 **sys.traces** 카탈로그 뷰에 시스템에서 현재 실행 중인 추적이 포함 합니다. 이 보기에 대 한 대체 시간은 합니다 **fn_trace_getinfo** 함수입니다.  
+  **Sys. 추적** 카탈로그 뷰에는 시스템에서 현재 실행 중인 추적이 포함 되어 있습니다. 이 보기는 **fn_trace_getinfo** 함수를 대체 하기 위한 것입니다.  
   
- 지원 되는 추적 이벤트의 전체 목록은 참조 하세요 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)합니다.  
+ 지원 되는 추적 이벤트의 전체 목록은 [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|추적 ID입니다.|  
-|**상태**|**int**|추적 상태입니다.<br /><br /> 0 = 중지됨<br /><br /> 1 = 실행 중|  
-|**path**|**nvarchar(260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
+|**a-id**|**int**|추적 ID입니다.|  
+|**업무**|**int**|추적 상태입니다.<br /><br /> 0 = 중지됨<br /><br /> 1 = 실행 중|  
+|**경로**|**nvarchar(260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**max_size**|**bigint**|최대 추적 파일 크기 한도(MB)입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**stop_time**|**datetime**|실행 중인 추적을 중지할 시간입니다.|  
 |**max_files**|**int**|최대 롤오버 파일 수입니다. 최대값을 설정하지 않으면 이 값은 Null입니다.|  
@@ -60,12 +61,12 @@ ms.locfileid: "68126684"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sys.trace_categories &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
- [sys.trace_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [sys.trace_events &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [sys.trace_event_bindings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
- [sys.trace_subclass_values &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
+ [trace_events &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
+ [trace_event_bindings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
+ [trace_subclass_values &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
   
   

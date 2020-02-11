@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241996"
 ---
 # <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
@@ -37,8 +37,7 @@ ms.locfileid: "75241996"
   
 -   마우스 및 탐색 키  
   
--   
-  **이동** 명령  
+-   **이동** 명령  
   
 > [!NOTE]  
 >  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
@@ -65,13 +64,11 @@ ms.locfileid: "75241996"
 -   Ctrl+위쪽 화살표 및 Ctrl+아래쪽 화살표를 사용하여 삽입 지점을 이동하지 않고 화면을 스크롤합니다.  
   
 ## <a name="go-to-command"></a>이동 명령  
- 
-  **이동** 명령을 사용하여 특정 줄 번호로 이동합니다. 줄 번호를 표시하려면 **옵션** 대화 상자에서 **텍스트 편집기**, **모든 언어**, **일반**을 차례로 클릭한 다음 **줄 번호**를 선택합니다.  
+ **이동** 명령을 사용하여 특정 줄 번호로 이동합니다. 줄 번호를 표시하려면 **옵션** 대화 상자에서 **텍스트 편집기**, **모든 언어**, **일반**을 차례로 클릭한 다음 **줄 번호**를 선택합니다.  
   
- **특정 줄 번호로 이동 하려면**  
+ **특정 줄 번호로 이동하려면**  
   
-1.  
-  **편집** 메뉴에서 **이동** 을 클릭합니다.  
+1.  **편집** 메뉴에서 **이동** 을 클릭합니다.  
   
 2.  보려는 줄 번호를 입력합니다.  
   

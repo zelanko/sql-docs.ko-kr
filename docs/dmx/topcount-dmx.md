@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893101"
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
@@ -28,17 +28,17 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조 >와 \<같이 테이블을 반환 하는 식 또는 테이블을 반환 하는 함수입니다.  
+ 테이블 열 참조>와 \<같이 테이블을 반환 하는 식 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식 >  
+ \<테이블 식>  
   
 ## <a name="remarks"></a>설명  
- \<Rank 식 > 인수에 의해 제공 되는 값은 \<테이블 식 > 인수에 제공 된 행의 차수를 결정 하 고에 지정 된최상위행의수를결정합니다.\<count > 인수가 반환 됩니다.  
+ \<Rank 식> 인수로 제공 되는 값은 \<테이블 식> 인수에 제공 되는 행의 순위를 내림차순으로 결정 하 고 \<count> 인수에 지정 된 최상위 행의 수를 반환 합니다.  
   
  TopCount 함수는 원래 연결 예측을 사용 하도록 도입 되었으며 일반적으로 **SELECT TOP** 및 **ORDER BY** 절을 포함 하는 문과 동일한 결과를 생성 합니다. 반환할 예측 수를 지정 하는 **Predict (DMX)** 함수를 사용 하는 경우 연관 예측에 대해 더 나은 성능을 얻을 수 있습니다.  
   
- 그러나 여전히 TopCount를 사용 해야 하는 경우도 있습니다. 예를 들어 DMX는 하위 select 문에서 **TOP** 한정자를 지원 하지 않습니다. 또한 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 함수는 **TOP**을 추가 하는 것을 지원 하지 않습니다.  
+ 그러나 여전히 TopCount를 사용 해야 하는 경우도 있습니다. 예를 들어 DMX는 하위 select 문에서 **TOP** 한정자를 지원 하지 않습니다. [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 함수는 **TOP**의 추가도 지원 하지 않습니다.  
   
 ## <a name="examples"></a>예  
  다음 예는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리입니다. 쿼리는 동일한 결과를 반환 하지만 첫 번째 예에서는 TopCount를 사용 하 고 두 번째 예에서는 Predict 함수를 사용 합니다.  
@@ -56,9 +56,9 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 > [!NOTE]  
 >  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
   
- 예제 결과:  
+ 결과 예:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|모델|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -92,9 +92,9 @@ NATURAL PREDICTION JOIN
   
  TopCount 함수의 세 번째 인수는 반환할 행 수를 정수로 지정 합니다. $SUPPORT에서 정렬한 대로 최상위 3개 제품을 얻으려면 3을 입력합니다.  
   
- 예제 결과:  
+ 결과 예:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|모델|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29 ...|0.25 ...|  
 |Water Bottle|2866|0.19 ...|0.17 ...|  
@@ -110,9 +110,9 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  결과에는 지원 값으로 정렬된 최상위 3개 예측이 포함됩니다. $SUPPORT를 $PROBABILITY 또는 $ADJUSTED_PROBABILITY로 대체하여 확률 또는 조정된 확률로 등급이 지정된 예측을 반환할 수 있습니다. 자세한 내용은 **Predict (DMX)** 를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>참고 항목  
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  

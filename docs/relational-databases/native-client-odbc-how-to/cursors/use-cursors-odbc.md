@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781619"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
@@ -26,7 +26,8 @@ ms.locfileid: "73781619"
     
 ### <a name="to-use-cursors"></a>커서를 사용하려면  
   
-1.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 원하는 커서 특성을 설정합니다.  
+1.  
+  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 원하는 커서 특성을 설정합니다.  
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY 특성을 설정합니다(기본 옵션).  
   
@@ -34,7 +35,8 @@ ms.locfileid: "73781619"
   
      SQL_CURSOR_SCROLLABLE 및 SQL_CURSOR_SENSITIVITY 특성을 설정합니다.  
   
-2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 SQL_ATTR_ROW_ARRAY_SIZE 특성으로 행 집합 크기를 설정합니다.  
+2.  
+  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 SQL_ATTR_ROW_ARRAY_SIZE 특성으로 행 집합 크기를 설정합니다.  
   
 3.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406)을 호출하여 커서 이름을 설정합니다.  
   
@@ -42,7 +44,8 @@ ms.locfileid: "73781619"
   
 5.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)을 호출하여 커서 이름을 가져옵니다(3단계에서 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406)을 사용하여 커서 이름을 지정하지 않은 경우).  
   
-6.  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)를 호출하여 행 집합의 열 수(C)를 가져옵니다.  
+6.  
+  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)를 호출하여 행 집합의 열 수(C)를 가져옵니다.  
   
      열 단위 바인딩을 사용합니다.  
   
@@ -52,7 +55,8 @@ ms.locfileid: "73781619"
   
 7.  커서에서 원하는 대로 행 집합을 인출합니다.  
   
-8.  [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하여 다른 결과 집합이 있는지 확인합니다.  
+8.  
+  [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하여 다른 결과 집합이 있는지 확인합니다.  
   
     -   다른 결과 집합이 있으면 SQL_SUCCESS가 반환됩니다.  
   
@@ -70,11 +74,12 @@ ms.locfileid: "73781619"
   
 10. 다른 결과 집합이 있으면 6단계부터 반복합니다.  
   
-     9단계에서 부분적으로 처리된 결과 집합에 대해 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하면 나머지 결과 집합이 지워집니다. [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출하여 부분적으로 처리된 결과 집합을 지울 수도 있습니다.  
+     9단계에서 부분적으로 처리된 결과 집합에 대해 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 호출하면 나머지 결과 집합이 지워집니다. 
+  [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출하여 부분적으로 처리된 결과 집합을 지울 수도 있습니다.  
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [커서 사용 방법 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [커서 사용 방법 항목 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

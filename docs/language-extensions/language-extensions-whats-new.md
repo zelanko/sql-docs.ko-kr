@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658800"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 새로운 기능
@@ -29,7 +29,7 @@ Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장
 - 지원되는 [Java 데이터 형식](how-to/java-to-sql-data-types.md).
 - SQL Server에서 외부 언어(예: Java)를 등록하는 데 사용되는 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
 - [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)(Java용 Microsoft 확장성 SDK).
-- Windows 및 Linux에서 [CREATE EXTERNAL LIBRARY(Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문을 사용하여 외부 라이브러리에 있는 Java 코드에 액세스할 수 있습니다. 자세히 알아보기 [SQL Server에서 Java를 호출하는 방법](how-to/call-java-from-sql.md)
+- Windows 및 Linux에서 [CREATE EXTERNAL LIBRARY(Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문을 사용하여 외부 라이브러리에 있는 Java 코드에 액세스할 수 있습니다. 자세한 정보: [SQL Server에서 Java를 호출하는 방법](how-to/call-java-from-sql.md)
 - Windows 및 Linux의 [Java 언어 확장](language-extensions-overview.md). 사용 권한을 할당하고 경로를 설정하여 SQL Server에서 컴파일된 Java 코드를 사용할 수 있도록 설정할 수 있습니다. SQL Server에 액세스할 수 있는 클라이언트 앱은 SQL Server Machine Learning Services에서 R 및 Python 통합에 사용되는 것과 동일한 절차인 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 호출하여 데이터를 사용하고 코드를 실행할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계

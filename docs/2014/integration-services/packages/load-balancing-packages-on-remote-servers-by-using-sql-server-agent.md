@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890189"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
-  패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 로드 균형 조정은 패키지 소유자가 직접 설계해야 하며 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
+  패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]로드 균형 조정은 패키지 소유자가 직접 설계 해야 하는 수동 절차입니다. 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
   
  로드 균형 조정은 다음 시나리오에서 유용합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62890189"
 ## <a name="illustration-of-load-balancing"></a>로드 균형 조정의 그림  
  다음 다이어그램에서는 서버의 부모 패키지를 보여 줍니다. 부모 패키지에는 여러 개의 SQL 작업 에이전트 실행 태스크가 들어 있습니다. 부모 패키지에 있는 각 태스크는 원격 서버의 SQL Server 에이전트를 호출합니다. 이러한 원격 서버에는 해당 서버의 패키지를 호출하는 단계가 포함된 SQL Server 에이전트 작업이 들어 있습니다.  
   
- ![SSIS 부하 분산 아키텍처 개요](../media/loadbalancingoverview.gif "SSIS 부하 분산 아키텍처 개요")  
+ ![SSIS 로드 균형 아키텍처 개요](../media/loadbalancingoverview.gif "SSIS 로드 균형 아키텍처 개요")  
   
  이 아키텍처에서 로드 균형을 조정하는 데 필요한 단계는 새로운 개념이 아닙니다. 대신 기존 개념 및 일반 SSIS 개체를 새로운 방식으로 사용하여 로드 균형을 조정합니다.  
   

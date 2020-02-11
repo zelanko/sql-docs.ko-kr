@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401027"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 INSERT into를 사용 하 여 데이터 로드
@@ -124,8 +124,8 @@ Tsql INSERT 문을 사용 하 여 데이터를 PDW (병렬 데이터 웨어하�
   
 |리터럴 형식|형식|변환 규칙|  
 |------------|------|----------------|
-|**정수** 형식의 문자열 리터럴|'nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123 '| 없음 |  
-|정수 리터럴|nnnnnnnnnnnnnn<br /><br />예: 321312313123| 없음|  
+|**정수** 형식의 문자열 리터럴|'nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123 '| None |  
+|정수 리터럴|nnnnnnnnnnnnnn<br /><br />예: 321312313123| None|  
 |10 진 리터럴|nnnnnn. nnnnn<br /><br />예: 123344.34455|소수점 오른쪽에 있는 값이 잘립니다.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>money 및 smallmoney 데이터 형식  
@@ -148,17 +148,17 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호를 접두사로 사
   
 |리터럴 형식|형식|변환 규칙|  
 |----------------|----------|--------------------|  
-|문자열 리터럴|Format: ' character string '<br /><br />예: ' abc '| 없음|  
-|유니코드 문자열 리터럴|형식: N'character string '<br /><br />예: N'abc '|  없음 |  
-|정수 리터럴|형식: nnnnnnnnnnn<br /><br />예: 321312313123| 없음 |  
-|10 진 리터럴|형식: nnnnnn. nnnnnnn<br /><br />예: 12344.34455| 없음 |  
+|문자열 리터럴|Format: ' character string '<br /><br />예: ' abc '| None|  
+|유니코드 문자열 리터럴|형식: N'character string '<br /><br />예: N'abc '|  None |  
+|정수 리터럴|형식: nnnnnnnnnnn<br /><br />예: 321312313123| None |  
+|10 진 리터럴|형식: nnnnnn. nnnnnnn<br /><br />예: 12344.34455| None |  
 |Money 리터럴|형식: $nnnnnn nnnnn<br /><br />예: $123456.99|통화 기호는 값으로 삽입 되지 않습니다. 통화 기호를 삽입 하려면 값을 문자열 리터럴로 삽입 합니다. 이는 모든 리터럴을 문자열 리터럴로 처리 하는 **dwloader** 도구의 형식과 일치 합니다.<br /><br />쉼표는 허용 되지 않습니다.<br /><br />소수점 뒤의 자릿수가 2를 초과 하는 경우 값은 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123.946789는 123.95으로 삽입 됩니다.<br /><br />CONVERT 함수를 사용 하 여 money 리터럴을 삽입 하는 경우에는 기본 스타일 0 (소수점 뒤에 쉼표 및 2 자리)만 사용할 수 있습니다.|  
 
   
 ## <a name="see-also"></a>참고 항목  
  
 [분산 데이터](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[넣거나](../t-sql/statements/insert-transact-sql.md)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

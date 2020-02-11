@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253496"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>1 단원: Azure Storage 계정 및 컨테이너 만들기
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>1단원: Azure Storage 계정 및 컨테이너 만들기
   Azure Storage에서 SQL Server 데이터 파일 저장을 시작 하려면 먼저 Azure Storage 계정과 blob 컨테이너 및 공유 액세스 서명을 만들어야 합니다. 1 단원에서는 Azure 관리 포털에 로그인 하 여 저장소 계정, blob 컨테이너 및 공유 액세스 서명을 만드는 과정을 단계별로 안내 합니다.  
   
  기본적으로는 스토리지 계정 소유자만 해당 계정 내의 Blob, 테이블 및 큐에 액세스할 수 있습니다. 스토리지 계정 액세스 키를 공유하지 않고 이 새로운 향상된 SQL Server 기능을 사용하여 이러한 리소스에 액세스할 수 있으려면 다음을 수행해야 합니다.  

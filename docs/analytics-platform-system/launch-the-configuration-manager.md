@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401050"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Configuration Manager 시작
@@ -21,7 +21,7 @@ ms.locfileid: "74401050"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 분석 플랫폼 시스템**Configuration Manager** 는 어플라이언스 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 어플라이언스 도메인 관리자에 대 한 암호가 필요 합니다. 추가 AP 관리자를 만들려면 aps [도메인 관리자 &#40;ap&#41;만들기 ](create-an-aps-domain-administrator-aps.md)를 참조 하세요.  
   
 ## <a name="Accessing"></a>Configuration Manager 도구 시작  

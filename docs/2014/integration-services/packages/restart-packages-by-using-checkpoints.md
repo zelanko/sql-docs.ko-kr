@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767035"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
@@ -59,7 +59,7 @@ ms.locfileid: "62767035"
 |CheckpointUsage|검사점 사용 여부를 지정합니다.|  
 |SaveCheckpoints|패키지의 검사점 저장 여부를 나타냅니다. 오류 발생 시점에서 패키지를 다시 시작하려면 이 속성을 True로 설정해야 합니다.|  
   
- FailPackageOnFailure 속성을 설정 해야 합니다는 또한 `true` 식별 하려고 하는 패키지의 모든 컨테이너에 대 한으로 다시 시작 지점입니다.  
+ 또한 다시 시작 점으로 식별할 패키지의 모든 컨테이너에 대해 FailPackageOnFailure 속성을로 `true` 설정 해야 합니다.  
   
  ForceExecutionResult 속성을 사용하여 패키지에 있는 검사점의 사용을 테스트할 수 있습니다. 태스크 또는 컨테이너의 ForceExecutionResult를 Failure로 설정하면 실시간 오류와 동일한 오류를 만들 수 있습니다. 패키지를 다시 실행하면 실패한 태스크와 컨테이너가 다시 실행됩니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767035"
 |`IfExists`|검사점 파일이 있는 경우 이를 사용하도록 지정합니다. 검사점 파일이 있으면 패키지는 이전 실행 오류 지점부터 다시 시작하고, 그렇지 않으면 패키지 워크플로의 처음부터 실행됩니다.|  
   
 > [!NOTE]  
->  합니다 **에서 /CheckPointing** dtexec 옵션 설정에 해당 하는 합니다 `SaveCheckpoints` 패키지의 속성 `True`, 및 `CheckpointUsage` 속성을 Always. 자세한 내용은 [dtexec Utility](dtexec-utility.md)를 참조하세요.  
+>  Dtexec의 **/con** 옵션은 패키지의 `SaveCheckpoints` 속성을로 `True`설정 하는 것과 같으며 속성은 `CheckpointUsage` 항상로 설정 합니다. 자세한 내용은 [dtexec Utility](dtexec-utility.md)를 참조하세요.  
   
 ## <a name="securing-checkpoint-files"></a>검사점 파일 보안 설정  
  패키지 수준 보호에는 검사점 파일 보호가 포함되지 않으므로 이러한 파일에 대해 보안을 별도로 설정해야 합니다. 검사점 데이터는 파일 시스템에만 저장할 수 있으므로 운영 체제의 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일에는 현재 변수 값을 비롯하여 패키지 상태에 대한 정보가 들어 있으므로 검사점 파일에 대해 보안을 설정하는 것은 중요합니다. 예를 들어 변수에 전화 번호와 같은 프라이빗 데이터 행이 여러 개 있는 레코드 집합이 포함될 수 있습니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../access-to-files-used-by-packages.md)를 참조하세요.  
@@ -88,7 +88,7 @@ ms.locfileid: "62767035"
   
 -   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](https://go.microsoft.com/fwlink/?LinkId=241633)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

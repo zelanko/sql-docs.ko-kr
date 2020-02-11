@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138280"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 스크립팅 - SCOPE
@@ -78,12 +78,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  숨겨진 멤버는 SCOPE 문에서 노출됩니다.  
   
- 범위 문은 생성에 관계 없이 "구멍"을 노출 하는 하위 큐브는 **MDX Compatibility** 설정 합니다. 예를 들어 `Scope( Customer.State.members )` 문은 주는 포함하지 않지만 보이지 않는 자리 표시자 멤버가 삽입된 국가 또는 지역의 주를 포함할 수 있습니다.  
+ 범위 문은 **MDX 호환성** 설정에 관계 없이 "구멍"을 노출 하는 하위 큐브를 만듭니다. 예를 들어 `Scope( Customer.State.members )` 문은 주는 포함하지 않지만 보이지 않는 자리 표시자 멤버가 삽입된 국가 또는 지역의 주를 포함할 수 있습니다.  
   
  SCOPE 문 내에서 만든 명명된 집합과 계산 멤버는 SCOPE 문에 의해 영향을 받지 않습니다.  
   
 ## <a name="example"></a>예제  
- Adventure works에서 MDX 계산 스크립트에서 다음 예제에서는 샘플 솔루션 sales amount quota 측정값 및 2005 회계 연도의 회계 분기와 현재 범위를 정의 하 고 합니다 를사용하여현재범위의셀에값을할당 **ParallelPeriod** 함수입니다. 예제에서는 다음 다른 SCOPE 문을 사용 하 여 범위를 수정 하 고 다음 사용 하 여 다른 할당을 수행 합니다 [This (MDX)](../mdx/this-mdx.md) 함수입니다.  
+ 다음 예는 놀이 Works 샘플 솔루션의 MDX 계산 스크립트에서 현재 범위를 회계 연도 2005 및 sales amount quota 측정값의 회계 분기로 정의한 다음 **ParallelPeriod** 함수를 사용 하 여 현재 범위에 있는 셀에 값을 할당 합니다. 그런 다음이 예에서는 다른 SCOPE 문을 사용 하 여 범위를 수정한 다음 [이 (MDX)](../mdx/this-mdx.md) 함수를 사용 하 여 다른 할당을 수행 합니다.  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 스크립팅 문&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

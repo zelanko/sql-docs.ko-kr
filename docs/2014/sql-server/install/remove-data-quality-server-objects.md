@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190666"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality 서버 개체 제거
@@ -40,9 +40,9 @@ ms.locfileid: "68190666"
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Data Quality 서버를 포함하는 SQL Server 인스턴스 제거  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 포함된 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 인스턴스를 완전히 제거하는 경우 제거 프로세스가 완료된 후 컴퓨터에서 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스를 수동으로 삭제해야 합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스 파일은 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA에 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 포함된 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]인스턴스를 완전히 제거하는 경우 제거 프로세스가 완료된 후 컴퓨터에서 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스를 수동으로 삭제해야 합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스 파일은 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA에 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [SQL Server 2014 제거](uninstall-sql-server.md)  
   

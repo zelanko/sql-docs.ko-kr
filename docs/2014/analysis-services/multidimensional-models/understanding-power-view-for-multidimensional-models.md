@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229399"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
@@ -28,7 +28,7 @@ ms.locfileid: "75229399"
   
  ![다차원 모델 아키텍처에 대 한 파워 뷰](../media/daxmd-architecture.gif "다차원 모델 아키텍처에 대 한 파워 뷰")  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  **서버 요구 사항**  
   
 -   다차원 모드에서 실행하는 Analysis Service와 SQL Server 2014 Enterprise 또는 Business Intelligence Edition.  
@@ -64,7 +64,7 @@ ms.locfileid: "75229399"
 |측정값 그룹 큐브 차원 관계|관계|  
 |관점|관점|  
 |KPI|KPI|  
-|사용자/부모-자식 계층|계층 구조|  
+|사용자/부모-자식 계층|계층|  
 |표시 폴더|표시 폴더|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>측정값, 측정값 그룹 및 KPI  
@@ -217,11 +217,11 @@ ms.locfileid: "75229399"
   
  DISCOVER_CSDL_METADATA 요청에는 다음과 같은 제한이 있습니다.  
   
-|이름|필수|설명|  
+|속성|필수|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|예|카탈로그\데이터베이스 이름입니다.|  
+|CATALOG_NAME|yes|카탈로그\데이터베이스 이름입니다.|  
 |PERSPECTIVE_NAME|큐브에 둘 이상의 큐브 뷰가 포함된 경우 필수, 큐브가 하나뿐이고 기본 큐브 뷰가 있는 경우 선택적|다차원 데이터베이스의 큐브 이름 또는 큐브 뷰 이름입니다.|  
-|VERSION|예|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
+|VERSION|yes|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   

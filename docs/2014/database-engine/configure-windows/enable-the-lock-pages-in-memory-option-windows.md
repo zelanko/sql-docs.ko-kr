@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782281"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782281"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>메모리의 페이지 잠금 옵션을 설정하려면  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **엽니다** 상자에 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc`합니다.  
   
 2.  **로컬 그룹 정책 편집기** 콘솔에서 **컴퓨터 구성**을 확장한 다음 **Windows 설정**을 확장합니다.  
   
@@ -43,11 +43,12 @@ ms.locfileid: "62782281"
   
 6.  **로컬 보안 설정 – 메모리의 페이지 잠그기** 대화 상자에서 **사용자 또는 그룹 추가**를 클릭합니다.  
   
-7.  **사용자, 서비스 계정 또는 그룹 선택** 대화 상자에서 sqlservr.exe를 실행할 권한이 있는 계정을 추가합니다.  
+7.  
+  **사용자, 서비스 계정 또는 그룹 선택** 대화 상자에서 sqlservr.exe를 실행할 권한이 있는 계정을 추가합니다.  
   
 8.  이 변경 사항을 적용하려면 로그아웃한 다음 다시 로그인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 메모리 서버 구성 옵션](server-memory-server-configuration-options.md)  
   
   

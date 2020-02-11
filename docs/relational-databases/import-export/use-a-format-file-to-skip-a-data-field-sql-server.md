@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056325"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
@@ -69,7 +69,7 @@ CREATE TABLE myTestSkipField
 서식 파일을 만드는 가장 간단한 방법은 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하는 것입니다.  먼저 기존 테이블에서 기본 서식 파일을 만듭니다.  그다음으로 실제 데이터 파일을 반영하도록 기본 서식 파일을 수정합니다.
   
 ### <a name="nonxml_format_file"></a>비 XML 서식 파일 만들기 
-자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요. 다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myTestSkipField.fmt`의 스키마를 기반으로 비 XML 서식 파일 `myTestSkipField`를 생성합니다.  또한 한정자 `c` 는 문자 데이터를 지정하고, `t,` 는 쉼표를 필드 종결자로 지정하며, `T` 는 통합 보안을 사용하여 신뢰할 수 있는 연결을 지정합니다.  명령 프롬프트에서 다음 명령을 입력합니다.
+자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요. 다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myTestSkipField.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myTestSkipField`를 생성합니다.  또한 한정자 `c` 는 문자 데이터를 지정하고, `t,` 는 쉼표를 필드 종결자로 지정하며, `T` 는 통합 보안을 사용하여 신뢰할 수 있는 연결을 지정합니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
@@ -91,7 +91,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
 3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
-**After**
+**이후**
 ```
 13.0
 4
@@ -140,7 +140,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 </BCPFORMAT>
 ```
 
-**After**
+**이후**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -252,7 +252,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>참고 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   

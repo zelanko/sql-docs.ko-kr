@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1703d70b7760cad2198b3565ce3fc47d44cac409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768945"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>사용자 지정 데이터 흐름 구성 요소 만들기
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 데이터 흐름 태스크는 개발자가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]와 관리형 코드를 사용하여 사용자 지정 데이터 흐름의 원본, 변환 및 대상 구성 요소를 만들 수 있게 해 주는 개체 모델을 제공합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]데이터 흐름 태스크는 개발자가 및 관리 코드를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 사용 하 여 사용자 지정 데이터 흐름 구성 요소 (원본, 변환 및 대상)를 만들 수 있는 개체 모델을 제공 합니다.  
   
  데이터 흐름 태스크는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 포함하는 구성 요소와 구성 요소 간의 데이터 이동을 정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체의 컬렉션으로 구성됩니다.  
   
@@ -40,13 +40,14 @@ ms.locfileid: "62768945"
  실행 시 데이터 흐름 태스크에서는 구성 요소의 시퀀스를 검사하고, 실행 계획을 준비하고, 작업 계획을 실행하는 작업자 스레드의 풀을 관리합니다. 각 작업자 스레드는 데이터 흐름 태스크 내부의 일부 작업을 수행하지만 작업자 스레드의 주요 태스크는 런타임 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 인터페이스를 통해 구성 요소의 메서드를 호출하는 것입니다.  
   
 ## <a name="creating-a-component"></a>구성 요소 만들기  
- 데이터 흐름 구성 요소를 만들려면 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 기본 클래스에서 클래스를 파생시키고 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 클래스를 적용한 다음 기본 클래스의 적절한 메서드를 재정의합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 인터페이스를 구현하고 구성 요소에서 재정의할 수 있는 메서드를 제공합니다.  
+ 데이터 흐름 구성 요소를 만들려면 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 기본 클래스에서 클래스를 파생시키고 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 클래스를 적용한 다음 기본 클래스의 적절한 메서드를 재정의합니다. 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 인터페이스를 구현하고 구성 요소에서 재정의할 수 있는 메서드를 제공합니다.  
   
  프로젝트에는 구성 요소에서 사용되는 개체에 따라 다음 어셈블리 중 일부 또는 모두에 대한 참조가 필요합니다.  
   
 |기능|참조할 어셈블리|가져올 네임스페이스|  
 |-------------|---------------------------|-------------------------|  
-|디자이너의|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
+|데이터 흐름|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |데이터 흐름 래퍼|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  
 |런타임|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |런타임 래퍼|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  
@@ -82,9 +83,9 @@ Public Class BasicComponent
 End Class  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 구성 요소의 사용자 인터페이스 개발](developing-a-user-interface-for-a-data-flow-component.md)  
   
   

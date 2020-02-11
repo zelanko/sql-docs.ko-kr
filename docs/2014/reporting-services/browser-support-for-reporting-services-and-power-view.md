@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241196"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925782"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
   
@@ -39,7 +39,7 @@ ms.locfileid: "75241196"
 
  지원되는 브라우저 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 에서 지원하는 브라우저 버전 목록은 여는 문서의 유형에 따라 다릅니다. Excel 2013 통합 문서와 "**rdlx**" 파일은 서로 다른 구성 요소를 활용 합니다.  
   
-|문서 유형|환경|브라우저 지원|  
+|문서 유형|Environment|브라우저 지원|  
 |-------------------|-----------------|---------------------|  
 |Power View 보고서(.RDLX)|**Sharepoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합 모드와 파워 뷰 웹 응용 프로그램에서|[Sharepoint Server의 파워 뷰 및 Reporting Services Sharepoint 통합 모드](#bkmk_powerview_on_SSRS)를 참조 하세요.|  
 |Power View 시트가 있는 Excel 2013 통합 문서|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel 서비스에서<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web App|[Excel Services 또는 SharePoint Online의 Excel Web App의 파워 뷰을](#bkmk_powerview_on_ExcelServices)참조 하세요.|  
@@ -160,7 +160,7 @@ ms.locfileid: "75241196"
 
  ReportViewer 웹 서버 컨트롤은 ASP.NET 웹 애플리케이션에 보고 기능을 포함시키는 데 사용됩니다. 컨트롤은 Visual Studio에 포함되어 있으며 이 항목에서 설명하는 기타 구성 요소와 다른 브라우저 및 브라우저 버전을 지원합니다. 애플리케이션을 보는 데 사용되는 브라우저의 유형은 애플리케이션에서 사용자가 어떤 종류의 ReportViewer 기능을 제공할 수 있는지를 결정합니다. 이 항목에 제공된 표를 사용하여 지원되는 브라우저 중 어떤 것이 보고 기능 제한 사항의 영향을 받고 어떤 플랫폼이 지원되는지 알아보세요.  
   
- 지원되는 브라우저의 렌더링 엔진 차이로 인해 일부 고급 보고 기능이 지원되는 브라우저마다 다르게 표시될 수 있습니다.  텍스트 회전을 예로 들 수 있습니다.  
+ 지원 되는 브라우저의 렌더링 엔진 차이로 인해 일부 고급 보고서 기능이 브라우저 마다 다르게 표시 될 수 있습니다.  텍스트 회전을 예로 들 수 있습니다.  
   
 ### <a name="scripting-requirements"></a>스크립팅 요구 사항
 
@@ -172,15 +172,15 @@ ms.locfileid: "75241196"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**메모란**|  
-|**Internet Explorer 11 (데스크톱용)**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 10(데스크톱용)**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 9**|지원되지 않음|예|지원되지 않음|예|예|예|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 8.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1(sp1)</sup>|  
-|**Internet Explorer 7.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1(sp1)</sup>|  
-|**Firefox (공개적으로 릴리스된 최신 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
-|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|예|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
-|**Chrome (공개적으로 릴리스된 최신 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**메모**|  
+|**Internet Explorer 11 (데스크톱용)**|yes|yes|yes|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 10(데스크톱용)**|yes|yes|yes|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 9**|지원되지 않음|yes|지원되지 않음|yes|yes|yes|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 8.0**|지원되지 않음|yes|지원되지 않음|yes|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
+|**Internet Explorer 7.0**|지원되지 않음|yes|지원되지 않음|yes|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
+|**Firefox (공개적으로 릴리스된 최신 버전)**|yes|yes|yes|yes|yes|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|yes|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
+|**Chrome (공개적으로 릴리스된 최신 버전)**|yes|yes|yes|yes|yes|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
   
  <sup>1</sup> 표준 모드에서 Internet Explorer 7.0 및 8.0은 보고서에 기울어진 선을 표시 하지 않습니다. 보고서에서 사선을 사용하는 경우 ASP.NET 페이지가 Internet Explorer의 쿼크 모드에서 실행되도록 설정하세요. 이렇게 하려면 \<! ASP.NET 페이지의 DOCTYPE> 태그입니다. 또는 마스터 페이지를 사용하는 경우 .master 파일에서 태그를 찾을 수 있습니다. 이 태그는 다음과 같습니다.  
   

@@ -15,17 +15,17 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056656"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA로 평가 보고서 통합
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
 다음 단계별 지침은 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server 또는 Azure Vm에서 실행 되는 SQL Server를 업그레이드 하거나 Azure SQL Database로 마이그레이션하기 위한 성공적으로 확장 된 평가를 수행 하는 데 도움이 됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - DMA가 시작 되는 네트워크의 도구 컴퓨터를 지정 합니다. 이 컴퓨터가 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
@@ -92,7 +92,7 @@ Csv 파일을 사용 하 여 데이터를 가져올 때 데이터 **인스턴스
 
 **EstateInventory** 라는 데이터베이스와 **databaseinventory**라는 테이블을 만듭니다. 이 인벤토리 데이터를 포함 하는 테이블에는 다음 4 개의 열이 있는 한 많은 열이 있을 수 있습니다.
 
-- 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면
+- ServerName
 - InstanceName
 - DatabaseName
 - AssessmentFlag
@@ -113,7 +113,7 @@ CSV 파일에 SQL Server 테이블을 사용 하면 평가 플래그 열을 사�
 
 DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**getServerListFrom** | 사용자의 인벤토리에 있습니다. 가능한 값은 **SqlServer** 및 **CSV**입니다.<br/>자세한 내용은 [SQL server 인벤토리 만들기](#create-inventory)를 참조 하세요. |
 |**csvPath** | CSV 인벤토리 파일의 경로입니다.  **Getserverlistfrom** 이 **CSV**로 설정 된 경우에만 사용 됩니다. |
@@ -136,7 +136,7 @@ DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되�
 
 DmaProcessor 함수와 연결 된 매개 변수는 다음 표에 설명 되어 있습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**processTo** | JSON 파일을 처리 하는 위치입니다. 가능한 값은 **SQLServer** 및 **AzureSQLDatabase**입니다. |
 |**serverName** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

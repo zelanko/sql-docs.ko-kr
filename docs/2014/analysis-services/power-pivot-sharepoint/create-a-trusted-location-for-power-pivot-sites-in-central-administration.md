@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684090"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,7 +22,7 @@ ms.locfileid: "74684090"
   
   
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  URL을 신뢰할 수 있는 위치로 지정하려면 팜이나 서비스 관리자여야 합니다.  
   
  PowerPivot 갤러리나 통합 문서를 저장하는 기타 라이브러리를 포함하는 SharePoint 사이트의 URL 주소를 알아야 합니다. 주소를 가져오려면 라이브러리가 포함 된 사이트를 열고 **PowerPivot 갤러리**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 서버 이름과 사이트 경로가 포함 된 주소 (URL)의 첫 부분을 복사 합니다.  
@@ -61,8 +61,7 @@ ms.locfileid: "74684090"
   
 10. 외부 데이터에서 새로 고칠 때 경고에 대한 **새로 고침 경고 사용**확인란의 선택을 취소합니다. 이 확인란 선택을 취소하면 PowerPivot 갤러리가 루틴 경고 메시지를 무시하고 대신 통합 문서의 미리 보기 이미지를 표시할 수 있습니다.  
   
-11. 
-  **확인**을 클릭합니다.  
+11. **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [PowerPivot 갤러리](../../2014-toc/index.yml)  

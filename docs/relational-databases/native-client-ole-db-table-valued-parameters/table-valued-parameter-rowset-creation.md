@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761652"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
@@ -30,7 +30,9 @@ ms.locfileid: "73761652"
 ## <a name="static-scenario"></a>정적 시나리오  
  형식 정보를 알고 있으면 소비자는 ITableDefinitionWithConstraints:: CreateTableWithConstraints를 사용 하 여 테이블 반환 매개 변수에 해당 하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
   
- *Guid* 필드 (*pTableID* 매개 변수)는 특수 guid (CLSID_ROWSET_TVP)를 포함 합니다. *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
+ *Guid* 필드 (*pTableID* 매개 변수)는 특수 guid (CLSID_ROWSET_TVP)를 포함 합니다. 
+  *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. 
+  *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
   
  집계의 경우 소비자는 *pUnkOuter* 매개 변수를 제어용 IUnknown으로 전달 합니다.  
   
@@ -42,14 +44,14 @@ ms.locfileid: "73761652"
   
  각 열의 null, 고유, 계산 및 업데이트 상태에 대 한 정보를 검색 하기 위해 소비자는 IColumnsRowset:: GetColumnsRowset 또는 IColumnsInfo:: GetColumnInfo를 사용 합니다. 이러한 메서드는 각 테이블 반환 매개 변수 행 집합 열에 대해 자세한 정보를 제공합니다.  
   
- 소비자는 테이블 반환 매개 변수의 각 열 유형을 지정합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블을 만든 경우 열을 지정하는 방법과 비슷합니다. 소비자는 *ppRowset* output 매개 변수를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 테이블 반환 매개 변수 행 집합 개체를 가져옵니다.  
+ 소비자는 테이블 반환 매개 변수의 각 열 유형을 지정합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블을 만든 경우 열을 지정하는 방법과 비슷합니다. 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ppRowset* output 매개 변수를 통해 Native Client OLE DB 공급자에서 테이블 반환 매개 변수 행 집합 개체를 가져옵니다.  
   
 ## <a name="dynamic-scenario"></a>동적 시나리오  
  소비자에 게 형식 정보가 없으면 IOpenRowset:: OpenRowset을 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 인스턴스화해야 합니다. 이때 소비자는 공급자에게 유형 이름을 제공해야 합니다.  
   
  이 시나리오에서는 공급자가 소비자 대신 서버에서 테이블 반환 매개 변수 행 집합 개체에 대한 유형 정보를 가져옵니다.  
   
- *PTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오에서로 설정 되어야 합니다. 그런 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
+ *PTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오에서로 설정 되어야 합니다. 그런 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

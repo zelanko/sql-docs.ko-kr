@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100127"
 ---
 # <a name="new-user-role-management-studio"></a>새 사용자 역할(Management Studio)
@@ -27,24 +27,24 @@ ms.locfileid: "66100127"
 > [!NOTE]  
 >  역할 정의는 기본 모드로 실행되는 보고서 서버에만 사용되며 보고서 서버가 SharePoint 통합 모드로 구성된 경우 이 페이지를 사용할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  역할 정의의 이름을 입력합니다. 역할 정의 이름은 보고서 서버 네임스페이스 내에서 고유해야 합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
  **설명**  
  역할 사용 방법을 설명하고 역할에서 지원하는 작업을 나열하는 설명을 입력합니다.  
   
- **태스크**  
+ **Task**  
  이 역할을 통해 수행할 수 있는 태스크를 선택합니다. 새 태스크를 만들거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원하는 기존 작업을 수정할 수 없습니다. 항목 수준의 역할 정의에서는 항목 수준의 태스크만 사용할 수 있습니다.  
   
  **태스크 설명**  
  작업에서 지원하는 작업 또는 사용 권한을 열거하는 태스크에 대한 설명을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [역할 정의](../security/role-definitions.md)  
   

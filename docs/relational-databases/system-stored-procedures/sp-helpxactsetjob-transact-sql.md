@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056792"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "74056792"
 
   Oracle 게시자에 대한 Xactset 작업 정보를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,20 +37,20 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`은 작업이 속한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`작업이 속하는 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Oracle 작업 번호입니다.|  
-|**lastdate**|**varchar(22)**|작업을 실행한 최근 날짜입니다.|  
-|**thisdate**|**varchar(22)**|변경 시간|  
-|**nextdate**|**varchar(22)**|작업을 실행할 다음 날짜입니다.|  
+|**lastdate**|**varchar (22)**|작업을 실행한 최근 날짜입니다.|  
+|**thisdate**|**varchar (22)**|변경 시간|  
+|**nextdate**|**varchar (22)**|작업을 실행할 다음 날짜입니다.|  
 |**broken**|**varchar(1)**|작업이 끊어지는지 여부를 나타내는 플래그입니다.|  
-|**interval**|**varchar(200)**|작업 간격입니다.|  
-|**failures**|**int**|해당 작업에 대한 실패 횟수입니다.|  
-|**xactsetjobwhat**|**varchar(200)**|작업에 의해 실행된 프로시저 이름입니다.|  
+|**간격은**|**varchar (200)**|작업 간격입니다.|  
+|**있어**|**int**|해당 작업에 대한 실패 횟수입니다.|  
+|**xactsetjobwhat**|**varchar (200)**|작업에 의해 실행된 프로시저 이름입니다.|  
 |**xactsetjob**|**varchar(1)**|작업의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** -작업을 사용할 수 있습니다.<br /><br /> **0** -작업을 사용할 수 없습니다.|  
 |**xactsetlonginterval**|**int**|작업에 대한 긴 간격입니다.|  
 |**xactsetlongthreshold**|**int**|작업에 대한 긴 임계값입니다.|  
@@ -69,7 +69,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_helpxactsetjob**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Transact-sql &#40;sp_publisherproperty&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [Oracle 게시자 &#40;복제 Transact-sql 프로그래밍에 대 한 트랜잭션 집합 작업 구성&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Transact-sql&#41;sp_publisherproperty &#40;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460108"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
@@ -36,20 +36,22 @@ ms.locfileid: "63460108"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`unsignedInt`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|
+  `unsignedInt`, 길이 제한 없음|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
+|**발생 빈도**|(선택 사항) 
+  `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 스토리지 크기보다 작은 공간을 가정합니다.  
   
 -   현재 원시 데이터 크기의 3배이며 테이블에 있는 힙과 클러스터형 인덱스의 전체 크기를 포함합니다.  
@@ -58,7 +60,8 @@ ms.locfileid: "63460108"
   
  기본 스토리지 크기는 비클러스터형 인덱스 및 인덱싱된 뷰를 포함하지 않습니다.  
   
- `StorageBoundInMB` 요소에 지정된 값이 실제 디스크 공간을 초과할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환하지만 튜닝 작업은 계속합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
+ 
+  `StorageBoundInMB` 요소에 지정된 값이 실제 디스크 공간을 초과할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환하지만 튜닝 작업은 계속합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -77,7 +80,7 @@ ms.locfileid: "63460108"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

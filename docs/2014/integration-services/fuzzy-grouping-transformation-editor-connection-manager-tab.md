@@ -15,13 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058335"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>유사 항목 그룹화 변환 편집기(연결 관리자 탭)
+  
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **연결 관리자** 탭을 사용하여 기존 연결을 선택하거나 새 연결을 만들 수 있습니다.  
   
 > [!NOTE]  
@@ -29,14 +30,15 @@ ms.locfileid: "66058335"
   
  유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
- **캐시 없음**  
+## <a name="options"></a>옵션  
+ **OLE DB 연결 관리자**  
  목록 상자를 사용하여 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
- **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
+ 
+  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

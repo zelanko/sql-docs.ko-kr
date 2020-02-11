@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399930"
 ---
 # <a name="transparent-data-encryption"></a>투명한 데이터 암호화
-보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)를 도난당 한 경우에는 악의적 파티에서 데이터베이스를 복원 하거나 연결 하 여 데이터를 찾아볼 수 있습니다. 한 가지 해결 방법으로 데이터베이스의 중요한 데이터를 암호화하고 인증서로 데이터를 암호화하는 데 사용되는 키를 보호합니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
+보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)를 도난당 한 경우에는 악의적 파티에서 데이터베이스를 복원 하거나 연결 하 여 데이터를 찾아볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
   
-Tde ( *투명 한 데이터 암호화* )는 데이터 및 트랜잭션 로그 파일과 특수 PDW 로그 파일의 실시간 i/o 암호화 및 암호 해독을 수행 합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 SQL Server PDW의 master 데이터베이스에 저장 된 인증서를 사용 하 여 보호 되는 대칭 키입니다. TDE는 데이터와 로그 파일을 의미하는 미사용 데이터를 보호합니다. 다양한 산업 분야에서 제정된 많은 법률, 규정 및 지침을 준수하는 기능을 제공합니다. 이 기능을 통해 소프트웨어 개발자는 기존 응용 프로그램을 변경 하지 않고 AES 및 3DES 암호화 알고리즘을 사용 하 여 데이터를 암호화할 수 있습니다.  
+Tde ( *투명 한 데이터 암호화* )는 데이터 및 트랜잭션 로그 파일과 특수 PDW 로그 파일의 실시간 i/o 암호화 및 암호 해독을 수행 합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 SQL Server PDW의 master 데이터베이스에 저장 된 인증서를 사용 하 여 보호 되는 대칭 키입니다. TDE는 데이터 및 로그 파일을 의미하는 "유휴" 데이터를 보호하고 다양한 업계에서 확립된 법, 규정 및 지침에 부합하는 기능을 제공합니다. 이 기능을 통해 소프트웨어 개발자는 기존 응용 프로그램을 변경 하지 않고 AES 및 3DES 암호화 알고리즘을 사용 하 여 데이터를 암호화할 수 있습니다.  
   
 > [!IMPORTANT]  
 > TDE는 클라이언트와 PDW 간에 이동 하는 데이터에 대 한 암호화를 제공 하지 않습니다. 클라이언트와 SQL Server PDW 간에 데이터를 암호화 하는 방법에 대 한 자세한 내용은 [인증서 프로 비전](provision-certificate.md)을 참조 하세요.  
@@ -120,7 +120,7 @@ TDE 인증서는 다음 문에서 수락된 데이터베이스 마스터 키로 
   
 |명령 또는 함수|목적|  
 |-----------------------|-----------|  
-|[데이터베이스 암호화 키 만들기](../t-sql/statements/create-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 만듭니다.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 만듭니다.|  
 |[ALTER DATABASE ENCRYPTION 키](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 변경합니다.|  
 |[데이터베이스 암호화 키 삭제](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용한 키를 제거합니다.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|TDE를 설정하는 데 사용된 **ALTER DATABASE** 옵션에 대해 설명합니다.|  
@@ -130,11 +130,11 @@ TDE 인증서는 다음 문에서 수락된 데이터베이스 마스터 키로 
   
 |카탈로그 뷰 또는 동적 관리 뷰|목적|  
 |-------------------------------------------|-----------|  
-|[sys. 데이터베이스](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|데이터베이스 정보를 보여 주는 카탈로그 뷰입니다.|  
-|[sys. 인증서](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|데이터베이스의 인증서를 보여 주는 카탈로그 뷰입니다.|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|각 노드에 대 한 정보, 데이터베이스에 사용 되는 암호화 키 및 데이터베이스의 암호화 상태를 제공 하는 동적 관리 뷰|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|데이터베이스 정보를 보여 주는 카탈로그 뷰입니다.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|데이터베이스의 인증서를 보여 주는 카탈로그 뷰입니다.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|각 노드에 대 한 정보, 데이터베이스에 사용 되는 암호화 키 및 데이터베이스의 암호화 상태를 제공 하는 동적 관리 뷰|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 위에 표시된 표에서 설명한 것처럼 TDE의 기능 및 명령에는 각각의 사용 권한 요구 사항이 있습니다.  
   
 TDE와 관련 된 메타 데이터를 보려면 `CONTROL SERVER` 권한이 필요 합니다.  
@@ -267,10 +267,10 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ## <a name="performance-impact"></a>성능에 미치는 영향  
 TDE의 성능 영향은 사용자가 보유 한 데이터 유형, 저장 방법 및 SQL Server PDW에 대 한 워크 로드 활동 유형에 따라 달라 집니다. TDE로 보호 되는 경우 데이터를 읽고 해독 한 다음 데이터를 암호화 하 고 기록 하는 i/o는 CPU 집약적 작업이 며, 다른 CPU 집약적 작업이 동시에 발생 하는 경우 더 많은 영향을 줍니다. TDE `tempdb`는 암호화 되므로 tde는 암호화 되지 않은 데이터베이스의 성능에 영향을 줄 수 있습니다. 성능에 대 한 정확한 아이디어를 얻으려면 데이터 및 쿼리 작업을 통해 전체 시스템을 테스트 해야 합니다.  
   
-## <a name="related-content"></a>관련 콘텐츠  
+## <a name="related-content"></a>관련 내용  
 다음 링크에는 SQL Server 암호화를 관리 하는 방법에 대 한 일반 정보가 포함 되어 있습니다. 이러한 문서는 SQL Server 암호화를 이해 하는 데 도움이 되지만, 이러한 문서는 SQL Server PDW 관련 된 정보를 제공 하지 않으며 SQL Server PDW에 없는 기능에 대해 설명 합니다.  
   
--   [암호화 SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
+-   [SQL Server 암호화](../relational-databases/security/encryption/sql-server-encryption.md)  
   
 -   [암호화 계층](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
@@ -279,12 +279,12 @@ TDE의 성능 영향은 사용자가 보유 한 데이터 유형, 저장 방법 
   
 ## <a name="see-also"></a>참고 항목  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)  
-[데이터베이스 암호화 키 만들기](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[인증서 백업](../t-sql/statements/backup-certificate-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. 인증서](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

@@ -15,15 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc7744d57ce2bdbad4f0000252999582a8dc37c2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785529"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
   
  응용 프로그램은 모든 문에 SQL_ATTR_ROW_ARRAY_SIZE을 설정 하 여 **Sqlfetch** 또는 [sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 함수 호출에서 반환 되는 행 수를 선언 합니다. 드라이버는 서버 커서를 지정하는 문에서 커서의 인출 요청을 충족하기 위해 SQL_ATTR_ROW_ARRAY_SIZE를 사용하여 서버가 생성하는 행 블록의 크기를 결정합니다. 트랜잭션 격리 수준이 커밋된 트랜잭션의 반복 읽기를 보장하는 데 충분하다면 행 멤버 자격 및 정렬이 동적 커서의 블록 크기 내에서 고정됩니다. 이 값으로 지정된 블록 밖에서는 커서가 완전히 동적입니다. 서버 커서 블록 크기는 완전히 동적이며 인출 처리 중 임의 시점에 변경될 수 있습니다.  
@@ -39,20 +40,22 @@ ms.locfileid: "73785529"
   
  자세한 내용은 [준비 된 문의 테이블 반환 매개 변수 메타 데이터](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)를 참조 하세요.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>스파스 열에 대한 SQLSetStmtAttr 지원  
- SQLSetStmtAttr를 사용 하 여 SQL_SOPT_SS_NAME_SCOPE를 설정할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 SQL_SOPT_SS_NAME_SCOPE 섹션을 참조 하세요. 스파스 열에 대 한 자세한 내용은 [스파스 열에서 ODBC &#40;&#41;지원](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)을 참조 하세요.  
+ SQLSetStmtAttr를 사용 하 여 SQL_SOPT_SS_NAME_SCOPE를 설정할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 SQL_SOPT_SS_NAME_SCOPE 섹션을 참조 하세요. 스파스 열에 대 한 자세한 내용은 [스파스 열 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)를 참조 하세요.  
   
 ## <a name="statement-attributes"></a>문 특성  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 드라이버별 문 특성도 지원합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 드라이버별 문 특성도 지원합니다.  
   
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
- SQL_SOPT_SS_CURSOR 특성은 드라이버가 커서에 드라이버별 성능 옵션을 사용할지 여부를 지정합니다. 이러한 옵션을 설정 하면 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 를 사용할 수 없습니다. 기본 설정은 SQL_CO_OFF입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_CURSOR 특성은 드라이버가 커서에 드라이버별 성능 옵션을 사용할지 여부를 지정합니다. 이러한 옵션을 설정 하면 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 를 사용할 수 없습니다. 기본 설정은 SQL_CO_OFF입니다. 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|기본. 빠른 앞 으로만 이동 가능한 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정 하 여 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하도록 설정 합니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램이 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE를 사용 하 여 다른 커서 유형을 설정 해야 합니다.|  
+|SQL_CO_OFF|Default. 빠른 앞 으로만 이동 가능한 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정 하 여 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하도록 설정 합니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램이 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE를 사용 하 여 다른 커서 유형을 설정 해야 합니다.|  
 |SQL_CO_FFO|빠른 전진 전용, 읽기 전용 커서를 사용 하도록 설정 하 고 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하지 않도록 설정 합니다.|  
 |SQL_CO_AF|임의의 커서 유형에 대해 자동 인출 옵션을 설정합니다. 문 핸들에 대해이 옵션을 설정 하면 **Sqlexecute** 또는 **sqlexecdirect** 가 암시적 **sqlfetchscroll** (SQL_FIRST)을 생성 합니다. 커서가 열리고 서버에 대한 단일 왕복에서 행의 첫 번째 일괄 처리가 반환됩니다.|  
 |SQL_CO_FFO_AF|빠른 정방향 전용 커서에 대해 자동 인출 옵션을 설정합니다. 이는 SQL_CO_AF 및 SQL_CO_FFO를 모두 지정한 것과 같습니다.|  
@@ -62,21 +65,25 @@ ms.locfileid: "73785529"
  Select 목록에 **text**, **ntext**또는 **image** 열이 포함 된 경우에는 빠른 전진 전용 커서가 동적 커서로 변환 되 고 **SQLGetData** 가 허용 됩니다.  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
- SQL_SOPT_SS_DEFER_PREPARE 특성은 **Sqlexecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 가 실행 될 때까지 문이 즉시 준비 되거나 지연 되는지 여부를 결정 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_DEFER_PREPARE 특성은 **Sqlexecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 가 실행 될 때까지 문이 즉시 준비 되거나 지연 되는지 여부를 결정 합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|기본. [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 호출한 후에는 **sqlprepare** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는 **SQLDescribeParam**)이 실행 될 때까지 문 준비가 지연 됩니다.|  
+|SQL_DP_ON|Default. [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 호출한 후에는 **sqlprepare** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는 **SQLDescribeParam**)이 실행 될 때까지 문 준비가 지연 됩니다.|  
 |SQL_DP_OFF|**Sqlprepare** 를 실행 하는 즉시 문이 준비 됩니다.|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
- SQL_SOPT_SS_REGIONALIZE 특성은 명령 수준에서 데이터 변환을 결정하는 데 사용됩니다. 이 특성은 드라이버가 날짜, 시간 및 통화 값을 문자열로 변환할 때 클라이언트 로캘 설정을 준수하도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식에서 문자열로의 변환만 해당됩니다.  
+ SQL_SOPT_SS_REGIONALIZE 특성은 명령 수준에서 데이터 변환을 결정하는 데 사용됩니다. 이 특성은 드라이버가 날짜, 시간 및 통화 값을 문자열로 변환할 때 클라이언트 로캘 설정을 준수하도록 합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식에서 문자열로의 변환만 해당됩니다.  
   
- *ValuePtr* 값은 SQLLEN 유형입니다.  
+ 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|기본. 드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용하지 않습니다.|  
+|SQL_RE_OFF|Default. 드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용하지 않습니다.|  
 |SQL_RE_ON|드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용합니다.|  
   
  국가별 변환 설정이 통화, 숫자, 날짜 및 시간 데이터 형식에 적용됩니다. 변환 설정은 통화, 숫자, 날짜 또는 시간 값을 문자열로 변환한 경우 출력 변환에만 적용할 수 있습니다.  
@@ -87,19 +94,21 @@ ms.locfileid: "73785529"
  데이터 원본의 국가별 동작을 변경하면 애플리케이션에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 애플리케이션에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
   
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
- SQL_SOPT_SS_TEXTPTR_LOGGING 특성은 **텍스트** 또는 **이미지** 데이터를 포함 하는 열에 대 한 작업 로깅을 설정/해제 합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_TEXTPTR_LOGGING 특성은 **텍스트** 또는 **이미지** 데이터를 포함 하는 열에 대 한 작업 로깅을 설정/해제 합니다. 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|**Text** 및 **image** 데이터에 대해 수행 되는 작업의 로깅을 사용 하지 않도록 설정 합니다.|  
-|SQL_TL_ON|기본. **Text** 및 **image** 데이터에 대해 수행 되는 작업의 로깅을 사용 하도록 설정 합니다.|  
+|SQL_TL_ON|Default. **Text** 및 **image** 데이터에 대해 수행 되는 작업의 로깅을 사용 하도록 설정 합니다.|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
- SQL_SOPT_SS_HIDDEN_COLUMNS 특성은 결과 집합에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 문의 숨겨진 열을 노출합니다. 드라이버는 기본적으로 이러한 열을 노출하지 않습니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_HIDDEN_COLUMNS 특성은 결과 집합에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 문의 숨겨진 열을 노출합니다. 드라이버는 기본적으로 이러한 열을 노출하지 않습니다. 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|기본. 결과 집합에서 FOR BROWSE 열을 숨깁니다.|  
+|SQL_HC_OFF|Default. 결과 집합에서 FOR BROWSE 열을 숨깁니다.|  
 |SQL_HC_ON|FOR BROWSE 열을 공개합니다.|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -112,12 +121,13 @@ ms.locfileid: "73785529"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
  `service=mySSBService;local database=mydb`  
   
 ### <a name="sql_sopt_ss_querynotification_timeout"></a>SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
- SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 특성은 쿼리 알림을 활성 상태로 유지할 초를 지정합니다. 기본값은 432000초(5일)입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 특성은 쿼리 알림을 활성 상태로 유지할 초를 지정합니다. 기본값은 432000초(5일)입니다. 
+  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 ### <a name="sql_sopt_ss_param_focus"></a>SQL_SOPT_SS_PARAM_FOCUS  
  SQL_SOPT_SS_PARAM_FOCUS 특성은 후속 SQLBindParameter, SQLGetDescField, SQLSetDescField, SQLGetDescRec 및 SQLSetDescRec 호출에 대 한 포커스를 지정 합니다.  
@@ -131,9 +141,9 @@ ms.locfileid: "73785529"
   
  SQL_SOPT_SS_NAME_SCOPE의 형식은 SQLULEN입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|기본.<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버가 아닌 열만 반환 합니다.|  
+|SQL_SS_NAME_SCOPE_TABLE|Default.<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버가 아닌 열만 반환 합니다.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|애플리케이션이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램은 테이블 반환 매개 변수의 TYPE_NAME를 *TableName* 매개 변수로 전달 합니다.|  
 |SQL_SS_NAME_SCOPE_EXTENDED|스파스 열 기능을 사용 하는 경우 SQLColumns는 **column_set** 멤버 자격에 관계 없이 모든 열을 반환 합니다.|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버인 열만 반환 합니다.|  

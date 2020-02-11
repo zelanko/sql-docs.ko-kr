@@ -1,5 +1,5 @@
 ---
-title: 대규모 데이터 가져오기 | Microsoft Docs
+title: 대량 데이터 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195231"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
-  일반적으로 소비자를 만드는 코드를 격리 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 저장소 개체를 통해 참조 되지 않는 데이터를 처리 하는 다른 코드를 **ISequentialStream** 인터페이스 포인터입니다.  
+  일반적으로 소비자는 **ISequentialStream** 인터페이스 포인터를 통해 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되지 않는 데이터를 처리 하는 다른 코드에서 네이티브 클라이언트 OLE DB 공급자 저장소 개체를 만드는 코드를 격리 해야 합니다.  
   
  이 항목에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63195231"
   
 -   ICommand::Execute  
   
- 소비자에 대 한 호출에서 데이터의 단일 행만 인출 해야 하는 경우 (행 집합 속성 그룹)의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 값 중 하나에 설정 됩니다는 **GetNextRows**  메서드 BLOB 데이터가 버퍼링 되지 때문입니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
+ 행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 값 중 하나로 설정 된 경우, BLOB 데이터가 버퍼링 되지 않으므로 소비자는 **GetNextRows** 메서드를 호출 하 여 데이터의 단일 행만 인출 해야 합니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 대용량 데이터를 검색 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이렇게 하려면 소비자가 요청할 때까지 합니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 소비자가 요청할 때까지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 데이터를 검색 하지 않습니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예는 단일 열에서 대규모 데이터 값을 검색합니다.  
@@ -145,8 +145,8 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [BLOB 및 OLE 개체](blobs-and-ole-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [Blob 및 OLE 개체](blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../native-client/features/using-large-value-types.md)  
   
   

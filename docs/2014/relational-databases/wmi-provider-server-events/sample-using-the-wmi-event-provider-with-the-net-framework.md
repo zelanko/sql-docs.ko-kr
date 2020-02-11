@@ -1,5 +1,5 @@
 ---
-title: '예제: .NET Framework를 사용 하 여 WMI 이벤트 공급자를 사용 하 여 | Microsoft Docs'
+title: '샘플: WMI 이벤트 공급자와 .NET Framework 사용 Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4e336eb9c89c05656d75cc13cec4d46ddde68d28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211594"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>예제: .NET Framework에서 WMI 이벤트 공급자 사용
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플: .NET Framework에서 WMI 이벤트 공급자 사용
   다음 예에서는 WMI 이벤트 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 설치 인스턴스에서 발생하는 모든 DDL 이벤트에 대한 이벤트 데이터를 반환하는 애플리케이션을 C#으로 만듭니다.  
   
 ## <a name="example"></a>예제  
@@ -75,7 +75,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 이벤트용 WMI 공급자 개념](wmi-provider-for-server-events-concepts.md)  
   
   

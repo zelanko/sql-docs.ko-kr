@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401012"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 Integration Services를 사용 하 여 데이터 로드
@@ -61,7 +61,7 @@ SQL Server Data Tools 내에서 패키지를 실행 하려면 패키지를 마�
 ### <a name="run-from-a-windows-command-prompt"></a>Windows 명령 프롬프트에서 실행 
 **Dtexec** 유틸리티를 사용 하 여 Windows 명령 프롬프트에서 패키지를 실행 하려면 다음을 수행 합니다.`dtexec /FILE <packagePath>`  
   
-예를 들면 다음과 같습니다. `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>데이터 형식  
 Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데이터베이스로 데이터를 로드할 때 데이터는 먼저 원본 데이터에서 Integration Services 데이터 형식으로 매핑됩니다. 이를 통해 여러 데이터 원본의 데이터가 데이터 형식의 공통 집합에 매핑될 수 있습니다.  
@@ -84,7 +84,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|Real|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SmallInt|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -97,7 +97,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
   
 DT_NUMERIC 또는 전체 자릿수가 28 보다 큰 값을 포함 하는 DT_DECIMAL 입력 열을 매핑하는 경우 PDW는 유효성 검사 오류를 생성 합니다.  
   
-**지원 되지 않는 데이터 형식**  
+**지원되지 않는 데이터 형식**  
   
 SQL Server PDW는 다음 Integration Services 데이터 형식을 지원 하지 않습니다.  
   
@@ -115,7 +115,7 @@ SQL Server PDW는 다음 Integration Services 데이터 형식을 지원 하지 
   
 이러한 형식의 데이터를 포함 하는 열을 SQL Server PDW으로 로드 하려면 데이터를 호환 되는 데이터 형식으로 변환 하기 위해 데이터 흐름에 데이터 변환 업스트림을 추가 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 Integration Services 로드 패키지를 실행 하려면 다음이 필요 합니다.  
   
 -   데이터베이스에 대 한 로드 권한  
@@ -126,7 +126,7 @@ Integration Services 로드 패키지를 실행 하려면 다음이 필요 합�
   
 -   준비 데이터베이스를 사용 하지 않는 경우 대상 데이터베이스에 대 한 CREATE 권한이 필요 합니다. 임시 테이블을 만들기 위한 것입니다.  
   
-## <a name="GenRemarks"></a>일반적인 설명  
+## <a name="GenRemarks"></a>일반적인 주의 사항  
 Integration Services 패키지에 여러 SQL Server PDW 대상이 실행 되 고 있고 연결 중 하나가 종료 되 면 Integration Services 모든 SQL Server PDW 대상에 데이터를 푸시하는 것이 중지 됩니다.  
   
 ## <a name="Limits"></a>제한 사항  
@@ -151,7 +151,7 @@ Integration Services를 사용 하 여 데이터를 로드 하는 경우 SQL Ser
   
 ## <a name="Examples"></a>예  
   
-### <a name="Walkthrough"></a>은. 플랫 파일에서 간단히 로드  
+### <a name="Walkthrough"></a>A. 플랫 파일에서 간단히 로드  
 다음 연습에서는 Integration Services를 사용 하 여 SQL Server PDW 어플라이언스로 플랫 파일 데이터를 로드 하는 간단한 데이터 로드를 보여 줍니다.  이 예에서는 Integration Services 이미 클라이언트 컴퓨터에 설치 되어 있고 SQL Server PDW 대상이 위에 설명 된 대로 설치 되어 있다고 가정 합니다.  
   
 이 예에서는 다음 DDL이 있는 `Orders` 테이블에 로드 합니다. `Orders` 테이블은 `LoadExampleDB` 데이터베이스의 일부입니다.  

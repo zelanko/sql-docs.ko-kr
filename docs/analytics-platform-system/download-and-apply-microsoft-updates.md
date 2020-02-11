@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401189"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>분석 플랫폼 시스템용 Microsoft 업데이트 다운로드 및 적용
 이 항목에서는 Microsoft 업데이트 카탈로그에서 Windows Server Update Services (WSUS)로 업데이트를 다운로드 하 고 해당 업데이트를 분석 플랫폼 시스템 어플라이언스 서버에 적용 하는 방법을 설명 합니다. Microsoft 업데이트은 Windows 및 SQL Server에 대해 적용 가능한 모든 업데이트를 설치 합니다. WSUS는 기기의 VMM 가상 컴퓨터에 설치 됩니다.  
   
-## <a name="TOP"></a>시작 하기 전에  
+## <a name="TOP"></a>시작하기 전 주의 사항  
   
 > [!WARNING]  
 > 어플라이언스 또는 어플라이언스 구성 요소가 다운 되거나 장애 조치 (failover) 된 경우 업데이트를 적용 하지 마십시오. 이 경우 지원 담당자에 게 문의 하세요.  
 >   
 > 어플라이언스를 사용 하는 동안에는 Microsoft 업데이트를 적용 하지 마십시오. 업데이트를 적용 하면 어플라이언스 노드가 재부팅 될 수 있습니다. 어플라이언스를 사용 하지 않는 경우 유지 관리 기간 동안 업데이트를 적용 해야 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 이러한 단계를 수행 하기 전에 다음을 수행 해야 합니다.  
   
 -   [구성 Windows Server Update Services &#40;wsus&#41; &#40;분석 플랫폼 시스템&#41;](configure-windows-server-update-services-wsus.md)의 지침에 따라 어플라이언스에서 wsus를 구성 합니다.  
@@ -65,8 +65,7 @@ ms.locfileid: "74401189"
   
 1.  WSUS 콘솔의 왼쪽 창에서 **모든 업데이트**를 클릭 합니다.  
   
-2.  **모든 업데이트** 창에서 **승인** 드롭다운 메뉴를 클릭 하 고 **승인** 거부 됨을 **제외**로 설정 합니다. **상태** 드롭다운 메뉴를 클릭 하 고 **상태** 를 **Any**로 설정 합니다. 
-  **새로 고침**을 클릭합니다.  
+2.  **모든 업데이트** 창에서 **승인** 드롭다운 메뉴를 클릭 하 고 **승인** 거부 됨을 **제외**로 설정 합니다. **상태** 드롭다운 메뉴를 클릭 하 고 **상태** 를 **Any**로 설정 합니다. **새로 고침**을 클릭합니다.  
   
     **제목** 열을 마우스 오른쪽 단추로 클릭 하 고 **파일 상태** 를 선택 하 여 다운로드 완료 후 파일 상태를 확인 합니다.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "74401189"
   
 8.  **모든 업데이트** 창에서 **상태** 를 Failed로 설정 **하거나 필요 함**으로 설정 합니다.  
   
-9. **새로 고침**을 클릭 합니다.  
+9. **새로 고침**을 클릭합니다.  
   
 10. **필요한 업데이트가** 0 보다 큰 경우 지원 담당자에 게 문의 하세요.  
   

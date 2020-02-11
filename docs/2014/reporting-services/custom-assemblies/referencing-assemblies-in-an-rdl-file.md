@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bc52419f382ea44fc718a47e99bbd0981275d240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264803"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL 파일에서 어셈블리 참조
@@ -34,7 +34,7 @@ ms.locfileid: "63264803"
 </CodeModules>  
 ```  
   
- 사용자 지정 코드에서 <xref:System.Reflection.Assembly.Load%2A>를 호출하는 대신 **CodeModule** 요소를 RDL 파일에 수동으로 추가하거나 **보고서 속성** 대화 상자의 **참조** 탭을 사용하여 사용자 지정 어셈블리를 등록합니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+ 사용자 지정 코드에서 <xref:System.Reflection.Assembly.Load%2A>를 호출하는 대신 **CodeModule** 요소를 RDL 파일에 수동으로 추가하거나 **보고서 속성** 대화 상자의 **참조** 탭을 사용하여 사용자 지정 어셈블리를 등록합니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 나타냅니다.  
   
  **Classes** 요소는 보고서 정의에서 인스턴스 멤버 사용을 지원합니다. **Classes**는 클래스 이름 및 인스턴스 이름에 대한 참조를 포함하는 최상위 요소입니다. 인스턴스 멤버 사용을 지원하는 보고서 정의 항목은 다음과 같습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63264803"
   
  자세한 내용은 [식을 통해 사용자 지정 어셈블리 액세스](accessing-custom-assemblies-through-expressions.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](using-custom-assemblies-with-reports.md)  
   
   

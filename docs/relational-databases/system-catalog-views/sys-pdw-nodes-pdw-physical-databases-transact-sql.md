@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399912"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql)
@@ -24,10 +24,10 @@ ms.locfileid: "74399912"
 
   계산 노드의 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 얻기 위해 실제 데이터베이스 정보를 집계 합니다. 정보를 결합 하려면 `sys.pdw_nodes_pdw_physical_databases` `sys.pdw_database_mappings` 및 `sys.databases` 테이블에를 조인 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스의 개체 ID입니다. 이 값은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 뷰의 database_id와 동일 하지 않습니다.|  
-|physical_name|**sysname 이며**|셸/계산 노드에 있는 데이터베이스의 물리적 이름입니다. 이 값은 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰의 physical_name 열에 있는 값과 동일 합니다.|  
+|physical_name|**sysname**|셸/계산 노드에 있는 데이터베이스의 물리적 이름입니다. 이 값은 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰의 physical_name 열에 있는 값과 동일 합니다.|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -87,7 +87,7 @@ SELECT TOP 1 encryption_state
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

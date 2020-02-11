@@ -1,5 +1,5 @@
 ---
-title: 에 연결 | Microsoft Docs
+title: 연결 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,29 +9,29 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
-- SQLBrowseConnect function [ODBC], establising a connection
+- SQLBrowseConnect function [ODBC], establishing a connection
 - functions [ODBC], data source or driver connections
 - connecting to data source [ODBC], functions
 - connecting to driver [ODBC], functions
 - connection functions [ODBC]
-- SQLConnect function [ODBC], establising a connection
+- SQLConnect function [ODBC], establishing a connection
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901359"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76941031"
 ---
 # <a name="establishing-a-connection"></a>연결 설정
-환경 및 연결 핸들을 할당 하 고 모든 연결 특성을 설정, 후 응용 프로그램 데이터 원본 또는 드라이버에 연결할 준비가 되었습니다. 응용 프로그램이이 작업을 수행 하 여 세 가지 다른 함수는 **SQLConnect** (핵심 인터페이스 적합성 수준), **SQLDriverConnect** (코어), 및 **SQLBrowseConnect** (수준 1). 각 세 가지 다른 시나리오에 사용할 설계 되었습니다. 에 연결 하기 전에 응용 프로그램으로는 이러한 함수는 확인할 수는 **ConnectFunctions** 반환한 키워드 **SQLDrivers**합니다.  
+환경 및 연결 핸들을 할당 하 고 연결 특성을 설정 하 고 나면 응용 프로그램은 데이터 원본 또는 드라이버에 연결할 준비가 된 것입니다. 응용 프로그램에서이 작업을 수행 하는 데 사용할 수 있는 세 가지 함수는 **SQLConnect** (핵심 인터페이스 규칙 수준), **SQLDriverConnect** (core) 및 **SQLBrowseConnect** (수준 1)입니다. 각각의 세 가지는 다른 시나리오에서 사용 하도록 설계 되었습니다. 연결 하기 전에 응용 프로그램은 **sqldrivers**에서 반환 된 **connectfunctions** 키워드를 사용 하 여 지원 되는 함수를 결정할 수 있습니다.  
   
 > [!NOTE]  
->  일부 드라이버 지 활성 연결 수를 제한 합니다. 응용 프로그램 호출 **SQLGetInfo** 활성 연결 수를 확인 하려면 SQL_MAX_DRIVER_CONNECTIONS 옵션을 사용 하 여 특정 드라이버를 지원 합니다.  
+>  일부 드라이버는 지원 되는 활성 연결 수를 제한 합니다. 응용 프로그램은 SQL_MAX_DRIVER_CONNECTIONS 옵션으로 **SQLGetInfo** 를 호출 하 여 특정 드라이버에서 지 원하는 활성 연결 수를 확인 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

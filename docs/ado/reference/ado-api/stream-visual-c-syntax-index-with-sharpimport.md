@@ -1,5 +1,5 @@
 ---
-title: 'Stream (Visual C++ #import 구문 인덱스) | Microsoft Docs'
+title: Stream (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930684"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C++ #import 구문 인덱스)
+# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  
@@ -91,5 +91,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

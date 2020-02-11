@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401044"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 데이터 로드
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|작업|설명|  
+|Task|Description|  
 |--------|---------------|  
 |준비 데이터베이스를 만듭니다.|[준비 데이터베이스 만들기](staging-database.md)|  
 |Integration Services를 사용 하 여 로드 합니다.|[Integration Services를 사용하여 로드](load-with-ssis.md)|  

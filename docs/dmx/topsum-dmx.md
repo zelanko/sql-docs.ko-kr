@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893041"
 ---
 # <a name="topsum-dmx"></a>TopSum(DMX)
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조 >와 \<같이 테이블을 반환 하는 식 또는 테이블을 반환 하는 함수입니다.  
+ 테이블 열 참조>와 \<같이 테이블을 반환 하는 식 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식 >  
+ \<테이블 식>  
   
 ## <a name="remarks"></a>설명  
- **TopSum** 함수는 차수 > 식의 \<계산 된 값을 기준으로 가장 높은 행을 차수 식의 계산 된 값을 기준으로 내림차순으로 반환 합니다 .이 값은 \<rank 식의 합계가 적어도 지정 된 >입니다. \<sum > 인수로 지정 된 합계입니다. **TopSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **TopSum** 함수는 각 행에 대 한 rank> 식의 \<계산 된 값을 기준으로 최상위 행을 반환 합니다 .이 값은 \<rank 식의 합계는 \<sum> 인수로 지정 된 합계 이상> 합니다. **TopSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
@@ -52,9 +52,9 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 > [!NOTE]  
 >  이 예에서 입력으로 제공된 값에는 작은따옴표가 들어 있으므로 작은따옴표를 앞에 추가하여 이스케이프해야 합니다. 이스케이프 문자를 삽입하는 구문을 모르는 경우 예측 쿼리 작성기를 사용하여 쿼리를 만들 수 있습니다. 드롭다운 목록에서 값을 선택하면 필요한 이스케이프 문자가 자동으로 삽입됩니다. 자세한 내용은 [데이터 마이닝 디자이너에서 단일 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)를 참조 하세요.  
   
- 예제 결과:  
+ 결과 예:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|모델|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -88,9 +88,9 @@ NATURAL PREDICTION JOIN
   
  **TopSum** 함수의 세 번째 인수는 대상 합계를 double로 지정 합니다. 확률 합계가 50%인 최상위 제품의 행을 가져오려면 .5를 입력합니다.  
   
- 예제 결과:  
+ 결과 예:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|모델|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29 ...|0.25 ...|  
 |Water Bottle|2866|0.19 ...|0.17 ...|  
@@ -98,9 +98,9 @@ NATURAL PREDICTION JOIN
   
  **참고** 이 예제는 **TopSum**의 사용법을 보여 주기 위해서만 제공 됩니다. 데이터 집합의 크기에 따라 이 쿼리를 실행하는 데 시간이 오래 걸릴 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>참고 항목  
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

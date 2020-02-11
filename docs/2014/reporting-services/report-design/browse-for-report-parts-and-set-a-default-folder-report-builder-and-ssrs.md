@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106457"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106457"
   
     -   서버 폴더  
   
-    -   형식  
+    -   Type  
   
      예를 들어 이미지를 찾으려면 **조건 추가**를 클릭하고 **유형**을 클릭합니다. 드롭다운 상자에서 **이미지** 확인란을 선택하고 ENTER 키를 누르고 검색 돋보기 단추를 클릭합니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66106457"
   
  이 설정을 적용하기 위해 보고서 작성기를 다시 시작할 필요는 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업데이트 확인 또는 업데이트 &#40;보고서 작성기 및 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [업데이트를 확인 하거나 업데이트 &#40;보고서 작성기 및 SSRS를 해제&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [보고서 작성기의 보고서 파트 및 데이터 세트](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

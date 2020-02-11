@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743169"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
@@ -42,7 +42,7 @@ ms.locfileid: "62743169"
   
  **완전 트랜잭션 내구성 보장**  
   
--   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다. 항목을 참조 하세요 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 자세한 내용은 합니다.  
+-   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다. 자세한 내용은 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 항목을 참조 하세요.  
   
 -   내구성이 커밋에서 보장됩니다. 트랜잭션 커밋이 성공하여 클라이언트에 컨트롤을 반환하기 이전에는 해당 로그 레코드가 디스크에 지속됩니다.  
   
@@ -56,20 +56,20 @@ ms.locfileid: "62743169"
     > [!NOTE]  
     >  동시성이 높은 경우 특히, 로그 버퍼를 플러시 속도보다 더 빠르게 채울 경우 로그 I/O 경합이 여전히 발생할 수 있습니다.  
   
- **지연 된 트랜잭션 내 구성을 사용 하는 경우**  
+ **지연된 트랜잭션 내구성을 사용할 경우**  
   
  지연된 트랜잭션 내구성을 사용하는 것이 유리한 경우는 다음과 같습니다.  
   
- **일부 데이터 손실을 허용할 수 있습니다.**  
+ **약간의 데이터 손실을 허용할 수 있는 경우**  
  약간의 데이터 손실을 허용할 수 있는 경우(예: 대부분의 데이터를 보유하여 개별 데이터가 중요하지는 않은 경우)에는 지연된 내구성을 고려하는 것이 좋습니다. 데이터 손실을 허용할 수 없는 경우에는 지연된 트랜잭션 내구성을 사용하지 마세요.  
   
- **트랜잭션 로그 쓰기 중에 병목 상태가 발생 합니다.**  
+ **트랜잭션 로그 쓰기 중에 병목 현상이 발생하는 경우**  
  트랜잭션 로그 쓰기의 지연으로 인해 성능 문제가 발생하는 경우 애플리케이션에서 지연된 트랜잭션 내구성을 사용하는 것이 좋습니다.  
   
- **작업의 경합 률이 높은 경우**  
+ **작업의 경합률이 높은 경우**  
  작업의 경합 수준이 높은 경우 잠금이 해제되는 동안 대기하는 데 많은 시간이 소요됩니다. 지연된 트랜잭션 내구성은 커밋 시간을 단축하여 잠금을 더 빠르게 해제하여 처리 속도를 높입니다.  
   
- **지연 트랜잭션 내구성 보장**  
+ **지연된 트랜잭션 내구성 보장**  
   
 -   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62743169"
   
     -   동일한 데이터베이스의 완전 내구성이 있는 트랜잭션이 데이터베이스에서 변경되고 성공적으로 커밋된 경우  
   
-    -   사용자가 시스템 저장 프로시저 `sp_flush_log`를 성공적으로 실행한 경우  
+    -   사용자가 시스템 저장 프로시저 `sp_flush_log` 를 성공적으로 실행한 경우  
   
     -   메모리 내 트랜잭션 로그 버퍼가 꽉 차서 디스크에 자동으로 플러시되는 경우  
   
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.  
   
  `ALLOWED`  
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 참조 [Atomic 블록 수준 제어-Natively Compiled Stored Procedures](#atomic-block-level-control---natively-compiled-stored-procedures) 하 고 [COMMIT 수준 제어-Transact SQL](#commit-level-control---t-sql) 자세한 내용은 합니다.  
+ 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어-고유 하 게 컴파일된 저장 프로시저](#atomic-block-level-control---natively-compiled-stored-procedures) 및 [커밋 수준 제어-transact-sql](#commit-level-control---t-sql) 을 참조 하세요.  
   
  `FORCED`  
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 애플리케이션 코드를 변경하지 않으려는 경우에 유용합니다.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Atomic 블록 수준 제어-Natively Compiled Stored Procedures  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저  
  다음 코드는 ATOMIC 블록 내로 이동합니다.  
   
 ```sql  
@@ -131,14 +131,14 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>표 1: Atomic 블록의 내구성  
+### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1; ATOMIC 블록의 내구성  
   
 |ATOMIC 블록 내구성 옵션|기존 트랜잭션 없음|처리 중인 트랜잭션(완전 또는 지연된 내구성이 있음)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|ATOMIC 블록은 새로운 완전 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|  
 |`DELAYED_DURABILITY = ON`|ATOMIC 블록은 새로운 지연된 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|  
   
-### <a name="commit-level-control---t-sql"></a>COMMIT 수준 제어-(T-SQL)
+### <a name="commit-level-control---t-sql"></a>커밋 수준 제어-(T-sql)
  지연된 트랜잭션 내구성을 강제로 적용할 수 있도록 COMMIT 구문이 확장됩니다. 데이터베이스 수준에서 If DELAYED_DURABILITY가 DISABLED 또는 FORCED인 경우(위 내용 참조) 이 COMMIT 옵션은 무시됩니다.  
   
 ```sql  
@@ -157,10 +157,14 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |COMMIT 설정/데이터베이스 설정|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|`DELAYED_DURABILITY = OFF` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
-|`DELAYED_DURABILITY = ON` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
-|`DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
-|`DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|
+  `DELAYED_DURABILITY = OFF` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
+|
+  `DELAYED_DURABILITY = ON` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
+|
+  `DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|
+  `DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>트랜잭션 로그를 강제로 플러시하는 방법  
  디스크에 트랜잭션 로그를 강제로 플러시하는 두 가지 방법이 있습니다.  
@@ -169,7 +173,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   시스템 저장 프로시저 실행 `sp_flush_log`를 실행합니다. 이 프로시저는 모든 이전에 커밋된 지연된 내구성이 있는 트랜잭션의 로그 레코드를 디스크에 강제로 플러시합니다. 자세한 내용은 [sys.sp_flush_log&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql)를 참조하세요.  
   
-##  <a name="delayed-durability-and-other-sql-server-features"></a>지연 된 내구성 및 기타 SQL Server 기능  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>지연된 내구성 및 기타 SQL Server 설정  
  **변경 추적 및 변경 데이터 캡처**  
  변경 추적을 적용한 모든 트랜잭션은 완전 내구성을 가집니다. 변경 추적을 사용하도록 설정한 테이블에 쓰기 작업을 수행하는 경우 트랜잭션은 변경 추적 속성이 있습니다. 지연된 내구성 사용은 CDC(변경 데이터 캡처)를 사용하는 데이터베이스에 지원되지 않습니다.   
   
@@ -179,10 +183,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **데이터베이스 간 및 DTC**  
  데이터베이스 또는 트랜잭션 커밋 설정에 상관없이 데이터베이스 간 트랜잭션 또는 분산 트랜잭션인 경우 트랜잭션은 완전 내구성을 가집니다.  
   
- **Always On 가용성 그룹 및 미러링**  
+ **AlwaysOn 가용성 그룹 및 미러링**  
  지연된 내구성이 있는 트랜잭션은 기본 또는 보조 데이터베이스에서 내구성을 보장하지 않습니다. 또한 보조 데이터베이스에서 트랜잭션에 대한 정보를 보장하지 않습니다. 제어는 커밋 후 동기 보조 데이터베이스에서 승인이 수신되기 이전에 클라이언트에 반환됩니다.  
   
- **장애 조치 클러스터링**  
+ **장애 조치(Failover) 클러스터링**  
  일부 지연된 내구성이 있는 트랜잭션 쓰기가 손실될 수 있습니다.  
   
  **트랜잭션 복제**  
@@ -203,7 +207,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="sql-server-shutdown-and-restart"></a>SQL Server 종료 및 다시 시작  
  지연된 내구성의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 예기치 않은 종료와 예상된 종료/다시 시작 간에는 차이가 없습니다. 재해와 같은 데이터 손실을 대비하여 계획을 세워야 합니다. 예정된 종료/다시 시작에서 디스크에 기록되지 않은 일부 트랜잭션이 먼저 디스크에 저장될 수 있지만 이에 대한 계획을 세우지 않아야 합니다. 예정되었든 예정되지 않았든 종료/다시 시작 시 재해와 동일하게 데이터를 손실할 것처럼 계획을 세우세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침](../in-memory-oltp/memory-optimized-tables.md)  
   

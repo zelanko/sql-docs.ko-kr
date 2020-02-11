@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400450"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Analytics Platform System (APS)에서 master 데이터베이스 복원
@@ -32,8 +32,7 @@ SQL Server PDW Configuration Manager의 **복원 마스터** 페이지를 사용
   
 3.  복원할 마스터 백업을 선택 합니다.  
   
-4.  
-  **적용**을 클릭합니다.  
+4.  **적용**을 클릭합니다.  
   
 5.  복원을 수행 하려면 SQL Server PDW 모든 어플라이언스 서비스를 종료 하 고 모든 사용자의 연결을 끊습니다. 복원이 완료 된 후 SQL Server PDW는 어플라이언스 서비스를 다시 시작 합니다.  
   

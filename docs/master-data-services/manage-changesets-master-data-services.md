@@ -11,21 +11,23 @@ ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728042"
 ---
 # <a name="manage-changesets-master-data-services"></a>변경 집합 관리(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 모델 및 버전별로 모든 변경 내용을 관리할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
--   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
+-   
+  **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
   
 -   엔터티 또는 엔터티의 특성 중 하나에 대한 읽기 이상의 권한이 있어야 합니다.  
   
@@ -35,9 +37,11 @@ ms.locfileid: "73728042"
   
 ## <a name="to-manage-the-changesets"></a>변경 집합을 관리하려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
-2.  **변경 집합**을 클릭합니다. 선택한 모델 및 버전에 대해 관리할 수 있는 모든 변경 집합이 표시됩니다.  
+2.  
+  **변경 집합**을 클릭합니다. 선택한 모델 및 버전에 대해 관리할 수 있는 모든 변경 집합이 표시됩니다.  
   
 3.  변경 집합 세부 정보를 확인하려면 **적용** 을 클릭합니다.  
   

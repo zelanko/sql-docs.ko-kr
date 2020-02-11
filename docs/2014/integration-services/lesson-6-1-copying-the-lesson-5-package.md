@@ -1,5 +1,5 @@
 ---
-title: '1단계: 5 단원 패키지 복사 | Microsoft Docs'
+title: '1단계: 5단원 패키지 복사 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890759"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5단원 패키지 복사
@@ -38,7 +38,7 @@ ms.locfileid: "62890759"
   
 7.  속성 창에서 Name 속성을 Lesson 6으로 업데이트합니다.  
   
-8.  ID 속성에 대 한 상자를 클릭 하 고 드롭다운 화살표를 클릭 한 다음 클릭 \<새 ID 생성 >.  
+8.  ID 속성 상자를 클릭 한 다음 드롭다운 화살표를 클릭 하 고 새 ID> 생성 \<을 클릭 합니다.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>완성된 5단원 패키지를 추가하려면  
   
@@ -52,9 +52,10 @@ ms.locfileid: "62890759"
   
      이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
   
-    2.  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  
+  **DOWNLOADS** 탭을 클릭합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   

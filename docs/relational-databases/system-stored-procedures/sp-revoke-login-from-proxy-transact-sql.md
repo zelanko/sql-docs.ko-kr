@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (TRANSACT-SQL) | Microsoft Docs
+title: sp_revoke_login_from_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019945"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy(Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   보안 주체의 프록시 액세스 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,11 +42,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'` 이름을 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할에 대 한 액세스를 제거 하려면. *이름을* 됩니다 **nvarchar(256)** 기본값은 없습니다.  
+`[ @name = ] 'name'`액세스 권한을 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. *name* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
   
-`[ @proxy_id = ] id` 에 대 한 액세스 권한을 제거할 프록시의 id입니다. 어느 *id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 합니다 *id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_id = ] id`액세스 권한을 제거할 프록시의 id입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Id* 는 **int**이며 기본값은 NULL입니다.  
   
-`[ @proxy_name = ] 'proxy_name'` 에 대 한 액세스 권한을 제거할 프록시의 이름입니다. 어느 *id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_name = ] 'proxy_name'`액세스 권한을 제거할 프록시의 이름입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -70,9 +70,9 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;sp_grant_login_to_proxy &#40;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [Transact-sql&#41;sp_help_proxy &#40;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

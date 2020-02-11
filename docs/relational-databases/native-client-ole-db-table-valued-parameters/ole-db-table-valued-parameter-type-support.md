@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69f7994848d02d6e5e0036aaf132e6294f8d5d90
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761630"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 테이블 반환 매개 변수 형식 지원
@@ -57,10 +57,10 @@ CoType RowsetTVP
  DBTYPE_TABLE과 다른 형식 간의 변환은 지원되지 않습니다. DBTYPE_TABLE에서 DBTYPE_TABLE로의 변환이 아닌 지원되지 않는 변환을 요청하면 IConvertType::CanConvert에서 S_FALSE를 반환합니다. 이는 명령 개체의 DBCONVERTFLAGS_PARAMETER로 간주됩니다.  
   
 ## <a name="methods"></a>메서드  
- 테이블 반환 매개 변수를 지 원하는 OLE DB 메서드에 대 한 자세한 내용은 [테이블 반환 매개 변수 형식 지원 &#40;메서드&#41;OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)를 참조 하세요.  
+ 테이블 반환 매개 변수를 지 원하는 OLE DB 메서드에 대 한 자세한 내용은 [OLE DB 테이블 반환 매개 변수 형식 지원 &#40;메서드&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)를 참조 하세요.  
   
 ## <a name="properties"></a>속성  
- 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 자세한 내용은 [테이블 반환 매개 변수 형식 지원 &#40;속성&#41;OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)을 참조 하세요.  
+ 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 자세한 내용은 [테이블 반환 매개 변수 형식 지원 &#40;속성&#41;OLE DB ](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

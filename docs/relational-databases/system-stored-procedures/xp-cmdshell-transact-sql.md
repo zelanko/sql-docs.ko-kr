@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687316"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687316"
 
   Windows  명령 셸을 생성하고 실행을 위해 문자열로 전달합니다. 모든 출력은 텍스트 행으로 반환됩니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +83,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  자세한 내용은 [sp_xp_cmdshell_proxy_account &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)를 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  악의적인 사용자가 **xp_cmdshell**를 사용 하 여 권한을 상승 하려고 시도 하기 때문에 **xp_cmdshell** 기본적으로 사용 하지 않도록 설정 되어 있습니다. **Sp_configure** 또는 **정책 기반 관리** 를 사용 하 여 사용 하도록 설정 합니다. 자세한 내용은 [xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)을 참조하세요.  
   
  처음 사용 하도록 설정 하면 **xp_cmdshell** 를 실행 하려면 CONTROL SERVER 권한이 필요 하 고 **Xp_cmdshell** 에서 만든 Windows 프로세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정과 동일한 보안 컨텍스트를 갖습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 **xp_cmdshell**에서 만든 프로세스에서 수행 하는 작업에 필요한 것 보다 많은 권한이 있는 경우가 많습니다. 보안을 강화 하려면 권한이 높은 사용자로 **xp_cmdshell** 에 대 한 액세스를 제한 해야 합니다.  

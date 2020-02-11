@@ -14,13 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196721"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 열에 입력되는 기본값을 지정할 수 있습니다. 기본값이 지정되지 않은 상태에서 사용자가 열을 빈 채로 두면 다음과 같은 결과가 발생합니다.  
   
 -   Null 값이 허용되도록 옵션을 설정한 경우 NULL이 열에 삽입됩니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "68196721"
   
      [보안](#Security)  
   
--   **기본값을 지정하려면**  
+-   **기본값을 지정 하려면 다음을 사용 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +46,8 @@ ms.locfileid: "68196721"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   **기본값** 필드에 값을 입력하여 괄호 없이 표시되는 바인딩된 기본값을 바꾸려는 경우 기본값을 바인딩 해제하고 새 기본값으로 대체하라는 메시지가 나타납니다.  
+-   
+  **기본값** 필드에 값을 입력하여 괄호 없이 표시되는 바인딩된 기본값을 바꾸려는 경우 기본값을 바인딩 해제하고 새 기본값으로 대체하라는 메시지가 나타납니다.  
   
 -   텍스트 문자열을 입력하려면 값을 작은따옴표(')로 묶어야 합니다. 큰따옴표(")는 따옴표 붙은 식별자용으로 예약되어 있으므로 사용하지 않아야 합니다.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "68196721"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -66,12 +68,13 @@ ms.locfileid: "68196721"
   
 2.  기본값을 지정하려는 열을 선택합니다.  
   
-3.  **열 속성** 탭에서 **기본값 또는 바인딩** 속성에 새 기본값을 입력합니다.  
+3.  
+  **열 속성** 탭에서 **기본값 또는 바인딩** 속성에 새 기본값을 입력합니다.  
   
     > [!NOTE]  
     >  숫자 기본값을 입력하려면 숫자를 입력합니다. 개체나 함수의 경우 해당 이름을 입력합니다. 영숫자 기본값의 경우 원하는 값을 작은따옴표로 묶어 입력합니다.  
   
-4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -95,6 +98,6 @@ ms.locfileid: "68196721"
   
     ```  
   
- 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조하세요.  
+ 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조 하세요.  
   
 ###  <a name="TsqlExample"></a>  

@@ -20,18 +20,18 @@ ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026202"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-특정 작업과 하나 이상의 대상 서버와의 연관 또는 관계를 저장합니다. 이 테이블은 msdb 데이터베이스에 저장 됩니다.
+특정 작업과 하나 이상의 대상 서버와의 연관 또는 관계를 저장합니다. 이 테이블은 msdb 데이터베이스에 저장됩니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|작업 ID입니다.|  
 |server_id|**int**|서버 ID입니다.|  
@@ -44,9 +44,9 @@ ms.locfileid: "70026202"
 
 ## <a name="remarks"></a>설명
 
-*4* 보다 높은 값은 SQL 에이전트가 해당 작업의 상태를 알 수 없음을 의미 합니다. *Last_run_outcome* 는 작업을 만들 때 처음에 *5* 로 설정 됩니다.
+*4* 보다 높은 값은 SQL 에이전트가 해당 작업의 상태를 알 수 없음을 의미 합니다. 작업을 만들 때 처음에는 *last_run_outcome* *5* 로 설정 됩니다.
 
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-[SQL Server 에이전트 테이블 &#40;transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[Transact-sql&#41;&#40;테이블 SQL Server 에이전트](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

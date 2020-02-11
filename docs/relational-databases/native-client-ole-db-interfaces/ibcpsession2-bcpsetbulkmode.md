@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763202"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: bcpset대량 모드는 열 형식을 지정 하는 [IBCPSession:: &#40;bcpcolfmt OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 에 대 한 대안을 제공 합니다. 개별 열 형식 특성을 설정 하는 IBCPSession:: BCPColFmt와는 달리, IBCPSession2:: Bcpcolfmt 모드는 모든 특성을 설정 합니다.  
+  IBCPSession2:: Bcpset대량 모드는 열 형식을 지정 하기 위한 [IBCPSession:: BCPColFmt &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 에 대 한 대안을 제공 합니다. 개별 열 형식 특성을 설정 하는 IBCPSession:: BCPColFmt와는 달리, IBCPSession2:: Bcpcolfmt 모드는 모든 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>인수  
- *property*  
+ *속성*  
  BYTE 유형의 상수입니다. 상수 목록은 주의 섹션의 표를 참조하십시오.  
   
  *pField*  
@@ -54,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  행 종결자 값의 길이(바이트)입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  IBCPSession2:: Bcpset대량 모드는 다음 중 하나를 반환할 수 있습니다.  
   
 |||  
@@ -65,14 +65,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|잘못된 인수입니다.|  
 |**E_OUTOFMEMORY**|메모리 부족 오류가 발생했습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  IBCPSession2:: Bcpset대량 모드를 사용 하 여 쿼리 또는 테이블에서 대량 복사를 수행할 수 있습니다. 쿼리 문을 대량 복사하는 데 사용되는 IBCPSession2::BCPSetBulkMode는 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)`를 호출하여 쿼리 문을 지정하기 전에 호출해야 합니다.  
   
  단일 명령 텍스트에서 RPC 호출 구문을 일괄 처리 쿼리 구문(예:`{rpc func};SELECT * from Tbl`)과 결합하지 마십시오.  이렇게 하면 ICommandPrepare::P repare에서 오류를 반환 하 고 메타 데이터를 검색할 수 없습니다. 단일 명령 텍스트에서 저장 프로시저 실행 및 일괄 처리 쿼리를 결합해야 할 경우 ODBC CALL 구문(예:`{call func}; SELECT * from Tbl`)을 사용합니다.  
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성을 **BCP_TYPE_SQLCHARACTER**로 설정 합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성을 **BCP_TYPE_SQLNCHAR**로 설정 합니다.|  
@@ -361,7 +361,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

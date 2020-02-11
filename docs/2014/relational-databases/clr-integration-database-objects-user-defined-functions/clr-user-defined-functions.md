@@ -17,14 +17,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874487"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 사용자 정의 함수
-  사용자 정의 함수는 매개 변수를 사용하여 계산이나 다른 동작을 수행한 다음 결과를 반환하는 루틴입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#과 같은 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍 언어를 사용하여 사용자 정의 함수를 작성할 수 있습니다.  
+  사용자 정의 함수는 매개 변수를 사용하여 계산이나 다른 동작을 수행한 다음 결과를 반환하는 루틴입니다. 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#과 같은 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍 언어를 사용하여 사용자 정의 함수를 작성할 수 있습니다.  
   
  함수에는 단일 값을 반환하는 스칼라 반환 함수와 행 집합을 반환하는 테이블 반환 함수의 두 가지 유형이 있습니다.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "62874487"
  [CLR 사용자 정의 집계](clr-user-defined-aggregates.md)  
  사용자 정의 집계를 구현하고 사용하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 정의 함수](../user-defined-functions/user-defined-functions.md)  
   
   

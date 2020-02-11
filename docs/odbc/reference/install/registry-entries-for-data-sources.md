@@ -17,10 +17,10 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009350"
 ---
 # <a name="registry-entries-for-data-sources"></a>데이터 원본에 대한 레지스트리 항목

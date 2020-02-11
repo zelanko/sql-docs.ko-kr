@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240148"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
   **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **열려는 프로그램을 선택하십시오.**  
  선택한 파일 형식에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 사용할 수 있는 편집기를 나열합니다. 표시된 목록에서 문서를 열 편집기를 선택하거나 **추가** 를 클릭하여 목록에 새 편집기를 포함합니다.  
   
- **파일**  
+ **열기**  
  선택한 편집기로 문서를 열려면 **열기** 를 클릭합니다.  
   
  **추가**  
@@ -41,5 +41,5 @@ ms.locfileid: "63240148"
 > [!NOTE]  
 >  **열려는 프로그램을 선택하십시오.** 아래의 프로그램 목록에서 선택한 파일 형식의 기본 편집기 이름 뒤에는 **(기본값)** 이 붙습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

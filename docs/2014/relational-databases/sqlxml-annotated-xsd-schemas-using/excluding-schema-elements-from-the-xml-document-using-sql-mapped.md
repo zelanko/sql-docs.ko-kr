@@ -1,5 +1,5 @@
 ---
-title: '스키마 요소를 제외 하 고 사용 하 여 결과 XML 문서 sql에서: mapped (SQLXML 4.0) | Microsoft Docs'
+title: 'Sql: mapped를 사용 하 여 결과 XML 문서에서 스키마 요소 제외 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,28 +23,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013867"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped를 사용하여 결과 XML 문서에서 스키마 요소 제외(SQLXML 4.0)
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 그러나 어느 데이터베이스 테이블(뷰) 또는 열에도 매핑되지 않고 XML에 표시되지 않는 요소를 XSD 스키마에 만들려면 `sql:mapped` 주석을 지정할 수 있습니다.  
   
- `sql:mapped` 주석은 스키마를 수정할 수 없는 경우 또는 스키마가 데이터베이스에 저장되어 있지 않은 데이터를 포함하지만 다른 원본에서 XML의 유효성을 검사하는 데 사용되는 경우에 특히 유용합니다. `sql:mapped` 주석은 매핑되지 않은 요소 및 특성이 XML 문서에서 나타나지 않는다는 점에서 `sql:is-constant`와는 다릅니다.  
+ 
+  `sql:mapped` 주석은 스키마를 수정할 수 없는 경우 또는 스키마가 데이터베이스에 저장되어 있지 않은 데이터를 포함하지만 다른 원본에서 XML의 유효성을 검사하는 데 사용되는 경우에 특히 유용합니다. 
+  `sql:mapped` 주석은 매핑되지 않은 요소 및 특성이 XML 문서에서 나타나지 않는다는 점에서 `sql:is-constant`와는 다릅니다.  
   
- `sql:mapped` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
+ 
+  `sql:mapped` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>1\. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마 구성를  **\<Person.Contact >** 사용 하 여 요소 **ContactID**를 **FirstName**를 **LastName**, 및 **HomeAddress** 특성입니다.  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **** **** **** **** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
   
- 이 XSD 스키마는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑할 `sql:mapped` 에 지정 되어 합니다 **HomeAddress** Employees 테이블에 직원의 자택 주소가 저장 하지 않으므로 특성입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
+ 이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 Employees 테이블에 `sql:mapped` 직원의 홈 주소가 저장 되지 않기 때문에 **HomeAddress** 특성에이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. 합니다  **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에서 동일한 이름 가진 열에 매핑됩니다.  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. Person. contact>요소는 person 테이블에 매핑되고, 모든 특성은 person. contact 테이블에서 이름이 같은 열에 매핑됩니다. ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -83,7 +86,7 @@ ms.locfileid: "66013867"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
+     자세한 내용은 [ADO를 사용 하 여 SQLXML 쿼리 실행](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -103,7 +106,7 @@ ms.locfileid: "66013867"
   
  매핑 스키마에서 `sql:mapped` 특성에 대해 0을 지정했기 때문에 ContactID, FirstName 및 LastName은 있지만 HomeAddress는 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [기본 매핑의 XSD 요소 및 특성 테이블 및 열을 &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQLXML 4.0 &#40;테이블 및 열에 대 한 XSD 요소 및 특성의 기본 매핑&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b985db3cb58a7029a3b5ec489d2e23b0c1292919
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786734"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   일반적으로   
-      ODBC 3.0 이상에서는**SQLFreeStmt** 가 권장되지 않습니다. 그러나 응용 프로그램에서 문을 다시 사용 해야 하는 경우에도 **SQL_RESET_PARAMS** 및 **SQL_UNBIND** 옵션과 함께 **SQLFreeStmt** 를 사용 해야 합니다. [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md), [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)및 [sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 사용 하 여 **SQLFreeStmt** 의 기능을 대체 하거나 중복 하 고 대신이를 사용 해야 할 수도 있습니다.  
+      ODBC 3.0 이상에서는 **SQLFreeStmt** 을 권장 하지 않습니다. 그러나 응용 프로그램에서 문을 다시 사용 해야 하는 경우에도 **SQL_RESET_PARAMS** 및 **SQL_UNBIND** 옵션과 함께 **SQLFreeStmt** 를 사용 해야 합니다. [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md), [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)및 [sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 사용 하 여 **SQLFreeStmt** 의 기능을 대체 하거나 중복 하 고 대신이를 사용 해야 할 수도 있습니다.  
   
  일반적으로 문을 삭제 하 고 새 문을 할당 하는 것 보다 문을 다시 사용 하는 것이 더 효율적입니다. 그러나 문 재사용과 같은 경우에도 SQLFreeStmt를 사용 해야 합니다.  
   

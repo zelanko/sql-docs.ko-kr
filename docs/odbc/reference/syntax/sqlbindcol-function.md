@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289288"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656600"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 함수
 **규칙**  
@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  입력 바인딩할 결과 집합 열의 수입니다. 열은 0부터 시작 하 여 열 순서를 기준으로 번호가 매겨집니다. 여기서 열 0은 책갈피 열입니다. 책갈피를 사용 하지 않는 경우, 즉 SQL_ATTR_USE_BOOKMARKS statement 특성이 SQL_UB_OFF로 설정 된 경우 열 번호는 1부터 시작 합니다.  
   
  *TargetType*  
- 입력 *Targetvalueptr* 버퍼 \*C 데이터 형식의 식별자입니다. **Sqlfetch**, **sqlfetchscroll**, **SQLBulkOperations**또는 **SQLSetPos**를 사용 하 여 데이터 원본에서 데이터를 검색 하는 경우 드라이버는 데이터를이 형식으로 변환 합니다. **SQLBulkOperations** 또는 **SQLSetPos**를 사용 하 여 데이터 원본에 데이터를 보낼 때 드라이버는이 유형의 데이터를 변환 합니다. 유효한 C 데이터 형식 및 형식 식별자 목록은 부록 D: 데이터 형식의 [c 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션을 참조 하세요.  
+ 입력 \* *Targetvalueptr* 버퍼의 C 데이터 형식의 식별자입니다. **Sqlfetch**, **sqlfetchscroll**, **SQLBulkOperations**또는 **SQLSetPos**를 사용 하 여 데이터 원본에서 데이터를 검색 하는 경우 드라이버는 데이터를이 형식으로 변환 합니다. **SQLBulkOperations** 또는 **SQLSetPos**를 사용 하 여 데이터 원본에 데이터를 보낼 때 드라이버는이 유형의 데이터를 변환 합니다. 유효한 C 데이터 형식 및 형식 식별자 목록은 부록 D: 데이터 형식의 [c 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션을 참조 하세요.  
   
  *TargetType* 인수가 interval 데이터 형식인 경우에는 데이터에 대 한 기본 간격 선행 전체 자릿수 (2)와 기본 간격 초 전체 자릿수 (6)가 각각의 SQL_DESC_DATETIME_INTERVAL_PRECISION 및 SQL_DESC_PRECISION 필드에 설정 됩니다. *TargetType* 인수가 SQL_C_NUMERIC 이면 데이터에 사용 되는 SQL_DESC_PRECISION 및 SQL_DESC_SCALE 필드에 설정 된 기본 전체 자릿수 (드라이버 정의) 및 기본 소수 자릿수 (0)가 사용 됩니다. 기본 전체 자릿수 또는 소수 자릿수가 적절 하지 않은 경우 응용 프로그램에서 **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 적절 한 설명자 필드를 명시적으로 설정 해야 합니다.  
   
@@ -67,9 +67,9 @@ SQLRETURN SQLBindCol(
  *Targetvalueptr* 이 null 포인터인 경우 드라이버는 열에 대 한 데이터 버퍼의 바인딩을 해제 합니다. 응용 프로그램은 SQL_UNBIND 옵션으로 **SQLFreeStmt** 를 호출 하 여 모든 열의 바인딩을 해제할 수 있습니다. 응용 프로그램은 열에 대 한 데이터 버퍼의 바인딩을 해제할 수 있지만 **SQLBindCol** 에 대 한 호출의 *Targetvalueptr* 인수가 null 포인터이 고 *StrLen_or_IndPtr* 인수가 유효한 값인 경우에는 열에 대 한 길이/표시기 버퍼가 계속 바인딩됩니다.  
   
  *BufferLength*  
- 입력 \**Targetvalueptr* 버퍼의 길이 (바이트)입니다.  
+ 입력 \* *Targetvalueptr* 버퍼의 길이 (바이트)입니다.  
   
- 드라이버는 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 때 \**Targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 *bufferlength* 를 사용 합니다. 드라이버는 \**Targetvalueptr*에 문자 데이터를 반환 하는 경우 null 종료 문자를 계산 합니다. 따라서 *Targetvalueptr* \*null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
+ 드라이버는 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 \*때 *targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 *bufferlength* 를 사용 합니다. 드라이버는 문자 데이터를 \* *targetvalueptr*에 반환할 때 null 종료 문자를 계산 합니다. \*따라서 *Targetvalueptr* 은 null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
   
  드라이버가 정수 또는 날짜 구조와 같은 고정 길이 데이터를 반환 하는 경우 드라이버는 *Bufferlength* 를 무시 하 고 버퍼가 데이터를 저장할 수 있을 만큼 충분히 큰지 가정 합니다. 따라서 응용 프로그램이 고정 길이 데이터에 대해 충분 한 크기의 버퍼를 할당 하는 것이 중요 합니다. 그렇지 않으면 드라이버가 버퍼의 끝을 넘어 기록 됩니다.  
   
@@ -108,18 +108,18 @@ SQLRETURN SQLBindCol(
   
  응용 프로그램이 64 비트 운영 체제에서 실행 되는 경우 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)를 참조 하세요.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
   
 ## <a name="diagnostics"></a>진단  
  **SQLBindCol** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLBindCol** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|설명|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07006|제한 된 데이터 형식 특성 위반|(DM) *Columnnumber* 인수가 0이 고 *TargetType* 인수가 SQL_C_BOOKMARK 되지 않았거나 SQL_C_VARBOOKMARK.|  
 |07009|잘못 된 설명자 인덱스|인수 *Columnnumber* 에 지정 된 값이 결과 집합의 최대 열 개수를 초과 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. *\*MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY003|응용 프로그램 버퍼 유형이 잘못 되었습니다.|인수 *TargetType* 이 올바른 데이터 형식 또는 SQL_C_DEFAULT 아닙니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLBindCol** 가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수가 호출 되었으며이 함수가 호출 될 때 여전히 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
@@ -236,11 +236,11 @@ SQLRETURN SQLBindCol(
   
  여기서 수식의 변수는 다음 표에 설명 된 대로 정의 됩니다.  
   
-|변수|설명|  
+|변수|Description|  
 |--------------|-----------------|  
 |*바인딩된 주소*|데이터 버퍼의 경우 **SQLBindCol**의 *Targetvalueptr* 인수를 사용 하 여 지정 된 주소입니다.<br /><br /> 길이/표시기 버퍼의 경우 **SQLBindCol**의 *StrLen_or_IndPtr* 인수를 사용 하 여 지정 된 주소입니다. 자세한 내용은 "설명자 and SQLBindCol" 섹션의 "추가 주석"을 참조 하세요.<br /><br /> 바인딩된 주소가 0 이면 이전 수식에서 계산 된 주소가 0이 아닌 경우에도 데이터 값이 반환 되지 않습니다.|  
 |*바인딩 오프셋*|행 단위 바인딩을 사용 하는 경우 SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성으로 지정 된 주소에 저장 된 값입니다.<br /><br /> 열 단위 바인딩을 사용 하거나 SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성의 값이 null 포인터인 경우 *바인딩 오프셋* 은 0입니다.|  
-|*행 번호*|행 집합의 행 번호 (1부터 수)입니다. 단일 행 페치의 경우 기본값은 1입니다.|  
+|*Row Number*|행 집합의 행 번호 (1부터 수)입니다. 단일 행 페치의 경우 기본값은 1입니다.|  
 |*요소 크기*|바인딩된 배열의 요소 크기입니다.<br /><br /> 열 단위 바인딩을 사용 하는 경우 길이/표시기 버퍼에 대 한 **sizeof (SQLINTEGER)** 입니다. 데이터 버퍼의 경우 데이터 형식이 가변 길이인 경우 **SQLBindCol** 에서 *bufferlength* 인수의 값이 고 데이터 형식이 고정 길이인 경우 데이터 형식의 크기입니다.<br /><br /> 행 단위 바인딩을 사용 하는 경우이 값은 데이터 및 길이/표시 버퍼에 대 한 SQL_ATTR_ROW_BIND_TYPE statement 특성의 값입니다.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>설명자 및 SQLBindCol  
@@ -295,7 +295,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -335,17 +335,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  
@@ -372,13 +379,13 @@ int main() {
   
 ## <a name="related-functions"></a>관련 함수  
   
-|내용|참조 항목|  
+|원하는 정보|참조 항목|  
 |---------------------------|---------|  
 |결과 집합의 열에 대 한 정보 반환|[SQLDescribeCol 함수](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|데이터 블록 가져오기 또는 결과 집합을 통한 스크롤|[SQLFetchScroll 함수](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|데이터 블록 가져오기 또는 결과 집합을 통한 스크롤|[SQLFetchScroll 함수(SQLFetchScroll Function)](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |여러 행의 데이터 페치|[SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |문에서 열 버퍼 해제|[SQLFreeStmt 함수](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|데이터 열의 일부 또는 전체를 가져오는 중|[SQLGetData 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|데이터 열의 일부 또는 전체를 가져오는 중|[SQLGetData 함수(SQLGetData Function)](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |결과 집합 열 수 반환|[SQLNumResultCols 함수](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
 ## <a name="see-also"></a>참고 항목  

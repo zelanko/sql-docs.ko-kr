@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244903"
 ---
 # <a name="drag-and-drop-text"></a>텍스트 끌어다 놓기
@@ -29,8 +29,7 @@ ms.locfileid: "75244903"
   
 -   편집기 간에  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 휴지통으로  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 휴지통으로  
   
 ### <a name="to-drag-and-drop-text"></a>텍스트를 끌어다 놓으려면  
   

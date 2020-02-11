@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244524"
 ---
 # <a name="link-to-programming-samples"></a>프로그래밍 예제 링크
@@ -26,7 +26,7 @@ ms.locfileid: "75244524"
   
  예제를 설치 하는 방법에 대 한 자세한 내용은 [SQL Server 2012에 대 한 AdventureWorks](https://msftdbprodsamples.codeplex.com/releases/view/55330)를 참조 하십시오.  
   
-|제목|설명|  
+|제목|Description|  
 |-----------|-----------------|  
 |BackRest|데이터베이스를 백업 및 복원하는 방법을 설명합니다.|  
 |ChangeTableOwner|소유자가 dbo가 아닌 모든 테이블의 소유권을 dbo로 변경하는 방법을 설명합니다.|  

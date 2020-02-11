@@ -1,6 +1,6 @@
 ---
 title: 정리 및 일치에 대 한 임계값 구성
-description: DQS (SQL Server Data Quality Services에서 활동의 컴퓨터 기반 정리 및 일치 작업 중에 사용할 임계값을 구성 하는 방법에 대해 알아봅니다.
+description: DQS (SQL Server Data Quality Services)에서 컴퓨터 기반 정리 및 일치 작업 중에 사용할 임계값을 구성 하는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557895"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76916305"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>정리 및 일치-DQS (Data Quality Services)에 대 한 임계값 구성
 
@@ -30,11 +30,11 @@ ms.locfileid: "75557895"
 
   이 항목에서는 컴퓨터 기반 정리 및 일치 작업 중에 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 사용할 임계값을 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  이러한 임계값을 구성하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Configure"></a>임계값 구성  
@@ -54,7 +54,6 @@ ms.locfileid: "75557895"
   
 5.  일치 작업에 대한 임계값을 지정하려면 **일치** 영역 아래의 **최소 레코드 점수** 상자에 값을 지정합니다. 이 값은 레코드가 다른 레코드와 일치하는 것으로 간주되는 최소 점수를 나타냅니다. 기본값은 80%입니다.  
   
-6.  
-  **닫기**를 클릭합니다.  
+6.  **닫기**를 클릭합니다.  
   
   

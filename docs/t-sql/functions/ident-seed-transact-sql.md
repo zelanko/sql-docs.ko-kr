@@ -20,10 +20,10 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9685c68127b5370d007981a2f01e67f8d22df5da
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843685"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED(Transact-SQL)
@@ -53,7 +53,7 @@ IDENT_SEED ( 'table_or_view' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-seed-value-from-a-specified-table"></a>1\. 지정된 테이블에서 초기값 반환  
+### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 지정된 테이블에서 초기값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 초기값을 반환합니다.  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT IDENT_SEED('Person.Address') AS Identity_Seed;
 GO  
 ```  
   
-### <a name="b-returning-the-seed-value-from-multiple-tables"></a>2\. 여러 테이블에서 초기값 반환  
+### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. 여러 테이블에서 초기값 반환  
  다음 예제에서는 초기값이 있는 ID 열을 포함하는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블을 반환합니다.  
   
 ```sql  

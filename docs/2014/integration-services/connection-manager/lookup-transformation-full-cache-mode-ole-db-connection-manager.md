@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833712"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
@@ -51,11 +51,11 @@ ms.locfileid: "62833712"
   
     -   **테이블 또는 뷰 사용**을 클릭한 다음 테이블이나 뷰를 선택하거나, **새로 만들기** 를 클릭하여 테이블이나 뷰를 만듭니다.  
   
-         -또는-  
+         또는  
   
     -   **SQL 쿼리 결과 사용**을 클릭한 후 **SQL 명령** 창에서 쿼리를 작성하거나 **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 제공하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         -또는-  
+         또는  
   
     -   또는 **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62833712"
   
 13. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [캐시 없음 또는 부분 캐시 모드로 조회 구현](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 변환](../data-flow/transformations/integration-services-transformations.md)  

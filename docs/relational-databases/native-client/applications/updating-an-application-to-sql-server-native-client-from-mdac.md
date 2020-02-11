@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243792"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC에서 SQL Server Native Client로 애플리케이션 업데이트
@@ -112,11 +112,11 @@ ms.locfileid: "75243792"
   
     |SQL Server 2005 형식|SQL Server 2000 형식|  
     |--------------------------|--------------------------|  
-    |**varchar (max)**|**본문**|  
+    |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
-    |**varbinary (max)**|**이미지로**|  
+    |**varbinary(max)**|**image**|  
     |**udt**|**varbinary**|  
-    |**Xml**|**ntext**|  
+    |**xml**|**ntext**|  
   
      이 형식 매핑은 열 메타데이터에 대해 반환되는 값에 영향을 줍니다. 예를 들어 **텍스트** 열의 최대 크기는 2147483647 이지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client ODBC는 **varchar (max)** 열의 최대 크기를 SQL_SS_LENGTH_UNLIMITED로 보고 하 고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB는 플랫폼에 따라 **varchar (max)** 열의 최대 크기를 2147483647 또는-1로 보고 합니다.  
   
@@ -134,6 +134,6 @@ ms.locfileid: "75243792"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC는 모두 행 버전 관리를 사용한 커밋된 읽기 트랜잭션 격리를 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client만 스냅샷 트랜잭션 격리를 지원합니다. 프로그래밍 측면에서 행 버전 관리를 사용한 커밋된 읽기 트랜잭션 격리는 커밋된 읽기 트랜잭션과 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Native Client를 사용 하 여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

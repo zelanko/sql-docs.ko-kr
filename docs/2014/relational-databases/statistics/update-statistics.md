@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033665"
 ---
 # <a name="update-statistics"></a>통계 업데이트
@@ -33,7 +33,7 @@ ms.locfileid: "63033665"
   
 -   **다음을 사용하여 통계 개체를 업데이트하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63033665"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  UPDATE STATISTICS를 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 작업을 하려면 테이블 또는 뷰에 대한 ALTER 권한이 있어야 합니다. `sp_updatestats`를 사용할 경우 **sysadmin** 고정 서버 역할에 멤버 자격이 있거나 데이터베이스(**dbo**)의 소유권이 있어야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -58,7 +58,7 @@ ms.locfileid: "63033665"
   
 5.  업데이트하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  에 **통계 속성-**_statistics_name_ 대화 상자를 선택 합니다 **이러한 열에 대 한 통계를 업데이트** 확인란을 클릭 한 다음 **확인**.  
+6.  **통계 속성-**_statistics_name_ 대화 상자에서 **이 열에 대 한 통계 업데이트** 확인란을 선택한 다음 **확인**을 클릭 합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63033665"
     GO  
     ```  
   
- 자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 참조하세요.  
+ 자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)로 만든 데이터베이스 유지 관리 계획을 실행합니다.  
   
 #### <a name="to-update-all-statistics-in-a-database"></a>데이터베이스의 모든 통계를 업데이트하려면  
   

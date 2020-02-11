@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893500"
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
@@ -57,9 +57,9 @@ ms.locfileid: "68893500"
   
  집합은 3개의 튜플로 구성됩니다. 각 튜플은 Product 차원의 Product Categories 계층 및 Date 차원의 Calendar 계층에 있는 멤버에 대한 두 개의 명시적 참조를 포함합니다.  
   
- 집합을 반환 하는 함수의 예는 [Members 작업, 튜플 &#40;및 집합 MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)를 참조 하십시오.  
+ 집합을 반환 하는 함수의 예는 [Members, 튜플 및 set &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX &#40;식&#41;](../mdx/expressions-mdx.md)  
   
   

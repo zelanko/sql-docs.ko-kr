@@ -1,5 +1,5 @@
 ---
-title: Members (집합) (MDX) | Microsoft Docs
+title: Members (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138264"
 ---
 # <a name="members-set-mdx"></a>Members(집합)(MDX)
@@ -39,9 +39,9 @@ Level_Expression.Members
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 계층 식이 지정 하는 경우는 **Members (집합)** 함수 계산된 멤버를 포함 하지 않습니다 지정된 된 계층 내의 모든 멤버 집합을 반환 합니다. 계산 하는 모든 멤버 집합을 구하거 나 그렇지 않은 경우 계층 구조를 사용 하 여 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) 함수  
+ 계층 식이 지정 된 경우 **Members (Set)** 함수는 계산 멤버를 포함 하지 않고 지정 된 계층 내의 모든 멤버 집합을 반환 합니다. 계층에서 계산 되거나 다른 모든 멤버 집합을 가져오려면 [allmembers &#40;MDX&#41;](../mdx/allmembers-mdx.md) 함수를 사용 합니다.  
   
- 수준 식이 지정 되는 **Members (집합)** 함수는 지정 된 수준 내의 모든 멤버 집합을 반환 합니다.  
+ 수준 식이 지정 된 경우 **members (Set)** 함수는 지정 된 수준 내의 모든 멤버 집합을 반환 합니다.  
   
 > [!IMPORTANT]  
 >  차원에 표시 가능한 계층이 하나만 있는 경우 해당 차원 이름은 표시 가능한 유일한 계층으로 확인되므로 해당 계층을 차원 이름이나 계층 이름 중 하나로 참조할 수 있습니다. 예를 들어 Measures.Members는 Measures 차원의 유일한 계층으로 확인되므로 유효한 MDX 식입니다.  
@@ -57,7 +57,7 @@ FROM
   
 ```  
   
- 다음 예에서는 `[Product].[Products].[Product Line]` 수준의 각 멤버에 대해 2003년 주문 수량을 반환합니다. 합니다 **멤버** 함수 모든 수준에서 멤버를 나타내는 집합을 반환 합니다.  
+ 다음 예에서는 `[Product].[Products].[Product Line]` 수준의 각 멤버에 대해 2003년 주문 수량을 반환합니다. **Members** 함수는 수준의 모든 멤버를 나타내는 집합을 반환 합니다.  
   
 ```  
 SELECT   
@@ -69,8 +69,8 @@ WHERE
    {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

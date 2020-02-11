@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401658"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-sql) 
@@ -25,13 +25,13 @@ ms.locfileid: "74401658"
 
 구체화 된 뷰에서 열에 대 한 분포 정보를 표시 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|열이 속한 개체의 ID입니다. |  
 |column_id|**int**|열의 ID입니다.|  
 |distribution_ordinal|**tinyint**|0 = 배포 열이 아닙니다.</br> 1 = SQL Data Warehouse이 열을 사용 하 여 구체화 된 뷰를 배포 합니다.|
  
-## <a name="permissions"></a>권한 
+## <a name="permissions"></a>사용 권한 
 
 VIEW DATABASE STATE 권한이 필요합니다.
 

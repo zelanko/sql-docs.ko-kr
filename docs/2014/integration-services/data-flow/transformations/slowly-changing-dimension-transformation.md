@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900205"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
@@ -46,7 +46,7 @@ ms.locfileid: "62900205"
   
 -   변경 특성 변경 내용은 기존 레코드를 덮어씁니다. 이러한 종류의 변경 내용은 Type 1 변경 내용과 동일합니다. 느린 변경 차원 변환은 이러한 행을 **변경 특성 업데이트 내용 출력**이라는 출력으로 보냅니다.  
   
--   기록 특성 변경 내용은 기존 레코드를 업데이트하는 대신 새 레코드를 만듭니다. 기존 레코드에서 허용되는 유일한 변경 내용은 레코드가 현재 상태 또는 만료된 상태인지 여부를 나타내는 열에 대한 업데이트입니다. 이러한 종류의 변경 내용은 Type 2 변경 내용과 동일합니다. 느린 변경 차원 변형은 이러한 행을 **기록 특성 삽입 내용 출력**과 **새 출력**, 이 두 출력으로 보냅니다.  
+-   기록 특성 변경 내용은 기존 레코드를 업데이트하는 대신 새 레코드를 만듭니다. 기존 레코드에서 허용되는 유일한 변경 내용은 레코드가 현재 상태 또는 만료된 상태인지 여부를 나타내는 열에 대한 업데이트입니다. 이러한 종류의 변경 내용은 Type 2 변경 내용과 동일합니다. 느린 변경 차원 변환은 이러한 행을 **기록 특성 삽입 내용 출력** 및 **새 출력**이라는 출력으로 보냅니다.  
   
 -   고정 특성 변경 내용은 열 값이 변경되지 않도록 지정합니다. 느린 변경 차원 변환은 변경 내용을 검색하고 변경 내용이 포함된 행을 **고정 특성 출력**이라는 출력으로 보낼 수 있습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62900205"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   

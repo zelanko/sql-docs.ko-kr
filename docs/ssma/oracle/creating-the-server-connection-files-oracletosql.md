@@ -1,5 +1,5 @@
 ---
-title: 서버 연결 파일 (OracleToSQL) 만들기 | Microsoft Docs
+title: 서버 연결 파일 만들기 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +14,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266106"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>서버 연결 파일 만들기(OracleToSQL)
-스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
+서버 정보는 스크립트 파일의 servers 섹션 또는 별도의 서버 연결 파일에서 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는, `-c <serverconnectionfile>`입니다. 스크립트 파일 및 서버 연결 파일에 동일한 서버 id가 있는 경우 스크립트 파일의 서버 정의가 고려 됩니다.  
   
 **예: 1**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68266106"
   
 </sql-server>  
 ```  
-**예제: 2**  
+**예: 2**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -103,8 +103,8 @@ ms.locfileid: "68266106"
 ```  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+콘솔 운영의 다음 단계에서는 [SSMA 콘솔 &#40;OracleToSQL를 실행 합니다&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SSMA 콘솔 실행](executing-the-ssma-console-oracletosql.md)  
   

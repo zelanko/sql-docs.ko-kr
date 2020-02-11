@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211188"
 ---
 # <a name="creating-views-and-stored-procedures"></a>뷰 및 저장 프로시저 만들기
-  이제 Mary는 **TestData** 데이터베이스에 액세스할 수 있으므로 뷰 및 저장 프로시저와 같은 일부 데이터베이스 개체를 만든 다음 이러한 개체에 대한 액세스 권한을 Mary에게 부여할 수 있습니다. 뷰는 저장된 SELECT 문이며 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  
+  이제 Mary는 **TestData** 데이터베이스에 액세스할 수 있으므로 뷰 및 저장 프로시저와 같은 일부 데이터베이스 개체를 만든 다음 이러한 개체에 대 한 액세스 권한을 mary에 게 부여할 수 있습니다. 뷰는 저장된 SELECT 문이며 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  
   
  뷰는 테이블처럼 쿼리되며 매개 변수를 허용하지 않습니다. 저장 프로시저는 뷰보다 복잡합니다. 저장 프로시저는 입력 및 출력 매개 변수를 가질 수 있으며 코드 흐름을 제어하기 위해 IF 및 WHILE 문과 같은 문을 포함할 수 있습니다. 데이터베이스의 모든 반복되는 동작에 저장 프로시저를 사용하는 것이 바람직한 프로그래밍 방식입니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68211188"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [데이터베이스 개체에 대한 액세스 권한 부여](lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   

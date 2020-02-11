@@ -17,25 +17,27 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729379"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
+  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기 &#40;MDS(Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md) 를 참조 하세요&#41;  
   
 > [!NOTE]  
 >  다른 멤버의 도메인 기반 특성 값으로 사용되는 멤버는 삭제할 수 없습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   
+  **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   멤버의 경우 멤버를 삭제할 리프 모델 개체에 대한 **삭제** 이상의 권한이 있어야 합니다.  
   
@@ -43,11 +45,14 @@ ms.locfileid: "73729379"
   
 ### <a name="to-delete-a-member-or-collection"></a>멤버 또는 컬렉션을 삭제하려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
-2.  **버전** 목록에서 버전을 선택합니다.  
+2.  
+  **버전** 목록에서 버전을 선택합니다.  
   
-3.  **탐색기**를 클릭합니다.  
+3.  
+  **탐색기**를 클릭합니다.  
   
 4.  삭제하려면  
   
@@ -59,15 +64,16 @@ ms.locfileid: "73729379"
   
 5.  표에서 삭제할 멤버 또는 컬렉션의 행을 선택합니다.  
   
-6.  **멤버 삭제**또는 **삭제**또는 **컬렉션 삭제**를 클릭합니다.  
+6.  
+  **멤버 삭제**또는 **삭제**또는 **컬렉션 삭제**를 클릭합니다.  
   
 7.  엔터티 관리자도 엔터티 버전의 일시 삭제된 모든 멤버를 삭제(영구 삭제)에 대한 메뉴 옵션이 나타납니다.  
   
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [MDS(Master Data Services) &#40;멤버 또는 컬렉션을 다시 활성화&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [멤버가 MDS(Master Data Services)를 &#40;&#41;](../master-data-services/members-master-data-services.md)   
+ [컬렉션 &#40;MDS(Master Data Services)&#41;](../master-data-services/collections-master-data-services.md)  
   
   

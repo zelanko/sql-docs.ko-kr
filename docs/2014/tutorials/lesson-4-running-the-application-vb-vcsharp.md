@@ -1,5 +1,5 @@
 ---
-title: '4단원: 응용 프로그램을 실행 (VB-VC#) | Microsoft Docs'
+title: '4 단원: 응용 프로그램 실행 (VB-VC #) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137481"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>4단원: 응용 프로그램을 실행 (VB-VC#)
+# <a name="lesson-4-running-the-application-vb-vc"></a>4 단원: 응용 프로그램 실행 (VB-VC #)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE에서 콘솔 애플리케이션을 작성하고 실행하는 여러 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  
@@ -28,7 +29,8 @@ ms.locfileid: "63137481"
   
 ### <a name="to-build-and-run-the-getpropertiessample"></a>GetPropertiesSample을 작성하고 실행하려면  
   
-1.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
+1.  
+  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
   
      애플리케이션은 다음 결과를 콘솔로 출력합니다.  
   
@@ -43,8 +45,8 @@ ms.locfileid: "63137481"
   
 2.  아무 키나 눌러 GetPropertiesSample을 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
- [Visual Basic 또는 Visual C를 사용 하 여 보고서 서버 웹 서비스에 액세스&#35; &#40;SSRS 자습서&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Visual Basic 또는 Visual C&#35; &#40;SSRS 자습서를 사용 하 여 보고서 서버 웹 서비스에 액세스&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

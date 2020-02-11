@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056297"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
@@ -28,15 +28,15 @@ WideWorldImportersDW 데이터베이스에 대 한 설치 및 구성 지침을 �
 
 예제의 최신 릴리스는 다음과 같습니다.
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[와이드-가져오기-릴리스](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 SQL Server 또는 Azure SQL Database 버전에 해당 하는 샘플 WideWorldImportersDW database backup/bacpac를 다운로드 합니다.
 
 예제 데이터베이스를 다시 만드는 소스 코드는 다음 위치에서 사용할 수 있습니다. 데이터 채우기는 OLTP 데이터베이스 (WideWorldImporters)의 ETL을 기반으로 합니다.
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[와이드-가져오기-소스](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>설치
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -50,7 +50,7 @@ SQL Server 인스턴스에 백업을 복원 하려면 Management Studio를 사�
 5. 필요한 경우 **파일** 창에서 데이터 및 로그 파일의 대상 위치를 변경 합니다. 데이터와 로그 파일을 서로 다른 드라이브에 저장 하는 것이 가장 좋습니다.
 6. **확인**을 클릭합니다. 그러면 데이터베이스 복원이 시작 됩니다. 완료 되 면 데이터베이스 WideWorldImporters이 SQL Server 인스턴스에 설치 됩니다.
 
-### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 있습니다.
 
@@ -60,9 +60,9 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 3. **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭 하 고 **데이터 계층 응용 프로그램 가져오기**를 선택 합니다.
 4. **가져오기 설정** 에서 **로컬 디스크에서 가져오기** 를 선택 하 고 파일 시스템에서 샘플 데이터베이스의 bacpac를 선택 합니다.
 5. **데이터베이스 설정** 에서 데이터베이스 이름을 *WideWorldImportersDW* 로 변경 하 고 사용할 대상 버전 및 서비스 목표를 선택 합니다.
-6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. 완료 하는 데 몇 분 정도 걸립니다. S2 보다 낮은 서비스 목표를 지정 하는 경우 시간이 오래 걸릴 수 있습니다.
+6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. 작업을 완료하는 데 몇 분 정도 걸립니다. S2 보다 낮은 서비스 목표를 지정 하는 경우 시간이 오래 걸릴 수 있습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 [SQL Server 2016 이상) Developer/Evaluation/Enterprise Edition에 적용 됩니다.
 

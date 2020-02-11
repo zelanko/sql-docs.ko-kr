@@ -1,5 +1,5 @@
 ---
-title: sys. dm _ _ _ _ _ _ 통계 | Microsoft Docs
+title: sys. dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 314318f2292a8d929a5d0eeaf68f01910f6de45f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476284"
 ---
-# <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
+# <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. 외부 스크립트 요청이 지원되는 외부 스크립트 언어로 그룹화됩니다. 각 등록된 외부 스크립트 함수에 대해 행이 하나씩 생성됩니다. 임의의 외부 스크립트 함수는 `rxExec`같은 부모 프로세스에 의해 전송되지 않는 한 기록되지 않습니다.
@@ -35,9 +35,9 @@ ms.locfileid: "68476284"
 > [!NOTE]  
 > 이 DMV (동적 관리 뷰)는 외부 스크립트 실행을 지 원하는 기능을 설치 하 고 사용 하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2017 이상에서 SQL Server 2016 및 Machine Learning Services (r, Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md) [의 r Services](../../advanced-analytics/r/sql-server-r-services.md) 를 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|language|**nvarchar**|등록된 외부 스크립트 언어의 이름입니다. 각 외부 스크립트에서 연결된 실행 프로그램을 시작하려면 스크립트 요청에서 언어를 지정 해야 합니다. |  
+|언어|**nvarchar**|등록된 외부 스크립트 언어의 이름입니다. 각 외부 스크립트에서 연결된 실행 프로그램을 시작하려면 스크립트 요청에서 언어를 지정 해야 합니다. |  
 |counter_name|**nvarchar**|등록된 외부 스크립트 함수의 이름입니다. Null을 허용하지 않습니다.|  
 |counter_value|**integer**|서버에서 등록된 외부 스크립트 함수를 호출한 총 인스턴스 수입니다. 이 값은 누적되며, 인스턴스에 기능이 설치된 시간부터 시작되어 다시 설정할 수 없습니다.|  
 
@@ -62,7 +62,8 @@ SQL Server 2016에서 유일 하 게 지원 되는 외부 언어는 R 이며 외
 
 R의 경우이 DMV는 인스턴스에 대해 수행 된 R 호출 수를 추적 합니다. 예를 들어 `rxLinMod` 가 호출되어 병렬로 실행될 때 카운터는 1씩 증가합니다.
  
-R 언어에서 *counter_name* 필드에 표시되는 카운터 값은 등록된 ScaleR 함수 이름을 나타냅니다. *counter_value* 필드 값은 특정 ScaleR 함수의 누적 인스턴스 수를 나타냅니다. 
+R 언어에서 *counter_name* 필드에 표시되는 카운터 값은 등록된 ScaleR 함수 이름을 나타냅니다. 
+  *counter_value* 필드 값은 특정 ScaleR 함수의 누적 인스턴스 수를 나타냅니다. 
 
 Python의 경우이 DMV는 인스턴스에 대해 만들어진 Python 호출 수를 추적 합니다.
 
@@ -95,10 +96,10 @@ WHERE language = 'Python';
 ```  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
-[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
+ [실행 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

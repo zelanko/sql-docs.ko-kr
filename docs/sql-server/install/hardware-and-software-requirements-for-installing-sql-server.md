@@ -1,7 +1,7 @@
 ---
-title: SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항 | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 07/24/2019
+title: 하드웨어 및 소프트웨어 요구 사항
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056799"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75657025"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "74056799"
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. SQL Server 설치 프로그램이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 자동으로 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](https://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)]에는 .NET Framework 4.6.2가 필요합니다. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](https://support.microsoft.com/kb/2919355)가 필요합니다.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. SQL Server 설치 프로그램이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 자동으로 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](https://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](https://support.microsoft.com/kb/2919355)가 필요합니다.|  
 |네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 다음 네트워크 프로토콜을 지원합니다. 공유 메모리, 명명된 파이프, TCP/IP 및 VIA.<br/><br/> **참고:** VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다.<br/><br/> **중요:** VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)를 참조하십시오.|  
 |하드 디스크|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br/><br/> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 있는 [하드 디스크 공간 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)을 참조하세요. 데이터 파일에 대해 지원되는 스토리지 유형에 대한 자세한 내용은 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
@@ -106,14 +106,14 @@ ms.locfileid: "74056799"
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
-|메모리\*|**최소:**<br/><br/> Express Edition: 512MB<br/><br/> 기타 모든 버전: 1GB<br/><br/> **권장:**<br/><br/> Express Edition: 1GB<br/><br/> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
+|메모리\*|**최소:**<br/><br/> Express Edition: 512MB<br/><br/> 기타 모든 버전: 1 GB<br/><br/> **권장:**<br/><br/> Express Edition: 1 GB<br/><br/> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
 |프로세서 속도|**최소:** x64 프로세서: 1.4GHz<br/><br/> **권장:** 2.0GHz 이상|  
 |프로세서 유형|x64 프로세서: AMD Opteron, AMD Athlon 64, Intel EM64T를 지원하는 Intel Xeon, Intel EM64T를 지원하는 Intel Pentium IV|  
   
 > [!NOTE]  
 > [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 설치는 x64 프로세서에서만 지원됩니다. x86 프로세서에서는 더 이상 지원되지 않습니다.  
   
- \* [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
+ \*[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
   
  **WOW64 지원:**  
   
@@ -122,19 +122,6 @@ ms.locfileid: "74056799"
 
 **Server Core 지원:**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-Server Core 모드에서 SQL Server 2019를 설치하는 것은 다음 버전의 Windows Server에서 지원됩니다.
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 Server Core 모드에서 SQL Server 2016 및 2017을 설치하는 것은 다음 버전의 Windows Server에서 지원됩니다.
 
@@ -145,7 +132,6 @@ Server Core 모드에서 SQL Server 2016 및 2017을 설치하는 것은 다음 
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 데이터 센터|
 | Windows Server 2012 Standard | Windows Server 2012 데이터 센터 |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
 
@@ -162,63 +148,46 @@ Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [
 -   Distributed Replay 구성 요소
 -   Distributed  Replay  Controller
 -   Distributed  Replay  Client
--   SQL 클라이언트 연결 SDK
+-   SQL  클라이언트 연결 SDK
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 및 이후 서버 운영 체제는 32비트 아키텍처로 사용할 수 없습니다. 모든 지원되는 서버 운영 체제는 64비트로만 사용할 수 있습니다. 모든 기능은 64비트 서버 운영 체제에서 지원됩니다.  
   
 ###  <a name="TOP_Principal"></a> OS 호환성   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-다음 표에서는 어떤 SQL Server 2019 버전이 어떤 Windows 버전과 호환되는지 설명합니다.  
-  
-
-| SQL Server 버전:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 다음 표에서는 어떤 SQL Server 2016 및 2017 버전이 어떤 Windows 버전과 호환되는지 설명합니다.  
   
-| SQL Server 버전:               | Enterprise | Developer | Standard | Web | Express |  
+| SQL Server 버전:               | Enterprise | Developer | Standard | 웹 | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2019 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Datacenter    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2016 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 R2 Datacenter |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 R2 Standard   |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 R2 Essentials |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 R2 Foundation |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 데이터 센터    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 Standard      |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 Essentials    |    예     |    예    |    예   | 예 |   예   |
-| Windows Server 2012 Foundation    |    예     |    예    |    예   | 예 |   예   |
-| Windows 10 IoT Enterprise         |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 10 Enterprise             |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 10 Professional           |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 10 Home                   |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 8.1 Enterprise            |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 8.1 Pro                   |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 8.1 Enterprise            |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 8 Pro                     |    아니오      |    예    |    예   | 아니오  |   예   |
-| Windows 8                         |    아니오      |    예    |    예   | 아니오  |   예   | 
+| Windows Server 2019 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2019 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2019 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2016 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 R2 Datacenter |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 R2 Standard   |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 R2 Essentials |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 R2 Foundation |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 데이터 센터    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows Server 2012 Foundation    |    yes     |    yes    |    yes   | yes |   yes   |
+| Windows 10 IoT Enterprise         |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 10 Enterprise             |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 10 Professional           |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 10 Home                   |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 8.1 Enterprise            |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 8.1 Pro                   |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 8.1 Enterprise            |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 8 Pro                     |    예      |    yes    |    yes   | 예  |   yes   |
+| Windows 8                         |    예      |    yes    |    yes   | 예  |   yes   | 
 
 > [!NOTE]  
 > 이 섹션에서 설명하는 운영 체제 지원에 대한 예외는 Windows Server 2008 R2 SP1 이상에 설치할 수 있는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이하용 다음 비즈니스 인텔리전스 기능입니다.  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용)  
-::: moniker-end
 
 
   

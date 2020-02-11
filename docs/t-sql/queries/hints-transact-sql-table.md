@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981760"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
@@ -63,7 +63,7 @@ ms.locfileid: "73981760"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어  
+NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 다음은 그 예입니다.  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -192,7 +192,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
   
 FORCESEEK 힌트는 다음과 같은 방법으로 지정할 수 있습니다.  
   
-|구문|예제|설명|  
+|구문|예제|Description|  
 |------------|-------------|-----------------|  
 |인덱스 또는 INDEX 힌트 없이 사용|`FROM dbo.MyTable WITH (FORCESEEK)`|쿼리 최적화 프로그램이 Index Seek 연산만 고려하여 모든 관련 인덱스 전체에서 테이블 또는 뷰에 액세스합니다.|  
 |INDEX 힌트와 함께 사용|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|쿼리 최적화 프로그램이 Index Seek 연산만 고려하여 지정된 인덱스 전체에서 테이블 또는 뷰에 액세스합니다.|  
@@ -313,7 +313,7 @@ REPEATABLE READ 격리 수준에서 실행되는 트랜잭션과 동일한 잠�
 ROWLOCK  
 페이지 또는 테이블 잠금이 일반적으로 사용될 때 행 잠금을 사용하도록 지정합니다. SNAPSHOT 격리 수준에서 작동하는 트랜잭션에 지정하는 경우 UPDLOCK 및 HOLDLOCK과 같은 잠금이 필요한 다른 테이블 힌트와 함께 ROWLOCK을 사용하지 않으면 행 잠금이 수행되지 않습니다.  
   
-SERIALIZABLE  
+직렬화 가능  
 HOLDLOCK과 동일합니다. 필요한 테이블 또는 데이터 페이지가 더 이상 필요 없을 때 트랜잭션의 완료 여부와 관계없이 즉시 공유 잠금을 해제하지 않고 트랜잭션 완료 시까지 유지함으로써 공유 잠금을 더욱 제한적으로 만듭니다. SERIALIZABLE 격리 수준에서 실행되는 트랜잭션과 동일한 잠금 기능으로 검색이 수행됩니다. 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 SNAPSHOT  
@@ -354,7 +354,7 @@ UPDLOCK이 지정된 경우 READCOMMITTED 및 READCOMMITTEDLOCK 격리 수준 �
 XLOCK  
 배타적 잠금을 사용하고 트랜잭션이 완료될 때까지 유지하도록 지정합니다. ROWLOCK, PAGLOCK 또는 TABLOCK과 함께 지정한 경우에는 배타적 잠금이 적절한 세분성 수준에 적용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 테이블을 쿼리 계획으로 액세스하지 않는 경우에는 테이블 힌트가 무시됩니다. 최적화 프로그램의 선택에 의해 테이블 자체를 액세스하지 않거나 테이블 대신 인덱싱된 뷰를 액세스하기로 하는 경우 등이 해당됩니다. 후자의 경우에 OPTION(EXPAND VIEWS) 쿼리 힌트를 사용하여 인덱싱된 뷰 액세스를 금지할 수도 있습니다.  
   
 모든 잠금 힌트는 뷰에서 참조되는 테이블과 뷰를 포함하여 쿼리 계획에서 액세스하는 모든 테이블과 뷰로 전달됩니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당되는 잠금 일관성 검사를 수행합니다.  
@@ -416,7 +416,7 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>1\. TABLOCK 힌트를 사용하여 잠금 방법 지정  
+### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. TABLOCK 힌트를 사용하여 잠금 방법 지정  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.Product` 테이블에 공유 잠금을 사용하고 UPDATE 문이 끝날 때까지 유지하도록 지정합니다.  
   
 ```sql  
@@ -427,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>2\. FORCESEEK 힌트를 사용하여 Index Seek 연산 지정  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. FORCESEEK 힌트를 사용하여 Index Seek 연산 지정  
  다음 예에서는 인덱스를 지정하지 않고 FORCESEEK 힌트를 사용하여 쿼리 최적화 프로그램이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesOrderDetail` 테이블에서 Index Seek 연산을 수행하도록 지정합니다.  
   
 ```sql

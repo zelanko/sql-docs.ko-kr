@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74307992"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "74307992"
 
 에서 실행 되는 각 요청에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]정보를 반환 합니다. 요청에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
    
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 요청과 관련된 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |request_id|**int**|요청의 ID입니다. 세션의 컨텍스트에서 고유합니다. Null을 허용하지 않습니다.|  
-|start_time|**날짜**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
-|status|**nvarchar (30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 백그라운드<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
-|command|**nvarchar (32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />삭제<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
+|start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
+|상태|**nvarchar (30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
+|command|**nvarchar (32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
 |sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|  
 |statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
 |statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "74307992"
 |open_resultset_count|**int**|이 요청에 대해 열린 결과 집합 수입니다. Null을 허용하지 않습니다.|  
 |transaction_id|**bigint**|이 요청이 실행되는 트랜잭션의 ID입니다. Null을 허용하지 않습니다.|  
 |context_info|**varbinary (128)**|세션의 CONTEXT_INFO 값입니다. Null을 허용합니다.|  
-|percent_complete|**real**|다음 명령에 대한 작업 완료율입니다.<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE의 AUTO_SHRINK 옵션<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Null을 허용하지 않습니다.|  
+|percent_complete|**실제로**|다음 명령에 대한 작업 완료율입니다.<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE의 AUTO_SHRINK 옵션<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Null을 허용하지 않습니다.|  
 |estimated_completion_time|**bigint**|내부용입니다. Null을 허용하지 않습니다.|  
 |cpu_time|**int**|요청에 사용된 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |total_elapsed_time|**int**|요청이 도착한 이후 경과한 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "74307992"
 |writes|**bigint**|이 요청에서 수행된 쓰기 수입니다. Null을 허용하지 않습니다.|  
 |logical_reads|**bigint**|요청에서 수행된 논리적 읽기 수입니다. Null을 허용하지 않습니다.|  
 |text_size|**int**|이 요청에 대한 TEXTSIZE 설정입니다. Null을 허용하지 않습니다.|  
-|언어|**(nvarchar(128**|요청에 대한 언어 설정입니다. Null을 허용합니다.|  
+|언어|**nvarchar(128)**|요청에 대한 언어 설정입니다. Null을 허용합니다.|  
 |date_format|**nvarchar (3)**|요청에 대한 DATEFORMAT 설정입니다. Null을 허용합니다.|  
 |date_first|**smallint**|요청에 대한 DATEFIRST 설정입니다. Null을 허용하지 않습니다.|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER가 요청에 대해 ON입니다. 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
@@ -88,12 +88,12 @@ ms.locfileid: "74307992"
 |group_id|**int**|이 쿼리가 속한 작업 그룹의 ID입니다. Null을 허용하지 않습니다.|  
 |query_hash|**binary (8)**|쿼리에서 계산되는 이진 해시 값으로, 비슷한 논리를 가진 쿼리를 식별하는 데 사용됩니다. 쿼리 해시를 사용하여 리터럴 값만 다른 쿼리에 대한 집계 리소스 사용을 확인할 수 있습니다.|  
 |query_plan_hash|**binary (8)**|쿼리 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 쿼리 실행 계획을 식별하는 데 사용됩니다. 쿼리 계획 해시를 사용하여 비슷한 실행 계획을 가진 쿼리의 누적 비용을 찾을 수 있습니다.|  
-|statement_sql_handle|**varbinary (64)**|**적용**대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상.<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
-|statement_context_id|**bigint**|**적용**대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상.<br /><br /> Query_context_settings에 대 한 선택적 외래 키입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
-|dop |**int** |**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.<br /><br /> 쿼리의 병렬 처리 수준입니다. |  
-|parallel_worker_count |**int** |**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.<br /><br /> 병렬 쿼리 인 경우 예약 된 병렬 작업자의 수입니다.  |  
-|external_script_request_id |**uniqueidentifier** |**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
-|is_resumable |**bit** |**적용**대상: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 이상.<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
+|statement_sql_handle|**varbinary (64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
+|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> Query_context_settings에 대 한 선택적 외래 키입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
+|dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 쿼리의 병렬 처리 수준입니다. |  
+|parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 병렬 쿼리 인 경우 예약 된 병렬 작업자의 수입니다.  |  
+|external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
+|is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 이상<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
 |page_resource |**binary (8)** |**적용**대상:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하 `wait_resource` 는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다. 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database hyperscale<br /><br /> 이 요청에서 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
 | &nbsp; | &nbsp; | &nbsp; |
@@ -102,9 +102,9 @@ ms.locfileid: "74307992"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
 
-[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 작업 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
+[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 사용자에 게 서버 `VIEW SERVER STATE` 에 대 한 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE``sys.dm_exec_requests` 는 Azure SQL Database에서 부여할 수 없으므로 항상 현재 연결로 제한 됩니다.
   
 ## <a name="examples"></a>예  

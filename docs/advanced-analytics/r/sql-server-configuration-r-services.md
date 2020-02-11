@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727337"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용을 위한 SQL Server 구성
@@ -76,7 +76,7 @@ SQL Server 인스턴스 최적화는 효율적인 외부 스크립트 실행을 
 > [!NOTE]
 > 최적 설정은 모델 채점 또는 학습을 위해 사용되는 열 수 및 데이터 크기와 유형에 따라 달라집니다.
 > 
-> 특정 최적화의 결과는 최종 문서에서 검토할 수 있습니다. [성능 튜닝 - 사례 연구 결과](../../advanced-analytics/r/performance-case-study-r-services.md)
+> 특정 최적화의 결과는 최종 문서에서 검토할 수 있습니다. [성능 조정 - 사례 연구 결과](../../advanced-analytics/r/performance-case-study-r-services.md)
 > 
 > 샘플 스크립트는 개별 [GitHub 리포지토리](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)를 참조하세요.
 
@@ -94,7 +94,7 @@ columnstore는 테이블에 대한 삽입이 많을 경우 비효율적일 수 �
 
 + [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
-### <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
+### <a name="memory-optimized-tables"></a>메모리 최적화 테이블
 
 요즘의 현대식 컴퓨터에서는 메모리가 더 이상 문제가 되지 않습니다. 하드웨어 사양이 계속 발전되고 있기 때문에 비교적 쉽게 적절한 가격으로 RAM을 갖출 수 있습니다. 하지만 동시에 데이터도 이전보다 훨씬 빠르게 생성되며, 데이터를 처리할 때의 대기 시간이 짧아야 합니다.
 
@@ -225,12 +225,12 @@ SQL Server의 이점 중 하나는 매우 많은 양의 행을 병렬로 처리�
 
 하지만 사용되는 알고리즘에 따라 일부 모델은 특히 대규모 데이터 세트로 학습할 때 상당히 커질 수 있습니다. 예를 들어 **lm** 또는 **glm**과 같은 알고리즘은 규칙들과 함께 많은 요약 데이터를 생성합니다. varbinary 열에 저장할 수 있는 모델 크기에 제한이 있기 때문에 프로덕션용 데이터베이스에 모델을 저장하기 전에 모델에서 불필요한 아티팩트를 제거하는 것이 좋습니다.
 
-## <a name="articles-in-this-series"></a>이 시리즈에 포함된 문서
+## <a name="articles-in-this-series"></a>이 시리즈의 문서
 
 [R의 성능 튜닝 - 소개](../r/sql-server-r-services-performance-tuning.md)
 
-[R의 성능 튜닝 - SQL Server 구성](../r/sql-server-configuration-r-services.md)
+[R의 성능 조정 - SQL Server 구성](../r/sql-server-configuration-r-services.md)
 
-[R의 성능 튜닝 - R 코드 및 데이터 최적화](../r/r-and-data-optimization-r-services.md)
+[R의 성능 조정 - R 코드 및 데이터 최적화](../r/r-and-data-optimization-r-services.md)
 
-[성능 튜닝 - 사례 연구 결과](../r/performance-case-study-r-services.md)
+[성능 조정 - 사례 연구 결과](../r/performance-case-study-r-services.md)

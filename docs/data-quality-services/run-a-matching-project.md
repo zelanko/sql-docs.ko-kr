@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244118"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
@@ -30,17 +30,17 @@ ms.locfileid: "75244118"
   
  하나 이상의 일치 규칙을 사용하여 일치 정책을 만들고 예제 데이터에서 해당 정책을 실행하여 일치 프로세스를 준비해야 합니다. 일치 프로젝트 프로세스는 일치 정책 프로세스와 별개이며, 기술 자료는 일치 프로젝트에서 얻은 일치 정보로 채워지지 않습니다. 일치 정책을 만드는 방법은 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   하나 이상의 일치 규칙으로 구성된 일치 정책을 사용하여 만든 기술 자료가 있어야 합니다.  
   
 -   일치시킬 원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="StartingaMatchingProject"></a>첫 번째 단계: 일치 프로젝트 시작  

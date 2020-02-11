@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318992"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
@@ -21,7 +21,7 @@ ms.locfileid: "74318992"
 
 AdventureWorks 다운로드 링크 및 설치 지침을 참조 하세요. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). 샘플의 전체 버전은 SQL Server Evaluation/Developer/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과를 위해 6 월 2016 릴리스 이상을 사용 합니다.
@@ -67,11 +67,9 @@ AdventureWorks의 데이터 웨어하우스 버전에 대 한 직접 링크는 �
 1. SQL Server Management Studio를 열고 대상 SQL Server 인스턴스에 연결 합니다.
 2. **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭 하 고 **데이터베이스 복원**을 선택 합니다.
 3. **장치** 를 선택 하 고 줄임표 (**...**)를 클릭 합니다.
-4. 대화 상자에서 **백업 장치를 선택**하 고, **추가**를 클릭 하 고, 서버의 파일 시스템에 있는 데이터베이스 백업으로 이동 하 고, 백업을 선택 합니다. 
-  **확인**을 클릭합니다.
+4. 대화 상자에서 **백업 장치를 선택**하 고, **추가**를 클릭 하 고, 서버의 파일 시스템에 있는 데이터베이스 백업으로 이동 하 고, 백업을 선택 합니다. **확인**을 클릭합니다.
 5. 필요한 경우 **파일** 창에서 데이터 및 로그 파일의 대상 위치를 변경 합니다. 데이터와 로그 파일을 서로 다른 드라이브에 저장 하는 것이 가장 좋습니다.
-6. 
-  **확인**을 클릭합니다. 그러면 데이터베이스 복원이 시작 됩니다. 완료 되 면 AdventureWorks 데이터베이스가 SQL Server 인스턴스에 설치 됩니다.
+6. **확인**을 클릭합니다. 그러면 데이터베이스 복원이 시작 됩니다. 완료 되 면 AdventureWorks 데이터베이스가 SQL Server 인스턴스에 설치 됩니다.
 
 SQL Server 데이터베이스 복원에 대 한 자세한 내용은 SSMS를 [사용 하 여 데이터베이스 백업 복원](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조 하세요.
 

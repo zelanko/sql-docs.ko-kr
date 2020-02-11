@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401288"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System에 대 한 InfiniBand 네트워크 어댑터 구성
 PDW (병렬 데이터 웨어하우스)의 제어 노드에 연결 하도록 비 어플라이언스 클라이언트 서버에서 InfiniBand 네트워크 어댑터를 구성 하는 방법을 설명 합니다. 기본 연결 및 고가용성을 위해 이러한 지침을 사용 하 여 로드, 백업 및 기타 프로세스가 활성 InfiniBand 네트워크에 자동으로 연결 되도록 합니다.  
   
-## <a name="Basics"></a>설명  
+## <a name="Basics"></a>Description  
 이 지침에서는 InfiniBand 연결 된 서버에서 올바른 InfiniBand IP 주소 및 서브넷 마스크를 찾아서 설정 하는 방법을 보여 줍니다. 또한 연결이 활성 InfiniBand 네트워크로 확인 되도록 서버에서 APS 어플라이언스 DNS를 사용 하도록 설정 하는 방법을 설명 합니다.  
   
 고가용성을 위해 APS에는 두 개의 InfiniBand 네트워크, 하나의 능동 및 하나의 passive가 있습니다. 각 InfiniBand 네트워크에는 제어 노드에 대해 서로 다른 IP 주소가 있습니다. 활성 InfiniBand 네트워크가 중단 되 면 passive InfiniBand 네트워크가 활성 네트워크가 됩니다. 이 경우 스크립트나 프로세스는 스크립트 매개 변수를 변경 하지 않고 활성 InfiniBand 네트워크에 자동으로 연결 됩니다.  
@@ -46,14 +46,14 @@ InfiniBand 네트워크 어댑터를 구성한 후 클라이언트 프로세스�
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>시작 하기 전에  
+## <a name="BeforeBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="requirements"></a>요구 사항  
 AD01 노드에 로그인 하려면 APS 어플라이언스 도메인 계정이 필요 합니다. 예: F12345 * \b  
   
 클라이언트 서버에서 네트워크 어댑터를 구성할 수 있는 권한이 있는 Windows 계정이 필요 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 이 지침에서는 클라이언트 서버가 이미 racked 어플라이언스 InfiniBand 네트워크에 연결 되어 있다고 가정 합니다. Racking 및 케이블 연결 지침은 [로드 서버 가져오기 및 구성](acquire-and-configure-loading-server.md)을 참조 하세요.  
   
 ### <a name="general-remarks"></a>일반적인 주의 사항  
@@ -98,7 +98,7 @@ SQLCTL01를 사용 하면 분석 플랫폼 시스템 DNS가 활성 InfiniBand �
   
 ## <a name="Sec2"></a>2 단계: 클라이언트 서버에서 InfiniBand 네트워크 어댑터 설정 구성  
 
-### <a name="notes"></a>참고  
+### <a name="notes"></a>메모  
   
 -   이러한 단계에서는 AP DNS 서버에 서버를 등록 하는 방법을 보여 줍니다.  
   

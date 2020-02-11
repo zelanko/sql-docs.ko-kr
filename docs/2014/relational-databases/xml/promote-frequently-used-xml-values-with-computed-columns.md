@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195578"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
@@ -26,7 +26,7 @@ ms.locfileid: "68195578"
  승격된 열은 같은 테이블에 있는 계산 열이거나 테이블에서 사용자가 유지 관리하는 별개의 열일 수 있습니다. 각 XML 인스턴스로부터 단일 항목 값이 승격되는 경우에는 이것으로 충분합니다. 하지만 다중 값 속성의 경우 다음 섹션의 설명과 같이 속성에 대해 별개의 테이블을 만들어야 합니다.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml 데이터 형식에 따른 계산 열  
- 호출 하는 사용자 정의 함수를 사용 하 여 계산된 열을 만들 수 있습니다 `xml` 데이터 형식 메서드. 계산 열의 유형은 XML을 포함하는 모든 SQL 유형일 수 있습니다. 다음 예에서 확인할 수 있습니다.  
+ 데이터 형식 메서드를 호출 `xml` 하는 사용자 정의 함수를 사용 하 여 계산 열을 만들 수 있습니다. 계산 열의 유형은 XML을 포함하는 모든 SQL 유형일 수 있습니다. 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>예: xml 데이터 형식 메서드에 따른 계산 열  
  책 ISBN 번호에 대한 사용자 정의 함수를 만듭니다.  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 반환할 사용자 정의 함수를 만들 수 있습니다는 `xml` 데이터 형식 및 사용자 정의 함수를 사용 하 여 계산된 열입니다. 하지만 XML 계산 열에는 XML 인덱스를 만들 수 없습니다.  
+ 사용자 정의 함수를 만들어 사용자 정의 함수를 사용 하 `xml` 여 데이터 형식과 계산 열을 반환할 수 있습니다. 하지만 XML 계산 열에는 XML 인덱스를 만들 수 없습니다.  
   
 ## <a name="creating-property-tables"></a>속성 테이블 만들기  
  XML 데이터에서 여러 값의 속성 중 일부를 하나 이상의 테이블로 승격시키고 해당 테이블에서 인덱스를 만들고 이를 사용하도록 쿼리를 다시 대상화할 수 있습니다. 일반적인 시나리오는 속성 중 일부에 대부분의 쿼리 작업이 포함되는 경우입니다. 사용할 수 있는 기능은 다음과 같습니다.  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   속성 테이블을 유지 관리하기 위해 XML 열에 트리거를 만듭니다. 트리거 내에서 다음 중 하나를 수행합니다.  
   
-    -   사용 하 여 `xml` 와 같은 데이터 형식 메서드를 **nodes ()** 하 고 **value ()** , 삽입 하 고 속성 테이블의 행을 삭제 합니다.  
+    -   `xml` **Nodes ()** 및 **value ()** 와 같은 데이터 형식 메서드를 사용 하 여 속성 테이블의 행을 삽입 하 고 삭제 합니다.  
   
     -   속성 테이블의 행을 삽입 및 삭제하기 위해 CLR(공용 언어 런타임)에 스트리밍 테이블 반환 함수를 만듭니다.  
   
@@ -155,7 +155,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>예: 저자의 이름이 같은 XML 인스턴스 찾기  
- XML 열에 쿼리를 만들 수 있습니다. 또는 속성 테이블에서 "David"라는 이름을 검색하고 기본 테이블에서 역 조인을 수행하여 XML 인스턴스를 반환할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ XML 열에 쿼리를 만들 수 있습니다. 또는 속성 테이블에서 "David"라는 이름을 검색하고 기본 테이블에서 역 조인을 수행하여 XML 인스턴스를 반환할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT xCol   
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  속성 테이블을 유지 관리하기 위한 사용자 정의 함수를 사용하여 삽입, 업데이트 및 삭제 트리거를 정의합니다.  
   
- 이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. 합니다 `xml` 데이터 유형의 ADO.NET에서 SqlXml 관리 되는 클래스로 노출 되 고 지원 합니다 **createreader ()** XmlReader를 반환 하는 메서드입니다.  
+ 이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. `xml` 데이터 형식은 ADO.NET에서 관리 되는 클래스 SqlXml으로 노출 되며 XmlReader를 반환 하는 **CreateReader ()** 메서드를 지원 합니다.  
   
 > [!NOTE]  
 >  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 애플리케이션에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](../../database-engine/dev-guide/architecture-of-clr-integration.md)를 참조하세요.  
@@ -253,7 +253,7 @@ as
   
  삭제 트리거는 비-CLR 버전과 동일합니다. 하지만 업데이트 트리거는 udf_XML2Table() 함수를 CLR_udf_XML2Table() 함수로 바꿉니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계산 열에 XML 사용](use-xml-in-computed-columns.md)  
   
   

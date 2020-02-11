@@ -11,18 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243248"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
-  **공간 데이터 결과** 창에서는 공간 데이터를 보기 위한 시각적 매핑 도구를 제공 합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
+  **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
   
 > [!NOTE]  
->  
-  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
+>  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
   
 ## <a name="options"></a>옵션  
  **공간 열 선택**  
@@ -38,7 +37,7 @@ ms.locfileid: "75243248"
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   
- **맞게**  
+ **Zoom**  
  맵 표시를 지수 배율로 조정합니다.  
   
  **눈금선 표시**  
@@ -51,8 +50,8 @@ ms.locfileid: "75243248"
   
 ## <a name="see-also"></a>참고 항목  
  [개체 탐색기에서 공간 데이터 보기](view-spatial-data-in-object-explorer.md)   
- [공간 데이터 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [쿼리 및 텍스트 편집기 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [공간 데이터&#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
+ [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046712"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  로 시작 하는 데이터베이스 엔진의에서 향상 된 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLNumParams 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 SQLNumParams 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  에서 시작 하는 데이터베이스 엔진의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 향상 된 기능으로는 SQLNumParams가 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 보다 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SQLNumParams에 의해 반환 되는 값과 다를 수 있습니다.  
   
  자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQLNumParams 함수](https://go.microsoft.com/fwlink/?LinkId=58404)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

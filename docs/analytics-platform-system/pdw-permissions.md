@@ -1,5 +1,5 @@
 ---
-title: 권한
+title: 사용 권한
 description: 이 문서에서는 병렬 데이터 웨어하우스의 데이터베이스 사용 권한을 관리 하기 위한 요구 사항 및 옵션을 설명 합니다.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400875"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 사용 권한 관리
@@ -213,7 +213,7 @@ SQL Server는 서버에 대 한 사용 권한을 관리 하는 데 도움이 되
   
 ![APS 보안 고정 데이터베이스 역할](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
-### <a name="related-content"></a>관련 콘텐츠  
+### <a name="related-content"></a>관련 내용  
   
 -   사용자 정의 역할을 만들려면 [역할 만들기](../t-sql/statements/create-role-transact-sql.md)를 참조 하세요.  
   

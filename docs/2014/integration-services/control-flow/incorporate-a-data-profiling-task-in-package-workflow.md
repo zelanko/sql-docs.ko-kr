@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831633"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
-  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
+  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]데이터 프로 파일링 태스크의 출력에는 일반적으로 보고 된 위반이 의미 있는지 여부를 확인 하기 위해 시각적 분석과 사람이 결정 해야 합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
   
  일단 데이터 품질에 대한 조건을 정립하고 나면 데이터 원본에 대한 주기적인 분석과 정리를 자동화할 수 있습니다. 다음과 같은 시나리오를 고려해 보십시오.  
   
--   **증분 로드 전에 데이터 품질 확인**. 데이터 프로파일링 태스크를 사용하여 Customers 테이블의 CustomerName 열에 사용할 새 데이터의 열 Null 비율 프로필을 컴퓨팅할 수 있습니다. Null 값의 비율이 20%를 초과하면 운영자에게 프로필 출력이 포함된 전자 메일 메시지를 보내고 패키지를 끝냅니다. 그렇지 않으면 증분 로드를 계속 수행합니다.  
+-   **증분 로드 전에 데이터 품질 확인** 데이터 프로파일링 태스크를 사용하여 Customers 테이블의 CustomerName 열에 사용할 새 데이터의 열 Null 비율 프로필을 컴퓨팅할 수 있습니다. Null 값의 비율이 20%를 초과하면 운영자에게 프로필 출력이 포함된 전자 메일 메시지를 보내고 패키지를 끝냅니다. 그렇지 않으면 증분 로드를 계속 수행합니다.  
   
--   **지정된 조건이 충족되는 경우 정리 자동화**. 데이터 프로파일링 태스크를 사용하여 상태 조회 테이블에 대한 State 열과 우편 번호 조회 테이블에 대한 ZIP Code/Postal Code 열의 값 포함 프로필을 컴퓨팅합니다. 상태 값의 포함 수준이 80% 미만인데 ZIP Code/Postal Code 값의 포함 수준이 99%를 초과한다면 이는 두 가지를 의미합니다. 첫째, State 데이터가 잘못되었습니다. 둘째, ZIP Code/Postal Code 데이터는 올바릅니다. 현재 Zip Code/Postal Code 값에서 올바른 State 값을 조회하여 State 데이터를 정리하는 데이터 흐름 태스크를 시작합니다.  
+-   **지정 된 조건이 충족 되는 경우 정리 자동화**. 데이터 프로파일링 태스크를 사용하여 상태 조회 테이블에 대한 State 열과 우편 번호 조회 테이블에 대한 ZIP Code/Postal Code 열의 값 포함 프로필을 컴퓨팅합니다. 상태 값의 포함 수준이 80% 미만인데 ZIP Code/Postal Code 값의 포함 수준이 99%를 초과한다면 이는 두 가지를 의미합니다. 첫째, State 데이터가 잘못되었습니다. 둘째, ZIP Code/Postal Code 데이터는 올바릅니다. 현재 Zip Code/Postal Code 값에서 올바른 State 값을 조회하여 State 데이터를 정리하는 데이터 흐름 태스크를 시작합니다.  
   
  데이터 흐름 태스크를 통합할 수 있는 워크플로를 확보한 후에는 이 태스크를 추가하는 데 필요한 단계를 파악해야 합니다. 다음 섹션에서는 데이터 흐름 태스크를 통합하는 일반적인 프로세스에 대해 설명합니다. 마지막 두 개의 섹션에서는 데이터 흐름 태스크를 데이터 원본에 직접 연결하거나 데이터 흐름의 변환된 데이터에 연결하는 방법에 대해 설명합니다.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62831633"
   
  데이터 프로파일링 태스크를 패키지의 워크플로에 통합할 때 태스크의 다음 두 가지 특징을 유의하십시오.  
   
--   **태스크 출력**. 데이터 프로파일링 태스크는 DataProfile.xsd 스키마에 따라 파일 또는 패키지 변수에 XML 형식으로 출력을 작성합니다. 따라서 패키지의 조건부 워크플로에서 프로필 결과를 사용하려면 이 XML 출력을 쿼리해야 합니다. Xpath 쿼리 언어를 사용하면 이 XML 출력을 손쉽게 쿼리할 수 있습니다. 이 XML 출력의 구조를 살펴보려면 예제 출력 파일 또는 스키마 자체를 열면 됩니다. 출력 파일 또는 스키마를 열려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], 다른 XML 편집기 또는 메모장과 같은 텍스트 편집기를 사용합니다.  
+-   **태스크 출력**. 데이터 프로파일링 태스크는 DataProfile.xsd 스키마에 따라 파일 또는 패키지 변수에 XML 형식으로 출력을 작성합니다. 따라서 패키지의 조건부 워크플로에서 프로필 결과를 사용하려면 이 XML 출력을 쿼리해야 합니다. Xpath 쿼리 언어를 사용하면 이 XML 출력을 손쉽게 쿼리할 수 있습니다. 이 XML 출력의 구조를 살펴보려면 예제 출력 파일 또는 스키마 자체를 열면 됩니다. 출력 파일 또는 스키마를 열려면, 다른 XML 편집기 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]메모장과 같은 텍스트 편집기를 사용할 수 있습니다.  
   
     > [!NOTE]  
     >  데이터 프로필 뷰어에 표시되는 프로필 결과의 일부는 출력에서 직접 찾을 수 없는 계산된 값입니다. 예를 들어 열 Null 비율 프로필에는 전체 행 개수와 Null 값이 있는 행 개수가 포함됩니다. 열 Null 비율을 구하려면 이 두 값을 쿼리한 다음 Null 값을 가진 행의 비율을 계산해야 합니다.  
   
--   **태스크 입력**. 데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 입력을 읽습니다. 따라서 이미 로드되어 데이터 흐름에서 변환된 데이터를 프로파일링하려면 메모리에 있는 데이터를 준비 테이블에 저장해야 합니다.  
+-   **작업 입력**입니다. 데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 입력을 읽습니다. 따라서 이미 로드되어 데이터 흐름에서 변환된 데이터를 프로파일링하려면 메모리에 있는 데이터를 준비 테이블에 저장해야 합니다.  
   
  다음 섹션에서는 외부 데이터 원본으로부터 직접 가져오거나 데이터 흐름 태스크에서 변환된 프로파일링 데이터에 이 일반 워크플로를 적용합니다. 또한 데이터 흐름 태스크의 입력 및 출력 요구 사항을 처리하는 방법을 보여 줍니다.  
   
@@ -75,13 +75,15 @@ ms.locfileid: "62831633"
 ### <a name="configure-the-connection-managers"></a>연결 관리자 구성  
  이 예에서는 다음과 같은 두 개의 연결 관리자가 사용됩니다.  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 연결되는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 연결 관리자  
+-   
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 연결되는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 연결 관리자  
   
 -   데이터 프로파일링 태스크의 결과를 보유할 출력 파일을 만드는 파일 연결 관리자  
   
 ##### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
 2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
   
@@ -100,16 +102,18 @@ ms.locfileid: "62831633"
   
 ##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>프로필 결과를 보유할 패키지 변수를 구성하려면  
   
--   **변수** 창에서 다음 두 개의 패키지 변수를 추가하고 구성합니다.  
+-   
+  **변수** 창에서 다음 두 개의 패키지 변수를 추가하고 구성합니다.  
   
-    -   이름을 입력 `ProfileConnectionName`, 변수 중 하나에 대 한이 변수의 유형을 설정 하 고 **문자열**합니다.  
+    -   변수 중 하나에 `ProfileConnectionName`대해 이름을 입력 하 고이 변수의 유형을 **String**으로 설정 합니다.  
   
-    -   이름을 입력 `AddressLine2NullRatio`에 대 한 다른 변수를이 변수의 유형을 **Double**합니다.  
+    -   다른 변수에 대 한 `AddressLine2NullRatio`이름을 입력 하 고이 변수의 유형을 **Double**로 설정 합니다.  
   
 ### <a name="configure-the-data-profiling-task"></a>데이터 프로파일링 태스크 구성  
  데이터 프로파일링 태스크는 다음과 같이 구성해야 합니다.  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 입력으로 제공하는 데이터를 사용하도록 구성  
+-   
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 입력으로 제공하는 데이터를 사용하도록 구성  
   
 -   입력 데이터에 대해 열 Null 비율 프로필을 수행하도록 구성  
   
@@ -119,13 +123,15 @@ ms.locfileid: "62831633"
   
 1.  제어 흐름에 데이터 프로파일링 태스크를 추가합니다.  
   
-2.  **데이터 프로파일링 태스크 편집기** 를 열어 태스크를 구성합니다.  
+2.  
+  **데이터 프로파일링 태스크 편집기** 를 열어 태스크를 구성합니다.  
   
 3.  편집기 **일반** 페이지의 **대상**에서 이전에 구성한 파일 연결 관리자의 이름을 선택합니다.  
   
 4.  편집기의 **프로필 요청** 페이지에서 새 열 Null 비율 프로필을 만듭니다.  
   
-5.  **요청 속성** 창의 **ConnectionManager**에서 이전에 구성한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다. 그런 다음 **TableOrView**에서 Person.Address를 선택합니다.  
+5.  
+  **요청 속성** 창의 **ConnectionManager**에서 이전에 구성한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다. 그런 다음 **TableOrView**에서 Person.Address를 선택합니다.  
   
 6.  데이터 프로파일링 태스크 편집기를 닫습니다.  
   
@@ -138,15 +144,18 @@ ms.locfileid: "62831633"
   
 2.  데이터 프로파일링 태스크에 스크립트 태스크를 연결합니다.  
   
-3.  **스크립트 태스크 편집기** 를 열어 태스크를 구성합니다.  
+3.  
+  **스크립트 태스크 편집기** 를 열어 태스크를 구성합니다.  
   
-4.  **스크립트** 페이지에서 선호하는 프로그래밍 언어를 선택합니다. 그런 다음 스크립트에서 사용할 수 있는 두 개의 패키지 변수를 만듭니다.  
+4.  
+  **스크립트** 페이지에서 선호하는 프로그래밍 언어를 선택합니다. 그런 다음 스크립트에서 사용할 수 있는 두 개의 패키지 변수를 만듭니다.  
   
-    1.  에 대 한 `ReadOnlyVariables`선택, `ProfileConnectionName`합니다.  
+    1.  에 `ReadOnlyVariables`대해를 `ProfileConnectionName`선택 합니다.  
   
-    2.  에 대 한 **ReadWriteVariables**, 선택 `AddressLine2NullRatio`합니다.  
+    2.  **ReadWriteVariables**의 경우를 `AddressLine2NullRatio`선택 합니다.  
   
-5.  **스크립트 편집** 을 선택하여 스크립트 개발 환경을 엽니다.  
+5.  
+  **스크립트 편집** 을 선택하여 스크립트 개발 환경을 엽니다.  
   
 6.  System.Xml 네임스페이스에 대한 참조를 추가합니다.  
   
@@ -266,7 +275,8 @@ ms.locfileid: "62831633"
 #### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
  앞의 절차는 파일에서 데이터 프로파일링 작업의 출력을 로드하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
   
--   `LoadXml` 메서드 대신 `XmlDocument` 클래스의 `Load` 메서드를 호출합니다.  
+-   
+  `LoadXml` 메서드 대신 `XmlDocument` 클래스의 `Load` 메서드를 호출합니다.  
   
 -   스크립트 태스크 편집기에서 프로필 출력이 포함된 패키지 변수의 이름을 태스크의 `ReadOnlyVariables` 목록에 추가합니다.  
   
@@ -313,7 +323,8 @@ ms.locfileid: "62831633"
   
 #### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>데이터 흐름에서 데이터 프로파일링 태스크를 사용하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 만듭니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 만듭니다.  
   
 2.  데이터 흐름에서 적절한 원본과 변환을 추가, 구성 및 연결합니다.  
   
@@ -327,8 +338,8 @@ ms.locfileid: "62831633"
   
 7.  워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 프로파일링 태스크 설정](data-profiling-task.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 프로 파일링 태스크 설정](data-profiling-task.md)   
  [데이터 프로필 뷰어(Data Profile Viewer)](data-profile-viewer.md)  
   
   

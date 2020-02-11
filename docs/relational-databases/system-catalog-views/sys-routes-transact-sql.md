@@ -1,5 +1,5 @@
 ---
-title: sys.routes (TRANSACT-SQL) | Microsoft Docs
+title: sys. 경로 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904430"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes(Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "67904430"
 |**principal_id**|**int**|경로를 소유하는 데이터베이스 보안 주체의 식별자입니다. NULL을 허용합니다.|  
 |**remote_service_name**|**nvarchar(256)**|원격 서비스의 이름입니다. NULL을 허용합니다.|  
 |**broker_instance**|**nvarchar(128)**|원격 서비스를 호스팅하는 broker의 식별자입니다. NULL을 허용합니다.|  
-|**lifetime**|**datetime**|경로가 만료되는 날짜 및 시간입니다. 이 값은 현지 표준 시간대 대신 UTC를 사용하여 만료 시간을 표시합니다. NULL을 허용합니다.|  
-|**address**|**nvarchar(256)**|Service Broker에서 원격 서비스를 위한 메시지를 보내는 네트워크 주소입니다. NULL을 허용합니다. SQL Database Managed Instance에 대 한 주소는 로컬 이어야 합니다.|  
+|**수명**|**datetime**|경로가 만료되는 날짜 및 시간입니다. 이 값은 현지 표준 시간대 대신 UTC를 사용하여 만료 시간을 표시합니다. NULL을 허용합니다.|  
+|**address**|**nvarchar(256)**|Service Broker에서 원격 서비스를 위한 메시지를 보내는 네트워크 주소입니다. NULL을 허용합니다. SQL Database Managed Instance의 경우 address는 local 이어야 합니다.|  
 |**mirror_address**|**nvarchar(256)**|주소에 지정된 서버에 대한 미러링 파트너의 네트워크 주소입니다. NULL을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  

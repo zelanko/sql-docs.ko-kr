@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cac1e775d5cccaccca90b03104de4132e651284e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467847"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>데이터베이스를 복원하여 리소스 풀에 바인딩
@@ -59,10 +59,10 @@ RESTORE DATABASE IMOLTP_DB
 ##  <a name="monitor-the-resource-pool-performance"></a>리소스 풀 성능 모니터링  
  데이터베이스가 명명된 리소스 풀에 바인딩되고 복구를 통해 복원되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Resource Pool Stats 개체를 모니터링합니다. 자세한 내용은 [SQL Server, Resource Pool Stats 개체](../performance-monitor/sql-server-resource-pool-stats-object.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [SQL Server, Resource Pool Stats 개체](../performance-monitor/sql-server-resource-pool-stats-object.md)   
+ [SQLServer, Resource Pool Stats 개체](../performance-monitor/sql-server-resource-pool-stats-object.md)   
  [sys.dm_resource_governor_resource_pools](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)  
   
   

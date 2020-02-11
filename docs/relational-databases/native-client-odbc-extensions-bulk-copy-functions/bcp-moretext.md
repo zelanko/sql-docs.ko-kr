@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782618"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -48,19 +48,20 @@ RETCODE bcp_moretext (
  *.Pdata*에서 참조 하는 데이터 SQL Server에 복사 되는 데이터의 바이트 수입니다. SQL_NULL_DATA 값은 NULL을 나타냅니다.  
   
  *pData*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 지원되는 긴 가변 길이 데이터 청크에 대한 포인터입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 지원되는 긴 가변 길이 데이터 청크에 대한 포인터입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
- 이 함수는 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 와 함께 사용 하 여 긴 가변 길이 데이터 값을 여러 개의 작은 청크로 SQL Server 복사할 수 있습니다. **text**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , UDT (사용자 정의 형식) 및 XML과 같은 SQL Server 데이터 형식이 있는 열에 **bcp_moretext** 을 사용할 수 있습니다. **bcp_moretext** 데이터 변환을 지원 하지 않으므로 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이 함수는 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 와 함께 사용 하 여 긴 가변 길이 데이터 값을 여러 개의 작은 청크로 SQL Server 복사할 수 있습니다. **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, UDT (사용자 정의 형식) 및 XML과 같은 SQL Server 데이터 형식이 있는 열에 **bcp_moretext** 을 사용할 수 있습니다. **bcp_moretext** 데이터 변환을 지원 하지 않으므로 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
- **Bcp_moretext**에서 지원 되는 데이터 형식에 대해 NULL이 아닌 *.pdata* 매개 변수를 사용 하 여 **bcp_bind** 를 호출 하면 **bcp_sendrow** 는 길이에 관계 없이 전체 데이터 값을 보냅니다. 그러나 **bcp_bind** 지원 되는 데이터 형식에 대해 NULL *.pdata* 매개 변수를 포함 하는 경우 데이터를 포함 하는 바인딩된 열을 나타내는 **bcp_sendrow** 에서 성공적으로 반환 된 후 즉시 데이터를 복사 하는 데 **bcp_moretext** 를 사용할 수 있습니다. 처리 되었습니다.  
+ **Bcp_moretext**에서 지원 되는 데이터 형식에 대해 NULL이 아닌 *.pdata* 매개 변수를 사용 하 여 **bcp_bind** 를 호출 하면 **bcp_sendrow** 는 길이에 관계 없이 전체 데이터 값을 보냅니다. 그러나 **bcp_bind** 지원 되는 데이터 형식에 대해 NULL *.pdata* 매개 변수를 포함 하는 경우에는 데이터를 포함 하는 바인딩된 열이 처리 되었음을 나타내는 **bcp_sendrow** 에서 성공적으로 반환 된 후 즉시 **bcp_moretext** 를 사용 하 여 데이터를 복사할 수 있습니다.  
   
  **Bcp_moretext** 를 사용 하 여 지원 되는 데이터 형식 열을 하나의 행에 보내려면이 열을 사용 하 여 행에서 지원 되는 다른 데이터 형식 열을 모두 전송 해야 합니다. 열을 건너뛸 수 없습니다. 지원되는 데이터 형식은 SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT 및 SQLXML입니다. 열이 각각 varchar(max), nvarchar(max) 또는 varbinary(max)인 경우 SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY 및 SQLVARBINARY도 이 범주에 해당합니다.  
   
- **Bcp_bind** 또는 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 를 호출 하면 SQL Server 열에 복사 되는 모든 데이터 부분의 총 길이가 설정 됩니다. **Bcp_bind** 또는 **bcp_collen** 에 대 한 호출에 지정 된 것 보다 더 많은 바이트 SQL Server 전송 하려고 하면 오류가 생성 됩니다. 예를 들어 **bcp_collen** 사용 하 여 SQL Server **텍스트** 열에 사용할 수 있는 데이터의 길이를 4500로 설정 하는 응용 프로그램에서 데이터 버퍼에 대 한 각 호출을 나타내는 동안 **bcp_moretext** 5 번 호출 된 응용 프로그램에서이 오류가 발생 합니다. 길이는 1000 바이트 길이입니다.  
+ **Bcp_bind** 또는 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 를 호출 하면 SQL Server 열에 복사 되는 모든 데이터 부분의 총 길이가 설정 됩니다. **Bcp_bind** 또는 **bcp_collen** 에 대 한 호출에 지정 된 것 보다 더 많은 바이트 SQL Server 전송 하려고 하면 오류가 생성 됩니다. 예를 들어 **bcp_collen** 사용 하 여 SQL Server **텍스트** 열에 사용할 수 있는 데이터의 길이를 4500로 설정 하는 응용 프로그램에서는 데이터 버퍼 길이가 1000 바이트 였는 각 호출을 나타내는 동안 **bcp_moretext** 를 5 번 호출 하는 것과 같은 오류가 발생 합니다.  
   
  복사 된 행에 두 개 이상의 long 가변 길이 열이 포함 된 경우 **bcp_moretext** 는 먼저 가장 낮은 서 수로 번호 열에 데이터를 보내고 그 다음에 가장 낮은 서 수로 번호 열을 입력 합니다. 필요한 데이터의 총 길이를 올바르게 설정하는 것이 중요합니다. 길이 설정 외에는 대량 복사에서 열의 모든 데이터가 수신되었음을 나타낼 방법이 없습니다.  
   
@@ -165,7 +166,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

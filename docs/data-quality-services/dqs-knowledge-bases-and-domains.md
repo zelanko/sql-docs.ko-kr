@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251647"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
@@ -97,7 +97,7 @@ ms.locfileid: "75251647"
   
 ### <a name="reference-data-services"></a>참조 Data Services  
  도메인 관리 프로세스에서 온라인 참조 데이터를 도메인에 연결할 수 있습니다. 이를 통해 도메인의 데이터를 참조 데이터 공급자가 유지 관리하는 데이터와 비교할 수 있습니다. 
-  **애플리케이션의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+  **애플리케이션의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 ### <a name="applying-domain-rules"></a>도메인 규칙 적용  
  데이터 유효성 검사를 위한 도메인 규칙을 만들 수 있습니다. 도메인 규칙은 문자열 값일 수 있는 단일 용어와 같은 기본 제약 조건으로부터 전자 메일 주소의 올바른 형식과 같은 보다 복잡한 정규식까지 다양한 데이터의 정확도를 보장합니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "75251647"
   
 |||  
 |-|-|  
-|지식 만들기, 열기 및 기술 자료에 지식 추가, 기술 자료에서 검색 수행|[기술 자료 빌드](../data-quality-services/building-a-knowledge-base.md)|  
+|지식 만들기, 열기 및 기술 자료에 지식 추가, 기술 자료에서 검색 수행|[기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)|  
 |도메인 및 기술 자료에서 가져오기 및 내보내기 작업 수행|[기술 자료 가져오기 및 내보내기](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |단일 도메인, 도메인 규칙, 용어 기반 관계 만들기 및 도메인 값 변경|[도메인 관리](../data-quality-services/managing-a-domain.md)|  
 |복합 도메인 만들기, 도메인 간 규칙 만들기, 값 관계 사용|[복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)|  

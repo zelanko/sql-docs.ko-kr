@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d65b0b0f9707eb137ab3c76cae350d265f3fc971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868844"
 ---
-# <a name="mssqlserver2539"></a>MSSQLSERVER_2539
+# <a name="mssqlserver_2539"></a>MSSQLSERVER_2539
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,6 +36,6 @@ ms.locfileid: "62868844"
  이 정보는 DBCC CHECKALLOC 명령에 대한 출력의 일부로, 할당된 익스텐트, 사용된 페이지 및 지정된 데이터베이스에 대해 예약된 페이지를 요약해서 보여 줍니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 없음  
+ None  
   
   

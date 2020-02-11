@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400361"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 원격 분석 피드백을 Microsoft에 보내기
@@ -42,7 +42,7 @@ ms.locfileid: "74400361"
     > [!NOTE]  
     > 가져오려면 명령에서 두 개의 마침표를 사용 해야 합니다.  
   
-    **예 들어**  
+    **예:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ ms.locfileid: "74400361"
     > [!NOTE]  
     > 가져오려면 명령에서 두 개의 마침표를 사용 해야 합니다.  
   
-    **예 들어**  
+    **예:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "74400361"
   
 4.  매개 변수 `Disable-RemoteMonitoring` 없이 명령을 호출 합니다. 이 명령은 사용자 의견 전송을 중지 합니다. 로컬 모니터링에는 영향을 주지 않습니다. 그러나이 명령은 DNS 전달자를 사용 하지 않도록 설정 하거나 인터넷 연결을 사용 하지 않도록 설정 하지 않습니다. 사용자 의견을 사용 하지 않도록 설정한 후 수동으로 수행 해야 합니다.  
   
-    **예 들어**  
+    **예:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

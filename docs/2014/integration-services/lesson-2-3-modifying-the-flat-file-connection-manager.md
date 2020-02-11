@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767435"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>3단계: 플랫 파일 연결 관리자 수정
@@ -28,19 +28,22 @@ ms.locfileid: "62767435"
   
 2.  속성 창에서 **식**의 빈 셀을 클릭한 다음, 줄임표 단추 **(...)** 를 클릭합니다.  
   
-3.  에 **속성 식 편집기** 대화 상자의 합니다 **속성** 열, 입력 또는 선택 `ConnectionString`합니다.  
+3.  **속성 식 편집기** 대화 상자의 **속성** 열에서를 입력 하거나 선택 `ConnectionString`합니다.  
   
-4.  **식** 열에서 줄임표 단추 **(...)** 를 클릭하여 **식 작성기** 대화 상자를 엽니다.  
+4.  
+  **식** 열에서 줄임표 단추 **(...)** 를 클릭하여 **식 작성기** 대화 상자를 엽니다.  
   
-5.  **식 작성기** 대화 상자에서 **변수** 노드를 확장합니다.  
+5.  
+  **식 작성기** 대화 상자에서 **변수** 노드를 확장합니다.  
   
-6.  **User::varFileName**변수를 **식** 상자로 끌어 놓습니다.  
+6.  **사용자:: varFileName**변수를 **식** 상자로 끌어 옵니다.  
   
-7.  **확인** 을 클릭하여 **식 작성기** 대화 상자를 닫습니다.  
+7.  
+  **확인** 을 클릭하여 **식 작성기** 대화 상자를 닫습니다.  
   
 8.  다시 **확인** 을 클릭하여 **PropertiesExpressionEditor** 대화 상자를 닫습니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
- [4단계: 2 단원 자습서 패키지 테스트](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [4단계: 2단원 자습서 패키지 테스트](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

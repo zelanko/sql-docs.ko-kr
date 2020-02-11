@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957247"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
@@ -25,29 +25,27 @@ ms.locfileid: "74957247"
 
 **항목 내용**
 
-- **시작 하기 전에:**
+- **시작하기 전 주의 사항:**
 
   [보안](#Security)
 
 - [Transact-sql을 사용 하 여 데이터베이스 마스터 키를 만들려면](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a>시작 하기 전에
+## <a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Security"></a>보안
+### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a>권한에
+#### <a name="Permissions"></a> 권한
 
 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
-## <a name="TsqlProcedure"></a>Transact-sql 사용
+## <a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-create-a-database-master-key"></a>데이터베이스 마스터 키를 만들려면
 
 1. 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.
-2. 
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.
-3. 
-  **시스템 데이터베이스**를 확장하고 `master`를 마우스 오른쪽 단추를 클릭한 다음, **새 쿼리**를 클릭합니다.
+2. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.
+3. **시스템 데이터베이스**를 확장하고 `master`를 마우스 오른쪽 단추를 클릭한 다음, **새 쿼리**를 클릭합니다.
 4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.
 
   ```sql

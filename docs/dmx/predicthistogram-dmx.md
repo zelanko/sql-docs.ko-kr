@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893856"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
@@ -28,7 +28,8 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 스칼라 열 참조 또는 클러스터 열 참조. [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 제외한 모든 알고리즘 유형에 사용할 수 있습니다.  
+ 스칼라 열 참조 또는 클러스터 열 참조. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 제외한 모든 알고리즘 유형에 사용할 수 있습니다.  
   
 ## <a name="return-type"></a>반환 형식  
  테이블입니다.  
@@ -37,7 +38,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  히스토그램은 통계 열을 생성합니다. 반환 된 히스토그램의 열 구조는 **PredictHistogram** 함수와 함께 사용 되는 열 참조의 유형에 따라 달라 집니다.  
   
 ## <a name="scalar-columns"></a>스칼라 열  
- 스칼라 열 참조 >의 경우 PredictHistogram 함수가 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다. \<  
+ \<스칼라 열 참조>의 경우 **PredictHistogram** 함수가 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
   
 -   예측되는 값  
   
@@ -58,7 +59,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      **$AdjustedProbability** 열은 데이터 마이닝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사양의 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB에 대 한 확장입니다.  
   
 ## <a name="cluster-columns"></a>클러스터 열  
- **PredictHistogram** 함수가 \<클러스터 열 참조 > 대해 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
+ **PredictHistogram** 함수가 \<클러스터 열 참조> 대해 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
   
 -   **$Cluster** (클러스터 이름을 나타냄)  
   
@@ -83,7 +84,7 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
@@ -91,9 +92,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)  
   
   

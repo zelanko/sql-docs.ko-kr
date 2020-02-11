@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913783"
 ---
-# <a name="mssqlserver701"></a>MSSQLSERVER_701
+# <a name="mssqlserver_701"></a>MSSQLSERVER_701
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "62913783"
 |메시지 텍스트|시스템 메모리가 부족하여 이 쿼리를 실행할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행할 충분한 메모리를 할당하지 못했습니다. 이 오류는 운영 체제 설정, 실제 메모리 가용성 또는 현재 작업에 대한 메모리 한계 등 다양한 원인에 의해 발생할 수 있습니다. 대부분의 경우 실패한 트랜잭션은 이 오류의 원인이 아닙니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행할 충분한 메모리를 할당하지 못했습니다. 운영 체제 설정, 실제 메모리 가용성, 현재 워크로드의 메모리 제한을 비롯한 다양한 이유로 이 오류가 발생할 수 있습니다. 대부분의 경우 실패한 트랜잭션은 이 오류의 원인이 아닙니다.  
   
  서버에 충분한 메모리가 없으므로 DBCC 문 같은 진단 쿼리는 실패할 가능성이 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62913783"
   
 1.  다른 애플리케이션 또는 서비스가 현재 서버의 메모리를 사용 중인지 확인합니다. 중요도가 낮은 애플리케이션이나 서비스에서 메모리를 덜 사용하도록 다시 구성합니다.  
   
-2.  에 대 한 성능 모니터 카운터 수집을 시작 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: 버퍼 관리자**, **SQL Server: Memory Manager**합니다.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, **SQL Server: Memory Manager**에 대한 성능 모니터 카운터 수집을 시작합니다.  
   
 3.  다음 SQL Server 메모리 구성 매개 변수를 확인합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62913783"
   
  다음 동작으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 메모리를 늘릴 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외에 다른 응용 프로그램이 리소스를 사용 중인 경우 이 응용 프로그램을 중지하거나 별도의 서버에서 실행합니다. 이렇게 하면 외부 메모리 가중을 없앨 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외에 다른 애플리케이션이 리소스를 사용 중인 경우 이 애플리케이션을 중지하거나 별도의 서버에서 실행합니다. 이렇게 하면 외부 메모리 가중을 없앨 수 있습니다.  
   
 -   **max server memory**를 구성한 경우 설정값을 늘립니다.  
   

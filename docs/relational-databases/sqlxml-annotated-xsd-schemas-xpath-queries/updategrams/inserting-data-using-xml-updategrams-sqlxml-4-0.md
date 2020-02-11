@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252495"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
@@ -530,7 +530,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="h-specifying-namespaces-in-an-updategram"></a>H Updategram에 네임스페이스 지정  
+### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Updategram에 네임스페이스 지정  
  Updategram에는 Updategram의 동일한 요소에서 선언된 네임스페이스에 속하는 요소가 있을 수 있습니다. 이 경우 해당 스키마에서도 동일한 네임스페이스를 선언해야 하며 요소가 대상 네임스페이스에 속해야 합니다.  
   
  예를 들어 다음 updategram (updategram-elementhavingnamespace.xml)에서 ** \<Order>** 요소는 요소에 선언 된 네임 스페이스에 속합니다.  
@@ -613,7 +613,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
-### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. XML 데이터 형식 열에 데이터 삽입  
+### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9\. XML 데이터 형식 열에 데이터 삽입  
  **Xml** 데이터 형식은에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]도입 되었습니다. Updategram을 사용 하 여 **xml** 데이터 형식 열에 저장 된 데이터를 삽입 하 고 업데이트할 수 있습니다.  
   
 -   **Xml** 열은 기존 행을 식별 하는 데 사용할 수 없습니다. 따라서 updategram의 **updg: before** 섹션에 포함할 수 없습니다.  

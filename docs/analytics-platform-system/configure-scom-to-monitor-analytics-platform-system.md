@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401306"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>분석 플랫폼 시스템을 모니터링 하는 System Center Operations Manager (SCOM) 구성
 분석 플랫폼 시스템용 SCOM (System Center Operations Manager) 관리 팩을 구성 하려면 다음 단계를 수행 합니다. 관리 팩은 SCOM에서 분석 플랫폼 시스템을 모니터링 하는 데 필요 합니다.  
   
-## <a name="BeforeBegin"></a>시작 하기 전에  
+## <a name="BeforeBegin"></a>시작하기 전 주의 사항  
 **필수 구성 요소**  
   
 System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니다.  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401242"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 어플라이언스 노드에 연결
@@ -34,7 +34,7 @@ SQL Server PDW에서 Hadoop을 사용 하려면 먼저 장치 관리자에 게 S
 |-|-|  
 |**노드로**|**액세스 시나리오**|  
 |제어 노드|웹 브라우저를 사용 하 여 제어 노드에서 실행 되는 관리 콘솔에 액세스 합니다. 자세한 내용은 [관리 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)을 참조 하세요.<br /><br />모든 클라이언트 응용 프로그램 및 도구는 연결에서 이더넷 또는 InfiniBand를 사용 하는지 여부에 관계 없이 제어 노드에 연결 합니다.<br /><br />제어 노드에 대 한 이더넷 연결을 구성 하려면 제어 노드 클러스터 IP 주소와 포트 **17001**을 사용 합니다. 예를 들면 "192.168.0.1, 17001"입니다.<br /><br />Control 노드에 대 한 InfiniBand 연결을 구성 하려면 <strong> *appliance_domain*-SQLCTL01</strong> 및 포트 **17001**을 사용 합니다. SQLCTL01를 사용 <strong> *appliance_domain*</strong>하 여 어플라이언스 DNS 서버가 활성 InfiniBand 네트워크에 서버를 연결 합니다. 이를 사용 하도록 어플라이언스 서버가 아닌 서버를 구성 하려면 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)을 참조 하세요.<br /><br />어플라이언스 관리자는 제어 노드에 연결 하 여 관리 작업을 수행 합니다. 예를 들어 어플라이언스 관리자는 제어 노드에서 다음 작업을 수행 합니다.<br /><br />**Dwconfig .exe** 구성 도구를 사용 하 여 분석 플랫폼 시스템을 구성 합니다.|  
-|Compute 노드|계산 노드 연결은 제어 노드에 의해 전달 됩니다. 계산 노드의 IP 주소는 매개 변수로 응용 프로그램 명령에 입력 되지 않습니다.<br /><br />로드, 백업, 원격 테이블 복사 및 Hadoop의 경우, SQL Server PDW는 계산 노드와 비 어플라이언스 노드 또는 서버 간에 데이터를 직접 병렬로 보내고 받습니다. 이러한 응용 프로그램은 제어 노드에 연결 하 여 SQL Server PDW에 연결 하 고, 컨트롤 노드는 계산 노드와 비 어플라이언스 서버 간의 통신을 설정 하도록 SQL Server PDW를 지시 합니다.<br /><br />예를 들어 이러한 데이터 전송 작업은 계산 노드에 대 한 직접 연결을 통해 병렬로 수행 됩니다.<br /><br />로드 서버에서 SQL Server PDW 로드 하는 중입니다.<br /><br />SQL Server PDW에서 백업 서버로 데이터베이스를 백업 합니다.<br /><br />백업 서버에서 SQL Server PDW로 데이터베이스 복원<br /><br />SQL Server PDW에서 Hadoop 데이터를 쿼리 합니다.<br /><br />SQL Server PDW에서 외부 Hadoop 테이블로 데이터를 내보냅니다.<br /><br />SQL Server PDW 테이블을 원격 SMP SQL Server 데이터베이스로 복사|  
+|컴퓨팅 노드|계산 노드 연결은 제어 노드에 의해 전달 됩니다. 계산 노드의 IP 주소는 매개 변수로 응용 프로그램 명령에 입력 되지 않습니다.<br /><br />로드, 백업, 원격 테이블 복사 및 Hadoop의 경우, SQL Server PDW는 계산 노드와 비 어플라이언스 노드 또는 서버 간에 데이터를 직접 병렬로 보내고 받습니다. 이러한 응용 프로그램은 제어 노드에 연결 하 여 SQL Server PDW에 연결 하 고, 컨트롤 노드는 계산 노드와 비 어플라이언스 서버 간의 통신을 설정 하도록 SQL Server PDW를 지시 합니다.<br /><br />예를 들어 이러한 데이터 전송 작업은 계산 노드에 대 한 직접 연결을 통해 병렬로 수행 됩니다.<br /><br />로드 서버에서 SQL Server PDW 로드 하는 중입니다.<br /><br />SQL Server PDW에서 백업 서버로 데이터베이스를 백업 합니다.<br /><br />백업 서버에서 SQL Server PDW로 데이터베이스 복원<br /><br />SQL Server PDW에서 Hadoop 데이터를 쿼리 합니다.<br /><br />SQL Server PDW에서 외부 Hadoop 테이블로 데이터를 내보냅니다.<br /><br />SQL Server PDW 테이블을 원격 SMP SQL Server 데이터베이스로 복사|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>이더넷 및 InfiniBand 네트워크에 연결  
 원격 서버는 어플라이언스 InfiniBand 네트워크 또는 이더넷 네트워크를 통해 연결할 수 있습니다. 성능상의 이유로, **CREATE REMOTE TABLE AS SELECT** 문을 통해 데이터를 수신 하는 서버, 백업 서버 및 서버를 로드 하는 것은 일반적으로 어플라이언스 InfiniBand 네트워크를 통해 데이터를 전송 합니다.  

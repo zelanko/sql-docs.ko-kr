@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727759"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>DMV(동적 관리 뷰)를 사용하여 SQL Server Machine Learning Services 모니터링
@@ -41,7 +41,7 @@ DMV에 대한 일반적인 정보는 [시스템 동적 관리 뷰](../../relatio
 
 SQL Server에서 기계 학습 워크로드를 모니터링할 때 다음과 같은 동적 관리 뷰를 사용할 수 있습니다. DMV를 쿼리하려면 인스턴스에 대한 `VIEW SERVER STATE` 권한이 필요합니다.
 
-| 동적 관리 뷰 | 형식 | 설명 |
+| 동적 관리 뷰 | Type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 실행 | 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 실행 | 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | IsMLServicesInstalled | 인스턴스에 대한 Machine Learning Services SQL Server가 설치된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
 | ExternalScriptsEnabled | 인스턴스에 외부 스크립트를 사용하도록 설정된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | session_id | 각각의 기본 활성 연결과 연결된 세션을 식별합니다. |
 | blocking_session_id | 요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음). |
@@ -122,7 +122,7 @@ ON s.session_id = r.session_id;
 | reads | 이 요청에서 수행된 읽기 수입니다. |
 | logical_reads | 요청에서 수행된 논리적 읽기 수입니다. |
 | writes | 이 요청에서 수행된 쓰기 수입니다. |
-| language | 지원되는 스크립트 언어를 나타내는 키워드입니다. |
+| 언어 | 지원되는 스크립트 언어를 나타내는 키워드입니다. |
 | degree_of_parallelism | 생성된 병렬 프로세스의 수를 나타내는 숫자입니다. 이 값은 요청된 병렬 프로세스의 수와 다를 수 있습니다. |
 | external_user_name | 스크립트가 실행된 Windows 작업자 계정입니다. |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
-| language | 등록된 외부 스크립트 언어의 이름입니다. |
+| 언어 | 등록된 외부 스크립트 언어의 이름입니다. |
 | counter_name | 등록된 외부 스크립트 함수의 이름입니다. |
 | counter_value | 서버에서 등록된 외부 스크립트 함수를 호출한 총 인스턴스 수입니다. 이 값은 누적되며, 인스턴스에 기능이 설치된 시간부터 시작되어 다시 설정할 수 없습니다. |
 
@@ -165,7 +165,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters**는 외부 스크립트에 대해 다음과 같은 성능 카운터를 출력합니다.
 
-| 카운터 | 설명 |
+| 카운터 | Description |
 |---------|-------------|
 | 모든 실행 | 로컬 또는 원격 호출에 의해 시작된 외부 프로세스 수입니다. |
 | 병렬 실행 | 스크립트에 _\@병렬_ 사양이 포함되어 있고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 병렬 쿼리 계획을 생성하여 사용할 수 있었던 횟수입니다. |
@@ -175,7 +175,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 총 실행 시간(ms) | 호출 시점과 호출 완료 시점 사이에 경과한 시간입니다. |
 | 실행 오류 | 스크립트에서 오류를 보고한 횟수입니다. 이 횟수에는 R 또는 Python 오류가 포함되지 않습니다. |
 
-## <a name="memory-usage"></a>메모리 사용
+## <a name="memory-usage"></a>메모리 사용량
 
 OS, SQL Server 및 외부 풀에서 사용하는 메모리에 대한 정보를 봅니다.
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | physical_memory_kb | 머신에 있는 실제 메모리의 총 양입니다. |
 | committed_kb | 메모리 관리자의 커밋된 메모리(KB)입니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
-| NAME | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
+| name | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
 | max_memory_percent | SQL Server 또는 외부 리소스 풀에서 사용할 수 있는 최대 메모리입니다. |
 
 ## <a name="resource-pools"></a>리소스 풀
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 이 쿼리는 다음 열을 반환합니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | pool_name | 리소스 풀의 이름입니다. SQL Server 리소스 풀에는 `SQL Server` 접두사가 붙고 외부 리소스 풀에는 `External Pool` 접두사가 붙습니다.
 | total_cpu_usage_hours | Resource Governor 통계를 다시 설정한 후 누적된 CPU 사용량(밀리초)입니다. |
@@ -276,12 +276,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 반환되는 열은 다음과 같습니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | 패키지 | 설치된 패키지의 이름입니다. |
-| 버전 옵션 | 패키지 버전입니다. |
+| 버전 | 패키지 버전입니다. |
 | 개체 | 설치된 패키지가 종속된 패키지를 나열합니다. |
-| 라이선스 | 설치된 패키지의 라이선스입니다. |
+| License | 설치된 패키지의 라이선스입니다. |
 | LibPath | 패키지를 찾을 수 있는 디렉터리입니다. |
 
 ### <a name="installed-packages-for-python"></a>Python에 대해 설치된 패키지
@@ -302,10 +302,10 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 반환되는 열은 다음과 같습니다.
 
-| Column | 설명 |
+| 열 | Description |
 |--------|-------------|
 | 패키지 | 설치된 패키지의 이름입니다. |
-| 버전 옵션 | 패키지 버전입니다. |
+| 버전 | 패키지 버전입니다. |
 | 위치 | 패키지를 찾을 수 있는 디렉터리입니다. |
 
 ## <a name="next-steps"></a>다음 단계

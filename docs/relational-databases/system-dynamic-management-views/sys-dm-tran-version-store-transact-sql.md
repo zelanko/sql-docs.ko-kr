@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_tran_version_store (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262599"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 전체 버전 저장소를 쿼리하며 버전 저장소가 매우 클 수 있으므로 실행 하는 비효율적입니다.  
+  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **dm_tran_version_store** 는 전체 버전 저장소를 쿼리 하기 때문에 실행이 비효율적 이며, 버전 저장소가 매우 클 수 있습니다.  
   
  각 버전 레코드는 일부 추적/상태 정보와 함께 이진 데이터로 저장됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
   
- 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store** 버전 저장소에 있는 이진 표현에서 행의 이전 버전을 찾을 수 있습니다.  
+ 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 버전 저장소에 있는 것 처럼 이진 표현에서 이전 버전의 행을 찾으려면 **dm_tran_version_store** 를 사용 합니다.  
   
   
 ## <a name="syntax"></a>구문  
@@ -45,23 +45,23 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|레코드 버전을 생성하는 트랜잭션 시퀀스 번호입니다.|  
 |**version_sequence_num**|**bigint**|버전 레코드 시퀀스 번호입니다. 이 값은 버전 생성 트랜잭션 내에서 고유합니다.|  
 |**database_id**|**int**|버전 레코드의 데이터베이스 ID입니다.|  
 |**rowset_id**|**bigint**|레코드의 행 집합 ID입니다.|  
-|**상태**|**tinyint**|버전이 지정된 레코드가 두 개 레코드로 분할되었는지 여부를 나타냅니다. 값이 0이면 레코드가 한 페이지에 저장됩니다. 값이 1이면 레코드가 두 개 레코드로 분할되어 서로 다른 두 페이지에 저장됩니다.|  
+|**업무**|**tinyint**|버전이 지정된 레코드가 두 개 레코드로 분할되었는지 여부를 나타냅니다. 값이 0이면 레코드가 한 페이지에 저장됩니다. 값이 1이면 레코드가 두 개 레코드로 분할되어 서로 다른 두 페이지에 저장됩니다.|  
 |**min_length_in_bytes**|**smallint**|레코드의 최소 길이(바이트)입니다.|  
 |**record_length_first_part_in_bytes**|**smallint**|버전 레코드에서 첫 번째 부분의 길이(바이트)입니다.|  
-|**record_image_first_part**|**varbinary(8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
+|**record_image_first_part**|**varbinary (8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
 |**record_length_second_part_in_bytes**|**smallint**|버전 레코드에서 두 번째 부분의 길이(바이트)입니다.|  
-|**record_image_second_part**|**varbinary(8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
+|**record_image_second_part**|**varbinary (8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
   
 ## <a name="permissions"></a>사용 권한
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="examples"></a>예  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  
@@ -131,7 +131,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  출력은 XSN-57이 한 테이블에서 행 버전 3개를 만들었으며 XSN-58이 다른 테이블에서 행 버전 하나를 만들었음을 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 법적 고 지 사항 (SSMA for Access) | Microsoft Docs
+title: 법적 고 지 사항 (Access 용 SSMA) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,13 +14,13 @@ ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947510"
 ---
-# <a name="legal-notice-ssma-for-access"></a>법적 고 지 사항 (SSMA for Access)
+# <a name="legal-notice-ssma-for-access"></a>법적 고 지 사항 (Access 용 SSMA)
 포함된 예제 애플리케이션을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  
   
 이 설명서에 포함된 예제는 주로 특정 문이나 절의 개념을 설명하거나 적당한 사용법을 보여 주기 위한 것입니다. 특정 개념이나 문에 대한 예제를 중점적으로 제공하기 위해 일반적인 데이터 유효성 검사 및 오류 처리의 일부가 제거되었으므로 대부분의 예제에 전체 프로덕션 시스템에서 일반적으로 찾을 수 있는 모든 코드가 포함되어 있지는 않습니다. 이러한 예제나 포함된 원본 코드에 대한 기술 지원은 받을 수 없습니다.  
@@ -38,11 +38,11 @@ SAP NetWeaver는 독일 및 기타 여러 국가/지역에서 SAP AG의 등록 �
 다른 모든 상표는 해당 소유자의 자산입니다.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 지원 및 업그레이드에 대한 설명서 정책  
-SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. -SQL Server 온라인 설명서, 추가 정보 파일, 알려진된 문제점 문서 및 기술 자료 문서-제품 설명서에는 모든 고객의 일반적 용도 대해 안전 하도록 충분히 강력한 기능과 SQL Server 기능에 대 한 콘텐츠가 포함 됩니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
+SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. 제품 설명서-SQL Server 온라인 설명서, 추가 정보 파일, 알려진 문제점 문서 및 기술 자료 문서에는 모든 고객이 일반적으로 사용 하기에 안전 하 게 사용할 수 있는 강력한 기능 SQL Server 기능에 대 한 내용이 포함 되어 있습니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
   
 경우에 따라 특정 기능은 고객의 직접 사용이 금지되므로 문서화되지 않습니다. Microsoft에서 게시한 SQL Server 설명서에서도 해당 기능을 설명하는 경우 이외에는 타사 서적 또는 웹 사이트의 콘텐츠는 Microsoft 고객 지원에서 지원하지 않으므로 프로덕션 데이터베이스 또는 애플리케이션에 사용하지 않아야 합니다.  
   
-고객은 저장 프로시저, 확장 저장 프로시저, 함수, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에서는 문서화되지 않은 진입점을 활용 또는 사용하는 데이터베이스 또는 애플리케이션을 지원하지 않습니다.  
+고객은 저장 프로시저, 확장 저장 프로시저, 기능, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에서는 문서화되지 않은 진입점을 활용 또는 사용하는 데이터베이스 또는 애플리케이션을 지원하지 않습니다.  
   
 문서화되지 않은 진입점을 사용하는 애플리케이션 및 데이터베이스의 경우 SQL Server의 나중 버전으로 서버 및 데이터베이스를 업그레이드하지 못할 수 있습니다. SQL Server 기능의 사용은 Microsoft SQL Server 설명서에 포함된 기능으로 제한되어야 합니다. 기능이 Microsoft SQL Server 설명서에 문서화되어 있지 않은 경우는 SQL Server의 지원되는 부분이 아닙니다.  
   

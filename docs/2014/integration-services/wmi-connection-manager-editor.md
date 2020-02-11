@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054476"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 연결 관리자 편집기
+  
   **WMI 연결 관리자** 대화 상자를 사용하여 서버에 대한 Microsoft WMI(Windows Management Instrumentation) 연결을 지정할 수 있습니다.  
   
  WMI 연결 관리자에 대한 자세한 내용은 [WMI Connection Manager](connection-manager/wmi-connection-manager.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  연결 관리자의 고유 이름을 제공합니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "66054476"
  **서버 이름**  
  WMI 연결을 만들 서버의 이름을 제공합니다.  
   
- **Namespace**  
+ **네임스페이스**  
  WMI 네임스페이스를 지정합니다.  
   
  **Windows 인증 사용**  
@@ -48,10 +49,10 @@ ms.locfileid: "66054476"
  **암호**  
  Windows 인증을 사용하지 않으면 연결할 때 암호를 제공해야 합니다.  
   
- **테스트**  
+ **테스트할**  
  연결 관리자 설정을 테스트합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [구성 관리용 WMI 공급자 개념](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [서버 이벤트용 WMI 공급자 개념](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

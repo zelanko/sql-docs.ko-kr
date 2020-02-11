@@ -10,10 +10,10 @@ ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251571"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
@@ -29,14 +29,14 @@ ms.locfileid: "75251571"
   
  기술 자료를 가져올 때는 클라이언트 애플리케이션에 기술 자료 이름이 이미 있어 이름을 바꾸어야 하는 경우를 제외하고 동일한 이름을 사용할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  .dqs 파일에서 기술 자료를 가져오려면 기술 자료를 .dqs 파일로 이미 내보낸 상태여야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  .dqs 데이터 파일에서 기술 자료를 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Import"></a>Dqs 파일에서 기술 자료 가져오기  
@@ -55,8 +55,7 @@ ms.locfileid: "75251571"
   **데이터 파일 선택**에서 **찾아보기**를 클릭합니다.  
   
 6.  
-  **데이터 파일에서 가져오기** 대화 상자에서 가져올 .dqs 파일이 있는 폴더로 이동한 다음 파일의 이름을 클릭합니다. 
-  **열기**를 클릭합니다.  
+  **데이터 파일에서 가져오기** 대화 상자에서 가져올 .dqs 파일이 있는 폴더로 이동한 다음 파일의 이름을 클릭합니다. **열기**를 클릭합니다.  
   
 7.  
   **도메인** 목록에 올바른 기술 자료와 도메인이 표시되는지 확인합니다.  
@@ -64,8 +63,7 @@ ms.locfileid: "75251571"
 8.  수행할 작업을 선택한 다음 **만들기**를 클릭합니다.  
   
 9. 
-  **기술 자료 가져오기** 대화 상자에서 상태 줄에 가져오기가 완료되었다고 표시되는지 확인합니다. 
-  **확인**을 클릭합니다.  
+  **기술 자료 가져오기** 대화 상자에서 상태 줄에 가져오기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
 10. 수행해야 하는 기술 자료 검색, 도메인 관리 또는 일치 정책 태스크를 완료한 다음 **마침**을 클릭합니다.  
   
